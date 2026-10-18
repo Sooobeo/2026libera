@@ -1,0 +1,75 @@
+{
+  "version": "v4.8-design",
+  "implementation_status": "specification_not_integrated_into_online_runner",
+  "top_level_fields": [
+    "source_id",
+    "interpretations",
+    "weights",
+    "alternatives",
+    "risk_discussion",
+    "unresolved",
+    "submitted_constraints"
+  ],
+  "structural_predecessor": {
+    "path": "research/sector_response_schema.py",
+    "sha256": "bedbf782a041ba7da4f944408dd19596d74cbf78b77bee1c75d12ce71a598c41"
+  },
+  "common_instructions": [
+    "Use only the currently visible document, common market facts, prior visible responses and actual calculator output.",
+    "Preserve the original source rating vocabulary. Public views are not legal mandates or exact target weights.",
+    "In interpretations.reason explain what the cited source actually states; mark absent reasons rather than inventing them.",
+    "In each weights.rationale state whether and how the source judgment is adopted, deferred or departed from; cite supplied reasons, explain relevant trade-offs, and connect the explanation to the actual weight relative to the common baseline.",
+    "Before institution exposure, do not guess institution identity, labels or private preferences; state market-only basis.",
+    "When quoting an externally supplied numerical fact, name its metric, sector, period and unit and cite its existing M: or actual calculator fact ID; do not relabel daily volatility as annual volatility or expected return.",
+    "For a quantity you derive from the current proposed weights before the calculator runs, cite already-visible input IDs, identify the current proposed weights and formula, and mark the claim pending external verification. Never invent a future calculator fact ID.",
+    "Alternative allocations need reasoned comparison, not an evaluator-supplied exact target. No minimum number of alternatives or invented numerical cap is imposed.",
+    "If an alternative is described using numbers, give its full vector or identify the base vector and every change; otherwise do not claim that its total or portfolio risk has been verified.",
+    "All weights are raw proposals. Do not claim correction or sum=1 without agreement with the submitted numbers."
+  ],
+  "stages": [
+    {
+      "stage": 1,
+      "task": "Interpret common market facts and any visible source judgments.",
+      "weights": "empty or all 11",
+      "R1_source_visible": true,
+      "R4_source_visible": false
+    },
+    {
+      "stage": 2,
+      "task": "Compare defensible allocation alternatives, reasons and risks.",
+      "weights": "empty or all 11",
+      "R1_source_visible": true,
+      "R4_source_visible": false
+    },
+    {
+      "stage": 3,
+      "task": "Submit a provisional allocation with evidence-linked rationale.",
+      "weights": "all 11",
+      "R1_source_visible": true,
+      "R4_source_visible": false
+    },
+    {
+      "stage": 4,
+      "task": "Reconsider the proposal using all now-visible facts; state maintained or changed choices and why. This first final response is C0.",
+      "weights": "all 11",
+      "R1_source_visible": true,
+      "R4_source_visible": true
+    }
+  ],
+  "empty_weights_stage1_2": "not_yet_proposed; no budget=0 violation and no valid portfolio risk; interpretation still reviewed",
+  "core_failure_policy": "A transport, JSON/schema, truncation or context-overflow failure ends that case without an automatic retry. Preserve all prior and partial raw responses; later planned stages are not_started, not additional attempted model failures. No C0 means no auxiliary repair.",
+  "history": "Keep visible content verbatim; no hidden thinking inspection, no silent truncation.",
+  "feedback": "Same pure calculator in both arms. Actual sums, violations, active weights, and valid-portfolio diagnostics only; never evaluator gold, semantic correction or suggested weights.",
+  "source_visibility": "One assigned source packet is first provided at stage 1 for R1 or stage 4 for R4; then remains in history. Offline source-comparison inventory is never provided.",
+  "auxiliary_repair": {
+    "candidate0": "stage4 first final response",
+    "maximum_additional_calls": 2,
+    "eligibility": "C0 completed, structurally valid and exactly one finite weight for each of 11 sectors; abs(sum(w)-1)>1e-6 OR any(w<0 or w>1).",
+    "feedback": "Actual prior candidate, sum, signed residual, bound violations and prior-candidate weight deltas. No target allocation or semantic verdict.",
+    "stop": "First arithmetically valid candidate, C2, or first transport/schema/finite-vector failure; no restart.",
+    "selection": "Retain C0 as primary always; auxiliary terminal submission is last attempted response, never best-of selection.",
+    "noneligible": "Valid C0, no C0, transport or schema failure, or incomplete/nonfinite sector vector; report reason, do not retry.",
+    "meaning": "Bounded recovery policy; actual calls may differ across arms. Not equal realized compute or a causal repair-effect experiment."
+  },
+  "main_model_calls": 0
+}

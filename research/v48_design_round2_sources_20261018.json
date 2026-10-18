@@ -1,0 +1,939 @@
+{
+  "round": 2,
+  "phase": "v48_redesign",
+  "created_at_utc": "2026-10-18T09:59:23.932197+00:00",
+  "reviewer": "Codex subagent /root/v48_repair_literature",
+  "reviewer_role_limit": "Separate reviewer from document builder; the reviewer authored the source memo and subsequently checked the finalized design against primary sources. Not a blinded independent human review.",
+  "scope": "Primary-source scope, exact parameter provenance, budget mapping, author-year citations and methodological interpretation of finalized v4.8 design. Not an online experiment, a proof of portfolio quality or a fresh re-audit of every inherited historical reference.",
+  "inputs": [
+    {
+      "path": "plan/LIBERA_실험계획_v4.8_20261018.html",
+      "sha256": "9b2b0dd6bc348f745f648ab03f9f7ce36573de6643700e896449894e75982423"
+    },
+    {
+      "path": "paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+      "sha256": "0775e2d64633d51c2f35a0378406e744ea7e0b0489a71a45b6651599c08ae7d1"
+    },
+    {
+      "path": "plan/LIBERA_실험설정_v4.8_20261018.json",
+      "sha256": "95d03ab44a75c477bced0a6c9868facd58b66562ab90e24a0a6854e8cac659d3"
+    },
+    {
+      "path": "data/sector_protocol/v48_design_20261018/prompt_contract.json",
+      "sha256": "6352355f20bde763d8bcbc2a7db02bfe466e92f80c60f12488a81cd021cdd5c8"
+    },
+    {
+      "path": "data/sector_protocol/v48_design_20261018/public_numeric_registry.json",
+      "sha256": "5463226c35c53a0ab4caefe89c0bf857dc81853c4c982fba51254c0f5395c375"
+    },
+    {
+      "path": "research/evaluator_only/v48_source_comparison_20261018.json",
+      "sha256": "0a020fe160122c9802cc4ed1f17ea2f07e5d255d00919eaf101cfed6fb248634"
+    },
+    {
+      "path": "research/v48_evaluation_protocol_20261018.json",
+      "sha256": "c870c8383aa0b6ffbf56eceea75618ea12c0819311d97a500a968f1742b48059"
+    },
+    {
+      "path": "research/v48_review_template_20261018.json",
+      "sha256": "15251035d307ae7a57c5fed3404363fcf5b0bfd77ef128faeca38c0e407bd0f2"
+    },
+    {
+      "path": "research/v48_reference_basis_20261018.json",
+      "sha256": "421e6c39900beccea72a2996eb31077c84d10270f677a4478fb4d6d44e25e95b"
+    },
+    {
+      "path": "research/v48_topic_alignment_basis_20261018.json",
+      "sha256": "6f8057c99a160a2b481b1394aa65569cd27eb9f42a0857169f1e1f1caec1ae28"
+    },
+    {
+      "path": "research/build_sector_revision_v48.py",
+      "sha256": "0a3a54aeb083b488983f922ba35745a11d13b15da9bcd152218c89af7c927e0f"
+    },
+    {
+      "path": "research/v48_parameter_reference_addendum_20261018.json",
+      "sha256": "37af0008222199720a65483512b32ed08292f21be18ea610d63d258dbcb5d474"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "research/evidence/v48_reference_20261018/uptake_abs_latest.html",
+      "sha256": "d8b276fa841c991aa2e88525c015f460d669aa721cf3607871568d2e01d728b7",
+      "size_bytes": 43462,
+      "url": "https://arxiv.org/abs/2607.15388",
+      "resolved_url": "https://arxiv.org/abs/2607.15388",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-18T09:50:55.891547+00:00",
+      "kind": "new_primary_snapshot",
+      "source_id": "uptake_abs_latest"
+    },
+    {
+      "path": "research/evidence/v47_priority1_options_20261018/uptake_fulltext.html",
+      "sha256": "3c94893519cb012c30d44da502eff8c9b75c9c3c60a487cb166374cd46ebbe3b",
+      "size_bytes": 699318,
+      "url": "https://arxiv.org/html/2607.15388v1",
+      "kind": "reused_primary_snapshot",
+      "source_id": "uptake_fulltext"
+    },
+    {
+      "path": "research/evidence/v48_reference_20261018/symbolic_abs_latest.html",
+      "sha256": "0fe46d1bf097662d443fdc2f897cce1034b06999bbd6f1128c474a302f59a2e2",
+      "size_bytes": 42055,
+      "url": "https://arxiv.org/abs/2606.27757",
+      "resolved_url": "https://arxiv.org/abs/2606.27757",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-18T09:50:55.997940+00:00",
+      "kind": "new_primary_snapshot",
+      "source_id": "symbolic_abs_latest"
+    },
+    {
+      "path": "research/evidence/v47_priority1_options_20261018/symbolic_fulltext.html",
+      "sha256": "5fb5c80f78a516660a325f15c67a4bfcb27b667a1c9c9c150a4007c21e4fa718",
+      "size_bytes": 141332,
+      "url": "https://arxiv.org/html/2606.27757v1",
+      "kind": "reused_primary_snapshot",
+      "source_id": "symbolic_fulltext"
+    },
+    {
+      "path": "research/evidence/v48_reference_20261018/finfirst_abs_latest.html",
+      "sha256": "658bf62d3c90d66dc0dc8b476f27d80135da83dc10e7562d06a13bd27017aec6",
+      "size_bytes": 44373,
+      "url": "https://arxiv.org/abs/2609.25192",
+      "resolved_url": "https://arxiv.org/abs/2609.25192",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-18T09:50:56.089383+00:00",
+      "kind": "new_primary_snapshot",
+      "source_id": "finfirst_abs_latest"
+    },
+    {
+      "path": "research/evidence/v47_priority1_options_20261018/finfirst_fulltext.html",
+      "sha256": "a54db747418a3581d352e5da9b69f645a678ea7b10d7b95322fa5ae34bac15b9",
+      "size_bytes": 302108,
+      "url": "https://arxiv.org/html/2609.25192v1",
+      "kind": "reused_primary_snapshot",
+      "source_id": "finfirst_fulltext"
+    },
+    {
+      "path": "research/evidence/v48_reference_20261018/externalization_abs_latest.html",
+      "sha256": "14d3668bbce7d781b1f608f7ab3eff5a79e08b72a86e384903458da8202d256d",
+      "size_bytes": 42938,
+      "url": "https://arxiv.org/abs/2609.38869",
+      "resolved_url": "https://arxiv.org/abs/2609.38869",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-18T09:50:56.206205+00:00",
+      "kind": "new_primary_snapshot",
+      "source_id": "externalization_abs_latest"
+    },
+    {
+      "path": "research/evidence/priority23_candidates_20261018/externalization_fulltext_v2.html",
+      "sha256": "507f1a762a5bc7b9b9797b75c5567c36a4f56ca4505efffa8dcb41cde3d38bf2",
+      "size_bytes": 284988,
+      "url": "https://arxiv.org/html/2609.38869v2",
+      "kind": "reused_primary_snapshot",
+      "source_id": "externalization_fulltext"
+    },
+    {
+      "path": "research/evidence/v48_reference_20261018/e2a_abs_latest.html",
+      "sha256": "87a59e24d4fcae57f69135bc6c5b976bc1fe8015df9b6e15d577faa763d3e04b",
+      "size_bytes": 41662,
+      "url": "https://arxiv.org/abs/2609.14302",
+      "resolved_url": "https://arxiv.org/abs/2609.14302",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-18T09:50:56.309346+00:00",
+      "kind": "new_primary_snapshot",
+      "source_id": "e2a_abs_latest"
+    },
+    {
+      "path": "research/evidence/priority23_candidates_20261018/e2a_fulltext.html",
+      "sha256": "65356300a0a37378be69440b8663c46f548a44deb0fd50a590469c27cc6d1dc1",
+      "size_bytes": 344670,
+      "url": "https://arxiv.org/html/2609.14302v1",
+      "kind": "reused_primary_snapshot",
+      "source_id": "e2a_fulltext"
+    },
+    {
+      "path": "research/evidence/v48_reference_20261018/fundapod_abs_latest.html",
+      "sha256": "587ca2a30978670891b20f7ea791ec5f72317a9de6bf393bc1bbc424af58948b",
+      "size_bytes": 44815,
+      "url": "https://arxiv.org/abs/2605.27864",
+      "resolved_url": "https://arxiv.org/abs/2605.27864",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-18T09:50:56.403065+00:00",
+      "kind": "new_primary_snapshot",
+      "source_id": "fundapod_abs_latest"
+    },
+    {
+      "path": "research/evidence/priority23_candidates_20261018/fundapod_fulltext.html",
+      "sha256": "5f86447eea84e754cfe3ebdd9d64562891af4475cd4bb9b2606fbc727c34ec7b",
+      "size_bytes": 284219,
+      "url": "https://arxiv.org/html/2605.27864v5",
+      "kind": "reused_primary_snapshot",
+      "source_id": "fundapod_fulltext"
+    },
+    {
+      "path": "research/evidence/v48_reference_20261018/instrument_abs_latest.html",
+      "sha256": "80a5e495ba792f64b13aaeff82fa4a20271ddd063281c765a55ec69fa845e34b",
+      "size_bytes": 43629,
+      "url": "https://arxiv.org/abs/2609.19844",
+      "resolved_url": "https://arxiv.org/abs/2609.19844",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-18T09:50:56.509619+00:00",
+      "kind": "new_primary_snapshot",
+      "source_id": "instrument_abs_latest"
+    },
+    {
+      "path": "research/evidence/v48_reference_20261018/instrument_2609_19844v2.html",
+      "sha256": "951220d0c013f618abccd4c1af820d48bffac7a70d23314c8d97a63fffb4ee85",
+      "size_bytes": 125119,
+      "url": "https://arxiv.org/html/2609.19844v2",
+      "resolved_url": "https://arxiv.org/html/2609.19844v2",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-18T09:50:56.609156+00:00",
+      "kind": "new_primary_snapshot",
+      "source_id": "instrument_fulltext"
+    },
+    {
+      "path": "research/evidence/v48_reference_20261018/portbench_abs_latest.html",
+      "sha256": "257f60b60b7ce8335bd2e64672e55b4926eb598a68d139fb9f7c4700e256ae50",
+      "size_bytes": 42877,
+      "url": "https://arxiv.org/abs/2605.27887",
+      "resolved_url": "https://arxiv.org/abs/2605.27887",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-18T09:56:36.662005+00:00",
+      "kind": "new_primary_snapshot",
+      "source_id": "portbench_abs_latest"
+    },
+    {
+      "path": "research/evidence/v48_reference_20261018/portbench_2605_27887v6.html",
+      "sha256": "1cfcc2234f076e011702265433fcdce14c29514546ed74ebf0bec090275ab62c",
+      "size_bytes": 1029621,
+      "url": "https://arxiv.org/html/2605.27887v6",
+      "resolved_url": "https://arxiv.org/html/2605.27887v6",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-18T09:56:37.031050+00:00",
+      "kind": "new_primary_snapshot",
+      "source_id": "portbench_fulltext_v6"
+    },
+    {
+      "path": "research/evidence/v48_reference_20261018/finvector_abs_latest.html",
+      "sha256": "f725bc2f591079d4d2d357e4f0c92165836eaab2fd6733bfe81bb33f095a9a49",
+      "size_bytes": 42068,
+      "url": "https://arxiv.org/abs/2610.08882",
+      "resolved_url": "https://arxiv.org/abs/2610.08882",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-18T09:56:37.119381+00:00",
+      "kind": "new_primary_snapshot",
+      "source_id": "finvector_abs_latest"
+    },
+    {
+      "path": "research/evidence/v45_structured_output_20261018/finvector_2610_08882.pdf",
+      "sha256": "a7551b10caddb0d9f94a215f29fad4771f5cd2addae56ea43d706f7c5c1c1dfa",
+      "size_bytes": 580927,
+      "url": "https://arxiv.org/pdf/2610.08882v1",
+      "kind": "reused_primary_snapshot",
+      "source_id": "finvector_pdf_v1"
+    }
+  ],
+  "input_roster_reference": {
+    "path": "research/v48_design_round1_final_20261018.json",
+    "sha256": "5f1c2638ca334a05524a4584f984f46d343df4fc70922621e7341ec04d5cf66c"
+  },
+  "status": "PASS",
+  "audit_completed": true,
+  "all_passed": true,
+  "check_count": 70,
+  "pass_count": 70,
+  "failed_checks": [],
+  "not_observed_checks": [],
+  "checks": [
+    {
+      "id": "artifact_hash:plan/LIBERA_실험계획_v4.8_20261018.html",
+      "status": "pass",
+      "evidence": {
+        "path": "plan/LIBERA_실험계획_v4.8_20261018.html",
+        "expected_sha256": "9b2b0dd6bc348f745f648ab03f9f7ce36573de6643700e896449894e75982423",
+        "observed_sha256": "9b2b0dd6bc348f745f648ab03f9f7ce36573de6643700e896449894e75982423"
+      },
+      "limit": null
+    },
+    {
+      "id": "artifact_hash:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+      "status": "pass",
+      "evidence": {
+        "path": "paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+        "expected_sha256": "0775e2d64633d51c2f35a0378406e744ea7e0b0489a71a45b6651599c08ae7d1",
+        "observed_sha256": "0775e2d64633d51c2f35a0378406e744ea7e0b0489a71a45b6651599c08ae7d1"
+      },
+      "limit": null
+    },
+    {
+      "id": "artifact_hash:plan/LIBERA_실험설정_v4.8_20261018.json",
+      "status": "pass",
+      "evidence": {
+        "path": "plan/LIBERA_실험설정_v4.8_20261018.json",
+        "expected_sha256": "95d03ab44a75c477bced0a6c9868facd58b66562ab90e24a0a6854e8cac659d3",
+        "observed_sha256": "95d03ab44a75c477bced0a6c9868facd58b66562ab90e24a0a6854e8cac659d3"
+      },
+      "limit": null
+    },
+    {
+      "id": "artifact_hash:data/sector_protocol/v48_design_20261018/prompt_contract.json",
+      "status": "pass",
+      "evidence": {
+        "path": "data/sector_protocol/v48_design_20261018/prompt_contract.json",
+        "expected_sha256": "6352355f20bde763d8bcbc2a7db02bfe466e92f80c60f12488a81cd021cdd5c8",
+        "observed_sha256": "6352355f20bde763d8bcbc2a7db02bfe466e92f80c60f12488a81cd021cdd5c8"
+      },
+      "limit": null
+    },
+    {
+      "id": "artifact_hash:data/sector_protocol/v48_design_20261018/public_numeric_registry.json",
+      "status": "pass",
+      "evidence": {
+        "path": "data/sector_protocol/v48_design_20261018/public_numeric_registry.json",
+        "expected_sha256": "5463226c35c53a0ab4caefe89c0bf857dc81853c4c982fba51254c0f5395c375",
+        "observed_sha256": "5463226c35c53a0ab4caefe89c0bf857dc81853c4c982fba51254c0f5395c375"
+      },
+      "limit": null
+    },
+    {
+      "id": "artifact_hash:research/evaluator_only/v48_source_comparison_20261018.json",
+      "status": "pass",
+      "evidence": {
+        "path": "research/evaluator_only/v48_source_comparison_20261018.json",
+        "expected_sha256": "0a020fe160122c9802cc4ed1f17ea2f07e5d255d00919eaf101cfed6fb248634",
+        "observed_sha256": "0a020fe160122c9802cc4ed1f17ea2f07e5d255d00919eaf101cfed6fb248634"
+      },
+      "limit": null
+    },
+    {
+      "id": "artifact_hash:research/v48_evaluation_protocol_20261018.json",
+      "status": "pass",
+      "evidence": {
+        "path": "research/v48_evaluation_protocol_20261018.json",
+        "expected_sha256": "c870c8383aa0b6ffbf56eceea75618ea12c0819311d97a500a968f1742b48059",
+        "observed_sha256": "c870c8383aa0b6ffbf56eceea75618ea12c0819311d97a500a968f1742b48059"
+      },
+      "limit": null
+    },
+    {
+      "id": "artifact_hash:research/v48_review_template_20261018.json",
+      "status": "pass",
+      "evidence": {
+        "path": "research/v48_review_template_20261018.json",
+        "expected_sha256": "15251035d307ae7a57c5fed3404363fcf5b0bfd77ef128faeca38c0e407bd0f2",
+        "observed_sha256": "15251035d307ae7a57c5fed3404363fcf5b0bfd77ef128faeca38c0e407bd0f2"
+      },
+      "limit": null
+    },
+    {
+      "id": "artifact_hash:research/v48_reference_basis_20261018.json",
+      "status": "pass",
+      "evidence": {
+        "path": "research/v48_reference_basis_20261018.json",
+        "expected_sha256": "421e6c39900beccea72a2996eb31077c84d10270f677a4478fb4d6d44e25e95b",
+        "observed_sha256": "421e6c39900beccea72a2996eb31077c84d10270f677a4478fb4d6d44e25e95b"
+      },
+      "limit": null
+    },
+    {
+      "id": "artifact_hash:research/v48_topic_alignment_basis_20261018.json",
+      "status": "pass",
+      "evidence": {
+        "path": "research/v48_topic_alignment_basis_20261018.json",
+        "expected_sha256": "6f8057c99a160a2b481b1394aa65569cd27eb9f42a0857169f1e1f1caec1ae28",
+        "observed_sha256": "6f8057c99a160a2b481b1394aa65569cd27eb9f42a0857169f1e1f1caec1ae28"
+      },
+      "limit": null
+    },
+    {
+      "id": "artifact_hash:research/build_sector_revision_v48.py",
+      "status": "pass",
+      "evidence": {
+        "path": "research/build_sector_revision_v48.py",
+        "expected_sha256": "0a3a54aeb083b488983f922ba35745a11d13b15da9bcd152218c89af7c927e0f",
+        "observed_sha256": "0a3a54aeb083b488983f922ba35745a11d13b15da9bcd152218c89af7c927e0f"
+      },
+      "limit": null
+    },
+    {
+      "id": "artifact_hash:research/v48_parameter_reference_addendum_20261018.json",
+      "status": "pass",
+      "evidence": {
+        "path": "research/v48_parameter_reference_addendum_20261018.json",
+        "expected_sha256": "37af0008222199720a65483512b32ed08292f21be18ea610d63d258dbcb5d474",
+        "observed_sha256": "37af0008222199720a65483512b32ed08292f21be18ea610d63d258dbcb5d474"
+      },
+      "limit": null
+    },
+    {
+      "id": "primary_hash:uptake_abs_latest",
+      "status": "pass",
+      "evidence": {
+        "path": "research/evidence/v48_reference_20261018/uptake_abs_latest.html",
+        "url": "https://arxiv.org/abs/2607.15388",
+        "sha256": "d8b276fa841c991aa2e88525c015f460d669aa721cf3607871568d2e01d728b7"
+      },
+      "limit": null
+    },
+    {
+      "id": "primary_hash:uptake_fulltext",
+      "status": "pass",
+      "evidence": {
+        "path": "research/evidence/v47_priority1_options_20261018/uptake_fulltext.html",
+        "url": "https://arxiv.org/html/2607.15388v1",
+        "sha256": "3c94893519cb012c30d44da502eff8c9b75c9c3c60a487cb166374cd46ebbe3b"
+      },
+      "limit": null
+    },
+    {
+      "id": "primary_hash:symbolic_abs_latest",
+      "status": "pass",
+      "evidence": {
+        "path": "research/evidence/v48_reference_20261018/symbolic_abs_latest.html",
+        "url": "https://arxiv.org/abs/2606.27757",
+        "sha256": "0fe46d1bf097662d443fdc2f897cce1034b06999bbd6f1128c474a302f59a2e2"
+      },
+      "limit": null
+    },
+    {
+      "id": "primary_hash:symbolic_fulltext",
+      "status": "pass",
+      "evidence": {
+        "path": "research/evidence/v47_priority1_options_20261018/symbolic_fulltext.html",
+        "url": "https://arxiv.org/html/2606.27757v1",
+        "sha256": "5fb5c80f78a516660a325f15c67a4bfcb27b667a1c9c9c150a4007c21e4fa718"
+      },
+      "limit": null
+    },
+    {
+      "id": "primary_hash:finfirst_abs_latest",
+      "status": "pass",
+      "evidence": {
+        "path": "research/evidence/v48_reference_20261018/finfirst_abs_latest.html",
+        "url": "https://arxiv.org/abs/2609.25192",
+        "sha256": "658bf62d3c90d66dc0dc8b476f27d80135da83dc10e7562d06a13bd27017aec6"
+      },
+      "limit": null
+    },
+    {
+      "id": "primary_hash:finfirst_fulltext",
+      "status": "pass",
+      "evidence": {
+        "path": "research/evidence/v47_priority1_options_20261018/finfirst_fulltext.html",
+        "url": "https://arxiv.org/html/2609.25192v1",
+        "sha256": "a54db747418a3581d352e5da9b69f645a678ea7b10d7b95322fa5ae34bac15b9"
+      },
+      "limit": null
+    },
+    {
+      "id": "primary_hash:externalization_abs_latest",
+      "status": "pass",
+      "evidence": {
+        "path": "research/evidence/v48_reference_20261018/externalization_abs_latest.html",
+        "url": "https://arxiv.org/abs/2609.38869",
+        "sha256": "14d3668bbce7d781b1f608f7ab3eff5a79e08b72a86e384903458da8202d256d"
+      },
+      "limit": null
+    },
+    {
+      "id": "primary_hash:externalization_fulltext",
+      "status": "pass",
+      "evidence": {
+        "path": "research/evidence/priority23_candidates_20261018/externalization_fulltext_v2.html",
+        "url": "https://arxiv.org/html/2609.38869v2",
+        "sha256": "507f1a762a5bc7b9b9797b75c5567c36a4f56ca4505efffa8dcb41cde3d38bf2"
+      },
+      "limit": null
+    },
+    {
+      "id": "primary_hash:e2a_abs_latest",
+      "status": "pass",
+      "evidence": {
+        "path": "research/evidence/v48_reference_20261018/e2a_abs_latest.html",
+        "url": "https://arxiv.org/abs/2609.14302",
+        "sha256": "87a59e24d4fcae57f69135bc6c5b976bc1fe8015df9b6e15d577faa763d3e04b"
+      },
+      "limit": null
+    },
+    {
+      "id": "primary_hash:e2a_fulltext",
+      "status": "pass",
+      "evidence": {
+        "path": "research/evidence/priority23_candidates_20261018/e2a_fulltext.html",
+        "url": "https://arxiv.org/html/2609.14302v1",
+        "sha256": "65356300a0a37378be69440b8663c46f548a44deb0fd50a590469c27cc6d1dc1"
+      },
+      "limit": null
+    },
+    {
+      "id": "primary_hash:fundapod_abs_latest",
+      "status": "pass",
+      "evidence": {
+        "path": "research/evidence/v48_reference_20261018/fundapod_abs_latest.html",
+        "url": "https://arxiv.org/abs/2605.27864",
+        "sha256": "587ca2a30978670891b20f7ea791ec5f72317a9de6bf393bc1bbc424af58948b"
+      },
+      "limit": null
+    },
+    {
+      "id": "primary_hash:fundapod_fulltext",
+      "status": "pass",
+      "evidence": {
+        "path": "research/evidence/priority23_candidates_20261018/fundapod_fulltext.html",
+        "url": "https://arxiv.org/html/2605.27864v5",
+        "sha256": "5f86447eea84e754cfe3ebdd9d64562891af4475cd4bb9b2606fbc727c34ec7b"
+      },
+      "limit": null
+    },
+    {
+      "id": "primary_hash:instrument_abs_latest",
+      "status": "pass",
+      "evidence": {
+        "path": "research/evidence/v48_reference_20261018/instrument_abs_latest.html",
+        "url": "https://arxiv.org/abs/2609.19844",
+        "sha256": "80a5e495ba792f64b13aaeff82fa4a20271ddd063281c765a55ec69fa845e34b"
+      },
+      "limit": null
+    },
+    {
+      "id": "primary_hash:instrument_fulltext",
+      "status": "pass",
+      "evidence": {
+        "path": "research/evidence/v48_reference_20261018/instrument_2609_19844v2.html",
+        "url": "https://arxiv.org/html/2609.19844v2",
+        "sha256": "951220d0c013f618abccd4c1af820d48bffac7a70d23314c8d97a63fffb4ee85"
+      },
+      "limit": null
+    },
+    {
+      "id": "primary_hash:portbench_abs_latest",
+      "status": "pass",
+      "evidence": {
+        "path": "research/evidence/v48_reference_20261018/portbench_abs_latest.html",
+        "url": "https://arxiv.org/abs/2605.27887",
+        "sha256": "257f60b60b7ce8335bd2e64672e55b4926eb598a68d139fb9f7c4700e256ae50"
+      },
+      "limit": null
+    },
+    {
+      "id": "primary_hash:portbench_fulltext_v6",
+      "status": "pass",
+      "evidence": {
+        "path": "research/evidence/v48_reference_20261018/portbench_2605_27887v6.html",
+        "url": "https://arxiv.org/html/2605.27887v6",
+        "sha256": "1cfcc2234f076e011702265433fcdce14c29514546ed74ebf0bec090275ab62c"
+      },
+      "limit": null
+    },
+    {
+      "id": "primary_hash:finvector_abs_latest",
+      "status": "pass",
+      "evidence": {
+        "path": "research/evidence/v48_reference_20261018/finvector_abs_latest.html",
+        "url": "https://arxiv.org/abs/2610.08882",
+        "sha256": "f725bc2f591079d4d2d357e4f0c92165836eaab2fd6733bfe81bb33f095a9a49"
+      },
+      "limit": null
+    },
+    {
+      "id": "primary_hash:finvector_pdf_v1",
+      "status": "pass",
+      "evidence": {
+        "path": "research/evidence/v45_structured_output_20261018/finvector_2610_08882.pdf",
+        "url": "https://arxiv.org/pdf/2610.08882v1",
+        "sha256": "a7551b10caddb0d9f94a215f29fad4771f5cd2addae56ea43d706f7c5c1c1dfa"
+      },
+      "limit": null
+    },
+    {
+      "id": "current_primary_version:uptake",
+      "status": "pass",
+      "evidence": {
+        "url": "https://arxiv.org/abs/2607.15388v1",
+        "dateline": "[Submitted on 16 Jul 2026]"
+      },
+      "limit": "Verified on retrieval; targeted review, not proof that no unindexed later version exists."
+    },
+    {
+      "id": "current_primary_version:symbolic",
+      "status": "pass",
+      "evidence": {
+        "url": "https://arxiv.org/abs/2606.27757v1",
+        "dateline": "[Submitted on 26 Jun 2026]"
+      },
+      "limit": "Verified on retrieval; targeted review, not proof that no unindexed later version exists."
+    },
+    {
+      "id": "current_primary_version:finfirst",
+      "status": "pass",
+      "evidence": {
+        "url": "https://arxiv.org/abs/2609.25192v1",
+        "dateline": "[Submitted on 21 Sep 2026]"
+      },
+      "limit": "Verified on retrieval; targeted review, not proof that no unindexed later version exists."
+    },
+    {
+      "id": "current_primary_version:externalization",
+      "status": "pass",
+      "evidence": {
+        "url": "https://arxiv.org/abs/2609.38869v2",
+        "dateline": "[Submitted on 30 Sep 2026 ( v1 ), last revised 6 Oct 2026 (this version, v2)]"
+      },
+      "limit": "Verified on retrieval; targeted review, not proof that no unindexed later version exists."
+    },
+    {
+      "id": "current_primary_version:e2a",
+      "status": "pass",
+      "evidence": {
+        "url": "https://arxiv.org/abs/2609.14302v1",
+        "dateline": "[Submitted on 13 Sep 2026]"
+      },
+      "limit": "Verified on retrieval; targeted review, not proof that no unindexed later version exists."
+    },
+    {
+      "id": "current_primary_version:fundapod",
+      "status": "pass",
+      "evidence": {
+        "url": "https://arxiv.org/abs/2605.27864v5",
+        "dateline": "[Submitted on 27 May 2026 ( v1 ), last revised 14 Sep 2026 (this version, v5)]"
+      },
+      "limit": "Verified on retrieval; targeted review, not proof that no unindexed later version exists."
+    },
+    {
+      "id": "current_primary_version:instrument",
+      "status": "pass",
+      "evidence": {
+        "url": "https://arxiv.org/abs/2609.19844v2",
+        "dateline": "[Submitted on 17 Sep 2026 ( v1 ), last revised 9 Oct 2026 (this version, v2)]"
+      },
+      "limit": "Verified on retrieval; targeted review, not proof that no unindexed later version exists."
+    },
+    {
+      "id": "PortBench_latest_v6",
+      "status": "pass",
+      "evidence": {
+        "url": "https://arxiv.org/abs/2605.27887",
+        "dateline": "[Submitted on 27 May 2026 ( v1 ), last revised 9 Oct 2026 (this version, v6)]"
+      },
+      "limit": null
+    },
+    {
+      "id": "FinVector_latest_v1",
+      "status": "pass",
+      "evidence": {
+        "url": "https://arxiv.org/abs/2610.08882",
+        "dateline": "[Submitted on 6 Oct 2026]"
+      },
+      "limit": null
+    },
+    {
+      "id": "Xiao_author_year:plan/LIBERA_실험계획_v4.8_20261018.html",
+      "status": "pass",
+      "evidence": {
+        "file": "plan/LIBERA_실험계획_v4.8_20261018.html",
+        "primary": "https://arxiv.org/abs/2609.19844v2"
+      },
+      "limit": "Author order, registered title, 2026 date and v2 checked; no proceedings DOI invented."
+    },
+    {
+      "id": "Yang_memory_attribution:plan/LIBERA_실험계획_v4.8_20261018.html",
+      "status": "pass",
+      "evidence": {
+        "file": "plan/LIBERA_실험계획_v4.8_20261018.html",
+        "source": "https://arxiv.org/html/2607.15388v1",
+        "locator": "Appendix I.5"
+      },
+      "limit": "The current full-history method is explicitly a LIBERA adaptation."
+    },
+    {
+      "id": "seed_provenance_separated:plan/LIBERA_실험계획_v4.8_20261018.html",
+      "status": "pass",
+      "evidence": {
+        "file": "plan/LIBERA_실험계획_v4.8_20261018.html",
+        "source": "https://arxiv.org/pdf/2610.08882v1",
+        "locator": "Section 4.1, PDF page 4"
+      },
+      "limit": "Same number does not mean identical backend or deterministic cross-engine output."
+    },
+    {
+      "id": "PortBench_precise_locators:plan/LIBERA_실험계획_v4.8_20261018.html",
+      "status": "pass",
+      "evidence": {
+        "file": "plan/LIBERA_실험계획_v4.8_20261018.html",
+        "source": "https://arxiv.org/html/2605.27887v6"
+      },
+      "limit": "60-day multi-asset T5 input is transferred to sector ETFs; Eq8 reference similarity becomes a descriptive distance."
+    },
+    {
+      "id": "completed_case_call_accounting:plan/LIBERA_실험계획_v4.8_20261018.html",
+      "status": "pass",
+      "evidence": {
+        "file": "plan/LIBERA_실험계획_v4.8_20261018.html",
+        "contract": "prompt_contract.json core_failure_policy"
+      },
+      "limit": "Unstarted stages after a case failure are not attempted generation failures."
+    },
+    {
+      "id": "E2A_corrected_scope:plan/LIBERA_실험계획_v4.8_20261018.html",
+      "status": "pass",
+      "evidence": {
+        "file": "plan/LIBERA_실험계획_v4.8_20261018.html",
+        "source": "https://arxiv.org/html/2609.14302v1"
+      },
+      "limit": "The cited source does not define a unique sector-weight gold or validate LIBERA qualitative categories."
+    },
+    {
+      "id": "invalid_C0_not_zero_effect:plan/LIBERA_실험계획_v4.8_20261018.html",
+      "status": "pass",
+      "evidence": {
+        "file": "plan/LIBERA_실험계획_v4.8_20261018.html",
+        "sources": [
+          "https://arxiv.org/html/2609.14302v1",
+          "https://arxiv.org/html/2609.19844v2"
+        ]
+      },
+      "limit": "Readable rationale remains separately reviewable; invalid vectors cannot supply a valid-portfolio risk/distance estimate."
+    },
+    {
+      "id": "frozen_history_not_regraded:plan/LIBERA_실험계획_v4.8_20261018.html",
+      "status": "pass",
+      "evidence": {
+        "file": "plan/LIBERA_실험계획_v4.8_20261018.html",
+        "basis": "v4.8 forward-only measurement gate"
+      },
+      "limit": "Changing future design does not solve the old model failures."
+    },
+    {
+      "id": "Xiao_author_year:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+      "status": "pass",
+      "evidence": {
+        "file": "paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+        "primary": "https://arxiv.org/abs/2609.19844v2"
+      },
+      "limit": "Author order, registered title, 2026 date and v2 checked; no proceedings DOI invented."
+    },
+    {
+      "id": "Yang_memory_attribution:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+      "status": "pass",
+      "evidence": {
+        "file": "paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+        "source": "https://arxiv.org/html/2607.15388v1",
+        "locator": "Appendix I.5"
+      },
+      "limit": "The current full-history method is explicitly a LIBERA adaptation."
+    },
+    {
+      "id": "seed_provenance_separated:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+      "status": "pass",
+      "evidence": {
+        "file": "paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+        "source": "https://arxiv.org/pdf/2610.08882v1",
+        "locator": "Section 4.1, PDF page 4"
+      },
+      "limit": "Same number does not mean identical backend or deterministic cross-engine output."
+    },
+    {
+      "id": "PortBench_precise_locators:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+      "status": "pass",
+      "evidence": {
+        "file": "paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+        "source": "https://arxiv.org/html/2605.27887v6"
+      },
+      "limit": "60-day multi-asset T5 input is transferred to sector ETFs; Eq8 reference similarity becomes a descriptive distance."
+    },
+    {
+      "id": "completed_case_call_accounting:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+      "status": "pass",
+      "evidence": {
+        "file": "paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+        "contract": "prompt_contract.json core_failure_policy"
+      },
+      "limit": "Unstarted stages after a case failure are not attempted generation failures."
+    },
+    {
+      "id": "E2A_corrected_scope:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+      "status": "pass",
+      "evidence": {
+        "file": "paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+        "source": "https://arxiv.org/html/2609.14302v1"
+      },
+      "limit": "The cited source does not define a unique sector-weight gold or validate LIBERA qualitative categories."
+    },
+    {
+      "id": "invalid_C0_not_zero_effect:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+      "status": "pass",
+      "evidence": {
+        "file": "paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+        "sources": [
+          "https://arxiv.org/html/2609.14302v1",
+          "https://arxiv.org/html/2609.19844v2"
+        ]
+      },
+      "limit": "Readable rationale remains separately reviewable; invalid vectors cannot supply a valid-portfolio risk/distance estimate."
+    },
+    {
+      "id": "frozen_history_not_regraded:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+      "status": "pass",
+      "evidence": {
+        "file": "paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+        "basis": "v4.8 forward-only measurement gate"
+      },
+      "limit": "Changing future design does not solve the old model failures."
+    },
+    {
+      "id": "seed_not_pure_unsourced_engineering",
+      "status": "pass",
+      "evidence": {
+        "path": "plan/LIBERA_실험설정_v4.8_20261018.json",
+        "parameter": "seed3407"
+      },
+      "limit": null
+    },
+    {
+      "id": "budget_C0_plus_two",
+      "status": "pass",
+      "evidence": {
+        "paper": "https://arxiv.org/html/2607.15388v1",
+        "locator": "Appendix I Table12",
+        "calculation": "C0+2 endpoint submissions; original4+2=6 model calls; 4cases*6=24 maximum"
+      },
+      "limit": "The original paper cap is not three extra calls, an optimal budget or the same four-stage protocol."
+    },
+    {
+      "id": "C0_always_primary",
+      "status": "pass",
+      "evidence": {
+        "config": "primary_output",
+        "evaluation": "endpoint_policy"
+      },
+      "limit": "C0 already includes the original stage1-3 history and feedback."
+    },
+    {
+      "id": "arithmetic_only_repair",
+      "status": "pass",
+      "evidence": {
+        "prompt": "auxiliary_repair",
+        "evaluation": "endpoint_policy/post_C0_arithmetic_repair"
+      },
+      "limit": "Eligibility is a LIBERA design rule; the source studies did not validate this exact finance-specific subset."
+    },
+    {
+      "id": "same_policy_not_equal_realized_compute",
+      "status": "pass",
+      "evidence": {
+        "config": "auxiliary_repair/meaning"
+      },
+      "limit": "The post-repair contrast is not an isolated causal effect of repair or timing."
+    },
+    {
+      "id": "no_host_or_gold_correction",
+      "status": "pass",
+      "evidence": {
+        "prompt": "feedback",
+        "evaluation": "execution_and_feasibility"
+      },
+      "limit": "Source-label or semantic errors cannot unlock extra revision calls."
+    },
+    {
+      "id": "valid_pair_and_denominator_policy",
+      "status": "pass",
+      "evidence": {
+        "evaluation": "denominators and descriptive_measures"
+      },
+      "limit": "Eleven sectors and successive candidates are dependent observations, not independent institution replications."
+    },
+    {
+      "id": "three_review_rule_not_paper_sample_size",
+      "status": "pass",
+      "evidence": {
+        "basis": "numeric_provenance",
+        "config": "primary_output"
+      },
+      "limit": "Design checks do not require favorable model outcomes or a hand-chosen accuracy threshold."
+    },
+    {
+      "id": "measurement_gate_not_model_pass",
+      "status": "pass",
+      "evidence": {
+        "source": "https://arxiv.org/html/2609.19844v2",
+        "locator": "Sections V-VII",
+        "config": "readiness_gate"
+      },
+      "limit": "Other-domain precedent supports measurement integrity; it does not make invalid finance outputs valid or authorize effect claims after a measurement failure."
+    },
+    {
+      "id": "fact_registry_scope_and_free_text_limit",
+      "status": "pass",
+      "evidence": {
+        "source": "https://arxiv.org/html/2609.38869v2",
+        "locator": "Sections3.4-3.5,4.1.2",
+        "evaluation": "numeric_fact_faithfulness"
+      },
+      "limit": "LIBERA retains seven model fields and extracts claim tuples offline; this is not the paper explicit structured-claim output contract."
+    },
+    {
+      "id": "FinFIRST_prompt_rubric_alignment",
+      "status": "pass",
+      "evidence": {
+        "source": "https://arxiv.org/html/2609.25192v1",
+        "locator": "Sections2.2.2-2.3"
+      },
+      "limit": "Exact IDs and exact labels alone cannot certify evidence support or investment reasoning."
+    },
+    {
+      "id": "E2A_no_unique_strategy_gold",
+      "status": "pass",
+      "evidence": {
+        "source": "https://arxiv.org/html/2609.14302v1",
+        "locator": "Sections3.3-3.4"
+      },
+      "limit": "BUY/SELL truth, NDR weights and confidence thresholds are not imported."
+    },
+    {
+      "id": "human_review_and_execution_not_claimed",
+      "status": "pass",
+      "evidence": {
+        "config": "current_execution"
+      },
+      "limit": "This audit checks design and source support, not runtime integration or human semantic quality."
+    },
+    {
+      "id": "prior_basis_unchanged",
+      "status": "pass",
+      "evidence": {
+        "path": "research/v48_reference_basis_20261018.json"
+      },
+      "limit": null
+    },
+    {
+      "id": "inputs_stable_until_audit_save",
+      "status": "pass",
+      "evidence": {
+        "input_count": 12
+      },
+      "limit": null
+    }
+  ],
+  "resolved_review_findings": [
+    "Seed3407 now separates the published FinVector value from Ollama backend adaptation.",
+    "Trust/Instrument in-text citation now identifies Xiao et al.; preserved metadata confirms all five authors and v2.",
+    "Compact-memory statement names Yang single-agent iteration rather than ambiguously attaching to Zhang.",
+    "PortBench60/C.1T5,252/C.4+F.9,Eq8/C.2 and8192/3.1 are separately located and their adaptations disclosed.",
+    "Four core calls are described for completed cases, while stopped and unstarted stages remain distinct."
+  ],
+  "limitations": [
+    "Support for a design pattern does not establish effectiveness for a small quantized finance model.",
+    "New readiness rules are forward-only; v4.6/v4.7 numerical and correction-claim failures remain failures.",
+    "If valid C0 pairs do not exist, allocation contrast remains unobserved and must not be replaced by repaired candidates or zero distance.",
+    "Public institution views do not define private preferences, mandates, exact target weights or a unique amount of necessary between-institution difference.",
+    "Full-history retention differs from the compact repair memory used in the cited source; R1/R4 does not isolate a pure internal memory mechanism.",
+    "Runtime implementation, full pilot accounting, source review by a human and the main freeze remain pending.",
+    "Literature verification is targeted; no claim of exhaustive current literature coverage is made."
+  ],
+  "model_calls": 0,
+  "main_model_calls": 0,
+  "main_ready": false,
+  "main_frozen": false,
+  "reviewed_artifacts_modified": false
+}

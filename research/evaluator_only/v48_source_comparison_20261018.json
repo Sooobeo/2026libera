@@ -1,0 +1,1203 @@
+{
+  "version": "v4.8-design",
+  "visibility": "EVALUATOR_ONLY_NEVER_MODEL_INPUT",
+  "status": "source-only_inventory_prepared_independent_human_review_pending",
+  "policy": "Prepared before v4.8 outputs; no unique weight gold, no translation of UBS Attractive into Fidelity Overweight; comparison categories require source review.",
+  "splits": {
+    "pilot": {
+      "inputs": [
+        {
+          "path": "data/sector_documents/packets/pilot/fidelity_q2_2026.json",
+          "sha256": "2f506f346ebfc1be0f327163eb016dcec649e6301e4494d6a9230ab86c28d406"
+        },
+        {
+          "path": "data/sector_documents/packets/pilot/ubs_june_2026.json",
+          "sha256": "a5cadf72d68cafe46244c9bf8e500da04e1c58aef12eaf493e76408654e6148a"
+        }
+      ],
+      "rows": [
+        {
+          "record_id": "pilot:source_comparison:10",
+          "sector_code": "10",
+          "sources": [
+            {
+              "source_id": "fidelity_q2_2026",
+              "passages": [
+                {
+                  "evidence_id": "fidelity_q2_2026:p3:sector:10",
+                  "source_id": "fidelity_q2_2026",
+                  "source_page": 3,
+                  "text": "Energy receives Underweight. Unfavorable risk-return indicators.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Underweight",
+                "Neutral",
+                "Overweight"
+              ],
+              "source_review": null
+            },
+            {
+              "source_id": "ubs_june_2026",
+              "passages": [
+                {
+                  "evidence_id": "ubs_june_2026:p21:sector:10",
+                  "source_id": "ubs_june_2026",
+                  "source_page": 21,
+                  "text": "Energy receives Neutral.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Unattractive",
+                "Neutral",
+                "Attractive"
+              ],
+              "source_review": null
+            }
+          ],
+          "comparison": null,
+          "comparison_allowed": [
+            "substantive_difference_supported",
+            "similarity_supported",
+            "different_scales_not_directly_comparable",
+            "insufficient_evidence",
+            "uncertain"
+          ],
+          "reviewer": null,
+          "review_evidence": null,
+          "warning": "Different label vocabulary alone does not establish a substantive disagreement."
+        },
+        {
+          "record_id": "pilot:source_comparison:15",
+          "sector_code": "15",
+          "sources": [
+            {
+              "source_id": "fidelity_q2_2026",
+              "passages": [
+                {
+                  "evidence_id": "fidelity_q2_2026:p3:sector:15",
+                  "source_id": "fidelity_q2_2026",
+                  "source_page": 3,
+                  "text": "Materials receives Underweight. Higher capital spending may burden the sector.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Underweight",
+                "Neutral",
+                "Overweight"
+              ],
+              "source_review": null
+            },
+            {
+              "source_id": "ubs_june_2026",
+              "passages": [
+                {
+                  "evidence_id": "ubs_june_2026:p21:sector:15",
+                  "source_id": "ubs_june_2026",
+                  "source_page": 21,
+                  "text": "Materials receives Neutral.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Unattractive",
+                "Neutral",
+                "Attractive"
+              ],
+              "source_review": null
+            }
+          ],
+          "comparison": null,
+          "comparison_allowed": [
+            "substantive_difference_supported",
+            "similarity_supported",
+            "different_scales_not_directly_comparable",
+            "insufficient_evidence",
+            "uncertain"
+          ],
+          "reviewer": null,
+          "review_evidence": null,
+          "warning": "Different label vocabulary alone does not establish a substantive disagreement."
+        },
+        {
+          "record_id": "pilot:source_comparison:20",
+          "sector_code": "20",
+          "sources": [
+            {
+              "source_id": "fidelity_q2_2026",
+              "passages": [
+                {
+                  "evidence_id": "fidelity_q2_2026:p3:sector:20",
+                  "source_id": "fidelity_q2_2026",
+                  "source_page": 3,
+                  "text": "Industrials receives Overweight. Forward-looking valuation evidence is favorable.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Underweight",
+                "Neutral",
+                "Overweight"
+              ],
+              "source_review": null
+            },
+            {
+              "source_id": "ubs_june_2026",
+              "passages": [
+                {
+                  "evidence_id": "ubs_june_2026:p21:sector:20",
+                  "source_id": "ubs_june_2026",
+                  "source_page": 21,
+                  "text": "Industrials receives Attractive. Aerospace growth and transportation's cyclical potential.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Unattractive",
+                "Neutral",
+                "Attractive"
+              ],
+              "source_review": null
+            }
+          ],
+          "comparison": null,
+          "comparison_allowed": [
+            "substantive_difference_supported",
+            "similarity_supported",
+            "different_scales_not_directly_comparable",
+            "insufficient_evidence",
+            "uncertain"
+          ],
+          "reviewer": null,
+          "review_evidence": null,
+          "warning": "Different label vocabulary alone does not establish a substantive disagreement."
+        },
+        {
+          "record_id": "pilot:source_comparison:25",
+          "sector_code": "25",
+          "sources": [
+            {
+              "source_id": "fidelity_q2_2026",
+              "passages": [
+                {
+                  "evidence_id": "fidelity_q2_2026:p3:sector:25",
+                  "source_id": "fidelity_q2_2026",
+                  "source_page": 3,
+                  "text": "Consumer Discretionary receives Overweight. Forward valuations imply favorable risk-return.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Underweight",
+                "Neutral",
+                "Overweight"
+              ],
+              "source_review": null
+            },
+            {
+              "source_id": "ubs_june_2026",
+              "passages": [
+                {
+                  "evidence_id": "ubs_june_2026:p21:sector:25",
+                  "source_id": "ubs_june_2026",
+                  "source_page": 21,
+                  "text": "Consumer Discretionary receives Attractive. AI adoption and fiscal support for consumer spending.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Unattractive",
+                "Neutral",
+                "Attractive"
+              ],
+              "source_review": null
+            }
+          ],
+          "comparison": null,
+          "comparison_allowed": [
+            "substantive_difference_supported",
+            "similarity_supported",
+            "different_scales_not_directly_comparable",
+            "insufficient_evidence",
+            "uncertain"
+          ],
+          "reviewer": null,
+          "review_evidence": null,
+          "warning": "Different label vocabulary alone does not establish a substantive disagreement."
+        },
+        {
+          "record_id": "pilot:source_comparison:30",
+          "sector_code": "30",
+          "sources": [
+            {
+              "source_id": "fidelity_q2_2026",
+              "passages": [
+                {
+                  "evidence_id": "fidelity_q2_2026:p3:sector:30",
+                  "source_id": "fidelity_q2_2026",
+                  "source_page": 3,
+                  "text": "Consumer Staples receives Underweight. Weak fundamentals raise value-trap concerns.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Underweight",
+                "Neutral",
+                "Overweight"
+              ],
+              "source_review": null
+            },
+            {
+              "source_id": "ubs_june_2026",
+              "passages": [
+                {
+                  "evidence_id": "ubs_june_2026:p21:sector:30",
+                  "source_id": "ubs_june_2026",
+                  "source_page": 21,
+                  "text": "Consumer Staples receives Neutral.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Unattractive",
+                "Neutral",
+                "Attractive"
+              ],
+              "source_review": null
+            }
+          ],
+          "comparison": null,
+          "comparison_allowed": [
+            "substantive_difference_supported",
+            "similarity_supported",
+            "different_scales_not_directly_comparable",
+            "insufficient_evidence",
+            "uncertain"
+          ],
+          "reviewer": null,
+          "review_evidence": null,
+          "warning": "Different label vocabulary alone does not establish a substantive disagreement."
+        },
+        {
+          "record_id": "pilot:source_comparison:35",
+          "sector_code": "35",
+          "sources": [
+            {
+              "source_id": "fidelity_q2_2026",
+              "passages": [
+                {
+                  "evidence_id": "fidelity_q2_2026:p3:sector:35",
+                  "source_id": "fidelity_q2_2026",
+                  "source_page": 3,
+                  "text": "Health Care receives Neutral. Risk-return evidence is balanced.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Underweight",
+                "Neutral",
+                "Overweight"
+              ],
+              "source_review": null
+            },
+            {
+              "source_id": "ubs_june_2026",
+              "passages": [
+                {
+                  "evidence_id": "ubs_june_2026:p21:sector:35",
+                  "source_id": "ubs_june_2026",
+                  "source_page": 21,
+                  "text": "Health Care receives Attractive. Resilience if economic growth disappoints.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Unattractive",
+                "Neutral",
+                "Attractive"
+              ],
+              "source_review": null
+            }
+          ],
+          "comparison": null,
+          "comparison_allowed": [
+            "substantive_difference_supported",
+            "similarity_supported",
+            "different_scales_not_directly_comparable",
+            "insufficient_evidence",
+            "uncertain"
+          ],
+          "reviewer": null,
+          "review_evidence": null,
+          "warning": "Different label vocabulary alone does not establish a substantive disagreement."
+        },
+        {
+          "record_id": "pilot:source_comparison:40",
+          "sector_code": "40",
+          "sources": [
+            {
+              "source_id": "fidelity_q2_2026",
+              "passages": [
+                {
+                  "evidence_id": "fidelity_q2_2026:p3:sector:40",
+                  "source_id": "fidelity_q2_2026",
+                  "source_page": 3,
+                  "text": "Financials receives Overweight. Relative valuations offer downside support.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Underweight",
+                "Neutral",
+                "Overweight"
+              ],
+              "source_review": null
+            },
+            {
+              "source_id": "ubs_june_2026",
+              "passages": [
+                {
+                  "evidence_id": "ubs_june_2026:p21:sector:40",
+                  "source_id": "ubs_june_2026",
+                  "source_page": 21,
+                  "text": "Financials receives Attractive. Regulatory easing and capital-markets activity.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Unattractive",
+                "Neutral",
+                "Attractive"
+              ],
+              "source_review": null
+            }
+          ],
+          "comparison": null,
+          "comparison_allowed": [
+            "substantive_difference_supported",
+            "similarity_supported",
+            "different_scales_not_directly_comparable",
+            "insufficient_evidence",
+            "uncertain"
+          ],
+          "reviewer": null,
+          "review_evidence": null,
+          "warning": "Different label vocabulary alone does not establish a substantive disagreement."
+        },
+        {
+          "record_id": "pilot:source_comparison:45",
+          "sector_code": "45",
+          "sources": [
+            {
+              "source_id": "fidelity_q2_2026",
+              "passages": [
+                {
+                  "evidence_id": "fidelity_q2_2026:p3:sector:45",
+                  "source_id": "fidelity_q2_2026",
+                  "source_page": 3,
+                  "text": "Information Technology receives Overweight. Fundamentals and post-decline valuations support the view.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Underweight",
+                "Neutral",
+                "Overweight"
+              ],
+              "source_review": null
+            },
+            {
+              "source_id": "ubs_june_2026",
+              "passages": [
+                {
+                  "evidence_id": "ubs_june_2026:p21:sector:45",
+                  "source_id": "ubs_june_2026",
+                  "source_page": 21,
+                  "text": "Information Technology receives Neutral.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Unattractive",
+                "Neutral",
+                "Attractive"
+              ],
+              "source_review": null
+            }
+          ],
+          "comparison": null,
+          "comparison_allowed": [
+            "substantive_difference_supported",
+            "similarity_supported",
+            "different_scales_not_directly_comparable",
+            "insufficient_evidence",
+            "uncertain"
+          ],
+          "reviewer": null,
+          "review_evidence": null,
+          "warning": "Different label vocabulary alone does not establish a substantive disagreement."
+        },
+        {
+          "record_id": "pilot:source_comparison:50",
+          "sector_code": "50",
+          "sources": [
+            {
+              "source_id": "fidelity_q2_2026",
+              "passages": [
+                {
+                  "evidence_id": "fidelity_q2_2026:p3:sector:50",
+                  "source_id": "fidelity_q2_2026",
+                  "source_page": 3,
+                  "text": "Communication Services receives Underweight. Technology-related components fare better than defensive components.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Underweight",
+                "Neutral",
+                "Overweight"
+              ],
+              "source_review": null
+            },
+            {
+              "source_id": "ubs_june_2026",
+              "passages": [
+                {
+                  "evidence_id": "ubs_june_2026:p21:sector:50",
+                  "source_id": "ubs_june_2026",
+                  "source_page": 21,
+                  "text": "Communication Services receives Neutral.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Unattractive",
+                "Neutral",
+                "Attractive"
+              ],
+              "source_review": null
+            }
+          ],
+          "comparison": null,
+          "comparison_allowed": [
+            "substantive_difference_supported",
+            "similarity_supported",
+            "different_scales_not_directly_comparable",
+            "insufficient_evidence",
+            "uncertain"
+          ],
+          "reviewer": null,
+          "review_evidence": null,
+          "warning": "Different label vocabulary alone does not establish a substantive disagreement."
+        },
+        {
+          "record_id": "pilot:source_comparison:55",
+          "sector_code": "55",
+          "sources": [
+            {
+              "source_id": "fidelity_q2_2026",
+              "passages": [
+                {
+                  "evidence_id": "fidelity_q2_2026:p3:sector:55",
+                  "source_id": "fidelity_q2_2026",
+                  "source_page": 3,
+                  "text": "Utilities receives Underweight. Valuations are unfavorable.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Underweight",
+                "Neutral",
+                "Overweight"
+              ],
+              "source_review": null
+            },
+            {
+              "source_id": "ubs_june_2026",
+              "passages": [
+                {
+                  "evidence_id": "ubs_june_2026:p21:sector:55",
+                  "source_id": "ubs_june_2026",
+                  "source_page": 21,
+                  "text": "Utilities receives Attractive. Defensive resilience and AI-related exposure.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Unattractive",
+                "Neutral",
+                "Attractive"
+              ],
+              "source_review": null
+            }
+          ],
+          "comparison": null,
+          "comparison_allowed": [
+            "substantive_difference_supported",
+            "similarity_supported",
+            "different_scales_not_directly_comparable",
+            "insufficient_evidence",
+            "uncertain"
+          ],
+          "reviewer": null,
+          "review_evidence": null,
+          "warning": "Different label vocabulary alone does not establish a substantive disagreement."
+        },
+        {
+          "record_id": "pilot:source_comparison:60",
+          "sector_code": "60",
+          "sources": [
+            {
+              "source_id": "fidelity_q2_2026",
+              "passages": [
+                {
+                  "evidence_id": "fidelity_q2_2026:p3:sector:60",
+                  "source_id": "fidelity_q2_2026",
+                  "source_page": 3,
+                  "text": "Real Estate receives Overweight. Valuation dispersion offers favorable risk-return.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Underweight",
+                "Neutral",
+                "Overweight"
+              ],
+              "source_review": null
+            },
+            {
+              "source_id": "ubs_june_2026",
+              "passages": [
+                {
+                  "evidence_id": "ubs_june_2026:p21:sector:60",
+                  "source_id": "ubs_june_2026",
+                  "source_page": 21,
+                  "text": "Real Estate receives Neutral.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Unattractive",
+                "Neutral",
+                "Attractive"
+              ],
+              "source_review": null
+            }
+          ],
+          "comparison": null,
+          "comparison_allowed": [
+            "substantive_difference_supported",
+            "similarity_supported",
+            "different_scales_not_directly_comparable",
+            "insufficient_evidence",
+            "uncertain"
+          ],
+          "reviewer": null,
+          "review_evidence": null,
+          "warning": "Different label vocabulary alone does not establish a substantive disagreement."
+        }
+      ]
+    },
+    "main": {
+      "inputs": [
+        {
+          "path": "data/sector_documents/packets/main/fidelity_q3_2026.json",
+          "sha256": "3f84c5d1e1302238fd270b41f1b9bcf86e3ae5c8c44a74f7a49a19941407d297"
+        },
+        {
+          "path": "data/sector_documents/packets/main/ubs_july_2026.json",
+          "sha256": "49f47f8c628b53231cdfb09fa90eabfa0a5d271fb6a439e75360bdb97db29d30"
+        }
+      ],
+      "rows": [
+        {
+          "record_id": "main:source_comparison:10",
+          "sector_code": "10",
+          "sources": [
+            {
+              "source_id": "fidelity_q3_2026",
+              "passages": [
+                {
+                  "evidence_id": "fidelity_q3_2026:p3:sector:10",
+                  "source_id": "fidelity_q3_2026",
+                  "source_page": 3,
+                  "text": "Energy receives Underweight. Unfavorable risk-return indicators.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Underweight",
+                "Neutral",
+                "Overweight"
+              ],
+              "source_review": null
+            },
+            {
+              "source_id": "ubs_july_2026",
+              "passages": [
+                {
+                  "evidence_id": "ubs_july_2026:p21:sector:10",
+                  "source_id": "ubs_july_2026",
+                  "source_page": 21,
+                  "text": "Energy receives Neutral.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Unattractive",
+                "Neutral",
+                "Attractive"
+              ],
+              "source_review": null
+            }
+          ],
+          "comparison": null,
+          "comparison_allowed": [
+            "substantive_difference_supported",
+            "similarity_supported",
+            "different_scales_not_directly_comparable",
+            "insufficient_evidence",
+            "uncertain"
+          ],
+          "reviewer": null,
+          "review_evidence": null,
+          "warning": "Different label vocabulary alone does not establish a substantive disagreement."
+        },
+        {
+          "record_id": "main:source_comparison:15",
+          "sector_code": "15",
+          "sources": [
+            {
+              "source_id": "fidelity_q3_2026",
+              "passages": [
+                {
+                  "evidence_id": "fidelity_q3_2026:p3:sector:15",
+                  "source_id": "fidelity_q3_2026",
+                  "source_page": 3,
+                  "text": "Materials receives Overweight. Selected mining opportunities.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Underweight",
+                "Neutral",
+                "Overweight"
+              ],
+              "source_review": null
+            },
+            {
+              "source_id": "ubs_july_2026",
+              "passages": [
+                {
+                  "evidence_id": "ubs_july_2026:p21:sector:15",
+                  "source_id": "ubs_july_2026",
+                  "source_page": 21,
+                  "text": "Materials receives Neutral.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Unattractive",
+                "Neutral",
+                "Attractive"
+              ],
+              "source_review": null
+            }
+          ],
+          "comparison": null,
+          "comparison_allowed": [
+            "substantive_difference_supported",
+            "similarity_supported",
+            "different_scales_not_directly_comparable",
+            "insufficient_evidence",
+            "uncertain"
+          ],
+          "reviewer": null,
+          "review_evidence": null,
+          "warning": "Different label vocabulary alone does not establish a substantive disagreement."
+        },
+        {
+          "record_id": "main:source_comparison:20",
+          "sector_code": "20",
+          "sources": [
+            {
+              "source_id": "fidelity_q3_2026",
+              "passages": [
+                {
+                  "evidence_id": "fidelity_q3_2026:p3:sector:20",
+                  "source_id": "fidelity_q3_2026",
+                  "source_page": 3,
+                  "text": "Industrials receives Overweight. Forward-looking valuation evidence is favorable.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Underweight",
+                "Neutral",
+                "Overweight"
+              ],
+              "source_review": null
+            },
+            {
+              "source_id": "ubs_july_2026",
+              "passages": [
+                {
+                  "evidence_id": "ubs_july_2026:p21:sector:20",
+                  "source_id": "ubs_july_2026",
+                  "source_page": 21,
+                  "text": "Industrials receives Attractive. Aerospace growth and transportation's cyclical potential.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Unattractive",
+                "Neutral",
+                "Attractive"
+              ],
+              "source_review": null
+            }
+          ],
+          "comparison": null,
+          "comparison_allowed": [
+            "substantive_difference_supported",
+            "similarity_supported",
+            "different_scales_not_directly_comparable",
+            "insufficient_evidence",
+            "uncertain"
+          ],
+          "reviewer": null,
+          "review_evidence": null,
+          "warning": "Different label vocabulary alone does not establish a substantive disagreement."
+        },
+        {
+          "record_id": "main:source_comparison:25",
+          "sector_code": "25",
+          "sources": [
+            {
+              "source_id": "fidelity_q3_2026",
+              "passages": [
+                {
+                  "evidence_id": "fidelity_q3_2026:p3:sector:25",
+                  "source_id": "fidelity_q3_2026",
+                  "source_page": 3,
+                  "text": "Consumer Discretionary receives Overweight. Forward valuations imply favorable risk-return.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Underweight",
+                "Neutral",
+                "Overweight"
+              ],
+              "source_review": null
+            },
+            {
+              "source_id": "ubs_july_2026",
+              "passages": [
+                {
+                  "evidence_id": "ubs_july_2026:p21:sector:25",
+                  "source_id": "ubs_july_2026",
+                  "source_page": 21,
+                  "text": "Consumer Discretionary receives Attractive. AI adoption, fiscal support, wealth effects, and fading tariff pressure.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Unattractive",
+                "Neutral",
+                "Attractive"
+              ],
+              "source_review": null
+            }
+          ],
+          "comparison": null,
+          "comparison_allowed": [
+            "substantive_difference_supported",
+            "similarity_supported",
+            "different_scales_not_directly_comparable",
+            "insufficient_evidence",
+            "uncertain"
+          ],
+          "reviewer": null,
+          "review_evidence": null,
+          "warning": "Different label vocabulary alone does not establish a substantive disagreement."
+        },
+        {
+          "record_id": "main:source_comparison:30",
+          "sector_code": "30",
+          "sources": [
+            {
+              "source_id": "fidelity_q3_2026",
+              "passages": [
+                {
+                  "evidence_id": "fidelity_q3_2026:p3:sector:30",
+                  "source_id": "fidelity_q3_2026",
+                  "source_page": 3,
+                  "text": "Consumer Staples receives Underweight. Weak fundamentals raise value-trap concerns.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Underweight",
+                "Neutral",
+                "Overweight"
+              ],
+              "source_review": null
+            },
+            {
+              "source_id": "ubs_july_2026",
+              "passages": [
+                {
+                  "evidence_id": "ubs_july_2026:p21:sector:30",
+                  "source_id": "ubs_july_2026",
+                  "source_page": 21,
+                  "text": "Consumer Staples receives Neutral.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Unattractive",
+                "Neutral",
+                "Attractive"
+              ],
+              "source_review": null
+            }
+          ],
+          "comparison": null,
+          "comparison_allowed": [
+            "substantive_difference_supported",
+            "similarity_supported",
+            "different_scales_not_directly_comparable",
+            "insufficient_evidence",
+            "uncertain"
+          ],
+          "reviewer": null,
+          "review_evidence": null,
+          "warning": "Different label vocabulary alone does not establish a substantive disagreement."
+        },
+        {
+          "record_id": "main:source_comparison:35",
+          "sector_code": "35",
+          "sources": [
+            {
+              "source_id": "fidelity_q3_2026",
+              "passages": [
+                {
+                  "evidence_id": "fidelity_q3_2026:p3:sector:35",
+                  "source_id": "fidelity_q3_2026",
+                  "source_page": 3,
+                  "text": "Health Care receives Neutral. Risk-return evidence is balanced.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Underweight",
+                "Neutral",
+                "Overweight"
+              ],
+              "source_review": null
+            },
+            {
+              "source_id": "ubs_july_2026",
+              "passages": [
+                {
+                  "evidence_id": "ubs_july_2026:p21:sector:35",
+                  "source_id": "ubs_july_2026",
+                  "source_page": 21,
+                  "text": "Health Care receives Attractive. Resilience if economic growth disappoints.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Unattractive",
+                "Neutral",
+                "Attractive"
+              ],
+              "source_review": null
+            }
+          ],
+          "comparison": null,
+          "comparison_allowed": [
+            "substantive_difference_supported",
+            "similarity_supported",
+            "different_scales_not_directly_comparable",
+            "insufficient_evidence",
+            "uncertain"
+          ],
+          "reviewer": null,
+          "review_evidence": null,
+          "warning": "Different label vocabulary alone does not establish a substantive disagreement."
+        },
+        {
+          "record_id": "main:source_comparison:40",
+          "sector_code": "40",
+          "sources": [
+            {
+              "source_id": "fidelity_q3_2026",
+              "passages": [
+                {
+                  "evidence_id": "fidelity_q3_2026:p3:sector:40",
+                  "source_id": "fidelity_q3_2026",
+                  "source_page": 3,
+                  "text": "Financials receives Overweight. Relative valuations offer downside support.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Underweight",
+                "Neutral",
+                "Overweight"
+              ],
+              "source_review": null
+            },
+            {
+              "source_id": "ubs_july_2026",
+              "passages": [
+                {
+                  "evidence_id": "ubs_july_2026:p21:sector:40",
+                  "source_id": "ubs_july_2026",
+                  "source_page": 21,
+                  "text": "Financials receives Attractive. Regulatory easing and capital-markets activity.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Unattractive",
+                "Neutral",
+                "Attractive"
+              ],
+              "source_review": null
+            }
+          ],
+          "comparison": null,
+          "comparison_allowed": [
+            "substantive_difference_supported",
+            "similarity_supported",
+            "different_scales_not_directly_comparable",
+            "insufficient_evidence",
+            "uncertain"
+          ],
+          "reviewer": null,
+          "review_evidence": null,
+          "warning": "Different label vocabulary alone does not establish a substantive disagreement."
+        },
+        {
+          "record_id": "main:source_comparison:45",
+          "sector_code": "45",
+          "sources": [
+            {
+              "source_id": "fidelity_q3_2026",
+              "passages": [
+                {
+                  "evidence_id": "fidelity_q3_2026:p3:sector:45",
+                  "source_id": "fidelity_q3_2026",
+                  "source_page": 3,
+                  "text": "Information Technology receives Overweight. Fundamentals and post-decline valuations support the view.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Underweight",
+                "Neutral",
+                "Overweight"
+              ],
+              "source_review": null
+            },
+            {
+              "source_id": "ubs_july_2026",
+              "passages": [
+                {
+                  "evidence_id": "ubs_july_2026:p21:sector:45",
+                  "source_id": "ubs_july_2026",
+                  "source_page": 21,
+                  "text": "Information Technology receives Neutral.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Unattractive",
+                "Neutral",
+                "Attractive"
+              ],
+              "source_review": null
+            }
+          ],
+          "comparison": null,
+          "comparison_allowed": [
+            "substantive_difference_supported",
+            "similarity_supported",
+            "different_scales_not_directly_comparable",
+            "insufficient_evidence",
+            "uncertain"
+          ],
+          "reviewer": null,
+          "review_evidence": null,
+          "warning": "Different label vocabulary alone does not establish a substantive disagreement."
+        },
+        {
+          "record_id": "main:source_comparison:50",
+          "sector_code": "50",
+          "sources": [
+            {
+              "source_id": "fidelity_q3_2026",
+              "passages": [
+                {
+                  "evidence_id": "fidelity_q3_2026:p3:sector:50",
+                  "source_id": "fidelity_q3_2026",
+                  "source_page": 3,
+                  "text": "Communication Services receives Underweight. Technology-related components fare better than defensive components.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Underweight",
+                "Neutral",
+                "Overweight"
+              ],
+              "source_review": null
+            },
+            {
+              "source_id": "ubs_july_2026",
+              "passages": [
+                {
+                  "evidence_id": "ubs_july_2026:p21:sector:50",
+                  "source_id": "ubs_july_2026",
+                  "source_page": 21,
+                  "text": "Communication Services receives Neutral.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Unattractive",
+                "Neutral",
+                "Attractive"
+              ],
+              "source_review": null
+            }
+          ],
+          "comparison": null,
+          "comparison_allowed": [
+            "substantive_difference_supported",
+            "similarity_supported",
+            "different_scales_not_directly_comparable",
+            "insufficient_evidence",
+            "uncertain"
+          ],
+          "reviewer": null,
+          "review_evidence": null,
+          "warning": "Different label vocabulary alone does not establish a substantive disagreement."
+        },
+        {
+          "record_id": "main:source_comparison:55",
+          "sector_code": "55",
+          "sources": [
+            {
+              "source_id": "fidelity_q3_2026",
+              "passages": [
+                {
+                  "evidence_id": "fidelity_q3_2026:p3:sector:55",
+                  "source_id": "fidelity_q3_2026",
+                  "source_page": 3,
+                  "text": "Utilities receives Underweight. Valuations are unfavorable.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Underweight",
+                "Neutral",
+                "Overweight"
+              ],
+              "source_review": null
+            },
+            {
+              "source_id": "ubs_july_2026",
+              "passages": [
+                {
+                  "evidence_id": "ubs_july_2026:p21:sector:55",
+                  "source_id": "ubs_july_2026",
+                  "source_page": 21,
+                  "text": "Utilities receives Attractive. Defensive resilience and AI-related exposure.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Unattractive",
+                "Neutral",
+                "Attractive"
+              ],
+              "source_review": null
+            }
+          ],
+          "comparison": null,
+          "comparison_allowed": [
+            "substantive_difference_supported",
+            "similarity_supported",
+            "different_scales_not_directly_comparable",
+            "insufficient_evidence",
+            "uncertain"
+          ],
+          "reviewer": null,
+          "review_evidence": null,
+          "warning": "Different label vocabulary alone does not establish a substantive disagreement."
+        },
+        {
+          "record_id": "main:source_comparison:60",
+          "sector_code": "60",
+          "sources": [
+            {
+              "source_id": "fidelity_q3_2026",
+              "passages": [
+                {
+                  "evidence_id": "fidelity_q3_2026:p3:sector:60",
+                  "source_id": "fidelity_q3_2026",
+                  "source_page": 3,
+                  "text": "Real Estate receives Underweight. Possible higher interest rates create a headwind.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Underweight",
+                "Neutral",
+                "Overweight"
+              ],
+              "source_review": null
+            },
+            {
+              "source_id": "ubs_july_2026",
+              "passages": [
+                {
+                  "evidence_id": "ubs_july_2026:p21:sector:60",
+                  "source_id": "ubs_july_2026",
+                  "source_page": 21,
+                  "text": "Real Estate receives Neutral.",
+                  "representation": "researcher paraphrase; original rating labels preserved"
+                }
+              ],
+              "rating_vocabulary": [
+                "Unattractive",
+                "Neutral",
+                "Attractive"
+              ],
+              "source_review": null
+            }
+          ],
+          "comparison": null,
+          "comparison_allowed": [
+            "substantive_difference_supported",
+            "similarity_supported",
+            "different_scales_not_directly_comparable",
+            "insufficient_evidence",
+            "uncertain"
+          ],
+          "reviewer": null,
+          "review_evidence": null,
+          "warning": "Different label vocabulary alone does not establish a substantive disagreement."
+        }
+      ]
+    }
+  },
+  "model_calls": 0
+}

@@ -1,0 +1,181 @@
+{
+  "protocol_version": "4.8",
+  "artifact_kind": "evaluation_design_specification",
+  "as_of_date": "2026-10-18",
+  "status": "design_specification_only_not_implemented_not_frozen",
+  "supersedes_for_future_runs_only": "data/sector_protocol/evaluation_spec.json",
+  "historical_results_policy": "Do not overwrite, rescore as prespecified, or pool v4.4-v4.7 development results with v4.8. Any retrospective application is exploratory and separately labelled.",
+  "current_observation_status": {
+    "v48_model_calls": 0,
+    "v48_main_calls": 0,
+    "independent_human_source_review_completed": false,
+    "independent_human_semantic_review_completed": false,
+    "online_runner_implemented_by_this_artifact": false,
+    "automatic_semantic_certification": false
+  },
+  "research_alignment": {
+    "question_ko": "공통 생성형 AI는 출처별 공개 산업 판단을 근거 있는 산업 배분에 보존하며, 근거를 처음 제공하는 업무 단계에 따라 그 반영이 어떻게 달라지는가?",
+    "unit": "one source document under one workflow arm, with one shared market snapshot",
+    "arms": ["R1", "R4"],
+    "sectors": ["10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60"],
+    "primary_observation": "Document evidence -> interpretation -> stated adoption, qualification, deferral or departure -> allocation rationale -> actual raw allocation, together with completion and feasibility.",
+    "supporting_observation": "Exact source-label extraction and source-scoped citations are factual checks, not the primary strategic-preservation outcome.",
+    "timing_estimand": "A comparison of early versus late evidence provision and subsequent use within the specified workflow; position, context age, generated history and available reconsideration opportunities are not separately identified.",
+    "convergence_interpretation": "Inspect between-source allocation distance jointly with verified source distinctions and the evidence-to-action records. Similarity alone is not harmful homogenization; difference alone is not successful preservation.",
+    "not_identified": [
+      "causal effect of shared-AI adoption relative to no AI",
+      "market-wide convergence, financial stability or welfare",
+      "latent institutional preferences or private investment mandates",
+      "individual-stock selection skill",
+      "hidden thinking, memory or anchoring as an isolated mechanism",
+      "unique optimal strategic weights or future investment performance"
+    ]
+  },
+  "case_roster": {
+    "pilot_sources": ["fidelity_q2_2026", "ubs_june_2026"],
+    "main_sources": ["fidelity_q3_2026", "ubs_july_2026"],
+    "arms_per_source": ["R1", "R4"],
+    "planned_cases_per_split": 4,
+    "planned_count_basis": "Two selected documents times two workflow arms, not a paper-derived power calculation.",
+    "development_exposure": "Fidelity Q2/R1 was repeatedly inspected during development. A later pilot run of that case is not independent confirmation.",
+    "sample_limit": "One document per source within each split, one common market input and one model. Sectors, stages, factual claims and repair attempts are dependent components, not independent institutions or independent sample replications."
+  },
+  "response_contract": {
+    "keep_existing_seven_top_level_fields": ["source_id", "interpretations", "weights", "alternatives", "risk_discussion", "unresolved", "submitted_constraints"],
+    "new_nested_model_fields_required": false,
+    "interpretations_reason": "State the meaning of the source's published judgment and its supported reasons. Keep source statements distinct from the model's own inference. If a separate source reason was not supplied, say so rather than inventing one.",
+    "weights_rationale": "Explain whether and how the source judgment is adopted, qualified, deferred or departed from; identify supporting and competing visible evidence; connect the explanation to the submitted weight and the named common baseline. A justified departure is permitted. No fixed target weight, risk-aversion coefficient or numeric cap may be invented from qualitative prose.",
+    "evidence_ids": "Existing arrays may cite already-visible document evidence IDs and public deterministic fact IDs. An ID must resolve to a registry item available in that stage; existence or matching scope alone does not prove semantic entailment.",
+    "alternatives": "Use the existing text field to compare a meaningful alternative and the evidence relevant to the choice. If numerical alternative weights are given, state the full vector or explicitly identify the base vector and every change. An incomplete alternative cannot be certified as feasible or lower-risk.",
+    "risk_discussion": "Separate supplied historical risk facts and calculated portfolio quantities from uncertain forecasts, preferences and trade-offs. Volatility is not a probability of loss.",
+    "unresolved": "Record unresolved evidence gaps, arithmetic failures or conflicting considerations without claiming that listing them resolves them.",
+    "submitted_constraints": "Only explicitly supported numeric conditions with visible evidence. Qualitative source ratings are not automatically numeric constraints.",
+    "stage_visibility": "R1 receives the institution packet at stage 1; R4 at stage 4. R4 earlier stages must not expose institution identity, evaluator annotations, source-specific facts or hidden source constraints.",
+    "prompt_rubric_alignment": "Any new requirement evaluated as required must be included in the future v4.8 task before generation. Do not retroactively penalize historical responses for requirements that were not in their prompts.",
+    "industry_presence": "The final contract requires one explicit row per public sector, including zero weights. Row presence checks coverage, duplicate handling and permitted identifiers; it is not stock-selection accuracy. Positive-weight membership has no unique source-prescribed correct set."
+  },
+  "endpoint_policy": {
+    "C0": {
+      "definition": "The original stage-4 response before any new post-stage-4 arithmetic repair call.",
+      "role": "Primary endpoint for all R1/R4 research comparisons, including failures.",
+      "raw": "Preserve exact model text, parsed data where available, actual request, calculator input/output, timestamps and hashes. C0 already follows ordinary stage-1-to-3 history and feedback; it is not an unaided first-ever answer."
+    },
+    "post_C0_arithmetic_repair": {
+      "maximum_additional_generation_calls": 2,
+      "endpoint_names": ["C1", "C2"],
+      "role": "Separately reported auxiliary operational diagnostic, not a replacement for C0.",
+      "policy_scope": "Finite additional repair allowance selected in the parent v4.8 redesign. This evaluation artifact does not claim that two calls are an optimal count established by the evaluation papers.",
+      "symmetry": "Both workflow arms use the same eligibility, evidence access, call cap, deterministic arithmetic validator and stopping rules.",
+      "authoritative_execution_contract": "data/sector_protocol/v48_design_20261018/prompt_contract.json",
+      "eligibility": "C0 must be a completed, structurally valid response containing exactly one finite numeric weight for each of the 11 unique allowed sectors. It is eligible only if abs(sum(w) - 1) > 0.000001 OR any(w_s < 0 OR w_s > 1). Boolean values are not numeric weights.",
+      "noneligible": "A valid C0, no C0, incomplete transport, timeout, truncation, context overflow, JSON/schema failure, duplicate or missing sector, or nonfinite weight is not eligible for arithmetic repair; retain the reason without an automatic retry.",
+      "stop": "Stop at the first arithmetically valid complete candidate, after C2, or at the first transport, schema or finite-vector failure, whichever occurs first. No restart, fallback to a better previous response or extra call on the basis of a semantic verdict is allowed.",
+      "trigger_and_stop_boundary": "Eligibility and stopping use only the stated deterministic arithmetic checks on structurally complete, unique finite sector vectors and the execution failures listed above. Do not use offline gold, source-label accuracy, invented source constraints or semantic judgments to give extra calls or select a response. The detailed rules are specified in the authoritative execution contract; implementation and pre-main freeze remain pending.",
+      "selection": "Store every attempt. The primary endpoint remains C0. For the auxiliary endpoint, retain the actual terminal submitted response under the frozen stop rule, never the retrospectively best response. Zero repairs is a distinct not-attempted state, not a missing failed attempt.",
+      "same_available_evidence": "Use the evidence available at the end of the original workflow plus actual computed feedback. Do not inject target weights or hidden evaluator judgments.",
+      "semantic_review": "Review C0 and each applicable repair response separately; never transfer C0 semantic judgments to C1/C2 or count arithmetic validity as semantic correctness.",
+      "cost_reporting": "Record planned and attempted calls, completed responses, latency and termination reason per case. Revisions of one case are not new independent cases."
+    }
+  },
+  "denominators": {
+    "all_planned_cases": "Keep every prespecified source-arm case in completion, parse and feasibility reporting. Distinguish not attempted, interrupted, timed out, incomplete transport, unparsable response, missing response and completed response.",
+    "all_expected_sectors": "At C0 there are 11 expected source-interpretation rows per case, 22 per arm across the two prespecified sources and 44 across the four-case split. Missing, duplicated or malformed rows receive no exact-label credit without reducing these denominators.",
+    "readable_outputs": "For qualitative review, report how many planned responses contain readable text, how many permit a specific judgment and why others do not. Unparsable but readable fragments can be reviewed with exact locations; this does not turn them into complete or valid allocations.",
+    "applicable_semantic_units": "Report category counts and missing/not-assessable counts against the full expected sector roster. Claim-level diagnostics additionally report the number of literal extracted claims and their eligibility; do not let producing fewer claims appear automatically more reliable.",
+    "valid_allocations": "Report the count of valid raw allocations over all planned cases before describing conditional risk or allocation statistics. Arithmetic-invalid but readable outputs remain eligible for factual and semantic review where their contents permit it.",
+    "valid_pairs": "Within-source distances require both relevant raw allocations to be valid. Between-source distances require both source allocations in the arm to be valid. The R4-minus-R1 between-source distance requires all four. Publish eligible-pair counts and excluded case identities with reasons.",
+    "missing_value_policy": "Missing or invalid weights have no portfolio-distance or valid-portfolio-risk value. Never substitute zero distance, zero risk, a benchmark vector, an optimizer vector or residual cash.",
+    "selection_warning": "Valid-only comparisons describe the observable subset; differential completion or feasibility between arms can change that subset. Do not present conditional distances or semantic rates as an unconditional effect for all planned cases.",
+    "versions": "Do not pool attempts under different prompts, model pins or protocols as independent observations of one fixed experiment."
+  },
+  "evaluation_dimensions": {
+    "execution_and_feasibility": {
+      "fields": ["attempted", "transport_completed", "parse_status", "contract_status", "sector_coverage", "raw_sum", "signed_budget_residual", "negative_weights", "weights_above_one", "explicit_constraint_violations", "valid_raw_allocation"],
+      "numeric_rules": "Use the unchanged raw numbers. Verify public sector coverage and finite numeric types independently of JSON generation grammar. Boolean values are not numeric weights. The calculator checks submitted constraints; their source support is an independent offline check.",
+      "precision": {"sum_tolerance": 0.000001, "negative_weight_tolerance": 0, "weight_above_one_tolerance": 0, "provenance": "Inherited engineering precision rules, not behavioral thresholds derived from a paper."},
+      "no_repair_by_evaluator": true
+    },
+    "source_fact_preservation": {
+      "source_labels": "Compare exact source-specific rating terms and source identity; trim only already-permitted outer whitespace. Do not map UBS Attractive to Fidelity Overweight.",
+      "source_reason": "Compare each interpretation.reason with the visible source passage. Distinguish a supported source reason, a model inference, an unsupported attribution and a source that does not separately state a reason.",
+      "scope": "A public strategist or CIO research view is not an observed institutional portfolio, legal mandate or private objective."
+    },
+    "numeric_fact_faithfulness": {
+      "reference_tuple": ["subject", "predicate_or_metric", "value_or_relation", "unit", "period_or_as_of", "source_or_fact_id", "data_version"],
+      "evaluator_record_only": "These fields belong to the offline review record. The model is not required to emit this additional nested schema.",
+      "comparison": "Match the complete applicable tuple and calculation lineage. A matching number attached to the wrong sector, date, unit, definition or source is not supported.",
+      "external_fact_claims": "A factual claim about supplied market data or an already-returned calculator result cites an existing visible M: fact ID or actual calculator fact ID and preserves its subject, metric, period and unit.",
+      "current_self_derived_claims": "A claim newly derived by the model from its current proposed weights, such as their sum or a current active weight, may precede any calculator observation of that vector. It must be identified as model-derived and pending verification, with existing input fact IDs where applicable, the relevant proposed weights and the formula. It is verified offline against the captured proposal; it is not treated as a supplied fact merely because the model asserts it.",
+      "future_calculator_ids": "Never invent a future calculator fact ID or cite an earlier candidate's result as verification of the current vector. A new calculator fact becomes available only after that actual calculation has been performed and recorded. Proposed strategic weights themselves are model choices, not claimed external target facts.",
+      "precision_policy": "Preserve exact raw values; apply only the numerical precision or display-rounding convention explicitly recorded for that fact before evaluation. If none is established, report the exact discrepancy and do not invent a favorable tolerance after seeing the response.",
+      "fact_registry": "One versioned underlying public fact registry; stage visibility is explicit. Deterministic facts may include supplied market statistics, common baseline weights and results computed from the submitted raw vector. A derived fact records inputs, formula, units, versions and calculation identity.",
+      "invalid_vector": "An arithmetic result calculated from an invalid vector may be checked as algebra, but must not be described as the risk or distance of a valid fully invested portfolio."
+    },
+    "evidence_to_action": {
+      "review_unit": "One sector's visible source interpretation, allocation rationale and actual raw weight, plus any cross-sector claim needed to understand that choice.",
+      "separate_questions": [
+        "What source judgment is literally attributed?",
+        "Does the cited passage support that attribution?",
+        "What adoption, qualification, deferral or departure does the model literally claim?",
+        "Are the supporting and competing considerations present in the visible evidence or explicitly identified as uncertain inference?",
+        "Does the claimed allocation direction match the actual raw weight relative to the named baseline?",
+        "If the choice departs from the source judgment, does the explanation acknowledge and support the departure without inventing a mandate?"
+      ],
+      "coding_status": "Local qualitative operationalization informed by evidence-to-action evaluation papers. These categories are not a validated taxonomy, an expert investment-quality score or a uniquely correct strategy rule.",
+      "source_stance_literal_states": ["adopt", "qualified_adoption", "defer", "depart", "ambiguous", "not_stated", "not_assessable"],
+      "claim_support_states": ["supported", "contradicted", "not_stated_in_visible_evidence", "uncertain", "not_assessable", "not_applicable"],
+      "action_consistency_states": ["consistent_with_stated_action", "contradicts_stated_action", "direction_not_claimed", "baseline_or_weights_unavailable", "ambiguous", "not_assessable", "not_applicable"],
+      "literal_vs_verified": "The literal stance or claim is recorded before support is judged. Saying that a source was adopted, that a weight increased or that an error was repaired is not evidence that it happened.",
+      "missing_vs_uncertain": "An absent required explanation is missing. An existing statement whose support cannot be determined is uncertain or not_assessable, with a specific reason. Neither is silently recoded as supported or contradicted.",
+      "source_departures": "A reasoned departure can be permitted. Review its evidence and consistency rather than forcing every favorable rating to imply an overweight or every neutral rating to equal the benchmark.",
+      "rationale_limit": "Faithful source interpretation and internal consistency do not establish that the allocation is financially optimal or that all causal financial inferences are true."
+    }
+  },
+  "pre_response_source_difference_inventory": {
+    "status": "required_before_main_freeze_not_completed_by_this_artifact",
+    "purpose": "Establish what similarities and differences are actually present in the two selected public documents before interpreting output similarity.",
+    "fields": ["inventory_id", "split", "sector_code", "source_A_id", "source_B_id", "source_A_literal_judgment", "source_B_literal_judgment", "source_A_evidence", "source_B_evidence", "rating_definition_scope", "period_scope", "relationship", "decision_relevance_reason", "reviewer", "review_status"],
+    "relationship_states": ["substantive_difference_supported", "similarity_supported", "different_scales_not_directly_comparable", "insufficient_evidence", "uncertain"],
+    "rules": [
+      "Different words alone do not establish opposite economic recommendations.",
+      "Different organizational units, dates, investment universes and rating definitions must remain visible.",
+      "Record similarities as well as differences; do not construct only a disagreement subset after seeing model outputs.",
+      "Inventory judgments guide interpretation; they are not target weights, hidden model inputs or automatic sign constraints.",
+      "Independent human source review is pending and must not be replaced by a claim that three assistant reviews are three human expert reviews."
+    ]
+  },
+  "descriptive_measures": [
+    {"id": "exact_label_accuracy", "formula": "L(i,r,e) = sum_s I(exact source label, matching source identity and unique sector row) / 11", "endpoint": "C0 primary reporting context; supporting factual measure", "basis": "LIBERA task-specific operationalization, not strategic-quality gold", "failure_policy": "No credit for missing or duplicate rows; expected denominator remains 11."},
+    {"id": "budget_residual", "formula": "e(w) = sum_s w_s - 1", "basis": "Arithmetic definition of the task's full-investment condition", "reporting": "Signed raw residual and raw sum, without normalization."},
+    {"id": "active_weight", "formula": "a_s = w_s - b_s", "basis": "Arithmetic comparison with the predeclared public common baseline", "condition": "A named comparable baseline and identifiable raw weight are available.", "reporting": "A descriptive difference. Fidelity label directions are optional if-adopted diagnostics; UBS ratings are not translated to benchmark-relative signs. Invalid-vector values must be labelled as such."},
+    {"id": "within_source_distance", "formula": "D_i = 0.5 * sum_s abs(w_(i,R4,s) - w_(i,R1,s))", "condition": "Both allocations at the same endpoint are valid.", "basis": "PortBench v6 Appendix C.2 Eq. (8) total-variation form, adapted from reference similarity to a descriptive pairwise distance."},
+    {"id": "between_source_distance", "formula": "D_r = 0.5 * sum_s abs(w_(A,r,s) - w_(B,r,s))", "condition": "Both source allocations in the same arm and endpoint are valid.", "basis": "Same explicitly labelled pairwise adaptation.", "reporting": "Report with the pre-response source difference inventory and semantic observations; smaller distance alone is not harmful convergence."},
+    {"id": "between_source_distance_difference", "formula": "delta_D = D_R4 - D_R1", "condition": "All four allocations at the same endpoint are valid.", "basis": "LIBERA descriptive contrast of the two distance observations", "reporting": "Not an identified population effect, difference-in-differences estimator or hypothesis-test result."},
+    {"id": "lookback_volatility", "formula": "sigma(w) = sqrt(w^T Sigma w)", "condition": "Valid raw allocation and supplied covariance with documented ordering, unit and period.", "basis": "PortBench v6 Appendix C.2 asset-level correlation risk; standard portfolio variance", "reporting": "Historical conditional risk diagnostic, not loss probability, future performance or a strategic-quality score."}
+  ],
+  "reporting_rules": [
+    "Report execution/feasibility, source and numeric facts, semantic categories and allocation comparisons separately; no arbitrary weighted composite or behavioral pass threshold.",
+    "Show C0 first and separately from C1/C2. Auxiliary improvement cannot erase a C0 failure or replace the primary comparison.",
+    "Publish case-level and sector-level records, denominators, reasons for missingness and each claim's evidence before any summary.",
+    "Do not treat neutral, zero weight, deferral or admitted uncertainty as automatically wrong; judge against the visible task and source.",
+    "Do not describe evidence-ID matching as semantic correctness or label accuracy as strategy preservation.",
+    "Do not attach statistical significance or population confidence intervals by treating dependent sectors, stages or repairs as independent samples.",
+    "If all allocations are invalid, state that allocation-based source separation or convergence is unobserved; readable source and rationale findings do not answer that missing component.",
+    "Three self-reviews verify design, computation and interpretation; they do not certify model success, replace independent human review or require favorable research outcomes."
+  ],
+  "freeze_requirements": [
+    "Versioned case roster, original packets, public fact registry, common market input and source difference inventory.",
+    "Prompt requirements aligned with this rubric and identical non-treatment conditions across R1/R4.",
+    "Final C0 and auxiliary-repair endpoint rules, eligibility, limits, stopping and failure handling.",
+    "Independent human source review and a transparent reviewer/role record; document unresolved limits.",
+    "Tested evaluator implementation and immutable hashes; this specification alone is not execution readiness.",
+    "Main inputs and evaluation fixed before main responses. Post-main additions are exploratory."
+  ],
+  "references": [
+    {"id": "e2a_2026", "url": "https://arxiv.org/html/2609.14302v1", "locator": "Sections 3.1-3.4", "use": "Separate factual grounding, reasoning-action consistency and coverage without assigning a unique correct financial action.", "adaptation_limit": "Financial-chart action evaluation is transferred to documentary sector allocations. Do not copy NDR aggregation, BUY/SELL labels or confidence thresholds."},
+    {"id": "externalization_2026_v2", "url": "https://arxiv.org/html/2609.38869v2", "locator": "Sections 3.4-4.1.2", "use": "Versioned evidence registry, visible evidence IDs, deterministic numeric/relational facts and separate factual-field versus free-text evaluation.", "adaptation_limit": "The source uses stock-prediction narratives and additional structured claims. LIBERA retains its seven-field response schema and constructs claim tuples offline; this is not an exact reproduction."},
+    {"id": "finfirst_2026", "url": "https://arxiv.org/html/2609.25192v1", "locator": "Sections 2.2.2-2.3", "use": "Trace source locations, definitions, periods, units, versions, intermediate calculations and conclusions; allow valid alternative evidence paths and avoid unstated rubric requirements.", "adaptation_limit": "LIBERA's semantic labels and assistant reviews are not the paper's validated expert-led financial QA evaluation."},
+    {"id": "portbench_2026_v6", "url": "https://arxiv.org/html/2605.27887v6", "locator": "Appendix C.2 Eq. (8), asset-level correlation risk; Appendices F.3-F.4", "use": "Keep allocation similarity, exposure compliance and outcomes separate; total-variation distance and covariance-based risk provide descriptive measures.", "adaptation_limit": "No reference optimizer, profile constraints, repaired weights, CEPS weights or behavioral thresholds are imported as strategic truth for public institutional views."},
+    {"id": "openpm_2026", "url": "https://arxiv.org/html/2608.09988v1", "locator": "Sections 3.3, 4 and 6.3", "use": "Distinguish raw proposal adherence from post-processing feasibility and preserve audit artifacts.", "adaptation_limit": "OpenPM's critic mechanically projects weights. LIBERA does not adopt that projection, mandate presets or hidden constraints; post-C0 revisions are model-authored."}
+  ]
+}

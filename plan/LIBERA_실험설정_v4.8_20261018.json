@@ -1,0 +1,360 @@
+{
+  "protocol_version": "4.8",
+  "as_of_date": "2026-10-18",
+  "status": "redesign_and_offline_artifacts_prepared; runtime_integration_pilot_human_review_and_freeze_pending",
+  "previous_protocol": {
+    "path": "plan/LIBERA_실험설정_v4.7_20261018.json",
+    "sha256": "f278aa9ab4d7a5b6548b7d9d5ac0e80d276dffc0d0333bd83020ed65708e5fd0"
+  },
+  "research_question": "Does a common AI preserve source-specific public sector judgments in justified equity-sector allocations, and how does early versus late evidence provision change that reflection?",
+  "research_claim_scope": "Descriptive public-document case under one shared model; evidence-to-rationale-to-allocation preservation, conditional on the task and runtime.",
+  "main": {
+    "module": "documentary_sector_allocation",
+    "status": "not_run",
+    "unit": "industry/sector basket, not individual stock",
+    "taxonomy": {
+      "finalized": true,
+      "selected": "GICS 11",
+      "sector_codes": [
+        "10",
+        "15",
+        "20",
+        "25",
+        "30",
+        "35",
+        "40",
+        "45",
+        "50",
+        "55",
+        "60"
+      ],
+      "no_FF12_conversion": true
+    },
+    "period": {
+      "recent_only": true,
+      "finalized": true,
+      "common_cutoff": "2026-07-17",
+      "price_last_date": "2026-07-16",
+      "claim": "retrospective document-conditioned case, not point-in-time trading replay",
+      "fidelity_invalid_view_date_preserved": "6/31/26"
+    },
+    "inputs": [
+      "common market evidence in the same sector taxonomy",
+      "dated institution documents containing relevant objectives, applicable constraints or sector judgments",
+      "source locations and document identity"
+    ],
+    "document_roles": "Legal investment mandates, fund-manager commentary and house research views are distinct evidence types. A house outlook is not silently assigned to an unrelated fund as its mandate.",
+    "risk_policy": "Preserve qualitative preferences; retain only explicitly supported numerical limits, denominators and exceptions. Do not map real-fund prose to gamma.",
+    "model_decisions": [
+      "identify relevant document facts",
+      "compare sector allocation alternatives",
+      "propose sector weights and explain the evidence supporting departures from a common baseline when one is specified"
+    ],
+    "gold_visibility": "Evaluator-only inventory and blank worksheets prepared; independent human review pending.",
+    "calculation": "Existing pure calculator retained conceptually; v4.8 empty-optional-proposal and fact-ID integration pending.",
+    "calculator_information_boundary": "Tools may use only evidence already exposed in that run and model-submitted inputs. Before R4 receives its institution packet, tools cannot read hidden mandates, evaluator annotations or institution-specific constraints. Missing constraints remain unknown; no automatic gold-based repair, lookup or informative feasibility response is allowed.",
+    "no_synthetic_real_facts": "Do not invent institutional expected returns, confidence, sector caps or exact target weights from qualitative prose.",
+    "pending": [
+      "Integrate v4.8 contracts and registry with runner/scorer",
+      "Three implementation checks",
+      "Run and review all four v4.8 pilot cases",
+      "Independent human source/semantic review",
+      "Freeze before main; main not executed here"
+    ],
+    "main_documents": [
+      "fidelity_q3_2026",
+      "ubs_july_2026"
+    ],
+    "pilot_documents": [
+      "fidelity_q2_2026",
+      "ubs_june_2026"
+    ],
+    "representation": "Researcher-selected short paraphrased evidence, original labels, source IDs and page locators; not full-document retrieval.",
+    "baseline": "Reported 2026-06-30 S&P500 sector weights, sum99.9%, original preserved and normalized for common arithmetic; not institution holdings/targets",
+    "paths": {
+      "documents": "../data/sector_documents/corpus_card.json",
+      "market": "../data/sector_market/market_input.json",
+      "calculator": "../research/sector_engine.py",
+      "runner": null,
+      "single_case_runner": "../research/local_sector_structured_case.py"
+    },
+    "blocking_design_decisions": [],
+    "runtime_policy": "No v4.8 online execution or main freeze yet."
+  },
+  "workflow": {
+    "arms": [
+      "R1",
+      "R4"
+    ],
+    "stages": [
+      "market and evidence interpretation",
+      "comparison of alternatives and risks",
+      "provisional sector allocation with all 11 sectors",
+      "final reconsideration"
+    ],
+    "mandate_or_evidence_onset": {
+      "R1": 1,
+      "R4": 4
+    },
+    "same_final_facts": true,
+    "same_model_and_calculation_facilities": true,
+    "full_history_retained": true,
+    "interpretation": "Evidence-onset and subsequent-use workflow policy, including position and context age; not an isolated memory mechanism.",
+    "retrieval": "Directly supplied evidence first; actual retrieval quality remains a separate extension, not an executed RAG result.",
+    "planned_main_case_count": 4,
+    "planned_pilot_case_count": 4,
+    "calls_per_complete_case": 4,
+    "inference": "descriptive case study; two source documents, not powered population experiment",
+    "same_generated_history": false,
+    "history_semantics": "visible model responses and calculator feedback retained; not hidden thinking traces",
+    "internal_thinking_observed": false,
+    "primary": "stage4 C0",
+    "auxiliary": "post-C0 bounded arithmetic revision only"
+  },
+  "model": {
+    "primary_target": "Qwen3.5-4B",
+    "ollama_tag": "qwen3.5:4b-q4_K_M",
+    "quantization": "Q4_K_M",
+    "temperature": 0,
+    "max_output_tokens": 8192,
+    "thinking": false,
+    "context_tokens": 65536,
+    "runtime_ready": false,
+    "exact_served_revision": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+    "runtime_manifest_path": "data/sector_protocol/v45_single_case_20261018/manifest.json",
+    "candidate_not_observed_settings": false,
+    "settings_observation_scope": "Engine settings observed in historical v4.5 only. No v4.8 request has run.",
+    "runtime_readiness_policy": "Installation or pilot status is reported separately; this builder never certifies execution readiness.",
+    "model_basis": [
+      {
+        "url": "https://arxiv.org/html/2609.10113",
+        "locator": "sections 5.1-5.3, Table 3",
+        "scope": "exact base model evaluated in finance; target decoding not fully disclosed"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2610.08882",
+        "locator": "section 4.1, Table 3",
+        "scope": "base Qwen3.5-4B; explicit JSON and disabled thinking; not the LoRA adapter"
+      }
+    ],
+    "parameter_basis": [
+      {
+        "parameter": "thinking",
+        "value": false,
+        "kind": "direct_financial_paper_precedent",
+        "url": "https://arxiv.org/pdf/2610.08882",
+        "locator": "section 4.1"
+      },
+      {
+        "parameter": "temperature",
+        "value": 0,
+        "kind": "backend_adaptation",
+        "url": "https://arxiv.org/pdf/2610.08882",
+        "locator": "section 4.1 greedy decoding",
+        "note": "Ollama implementation candidate; also T=0 in PortBench; not identical engine reproduction"
+      },
+      {
+        "parameter": "max_output_tokens",
+        "value": 8192,
+        "kind": "paper_value_transferred_to_different_model_and_task",
+        "url": "https://arxiv.org/html/2605.27887v6",
+        "locator": "section 3.1",
+        "note": "Not FinVector's 700-token condition; adequacy checked on pilot, before main"
+      },
+      {
+        "parameter": "context_tokens",
+        "value": 65536,
+        "kind": "engineering_candidate_not_paper_constant",
+        "note": "Preserve all four stages including visible responses and calculation feedback; verify actual tokenization and memory"
+      }
+    ],
+    "backend_settings": "Pin served digest, quantization, chat template, engine, context, sampling defaults and thinking implementation from actual runtime evidence.",
+    "context_overflow": "fail and record; no silent truncation, history deletion or budget change",
+    "limitations": [
+      "financial base-model paper scores do not measure this quantized runtime",
+      "small-model application, not PortBench replication",
+      "basic task inability can obscure workflow differences",
+      "no hidden-thinking or memory mechanism identification"
+    ],
+    "future_candidate_scope": "v4.8 retains observed v4.5 engine settings as candidate; new protocol integration unvalidated.",
+    "review": "../research/v45_revision_reference_20261018.html",
+    "protocol_version": "4.8-design",
+    "explicit_request_options": {
+      "temperature": 0,
+      "seed": 3407,
+      "num_predict": 8192,
+      "num_ctx": 65536,
+      "num_thread": 2,
+      "num_batch": 512,
+      "repeat_penalty": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0.0
+    },
+    "context_check_policy": "Require render-only visible-history validation with explicit truncate=false/shift=false; no UTF-8 token heuristic. Actual checks are recorded stage by stage.",
+    "context_check_observed_stages": [],
+    "renderer_policy": {
+      "path": "research/v44_renderer_policy_20261018.json",
+      "sha256": "4135e7f2d0000e4f51ca3414af803805c823f681468807d3ab19f9fd116488a4",
+      "http_history": "verbatim",
+      "rendered_history": "Only declared JSON boundary whitespace removal; internal characters and parsed values unchanged."
+    },
+    "one_case_workflow_completed": false,
+    "decoding_revision_applied": "Neutral penalties and seed explicitly specified; not claimed as unreported benchmark values.",
+    "response_contract": "per-stage API JSON Schema and identical schema grounded in task prompt"
+  },
+  "submission": {
+    "term_paper_due": "2026-11-01",
+    "pitch": "2026-11-06",
+    "pitch_minutes": [
+      5,
+      10
+    ],
+    "citation_style": "APA",
+    "source": "https://app.notion.com/p/2026-agent-conference/LIBERA-3e00589711408053a7e5ff9a0c4ba804",
+    "length_format_own_results_requirement": "not specified in available overview; do not infer exemption"
+  },
+  "claims_not_identified": [
+    "individual-stock selection skill",
+    "overall stocks/bonds/cash allocation",
+    "true future optimal portfolios",
+    "actual private information",
+    "causal effect of shared-model adoption",
+    "market-wide convergence or financial stability",
+    "pure memory or anchoring mechanism",
+    "excess convergence relative to a uniquely necessary institutional weight difference"
+  ],
+  "primary_output": {
+    "candidate": "C0",
+    "definition": "First raw final response at workflow stage 4, separately for each R1/R4 case.",
+    "repair_replacement": false,
+    "weighted_composite_score": false,
+    "dimensions": [
+      "source and numerical factual fidelity",
+      "evidence-rationale-allocation linkage and coverage",
+      "raw execution feasibility"
+    ],
+    "label_accuracy_role": "auxiliary fact extraction diagnostic, not strategy quality"
+  },
+  "auxiliary_repair": {
+    "candidate0": "stage4 first final response",
+    "maximum_additional_calls": 2,
+    "eligibility": "C0 completed, structurally valid and exactly one finite weight for each of 11 sectors; abs(sum(w)-1)>1e-6 OR any(w<0 or w>1).",
+    "feedback": "Actual prior candidate, sum, signed residual, bound violations and prior-candidate weight deltas. No target allocation or semantic verdict.",
+    "stop": "First arithmetically valid candidate, C2, or first transport/schema/finite-vector failure; no restart.",
+    "selection": "Retain C0 as primary always; auxiliary terminal submission is last attempted response, never best-of selection.",
+    "noneligible": "Valid C0, no C0, transport or schema failure, or incomplete/nonfinite sector vector; report reason, do not retry.",
+    "meaning": "Bounded recovery policy; actual calls may differ across arms. Not equal realized compute or a causal repair-effect experiment."
+  },
+  "budget": {
+    "core_calls_per_complete_case": 4,
+    "max_auxiliary_calls_per_case": 2,
+    "max_calls_per_case": 6,
+    "planned_cases_each_split": 4,
+    "core_calls_each_split": 16,
+    "max_auxiliary_calls_each_split": 8,
+    "max_total_calls_each_split": 24,
+    "basis": "3 final candidates including C0 from Precise App I Table12; placement after LIBERA stage4 is local adaptation, not an optimal budget or exact replication."
+  },
+  "evaluation": {
+    "spec": "research/v48_evaluation_protocol_20261018.json",
+    "template": "research/v48_review_template_20261018.json",
+    "public_registry": "data/sector_protocol/v48_design_20261018/public_numeric_registry.json",
+    "source_comparison_inventory": "research/evaluator_only/v48_source_comparison_20261018.json",
+    "no_unique_weight_gold": true,
+    "no_automatic_semantic_pass": true,
+    "scoring_implementation": "Legacy mechanical scorer exists; v4.8 linkage/registry evaluation not integrated or human completed.",
+    "source_inventory_scope": "All 11 sectors in both splits before new outputs; avoid selecting only visibly conflicting labels.",
+    "denominators": "Report scheduled cases, generation-attempt cases, readable responses, complete vectors, valid allocations, and valid pairs separately. Meaningful rationale fragments can be reviewed even if budget invalid; otherwise missing, never inferred."
+  },
+  "readiness_gate": {
+    "version": "v48_forward_only",
+    "requires": [
+      "input/schema agreement",
+      "assigned-source exposure isolation",
+      "verbatim raw records and failure accounting",
+      "calculator and denominator correctness",
+      "numeric claims traceability",
+      "source and semantic review procedure",
+      "full four-case pilot before freeze"
+    ],
+    "does_not_require": [
+      "every model answer has budget sum 1",
+      "all model reasoning is correct",
+      "R1 superiority",
+      "nonzero institution distance"
+    ],
+    "model_failure_is_outcome": true,
+    "insufficient_measurement_rule": "If C0 allocations do not form valid pairs, weight-contrast outcomes remain unobserved. Report this without a zero-effect claim; do not substitute repaired candidates into primary comparison.",
+    "main_start": "Only after versioned implementation checks, complete pilot accounting, independent human source review and frozen protocol. No main execution in this task."
+  },
+  "current_execution": {
+    "v48_model_calls": 0,
+    "v48_pilot_completed_cases": 0,
+    "main_completed_cases": 0,
+    "main_frozen": false,
+    "runtime_integration_complete": false,
+    "human_review_complete": false
+  },
+  "historical_development": {
+    "v45_raw_sum": 0.965,
+    "v46_raw_sum": 0.965,
+    "v47_raw_sum": 0.975,
+    "old_gate_outcome": "failed; not retroactively passed",
+    "records": [
+      {
+        "path": "research/v47_handoff_20261018.json",
+        "sha256": "5fd392884a17985f220e67b5fb25a47ee8e579723a752fbc083723d0e10cd7ff"
+      },
+      {
+        "path": "research/v47_priority1_round2_20261018.json",
+        "sha256": "69603beb62b4a74058b1a122b40420f4cdfa09311c597d663d3a8b42486d3a98"
+      },
+      {
+        "path": "research/v47_priority1_round3_20261018.json",
+        "sha256": "e06ab765474e861bac5d044bbde1e3e3326c9325e93316b194564a83a195fbb2"
+      }
+    ],
+    "pool_with_v48": false
+  },
+  "numeric_supplement": {
+    "path": "data/institutional_recent/summary.json",
+    "reference_cases": 72,
+    "role": "Appendix-only computed reference; not evidence of documentary strategy preservation or AI success.",
+    "ai_runs": 0
+  },
+  "parameter_provenance": {
+    "paper_precedent": [
+      "60 daily returns: PortBench Appendix C.1 T5; 252 annualization: C.4/F.9; transferred to sector ETF inputs",
+      "8192 output limit: PortBench section3.1 transfer, not FinVector condition",
+      "non-thinking structured financial output and seed3407 value: FinVector section4.1; greedy translated to T=0 and Ollama seed application are backend adaptations",
+      "3 total final candidates: Precise, adapted after stage4"
+    ],
+    "local_design": [
+      "4 workflow stages and R1/R4 onset from original LIBERA proposal, informed by staged portfolio workflow",
+      "2 sources x 2 arms, one market context: data availability, no power claim",
+      "qualitative coding scheme: operational adaptation of E2A, not its validated taxonomy",
+      "calendar cutoffs and document choices"
+    ],
+    "engineering_not_paper_behavioral_constants": [
+      "Q4_K_M, context65536, batch512, threads2, 900s deadline, 1e-6 sum tolerance",
+      "runtime and exact template/digest pins; neutral penalties and sampler defaults; Ollama application of paper seed3407 does not ensure cross-engine equivalence"
+    ],
+    "prohibited_heuristics": [
+      "invented risk-aversion coefficient per institution",
+      "ratings mapped to target percentages",
+      "weighted strategy score or arbitrary pass rate",
+      "until-success retries or outcome-driven best-response selection"
+    ]
+  },
+  "provenance": {
+    "builder": "research/build_sector_revision_v48.py",
+    "basis": "research/v48_reference_basis_20261018.json",
+    "parameter_addendum": "research/v48_parameter_reference_addendum_20261018.json",
+    "topic_basis": "research/v48_topic_alignment_basis_20261018.json",
+    "prompt_contract": "data/sector_protocol/v48_design_20261018/prompt_contract.json",
+    "model_calls_by_builder": 0
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "version": "4.8",
+  "created_at_utc": "2026-10-18T10:03:32.146547+00:00",
+  "status": "redesign_three_review_rounds_passed_runtime_preparation_pending",
+  "delivered_artifacts": [
+    {
+      "path": "plan/LIBERA_실험계획_v4.8_20261018.html",
+      "sha256": "9b2b0dd6bc348f745f648ab03f9f7ce36573de6643700e896449894e75982423"
+    },
+    {
+      "path": "paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+      "sha256": "0775e2d64633d51c2f35a0378406e744ea7e0b0489a71a45b6651599c08ae7d1"
+    },
+    {
+      "path": "plan/LIBERA_실험설정_v4.8_20261018.json",
+      "sha256": "95d03ab44a75c477bced0a6c9868facd58b66562ab90e24a0a6854e8cac659d3"
+    },
+    {
+      "path": "data/sector_protocol/v48_design_20261018/prompt_contract.json",
+      "sha256": "6352355f20bde763d8bcbc2a7db02bfe466e92f80c60f12488a81cd021cdd5c8"
+    },
+    {
+      "path": "data/sector_protocol/v48_design_20261018/public_numeric_registry.json",
+      "sha256": "5463226c35c53a0ab4caefe89c0bf857dc81853c4c982fba51254c0f5395c375"
+    },
+    {
+      "path": "research/evaluator_only/v48_source_comparison_20261018.json",
+      "sha256": "0a020fe160122c9802cc4ed1f17ea2f07e5d255d00919eaf101cfed6fb248634"
+    },
+    {
+      "path": "research/v48_evaluation_protocol_20261018.json",
+      "sha256": "c870c8383aa0b6ffbf56eceea75618ea12c0819311d97a500a968f1742b48059"
+    },
+    {
+      "path": "research/v48_review_template_20261018.json",
+      "sha256": "15251035d307ae7a57c5fed3404363fcf5b0bfd77ef128faeca38c0e407bd0f2"
+    },
+    {
+      "path": "research/v48_reference_basis_20261018.json",
+      "sha256": "421e6c39900beccea72a2996eb31077c84d10270f677a4478fb4d6d44e25e95b"
+    },
+    {
+      "path": "research/v48_topic_alignment_basis_20261018.json",
+      "sha256": "6f8057c99a160a2b481b1394aa65569cd27eb9f42a0857169f1e1f1caec1ae28"
+    },
+    {
+      "path": "research/build_sector_revision_v48.py",
+      "sha256": "0a3a54aeb083b488983f922ba35745a11d13b15da9bcd152218c89af7c927e0f"
+    },
+    {
+      "path": "research/v48_parameter_reference_addendum_20261018.json",
+      "sha256": "37af0008222199720a65483512b32ed08292f21be18ea610d63d258dbcb5d474"
+    }
+  ],
+  "reviews": [
+    {
+      "round": 1,
+      "report": {
+        "path": "research/v48_design_round1_final_20261018.json",
+        "sha256": "5f1c2638ca334a05524a4584f984f46d343df4fc70922621e7341ec04d5cf66c"
+      },
+      "status": "PASS",
+      "check_count": 350,
+      "pass_count": 350
+    },
+    {
+      "round": 2,
+      "report": {
+        "path": "research/v48_design_round2_sources_20261018.json",
+        "sha256": "ff35a4fa217207ae42c31bc89ac0b5d333522ad3590f36fe976b2659b50093e8"
+      },
+      "status": "PASS",
+      "check_count": 70,
+      "pass_count": 70
+    },
+    {
+      "round": 2,
+      "report": {
+        "path": "research/v48_design_round2_methods_20261018.json",
+        "sha256": "b063e145c492c5679317ca2eebc0b61266c43a823d5e32b7c0bf338d036e2d5a"
+      },
+      "status": "PASS",
+      "check_count": 65,
+      "pass_count": 65
+    },
+    {
+      "round": 3,
+      "report": {
+        "path": "research/v48_design_round3_20261018.json",
+        "sha256": "89f4b43e2a996d64acdd0ad38fc17ced1aa1ac7e1e37f6ca923036be4a6da2a8"
+      },
+      "status": "PASS",
+      "check_count": 51,
+      "pass_count": 51
+    }
+  ],
+  "review_scope": "Three self-review rounds: offline consistency; primary-source and evaluation methods; topic/logical alignment. Not independent human review, model performance acceptance, runtime certification or main freeze.",
+  "forward_only_amendment": {
+    "previous_model_success_gate": "v4.7 arithmetic-success prerequisite",
+    "superseded_for_future_design": true,
+    "new_gate": "Measurement/contract/provenance validity; model arithmetic and semantic errors are recorded outcomes.",
+    "primary": "Each four-stage case first final C0; no replacement by repaired output.",
+    "auxiliary": "At most C1/C2 arithmetic revisions for eligible complete vectors; common bounded policy, not equal realized calls.",
+    "historical_failures_reclassified_as_pass": false,
+    "insufficient_allocation_data": "No valid C0 pairs means no observed allocation-contrast result; readable explanations do not complete that missing research component."
+  },
+  "current_execution": {
+    "v48_model_calls": 0,
+    "v48_pilot_completed_cases": 0,
+    "main_completed_cases": 0,
+    "main_frozen": false,
+    "runtime_integration_complete": false,
+    "human_review_complete": false
+  },
+  "next_steps": [
+    "Integrate v4.8 contracts and registry with runner/scorer",
+    "Three implementation checks",
+    "Run and review all four v4.8 pilot cases",
+    "Independent human source/semantic review",
+    "Freeze before main; main not executed here"
+  ],
+  "pre_delivery_ledger": {
+    "snapshot": {
+      "path": "research/evidence/v48_handoff_20261018/progress_before_redesign.jsonl",
+      "sha256": "663d5d4b78569301bf0d0e8d62d8cf87eb4875a7636e9fcea5d4f071b2677f27"
+    },
+    "events": 12,
+    "last_event_sha256": "486431a71bc6e5f4ef07ec31809d9b24a9398baa5acef0e1bee4e26079e98953"
+  },
+  "recording_tools": [
+    {
+      "path": "research/record_v48_handoff.py",
+      "sha256": "2b3153744825c62e80b44ce2719097e0a57b2cc0769ab7d126699fcf2be70a41"
+    },
+    {
+      "path": "research/render_research_progress.py",
+      "sha256": "6f691c13e60192fc54c46830318dcb043f990243201a1b376a0da0dca557644f"
+    }
+  ],
+  "initial_draft_audit": {
+    "path": "research/v48_design_round1_20261018.json",
+    "scope": "Earlier 346-check draft before the parameter-addendum cross-link; final input version is the 350-check round1_final report."
+  },
+  "main_execution_allowed_by_this_delivery": false
+}

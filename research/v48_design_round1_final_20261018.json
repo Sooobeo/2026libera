@@ -1,0 +1,1813 @@
+{
+  "round": 1,
+  "scope": "Offline design artifacts, arithmetic, provenance and consistency. Not an online runtime test, model performance pass or human semantic review.",
+  "created_at_utc": "2026-10-18T09:57:49.266609+00:00",
+  "reviewer": "root deterministic audit with separately computed numerical identities",
+  "inputs": [
+    {
+      "path": "plan/LIBERA_실험계획_v4.8_20261018.html",
+      "sha256": "9b2b0dd6bc348f745f648ab03f9f7ce36573de6643700e896449894e75982423"
+    },
+    {
+      "path": "paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+      "sha256": "0775e2d64633d51c2f35a0378406e744ea7e0b0489a71a45b6651599c08ae7d1"
+    },
+    {
+      "path": "plan/LIBERA_실험설정_v4.8_20261018.json",
+      "sha256": "95d03ab44a75c477bced0a6c9868facd58b66562ab90e24a0a6854e8cac659d3"
+    },
+    {
+      "path": "data/sector_protocol/v48_design_20261018/prompt_contract.json",
+      "sha256": "6352355f20bde763d8bcbc2a7db02bfe466e92f80c60f12488a81cd021cdd5c8"
+    },
+    {
+      "path": "data/sector_protocol/v48_design_20261018/public_numeric_registry.json",
+      "sha256": "5463226c35c53a0ab4caefe89c0bf857dc81853c4c982fba51254c0f5395c375"
+    },
+    {
+      "path": "research/evaluator_only/v48_source_comparison_20261018.json",
+      "sha256": "0a020fe160122c9802cc4ed1f17ea2f07e5d255d00919eaf101cfed6fb248634"
+    },
+    {
+      "path": "research/v48_evaluation_protocol_20261018.json",
+      "sha256": "c870c8383aa0b6ffbf56eceea75618ea12c0819311d97a500a968f1742b48059"
+    },
+    {
+      "path": "research/v48_review_template_20261018.json",
+      "sha256": "15251035d307ae7a57c5fed3404363fcf5b0bfd77ef128faeca38c0e407bd0f2"
+    },
+    {
+      "path": "research/v48_reference_basis_20261018.json",
+      "sha256": "421e6c39900beccea72a2996eb31077c84d10270f677a4478fb4d6d44e25e95b"
+    },
+    {
+      "path": "research/v48_topic_alignment_basis_20261018.json",
+      "sha256": "6f8057c99a160a2b481b1394aa65569cd27eb9f42a0857169f1e1f1caec1ae28"
+    },
+    {
+      "path": "research/build_sector_revision_v48.py",
+      "sha256": "0a3a54aeb083b488983f922ba35745a11d13b15da9bcd152218c89af7c927e0f"
+    },
+    {
+      "path": "research/v48_parameter_reference_addendum_20261018.json",
+      "sha256": "37af0008222199720a65483512b32ed08292f21be18ea610d63d258dbcb5d474"
+    }
+  ],
+  "status": "PASS",
+  "check_count": 350,
+  "pass_count": 350,
+  "model_calls": 0,
+  "main_ready": false,
+  "checks": [
+    {
+      "id": "encoding:plan/LIBERA_실험계획_v4.8_20261018.html",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "encoding:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "encoding:plan/LIBERA_실험설정_v4.8_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "strict_json:plan/LIBERA_실험설정_v4.8_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "encoding:data/sector_protocol/v48_design_20261018/prompt_contract.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "strict_json:data/sector_protocol/v48_design_20261018/prompt_contract.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "encoding:data/sector_protocol/v48_design_20261018/public_numeric_registry.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "strict_json:data/sector_protocol/v48_design_20261018/public_numeric_registry.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "encoding:research/evaluator_only/v48_source_comparison_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "strict_json:research/evaluator_only/v48_source_comparison_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "encoding:research/v48_evaluation_protocol_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "strict_json:research/v48_evaluation_protocol_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "encoding:research/v48_review_template_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "strict_json:research/v48_review_template_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "encoding:research/v48_reference_basis_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "strict_json:research/v48_reference_basis_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "encoding:research/v48_topic_alignment_basis_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "strict_json:research/v48_topic_alignment_basis_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "encoding:research/build_sector_revision_v48.py",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "encoding:research/v48_parameter_reference_addendum_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "strict_json:research/v48_parameter_reference_addendum_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "public_sector_roster",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "new_execution_zero",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "top_level_contract_agreement",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "stage3_no_pending",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "stage4_all11",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "R1_exposure",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "R4_exposure",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "optional_early_proposal",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "core_failure_no_retry",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "C0_primary",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "repair_contract_config_equal",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "repair_budget",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "repair_explicit_numeric_boundary",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "call_arithmetic",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "failures_outcomes_not_pass_gate",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "no_composite_or_gold",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "source_hash_registry",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:baseline_weights:10",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:baseline_weights:10",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:baseline_weights:15",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:baseline_weights:15",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:baseline_weights:20",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:baseline_weights:20",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:baseline_weights:25",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:baseline_weights:25",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:baseline_weights:30",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:baseline_weights:30",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:baseline_weights:35",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:baseline_weights:35",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:baseline_weights:40",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:baseline_weights:40",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:baseline_weights:45",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:baseline_weights:45",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:baseline_weights:50",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:baseline_weights:50",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:baseline_weights:55",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:baseline_weights:55",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:baseline_weights:60",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:baseline_weights:60",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:daily_volatility:10",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:daily_volatility:10",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:daily_volatility:15",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:daily_volatility:15",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:daily_volatility:20",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:daily_volatility:20",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:daily_volatility:25",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:daily_volatility:25",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:daily_volatility:30",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:daily_volatility:30",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:daily_volatility:35",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:daily_volatility:35",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:daily_volatility:40",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:daily_volatility:40",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:daily_volatility:45",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:daily_volatility:45",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:daily_volatility:50",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:daily_volatility:50",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:daily_volatility:55",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:daily_volatility:55",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:daily_volatility:60",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:daily_volatility:60",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:annualized_volatility_diagnostic:10",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:annualized_volatility_diagnostic:10",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:annualized_volatility_diagnostic:15",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:annualized_volatility_diagnostic:15",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:annualized_volatility_diagnostic:20",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:annualized_volatility_diagnostic:20",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:annualized_volatility_diagnostic:25",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:annualized_volatility_diagnostic:25",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:annualized_volatility_diagnostic:30",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:annualized_volatility_diagnostic:30",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:annualized_volatility_diagnostic:35",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:annualized_volatility_diagnostic:35",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:annualized_volatility_diagnostic:40",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:annualized_volatility_diagnostic:40",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:annualized_volatility_diagnostic:45",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:annualized_volatility_diagnostic:45",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:annualized_volatility_diagnostic:50",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:annualized_volatility_diagnostic:50",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:annualized_volatility_diagnostic:55",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:annualized_volatility_diagnostic:55",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:annualized_volatility_diagnostic:60",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:annualized_volatility_diagnostic:60",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:lookback_compound_return:10",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:lookback_compound_return:10",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:lookback_compound_return:15",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:lookback_compound_return:15",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:lookback_compound_return:20",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:lookback_compound_return:20",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:lookback_compound_return:25",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:lookback_compound_return:25",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:lookback_compound_return:30",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:lookback_compound_return:30",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:lookback_compound_return:35",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:lookback_compound_return:35",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:lookback_compound_return:40",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:lookback_compound_return:40",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:lookback_compound_return:45",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:lookback_compound_return:45",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:lookback_compound_return:50",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:lookback_compound_return:50",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:lookback_compound_return:55",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:lookback_compound_return:55",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:lookback_compound_return:60",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:lookback_compound_return:60",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:daily_mean_return:10",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:daily_mean_return:10",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:daily_mean_return:15",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:daily_mean_return:15",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:daily_mean_return:20",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:daily_mean_return:20",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:daily_mean_return:25",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:daily_mean_return:25",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:daily_mean_return:30",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:daily_mean_return:30",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:daily_mean_return:35",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:daily_mean_return:35",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:daily_mean_return:40",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:daily_mean_return:40",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:daily_mean_return:45",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:daily_mean_return:45",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:daily_mean_return:50",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:daily_mean_return:50",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:daily_mean_return:55",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:daily_mean_return:55",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:daily_mean_return:60",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:daily_mean_return:60",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:baseline_annualized_volatility_diagnostic",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:baseline_annualized_volatility_diagnostic",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:return_observations",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:return_observations",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_exact_value:M:annualization_trading_days",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_trace_tuple:M:annualization_trading_days",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_unique58",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_complete11each",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_no_assigned_source",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "registry_no_future_calc_facts",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "market_vol_covariance:10",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "market_annualization:10",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "market_vol_covariance:15",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "market_annualization:15",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "market_vol_covariance:20",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "market_annualization:20",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "market_vol_covariance:25",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "market_annualization:25",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "market_vol_covariance:30",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "market_annualization:30",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "market_vol_covariance:35",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "market_annualization:35",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "market_vol_covariance:40",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "market_annualization:40",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "market_vol_covariance:45",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "market_annualization:45",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "market_vol_covariance:50",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "market_annualization:50",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "market_vol_covariance:55",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "market_annualization:55",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "market_vol_covariance:60",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "market_annualization:60",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "baseline_unit_sum",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "baseline_risk_independent_recompute",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_roster:pilot",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_source_hash:data/sector_documents/packets/pilot/fidelity_q2_2026.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_source_hash:data/sector_documents/packets/pilot/ubs_june_2026.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_unjudged:pilot:source_comparison:10",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_states:pilot:source_comparison:10",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:pilot:source_comparison:10:fidelity_q2_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:pilot:source_comparison:10:ubs_june_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_unjudged:pilot:source_comparison:15",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_states:pilot:source_comparison:15",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:pilot:source_comparison:15:fidelity_q2_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:pilot:source_comparison:15:ubs_june_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_unjudged:pilot:source_comparison:20",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_states:pilot:source_comparison:20",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:pilot:source_comparison:20:fidelity_q2_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:pilot:source_comparison:20:ubs_june_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_unjudged:pilot:source_comparison:25",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_states:pilot:source_comparison:25",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:pilot:source_comparison:25:fidelity_q2_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:pilot:source_comparison:25:ubs_june_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_unjudged:pilot:source_comparison:30",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_states:pilot:source_comparison:30",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:pilot:source_comparison:30:fidelity_q2_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:pilot:source_comparison:30:ubs_june_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_unjudged:pilot:source_comparison:35",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_states:pilot:source_comparison:35",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:pilot:source_comparison:35:fidelity_q2_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:pilot:source_comparison:35:ubs_june_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_unjudged:pilot:source_comparison:40",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_states:pilot:source_comparison:40",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:pilot:source_comparison:40:fidelity_q2_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:pilot:source_comparison:40:ubs_june_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_unjudged:pilot:source_comparison:45",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_states:pilot:source_comparison:45",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:pilot:source_comparison:45:fidelity_q2_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:pilot:source_comparison:45:ubs_june_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_unjudged:pilot:source_comparison:50",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_states:pilot:source_comparison:50",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:pilot:source_comparison:50:fidelity_q2_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:pilot:source_comparison:50:ubs_june_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_unjudged:pilot:source_comparison:55",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_states:pilot:source_comparison:55",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:pilot:source_comparison:55:fidelity_q2_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:pilot:source_comparison:55:ubs_june_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_unjudged:pilot:source_comparison:60",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_states:pilot:source_comparison:60",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:pilot:source_comparison:60:fidelity_q2_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:pilot:source_comparison:60:ubs_june_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_roster:main",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_source_hash:data/sector_documents/packets/main/fidelity_q3_2026.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_source_hash:data/sector_documents/packets/main/ubs_july_2026.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_unjudged:main:source_comparison:10",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_states:main:source_comparison:10",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:main:source_comparison:10:fidelity_q3_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:main:source_comparison:10:ubs_july_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_unjudged:main:source_comparison:15",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_states:main:source_comparison:15",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:main:source_comparison:15:fidelity_q3_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:main:source_comparison:15:ubs_july_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_unjudged:main:source_comparison:20",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_states:main:source_comparison:20",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:main:source_comparison:20:fidelity_q3_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:main:source_comparison:20:ubs_july_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_unjudged:main:source_comparison:25",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_states:main:source_comparison:25",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:main:source_comparison:25:fidelity_q3_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:main:source_comparison:25:ubs_july_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_unjudged:main:source_comparison:30",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_states:main:source_comparison:30",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:main:source_comparison:30:fidelity_q3_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:main:source_comparison:30:ubs_july_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_unjudged:main:source_comparison:35",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_states:main:source_comparison:35",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:main:source_comparison:35:fidelity_q3_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:main:source_comparison:35:ubs_july_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_unjudged:main:source_comparison:40",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_states:main:source_comparison:40",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:main:source_comparison:40:fidelity_q3_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:main:source_comparison:40:ubs_july_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_unjudged:main:source_comparison:45",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_states:main:source_comparison:45",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:main:source_comparison:45:fidelity_q3_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:main:source_comparison:45:ubs_july_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_unjudged:main:source_comparison:50",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_states:main:source_comparison:50",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:main:source_comparison:50:fidelity_q3_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:main:source_comparison:50:ubs_july_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_unjudged:main:source_comparison:55",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_states:main:source_comparison:55",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:main:source_comparison:55:fidelity_q3_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:main:source_comparison:55:ubs_july_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_unjudged:main:source_comparison:60",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_states:main:source_comparison:60",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:main:source_comparison:60:fidelity_q3_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_exact_source:main:source_comparison:60:ubs_july_2026",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_unique22",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "inventory_offline",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "human_blank",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "rubric_template:source_stance_literal_states",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "rubric_template:claim_support_states",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "rubric_template:action_consistency_states",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "html_unique_ids:plan/LIBERA_실험계획_v4.8_20261018.html",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "html_state:plan/LIBERA_실험계획_v4.8_20261018.html",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "html_no_stale_gate:plan/LIBERA_실험계획_v4.8_20261018.html",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "html_budget:plan/LIBERA_실험계획_v4.8_20261018.html",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "html_core_topic:plan/LIBERA_실험계획_v4.8_20261018.html",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:plan/LIBERA_실험계획_v4.8_20261018.html:../plan/LIBERA_실험계획_v4.8_20261018.html",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:plan/LIBERA_실험계획_v4.8_20261018.html:../paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:plan/LIBERA_실험계획_v4.8_20261018.html:../plan/LIBERA_실험설정_v4.8_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:plan/LIBERA_실험계획_v4.8_20261018.html:../research/v48_evaluation_protocol_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:plan/LIBERA_실험계획_v4.8_20261018.html:../research/v48_reference_basis_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:plan/LIBERA_실험계획_v4.8_20261018.html:../research/progress_20261018.html",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:plan/LIBERA_실험계획_v4.8_20261018.html:../data/sector_protocol/v48_design_20261018/prompt_contract.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:plan/LIBERA_실험계획_v4.8_20261018.html:../data/sector_protocol/v48_design_20261018/public_numeric_registry.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:plan/LIBERA_실험계획_v4.8_20261018.html:../research/evaluator_only/v48_source_comparison_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:plan/LIBERA_실험계획_v4.8_20261018.html:../research/v48_review_template_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:plan/LIBERA_실험계획_v4.8_20261018.html:../research/v48_topic_alignment_basis_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:plan/LIBERA_실험계획_v4.8_20261018.html:../research/v48_parameter_reference_addendum_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:plan/LIBERA_실험계획_v4.8_20261018.html:../research/v47_handoff_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:plan/LIBERA_실험계획_v4.8_20261018.html:../paper/LIBERA_텀페이퍼_초안_v4.7_20261018.html",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "html_unique_ids:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "html_state:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "html_no_stale_gate:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "html_budget:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "html_core_topic:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:../plan/LIBERA_실험계획_v4.8_20261018.html",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:../paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:../plan/LIBERA_실험설정_v4.8_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:../research/v48_evaluation_protocol_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:../research/v48_reference_basis_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:../research/progress_20261018.html",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:#ref-fsb24",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "anchor:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:#ref-fsb24",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:#ref-kleinberg",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "anchor:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:#ref-kleinberg",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:#ref-bommasani",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "anchor:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:#ref-bommasani",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:#ref-hedden",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "anchor:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:#ref-hedden",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:#ref-agarwal",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "anchor:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:#ref-agarwal",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:#ref-chen",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "anchor:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:#ref-chen",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:#ref-hansen",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "anchor:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:#ref-hansen",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:#ref-sheng",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "anchor:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:#ref-sheng",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:#ref-doshi",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "anchor:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:#ref-doshi",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:#ref-dellacqua",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "anchor:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:#ref-dellacqua",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:#ref-lewis",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "anchor:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:#ref-lewis",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:#ref-schneider",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "anchor:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:#ref-schneider",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:#ref-hornuf",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "anchor:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:#ref-hornuf",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:../data/sector_protocol/v48_design_20261018/prompt_contract.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:../data/sector_protocol/v48_design_20261018/public_numeric_registry.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:../research/evaluator_only/v48_source_comparison_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:../research/v48_review_template_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:../research/v48_topic_alignment_basis_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:../research/v48_parameter_reference_addendum_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:../research/v47_handoff_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "local_link:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html:../paper/LIBERA_텀페이퍼_초안_v4.7_20261018.html",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "historical_immutable:plan/LIBERA_실험계획_v4.7_20261018.html",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "historical_immutable:paper/LIBERA_텀페이퍼_초안_v4.7_20261018.html",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "historical_immutable:plan/LIBERA_실험설정_v4.7_20261018.json",
+      "pass": true,
+      "evidence": null
+    },
+    {
+      "id": "historical_immutable:research/run_sector_workflow.py",
+      "pass": true,
+      "evidence": null
+    }
+  ]
+}

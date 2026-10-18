@@ -1,0 +1,273 @@
+{
+  "artifact_type": "independent_topic_alignment_basis",
+  "protocol_candidate": "4.8",
+  "created_at_utc": "2026-10-18T09:49:16.974992+00:00",
+  "author_role": "independent_codex_subagent_v48_topic_alignment",
+  "scope": "원제안서와 v4.7 소논문의 연구질문·실패 처리 원칙을 대조한 v4.8 설계 근거. 실험 결과·효과 검증·독립 사람 검토가 아니다.",
+  "model_calls_performed_for_this_review": 0,
+  "existing_documents_modified": false,
+  "terminology": {
+    "R1": "기관 근거를 1단계부터 제공하고 유지하는 기존 네 단계 절차",
+    "R4": "기관 근거를 4단계에서 처음 제공하는 기존 네 단계 절차",
+    "C0": "각 R1/R4 실행에서 4단계가 처음 제출한 최종 원안(candidate 0). 새로운 대조군을 뜻하지 않는다.",
+    "C1_C2": "root가 설계 중인 C0 이후 유한한 산술 수정 후보 표기. C0의 대체 본결과가 아니며 보조 진단으로만 구분한다.",
+    "technical_gate": "정확한 입력·노출·실행·기록·평가가 가능한가에 대한 연구 구현 검증",
+    "model_outcome": "모델의 합계 오류·수치 오기·근거 왜곡·설명과 행동의 불일치 등 연구에서 관측할 결과"
+  },
+  "source_files": [
+    {
+      "path": "plan/문규리 제안서 상세_최종.html",
+      "sha256": "3af00703a0e0246275f25e4ab4395610cee9d773a2d327e47905fe499d9e2db9",
+      "role": "original_proposal"
+    },
+    {
+      "path": "plan/LIBERA_실험설계서0925.html",
+      "sha256": "dd7ddd202e6e0fcafb93082c5f558b919bce30b87424eea8fb6792f78a1dc002",
+      "role": "historical_design_read_for_context"
+    },
+    {
+      "path": "paper/LIBERA_텀페이퍼_초안_v4.7_20261018.html",
+      "sha256": "160e77c616d4ad4e29613240e36e977b7cdd9882774da0bd7f5cd38f9875eb82",
+      "role": "current_paper"
+    },
+    {
+      "path": "plan/LIBERA_실험계획_v4.7_20261018.html",
+      "sha256": "39f5d944944983435c5e27c204ae065d7066b1c5559aabfbb0129558571b7804",
+      "role": "current_plan"
+    },
+    {
+      "path": "data/sector_documents/model_packets.jsonl",
+      "sha256": "520bed87396eb815c87f362712a6ec39c0275076f9ef4c5d59ef5a7cbbe6afc7",
+      "role": "public_document_packet_scope_checked_offline; no model response generated"
+    }
+  ],
+  "local_document_anchors": [
+    {
+      "anchor_id": "original_rq1",
+      "path": "plan/문규리 제안서 상세_최종.html",
+      "line": 100,
+      "section": "전체 프로젝트 흐름 / 연구질문",
+      "exact_excerpt": "같은 LLM이 펀드별 정보 차이를 필요한 배분 차이로 반영하는가?",
+      "reused_core": "같은 공통 모델에 서로 다른 기관 근거를 제공했을 때 그 차이가 최종 선택에 전달되는지 관측한다."
+    },
+    {
+      "anchor_id": "original_rq2",
+      "path": "plan/문규리 제안서 상세_최종.html",
+      "line": 101,
+      "section": "전체 프로젝트 흐름 / 연구질문",
+      "exact_excerpt": "RAG 근거를 어느 단계부터 제공·유지해야 차이와 품질이 함께 회복되는가?",
+      "reused_core": "근거 최초 제공 단계를 업무 설계의 비교 대상으로 유지한다. 이번 사례는 검색을 고정한 근거 활용 과제이다."
+    },
+    {
+      "anchor_id": "original_required_difference",
+      "path": "plan/문규리 제안서 상세_최종.html",
+      "line": 199,
+      "section": "01 연구 배경",
+      "exact_excerpt": "공통된 시장정보가 동일한 방향의 합리적 판단을 요구한다면 수렴은 오히려 의사결정 품질의 향상을 의미할 수 있다.",
+      "reused_core": "비중 차이 증가를 성공으로 정의하지 않는다. 정성 문서에는 필요한 비중 차이의 유일 정답이 없다는 제한을 유지한다."
+    },
+    {
+      "anchor_id": "original_valid_pairs_and_selection",
+      "path": "plan/문규리 제안서 상세_최종.html",
+      "line": 361,
+      "section": "판단 지표 / 배분 거리와 과잉수렴",
+      "exact_excerpt": "실패가 있으면 해당 비교를 결측으로 표시하고 조건별 실패율을 함께 보고한다.",
+      "adjacent_exact_excerpt": "유효 출력만 남긴 분석에는 선택 편향이 생길 수 있으므로 실패율이 다른 조건을 거리만으로 순위화하지 않는다.",
+      "reused_core": "모델 실패를 실험 중단의 자동 사유로 삼지 않고 실패 포함 결과와 유효 사례에 조건부인 결과를 함께 보고한다."
+    },
+    {
+      "anchor_id": "original_raw_failure_retention",
+      "path": "plan/문규리 제안서 상세_최종.html",
+      "line": 391,
+      "section": "실행 계획 / 재현성과 실패 처리",
+      "exact_excerpt": "JSON 실패·미완성·합계 오류를 원출력에 남긴다.",
+      "adjacent_exact_excerpt": "주 결과는 원래 출력의 실패율을 포함하고, 복구 결과는 별도 표로 둔다.",
+      "reused_core": "C0를 주 결과로 보존하고 C1/C2가 성공해도 C0 오류를 삭제하거나 교체하지 않는다."
+    },
+    {
+      "anchor_id": "current_paper_question",
+      "path": "paper/LIBERA_텀페이퍼_초안_v4.7_20261018.html",
+      "line": 28,
+      "section": "3. 개념과 연구질문",
+      "exact_excerpt": "기관별 산업 판단이 배분 제안의 근거로 보존되는가",
+      "adjacent_exact_excerpt": "기관 간 차이가 커지는 것 역시 성공의 정의가 아니다.",
+      "reused_core": "공개 문서의 판단과 근거가 최종 제안에 전달되는 것을 핵심 관측 대상으로 유지한다."
+    },
+    {
+      "anchor_id": "current_paper_history_confound",
+      "path": "paper/LIBERA_텀페이퍼_초안_v4.7_20261018.html",
+      "line": 38,
+      "section": "4.3. 업무 절차와 계산 비교",
+      "exact_excerpt": "마지막 단계에는 양 조건에 같은 외부 사실이 주어지지만 앞선 판단과 계산 피드백은 경로에 따라 달라질 수 있다.",
+      "reused_core": "R1/R4는 시점·위치·활용 기간·재검토 기회가 함께 달라지는 절차 비교이며, 고착이나 기억이라는 단일 기제의 인과효과를 식별하지 않는다."
+    },
+    {
+      "anchor_id": "current_paper_chain",
+      "path": "paper/LIBERA_텀페이퍼_초안_v4.7_20261018.html",
+      "line": 44,
+      "section": "4.4. 평가 항목과 해석",
+      "exact_excerpt": "전략과의 연결은 등급 복사 점수 하나가 아니라 판단→근거→비중의 연쇄에서 검토한다.",
+      "reused_core": "등급 추출, 근거 충실성, 실제 제출 비중과 설명의 일치, 실행 유효성을 분리하여 관측한다."
+    },
+    {
+      "anchor_id": "current_paper_gate_to_replace",
+      "path": "paper/LIBERA_텀페이퍼_초안_v4.7_20261018.html",
+      "line": 87,
+      "section": "남은 우선순위와 선택해야 할 부분",
+      "exact_excerpt": "앞 단계 통과 후 최종 조건에서 Fidelity Q2/R1을 포함한 예비 4사례 전체를 실행·검증한다.",
+      "required_change": "여기서 통과는 연구 구현의 정확성 검증으로 한정한다. 모델의 산술 성공·근거 일치 성공을 다음 평가영역의 착수 조건으로 두지 않는다."
+    }
+  ],
+  "research_question_mapping": [
+    {
+      "question_id": "RQ1_public_judgment_transfer",
+      "research_question": "공통 생성형 AI가 기관 문서의 산업 판단과 근거를 최종 배분 선택에 어떻게 사용하거나 누락·왜곡하는가?",
+      "public_evidence": "Fidelity 전략가 전망 및 UBS CIO House View의 공개 산업 등급·설명·출처 범위. 기관 전체의 실제 목적·보유·위험 한도를 대신하지 않는다.",
+      "unit": "문서 사례 × 네 단계 절차; 산업 11개는 응답 안의 항목이다.",
+      "observation_point": "4단계 첫 최종 원안 C0와 그 이전 공개 응답 이력",
+      "observations": [
+        "원문 등급과 출처·시점·산업 식별 보존",
+        "판단에 대한 채택·유보·이탈 설명 및 그 설명의 공개 근거",
+        "설명에 적은 수치·관계가 실제 원안과 일치하는지",
+        "기관별 근거가 서로 다른데 같은 일반론만 반복하는지에 대한 사례별 검토",
+        "배분 유효성 및 관측 불가능 항목의 구분"
+      ],
+      "allowed_conclusions": [
+        "해당 공개 문서와 고정 모델·입력에서 확인된 근거 전달·누락·왜곡의 구체적 사례",
+        "등급 복사 성공과 선택의 근거성 또는 실행 유효성이 다른 결과일 수 있다는 관측"
+      ],
+      "forbidden_conclusions": [
+        "두 문서로 기관 전체 전략 또는 사적 위험선호를 측정했다는 주장",
+        "원문 정성 등급에서 유일한 정답 비중·필요한 비중 차이를 도출",
+        "Fidelity Overweight와 UBS Attractive를 동일한 수치 지시로 변환",
+        "실제 자금 운용·미래 수익률 또는 금융시장 전체의 동질화에 관한 결론"
+      ]
+    },
+    {
+      "question_id": "RQ2_workflow_comparison",
+      "research_question": "동일한 기관 근거를 처음부터 제공하는 R1과 최종 재검토에서 제공하는 R4는 최종 판단 전달에서 어떻게 다른가?",
+      "public_evidence": "같은 문서 패킷, 공통 시장자료와 계산 지원을 두 절차에서 재사용",
+      "unit": "같은 문서에 대응하는 R1 C0와 R4 C0",
+      "observation_point": "각 절차의 C0; C1/C2로 교체하지 않는다.",
+      "observations": [
+        "실패를 포함한 완료·형식·배분 유효성",
+        "원문 판단·근거 보존 및 설명과 선택의 일치",
+        "두 C0 모두 유효한 경우에만 배분 거리와 공통 과거자료에 조건부인 위험 진단",
+        "전체 실행 수, 평가 가능한 응답 수, 유효 배분 수와 유효 배분쌍 수"
+      ],
+      "allowed_conclusions": [
+        "고정한 문서 사례와 실행 조건에서 두 업무 절차가 보여 준 기술적 차이",
+        "어느 전달 단계에서 관측 가능한 근거 연결이 끊기거나 유지됐는지"
+      ],
+      "forbidden_conclusions": [
+        "두 출처 또는 11개 산업으로 기관 모집단에 일반화한 통계적 효과",
+        "문서 위치·활용 횟수·이력과 분리된 순수 제공 시점 효과",
+        "숨겨진 사고·기억·고착 기제를 단독으로 식별했다는 주장",
+        "비 AI 대조가 없는 설계에서 공통 AI 도입 자체의 인과효과"
+      ]
+    },
+    {
+      "question_id": "SUPPLEMENT_feedback_uptake",
+      "research_question": "정해진 유한 예산 안에서 실제 계산 피드백 뒤에 원안과 수정 설명이 어떻게 바뀌는가?",
+      "public_evidence": "C0 원안과 실제 계산 결과; 정답 비중이나 기관별 숨은 제약을 주입하지 않음",
+      "unit": "동일 실행 안의 C0→C1→C2 궤적",
+      "observation_point": "각 후보를 원문 그대로 기록; 종료와 누락을 포함",
+      "observations": [
+        "실제 변경된 산업 비중과 예산 잔차",
+        "고쳤다는 설명과 수치 변경의 일치",
+        "수정으로 공개 문서의 판단·근거가 바뀌거나 손실되는지",
+        "실제 호출 수와 중단 이유"
+      ],
+      "allowed_conclusions": [
+        "동일 실패 사례에 대한 보조 수정 궤적과 검토 책임의 필요성",
+        "한정된 추가 예산 내에서 실제 수정이 관측됐는지"
+      ],
+      "forbidden_conclusions": [
+        "성공한 C1/C2를 선택하여 원래 C0를 유효했다고 처리",
+        "추가 호출·피드백 노출이 다른 후보를 원래 R1/R4 주 비교에 혼합",
+        "한 사례의 반복 개발을 독립 확인 표본으로 합산",
+        "선행 논문의 반복 횟수를 현재 과제의 최적 예산이라고 주장"
+      ],
+      "status": "설계 방향 검토이며 실제 반복 예산·종료 규칙·실행 구현은 root의 별도 v4.8 명세에서 확정해야 한다."
+    }
+  ],
+  "management_and_economics_connection": [
+    {
+      "topic": "조직의 판단 근거 전달",
+      "mechanism": "조직에 자료가 존재하는 것과 그 자료가 중간 검토를 거쳐 최종 제안에 쓰이는 것은 다르다.",
+      "experimental_link": "R1/R4에서 같은 근거의 전달 경로와 최종 C0의 근거·선택을 연결해 기록한다.",
+      "scope_limit": "실제 운용팀이나 조직 구성원의 행동을 관측하지 않으므로 조직 전체 성과를 추정하지 않는다."
+    },
+    {
+      "topic": "검토 책임과 업무 분담",
+      "mechanism": "산술 검증 도구가 오류를 탐지했어도 AI의 후속 제안이 실제로 고쳐졌다는 보장은 없다.",
+      "experimental_link": "검증 결과·AI 원안·수정 행동·수정 주장을 별도 기록하여 검토가 필요한 지점을 드러낸다.",
+      "scope_limit": "계산 도구는 전략의 정답 대조군이 아니며 독립 사람의 내용 검토를 대신하지 않는다."
+    },
+    {
+      "topic": "산업 간 자본 배분",
+      "mechanism": "산업별 비중은 서로 다른 경제활동에 자본을 나누는 제안이며, 공개 전망과 공통 위험 정보의 사용을 수치 선택으로 연결한다.",
+      "experimental_link": "11개 산업에 대한 실제 모델 비중과 채택·이탈 근거를 함께 관측한다.",
+      "scope_limit": "무효 비중은 실행 가능한 포트폴리오가 아니다. 유효한 비중도 수익 최적성이나 실제 기관 운용안을 뜻하지 않는다."
+    }
+  ],
+  "gate_recommendation": {
+    "must_pass_before_next_research_stage": [
+      "실험자가 고정한 입력·문서·이력을 올바르게 전달하는지",
+      "R4의 조기 단계에 기관 정보·평가 전용 정답이 새지 않는지",
+      "계산기와 감사가 원문 숫자를 정확히 검사하는지",
+      "실패·중단·미관측 및 분모를 정확히 보존하는지",
+      "같은 규칙을 R1/R4에 적용하고 주 결과 C0를 교체하지 않는지"
+    ],
+    "not_required_as_development_pass": [
+      "모델이 비중 합계를 1로 제출함",
+      "모델이 모든 수치·설명을 정확하게 작성함",
+      "모델이 계산 피드백을 받아 반드시 수정함",
+      "모델이 기관 근거를 충실하게 사용함"
+    ],
+    "reason": "후자는 측정할 결과이다. 연구 구현 오류를 고치는 검증과 모델이 좋은 답을 내도록 보장하는 것을 혼동하면 실패 관측을 제거하고 연구가 산술 수정 성능 연구로 이동한다.",
+    "all_invalid_rule": "모든 C0가 무효이면 배분 거리·유효 포트폴리오 위험 대비는 평가 불가로 남긴다. 관측 가능한 근거·설명·실패는 보고하되 기관 판단 차이 없음 또는 R1/R4 효과 없음으로 결론내리지 않는다.",
+    "design_not_outcome_claim": "이 권고는 새 실행 성공이나 본실험 준비 완료 판정이 아니다."
+  },
+  "primary_method_papers_checked": [
+    {
+      "title": "E2A-Bench: Benchmarking Evidence-to-Action Reliability in Financial Chart Reasoning",
+      "url": "https://arxiv.org/html/2609.14302v1",
+      "locator": "Sections 3.1-3.4",
+      "checked_at_date": "2026-10-18",
+      "method_support": "유일한 투자 행동 정답을 만들지 않고 검증 가능한 사실·근거와 행동의 연결·결정 산출 여부를 구분하여 평가한다.",
+      "adaptation_limit": "차트 BUY/SELL 과제의 행동 범주·임계값·NDR 종합식은 산업 비중 정답이나 LIBERA 점수로 채택하지 않는다."
+    },
+    {
+      "title": "Reasoning Externalization for Faithful Large Language Model Narratives of Stock Return Predictions",
+      "url": "https://arxiv.org/html/2609.38869v2",
+      "locator": "Sections 3.5 and 4.1.2",
+      "checked_at_date": "2026-10-18",
+      "method_support": "객관적으로 계산한 수치·관계를 근거로 제공하고 구조화된 주장과 evidence ID를 대조한다.",
+      "adaptation_limit": "자동 대조는 자유 설명 전체의 의미 진실성을 보증하지 않는다. 원 과제와 현재 4B 양자화 산업 배분의 성능이 같다고 주장하지 않는다."
+    },
+    {
+      "title": "OpenPM: Auditable Point-in-Time Evaluation for LLM Portfolio-Management Agents",
+      "url": "https://arxiv.org/html/2608.09988v1",
+      "locator": "Section 4; raw mandate adherence versus post-critic feasibility discussion",
+      "checked_at_date": "2026-10-18",
+      "method_support": "모델 원안의 준수와 결정적 검증·보정 이후 결과를 구별하여 기록한다.",
+      "adaptation_limit": "원 논문의 결정적 배분 보정은 모델이 스스로 고친 결과가 아니다. 이 검토는 LIBERA 원안을 자동 정규화하도록 권고하지 않는다."
+    }
+  ],
+  "proposed_document_edits": [
+    "산술 성공을 ②·③ 및 전체 예비실험의 선행 조건으로 둔 문장을 연구 구현 검증과 구분하여 수정한다.",
+    "주 분석을 R1/R4의 4단계 첫 최종 원안 C0로 명확히 고정하고, 추가 수정은 별도 보조 궤적으로 표기한다.",
+    "핵심 평가표를 기관 판단·근거→채택/유보/이탈 이유→실제 선택의 연결로 구성한다.",
+    "주장 범위를 공개 문서의 판단 전달 사례로 유지하고, 정성 문서에서 원제안서의 규범적 과잉수렴 G를 직접 식별하지 못한다는 점을 명시한다.",
+    "v4.5-v4.7 산술 진단의 상세 이력을 개발 부록으로 옮기되 기존 실패 파일·해시·판정을 보존한다.",
+    "계산 도구 지원 아래서도 실패할 수 있음을 결과로 인정하며, 전체 사례 수와 유효 사례·쌍 수를 함께 보고한다."
+  ],
+  "review_status": {
+    "basis_complete": true,
+    "v48_document_round3_review_performed": false,
+    "v48_implementation_verified": false,
+    "main_experiment_run": false,
+    "human_substantive_review": false
+  }
+}

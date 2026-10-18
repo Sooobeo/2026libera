@@ -1,0 +1,832 @@
+{
+  "round": 2,
+  "phase": "v48_design",
+  "artifact_kind": "offline_methods_and_denominators_review",
+  "scope": "Cross-artifact evaluation, endpoint, denominator and prompt-contract review. No model generation, online runner integration test, human expert review or model-performance acceptance.",
+  "created_at_utc": "2026-10-18T09:59:41.847110+00:00",
+  "reviewer": {
+    "id": "/root/v48_evaluation_design",
+    "role": "assistant_self_review",
+    "independence_note": "Separate agent from root delivery author and round-1 checker; this agent authored the evaluation specification/template and therefore is not independent of all reviewed artifacts or a blinded human reviewer."
+  },
+  "basis_round1": {
+    "path": "research/v48_design_round1_final_20261018.json",
+    "sha256": "5f1c2638ca334a05524a4584f984f46d343df4fc70922621e7341ec04d5cf66c"
+  },
+  "inputs": [
+    {
+      "path": "plan/LIBERA_실험계획_v4.8_20261018.html",
+      "sha256": "9b2b0dd6bc348f745f648ab03f9f7ce36573de6643700e896449894e75982423"
+    },
+    {
+      "path": "paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+      "sha256": "0775e2d64633d51c2f35a0378406e744ea7e0b0489a71a45b6651599c08ae7d1"
+    },
+    {
+      "path": "plan/LIBERA_실험설정_v4.8_20261018.json",
+      "sha256": "95d03ab44a75c477bced0a6c9868facd58b66562ab90e24a0a6854e8cac659d3"
+    },
+    {
+      "path": "data/sector_protocol/v48_design_20261018/prompt_contract.json",
+      "sha256": "6352355f20bde763d8bcbc2a7db02bfe466e92f80c60f12488a81cd021cdd5c8"
+    },
+    {
+      "path": "data/sector_protocol/v48_design_20261018/public_numeric_registry.json",
+      "sha256": "5463226c35c53a0ab4caefe89c0bf857dc81853c4c982fba51254c0f5395c375"
+    },
+    {
+      "path": "research/evaluator_only/v48_source_comparison_20261018.json",
+      "sha256": "0a020fe160122c9802cc4ed1f17ea2f07e5d255d00919eaf101cfed6fb248634"
+    },
+    {
+      "path": "research/v48_evaluation_protocol_20261018.json",
+      "sha256": "c870c8383aa0b6ffbf56eceea75618ea12c0819311d97a500a968f1742b48059"
+    },
+    {
+      "path": "research/v48_review_template_20261018.json",
+      "sha256": "15251035d307ae7a57c5fed3404363fcf5b0bfd77ef128faeca38c0e407bd0f2"
+    },
+    {
+      "path": "research/v48_reference_basis_20261018.json",
+      "sha256": "421e6c39900beccea72a2996eb31077c84d10270f677a4478fb4d6d44e25e95b"
+    },
+    {
+      "path": "research/v48_topic_alignment_basis_20261018.json",
+      "sha256": "6f8057c99a160a2b481b1394aa65569cd27eb9f42a0857169f1e1f1caec1ae28"
+    },
+    {
+      "path": "research/build_sector_revision_v48.py",
+      "sha256": "0a3a54aeb083b488983f922ba35745a11d13b15da9bcd152218c89af7c927e0f"
+    },
+    {
+      "path": "research/v48_parameter_reference_addendum_20261018.json",
+      "sha256": "37af0008222199720a65483512b32ed08292f21be18ea610d63d258dbcb5d474"
+    }
+  ],
+  "inputs_copied_verbatim_from_round1": true,
+  "audit_completed": true,
+  "all_passed": true,
+  "status": "PASS",
+  "check_count": 65,
+  "pass_count": 65,
+  "failed_checks": [],
+  "not_observed_checks": [],
+  "checks": [
+    {
+      "id": "same_twelve_input_records",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "count": 12,
+        "source": "research\\v48_design_round1_final_20261018.json"
+      }
+    },
+    {
+      "id": "input_hash:plan/LIBERA_실험계획_v4.8_20261018.html",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "expected": "9b2b0dd6bc348f745f648ab03f9f7ce36573de6643700e896449894e75982423",
+        "actual": "9b2b0dd6bc348f745f648ab03f9f7ce36573de6643700e896449894e75982423"
+      }
+    },
+    {
+      "id": "input_hash:paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "expected": "0775e2d64633d51c2f35a0378406e744ea7e0b0489a71a45b6651599c08ae7d1",
+        "actual": "0775e2d64633d51c2f35a0378406e744ea7e0b0489a71a45b6651599c08ae7d1"
+      }
+    },
+    {
+      "id": "input_hash:plan/LIBERA_실험설정_v4.8_20261018.json",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "expected": "95d03ab44a75c477bced0a6c9868facd58b66562ab90e24a0a6854e8cac659d3",
+        "actual": "95d03ab44a75c477bced0a6c9868facd58b66562ab90e24a0a6854e8cac659d3"
+      }
+    },
+    {
+      "id": "input_hash:data/sector_protocol/v48_design_20261018/prompt_contract.json",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "expected": "6352355f20bde763d8bcbc2a7db02bfe466e92f80c60f12488a81cd021cdd5c8",
+        "actual": "6352355f20bde763d8bcbc2a7db02bfe466e92f80c60f12488a81cd021cdd5c8"
+      }
+    },
+    {
+      "id": "input_hash:data/sector_protocol/v48_design_20261018/public_numeric_registry.json",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "expected": "5463226c35c53a0ab4caefe89c0bf857dc81853c4c982fba51254c0f5395c375",
+        "actual": "5463226c35c53a0ab4caefe89c0bf857dc81853c4c982fba51254c0f5395c375"
+      }
+    },
+    {
+      "id": "input_hash:research/evaluator_only/v48_source_comparison_20261018.json",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "expected": "0a020fe160122c9802cc4ed1f17ea2f07e5d255d00919eaf101cfed6fb248634",
+        "actual": "0a020fe160122c9802cc4ed1f17ea2f07e5d255d00919eaf101cfed6fb248634"
+      }
+    },
+    {
+      "id": "input_hash:research/v48_evaluation_protocol_20261018.json",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "expected": "c870c8383aa0b6ffbf56eceea75618ea12c0819311d97a500a968f1742b48059",
+        "actual": "c870c8383aa0b6ffbf56eceea75618ea12c0819311d97a500a968f1742b48059"
+      }
+    },
+    {
+      "id": "input_hash:research/v48_review_template_20261018.json",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "expected": "15251035d307ae7a57c5fed3404363fcf5b0bfd77ef128faeca38c0e407bd0f2",
+        "actual": "15251035d307ae7a57c5fed3404363fcf5b0bfd77ef128faeca38c0e407bd0f2"
+      }
+    },
+    {
+      "id": "input_hash:research/v48_reference_basis_20261018.json",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "expected": "421e6c39900beccea72a2996eb31077c84d10270f677a4478fb4d6d44e25e95b",
+        "actual": "421e6c39900beccea72a2996eb31077c84d10270f677a4478fb4d6d44e25e95b"
+      }
+    },
+    {
+      "id": "input_hash:research/v48_topic_alignment_basis_20261018.json",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "expected": "6f8057c99a160a2b481b1394aa65569cd27eb9f42a0857169f1e1f1caec1ae28",
+        "actual": "6f8057c99a160a2b481b1394aa65569cd27eb9f42a0857169f1e1f1caec1ae28"
+      }
+    },
+    {
+      "id": "input_hash:research/build_sector_revision_v48.py",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "expected": "0a3a54aeb083b488983f922ba35745a11d13b15da9bcd152218c89af7c927e0f",
+        "actual": "0a3a54aeb083b488983f922ba35745a11d13b15da9bcd152218c89af7c927e0f"
+      }
+    },
+    {
+      "id": "input_hash:research/v48_parameter_reference_addendum_20261018.json",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "expected": "37af0008222199720a65483512b32ed08292f21be18ea610d63d258dbcb5d474",
+        "actual": "37af0008222199720a65483512b32ed08292f21be18ea610d63d258dbcb5d474"
+      }
+    },
+    {
+      "id": "primary_C0_config_and_spec",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "config": {
+          "candidate": "C0",
+          "definition": "First raw final response at workflow stage 4, separately for each R1/R4 case.",
+          "repair_replacement": false,
+          "weighted_composite_score": false,
+          "dimensions": [
+            "source and numerical factual fidelity",
+            "evidence-rationale-allocation linkage and coverage",
+            "raw execution feasibility"
+          ],
+          "label_accuracy_role": "auxiliary fact extraction diagnostic, not strategy quality"
+        },
+        "spec_C0": {
+          "definition": "The original stage-4 response before any new post-stage-4 arithmetic repair call.",
+          "role": "Primary endpoint for all R1/R4 research comparisons, including failures.",
+          "raw": "Preserve exact model text, parsed data where available, actual request, calculator input/output, timestamps and hashes. C0 already follows ordinary stage-1-to-3 history and feedback; it is not an unaided first-ever answer."
+        }
+      }
+    },
+    {
+      "id": "C0_is_after_core_history_not_unaided",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "spec": "Preserve exact model text, parsed data where available, actual request, calculator input/output, timestamps and hashes. C0 already follows ordinary stage-1-to-3 history and feedback; it is not an unaided first-ever answer.",
+        "stage4": {
+          "stage": 4,
+          "task": "Reconsider the proposal using all now-visible facts; state maintained or changed choices and why. This first final response is C0.",
+          "weights": "all 11",
+          "R1_source_visible": true,
+          "R4_source_visible": true
+        }
+      }
+    },
+    {
+      "id": "repair_contract_matches_config",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "config_and_prompt_equal": true
+      }
+    },
+    {
+      "id": "repair_max_two_and_no_primary_replacement",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "spec": "Separately reported auxiliary operational diagnostic, not a replacement for C0.",
+        "cap": 2,
+        "endpoints": [
+          "C1",
+          "C2"
+        ]
+      }
+    },
+    {
+      "id": "repair_explicit_numeric_boundary",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "config": "C0 completed, structurally valid and exactly one finite weight for each of 11 sectors; abs(sum(w)-1)>1e-6 OR any(w<0 or w>1).",
+        "spec": "C0 must be a completed, structurally valid response containing exactly one finite numeric weight for each of the 11 unique allowed sectors. It is eligible only if abs(sum(w) - 1) > 0.000001 OR any(w_s < 0 OR w_s > 1). Boolean values are not numeric weights."
+      }
+    },
+    {
+      "id": "repair_requires_complete_unique_finite_vector",
+      "status": "pass",
+      "pass": true,
+      "evidence": "C0 must be a completed, structurally valid response containing exactly one finite numeric weight for each of the 11 unique allowed sectors. It is eligible only if abs(sum(w) - 1) > 0.000001 OR any(w_s < 0 OR w_s > 1). Boolean values are not numeric weights."
+    },
+    {
+      "id": "repair_excludes_transport_schema_missing_nonfinite",
+      "status": "pass",
+      "pass": true,
+      "evidence": "A valid C0, no C0, incomplete transport, timeout, truncation, context overflow, JSON/schema failure, duplicate or missing sector, or nonfinite weight is not eligible for arithmetic repair; retain the reason without an automatic retry."
+    },
+    {
+      "id": "repair_stop_matches_policy",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "spec_stop": "Stop at the first arithmetically valid complete candidate, after C2, or at the first transport, schema or finite-vector failure, whichever occurs first. No restart, fallback to a better previous response or extra call on the basis of a semantic verdict is allowed.",
+        "config_stop": "First arithmetically valid candidate, C2, or first transport/schema/finite-vector failure; no restart.",
+        "selection": "Retain C0 as primary always; auxiliary terminal submission is last attempted response, never best-of selection."
+      }
+    },
+    {
+      "id": "repair_authoritative_reference_resolves",
+      "status": "pass",
+      "pass": true,
+      "evidence": "data/sector_protocol/v48_design_20261018/prompt_contract.json"
+    },
+    {
+      "id": "repair_not_semantic_or_gold_trigger",
+      "status": "pass",
+      "pass": true,
+      "evidence": "Eligibility and stopping use only the stated deterministic arithmetic checks on structurally complete, unique finite sector vectors and the execution failures listed above. Do not use offline gold, source-label accuracy, invented source constraints or semantic judgments to give extra calls or select a response. The detailed rules are specified in the authoritative execution contract; implementation and pre-main freeze remain pending."
+    },
+    {
+      "id": "independent_decimal_boundary_examples",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "scope": "Mathematical rule interpretation, not runner implementation verification.",
+        "examples": [
+          {
+            "sum": "1",
+            "minimum": "0",
+            "maximum": "1",
+            "expected_arithmetic_violation": false,
+            "computed_arithmetic_violation": false
+          },
+          {
+            "sum": "0.999999",
+            "minimum": "0",
+            "maximum": "1",
+            "expected_arithmetic_violation": false,
+            "computed_arithmetic_violation": false
+          },
+          {
+            "sum": "0.9999989",
+            "minimum": "0",
+            "maximum": "1",
+            "expected_arithmetic_violation": true,
+            "computed_arithmetic_violation": true
+          },
+          {
+            "sum": "1.000001",
+            "minimum": "0",
+            "maximum": "1",
+            "expected_arithmetic_violation": false,
+            "computed_arithmetic_violation": false
+          },
+          {
+            "sum": "1.0000011",
+            "minimum": "0",
+            "maximum": "1",
+            "expected_arithmetic_violation": true,
+            "computed_arithmetic_violation": true
+          },
+          {
+            "sum": "1",
+            "minimum": "-0.0000001",
+            "maximum": "0.5",
+            "expected_arithmetic_violation": true,
+            "computed_arithmetic_violation": true
+          },
+          {
+            "sum": "1",
+            "minimum": "0",
+            "maximum": "1.0000001",
+            "expected_arithmetic_violation": true,
+            "computed_arithmetic_violation": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "seven_fields_retained",
+      "status": "pass",
+      "pass": true,
+      "evidence": [
+        "source_id",
+        "interpretations",
+        "weights",
+        "alternatives",
+        "risk_discussion",
+        "unresolved",
+        "submitted_constraints"
+      ]
+    },
+    {
+      "id": "early_empty_is_not_proposed_or_zero_budget_failure",
+      "status": "pass",
+      "pass": true,
+      "evidence": "not_yet_proposed; no budget=0 violation and no valid portfolio risk; interpretation still reviewed"
+    },
+    {
+      "id": "later_stages_require_all11",
+      "status": "pass",
+      "pass": true,
+      "evidence": [
+        {
+          "stage": 3,
+          "task": "Submit a provisional allocation with evidence-linked rationale.",
+          "weights": "all 11",
+          "R1_source_visible": true,
+          "R4_source_visible": false
+        },
+        {
+          "stage": 4,
+          "task": "Reconsider the proposal using all now-visible facts; state maintained or changed choices and why. This first final response is C0.",
+          "weights": "all 11",
+          "R1_source_visible": true,
+          "R4_source_visible": true
+        }
+      ]
+    },
+    {
+      "id": "R1_R4_visibility_design",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "R1": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "R4": [
+          false,
+          false,
+          false,
+          true
+        ],
+        "scope": "Design contract only; runtime isolation remains untested."
+      }
+    },
+    {
+      "id": "core_failure_stops_no_unattempted_failure_inflation",
+      "status": "pass",
+      "pass": true,
+      "evidence": "A transport, JSON/schema, truncation or context-overflow failure ends that case without an automatic retry. Preserve all prior and partial raw responses; later planned stages are not_started, not additional attempted model failures. No C0 means no auxiliary repair."
+    },
+    {
+      "id": "external_numeric_claims_have_visible_fact_ids",
+      "status": "pass",
+      "pass": true,
+      "evidence": "A factual claim about supplied market data or an already-returned calculator result cites an existing visible M: fact ID or actual calculator fact ID and preserves its subject, metric, period and unit."
+    },
+    {
+      "id": "self_derived_claims_pending_and_input_grounded",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "evaluation": "A claim newly derived by the model from its current proposed weights, such as their sum or a current active weight, may precede any calculator observation of that vector. It must be identified as model-derived and pending verification, with existing input fact IDs where applicable, the relevant proposed weights and the formula. It is verified offline against the captured proposal; it is not treated as a supplied fact merely because the model asserts it.",
+        "prompt": [
+          "For a quantity you derive from the current proposed weights before the calculator runs, cite already-visible input IDs, identify the current proposed weights and formula, and mark the claim pending external verification. Never invent a future calculator fact ID."
+        ]
+      }
+    },
+    {
+      "id": "future_calculator_id_and_stale_candidate_prohibition",
+      "status": "pass",
+      "pass": true,
+      "evidence": "Never invent a future calculator fact ID or cite an earlier candidate's result as verification of the current vector. A new calculator fact becomes available only after that actual calculation has been performed and recorded. Proposed strategic weights themselves are model choices, not claimed external target facts."
+    },
+    {
+      "id": "actual_runtime_fact_lineage_remains_pending",
+      "status": "pass",
+      "pass": true,
+      "evidence": "Future per-stage facts must carry call/stage/candidate ID, operation, actual input hashes, units and values. They are not static observations in this file."
+    },
+    {
+      "id": "alternative_numeric_completeness_prompted",
+      "status": "pass",
+      "pass": true,
+      "evidence": "Use the existing text field to compare a meaningful alternative and the evidence relevant to the choice. If numerical alternative weights are given, state the full vector or explicitly identify the base vector and every change. An incomplete alternative cannot be certified as feasible or lower-risk."
+    },
+    {
+      "id": "registry_market_source_hash",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "path": "data/sector_market/market_input.json",
+        "sha256": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f"
+      }
+    },
+    {
+      "id": "registry_lineage_hash:data/sector_market/manifest.json",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "path": "data/sector_market/manifest.json",
+        "sha256": "b60124bd5ccb14d0738bec7e80e59cc66f7d288af60b9ca3c14d61831a05cf6f"
+      }
+    },
+    {
+      "id": "registry_lineage_hash:data/sector_market/benchmark.json",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "path": "data/sector_market/benchmark.json",
+        "sha256": "ebef9bd86acbce8d0ea5681c5cf685a79adc53a03e417971ac044b0fbf86d6e6"
+      }
+    },
+    {
+      "id": "all58_registry_values_equal_public_source",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "rows": 58,
+        "numeric_and_float_hex_mismatches": []
+      }
+    },
+    {
+      "id": "registry_ids_unique_including_matrices",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "all_fact_ids": 60,
+        "unique_ids": 60
+      }
+    },
+    {
+      "id": "registry_scalar_tuple_coverage",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "rows_checked": 58,
+        "version_binding": {
+          "path": "data/sector_market/market_input.json",
+          "sha256": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f"
+        }
+      }
+    },
+    {
+      "id": "registry_matrix_order_and_units",
+      "status": "pass",
+      "pass": true,
+      "evidence": [
+        {
+          "fact_id": "M:covariance",
+          "source_json_pointer": "/covariance",
+          "unit": "daily_decimal_return_squared",
+          "sector_order": [
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35",
+            "40",
+            "45",
+            "50",
+            "55",
+            "60"
+          ]
+        },
+        {
+          "fact_id": "M:correlation",
+          "source_json_pointer": "/correlation",
+          "unit": "unitless",
+          "sector_order": [
+            "10",
+            "15",
+            "20",
+            "25",
+            "30",
+            "35",
+            "40",
+            "45",
+            "50",
+            "55",
+            "60"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "all_planned_cases_and_four_denominator_layers",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "all_planned_cases": "Keep every prespecified source-arm case in completion, parse and feasibility reporting. Distinguish not attempted, interrupted, timed out, incomplete transport, unparsable response, missing response and completed response.",
+        "readable_outputs": "For qualitative review, report how many planned responses contain readable text, how many permit a specific judgment and why others do not. Unparsable but readable fragments can be reviewed with exact locations; this does not turn them into complete or valid allocations.",
+        "valid_allocations": "Report the count of valid raw allocations over all planned cases before describing conditional risk or allocation statistics. Arithmetic-invalid but readable outputs remain eligible for factual and semantic review where their contents permit it.",
+        "valid_pairs": "Within-source distances require both relevant raw allocations to be valid. Between-source distances require both source allocations in the arm to be valid. The R4-minus-R1 between-source distance requires all four. Publish eligible-pair counts and excluded case identities with reasons."
+      }
+    },
+    {
+      "id": "44_fixed_sector_denominator",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "cases": 4,
+        "sectors_per_case": 11,
+        "split_expected_sector_rows": 44,
+        "description": "At C0 there are 11 expected source-interpretation rows per case, 22 per arm across the two prespecified sources and 44 across the four-case split. Missing, duplicated or malformed rows receive no exact-label credit without reducing these denominators."
+      }
+    },
+    {
+      "id": "missing_duplicate_rows_keep_label_denominator",
+      "status": "pass",
+      "pass": true,
+      "evidence": "At C0 there are 11 expected source-interpretation rows per case, 22 per arm across the two prespecified sources and 44 across the four-case split. Missing, duplicated or malformed rows receive no exact-label credit without reducing these denominators."
+    },
+    {
+      "id": "invalid_arithmetic_does_not_erase_readable_semantics",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "valid_allocation_scope": "Report the count of valid raw allocations over all planned cases before describing conditional risk or allocation statistics. Arithmetic-invalid but readable outputs remain eligible for factual and semantic review where their contents permit it.",
+        "readable_scope": "For qualitative review, report how many planned responses contain readable text, how many permit a specific judgment and why others do not. Unparsable but readable fragments can be reviewed with exact locations; this does not turn them into complete or valid allocations."
+      }
+    },
+    {
+      "id": "valid_pairs_and_four_way_difference_only",
+      "status": "pass",
+      "pass": true,
+      "evidence": "Within-source distances require both relevant raw allocations to be valid. Between-source distances require both source allocations in the arm to be valid. The R4-minus-R1 between-source distance requires all four. Publish eligible-pair counts and excluded case identities with reasons."
+    },
+    {
+      "id": "conditional_selection_bias_reported",
+      "status": "pass",
+      "pass": true,
+      "evidence": "Valid-only comparisons describe the observable subset; differential completion or feasibility between arms can change that subset. Do not present conditional distances or semantic rates as an unconditional effect for all planned cases."
+    },
+    {
+      "id": "missing_and_uncertain_not_supported_by_default",
+      "status": "pass",
+      "pass": true,
+      "evidence": "An absent required explanation is missing. An existing statement whose support cannot be determined is uncertain or not_assessable, with a specific reason. Neither is silently recoded as supported or contradicted."
+    },
+    {
+      "id": "literal_claims_distinct_from_verified_support",
+      "status": "pass",
+      "pass": true,
+      "evidence": "The literal stance or claim is recorded before support is judged. Saying that a source was adopted, that a weight increased or that an error was repaired is not evidence that it happened."
+    },
+    {
+      "id": "qualitative_codes_are_local_not_validated_scale",
+      "status": "pass",
+      "pass": true,
+      "evidence": "Local qualitative operationalization informed by evidence-to-action evaluation papers. These categories are not a validated taxonomy, an expert investment-quality score or a uniquely correct strategy rule."
+    },
+    {
+      "id": "state_vocabularies_match_template",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "literal": [
+          "adopt",
+          "qualified_adoption",
+          "defer",
+          "depart",
+          "ambiguous",
+          "not_stated",
+          "not_assessable"
+        ],
+        "support": [
+          "supported",
+          "contradicted",
+          "not_stated_in_visible_evidence",
+          "uncertain",
+          "not_assessable",
+          "not_applicable"
+        ],
+        "consistency": [
+          "consistent_with_stated_action",
+          "contradicts_stated_action",
+          "direction_not_claimed",
+          "baseline_or_weights_unavailable",
+          "ambiguous",
+          "not_assessable",
+          "not_applicable"
+        ]
+      }
+    },
+    {
+      "id": "five_inventory_states_match_template",
+      "status": "pass",
+      "pass": true,
+      "evidence": [
+        "substantive_difference_supported",
+        "similarity_supported",
+        "different_scales_not_directly_comparable",
+        "insufficient_evidence",
+        "uncertain"
+      ]
+    },
+    {
+      "id": "all22_inventory_rows_share_five_states",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "row_count": 22,
+        "expected_states": [
+          "substantive_difference_supported",
+          "similarity_supported",
+          "different_scales_not_directly_comparable",
+          "insufficient_evidence",
+          "uncertain"
+        ]
+      }
+    },
+    {
+      "id": "inventory_complete_sectors_each_split",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "pilot_rows": 11,
+        "main_rows": 11
+      }
+    },
+    {
+      "id": "inventory_comparisons_human_review_unfilled",
+      "status": "pass",
+      "pass": true,
+      "evidence": "source-only_inventory_prepared_independent_human_review_pending"
+    },
+    {
+      "id": "inventory_hidden_from_model",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "inventory": "EVALUATOR_ONLY_NEVER_MODEL_INPUT",
+        "prompt": "One assigned source packet is first provided at stage 1 for R1 or stage 4 for R4; then remains in history. Offline source-comparison inventory is never provided."
+      }
+    },
+    {
+      "id": "no_unique_gold_or_forced_source_sign",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "source_labels": "Compare exact source-specific rating terms and source identity; trim only already-permitted outer whitespace. Do not map UBS Attractive to Fidelity Overweight.",
+        "rationale": "Explain whether and how the source judgment is adopted, qualified, deferred or departed from; identify supporting and competing visible evidence; connect the explanation to the submitted weight and the named common baseline. A justified departure is permitted. No fixed target weight, risk-aversion coefficient or numeric cap may be invented from qualitative prose."
+      }
+    },
+    {
+      "id": "primary_dimensions_answer_source_to_choice_question",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "dimensions": [
+          "source and numerical factual fidelity",
+          "evidence-rationale-allocation linkage and coverage",
+          "raw execution feasibility"
+        ],
+        "scope": "Document evidence -> interpretation -> stated adoption, qualification, deferral or departure -> allocation rationale -> actual raw allocation, together with completion and feasibility."
+      }
+    },
+    {
+      "id": "no_model_success_requirement_in_readiness",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "version": "v48_forward_only",
+        "requires": [
+          "input/schema agreement",
+          "assigned-source exposure isolation",
+          "verbatim raw records and failure accounting",
+          "calculator and denominator correctness",
+          "numeric claims traceability",
+          "source and semantic review procedure",
+          "full four-case pilot before freeze"
+        ],
+        "does_not_require": [
+          "every model answer has budget sum 1",
+          "all model reasoning is correct",
+          "R1 superiority",
+          "nonzero institution distance"
+        ],
+        "model_failure_is_outcome": true,
+        "insufficient_measurement_rule": "If C0 allocations do not form valid pairs, weight-contrast outcomes remain unobserved. Report this without a zero-effect claim; do not substitute repaired candidates into primary comparison.",
+        "main_start": "Only after versioned implementation checks, complete pilot accounting, independent human source review and frozen protocol. No main execution in this task."
+      }
+    },
+    {
+      "id": "no_valid_C0_pairs_means_unobserved_not_zero",
+      "status": "pass",
+      "pass": true,
+      "evidence": "If C0 allocations do not form valid pairs, weight-contrast outcomes remain unobserved. Report this without a zero-effect claim; do not substitute repaired candidates into primary comparison."
+    },
+    {
+      "id": "one_model_small_case_not_independent_sector_sample",
+      "status": "pass",
+      "pass": true,
+      "evidence": "One document per source within each split, one common market input and one model. Sectors, stages, factual claims and repair attempts are dependent components, not independent institutions or independent sample replications."
+    },
+    {
+      "id": "new_calls_zero_and_no_readiness_claim",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "v48_model_calls": 0,
+        "v48_pilot_completed_cases": 0,
+        "main_completed_cases": 0,
+        "main_frozen": false,
+        "runtime_integration_complete": false,
+        "human_review_complete": false
+      }
+    },
+    {
+      "id": "human_review_not_completed_or_simulated",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "config_human_review": false,
+        "template_human_review": false,
+        "reviewer_role_this_audit": "assistant_self_review"
+      }
+    },
+    {
+      "id": "runtime_integration_explicitly_pending",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "prompt": "specification_not_integrated_into_online_runner",
+        "registry": "offline_registry_prepared_runner_integration_pending",
+        "evaluation": "design_specification_only_not_implemented_not_frozen"
+      }
+    },
+    {
+      "id": "delivery_prose_endpoint_scope_matches_reviewed_design",
+      "status": "pass",
+      "pass": true,
+      "evidence": {
+        "review": "Both pinned documents describe stage-4 C0 as primary, up to two auxiliary arithmetic revisions, invalid C0 comparisons as unobserved and future integration/pilot/human review as pending. This semantic assessment follows direct reading, not token presence alone.",
+        "documents": [
+          {
+            "path": "plan/LIBERA_실험계획_v4.8_20261018.html",
+            "sha256": "9b2b0dd6bc348f745f648ab03f9f7ce36573de6643700e896449894e75982423"
+          },
+          {
+            "path": "paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+            "sha256": "0775e2d64633d51c2f35a0378406e744ea7e0b0489a71a45b6651599c08ae7d1"
+          }
+        ]
+      }
+    }
+  ],
+  "model_calls": 0,
+  "main_model_calls": 0,
+  "main_ready": false,
+  "human_review_completed": false,
+  "online_runtime_integration_verified": false,
+  "pending_outside_audit_scope": [
+    "Versioned v4.8 online runner/scorer integration",
+    "Runtime exposure isolation and all failure-path tests",
+    "Four-case pilot with complete failure accounting",
+    "Independent human source comparison and semantic review",
+    "Main-input/protocol freeze before any main response"
+  ],
+  "conclusion": "The reviewed design is internally consistent for the stated descriptive source-to-allocation question. PASS applies to the audited offline design boundaries, not successful model decisions, completed human review or readiness for main execution."
+}

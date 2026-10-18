@@ -1,0 +1,193 @@
+{
+  "schema_version": "libera_v48_parameter_reference_addendum_1.0",
+  "created_at_utc": "2026-10-18T09:56:37.666611+00:00",
+  "scope": "Two inherited parameter sources rechecked for precise provenance and current versions. Supplements, does not rewrite, v48_reference_basis_20261018.json.",
+  "primary_sources": [
+    {
+      "path": "research/evidence/v48_reference_20261018/portbench_abs_latest.html",
+      "sha256": "257f60b60b7ce8335bd2e64672e55b4926eb598a68d139fb9f7c4700e256ae50",
+      "size_bytes": 42877,
+      "url": "https://arxiv.org/abs/2605.27887",
+      "resolved_url": "https://arxiv.org/abs/2605.27887",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-18T09:56:36.662005+00:00",
+      "kind": "new_primary_snapshot",
+      "source_id": "portbench_abs_latest"
+    },
+    {
+      "path": "research/evidence/v48_reference_20261018/portbench_2605_27887v6.html",
+      "sha256": "1cfcc2234f076e011702265433fcdce14c29514546ed74ebf0bec090275ab62c",
+      "size_bytes": 1029621,
+      "url": "https://arxiv.org/html/2605.27887v6",
+      "resolved_url": "https://arxiv.org/html/2605.27887v6",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-18T09:56:37.031050+00:00",
+      "kind": "new_primary_snapshot",
+      "source_id": "portbench_fulltext_v6"
+    },
+    {
+      "path": "research/evidence/v48_reference_20261018/finvector_abs_latest.html",
+      "sha256": "f725bc2f591079d4d2d357e4f0c92165836eaab2fd6733bfe81bb33f095a9a49",
+      "size_bytes": 42068,
+      "url": "https://arxiv.org/abs/2610.08882",
+      "resolved_url": "https://arxiv.org/abs/2610.08882",
+      "http_status": 200,
+      "retrieved_at_utc": "2026-10-18T09:56:37.119381+00:00",
+      "kind": "new_primary_snapshot",
+      "source_id": "finvector_abs_latest"
+    },
+    {
+      "path": "research/evidence/v45_structured_output_20261018/finvector_2610_08882.pdf",
+      "sha256": "a7551b10caddb0d9f94a215f29fad4771f5cd2addae56ea43d706f7c5c1c1dfa",
+      "size_bytes": 580927,
+      "url": "https://arxiv.org/pdf/2610.08882v1",
+      "kind": "reused_primary_snapshot",
+      "source_id": "finvector_pdf_v1"
+    }
+  ],
+  "metadata": {
+    "portbench": {
+      "title_registered": "PortBench: A Correlation-Aware, Full-Pipeline Benchmark for LLM-Driven Portfolio Management",
+      "citation_authors_original": [
+        "Zhao, Yuxuan",
+        "Chen, Sijia",
+        "Su, Ningxin"
+      ],
+      "citation_date_original": "2026/05/27",
+      "arxiv_id": "2605.27887",
+      "dateline_original": "[Submitted on 27 May 2026 ( v1 ), last revised 9 Oct 2026 (this version, v6)]",
+      "latest_version_observed": 6,
+      "metadata_locator": "head meta citation_title/citation_author/citation_date/citation_arxiv_id; .dateline"
+    },
+    "finvector": {
+      "title_registered": "FinVector-Market-4B: A Controlled Study of LoRA Adaptation for Structured Financial Tasks",
+      "citation_authors_original": [
+        "Khaybullina, Alina"
+      ],
+      "citation_date_original": "2026/10/06",
+      "arxiv_id": "2610.08882",
+      "dateline_original": "[Submitted on 6 Oct 2026]",
+      "latest_version_observed": 1,
+      "metadata_locator": "head meta citation_title/citation_author/citation_date/citation_arxiv_id; .dateline"
+    }
+  },
+  "checked_parameters": [
+    {
+      "parameter": "lookback",
+      "value": 60,
+      "unit": "daily return lookback observations in LIBERA",
+      "paper_locator": "PortBench v6 Appendix C.1, T5 maximum-Sharpe allocation",
+      "paper_url": "https://arxiv.org/html/2605.27887v6",
+      "direct_support_ko": "T5는 60-day lookback에서 연율화 평균과 공분산을 추정한다.",
+      "application_class": "paper_value_transferred_to_new_task",
+      "limit_ko": "원 다자산 최대-Sharpe 과제와 LIBERA 11개 산업 ETF 자료의 목적은 다르다. 60개 수익률을 확보하는 날짜 선택은 자료·구현 규칙이며 최적 창 길이 또는 기관 고유 위험선호를 뜻하지 않는다."
+    },
+    {
+      "parameter": "annualization",
+      "value": 252,
+      "paper_locator": "PortBench v6 Appendix C.4 execution/return accounting and classical strategies; Appendix F.9 decisions/covariance estimates",
+      "paper_url": "https://arxiv.org/html/2605.27887v6",
+      "direct_support_ko": "일간 수익률 변동성에 sqrt(252), 공분산 기반 추정 변동성에 sqrt(252*w' Sigma w)를 사용한다.",
+      "application_class": "direct_formula_with_task_adaptation",
+      "limit_ko": "부적합 비중을 정상 포트폴리오로 정규화하는 근거가 아니며, 미래 손실확률이나 수익률 예측을 입증하지 않는다. 원 연구의 미투자 현금 처리는 가져오지 않는다."
+    },
+    {
+      "parameter": "allocation_distance",
+      "formula_LIBERA": "d(w,v)=0.5*sum_i(abs(w_i-v_i))",
+      "paper_formula": "s_acc=1-0.5*sum_i(abs(w_i-w*_p,i))",
+      "paper_locator": "PortBench v6 Appendix C.2 Equation (8)",
+      "paper_url": "https://arxiv.org/html/2605.27887v6",
+      "direct_support_ko": "원식은 정규화된 long-only 배분과 계산 참조 사이의 유사성이다.",
+      "application_class": "distance_component_adapted_to_two_model_proposals",
+      "limit_ko": "LIBERA에서는 두 유효 제안 간 거리로만 사용한다. 비교 제안 v를 정답 비중으로 간주하지 않으며 1-distance를 기관 전략 정확도로 부르지 않는다."
+    },
+    {
+      "parameter": "max_output_tokens",
+      "value": 8192,
+      "paper_locator": "PortBench v6 Section 3.1",
+      "paper_url": "https://arxiv.org/html/2605.27887v6",
+      "application_class": "paper_value_transferred_to_different_model_and_task",
+      "limit_ko": "원 연구는 thinking 기본 활성화이며 현재 4B가 평가 모델 목록에 없다. FinVector의 700-token 평가와 구분하고 현재 과제에 대한 최적·충분 상한이라고 주장하지 않는다."
+    },
+    {
+      "parameter": "seed",
+      "value": 3407,
+      "paper_locator": "FinVector-Market-4B v1 Section 4.1, PDF page 4, paragraph immediately after Table 3",
+      "paper_url": "https://arxiv.org/pdf/2610.08882v1",
+      "direct_support_ko": "네 평가 조건에 공통 seed 3407을 명시한다. 학습 seed만에서 추론한 값이 아니다.",
+      "application_class": "reported_paper_value_with_backend_adaptation",
+      "limit_ko": "3407이라는 숫자는 직접 논문 선례이고 Ollama의 seed 요청 필드에 적용하는 것은 backend 변형이다. MLX와 Ollama의 난수·토큰·출력 동등성이나 최적값의 근거가 아니다. 순수 무근거 공학 수치로 분류하지 않는다."
+    },
+    {
+      "parameter": "greedy_and_thinking",
+      "values": {
+        "greedy": true,
+        "thinking": false
+      },
+      "paper_locator": "FinVector-Market-4B v1 Section 4.1, PDF page 4",
+      "paper_url": "https://arxiv.org/pdf/2610.08882v1",
+      "application_class": "paper_condition_with_Ollama_T0_translation",
+      "limit_ko": "원 평가 MLX 0.32.2/MLX-LM 0.31.3, batch8, max700과 현재 런타임은 다르다. JSON schema를 프롬프트에 넣은 조건이 Ollama constrained decoding과 동일하지 않다. 미보고 repetition/presence/frequency penalty를 논문 평가 설정으로 단정하지 않는다."
+    }
+  ],
+  "engineering_parameters_not_established_by_these_papers": [
+    "Q4_K_M quantization",
+    "65536 context tokens",
+    "900-second per-call deadline",
+    "num_thread=2",
+    "num_batch=512",
+    "1e-6 sum tolerance",
+    "exact Ollama engine/template/binary pins"
+  ],
+  "checks": [
+    {
+      "id": "PortBench_latest_v6_2026_10_09",
+      "passed": true
+    },
+    {
+      "id": "FinVector_latest_v1_2026_10_06",
+      "passed": true
+    },
+    {
+      "id": "PortBench_T5_60day",
+      "passed": true
+    },
+    {
+      "id": "PortBench_C4_F9_annualization",
+      "passed": true
+    },
+    {
+      "id": "PortBench_Eq8_similarity",
+      "passed": true
+    },
+    {
+      "id": "PortBench_8192",
+      "passed": true
+    },
+    {
+      "id": "FinVector_eval_seed_not_only_training_seed",
+      "passed": true
+    },
+    {
+      "id": "FinVector_700_cap_and_MLX_engine",
+      "passed": true
+    },
+    {
+      "id": "FinVector_PDF_historical_hash_unchanged",
+      "passed": true
+    }
+  ],
+  "all_passed": true,
+  "memo_reference": {
+    "path": "research/v48_reference_basis_20261018.json",
+    "sha256": "421e6c39900beccea72a2996eb31077c84d10270f677a4478fb4d6d44e25e95b",
+    "size_bytes": 43782
+  },
+  "historical_snapshot_manifest": {
+    "path": "research/evidence/v45_structured_output_20261018/manifest.json",
+    "sha256": "994ad850a7c2c42267d8dc19a0461c844ea55c2faf4adf8609004a1f6bc200c7",
+    "size_bytes": 4402
+  },
+  "model_calls": 0,
+  "prior_files_modified": false
+}
