@@ -1,0 +1,221 @@
+{
+  "schema_version": "libera_planner_executor_reference_1.0",
+  "protocol_version": "4.7",
+  "phase": "priority1",
+  "created_at_utc": "2026-10-18T09:08:38.186558+00:00",
+  "status": "frozen_reference_for_selected_finite_development_diagnostic_not_execution_result",
+  "change_scope": "two_call_model_authored_plan_then_model_authored_full_response_with_actual_feedback",
+  "comparison_memo": {
+    "path": "research/v47_priority1_revision_options_20261018.json",
+    "sha256": "10f95a6b89749fd175cf212d579b2e6a6215e6bbc7e08fe86e72438be80ea116",
+    "size_bytes": 14013
+  },
+  "primary_sources": [
+    {
+      "source_id": "uptake_fulltext",
+      "url": "https://arxiv.org/html/2607.15388v1",
+      "path": "research/evidence/v47_priority1_options_20261018/uptake_fulltext.html",
+      "sha256": "3c94893519cb012c30d44da502eff8c9b75c9c3c60a487cb166374cd46ebbe3b",
+      "size_bytes": 699318,
+      "http_status": 200,
+      "resolved_url": "https://arxiv.org/html/2607.15388v1"
+    },
+    {
+      "source_id": "uptake_abs",
+      "url": "https://arxiv.org/abs/2607.15388",
+      "path": "research/evidence/v47_priority1_options_20261018/uptake_abs.html",
+      "sha256": "d8b276fa841c991aa2e88525c015f460d669aa721cf3607871568d2e01d728b7",
+      "size_bytes": 43462,
+      "http_status": 200,
+      "resolved_url": "https://arxiv.org/abs/2607.15388",
+      "version_dateline_observed": "[Submitted on 16 Jul 2026]"
+    },
+    {
+      "source_id": "symbolic_fulltext",
+      "url": "https://arxiv.org/html/2606.27757v1",
+      "path": "research/evidence/v47_priority1_options_20261018/symbolic_fulltext.html",
+      "sha256": "5fb5c80f78a516660a325f15c67a4bfcb27b667a1c9c9c150a4007c21e4fa718",
+      "size_bytes": 141332,
+      "http_status": 200,
+      "resolved_url": "https://arxiv.org/html/2606.27757v1"
+    },
+    {
+      "source_id": "symbolic_abs",
+      "url": "https://arxiv.org/abs/2606.27757",
+      "path": "research/evidence/v47_priority1_options_20261018/symbolic_abs.html",
+      "sha256": "0fe46d1bf097662d443fdc2f897cce1034b06999bbd6f1128c474a302f59a2e2",
+      "size_bytes": 42055,
+      "http_status": 200,
+      "resolved_url": "https://arxiv.org/abs/2606.27757",
+      "version_dateline_observed": "[Submitted on 26 Jun 2026]"
+    },
+    {
+      "source_id": "finfirst_fulltext",
+      "url": "https://arxiv.org/html/2609.25192v1",
+      "path": "research/evidence/v47_priority1_options_20261018/finfirst_fulltext.html",
+      "sha256": "a54db747418a3581d352e5da9b69f645a678ea7b10d7b95322fa5ae34bac15b9",
+      "size_bytes": 302108,
+      "http_status": 200,
+      "resolved_url": "https://arxiv.org/html/2609.25192v1"
+    },
+    {
+      "source_id": "finfirst_abs",
+      "url": "https://arxiv.org/abs/2609.25192",
+      "path": "research/evidence/v47_priority1_options_20261018/finfirst_abs.html",
+      "sha256": "658bf62d3c90d66dc0dc8b476f27d80135da83dc10e7562d06a13bd27017aec6",
+      "size_bytes": 44373,
+      "http_status": 200,
+      "resolved_url": "https://arxiv.org/abs/2609.25192",
+      "version_dateline_observed": "[Submitted on 21 Sep 2026]"
+    }
+  ],
+  "source_checks": [
+    {
+      "claim_locator": "without producing a final answer",
+      "observed": true
+    },
+    {
+      "claim_locator": "The Executor sees",
+      "observed": true
+    },
+    {
+      "claim_locator": "concrete plan updates",
+      "observed": true
+    },
+    {
+      "claim_locator": "question-scoped repair ledgers",
+      "observed": true
+    },
+    {
+      "claim_locator": "ACK-required is a failed compliance-style control",
+      "observed": true
+    }
+  ],
+  "inherited_conditions": {
+    "path": "research/v44_conditions_reference_20261018.json",
+    "sha256": "a403d4c37d1581f9af21af8ba7a6333614d890ff15277e83181c1204549a9c5b",
+    "size_bytes": 16107
+  },
+  "renderer_policy": {
+    "path": "research/v44_renderer_policy_20261018.json",
+    "sha256": "4135e7f2d0000e4f51ca3414af803805c823f681468807d3ab19f9fd116488a4",
+    "size_bytes": 3736
+  },
+  "previous_schema_evidence": {
+    "path": "research/v45_revision_reference_20261018.json",
+    "sha256": "57a9c86c2bbc08a1006d6339bcd3303194ae8975cab14d6c5603a3191122dd79",
+    "size_bytes": 16564
+  },
+  "preserved_failed_diagnostic": {
+    "summary": {
+      "path": "data/local_sector_runtime/feedback_diagnostic_v46_20261018/summary.json",
+      "sha256": "045f3b55fde038975b2fdce144687a9b13dffd0ca816754a585a2d8852fb25e7",
+      "size_bytes": 1330
+    },
+    "revision_record": {
+      "path": "data/local_sector_runtime/feedback_diagnostic_v46_20261018/revision_record.json",
+      "sha256": "5878882798e72b1284383b195ce11a78a26fbdce07f3346d1f6490ea19d04339",
+      "size_bytes": 12516
+    },
+    "round2": {
+      "path": "research/v46_priority1_round2_20261018.json",
+      "sha256": "6e838228fd1497e0a27bfb528b740d1171577023383f60266d1d57c15526eaff",
+      "size_bytes": 8553
+    },
+    "round3": {
+      "path": "research/v46_priority1_round3_20261018.json",
+      "sha256": "04ea97c616fbea2bddfc106c6766a58d22cd4e21d0809c840b796e2bcd36afe3",
+      "size_bytes": 13391
+    }
+  },
+  "selection": {
+    "candidate": "B_minimal",
+    "selected_by": "Root coordination under user-authorized sequential priority1 repair work.",
+    "purpose": "Observe a model-authored future correction plan separately from the subsequent model-authored submitted allocation.",
+    "planned_max_generation_calls": 2,
+    "call_roles": [
+      "planner",
+      "executor"
+    ],
+    "call_budget_basis": "Finite local development scope consisting of one planning call and one execution call; not a reported optimal paper setting.",
+    "automatic_retries": 0,
+    "automatic_fallback_A_or_C": false,
+    "main_experiment_authorized": false
+  },
+  "direct_paper_basis": {
+    "paper": "Precise but Uncoupled",
+    "url": "https://arxiv.org/html/2607.15388v1",
+    "locators": [
+      "Section3.3",
+      "AppendixI Table12",
+      "AppendixI.1 PER",
+      "AppendixI.3",
+      "AppendixI.5"
+    ],
+    "direct_claim": "Planner receives task, previous plan and advice and states concrete plan updates without giving a final answer; Executor receives task, the plan and advice to form the candidate. Failed-answer memory and candidate transitions are explicit.",
+    "short_exact_quote": "without producing a final answer",
+    "warning": "The same paper shows that precise criticism, acknowledgment and a separated planner/executor/reviewer pipeline do not guarantee actual correction. Its model/task is gpt-oss-120b on mathematics, not this Qwen3.5-4B finance task.",
+    "replication_not_claimed": "The original PER includes a Reviewer and inner/outer budgets. This two-call development diagnostic is a deliberate simplification, not PER reproduction."
+  },
+  "supporting_sources": [
+    {
+      "url": "https://arxiv.org/html/2606.27757v1",
+      "locator": "SectionIII-B, Equation2",
+      "supported": "Original task, real error feedback and previous attempts can inform new model plans; terminate on validation or a predefined limit.",
+      "not_supported": "Does not select2calls, this model, portfolio weights or a particular repair target."
+    },
+    {
+      "url": "https://arxiv.org/html/2609.25192v1",
+      "locator": "Sections2.2.2–2.3",
+      "supported": "Trace inputs, intermediate claims/calculations and final conclusions; do not add absent rubric requirements retrospectively.",
+      "not_supported": "Does not demonstrate performance improvement from this planner/executor split."
+    }
+  ],
+  "planner_contract": {
+    "inputs": "Original public task/source/market, preserved invalid answer, its actual calculator feedback, and factual v45-to-v46 unchanged-weight/unchanged-sum diagnostics.",
+    "output": "Model-authored future correction plan, using the existing seven field names; weights is the empty array and no complete submitted allocation is emitted in this role.",
+    "plan_fields": "Use alternatives/risk_discussion for concrete intended changes and budget adjustment planning; this is an observable output artifact, not access to hidden thinking.",
+    "no_host_target": "No sector, corrected sector weight, exact target vector or normalization recipe is supplied by the host. Existing task sum1 remains a public constraint.",
+    "assessment_scope": "A planning-role empty weights array is intentional, not an allocation candidate with sum0 and not a successful numeric portfolio. Its content can still be contradicted or unsupported.",
+    "schema_precision": "Reusing seven field names does not imply identical full JSONSchema if planning changes the permitted array cardinality. Record any role-specific contract exactly."
+  },
+  "executor_contract": {
+    "inputs": "Original public task and preserved failure, all newly generated planner text, actual calculator/error records and the registered new message history.",
+    "output": "The model itself emits the existing complete final seven-key response with all11 public sectors and their numeric weights.",
+    "host_role": "The host never applies the plan, creates sector weights or repairs the vector. It calculates raw validity and factual comparisons only.",
+    "plan_execution_comparison": "Retain the plan and final vector for direct comparison. Record what was executed and whether claims of execution are true; do not silently treat plan prose as a changed portfolio."
+  },
+  "validation_and_stop_contract": [
+    "Preserve every raw plan, request, stream, final response and error. A transport/shape failure stops under the existing fail-closed rules; no substitute answer is produced.",
+    "At most one planner and one executor generation; no outcome-based extension or automatic A/C fallback.",
+    "Final allocation is checked under existing finite11sector/bounds/sum rules with the inherited1e-6 serialization tolerance, without normalization, clipping, projection, cash imputation or gold.",
+    "Final acceptance requires independent provenance, exact raw arithmetic and narrow correction-claim reviews. A claim of having corrected the answer is not proof.",
+    "If the final vector or correction claims fail, preserve failure and remain at priority1. Do not begin priority2/3 or the main experiment.",
+    "Existing per-call900s/time-output limits are inherited runtime choices; no new optimum is asserted."
+  ],
+  "paper_vs_local_choice": {
+    "direct_pattern": "Separate model-authored planning from model-authored execution, with critique/failure information available.",
+    "local_adaptations": [
+      "Seven existing field names and weights=[] planning shape",
+      "One planner plus one executor maximum",
+      "Factual cross-version sector deltas as deterministic feedback",
+      "Retain existing finance task and small quantized model",
+      "No new Reviewer generation; independent offline reviews remain separate"
+    ],
+    "unchanged_research_targets": [
+      "No automatic weight repair",
+      "No unique weight gold",
+      "No priority2 market-number or priority3 institutional-reason revision task",
+      "No main experiment"
+    ]
+  },
+  "limitations": [
+    "This is another known-failure development intervention after observing v45/v46, not an untouched test or independent replication. Count and retain all previous failed attempts.",
+    "Success would not isolate planning, extra compute, task wording, feedback placement or retained history as the causal factor.",
+    "Success would not establish that the original four-stage protocol, institution-strategy comparison or source-grounded allocation quality is repaired.",
+    "A false or non-actionable plan can still be followed by an invalid execution; planning-role separation is not a correctness guarantee.",
+    "Failure mechanisms remain hypotheses unless separately tested; current output does not identify hidden model intent or reasoning."
+  ],
+  "model_calls_by_researcher": 0,
+  "prior_files_modified": false
+}

@@ -1,0 +1,104 @@
+{
+  "schema_version": "libera_posthoc_offline_test_result_1.0",
+  "scope": "Post hoc reproduction after the actual v4.7 diagnostic; this is not the original pre-run test log.",
+  "started_at_utc": "2026-10-18T09:27:55.744872+00:00",
+  "completed_at_utc": "2026-10-18T09:28:49.944819+00:00",
+  "test_execution_attempts": 1,
+  "returncode": 0,
+  "tests_run": 20,
+  "unittest_reported_seconds": 53.115,
+  "process_wall_seconds": 54.074055200006114,
+  "all_passed": true,
+  "fixed_sources_unchanged": true,
+  "source_files": [
+    {
+      "path": "research/benchmark_sector_latency.py",
+      "sha256": "0686444e608033be931922a26886ed4a4b5b0789385215b7b75bfacc4050458b",
+      "sha256_after": "0686444e608033be931922a26886ed4a4b5b0789385215b7b75bfacc4050458b"
+    },
+    {
+      "path": "research/compact_sector_prompt.py",
+      "sha256": "6984ada966ad55c3089fc297ca6342fdb51685bebfe3107769086343bbe68c0d",
+      "sha256_after": "6984ada966ad55c3089fc297ca6342fdb51685bebfe3107769086343bbe68c0d"
+    },
+    {
+      "path": "research/local_sector_feedback_diagnostic.py",
+      "sha256": "ab995d0952bff36548de5ac5983add416f121e37bb715ebcea1ec8326cb91c42",
+      "sha256_after": "ab995d0952bff36548de5ac5983add416f121e37bb715ebcea1ec8326cb91c42"
+    },
+    {
+      "path": "research/local_sector_plan_execute_diagnostic.py",
+      "sha256": "d8f7c29975305ac34cac23a5bde7467010e4b46237eef3dcf6b02b782fcc5b2c",
+      "sha256_after": "d8f7c29975305ac34cac23a5bde7467010e4b46237eef3dcf6b02b782fcc5b2c"
+    },
+    {
+      "path": "research/local_sector_single_case.py",
+      "sha256": "0b2596a223167136bb37578e86469d50c26e7883305d4db31f43b9ddd10d28d0",
+      "sha256_after": "0b2596a223167136bb37578e86469d50c26e7883305d4db31f43b9ddd10d28d0"
+    },
+    {
+      "path": "research/local_sector_structured_case.py",
+      "sha256": "d7193e69a9525ff640d275f86d7b5deaa18ce033e3d628e416bc2a06699c1a73",
+      "sha256_after": "d7193e69a9525ff640d275f86d7b5deaa18ce033e3d628e416bc2a06699c1a73"
+    },
+    {
+      "path": "research/probe_ollama_runtime.py",
+      "sha256": "2dd48936bbaf8fd090a26f92fd356fec3a11ac81e5b01b39d661ffe72552fddb",
+      "sha256_after": "2dd48936bbaf8fd090a26f92fd356fec3a11ac81e5b01b39d661ffe72552fddb"
+    },
+    {
+      "path": "research/remote_sector_runtime.py",
+      "sha256": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5",
+      "sha256_after": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5"
+    },
+    {
+      "path": "research/run_sector_workflow.py",
+      "sha256": "5625450a4dcbe1aa717c9809bf4955c1ef6b10aab4f0c83ef05dc2eb2c123cfd",
+      "sha256_after": "5625450a4dcbe1aa717c9809bf4955c1ef6b10aab4f0c83ef05dc2eb2c123cfd"
+    },
+    {
+      "path": "research/sector_engine.py",
+      "sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c",
+      "sha256_after": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c"
+    },
+    {
+      "path": "research/sector_response_schema.py",
+      "sha256": "bedbf782a041ba7da4f944408dd19596d74cbf78b77bee1c75d12ce71a598c41",
+      "sha256_after": "bedbf782a041ba7da4f944408dd19596d74cbf78b77bee1c75d12ce71a598c41"
+    },
+    {
+      "path": "research/test_local_sector_feedback_diagnostic.py",
+      "sha256": "633086bf51cceff993007f5cea1a66c57e88b9e95f0a9ef079f8d188a850d8ae",
+      "sha256_after": "633086bf51cceff993007f5cea1a66c57e88b9e95f0a9ef079f8d188a850d8ae"
+    },
+    {
+      "path": "research/test_local_sector_plan_execute_diagnostic.py",
+      "sha256": "69a4e69dc6d7f216ea4804ae8418f44cf148cfb39e2ece27eba861ba995c2fc1",
+      "sha256_after": "69a4e69dc6d7f216ea4804ae8418f44cf148cfb39e2ece27eba861ba995c2fc1"
+    },
+    {
+      "path": "research/test_sector_structured_case.py",
+      "sha256": "32751a6be084d6313f5574aa4c5ac0ea95f91fb9aa7024f6c371fb876866a01c",
+      "sha256_after": "32751a6be084d6313f5574aa4c5ac0ea95f91fb9aa7024f6c371fb876866a01c"
+    }
+  ],
+  "raw_output_files": [
+    {
+      "path": "research/evidence/v47_posthoc_offline_tests_20261018/stdout.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "path": "research/evidence/v47_posthoc_offline_tests_20261018/stderr.bin",
+      "sha256": "c2180bda2954de1a79c3212e187d0c359228d3a72fb3f49f4bb2b2418832e66b",
+      "size_bytes": 3674
+    }
+  ],
+  "invocation": {
+    "path": "research/evidence/v47_posthoc_offline_tests_20261018/invocation.json",
+    "sha256": "bac092ce88a10396ab7f438f55ec16cd2795c317ec3d19216b05598540ff1a9c"
+  },
+  "model_calls_by_this_test_run": 0,
+  "real_experiment_results_modified": false,
+  "interpretation": "Software regression evidence only; does not establish model correction ability, priority1 acceptance, or main readiness."
+}

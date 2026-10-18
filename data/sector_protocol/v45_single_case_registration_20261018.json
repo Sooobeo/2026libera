@@ -1,0 +1,103 @@
+{
+  "protocol_version": "4.5",
+  "registered_at_utc": "2026-10-18T07:52:14.442959+00:00",
+  "case_id": "fidelity_q2_2026__R1",
+  "planned_cases": 1,
+  "planned_stages": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "purpose": "Repair the output interface on the same failed pilot case under a new user-authorized revision. This is not an independent confirmatory sample or a main-study run.",
+  "revision": [
+    "Supply an explicit response JSON schema to the API format parameter.",
+    "Ground the same schema in each stage task prompt, preserving original task, source and market values.",
+    "Validate the declared response structure after preserving raw output; do not repair or resample."
+  ],
+  "unchanged": [
+    "model/digest/engine/template",
+    "decoding options and output/context budgets",
+    "900-second supervised per-stage execution deadline",
+    "source packet and market numeric values",
+    "four task stages and calculator",
+    "raw assistant and calculator history",
+    "original offline source annotations and numeric scoring definitions"
+  ],
+  "joint_intervention_limit": "Prompt schema visibility and API grammar constraints change together. One paired engineering attempt cannot isolate their individual effects or establish a general causal performance gain.",
+  "schema_is_not_a_target_answer": "No source-specific rating, target allocation, risk-aversion number, expected return or hidden evidence answer is supplied by the schema. Common taxonomy and response shape are controls, not demonstrated capabilities.",
+  "execution_policy": {
+    "automatic_retries": 0,
+    "raw_repair": false,
+    "main_calls": 0,
+    "retain_failed_attempts": true,
+    "future_revision": "A further change must preserve this attempt, identify its evidence and be recorded before new generation. Do not repeat unchanged requests to select favorable output."
+  },
+  "completion_dimensions": {
+    "workflow": "Four terminated, structurally valid raw responses and four stage records.",
+    "numeric": "Report final raw calculator validity separately; provisional errors are fed back before the next stage, not normalized by the runner.",
+    "semantic": "Source ratings, rationale and strategy are reviewed separately; schema validity never means semantic PASS."
+  },
+  "three_postrun_reviews": [
+    {
+      "round": 1,
+      "scope": "Pinned inputs, schema grounding, visible history, raw transport, termination, version identity and cleanup."
+    },
+    {
+      "round": 2,
+      "scope": "Independent exact arithmetic, source-label denominator, code and citation-scope checks on saved raw proposals."
+    },
+    {
+      "round": 3,
+      "scope": "Original-source entailment, each stage task, rationale, risk interpretation and relation to the research question."
+    }
+  ],
+  "denominator_clarification": {
+    "preserve_prior_reports": true,
+    "registered_extraction_metric": "The original evaluation specification keeps 11 expected sector labels in the denominator, including nonresponses. Thus the v4.4 failed attempt contributes 0/11 to that mechanical metric.",
+    "conditional_semantic_and_numeric_review": "No completed allocation means numeric and semantic assessments are not applicable, not an invented zero-risk or zero-strategy-quality score.",
+    "reporting": "Report completion, fixed-denominator extraction and applicable semantic/numeric assessment separately. Do not exclude failures to inflate successful-answer performance or pool protocol revisions as one fixed experiment."
+  },
+  "online_boundary": "This registration and evaluator-only review material are offline. The runner receives public evidence, market values, structural schema and execution provenance only.",
+  "reference_files": [
+    {
+      "path": "data/sector_protocol/v45_single_case_20261018/manifest.json",
+      "sha256": "6465406eddaa2bab5136d15a0aee1487e9501066f20f421e4c1237ec01b13ff8"
+    },
+    {
+      "path": "research/v45_preflight_implementation_review_20261018.json",
+      "sha256": "7f91120be17b47bb74c0edc49a4bace6b79a51d9853721cbfcfcc3e3891d04cf"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/summary.json",
+      "sha256": "c8c2f88e0a73322d32b6e8be1585a2a4f9b2bc15a0afa37aa93e0f66a17ce1e2"
+    },
+    {
+      "path": "research/v45_revision_reference_20261018.json",
+      "sha256": "57a9c86c2bbc08a1006d6339bcd3303194ae8975cab14d6c5603a3191122dd79"
+    },
+    {
+      "path": "research/evaluator_only/v45_structured_prerun_review_20261018.json",
+      "sha256": "b9c4da9fd115e8432896e71600eac096110745cece1d789ebd915c17e5752e54"
+    },
+    {
+      "path": "research/evaluator_only/fidelity_q2_r1_prerun_reference_20261018.json",
+      "sha256": "8022c19d7b5e9654139996d88cac230cb12d29b30fcf7e817850203c02c35f38"
+    },
+    {
+      "path": "data/sector_protocol/evaluation_spec.json",
+      "sha256": "cff49202b9da0da6bc094eb02a55e971afeab8c983a1a8fe3d686af1cff8df7f"
+    },
+    {
+      "path": "data/sector_documents/source_manifest.json",
+      "sha256": "d1af00ee2a1c5e3ba4ca9949b5f9427a9102a373ff19afa0e6c4309769627b28"
+    },
+    {
+      "path": "research/register_v45_single_case.py",
+      "sha256": "96407fc93e335e9f8843fe8efd8611081f260c33653fef4e2b77ad461044792e"
+    }
+  ],
+  "independent_human_review_complete": false,
+  "main_frozen": false,
+  "model_calls_by_registration": 0
+}

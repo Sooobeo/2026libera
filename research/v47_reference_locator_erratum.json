@@ -1,0 +1,27 @@
+{
+  "schema_version": "libera_reference_locator_erratum_1.0",
+  "created_at_utc": "2026-10-18T09:11:13.647676+00:00",
+  "scope": "ASCII locator clarification only; no research design or numeric condition change",
+  "original_reference": {
+    "path": "research/v47_planner_executor_reference_20261018.json",
+    "sha256": "5e86ac4bf264aab67e9fbec7a58d0e81aaaad71b2e83008501a6f8443cf4ba48"
+  },
+  "affected_json_pointer": "/supporting_sources/1/locator",
+  "original_value": "Sections2.2.2\u20132.3",
+  "original_value_unicode_escape": "Sections2.2.2\\u20132.3",
+  "corrected_ascii_locator": "Sections 2.2.2-2.3",
+  "section_titles": [
+    "2.2.2 Reference-Package Construction",
+    "2.2.3 Atomic Rubric Construction",
+    "2.3 Quality Control"
+  ],
+  "source": {
+    "url": "https://arxiv.org/html/2609.25192v1",
+    "path": "research/evidence/v47_priority1_options_20261018/finfirst_fulltext.html",
+    "sha256": "a54db747418a3581d352e5da9b69f645a678ea7b10d7b95322fa5ae34bac15b9"
+  },
+  "finding": "Frozen UTF-8 JSON contains a valid U+2013 en dash. Some read/display paths showed it incorrectly; this additive ASCII locator removes ambiguity without editing original bytes.",
+  "original_files_modified": false,
+  "conditions_changed": false,
+  "model_calls": 0
+}

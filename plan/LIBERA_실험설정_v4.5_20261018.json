@@ -1,0 +1,1491 @@
+{
+  "protocol_version": "4.5",
+  "as_of_date": "2026-10-18",
+  "status": "versioned_single_case_pilot; main_not_run_not_frozen",
+  "previous_protocol": "plan/LIBERA_실험설정_v4.4_20261018.json",
+  "user_decision": "Retain industry-level allocation if construct validity and research meaning are preserved.",
+  "decision": {
+    "unit": "equity-sleeve industry/sector allocation",
+    "selected": true,
+    "reason": "The original proposal already studies industry weights; allocation across sectors can encode institution-specific judgments without testing individual-stock selection.",
+    "sufficiency_condition": "Document interpretation must affect a genuine allocation choice; changing gamma alone is only a numerical control and does not establish strategic-judgment coverage.",
+    "not_a_result": "This is a design-level adequacy judgment, not a claim that treatment effects or sufficient statistical power have been observed."
+  },
+  "research_question": "Does a common AI preserve source-specific public sector judgments in justified equity-sector allocations, and how does early versus late evidence provision change that reflection?",
+  "main": {
+    "module": "documentary_sector_allocation",
+    "status": "not_run",
+    "unit": "industry/sector basket, not individual stock",
+    "taxonomy": {
+      "finalized": true,
+      "selected": "GICS 11",
+      "sector_codes": [
+        "10",
+        "15",
+        "20",
+        "25",
+        "30",
+        "35",
+        "40",
+        "45",
+        "50",
+        "55",
+        "60"
+      ],
+      "no_FF12_conversion": true
+    },
+    "period": {
+      "recent_only": true,
+      "finalized": true,
+      "common_cutoff": "2026-07-17",
+      "price_last_date": "2026-07-16",
+      "claim": "retrospective document-conditioned case, not point-in-time trading replay",
+      "fidelity_invalid_view_date_preserved": "6/31/26"
+    },
+    "inputs": [
+      "common market evidence in the same sector taxonomy",
+      "dated institution documents containing relevant objectives, applicable constraints or sector judgments",
+      "source locations and document identity"
+    ],
+    "document_roles": "Legal investment mandates, fund-manager commentary and house research views are distinct evidence types. A house outlook is not silently assigned to an unrelated fund as its mandate.",
+    "risk_policy": "Preserve qualitative preferences; retain only explicitly supported numerical limits, denominators and exceptions. Do not map real-fund prose to gamma.",
+    "model_decisions": [
+      "identify relevant document facts",
+      "compare sector allocation alternatives",
+      "propose sector weights and explain the evidence supporting departures from a common baseline when one is specified"
+    ],
+    "gold_visibility": "Offline provisional references mechanically cross-checked; independent human review pending; never read by online runner.",
+    "calculation": "Implemented pure calculator; automatic same feedback between stages; no repair or hidden-reference access",
+    "calculator_information_boundary": "Tools may use only evidence already exposed in that run and model-submitted inputs. Before R4 receives its institution packet, tools cannot read hidden mandates, evaluator annotations or institution-specific constraints. Missing constraints remain unknown; no automatic gold-based repair, lookup or informative feasibility response is allowed.",
+    "no_synthetic_real_facts": "Do not invent institutional expected returns, confidence, sector caps or exact target weights from qualitative prose.",
+    "pending": [
+      "Review and resolve the observed pilot limitations",
+      "Validate R4 and complete the remaining pilot cases under explicit versioned conditions",
+      "Independent substantive human source review",
+      "Freeze main inputs, model and rubric",
+      "Separate main execution and offline evaluation"
+    ],
+    "main_documents": [
+      "fidelity_q3_2026",
+      "ubs_july_2026"
+    ],
+    "pilot_documents": [
+      "fidelity_q2_2026",
+      "ubs_june_2026"
+    ],
+    "representation": "Researcher-selected short paraphrased evidence, original labels, source IDs and page locators; not full-document retrieval.",
+    "baseline": "Reported 2026-06-30 S&P500 sector weights, sum99.9%, original preserved and normalized for common arithmetic; not institution holdings/targets",
+    "paths": {
+      "documents": "../data/sector_documents/corpus_card.json",
+      "market": "../data/sector_market/market_input.json",
+      "calculator": "../research/sector_engine.py",
+      "runner": null,
+      "single_case_runner": "../research/local_sector_structured_case.py"
+    },
+    "blocking_design_decisions": [],
+    "runtime_policy": "v4.5 one-case observations only; remaining pilot and main pending."
+  },
+  "workflow": {
+    "arms": [
+      "R1",
+      "R4"
+    ],
+    "stages": [
+      "market and evidence interpretation",
+      "comparison of alternatives and risks",
+      "provisional sector allocation or pending",
+      "final reconsideration"
+    ],
+    "mandate_or_evidence_onset": {
+      "R1": 1,
+      "R4": 4
+    },
+    "same_final_facts": true,
+    "same_model_and_calculation_facilities": true,
+    "full_history_retained": true,
+    "interpretation": "Evidence-onset and subsequent-use workflow policy, including position and context age; not an isolated memory mechanism.",
+    "retrieval": "Directly supplied evidence first; actual retrieval quality remains a separate extension, not an executed RAG result.",
+    "planned_main_case_count": 4,
+    "planned_pilot_case_count": 4,
+    "calls_per_complete_case": 4,
+    "inference": "descriptive case study; two source documents, not powered population experiment",
+    "same_generated_history": false,
+    "history_semantics": "visible model responses and calculator feedback retained; not hidden thinking traces",
+    "internal_thinking_observed": false
+  },
+  "evaluation": {
+    "status": "mechanical_spec_implemented; see_observed_execution_for_reviews; freeze_after_pilot_before_main",
+    "dimensions": [
+      "valid sector identifiers and feasible weights",
+      "evidence-grounded interpretation",
+      "explicit constraint compliance before repair",
+      "document-supported exposure tendencies",
+      "institution-specific response under matched workflow comparison"
+    ],
+    "numeric_agreement": "A unique exact-weight reference is used only for the independent numerical control. Public holdings or qualitative views do not specify universally correct strategic weights.",
+    "convergence": "Similarity alone is not failure. Report whether a convergence accompanies loss of relevant evidence or objective/constraint violations. Do not force differences when source judgments agree.",
+    "counterfactuals": "If constructed, change an explicitly identified condition while keeping others fixed and label these as synthetic task interventions, not real institution history.",
+    "post_outcome_additions": "Rubric refinements allowed on pilot only before main freeze; additions after main outcomes are exploratory, not revised confirmatory rules.",
+    "no_arbitrary_composite_score": true,
+    "spec": "../data/sector_protocol/evaluation_spec.json",
+    "primary_rating_scope": "source label preservation only, not strategy quality",
+    "no_exact_weight_gold_for_documentary_task": true,
+    "semantic_categories": [
+      "supported",
+      "contradicted",
+      "not_stated",
+      "uncertain"
+    ],
+    "semantic_scoring_automated": false,
+    "denominator_clarification": {
+      "preserve_prior_reports": true,
+      "registered_extraction_metric": "The original evaluation specification keeps 11 expected sector labels in the denominator, including nonresponses. Thus the v4.4 failed attempt contributes 0/11 to that mechanical metric.",
+      "conditional_semantic_and_numeric_review": "No completed allocation means numeric and semantic assessments are not applicable, not an invented zero-risk or zero-strategy-quality score.",
+      "reporting": "Report completion, fixed-denominator extraction and applicable semantic/numeric assessment separately. Do not exclude failures to inflate successful-answer performance or pool protocol revisions as one fixed experiment."
+    }
+  },
+  "numerical_control": {
+    "role": "auxiliary check of explicit objective implementation; cannot substitute for the documentary strategic task",
+    "prepared": true,
+    "path": "../data/institutional_recent/summary.json",
+    "reference_months": [
+      "2024-01",
+      "2025-12"
+    ],
+    "market_windows": 24,
+    "lookback_months": 60,
+    "input_coverage": [
+      "2019-01",
+      "2025-11"
+    ],
+    "assets": [
+      "NoDur",
+      "Durbl",
+      "Manuf",
+      "Enrgy",
+      "Chems",
+      "BusEq",
+      "Telcm",
+      "Utils",
+      "Shops",
+      "Hlth",
+      "Money",
+      "Other"
+    ],
+    "gammas": [
+      1,
+      3,
+      5
+    ],
+    "institution_cases": 72,
+    "objective": "U_gamma(w)=mu.T@w-gamma/2*w.T@Sigma@w",
+    "constraints": [
+      "sum(w)=1",
+      "w>=0"
+    ],
+    "data_status": "Revised historical French data; retrospective controlled task, not point-in-time trading reconstruction.",
+    "period_provenance": "LIBERA adaptation: PortBench QA test years 2024-2025 plus Salcher 60-month lookback. Not PortBench pipeline replication.",
+    "inference": "Overlapping fixed cases; no independent-sample or power claim. Shared optima retained. No future returns used."
+  },
+  "legacy_v4": {
+    "benchmark": "../data/institutional/summary.json",
+    "workflow": "../data/workflow/manifest.json",
+    "role": "historical numerical prototype, not the new documentary main task",
+    "audit": "../research/audits/verification_v4.html",
+    "audit_scope": "The v4 two-round audit applies to archived v4 files and hashes only; it is not a certification of this revised documentary design."
+  },
+  "model": {
+    "primary_target": "Qwen3.5-4B",
+    "ollama_tag": "qwen3.5:4b-q4_K_M",
+    "quantization": "Q4_K_M",
+    "temperature": 0,
+    "max_output_tokens": 8192,
+    "thinking": false,
+    "context_tokens": 65536,
+    "runtime_ready": false,
+    "exact_served_revision": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+    "runtime_manifest_path": "data/sector_protocol/v45_single_case_20261018/manifest.json",
+    "candidate_not_observed_settings": false,
+    "settings_observation_scope": "Versioned request conditions; actual observations are in the linked single-case transport records.",
+    "runtime_readiness_policy": "Installation or pilot status is reported separately; this builder never certifies execution readiness.",
+    "model_basis": [
+      {
+        "url": "https://arxiv.org/html/2609.10113",
+        "locator": "sections 5.1-5.3, Table 3",
+        "scope": "exact base model evaluated in finance; target decoding not fully disclosed"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2610.08882",
+        "locator": "section 4.1, Table 3",
+        "scope": "base Qwen3.5-4B; explicit JSON and disabled thinking; not the LoRA adapter"
+      }
+    ],
+    "parameter_basis": [
+      {
+        "parameter": "thinking",
+        "value": false,
+        "kind": "direct_financial_paper_precedent",
+        "url": "https://arxiv.org/pdf/2610.08882",
+        "locator": "section 4.1"
+      },
+      {
+        "parameter": "temperature",
+        "value": 0,
+        "kind": "backend_adaptation",
+        "url": "https://arxiv.org/pdf/2610.08882",
+        "locator": "section 4.1 greedy decoding",
+        "note": "Ollama implementation candidate; also T=0 in PortBench; not identical engine reproduction"
+      },
+      {
+        "parameter": "max_output_tokens",
+        "value": 8192,
+        "kind": "paper_value_transferred_to_different_model_and_task",
+        "url": "https://arxiv.org/html/2605.27887v6",
+        "locator": "section 3.1",
+        "note": "Not FinVector's 700-token condition; adequacy checked on pilot, before main"
+      },
+      {
+        "parameter": "context_tokens",
+        "value": 65536,
+        "kind": "engineering_candidate_not_paper_constant",
+        "note": "Preserve all four stages including visible responses and calculation feedback; verify actual tokenization and memory"
+      }
+    ],
+    "backend_settings": "Pin served digest, quantization, chat template, engine, context, sampling defaults and thinking implementation from actual runtime evidence.",
+    "context_overflow": "fail and record; no silent truncation, history deletion or budget change",
+    "limitations": [
+      "financial base-model paper scores do not measure this quantized runtime",
+      "small-model application, not PortBench replication",
+      "basic task inability can obscure workflow differences",
+      "no hidden-thinking or memory mechanism identification"
+    ],
+    "future_candidate_scope": "Pinned v4.5 single-case repair; no main freeze.",
+    "review": "../research/v45_revision_reference_20261018.html",
+    "protocol_version": "4.5",
+    "explicit_request_options": {
+      "temperature": 0,
+      "seed": 3407,
+      "num_predict": 8192,
+      "num_ctx": 65536,
+      "num_thread": 2,
+      "num_batch": 512,
+      "repeat_penalty": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0.0
+    },
+    "context_check_policy": "Require render-only visible-history validation with explicit truncate=false/shift=false; no UTF-8 token heuristic. Actual checks are recorded stage by stage.",
+    "context_check_observed_stages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "renderer_policy": {
+      "path": "research/v44_renderer_policy_20261018.json",
+      "sha256": "4135e7f2d0000e4f51ca3414af803805c823f681468807d3ab19f9fd116488a4",
+      "http_history": "verbatim",
+      "rendered_history": "Only declared JSON boundary whitespace removal; internal characters and parsed values unchanged."
+    },
+    "one_case_workflow_completed": true,
+    "decoding_revision_applied": "Neutral penalties and seed explicitly specified; not claimed as unreported benchmark values.",
+    "response_contract": "per-stage API JSON Schema and identical schema grounded in task prompt"
+  },
+  "submission": {
+    "term_paper_due": "2026-11-01",
+    "pitch": "2026-11-06",
+    "pitch_minutes": [
+      5,
+      10
+    ],
+    "citation_style": "APA",
+    "source": "https://app.notion.com/p/2026-agent-conference/LIBERA-3e00589711408053a7e5ff9a0c4ba804",
+    "length_format_own_results_requirement": "not specified in available overview; do not infer exemption"
+  },
+  "sources": {
+    "sector_task": "https://arxiv.org/html/2603.22305v1",
+    "profiles": "https://www.ifo.de/DocDL/cesifo1_wp11862.pdf",
+    "workflow": "https://arxiv.org/html/2605.27887v6",
+    "raw_vs_repaired": "https://arxiv.org/html/2608.09988v1",
+    "quadratic": "https://onlinelibrary.wiley.com/doi/full/10.1002/for.70134",
+    "french": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_12_ind_port.html",
+    "preregistration": "https://www.pnas.org/doi/10.1073/pnas.1708274114",
+    "official_document_template": "https://www.sec.gov/files/form-n-1a.pdf",
+    "small_model_finance": "https://arxiv.org/html/2609.10113",
+    "nonthinking_structured_finance": "https://arxiv.org/pdf/2610.08882"
+  },
+  "claims_not_identified": [
+    "individual-stock selection skill",
+    "overall stocks/bonds/cash allocation",
+    "true future optimal portfolios",
+    "actual private information",
+    "causal effect of shared-model adoption",
+    "market-wide convergence or financial stability"
+  ],
+  "results": {
+    "pilot_completed_cases": 1,
+    "pilot_completed_calls": 4,
+    "pilot_attempted_calls_observed": 4,
+    "pilot_completed_workflow_stages": 4,
+    "final_allocation_valid": false,
+    "main_completed_cases": 0,
+    "main_completed_calls": 0,
+    "main_execution_ready": false,
+    "human_runs": null,
+    "main_effect_estimate": null,
+    "count_scope": "v4.5 single case only; v4.4 failure retained separately"
+  },
+  "revision_provenance": {
+    "builder": "research/build_sector_revision_v45.py",
+    "source_version": "4.4",
+    "source_files": {
+      "plan": {
+        "path": "plan/LIBERA_실험계획_v4.4_20261018.html",
+        "sha256": "e31b9dbe9ae484ffc4c5bdaa399c25aac928f842e42792746b7a25f4034f275f"
+      },
+      "paper": {
+        "path": "paper/LIBERA_텀페이퍼_초안_v4.4_20261018.html",
+        "sha256": "8ffb6a45d5070a1e4de3480282870fd30ed892ab6219e1a11a3ff59627554ea2"
+      },
+      "config": {
+        "path": "plan/LIBERA_실험설정_v4.4_20261018.json",
+        "sha256": "d8775fcd3fec248b6c203edb091c9f8db0587bcf93b6fe9269766fdb26ec804d"
+      }
+    },
+    "registration": {
+      "path": "data/sector_protocol/v45_single_case_registration_20261018.json",
+      "sha256": "8cf54a9aaaad2ad89e595174a6bfda85b0a307b99f932ca1e0ae5274081b34da"
+    },
+    "model_calls_by_builder": 0
+  },
+  "observed_execution": {
+    "pilot": {
+      "status": "completed_four_stages",
+      "protocol_version": "4.5",
+      "case_id": "fidelity_q2_2026__R1",
+      "planned_cases": 1,
+      "planned_stages": 4,
+      "main_model_calls": 0,
+      "automatic_retries": 0,
+      "human_semantic_pass": false,
+      "main_freeze": false,
+      "finished_at_utc": "2026-10-18T08:13:05.945498+00:00",
+      "wall_seconds": 1246.245481200007,
+      "render_requests_attempted": 4,
+      "generation_requests_attempted": 4,
+      "pilot_model_calls": 4,
+      "http_streams_completed": 4,
+      "unexpected_generation_evidence_in_render": 0,
+      "stage_transports_entered": 4,
+      "completed_workflow_stages": 4,
+      "generation_stages_not_started": [],
+      "stage_records": [
+        {
+          "stage": 1,
+          "workflow_record_present": true,
+          "generation_request_recorded": true
+        },
+        {
+          "stage": 2,
+          "workflow_record_present": true,
+          "generation_request_recorded": true
+        },
+        {
+          "stage": 3,
+          "workflow_record_present": true,
+          "generation_request_recorded": true
+        },
+        {
+          "stage": 4,
+          "workflow_record_present": true,
+          "generation_request_recorded": true
+        }
+      ],
+      "cases_with_generation_attempt": 1,
+      "completed_cases": 1,
+      "structure_validated_stages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "final_allocation_valid": false,
+      "completion_scope": "Four stopped responses satisfying the structural contract; financial feasibility and semantic accuracy are separate.",
+      "semantic_validity_assessed": false,
+      "replaces_prior_v44_failure": false
+    },
+    "main": {
+      "status": "not_run",
+      "completed_cases": 0,
+      "completed_calls": 0,
+      "frozen": false
+    },
+    "human_review": {
+      "status": "pending"
+    },
+    "historical_v44_record": "plan/LIBERA_실험설정_v4.4_20261018.json"
+  },
+  "execution_conditions": {
+    "reference": "research/v44_conditions_reference_20261018.json",
+    "sha256": "a403d4c37d1581f9af21af8ba7a6333614d890ff15277e83181c1204549a9c5b",
+    "execution": {
+      "engine": "0.35.1",
+      "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "request_timeout_seconds": 900,
+      "serial_requests": 1,
+      "authorized_pilot_cases": 1,
+      "stages_per_case": 4,
+      "count_basis": "One case and four stages follow the authorized LIBERA pilot design, not a paper-derived statistical sample-size calculation.",
+      "automatic_retry": false,
+      "main_frozen": false
+    },
+    "documentation_correction": "Per-call automatic pinning covers engine version, model digest and template. Binary hash and GPU placement are separate installation/log observations, not additional per-call gates. The immutable original conditions evidence is retained.",
+    "all_numbers_reported_by_papers": false,
+    "protocol_version": "4.5",
+    "request_headers_by_stage": {
+      "1": {
+        "model": "qwen3.5:4b-q4_K_M",
+        "think": false,
+        "truncate": false,
+        "shift": false,
+        "stream": true,
+        "keep_alive": 0,
+        "options": {
+          "temperature": 0,
+          "num_ctx": 65536,
+          "num_predict": 8192,
+          "num_thread": 2,
+          "num_batch": 512,
+          "repeat_penalty": 1.0,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0,
+          "seed": 3407,
+          "top_p": 0.95,
+          "top_k": 20,
+          "min_p": 0.0
+        },
+        "format": {
+          "type": "object",
+          "properties": {
+            "source_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "interpretations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "sector_code": {
+                    "type": "string",
+                    "enum": [
+                      "10",
+                      "15",
+                      "20",
+                      "25",
+                      "30",
+                      "35",
+                      "40",
+                      "45",
+                      "50",
+                      "55",
+                      "60"
+                    ]
+                  },
+                  "rating": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "evidence_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "reason": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "sector_code",
+                  "rating",
+                  "evidence_ids",
+                  "reason"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 11,
+              "maxItems": 11
+            },
+            "weights": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "sector_code": {
+                        "type": "string",
+                        "enum": [
+                          "10",
+                          "15",
+                          "20",
+                          "25",
+                          "30",
+                          "35",
+                          "40",
+                          "45",
+                          "50",
+                          "55",
+                          "60"
+                        ]
+                      },
+                      "weight": {
+                        "type": "number"
+                      },
+                      "rationale": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "evidence_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    },
+                    "required": [
+                      "sector_code",
+                      "weight",
+                      "rationale",
+                      "evidence_ids"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "maxItems": 0
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "sector_code": {
+                        "type": "string",
+                        "enum": [
+                          "10",
+                          "15",
+                          "20",
+                          "25",
+                          "30",
+                          "35",
+                          "40",
+                          "45",
+                          "50",
+                          "55",
+                          "60"
+                        ]
+                      },
+                      "weight": {
+                        "type": "number"
+                      },
+                      "rationale": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "evidence_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    },
+                    "required": [
+                      "sector_code",
+                      "weight",
+                      "rationale",
+                      "evidence_ids"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "minItems": 11,
+                  "maxItems": 11
+                }
+              ]
+            },
+            "alternatives": {
+              "type": "string",
+              "minLength": 1
+            },
+            "risk_discussion": {
+              "type": "string",
+              "minLength": 1
+            },
+            "unresolved": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "submitted_constraints": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "constraint_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "sector_code": {
+                    "type": "string",
+                    "enum": [
+                      "10",
+                      "15",
+                      "20",
+                      "25",
+                      "30",
+                      "35",
+                      "40",
+                      "45",
+                      "50",
+                      "55",
+                      "60"
+                    ]
+                  },
+                  "kind": {
+                    "type": "string",
+                    "enum": [
+                      "sector_min_weight",
+                      "sector_max_weight"
+                    ]
+                  },
+                  "bound": {
+                    "type": "number"
+                  },
+                  "evidence_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                },
+                "required": [
+                  "constraint_id",
+                  "sector_code",
+                  "kind",
+                  "bound",
+                  "evidence_ids"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "source_id",
+            "interpretations",
+            "weights",
+            "alternatives",
+            "risk_discussion",
+            "unresolved",
+            "submitted_constraints"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "2": {
+        "model": "qwen3.5:4b-q4_K_M",
+        "think": false,
+        "truncate": false,
+        "shift": false,
+        "stream": true,
+        "keep_alive": 0,
+        "options": {
+          "temperature": 0,
+          "num_ctx": 65536,
+          "num_predict": 8192,
+          "num_thread": 2,
+          "num_batch": 512,
+          "repeat_penalty": 1.0,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0,
+          "seed": 3407,
+          "top_p": 0.95,
+          "top_k": 20,
+          "min_p": 0.0
+        },
+        "format": {
+          "type": "object",
+          "properties": {
+            "source_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "interpretations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "sector_code": {
+                    "type": "string",
+                    "enum": [
+                      "10",
+                      "15",
+                      "20",
+                      "25",
+                      "30",
+                      "35",
+                      "40",
+                      "45",
+                      "50",
+                      "55",
+                      "60"
+                    ]
+                  },
+                  "rating": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "evidence_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "reason": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "sector_code",
+                  "rating",
+                  "evidence_ids",
+                  "reason"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 11,
+              "maxItems": 11
+            },
+            "weights": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "sector_code": {
+                        "type": "string",
+                        "enum": [
+                          "10",
+                          "15",
+                          "20",
+                          "25",
+                          "30",
+                          "35",
+                          "40",
+                          "45",
+                          "50",
+                          "55",
+                          "60"
+                        ]
+                      },
+                      "weight": {
+                        "type": "number"
+                      },
+                      "rationale": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "evidence_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    },
+                    "required": [
+                      "sector_code",
+                      "weight",
+                      "rationale",
+                      "evidence_ids"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "maxItems": 0
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "sector_code": {
+                        "type": "string",
+                        "enum": [
+                          "10",
+                          "15",
+                          "20",
+                          "25",
+                          "30",
+                          "35",
+                          "40",
+                          "45",
+                          "50",
+                          "55",
+                          "60"
+                        ]
+                      },
+                      "weight": {
+                        "type": "number"
+                      },
+                      "rationale": {
+                        "type": "string",
+                        "minLength": 1
+                      },
+                      "evidence_ids": {
+                        "type": "array",
+                        "items": {
+                          "type": "string",
+                          "minLength": 1
+                        }
+                      }
+                    },
+                    "required": [
+                      "sector_code",
+                      "weight",
+                      "rationale",
+                      "evidence_ids"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "minItems": 11,
+                  "maxItems": 11
+                }
+              ]
+            },
+            "alternatives": {
+              "type": "string",
+              "minLength": 1
+            },
+            "risk_discussion": {
+              "type": "string",
+              "minLength": 1
+            },
+            "unresolved": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "submitted_constraints": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "constraint_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "sector_code": {
+                    "type": "string",
+                    "enum": [
+                      "10",
+                      "15",
+                      "20",
+                      "25",
+                      "30",
+                      "35",
+                      "40",
+                      "45",
+                      "50",
+                      "55",
+                      "60"
+                    ]
+                  },
+                  "kind": {
+                    "type": "string",
+                    "enum": [
+                      "sector_min_weight",
+                      "sector_max_weight"
+                    ]
+                  },
+                  "bound": {
+                    "type": "number"
+                  },
+                  "evidence_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                },
+                "required": [
+                  "constraint_id",
+                  "sector_code",
+                  "kind",
+                  "bound",
+                  "evidence_ids"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "source_id",
+            "interpretations",
+            "weights",
+            "alternatives",
+            "risk_discussion",
+            "unresolved",
+            "submitted_constraints"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "3": {
+        "model": "qwen3.5:4b-q4_K_M",
+        "think": false,
+        "truncate": false,
+        "shift": false,
+        "stream": true,
+        "keep_alive": 0,
+        "options": {
+          "temperature": 0,
+          "num_ctx": 65536,
+          "num_predict": 8192,
+          "num_thread": 2,
+          "num_batch": 512,
+          "repeat_penalty": 1.0,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0,
+          "seed": 3407,
+          "top_p": 0.95,
+          "top_k": 20,
+          "min_p": 0.0
+        },
+        "format": {
+          "type": "object",
+          "properties": {
+            "source_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "interpretations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "sector_code": {
+                    "type": "string",
+                    "enum": [
+                      "10",
+                      "15",
+                      "20",
+                      "25",
+                      "30",
+                      "35",
+                      "40",
+                      "45",
+                      "50",
+                      "55",
+                      "60"
+                    ]
+                  },
+                  "rating": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "evidence_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "reason": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "sector_code",
+                  "rating",
+                  "evidence_ids",
+                  "reason"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 11,
+              "maxItems": 11
+            },
+            "weights": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "sector_code": {
+                    "type": "string",
+                    "enum": [
+                      "10",
+                      "15",
+                      "20",
+                      "25",
+                      "30",
+                      "35",
+                      "40",
+                      "45",
+                      "50",
+                      "55",
+                      "60"
+                    ]
+                  },
+                  "weight": {
+                    "type": "number"
+                  },
+                  "rationale": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "evidence_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                },
+                "required": [
+                  "sector_code",
+                  "weight",
+                  "rationale",
+                  "evidence_ids"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 11,
+              "maxItems": 11
+            },
+            "alternatives": {
+              "type": "string",
+              "minLength": 1
+            },
+            "risk_discussion": {
+              "type": "string",
+              "minLength": 1
+            },
+            "unresolved": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "submitted_constraints": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "constraint_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "sector_code": {
+                    "type": "string",
+                    "enum": [
+                      "10",
+                      "15",
+                      "20",
+                      "25",
+                      "30",
+                      "35",
+                      "40",
+                      "45",
+                      "50",
+                      "55",
+                      "60"
+                    ]
+                  },
+                  "kind": {
+                    "type": "string",
+                    "enum": [
+                      "sector_min_weight",
+                      "sector_max_weight"
+                    ]
+                  },
+                  "bound": {
+                    "type": "number"
+                  },
+                  "evidence_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                },
+                "required": [
+                  "constraint_id",
+                  "sector_code",
+                  "kind",
+                  "bound",
+                  "evidence_ids"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "source_id",
+            "interpretations",
+            "weights",
+            "alternatives",
+            "risk_discussion",
+            "unresolved",
+            "submitted_constraints"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "4": {
+        "model": "qwen3.5:4b-q4_K_M",
+        "think": false,
+        "truncate": false,
+        "shift": false,
+        "stream": true,
+        "keep_alive": 0,
+        "options": {
+          "temperature": 0,
+          "num_ctx": 65536,
+          "num_predict": 8192,
+          "num_thread": 2,
+          "num_batch": 512,
+          "repeat_penalty": 1.0,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0,
+          "seed": 3407,
+          "top_p": 0.95,
+          "top_k": 20,
+          "min_p": 0.0
+        },
+        "format": {
+          "type": "object",
+          "properties": {
+            "source_id": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "interpretations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "sector_code": {
+                    "type": "string",
+                    "enum": [
+                      "10",
+                      "15",
+                      "20",
+                      "25",
+                      "30",
+                      "35",
+                      "40",
+                      "45",
+                      "50",
+                      "55",
+                      "60"
+                    ]
+                  },
+                  "rating": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "evidence_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "reason": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                },
+                "required": [
+                  "sector_code",
+                  "rating",
+                  "evidence_ids",
+                  "reason"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 11,
+              "maxItems": 11
+            },
+            "weights": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "sector_code": {
+                    "type": "string",
+                    "enum": [
+                      "10",
+                      "15",
+                      "20",
+                      "25",
+                      "30",
+                      "35",
+                      "40",
+                      "45",
+                      "50",
+                      "55",
+                      "60"
+                    ]
+                  },
+                  "weight": {
+                    "type": "number"
+                  },
+                  "rationale": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "evidence_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                },
+                "required": [
+                  "sector_code",
+                  "weight",
+                  "rationale",
+                  "evidence_ids"
+                ],
+                "additionalProperties": false
+              },
+              "minItems": 11,
+              "maxItems": 11
+            },
+            "alternatives": {
+              "type": "string",
+              "minLength": 1
+            },
+            "risk_discussion": {
+              "type": "string",
+              "minLength": 1
+            },
+            "unresolved": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "submitted_constraints": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "constraint_id": {
+                    "type": "string",
+                    "minLength": 1
+                  },
+                  "sector_code": {
+                    "type": "string",
+                    "enum": [
+                      "10",
+                      "15",
+                      "20",
+                      "25",
+                      "30",
+                      "35",
+                      "40",
+                      "45",
+                      "50",
+                      "55",
+                      "60"
+                    ]
+                  },
+                  "kind": {
+                    "type": "string",
+                    "enum": [
+                      "sector_min_weight",
+                      "sector_max_weight"
+                    ]
+                  },
+                  "bound": {
+                    "type": "number"
+                  },
+                  "evidence_ids": {
+                    "type": "array",
+                    "items": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  }
+                },
+                "required": [
+                  "constraint_id",
+                  "sector_code",
+                  "kind",
+                  "bound",
+                  "evidence_ids"
+                ],
+                "additionalProperties": false
+              }
+            }
+          },
+          "required": [
+            "source_id",
+            "interpretations",
+            "weights",
+            "alternatives",
+            "risk_discussion",
+            "unresolved",
+            "submitted_constraints"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "runtime": {
+      "protocol_version": "4.5",
+      "backend": "ollama",
+      "model": "qwen3.5:4b-q4_K_M",
+      "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "template_sha256": "b507b9c2f6ca642bffcd06665ea7c91f235fd32daeefdf875a0f938db05fb315",
+      "engine_version": "0.35.1",
+      "options": {
+        "temperature": 0,
+        "num_ctx": 65536,
+        "num_predict": 8192,
+        "num_thread": 2,
+        "num_batch": 512,
+        "repeat_penalty": 1.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "seed": 3407,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0.0
+      },
+      "think": false,
+      "truncate": false,
+      "shift": false,
+      "stream": true,
+      "keep_alive": 0,
+      "deadline_seconds": 900,
+      "history_policy": "explicit_final_content",
+      "renderer_policy": "http_verbatim_json_outer_ascii_whitespace_only_v1",
+      "projection_version": "sector_market_exact_duplicates_v1",
+      "format_mode": "per_stage_json_schema",
+      "response_schema_version": "sector_response_structure_v45",
+      "prompt_grounding_version": "stage_schema_grounding_v45"
+    },
+    "per_stage_schema_files": [
+      "data/sector_protocol/v45_single_case_20261018/response_schema_stage1.json",
+      "data/sector_protocol/v45_single_case_20261018/response_schema_stage2.json",
+      "data/sector_protocol/v45_single_case_20261018/response_schema_stage3.json",
+      "data/sector_protocol/v45_single_case_20261018/response_schema_stage4.json"
+    ],
+    "schema_amendment": {
+      "path": "research/v45_revision_reference_20261018.json",
+      "sha256": "57a9c86c2bbc08a1006d6339bcd3303194ae8975cab14d6c5603a3191122dd79"
+    }
+  },
+  "current_single_case": {
+    "status": "completed_four_stages",
+    "protocol_version": "4.5",
+    "case_id": "fidelity_q2_2026__R1",
+    "planned_cases": 1,
+    "planned_stages": 4,
+    "main_model_calls": 0,
+    "automatic_retries": 0,
+    "human_semantic_pass": false,
+    "main_freeze": false,
+    "finished_at_utc": "2026-10-18T08:13:05.945498+00:00",
+    "wall_seconds": 1246.245481200007,
+    "render_requests_attempted": 4,
+    "generation_requests_attempted": 4,
+    "pilot_model_calls": 4,
+    "http_streams_completed": 4,
+    "unexpected_generation_evidence_in_render": 0,
+    "stage_transports_entered": 4,
+    "completed_workflow_stages": 4,
+    "generation_stages_not_started": [],
+    "stage_records": [
+      {
+        "stage": 1,
+        "workflow_record_present": true,
+        "generation_request_recorded": true
+      },
+      {
+        "stage": 2,
+        "workflow_record_present": true,
+        "generation_request_recorded": true
+      },
+      {
+        "stage": 3,
+        "workflow_record_present": true,
+        "generation_request_recorded": true
+      },
+      {
+        "stage": 4,
+        "workflow_record_present": true,
+        "generation_request_recorded": true
+      }
+    ],
+    "cases_with_generation_attempt": 1,
+    "completed_cases": 1,
+    "structure_validated_stages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "final_allocation_valid": false,
+    "completion_scope": "Four stopped responses satisfying the structural contract; financial feasibility and semantic accuracy are separate.",
+    "semantic_validity_assessed": false,
+    "replaces_prior_v44_failure": false
+  },
+  "review_records": [
+    {
+      "path": "research/v45_single_case_round1_20261018.json",
+      "sha256": "229dfa486aef33005ee71442a033d8c70b67616d6c374cdb7ebdd2b4d5656f5b"
+    },
+    {
+      "path": "research/v45_single_case_round2_20261018.json",
+      "sha256": "77c167495b05d7d47143455ac4cfffa1f6da166bbeaa749e5c642993ed582e7a"
+    },
+    {
+      "path": "research/v45_single_case_round3_20261018.json",
+      "sha256": "0164fdc66fecaea134160c1d5347066113bdc93a70d27d0ef5fae4c62cb5082c"
+    }
+  ],
+  "findings_reference": {
+    "path": "research/v45_single_case_findings_20261018.json",
+    "sha256": "5c3d013b123c9dcac6ff358121863fa227d20831bfb4054c9a8f5578e3259c25"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "protocol_version": "4.6",
+  "diagnostic_id": "fidelity_q2_2026__v45_final_feedback_revision",
+  "registered_at_utc": "2026-10-18T08:57:20.434022+00:00",
+  "manifest": {
+    "path": "C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v46_feedback_diagnostic_20261018\\manifest.json",
+    "sha256": "7be29c06056d0f909d66ee992d93ce3830b544b4d9cf331ede6c636edc1b35ec"
+  },
+  "planned_generation_attempts": 1,
+  "automatic_retries": 0,
+  "main_model_calls": 0,
+  "main_freeze": false,
+  "purpose": "Priority1 development diagnostic on the preserved invalid v4.5 final candidate; not a four-stage workflow or independent confirmation.",
+  "intervention": "Original public task plus complete old final response and exact calculator result, repeated in the active revision task. Model chooses raw correction; no target weights or external normalization.",
+  "budget_basis": "One preselected corrective call is a local diagnostic scope, not an optimal iteration count claimed from a paper.",
+  "retention": "All old and new raw, partial, invalid and completed outcomes are retained. This registration is not reused for repeated candidate selection.",
+  "three_reviews": [
+    {
+      "round": 1,
+      "scope": "Provenance, exact inputs/options/rendering, raw output and recording."
+    },
+    {
+      "round": 2,
+      "scope": "Independent arithmetic, unchanged acceptance conditions, actual weight correction."
+    },
+    {
+      "round": 3,
+      "scope": "Truth of the prior-error, revision and final-validity explanations only."
+    }
+  ],
+  "later_priorities": "No priority2 implementation or model call until all three priority1 reviews pass. Full-workflow suitability remains pending even after this diagnostic passes.",
+  "limits": [
+    "The deliberately selected old failure is a development case.",
+    "Intermediate old assistant history is absent by design.",
+    "Market-number truth, source-rationale quality, R1/R4 effects and human source review remain unassessed in this gate."
+  ],
+  "reference_files": [
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v46_feedback_diagnostic_20261018\\manifest.json",
+      "sha256": "7be29c06056d0f909d66ee992d93ce3830b544b4d9cf331ede6c636edc1b35ec"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\v46_feedback_preflight_implementation_review_20261018.json",
+      "sha256": "13f02e22a4f5a4698640827e14d5fdfe7db80f2ff86edd5d97368edc11a3c0bd"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evaluator_only\\v46_priority1_prerun_review_20261018.json",
+      "sha256": "c5c85f170ef8701222abf169f0e8ad93bfb086e00f6d584c49b1f5e89f909ae8"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evaluator_only\\v46_replay_priority1_rubric_addendum_20261018.json",
+      "sha256": "2993b2c379e918f8b713927f89a263e48f74ecd0576b63ccf970314883ed5962"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\v46_single_revision_basis_addendum_20261018.json",
+      "sha256": "a871bea800e7199b726706e8c064803021735a7bbc99f80f5736014e7790a0d9"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\evaluation_spec.json",
+      "sha256": "cff49202b9da0da6bc094eb02a55e971afeab8c983a1a8fe3d686af1cff8df7f"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\register_feedback_diagnostic.py",
+      "sha256": "efbecedfd9bf90f30059e769cedd805acae367f435d1e074ce81f0611099bfb1"
+    }
+  ],
+  "online_boundary": "Registration and evaluator materials are not model prompt contents; only the frozen five messages are sent.",
+  "human_semantic_pass": false,
+  "model_calls_by_registration": 0
+}

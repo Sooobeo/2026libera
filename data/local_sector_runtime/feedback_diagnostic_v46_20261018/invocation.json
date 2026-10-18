@@ -1,0 +1,26 @@
+{
+  "started_at_utc": "2026-10-18T08:57:30.686339+00:00",
+  "origin": "http://127.0.0.1:11434",
+  "server_log": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\service_20261018T063629957Z\\server.stderr.log",
+  "manifest": {
+    "path": "C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v46_feedback_diagnostic_20261018\\manifest.json",
+    "sha256": "7be29c06056d0f909d66ee992d93ce3830b544b4d9cf331ede6c636edc1b35ec"
+  },
+  "registration": {
+    "path": "C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v46_feedback_diagnostic_registration_20261018.json",
+    "sha256": "3ec173451a7612d9a3ce1b3857489e0665faa1946613b44360735762539a6a25"
+  },
+  "controls": {
+    "input_messages": 5,
+    "intermediate_assistant_stages_included": [],
+    "feedback_serialization": "Original stage4 calculator_result newly serialized with the old workflow formatter; it was not sent after the previous final answer.",
+    "feedback_embedding": "The same full original calculator value is duplicated in the current task; no target weights or correction coefficient.",
+    "transport": "Unchanged v4.5 supervised child/worker, response schema, pins, renderer, model and all request options.",
+    "stage_selector": "stage=4 selects the old final-response schema only; this run has one diagnostic call, not four workflow stages.",
+    "deadline": "900 seconds for child setup, metadata, render-only and generation combined, apart from OS scheduling/kill overhead. Cleanup is outside.",
+    "legacy_worker_counts": "The reused worker names its call pilot_model_calls; this diagnostic parent counts it only as diagnostic_generation_calls, never a new four-stage pilot or main call.",
+    "acceptance": "Recalculate raw output without normalization, clipping, cash insertion or retry. Numeric acceptance does not grant the three independent reviews or semantic success.",
+    "excluded_scope": "No separate market-number correction or source-rationale improvement program; no R1/R4 inference."
+  },
+  "purpose": "one_prespecified_development_revision_of_a_known_invalid_candidate"
+}

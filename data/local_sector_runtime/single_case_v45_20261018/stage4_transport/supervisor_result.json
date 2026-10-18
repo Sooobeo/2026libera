@@ -1,0 +1,46 @@
+{
+  "status": "worker_exited",
+  "worker_exit_code": 0,
+  "elapsed_seconds": 435.78731670000707,
+  "deadline_seconds": 900,
+  "deadline_scope": "Child setup, metadata, render-only and generation combined. Cleanup is outside; OS scheduling/kill overhead may add to elapsed time.",
+  "automatic_retries": 0,
+  "worker": {
+    "status": "completed",
+    "main_model_calls": 0,
+    "automatic_retries": 0,
+    "elapsed_seconds": 434.6758308999997,
+    "calls": [
+      {
+        "kind": "generation",
+        "folder": "http_0001_generation",
+        "started_at_utc": "2026-10-18T08:06:03.357802+00:00",
+        "status": "completed",
+        "http_status": 200,
+        "metrics": {
+          "wall_seconds": 421.07381400000304,
+          "ttft_any_generated_seconds": 181.1802563000092,
+          "ttft_content_seconds": 181.18025479999778,
+          "token_count_source": "Ollama counters, not independent tokenization",
+          "duration_unit_in_response": "nanoseconds",
+          "total_duration_seconds": 421.050541,
+          "load_duration_seconds": 15.4225348,
+          "prompt_eval_duration_seconds": 165.651905,
+          "eval_duration_seconds": 239.890929,
+          "prompt_eval_count": 17756,
+          "eval_count": 1828,
+          "prompt_eval_tokens_per_second": 107.18862544925155,
+          "eval_tokens_per_second": 7.620129729874029
+        },
+        "raw_bytes_path": "http_0001_generation\\raw_stream.bin",
+        "no_automatic_retry": true,
+        "unexpected_thinking_with_disabled_request": false
+      }
+    ],
+    "render_requests_attempted": 1,
+    "generation_requests_attempted": 1,
+    "pilot_model_calls": 1,
+    "unexpected_generation_evidence_in_render": false,
+    "http_streams_completed": 1
+  }
+}

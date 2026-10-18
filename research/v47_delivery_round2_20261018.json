@@ -1,0 +1,371 @@
+{
+  "schema_version": "v47_delivery_documentation_round2_v1",
+  "created_at_utc": "2026-10-18T09:38:58.245776+00:00",
+  "phase": "delivery_documentation",
+  "round": 2,
+  "review_type": "independent_failure_record_numbers_and_scope",
+  "scope": "Accuracy of the final plan, term-paper draft and settings after the v4.6/v4.7 failed development diagnoses; not an experimental acceptance gate.",
+  "audit_completed": true,
+  "all_passed": true,
+  "priority1_passed": false,
+  "priority2_implementation_started": false,
+  "priority3_implementation_started": false,
+  "main_execution_authorized": false,
+  "main_execution_ready": false,
+  "main_model_calls": 0,
+  "model_calls_by_auditor": 0,
+  "raw_files_changed": 0,
+  "delivery_documents_changed_by_auditor": 0,
+  "failed_checks": [],
+  "not_observed_checks": [],
+  "check_count": 25,
+  "checks": [
+    {
+      "id": "D47-R2-01",
+      "status": "pass",
+      "method": "independent_read_and_assertion",
+      "detail": "Review identifies the three final documents after the six-reference bibliography addition."
+    },
+    {
+      "id": "D47-R2-02",
+      "status": "pass",
+      "method": "independent_read_and_assertion",
+      "detail": "Both HTML documents contain the development results, method limits, and separate future candidates."
+    },
+    {
+      "id": "D47-R2-03",
+      "status": "pass",
+      "method": "independent_read_and_assertion",
+      "detail": "No duplicate HTML IDs in either final document."
+    },
+    {
+      "id": "D47-R2-04",
+      "status": "pass",
+      "method": "independent_read_and_assertion",
+      "detail": "All 244 source-file entries across six settled diagnostic audits match current bytes; each group shares its exact summary and financial record, plus the v4.7 planning record."
+    },
+    {
+      "id": "D47-R2-05",
+      "status": "pass",
+      "method": "independent_read_and_assertion",
+      "detail": "Both versions have completed rounds 1/2/3 with provenance PASS and arithmetic/claim FAIL; completion is not acceptance."
+    },
+    {
+      "id": "D47-R2-06",
+      "status": "pass",
+      "method": "independent_read_and_assertion",
+      "detail": "Independent exact arithmetic: v4.6 sum is 193/200 = 0.965; residual -0.035. It remains invalid."
+    },
+    {
+      "id": "D47-R2-07",
+      "status": "pass",
+      "method": "independent_read_and_assertion",
+      "detail": "Independent exact arithmetic: v4.7 sum is 39/40 = 0.975; residual -0.025. It remains invalid."
+    },
+    {
+      "id": "D47-R2-08",
+      "status": "pass",
+      "method": "independent_read_and_assertion",
+      "detail": "Only sector 45 changes: 0.37 to 0.38 (+0.01). The other ten submitted weights remain unchanged; no cash or rescaling is imputed."
+    },
+    {
+      "id": "D47-R2-09",
+      "status": "pass",
+      "method": "independent_read_and_assertion",
+      "detail": "Empty planning weights are a non-submission, not a zero allocation or a financial PASS. Only executor weights are assessed."
+    },
+    {
+      "id": "D47-R2-10",
+      "status": "pass",
+      "method": "independent_read_and_assertion",
+      "detail": "Both rendered tables match source request counts (1,2), completed responses (1,2), sums (96.500%,97.500%), and the three audit outcomes."
+    },
+    {
+      "id": "D47-R2-11",
+      "status": "pass",
+      "method": "independent_read_and_assertion",
+      "detail": "Development diagnostics have no main calls, no automatic retries, no main freeze, and no numerical acceptance."
+    },
+    {
+      "id": "D47-R2-12",
+      "status": "pass",
+      "method": "independent_read_and_assertion",
+      "detail": "Original v4.5 is exactly one completed four-stage case with four calls and an invalid final allocation. Later 1+2 diagnostic calls are separate and not additional pilot cases."
+    },
+    {
+      "id": "D47-R2-13",
+      "status": "pass",
+      "method": "independent_read_and_assertion",
+      "detail": "Priority 1 remains unresolved; priorities 2 and 3 have literature candidates only. No later-priority implementation or main execution is represented as completed."
+    },
+    {
+      "id": "D47-R2-14",
+      "status": "pass",
+      "method": "independent_read_and_assertion",
+      "detail": "Main counts remain zero; readiness and execution permission remain false. Historical model observations are not readiness certification."
+    },
+    {
+      "id": "D47-R2-15",
+      "status": "pass",
+      "method": "independent_read_and_assertion",
+      "detail": "The original paper section on competing interpretations is preserved verbatim. New candidates are an additional section."
+    },
+    {
+      "id": "D47-R2-16",
+      "status": "pass",
+      "method": "independent_read_and_assertion",
+      "detail": "Historical v4.4 fixed-denominator extraction 0/11 and v4.5 11/11 labels remain explicit; semantic applicability and protocol differences are not erased."
+    },
+    {
+      "id": "D47-R2-17",
+      "status": "pass",
+      "method": "independent_read_and_assertion",
+      "detail": "The final protocol must validate all four pilot cases, including the exposed Fidelity Q2/R1 development case. Reuse is not an independent confirmation sample."
+    },
+    {
+      "id": "D47-R2-18",
+      "status": "pass",
+      "method": "manual_content_review",
+      "detail": "Read both candidates sections: A/C are unrun alternatives, B failed; later criteria are not retuned to claim success, and repeated old attempts are not pooled as fixed-condition replicates."
+    },
+    {
+      "id": "D47-R2-19",
+      "status": "pass",
+      "method": "manual_content_review",
+      "detail": "Read both methods sections: planner/executor is a partial method transfer; two calls and empty planning weights are disclosed local implementation choices; no claim of full PER reproduction, paper-optimal budget, or all numbers directly reported by papers."
+    },
+    {
+      "id": "D47-R2-20",
+      "status": "pass",
+      "method": "manual_content_review",
+      "detail": "Read diagnostic and conclusion sections: three distributed self-audits do not replace independent human review; no R1/R4 effect, institutional convergence effect, investment-performance claim, or general model ranking is inferred from this reused case."
+    },
+    {
+      "id": "D47-R2-21",
+      "status": "pass",
+      "method": "manual_content_review",
+      "detail": "Read strategy scope: source-label fidelity, source/rationale interpretation and strategic coherence remain distinct from numerical feasibility. Failure diagnostics do not turn sector weights into a unique institutional gold target."
+    },
+    {
+      "id": "D47-R2-22",
+      "status": "pass",
+      "method": "independent_read_and_assertion",
+      "detail": "Final builder, v4.7 manifest/registration, bibliography and original v4.5 source documents match the delivery provenance hashes."
+    },
+    {
+      "id": "D47-R2-23",
+      "status": "pass",
+      "method": "independent_read_and_assertion",
+      "detail": "All six added bibliography entries appear in both documents with the saved author/title/version URLs; seven underlying source snapshots retain their recorded hashes. Bibliography metadata/source fact audit is also separately available in delivery round 1."
+    },
+    {
+      "id": "D47-R2-24",
+      "status": "pass",
+      "method": "manual_content_review",
+      "detail": "Read final reference notes and text: implemented partial adaptation and future literature candidates are explicitly distinguished; W. Wang and X. Wang are disambiguated. Bibliography insertion does not change diagnostic success or readiness."
+    },
+    {
+      "id": "D47-R2-25",
+      "status": "pass",
+      "method": "independent_read_and_assertion",
+      "detail": "This independent round 2 identifies the same final three document hashes as completed delivery round 1 v3; document PASS remains distinct from priority-1 FAIL."
+    }
+  ],
+  "reviewed_documents": {
+    "plan": {
+      "path": "plan/LIBERA_실험계획_v4.7_20261018.html",
+      "sha256": "39f5d944944983435c5e27c204ae065d7066b1c5559aabfbb0129558571b7804"
+    },
+    "paper": {
+      "path": "paper/LIBERA_텀페이퍼_초안_v4.7_20261018.html",
+      "sha256": "160e77c616d4ad4e29613240e36e977b7cdd9882774da0bd7f5cd38f9875eb82"
+    },
+    "config": {
+      "path": "plan/LIBERA_실험설정_v4.7_20261018.json",
+      "sha256": "f278aa9ab4d7a5b6548b7d9d5ac0e80d276dffc0d0333bd83020ed65708e5fd0"
+    }
+  },
+  "source_files": [
+    {
+      "path": "plan/LIBERA_실험계획_v4.7_20261018.html",
+      "sha256": "39f5d944944983435c5e27c204ae065d7066b1c5559aabfbb0129558571b7804"
+    },
+    {
+      "path": "paper/LIBERA_텀페이퍼_초안_v4.7_20261018.html",
+      "sha256": "160e77c616d4ad4e29613240e36e977b7cdd9882774da0bd7f5cd38f9875eb82"
+    },
+    {
+      "path": "plan/LIBERA_실험설정_v4.7_20261018.json",
+      "sha256": "f278aa9ab4d7a5b6548b7d9d5ac0e80d276dffc0d0333bd83020ed65708e5fd0"
+    },
+    {
+      "path": "research/v46_feedback_diagnostic_round1_20261018.json",
+      "sha256": "f4fcfdeab213cb3297b1476020f63fe8f72bf4746d92b410ecbac13f2686cadf"
+    },
+    {
+      "path": "research/v46_priority1_round2_20261018.json",
+      "sha256": "6e838228fd1497e0a27bfb528b740d1171577023383f60266d1d57c15526eaff"
+    },
+    {
+      "path": "research/v46_priority1_round3_20261018.json",
+      "sha256": "04ea97c616fbea2bddfc106c6766a58d22cd4e21d0809c840b796e2bcd36afe3"
+    },
+    {
+      "path": "data/local_sector_runtime/feedback_diagnostic_v46_20261018/summary.json",
+      "sha256": "045f3b55fde038975b2fdce144687a9b13dffd0ca816754a585a2d8852fb25e7"
+    },
+    {
+      "path": "data/local_sector_runtime/feedback_diagnostic_v46_20261018/revision_record.json",
+      "sha256": "5878882798e72b1284383b195ce11a78a26fbdce07f3346d1f6490ea19d04339"
+    },
+    {
+      "path": "research/v47_plan_execute_round1_20261018.json",
+      "sha256": "f6b7c573356dd1babbb088b5999487acaabb8a04defea5735cdfb945629a40c3"
+    },
+    {
+      "path": "research/v47_priority1_round2_20261018.json",
+      "sha256": "69603beb62b4a74058b1a122b40420f4cdfa09311c597d663d3a8b42486d3a98"
+    },
+    {
+      "path": "research/v47_priority1_round3_20261018.json",
+      "sha256": "e06ab765474e861bac5d044bbde1e3e3326c9325e93316b194564a83a195fbb2"
+    },
+    {
+      "path": "data/local_sector_runtime/plan_execute_diagnostic_v47_20261018/summary.json",
+      "sha256": "93aa6651212d290309b2b98b9a11b1915039bfe7fc49bdcb2f1afeaa960ac998"
+    },
+    {
+      "path": "data/local_sector_runtime/plan_execute_diagnostic_v47_20261018/revision_record.json",
+      "sha256": "a9ae65714831869f9d148f7c4fbeb1b2d011c4d9180f06d919126012c21a355f"
+    },
+    {
+      "path": "data/local_sector_runtime/plan_execute_diagnostic_v47_20261018/plan_record.json",
+      "sha256": "7188dddef25560a1de72673bd33e9d686b322ac2b3ed6ff75a056a5258299a78"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v45_20261018/summary.json",
+      "sha256": "e06b9877d288b7a124769528a1a0d475723501477465a515dec9de406e1c9e58"
+    },
+    {
+      "path": "plan/LIBERA_실험계획_v4.5_20261018.html",
+      "sha256": "78d238e985c0a573c02832b81a581e82fafbf416c96dac41a506a917a8f56c77"
+    },
+    {
+      "path": "paper/LIBERA_텀페이퍼_초안_v4.5_20261018.html",
+      "sha256": "6f6091951e546768ab935631ec51eab15b80e9fe9286fed794b75a90b2743cb8"
+    },
+    {
+      "path": "plan/LIBERA_실험설정_v4.5_20261018.json",
+      "sha256": "eedf899d6368398d054f5aff9a6de2ca0c1fd09ec32fcf70835bf40d572444bc"
+    },
+    {
+      "path": "research/build_sector_revision_v47.py",
+      "sha256": "d4c2661e6a499f7ae49803760f97a77a5cf9cbe7cc809915dbf5af7eca2a8604"
+    },
+    {
+      "path": "research/v47_added_bibliography_v2_20261018.json",
+      "sha256": "655ded49a7c16708e1365085ca33d8aaa3c8ef4f1771e2c2f998c4e2213a1547"
+    },
+    {
+      "path": "data/sector_protocol/v47_plan_execute_diagnostic_20261018/manifest.json",
+      "sha256": "7123245e45c547ba8460dedbd5d30f2a175231a67774486542f5ba0db7a0323f"
+    },
+    {
+      "path": "data/sector_protocol/v47_plan_execute_diagnostic_registration_20261018.json",
+      "sha256": "b46c284b8becb86eb7f62c518d6aaed8c4be458b98a228185dcfa7bcbc2d0a8a"
+    },
+    {
+      "path": "research/evidence/v47_priority1_options_20261018/uptake_abs.html",
+      "sha256": "d8b276fa841c991aa2e88525c015f460d669aa721cf3607871568d2e01d728b7"
+    },
+    {
+      "path": "research/evidence/v47_priority1_options_20261018/symbolic_abs.html",
+      "sha256": "0fe46d1bf097662d443fdc2f897cce1034b06999bbd6f1128c474a302f59a2e2"
+    },
+    {
+      "path": "research/evidence/v47_priority1_options_20261018/symbolic_fulltext.html",
+      "sha256": "5fb5c80f78a516660a325f15c67a4bfcb27b667a1c9c9c150a4007c21e4fa718"
+    },
+    {
+      "path": "research/evidence/v47_priority1_options_20261018/finfirst_abs.html",
+      "sha256": "658bf62d3c90d66dc0dc8b476f27d80135da83dc10e7562d06a13bd27017aec6"
+    },
+    {
+      "path": "research/evidence/priority23_candidates_20261018/externalization_abs.html",
+      "sha256": "14d3668bbce7d781b1f608f7ab3eff5a79e08b72a86e384903458da8202d256d"
+    },
+    {
+      "path": "research/evidence/priority23_candidates_20261018/e2a_abs.html",
+      "sha256": "87a59e24d4fcae57f69135bc6c5b976bc1fe8015df9b6e15d577faa763d3e04b"
+    },
+    {
+      "path": "research/evidence/priority23_candidates_20261018/fundapod_abs.html",
+      "sha256": "587ca2a30978670891b20f7ea791ec5f72317a9de6bf393bc1bbc424af58948b"
+    },
+    {
+      "path": "research/v47_delivery_round1_v3_20261018.json",
+      "sha256": "3f0cd3b30ac3c6a12d2c74665e0b9b139a10b422422a049dc9383b808db08248"
+    }
+  ],
+  "source_file_count": 30,
+  "chained_diagnostic_source_entries_verified": 244,
+  "shared_diagnostic_records": {
+    "4.6": {
+      "summary.json": {
+        "path": "data/local_sector_runtime/feedback_diagnostic_v46_20261018/summary.json",
+        "sha256": "045f3b55fde038975b2fdce144687a9b13dffd0ca816754a585a2d8852fb25e7"
+      },
+      "revision_record.json": {
+        "path": "data/local_sector_runtime/feedback_diagnostic_v46_20261018/revision_record.json",
+        "sha256": "5878882798e72b1284383b195ce11a78a26fbdce07f3346d1f6490ea19d04339"
+      }
+    },
+    "4.7": {
+      "summary.json": {
+        "path": "data/local_sector_runtime/plan_execute_diagnostic_v47_20261018/summary.json",
+        "sha256": "93aa6651212d290309b2b98b9a11b1915039bfe7fc49bdcb2f1afeaa960ac998"
+      },
+      "revision_record.json": {
+        "path": "data/local_sector_runtime/plan_execute_diagnostic_v47_20261018/revision_record.json",
+        "sha256": "a9ae65714831869f9d148f7c4fbeb1b2d011c4d9180f06d919126012c21a355f"
+      },
+      "plan_record.json": {
+        "path": "data/local_sector_runtime/plan_execute_diagnostic_v47_20261018/plan_record.json",
+        "sha256": "7188dddef25560a1de72673bd33e9d686b322ac2b3ed6ff75a056a5258299a78"
+      }
+    }
+  },
+  "exact_observations": {
+    "v46_sum": "0.965",
+    "v46_budget_residual": "-0.035",
+    "v47_sum": "0.975",
+    "v47_budget_residual": "-0.025",
+    "v47_changed_sectors": {
+      "45": {
+        "from": "0.37",
+        "to": "0.38",
+        "delta": "0.01"
+      }
+    },
+    "planner_allocation_submitted": false,
+    "planner_financial_acceptance": null,
+    "diagnostic_round_outcomes": {
+      "4.6": [
+        true,
+        false,
+        false
+      ],
+      "4.7": [
+        true,
+        false,
+        false
+      ]
+    }
+  },
+  "conclusion": "The final documents accurately preserve observed failures and current limits. This documentation review passes; priority 1 still fails, priorities 2/3 are unimplemented, all final-protocol pilot cases remain to be validated, human source review is pending, and main is neither frozen nor executed.",
+  "limitations": [
+    "This is an independent assistant review, not an independent human source-signoff.",
+    "It verifies recorded numbers and scope, not a successful model strategy or a causal treatment effect.",
+    "No new model calls, repairs, source data changes, criterion thresholds, or execution permissions were introduced."
+  ]
+}

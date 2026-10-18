@@ -1,0 +1,244 @@
+{
+  "schema_version": "v47_priority1_planner_executor_prerun_addendum_v1",
+  "created_at_utc": "2026-10-18T09:11:07.921040+00:00",
+  "access_role": "offline_evaluator_only_never_upload_to_model",
+  "phase": "priority1",
+  "status": "selected_design_review_implementation_and_registration_pending",
+  "reviewer": "independent_risk_metrics_review",
+  "selected_scope": "A separate two-call known-failure development diagnostic: one model-authored future correction plan followed by one model-authored complete allocation. No new four-stage workflow or main case.",
+  "historical_state_preserved": {
+    "v45": "Four task stages completed with the same invalid0.965 vector; original failure remains.",
+    "v46": "One feedback-grounded correction completed but all11 raw weights stayed unchanged, sum0.965 and residual-0.035. Mathematical and narrow claim audits failed.",
+    "new_attempt_selection": "Adaptive development after observing those failures; not independent confirmation and not a reset of the attempt denominator.",
+    "original_artifacts_mutable": false
+  },
+  "unchanged_acceptance": {
+    "base_rubric": "research/evaluator_only/v46_priority1_prerun_review_20261018.json",
+    "base_replay_rubric": "research/evaluator_only/v46_replay_priority1_rubric_addendum_20261018.json",
+    "requirements": "An actual invalid predecessor and its true feedback are visible; the model emits an actually changed raw allocation that satisfies existing constraints; the correction explanation is truthful; no host repair/gold/retry; three independent same-artifact audits pass.",
+    "existing_sum_tolerance": 1e-06,
+    "tolerance_role": "Inherited engineering serialization precision, not a new paper-derived effect criterion.",
+    "no_unique_weight_answer": true,
+    "priority1_passed": false,
+    "priority2_authorized": false,
+    "main_authorized": false
+  },
+  "role_contracts": {
+    "planner": {
+      "schema": "Reuse the existing seven top-level fields and existing stage1 schema. That schema permits0 or11 weights, but this planning-role contract requires exactly weights=[]. Record both facts; do not claim the complete schema itself enforces only0.",
+      "output_meaning": "An observable prospective correction plan, not hidden thinking and not a submitted allocation.",
+      "weight_semantics": "An intentional empty array is not a zero-investment portfolio, does not have an accepted allocation sum, and does not itself demonstrate arithmetic failure or success.",
+      "guard": "After the existing strict shape validation, enforce weights==[]. A violation is preserved as a planning-role contract failure and prevents executor generation; no host removal or truncation of the planner weights.",
+      "interpretations": "Any existing eleven interpretation rows are source analysis, not a new source-label answer key or a financial submission.",
+      "prose_audit": "Future intention is not completed action. Empty weights alone does not prove the prose is a valid plan; false claims about earlier or already-completed changes remain auditable. No new keyword/length/quality score is introduced."
+    },
+    "executor": {
+      "inputs": "The registered original public inputs, actual frozen failed response and calculator feedback, the factual prior transition record, and the complete unedited new planner response in the recorded history.",
+      "schema": "Existing final seven-field response with11 raw weights. Public code/type/shape constraints do not prescribe ratings, reasons or weight values.",
+      "output_meaning": "The sole new final allocation candidate. The model must write the values itself; the host never executes a numerical plan on its behalf.",
+      "calculation": "Calculate this unchanged raw candidate using only the same public market and stage-visible submitted inputs. No normalization, clipping, projection, cash imputation or corrected-vector substitution.",
+      "plan_execution": "Preserve differences between intended changes and final raw values. A prose plan or claim that it was executed is not evidence of actual numerical execution."
+    }
+  },
+  "allowed_transition_feedback": {
+    "observations": "Actual v45 and v46 raw sums/residuals/validity, matched sector-by-sector differences derived from the original unique numeric rows, and genuine calculator reports.",
+    "specific_observed_fact": "The existing v45-to-v46 weight delta is exactly0 for all11 sectors; both raw sums are0.965.",
+    "provenance": "Recompute and hash the transition before inference. Reject missing/duplicate/ambiguous source rows instead of inventing a value.",
+    "interpretation_limit": "The transition identifies no hidden intent, inability mechanism or optimal correction. It is a deterministic observation of prior public-output values.",
+    "forbidden_additions": [
+      "A sector chosen by the host to receive the missing budget mass",
+      "A corrected target vector or normalization coefficient/recipe",
+      "A model plan written or repaired by the host",
+      "Prior offline semantic verdicts, source-label answer tables, hidden source pages or main-case outputs",
+      "A requirement that a particular weight must equal the benchmark or a fabricated institution risk cap"
+    ]
+  },
+  "bounded_execution": {
+    "max_generation_calls": 2,
+    "roles": [
+      "planner",
+      "executor"
+    ],
+    "meaning": "One planning call and at most one execution call, not two independent repair attempts, not multiple candidate selection and not the original four-stage treatment.",
+    "budget_basis": "A predeclared local development bound implementing the selected role separation, not an optimal numeric setting reported in the cited paper.",
+    "automatic_retry": false,
+    "automatic_fallback": false,
+    "inherited_controls": "Exact model/digest/template/engine, sampling/penalty/context/output controls, renderer, no-truncation rules and900-second per-call deadline remain pinned. Verify the actual implementation and manifest before inference.",
+    "stop_rules": "A transport/pin/render/strict-shape failure stops. A planner nonempty-weight violation stops before executor. A completed invalid executor candidate is recorded as a failed correction, with no extension."
+  },
+  "three_required_audits": [
+    {
+      "round": 1,
+      "scope": "Execution and provenance",
+      "checks": [
+        "Exact prospective registration/role/input/schema/model pins and finite budget.",
+        "Original failures and derived transition match frozen sources; no hidden correction target or evaluator information enters online text.",
+        "Planner response is preserved in full and actually visible to executor; host does not apply its plan.",
+        "Correct role-specific call counts, termination, failure retention and no retry/repair.",
+        "Planning weights=[] is recorded as not submitted, never as a valid portfolio or a new full-workflow success."
+      ]
+    },
+    {
+      "round": 2,
+      "scope": "Independent raw arithmetic and existing format contract",
+      "checks": [
+        "Strictly parse original numeric literals and check the planner empty-weight role contract separately from final allocation feasibility.",
+        "Independently verify v45-to-v46 factual delta0; do not interpret the empty planner array as a zero vector for subtraction.",
+        "For executor only, verify all11 canonical sectors once, finite weights, original long-only bounds and inherited full-investment sum criterion.",
+        "Compute exact v46-to-executor deltas and sums without importing a repaired vector or using the runner's validity flag as the answer.",
+        "Require an actual final numerical change and valid raw allocation; retain exact residuals and distinguish binary-float calculator precision."
+      ]
+    },
+    {
+      "round": 3,
+      "scope": "Narrow plan/execution/correction claim truth",
+      "checks": [
+        "Check statements about the v45/v46 error and unchanged transition against preserved evidence.",
+        "Separate prospective plan language from completed-action claims; no literal ACK or verbosity condition.",
+        "Compare consequential planner intentions and executor claims of following them against final raw values, with uncertainty or unexecuted actions explicit.",
+        "Reject false claims that weights changed, the original invalid candidate was valid, or the final sum is1 when its raw values contradict that claim.",
+        "Do not infer source fidelity, strategy quality or repair of the original four-stage workflow merely from arithmetic feasibility."
+      ]
+    }
+  ],
+  "terminal_reporting": {
+    "shared_artifacts": "All three final audits must identify the same settled run_dir, summary.json and executor revision record hashes; also preserve planner response/record hashes. A missing executor record prevents a success gate.",
+    "audit_fields": "phase='priority1', round, run_dir, audit_completed, all_passed, failed_checks, not_observed_checks, checks(status='pass' only for actual passes), source_files(path,sha256).",
+    "complete_invalid_executor": "Observed failure; do not move it into missing/unknown merely because it fails.",
+    "executor_not_started_or_incomplete": "Retain the attempted/finished planning-role counts and mark final allocation/claim observations unavailable. Never an automatic pass.",
+    "after_all_three_pass": "The separate development gate alone may pass. Priority2 needs its own prospective preparation; full four-stage suitability remains pending.",
+    "main": "Still prohibited and unfrozen."
+  },
+  "paper_alignment": {
+    "reference": "research/v47_planner_executor_reference_20261018.json",
+    "primary_url": "https://arxiv.org/html/2607.15388v1",
+    "verified_locator": "AppendixI.1 PER; AppendixI.3; Section3.3",
+    "supported_pattern": "Planning without a final answer is separated from execution of a candidate using task, plan and advice.",
+    "local_adaptations": "Same small model used in two roles, financial seven-key JSON, intentional empty weights in the planner, exactly two maximum calls, deterministic numeric feedback, and three offline audits instead of the original full Planner-Executor-Reviewer loop.",
+    "not_supported": "The paper does not establish that this model/task will improve, that two calls are optimal, or that an acknowledgment/plan guarantees correction. No reported success rate transfers here."
+  },
+  "remaining_before_inference": [
+    "Review final runner, role guard, tests and input/feedback construction.",
+    "Review and hash the exact prepared manifest, all source code and registered budget.",
+    "Confirm original failures, source data, rubric and old audit files remain immutable."
+  ],
+  "new_model_calls_by_reviewer": 0,
+  "previous_immutable_files_changed": 0,
+  "source_files": [
+    {
+      "path": "research/evaluator_only/v46_priority1_prerun_review_20261018.json",
+      "sha256": "c5c85f170ef8701222abf169f0e8ad93bfb086e00f6d584c49b1f5e89f909ae8"
+    },
+    {
+      "path": "research/evaluator_only/v46_replay_priority1_rubric_addendum_20261018.json",
+      "sha256": "2993b2c379e918f8b713927f89a263e48f74ecd0576b63ccf970314883ed5962"
+    },
+    {
+      "path": "research/evaluator_only/fidelity_q2_r1_prerun_reference_20261018.json",
+      "sha256": "8022c19d7b5e9654139996d88cac230cb12d29b30fcf7e817850203c02c35f38"
+    },
+    {
+      "path": "research/v47_planner_executor_reference_20261018.json",
+      "sha256": "5e86ac4bf264aab67e9fbec7a58d0e81aaaad71b2e83008501a6f8443cf4ba48"
+    },
+    {
+      "path": "research/v46_priority1_round2_20261018.json",
+      "sha256": "6e838228fd1497e0a27bfb528b740d1171577023383f60266d1d57c15526eaff"
+    },
+    {
+      "path": "research/v46_priority1_round3_20261018.json",
+      "sha256": "04ea97c616fbea2bddfc106c6766a58d22cd4e21d0809c840b796e2bcd36afe3"
+    },
+    {
+      "path": "data/sector_protocol/evaluation_spec.json",
+      "sha256": "cff49202b9da0da6bc094eb02a55e971afeab8c983a1a8fe3d686af1cff8df7f"
+    },
+    {
+      "path": "research/sector_response_schema.py",
+      "sha256": "bedbf782a041ba7da4f944408dd19596d74cbf78b77bee1c75d12ce71a598c41"
+    },
+    {
+      "path": "research/local_sector_structured_case.py",
+      "sha256": "d7193e69a9525ff640d275f86d7b5deaa18ce033e3d628e416bc2a06699c1a73"
+    },
+    {
+      "path": "data/sector_market/market_input.json",
+      "sha256": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v45_20261018/fidelity_q2_2026__R1/stage4_record.json",
+      "sha256": "7b20d31a9e70f1cdd21aa0abb02c30c5ea7d6c1cd2b5ecdf5c3db11585188731"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v45_20261018/fidelity_q2_2026__R1/stage4_response.json",
+      "sha256": "d8218ee743275ab6d9d77151969048e39c0988ac848bdf48a19f872ab7777304"
+    },
+    {
+      "path": "data/local_sector_runtime/feedback_diagnostic_v46_20261018/summary.json",
+      "sha256": "045f3b55fde038975b2fdce144687a9b13dffd0ca816754a585a2d8852fb25e7"
+    },
+    {
+      "path": "data/local_sector_runtime/feedback_diagnostic_v46_20261018/revision_record.json",
+      "sha256": "5878882798e72b1284383b195ce11a78a26fbdce07f3346d1f6490ea19d04339"
+    },
+    {
+      "path": "data/local_sector_runtime/feedback_diagnostic_v46_20261018/revision_transport/http_0001_generation/response.json",
+      "sha256": "e0d2cf4914aa2d0f142bda4dea9ab59fbb9ee3cf93aa71896c1a6220f2f0d595"
+    },
+    {
+      "path": "research/evidence/v47_priority1_options_20261018/uptake_fulltext.html",
+      "sha256": "3c94893519cb012c30d44da502eff8c9b75c9c3c60a487cb166374cd46ebbe3b"
+    }
+  ],
+  "evidence_files": {
+    "research/evaluator_only/v46_priority1_prerun_review_20261018.json": {
+      "sha256": "c5c85f170ef8701222abf169f0e8ad93bfb086e00f6d584c49b1f5e89f909ae8"
+    },
+    "research/evaluator_only/v46_replay_priority1_rubric_addendum_20261018.json": {
+      "sha256": "2993b2c379e918f8b713927f89a263e48f74ecd0576b63ccf970314883ed5962"
+    },
+    "research/evaluator_only/fidelity_q2_r1_prerun_reference_20261018.json": {
+      "sha256": "8022c19d7b5e9654139996d88cac230cb12d29b30fcf7e817850203c02c35f38"
+    },
+    "research/v47_planner_executor_reference_20261018.json": {
+      "sha256": "5e86ac4bf264aab67e9fbec7a58d0e81aaaad71b2e83008501a6f8443cf4ba48"
+    },
+    "research/v46_priority1_round2_20261018.json": {
+      "sha256": "6e838228fd1497e0a27bfb528b740d1171577023383f60266d1d57c15526eaff"
+    },
+    "research/v46_priority1_round3_20261018.json": {
+      "sha256": "04ea97c616fbea2bddfc106c6766a58d22cd4e21d0809c840b796e2bcd36afe3"
+    },
+    "data/sector_protocol/evaluation_spec.json": {
+      "sha256": "cff49202b9da0da6bc094eb02a55e971afeab8c983a1a8fe3d686af1cff8df7f"
+    },
+    "research/sector_response_schema.py": {
+      "sha256": "bedbf782a041ba7da4f944408dd19596d74cbf78b77bee1c75d12ce71a598c41"
+    },
+    "research/local_sector_structured_case.py": {
+      "sha256": "d7193e69a9525ff640d275f86d7b5deaa18ce033e3d628e416bc2a06699c1a73"
+    },
+    "data/sector_market/market_input.json": {
+      "sha256": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f"
+    },
+    "data/local_sector_runtime/single_case_v45_20261018/fidelity_q2_2026__R1/stage4_record.json": {
+      "sha256": "7b20d31a9e70f1cdd21aa0abb02c30c5ea7d6c1cd2b5ecdf5c3db11585188731"
+    },
+    "data/local_sector_runtime/single_case_v45_20261018/fidelity_q2_2026__R1/stage4_response.json": {
+      "sha256": "d8218ee743275ab6d9d77151969048e39c0988ac848bdf48a19f872ab7777304"
+    },
+    "data/local_sector_runtime/feedback_diagnostic_v46_20261018/summary.json": {
+      "sha256": "045f3b55fde038975b2fdce144687a9b13dffd0ca816754a585a2d8852fb25e7"
+    },
+    "data/local_sector_runtime/feedback_diagnostic_v46_20261018/revision_record.json": {
+      "sha256": "5878882798e72b1284383b195ce11a78a26fbdce07f3346d1f6490ea19d04339"
+    },
+    "data/local_sector_runtime/feedback_diagnostic_v46_20261018/revision_transport/http_0001_generation/response.json": {
+      "sha256": "e0d2cf4914aa2d0f142bda4dea9ab59fbb9ee3cf93aa71896c1a6220f2f0d595"
+    },
+    "research/evidence/v47_priority1_options_20261018/uptake_fulltext.html": {
+      "sha256": "3c94893519cb012c30d44da502eff8c9b75c9c3c60a487cb166374cd46ebbe3b"
+    }
+  },
+  "reference_typography_note": "The frozen reference package contains a damaged FinFirst locator string (Sections2.2.2??.3). It is not silently edited. This rubric relies directly on the verified Yang AppendixI.1/I.3 locations; any correction to the separate FinFirst locator belongs in an additive erratum, not a replacement of the pinned reference."
+}

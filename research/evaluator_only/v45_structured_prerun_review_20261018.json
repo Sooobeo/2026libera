@@ -1,0 +1,290 @@
+{
+  "schema_version": "v45_structured_pre_run_design_review_v1",
+  "created_at_utc": "2026-10-18T07:45:52.240797+00:00",
+  "reviewer": "independent_risk_metrics_review",
+  "access_role": "offline_evaluator_only_never_upload_or_expose_to_model",
+  "status": "design_review_complete_implementation_verification_pending",
+  "case": {
+    "source_id": "fidelity_q2_2026",
+    "arm": "R1",
+    "planned_cases": 1,
+    "planned_stages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "stage4_expected_source_labels": 11,
+    "purpose": "revised_exploratory_pilot_not_independent_confirmation",
+    "main_calls_authorized_here": 0
+  },
+  "proposed_revision": {
+    "from": "4.4",
+    "to": "4.5",
+    "changes": [
+      "Use an answer-shape JSON Schema in Ollama API format.",
+      "Provide the same answer-shape schema or equivalent guidance in each stage task JSON.",
+      "Apply strict local structural validation before advancing."
+    ],
+    "required_top_level_keys": [
+      "source_id",
+      "interpretations",
+      "weights",
+      "alternatives",
+      "risk_discussion",
+      "unresolved",
+      "submitted_constraints"
+    ],
+    "unchanged": [
+      "institution packet",
+      "common market values",
+      "original seven-field task meanings",
+      "sampling and runtime conditions unless separately registered before execution",
+      "explicit previous final-answer content and calculator history",
+      "offline source reference and semantic rubric",
+      "raw calculator arithmetic and no-repair policy"
+    ]
+  },
+  "independent_design_judgment": {
+    "acceptable_in_principle": true,
+    "financial_answer_injection_identified_in_proposal": false,
+    "implementation_verified": false,
+    "reason": "The proposed constraints express existing output obligations and public taxonomy, while leaving source ratings, evidence claims, constraints and numeric allocations for the model to produce. Format enforcement is disclosed as engineering control rather than autonomous model achievement. The actual implementation and request artifacts still require pre-run verification."
+  },
+  "rules": [
+    {
+      "id": "terminal_response",
+      "rule": "A complete HTTP response and strict, duplicate-key-free JSON object are required. Partial stream text is never repaired or treated as a submission."
+    },
+    {
+      "id": "exact_top_level_shape",
+      "rule": "Require the seven existing response keys and reject unrelated top-level input keys; keep their pre-existing meanings."
+    },
+    {
+      "id": "source_identity",
+      "rule": "Copy or compare only the source identity already exposed in the conversation. Null and empty interpretations are required while source information is withheld."
+    },
+    {
+      "id": "source_visible_interpretation",
+      "rule": "When the source has been supplied, require all eleven canonical sector rows once. This enforces the task universe, not the correct ratings, explanations or citations."
+    },
+    {
+      "id": "early_stage_weights",
+      "rule": "Stages 1 and 2 may have an empty weights array or a complete eleven-sector proposal. An empty early allocation is not a failure by itself."
+    },
+    {
+      "id": "late_stage_weights",
+      "rule": "Stages 3 and 4 require all eleven explicit raw weights. The complete code roster is structural control and cannot be claimed as autonomous model taxonomy performance."
+    },
+    {
+      "id": "raw_numeric_validity",
+      "rule": "Accept finite JSON number values without enforcing a preferred magnitude, sum, sign or sector cap in the generation schema. The unchanged calculator records their original violations without normalization."
+    },
+    {
+      "id": "source_claim_values",
+      "rule": "Do not supply sector-specific rating constants, allowed correct-answer lists, evidence-ID answers, model target weights, exemplars containing answers, or gold-derived defaults in the schema."
+    },
+    {
+      "id": "task_origin_constraints",
+      "rule": "Schema key names, types, row counts and canonical public GICS codes are task-format controls. They are not Fidelity preferences, paper-estimated treatment magnitudes or financial strategy heuristics."
+    },
+    {
+      "id": "claim_evidence",
+      "rule": "Citation strings must be model-selected from visible evidence. Syntax or an ID match cannot establish entailment, reason fidelity or strategic validity."
+    },
+    {
+      "id": "stage1_task",
+      "rule": "Review whether the completed answer interprets the source and common market and identifies relevant uncertainties. Merely repeating task or market fields does not perform these functions."
+    },
+    {
+      "id": "stage2_task",
+      "rule": "Review whether the completed answer compares plausible alternatives with stated evidence, risk and concentration tradeoffs. Do not demand an invented gamma, risk budget, optimal portfolio or fixed alternative magnitude."
+    },
+    {
+      "id": "stage3_task",
+      "rule": "Review the evidence-to-provisional-allocation explanation for each consequential decision. Before institution disclosure the proposal must remain market-only and provisional."
+    },
+    {
+      "id": "stage4_task",
+      "rule": "Review the final original ratings and allocation, preserved or revised decisions, and any reasoned departure. No forced benchmark equality, equal weights, source sentiment conversion or optimizer target."
+    },
+    {
+      "id": "nonempty_is_not_semantics",
+      "rule": "Nonempty strings or arrays are submission-shape checks only. Boilerplate, copied input or irrelevant prose may satisfy syntax while leaving the requested function unperformed."
+    },
+    {
+      "id": "copying_not_globally_banned",
+      "rule": "Copying an original rating, evidence identifier or necessary source wording is legitimate extraction. Do not use an arbitrary text-overlap, novelty, length or diversity threshold to classify echo or quality."
+    },
+    {
+      "id": "absence_is_not_claim_status",
+      "rule": "An absent or incomplete answer is unobserved/not submitted, not a contradicted or not_stated factual claim. Completed claims retain the existing four semantic categories."
+    },
+    {
+      "id": "no_retry_or_repair",
+      "rule": "Retain the raw output and attempted-case denominator on deadline, cap, JSON or schema failure. No automatic resampling, answer repair, silent substitution or financial scoring feedback."
+    },
+    {
+      "id": "controlled_feedback",
+      "rule": "The online calculator sees the original proposed weights, submitted constraints and already-visible public inputs only. Gold, semantic audits and original-PDF content absent from the packet never enter the runner."
+    },
+    {
+      "id": "revision_identification",
+      "rule": "API schema plus response_schema task guidance is a combined format intervention. Preserve v4.4 and v4.5 separately; the effect of either component and the cause of the old failure are not individually identified."
+    },
+    {
+      "id": "successful_selection",
+      "rule": "Do not discard v4.4 or failed v4.5 attempts and present the remaining successful response as improved general accuracy. Report attempted and completed cases by version, with all outcomes retained."
+    },
+    {
+      "id": "study_scope",
+      "rule": "One repeatedly developed Fidelity R1 pilot does not identify R1/R4 effects, between-institution convergence, general strategy quality or out-of-sample performance. Main remains unrun and unfrozen."
+    }
+  ],
+  "task_performance_review": {
+    "mechanical": [
+      "completed transport",
+      "strict JSON",
+      "response shape",
+      "field types",
+      "required public sector roster",
+      "raw arithmetic and evidence-ID scope"
+    ],
+    "semantic": [
+      "stage-specific task actually performed",
+      "original labels and rationale faithfully represented",
+      "consequential factual claims supported by visible evidence",
+      "decision premises, tradeoffs and deviations traceable",
+      "historical risk and benchmark semantics preserved"
+    ],
+    "categorical_outcomes": [
+      "performed",
+      "partly_performed",
+      "not_performed",
+      "not_evaluable_no_completed_response"
+    ],
+    "categorical_outcomes_role": "Transparent descriptive reviewer classification with explicit observations, not a new weighted score, quantitative pass threshold or source truth label.",
+    "source_truth_categories": [
+      "supported",
+      "contradicted",
+      "not_stated",
+      "uncertain"
+    ],
+    "existing_semantic_rubric_path": "research/evaluator_only/fidelity_q2_r1_prerun_reference_20261018.json",
+    "no_minimum_prose_length_or_echo_overlap_threshold": true
+  },
+  "denominator_reconciliation": {
+    "existing_spec_locator": "evaluation_spec.primary_candidate.failure_denominator; sector_engine.score_response lines339-357 and417-422",
+    "formula": "sum over the eleven prespecified source sectors of an exact correct original label with unique sector row and correct source identity, divided by11",
+    "v44_attempted_case": {
+      "registered_cases": 1,
+      "attempted_cases": 1,
+      "completed_cases": 0,
+      "completion_rate": 0.0,
+      "original_fixed_denominator_metric": {
+        "correct": 0,
+        "expected": 11,
+        "accuracy": 0.0
+      },
+      "verification": "Read-only call score_response(None, Fidelity Q2 offline gold, common market) returned exactly correct0,expected11,accuracy0.0. No model call or artifact mutation.",
+      "meaning": "Failure to deliver the prespecified extractive result for this attempted case under this protocol. It is not eleven observed financial misconceptions or zero general investment ability."
+    },
+    "earlier_null_values": "The v4.4 round2/round3 reports left completed-response arithmetic and semantic assessments null because no completed answer exists. Those nulls remain appropriate for that scope; they do not supersede the original fixed-denominator extraction metric. Earlier files remain unchanged; this is an explicit additive reconciliation.",
+    "v45_reporting": {
+      "completion": "Report planned, attempted, HTTP-completed, structurally accepted and four-stage-completed counts separately.",
+      "primary_extraction": "Use the final stage4 answer for the one registered case; keep expected11 on an attempted case that has no valid final answer. Do not pool four sequential stages as44 independent observations.",
+      "intermediate_answers": "Report source-label observations by stage descriptively where available; they are not four independent cases and cannot replace a missing final answer.",
+      "semantic": "Evaluate completed claims or decisions only. Keep noncompletion distinct from the four source-truth categories.",
+      "portfolio": "Missing or invalid allocations have null risk/distance, not a zero-distance perfect match; no imputation from the supplied benchmark.",
+      "unstarted_roster_entries": "Keep planned but unattempted jobs visible as not_started; do not describe them as observed model errors.",
+      "cross_version": "Report v4.4 and v4.5 attempts separately. A success-conditional score can be supplemental only with its restricted denominator and completion table; no survivor-only improvement claim."
+    }
+  },
+  "schema_audit_before_run": {
+    "pending_artifacts": [
+      "research/sector_response_schema.py",
+      "research/local_sector_structured_case.py",
+      "research/test_sector_structured_case.py"
+    ],
+    "checkpoints": [
+      "Schema recursively contains no hidden gold-derived const/default/example values.",
+      "Only source-visible metadata and canonical public sector codes inform validation.",
+      "Finite numeric weights remain raw even when negative or their sum differs from1.",
+      "No schema-validation failure is silently retried or discarded.",
+      "Rendered stage instructions and actual API format carry the declared schema consistently.",
+      "All history, public evidence and original numeric market values are preserved.",
+      "Tests use fixtures rather than the live model and cover input echo, missing fields, duplicates, wrong source identity, nonfinite values and legitimate empty early weights.",
+      "New response-shaped boilerplate can pass mechanical validation but must not receive automatic task/meaning approval."
+    ]
+  },
+  "method_sources": [
+    {
+      "url": "https://docs.ollama.com/capabilities/structured-outputs",
+      "locator": "Generating structured JSON with a schema; format and subsequent validation examples",
+      "role": "Official implementation support for API schema and schema guidance in the prompt. Engineering mechanism, not evidence of financial reasoning quality.",
+      "checked_on": "2026-10-18"
+    },
+    {
+      "url": "https://arxiv.org/html/2608.09988v1",
+      "locator": "sections3.3 and6.3, as recorded in the pre-run rubric and evaluation specification",
+      "role": "Separate typed constraint enforcement, raw adherence and post-critic feasibility; does not supply institution target weights or this schema."
+    },
+    {
+      "url": "https://arxiv.org/html/2605.27887v6",
+      "locator": "AppendixF.3, as recorded in the pre-run rubric",
+      "role": "Separate agreement, exposure compliance and financial outcome dimensions; no unique numeric gold for these public source documents."
+    },
+    {
+      "url": "https://aclanthology.org/2023.emnlp-main.398/",
+      "locator": "sections3.3 and6, as recorded in the pre-run rubric",
+      "role": "Citation support and answer correctness require distinct review; valid schema and citation IDs are insufficient."
+    }
+  ],
+  "paper_basis_limit": "The new JSON schema is a disclosed engineering implementation of an existing response contract, not a numerical condition experimentally established by a paper. No new financial treatment magnitude, target weight, risk cap, preference coefficient or composite score is introduced.",
+  "model_calls_by_this_review": 0,
+  "v45_outputs_read": 0,
+  "previous_files_modified": 0,
+  "main_frozen": false,
+  "evidence_files": {
+    "research/evaluator_only/fidelity_q2_r1_prerun_reference_20261018.json": {
+      "sha256": "8022c19d7b5e9654139996d88cac230cb12d29b30fcf7e817850203c02c35f38",
+      "bytes": 26413
+    },
+    "data/sector_protocol/evaluation_spec.json": {
+      "sha256": "cff49202b9da0da6bc094eb02a55e971afeab8c983a1a8fe3d686af1cff8df7f",
+      "bytes": 9398
+    },
+    "research/run_sector_workflow.py": {
+      "sha256": "5625450a4dcbe1aa717c9809bf4955c1ef6b10aab4f0c83ef05dc2eb2c123cfd",
+      "bytes": 23842
+    },
+    "research/sector_engine.py": {
+      "sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c",
+      "bytes": 27360
+    },
+    "research/evaluate_sector_runs.py": {
+      "sha256": "0a6bab7531ff9540fc3c7152ffb07fad52f27ddcbf766116445d2c8fde043e3d",
+      "bytes": 2726
+    },
+    "research/v44_single_case_round2_20261018.json": {
+      "sha256": "a1cec8695d377669c9aac77073a7e425edf8ce5168a96651550fc5bd7b14f07a",
+      "bytes": 14067
+    },
+    "research/v44_single_case_round3_20261018.json": {
+      "sha256": "a858e209afd5cb4f770ea418778d806aa9f33fb17ae859f2de3635cd513b64eb",
+      "bytes": 22595
+    },
+    "data/local_sector_runtime/single_case_v44_20261018/summary.json": {
+      "sha256": "c8c2f88e0a73322d32b6e8be1585a2a4f9b2bc15a0afa37aa93e0f66a17ce1e2",
+      "bytes": 1319
+    },
+    "data/sector_documents/packets/pilot/fidelity_q2_2026.json": {
+      "sha256": "2f506f346ebfc1be0f327163eb016dcec649e6301e4494d6a9230ab86c28d406",
+      "bytes": 6688
+    },
+    "data/sector_market/market_input.json": {
+      "sha256": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f",
+      "bytes": 15480
+    }
+  }
+}

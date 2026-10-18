@@ -1,0 +1,65 @@
+{
+  "created_at_utc": "2026-10-18T09:40:10.223108+00:00",
+  "delivery_reviews_completed": 3,
+  "delivery_reviews_all_passed": true,
+  "check_counts_by_round": [
+    51,
+    25,
+    20
+  ],
+  "review_reports": [
+    {
+      "path": "research/v47_delivery_round1_v3_20261018.json",
+      "sha256": "3f0cd3b30ac3c6a12d2c74665e0b9b139a10b422422a049dc9383b808db08248"
+    },
+    {
+      "path": "research/v47_delivery_round2_20261018.json",
+      "sha256": "39a892a5053c48a083666a0ab2cc3454d1755cddb6b73c7c8fea0943894624ae"
+    },
+    {
+      "path": "research/v47_delivery_round3_20261018.json",
+      "sha256": "acef6e4b383bec1008cd97dd7ec354c1c53e63c875f00010f19ecaa27e6f4e67"
+    }
+  ],
+  "documents": [
+    {
+      "path": "plan/LIBERA_실험계획_v4.7_20261018.html",
+      "sha256": "39f5d944944983435c5e27c204ae065d7066b1c5559aabfbb0129558571b7804"
+    },
+    {
+      "path": "paper/LIBERA_텀페이퍼_초안_v4.7_20261018.html",
+      "sha256": "160e77c616d4ad4e29613240e36e977b7cdd9882774da0bd7f5cd38f9875eb82"
+    },
+    {
+      "path": "plan/LIBERA_실험설정_v4.7_20261018.json",
+      "sha256": "f278aa9ab4d7a5b6548b7d9d5ac0e80d276dffc0d0333bd83020ed65708e5fd0"
+    }
+  ],
+  "process_ledger": {
+    "path": "research/progress_20261018.jsonl",
+    "sha256": "593b9acf4e0a74edf83fcf60c941c6efb5d2a76cc1fb02bdad7510abf307bd9f"
+  },
+  "process_events_verified": 11,
+  "posthoc_test_record": {
+    "path": "research/evidence/v47_posthoc_offline_tests_20261018/summary.json",
+    "sha256": "29c35f2b4e1eda64a4b62f93ee45126db42040f2c4c925e652eb6efcba8385be"
+  },
+  "bibliography": {
+    "path": "research/v47_added_bibliography_v2_20261018.json",
+    "sha256": "655ded49a7c16708e1365085ca33d8aaa3c8ef4f1771e2c2f998c4e2213a1547"
+  },
+  "diagnostic_result": "Both v4.6 and v4.7 priority1 diagnoses failed their required numerical and semantic criteria.",
+  "priority1_passed": false,
+  "priority2_implementation_started": false,
+  "priority3_implementation_started": false,
+  "main_model_calls": 0,
+  "main_ready": false,
+  "main_frozen": false,
+  "scope": "Document handoff and historical process snapshot only; not a successful experimental outcome.",
+  "next_work": [
+    "Choose and justify a new bounded priority1 method or model decision; no until-pass reroll.",
+    "After the prerequisite gate: implement and review priorities2 and3.",
+    "Validate all four pilot cases under final conditions, retaining prior development exposure.",
+    "Independent substantive human review and main-condition freeze. Main execution is outside this request."
+  ]
+}

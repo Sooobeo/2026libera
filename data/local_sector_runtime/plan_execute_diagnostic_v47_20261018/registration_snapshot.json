@@ -1,0 +1,81 @@
+{
+  "protocol_version": "4.7",
+  "diagnostic_id": "fidelity_q2_2026__v46_plan_execute_revision",
+  "registered_at_utc": "2026-10-18T09:16:41.330123+00:00",
+  "manifest": {
+    "path": "C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v47_plan_execute_diagnostic_20261018\\manifest.json",
+    "sha256": "7123245e45c547ba8460dedbd5d30f2a175231a67774486542f5ba0db7a0323f"
+  },
+  "planned_generation_attempts": 2,
+  "automatic_retries": 0,
+  "main_model_calls": 0,
+  "main_freeze": false,
+  "purpose": "Finite development diagnosis: model-authored plan then model-authored final allocation on a known failed case.",
+  "budget": "Planner once, then executor once if planning output satisfies its declared contract. No retry, A/C fallback, until-pass loop or favorable-output selection.",
+  "planner": "Existing stage1 schema selector, exactly empty weights and future plan in narrative fields. Empty weights are a plan with no allocation, not a valid or invalid financial proposal.",
+  "executor": "Reads the unmodified complete planning response and all new explicit history; constructs its own complete 11-weight response under the existing final schema.",
+  "feedback": "Previous raw answer/calculation and exact v4.5-to-v4.6 weight deltas only. No target vector, suggested sector increase, normalization or host application of a plan.",
+  "retention": "Preserve the v4.4/v4.5/v4.6 failures and every v4.7 outcome, including a planner contract failure preventing executor launch.",
+  "three_reviews": [
+    {
+      "round": 1,
+      "scope": "Input/provenance/transport, raw planning and final outputs, complete history and two-call accounting."
+    },
+    {
+      "round": 2,
+      "scope": "Independent final raw arithmetic, actual changes, planning non-allocation distinction."
+    },
+    {
+      "round": 3,
+      "scope": "Truth of plan versus actual execution and prior-error/final-validity statements."
+    }
+  ],
+  "limits": [
+    "Two-call scope and seven-key adaptation are not the paper optimal budget or exact PER reproduction.",
+    "Plan, prompt, feedback and compute change together; no isolated causal effect is identified.",
+    "The known development failure is not an untouched confirmation case.",
+    "Success does not certify the original four-stage R1/R4 workflow, market-number accuracy, institutional rationale, or general reliability."
+  ],
+  "later_steps": "Priority2/3 require the preceding gates; main execution remains prohibited under this request even after all gates pass.",
+  "online_boundary": "Registration and offline review materials are not sent to the model.",
+  "reference_files": [
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v47_plan_execute_diagnostic_20261018\\manifest.json",
+      "sha256": "7123245e45c547ba8460dedbd5d30f2a175231a67774486542f5ba0db7a0323f"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\v47_plan_execute_preflight_implementation_review_v2_20261018.json",
+      "sha256": "9bc7ed906effed8f6f2a96894675ea2e64146929edfc529b65bd20eb0da773e1"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evaluator_only\\v47_priority1_planner_executor_prerun_addendum_20261018.json",
+      "sha256": "5957c377736dd49bb34320004b0f54b9129234728df46b07081898c92c12feda"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\v47_planner_executor_reference_20261018.json",
+      "sha256": "5e86ac4bf264aab67e9fbec7a58d0e81aaaad71b2e83008501a6f8443cf4ba48"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\v46_feedback_diagnostic_round1_20261018.json",
+      "sha256": "f4fcfdeab213cb3297b1476020f63fe8f72bf4746d92b410ecbac13f2686cadf"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\v46_priority1_round2_20261018.json",
+      "sha256": "6e838228fd1497e0a27bfb528b740d1171577023383f60266d1d57c15526eaff"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\v46_priority1_round3_20261018.json",
+      "sha256": "04ea97c616fbea2bddfc106c6766a58d22cd4e21d0809c840b796e2bcd36afe3"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\evaluation_spec.json",
+      "sha256": "cff49202b9da0da6bc094eb02a55e971afeab8c983a1a8fe3d686af1cff8df7f"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\register_plan_execute_diagnostic.py",
+      "sha256": "a70436f7e49fa72541eb0deacc40e421f875b41141a264e23cd93dcdee0361ce"
+    }
+  ],
+  "human_semantic_pass": false,
+  "model_calls_by_registration": 0
+}

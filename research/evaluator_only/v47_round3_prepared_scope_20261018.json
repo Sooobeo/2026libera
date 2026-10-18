@@ -1,0 +1,88 @@
+{
+  "schema_version": "libera_v47_round3_prepared_scope_1.0",
+  "created_at_utc": "2026-10-18T09:15:27.372283+00:00",
+  "phase": "priority1",
+  "round": 3,
+  "status": "prepared_scope_only_no_run_results_read",
+  "audit_completed": false,
+  "all_passed": null,
+  "run_dir": null,
+  "scope": "Narrow prospective-plan, actual-execution and correction-claim truth under the predeclared priority1 rubric.",
+  "planned_checks": [
+    {
+      "id": "R3-P01",
+      "check": "Confirm settled terminal run, exact final raw text, stream/record correspondence and common summary/record hashes with rounds1/2."
+    },
+    {
+      "id": "R3-P02",
+      "check": "Treat planner weights=[] as intentional no-allocation submission. Check any complete final vector or completed-action claim in prose separately from future intentions."
+    },
+    {
+      "id": "R3-P03",
+      "check": "Compare assertions about prior invalid0.965 sum,0.035 shortfall and v45-to-v46 unchanged transition with preserved raw literals."
+    },
+    {
+      "id": "R3-P04",
+      "check": "Record consequential intended changes and compare them with final executor values. Do not treat intentions as executed changes; do not impose an unregistered equality-to-plan rule."
+    },
+    {
+      "id": "R3-P05",
+      "check": "Check factual claims of final actual changes, sum, full investment and bounds using independently recomputed Decimal/Fraction values. No normalization, projection or cash assumption."
+    },
+    {
+      "id": "R3-P06",
+      "check": "Separate error acknowledgment, model-authored change, numerical validity and truthful description. No mandatory acknowledgment phrase or verbosity threshold."
+    },
+    {
+      "id": "R3-P07",
+      "check": "Check any claim that arithmetic repair establishes source fidelity, strategy quality, original four-stage success or general reliability; no such inference is licensed."
+    },
+    {
+      "id": "R3-P08",
+      "check": "Mark missing/incomplete executor output unavailable and block success. Complete false or invalid outputs remain observed failures, not missing cases."
+    }
+  ],
+  "final_report_required_fields": [
+    "phase",
+    "round",
+    "run_dir",
+    "audit_completed",
+    "all_passed",
+    "scope",
+    "failed_checks",
+    "not_observed_checks",
+    "checks",
+    "source_files"
+  ],
+  "classification_contract": "supported, contradicted, uncertain, not_stated; a false complete claim is not silently reclassified as unobserved. All checks are judged only after root terminal notice.",
+  "excluded_scopes": [
+    "Priority2 market-number and sector allocation-description consistency beyond direct correction claims.",
+    "Priority3 institutional evidence fidelity, alternative quality and strategy rationale.",
+    "Hidden reasoning or causal explanation of success/failure."
+  ],
+  "source_files": [
+    {
+      "path": "data/sector_protocol/v47_plan_execute_diagnostic_20261018/manifest.json",
+      "sha256": "7123245e45c547ba8460dedbd5d30f2a175231a67774486542f5ba0db7a0323f"
+    },
+    {
+      "path": "research/evaluator_only/v47_priority1_planner_executor_prerun_addendum_20261018.json",
+      "sha256": "5957c377736dd49bb34320004b0f54b9129234728df46b07081898c92c12feda"
+    },
+    {
+      "path": "research/evaluator_only/v47_prerun_typography_note_correction_20261018.json",
+      "sha256": "75a5d5fd45160051da1059c2180d115dfc745900e14d009fa4bc2ba148c44d54"
+    },
+    {
+      "path": "research/v47_planner_executor_reference_20261018.json",
+      "sha256": "5e86ac4bf264aab67e9fbec7a58d0e81aaaad71b2e83008501a6f8443cf4ba48"
+    },
+    {
+      "path": "research/v47_reference_locator_erratum.json",
+      "sha256": "fc5912242e4143a163448922818fd56211dddd1ccd3e5f8520beecf92ddf241a"
+    }
+  ],
+  "new_criteria_added": false,
+  "model_calls_by_reviewer": 0,
+  "existing_files_changed": 0
+}

@@ -1,0 +1,351 @@
+{
+  "schema_version": "v45_preflight_implementation_review_v1",
+  "created_at_utc": "2026-10-18T07:50:55.069637+00:00",
+  "reviewer": "independent_risk_metrics_review",
+  "status": "pass_with_registered_scope_limits",
+  "ready_for_registered_pilot_execution": true,
+  "research_success_verified": false,
+  "main_ready": false,
+  "model_calls_by_reviewer": 0,
+  "http_calls_by_reviewer": 0,
+  "previous_artifacts_modified": 0,
+  "implementation_hashes": {
+    "research/local_sector_structured_case.py": "d7193e69a9525ff640d275f86d7b5deaa18ce033e3d628e416bc2a06699c1a73",
+    "research/sector_response_schema.py": "bedbf782a041ba7da4f944408dd19596d74cbf78b77bee1c75d12ce71a598c41",
+    "research/test_sector_structured_case.py": "32751a6be084d6313f5574aa4c5ac0ea95f91fb9aa7024f6c371fb876866a01c",
+    "research/v45_revision_reference_20261018.json": "57a9c86c2bbc08a1006d6339bcd3303194ae8975cab14d6c5603a3191122dd79"
+  },
+  "checks": [
+    {
+      "id": "pinned_sources_and_evidence",
+      "status": "pass",
+      "meaning": "The final three new-file hashes and immutable base dependencies match. Every primary schema source hash is verified by the implementation."
+    },
+    {
+      "id": "same_numeric_runtime",
+      "status": "pass",
+      "meaning": "Only the registered schema metadata/format differ; model, decoding, deadline, projection and history remain fixed."
+    },
+    {
+      "id": "same_public_packet_market",
+      "status": "pass",
+      "meaning": "The packet and complete market snapshot are identical to the registered original values."
+    },
+    {
+      "id": "schema_seven_keys_stage1",
+      "status": "pass",
+      "meaning": "The original seven response fields are required; unrelated input objects are excluded."
+    },
+    {
+      "id": "schema_seven_keys_stage2",
+      "status": "pass",
+      "meaning": "The original seven response fields are required; unrelated input objects are excluded."
+    },
+    {
+      "id": "schema_seven_keys_stage3",
+      "status": "pass",
+      "meaning": "The original seven response fields are required; unrelated input objects are excluded."
+    },
+    {
+      "id": "schema_seven_keys_stage4",
+      "status": "pass",
+      "meaning": "The original seven response fields are required; unrelated input objects are excluded."
+    },
+    {
+      "id": "no_answer_injection_or_financial_bounds",
+      "status": "pass",
+      "meaning": "Only common GICS codes and supported constraint kinds are enumerated. No gold rating, correct evidence list, numeric target, default, example or financial bound is injected."
+    },
+    {
+      "id": "arbitrary_ratings_and_ids_remain_ungraded",
+      "status": "pass",
+      "meaning": "A nonsensical free rating and evidence string can pass shape validation; semantic correctness is deliberately not asserted."
+    },
+    {
+      "id": "early_empty_weights_allowed",
+      "status": "pass",
+      "meaning": "No early-stage allocation is forced."
+    },
+    {
+      "id": "late_empty_weights_rejected",
+      "status": "pass",
+      "meaning": "Eleven raw weight rows are required at the allocation stages."
+    },
+    {
+      "id": "input_echo_rejected_as_wrong_shape",
+      "status": "pass",
+      "meaning": "An input-shaped stage/task/common_market object cannot masquerade as the output contract."
+    },
+    {
+      "id": "missing_key_rejected",
+      "status": "pass",
+      "meaning": "Strict required fields, extra fields and types are validated without repairing the answer."
+    },
+    {
+      "id": "extra_key_rejected",
+      "status": "pass",
+      "meaning": "Strict required fields, extra fields and types are validated without repairing the answer."
+    },
+    {
+      "id": "wrong_type_rejected",
+      "status": "pass",
+      "meaning": "Strict required fields, extra fields and types are validated without repairing the answer."
+    },
+    {
+      "id": "duplicate_json_keys_rejected",
+      "status": "pass",
+      "meaning": "Duplicate JSON object keys are not silently selected."
+    },
+    {
+      "id": "numeric_duplicate_and_identity_errors_not_repaired_or_blocked",
+      "status": "pass",
+      "meaning": "These remain observable model errors and calculator/metadata diagnostics, rather than schema-injected correctness."
+    },
+    {
+      "id": "calculator_records_invalid_raw_proposal",
+      "status": "pass",
+      "meaning": "The original negative/duplicate-sector proposal remains invalid and is never normalized."
+    },
+    {
+      "id": "invalid_numeric_type_True",
+      "status": "pass",
+      "meaning": "Boolean and nonfinite numeric output is rejected by strict syntax/type checks."
+    },
+    {
+      "id": "invalid_numeric_type_nan",
+      "status": "pass",
+      "meaning": "Boolean and nonfinite numeric output is rejected by strict syntax/type checks."
+    },
+    {
+      "id": "invalid_numeric_type_inf",
+      "status": "pass",
+      "meaning": "Boolean and nonfinite numeric output is rejected by strict syntax/type checks."
+    },
+    {
+      "id": "prompt_api_schema_agreement_stage1",
+      "status": "pass",
+      "meaning": "API format and current task guidance contain the exact same schema."
+    },
+    {
+      "id": "original_inputs_history_preserved_stage1",
+      "status": "pass",
+      "meaning": "Input arguments and SYSTEM remain unchanged; later assistant/calculator strings retain exact bytes."
+    },
+    {
+      "id": "prompt_api_schema_agreement_stage2",
+      "status": "pass",
+      "meaning": "API format and current task guidance contain the exact same schema."
+    },
+    {
+      "id": "original_inputs_history_preserved_stage2",
+      "status": "pass",
+      "meaning": "Input arguments and SYSTEM remain unchanged; later assistant/calculator strings retain exact bytes."
+    },
+    {
+      "id": "prompt_api_schema_agreement_stage3",
+      "status": "pass",
+      "meaning": "API format and current task guidance contain the exact same schema."
+    },
+    {
+      "id": "original_inputs_history_preserved_stage3",
+      "status": "pass",
+      "meaning": "Input arguments and SYSTEM remain unchanged; later assistant/calculator strings retain exact bytes."
+    },
+    {
+      "id": "prompt_api_schema_agreement_stage4",
+      "status": "pass",
+      "meaning": "API format and current task guidance contain the exact same schema."
+    },
+    {
+      "id": "original_inputs_history_preserved_stage4",
+      "status": "pass",
+      "meaning": "Input arguments and SYSTEM remain unchanged; later assistant/calculator strings retain exact bytes."
+    },
+    {
+      "id": "invalid_stage3_feedback_reaches_stage4",
+      "status": "pass",
+      "meaning": "Stage3 raw financial errors reach stage4 through unchanged calculator feedback, with no retry, repair or gold."
+    },
+    {
+      "id": "four_stage_fixture_completion_separate_from_validity",
+      "status": "pass",
+      "meaning": "The deterministic fake adapter completes four stages even though its raw final allocation is invalid; this is not an AI success claim."
+    },
+    {
+      "id": "no_semantic_approval_from_schema",
+      "status": "pass",
+      "meaning": "Structural acceptance is explicitly separate from source correctness and human approval."
+    },
+    {
+      "id": "prepared_manifest_offline_verification",
+      "status": "pass",
+      "meaning": "The actual prepared manifest and all saved runtime/schema/public input hashes pass exact verification before generation."
+    }
+  ],
+  "check_count": 33,
+  "evidence_files": {
+    "research/local_sector_structured_case.py": {
+      "sha256": "d7193e69a9525ff640d275f86d7b5deaa18ce033e3d628e416bc2a06699c1a73",
+      "bytes": 28240
+    },
+    "research/sector_response_schema.py": {
+      "sha256": "bedbf782a041ba7da4f944408dd19596d74cbf78b77bee1c75d12ce71a598c41",
+      "bytes": 7183
+    },
+    "research/test_sector_structured_case.py": {
+      "sha256": "32751a6be084d6313f5574aa4c5ac0ea95f91fb9aa7024f6c371fb876866a01c",
+      "bytes": 24162
+    },
+    "research/v45_revision_reference_20261018.json": {
+      "sha256": "57a9c86c2bbc08a1006d6339bcd3303194ae8975cab14d6c5603a3191122dd79",
+      "bytes": 16564
+    },
+    "research/evaluator_only/v45_structured_prerun_review_20261018.json": {
+      "sha256": "b9c4da9fd115e8432896e71600eac096110745cece1d789ebd915c17e5752e54",
+      "bytes": 16063
+    },
+    "research/local_sector_single_case.py": {
+      "sha256": "0b2596a223167136bb37578e86469d50c26e7883305d4db31f43b9ddd10d28d0",
+      "bytes": 30650
+    },
+    "research/run_sector_workflow.py": {
+      "sha256": "5625450a4dcbe1aa717c9809bf4955c1ef6b10aab4f0c83ef05dc2eb2c123cfd",
+      "bytes": 23842
+    },
+    "research/sector_engine.py": {
+      "sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c",
+      "bytes": 27360
+    },
+    "data/sector_protocol/evaluation_spec.json": {
+      "sha256": "cff49202b9da0da6bc094eb02a55e971afeab8c983a1a8fe3d686af1cff8df7f",
+      "bytes": 9398
+    },
+    "research/evaluator_only/fidelity_q2_r1_prerun_reference_20261018.json": {
+      "sha256": "8022c19d7b5e9654139996d88cac230cb12d29b30fcf7e817850203c02c35f38",
+      "bytes": 26413
+    },
+    "research/evidence/v45_structured_output_20261018/finvector_2610_08882.pdf": {
+      "sha256": "a7551b10caddb0d9f94a215f29fad4771f5cd2addae56ea43d706f7c5c1c1dfa",
+      "bytes": 580927
+    },
+    "research/evidence/v45_structured_output_20261018/ollama_structured_outputs.html": {
+      "sha256": "2f176ec2515dfa8616ae1ed2bd779035e1a4aba323b318cf9ab48f79ca52868d",
+      "bytes": 366050
+    },
+    "research/evidence/v45_structured_output_20261018/ollama_chat_api.html": {
+      "sha256": "bb5ab876dc97aaffa107cc6ed9ade9fe1d1721daf3650a09f451e10fc2c201ab",
+      "bytes": 395240
+    },
+    "research/evidence/v45_structured_output_20261018/ollama_llama_server_v0351.go": {
+      "sha256": "10777cca3193c12b4cfcc90f5cfd88085c298f7a2c2c7333b0b95bb6e545d391",
+      "bytes": 89853
+    },
+    "research/evidence/v45_structured_output_20261018/ollama_structured_output_test_v0351.go": {
+      "sha256": "b8711da2cd8bc6bc45a4889f3723b3a0a21ae4958350405b10a07b5f885201e8",
+      "bytes": 6178
+    },
+    "research/evidence/v45_structured_output_20261018/ollama_LLAMA_CPP_VERSION_v0351.txt": {
+      "sha256": "23d8617f4235704076e82a85531d9324033da4ed3c375984003c1fff00de9226",
+      "bytes": 7
+    },
+    "research/evidence/v45_structured_output_20261018/ollama_llama_README_v0351.md": {
+      "sha256": "16c31172d0d6aa5b05b6bbfe5e9746cb94316e6991864d2448a9b946b7697124",
+      "bytes": 4023
+    },
+    "research/evidence/v45_structured_output_20261018/ollama_llama_CMakeLists_v0351.txt": {
+      "sha256": "af9397603247c2e09011939bd7e9209f61c3905f0f080009b2e518933efa3d4b",
+      "bytes": 29398
+    },
+    "research/evidence/v45_structured_output_20261018/ollama_compat_001_v0351.patch": {
+      "sha256": "de62fe6dd48c1b19082ae234e0b21fbc3da326dc18d6c971b93953886bf3ebf7",
+      "bytes": 4903
+    },
+    "research/evidence/v45_structured_output_20261018/ollama_compat_002_v0351.patch": {
+      "sha256": "42deb6df78657d92a9382230d742cfc97a12e2c99cce0a904fb029b7104415ff",
+      "bytes": 13007
+    },
+    "research/evidence/v45_structured_output_20261018/llamacpp_grammar_README_b11232.md": {
+      "sha256": "e1874c0f08abbcfe45eff0b7b0290faa58f630981bf94274e2d99751ef3b0208",
+      "bytes": 18051
+    },
+    "research/evidence/v45_structured_output_20261018/llamacpp_json_schema_to_grammar_b11232.cpp": {
+      "sha256": "d5a82fff5d611abd1198ff27c328b20376ffe9f110b4771d579c8bd20c70541f",
+      "bytes": 43518
+    },
+    "research/evidence/v45_structured_output_20261018/llamacpp_schema_tests_b11232.cpp": {
+      "sha256": "477113067a347be12830ac39395ad55c5153b40720e0966c5394f09dea3f24d0",
+      "bytes": 49597
+    },
+    "research/evidence/v45_structured_output_20261018/manifest.json": {
+      "sha256": "994ad850a7c2c42267d8dc19a0461c844ea55c2faf4adf8609004a1f6bc200c7",
+      "bytes": 4402
+    },
+    "research/v44_conditions_reference_20261018.json": {
+      "sha256": "a403d4c37d1581f9af21af8ba7a6333614d890ff15277e83181c1204549a9c5b",
+      "bytes": 16107
+    },
+    "data/sector_protocol/v45_single_case_20261018/manifest.json": {
+      "sha256": "6465406eddaa2bab5136d15a0aee1487e9501066f20f421e4c1237ec01b13ff8",
+      "bytes": 11892
+    },
+    "data/sector_protocol/v45_single_case_20261018/runtime.json": {
+      "sha256": "2b1fdb8fd191ffc275a5e4723019fc75cb0bb152fa213ca37aa4dc16e9b8b6c9",
+      "bytes": 1075
+    },
+    "data/sector_protocol/v45_single_case_20261018/model_packet.json": {
+      "sha256": "2f506f346ebfc1be0f327163eb016dcec649e6301e4494d6a9230ab86c28d406",
+      "bytes": 6688
+    },
+    "data/sector_protocol/v45_single_case_20261018/market_input.json": {
+      "sha256": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f",
+      "bytes": 15480
+    },
+    "data/sector_protocol/v45_single_case_20261018/response_schema_stage1.json": {
+      "sha256": "8213c165349f435e7f2aff29cc089ebb51578f474c243c60fcd2eb7739484327",
+      "bytes": 5370
+    },
+    "data/sector_protocol/v45_single_case_20261018/response_schema_stage2.json": {
+      "sha256": "8213c165349f435e7f2aff29cc089ebb51578f474c243c60fcd2eb7739484327",
+      "bytes": 5370
+    },
+    "data/sector_protocol/v45_single_case_20261018/response_schema_stage3.json": {
+      "sha256": "5d9292759ec0469592a7c67279582e3a48fe3a0a04b7f679561f123734a2ea0a",
+      "bytes": 3953
+    },
+    "data/sector_protocol/v45_single_case_20261018/response_schema_stage4.json": {
+      "sha256": "5d9292759ec0469592a7c67279582e3a48fe3a0a04b7f679561f123734a2ea0a",
+      "bytes": 3953
+    }
+  },
+  "design_amendment": {
+    "prior_review": "research/evaluator_only/v45_structured_prerun_review_20261018.json",
+    "clarification": "The earlier design proposed complete unique public sector coverage as a prerequisite. The final registered implementation constrains eleven rows and public code syntax but treats duplicate/missing coverage and source identity mismatch as NONBLOCKING diagnostics, so these original error dimensions remain observable. The calculator records allocation errors and passes them to the next stage. Earlier file is preserved unchanged.",
+    "reason": "Do not turn malformed financial decisions into schema-forced correct allocations, and permit documented reconsideration at the next task stage."
+  },
+  "evidence_basis": {
+    "official_documentation": "https://docs.ollama.com/capabilities/structured-outputs",
+    "version_pinned_implementation": "research/v45_revision_reference_20261018.json",
+    "distinction": "FinVector supports explicit task-schema prompting in its own setting. Ollama API grammar is a documented engineering adaptation. The combined intervention is not a replication of private prompts and does not identify its component effects."
+  },
+  "denominator_policy": "Retain the original final-source extraction denominator11 for each attempted registered case. A missing final response contributes0 correct, while completed-response semantic analysis and missing portfolio diagnostics remain null. Intermediate stages are not four independent cases. Preserve v4.4 and v4.5 separately; no successful-case-only improvement claim.",
+  "important_limits": [
+    "A structurally valid answer may still repeat irrelevant input inside free-text fields or provide unsupported reasons; round3 semantic review remains required.",
+    "The common code vocabulary and array length are controlled response-format dimensions, not independent evidence of model accuracy.",
+    "The frozen code is tested against deterministic fixtures, not a real-model completion guarantee or a performance benchmark.",
+    "Schema guidance increases input length and grammar alters token selection. Four-stage capacity and deadline success remain empirical questions; no silent context truncation is authorized.",
+    "The source interpretation rubric and financial arithmetic are unchanged. No target weights, risk-aversion coefficient, invented bound or weighted quality score is added.",
+    "One repeated development case cannot identify R1/R4 effects or institutional convergence. Main stays unfrozen."
+  ],
+  "author_test_result": {
+    "reported_by_author": "16 fake HTTP/offline tests PASS in38.277seconds",
+    "independently_reexecuted_whole_suite": false,
+    "review_scope": "Test source inspected; independent pure probes and four-stage deterministic fixture run recorded above. No duplicate real inference or whole-suite run."
+  },
+  "findings": [],
+  "prepared_manifest": {
+    "path": "data/sector_protocol/v45_single_case_20261018/manifest.json",
+    "sha256": "6465406eddaa2bab5136d15a0aee1487e9501066f20f421e4c1237ec01b13ff8",
+    "offline_verify": "pass",
+    "generation_requests": 0
+  }
+}

@@ -1,0 +1,3211 @@
+{
+  "schema_version": "libera_v45_single_case_round2_1.0",
+  "created_at_utc": "2026-10-18T08:13:21.622288+00:00",
+  "run_directory": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018",
+  "case_id": "fidelity_q2_2026__R1",
+  "review_status": "completed_no_consistency_mismatch",
+  "review_scope": "Independent saved-output arithmetic and unchanged mechanical label/citation rules. The frozen independent helper is reused; production scoring/calculator code is not imported.",
+  "run_status": "completed_four_stages",
+  "completed_workflow_records_reviewed": 4,
+  "run_counts": {
+    "generation_requests_attempted": 4,
+    "http_streams_completed": 4,
+    "completed_workflow_stages": 4,
+    "generation_stages_not_started": [],
+    "main_model_calls": 0,
+    "cases_with_generation_attempt": 1,
+    "completed_cases": 1,
+    "automatic_retries": 0
+  },
+  "stages": [
+    {
+      "stage": 1,
+      "status": "completed_record_independently_examined",
+      "raw_content_utf8_sha256": "5b018f465ff3a7fc4fcfbc965f9ac6ee15c98cb9549f49e4ed8418a6934bef30",
+      "done_reason": "stop",
+      "reference_checks": {
+        "source_id_matches": true,
+        "structure": {
+          "container_valid": true,
+          "missing_codes": [],
+          "duplicate_codes": [],
+          "unknown_codes": [],
+          "malformed_rows": 0
+        },
+        "correct_labels": 11,
+        "fixed_label_denominator": 11,
+        "rating_citation_valid_count": 11,
+        "reason_citation_valid_count": 11,
+        "reason_citation_expected": 11,
+        "records": [
+          {
+            "sector_code": "10",
+            "expected_rating": "Underweight",
+            "raw_rating": "Underweight",
+            "label_after_existing_whitespace_rule": "Underweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:10"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:10"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "15",
+            "expected_rating": "Underweight",
+            "raw_rating": "Underweight",
+            "label_after_existing_whitespace_rule": "Underweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:15"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:15"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "20",
+            "expected_rating": "Overweight",
+            "raw_rating": "Overweight",
+            "label_after_existing_whitespace_rule": "Overweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:20"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:20"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "25",
+            "expected_rating": "Overweight",
+            "raw_rating": "Overweight",
+            "label_after_existing_whitespace_rule": "Overweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:25"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:25"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "30",
+            "expected_rating": "Underweight",
+            "raw_rating": "Underweight",
+            "label_after_existing_whitespace_rule": "Underweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:30"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:30"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "35",
+            "expected_rating": "Neutral",
+            "raw_rating": "Neutral",
+            "label_after_existing_whitespace_rule": "Neutral",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:35"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:35"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "40",
+            "expected_rating": "Overweight",
+            "raw_rating": "Overweight",
+            "label_after_existing_whitespace_rule": "Overweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:40"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:40"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "45",
+            "expected_rating": "Overweight",
+            "raw_rating": "Overweight",
+            "label_after_existing_whitespace_rule": "Overweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:45"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:45"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "50",
+            "expected_rating": "Underweight",
+            "raw_rating": "Underweight",
+            "label_after_existing_whitespace_rule": "Underweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:50"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:50"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "55",
+            "expected_rating": "Underweight",
+            "raw_rating": "Underweight",
+            "label_after_existing_whitespace_rule": "Underweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:55"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:55"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "60",
+            "expected_rating": "Overweight",
+            "raw_rating": "Overweight",
+            "label_after_existing_whitespace_rule": "Overweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:60"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:60"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          }
+        ],
+        "meaning": "Existing fixed reference labels and citation identity/scope only; not strategy quality or semantic entailment."
+      },
+      "arithmetic": {
+        "structure": {
+          "container_valid": true,
+          "missing_codes": [],
+          "duplicate_codes": [],
+          "unknown_codes": [],
+          "malformed_rows": 0,
+          "nonnumeric_codes": [],
+          "negative_codes": [],
+          "above_one_codes": []
+        },
+        "no_normalization_or_repair": true,
+        "all_11_numeric_weights": true,
+        "engine_allocation_valid": false,
+        "engine_sum_tolerance": "0.000001",
+        "tolerance_interpretation": "Existing 1e-6 serialization check only, never a behavioral rule or new audit acceptance cutoff.",
+        "exact_sum": {
+          "fraction": "193/200",
+          "decimal_80_digits": "0.965"
+        },
+        "exact_budget_residual": {
+          "fraction": "-7/200",
+          "decimal_80_digits": "-0.035"
+        },
+        "exactly_full_investment": false,
+        "recorded_sum_comparison": {
+          "observed": "0.965",
+          "observed_minus_independent_exact": {
+            "fraction": "0",
+            "decimal_80_digits": "0"
+          }
+        },
+        "recorded_budget_residual_comparison": {
+          "observed": "-0.03500000000000003",
+          "observed_minus_independent_exact": {
+            "fraction": "-3/100000000000000000",
+            "decimal_80_digits": "-3E-17"
+          }
+        },
+        "exact_baseline_sum": {
+          "fraction": "499999999999999989/500000000000000000",
+          "decimal_80_digits": "0.999999999999999978"
+        },
+        "exact_baseline_budget_residual": {
+          "fraction": "-11/500000000000000000",
+          "decimal_80_digits": "-2.2E-17"
+        },
+        "active_weights": {
+          "10": {
+            "weight": {
+              "fraction": "1/40",
+              "decimal_80_digits": "0.025"
+            },
+            "supplied_baseline": {
+              "fraction": "3003003003003003/100000000000000000",
+              "decimal_80_digits": "0.03003003003003003"
+            },
+            "active_weight": {
+              "fraction": "-503003003003003/100000000000000000",
+              "decimal_80_digits": "-0.00503003003003003"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "15": {
+            "weight": {
+              "fraction": "3/200",
+              "decimal_80_digits": "0.015"
+            },
+            "supplied_baseline": {
+              "fraction": "9009009009009009/500000000000000000",
+              "decimal_80_digits": "0.018018018018018018"
+            },
+            "active_weight": {
+              "fraction": "-1509009009009009/500000000000000000",
+              "decimal_80_digits": "-0.003018018018018018"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "20": {
+            "weight": {
+              "fraction": "1/10",
+              "decimal_80_digits": "0.1"
+            },
+            "supplied_baseline": {
+              "fraction": "8808808808808809/100000000000000000",
+              "decimal_80_digits": "0.08808808808808809"
+            },
+            "active_weight": {
+              "fraction": "1191191191191191/100000000000000000",
+              "decimal_80_digits": "0.01191191191191191"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "25": {
+            "weight": {
+              "fraction": "9/100",
+              "decimal_80_digits": "0.09"
+            },
+            "supplied_baseline": {
+              "fraction": "9309309309309309/100000000000000000",
+              "decimal_80_digits": "0.09309309309309309"
+            },
+            "active_weight": {
+              "fraction": "-309309309309309/100000000000000000",
+              "decimal_80_digits": "-0.00309309309309309"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "30": {
+            "weight": {
+              "fraction": "1/25",
+              "decimal_80_digits": "0.04"
+            },
+            "supplied_baseline": {
+              "fraction": "1151151151151151/25000000000000000",
+              "decimal_80_digits": "0.04604604604604604"
+            },
+            "active_weight": {
+              "fraction": "-151151151151151/25000000000000000",
+              "decimal_80_digits": "-0.00604604604604604"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "35": {
+            "weight": {
+              "fraction": "9/100",
+              "decimal_80_digits": "0.09"
+            },
+            "supplied_baseline": {
+              "fraction": "890890890890891/10000000000000000",
+              "decimal_80_digits": "0.0890890890890891"
+            },
+            "active_weight": {
+              "fraction": "9109109109109/10000000000000000",
+              "decimal_80_digits": "0.0009109109109109"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "40": {
+            "weight": {
+              "fraction": "11/100",
+              "decimal_80_digits": "0.11"
+            },
+            "supplied_baseline": {
+              "fraction": "2952952952952953/25000000000000000",
+              "decimal_80_digits": "0.11811811811811812"
+            },
+            "active_weight": {
+              "fraction": "-202952952952953/25000000000000000",
+              "decimal_80_digits": "-0.00811811811811812"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "45": {
+            "weight": {
+              "fraction": "37/100",
+              "decimal_80_digits": "0.37"
+            },
+            "supplied_baseline": {
+              "fraction": "9509509509509509/25000000000000000",
+              "decimal_80_digits": "0.38038038038038036"
+            },
+            "active_weight": {
+              "fraction": "-259509509509509/25000000000000000",
+              "decimal_80_digits": "-0.01038038038038036"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "50": {
+            "weight": {
+              "fraction": "1/50",
+              "decimal_80_digits": "0.02"
+            },
+            "supplied_baseline": {
+              "fraction": "9709709709709709/100000000000000000",
+              "decimal_80_digits": "0.09709709709709709"
+            },
+            "active_weight": {
+              "fraction": "-7709709709709709/100000000000000000",
+              "decimal_80_digits": "-0.07709709709709709"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "55": {
+            "weight": {
+              "fraction": "1/50",
+              "decimal_80_digits": "0.02"
+            },
+            "supplied_baseline": {
+              "fraction": "11011011011011011/500000000000000000",
+              "decimal_80_digits": "0.022022022022022022"
+            },
+            "active_weight": {
+              "fraction": "-1011011011011011/500000000000000000",
+              "decimal_80_digits": "-0.002022022022022022"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "60": {
+            "weight": {
+              "fraction": "17/200",
+              "decimal_80_digits": "0.085"
+            },
+            "supplied_baseline": {
+              "fraction": "9009009009009009/500000000000000000",
+              "decimal_80_digits": "0.018018018018018018"
+            },
+            "active_weight": {
+              "fraction": "33490990990990991/500000000000000000",
+              "decimal_80_digits": "0.066981981981981982"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          }
+        },
+        "half_l1_distance": {
+          "fraction": "97304804804804781/1000000000000000000",
+          "decimal_80_digits": "0.097304804804804781"
+        },
+        "half_l1_calculator_comparison": {
+          "observed": null,
+          "observed_minus_independent_exact": null
+        },
+        "risk": {
+          "covariance_unit": "daily_decimal_return_squared",
+          "daily_variance_exact": {
+            "fraction": "14097464045051786897061/200000000000000000000000000",
+            "decimal_80_digits": "0.000070487320225258934485305"
+          },
+          "daily_volatility_80_digits": "0.0083956727083217658315844788377870594810217231313648488919462694723240112060647863",
+          "daily_variance_calculator_comparison": {
+            "observed": null,
+            "observed_minus_independent_exact": null
+          },
+          "daily_volatility_calculator_record": "None",
+          "annualization_factor_from_market": "252",
+          "annualized_variance_derived_exact": {
+            "fraction": "888140234838262574514843/50000000000000000000000000",
+            "decimal_80_digits": "0.01776280469676525149029686"
+          },
+          "annualized_volatility_derived_80_digits": "0.13327717245186908409983065530074486596361448178410236139182487387945477734477586",
+          "annualized_values_are_audit_derivations_not_engine_daily_output": true,
+          "meaning": "w-transpose covariance w on frozen historical inputs; not future loss probability or strategic optimality.",
+          "interpretation_scope": "raw_invalid_vector_algebra_only_not_fully_invested_valid_portfolio_risk",
+          "raw_invalid_vector_algebra_only": true,
+          "not_fully_invested_valid_portfolio_risk": true,
+          "no_automatic_cash_assumption": true,
+          "cross_valid_portfolio_comparability": "not_established_for_invalid_raw_vector",
+          "calculator_daily_volatility_minus_independent_80_digit_value": null
+        },
+        "independently_recomputed_existing_validity": {
+          "valid": false,
+          "engine_recorded_valid": false,
+          "matches_recorded_validity": true,
+          "existing_sum_tolerance": "1e-6",
+          "existing_negative_and_above_one_tolerance": "0",
+          "tolerance_role": "Existing numerical implementation rule, not a paper-derived behavioral rule or a new cutoff.",
+          "binary_float_sum_comparable_to_existing_engine": 0.965,
+          "binary_float_residual_comparable_to_existing_engine": -0.03500000000000003,
+          "exact_rational_sum_and_residual": "Reported separately in arithmetic; never substituted, normalized or rounded to zero."
+        },
+        "interpretation_scope": "raw_invalid_vector_algebra_only_not_fully_invested_valid_portfolio_risk",
+        "raw_invalid_vector_algebra_only": true,
+        "unallocated_residual_handling": "No automatic cash assumption, rescaling, normalization, leverage interpretation or repaired portfolio is introduced.",
+        "distance_comparability": "Active weights and half-L1 remain algebraic differences of the supplied coordinates; do not treat this as a valid-allocation comparison or compare it as if both vectors were admissible portfolios.",
+        "source_tilt_diagnostics": {
+          "records": [
+            {
+              "sector_code": "10",
+              "source_label": "Underweight",
+              "raw_active_weight": {
+                "fraction": "-503003003003003/100000000000000000",
+                "decimal_80_digits": "-0.00503003003003003"
+              },
+              "signed_tilt": {
+                "fraction": "503003003003003/100000000000000000",
+                "decimal_80_digits": "0.00503003003003003"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "15",
+              "source_label": "Underweight",
+              "raw_active_weight": {
+                "fraction": "-1509009009009009/500000000000000000",
+                "decimal_80_digits": "-0.003018018018018018"
+              },
+              "signed_tilt": {
+                "fraction": "1509009009009009/500000000000000000",
+                "decimal_80_digits": "0.003018018018018018"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "20",
+              "source_label": "Overweight",
+              "raw_active_weight": {
+                "fraction": "1191191191191191/100000000000000000",
+                "decimal_80_digits": "0.01191191191191191"
+              },
+              "signed_tilt": {
+                "fraction": "1191191191191191/100000000000000000",
+                "decimal_80_digits": "0.01191191191191191"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "25",
+              "source_label": "Overweight",
+              "raw_active_weight": {
+                "fraction": "-309309309309309/100000000000000000",
+                "decimal_80_digits": "-0.00309309309309309"
+              },
+              "signed_tilt": {
+                "fraction": "-309309309309309/100000000000000000",
+                "decimal_80_digits": "-0.00309309309309309"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "30",
+              "source_label": "Underweight",
+              "raw_active_weight": {
+                "fraction": "-151151151151151/25000000000000000",
+                "decimal_80_digits": "-0.00604604604604604"
+              },
+              "signed_tilt": {
+                "fraction": "151151151151151/25000000000000000",
+                "decimal_80_digits": "0.00604604604604604"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "35",
+              "source_label": "Neutral",
+              "raw_active_weight": {
+                "fraction": "9109109109109/10000000000000000",
+                "decimal_80_digits": "0.0009109109109109"
+              },
+              "signed_tilt": null,
+              "absolute_tilt_for_neutral": {
+                "fraction": "9109109109109/10000000000000000",
+                "decimal_80_digits": "0.0009109109109109"
+              }
+            },
+            {
+              "sector_code": "40",
+              "source_label": "Overweight",
+              "raw_active_weight": {
+                "fraction": "-202952952952953/25000000000000000",
+                "decimal_80_digits": "-0.00811811811811812"
+              },
+              "signed_tilt": {
+                "fraction": "-202952952952953/25000000000000000",
+                "decimal_80_digits": "-0.00811811811811812"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "45",
+              "source_label": "Overweight",
+              "raw_active_weight": {
+                "fraction": "-259509509509509/25000000000000000",
+                "decimal_80_digits": "-0.01038038038038036"
+              },
+              "signed_tilt": {
+                "fraction": "-259509509509509/25000000000000000",
+                "decimal_80_digits": "-0.01038038038038036"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "50",
+              "source_label": "Underweight",
+              "raw_active_weight": {
+                "fraction": "-7709709709709709/100000000000000000",
+                "decimal_80_digits": "-0.07709709709709709"
+              },
+              "signed_tilt": {
+                "fraction": "7709709709709709/100000000000000000",
+                "decimal_80_digits": "0.07709709709709709"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "55",
+              "source_label": "Underweight",
+              "raw_active_weight": {
+                "fraction": "-1011011011011011/500000000000000000",
+                "decimal_80_digits": "-0.002022022022022022"
+              },
+              "signed_tilt": {
+                "fraction": "1011011011011011/500000000000000000",
+                "decimal_80_digits": "0.002022022022022022"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "60",
+              "source_label": "Overweight",
+              "raw_active_weight": {
+                "fraction": "33490990990990991/500000000000000000",
+                "decimal_80_digits": "0.066981981981981982"
+              },
+              "signed_tilt": {
+                "fraction": "33490990990990991/500000000000000000",
+                "decimal_80_digits": "0.066981981981981982"
+              },
+              "absolute_tilt_for_neutral": null
+            }
+          ],
+          "meaning": "Continuous descriptive reference-direction diagnostics only; no strategy pass/fail or unique weight target."
+        }
+      },
+      "early_empty_weights_permitted": true,
+      "recorded_calculator_ok": false,
+      "submitted_constraints": [],
+      "captured_answer_observation": {
+        "status": "saved_HTTP_response",
+        "done_reason": "stop",
+        "raw_content_utf8_sha256": "5b018f465ff3a7fc4fcfbc965f9ac6ee15c98cb9549f49e4ed8418a6934bef30",
+        "parseable_complete_object": true
+      },
+      "fixed_denominator_extraction": {
+        "correct": 11,
+        "expected": 11,
+        "accuracy_exact": "1",
+        "reason": "Exact original-source label, unique sector row and correct source identity, per the unchanged evaluation specification.",
+        "conditional_semantic_evaluability": "requires_separate_semantic_review_not_established_by_labels"
+      },
+      "conditional_numeric_assessment": "computed_on_unrepaired_raw_numbers"
+    },
+    {
+      "stage": 2,
+      "status": "completed_record_independently_examined",
+      "raw_content_utf8_sha256": "26b28c04b8999a397f96af73e84b5dc3d20bf046550c4e1246239f40d395de80",
+      "done_reason": "stop",
+      "reference_checks": {
+        "source_id_matches": true,
+        "structure": {
+          "container_valid": true,
+          "missing_codes": [],
+          "duplicate_codes": [],
+          "unknown_codes": [],
+          "malformed_rows": 0
+        },
+        "correct_labels": 11,
+        "fixed_label_denominator": 11,
+        "rating_citation_valid_count": 11,
+        "reason_citation_valid_count": 11,
+        "reason_citation_expected": 11,
+        "records": [
+          {
+            "sector_code": "10",
+            "expected_rating": "Underweight",
+            "raw_rating": "Underweight",
+            "label_after_existing_whitespace_rule": "Underweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:10"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:10"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "15",
+            "expected_rating": "Underweight",
+            "raw_rating": "Underweight",
+            "label_after_existing_whitespace_rule": "Underweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:15"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:15"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "20",
+            "expected_rating": "Overweight",
+            "raw_rating": "Overweight",
+            "label_after_existing_whitespace_rule": "Overweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:20"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:20"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "25",
+            "expected_rating": "Overweight",
+            "raw_rating": "Overweight",
+            "label_after_existing_whitespace_rule": "Overweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:25"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:25"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "30",
+            "expected_rating": "Underweight",
+            "raw_rating": "Underweight",
+            "label_after_existing_whitespace_rule": "Underweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:30"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:30"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "35",
+            "expected_rating": "Neutral",
+            "raw_rating": "Neutral",
+            "label_after_existing_whitespace_rule": "Neutral",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:35"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:35"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "40",
+            "expected_rating": "Overweight",
+            "raw_rating": "Overweight",
+            "label_after_existing_whitespace_rule": "Overweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:40"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:40"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "45",
+            "expected_rating": "Overweight",
+            "raw_rating": "Overweight",
+            "label_after_existing_whitespace_rule": "Overweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:45"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:45"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "50",
+            "expected_rating": "Underweight",
+            "raw_rating": "Underweight",
+            "label_after_existing_whitespace_rule": "Underweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:50"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:50"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "55",
+            "expected_rating": "Underweight",
+            "raw_rating": "Underweight",
+            "label_after_existing_whitespace_rule": "Underweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:55"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:55"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "60",
+            "expected_rating": "Overweight",
+            "raw_rating": "Overweight",
+            "label_after_existing_whitespace_rule": "Overweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:60"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:60"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          }
+        ],
+        "meaning": "Existing fixed reference labels and citation identity/scope only; not strategy quality or semantic entailment."
+      },
+      "arithmetic": {
+        "structure": {
+          "container_valid": true,
+          "missing_codes": [],
+          "duplicate_codes": [],
+          "unknown_codes": [],
+          "malformed_rows": 0,
+          "nonnumeric_codes": [],
+          "negative_codes": [],
+          "above_one_codes": []
+        },
+        "no_normalization_or_repair": true,
+        "all_11_numeric_weights": true,
+        "engine_allocation_valid": false,
+        "engine_sum_tolerance": "0.000001",
+        "tolerance_interpretation": "Existing 1e-6 serialization check only, never a behavioral rule or new audit acceptance cutoff.",
+        "exact_sum": {
+          "fraction": "193/200",
+          "decimal_80_digits": "0.965"
+        },
+        "exact_budget_residual": {
+          "fraction": "-7/200",
+          "decimal_80_digits": "-0.035"
+        },
+        "exactly_full_investment": false,
+        "recorded_sum_comparison": {
+          "observed": "0.965",
+          "observed_minus_independent_exact": {
+            "fraction": "0",
+            "decimal_80_digits": "0"
+          }
+        },
+        "recorded_budget_residual_comparison": {
+          "observed": "-0.03500000000000003",
+          "observed_minus_independent_exact": {
+            "fraction": "-3/100000000000000000",
+            "decimal_80_digits": "-3E-17"
+          }
+        },
+        "exact_baseline_sum": {
+          "fraction": "499999999999999989/500000000000000000",
+          "decimal_80_digits": "0.999999999999999978"
+        },
+        "exact_baseline_budget_residual": {
+          "fraction": "-11/500000000000000000",
+          "decimal_80_digits": "-2.2E-17"
+        },
+        "active_weights": {
+          "10": {
+            "weight": {
+              "fraction": "1/40",
+              "decimal_80_digits": "0.025"
+            },
+            "supplied_baseline": {
+              "fraction": "3003003003003003/100000000000000000",
+              "decimal_80_digits": "0.03003003003003003"
+            },
+            "active_weight": {
+              "fraction": "-503003003003003/100000000000000000",
+              "decimal_80_digits": "-0.00503003003003003"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "15": {
+            "weight": {
+              "fraction": "3/200",
+              "decimal_80_digits": "0.015"
+            },
+            "supplied_baseline": {
+              "fraction": "9009009009009009/500000000000000000",
+              "decimal_80_digits": "0.018018018018018018"
+            },
+            "active_weight": {
+              "fraction": "-1509009009009009/500000000000000000",
+              "decimal_80_digits": "-0.003018018018018018"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "20": {
+            "weight": {
+              "fraction": "1/10",
+              "decimal_80_digits": "0.1"
+            },
+            "supplied_baseline": {
+              "fraction": "8808808808808809/100000000000000000",
+              "decimal_80_digits": "0.08808808808808809"
+            },
+            "active_weight": {
+              "fraction": "1191191191191191/100000000000000000",
+              "decimal_80_digits": "0.01191191191191191"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "25": {
+            "weight": {
+              "fraction": "9/100",
+              "decimal_80_digits": "0.09"
+            },
+            "supplied_baseline": {
+              "fraction": "9309309309309309/100000000000000000",
+              "decimal_80_digits": "0.09309309309309309"
+            },
+            "active_weight": {
+              "fraction": "-309309309309309/100000000000000000",
+              "decimal_80_digits": "-0.00309309309309309"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "30": {
+            "weight": {
+              "fraction": "1/25",
+              "decimal_80_digits": "0.04"
+            },
+            "supplied_baseline": {
+              "fraction": "1151151151151151/25000000000000000",
+              "decimal_80_digits": "0.04604604604604604"
+            },
+            "active_weight": {
+              "fraction": "-151151151151151/25000000000000000",
+              "decimal_80_digits": "-0.00604604604604604"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "35": {
+            "weight": {
+              "fraction": "9/100",
+              "decimal_80_digits": "0.09"
+            },
+            "supplied_baseline": {
+              "fraction": "890890890890891/10000000000000000",
+              "decimal_80_digits": "0.0890890890890891"
+            },
+            "active_weight": {
+              "fraction": "9109109109109/10000000000000000",
+              "decimal_80_digits": "0.0009109109109109"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "40": {
+            "weight": {
+              "fraction": "11/100",
+              "decimal_80_digits": "0.11"
+            },
+            "supplied_baseline": {
+              "fraction": "2952952952952953/25000000000000000",
+              "decimal_80_digits": "0.11811811811811812"
+            },
+            "active_weight": {
+              "fraction": "-202952952952953/25000000000000000",
+              "decimal_80_digits": "-0.00811811811811812"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "45": {
+            "weight": {
+              "fraction": "37/100",
+              "decimal_80_digits": "0.37"
+            },
+            "supplied_baseline": {
+              "fraction": "9509509509509509/25000000000000000",
+              "decimal_80_digits": "0.38038038038038036"
+            },
+            "active_weight": {
+              "fraction": "-259509509509509/25000000000000000",
+              "decimal_80_digits": "-0.01038038038038036"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "50": {
+            "weight": {
+              "fraction": "1/50",
+              "decimal_80_digits": "0.02"
+            },
+            "supplied_baseline": {
+              "fraction": "9709709709709709/100000000000000000",
+              "decimal_80_digits": "0.09709709709709709"
+            },
+            "active_weight": {
+              "fraction": "-7709709709709709/100000000000000000",
+              "decimal_80_digits": "-0.07709709709709709"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "55": {
+            "weight": {
+              "fraction": "1/50",
+              "decimal_80_digits": "0.02"
+            },
+            "supplied_baseline": {
+              "fraction": "11011011011011011/500000000000000000",
+              "decimal_80_digits": "0.022022022022022022"
+            },
+            "active_weight": {
+              "fraction": "-1011011011011011/500000000000000000",
+              "decimal_80_digits": "-0.002022022022022022"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "60": {
+            "weight": {
+              "fraction": "17/200",
+              "decimal_80_digits": "0.085"
+            },
+            "supplied_baseline": {
+              "fraction": "9009009009009009/500000000000000000",
+              "decimal_80_digits": "0.018018018018018018"
+            },
+            "active_weight": {
+              "fraction": "33490990990990991/500000000000000000",
+              "decimal_80_digits": "0.066981981981981982"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          }
+        },
+        "half_l1_distance": {
+          "fraction": "97304804804804781/1000000000000000000",
+          "decimal_80_digits": "0.097304804804804781"
+        },
+        "half_l1_calculator_comparison": {
+          "observed": null,
+          "observed_minus_independent_exact": null
+        },
+        "risk": {
+          "covariance_unit": "daily_decimal_return_squared",
+          "daily_variance_exact": {
+            "fraction": "14097464045051786897061/200000000000000000000000000",
+            "decimal_80_digits": "0.000070487320225258934485305"
+          },
+          "daily_volatility_80_digits": "0.0083956727083217658315844788377870594810217231313648488919462694723240112060647863",
+          "daily_variance_calculator_comparison": {
+            "observed": null,
+            "observed_minus_independent_exact": null
+          },
+          "daily_volatility_calculator_record": "None",
+          "annualization_factor_from_market": "252",
+          "annualized_variance_derived_exact": {
+            "fraction": "888140234838262574514843/50000000000000000000000000",
+            "decimal_80_digits": "0.01776280469676525149029686"
+          },
+          "annualized_volatility_derived_80_digits": "0.13327717245186908409983065530074486596361448178410236139182487387945477734477586",
+          "annualized_values_are_audit_derivations_not_engine_daily_output": true,
+          "meaning": "w-transpose covariance w on frozen historical inputs; not future loss probability or strategic optimality.",
+          "interpretation_scope": "raw_invalid_vector_algebra_only_not_fully_invested_valid_portfolio_risk",
+          "raw_invalid_vector_algebra_only": true,
+          "not_fully_invested_valid_portfolio_risk": true,
+          "no_automatic_cash_assumption": true,
+          "cross_valid_portfolio_comparability": "not_established_for_invalid_raw_vector",
+          "calculator_daily_volatility_minus_independent_80_digit_value": null
+        },
+        "independently_recomputed_existing_validity": {
+          "valid": false,
+          "engine_recorded_valid": false,
+          "matches_recorded_validity": true,
+          "existing_sum_tolerance": "1e-6",
+          "existing_negative_and_above_one_tolerance": "0",
+          "tolerance_role": "Existing numerical implementation rule, not a paper-derived behavioral rule or a new cutoff.",
+          "binary_float_sum_comparable_to_existing_engine": 0.965,
+          "binary_float_residual_comparable_to_existing_engine": -0.03500000000000003,
+          "exact_rational_sum_and_residual": "Reported separately in arithmetic; never substituted, normalized or rounded to zero."
+        },
+        "interpretation_scope": "raw_invalid_vector_algebra_only_not_fully_invested_valid_portfolio_risk",
+        "raw_invalid_vector_algebra_only": true,
+        "unallocated_residual_handling": "No automatic cash assumption, rescaling, normalization, leverage interpretation or repaired portfolio is introduced.",
+        "distance_comparability": "Active weights and half-L1 remain algebraic differences of the supplied coordinates; do not treat this as a valid-allocation comparison or compare it as if both vectors were admissible portfolios.",
+        "source_tilt_diagnostics": {
+          "records": [
+            {
+              "sector_code": "10",
+              "source_label": "Underweight",
+              "raw_active_weight": {
+                "fraction": "-503003003003003/100000000000000000",
+                "decimal_80_digits": "-0.00503003003003003"
+              },
+              "signed_tilt": {
+                "fraction": "503003003003003/100000000000000000",
+                "decimal_80_digits": "0.00503003003003003"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "15",
+              "source_label": "Underweight",
+              "raw_active_weight": {
+                "fraction": "-1509009009009009/500000000000000000",
+                "decimal_80_digits": "-0.003018018018018018"
+              },
+              "signed_tilt": {
+                "fraction": "1509009009009009/500000000000000000",
+                "decimal_80_digits": "0.003018018018018018"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "20",
+              "source_label": "Overweight",
+              "raw_active_weight": {
+                "fraction": "1191191191191191/100000000000000000",
+                "decimal_80_digits": "0.01191191191191191"
+              },
+              "signed_tilt": {
+                "fraction": "1191191191191191/100000000000000000",
+                "decimal_80_digits": "0.01191191191191191"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "25",
+              "source_label": "Overweight",
+              "raw_active_weight": {
+                "fraction": "-309309309309309/100000000000000000",
+                "decimal_80_digits": "-0.00309309309309309"
+              },
+              "signed_tilt": {
+                "fraction": "-309309309309309/100000000000000000",
+                "decimal_80_digits": "-0.00309309309309309"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "30",
+              "source_label": "Underweight",
+              "raw_active_weight": {
+                "fraction": "-151151151151151/25000000000000000",
+                "decimal_80_digits": "-0.00604604604604604"
+              },
+              "signed_tilt": {
+                "fraction": "151151151151151/25000000000000000",
+                "decimal_80_digits": "0.00604604604604604"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "35",
+              "source_label": "Neutral",
+              "raw_active_weight": {
+                "fraction": "9109109109109/10000000000000000",
+                "decimal_80_digits": "0.0009109109109109"
+              },
+              "signed_tilt": null,
+              "absolute_tilt_for_neutral": {
+                "fraction": "9109109109109/10000000000000000",
+                "decimal_80_digits": "0.0009109109109109"
+              }
+            },
+            {
+              "sector_code": "40",
+              "source_label": "Overweight",
+              "raw_active_weight": {
+                "fraction": "-202952952952953/25000000000000000",
+                "decimal_80_digits": "-0.00811811811811812"
+              },
+              "signed_tilt": {
+                "fraction": "-202952952952953/25000000000000000",
+                "decimal_80_digits": "-0.00811811811811812"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "45",
+              "source_label": "Overweight",
+              "raw_active_weight": {
+                "fraction": "-259509509509509/25000000000000000",
+                "decimal_80_digits": "-0.01038038038038036"
+              },
+              "signed_tilt": {
+                "fraction": "-259509509509509/25000000000000000",
+                "decimal_80_digits": "-0.01038038038038036"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "50",
+              "source_label": "Underweight",
+              "raw_active_weight": {
+                "fraction": "-7709709709709709/100000000000000000",
+                "decimal_80_digits": "-0.07709709709709709"
+              },
+              "signed_tilt": {
+                "fraction": "7709709709709709/100000000000000000",
+                "decimal_80_digits": "0.07709709709709709"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "55",
+              "source_label": "Underweight",
+              "raw_active_weight": {
+                "fraction": "-1011011011011011/500000000000000000",
+                "decimal_80_digits": "-0.002022022022022022"
+              },
+              "signed_tilt": {
+                "fraction": "1011011011011011/500000000000000000",
+                "decimal_80_digits": "0.002022022022022022"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "60",
+              "source_label": "Overweight",
+              "raw_active_weight": {
+                "fraction": "33490990990990991/500000000000000000",
+                "decimal_80_digits": "0.066981981981981982"
+              },
+              "signed_tilt": {
+                "fraction": "33490990990990991/500000000000000000",
+                "decimal_80_digits": "0.066981981981981982"
+              },
+              "absolute_tilt_for_neutral": null
+            }
+          ],
+          "meaning": "Continuous descriptive reference-direction diagnostics only; no strategy pass/fail or unique weight target."
+        }
+      },
+      "early_empty_weights_permitted": true,
+      "recorded_calculator_ok": false,
+      "submitted_constraints": [],
+      "captured_answer_observation": {
+        "status": "saved_HTTP_response",
+        "done_reason": "stop",
+        "raw_content_utf8_sha256": "26b28c04b8999a397f96af73e84b5dc3d20bf046550c4e1246239f40d395de80",
+        "parseable_complete_object": true
+      },
+      "fixed_denominator_extraction": {
+        "correct": 11,
+        "expected": 11,
+        "accuracy_exact": "1",
+        "reason": "Exact original-source label, unique sector row and correct source identity, per the unchanged evaluation specification.",
+        "conditional_semantic_evaluability": "requires_separate_semantic_review_not_established_by_labels"
+      },
+      "conditional_numeric_assessment": "computed_on_unrepaired_raw_numbers"
+    },
+    {
+      "stage": 3,
+      "status": "completed_record_independently_examined",
+      "raw_content_utf8_sha256": "26b28c04b8999a397f96af73e84b5dc3d20bf046550c4e1246239f40d395de80",
+      "done_reason": "stop",
+      "reference_checks": {
+        "source_id_matches": true,
+        "structure": {
+          "container_valid": true,
+          "missing_codes": [],
+          "duplicate_codes": [],
+          "unknown_codes": [],
+          "malformed_rows": 0
+        },
+        "correct_labels": 11,
+        "fixed_label_denominator": 11,
+        "rating_citation_valid_count": 11,
+        "reason_citation_valid_count": 11,
+        "reason_citation_expected": 11,
+        "records": [
+          {
+            "sector_code": "10",
+            "expected_rating": "Underweight",
+            "raw_rating": "Underweight",
+            "label_after_existing_whitespace_rule": "Underweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:10"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:10"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "15",
+            "expected_rating": "Underweight",
+            "raw_rating": "Underweight",
+            "label_after_existing_whitespace_rule": "Underweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:15"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:15"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "20",
+            "expected_rating": "Overweight",
+            "raw_rating": "Overweight",
+            "label_after_existing_whitespace_rule": "Overweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:20"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:20"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "25",
+            "expected_rating": "Overweight",
+            "raw_rating": "Overweight",
+            "label_after_existing_whitespace_rule": "Overweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:25"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:25"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "30",
+            "expected_rating": "Underweight",
+            "raw_rating": "Underweight",
+            "label_after_existing_whitespace_rule": "Underweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:30"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:30"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "35",
+            "expected_rating": "Neutral",
+            "raw_rating": "Neutral",
+            "label_after_existing_whitespace_rule": "Neutral",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:35"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:35"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "40",
+            "expected_rating": "Overweight",
+            "raw_rating": "Overweight",
+            "label_after_existing_whitespace_rule": "Overweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:40"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:40"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "45",
+            "expected_rating": "Overweight",
+            "raw_rating": "Overweight",
+            "label_after_existing_whitespace_rule": "Overweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:45"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:45"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "50",
+            "expected_rating": "Underweight",
+            "raw_rating": "Underweight",
+            "label_after_existing_whitespace_rule": "Underweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:50"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:50"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "55",
+            "expected_rating": "Underweight",
+            "raw_rating": "Underweight",
+            "label_after_existing_whitespace_rule": "Underweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:55"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:55"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "60",
+            "expected_rating": "Overweight",
+            "raw_rating": "Overweight",
+            "label_after_existing_whitespace_rule": "Overweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:60"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:60"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          }
+        ],
+        "meaning": "Existing fixed reference labels and citation identity/scope only; not strategy quality or semantic entailment."
+      },
+      "arithmetic": {
+        "structure": {
+          "container_valid": true,
+          "missing_codes": [],
+          "duplicate_codes": [],
+          "unknown_codes": [],
+          "malformed_rows": 0,
+          "nonnumeric_codes": [],
+          "negative_codes": [],
+          "above_one_codes": []
+        },
+        "no_normalization_or_repair": true,
+        "all_11_numeric_weights": true,
+        "engine_allocation_valid": false,
+        "engine_sum_tolerance": "0.000001",
+        "tolerance_interpretation": "Existing 1e-6 serialization check only, never a behavioral rule or new audit acceptance cutoff.",
+        "exact_sum": {
+          "fraction": "193/200",
+          "decimal_80_digits": "0.965"
+        },
+        "exact_budget_residual": {
+          "fraction": "-7/200",
+          "decimal_80_digits": "-0.035"
+        },
+        "exactly_full_investment": false,
+        "recorded_sum_comparison": {
+          "observed": "0.965",
+          "observed_minus_independent_exact": {
+            "fraction": "0",
+            "decimal_80_digits": "0"
+          }
+        },
+        "recorded_budget_residual_comparison": {
+          "observed": "-0.03500000000000003",
+          "observed_minus_independent_exact": {
+            "fraction": "-3/100000000000000000",
+            "decimal_80_digits": "-3E-17"
+          }
+        },
+        "exact_baseline_sum": {
+          "fraction": "499999999999999989/500000000000000000",
+          "decimal_80_digits": "0.999999999999999978"
+        },
+        "exact_baseline_budget_residual": {
+          "fraction": "-11/500000000000000000",
+          "decimal_80_digits": "-2.2E-17"
+        },
+        "active_weights": {
+          "10": {
+            "weight": {
+              "fraction": "1/40",
+              "decimal_80_digits": "0.025"
+            },
+            "supplied_baseline": {
+              "fraction": "3003003003003003/100000000000000000",
+              "decimal_80_digits": "0.03003003003003003"
+            },
+            "active_weight": {
+              "fraction": "-503003003003003/100000000000000000",
+              "decimal_80_digits": "-0.00503003003003003"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "15": {
+            "weight": {
+              "fraction": "3/200",
+              "decimal_80_digits": "0.015"
+            },
+            "supplied_baseline": {
+              "fraction": "9009009009009009/500000000000000000",
+              "decimal_80_digits": "0.018018018018018018"
+            },
+            "active_weight": {
+              "fraction": "-1509009009009009/500000000000000000",
+              "decimal_80_digits": "-0.003018018018018018"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "20": {
+            "weight": {
+              "fraction": "1/10",
+              "decimal_80_digits": "0.1"
+            },
+            "supplied_baseline": {
+              "fraction": "8808808808808809/100000000000000000",
+              "decimal_80_digits": "0.08808808808808809"
+            },
+            "active_weight": {
+              "fraction": "1191191191191191/100000000000000000",
+              "decimal_80_digits": "0.01191191191191191"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "25": {
+            "weight": {
+              "fraction": "9/100",
+              "decimal_80_digits": "0.09"
+            },
+            "supplied_baseline": {
+              "fraction": "9309309309309309/100000000000000000",
+              "decimal_80_digits": "0.09309309309309309"
+            },
+            "active_weight": {
+              "fraction": "-309309309309309/100000000000000000",
+              "decimal_80_digits": "-0.00309309309309309"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "30": {
+            "weight": {
+              "fraction": "1/25",
+              "decimal_80_digits": "0.04"
+            },
+            "supplied_baseline": {
+              "fraction": "1151151151151151/25000000000000000",
+              "decimal_80_digits": "0.04604604604604604"
+            },
+            "active_weight": {
+              "fraction": "-151151151151151/25000000000000000",
+              "decimal_80_digits": "-0.00604604604604604"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "35": {
+            "weight": {
+              "fraction": "9/100",
+              "decimal_80_digits": "0.09"
+            },
+            "supplied_baseline": {
+              "fraction": "890890890890891/10000000000000000",
+              "decimal_80_digits": "0.0890890890890891"
+            },
+            "active_weight": {
+              "fraction": "9109109109109/10000000000000000",
+              "decimal_80_digits": "0.0009109109109109"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "40": {
+            "weight": {
+              "fraction": "11/100",
+              "decimal_80_digits": "0.11"
+            },
+            "supplied_baseline": {
+              "fraction": "2952952952952953/25000000000000000",
+              "decimal_80_digits": "0.11811811811811812"
+            },
+            "active_weight": {
+              "fraction": "-202952952952953/25000000000000000",
+              "decimal_80_digits": "-0.00811811811811812"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "45": {
+            "weight": {
+              "fraction": "37/100",
+              "decimal_80_digits": "0.37"
+            },
+            "supplied_baseline": {
+              "fraction": "9509509509509509/25000000000000000",
+              "decimal_80_digits": "0.38038038038038036"
+            },
+            "active_weight": {
+              "fraction": "-259509509509509/25000000000000000",
+              "decimal_80_digits": "-0.01038038038038036"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "50": {
+            "weight": {
+              "fraction": "1/50",
+              "decimal_80_digits": "0.02"
+            },
+            "supplied_baseline": {
+              "fraction": "9709709709709709/100000000000000000",
+              "decimal_80_digits": "0.09709709709709709"
+            },
+            "active_weight": {
+              "fraction": "-7709709709709709/100000000000000000",
+              "decimal_80_digits": "-0.07709709709709709"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "55": {
+            "weight": {
+              "fraction": "1/50",
+              "decimal_80_digits": "0.02"
+            },
+            "supplied_baseline": {
+              "fraction": "11011011011011011/500000000000000000",
+              "decimal_80_digits": "0.022022022022022022"
+            },
+            "active_weight": {
+              "fraction": "-1011011011011011/500000000000000000",
+              "decimal_80_digits": "-0.002022022022022022"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "60": {
+            "weight": {
+              "fraction": "17/200",
+              "decimal_80_digits": "0.085"
+            },
+            "supplied_baseline": {
+              "fraction": "9009009009009009/500000000000000000",
+              "decimal_80_digits": "0.018018018018018018"
+            },
+            "active_weight": {
+              "fraction": "33490990990990991/500000000000000000",
+              "decimal_80_digits": "0.066981981981981982"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          }
+        },
+        "half_l1_distance": {
+          "fraction": "97304804804804781/1000000000000000000",
+          "decimal_80_digits": "0.097304804804804781"
+        },
+        "half_l1_calculator_comparison": {
+          "observed": null,
+          "observed_minus_independent_exact": null
+        },
+        "risk": {
+          "covariance_unit": "daily_decimal_return_squared",
+          "daily_variance_exact": {
+            "fraction": "14097464045051786897061/200000000000000000000000000",
+            "decimal_80_digits": "0.000070487320225258934485305"
+          },
+          "daily_volatility_80_digits": "0.0083956727083217658315844788377870594810217231313648488919462694723240112060647863",
+          "daily_variance_calculator_comparison": {
+            "observed": null,
+            "observed_minus_independent_exact": null
+          },
+          "daily_volatility_calculator_record": "None",
+          "annualization_factor_from_market": "252",
+          "annualized_variance_derived_exact": {
+            "fraction": "888140234838262574514843/50000000000000000000000000",
+            "decimal_80_digits": "0.01776280469676525149029686"
+          },
+          "annualized_volatility_derived_80_digits": "0.13327717245186908409983065530074486596361448178410236139182487387945477734477586",
+          "annualized_values_are_audit_derivations_not_engine_daily_output": true,
+          "meaning": "w-transpose covariance w on frozen historical inputs; not future loss probability or strategic optimality.",
+          "interpretation_scope": "raw_invalid_vector_algebra_only_not_fully_invested_valid_portfolio_risk",
+          "raw_invalid_vector_algebra_only": true,
+          "not_fully_invested_valid_portfolio_risk": true,
+          "no_automatic_cash_assumption": true,
+          "cross_valid_portfolio_comparability": "not_established_for_invalid_raw_vector",
+          "calculator_daily_volatility_minus_independent_80_digit_value": null
+        },
+        "independently_recomputed_existing_validity": {
+          "valid": false,
+          "engine_recorded_valid": false,
+          "matches_recorded_validity": true,
+          "existing_sum_tolerance": "1e-6",
+          "existing_negative_and_above_one_tolerance": "0",
+          "tolerance_role": "Existing numerical implementation rule, not a paper-derived behavioral rule or a new cutoff.",
+          "binary_float_sum_comparable_to_existing_engine": 0.965,
+          "binary_float_residual_comparable_to_existing_engine": -0.03500000000000003,
+          "exact_rational_sum_and_residual": "Reported separately in arithmetic; never substituted, normalized or rounded to zero."
+        },
+        "interpretation_scope": "raw_invalid_vector_algebra_only_not_fully_invested_valid_portfolio_risk",
+        "raw_invalid_vector_algebra_only": true,
+        "unallocated_residual_handling": "No automatic cash assumption, rescaling, normalization, leverage interpretation or repaired portfolio is introduced.",
+        "distance_comparability": "Active weights and half-L1 remain algebraic differences of the supplied coordinates; do not treat this as a valid-allocation comparison or compare it as if both vectors were admissible portfolios.",
+        "source_tilt_diagnostics": {
+          "records": [
+            {
+              "sector_code": "10",
+              "source_label": "Underweight",
+              "raw_active_weight": {
+                "fraction": "-503003003003003/100000000000000000",
+                "decimal_80_digits": "-0.00503003003003003"
+              },
+              "signed_tilt": {
+                "fraction": "503003003003003/100000000000000000",
+                "decimal_80_digits": "0.00503003003003003"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "15",
+              "source_label": "Underweight",
+              "raw_active_weight": {
+                "fraction": "-1509009009009009/500000000000000000",
+                "decimal_80_digits": "-0.003018018018018018"
+              },
+              "signed_tilt": {
+                "fraction": "1509009009009009/500000000000000000",
+                "decimal_80_digits": "0.003018018018018018"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "20",
+              "source_label": "Overweight",
+              "raw_active_weight": {
+                "fraction": "1191191191191191/100000000000000000",
+                "decimal_80_digits": "0.01191191191191191"
+              },
+              "signed_tilt": {
+                "fraction": "1191191191191191/100000000000000000",
+                "decimal_80_digits": "0.01191191191191191"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "25",
+              "source_label": "Overweight",
+              "raw_active_weight": {
+                "fraction": "-309309309309309/100000000000000000",
+                "decimal_80_digits": "-0.00309309309309309"
+              },
+              "signed_tilt": {
+                "fraction": "-309309309309309/100000000000000000",
+                "decimal_80_digits": "-0.00309309309309309"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "30",
+              "source_label": "Underweight",
+              "raw_active_weight": {
+                "fraction": "-151151151151151/25000000000000000",
+                "decimal_80_digits": "-0.00604604604604604"
+              },
+              "signed_tilt": {
+                "fraction": "151151151151151/25000000000000000",
+                "decimal_80_digits": "0.00604604604604604"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "35",
+              "source_label": "Neutral",
+              "raw_active_weight": {
+                "fraction": "9109109109109/10000000000000000",
+                "decimal_80_digits": "0.0009109109109109"
+              },
+              "signed_tilt": null,
+              "absolute_tilt_for_neutral": {
+                "fraction": "9109109109109/10000000000000000",
+                "decimal_80_digits": "0.0009109109109109"
+              }
+            },
+            {
+              "sector_code": "40",
+              "source_label": "Overweight",
+              "raw_active_weight": {
+                "fraction": "-202952952952953/25000000000000000",
+                "decimal_80_digits": "-0.00811811811811812"
+              },
+              "signed_tilt": {
+                "fraction": "-202952952952953/25000000000000000",
+                "decimal_80_digits": "-0.00811811811811812"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "45",
+              "source_label": "Overweight",
+              "raw_active_weight": {
+                "fraction": "-259509509509509/25000000000000000",
+                "decimal_80_digits": "-0.01038038038038036"
+              },
+              "signed_tilt": {
+                "fraction": "-259509509509509/25000000000000000",
+                "decimal_80_digits": "-0.01038038038038036"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "50",
+              "source_label": "Underweight",
+              "raw_active_weight": {
+                "fraction": "-7709709709709709/100000000000000000",
+                "decimal_80_digits": "-0.07709709709709709"
+              },
+              "signed_tilt": {
+                "fraction": "7709709709709709/100000000000000000",
+                "decimal_80_digits": "0.07709709709709709"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "55",
+              "source_label": "Underweight",
+              "raw_active_weight": {
+                "fraction": "-1011011011011011/500000000000000000",
+                "decimal_80_digits": "-0.002022022022022022"
+              },
+              "signed_tilt": {
+                "fraction": "1011011011011011/500000000000000000",
+                "decimal_80_digits": "0.002022022022022022"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "60",
+              "source_label": "Overweight",
+              "raw_active_weight": {
+                "fraction": "33490990990990991/500000000000000000",
+                "decimal_80_digits": "0.066981981981981982"
+              },
+              "signed_tilt": {
+                "fraction": "33490990990990991/500000000000000000",
+                "decimal_80_digits": "0.066981981981981982"
+              },
+              "absolute_tilt_for_neutral": null
+            }
+          ],
+          "meaning": "Continuous descriptive reference-direction diagnostics only; no strategy pass/fail or unique weight target."
+        }
+      },
+      "early_empty_weights_permitted": false,
+      "recorded_calculator_ok": false,
+      "submitted_constraints": [],
+      "captured_answer_observation": {
+        "status": "saved_HTTP_response",
+        "done_reason": "stop",
+        "raw_content_utf8_sha256": "26b28c04b8999a397f96af73e84b5dc3d20bf046550c4e1246239f40d395de80",
+        "parseable_complete_object": true
+      },
+      "fixed_denominator_extraction": {
+        "correct": 11,
+        "expected": 11,
+        "accuracy_exact": "1",
+        "reason": "Exact original-source label, unique sector row and correct source identity, per the unchanged evaluation specification.",
+        "conditional_semantic_evaluability": "requires_separate_semantic_review_not_established_by_labels"
+      },
+      "conditional_numeric_assessment": "computed_on_unrepaired_raw_numbers"
+    },
+    {
+      "stage": 4,
+      "status": "completed_record_independently_examined",
+      "raw_content_utf8_sha256": "87bb63afae528150ac59a6a074dc63ead9416b55e3b5cd4b98744f0064399614",
+      "done_reason": "stop",
+      "reference_checks": {
+        "source_id_matches": true,
+        "structure": {
+          "container_valid": true,
+          "missing_codes": [],
+          "duplicate_codes": [],
+          "unknown_codes": [],
+          "malformed_rows": 0
+        },
+        "correct_labels": 11,
+        "fixed_label_denominator": 11,
+        "rating_citation_valid_count": 11,
+        "reason_citation_valid_count": 11,
+        "reason_citation_expected": 11,
+        "records": [
+          {
+            "sector_code": "10",
+            "expected_rating": "Underweight",
+            "raw_rating": "Underweight",
+            "label_after_existing_whitespace_rule": "Underweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:10"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:10"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "15",
+            "expected_rating": "Underweight",
+            "raw_rating": "Underweight",
+            "label_after_existing_whitespace_rule": "Underweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:15"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:15"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "20",
+            "expected_rating": "Overweight",
+            "raw_rating": "Overweight",
+            "label_after_existing_whitespace_rule": "Overweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:20"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:20"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "25",
+            "expected_rating": "Overweight",
+            "raw_rating": "Overweight",
+            "label_after_existing_whitespace_rule": "Overweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:25"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:25"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "30",
+            "expected_rating": "Underweight",
+            "raw_rating": "Underweight",
+            "label_after_existing_whitespace_rule": "Underweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:30"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:30"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "35",
+            "expected_rating": "Neutral",
+            "raw_rating": "Neutral",
+            "label_after_existing_whitespace_rule": "Neutral",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:35"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:35"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "40",
+            "expected_rating": "Overweight",
+            "raw_rating": "Overweight",
+            "label_after_existing_whitespace_rule": "Overweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:40"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:40"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "45",
+            "expected_rating": "Overweight",
+            "raw_rating": "Overweight",
+            "label_after_existing_whitespace_rule": "Overweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:45"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:45"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "50",
+            "expected_rating": "Underweight",
+            "raw_rating": "Underweight",
+            "label_after_existing_whitespace_rule": "Underweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:50"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:50"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "55",
+            "expected_rating": "Underweight",
+            "raw_rating": "Underweight",
+            "label_after_existing_whitespace_rule": "Underweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:55"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:55"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          },
+          {
+            "sector_code": "60",
+            "expected_rating": "Overweight",
+            "raw_rating": "Overweight",
+            "label_after_existing_whitespace_rule": "Overweight",
+            "label_correct": true,
+            "rating_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:60"
+            ],
+            "rating_citation_valid": true,
+            "rating_citation_status": "citation_identity_and_scope_match_only",
+            "reason_citation_valid": true,
+            "reason_citation_status": "citation_identity_and_scope_match_only",
+            "allocation_evidence_ids": [
+              "fidelity_q2_2026:p3:sector:60"
+            ],
+            "allocation_citation_valid": true,
+            "allocation_citation_status": "citation_identity_and_scope_match_only"
+          }
+        ],
+        "meaning": "Existing fixed reference labels and citation identity/scope only; not strategy quality or semantic entailment."
+      },
+      "arithmetic": {
+        "structure": {
+          "container_valid": true,
+          "missing_codes": [],
+          "duplicate_codes": [],
+          "unknown_codes": [],
+          "malformed_rows": 0,
+          "nonnumeric_codes": [],
+          "negative_codes": [],
+          "above_one_codes": []
+        },
+        "no_normalization_or_repair": true,
+        "all_11_numeric_weights": true,
+        "engine_allocation_valid": false,
+        "engine_sum_tolerance": "0.000001",
+        "tolerance_interpretation": "Existing 1e-6 serialization check only, never a behavioral rule or new audit acceptance cutoff.",
+        "exact_sum": {
+          "fraction": "193/200",
+          "decimal_80_digits": "0.965"
+        },
+        "exact_budget_residual": {
+          "fraction": "-7/200",
+          "decimal_80_digits": "-0.035"
+        },
+        "exactly_full_investment": false,
+        "recorded_sum_comparison": {
+          "observed": "0.965",
+          "observed_minus_independent_exact": {
+            "fraction": "0",
+            "decimal_80_digits": "0"
+          }
+        },
+        "recorded_budget_residual_comparison": {
+          "observed": "-0.03500000000000003",
+          "observed_minus_independent_exact": {
+            "fraction": "-3/100000000000000000",
+            "decimal_80_digits": "-3E-17"
+          }
+        },
+        "exact_baseline_sum": {
+          "fraction": "499999999999999989/500000000000000000",
+          "decimal_80_digits": "0.999999999999999978"
+        },
+        "exact_baseline_budget_residual": {
+          "fraction": "-11/500000000000000000",
+          "decimal_80_digits": "-2.2E-17"
+        },
+        "active_weights": {
+          "10": {
+            "weight": {
+              "fraction": "1/40",
+              "decimal_80_digits": "0.025"
+            },
+            "supplied_baseline": {
+              "fraction": "3003003003003003/100000000000000000",
+              "decimal_80_digits": "0.03003003003003003"
+            },
+            "active_weight": {
+              "fraction": "-503003003003003/100000000000000000",
+              "decimal_80_digits": "-0.00503003003003003"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "15": {
+            "weight": {
+              "fraction": "3/200",
+              "decimal_80_digits": "0.015"
+            },
+            "supplied_baseline": {
+              "fraction": "9009009009009009/500000000000000000",
+              "decimal_80_digits": "0.018018018018018018"
+            },
+            "active_weight": {
+              "fraction": "-1509009009009009/500000000000000000",
+              "decimal_80_digits": "-0.003018018018018018"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "20": {
+            "weight": {
+              "fraction": "1/10",
+              "decimal_80_digits": "0.1"
+            },
+            "supplied_baseline": {
+              "fraction": "8808808808808809/100000000000000000",
+              "decimal_80_digits": "0.08808808808808809"
+            },
+            "active_weight": {
+              "fraction": "1191191191191191/100000000000000000",
+              "decimal_80_digits": "0.01191191191191191"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "25": {
+            "weight": {
+              "fraction": "9/100",
+              "decimal_80_digits": "0.09"
+            },
+            "supplied_baseline": {
+              "fraction": "9309309309309309/100000000000000000",
+              "decimal_80_digits": "0.09309309309309309"
+            },
+            "active_weight": {
+              "fraction": "-309309309309309/100000000000000000",
+              "decimal_80_digits": "-0.00309309309309309"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "30": {
+            "weight": {
+              "fraction": "1/25",
+              "decimal_80_digits": "0.04"
+            },
+            "supplied_baseline": {
+              "fraction": "1151151151151151/25000000000000000",
+              "decimal_80_digits": "0.04604604604604604"
+            },
+            "active_weight": {
+              "fraction": "-151151151151151/25000000000000000",
+              "decimal_80_digits": "-0.00604604604604604"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "35": {
+            "weight": {
+              "fraction": "9/100",
+              "decimal_80_digits": "0.09"
+            },
+            "supplied_baseline": {
+              "fraction": "890890890890891/10000000000000000",
+              "decimal_80_digits": "0.0890890890890891"
+            },
+            "active_weight": {
+              "fraction": "9109109109109/10000000000000000",
+              "decimal_80_digits": "0.0009109109109109"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "40": {
+            "weight": {
+              "fraction": "11/100",
+              "decimal_80_digits": "0.11"
+            },
+            "supplied_baseline": {
+              "fraction": "2952952952952953/25000000000000000",
+              "decimal_80_digits": "0.11811811811811812"
+            },
+            "active_weight": {
+              "fraction": "-202952952952953/25000000000000000",
+              "decimal_80_digits": "-0.00811811811811812"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "45": {
+            "weight": {
+              "fraction": "37/100",
+              "decimal_80_digits": "0.37"
+            },
+            "supplied_baseline": {
+              "fraction": "9509509509509509/25000000000000000",
+              "decimal_80_digits": "0.38038038038038036"
+            },
+            "active_weight": {
+              "fraction": "-259509509509509/25000000000000000",
+              "decimal_80_digits": "-0.01038038038038036"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "50": {
+            "weight": {
+              "fraction": "1/50",
+              "decimal_80_digits": "0.02"
+            },
+            "supplied_baseline": {
+              "fraction": "9709709709709709/100000000000000000",
+              "decimal_80_digits": "0.09709709709709709"
+            },
+            "active_weight": {
+              "fraction": "-7709709709709709/100000000000000000",
+              "decimal_80_digits": "-0.07709709709709709"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "55": {
+            "weight": {
+              "fraction": "1/50",
+              "decimal_80_digits": "0.02"
+            },
+            "supplied_baseline": {
+              "fraction": "11011011011011011/500000000000000000",
+              "decimal_80_digits": "0.022022022022022022"
+            },
+            "active_weight": {
+              "fraction": "-1011011011011011/500000000000000000",
+              "decimal_80_digits": "-0.002022022022022022"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          },
+          "60": {
+            "weight": {
+              "fraction": "17/200",
+              "decimal_80_digits": "0.085"
+            },
+            "supplied_baseline": {
+              "fraction": "9009009009009009/500000000000000000",
+              "decimal_80_digits": "0.018018018018018018"
+            },
+            "active_weight": {
+              "fraction": "33490990990990991/500000000000000000",
+              "decimal_80_digits": "0.066981981981981982"
+            },
+            "calculator_comparison": {
+              "observed": null,
+              "observed_minus_independent_exact": null
+            }
+          }
+        },
+        "half_l1_distance": {
+          "fraction": "97304804804804781/1000000000000000000",
+          "decimal_80_digits": "0.097304804804804781"
+        },
+        "half_l1_calculator_comparison": {
+          "observed": null,
+          "observed_minus_independent_exact": null
+        },
+        "risk": {
+          "covariance_unit": "daily_decimal_return_squared",
+          "daily_variance_exact": {
+            "fraction": "14097464045051786897061/200000000000000000000000000",
+            "decimal_80_digits": "0.000070487320225258934485305"
+          },
+          "daily_volatility_80_digits": "0.0083956727083217658315844788377870594810217231313648488919462694723240112060647863",
+          "daily_variance_calculator_comparison": {
+            "observed": null,
+            "observed_minus_independent_exact": null
+          },
+          "daily_volatility_calculator_record": "None",
+          "annualization_factor_from_market": "252",
+          "annualized_variance_derived_exact": {
+            "fraction": "888140234838262574514843/50000000000000000000000000",
+            "decimal_80_digits": "0.01776280469676525149029686"
+          },
+          "annualized_volatility_derived_80_digits": "0.13327717245186908409983065530074486596361448178410236139182487387945477734477586",
+          "annualized_values_are_audit_derivations_not_engine_daily_output": true,
+          "meaning": "w-transpose covariance w on frozen historical inputs; not future loss probability or strategic optimality.",
+          "interpretation_scope": "raw_invalid_vector_algebra_only_not_fully_invested_valid_portfolio_risk",
+          "raw_invalid_vector_algebra_only": true,
+          "not_fully_invested_valid_portfolio_risk": true,
+          "no_automatic_cash_assumption": true,
+          "cross_valid_portfolio_comparability": "not_established_for_invalid_raw_vector",
+          "calculator_daily_volatility_minus_independent_80_digit_value": null
+        },
+        "independently_recomputed_existing_validity": {
+          "valid": false,
+          "engine_recorded_valid": false,
+          "matches_recorded_validity": true,
+          "existing_sum_tolerance": "1e-6",
+          "existing_negative_and_above_one_tolerance": "0",
+          "tolerance_role": "Existing numerical implementation rule, not a paper-derived behavioral rule or a new cutoff.",
+          "binary_float_sum_comparable_to_existing_engine": 0.965,
+          "binary_float_residual_comparable_to_existing_engine": -0.03500000000000003,
+          "exact_rational_sum_and_residual": "Reported separately in arithmetic; never substituted, normalized or rounded to zero."
+        },
+        "interpretation_scope": "raw_invalid_vector_algebra_only_not_fully_invested_valid_portfolio_risk",
+        "raw_invalid_vector_algebra_only": true,
+        "unallocated_residual_handling": "No automatic cash assumption, rescaling, normalization, leverage interpretation or repaired portfolio is introduced.",
+        "distance_comparability": "Active weights and half-L1 remain algebraic differences of the supplied coordinates; do not treat this as a valid-allocation comparison or compare it as if both vectors were admissible portfolios.",
+        "source_tilt_diagnostics": {
+          "records": [
+            {
+              "sector_code": "10",
+              "source_label": "Underweight",
+              "raw_active_weight": {
+                "fraction": "-503003003003003/100000000000000000",
+                "decimal_80_digits": "-0.00503003003003003"
+              },
+              "signed_tilt": {
+                "fraction": "503003003003003/100000000000000000",
+                "decimal_80_digits": "0.00503003003003003"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "15",
+              "source_label": "Underweight",
+              "raw_active_weight": {
+                "fraction": "-1509009009009009/500000000000000000",
+                "decimal_80_digits": "-0.003018018018018018"
+              },
+              "signed_tilt": {
+                "fraction": "1509009009009009/500000000000000000",
+                "decimal_80_digits": "0.003018018018018018"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "20",
+              "source_label": "Overweight",
+              "raw_active_weight": {
+                "fraction": "1191191191191191/100000000000000000",
+                "decimal_80_digits": "0.01191191191191191"
+              },
+              "signed_tilt": {
+                "fraction": "1191191191191191/100000000000000000",
+                "decimal_80_digits": "0.01191191191191191"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "25",
+              "source_label": "Overweight",
+              "raw_active_weight": {
+                "fraction": "-309309309309309/100000000000000000",
+                "decimal_80_digits": "-0.00309309309309309"
+              },
+              "signed_tilt": {
+                "fraction": "-309309309309309/100000000000000000",
+                "decimal_80_digits": "-0.00309309309309309"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "30",
+              "source_label": "Underweight",
+              "raw_active_weight": {
+                "fraction": "-151151151151151/25000000000000000",
+                "decimal_80_digits": "-0.00604604604604604"
+              },
+              "signed_tilt": {
+                "fraction": "151151151151151/25000000000000000",
+                "decimal_80_digits": "0.00604604604604604"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "35",
+              "source_label": "Neutral",
+              "raw_active_weight": {
+                "fraction": "9109109109109/10000000000000000",
+                "decimal_80_digits": "0.0009109109109109"
+              },
+              "signed_tilt": null,
+              "absolute_tilt_for_neutral": {
+                "fraction": "9109109109109/10000000000000000",
+                "decimal_80_digits": "0.0009109109109109"
+              }
+            },
+            {
+              "sector_code": "40",
+              "source_label": "Overweight",
+              "raw_active_weight": {
+                "fraction": "-202952952952953/25000000000000000",
+                "decimal_80_digits": "-0.00811811811811812"
+              },
+              "signed_tilt": {
+                "fraction": "-202952952952953/25000000000000000",
+                "decimal_80_digits": "-0.00811811811811812"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "45",
+              "source_label": "Overweight",
+              "raw_active_weight": {
+                "fraction": "-259509509509509/25000000000000000",
+                "decimal_80_digits": "-0.01038038038038036"
+              },
+              "signed_tilt": {
+                "fraction": "-259509509509509/25000000000000000",
+                "decimal_80_digits": "-0.01038038038038036"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "50",
+              "source_label": "Underweight",
+              "raw_active_weight": {
+                "fraction": "-7709709709709709/100000000000000000",
+                "decimal_80_digits": "-0.07709709709709709"
+              },
+              "signed_tilt": {
+                "fraction": "7709709709709709/100000000000000000",
+                "decimal_80_digits": "0.07709709709709709"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "55",
+              "source_label": "Underweight",
+              "raw_active_weight": {
+                "fraction": "-1011011011011011/500000000000000000",
+                "decimal_80_digits": "-0.002022022022022022"
+              },
+              "signed_tilt": {
+                "fraction": "1011011011011011/500000000000000000",
+                "decimal_80_digits": "0.002022022022022022"
+              },
+              "absolute_tilt_for_neutral": null
+            },
+            {
+              "sector_code": "60",
+              "source_label": "Overweight",
+              "raw_active_weight": {
+                "fraction": "33490990990990991/500000000000000000",
+                "decimal_80_digits": "0.066981981981981982"
+              },
+              "signed_tilt": {
+                "fraction": "33490990990990991/500000000000000000",
+                "decimal_80_digits": "0.066981981981981982"
+              },
+              "absolute_tilt_for_neutral": null
+            }
+          ],
+          "meaning": "Continuous descriptive reference-direction diagnostics only; no strategy pass/fail or unique weight target."
+        }
+      },
+      "early_empty_weights_permitted": false,
+      "recorded_calculator_ok": false,
+      "submitted_constraints": [],
+      "captured_answer_observation": {
+        "status": "saved_HTTP_response",
+        "done_reason": "stop",
+        "raw_content_utf8_sha256": "87bb63afae528150ac59a6a074dc63ead9416b55e3b5cd4b98744f0064399614",
+        "parseable_complete_object": true
+      },
+      "fixed_denominator_extraction": {
+        "correct": 11,
+        "expected": 11,
+        "accuracy_exact": "1",
+        "reason": "Exact original-source label, unique sector row and correct source identity, per the unchanged evaluation specification.",
+        "conditional_semantic_evaluability": "requires_separate_semantic_review_not_established_by_labels"
+      },
+      "conditional_numeric_assessment": "computed_on_unrepaired_raw_numbers"
+    }
+  ],
+  "model_observations": [
+    {
+      "stage": 1,
+      "type": "nonzero_exact_budget_residual",
+      "residual": {
+        "fraction": "-7/200",
+        "decimal_80_digits": "-0.035"
+      },
+      "not_automatically_failed_by_new_threshold": true
+    },
+    {
+      "stage": 2,
+      "type": "nonzero_exact_budget_residual",
+      "residual": {
+        "fraction": "-7/200",
+        "decimal_80_digits": "-0.035"
+      },
+      "not_automatically_failed_by_new_threshold": true
+    },
+    {
+      "stage": 3,
+      "type": "existing_calculator_allocation_validity_false",
+      "independent_structure": {
+        "container_valid": true,
+        "missing_codes": [],
+        "duplicate_codes": [],
+        "unknown_codes": [],
+        "malformed_rows": 0,
+        "nonnumeric_codes": [],
+        "negative_codes": [],
+        "above_one_codes": []
+      },
+      "new_acceptance_threshold": null
+    },
+    {
+      "stage": 3,
+      "type": "nonzero_exact_budget_residual",
+      "residual": {
+        "fraction": "-7/200",
+        "decimal_80_digits": "-0.035"
+      },
+      "not_automatically_failed_by_new_threshold": true
+    },
+    {
+      "stage": 4,
+      "type": "existing_calculator_allocation_validity_false",
+      "independent_structure": {
+        "container_valid": true,
+        "missing_codes": [],
+        "duplicate_codes": [],
+        "unknown_codes": [],
+        "malformed_rows": 0,
+        "nonnumeric_codes": [],
+        "negative_codes": [],
+        "above_one_codes": []
+      },
+      "new_acceptance_threshold": null
+    },
+    {
+      "stage": 4,
+      "type": "nonzero_exact_budget_residual",
+      "residual": {
+        "fraction": "-7/200",
+        "decimal_80_digits": "-0.035"
+      },
+      "not_automatically_failed_by_new_threshold": true
+    }
+  ],
+  "consistency_findings": [],
+  "market_checks": {
+    "covariance_unit": "daily_decimal_return_squared",
+    "exact_max_symmetry_residual": {
+      "fraction": "0",
+      "decimal_80_digits": "0"
+    },
+    "PSD_scope": "Existing engine PSD tolerance is 1e-12 for numerical validation only; this audit does not turn it into a behavioral acceptance rule.",
+    "reported_benchmark_percent_sum": {
+      "fraction": "999/10",
+      "decimal_80_digits": "99.9"
+    },
+    "baseline_derivation_audit": {
+      "10": {
+        "exact_ratio_of_reported_percentages": {
+          "fraction": "10/333",
+          "decimal_80_digits": "0.030030030030030030030030030030030030030030030030030030030030030030030030030030030"
+        },
+        "supplied_baseline_minus_ratio": {
+          "fraction": "-1/33300000000000000000",
+          "decimal_80_digits": "-3.0030030030030030030030030030030030030030030030030030030030030030030030030030030E-20"
+        }
+      },
+      "15": {
+        "exact_ratio_of_reported_percentages": {
+          "fraction": "2/111",
+          "decimal_80_digits": "0.018018018018018018018018018018018018018018018018018018018018018018018018018018018"
+        },
+        "supplied_baseline_minus_ratio": {
+          "fraction": "-1/55500000000000000000",
+          "decimal_80_digits": "-1.8018018018018018018018018018018018018018018018018018018018018018018018018018018E-20"
+        }
+      },
+      "20": {
+        "exact_ratio_of_reported_percentages": {
+          "fraction": "88/999",
+          "decimal_80_digits": "0.088088088088088088088088088088088088088088088088088088088088088088088088088088088"
+        },
+        "supplied_baseline_minus_ratio": {
+          "fraction": "191/99900000000000000000",
+          "decimal_80_digits": "1.9119119119119119119119119119119119119119119119119119119119119119119119119119119E-18"
+        }
+      },
+      "25": {
+        "exact_ratio_of_reported_percentages": {
+          "fraction": "31/333",
+          "decimal_80_digits": "0.093093093093093093093093093093093093093093093093093093093093093093093093093093093"
+        },
+        "supplied_baseline_minus_ratio": {
+          "fraction": "-103/33300000000000000000",
+          "decimal_80_digits": "-3.0930930930930930930930930930930930930930930930930930930930930930930930930930931E-18"
+        }
+      },
+      "30": {
+        "exact_ratio_of_reported_percentages": {
+          "fraction": "46/999",
+          "decimal_80_digits": "0.046046046046046046046046046046046046046046046046046046046046046046046046046046046"
+        },
+        "supplied_baseline_minus_ratio": {
+          "fraction": "-151/24975000000000000000",
+          "decimal_80_digits": "-6.0460460460460460460460460460460460460460460460460460460460460460460460460460460E-18"
+        }
+      },
+      "35": {
+        "exact_ratio_of_reported_percentages": {
+          "fraction": "89/999",
+          "decimal_80_digits": "0.089089089089089089089089089089089089089089089089089089089089089089089089089089089"
+        },
+        "supplied_baseline_minus_ratio": {
+          "fraction": "109/9990000000000000000",
+          "decimal_80_digits": "1.0910910910910910910910910910910910910910910910910910910910910910910910910910911E-17"
+        }
+      },
+      "40": {
+        "exact_ratio_of_reported_percentages": {
+          "fraction": "118/999",
+          "decimal_80_digits": "0.11811811811811811811811811811811811811811811811811811811811811811811811811811812"
+        },
+        "supplied_baseline_minus_ratio": {
+          "fraction": "47/24975000000000000000",
+          "decimal_80_digits": "1.8818818818818818818818818818818818818818818818818818818818818818818818818818819E-18"
+        }
+      },
+      "45": {
+        "exact_ratio_of_reported_percentages": {
+          "fraction": "380/999",
+          "decimal_80_digits": "0.38038038038038038038038038038038038038038038038038038038038038038038038038038038"
+        },
+        "supplied_baseline_minus_ratio": {
+          "fraction": "-509/24975000000000000000",
+          "decimal_80_digits": "-2.0380380380380380380380380380380380380380380380380380380380380380380380380380380E-17"
+        }
+      },
+      "50": {
+        "exact_ratio_of_reported_percentages": {
+          "fraction": "97/999",
+          "decimal_80_digits": "0.097097097097097097097097097097097097097097097097097097097097097097097097097097097"
+        },
+        "supplied_baseline_minus_ratio": {
+          "fraction": "-709/99900000000000000000",
+          "decimal_80_digits": "-7.0970970970970970970970970970970970970970970970970970970970970970970970970970971E-18"
+        }
+      },
+      "55": {
+        "exact_ratio_of_reported_percentages": {
+          "fraction": "22/999",
+          "decimal_80_digits": "0.022022022022022022022022022022022022022022022022022022022022022022022022022022022"
+        },
+        "supplied_baseline_minus_ratio": {
+          "fraction": "-11/499500000000000000000",
+          "decimal_80_digits": "-2.2022022022022022022022022022022022022022022022022022022022022022022022022022022E-20"
+        }
+      },
+      "60": {
+        "exact_ratio_of_reported_percentages": {
+          "fraction": "2/111",
+          "decimal_80_digits": "0.018018018018018018018018018018018018018018018018018018018018018018018018018018018"
+        },
+        "supplied_baseline_minus_ratio": {
+          "fraction": "-1/55500000000000000000",
+          "decimal_80_digits": "-1.8018018018018018018018018018018018018018018018018018018018018018018018018018018E-20"
+        }
+      }
+    }
+  },
+  "reference_status": "machine_prepared_source_annotations_independent_human_review_pending",
+  "human_semantic_review": "pending_separate_round3_and_human_review",
+  "limits": [
+    "Each stage belongs to one same case and is not an independent sample.",
+    "Labels use the prespecified fixed 11-sector denominator; citation IDs verify identity/scope, not entailment.",
+    "Under the existing allocation citation rule, every cited ID must include the row sector. A cross-sector comparison can therefore fail this mechanical scope check without proving a reasoning or strategy error; semantic review is separate and the rule is not changed after observing results.",
+    "Weights have no unique institution-provided numeric gold. Differences or directional departures are descriptive.",
+    "All exact arithmetic uses JSON decimal literals as rational numbers. Calculator binary-floating differences are disclosed continuously without inventing a pass threshold.",
+    "Missing/failed stages are not imputed. No R1-versus-R4 effect or population conclusion follows from this one R1 case.",
+    "Stage scores are diagnostic repeated observations within one case. The registered final endpoint uses stage4 and includes failed/missing responses in its denominator; this is separate from conditional semantic and allocation evaluation.",
+    "For an invalid submitted weight vector, w-transpose covariance w, its square root, active weights and half-L1 are retained only as raw algebra. They are not the risk or comparison of a valid fully invested portfolio; no omitted weight is silently treated as cash, and no cross-valid-portfolio comparability is asserted."
+  ],
+  "main_frozen": false,
+  "model_calls_by_reviewer": 0,
+  "source_files": [
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018\\summary.json",
+      "sha256": "e06b9877d288b7a124769528a1a0d475723501477465a515dec9de406e1c9e58",
+      "size_bytes": 1547
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018\\invocation.json",
+      "sha256": "4df51a1e0e9c0e7fa2063883719317bf33a1a501b6d8b7d7ff2ae7f5041fa951",
+      "size_bytes": 2165
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018\\manifest_snapshot.json",
+      "sha256": "6465406eddaa2bab5136d15a0aee1487e9501066f20f421e4c1237ec01b13ff8",
+      "size_bytes": 11892
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v45_single_case_20261018\\market_input.json",
+      "sha256": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f",
+      "size_bytes": 15480
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v45_single_case_20261018\\model_packet.json",
+      "sha256": "2f506f346ebfc1be0f327163eb016dcec649e6301e4494d6a9230ab86c28d406",
+      "size_bytes": 6688
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\sector_documents\\evaluator_only\\reference_annotations.jsonl",
+      "sha256": "3a83cbb386442f3263357a5e67cb1f52c59114c28cc81e636b28e111c3509ffc",
+      "size_bytes": 23659
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\audit_v44_single_case_round2.py",
+      "sha256": "ea264a1e531c6f481e3dc201a86abd3d73c4e57963c7e86be0414973af1fbaa4",
+      "size_bytes": 28538
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018\\fidelity_q2_2026__R1\\stage1_record.json",
+      "sha256": "ba3438fcc57aefc4e187de91fa6e64cb44dc3e918295293600bf9cf1ecdc77f0",
+      "size_bytes": 11725
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018\\fidelity_q2_2026__R1\\stage1_response.json",
+      "sha256": "9a63a7dbc58ef9c02981a7b923034ca8695bdba61973ea2511d875a2147b414d",
+      "size_bytes": 6957
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018\\stage1_transport\\http_0001_generation\\response.json",
+      "sha256": "9a63a7dbc58ef9c02981a7b923034ca8695bdba61973ea2511d875a2147b414d",
+      "size_bytes": 6957
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018\\stage1_transport\\http_0001_generation\\events.jsonl",
+      "sha256": "1fc6f37641c3c47da9f798a53bc124a1c61b6ecc5a9d87f9614351f616889eac",
+      "size_bytes": 306058
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018\\stage1_transport\\http_0001_generation\\raw_stream.bin",
+      "sha256": "eff7fbda192f089d276ededecde314cb6d285131972ce9af8b11784006e69bd5",
+      "size_bytes": 211600
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018\\stage1_transport\\http_0001_generation\\request.json",
+      "sha256": "aeadeecc468b0a201c1933afcda6e042fa529bbfa8df8364db5d67f1794193f2",
+      "size_bytes": 26752
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018\\fidelity_q2_2026__R1\\stage2_record.json",
+      "sha256": "4a218fc98fc13c7302ebdeed2ec0c72c292b72c55c85f4eb3201ba6d72ee6ecf",
+      "size_bytes": 10665
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018\\fidelity_q2_2026__R1\\stage2_response.json",
+      "sha256": "dbb8c47d2044cd8726603e58a2af2c01a998f37118c55f9e3d98f1a72b73e03e",
+      "size_bytes": 6339
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018\\stage2_transport\\http_0001_generation\\response.json",
+      "sha256": "dbb8c47d2044cd8726603e58a2af2c01a998f37118c55f9e3d98f1a72b73e03e",
+      "size_bytes": 6339
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018\\stage2_transport\\http_0001_generation\\events.jsonl",
+      "sha256": "185841e954239555596ace123fcbf7ddefaaa80976c2301d8b75f39e55eaaf5d",
+      "size_bytes": 280343
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018\\stage2_transport\\http_0001_generation\\raw_stream.bin",
+      "sha256": "efe2289cbead90bbce35d02f7f3597de0d742ae4c2975eda741fa8705f5d19b8",
+      "size_bytes": 193572
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018\\stage2_transport\\http_0001_generation\\request.json",
+      "sha256": "b026376ef42807ea575240fc2a4b6d79f0a7860cc12cefbed4fc572a6f922da5",
+      "size_bytes": 37866
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018\\fidelity_q2_2026__R1\\stage3_record.json",
+      "sha256": "7d71e1c3606589e499a49f655640c9882df962e6a82c3023167189c426975fb4",
+      "size_bytes": 10665
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018\\fidelity_q2_2026__R1\\stage3_response.json",
+      "sha256": "c5254a65d8da3bf5574528704d0c457e1326519604378e3ff258348764284419",
+      "size_bytes": 6340
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018\\stage3_transport\\http_0001_generation\\response.json",
+      "sha256": "c5254a65d8da3bf5574528704d0c457e1326519604378e3ff258348764284419",
+      "size_bytes": 6340
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018\\stage3_transport\\http_0001_generation\\events.jsonl",
+      "sha256": "7da703be653201b5ac62691abbdd9f6fd326727c6fb4cd0f930925186fb57d07",
+      "size_bytes": 280273
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018\\stage3_transport\\http_0001_generation\\raw_stream.bin",
+      "sha256": "448ad6417bb8a432015d4189bc2d44832ee79539a972e9c2b009a83836b00b86",
+      "size_bytes": 193533
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018\\stage3_transport\\http_0001_generation\\request.json",
+      "sha256": "62f30d4a4f24d739c30ee09f11ca5af6d50bfde66a04bdf4c119f3c7692429ae",
+      "size_bytes": 46202
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018\\fidelity_q2_2026__R1\\stage4_record.json",
+      "sha256": "7b20d31a9e70f1cdd21aa0abb02c30c5ea7d6c1cd2b5ecdf5c3db11585188731",
+      "size_bytes": 11512
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018\\fidelity_q2_2026__R1\\stage4_response.json",
+      "sha256": "d8218ee743275ab6d9d77151969048e39c0988ac848bdf48a19f872ab7777304",
+      "size_bytes": 6824
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018\\stage4_transport\\http_0001_generation\\response.json",
+      "sha256": "d8218ee743275ab6d9d77151969048e39c0988ac848bdf48a19f872ab7777304",
+      "size_bytes": 6824
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018\\stage4_transport\\http_0001_generation\\events.jsonl",
+      "sha256": "775966833f522ea8a96da484bcc37782e38011e742839bf7db51577587925d37",
+      "size_bytes": 299192
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018\\stage4_transport\\http_0001_generation\\raw_stream.bin",
+      "sha256": "88b036d8a6f2e19b40090f5b1f33ed67f4ac608880573e5d629e7b9909cae288",
+      "size_bytes": 206747
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v45_20261018\\stage4_transport\\http_0001_generation\\request.json",
+      "sha256": "4e96649497c0cb072e2793c25c3b74e04faf7cb867590aadfb7198973e524bcf",
+      "size_bytes": 56224
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\audit_v45_single_case_round2.py",
+      "sha256": "c8b7ed7bc4b2f64d48e18abee619d21644d726921b8fd0528c1ea7240ab1524b",
+      "size_bytes": 19668
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\evaluation_spec.json",
+      "sha256": "cff49202b9da0da6bc094eb02a55e971afeab8c983a1a8fe3d686af1cff8df7f",
+      "size_bytes": 9398
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v44_20261018\\summary.json",
+      "sha256": "c8c2f88e0a73322d32b6e8be1585a2a4f9b2bc15a0afa37aa93e0f66a17ce1e2",
+      "size_bytes": 1319
+    }
+  ],
+  "protocol_version": "4.5",
+  "registered_final_extraction_endpoint": {
+    "correct": 11,
+    "expected": 11,
+    "accuracy_exact": "1",
+    "reason": "Exact original-source label, unique sector row and correct source identity, per the unchanged evaluation specification.",
+    "conditional_semantic_evaluability": "requires_separate_semantic_review_not_established_by_labels"
+  },
+  "denominator_clarification": {
+    "prior_v44_files_modified": false,
+    "v44_failed_attempt_fixed_label_endpoint": {
+      "correct": 0,
+      "expected": 11,
+      "accuracy_exact": "0"
+    },
+    "v44_conditional_semantic_and_numeric_assessment": "not_applicable_no_completed_answer_or_allocation",
+    "correction": "The earlier v4.4 round2 report correctly left conditional semantic/numeric assessment unavailable, but did not separately report the registered failure-inclusive label endpoint. That endpoint is 0/11. This additive clarification preserves the original failure bytes and reviews.",
+    "v45_final_endpoint_reported_separately": true,
+    "no_pooling_across_protocol_revisions": true,
+    "no_conversion_to_zero_strategy_quality_or_zero_risk": true
+  },
+  "final_allocation_evaluability": "raw_completed_answer_present_see_numeric_checks",
+  "independent_arithmetic_helper": {
+    "path": "research/audit_v44_single_case_round2.py",
+    "sha256": "ea264a1e531c6f481e3dc201a86abd3d73c4e57963c7e86be0414973af1fbaa4"
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "protocol_version": "4.5",
+  "scope": "one_predetermined_pilot_case",
+  "created_at_utc": "2026-10-18T07:49:33.188851+00:00",
+  "case_id": "fidelity_q2_2026__R1",
+  "arm": "R1",
+  "planned_cases": 1,
+  "planned_stages": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "selection": "Same predetermined first case after recorded v4.4 failure; no outcome-based case substitution.",
+  "main_freeze": false,
+  "human_semantic_pass": false,
+  "inputs": {
+    "runtime.json": "2b1fdb8fd191ffc275a5e4723019fc75cb0bb152fa213ca37aa4dc16e9b8b6c9",
+    "model_packet.json": "2f506f346ebfc1be0f327163eb016dcec649e6301e4494d6a9230ab86c28d406",
+    "market_input.json": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f",
+    "response_schema_stage1.json": "8213c165349f435e7f2aff29cc089ebb51578f474c243c60fcd2eb7739484327",
+    "response_schema_stage2.json": "8213c165349f435e7f2aff29cc089ebb51578f474c243c60fcd2eb7739484327",
+    "response_schema_stage3.json": "5d9292759ec0469592a7c67279582e3a48fe3a0a04b7f679561f123734a2ea0a",
+    "response_schema_stage4.json": "5d9292759ec0469592a7c67279582e3a48fe3a0a04b7f679561f123734a2ea0a"
+  },
+  "source_request": {
+    "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\laptop_realinput_4b_20261018\\original_request_not_sent.json",
+    "sha256": "b9368d3d27c7208de9b5c89f836c28ed72bc4ca96837b86c537caa82a16dd163"
+  },
+  "selected_packet_value_sha256": "dd55b6d197d1732e3051d9361566c7db3a175a6a90e720c0053659c2f9124a46",
+  "software": {
+    "local_sector_single_case.py": "0b2596a223167136bb37578e86469d50c26e7883305d4db31f43b9ddd10d28d0",
+    "run_sector_workflow.py": "5625450a4dcbe1aa717c9809bf4955c1ef6b10aab4f0c83ef05dc2eb2c123cfd",
+    "sector_engine.py": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c",
+    "compact_sector_prompt.py": "6984ada966ad55c3089fc297ca6342fdb51685bebfe3107769086343bbe68c0d",
+    "benchmark_sector_latency.py": "0686444e608033be931922a26886ed4a4b5b0789385215b7b75bfacc4050458b",
+    "remote_sector_runtime.py": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5",
+    "probe_ollama_runtime.py": "2dd48936bbaf8fd090a26f92fd356fec3a11ac81e5b01b39d661ffe72552fddb",
+    "local_sector_structured_case.py": "d7193e69a9525ff640d275f86d7b5deaa18ce033e3d628e416bc2a06699c1a73",
+    "sector_response_schema.py": "bedbf782a041ba7da4f944408dd19596d74cbf78b77bee1c75d12ce71a598c41"
+  },
+  "inherited_conditions_evidence": {
+    "path": "C:\\Users\\Insun\\2026libera\\research\\v44_conditions_reference_20261018.json",
+    "sha256": "a403d4c37d1581f9af21af8ba7a6333614d890ff15277e83181c1204549a9c5b"
+  },
+  "schema_evidence": [
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\v45_revision_reference_20261018.json",
+      "sha256": "57a9c86c2bbc08a1006d6339bcd3303194ae8975cab14d6c5603a3191122dd79"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v45_structured_output_20261018\\manifest.json",
+      "sha256": "994ad850a7c2c42267d8dc19a0461c844ea55c2faf4adf8609004a1f6bc200c7"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v45_structured_output_20261018\\finvector_2610_08882.pdf",
+      "sha256": "a7551b10caddb0d9f94a215f29fad4771f5cd2addae56ea43d706f7c5c1c1dfa",
+      "url": "https://arxiv.org/pdf/2610.08882"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v45_structured_output_20261018\\ollama_structured_outputs.html",
+      "sha256": "2f176ec2515dfa8616ae1ed2bd779035e1a4aba323b318cf9ab48f79ca52868d",
+      "url": "https://docs.ollama.com/capabilities/structured-outputs"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v45_structured_output_20261018\\ollama_chat_api.html",
+      "sha256": "bb5ab876dc97aaffa107cc6ed9ade9fe1d1721daf3650a09f451e10fc2c201ab",
+      "url": "https://docs.ollama.com/api/chat"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v45_structured_output_20261018\\ollama_llama_server_v0351.go",
+      "sha256": "10777cca3193c12b4cfcc90f5cfd88085c298f7a2c2c7333b0b95bb6e545d391",
+      "url": "https://raw.githubusercontent.com/ollama/ollama/v0.35.1/llm/llama_server.go"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v45_structured_output_20261018\\ollama_structured_output_test_v0351.go",
+      "sha256": "b8711da2cd8bc6bc45a4889f3723b3a0a21ae4958350405b10a07b5f885201e8",
+      "url": "https://raw.githubusercontent.com/ollama/ollama/v0.35.1/integration/structured_output_test.go"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v45_structured_output_20261018\\ollama_LLAMA_CPP_VERSION_v0351.txt",
+      "sha256": "23d8617f4235704076e82a85531d9324033da4ed3c375984003c1fff00de9226",
+      "url": "https://raw.githubusercontent.com/ollama/ollama/v0.35.1/LLAMA_CPP_VERSION"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v45_structured_output_20261018\\ollama_llama_README_v0351.md",
+      "sha256": "16c31172d0d6aa5b05b6bbfe5e9746cb94316e6991864d2448a9b946b7697124",
+      "url": "https://raw.githubusercontent.com/ollama/ollama/v0.35.1/llama/README.md"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v45_structured_output_20261018\\ollama_llama_CMakeLists_v0351.txt",
+      "sha256": "af9397603247c2e09011939bd7e9209f61c3905f0f080009b2e518933efa3d4b",
+      "url": "https://raw.githubusercontent.com/ollama/ollama/v0.35.1/llama/server/CMakeLists.txt"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v45_structured_output_20261018\\ollama_compat_001_v0351.patch",
+      "sha256": "de62fe6dd48c1b19082ae234e0b21fbc3da326dc18d6c971b93953886bf3ebf7",
+      "url": "https://raw.githubusercontent.com/ollama/ollama/v0.35.1/llama/compat/001-llama-cpp-hooks.patch"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v45_structured_output_20261018\\ollama_compat_002_v0351.patch",
+      "sha256": "42deb6df78657d92a9382230d742cfc97a12e2c99cce0a904fb029b7104415ff",
+      "url": "https://raw.githubusercontent.com/ollama/ollama/v0.35.1/llama/compat/002-clef.patch"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v45_structured_output_20261018\\llamacpp_grammar_README_b11232.md",
+      "sha256": "e1874c0f08abbcfe45eff0b7b0290faa58f630981bf94274e2d99751ef3b0208",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/b11232/grammars/README.md"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v45_structured_output_20261018\\llamacpp_json_schema_to_grammar_b11232.cpp",
+      "sha256": "d5a82fff5d611abd1198ff27c328b20376ffe9f110b4771d579c8bd20c70541f",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/b11232/common/json-schema-to-grammar.cpp"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v45_structured_output_20261018\\llamacpp_schema_tests_b11232.cpp",
+      "sha256": "477113067a347be12830ac39395ad55c5153b40720e0966c5394f09dea3f24d0",
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/b11232/tests/test-json-schema-to-grammar.cpp"
+    }
+  ],
+  "renderer_policy_evidence": [
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\v44_renderer_policy_20261018.json",
+      "sha256": "4135e7f2d0000e4f51ca3414af803805c823f681468807d3ab19f9fd116488a4"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v44_renderer_appendix_20261018\\ollama_qwen35_renderer_v0351.go",
+      "sha256": "69bca99b53a3db8d599bb9ec8eadf65ce9a72868566a89bfac44d31fe3b565e0",
+      "url": "https://raw.githubusercontent.com/ollama/ollama/v0.35.1/model/renderers/qwen35.go"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v44_renderer_appendix_20261018\\go_strings_public_snapshot.go",
+      "sha256": "a81bdf73a308277c322e35d0c602e3813f57b6f769c091f8f8962c8884a45ea3",
+      "url": "https://go.dev/src/strings/strings.go?m=text"
+    }
+  ],
+  "primary_source_evidence": [
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v44_primary_sources_20261018\\manifest.json",
+      "sha256": "97ad1d6a9ae3a4f5354940891944f0be1034d5795b8f3d322c742f2a5e504d99"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v44_primary_sources_20261018\\ollama_api_types_v0351.go",
+      "sha256": "e9c86add622033ade3d288dd6e1dfbd7f35be6a7ef1f31dda3486f0b859a1df3",
+      "url": "https://raw.githubusercontent.com/ollama/ollama/v0.35.1/api/types.go"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v44_primary_sources_20261018\\ollama_server_routes_v0351.go",
+      "sha256": "d0d524eae78da3a73c344e86ca9b215358c964845188a192e5c35ac41fb0a55d",
+      "url": "https://raw.githubusercontent.com/ollama/ollama/v0.35.1/server/routes.go"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v44_primary_sources_20261018\\ollama_server_prompt_v0351.go",
+      "sha256": "79411c4e15ff27fb8bac4dcd96076407e035ec407c0ab1a1840035f9668b4654",
+      "url": "https://raw.githubusercontent.com/ollama/ollama/v0.35.1/server/prompt.go"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v44_primary_sources_20261018\\ollama_llama_server_v0351.go",
+      "sha256": "10777cca3193c12b4cfcc90f5cfd88085c298f7a2c2c7333b0b95bb6e545d391",
+      "url": "https://raw.githubusercontent.com/ollama/ollama/v0.35.1/llm/llama_server.go"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v44_primary_sources_20261018\\finvector_public_inference_mlx.py",
+      "sha256": "57e2fedfb400fdf4d9e6b0b58d48b93f23a76741f6fb7420b840c7315b8c3bec",
+      "url": "https://raw.githubusercontent.com/alinakhay/FinVector-Market-4B/main/examples/inference_mlx.py"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v44_primary_sources_20261018\\mlx_lm_generate_v0313.py",
+      "sha256": "270778ad53eaca55a8533d82e6752660fe5d2605c4aa0879b48a50a91f69345f",
+      "url": "https://raw.githubusercontent.com/ml-explore/mlx-lm/v0.31.3/mlx_lm/generate.py"
+    }
+  ],
+  "controls": {
+    "revision": "JSON-schema API grammar and schema-in-prompt grounding change together; no separate causal effect identified.",
+    "decoding": "v4.4 model/engine/template, T0, seed3407, neutral penalties, output8192, context65536 and all remaining request options retained.",
+    "deadline": "One supervised child per stage: setup, metadata, render-only and generation combined are limited to 900 seconds, apart from OS scheduling/kill overhead. Cleanup is outside.",
+    "history": "Logical requests saved unchanged; deterministic schema guidance added only to stage user JSON. Original task, common market and public document values retained. Assistant/calculator strings are verbatim.",
+    "projection": "The unchanged reversible duplicate-market-field projection follows grounding. Grounded and authoritative messages are both saved.",
+    "context": "Inherited render-only visible-message validation plus truncate=false/shift=false; no independent tokenization or capacity proof.",
+    "validation": "Required fields, JSON types and array lengths only; no gold values. Public sector duplication/missing rows are recorded diagnostically. Portfolio sum/sign/coverage errors remain with the unchanged calculator. No semantic pass from structural validity.",
+    "failure": "Preserve raw response and attempt count, stop on schema/cap/deadline/transport/pin failure; no repair, automatic retry or alternate model.",
+    "assessment": "Four-stage completion is workflow execution, not investment validity, human review or main-study readiness."
+  }
+}

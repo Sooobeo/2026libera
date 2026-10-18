@@ -1,0 +1,207 @@
+{
+  "schema_version": "v46_replay_priority1_rubric_addendum_v1",
+  "created_at_utc": "2026-10-18T08:53:06.135436+00:00",
+  "access_role": "offline_evaluator_only_never_upload_to_model",
+  "status": "pre_run_scope_selected_implementation_review_pending",
+  "reviewer": "independent_risk_metrics_review",
+  "supersedes_or_rewrites_prior_files": false,
+  "selected_diagnostic": {
+    "case_id": "fidelity_q2_2026__R1",
+    "input_candidate": "Preserved completed v4.5 stage4 raw model response and the values of its actual corresponding calculator result; pairing with original arguments is verified offline.",
+    "original_raw_sum_exact": "0.965",
+    "original_raw_residual_exact": "-0.035",
+    "original_allocation_valid": false,
+    "new_generation_budget": 1,
+    "budget_basis": "Explicitly selected development scope and engineering resource bound; not a paper-derived optimum or effect threshold.",
+    "automatic_retries": 0,
+    "four_stage_reexecution": false,
+    "intermediate_stage1_to3_assistant_history_included": false,
+    "effect_of_history_difference": "This is a separate known-failure correction diagnostic. A pass does not demonstrate repair of the original retained-history four-stage workflow or the R1/R4 comparison.",
+    "inherited_conditions": "Same public source and market values, original system instruction, seven-key schema, exact pinned model/runtime/options, and inherited engineering deadline. Only the separately registered diagnostic task and explicitly disclosed history scope differ.",
+    "main_authorized": false,
+    "messages_contract": [
+      "Original system instruction.",
+      "Original stage1 public task/source/market message.",
+      "Original complete v4.5 stage4 final assistant content.",
+      "New user feedback message serialized from original stage4 calculator_result values using the existing feedback convention.",
+      "New diagnostic task with the same actual feedback embedded; stage4 schema selected for output shape only."
+    ],
+    "feedback_serialization": "Freshly serialized feedback is not claimed to be a historical stage5 message or a previously transmitted string. Preserve original calculator values and source bytes separately; record new request bytes as new artifacts.",
+    "diagnostic_stage_label": "Any stage4 selector selects the existing final-response schema, not evidence that four new workflow stages ran."
+  },
+  "relationship_to_prior_rubric": {
+    "base_priority1_rubric": "research/evaluator_only/v46_priority1_prerun_review_20261018.json",
+    "base_source_rubric": "research/evaluator_only/fidelity_q2_r1_prerun_reference_20261018.json",
+    "basis_selection_addendum": "research/v46_single_revision_basis_addendum_20261018.json",
+    "unchanged": "P1-A through P1-F, original raw allocation validity rules, the existing1e-6 engineering sum tolerance, no repair/gold/retry rules, and supported/contradicted/not_stated/uncertain factual claim categories.",
+    "adaptation": "The observed predecessor is the frozen v4.5 stage4 failure rather than a newly generated preceding stage. Trace visibility concerns this registered replay request only. Existing stage1-3 contents must not be represented as included.",
+    "not_a_redefinition": "No new target vector, source-label key, criterion that exact sector weights equal a benchmark, minimum delta, or success score is introduced."
+  },
+  "pre_execution_required_checks": [
+    {
+      "id": "REPLAY-PRE-01",
+      "check": "Candidate text/parsed content and paired original calculator result equal the preserved v4.5 source artifacts; the existing false budget assertion is not silently corrected before input."
+    },
+    {
+      "id": "REPLAY-PRE-02",
+      "check": "The request contains the original public source/market values and system instruction; exact-duplicate-only compression roundtrips without losing unique numbers or semantics."
+    },
+    {
+      "id": "REPLAY-PRE-03",
+      "check": "Active instructions explicitly ask for reconsideration of the frozen candidate under its genuine calculator feedback, while no sector receives an externally prescribed weight or missing budget mass."
+    },
+    {
+      "id": "REPLAY-PRE-04",
+      "check": "Only the selected predecessor response/feedback and public task are replayed; absence of stage1-3 assistant history and one-call diagnostic status are recorded."
+    },
+    {
+      "id": "REPLAY-PRE-05",
+      "check": "No evaluator-only rubric, source answer annotations, prior semantic verdict or hidden main output is read into online model input."
+    },
+    {
+      "id": "REPLAY-PRE-06",
+      "check": "Schema controls existing keys/types and public sector codes only; numerical feasibility remains a post-submission raw calculator check, not a decoder-injected answer."
+    },
+    {
+      "id": "REPLAY-PRE-07",
+      "check": "Runtime pins, full options, input/schema/code hashes, no-retry policy and finite inherited deadline are registered before inference."
+    },
+    {
+      "id": "REPLAY-PRE-08",
+      "check": "Terminal records distinguish HTTP completion, shape validity, raw allocation validity, correction claim audit, diagnostic calls, research workflow completions and main calls."
+    }
+  ],
+  "three_post_run_audits": [
+    {
+      "round": 1,
+      "scope": "execution_and_input_integrity",
+      "pass_requires": [
+        "One registered generation at most, with no retry/continuation or model substitution.",
+        "Exact original invalid candidate and feedback actually visible in rendered input.",
+        "No hidden evidence, automatic weight repair or outcome-based substitution.",
+        "Terminal request/stream/response and failure records preserved; retained/replayed history scope accurately reported."
+      ],
+      "not_sufficient": "Successful transport or shape validation does not imply repair."
+    },
+    {
+      "round": 2,
+      "scope": "independent_raw_arithmetic_and_format",
+      "pass_requires": [
+        "A complete unmodified seven-key response passes the existing strict JSON/shape contract.",
+        "Original raw JSON literal arithmetic independently verifies finite numeric weights, all11 public sectors once, bounds and the inherited full-investment sum rule.",
+        "Before/after deltas and exact residuals agree with recorded raw values and calculator outputs.",
+        "The final raw vector is valid without external normalization, clipping, cash imputation or correction."
+      ],
+      "not_sufficient": "Changing weights alone, preserving labels, or a rounded display of100% is not a pass when raw criteria fail."
+    },
+    {
+      "round": 3,
+      "scope": "narrow_correction_claim_logic",
+      "pass_requires": [
+        "The new response truthfully addresses the observed invalid-feedback episode; no mandatory literal acknowledgment token or length rule.",
+        "Every consequential statement about the original budget status, correction, changed weights and final validity matches the preserved before/after trace at its stated precision.",
+        "The model does not claim that the original0.965 vector already satisfied full investment, or that the runner repaired it when it did not.",
+        "A repaired vector is not represented as an optimal allocation, as proven source preference preservation, or as success of the absent four-stage replay merely because its weights sum to1."
+      ],
+      "categories": "supported, contradicted, not_stated, uncertain apply to factual correction claims; independent decisions are not labeled false merely because they differ from a nonexistent exact-weight answer.",
+      "unobserved": "Incomplete or absent final response makes claim semantics unevaluable, not a passing empty set."
+    }
+  ],
+  "priority_scope_boundary": {
+    "priority1": "Observed raw correction and truthful description of the calculation-error correction only.",
+    "priority2_reserved": "Market-number accuracy and consistency of sector-level allocations with descriptions, including overweight-versus-benchmark wording and reported historical volatility.",
+    "priority3_reserved": "Faithful source reasons, documented departures, meaningful alternatives and the reasoning connecting source views to chosen allocations.",
+    "known_old_errors": "Existing unrelated factual or rationale errors remain recorded, but no correction key for them is supplied in this diagnostic. A priority1 pass does not clear them.",
+    "mixed_claims": "If a final sentence infers source fidelity or strategy quality solely from the corrected sum, the narrow round3 audit records the invalid inference. It does not silently require all priority2/3 work before their authorized turn."
+  },
+  "terminal_gate": {
+    "priority1_pass_requires": "One terminal registered diagnostic and all three corresponding audit records explicitly PASS for the exact same source/output hashes.",
+    "failure": "Remain at priority1; preserve the attempted failure and do not automatically retry or move to priority2.",
+    "missing_or_uncertain": "Pending or failed-to-demonstrate, never a pass from absent claims.",
+    "after_pass": "Priority2 may be separately prepared/registered; no automatic model call, original four-stage success claim, or main execution follows.",
+    "main": "Forbidden; main_frozen=false and main_calls=0 remain explicit."
+  },
+  "reporting": {
+    "development_selection": "Known historical failure deliberately selected; not a random case, untouched test set or independent replication.",
+    "counts": "One new diagnostic model call is distinct from the four historical v4.5 calls, four-stage completions, three audits and main calls. Preserve original failure denominators.",
+    "source_metric": "If source extraction is additionally reported, keep the existing11-element denominator and source scope; it is ancillary to priority1 and not an acceptance substitute.",
+    "no_causal_claim": "A one-call improvement cannot isolate the effect of feedback embedding from omitted intermediate history or other registered task presentation changes.",
+    "paper_claim": "Supports feasibility of a model-authored correction for this exposed failure only; no inference about general reliability, expected returns or institution convergence."
+  },
+  "implementation_review_status": "pending_new_runner_and_registration",
+  "priority1_passed": false,
+  "new_inference_calls_by_reviewer": 0,
+  "previous_immutable_files_changed": 0,
+  "evidence_files": {
+    "research/evaluator_only/v46_priority1_prerun_review_20261018.json": {
+      "sha256": "c5c85f170ef8701222abf169f0e8ad93bfb086e00f6d584c49b1f5e89f909ae8",
+      "bytes": 22915
+    },
+    "research/evaluator_only/fidelity_q2_r1_prerun_reference_20261018.json": {
+      "sha256": "8022c19d7b5e9654139996d88cac230cb12d29b30fcf7e817850203c02c35f38",
+      "bytes": 26413
+    },
+    "research/v46_single_revision_basis_addendum_20261018.json": {
+      "sha256": "a871bea800e7199b726706e8c064803021735a7bbc99f80f5736014e7790a0d9",
+      "bytes": 10438
+    },
+    "research/v46_feedback_basis_20261018.json": {
+      "sha256": "434883025ed152a65f0f8912c49e14183d7f908a3fec7497313309a230c52673",
+      "bytes": 15134
+    },
+    "data/sector_protocol/evaluation_spec.json": {
+      "sha256": "cff49202b9da0da6bc094eb02a55e971afeab8c983a1a8fe3d686af1cff8df7f",
+      "bytes": 9398
+    },
+    "research/sector_engine.py": {
+      "sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c",
+      "bytes": 27360
+    },
+    "research/sector_response_schema.py": {
+      "sha256": "bedbf782a041ba7da4f944408dd19596d74cbf78b77bee1c75d12ce71a598c41",
+      "bytes": 7183
+    },
+    "research/local_sector_structured_case.py": {
+      "sha256": "d7193e69a9525ff640d275f86d7b5deaa18ce033e3d628e416bc2a06699c1a73",
+      "bytes": 28240
+    },
+    "data/sector_market/market_input.json": {
+      "sha256": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f",
+      "bytes": 15480
+    },
+    "data/local_sector_runtime/single_case_v45_20261018/summary.json": {
+      "sha256": "e06b9877d288b7a124769528a1a0d475723501477465a515dec9de406e1c9e58",
+      "bytes": 1547
+    },
+    "data/local_sector_runtime/single_case_v45_20261018/fidelity_q2_2026__R1/stage4_record.json": {
+      "sha256": "7b20d31a9e70f1cdd21aa0abb02c30c5ea7d6c1cd2b5ecdf5c3db11585188731",
+      "bytes": 11512
+    },
+    "data/local_sector_runtime/single_case_v45_20261018/fidelity_q2_2026__R1/stage4_response.json": {
+      "sha256": "d8218ee743275ab6d9d77151969048e39c0988ac848bdf48a19f872ab7777304",
+      "bytes": 6824
+    },
+    "data/local_sector_runtime/single_case_v45_20261018/fidelity_q2_2026__R1/stage1_request.json": {
+      "sha256": "021aa18ec6b495a6c6323f4b7fae66279340cd1f8ba18f6109b98f768abb5c70",
+      "bytes": 20568
+    },
+    "data/sector_protocol/v45_single_case_registration_20261018.json": {
+      "sha256": "8cf54a9aaaad2ad89e595174a6bfda85b0a307b99f932ca1e0ae5274081b34da",
+      "bytes": 5449
+    }
+  },
+  "audit_assignment": {
+    "round1": "root execution/provenance",
+    "round2": "independent risk_metrics_review arithmetic",
+    "round3": "institution_templates narrow correction-claim logic"
+  },
+  "required_round2_top_level_fields": [
+    "phase",
+    "round",
+    "run_dir",
+    "all_passed",
+    "scope",
+    "failed_checks",
+    "source_files"
+  ]
+}

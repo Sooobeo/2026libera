@@ -1,0 +1,311 @@
+{
+  "schema_version": "v47_priority1_plan_execute_independent_arithmetic_round2_v1",
+  "created_at_utc": "2026-10-18T09:27:13.741576+00:00",
+  "phase": "priority1",
+  "round": 2,
+  "run_dir": "data/local_sector_runtime/plan_execute_diagnostic_v47_20261018",
+  "audit_completed": true,
+  "all_passed": false,
+  "scope": "Independent raw arithmetic and role-specific format for one planner/executor development diagnostic; no main or original four-stage success claim.",
+  "failed_checks": [
+    "P1B-R2-13",
+    "P1B-R2-18"
+  ],
+  "not_observed_checks": [],
+  "checks": [
+    {
+      "id": "P1B-R2-01",
+      "status": "pass",
+      "detail": "Frozen v4.6 predecessor text/decimal values match the original raw response and record."
+    },
+    {
+      "id": "P1B-R2-02",
+      "status": "pass",
+      "detail": "Independently confirmed invalid predecessor sum0.965 and residual-0.035."
+    },
+    {
+      "id": "P1B-R2-03",
+      "status": "pass",
+      "detail": "Every visible v4.5-to-v4.6 delta is independently0; both original sums match. No corrected vector is used."
+    },
+    {
+      "id": "P1B-R2-04",
+      "status": "pass",
+      "detail": "Success requires the registered one planner plus one executor, no retry and no new four-stage/main calls; fewer calls remain a stopped diagnostic."
+    },
+    {
+      "id": "P1B-R2-05",
+      "status": "pass",
+      "detail": {
+        "meaning": "Complete planner response independently passes existing strict shape.",
+        "structure_errors": []
+      }
+    },
+    {
+      "id": "P1B-R2-06",
+      "status": "pass",
+      "detail": "Planner raw weights are exactly[] and preserved; no allocation is inferred from prose or a zero-vector replacement."
+    },
+    {
+      "id": "P1B-R2-07",
+      "status": "pass",
+      "detail": "Plan is explicitly not submitted: no calculator call and financial_acceptance=null. No planning sum or valid-portfolio flag is assigned."
+    },
+    {
+      "id": "P1B-R2-08",
+      "status": "pass",
+      "detail": "A completed original executor response and revision record are required; a plan alone cannot pass."
+    },
+    {
+      "id": "P1B-R2-09",
+      "status": "pass",
+      "detail": {
+        "meaning": "Executor raw JSON passes independent parsing and existing final schema.",
+        "structure_errors": []
+      }
+    },
+    {
+      "id": "P1B-R2-10",
+      "status": "pass",
+      "detail": "Model-written raw proposal, stored proposal and calculator arguments are identical."
+    },
+    {
+      "id": "P1B-R2-11",
+      "status": "pass",
+      "detail": "All11 public sector codes occur once with finite numeric weights."
+    },
+    {
+      "id": "P1B-R2-12",
+      "status": "pass",
+      "detail": "Original long-only0..1 bounds hold without repair."
+    },
+    {
+      "id": "P1B-R2-13",
+      "status": "fail",
+      "detail": {
+        "meaning": "Exact final raw arithmetic satisfies the inherited sum rule.",
+        "sum": "0.975",
+        "residual": "-0.025",
+        "sum_tolerance": "0.000001",
+        "tolerance_role": "Existing engineering serialization precision only."
+      }
+    },
+    {
+      "id": "P1B-R2-14",
+      "status": "pass",
+      "detail": {
+        "meaning": "Independent exact validity and separately recomputed float arithmetic agree with recorded calculator.",
+        "float_sum": 0.975
+      }
+    },
+    {
+      "id": "P1B-R2-15",
+      "status": "pass",
+      "detail": {
+        "meaning": "Submitted numerical bounds are valid/evaluable/satisfied; source entailment is not inferred from an ID.",
+        "checks": []
+      }
+    },
+    {
+      "id": "P1B-R2-16",
+      "status": "pass",
+      "detail": "Actual executor vector changes from v4.6; exact delta sum equals new sum minus old sum. Planning text itself is not a change."
+    },
+    {
+      "id": "P1B-R2-17",
+      "status": "pass",
+      "detail": "No repair is recorded and raw/argument identity is checked; full provenance remains round1."
+    },
+    {
+      "id": "P1B-R2-18",
+      "status": "fail",
+      "detail": "Independent numeric acceptance agrees with both stored flags and is true; no semantic inference follows."
+    },
+    {
+      "id": "P1B-R2-19",
+      "status": "pass",
+      "detail": "Runner did not self-approve the user-required three-audit gate or human review."
+    }
+  ],
+  "check_count": 19,
+  "source_files": [
+    {
+      "path": "data/local_sector_runtime/feedback_diagnostic_v46_20261018/revision_record.json",
+      "sha256": "5878882798e72b1284383b195ce11a78a26fbdce07f3346d1f6490ea19d04339"
+    },
+    {
+      "path": "data/local_sector_runtime/feedback_diagnostic_v46_20261018/revision_transport/http_0001_generation/response.json",
+      "sha256": "e0d2cf4914aa2d0f142bda4dea9ab59fbb9ee3cf93aa71896c1a6220f2f0d595"
+    },
+    {
+      "path": "data/local_sector_runtime/plan_execute_diagnostic_v47_20261018/executor_transport/http_0001_generation/response.json",
+      "sha256": "d304b18f9f055b31de5be8113652eca4a88f02eba7788506269ca3f7222385a5"
+    },
+    {
+      "path": "data/local_sector_runtime/plan_execute_diagnostic_v47_20261018/invocation.json",
+      "sha256": "b1ee8b4683d8f78f188e426cb27b02ad476d68fdf355cea1aa18c47f8d96b827"
+    },
+    {
+      "path": "data/local_sector_runtime/plan_execute_diagnostic_v47_20261018/manifest_snapshot.json",
+      "sha256": "7123245e45c547ba8460dedbd5d30f2a175231a67774486542f5ba0db7a0323f"
+    },
+    {
+      "path": "data/local_sector_runtime/plan_execute_diagnostic_v47_20261018/plan_record.json",
+      "sha256": "7188dddef25560a1de72673bd33e9d686b322ac2b3ed6ff75a056a5258299a78"
+    },
+    {
+      "path": "data/local_sector_runtime/plan_execute_diagnostic_v47_20261018/planner_transport/http_0001_generation/response.json",
+      "sha256": "720c25888ec3b007c5d6f7a1989e8247a939dd3f60fc7f038142783a51341540"
+    },
+    {
+      "path": "data/local_sector_runtime/plan_execute_diagnostic_v47_20261018/revision_record.json",
+      "sha256": "a9ae65714831869f9d148f7c4fbeb1b2d011c4d9180f06d919126012c21a355f"
+    },
+    {
+      "path": "data/local_sector_runtime/plan_execute_diagnostic_v47_20261018/summary.json",
+      "sha256": "93aa6651212d290309b2b98b9a11b1915039bfe7fc49bdcb2f1afeaa960ac998"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v45_20261018/fidelity_q2_2026__R1/stage4_record.json",
+      "sha256": "7b20d31a9e70f1cdd21aa0abb02c30c5ea7d6c1cd2b5ecdf5c3db11585188731"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v45_20261018/fidelity_q2_2026__R1/stage4_response.json",
+      "sha256": "d8218ee743275ab6d9d77151969048e39c0988ac848bdf48a19f872ab7777304"
+    },
+    {
+      "path": "data/sector_protocol/evaluation_spec.json",
+      "sha256": "cff49202b9da0da6bc094eb02a55e971afeab8c983a1a8fe3d686af1cff8df7f"
+    },
+    {
+      "path": "data/sector_protocol/v47_plan_execute_diagnostic_20261018/manifest.json",
+      "sha256": "7123245e45c547ba8460dedbd5d30f2a175231a67774486542f5ba0db7a0323f"
+    },
+    {
+      "path": "data/sector_protocol/v47_plan_execute_diagnostic_20261018/prior_delta_feedback.json",
+      "sha256": "a8a5dfc8e72fc7430111a92598c895ce9a5ea1a57c755f0a1757f5a2df343167"
+    },
+    {
+      "path": "data/sector_protocol/v47_plan_execute_diagnostic_20261018/prior_record.json",
+      "sha256": "5878882798e72b1284383b195ce11a78a26fbdce07f3346d1f6490ea19d04339"
+    },
+    {
+      "path": "data/sector_protocol/v47_plan_execute_diagnostic_20261018/prior_response.json",
+      "sha256": "e0d2cf4914aa2d0f142bda4dea9ab59fbb9ee3cf93aa71896c1a6220f2f0d595"
+    },
+    {
+      "path": "data/sector_protocol/v47_plan_execute_diagnostic_20261018/schema_executor.json",
+      "sha256": "5d9292759ec0469592a7c67279582e3a48fe3a0a04b7f679561f123734a2ea0a"
+    },
+    {
+      "path": "data/sector_protocol/v47_plan_execute_diagnostic_20261018/schema_planner.json",
+      "sha256": "8213c165349f435e7f2aff29cc089ebb51578f474c243c60fcd2eb7739484327"
+    },
+    {
+      "path": "research/build_v46_priority1_round2_audit.py",
+      "sha256": "f6de0e9c3ebf9cdbd139521a45dff211f35cd0fd25faf3a9122cdd830376cffd"
+    },
+    {
+      "path": "research/build_v47_priority1_round2_audit.py",
+      "sha256": "a0bdbf826e8c1759486acd350de48ad001364f196223aa13c80efdcee0fc3b27"
+    },
+    {
+      "path": "research/evaluator_only/v47_prerun_typography_note_correction_20261018.json",
+      "sha256": "75a5d5fd45160051da1059c2180d115dfc745900e14d009fa4bc2ba148c44d54"
+    },
+    {
+      "path": "research/evaluator_only/v47_priority1_planner_executor_prerun_addendum_20261018.json",
+      "sha256": "5957c377736dd49bb34320004b0f54b9129234728df46b07081898c92c12feda"
+    }
+  ],
+  "prior": {
+    "valid": false,
+    "complete": true,
+    "missing_codes": [],
+    "duplicate_codes": [],
+    "unknown_codes": [],
+    "invalid_numbers": [],
+    "negative_codes": [],
+    "above_one_codes": [],
+    "values": {
+      "10": "0.025",
+      "15": "0.015",
+      "20": "0.1",
+      "25": "0.09",
+      "30": "0.04",
+      "35": "0.09",
+      "40": "0.11",
+      "45": "0.37",
+      "50": "0.02",
+      "55": "0.02",
+      "60": "0.085"
+    },
+    "sum": "0.965",
+    "residual": "-0.035"
+  },
+  "planner": {
+    "contract": {
+      "structure_errors": [],
+      "empty_weights": true,
+      "no_portfolio_calculation": true,
+      "financial_acceptance_unassigned": true,
+      "reported_role_valid": true,
+      "valid": true
+    },
+    "allocation_submitted": false,
+    "allocation_sum": null,
+    "financial_validity": null,
+    "meaning": "Intentional empty planning weights are not a zero vector or successful portfolio."
+  },
+  "revised": {
+    "valid": false,
+    "complete": true,
+    "missing_codes": [],
+    "duplicate_codes": [],
+    "unknown_codes": [],
+    "invalid_numbers": [],
+    "negative_codes": [],
+    "above_one_codes": [],
+    "values": {
+      "10": "0.025",
+      "15": "0.015",
+      "20": "0.1",
+      "25": "0.09",
+      "30": "0.04",
+      "35": "0.09",
+      "40": "0.11",
+      "45": "0.38",
+      "50": "0.02",
+      "55": "0.02",
+      "60": "0.085"
+    },
+    "sum": "0.975",
+    "residual": "-0.025"
+  },
+  "exact_weight_changes": {
+    "10": "0",
+    "15": "0",
+    "20": "0",
+    "25": "0",
+    "30": "0",
+    "35": "0",
+    "40": "0",
+    "45": "0.01",
+    "50": "0",
+    "55": "0",
+    "60": "0"
+  },
+  "exact_total_weight_change": "0.01",
+  "no_normalization_or_cash_imputation": true,
+  "model_calls_by_auditor": 0,
+  "raw_files_changed": 0,
+  "main_model_calls": 0,
+  "priority1_gate_decided_here": false,
+  "limits": [
+    "Planner future intentions are not actual execution.",
+    "Only executor is a new submitted allocation.",
+    "Source reasons and market-number truth are reserved for later priorities.",
+    "Two calls/three audits are not independent samples or the original four-stage workflow.",
+    "One same-case development result cannot establish causal improvement or general reliability."
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": "libera_posthoc_offline_test_invocation_1.0",
+  "started_at_utc": "2026-10-18T09:27:55.744872+00:00",
+  "scope": "Post hoc reproduction after the actual v4.7 diagnostic; this is not the original pre-run test log.",
+  "command": [
+    "C:\\Users\\Insun\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "test_local_sector_plan_execute_diagnostic",
+    "test_local_sector_feedback_diagnostic",
+    "-v"
+  ],
+  "cwd": "C:\\Users\\Insun\\2026libera\\research",
+  "test_execution_attempts_planned": 1,
+  "expected_test_count": 20,
+  "real_model_calls_authorized": 0,
+  "network_scope": "Only test-owned loopback fake HTTP servers; no real model service or external network operation.",
+  "prepared_manifest": {
+    "path": "data/sector_protocol/v47_plan_execute_diagnostic_20261018/manifest.json",
+    "sha256": "7123245e45c547ba8460dedbd5d30f2a175231a67774486542f5ba0db7a0323f"
+  },
+  "fixed_source_hashes_before": {
+    "benchmark_sector_latency.py": "0686444e608033be931922a26886ed4a4b5b0789385215b7b75bfacc4050458b",
+    "compact_sector_prompt.py": "6984ada966ad55c3089fc297ca6342fdb51685bebfe3107769086343bbe68c0d",
+    "local_sector_feedback_diagnostic.py": "ab995d0952bff36548de5ac5983add416f121e37bb715ebcea1ec8326cb91c42",
+    "local_sector_plan_execute_diagnostic.py": "d8f7c29975305ac34cac23a5bde7467010e4b46237eef3dcf6b02b782fcc5b2c",
+    "local_sector_single_case.py": "0b2596a223167136bb37578e86469d50c26e7883305d4db31f43b9ddd10d28d0",
+    "local_sector_structured_case.py": "d7193e69a9525ff640d275f86d7b5deaa18ce033e3d628e416bc2a06699c1a73",
+    "probe_ollama_runtime.py": "2dd48936bbaf8fd090a26f92fd356fec3a11ac81e5b01b39d661ffe72552fddb",
+    "remote_sector_runtime.py": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5",
+    "run_sector_workflow.py": "5625450a4dcbe1aa717c9809bf4955c1ef6b10aab4f0c83ef05dc2eb2c123cfd",
+    "sector_engine.py": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c",
+    "sector_response_schema.py": "bedbf782a041ba7da4f944408dd19596d74cbf78b77bee1c75d12ce71a598c41",
+    "test_local_sector_feedback_diagnostic.py": "633086bf51cceff993007f5cea1a66c57e88b9e95f0a9ef079f8d188a850d8ae",
+    "test_local_sector_plan_execute_diagnostic.py": "69a4e69dc6d7f216ea4804ae8418f44cf148cfb39e2ece27eba861ba995c2fc1",
+    "test_sector_structured_case.py": "32751a6be084d6313f5574aa4c5ac0ea95f91fb9aa7024f6c371fb876866a01c"
+  },
+  "pinned_source_match": true
+}

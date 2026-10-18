@@ -1,0 +1,247 @@
+{
+  "schema_version": "v46_priority1_independent_arithmetic_round2_v1",
+  "created_at_utc": "2026-10-18T09:02:38.791808+00:00",
+  "phase": "priority1",
+  "round": 2,
+  "run_dir": "data/local_sector_runtime/feedback_diagnostic_v46_20261018",
+  "audit_completed": true,
+  "all_passed": false,
+  "scope": "Independent raw arithmetic and existing format contract for one known-failure development correction only.",
+  "failed_checks": [
+    "P1-R2-09",
+    "P1-R2-12",
+    "P1-R2-14"
+  ],
+  "not_observed_checks": [],
+  "check_count": 15,
+  "checks": [
+    {
+      "id": "P1-R2-01",
+      "status": "pass",
+      "detail": "Predecessor content and exact decimal values agree with immutable v4.5 sources."
+    },
+    {
+      "id": "P1-R2-02",
+      "status": "pass",
+      "detail": "Independently verified original sum0.965, residual-0.035 and invalidity; original calculator values unchanged."
+    },
+    {
+      "id": "P1-R2-03",
+      "status": "pass",
+      "detail": "Recorded scope is one diagnostic call with no automatic retry, new four-stage pilot or main call."
+    },
+    {
+      "id": "P1-R2-04",
+      "status": "pass",
+      "detail": "Complete terminal revision and original response are required for correction acceptance."
+    },
+    {
+      "id": "P1-R2-05",
+      "status": "pass",
+      "detail": {
+        "meaning": "Independent strict JSON/schema validation; no prefix repair.",
+        "structure_errors": []
+      }
+    },
+    {
+      "id": "P1-R2-06",
+      "status": "pass",
+      "detail": "Calculator arguments and record equal literal raw model output; no host weight change."
+    },
+    {
+      "id": "P1-R2-07",
+      "status": "pass",
+      "detail": "Exactly eleven canonical public sector codes, once each, with finite numeric raw weights."
+    },
+    {
+      "id": "P1-R2-08",
+      "status": "pass",
+      "detail": "Every model-authored weight satisfies the original long-only0..1 bounds."
+    },
+    {
+      "id": "P1-R2-09",
+      "status": "fail",
+      "detail": {
+        "meaning": "Exact raw sum satisfies the inherited engineering tolerance.",
+        "exact_sum": "0.965",
+        "exact_residual": "-0.035",
+        "tolerance": "0.000001",
+        "tolerance_basis": "Existing serialization precision only; no new effect threshold."
+      }
+    },
+    {
+      "id": "P1-R2-10",
+      "status": "pass",
+      "detail": {
+        "meaning": "Exact independent validity and separately recomputed binary-float sums match recorded calculator.",
+        "binary_float_sum": 0.965
+      }
+    },
+    {
+      "id": "P1-R2-11",
+      "status": "pass",
+      "detail": {
+        "meaning": "All submitted numerical constraints are well-formed/evaluable/satisfied. IDs available in public packet are not proof of source entailment.",
+        "checks": []
+      }
+    },
+    {
+      "id": "P1-R2-12",
+      "status": "fail",
+      "detail": "An actual raw vector change occurs; exact total change equals new sum minus0.965. No minimum sector delta or target sector is prescribed."
+    },
+    {
+      "id": "P1-R2-13",
+      "status": "pass",
+      "detail": "Recorded host repair flags are false; output/argument identity is independently checked above. Full execution provenance belongs to round1."
+    },
+    {
+      "id": "P1-R2-14",
+      "status": "fail",
+      "detail": "Independent numeric acceptance agrees with record and summary, and is true. This does not imply semantic acceptance."
+    },
+    {
+      "id": "P1-R2-15",
+      "status": "pass",
+      "detail": "Runner did not self-authorize the three-review gate or independent human approval."
+    }
+  ],
+  "source_files": [
+    {
+      "path": "data/local_sector_runtime/feedback_diagnostic_v46_20261018/invocation.json",
+      "sha256": "fbdcf55584ebc3b364023910d088c9b4a7dd63b7d4c6d77c6af7ab7b4a472fa0"
+    },
+    {
+      "path": "data/local_sector_runtime/feedback_diagnostic_v46_20261018/manifest_snapshot.json",
+      "sha256": "7be29c06056d0f909d66ee992d93ce3830b544b4d9cf331ede6c636edc1b35ec"
+    },
+    {
+      "path": "data/local_sector_runtime/feedback_diagnostic_v46_20261018/revision_record.json",
+      "sha256": "5878882798e72b1284383b195ce11a78a26fbdce07f3346d1f6490ea19d04339"
+    },
+    {
+      "path": "data/local_sector_runtime/feedback_diagnostic_v46_20261018/revision_transport/http_0001_generation/response.json",
+      "sha256": "e0d2cf4914aa2d0f142bda4dea9ab59fbb9ee3cf93aa71896c1a6220f2f0d595"
+    },
+    {
+      "path": "data/local_sector_runtime/feedback_diagnostic_v46_20261018/summary.json",
+      "sha256": "045f3b55fde038975b2fdce144687a9b13dffd0ca816754a585a2d8852fb25e7"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v45_20261018/fidelity_q2_2026__R1/stage4_record.json",
+      "sha256": "7b20d31a9e70f1cdd21aa0abb02c30c5ea7d6c1cd2b5ecdf5c3db11585188731"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v45_20261018/fidelity_q2_2026__R1/stage4_response.json",
+      "sha256": "d8218ee743275ab6d9d77151969048e39c0988ac848bdf48a19f872ab7777304"
+    },
+    {
+      "path": "data/sector_protocol/evaluation_spec.json",
+      "sha256": "cff49202b9da0da6bc094eb02a55e971afeab8c983a1a8fe3d686af1cff8df7f"
+    },
+    {
+      "path": "data/sector_protocol/v46_feedback_diagnostic_20261018/manifest.json",
+      "sha256": "7be29c06056d0f909d66ee992d93ce3830b544b4d9cf331ede6c636edc1b35ec"
+    },
+    {
+      "path": "data/sector_protocol/v46_feedback_diagnostic_20261018/prior_record.json",
+      "sha256": "7b20d31a9e70f1cdd21aa0abb02c30c5ea7d6c1cd2b5ecdf5c3db11585188731"
+    },
+    {
+      "path": "data/sector_protocol/v46_feedback_diagnostic_20261018/prior_response.json",
+      "sha256": "d8218ee743275ab6d9d77151969048e39c0988ac848bdf48a19f872ab7777304"
+    },
+    {
+      "path": "data/sector_protocol/v46_feedback_diagnostic_20261018/response_schema.json",
+      "sha256": "5d9292759ec0469592a7c67279582e3a48fe3a0a04b7f679561f123734a2ea0a"
+    },
+    {
+      "path": "research/build_v46_priority1_round2_audit.py",
+      "sha256": "f6de0e9c3ebf9cdbd139521a45dff211f35cd0fd25faf3a9122cdd830376cffd"
+    },
+    {
+      "path": "research/evaluator_only/v46_replay_priority1_rubric_addendum_20261018.json",
+      "sha256": "2993b2c379e918f8b713927f89a263e48f74ecd0576b63ccf970314883ed5962"
+    }
+  ],
+  "prior": {
+    "valid": false,
+    "complete": true,
+    "missing_codes": [],
+    "duplicate_codes": [],
+    "unknown_codes": [],
+    "invalid_numbers": [],
+    "negative_codes": [],
+    "above_one_codes": [],
+    "values": {
+      "10": "0.025",
+      "15": "0.015",
+      "20": "0.1",
+      "25": "0.09",
+      "30": "0.04",
+      "35": "0.09",
+      "40": "0.11",
+      "45": "0.37",
+      "50": "0.02",
+      "55": "0.02",
+      "60": "0.085"
+    },
+    "sum": "0.965",
+    "residual": "-0.035"
+  },
+  "revised": {
+    "valid": false,
+    "complete": true,
+    "missing_codes": [],
+    "duplicate_codes": [],
+    "unknown_codes": [],
+    "invalid_numbers": [],
+    "negative_codes": [],
+    "above_one_codes": [],
+    "values": {
+      "10": "0.025",
+      "15": "0.015",
+      "20": "0.1",
+      "25": "0.09",
+      "30": "0.04",
+      "35": "0.09",
+      "40": "0.11",
+      "45": "0.37",
+      "50": "0.02",
+      "55": "0.02",
+      "60": "0.085"
+    },
+    "sum": "0.965",
+    "residual": "-0.035"
+  },
+  "exact_weight_changes": {
+    "10": "0",
+    "15": "0",
+    "20": "0",
+    "25": "0",
+    "30": "0",
+    "35": "0",
+    "40": "0",
+    "45": "0",
+    "50": "0",
+    "55": "0",
+    "60": "0"
+  },
+  "exact_total_weight_change": "0",
+  "schema_or_parse_error": null,
+  "decision_scope": "This audit alone never sets priority1 accepted. Round1 provenance and round3 correction-claim truth must also pass for the same settled summary and revision record.",
+  "not_claimed": [
+    "Optimal or source-exact weights",
+    "Source rationale quality",
+    "Historical market-number accuracy",
+    "Four-stage workflow repair",
+    "R1/R4 causal effect",
+    "General model reliability",
+    "Main readiness or authorization"
+  ],
+  "model_calls_by_auditor": 0,
+  "raw_files_changed": 0,
+  "main_model_calls": 0,
+  "no_normalization_or_cash_imputation": true,
+  "independence": "Fraction arithmetic and schema validation are implemented here without importing the runner, portfolio engine or model client. No hidden labels are used."
+}

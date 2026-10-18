@@ -1,0 +1,185 @@
+{
+  "protocol_version": "4.5",
+  "created_at_utc": "2026-10-18T08:15:57.111978+00:00",
+  "scope": "One versioned exploratory four-stage case and three completed self-review processes; completion, financial validity and semantic quality remain separate.",
+  "observed_outcome": {
+    "workflow_stages": 4,
+    "attempted_generation_calls": 4,
+    "final_allocation_valid": false,
+    "original_label_endpoint": {
+      "correct": 11,
+      "expected": 11,
+      "accuracy_exact": "1",
+      "reason": "Exact original-source label, unique sector row and correct source identity, per the unchanged evaluation specification.",
+      "conditional_semantic_evaluability": "requires_separate_semantic_review_not_established_by_labels"
+    },
+    "technical_round1_pass": true,
+    "round2_consistency_findings": 0,
+    "semantic_review_conclusion": "네 번의 응답은 모두 끝났고 원래 산업 등급은 최종 11/11개가 맞았습니다. 그러나 최종 비중 합계는 96.5%로 전액 배분 조건을 어겼고, 모델은 오히려 합계 조건을 충족했다고 잘못 설명했습니다. 잘못된 위험 수치와 일부 비중 방향 설명도 남았습니다."
+  },
+  "findings": [
+    {
+      "statement": "v4.4의 입력 재출력·시간 제한 실패를 보존하고, 같은 예비 사례에 명시적 응답 스키마를 API와 단계별 프롬프트에 함께 제공했다. FinVector의 명시적 스키마 조건과 Ollama 공식 구현을 근거로 삼되, 두 변경의 효과를 따로 식별하거나 금융 판단 개선을 보장한 것으로 해석하지 않는다.",
+      "evidence": [
+        "research/v45_revision_reference_20261018.html",
+        "data/sector_protocol/v45_single_case_registration_20261018.json"
+      ]
+    },
+    {
+      "statement": "실제 생성 요청 4회 중 완료 응답 4회, 완료 단계 4/4를 기록했다. 정리까지 포함한 전체 시간은 20.77분이다. 재시도 0회이며 단계별 원문과 계산 결과를 보존했다. 이는 같은 한 사례의 실행 관측이고 독립된 네 사례가 아니다.",
+      "evidence": [
+        "data/local_sector_runtime/single_case_v45_20261018/summary.json",
+        "research/v45_single_case_round1_20261018.json"
+      ]
+    },
+    {
+      "statement": "1차 실행 검증은 287개 항목을 확인했다. 실패 항목 0개, 미관측 항목 0개다. 입력 수치·공개 문서·단계별 응답 구조·이전 답변 및 계산 피드백·종료 상태를 대조했다. 형식과 이력 검증은 전략 타당성의 판정이 아니다.",
+      "evidence": [
+        "research/v45_single_case_round1_20261018.json",
+        "research/v45_single_case_round1_20261018.html"
+      ]
+    },
+    {
+      "statement": "2차 독립 계산에서 제출 비중의 정확한 합계는 1단계 193/200, 2단계 193/200, 3단계 193/200, 4단계 193/200이다. 기존 계산기가 기록한 최종 비중 유효성은 False이고 기록 간 불일치 발견은 0건이다. 원문 숫자를 정규화하거나 반올림해 오류를 지우지 않는다.",
+      "evidence": [
+        "research/v45_single_case_round2_20261018.json",
+        "research/v45_single_case_round2_20261018.html"
+      ]
+    },
+    {
+      "statement": "최종 원래 등급 추출은 기존 고정 분모 기준 11/11이다. 이는 원문 평가 단어를 보존한 정도이며, 비중의 적합성이나 근거 설명의 진실성까지 뜻하지 않는다. 공개 전망에는 유일한 정답 비중이 없어 정확 비중 일치율을 임의로 만들지 않았다.",
+      "evidence": [
+        "research/v45_single_case_round2_20261018.json",
+        "research/v45_single_case_round3_20261018.json",
+        "data/sector_protocol/evaluation_spec.json"
+      ]
+    },
+    {
+      "statement": "3차 원문·논리 검토: 원래 등급과 기본 이유는 보존됐습니다. 모든 단계에서 11개 등급·동일 산업의 근거 ID가 유지됐고, 해석란의 이유는 보인 패킷을 따랐습니다. 이는 출처 추출의 성공이며 배분·전략 설명의 정확성을 보장하지 않습니다.",
+      "evidence": [
+        "research/v45_single_case_round3_20261018.json",
+        "research/v45_single_case_round3_20261018.html"
+      ]
+    },
+    {
+      "statement": "3차 원문·논리 검토: 완전투자 위반을 세 번의 피드백 뒤에도 고치지 않았습니다. 네 단계의 비중은 모두 같고 합계는 0.965입니다. 2·3·4단계 입력에는 직전 계산기의 valid=false와 잔차 −0.035가 있었지만 최종 답변은 처음부터 합계 1 조건을 충족했다고 썼습니다. 남은 3.5%를 임의로 현금으로 넣거나 전체 비중을 보정하지 않았습니다.",
+      "evidence": [
+        "research/v45_single_case_round3_20261018.json",
+        "research/v45_single_case_round3_20261018.html"
+      ]
+    },
+    {
+      "statement": "3차 원문·논리 검토: ‘비중 확대에 부합한다’는 설명과 원안이 다릅니다. 최종 소비재 선택재 9%, 금융 11%, 정보기술 37%는 제공된 공통 기준의 약 9.3093%, 11.8118%, 38.0380%보다 낮습니다. 모델은 이 세 비중이 원문 확대 의견과 일치한다고 설명했습니다. 다른 판단을 선택하는 것은 허용되지만, 그런 이탈을 인정하거나 설명하지 않았습니다.",
+      "evidence": [
+        "research/v45_single_case_round3_20261018.json",
+        "research/v45_single_case_round3_20261018.html"
+      ]
+    },
+    {
+      "statement": "3차 원문·논리 검토: 시장 수치를 잘못 읽은 오류가 반복됐습니다. 정보기술의 입력 일별 변동성은 0.0212196234인데 모든 단계에서 0.0113으로 썼습니다. 1단계의 유틸리티 0.0084도 입력 0.0112715670과 다릅니다. 과거 변동성이 미래를 보장하지 않는다는 제한 설명은 맞지만 숫자 자체는 틀렸습니다.",
+      "evidence": [
+        "research/v45_single_case_round3_20261018.json",
+        "research/v45_single_case_round3_20261018.html"
+      ]
+    },
+    {
+      "statement": "3차 원문·논리 검토: 대안은 있었지만 비교의 근거는 불완전했습니다. 2–4단계는 정보기술을 40%로, 부동산을 7%로 바꾸는 대안을 제시했습니다. 전체 대안 벡터나 위험 계산은 없고 ‘가장 강한 기초여건’이라는 비교 서열, 가치평가 분산에서 분산투자 효과로 넘어가는 설명은 제시된 근거가 충분하지 않습니다. 수치 대안의 존재와 타당한 비교를 구분했습니다.",
+      "evidence": [
+        "research/v45_single_case_round3_20261018.json",
+        "research/v45_single_case_round3_20261018.html"
+      ]
+    },
+    {
+      "statement": "3차 원문·논리 검토: 기관의 숨은 목적이나 숫자 상한을 만들지는 않았습니다. 추가 제약은 비어 있고 위험회피계수·고객별 위험 한도를 새로 제시하지 않았습니다. 다만 unresolved도 계속 비어 있어 이미 지적된 예산 위반과 과거 문서·후행 시장자료의 한계가 해결되지 않은 채 남았습니다.",
+      "evidence": [
+        "research/v45_single_case_round3_20261018.json",
+        "research/v45_single_case_round3_20261018.html"
+      ]
+    },
+    {
+      "statement": "이 사례에서는 기관 문서의 등급을 정확히 옮기는 일과 그 판단을 일관된 산업 배분으로 연결하는 일이 구별됐습니다. 소논문에는 ‘등급 추출은 정확했지만, 원안 제약과 수치·설명 연결의 오류가 계산 피드백 뒤에도 남은 탐색 사례’로 제시할 수 있습니다. 반복 개발한 Fidelity R1 한 사례이므로 기관 간 차이, R1/R4 효과, 전략 수렴, 일반적인 모델 능력이나 미래 수익률에 대한 결론으로 확대할 수는 없습니다.",
+      "evidence": [
+        "research/v45_single_case_round3_20261018.json"
+      ]
+    },
+    {
+      "statement": "이전 v4.4 실패는 기존 등급 추출 지표에서 0/11로 포함하고, 완성 답변이 없어 수치·의미를 평가할 수 없었다는 조건부 판단과 구분한다. 실패를 분모에서 삭제하지 않으며 서로 다른 프로토콜 버전을 같은 고정 조건의 결과로 합산하지 않는다.",
+      "evidence": [
+        "research/v45_single_case_round2_20261018.json",
+        "data/sector_protocol/v45_single_case_registration_20261018.json"
+      ]
+    },
+    {
+      "statement": "본과제 호출은 0회이고 조건도 아직 동결하지 않았다. 이번에 다시 사용한 Fidelity Q2/R1은 개발용 예비 사례다. 나머지 예비 사례와 R4 절차, 독립 사람의 원문 검토, 본과제의 별도 동결·실행이 남아 있다. 세 차례 자체 검증을 사람의 독립 검토로 표시하지 않는다.",
+      "evidence": [
+        "data/local_sector_runtime/single_case_v45_20261018/summary.json",
+        "research/v45_single_case_round3_20261018.json"
+      ]
+    }
+  ],
+  "source_files": [
+    {
+      "path": "data/local_sector_runtime/single_case_v45_20261018/summary.json",
+      "sha256": "e06b9877d288b7a124769528a1a0d475723501477465a515dec9de406e1c9e58"
+    },
+    {
+      "path": "data/sector_protocol/evaluation_spec.json",
+      "sha256": "cff49202b9da0da6bc094eb02a55e971afeab8c983a1a8fe3d686af1cff8df7f"
+    },
+    {
+      "path": "data/sector_protocol/v45_single_case_registration_20261018.json",
+      "sha256": "8cf54a9aaaad2ad89e595174a6bfda85b0a307b99f932ca1e0ae5274081b34da"
+    },
+    {
+      "path": "research/build_sector_revision_v45.py",
+      "sha256": "c174acaeea505e6bbd5ee1b13dd6a941be6e1f38e575cfe85639f19694cfb718"
+    },
+    {
+      "path": "research/local_sector_structured_case.py",
+      "sha256": "d7193e69a9525ff640d275f86d7b5deaa18ce033e3d628e416bc2a06699c1a73"
+    },
+    {
+      "path": "research/sector_response_schema.py",
+      "sha256": "bedbf782a041ba7da4f944408dd19596d74cbf78b77bee1c75d12ce71a598c41"
+    },
+    {
+      "path": "research/summarize_v45_single_case.py",
+      "sha256": "c2887d6e10385c3a3004abeda5548dc6646dcb6e8b88036b1ff856912fb0736f"
+    },
+    {
+      "path": "research/v45_revision_reference_20261018.html",
+      "sha256": "a3f9dd7c10758002584b162b7e909e5fd866eabf32b4424d5d3734f714e294aa"
+    },
+    {
+      "path": "research/v45_revision_reference_20261018.json",
+      "sha256": "57a9c86c2bbc08a1006d6339bcd3303194ae8975cab14d6c5603a3191122dd79"
+    },
+    {
+      "path": "research/v45_single_case_round1_20261018.html",
+      "sha256": "db99db1fec5357f611f806cc56a7c15c7889534f55b833b219828192d4f446e1"
+    },
+    {
+      "path": "research/v45_single_case_round1_20261018.json",
+      "sha256": "229dfa486aef33005ee71442a033d8c70b67616d6c374cdb7ebdd2b4d5656f5b"
+    },
+    {
+      "path": "research/v45_single_case_round2_20261018.html",
+      "sha256": "75fd3ccac3c827d34c07352460996a4447a7f051e25ee73a83b4c6df5f6b005e"
+    },
+    {
+      "path": "research/v45_single_case_round2_20261018.json",
+      "sha256": "77c167495b05d7d47143455ac4cfffa1f6da166bbeaa749e5c642993ed582e7a"
+    },
+    {
+      "path": "research/v45_single_case_round3_20261018.html",
+      "sha256": "edbfdcdab103c707b20352cf9682f8644080302b2919cb02fa7babf6ad422e8f"
+    },
+    {
+      "path": "research/v45_single_case_round3_20261018.json",
+      "sha256": "0164fdc66fecaea134160c1d5347066113bdc93a70d27d0ef5fae4c62cb5082c"
+    }
+  ],
+  "model_calls_by_synthesis": 0,
+  "main_frozen": false,
+  "independent_human_review_complete": false
+}

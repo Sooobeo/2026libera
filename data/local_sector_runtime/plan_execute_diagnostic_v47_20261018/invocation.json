@@ -1,0 +1,28 @@
+{
+  "started_at_utc": "2026-10-18T09:16:55.295905+00:00",
+  "origin": "http://127.0.0.1:11434",
+  "server_log": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\service_20261018T063629957Z\\server.stderr.log",
+  "manifest": {
+    "path": "C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v47_plan_execute_diagnostic_20261018\\manifest.json",
+    "sha256": "7123245e45c547ba8460dedbd5d30f2a175231a67774486542f5ba0db7a0323f"
+  },
+  "registration": {
+    "path": "C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v47_plan_execute_diagnostic_registration_20261018.json",
+    "sha256": "b46c284b8becb86eb7f62c518d6aaed8c4be458b98a228185dcfa7bcbc2d0a8a"
+  },
+  "controls": {
+    "planner_message_count": 5,
+    "executor_message_count": 7,
+    "planner_contract": "Existing stage1 API schema plus parent requirement weights==[]; its empty array is a planning artifact, not a zero-sum portfolio. A full final vector in narrative remains a separate semantic contract to review.",
+    "executor_contract": "Existing stage4 API schema with 11 weights; the model alone writes the allocation. The host never executes or fills in the plan.",
+    "history": "Original SYSTEM/public stage1, complete v46 final answer, original calculator values, and measured v45-to-v46 deltas. Old intermediate assistant history is absent; new planner content is appended verbatim.",
+    "feedback_serialization": "The v46 calculator_result is newly serialized into a user message; it was not sent after that previous diagnostic.",
+    "transport": "Unchanged v45 supervised worker, model/options/pins/rendering/monitoring. Stage1/stage4 select schemas only, not actual original workflow stages.",
+    "deadline": "Each supervised child has the existing 900-second combined setup/metadata/render/generation bound. Cleanup and OS kill/scheduling overhead are outside.",
+    "legacy_worker_counts": "Each reused worker labels its call pilot_model_calls; this parent counts only diagnostic_generation_calls, with four_stage_pilot_calls=main_model_calls=0.",
+    "stopping": "No retry or replacement. Invalid planner weights preserve the raw plan and stop before executor; incomplete/capped/failed calls retain raw evidence.",
+    "interpretation": "Plan prompting, an additional call and new context arrangement change together; success identifies none of their separate causal effects or original R1/R4 repair.",
+    "assessment": "Numeric acceptance does not approve priority1, semantics, later priorities or main execution; three independent checks remain required."
+  },
+  "purpose": "two_call_development_plan_then_execute_on_preserved_v46_failure"
+}
