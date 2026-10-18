@@ -1,0 +1,513 @@
+{
+  "schema_version": "v44_single_case_semantic_audit_v1",
+  "created_at_utc": "2026-10-18T07:15:02.971834+00:00",
+  "reviewer": "independent_assistant_round3",
+  "audit_status": "completed",
+  "case_status": "incomplete_hard_deadline",
+  "semantic_evaluation_status": "not_evaluable_no_completed_response",
+  "research_task_pass": false,
+  "human_semantic_approval": false,
+  "main_ready": false,
+  "case_id": "fidelity_q2_2026__R1",
+  "pre_run_rubric": {
+    "path": "research/evaluator_only/fidelity_q2_r1_prerun_reference_20261018.json",
+    "sha256": "8022c19d7b5e9654139996d88cac230cb12d29b30fcf7e817850203c02c35f38",
+    "bytes": 26413
+  },
+  "summary": {
+    "status": "hard_deadline",
+    "protocol_version": "4.4",
+    "case_id": "fidelity_q2_2026__R1",
+    "planned_cases": 1,
+    "planned_stages": 4,
+    "main_model_calls": 0,
+    "automatic_retries": 0,
+    "human_semantic_pass": false,
+    "main_freeze": false,
+    "error_type": "StageStopped",
+    "error": "Stage stopped: hard_deadline",
+    "finished_at_utc": "2026-10-18T07:10:56.856859+00:00",
+    "wall_seconds": 903.6723634000082,
+    "render_requests_attempted": 1,
+    "generation_requests_attempted": 1,
+    "pilot_model_calls": 1,
+    "http_streams_completed": 0,
+    "unexpected_generation_evidence_in_render": 0,
+    "stage_transports_entered": 1,
+    "completed_workflow_stages": 0,
+    "generation_stages_not_started": [
+      2,
+      3,
+      4
+    ],
+    "stage_records": [
+      {
+        "stage": 1,
+        "workflow_record_present": false,
+        "generation_request_recorded": true
+      },
+      {
+        "stage": 2,
+        "workflow_record_present": false,
+        "generation_request_recorded": false
+      },
+      {
+        "stage": 3,
+        "workflow_record_present": false,
+        "generation_request_recorded": false
+      },
+      {
+        "stage": 4,
+        "workflow_record_present": false,
+        "generation_request_recorded": false
+      }
+    ],
+    "cases_with_generation_attempt": 1,
+    "completed_cases": 0
+  },
+  "timing": {
+    "whole_script_wall_seconds": 903.6723634000082,
+    "supervised_child_elapsed_seconds": 900.9815200000012,
+    "supervised_deadline_seconds": 900,
+    "scope_note": "Child setup, metadata, renderer and generation share the deadline. Cleanup and process overhead are outside it; wall times are not output throughput."
+  },
+  "partial_stream": {
+    "raw_bytes": 818079,
+    "parseable_transport_events": 6191,
+    "transport_event_count_is_not_token_count": true,
+    "done_true_events": 0,
+    "content_characters": 7681,
+    "thinking_characters": 0,
+    "first_recorded_event_utc": "2026-10-18T06:56:45.6749422Z",
+    "last_recorded_event_utc": "2026-10-18T07:10:53.3934833Z",
+    "complete_json": false,
+    "parse_error": {
+      "type": "JSONDecodeError",
+      "message": "Expecting ',' delimiter: line 44 column 211 (char 7681)",
+      "position": 7681
+    },
+    "required_response_keys_prefix_occurrences": {
+      "source_id": 0,
+      "interpretations": 0,
+      "weights": 0,
+      "alternatives": 0,
+      "risk_discussion": 0,
+      "unresolved": 0,
+      "submitted_constraints": 0
+    },
+    "prefix_occurrences_are_not_submission_detection": true,
+    "input_repetition": {
+      "scope": "individually completed field values only",
+      "matching_fields": [
+        {
+          "field": "stage",
+          "exact_original_value": true,
+          "start_char": 4,
+          "end_char": 14
+        },
+        {
+          "field": "task",
+          "exact_original_value": true,
+          "start_char": 18,
+          "end_char": 137
+        },
+        {
+          "field": "annualization_trading_days",
+          "exact_original_value": true,
+          "start_char": 164,
+          "end_char": 197
+        },
+        {
+          "field": "annualized_volatility_diagnostic",
+          "exact_original_value": true,
+          "start_char": 203,
+          "end_char": 468
+        },
+        {
+          "field": "asof_scope",
+          "exact_original_value": true,
+          "start_char": 474,
+          "end_char": 720
+        },
+        {
+          "field": "baseline_annualized_volatility_diagnostic",
+          "exact_original_value": true,
+          "start_char": 726,
+          "end_char": 790
+        },
+        {
+          "field": "baseline_derivation",
+          "exact_original_value": true,
+          "start_char": 796,
+          "end_char": 1030
+        },
+        {
+          "field": "baseline_id",
+          "exact_original_value": true,
+          "start_char": 1036,
+          "end_char": 1084
+        },
+        {
+          "field": "benchmark_label",
+          "exact_original_value": true,
+          "start_char": 1090,
+          "end_char": 1147
+        },
+        {
+          "field": "correlation",
+          "exact_original_value": true,
+          "start_char": 1153,
+          "end_char": 3651
+        },
+        {
+          "field": "covariance",
+          "exact_original_value": true,
+          "start_char": 3657,
+          "end_char": 6612
+        },
+        {
+          "field": "covariance_unit",
+          "exact_original_value": true,
+          "start_char": 6618,
+          "end_char": 6667
+        },
+        {
+          "field": "cutoff_exclusive",
+          "exact_original_value": true,
+          "start_char": 6673,
+          "end_char": 6705
+        },
+        {
+          "field": "daily_mean_return",
+          "exact_original_value": true,
+          "start_char": 6711,
+          "end_char": 6983
+        },
+        {
+          "field": "daily_volatility",
+          "exact_original_value": true,
+          "start_char": 6989,
+          "end_char": 7250
+        },
+        {
+          "field": "interpretation",
+          "exact_original_value": true,
+          "start_char": 7256,
+          "end_char": 7426
+        },
+        {
+          "field": "last_observation_date",
+          "exact_original_value": true,
+          "start_char": 7432,
+          "end_char": 7469
+        }
+      ],
+      "matching_complete_field_count": 17,
+      "incomplete_fields": [
+        "lookback_compound_return"
+      ],
+      "whole_input_reproduction_claimed": false
+    },
+    "prefix_excerpt": "{\n  \"stage\": 1,\n  \"task\": \"Interpret the common market information and any institution document supplied so far. Identify uncertainties.\",\n  \"common_market\": {\n    \"annualization_trading_days\": 252,\n    \"annualized_volatility_diagnostic\": [",
+    "suffix_excerpt": ": [0.04287667814038709, -0.022012639294049507, 0.03848895413108133, -0.019155630332708284, 0.04873642549989987, 0.10238502092729651, 0.08205961595157252, 0.14992022077727252, -0.04",
+    "final_eval_count": null,
+    "final_prompt_eval_count": null,
+    "quality_inference": "none"
+  },
+  "evaluation": {
+    "eligible_completed_claims": 0,
+    "claim_assessments": [],
+    "category_counts": {
+      "supported": null,
+      "contradicted": null,
+      "not_stated": null,
+      "uncertain": null
+    },
+    "absence_rule": "Missing or incomplete output is unobserved/not submitted. It is not a not_stated or contradicted source claim.",
+    "dimensions": [
+      {
+        "id": "source_labels",
+        "status": "not_evaluable_no_completed_response",
+        "pre_run_rule": "For final stage4, compare all11 unique GICS sector entries with the original Strategist View legend/row, not time-horizon factor signs or past performance. Missing/duplicate entries remain visible in the mechanical check.",
+        "reference": "Fidelity PDFp3; original source annotation; existing evaluation_spec primary_candidate"
+      },
+      {
+        "id": "citation_entailment",
+        "status": "not_evaluable_no_completed_response",
+        "pre_run_rule": "Check that each citation belongs to the same source and sector and that its full passage supports the actual attached claim. A valid ID alone is insufficient. Assess unreferenced factual clauses and irrelevant citations separately.",
+        "reference": "ALCE2023 sections3.3 and6; source packet evidence IDs"
+      },
+      {
+        "id": "reason_fidelity",
+        "status": "not_evaluable_no_completed_response",
+        "pre_run_rule": "Compare reasons with same-row source comments and preserve conditional wording. Do not turn potential downside support into guaranteed protection. Do not infer positive whole-sector Communication Services judgment from a positive fundamentals cell or its technology-like subindustries.",
+        "reference": "Fidelity PDFp3 Comments and separate Strategist View column"
+      },
+      {
+        "id": "benchmark_and_weight_semantics",
+        "status": "not_evaluable_no_completed_response",
+        "pre_run_rule": "Overweight/Underweight are relative to a benchmark, not a ranking of absolute weights. Report active weight w_s-b_s continuously against the declared common benchmark. Neutral does not require exact equality.",
+        "reference": "Fidelity PDFp2 footnote; market.baseline_id; evaluation_spec separate_dimensions.Fidelity_tilts"
+      },
+      {
+        "id": "scope_and_invented_mandates",
+        "status": "not_evaluable_no_completed_response",
+        "pre_run_rule": "Keep author/firm/client roles separate. No source-based gamma, client risk appetite, mandatory caps, minimums, target returns, horizons or optimized institutional weights unless actually stated in supplied evidence. Task rules may be followed but must not be attributed to Fidelity.",
+        "reference": "Fidelity PDFp2 scope footnote; p18 general disclaimer (auditor context only); packet task_scope"
+      },
+      {
+        "id": "market_and_risk_claims",
+        "status": "not_evaluable_no_completed_response",
+        "pre_run_rule": "Observed ETF returns/covariance describe the pinned historical sample. Volatility is not a probability of loss, downside-only risk, or forecast guarantee. Any mean/covariance/volatility figure must use declared units and any disclosed annualization.",
+        "reference": "market.interpretation/units/asof_scope; existing evaluation_spec risk; Fidelityp2 andp18 historical-performance caution"
+      },
+      {
+        "id": "strategy_link_and_deviations",
+        "status": "not_evaluable_no_completed_response",
+        "pre_run_rule": "For each nontrivial allocation rationale, identify the source premise, common-data premise and stated decision/tradeoff. A deviation from a source tendency is not automatically wrong if the original view is preserved and the model explains its choice using supplied evidence.",
+        "reference": "Pinned SYSTEM decision contract; Fidelityp2 individualized goals/tolerance scope; OpenPM raw-versus-post-critic separation; PortBench distinct allocation/exposure/outcome dimensions"
+      },
+      {
+        "id": "temporal_and_universe_scope",
+        "status": "not_evaluable_no_completed_response",
+        "pre_run_rule": "Treat this as a retrospective source-conditioned case. Fidelityp3 view is as of2026-03-31, while common market is later and its baseline date is2026-06-30. The source top3000 universe is not identical to SP500-sector ETF proxies.",
+        "reference": "Source packet dates; PDFp2/p3; market cutoff and classification_scope"
+      }
+    ],
+    "source_rating_accuracy": null,
+    "citation_entailment_score": null,
+    "portfolio_weights": null,
+    "benchmark_tilts": null,
+    "portfolio_risk": null,
+    "strategy_quality": null,
+    "composite_score": null,
+    "stage1_weight_rule": "Stages 1 and 2 may legitimately leave weights empty. The present failure is absence of a completed interpretation/response, not absence of an early allocation.",
+    "input_values_not_model_decisions": true,
+    "no_exact_weight_gold_or_invented_risk_cap": true
+  },
+  "topic_connection": {
+    "intended_construct": "Whether an institution-document interpretation is preserved through an evidence-linked industry allocation workflow.",
+    "observed_result": "One attempted first-stage generation did not deliver a completed interpretation within its deadline. No portfolio or four-stage trajectory is observed.",
+    "not_identified": [
+      "institution-specific strategy quality",
+      "source-label fidelity of a completed answer",
+      "R1 versus R4 effect",
+      "cross-institution similarity or convergence",
+      "portfolio performance"
+    ],
+    "source_error_vs_decision": "Neither an institutional factual error nor an independent allocation choice can be assigned from this unfinished input-repeating prefix.",
+    "next_revision_limit": "Input repetition motivates reviewing task adherence, but this one incomplete run does not establish its cause or validate a prompt, model, or runtime remedy. Any revision must be separately recorded before another run."
+  },
+  "scope_limits": [
+    "Audit checks passing means the audit is evidence-consistent, not that the research task passed.",
+    "Offline reference annotations and the original PDF are evaluator-only; full-PDF facts absent from the visible packet are not missing model requirements.",
+    "No completed response was repaired, rescored as a synthetic portfolio, or replaced by its input benchmark.",
+    "This review makes no claim of human validation, future risk prediction, financial strategy failure, or successful four-stage execution.",
+    "Earlier 32-output-token engineering diagnostics are different tasks and do not validate an 8192-token research answer."
+  ],
+  "checks": [
+    {
+      "id": "pre_run_reference_unchanged",
+      "status": "pass",
+      "meaning": "All original sources and offline rubric dependencies match their pre-run hashes."
+    },
+    {
+      "id": "terminal_failed_case_retained",
+      "status": "pass",
+      "meaning": "One attempted case is retained; no replacement or retry is counted."
+    },
+    {
+      "id": "no_completed_response",
+      "status": "pass",
+      "meaning": "No completed workflow record exists."
+    },
+    {
+      "id": "later_stages_unstarted",
+      "status": "pass",
+      "meaning": "Stages 2–4 are unobserved, not three independently failed semantic answers."
+    },
+    {
+      "id": "correct_visible_source",
+      "status": "pass",
+      "meaning": "The actual request included the unchanged Fidelity Q2 public packet with 12 passages; hidden annotations are not used as required model input."
+    },
+    {
+      "id": "actual_stream_integrity",
+      "status": "pass",
+      "meaning": "All nonempty raw stream lines parse as transport events; this is not a generated token count."
+    },
+    {
+      "id": "no_terminal_event",
+      "status": "pass",
+      "meaning": "No terminal done:true event exists in the generation stream."
+    },
+    {
+      "id": "correct_stream_model",
+      "status": "pass",
+      "meaning": "All observed response events name the requested model."
+    },
+    {
+      "id": "partial_not_submitted_json",
+      "status": "pass",
+      "meaning": "A partial content stream exists, but it is not a complete JSON answer."
+    },
+    {
+      "id": "required_keys_prefix_diagnostic_only",
+      "status": "pass",
+      "meaning": "The seven requested keys are absent in the available prefix. This does not manufacture an answer or a semantic score."
+    },
+    {
+      "id": "subset_input_repetition_verified",
+      "status": "pass",
+      "meaning": "Seventeen complete field values match the actual original input; an additional list is unfinished. No whole-input-copy claim is made."
+    },
+    {
+      "id": "no_research_completion_or_freeze",
+      "status": "pass",
+      "meaning": "Main remains unrun and unfrozen, with no semantic approval."
+    },
+    {
+      "id": "cleanup_observed",
+      "status": "pass",
+      "meaning": "Cleanup reports successful unload and an empty resident-model list at that observation."
+    },
+    {
+      "id": "raw_artifacts_unchanged_during_review",
+      "status": "pass",
+      "meaning": "All referenced files remain byte-identical during this read-only audit."
+    }
+  ],
+  "check_count": 14,
+  "evidence_files": {
+    "research/evaluator_only/fidelity_q2_r1_prerun_reference_20261018.json": {
+      "sha256": "8022c19d7b5e9654139996d88cac230cb12d29b30fcf7e817850203c02c35f38",
+      "bytes": 26413
+    },
+    "research/build_v44_round3_audit.py": {
+      "sha256": "2b1afd515bc10e4f58ab5e946028e3eeff0b2221268d87e9992bc1e96818f909",
+      "bytes": 18969
+    },
+    "tmp/pdfs/sector_documents/fidelity_q2_2026.pdf": {
+      "sha256": "d11c4403f90e7bbd1d06a7fa83c91673d8c772be325042d4d1f01fab4e7076d6",
+      "bytes": 321996
+    },
+    "tmp/pdfs/sector_documents/fidelity_q2_2026_2.png": {
+      "sha256": "f3368fcdec2581ff14bcf6c1b9d1de4e8586165298453f20405372fa0a6f1d56",
+      "bytes": 180650
+    },
+    "tmp/pdfs/sector_documents/fidelity_q2_2026_3.png": {
+      "sha256": "316931d86edf4475e45605ba55c6db5e47e682464a49dc10437b77b73740962d",
+      "bytes": 162695
+    },
+    "tmp/pdfs/sector_documents/fidelity_q2_2026_17.png": {
+      "sha256": "e7698f86e98821fecb1cc6e8b9440b5893924b3301ac4608ae4d56288ee3a9aa",
+      "bytes": 170695
+    },
+    "tmp/pdfs/sector_documents/fidelity_q2_2026_18.png": {
+      "sha256": "2767d86a74b844bce61edf6ebd9483c2d5f6310f606e1f9b44f68040ce9fba5d",
+      "bytes": 217728
+    },
+    "data/sector_documents/source_manifest.json": {
+      "sha256": "d1af00ee2a1c5e3ba4ca9949b5f9427a9102a373ff19afa0e6c4309769627b28",
+      "bytes": 11536
+    },
+    "data/sector_documents/model_packets.jsonl": {
+      "sha256": "520bed87396eb815c87f362712a6ec39c0275076f9ef4c5d59ef5a7cbbe6afc7",
+      "bytes": 22728
+    },
+    "data/sector_documents/packets/pilot/fidelity_q2_2026.json": {
+      "sha256": "2f506f346ebfc1be0f327163eb016dcec649e6301e4494d6a9230ab86c28d406",
+      "bytes": 6688
+    },
+    "data/sector_documents/evaluator_only/reference_annotations.jsonl": {
+      "sha256": "3a83cbb386442f3263357a5e67cb1f52c59114c28cc81e636b28e111c3509ffc",
+      "bytes": 23659
+    },
+    "data/sector_market/market_input.json": {
+      "sha256": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f",
+      "bytes": 15480
+    },
+    "data/sector_protocol/evaluation_spec.json": {
+      "sha256": "cff49202b9da0da6bc094eb02a55e971afeab8c983a1a8fe3d686af1cff8df7f",
+      "bytes": 9398
+    },
+    "data/local_sector_runtime/single_case_v44_20261018/summary.json": {
+      "sha256": "c8c2f88e0a73322d32b6e8be1585a2a4f9b2bc15a0afa37aa93e0f66a17ce1e2",
+      "bytes": 1319
+    },
+    "data/local_sector_runtime/single_case_v44_20261018/runtime.json": {
+      "sha256": "a8773b350570e9518fefa59ad5be017efd7067bbdc26d31e855f75dc3ff79aaa",
+      "bytes": 929
+    },
+    "data/local_sector_runtime/single_case_v44_20261018/invocation.json": {
+      "sha256": "8cafaecf7d57d9b587653e8465748c70b8178b531d683faf12979d4b0a9dedc8",
+      "bytes": 1800
+    },
+    "data/local_sector_runtime/single_case_v44_20261018/run_failure.json": {
+      "sha256": "6db480d60410b3c2dad126f362eb790a23eaae74021cbfdf63e2c59dedb59fea",
+      "bytes": 154
+    },
+    "data/local_sector_runtime/single_case_v44_20261018/manifest_snapshot.json": {
+      "sha256": "6fd367154e352bdc0167c8af14b1959589ddde01cd5b99e62dbec953f1c963ab",
+      "bytes": 6223
+    },
+    "data/local_sector_runtime/single_case_v44_20261018/fidelity_q2_2026__R1/failure.json": {
+      "sha256": "bd4eff485049256ed2888628084cb6fc1a78daf7d59cd9960d19ce2a548f5a81",
+      "bytes": 190
+    },
+    "data/local_sector_runtime/single_case_v44_20261018/fidelity_q2_2026__R1/stage1_request.json": {
+      "sha256": "021aa18ec6b495a6c6323f4b7fae66279340cd1f8ba18f6109b98f768abb5c70",
+      "bytes": 20568
+    },
+    "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/authoritative_body.bin": {
+      "sha256": "120707dc3112400046519b1e9012ea990bab4ed9e108a8f6a6c25572efc773ab",
+      "bytes": 17148
+    },
+    "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/authoritative_body.json": {
+      "sha256": "fa9e4b82bd14272023d9dce1b08da7e04eb6f03193ad9599928bf1893b92b1e2",
+      "bytes": 17302
+    },
+    "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/projection_validation.json": {
+      "sha256": "d77fbbc35933121dfc61ea2b248d7941b642ea38ce1cc8a093247860fc0efcf1",
+      "bytes": 328
+    },
+    "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/supervisor_result.json": {
+      "sha256": "39bfc184554fae47ff124a64445679bcc7b7db85991d82a7dd0f066e4c967cbc",
+      "bytes": 314
+    },
+    "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/unload_and_residency.json": {
+      "sha256": "61137646ed569e348e30c2e02da9e4470919334d1a184747840182ea36d9220d",
+      "bytes": 382
+    },
+    "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/pin_before_generation.json": {
+      "sha256": "95b93267f20153799280a32169a7496e61fa10ea417ae53fc22bea9dbc1afddc",
+      "bytes": 29527
+    },
+    "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/render_only/validation.json": {
+      "sha256": "597f1add645a1498022f92f02615c17e0437dd79474fb99635986e22bcd1b506",
+      "bytes": 1679
+    },
+    "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/render_only/rendered_prompt.txt": {
+      "sha256": "262c6a97b624d541b1a8e5e5db1a21f799cd8b03a5b31f06738a93d77820b286",
+      "bytes": 16213
+    },
+    "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/http_0001_generation/raw_stream.bin": {
+      "sha256": "e71de67463fa9224e6e218519749a2c2bb41b419091f851f16872742672aa935",
+      "bytes": 818079
+    },
+    "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/http_0001_generation/events.jsonl": {
+      "sha256": "20b6c4c7731f76cc04635dc4d82fbf6830c232ede28ee8067b84095a69621138",
+      "bytes": 1190684
+    },
+    "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/http_0001_generation/request.json": {
+      "sha256": "f7576483f39de45164024018afe6fc5bfceec5f78a894a5aca63383ecf362510",
+      "bytes": 17431
+    }
+  },
+  "mutations": {
+    "model_calls": 0,
+    "raw_result_edits": 0,
+    "runtime_edits": 0,
+    "plan_or_paper_edits": 0
+  }
+}

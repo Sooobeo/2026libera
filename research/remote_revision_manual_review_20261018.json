@@ -1,0 +1,66 @@
+{
+  "reviewed_at_utc": "2026-10-18T05:37:21.370658+00:00",
+  "reviewer": "root independent source/document review",
+  "scope": "Model revision, attribution and interpretation; not a certification of pilot results",
+  "checks": [
+    {
+      "id": "financial_model_precedent",
+      "result": "pass",
+      "evidence": "https://arxiv.org/pdf/2610.08882",
+      "locator": "section 4.1",
+      "finding": "Base Qwen3.5-4B, greedy, thinking disabled; paper uses MLX, batch 8 and 700 output tokens. Our engine, quantization and output budget are adaptations."
+    },
+    {
+      "id": "output_budget_attribution",
+      "result": "pass",
+      "evidence": "https://arxiv.org/html/2605.27887v6#S3.SS1",
+      "finding": "PortBench reports temperature 0, output maximum 8192 and thinking enabled; its 35B model does not directly validate a 4B non-thinking sector task."
+    },
+    {
+      "id": "exact_installed_variant",
+      "result": "pass",
+      "evidence": "data/remote_sector_20261018/data/sector_runtime/inventory_v43/runtime_pinned.json",
+      "finding": "Exact tag, digest, template hash, engine and request settings are pinned. Installation verified separately from task suitability."
+    },
+    {
+      "id": "inherited_defaults_not_paper_conditions",
+      "result": "pass_with_limit",
+      "finding": "Dated plan and paper distinguish request overrides from inherited model parameters. Presence penalty 1.5 is not presented as a FinVector-reported setting; complete decoding replication is not claimed."
+    },
+    {
+      "id": "research_construct_preserved",
+      "result": "pass",
+      "finding": "Public house-view interpretation and R1/R4 document timing remain the target; actual institution holdings, private mandates, future returns and isolated memory causality are not asserted."
+    },
+    {
+      "id": "diagnostic_not_research_result",
+      "result": "pass",
+      "finding": "One 23-input/6-output-token health request does not establish four-stage completion, semantic fidelity, or long-prompt throughput."
+    },
+    {
+      "id": "pilot_outcome",
+      "result": "pending",
+      "finding": "A separate four-case job is running remotely. Its final records must be retrieved and audited before reporting completion or scores."
+    },
+    {
+      "id": "human_review_and_main",
+      "result": "pending",
+      "finding": "Automated checks are not human semantic review. Main experiment remains unstarted and unfrozen."
+    }
+  ],
+  "document_snapshots": [
+    {
+      "path": "plan/LIBERA_실험계획_20261018.html",
+      "sha256": "8844f1c61dca9bdf548b23c8c21336ca1e7439c48ab384bb16ca6ed9fdc4edc8"
+    },
+    {
+      "path": "paper/LIBERA_텀페이퍼_초안_20261018.html",
+      "sha256": "1c88aac33916ed699bc837d6764b2d0fb228191ae2eb1a44031c4b80edd689c9"
+    },
+    {
+      "path": "research/build_sector_revision_v43.py",
+      "sha256": "ceb1eddb2b2924eecd33417642fe49f0d73d385097f76b157109d61b21617e83"
+    }
+  ],
+  "note": "Documents may later be regenerated with measured execution status; retain this snapshot as a pre-result review."
+}

@@ -1,0 +1,100 @@
+{
+  "protocol_version": "4.4",
+  "registered_at_utc": "2026-10-18T06:49:05.173546+00:00",
+  "scope": "One prespecified four-stage pilot case, followed by three distinct self-review rounds. No main run or main freeze.",
+  "source_id": "fidelity_q2_2026",
+  "arm": "R1",
+  "selection_basis": "The same first pilot case used in the prior feasibility diagnosis; fixed before this full-response run, not chosen by an observed treatment effect.",
+  "planned_cases": 1,
+  "planned_stages": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "research_question_changed": false,
+  "reference_files": [
+    {
+      "path": "research/v44_conditions_reference_20261018.json",
+      "sha256": "a403d4c37d1581f9af21af8ba7a6333614d890ff15277e83181c1204549a9c5b"
+    },
+    {
+      "path": "research/evaluator_only/fidelity_q2_r1_prerun_reference_20261018.json",
+      "sha256": "8022c19d7b5e9654139996d88cac230cb12d29b30fcf7e817850203c02c35f38"
+    },
+    {
+      "path": "data/sector_protocol/evaluation_spec.json",
+      "sha256": "cff49202b9da0da6bc094eb02a55e971afeab8c983a1a8fe3d686af1cff8df7f"
+    },
+    {
+      "path": "data/sector_documents/source_manifest.json",
+      "sha256": "d1af00ee2a1c5e3ba4ca9949b5f9427a9102a373ff19afa0e6c4309769627b28"
+    },
+    {
+      "path": "data/sector_market/market_input.json",
+      "sha256": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f"
+    }
+  ],
+  "online_boundary": "This registration is for offline audit. The online runner is given only its public packet, market, execution-condition evidence and code manifest. It must never read evaluator_only references.",
+  "rounds": [
+    {
+      "round": 1,
+      "name": "Execution, inputs and history",
+      "basis": [
+        "Pinned source bytes and settings",
+        "Official Ollama 0.35.1 request/rendering behavior",
+        "Four-stage workflow contract"
+      ],
+      "checks": [
+        "Exact selected public packet and market",
+        "Reversible duplicate-only projection",
+        "Model/engine/template/condition pins before each call",
+        "All visible messages preserved in the rendered prompt in order",
+        "Explicit no-truncation/no-shift flags and observed termination",
+        "Four captured stages or honest incomplete-case record",
+        "No automatic retry, response repair, hidden reference access or main call",
+        "Raw request/response, timing, memory, and unload evidence retained"
+      ]
+    },
+    {
+      "round": 2,
+      "name": "Independent arithmetic and mechanical source checks",
+      "basis": [
+        "Existing evaluation_spec.json",
+        "Published sector labels and independently transcribed reference",
+        "Supplied common benchmark and covariance"
+      ],
+      "checks": [
+        "Sector identities and uniqueness",
+        "Exact submitted sum and signed residual",
+        "Nonnegative finite weights",
+        "Independent active-weight and quadratic-risk recomputation",
+        "Original source-label and evidence-ID scope checks",
+        "No invented exact-weight target or composite score"
+      ],
+      "precision_policy": "Report exact decimal/rational residuals when possible and preserve floating-point differences. Existing implementation tolerances are not paper-derived behavioral thresholds; no new outcome-dependent threshold."
+    },
+    {
+      "round": 3,
+      "name": "Claim-to-source semantic review and study relevance",
+      "basis": [
+        "Pinned Fidelity Q2 original PDF with page locations",
+        "Selected public packet",
+        "Common market inputs and calculator results"
+      ],
+      "checks": [
+        "Each consequential claim linked to an actual source location or calculation",
+        "Supported, contradicted, not stated and uncertain kept separate",
+        "Public strategist view not recast as a legal mandate or hidden preference",
+        "Qualitative ratings not recast as unique numeric portfolio targets",
+        "Historical volatility not recast as loss probability or predicted performance",
+        "One R1 pilot not treated as R1/R4 effect, general strategy quality or main evidence"
+      ]
+    }
+  ],
+  "failure_policy": "Keep failed, malformed, capped, timed-out and incomplete outputs. Do not silently retry, normalize weights, edit source text or tune settings against the observed allocation. A future revision must preserve this attempt and record new provenance.",
+  "human_review": "Three automated/assistant self-reviews do not constitute independent substantive human review.",
+  "main_model_calls_authorized_here": 0,
+  "main_frozen": false,
+  "generation_requests_by_this_script": 0
+}

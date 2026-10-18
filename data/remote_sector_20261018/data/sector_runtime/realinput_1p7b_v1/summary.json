@@ -1,0 +1,29 @@
+{
+  "status": "hard_deadline",
+  "output": "/root/libera_20261018/data/sector_runtime/realinput_1p7b_v1",
+  "scope": "real_input_engineering_feasibility_only",
+  "model": "qwen3:1.7b",
+  "case_input": "fidelity_q2_2026__R1__stage1",
+  "probe_invocations_attempted": 1,
+  "generation_request_envelopes_recorded": 1,
+  "pilot_model_calls": 0,
+  "main_model_calls": 0,
+  "automatic_retries": 0,
+  "response_quality_scored": false,
+  "four_stage_feasibility_established": false,
+  "supervisor": {
+    "supervisor_status": "hard_deadline",
+    "worker_exit_code": -9,
+    "elapsed_seconds": 180.0034051090479,
+    "deadline_seconds": 180,
+    "deadline_scope": "Child process lifetime includes setup, connect, headers and complete stream; OS scheduling/kill overhead is separately included in elapsed_seconds.",
+    "automatic_retries": 0,
+    "worker_summary_missing": true
+  },
+  "output_limit_reached": false,
+  "output_limit_is_expected_engineering_ceiling": true,
+  "cleanup_status": "no_resident_models_observed",
+  "finished_at_utc": "2026-10-18T06:02:34.719765+00:00",
+  "script_wall_seconds": 180.25418036989868,
+  "deadline_scope": "180-second maximum applies to the supervised child lifetime; metadata checks and cleanup are outside that bound."
+}

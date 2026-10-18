@@ -1,0 +1,52 @@
+{
+  "round": 2,
+  "scope": "mechanical artifact and evaluator checks; does not replace substantive research review",
+  "synthetic_fixtures_not_AI_results": true,
+  "AI_calls": 0,
+  "checks": [
+    {
+      "check": "independent recomputation of every training mean/covariance from monthly FF12 table and matched RF",
+      "passed": true,
+      "cases": 1875,
+      "max_mean_error": 0.0,
+      "max_covariance_error": 0.0
+    },
+    {
+      "check": "all reference-answer fixtures have zero loss and zero paired errors, and certified strata agree",
+      "passed": true,
+      "fixture_outputs": 5625
+    },
+    {
+      "check": "one invalid R4/gamma1 removes exactly one individual and two four-output pair comparisons",
+      "passed": true
+    },
+    {
+      "check": "overflowing integer gamma/weights and deeply nested final JSON invalidate only their response",
+      "passed": true
+    },
+    {
+      "check": "missing responses remain missing; no invented zero performance",
+      "passed": true
+    },
+    {
+      "check": "duplicate keys, nonfinite numbers, wrong schema and fenced text rejected",
+      "passed": true
+    },
+    {
+      "check": "case counts, call counts and workflow input hashes agree with final protocol",
+      "passed": true
+    },
+    {
+      "check": "HTML anchors unique and no stale model-pending or bibliography placeholders",
+      "passed": true
+    }
+  ],
+  "pending_local_links": [],
+  "sha256": {
+    "plan\\LIBERA_실험계획_20261017.html": "92a4cdfe296422926c249e59ff76e3c5c10e9ead1deb57d264d6cb321937affb",
+    "paper\\LIBERA_텀페이퍼_초안_20261017.html": "6bbab024cb47f39e5ee42153012db42cf27ec48e483f7b7abde343b5737ce843",
+    "plan\\LIBERA_실험설정_20261017.json": "706754b7344ecdf2c412affe66303d83e8ac787d210fa52d37462a2b237b2d2c",
+    "research\\prepare_workflow_v4.py": "d61c291aed03b743a4bc3b502de4ace26a6e1af49b4882652a33d2d3dd139116",
+    "research\\prepare_institutional_benchmark.py": "6a6cf0ec1118286eee3f92b4136e5723e3ffa75269e5e3bce75560c7a72fd648"
+  }
+}

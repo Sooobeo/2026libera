@@ -1,0 +1,871 @@
+{
+  "schema_version": "remote_sector_artifact_audit_1.0",
+  "generated_at_utc": "2026-10-18T05:54:59.476729+00:00",
+  "status": "pass_with_stated_limits",
+  "scope": "Saved artifact consistency only; no strategy-performance or semantic correctness verdict.",
+  "inputs": {
+    "received_root": "data/remote_sector_20261018",
+    "pilot_dir": "data/remote_sector_20261018/data/sector_runtime/pilot_v43",
+    "deployment_archive": "tmp/sector_bridge_20261018/bundle.tar.gz"
+  },
+  "audit_actions": {
+    "model_calls": 0,
+    "network_calls": 0,
+    "runtime_records_modified": false,
+    "evaluation_files_modified": false
+  },
+  "calculator_recomputation_tolerance": {
+    "relative": 1e-10,
+    "absolute": 1e-12,
+    "basis": "Engineering allowance for cross-platform floating-point arithmetic; not a paper-derived acceptance threshold. Saved history strings and raw proposals are compared exactly."
+  },
+  "human_semantic_review": {
+    "performed": false,
+    "status": "not_assessed_by_this_script"
+  },
+  "main_execution_or_freeze": {
+    "performed": false,
+    "status": "not_certified_by_this_script"
+  },
+  "diagnostic": {
+    "attempted_http_calls": 1,
+    "reported_status": "completed",
+    "completed_http_streams": 1,
+    "unexpected_thinking_call_folders": [],
+    "included_in_pilot_counts": false
+  },
+  "pilot": {
+    "artifact_status": "received",
+    "attempted_cases": 1,
+    "completed_cases": 0,
+    "not_started_cases": 3,
+    "failed_cases": 1,
+    "attempted_http_calls": 1,
+    "completed_http_streams": 0,
+    "completed_stage_records": 0,
+    "unexpected_thinking_call_folders": [],
+    "cases": [
+      {
+        "case_id": "fidelity_q2_2026__R1",
+        "status_from_artifacts": "failed",
+        "stage_requests": 1,
+        "completed_stage_records": 0,
+        "reported_http_call_folders": [
+          "http_0001_pilot"
+        ],
+        "has_failure_record": true
+      },
+      {
+        "case_id": "fidelity_q2_2026__R4",
+        "status_from_artifacts": "not_started",
+        "stage_requests": 0,
+        "completed_stage_records": 0,
+        "reported_http_call_folders": [],
+        "has_failure_record": false
+      },
+      {
+        "case_id": "ubs_june_2026__R1",
+        "status_from_artifacts": "not_started",
+        "stage_requests": 0,
+        "completed_stage_records": 0,
+        "reported_http_call_folders": [],
+        "has_failure_record": false
+      },
+      {
+        "case_id": "ubs_june_2026__R4",
+        "status_from_artifacts": "not_started",
+        "stage_requests": 0,
+        "completed_stage_records": 0,
+        "reported_http_call_folders": [],
+        "has_failure_record": false
+      }
+    ]
+  },
+  "check_counts": {
+    "pass": 70
+  },
+  "checks": [
+    {
+      "check": "exact_two_public_pilot_packets",
+      "status": "pass",
+      "evidence_paths": [
+        "data/sector_documents/model_packets.jsonl"
+      ]
+    },
+    {
+      "check": "deployment_allowlist_excludes_gold_and_main_packet_files",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/bundle_manifest.json"
+      ]
+    },
+    {
+      "check": "source_packet_hash_matches_current_local_source",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/bundle_manifest.json",
+        "data/sector_documents/model_packets.jsonl"
+      ]
+    },
+    {
+      "check": "deployment_hash:research/remote_sector_runtime.py",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/bundle_manifest.json",
+        "research/remote_sector_runtime.py"
+      ],
+      "detail": {
+        "recorded": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5",
+        "current_or_filtered": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5"
+      }
+    },
+    {
+      "check": "deployment_hash:research/run_sector_workflow.py",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/bundle_manifest.json",
+        "research/run_sector_workflow.py"
+      ],
+      "detail": {
+        "recorded": "5625450a4dcbe1aa717c9809bf4955c1ef6b10aab4f0c83ef05dc2eb2c123cfd",
+        "current_or_filtered": "5625450a4dcbe1aa717c9809bf4955c1ef6b10aab4f0c83ef05dc2eb2c123cfd"
+      }
+    },
+    {
+      "check": "deployment_hash:research/sector_engine.py",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/bundle_manifest.json",
+        "research/sector_engine.py"
+      ],
+      "detail": {
+        "recorded": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c",
+        "current_or_filtered": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c"
+      }
+    },
+    {
+      "check": "deployment_hash:data/sector_market/market_input.json",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/bundle_manifest.json",
+        "data/sector_market/market_input.json"
+      ],
+      "detail": {
+        "recorded": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f",
+        "current_or_filtered": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f"
+      }
+    },
+    {
+      "check": "deployment_hash:data/sector_documents/model_packets.jsonl",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/bundle_manifest.json",
+        "data/sector_documents/model_packets.jsonl"
+      ],
+      "detail": {
+        "recorded": "f5bbd9bf0ee8267a8718439064604dfc499428a2fc728c95f672bc4abc5595b9",
+        "current_or_filtered": "f5bbd9bf0ee8267a8718439064604dfc499428a2fc728c95f672bc4abc5595b9"
+      }
+    },
+    {
+      "check": "bundle_members_exact_allowlist",
+      "status": "pass",
+      "evidence_paths": [
+        "tmp/sector_bridge_20261018/bundle.tar.gz"
+      ]
+    },
+    {
+      "check": "bundle_member_regular_file:research/remote_sector_runtime.py",
+      "status": "pass",
+      "evidence_paths": [
+        "tmp/sector_bridge_20261018/bundle.tar.gz"
+      ]
+    },
+    {
+      "check": "bundle_member_hash:research/remote_sector_runtime.py",
+      "status": "pass",
+      "evidence_paths": [
+        "tmp/sector_bridge_20261018/bundle.tar.gz",
+        "data/remote_sector_20261018/bundle_manifest.json"
+      ]
+    },
+    {
+      "check": "bundle_member_regular_file:research/run_sector_workflow.py",
+      "status": "pass",
+      "evidence_paths": [
+        "tmp/sector_bridge_20261018/bundle.tar.gz"
+      ]
+    },
+    {
+      "check": "bundle_member_hash:research/run_sector_workflow.py",
+      "status": "pass",
+      "evidence_paths": [
+        "tmp/sector_bridge_20261018/bundle.tar.gz",
+        "data/remote_sector_20261018/bundle_manifest.json"
+      ]
+    },
+    {
+      "check": "bundle_member_regular_file:research/sector_engine.py",
+      "status": "pass",
+      "evidence_paths": [
+        "tmp/sector_bridge_20261018/bundle.tar.gz"
+      ]
+    },
+    {
+      "check": "bundle_member_hash:research/sector_engine.py",
+      "status": "pass",
+      "evidence_paths": [
+        "tmp/sector_bridge_20261018/bundle.tar.gz",
+        "data/remote_sector_20261018/bundle_manifest.json"
+      ]
+    },
+    {
+      "check": "bundle_member_regular_file:data/sector_market/market_input.json",
+      "status": "pass",
+      "evidence_paths": [
+        "tmp/sector_bridge_20261018/bundle.tar.gz"
+      ]
+    },
+    {
+      "check": "bundle_member_hash:data/sector_market/market_input.json",
+      "status": "pass",
+      "evidence_paths": [
+        "tmp/sector_bridge_20261018/bundle.tar.gz",
+        "data/remote_sector_20261018/bundle_manifest.json"
+      ]
+    },
+    {
+      "check": "bundle_member_regular_file:data/sector_documents/model_packets.jsonl",
+      "status": "pass",
+      "evidence_paths": [
+        "tmp/sector_bridge_20261018/bundle.tar.gz"
+      ]
+    },
+    {
+      "check": "bundle_member_hash:data/sector_documents/model_packets.jsonl",
+      "status": "pass",
+      "evidence_paths": [
+        "tmp/sector_bridge_20261018/bundle.tar.gz",
+        "data/remote_sector_20261018/bundle_manifest.json"
+      ]
+    },
+    {
+      "check": "bundle_member_regular_file:bundle_manifest.json",
+      "status": "pass",
+      "evidence_paths": [
+        "tmp/sector_bridge_20261018/bundle.tar.gz"
+      ]
+    },
+    {
+      "check": "bundle_member_hash:bundle_manifest.json",
+      "status": "pass",
+      "evidence_paths": [
+        "tmp/sector_bridge_20261018/bundle.tar.gz",
+        "data/remote_sector_20261018/bundle_manifest.json"
+      ]
+    },
+    {
+      "check": "v43_runtime_contract",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/inventory_v43/runtime_pinned.json",
+        "data/remote_sector_20261018/data/sector_runtime/inventory_v43/model_metadata.json"
+      ]
+    },
+    {
+      "check": "observed_model_digest_engine_template_quantization",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/inventory_v43/runtime_pinned.json",
+        "data/remote_sector_20261018/data/sector_runtime/inventory_v43/model_metadata.json"
+      ]
+    },
+    {
+      "check": "inventory_snapshot_engine_and_digest",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/inventory_v43/inventory_before.json"
+      ]
+    },
+    {
+      "check": "inventory_snapshot_engine_and_digest",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/inventory_v43/inventory_after.json"
+      ]
+    },
+    {
+      "check": "inventory_no_model_generation",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/inventory_v43/summary.json"
+      ]
+    },
+    {
+      "check": "inventory_snapshot_engine_and_digest",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/inventory_before.json"
+      ]
+    },
+    {
+      "check": "inventory_snapshot_engine_and_digest",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/inventory_after.json"
+      ]
+    },
+    {
+      "check": "diagnose_runtime_pin_matches_inventory",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/runtime_pinned.json"
+      ]
+    },
+    {
+      "check": "call_request_envelope",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/request.json"
+      ]
+    },
+    {
+      "check": "diagnose_call_settings",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/request.json"
+      ]
+    },
+    {
+      "check": "call_kind_and_folder_match",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/result.json"
+      ]
+    },
+    {
+      "check": "raw_stream_matches_logged_events",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/raw_stream.bin",
+        "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/events.jsonl"
+      ]
+    },
+    {
+      "check": "completed_http_has_terminal_stream",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/result.json",
+        "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/raw_stream.bin"
+      ]
+    },
+    {
+      "check": "saved_response_is_assembled_raw_stream",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/response.json",
+        "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/raw_stream.bin"
+      ]
+    },
+    {
+      "check": "response_model_matches_exact_tag",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/response.json"
+      ]
+    },
+    {
+      "check": "thinking_anomaly_flag_matches_raw",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/result.json",
+        "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/raw_stream.bin"
+      ]
+    },
+    {
+      "check": "diagnose_summary_call_count",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/summary.json"
+      ]
+    },
+    {
+      "check": "diagnose_summary_call_records",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/summary.json"
+      ]
+    },
+    {
+      "check": "diagnose_main_calls_remain_zero",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/summary.json"
+      ]
+    },
+    {
+      "check": "diagnostic_is_synthetic_not_institution_task",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/request.json"
+      ]
+    },
+    {
+      "check": "inventory_snapshot_engine_and_digest",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/inventory_before.json"
+      ]
+    },
+    {
+      "check": "inventory_snapshot_engine_and_digest",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/inventory_after.json"
+      ]
+    },
+    {
+      "check": "pilot_runtime_pin_matches_inventory",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/runtime_pinned.json"
+      ]
+    },
+    {
+      "check": "call_request_envelope",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/request.json"
+      ]
+    },
+    {
+      "check": "pilot_call_settings",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/request.json"
+      ]
+    },
+    {
+      "check": "call_kind_and_folder_match",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/result.json"
+      ]
+    },
+    {
+      "check": "raw_stream_matches_logged_events",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/raw_stream.bin",
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/events.jsonl"
+      ]
+    },
+    {
+      "check": "thinking_anomaly_flag_matches_raw",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/result.json",
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/raw_stream.bin"
+      ]
+    },
+    {
+      "check": "pilot_summary_call_count",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/summary.json"
+      ]
+    },
+    {
+      "check": "pilot_summary_call_records",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/summary.json"
+      ]
+    },
+    {
+      "check": "pilot_main_calls_remain_zero",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/summary.json"
+      ]
+    },
+    {
+      "check": "pilot_saved_runtime_matches_pin",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/runtime.json",
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/runtime_pinned.json"
+      ]
+    },
+    {
+      "check": "pilot_execution_input_hashes",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/input_hashes.json"
+      ]
+    },
+    {
+      "check": "pilot_roster_exact_four_cases",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/planned_cases.json"
+      ]
+    },
+    {
+      "check": "pilot_summary_preserves_full_roster",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/summary.json"
+      ]
+    },
+    {
+      "check": "fidelity_q2_2026__R1:stage1:exact_history_and_evidence_onset",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/stage1_request.json"
+      ]
+    },
+    {
+      "check": "fidelity_q2_2026__R1:stage1:HTTP_matches_saved_request",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/stage1_request.json",
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/request.json"
+      ]
+    },
+    {
+      "check": "fidelity_q2_2026__R1:stage1:context_screen_passed_before_HTTP",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/stage1_request.json"
+      ]
+    },
+    {
+      "check": "fidelity_q2_2026__R1:no_missing_or_extra_stage_requests",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1"
+      ]
+    },
+    {
+      "check": "fidelity_q2_2026__R1:reported_case_status_reconciles",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/summary.json",
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1"
+      ]
+    },
+    {
+      "check": "fidelity_q2_2026__R1:reported_http_attempts_reconcile",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/summary.json"
+      ]
+    },
+    {
+      "check": "fidelity_q2_2026__R1:failed_case_retained",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/failure.json"
+      ]
+    },
+    {
+      "check": "fidelity_q2_2026__R4:reported_case_status_reconciles",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/summary.json",
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R4"
+      ]
+    },
+    {
+      "check": "ubs_june_2026__R1:reported_case_status_reconciles",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/summary.json",
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R1"
+      ]
+    },
+    {
+      "check": "ubs_june_2026__R4:reported_case_status_reconciles",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/summary.json",
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R4"
+      ]
+    },
+    {
+      "check": "pilot_HTTP_requests_assigned_once",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/summary.json"
+      ]
+    },
+    {
+      "check": "pilot_case_and_call_counts_reconciled",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/summary.json"
+      ]
+    },
+    {
+      "check": "outer_and_inner_pilot_summary_agree",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/summary.json",
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/summary.json"
+      ]
+    },
+    {
+      "check": "read_evidence_unchanged_during_audit",
+      "status": "pass",
+      "evidence_paths": [],
+      "detail": []
+    }
+  ],
+  "limitations": [
+    "diagnose: live digest/template/engine checks are implemented in the deployed coordinator, but their per-call observations were not persisted. Request settings, initial inventory pins and response model tags are independently reconciled; per-call live pins are not independently reconstructed.",
+    "pilot: live digest/template/engine checks are implemented in the deployed coordinator, but their per-call observations were not persisted. Request settings, initial inventory pins and response model tags are independently reconciled; per-call live pins are not independently reconstructed.",
+    "Request-history reconstruction does not reveal the effective server-rendered prompt or independently verify absence of server truncation.",
+    "Missing local artifacts are not evidence that remote execution did not occur. HTTP attempts and complete four-stage cases are separate counts.",
+    "No evaluator-only gold is read. Calculator recomputation verifies arithmetic and exposed evidence IDs, not the validity of allocation reasons."
+  ],
+  "evidence_files": {
+    "data/remote_sector_20261018/bundle_manifest.json": {
+      "exists": true,
+      "size_bytes": 820,
+      "sha256": "578ce491bf1ff2de5af4f01493e72bfb76868e4bb52f2a53b710eb50528cbf79"
+    },
+    "data/sector_documents/model_packets.jsonl": {
+      "exists": true,
+      "size_bytes": 22728,
+      "sha256": "520bed87396eb815c87f362712a6ec39c0275076f9ef4c5d59ef5a7cbbe6afc7"
+    },
+    "research/remote_sector_runtime.py": {
+      "exists": true,
+      "size_bytes": 32605,
+      "sha256": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5"
+    },
+    "research/run_sector_workflow.py": {
+      "exists": true,
+      "size_bytes": 23842,
+      "sha256": "5625450a4dcbe1aa717c9809bf4955c1ef6b10aab4f0c83ef05dc2eb2c123cfd"
+    },
+    "research/sector_engine.py": {
+      "exists": true,
+      "size_bytes": 27360,
+      "sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c"
+    },
+    "data/sector_market/market_input.json": {
+      "exists": true,
+      "size_bytes": 15480,
+      "sha256": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f"
+    },
+    "tmp/sector_bridge_20261018/bundle.tar.gz": {
+      "exists": true,
+      "size_bytes": 30205,
+      "sha256": "2d01c7ad0af6f1d919ed9fd969a4b8e397e247b5cf634acc0426a3717dba1a2a"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/inventory_v43/runtime_pinned.json": {
+      "exists": true,
+      "size_bytes": 1967,
+      "sha256": "c04bcdee8093a6c6db0d8e93d4166aa89d3337e3acceac42d3ac409c295602b0"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/inventory_v43/model_metadata.json": {
+      "exists": true,
+      "size_bytes": 29305,
+      "sha256": "d3fa9555fb73fb28924f9fcfdeb972a645796c95c035f44e4b71029190d7600b"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/inventory_v43/inventory_before.json": {
+      "exists": true,
+      "size_bytes": 3432,
+      "sha256": "5ccf9a05e5468744a7f672b35e348b72031e32f720e916ea21059d785ef162e9"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/inventory_v43/inventory_after.json": {
+      "exists": true,
+      "size_bytes": 3432,
+      "sha256": "59bbab6cfcc27cbacc1ccc9319a0393317e88813b689cec7e222748c223d3153"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/inventory_v43/summary.json": {
+      "exists": true,
+      "size_bytes": 346,
+      "sha256": "52879c0085ad24d3fb30053d684d629422c0abfc3566bcff6d431bca2535a755"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/inventory_before.json": {
+      "exists": true,
+      "size_bytes": 3432,
+      "sha256": "91a0ea20a98ab337148a81b1fb22e7eb2989df0db082679f49b3aae3c007accd"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/inventory_after.json": {
+      "exists": true,
+      "size_bytes": 3434,
+      "sha256": "650670eb4400df1383aeb85bfa934fca9172fdd58f299de969999c5d5de0579c"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/runtime_pinned.json": {
+      "exists": true,
+      "size_bytes": 1967,
+      "sha256": "c04bcdee8093a6c6db0d8e93d4166aa89d3337e3acceac42d3ac409c295602b0"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/summary.json": {
+      "exists": true,
+      "size_bytes": 1702,
+      "sha256": "bfe7dbdbf0d0a63b58b3edd16eda58987f51be8013c62bae1ccfb1b4ff710553"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/result.json": {
+      "exists": true,
+      "size_bytes": 911,
+      "sha256": "81a78083fde1f15c5a460e3f4a913620bec6a76064a3328466d16d54d28de81d"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/request.json": {
+      "exists": true,
+      "size_bytes": 414,
+      "sha256": "9561da2cf2e899c590e7238c920c41f84d0618adada1389d932de4d788cd2ccb"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/raw_stream.bin": {
+      "exists": true,
+      "size_bytes": 1018,
+      "sha256": "2458156c4fb30e60a6d7b727ca76a7bff86601c9f10f0f63e2de331e86ea7dcf"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/events.jsonl": {
+      "exists": true,
+      "size_bytes": 1393,
+      "sha256": "a2a62d278c27f521a3d074ed67663342f808e53b0db39dcca9240aec768189f9"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/response.json": {
+      "exists": true,
+      "size_bytes": 417,
+      "sha256": "9395fe71fdd1053ae96843c8ca0dcf845ef28d79d5b22e7921ac8c7300386fdf"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/inventory_before.json": {
+      "exists": true,
+      "size_bytes": 3434,
+      "sha256": "8bfb19013de45d48039bc1ec8a154bbc73a9b3dfe9f159c8ca2865d60de81bf8"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/inventory_after.json": {
+      "exists": true,
+      "size_bytes": 3434,
+      "sha256": "191cc95a6d2be4f9a769946507a9428d04ea9a0eb1968450e270ca333ef4e099"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/runtime_pinned.json": {
+      "exists": true,
+      "size_bytes": 1967,
+      "sha256": "c04bcdee8093a6c6db0d8e93d4166aa89d3337e3acceac42d3ac409c295602b0"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/summary.json": {
+      "exists": true,
+      "size_bytes": 2186,
+      "sha256": "3f116e14ef25527cc97693aaa092a58c55b955d266387395a6301811761124de"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/result.json": {
+      "exists": true,
+      "size_bytes": 705,
+      "sha256": "a5b5d53403e8376a1593b966e9ae322b82cfb9b95f4b75056d8d0c593640d088"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/request.json": {
+      "exists": true,
+      "size_bytes": 20887,
+      "sha256": "a319949a482f872d3f1dc781064de907248330cb4b9ce15ad41fcfe8590368ff"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/raw_stream.bin": {
+      "exists": true,
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/events.jsonl": {
+      "exists": true,
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/response.json": {
+      "exists": false
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/summary.json": {
+      "exists": true,
+      "size_bytes": 1167,
+      "sha256": "221100419a9b7d6582dc0891c6661eb732e820b9843b562aec13744de8b8a6c7"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/planned_cases.json": {
+      "exists": true,
+      "size_bytes": 511,
+      "sha256": "4587f3543bbc9b5b295f0b830553e02aba3087c26cb1954d38c8d411e6824203"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/runtime.json": {
+      "exists": true,
+      "size_bytes": 2114,
+      "sha256": "a251ce3c7a235b11a70e85ccbdc28667d285390b68ca6b0b1ca5db84d332d7f3"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/dependencies.json": {
+      "exists": true,
+      "size_bytes": 144,
+      "sha256": "deef3244febb9a202b835c05abf94000044b4b183884244afcb16f2486300670"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/input_hashes.json": {
+      "exists": true,
+      "size_bytes": 444,
+      "sha256": "6a7479b348753e360abf5ca9b9329435236d8bd6296e2a7c8dcfe7b7ca00be99"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/stage1_request.json": {
+      "exists": true,
+      "size_bytes": 20558,
+      "sha256": "fefbe28d6837019e00094e30bbf60c082a073a72a052e0eece342e325e86eb6c"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/stage1_response.json": {
+      "exists": false
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/stage1_record.json": {
+      "exists": false
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/final.json": {
+      "exists": false
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/trace.json": {
+      "exists": false
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/failure.json": {
+      "exists": true,
+      "size_bytes": 203,
+      "sha256": "cb7cec7cba0143d394ba203497d711e087ba23ced70942a8b36244b60caf3dba"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1_coordinator_failure.json": {
+      "exists": true,
+      "size_bytes": 207,
+      "sha256": "444ebc037dfeb7040dbe327491e2b9a5cd1cad5ae2ddc5b84a76165a041ef1d8"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R4/final.json": {
+      "exists": false
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R4/trace.json": {
+      "exists": false
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R4/failure.json": {
+      "exists": false
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R4_coordinator_failure.json": {
+      "exists": false
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R1/final.json": {
+      "exists": false
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R1/trace.json": {
+      "exists": false
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R1/failure.json": {
+      "exists": false
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R1_coordinator_failure.json": {
+      "exists": false
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R4/final.json": {
+      "exists": false
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R4/trace.json": {
+      "exists": false
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R4/failure.json": {
+      "exists": false
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R4_coordinator_failure.json": {
+      "exists": false
+    }
+  },
+  "audit_script_sha256": "f25a524ad90fcea4c67685fa3aaa87bea32beb1e6bc6d8e5473f294592e5a3b6"
+}

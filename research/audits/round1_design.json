@@ -1,0 +1,319 @@
+{
+  "schema_version": "1.0",
+  "audit_round": 1,
+  "auditor": "/root/plain_design_review",
+  "audit_type": "independent_adversarial_design_and_argument_review",
+  "protocol_reviewed": "4.0",
+  "review_date_client_timezone": "2026-10-17 Asia/Seoul",
+  "overall_status": "requires_targeted_revisions_before_final_verification",
+  "main_conclusion_ko": "가상 기관의 명시적 위험선호가 규범적 최적 배분을 실제로 달라지게 하므로, 원제안서의 필요한 투자판단 차이라는 문제와 연결되는 주실험이다. 다만 목표·선호 이질성의 한 차원에 관한 설계이며, 실제 기관의 사적정보나 공통모델 도입의 효과를 검증하지 않는다. 아래 대응집합, 실행 순서, 해석 및 서지 수정을 완료한 뒤 2차 검증이 필요하다.",
+  "files_read_in_full": [
+    "plan/LIBERA_실험계획_20261017.html",
+    "plan/LIBERA_실험설정_20261017.json",
+    "paper/LIBERA_텀페이퍼_초안_20261017.html",
+    "research/build_research_v4.py"
+  ],
+  "comparison_sources": [
+    {
+      "path": "plan/문규리 제안서 상세_최종.html",
+      "review_scope": "원제안서 13개 장과 참고문헌 적용범위는 앞선 독립 검토에서 전체 읽음. 이번에는 목표·보유·제약에 따른 필요한 차이, 동일 모델의 제공정책 비교, 품질 공동판정이라는 논점과 대조함.",
+      "anchors": [
+        "problem",
+        "position",
+        "identification",
+        "measures",
+        "rigor",
+        "solutions"
+      ]
+    },
+    {
+      "path": "research/evidence_ledger_v4.json",
+      "review_scope": "직접 차용과 새 조합의 구분 및 PortBench 저자 메타데이터 대조"
+    },
+    {
+      "path": "data/institutional/summary.json",
+      "review_scope": "규범적 차이가 실제 존재하는지와 같은 최적해 사례를 보존하는지 확인. 이번 감사는 준비 코드·전체 코퍼스의 독립 수치감사를 대신하지 않음."
+    }
+  ],
+  "independently_checked_primary_sources": [
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/for.70134",
+      "locations": [
+        "Section 3.2 Equation (6)",
+        "Section 4.1",
+        "Tables 2-5",
+        "Section 6"
+      ],
+      "supports": "완전투자 이차효용, 위험선호 1·3·5, 월간 FF12 초과수익 1964–2023, 60/36개월 프레임",
+      "does_not_support": "이 목적에 대한 long-only 결합, LIBERA 4단계 또는 R1/R4 처치의 직접 재현"
+    },
+    {
+      "url": "https://arxiv.org/html/2605.27887v6",
+      "locations": [
+        "Section 3.1",
+        "Appendix C.1 T5",
+        "author/title metadata"
+      ],
+      "supports": "해당 모델·생성 설정의 평가 선례 및 long-only 완전투자 허용집합의 선례",
+      "does_not_support": "Salcher 목적과 결합한 단일 출판 프로토콜 또는 이번 4단계의 최적성"
+    },
+    {
+      "url": "https://www.ifo.de/en/cesifo/publications/2025/working-paper/making-genai-smarter-evidence-portfolio-allocation-experiment",
+      "locations": [
+        "official working-paper metadata/abstract"
+      ],
+      "supports": "투자자 프로필과 제공 정보에 따른 배분을 연구할 관련 선례",
+      "limitation": "이 선례가 LIBERA의 목적함수나 정보 제공 시점 효과를 입증하는 것으로 취급하지 않음"
+    }
+  ],
+  "axes": {
+    "consistency": {
+      "status": "targeted_revision_needed",
+      "verified": [
+        "HTML 두 개와 JSON이 가상 기관 γ=1·3·5, FF12, 동일 시장입력, long-only 이차효용, R1/R4 네 응답 및 FRESH 별도 진단을 동일하게 기술함",
+        "625개 프레임, 1875개 기관 사례, 15000+1875개 모델 응답의 산술이 일치함",
+        "본실험 미실행과 모델 접근/정확한 버전 미확정 상태를 공개함"
+      ],
+      "findings": [
+        "D1",
+        "D5",
+        "D6"
+      ]
+    },
+    "logic": {
+      "status": "targeted_revision_needed",
+      "verified": [
+        "목적 계수의 차이가 최적화에 실제로 들어가며 같은 최적해 사례도 보존함",
+        "공매도 제약 추가 후 무제약 순수 이차 손실 항등식을 재사용하지 않고 목적값 차이를 계산함",
+        "R4에서 목적이 없을 때 보류를 허용하고 최종 완전정보 판단만 채점함",
+        "최초 제공·대화내 위치·보존 이력의 정책 묶음으로 해석하며 순수 시점이나 심리적 고착의 단독 효과로 주장하지 않음"
+      ],
+      "findings": [
+        "D1",
+        "D2",
+        "D3"
+      ]
+    },
+    "connection_to_original_paper_question": {
+      "status": "supported_with_explicit_narrowing",
+      "verified": [
+        "원제안서가 이질성의 원천으로 제시한 목적·보유·제약 중 명시적 목적 차이를 실제 금융 배분의 규범적 차이로 연결함",
+        "제목·초록·방법·한계가 위험선호가 다른 가상 기관과 주식부문 산업 배분이라는 범위를 드러냄",
+        "실제 네 펀드의 γ를 추정했다거나 A 문서·B1 신호 진단의 성과로 본 배분 실험을 대신했다는 주장을 하지 않음",
+        "다양성만 늘리는 것과 목적상 품질 개선을 구별함"
+      ],
+      "remaining_narrowing": "전략적 사적정보의 소실이 아니라 명시적 위임목적에 대한 배분 적합성의 보존을 검증함. 원제안서 전체 문제를 포괄하는 실증으로 확대하면 안 됨.",
+      "findings": [
+        "D3",
+        "D4"
+      ]
+    },
+    "evidence_and_provenance": {
+      "status": "core_conditions_supported_bibliographic_revision_needed",
+      "verified": [
+        "금융 목적식·γ·자료 프레임의 직접 근거를 원문에서 확인함",
+        "long-only와 quadratic의 결합은 새 응용이라고 일관되게 표시함",
+        "625는 산술적 코퍼스 수, 공차는 수치 구현값이며 검정력이나 논문 처치 상수라고 하지 않음",
+        "중첩 창을 독립 표본으로 세지 않고 고정 코퍼스 기술비교로 한정함"
+      ],
+      "findings": [
+        "D5"
+      ],
+      "scope_limit": "모든 배경문헌 전문을 새로 전수검증한 감사가 아님. 초록 수준으로 확인한 연구는 본문의 제한 표시를 유지해야 함."
+    }
+  },
+  "findings": [
+    {
+      "id": "D1",
+      "severity": "high",
+      "status": "open",
+      "axis": [
+        "consistency",
+        "logic"
+      ],
+      "locations": [
+        {
+          "path": "plan/LIBERA_실험설정_20261017.json",
+          "line": 127,
+          "pointer": "/analysis/invalid_outputs"
+        },
+        {
+          "path": "paper/LIBERA_텀페이퍼_초안_20261017.html",
+          "line": 54,
+          "section": "4.4"
+        },
+        {
+          "path": "research/build_research_v4.py",
+          "line": 103,
+          "symbol": "config.analysis.invalid_outputs"
+        },
+        {
+          "path": "research/build_research_v4.py",
+          "line": 154,
+          "symbol": "methods"
+        }
+      ],
+      "issue": "both-valid/양쪽 답이라는 표현만으로는 정책 대응과 기관쌍 대응의 유효집합이 명확하지 않다.",
+      "why_it_matters": "기관쌍 반응오차 E의 R4−R1은 같은 시장창의 두 γ와 두 정책, 총 네 출력이 필요한 대비다. 정책별로 다른 유효 기관쌍에서 평균을 내서 빼면 실패 사례 구성이 정책 차이처럼 보인다. 실패율이 같아도 빠진 사례가 다르면 이 문제가 남는다.",
+      "required_change": "기관별 손실 R4−R1은 해당 γ의 R1/R4 두 출력이 모두 유효한 공통집합, 기관쌍 E의 R4−R1은 i/j×R1/R4 네 출력이 모두 유효한 공통집합에서 계산한다고 명시한다. 유효응답 조건부 비교라는 성격과 분모를 표시하고, 전체 예정 코퍼스의 품질 우월성으로 자동 확대하지 않는다. 정책별 유효응답 단독 평균은 보조표로 구분한다.",
+      "acceptance_check": "JSON·두 HTML·빌더에 동일한 두/네 출력 intersection 규칙과 조건부 해석이 있으며, 2차 평가기 감사에서 실제 mask 구현을 확인할 것."
+    },
+    {
+      "id": "D2",
+      "severity": "medium",
+      "status": "open_before_execution",
+      "axis": [
+        "logic"
+      ],
+      "locations": [
+        {
+          "path": "plan/LIBERA_실험설정_20261017.json",
+          "pointer": "/workflow and /analysis"
+        },
+        {
+          "path": "paper/LIBERA_텀페이퍼_초안_20261017.html",
+          "section": "4.3-4.5"
+        }
+      ],
+      "issue": "한 번의 장시간 코퍼스 평가에서 정책·γ 실행 순서를 사전 고정하는 규칙이 없다.",
+      "why_it_matters": "모델 응답은 16875회이며 백엔드 비결정성도 인정한다. 모든 R1을 먼저, R4를 나중에 실행하면 시간·서버 환경 차이가 정책과 겹친다. 모델 ID 기록만으로 실행 시점의 공변화를 통제하지 못한다.",
+      "required_change": "같은 시장창의 정책·γ를 완전한 블록으로 묶고, 블록 내 순서를 균형화 또는 기록한 난수 규칙으로 섞는 실행 manifest를 사전에 만든다. 원 요청 순서·실행 시각·버전 변화를 보존한다. FRESH는 보조 진단이라는 역할을 유지한다.",
+      "acceptance_check": "2차에서 workflow manifest와 dry-run 요청 순서가 정책 전수 선행 방식이 아니며 동일 버전·세션 분리 규칙과 연결되는지 확인할 것."
+    },
+    {
+      "id": "D3",
+      "severity": "medium",
+      "status": "open_interpretation_guard",
+      "axis": [
+        "logic",
+        "connection_to_original_paper_question"
+      ],
+      "locations": [
+        {
+          "path": "paper/LIBERA_텀페이퍼_초안_20261017.html",
+          "section": "4.4 and 7"
+        },
+        {
+          "path": "plan/LIBERA_실험설정_20261017.json",
+          "pointer": "/claim_scope and /analysis/claim_rule"
+        }
+      ],
+      "issue": "배분 반응오차나 목적상 손실은 목표를 읽지 못한 경우와 목표를 읽었으나 계산을 못한 경우를 단독으로 구별하지 못한다.",
+      "why_it_matters": "원주제에 맞춘 최종 목적 적합성 측정은 성립하지만, 이 결과만으로 공통 모델이 기관 목표를 인식하지 못했거나 기억에서 지웠다는 기제를 단정하면 다시 과잉해석이 된다. FRESH의 차이도 호출 경로가 달라 기제의 단독 식별은 아니다.",
+      "required_change": "주평가는 최종 배분의 목적 적합성과 업무정책 차이이며, 목표 인식·기억·수치 최적화 실패의 원인을 각각 식별하지 않는다고 명시한다. mandate_used_gamma와 근거 ID가 있다면 진단용으로 쓰되 그것만으로 성공 판정하거나 기제를 확정하지 않는다.",
+      "acceptance_check": "본문 한계와 JSON 해석범위에 이 구분을 추가하고, 2차에서 진단 필드와 배분 점수의 역할이 섞이지 않는지 확인할 것."
+    },
+    {
+      "id": "D4",
+      "severity": "low",
+      "status": "open_editorial_logic",
+      "axis": [
+        "connection_to_original_paper_question"
+      ],
+      "locations": [
+        {
+          "path": "paper/LIBERA_텀페이퍼_초안_20261017.html",
+          "line": 63,
+          "section": "5 첫 번째 반론"
+        },
+        {
+          "path": "paper/LIBERA_텀페이퍼_초안_20261017.html",
+          "line": 25,
+          "section": "2.3 마지막 문장"
+        },
+        {
+          "path": "research/build_research_v4.py",
+          "symbol": "inherited alternatives and literature nodes"
+        }
+      ],
+      "issue": "이전 신호·검색 중심 설계의 문장이 남아 현재 주실험을 사적신호 또는 실제 검색 실험으로 읽히게 할 여지가 있다.",
+      "why_it_matters": "§5는 사적신호 추종을 경계하고 §2.3은 검색 정확성도 분리 평가한다고 현재형으로 쓰지만, v4 주실험은 공통 μΣ와 명시적 γ이며 실제 검색은 생략한다.",
+      "required_change": "§5의 사례를 'γ가 다르더라도 동일 최적 배분이면 수렴은 정상'으로 연결한다. §2.3의 검색 정확도 평가는 보조·후속 문서 과제에서 다룰 부분임을 표시한다. 배경 문헌의 사적정보 논의 자체를 삭제할 필요는 없다.",
+      "acceptance_check": "주실험이 사적정보 억압이나 RAG 검색 효과를 측정한다고 읽히는 현재형 문장이 남지 않을 것."
+    },
+    {
+      "id": "D5",
+      "severity": "medium",
+      "status": "open_bibliography",
+      "axis": [
+        "consistency",
+        "evidence_and_provenance"
+      ],
+      "locations": [
+        {
+          "path": "paper/LIBERA_텀페이퍼_초안_20261017.html",
+          "line": 90,
+          "anchor": "ref-portbench"
+        },
+        {
+          "path": "plan/LIBERA_실험계획_20261017.html",
+          "line": 75,
+          "anchor": "ref-portbench"
+        },
+        {
+          "path": "research/build_research_v4.py",
+          "line": 198,
+          "symbol": "new_refs"
+        },
+        {
+          "path": "research/evidence_ledger_v4.json",
+          "source_id": "portbench2026v6"
+        }
+      ],
+      "issue": "핵심 모델·제약 출처인 PortBench의 저자가 본문/서지에서는 미정인데 근거 대조표에는 확인되어 있다.",
+      "why_it_matters": "APA 저자–연도 대응이 불완전하며 '저자 서지는 확인 후 반영'이 남아 있어 근거 확인이 끝난 완성 초안이라고 보기 어렵다.",
+      "required_change": "대조표의 검증된 저자 Zhao, Y., Chen, S., & Su, N.를 서지에 반영하고 본문도 Zhao 등(2026)으로 연결한다. long-only 출처는 Appendix C.1 T5인지 정확히 표기하며, γ·목적식·새 결합의 출처 범위 구분을 유지한다.",
+      "acceptance_check": "두 HTML과 빌더에서 미정 안내가 제거되고 대조표의 APA 메타데이터 및 본문 인용이 일치할 것."
+    },
+    {
+      "id": "D6",
+      "severity": "low",
+      "status": "open_status_label",
+      "axis": [
+        "consistency"
+      ],
+      "locations": [
+        {
+          "path": "plan/LIBERA_실험계획_20261017.html",
+          "line": 9,
+          "label": "동결 설정"
+        },
+        {
+          "path": "research/build_research_v4.py",
+          "line": 243,
+          "symbol": "plan_body"
+        },
+        {
+          "path": "plan/LIBERA_실험설정_20261017.json",
+          "pointer": "/model/exact_served_revision and /model/runtime_ready"
+        }
+      ],
+      "issue": "실행 모델의 불변 버전이 null이고 검증·프롬프트 묶음 작성 중인데 링크 라벨은 동결 설정이다.",
+      "why_it_matters": "설계와 실행 준비의 상태를 혼동할 수 있다. 지금 단계의 감사는 최종 런타임 동결을 인증하지 않는다.",
+      "required_change": "현재는 '실험 설정' 또는 '검증 중 설정'으로 부르고, 두 차례 검증과 런타임 해시·버전 고정 후 실제 freeze manifest로 동결 상태를 표시한다.",
+      "acceptance_check": "상태 라벨과 런타임 준비 상태가 일치할 것."
+    }
+  ],
+  "four_stage_provenance_judgment": {
+    "decision": "retain_the_declared_LIBERA_four_stage_treatment_do_not_substitute_a_matching_number",
+    "reason_ko": "PortBench의 3단계와 이번 4단계는 수행 과업이 달라 숫자를 3으로 맞춰도 직접 차용이 되지 않는다. 4단계는 검증할 업무정책의 정의로 명시하고 결과를 그 절차에 조건부로 한정하는 것이 정직하다. 논문 근거 금융조건과 새 처치의 결합을 모든 조건의 paper 직접 복제라고 부르면 안 된다.",
+    "user_constraint_boundary": "사용자가 요구한 paper 기반은 출처 없는 금융 상수를 논문 권고처럼 붙이지 말라는 제약으로 적용한다. 새 처치까지 기존 논문이 직접 입증했다고 주장하지 않으며, literal full replication인 것처럼 보고하지 않는다."
+  },
+  "pending_round2_checks_not_claimed_completed": [
+    "완성된 workflow pack의 목표 onset, opaque ID 비노출, 다른 γ·정답 누출 방지",
+    "실제 시장 입력 직렬화와 평가기 입력의 일치",
+    "R1/R4별 동일 최종 지시 및 네 응답과 FRESH 한 응답의 차이",
+    "완전 블록 실행 순서와 요청 manifest",
+    "기관별·기관쌍별 유효집합 mask 및 실패 분모 구현",
+    "문서 링크·산출물 완료 목록과 감사 후 재생성 일관성"
+  ],
+  "actions_taken": "이 감사 JSON만 작성함. 본문·설정·빌더·실험 패킷은 수정하거나 실행하지 않음.",
+  "ai_experiment_runs_performed_by_auditor": 0,
+  "recorded_at_utc": "2026-10-17T07:58:01.814006+00:00",
+  "reviewed_file_hashes": {
+    "plan/LIBERA_실험계획_20261017.html": "97daa4d54294a0361c1722dcfee2a26b20db81a26d9e46212e2477885ed7e49d",
+    "plan/LIBERA_실험설정_20261017.json": "4fc2f1b8c8472df8f21126aabb83848bed301661f4bc35b93672d27b0c35e03f",
+    "paper/LIBERA_텀페이퍼_초안_20261017.html": "6e95cb1922627aa1e02005d9c35af89bdd4982f897cf58cf02f8e9061bb4b06c",
+    "research/build_research_v4.py": "87dea3816609e5105591365d7fa4d37da4a4f74e17210d05318669d1b4f9ac52"
+  }
+}

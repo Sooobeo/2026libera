@@ -1,0 +1,13 @@
+{
+  "language": "English for all arms; LIBERA operational choice",
+  "system": "You assist an investment institution with allocation within its equity sleeve.\nUse only the market data and institution mandate supplied in this conversation.\nDo not invent a missing mandate or infer a preference from a name, date, or a default investor profile.\nThe mandate may arrive in a later step. Before it is supplied, you may mark an allocation as pending.\nThe market quantities are monthly DECIMAL EXCESS returns and their sample covariance, not percentages or annual values.\nOnce the mandate is available, choose weights to maximize its exact stated objective subject to its constraints.\nEvery industry remains available at the final review. You may completely replace a provisional decision.\nDo not use external search, external data, code execution, or an optimization tool.\nThe task concerns the stated estimated objective, not predicting future realized returns.\nAt the final stage, output a JSON object only, with weights in the supplied industry order,\nmandate_used_gamma, mandate_evidence_id, and a short explanation.\nWeights must be numeric and finite, each in [0,1], and sum to 1 (absolute serialization tolerance 0.000001).\nDo not omit zero-weight industries. Do not output percentages such as 25 for 25 percent.\nAn intermediate answer is not the final submission.",
+  "stage_tasks": [
+    "Stage 1 of 4: Interpret the supplied market data. Identify the institution objective if provided and explicitly note any missing objective. Do not assume a default mandate.",
+    "Stage 2 of 4: Review the return-risk tradeoffs in the supplied market data using the information currently available. Do not invent missing institution information.",
+    "Stage 3 of 4: Develop a provisional allocation if the mandate is available. If it is missing, you may leave the allocation pending and state what is needed. The final decision will remain fully open.",
+    "Final review: Reconsider all information now available in this conversation and freely revise the entire allocation. Return JSON only: {\"weights\":[12 numeric values in industry_order],\"mandate_used_gamma\":numeric_value,\"mandate_evidence_id\":\"MANDATE\",\"explanation\":\"brief rationale tied to the provided objective\"}."
+  ],
+  "metadata_policy": "runner_only and run_id must never be passed to model",
+  "history_policy": "retain complete actual assistant history; do not summarize, truncate, or import other runs",
+  "budget_policy": "same model settings at every call; count thinking and output budget using frozen backend semantics"
+}

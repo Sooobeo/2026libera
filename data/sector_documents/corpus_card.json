@@ -1,0 +1,50 @@
+{
+  "schema_version": "sector_documents_v4.2.1",
+  "construct": "published sector-judgment interpretation and justified proposed allocation",
+  "unit": "document case; eleven GICS sectors within each case",
+  "sectors": {
+    "10": "Energy",
+    "15": "Materials",
+    "20": "Industrials",
+    "25": "Consumer Discretionary",
+    "30": "Consumer Staples",
+    "35": "Health Care",
+    "40": "Financials",
+    "45": "Information Technology",
+    "50": "Communication Services",
+    "55": "Utilities",
+    "60": "Real Estate"
+  },
+  "splits": {
+    "pilot": [
+      "fidelity_q2_2026",
+      "ubs_june_2026"
+    ],
+    "main": [
+      "fidelity_q3_2026",
+      "ubs_july_2026"
+    ]
+  },
+  "common_market_snapshot_cutoff": "2026-07-17",
+  "common_benchmark_id": "sp500_sector_reference_20260630",
+  "limitations": [
+    "These are published sector judgments, not client mandates, risk-aversion coefficients, actual holdings, or complete institutional investment objectives.",
+    "The common 2026-07-17 cutoff is a retrospective document-snapshot availability cutoff. It does not establish simultaneous information, the latest views of all institutions, or a historical trading replay.",
+    "Current retrieved bytes and publisher dates do not prove which exact bytes were publicly available at the historical cutoff; no archived historical snapshot has been authenticated.",
+    "Pilot and main reuse the same two institutions and similar wording. UBS labels are unchanged; only two Fidelity sector labels change. This is not an independent held-out institution sample.",
+    "Pilot is a mechanical rehearsal using the same common market snapshot as main. Freeze pilot-derived rules before main; do not tune against main references.",
+    "Fidelity strategist research uses the top 3000 US stocks, while benchmark weights are S&P 500. The shared GICS sector action space is a constrained interpretation task, not exact replication of that strategist's investable universe.",
+    "Qualitative ratings do not identify unique numeric portfolio weights. Fidelity Overweight is relative to a benchmark; UBS Attractive is not an automatic Overweight instruction.",
+    "Source paraphrasing and chart transcription can simplify or misread the original. Independent substantive human source review remains pending.",
+    "The corpus tests source interpretation and reasoned proposed allocation. It cannot establish superior future returns, full strategy replication, or welfare effects."
+  ],
+  "readiness": {
+    "model_packets_prepared": true,
+    "mechanical_checks_passed": true,
+    "independent_substantive_human_review": "pending",
+    "experiment_run": false
+  },
+  "model_input_boundary": "Pass only the selected model packet plus the common market packet and execution rules. Do not include evaluator_only files or this corpus card's review metadata in model prompts.",
+  "blind_review_definition": "Worksheet is blank and blind to reference answers and model outputs/treatments; source identities remain visible.",
+  "reproduce": "python research/prepare_sector_documents.py; optionally --check-live or --download-missing"
+}

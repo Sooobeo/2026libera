@@ -1,0 +1,60 @@
+{
+  "interpretation": "Numerical and exact-decimal-input checks of prepared references/evaluator, not observed AI performance or full study-validity certification.",
+  "output_sha256": {
+    "cases.jsonl": "3ec2d5a56c842fdf688367ff1987d1dfcd905fa1723f65cade5cfe3bb7e69703",
+    "manifest.json": "aa09c97b8c7cabbe10a1f5187c5d31ad3560f6ec48d2a080fa27434341afe0d8",
+    "summary.json": "655fe361c1a91bbc93c5ecf870a8e9f19f77d64267f5c050fc553ec9e8ebaf03",
+    "windows.jsonl": "ab840abc3fa2b4b10ad910197311fc917aaf29f1cbafc15925cb68c336fa4fee"
+  },
+  "pass_1": {
+    "all_passed": true,
+    "cases": 1875,
+    "exact_decimal_vertex_dual_minimum_gap_decimal": 1.3096892655317e-06,
+    "exact_decimal_vertex_dual_minimum_gap_fraction": "13096892655317/10000000000000000000",
+    "exact_rational_vertex_KKT_cases": 673,
+    "scope": "All 1875 serialized references: independent gradient/feasibility calculation, source-input equality, oracle-zero, no future data or old unrestricted oracle copied",
+    "windows": 625
+  },
+  "pass_2": {
+    "all_passed": true,
+    "deterministic_regeneration_same_SHA256": true,
+    "invalid_vectors_rejected": 7,
+    "near_budget_raw_response_score": {
+      "budget_residual_objective_allowance": 6.902248593654826e-10,
+      "candidate_training_utility": 0.01020243048875416,
+      "case_id": "INST-W0001-G3",
+      "constrained_loss_expansion": {
+        "boundary_linear_term": -6.899562884273827e-10,
+        "identity_residual": 3.1761419416321114e-19,
+        "numerical_tolerance": 2.685705550971834e-13,
+        "quadratic_term": 3.342190928158315e-17
+      },
+      "engineering_sum_tolerance": 1e-06,
+      "negative_raw_regret_explained_by_allowed_budget_residual": true,
+      "raw_budget_residual_minus_one": 1.0000000005838672e-07,
+      "raw_weight_sum": 1.0000001,
+      "raw_weights": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.2285294076500241,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.7714706923499759
+      ],
+      "reference_training_utility": 0.010202429798797905,
+      "regret_not_clipped": true,
+      "scope": "Supplied training-input objective; no future-return or AI-observation claim.",
+      "total_variation_to_reference": 5.000000000143778e-08,
+      "utility_regret_direct": -6.899562553230876e-10,
+      "valid": true
+    },
+    "scope": "Evaluator invalid-vector checks, raw near-budget response kept without repair and negative-regret attribution, deterministic complete regeneration"
+  },
+  "status": "two_complementary_verification_passes_complete_no_AI_run"
+}

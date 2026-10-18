@@ -1,0 +1,48 @@
+{
+  "external_AI_or_network_calls": 0,
+  "generator": "research/prepare_institutional_benchmark.py",
+  "generator_sha256": "6a6cf0ec1118286eee3f92b4136e5723e3ffa75269e5e3bce75560c7a72fd648",
+  "input": {
+    "fields_read": [
+      "summary.dataset",
+      "windows[].window_id",
+      "windows[].training_window",
+      "windows[].training_forecast.mean_excess_return",
+      "windows[].training_forecast.sample_covariance_ddof_1"
+    ],
+    "path": "C:\\Users\\Insun\\2026libera\\data\\french\\salcher_quadratic_empirical_references.json",
+    "sha256": "7b2ff47432b204248014005bc9b24f6f7117329ad6a55527e91cfb653a1b877b"
+  },
+  "outputs": {
+    "cases.jsonl": {
+      "bytes": 14596442,
+      "sha256": "3ec2d5a56c842fdf688367ff1987d1dfcd905fa1723f65cade5cfe3bb7e69703"
+    },
+    "summary.json": {
+      "bytes": 16831,
+      "sha256": "655fe361c1a91bbc93c5ecf870a8e9f19f77d64267f5c050fc553ec9e8ebaf03"
+    },
+    "windows.jsonl": {
+      "bytes": 4051431,
+      "sha256": "ab840abc3fa2b4b10ad910197311fc917aaf29f1cbafc15925cb68c336fa4fee"
+    }
+  },
+  "reproduce": "python research/prepare_institutional_benchmark.py prepare",
+  "runtime": {
+    "numpy": "2.4.4",
+    "python": "3.13.3",
+    "scipy": "1.17.1"
+  },
+  "schema_version": "1.0",
+  "source": {
+    "covariance_implementation_distinction": "Use the existing paper-text sample covariance (ddof=1), not the author's code-only 0.2 diagonal shrinkage mode.",
+    "gamma_author_code": "https://github.com/salcherlukas/Lost_in_Translation/blob/14c3a4c9567da966de5a4f7b9e5ef9ea6cff99fe/code/00_setup.R",
+    "libera_extension": "A combination of Salcher quadratic utility with PortBench's long-only simplex, interpreted as three fictional equity-sector mandates. This is not a full replication, an estimate of actual institutions' preferences, or a private-forecast model.",
+    "portbench_location": "Appendix C.1 T5 supplies long-only weights and sum-one constraints for a maximum-Sharpe objective. Only those feasible-set conditions are borrowed; its 4% rate, daily lookback, objective, scoring and fallback are not used.",
+    "portbench_paper": "https://arxiv.org/html/2605.27887v6",
+    "salcher_locations": "Section 3.2 Eq.(6), full investment quadratic utility; Tables 2-5 gamma=1,3,5; Sections 4.1 and 6 monthly FF12 excess returns 1964-2023 and rolling 60/36-month windows.",
+    "salcher_paper": "https://onlinelibrary.wiley.com/doi/10.1002/for.70134",
+    "units_author_code": "https://github.com/salcherlukas/Lost_in_Translation/blob/14c3a4c9567da966de5a4f7b9e5ef9ea6cff99fe/code/functions/data.R"
+  },
+  "status": "prepared_numerically_KKT_verified_references_no_AI_experiment_run"
+}

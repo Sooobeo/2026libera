@@ -1,0 +1,72 @@
+{
+  "recorded_at_utc": "2026-10-17T10:20:09.951304+00:00",
+  "source": "Read-only UI and terminal observations through existing authenticated Proxmox Chrome tab",
+  "access": {
+    "method": "Proxmox web terminal",
+    "management_url": "https://proxmox.ycc.club",
+    "node": "ycc-1",
+    "container_id": 150,
+    "container_name": "gpt",
+    "ollama_ip": "192.168.0.151",
+    "direct_laptop_tcp_22_and_11434": "timeout; web terminal works"
+  },
+  "container": {
+    "ollama_version": "0.35.1",
+    "installed_model": "qwen3:1.7b",
+    "installed_short_id": "8f68893c685c",
+    "model_bytes_human": "1.4GB",
+    "memory_config_MiB": 8192,
+    "swap_config_MiB": 8192,
+    "cores_config": 4,
+    "free_h_available_GiB": 7.7,
+    "rootfs": "local-lvm:vm-150-disk-0,size=144G",
+    "df_root_available_human": "128G",
+    "model_store": "/usr/share/ollama/.ollama/models",
+    "nvidia_smi": "command not found",
+    "dev_dri": "not present",
+    "dev_nvidia_devices": "not present",
+    "namespace_cgroup_limits": [
+      "max",
+      "max",
+      "max 100000"
+    ],
+    "cgroup_caution": "Visible cgroup root does not override host-side container allocation."
+  },
+  "host": {
+    "cpu": "Intel Pentium Gold G6405 @ 4.10GHz",
+    "logical_CPUs": 4,
+    "ram_total_GiB_UI": 15.41,
+    "ram_used_GiB_UI": 7.46,
+    "swap_total_GiB_UI": 8.0,
+    "swap_used_GiB_UI": 2.71,
+    "gpu_controller_seen": "Intel CometLake-S GT1 UHD Graphics 610 [8086:9ba8]",
+    "dedicated_inference_GPU_found": false,
+    "local_lvm_pool": {
+      "total_KiB": 143773696,
+      "used_KiB": 119504696,
+      "available_KiB": 24268999,
+      "used_percent_reported": 83.12
+    }
+  },
+  "planned_model": {
+    "tag": "qwen3.6:35b",
+    "variant": "GGUF Q4_K_M",
+    "download_bytes_from_official_manifest": 22621314161,
+    "source": "https://registry.ollama.ai/v2/library/qwen3.6/manifests/35b"
+  },
+  "derived": {
+    "pool_available_GiB": 23.144721031188965,
+    "remaining_pool_GiB_after_model_layers_only": 2.0769804855808616,
+    "estimated_pool_used_percent_after_model_layers_only": 98.48520769080845,
+    "caution": "Estimate assumes all layers newly allocated in this pool; excludes metadata, other writes, and runtime overhead."
+  },
+  "outcome": {
+    "remote_control_verified": true,
+    "target_download_started": false,
+    "model_inference_calls": 0,
+    "remote_config_changes": 0,
+    "reason_not_started": "Shared thin-pool would become almost full; current 8GiB container on 15.41GiB host has no exposed GPU and has not established capacity for target model.",
+    "local_installation": "Still stopped at user request.",
+    "research_pilot_and_main_calls": 0
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "audit_id": "round2_math",
+  "round": 2,
+  "reviewed_protocol_version": "4.0",
+  "created_at_utc": "2026-10-17T08:02:32.999058+00:00",
+  "reviewer": "paper_numeric_audit",
+  "scope": "Second substantive math/logic/consistency review of revised root-authored plan/paper/config and actual root-authored workflow message builder and scorer. Includes independent nonzero mandate-blind synthetic fixtures, not just zero-scoring oracle fixtures.",
+  "reviewer_independence": "Reviewer authored the separate numerical reference builder. The reviewed integration/scoring/message code and documents were root-authored. This is not mislabeled as an independent authorship audit of the numerical reference builder.",
+  "overall_verdict": "PASS_AFTER_REPRODUCED_INTEGRATION_ROBUSTNESS_FIX",
+  "unresolved_math_logic_consistency_findings": [],
+  "document_and_code_snapshots": [
+    {
+      "path": "plan/LIBERA_실험계획_20261017.html",
+      "sha256": "edca55b0b3eddbbb3dde389fa14f7fbb6eb6cc886a333ec115a15b6b16d52808",
+      "bytes": 37205
+    },
+    {
+      "path": "plan/LIBERA_실험설정_20261017.json",
+      "sha256": "706754b7344ecdf2c412affe66303d83e8ac787d210fa52d37462a2b237b2d2c",
+      "bytes": 10127
+    },
+    {
+      "path": "paper/LIBERA_텀페이퍼_초안_20261017.html",
+      "sha256": "8ce3be4d7371cb53b94f12c836124991fadababcf1d0e26ed7404edfb110f306",
+      "bytes": 53078
+    },
+    {
+      "path": "research/prepare_workflow_v4.py",
+      "sha256": "d61c291aed03b743a4bc3b502de4ace26a6e1af49b4882652a33d2d3dd139116",
+      "bytes": 19123
+    },
+    {
+      "path": "research/verify_workflow_v4.py",
+      "sha256": "9f96a77d0bc54f72a6f98da53a8c9ca71abf2783c03b6f01dc71e3d5c707adc4",
+      "bytes": 9522
+    },
+    {
+      "path": "data/workflow/example_packets.json",
+      "sha256": "39124f2706863d36781620c7fe097910e8aad8964eca1d5ecb7a1e3faa3a2f9c",
+      "bytes": 7059
+    },
+    {
+      "path": "data/workflow/manifest.json",
+      "sha256": "2bd4f3626b951c884e6e3f147c7465f6531f518ec14d3edb136cdd090ff5ed02",
+      "bytes": 1453
+    },
+    {
+      "path": "data/workflow/prompt_spec.json",
+      "sha256": "47cc5c3258ddc3bb65d07abc957dd4ceea32cfbd038029783d169259f54bb02b",
+      "bytes": 2623
+    },
+    {
+      "path": "data/workflow/runs.jsonl",
+      "sha256": "acb253908472db43fe0219384141f4da06630e4af4bbf57b086884f023b65dae",
+      "bytes": 29132205
+    }
+  ],
+  "round1_issue_resolution": [
+    {
+      "id": "MATH-R1-01",
+      "status": "closed_verified",
+      "evidence": "Both HTML method sections now explain signed raw objective gaps and allowed budget residuals; JSON analysis.negative_raw_gap_policy agrees. Independent integrated scorer fixture retained a raw budget residual 1.0000000005838672e-7 and raw gap -6.899562553230876e-10, with its budget-explanation flag true and no repair or clipping."
+    },
+    {
+      "id": "MATH-R1-02",
+      "status": "closed_verified",
+      "evidence": "Both HTMLs and JSON explicitly require two valid policy responses for an individual contrast and four for an institutional-pair policy contrast. Scorer uses a shared window/membership mask. Mechanical fixture drops exactly one individual and two pair contrasts for one invalid R4/gamma1 answer. Independent missing-counterpart fixture yields zero paired comparisons."
+    },
+    {
+      "id": "MATH-R1-03",
+      "status": "closed_verified",
+      "evidence": "Both HTMLs now describe a risk cost proportional to portfolio variance, consistent with w.T@Sigma@w rather than its square root."
+    }
+  ],
+  "new_issue_found_and_fixed": {
+    "id": "MATH-R2-01",
+    "severity_before_fix": "moderate",
+    "category": "invalid_model_output_must_not_abort_whole_evaluation",
+    "discovery": "Independent evaluation fixtures with a valid JSON integer 10**400 in mandate_used_gamma or weights raised uncaught OverflowError and aborted the full batch rather than marking that final response invalid.",
+    "root_correction": "prepare_workflow_v4.evaluate now catches OverflowError and RecursionError in its per-final-response parsing/scoring boundary, preserving other cases and missingness counts.",
+    "status": "closed_reproduced_after_fix",
+    "before_source_sha256": null,
+    "after_source_sha256": "d61c291aed03b743a4bc3b502de4ace26a6e1af49b4882652a33d2d3dd139116",
+    "independent_retest": {
+      "storage": "Fresh TemporaryDirectory; synthetic fixture and output deleted after verification, not installed as AI results.",
+      "input_records": 4,
+      "fixtures": [
+        "oversized integer gamma",
+        "oversized integer weight",
+        "2000-level nested weights JSON",
+        "one valid near-budget reference portfolio"
+      ],
+      "planned_runs": 5625,
+      "result_counts": {
+        "invalid_final": 3,
+        "missing": 5621,
+        "scored": 1
+      },
+      "batch_completed": true,
+      "valid_near_budget_record": {
+        "raw_gap": -6.899562553230876e-10,
+        "raw_budget_residual": 1.0000000005838672e-07,
+        "budget_residual_flag": true,
+        "raw_weights_unchanged": true
+      },
+      "paired_individual_comparisons": 0,
+      "paired_institution_pair_comparisons": 0
+    }
+  },
+  "independent_scientific_metric_integration_test": {
+    "label": "SYNTHETIC DETERMINISTIC GAMMA3-BLIND DIAGNOSTIC; NOT AI OBSERVATIONS",
+    "purpose": "Check that the integration detects loss of warranted cross-mandate allocation response as well as institution-specific objective quality; zero oracle fixtures alone cannot demonstrate this.",
+    "fixture_rule": "R1 and FRESH use each mandate own reference; R4 uses the same window gamma3 reference for all three mandates while still reporting the correct mandate gamma.",
+    "fixture_final_records": 5625,
+    "actual_AI_calls": 0,
+    "storage": "TemporaryDirectory only; no fixture installed under research results.",
+    "expected_and_observed": {
+      "pair_policy_delta_E_equals_mean_D_star": {
+        "1-3": 0.22621640259598608,
+        "1-5": 0.3807568436312312,
+        "3-5": 0.17154843960485142
+      },
+      "pair_policy_delta_G_equals_mean_D_star": true,
+      "individual_policy_delta_L": {
+        "gamma1": 0.00025154024269441276,
+        "gamma3": 0.0,
+        "gamma5": 0.00019585304696354312
+      },
+      "four_valid_outputs_per_pair_all_625_windows": true,
+      "shared_optimum_stratum_delta_E_zero": true,
+      "all_equal_reference_gamma_mention_does_not_substitute_for_allocation_quality": true
+    },
+    "passed": true,
+    "interpretation": "A mandate-blind policy is detected when reference allocations should differ, while warranted equality remains unpenalized. These are evaluator expectations, not findings about any AI model."
+  },
+  "message_and_information_structure_review": {
+    "all_625_R4_early_user_content_triples_identical_across_three_gammas": true,
+    "market_data_allowlist_only": true,
+    "mandate_inserted_once_at_assigned_onset": true,
+    "no_runner_or_gamma_bearing_ids_in_model_messages": true,
+    "no_gold_or_future_windows_in_model_messages": true,
+    "actual_assistant_history_appended_without_other_case_metadata": true,
+    "limitations": "The offline helper assembles independent case/arm conversations. Actual provider isolation, complete untruncated history, immutable backend and access remain runtime gates; no successful real execution is asserted."
+  },
+  "substantive_consistency_checks": [
+    {
+      "dimension": "formulas",
+      "verdict": "pass",
+      "reason": "Displayed quadratic objective, monthly decimal units, nonnegative full-investment constraints, direct constrained gap, signed pair response error E and descriptive distance reduction G agree with the integration. No unrestricted loss identity is substituted."
+    },
+    {
+      "dimension": "logic_and_topic",
+      "verdict": "pass",
+      "reason": "The estimand is preservation of warranted institution mandate response under a fixed common model, jointly judged with each mandate objective and failures. It is not answer diversity alone and not a claim about common-model adoption or actual private forecasts. Shared errors can cancel in E, so joint institution losses remain essential as the documents require."
+    },
+    {
+      "dimension": "identification",
+      "verdict": "pass",
+      "reason": "R1/R4 changes an onset/position/history-use policy bundle; FRESH is a separate one-step capability diagnostic. Before mandate arrival pending is allowed and there is no unique mandate-specific intermediate oracle score."
+    },
+    {
+      "dimension": "sample_and_denominators",
+      "verdict": "pass",
+      "reason": "625 overlapping public-data windows, 1875 mandate cases, 3750 main final outputs and 16875 planned response calls are distinguished from independent observations. All windows and shared-optimum strata remain. Numeric contrasts use common validity masks and do not imply full-corpus superiority when failures are asymmetric."
+    },
+    {
+      "dimension": "result_status",
+      "verdict": "pass",
+      "reason": "Documents distinguish 1875 computed optima and 83 all-shared reference windows from AI observations. Config AI runs=0; workflow model_calls=0 and run_ready=false. Synthetic verification fixtures are explicitly labeled, temporary and not research results."
+    }
+  ],
+  "mechanical_report_cross_reference": {
+    "path": "research/audits/round2_mechanical.json",
+    "all_checks_passed": true,
+    "checks": 8,
+    "raw_table_recomputed_mean_and_covariance_error": 0.0,
+    "pending_local_links": [],
+    "note": "Root-authored mechanical suite is corroborating evidence; independent blind-policy and malformed-response retests above are separate reviewer checks."
+  },
+  "actual_runtime_status": {
+    "AI_runs": 0,
+    "workflow_model_calls": 0,
+    "model_runtime_ready": false,
+    "workflow_run_ready": false,
+    "remaining_gate": "verify fixed target model access and immutable model/backend manifest; no silent substitution"
+  },
+  "approval_scope": "Offline document/reference/workflow/scorer consistency only. Does not certify an unavailable model runtime, predict a treatment effect, or report experimental AI performance.",
+  "files_modified_by_reviewer_this_round": [
+    "research/audits/round2_math.json"
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "schema_version": "libera_v44_preflight_independent_review_1.0",
+  "created_at_utc": "2026-10-18T06:55:14.667404+00:00",
+  "reviewer": "institution_templates",
+  "scope": "Independent read-only source/API review before one authorized case; no model call or remote operation by reviewer",
+  "status": "pass_with_stated_limits",
+  "checks": [
+    {
+      "id": "all_request_conditions_pinned",
+      "status": "pass",
+      "finding": "Full request, including top_p/top_k/min_p, equals the frozen primary-reference conditions; engine/model/template and source input hashes are checked."
+    },
+    {
+      "id": "renderer_policy_and_sources_pinned",
+      "status": "pass",
+      "finding": "Preparation and per-stage manifest checks require the immutable renderer policy plus both local source snapshots."
+    },
+    {
+      "id": "render_api_contract",
+      "status": "pass",
+      "finding": "Saved official routes return _debug_info.rendered_template before completion in the debug-only path; request captures stream=false, _debug_render_only=true, truncate=false and shift=false."
+    },
+    {
+      "id": "unexpected_render_generation_stops",
+      "status": "pass",
+      "finding": "Content, thinking, tool calls, nonzero eval_count or prompt_eval_count in render evidence are rejected before generation; anomaly evidence is counted separately."
+    },
+    {
+      "id": "http_history_preserved",
+      "status": "pass",
+      "finding": "Only stage1 duplicate-field projection is applied and reverse-checked; subsequent assistant/calculator message strings and transmitted prefixes remain exact."
+    },
+    {
+      "id": "restricted_renderer_boundary_policy",
+      "status": "pass",
+      "finding": "Fixed system content is literal. Other JSON strings permit only outer space/tab/CR/LF; values and all internal characters remain unchanged and hashes/removed boundaries are recorded."
+    },
+    {
+      "id": "context_evidence_scope",
+      "status": "pass",
+      "finding": "Renderer output is inspected in order. No exact token count or byte heuristic is claimed. No wrapper message truncation or context shifting is requested."
+    },
+    {
+      "id": "single_attempt_child_deadline",
+      "status": "pass",
+      "finding": "Each stage has one supervised owned child with a 900-second bound covering metadata, render and generation. Cleanup is explicitly outside the bound; no retry or replacement case exists."
+    },
+    {
+      "id": "overflow_length_and_invalid_json_stop",
+      "status": "pass",
+      "finding": "Backend HTTP/error failures stop; output_limit_reached is rejected by workflow.run_case before continuation; strict JSON parse errors stop without repair."
+    },
+    {
+      "id": "cancel_status_preserved",
+      "status": "pass",
+      "finding": "StageStopped carries cancelled or hard_deadline status to the final summary rather than recoding operator cancellation as a model failure."
+    },
+    {
+      "id": "gold_not_in_online_case",
+      "status": "pass",
+      "finding": "The selected packet is extracted from the exact previous model request. This run path reads model packet and market data, not evaluator gold; calculate_portfolio uses common market and already-visible evidence IDs."
+    },
+    {
+      "id": "research_scope_counts",
+      "status": "pass",
+      "finding": "One fixed Fidelity Q2/R1 case, four sequential stages, no automatic retries, no main calls, main_freeze=false and human_semantic_pass=false are explicit."
+    }
+  ],
+  "check_count": 12,
+  "evidence_files": {
+    "research/local_sector_single_case.py": {
+      "sha256": "0b2596a223167136bb37578e86469d50c26e7883305d4db31f43b9ddd10d28d0",
+      "size_bytes": 30650
+    },
+    "research/test_local_sector_single_case.py": {
+      "sha256": "669e711b193ae1c9669de85827ea643e4ca33e28e2eeb821d9cf7f6d8e870ec3",
+      "size_bytes": 15751
+    },
+    "research/run_sector_workflow.py": {
+      "sha256": "5625450a4dcbe1aa717c9809bf4955c1ef6b10aab4f0c83ef05dc2eb2c123cfd",
+      "size_bytes": 23842
+    },
+    "research/remote_sector_runtime.py": {
+      "sha256": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5",
+      "size_bytes": 32605
+    },
+    "research/sector_engine.py": {
+      "sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c",
+      "size_bytes": 27360
+    },
+    "research/v44_conditions_reference_20261018.json": {
+      "sha256": "a403d4c37d1581f9af21af8ba7a6333614d890ff15277e83181c1204549a9c5b",
+      "size_bytes": 16107
+    },
+    "research/v44_renderer_policy_20261018.json": {
+      "sha256": "4135e7f2d0000e4f51ca3414af803805c823f681468807d3ab19f9fd116488a4",
+      "size_bytes": 3736
+    },
+    "research/evidence/v44_renderer_appendix_20261018/ollama_qwen35_renderer_v0351.go": {
+      "sha256": "69bca99b53a3db8d599bb9ec8eadf65ce9a72868566a89bfac44d31fe3b565e0",
+      "size_bytes": 11201
+    },
+    "research/evidence/v44_renderer_appendix_20261018/go_strings_public_snapshot.go": {
+      "sha256": "a81bdf73a308277c322e35d0c602e3813f57b6f769c091f8f8962c8884a45ea3",
+      "size_bytes": 34265
+    },
+    "research/evidence/v44_primary_sources_20261018/ollama_server_routes_v0351.go": {
+      "sha256": "d0d524eae78da3a73c344e86ca9b215358c964845188a192e5c35ac41fb0a55d",
+      "size_bytes": 94397
+    },
+    "research/evidence/v44_primary_sources_20261018/ollama_server_prompt_v0351.go": {
+      "sha256": "79411c4e15ff27fb8bac4dcd96076407e035ec407c0ab1a1840035f9668b4654",
+      "size_bytes": 4362
+    },
+    "research/evidence/v44_primary_sources_20261018/ollama_llama_server_v0351.go": {
+      "sha256": "10777cca3193c12b4cfcc90f5cfd88085c298f7a2c2c7333b0b95bb6e545d391",
+      "size_bytes": 89853
+    }
+  },
+  "resolved_findings": [
+    {
+      "finding": "Unexpected render thinking/tool_calls could pass validation",
+      "resolution": "Author added fail-closed checks and fake-server cases before source freeze"
+    },
+    {
+      "finding": "Supervisor CANCEL was surfaced as failed",
+      "resolution": "Author added StageStopped status propagation before source freeze"
+    }
+  ],
+  "author_reported_tests": {
+    "kind": "fake HTTP, no model inference",
+    "passed": 12,
+    "independently_rerun_by_this_reviewer": false,
+    "test_source_sha256": "669e711b193ae1c9669de85827ea643e4ca33e28e2eeb821d9cf7f6d8e870ec3"
+  },
+  "limitations": [
+    "Static/API-path review is not proof of installed-backend context capacity or token preservation after tokenization. Rendered text preservation and explicit flags will be checked against actual saved evidence.",
+    "Temperature zero is the requested greedy control; this review does not independently audit every bundled backend sampler implementation. Cross-engine decoding identity with FinVector is not claimed.",
+    "Completion means the four-stage workflow executed; it is not strategy quality, human semantic approval, a main-study effect, or a representative institutional sample."
+  ],
+  "model_generation_calls_by_reviewer": 0,
+  "postrun_round2": "Pending actual raw outputs; independently recompute exact sums, active weights, variance and source-label/evidence-ID checks without new heuristic cutoffs."
+}

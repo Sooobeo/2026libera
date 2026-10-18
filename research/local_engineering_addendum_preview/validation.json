@@ -1,0 +1,43 @@
+{
+  "scope": "Final preview parse/semantic validation; no live document update or inference.",
+  "status": "pass",
+  "report_sha256": "00fdaf93a48c3e1dde4dfa87bb6e0363f89bd0c90e7ab55db399804971ee0150",
+  "builder_sha256": "a1b676d40bd82b9857e904105aae41d108b2a73e372deec708b364f284d62ce3",
+  "preview_document_hashes": {
+    "plan": "1c7da2ef2057e2bf9010513b9ee3817404164ec9608746a35c09b69775df451d",
+    "paper": "880700f88bb233117fb5c436832457e2b775a09b12b25517599ad9b9ecb8ae9e",
+    "config": "09b3bf4a07135f2607cd08a6eb34750c05d7524b212d479d03ae0fae1764abb1"
+  },
+  "checks": [
+    {
+      "id": "plan_preview_preserved_and_styled",
+      "status": "pass",
+      "detail": "Four local rows, one appendix inside styled main/article; stripping only owned blocks exactly reproduces the unchanged live document."
+    },
+    {
+      "id": "plan_preview_link_targets",
+      "status": "pass",
+      "detail": "Readable HTML, JSON and startup-script links resolve in intended final document location; preview preserves final-relative link context."
+    },
+    {
+      "id": "paper_preview_preserved_and_styled",
+      "status": "pass",
+      "detail": "Four local rows, one appendix inside styled main/article; stripping only owned blocks exactly reproduces the unchanged live document."
+    },
+    {
+      "id": "paper_preview_link_targets",
+      "status": "pass",
+      "detail": "Readable HTML, JSON and startup-script links resolve in intended final document location; preview preserves final-relative link context."
+    },
+    {
+      "id": "study_configuration_and_shared_appendix",
+      "status": "pass",
+      "detail": "All original study model/conditions/results/remote history unchanged; plan/paper appendices agree and reference the final four-observation report."
+    }
+  ],
+  "limits": [
+    "Preview retains final plan/paper relative-link context.",
+    "Parse and semantic verification, not rendered screenshot verification."
+  ],
+  "check_count": 5
+}

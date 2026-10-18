@@ -1,0 +1,41 @@
+{
+  "status": "completed",
+  "model_requests_attempted": 1,
+  "done_reason": "stop",
+  "parseable_json_object": true,
+  "unexpected_thinking": false,
+  "expected_synthetic_json": true,
+  "assessment_scope": "synthetic_ready_json_only",
+  "response_model": "qwen3.5:4b-q4_K_M",
+  "worker_wall_seconds": 13.567956400002004,
+  "calls": [
+    {
+      "kind": "latency_probe",
+      "folder": "http_0001_latency_probe",
+      "started_at_utc": "2026-10-18T06:34:13.640262+00:00",
+      "status": "completed",
+      "http_status": 200,
+      "metrics": {
+        "wall_seconds": 13.556900600000517,
+        "ttft_any_generated_seconds": 13.012620900000911,
+        "ttft_content_seconds": 13.01261939998949,
+        "token_count_source": "Ollama counters, not independent tokenization",
+        "duration_unit_in_response": "nanoseconds",
+        "total_duration_seconds": 13.5411569,
+        "load_duration_seconds": 9.9484859,
+        "prompt_eval_duration_seconds": 3.036411,
+        "eval_duration_seconds": 0.539764,
+        "prompt_eval_count": 377,
+        "eval_count": 6,
+        "prompt_eval_tokens_per_second": 124.15973990345839,
+        "eval_tokens_per_second": 11.115969201354666
+      },
+      "raw_bytes_path": "http_0001_latency_probe\\raw_stream.bin",
+      "no_automatic_retry": true,
+      "unexpected_thinking_with_disabled_request": false
+    }
+  ],
+  "pilot_model_calls": 0,
+  "main_model_calls": 0,
+  "automatic_retries": 0
+}

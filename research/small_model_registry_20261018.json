@@ -1,0 +1,173 @@
+{
+  "checked_at_utc": "2026-10-18T04:09:18.494331+00:00",
+  "client_date": "2026-10-18",
+  "scope": "Public metadata only. No model download, installation, inference, or active protocol change.",
+  "size_definition": "Sum of model manifest layers, excludes manifest/config metadata; not runtime RAM.",
+  "candidates": [
+    {
+      "tag": "qwen3.5:4b-q4_K_M",
+      "manifest_url": "https://registry.ollama.ai/v2/library/qwen3.5/manifests/4b-q4_K_M",
+      "manifest_sha256": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "layer_bytes": 3324173757,
+      "config_url": "https://registry.ollama.ai/v2/library/qwen3.5/blobs/sha256:788a4d94bc3f431ac0cd067005be4b838a09330427962952420b05d10ecf84db",
+      "config": {
+        "model_format": "gguf",
+        "model_family": "qwen35",
+        "model_families": [
+          "qwen35"
+        ],
+        "model_type": "4.2B",
+        "file_type": "Q4_K_M",
+        "renderer": "qwen3.5",
+        "parser": "qwen3.5",
+        "requires": "0.30.0"
+      }
+    },
+    {
+      "tag": "qwen3.5:2b-q4_K_M",
+      "manifest_url": "https://registry.ollama.ai/v2/library/qwen3.5/manifests/2b-q4_K_M",
+      "manifest_sha256": "1e2d21a4f03ab9e4a9c1976a4b7e88f21de61d65f2c5485d8fde8942be73f1e7",
+      "layer_bytes": 1945781181,
+      "config_url": "https://registry.ollama.ai/v2/library/qwen3.5/blobs/sha256:37f57288e2ab61515e0db050eb9eee2d4b25881e49d95e7d20b2809b245d6220",
+      "config": {
+        "model_format": "gguf",
+        "model_family": "qwen35",
+        "model_families": [
+          "qwen35"
+        ],
+        "model_type": "1.9B",
+        "file_type": "Q4_K_M",
+        "renderer": "qwen3.5",
+        "parser": "qwen3.5",
+        "requires": "0.30.0"
+      }
+    },
+    {
+      "tag": "qwen3.5:2b",
+      "manifest_url": "https://registry.ollama.ai/v2/library/qwen3.5/manifests/2b",
+      "manifest_sha256": "0689d44085e06d165161a8a9a1731344278cfb5aade63a3c3dbdb48ab54b130a",
+      "layer_bytes": 2683396637,
+      "config_url": "https://registry.ollama.ai/v2/library/qwen3.5/blobs/sha256:0f7af3a2d4145d7e4dbc9dbab778ac7a6aee7104fb93570c047726b5a816781f",
+      "config": {
+        "model_format": "gguf",
+        "model_family": "qwen35",
+        "model_families": [
+          "qwen35"
+        ],
+        "model_type": "1.9B",
+        "file_type": "Q8_0",
+        "renderer": "qwen3.5",
+        "parser": "qwen3.5",
+        "requires": "0.30.0"
+      }
+    },
+    {
+      "tag": "qwen3:4b-q4_K_M",
+      "manifest_url": "https://registry.ollama.ai/v2/library/qwen3/manifests/4b-q4_K_M",
+      "manifest_sha256": "2bfd38a7daaf4b1037efe517ccb73d1a3bbd4822cf89f1a82be1569050a114e0",
+      "layer_bytes": 2620787773,
+      "config_url": "https://registry.ollama.ai/v2/library/qwen3/blobs/sha256:5efd52d6d9f24db4a33df0d706ee6037edf026027281bb9568bb066ebc5a4f31",
+      "config": {
+        "model_format": "gguf",
+        "model_family": "qwen3",
+        "model_families": [
+          "qwen3"
+        ],
+        "model_type": "4.0B",
+        "file_type": "Q4_K_M",
+        "architecture": "amd64",
+        "os": "linux",
+        "rootfs": {
+          "type": "layers",
+          "diff_ids": [
+            "sha256:163553aea1b1de62de7c5eb2ef5afb756b4b3133308d9ae7e42e951d8d696ef5",
+            "sha256:eb4402837c7829a690fa845de4d7f3fd842c2adee476d5341da8a46ea9255175",
+            "sha256:d18a5cc71b84bc4af394a31116bd3932b42241de70c77d2b76d69a314ec8aa12",
+            "sha256:cff3f395ef3756ab63e58b0ad1b32bb6f802905cae1472e6a12034e4246fbbdb"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "qwen3:1.7b",
+      "manifest_url": "https://registry.ollama.ai/v2/library/qwen3/manifests/1.7b",
+      "manifest_sha256": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+      "layer_bytes": 1359292957,
+      "config_url": "https://registry.ollama.ai/v2/library/qwen3/blobs/sha256:517ccaff02fe9f99718ab2f478e611aa2813c36263eeed86c2427bc122d14ad8",
+      "config": {
+        "model_format": "gguf",
+        "model_family": "qwen3",
+        "model_families": [
+          "qwen3"
+        ],
+        "model_type": "2.0B",
+        "file_type": "Q4_K_M",
+        "architecture": "amd64",
+        "os": "linux",
+        "rootfs": {
+          "type": "layers",
+          "diff_ids": [
+            "sha256:3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6",
+            "sha256:eb4402837c7829a690fa845de4d7f3fd842c2adee476d5341da8a46ea9255175",
+            "sha256:d18a5cc71b84bc4af394a31116bd3932b42241de70c77d2b76d69a314ec8aa12",
+            "sha256:cff3f395ef3756ab63e58b0ad1b32bb6f802905cae1472e6a12034e4246fbbdb"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "qwen3:4b-thinking-2507-q4_K_M",
+      "manifest_url": "https://registry.ollama.ai/v2/library/qwen3/manifests/4b-thinking-2507-q4_K_M",
+      "manifest_sha256": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+      "layer_bytes": 2497293444,
+      "config_url": "https://registry.ollama.ai/v2/library/qwen3/blobs/sha256:e18a783aae5525fd2852fc94c985541a77e791e034abc2d3056474d59de336fc",
+      "config": {
+        "model_format": "gguf",
+        "model_family": "qwen3",
+        "model_families": [
+          "qwen3"
+        ],
+        "model_type": "4.0B",
+        "file_type": "Q4_K_M",
+        "architecture": "amd64",
+        "os": "linux",
+        "rootfs": {
+          "type": "layers",
+          "diff_ids": [
+            "sha256:3e4cb14174460404e7a233e531675303b2fbf7749c02f91864fe311ab6344e4f",
+            "sha256:53e4ea15e8f5f17f5052c5ef6aef5f79b4266708c93e7c893dbe4b3e211a815d",
+            "sha256:d18a5cc71b84bc4af394a31116bd3932b42241de70c77d2b76d69a314ec8aa12",
+            "sha256:cff3f395ef3756ab63e58b0ad1b32bb6f802905cae1472e6a12034e4246fbbdb"
+          ]
+        }
+      }
+    },
+    {
+      "tag": "qwen3:4b",
+      "manifest_url": "https://registry.ollama.ai/v2/library/qwen3/manifests/4b",
+      "manifest_sha256": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+      "layer_bytes": 2497293444,
+      "config_url": "https://registry.ollama.ai/v2/library/qwen3/blobs/sha256:e18a783aae5525fd2852fc94c985541a77e791e034abc2d3056474d59de336fc",
+      "config": {
+        "model_format": "gguf",
+        "model_family": "qwen3",
+        "model_families": [
+          "qwen3"
+        ],
+        "model_type": "4.0B",
+        "file_type": "Q4_K_M",
+        "architecture": "amd64",
+        "os": "linux",
+        "rootfs": {
+          "type": "layers",
+          "diff_ids": [
+            "sha256:3e4cb14174460404e7a233e531675303b2fbf7749c02f91864fe311ab6344e4f",
+            "sha256:53e4ea15e8f5f17f5052c5ef6aef5f79b4266708c93e7c893dbe4b3e211a815d",
+            "sha256:d18a5cc71b84bc4af394a31116bd3932b42241de70c77d2b76d69a314ec8aa12",
+            "sha256:cff3f395ef3756ab63e58b0ad1b32bb6f802905cae1472e6a12034e4246fbbdb"
+          ]
+        }
+      }
+    }
+  ]
+}

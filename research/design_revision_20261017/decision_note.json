@@ -1,0 +1,113 @@
+{
+  "status": "industry_unit_selected; earlier alternatives remain research history",
+  "date": "2026-10-17",
+  "active_protocol_note": "The active plan, paper and config are now v4.2. The candidate arrays below preserve earlier research history; the v4.2 config and sector corpus are authoritative.",
+  "user_direction": "Use a recent period rather than the full historical span.",
+  "pending_choice": null,
+  "period_candidates": [
+    {
+      "id": "industry_recent_decisions",
+      "decision_period": "2024-2025",
+      "estimation_history": "Frozen retrospective indexing: for each reference month 2024-01 through 2025-12, use exactly the preceding 60 observation months. Data are currently revised values, not verified historical publication-time availability.",
+      "source_roles": {
+        "https://arxiv.org/html/2605.27887v6": "Appendix B.2 uses 2024-2025 as its held-out QA test period; this is not the same as its pipeline evaluation period.",
+        "https://onlinelibrary.wiley.com/doi/full/10.1002/for.70134": "60-month estimation-length precedent; not a prescription of our proposed evaluation dates."
+      },
+      "provenance": "LIBERA adaptation combining separately sourced choices",
+      "limitations": "Recent evaluation still requires trailing estimation history. FF12 constituents still change. A separate 24-window, 72-case numerical control is now prepared in data/institutional_recent; it is not the documentary main task."
+    },
+    {
+      "id": "openpm_stock_candidate",
+      "dataset_coverage": "2026-02-19/2026-05-01",
+      "paper_evaluation_period": "2026-03-02/2026-05-01",
+      "paper_trading_days": 44,
+      "source": "https://arxiv.org/html/2608.09988v1",
+      "dataset": "https://huggingface.co/datasets/aslcai/OpenPM-Bench",
+      "code": "https://github.com/aslcai/OpenPM-Bench",
+      "source_locator": "Sections 3.2, 3.3, 5 and 6.3",
+      "provenance": "direct paper candidate; not downloaded or adopted",
+      "limitations": "A single short market window, point-in-time changing membership, and no proof of general financial performance. Public dataset release, licensing, manifest, necessary fields, source versions and model knowledge-cutoff implications must be audited before use. Paper risk-profile presets are research assumptions, not measured preferences of actual funds."
+    }
+  ],
+  "risk_recommendation": {
+    "input": "Keep qualitative preferences as documented prose; preserve explicit numeric constraints with their denominator and exceptions. Mark absent information as not stated.",
+    "evaluation": "Quantitatively measure mandate compliance and portfolio characteristics without inventing a prose-to-gamma mapping.",
+    "gamma_role": "The existing paper-derived gamma 1/3/5 may remain a separate hypothetical numerical task, not a calibration of real institutions.",
+    "paper_basis": "https://www.ifo.de/DocDL/cesifo1_wp11862.pdf",
+    "paper_locator": "Sections 3.1-3.2, Table 6, Table A1",
+    "scope_caution": "All-equity industry allocation limits the ability to express overall risk preference through stocks versus bonds or cash."
+  },
+  "document_recommendation": {
+    "unit": "Identify the issuing institution and responsible organizational unit. Use a named fund/share class only for fund documents; distinguish a house research view from a fund mandate.",
+    "official_template": "https://www.sec.gov/files/form-n-1a.pdf",
+    "fields": [
+      "objectives",
+      "principal strategies",
+      "principal risks",
+      "explicit limits and denominators",
+      "exceptions",
+      "qualitative selection rationale"
+    ],
+    "official_data_not_paper": "Regulatory and fund documents supply empirical mandate facts. Academic papers support task/evaluation design; they do not validate invented fund parameter values.",
+    "candidate_original": "https://www.sec.gov/Archives/edgar/data/752177/000119312526025001/f43838d1.htm",
+    "candidate_fact": "Vanguard PRIMECAP summary prospectus dated 2026-01-28: long-term capital appreciation; may invest up to 25% of assets in foreign securities. The cap is not a target weight or an industry allocation rule.",
+    "version_gate": "Check filing availability, supplement chain and applicability at each decision date before selecting any packet. Never combine 2026 mandates with historical decisions as if they were then available.",
+    "scope_gate": "FF12 alone does not expose issuer nationality, currency, market capitalization, growth/value or blue-chip eligibility. Unsupported constraints cannot be scored from industry returns alone."
+  },
+  "evaluation_candidates": [
+    {
+      "name": "asset validity",
+      "definition": "Exists at the decision time, permitted by the supplied universe and mandate; for FF12 validate industry identifiers rather than invented stock-level holdings."
+    },
+    {
+      "name": "mandate extraction and evidence",
+      "definition": "Correct objectives, numeric values, denominators, exceptions and source support against an independently reviewed evaluator-only annotation."
+    },
+    {
+      "name": "constraint adherence",
+      "definition": "Record each constraint's violation separately; retain proposed weights before any deterministic repair."
+    },
+    {
+      "name": "allocation tendency",
+      "definition": "Test only document-supported exposures or prespecified, justified responses to a changed mandate while holding common market evidence fixed. No unsupported sector direction inferred from a risk label."
+    },
+    {
+      "name": "numeric distance",
+      "definition": "Use continuous distance where an independent mathematical reference exists. Holdings similarity measures reproduction, not uniquely correct strategy. Do not invent a pass tolerance after viewing main outcomes."
+    },
+    {
+      "name": "institutional differentiation",
+      "definition": "Assess whether justified institution-specific responses survive across workflows; similarity alone is neither failure nor success, and difference alone is not proof of quality."
+    }
+  ],
+  "evaluation_freeze_recommendation": {
+    "pilot": "Allow rubric, parser and reporting refinements on declared exploratory cases.",
+    "main": "Freeze primary metrics, expected directions where justified, comparison references, missing/invalid rules and any thresholds before observing held-out main responses. Pilot-tuned cases cannot silently become confirmatory evidence.",
+    "post_main": "Additional outcome-informed metrics may be reported explicitly as exploratory.",
+    "method_source": "https://www.pnas.org/doi/10.1073/pnas.1708274114",
+    "metrics_source": "https://arxiv.org/html/2605.27887v6",
+    "metrics_locator": "Appendix F.3 separates reference agreement, exposure compliance and financial outcomes."
+  },
+  "implementation_state": {
+    "model_calls": 0,
+    "new_market_data_downloaded": true,
+    "main_protocol_rewritten": true,
+    "new_evaluation_thresholds_fixed": false,
+    "recent_control_recomputed_from_existing_snapshot": true,
+    "documentary_corpus_prepared": true,
+    "calculator_and_scorer_implemented": true,
+    "actual_AI_pilot_completed": false,
+    "main_frozen": false
+  },
+  "user_selected_unit": "industry/sector allocation, conditional on construct validity; retained with documentary task requirements",
+  "current_authority": "../../plan/LIBERA_실험설정_20261017.json (v4.2)",
+  "selected_main": {
+    "taxonomy": "GICS11",
+    "sources": [
+      "fidelity_q3_2026",
+      "ubs_july_2026"
+    ],
+    "cutoff": "2026-07-17",
+    "scope": "Documentary sector-judgment case study; not actual fund mandate or risk-preference replication"
+  }
+}

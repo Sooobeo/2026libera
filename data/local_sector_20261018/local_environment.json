@@ -1,0 +1,59 @@
+{
+  "observed_at_utc": "2026-10-18T06:20:47.740617+00:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+  "memory_before_inference": {
+    "observed_at_utc": "2026-10-18T06:20:47.951850+00:00",
+    "platform": "win32",
+    "global_memory_status_ex": {
+      "memory_load_percent": 69,
+      "total_physical_bytes": 33834049536,
+      "available_physical_bytes": 10332217344,
+      "total_page_file_budget_bytes": 48866435072,
+      "available_page_file_budget_bytes": 18454614016,
+      "total_virtual_bytes": 140737488224256,
+      "available_virtual_bytes": 140733048246272
+    },
+    "system_performance_info": {
+      "committed_bytes": 30411821056,
+      "commit_limit_bytes": 48866435072,
+      "commit_peak_since_boot_bytes": 33681997824,
+      "physical_available_bytes": 10332217344,
+      "page_size_bytes": 4096
+    },
+    "ollama_process_memory": [
+      {
+        "pid": 30236,
+        "name": "ollama.exe",
+        "memory_info_source": "windows_ctypes_Toolhelp32_GetProcessMemoryInfo",
+        "status": "ok",
+        "memory_info": {
+          "working_set_bytes": 38338560,
+          "private_bytes": 64159744,
+          "peak_working_set_bytes": 43339776,
+          "page_fault_count": 18142,
+          "peak_private_commit_bytes": 84844544
+        },
+        "interpretation": "Working set is resident pageable memory; private bytes are committed, not resident. Peaks cover process lifetime."
+      }
+    ],
+    "process_memory_source": "windows_ctypes_Toolhelp32_GetProcessMemoryInfo",
+    "native_process_memory_status": {
+      "source": "windows_ctypes_Toolhelp32_GetProcessMemoryInfo",
+      "status": "ok"
+    },
+    "optional_process_memory_status": "psutil_not_installed_native_windows_fallback"
+  },
+  "ollama_version": {
+    "version": "0.35.1"
+  },
+  "source_hashes": {
+    "benchmark_sector_latency.py": "0686444e608033be931922a26886ed4a4b5b0789385215b7b75bfacc4050458b",
+    "benchmark_sector_real_input.py": "2a64adcae546d74702c4b9ba5e60e2c81308389b5b6f2c7c663571bc5b0ac88e",
+    "compact_sector_prompt.py": "6984ada966ad55c3089fc297ca6342fdb51685bebfe3107769086343bbe68c0d",
+    "remote_sector_runtime.py": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5",
+    "probe_ollama_runtime.py": "2dd48936bbaf8fd090a26f92fd356fec3a11ac81e5b01b39d661ffe72552fddb",
+    "run_sector_workflow.py": "5625450a4dcbe1aa717c9809bf4955c1ef6b10aab4f0c83ef05dc2eb2c123cfd"
+  },
+  "scope": "Installation and engineering latency diagnosis only; no research pilot/main execution."
+}

@@ -1,0 +1,92 @@
+{
+  "version": "4.2.0",
+  "status": "implemented_scoring_candidate_for_pilot; freeze_before_main_after_pilot; no_AI_results",
+  "scope": "Document-grounded sector interpretation, raw allocation validity and descriptive workflow comparisons; no unique strategic target weights or future-return ground truth.",
+  "taxonomy": {
+    "name": "GICS sector level",
+    "source": "https://www.msci.com/indexes/index-resources/gics",
+    "codes_and_names": {
+      "10": "Energy", "15": "Materials", "20": "Industrials",
+      "25": "Consumer Discretionary", "30": "Consumer Staples",
+      "35": "Health Care", "40": "Financials", "45": "Information Technology",
+      "50": "Communication Services", "55": "Utilities", "60": "Real Estate"
+    },
+    "exact_code_strings_required": true,
+    "FF12_conversion": "None. GICS source/market mapping must be independently established."
+  },
+  "response_contract": {
+    "source_id": "must match the source packet identity",
+    "interpretations": [{"sector_code": "10", "rating": "exact original source label", "evidence_ids": ["source-scoped rating evidence ID"], "reason": "source-grounded explanation", "reason_evidence_ids": ["source-scoped reason evidence ID; optional if evidence_ids covers both"]}],
+    "weights": [{"sector_code": "10", "weight": "decimal fraction, not percentage points", "rationale": "why this exposure follows the evidence and shared task", "evidence_ids": ["source-scoped reason evidence ID"]}],
+    "required_rows": "Exactly one row for each of 11 sector codes in each array; zero weights must be explicit.",
+    "parsing": "Strict JSON object, no code fences; duplicate JSON keys rejected. Only surrounding whitespace of rating strings is ignored; no label aliases or sentiment-to-weight conversions."
+  },
+  "primary_candidate": {
+    "name": "original_source_rating_accuracy",
+    "formula": "sum_s I(exact source-specific label correct and unique sector row and correct source identity) / 11",
+    "two_source_bundle": "Sum correct across the prespecified two sources / 22; report each source separately as well.",
+    "failure_denominator": "Missing response, parse failure, duplicate source response, missing sector and duplicate sector do not shrink the expected denominator.",
+    "meaning": "Accuracy of extracting published sector judgments; not proof of allocation quality, strategy preservation or future performance."
+  },
+  "separate_dimensions": {
+    "rating_evidence": "Count citation IDs matching the independently annotated source, sector and rating claim / 11. Keep separate from label accuracy.",
+    "reason_evidence": "Count scoped reason citations only among sectors with independently annotated, separately stated source reasons; report that eligible denominator and all not-stated sectors. An explicitly empty gold reason_evidence_ids list does not fall back to a rating passage. Count nonempty explanation fields separately. Citation-ID match is not semantic verification of free text; independent semantic review remains required.",
+    "raw_constraints": "Record long-only/full-investment validity and each explicitly documented numeric bound's continuous violation before any external repair.",
+    "allocation_rationale": "Preserve sector rationale and source/sector-scoped references for independent review. Scope or rating-definition references are permissible context citations but do not certify the semantic allocation rationale; do not grade by an LLM's unsupported impression or infer correctness from fluent prose.",
+    "Fidelity_tilts": "Only when source semantics and a named baseline are independently fixed: active weight a_s=w_s-b_s, signed diagnostic a_s for Overweight, -a_s for Underweight, abs(a_s) for Neutral. No behavioral pass threshold or unique optimal magnitude.",
+    "UBS_semantics": "Attractive/Neutral/Unattractive are source assessment labels. Never automatically translate Attractive into Overweight or infer a numeric target.",
+    "within_source_workflow": "0.5 * sum_s abs(w_R4,s-w_R1,s) for two valid raw allocations; direction and differences are descriptive.",
+    "between_sources": "0.5 * sum_s abs(w_A,s-w_B,s) separately per arm; compare R4-minus-R1 only with all four valid allocations. Similarity alone does not establish harmful convergence.",
+    "risk": "Optional w^T Sigma w and its nonnegative square root in the supplied covariance units; no implicit annualization and no claim to measure only downside loss.",
+    "market_baseline": "Optional continuous half-L1 distance and active weights relative to an explicitly named public baseline; baseline is not unique strategic truth."
+  },
+  "engineering_checks": {
+    "sum_tolerance": 0.000001,
+    "negative_weight_tolerance": 0,
+    "weight_above_one_tolerance": 0,
+    "covariance_symmetry_and_PSD_tolerance": 0.000000000001,
+    "provenance": "Implementation precision checks, not paper-derived treatment magnitudes or effect thresholds.",
+    "reporting": "Retain signed raw sum residual; never normalize, clip, repair or assign zero distance to invalid/missing allocations."
+  },
+  "calculator_contract": {
+    "callable": "research.sector_engine.calculate_portfolio",
+    "arguments": ["weights", "market", "visible_evidence_ids", "submitted_constraints"],
+    "trusted_runner_fields": ["market", "visible_evidence_ids"],
+    "model_submission_fields": ["weights", "submitted_constraints"],
+    "supported_submitted_constraints": "sector_min_weight or sector_max_weight with constraint_id, sector_code, decimal bound and already-visible evidence_ids",
+    "hidden_data_boundary": "No filesystem, network, evaluator gold or document lookup. A model must not override the runner's stage-visible evidence capability. Hidden or unknown constraint evidence yields no constraint result.",
+    "arithmetic_not_truth": "The tool checks supplied numeric constraints, not whether the model interpreted the document correctly.",
+    "repair": "Never performed. Raw inputs and outputs must be retained by the runner.",
+    "offline_gold": "score_response, score_text and score_bundle are excluded from the model-facing tool registry and invoked only after response capture."
+  },
+  "market_contract": {
+    "baseline_id": "independently defined public comparator identifier",
+    "baseline_weights": "dictionary keyed by all 11 sector codes or full weight-row array",
+    "sector_codes": "ordered list corresponding to covariance rows/columns",
+    "covariance": "optional finite symmetric 11x11 matrix, positive semidefinite within engineering precision",
+    "covariance_unit": "required when covariance is supplied, for example daily_decimal_return_squared",
+    "temporal_integrity": "Source date, available-from date, return period, taxonomy and estimator are enforced by the separate market-data builder and recorded in its manifest."
+  },
+  "gold_contract": {
+    "source_id": "one source packet identity",
+    "rating_vocabulary": "original source labels, not generic positive/negative labels",
+    "sector_ratings": "all 11 code keys, each with rating and source-scoped evidence_ids",
+    "evidence_index": "evidence_id -> {source_id, sector_codes, claims:[rating/reason/constraint/scope/rating_semantics]}; scope and rating_semantics citations cannot substitute for a sector rating or reason. Original text/page and annotation provenance can be retained as additional fields",
+    "constraints": "optional independently supported numeric constraints only",
+    "allocation_semantics": "optional {kind:benchmark_relative_tilt, baseline_id, label_directions}; absent for non-equivalent source assessments",
+    "setup_failure": "Incomplete or inconsistent gold raises an evaluator setup error; it is not an AI failure and cannot reduce the denominator."
+  },
+  "reporting_rules": [
+    "No weighted composite score, arbitrary behavioral pass threshold, optimizer target for qualitative strategy or automatically favorable interpretation of increased diversity.",
+    "Keep malformed, missing, invalid and completed denominators visible; valid-pair comparisons describe that subset.",
+    "Prespecify source roster, benchmark, semantic rubric and any exclusions before held-out main responses; pilot-tuned cases cannot be reused as independent confirmation.",
+    "Synthetic fixtures in test_sector_engine.py verify implementation only and are not AI or human results.",
+    "Public-source extraction and rationale scoring do not establish real institutional private-information use or the causal effect of shared-model adoption."
+  ],
+  "source_roles": [
+    {"url": "https://arxiv.org/html/2608.09988v1", "locator": "sections 3.3 and 6.3", "role": "Separate typed-constraint enforcement, raw proposal adherence and post-critic feasibility; our no-repair tool and workflow comparison are adaptations."},
+    {"url": "https://arxiv.org/html/2605.27887v6", "locator": "appendix F.3", "role": "Separate reference-weight agreement, exposure compliance and financial outcomes; does not supply unique weights for these public documents."},
+    {"url": "https://arxiv.org/html/2603.22305v1", "locator": "sections 3.3-3.4", "role": "Sector-level action space and interpretation-to-allocation task precedent; not a validation of this specific rubric."},
+    {"url": "https://www.pnas.org/doi/10.1073/pnas.1708274114", "role": "Separate exploratory pilot decisions from held-out confirmatory analysis."}
+  ]
+}

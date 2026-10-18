@@ -1,0 +1,91 @@
+{
+  "audit": "v4.2 software round 2",
+  "reviewer": "risk_metrics_review",
+  "reviewed_at_utc": "2026-10-17T09:48:34.449870+00:00",
+  "status": "pass_for_software_preparation_only",
+  "round_1_report": "research/design_revision_20261017/audit_round1_software_v42.json",
+  "method": "Repeated review by the same reviewer, not a claim of two distinct independent reviewers. Re-read runner/evaluator and new integration tests, rerun all 25 tests, then independently challenge runtime change, model substitution and context overflow gates.",
+  "findings": [],
+  "round1_findings_all_resolved": true,
+  "changed_reviewed_files_since_round1": [],
+  "verification": {
+    "unit_and_integration_tests": {
+      "passed": 25,
+      "engine_tests": 20,
+      "workflow_tests": 5,
+      "command": "python -m unittest discover -s research -p test_sector*.py -v"
+    },
+    "new_independent_second_round_checks": [
+      {
+        "check": "round1_reviewed_files_unchanged",
+        "passed": true
+      },
+      {
+        "check": "runtime_change_rejected_before_any_model_call",
+        "passed": true
+      },
+      {
+        "check": "unreviewed_model_substitution_rejected",
+        "passed": true
+      },
+      {
+        "check": "context_overflow_rejected_without_truncation_or_request",
+        "passed": true
+      },
+      {
+        "check": "no_main_freeze_before_pilot",
+        "passed": true
+      },
+      {
+        "check": "main_roster_two_sources_two_arms",
+        "passed": true
+      },
+      {
+        "check": "pilot_roster_two_sources_two_arms",
+        "passed": true
+      }
+    ],
+    "round1_independent_integration_checks": 22,
+    "runner_dry_checks": 19,
+    "AI_calls": 0,
+    "all_fixtures_synthetic_not_observed_model_outputs": true
+  },
+  "readiness": {
+    "main_ready": false,
+    "model_runtime_ready": false,
+    "actual_AI_pilot_completed": false,
+    "main_freeze_exists": false,
+    "source_annotation_human_semantic_review": "pending",
+    "remaining_dependencies": [
+      "Install and pin the selected runtime exactly, or document and review a protocol revision.",
+      "Complete source annotation/semantic review and the real pilot.",
+      "Fix the final rubric before main and create the main freeze from the actual pilot review record."
+    ]
+  },
+  "interpretation_limits": [
+    "Primary exact original-label accuracy is document-extraction fidelity, not automatic strategic quality.",
+    "Citation/source/sector identity checks cannot establish semantic entailment of reasons.",
+    "Valid portfolios have no unique correct weight vector; signed tilts and half-L1 distances are descriptive diagnostics.",
+    "Calculator ok denotes valid request/computation; positive submitted_constraint_checks.checks[].violation remains a constraint violation.",
+    "Actual pilot review and rubric approval must precede main freeze; software tests do not certify those approvals.",
+    "Not-started jobs remain in the prespecified roster but are explicitly not observed AI errors."
+  ],
+  "hashes": {
+    "research/sector_engine.py": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c",
+    "research/test_sector_engine.py": "8c383f11be35837fce6f2ce91a4754366dc15dcecb7dd065275da53f00b1378a",
+    "research/run_sector_workflow.py": "d46ccbefa7844d30d2d0d114661718dcaaf2f430ff42059eb985210155e38c6b",
+    "research/evaluate_sector_runs.py": "0a6bab7531ff9540fc3c7152ffb07fad52f27ddcbf766116445d2c8fde043e3d",
+    "data/sector_protocol/evaluation_spec.json": "cff49202b9da0da6bc094eb02a55e971afeab8c983a1a8fe3d686af1cff8df7f",
+    "data/sector_protocol/cases.json": "27be9fa986afcbef65979e1e3c74b8119cbf341615daf9824faba767adce04ad",
+    "data/sector_protocol/workflow_manifest.json": "0bd6c320a374025130303631df15b799ab13dc5f89bd1cae81c12b5749e2e96a",
+    "data/sector_protocol/workflow_verification.json": "c44251055c83b08f2c48e5188b7668db04bc25160d1f20648bdf21ae4263da4d",
+    "data/sector_protocol/runtime_candidate.json": "a3785063ba2f32c4f5e026ff0e8c24fe9dbed2fd6491896472ae255ac1ba8adf",
+    "data/sector_protocol/runtime_preflight.json": "b5a0b01fa7c98937181a6e4638018512d173fc817fdc545649999e05db80b090",
+    "data/sector_documents/model_packets.jsonl": "520bed87396eb815c87f362712a6ec39c0275076f9ef4c5d59ef5a7cbbe6afc7",
+    "data/sector_documents/evaluator_only/reference_annotations.jsonl": "3a83cbb386442f3263357a5e67cb1f52c59114c28cc81e636b28e111c3509ffc",
+    "data/sector_market/market_input.json": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f",
+    "research/design_revision_20261017/software_audit_checks_v42.json": "4cdf05c3f9dbaf0991337d6764bebdb8f811949a14f562d1243f24b5529a02ce",
+    "research/test_sector_workflow.py": "1441e9bda23606fd99e0a428a3c9a5f77b0fdf468f04b9b618299646ea75819f",
+    "research/design_revision_20261017/audit_round1_software_v42.json": "9ef47e6735a7cc9cd248957065061fc2a1b5669c42cfdacc4c63bb2b524f65f2"
+  }
+}

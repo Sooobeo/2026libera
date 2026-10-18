@@ -1,0 +1,28 @@
+{
+  "path": "/api/chat",
+  "body": {
+    "model": "qwen3:1.7b",
+    "messages": [
+      {
+        "role": "user",
+        "content": "This is a synthetic latency check, not an investment task. Read these fictional inventory records. Do not summarize or analyze them. After the records, return only the requested JSON.\nitem=01; group=amber; units=07; note=synthetic fixture.\nitem=02; group=amber; units=07; note=synthetic fixture.\nitem=03; group=amber; units=07; note=synthetic fixture.\nitem=04; group=amber; units=07; note=synthetic fixture.\nitem=05; group=amber; units=07; note=synthetic fixture.\nitem=06; group=amber; units=07; note=synthetic fixture.\nitem=07; group=amber; units=07; note=synthetic fixture.\nitem=08; group=amber; units=07; note=synthetic fixture.\nitem=09; group=amber; units=07; note=synthetic fixture.\nitem=10; group=amber; units=07; note=synthetic fixture.\nitem=11; group=amber; units=07; note=synthetic fixture.\nitem=12; group=amber; units=07; note=synthetic fixture.\nitem=13; group=amber; units=07; note=synthetic fixture.\nitem=14; group=amber; units=07; note=synthetic fixture.\nitem=15; group=amber; units=07; note=synthetic fixture.\n\nReturn exactly this JSON object, without commentary: {\"ready\":true}\n"
+      }
+    ],
+    "stream": true,
+    "think": false,
+    "format": "json",
+    "keep_alive": 0,
+    "options": {
+      "temperature": 0,
+      "num_ctx": 8192,
+      "num_predict": 32,
+      "num_thread": 2,
+      "num_batch": 512,
+      "repeat_penalty": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "seed": 3407
+    }
+  },
+  "kind": "latency_probe"
+}

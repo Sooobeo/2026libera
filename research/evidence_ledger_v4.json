@@ -1,0 +1,1578 @@
+{
+  "schema_version": "1.0",
+  "protocol_version": "4.0",
+  "created_at_utc": "2026-10-17 07:54:54 UTC",
+  "checked_on": "2026-10-17",
+  "purpose": "Evidence/provenance ledger for the LIBERA v4 hypothetical institutional-mandate experiment. Two design-review rounds are linked in resolved item U03. This does not assert AI execution, exact paper replication, runtime freeze or external validity.",
+  "language": "en_with_Korean_scope_note",
+  "scope_note_ko": "주실험은 명시된 γ가 다른 가상 기관의 위임목적 보존이다. 공통 GenAI·시장자료에서 필요한 배분 차이를 업무 중 근거 제공 시점이 보존하는지 검증한다. 실제 펀드의 γ·사적정보를 복원했다는 주장이 아니다.",
+  "provenance_taxonomy": {
+    "direct_paper": "An explicit construct/value/result in a primary academic source, within its verified scope. Does not mean the complete LIBERA experiment was directly tested.",
+    "LIBERA_adaptation": "A new LIBERA question, combination, restriction, control, arithmetic case count, or metric. Related paper URLs are intellectual motivation rather than a direct prescription.",
+    "public_data": "Official public data, survey, or regulator report. Official reports are explicitly not described as peer-reviewed empirical papers.",
+    "numerical_implementation": "Parsing, unit conversion, covariance convention, solver, arithmetic validation, or author-code-specific implementation; engineering choices are not paper-direct experimental recommendations."
+  },
+  "verification_policy": {
+    "primary_sources_only": true,
+    "all_entries_have_explicit_limits": true,
+    "access_level_is_not_upgraded_from_abstract_to_full_text": true,
+    "negative_or_mixed_results_retained": true,
+    "no_novelty_claim_of_absent_prior_research": true,
+    "latest_version_claim_scope": "Versions and metadata are checked as of 2026-10-17; this is not a proof that no unindexed newer author version exists.",
+    "quotation_policy": "Claims are paraphrased; source equations are used only for their exact mathematical definitions."
+  },
+  "sources": [
+    {
+      "id": "salcher2026",
+      "type": "peer_reviewed_article",
+      "authors": [
+        "Lukas Salcher",
+        "Sebastian Stöckl",
+        "Michael Hanke"
+      ],
+      "year": 2026,
+      "title": "Lost in Translation? Risk-Adjusting RMSE for Economic Forecast Performance",
+      "venue": "Journal of Forecasting",
+      "volume": "45",
+      "issue": "5",
+      "pages": "2587–2605",
+      "doi": "10.1002/for.70134",
+      "date": "2026-04-13",
+      "url": "https://doi.org/10.1002/for.70134",
+      "full_text_url": "https://onlinelibrary.wiley.com/doi/10.1002/for.70134",
+      "verification_level": "publisher_full_text_selected_equations_sections_and_tables_verified",
+      "apa": "Salcher, L., Stöckl, S., & Hanke, M. (2026). Lost in translation? Risk-adjusting RMSE for economic forecast performance. Journal of Forecasting, 45(5), 2587–2605. https://doi.org/10.1002/for.70134",
+      "provenance": "direct_paper",
+      "metadata_checked_on": "2026-10-17"
+    },
+    {
+      "id": "portbench2026v6",
+      "type": "preprint",
+      "authors": [
+        "Yuxuan Zhao",
+        "Sijia Chen",
+        "Ningxin Su"
+      ],
+      "year": 2026,
+      "title": "PortBench: A Correlation-Aware, Full-Pipeline Benchmark for LLM-Driven Portfolio Management",
+      "venue": "arXiv",
+      "identifier": "2605.27887v6",
+      "doi": "10.48550/arXiv.2605.27887",
+      "first_submitted": "2026-05-27",
+      "version_date": "2026-10-09",
+      "version": "v6",
+      "url": "https://arxiv.org/html/2605.27887v6",
+      "metadata_url": "https://arxiv.org/abs/2605.27887v6",
+      "verification_level": "latest_arxiv_metadata_and_full_text_selected_protocol_sections_verified",
+      "apa": "Zhao, Y., Chen, S., & Su, N. (2026). PortBench: A correlation-aware, full-pipeline benchmark for LLM-driven portfolio management (Version 6) [Preprint]. arXiv. https://doi.org/10.48550/arXiv.2605.27887",
+      "provenance": "direct_paper",
+      "metadata_checked_on": "2026-10-17"
+    },
+    {
+      "id": "french_public_data",
+      "type": "official_public_data",
+      "authors": [
+        "Kenneth R. French"
+      ],
+      "year": 2026,
+      "title": "Data Library: 12 Industry Portfolios and Fama/French Factors",
+      "venue": "Kenneth R. French Data Library",
+      "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html",
+      "detail_url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_12_ind_port.html",
+      "data_urls": [
+        "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/12_Industry_Portfolios_TXT.zip",
+        "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/F-F_Research_Data_Factors_TXT.zip"
+      ],
+      "verification_level": "official_links_raw_archives_headers_and_local_parsed_values_verified",
+      "apa": "French, K. R. (n.d.). Data library: 12 industry portfolios and Fama/French factors [Data sets]. Retrieved October 17, 2026, from https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html",
+      "provenance": "public_data",
+      "metadata_checked_on": "2026-10-17"
+    },
+    {
+      "id": "salcher_author_code",
+      "type": "author_public_code",
+      "authors": [
+        "Lukas Salcher"
+      ],
+      "year": 2026,
+      "title": "Lost_in_Translation replication repository",
+      "venue": "GitHub",
+      "commit": "14c3a4c9567da966de5a4f7b9e5ef9ea6cff99fe",
+      "url": "https://github.com/salcherlukas/Lost_in_Translation/tree/14c3a4c9567da966de5a4f7b9e5ef9ea6cff99fe",
+      "verification_level": "pinned_author_code_audited_in_companion_reference_preparation; paper_text_and_code_modes_kept_separate",
+      "apa": "Salcher, L. (2026). Lost_in_Translation [Computer software; commit 14c3a4c9567da966de5a4f7b9e5ef9ea6cff99fe]. GitHub. https://github.com/salcherlukas/Lost_in_Translation",
+      "provenance": "numerical_implementation",
+      "metadata_checked_on": "2026-10-17"
+    },
+    {
+      "id": "fsb2024",
+      "type": "official_report",
+      "authors": [
+        "Financial Stability Board"
+      ],
+      "year": 2024,
+      "date": "2024-11-14",
+      "title": "The Financial Stability Implications of Artificial Intelligence",
+      "venue": "Financial Stability Board",
+      "url": "https://www.fsb.org/2024/11/the-financial-stability-implications-of-artificial-intelligence/",
+      "full_text_url": "https://www.fsb.org/uploads/P14112024.pdf",
+      "verification_level": "official_landing_page_and_report_selected_market_correlation_section_verified_in_session",
+      "apa": "Financial Stability Board. (2024, November 14). The financial stability implications of artificial intelligence. https://www.fsb.org/uploads/P14112024.pdf",
+      "provenance": "public_data",
+      "metadata_checked_on": "2026-10-17"
+    },
+    {
+      "id": "fsb2025",
+      "type": "official_report",
+      "authors": [
+        "Financial Stability Board"
+      ],
+      "year": 2025,
+      "date": "2025-10-10",
+      "title": "Monitoring Adoption of Artificial Intelligence and Related Vulnerabilities in the Financial Sector",
+      "venue": "Financial Stability Board",
+      "url": "https://www.fsb.org/2025/10/monitoring-adoption-of-artificial-intelligence-and-related-vulnerabilities-in-the-financial-sector/",
+      "full_text_url": "https://www.fsb.org/uploads/P101025.pdf",
+      "verification_level": "official_landing_page_summary_and_metadata_verified; not_an_empirical_causal_paper",
+      "apa": "Financial Stability Board. (2025, October 10). Monitoring adoption of artificial intelligence and related vulnerabilities in the financial sector. https://www.fsb.org/uploads/P101025.pdf",
+      "provenance": "public_data",
+      "metadata_checked_on": "2026-10-17"
+    },
+    {
+      "id": "fsb2026final",
+      "type": "official_report",
+      "authors": [
+        "Financial Stability Board"
+      ],
+      "year": 2026,
+      "date": "2026-10-15",
+      "title": "Sound Practices for Responsible Adoption of Artificial Intelligence (AI): Final report",
+      "venue": "Financial Stability Board",
+      "url": "https://www.fsb.org/uploads/P151026-1.pdf",
+      "announcement_url": "https://www.fsb.org/2026/10/fsb-finalises-sound-practices-for-the-responsible-adoption-of-artificial-intelligence-ai/",
+      "verification_level": "official_final_pdf_title_date_executive_summary_and_sound_practice_1_verified",
+      "apa": "Financial Stability Board. (2026, October 15). Sound practices for responsible adoption of artificial intelligence (AI): Final report. https://www.fsb.org/uploads/P151026-1.pdf",
+      "provenance": "public_data",
+      "metadata_checked_on": "2026-10-17"
+    },
+    {
+      "id": "kleinberg2021",
+      "type": "peer_reviewed_article",
+      "authors": [
+        "Jon Kleinberg",
+        "Manish Raghavan"
+      ],
+      "year": 2021,
+      "title": "Algorithmic Monoculture and Social Welfare",
+      "venue": "Proceedings of the National Academy of Sciences",
+      "volume": "118",
+      "issue": "22",
+      "article_number": "e2018340118",
+      "doi": "10.1073/pnas.2018340118",
+      "url": "https://www.pnas.org/doi/10.1073/pnas.2018340118",
+      "author_preprint_url": "https://arxiv.org/abs/2101.05853",
+      "verification_level": "primary_author_preprint_abstract_and_article_metadata_verified; model_result_not_finance_empirics",
+      "apa": "Kleinberg, J., & Raghavan, M. (2021). Algorithmic monoculture and social welfare. Proceedings of the National Academy of Sciences, 118(22), e2018340118. https://doi.org/10.1073/pnas.2018340118",
+      "provenance": "direct_paper",
+      "metadata_checked_on": "2026-10-17"
+    },
+    {
+      "id": "bommasani2022",
+      "type": "peer_reviewed_conference_paper",
+      "authors": [
+        "Rishi Bommasani",
+        "Kathleen A. Creel",
+        "Ananya Kumar",
+        "Dan Jurafsky",
+        "Percy Liang"
+      ],
+      "year": 2022,
+      "title": "Picking on the Same Person: Does Algorithmic Monoculture lead to Outcome Homogenization?",
+      "venue": "Advances in Neural Information Processing Systems",
+      "volume": "35",
+      "doi": "10.52202/068431-0265",
+      "url": "https://papers.nips.cc/paper_files/paper/2022/hash/17a234c91f746d9625a75cf8a8731ee2-Abstract-Conference.html",
+      "full_text_url": "https://papers.neurips.cc/paper_files/paper/2022/file/17a234c91f746d9625a75cf8a8731ee2-Paper-Conference.pdf",
+      "verification_level": "official_proceedings_metadata_and_abstract_verified; claim_limited_to_abstract",
+      "apa": "Bommasani, R., Creel, K. A., Kumar, A., Jurafsky, D., & Liang, P. (2022). Picking on the same person: Does algorithmic monoculture lead to outcome homogenization? Advances in Neural Information Processing Systems, 35. https://doi.org/10.52202/068431-0265",
+      "provenance": "direct_paper",
+      "metadata_checked_on": "2026-10-17"
+    },
+    {
+      "id": "doshi2024",
+      "type": "peer_reviewed_article",
+      "authors": [
+        "Anil R. Doshi",
+        "Oliver P. Hauser"
+      ],
+      "year": 2024,
+      "title": "Generative AI enhances individual creativity but reduces the collective diversity of novel content",
+      "venue": "Science Advances",
+      "volume": "10",
+      "issue": "28",
+      "article_number": "eadn5290",
+      "doi": "10.1126/sciadv.adn5290",
+      "url": "https://doi.org/10.1126/sciadv.adn5290",
+      "verification_level": "publisher_metadata_and_primary_abstract_verified; no_finance_claim",
+      "apa": "Doshi, A. R., & Hauser, O. P. (2024). Generative AI enhances individual creativity but reduces the collective diversity of novel content. Science Advances, 10(28), eadn5290. https://doi.org/10.1126/sciadv.adn5290",
+      "provenance": "direct_paper",
+      "metadata_checked_on": "2026-10-17"
+    },
+    {
+      "id": "hansen2025",
+      "type": "working_paper",
+      "authors": [
+        "Anne Lundgaard Hansen",
+        "Seung Jung Lee"
+      ],
+      "year": 2025,
+      "date": "2025-09",
+      "title": "Financial Stability Implications of Generative AI: Taming the Animal Spirits",
+      "venue": "Finance and Economics Discussion Series",
+      "identifier": "2025-090",
+      "doi": "10.17016/FEDS.2025.090",
+      "url": "https://www.federalreserve.gov/econres/feds/financial-stability-implications-of-generative-ai-taming-the-animal-spirits.htm",
+      "preprint_url": "https://arxiv.org/abs/2510.01451",
+      "landing_page_last_updated": "2026-08-21",
+      "verification_level": "official_FEDS_metadata_and_abstract_verified; webpage_update_not_treated_as_paper_revision_date",
+      "apa": "Hansen, A. L., & Lee, S. J. (2025). Financial stability implications of generative AI: Taming the animal spirits (FEDS 2025-090). Board of Governors of the Federal Reserve System. https://doi.org/10.17016/FEDS.2025.090",
+      "provenance": "direct_paper",
+      "metadata_checked_on": "2026-10-17"
+    },
+    {
+      "id": "chen2026",
+      "type": "working_paper",
+      "authors": [
+        "Shuang Chen",
+        "Clemens Sialm",
+        "David X. Xu"
+      ],
+      "year": 2026,
+      "date": "2026-05",
+      "title": "The Growth and Performance of Artificial Intelligence in Asset Management",
+      "venue": "NBER Working Paper",
+      "identifier": "35273",
+      "doi": "10.3386/w35273",
+      "url": "https://www.nber.org/papers/w35273",
+      "author_posted_version_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6859837",
+      "author_posted_revision": "2026-06-15",
+      "verification_level": "primary_NBER_abstract_metadata_and_SSRN_revision_verified; full_paper_not_obtained",
+      "apa": "Chen, S., Sialm, C., & Xu, D. X. (2026). The growth and performance of artificial intelligence in asset management (NBER Working Paper No. 35273). https://doi.org/10.3386/w35273",
+      "provenance": "direct_paper",
+      "metadata_checked_on": "2026-10-17"
+    },
+    {
+      "id": "sheng2026",
+      "type": "peer_reviewed_article",
+      "authors": [
+        "Jinfei Sheng",
+        "Zheng Sun",
+        "Baozhong Yang",
+        "Alan L. Zhang"
+      ],
+      "year": 2026,
+      "date": "2026-05-12",
+      "corrected_typeset_date": "2026-06-15",
+      "title": "Generative AI and Asset Management",
+      "venue": "The Review of Financial Studies",
+      "article_number": "hhag050",
+      "doi": "10.1093/rfs/hhag050",
+      "url": "https://doi.org/10.1093/rfs/hhag050",
+      "prior_author_full_text_url": "https://www.cuhk.edu.hk/fin/event/CUHK-RAPS-RCFS-Conference2025/CUHK-RAPS-119.pdf",
+      "verification_level": "final_publisher_abstract_and_metadata_verified; prior_2025_conference_manuscript_available_but_not_assumed_identical_to_final",
+      "apa": "Sheng, J., Sun, Z., Yang, B., & Zhang, A. L. (2026). Generative AI and asset management. The Review of Financial Studies, hhag050. https://doi.org/10.1093/rfs/hhag050",
+      "provenance": "direct_paper",
+      "metadata_checked_on": "2026-10-17"
+    },
+    {
+      "id": "agarwal2026",
+      "type": "working_paper",
+      "authors": [
+        "Sumit Agarwal",
+        "Yue Zhang"
+      ],
+      "year": 2026,
+      "date_written": "2026-08-01",
+      "posted": "2026-08-17",
+      "version_date": "2026-10-03",
+      "title": "Does Generative AI Increase Investment Convergence?",
+      "venue": "SSRN",
+      "identifier": "7294279",
+      "doi": "10.2139/ssrn.7294279",
+      "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7294279",
+      "verification_level": "primary_SSRN_metadata_and_abstract_verified; full_text_not_obtained",
+      "apa": "Agarwal, S., & Zhang, Y. (2026). Does generative AI increase investment convergence? [Working paper; revised October 3, 2026]. SSRN. https://doi.org/10.2139/ssrn.7294279",
+      "provenance": "direct_paper",
+      "metadata_checked_on": "2026-10-17"
+    },
+    {
+      "id": "dellacqua2026",
+      "type": "peer_reviewed_article",
+      "authors": [
+        "Fabrizio Dell’Acqua",
+        "Edward McFowland III",
+        "Ethan Mollick",
+        "Hila Lifshitz",
+        "Katherine C. Kellogg",
+        "Saran Rajendran",
+        "Lisa Krayer",
+        "François Candelon",
+        "Karim R. Lakhani"
+      ],
+      "year": 2026,
+      "date": "2026-03-11",
+      "title": "Navigating the Jagged Technological Frontier: Field Experimental Evidence of the Effects of Artificial Intelligence on Knowledge Worker Productivity and Quality",
+      "venue": "Organization Science",
+      "volume": "37",
+      "issue": "2",
+      "pages": "403–423",
+      "doi": "10.1287/orsc.2025.21838",
+      "url": "https://doi.org/10.1287/orsc.2025.21838",
+      "author_full_text_url": "https://www.hbs.edu/ris/Publication%20Files/dell-acqua-et-al-2026-navigating-the-jagged-technological-frontier_5c589c8c-fbb5-458f-b285-c944746cd717.pdf",
+      "verification_level": "publisher_Cite_as_full_issue_pagination_and_abstract_verified_2026_10_17",
+      "apa": "Dell’Acqua, F., McFowland, E., III, Mollick, E., Lifshitz, H., Kellogg, K. C., Rajendran, S., Krayer, L., Candelon, F., & Lakhani, K. R. (2026). Navigating the jagged technological frontier: Field experimental evidence of the effects of artificial intelligence on knowledge worker productivity and quality. Organization Science, 37(2), 403–423. https://doi.org/10.1287/orsc.2025.21838",
+      "provenance": "direct_paper",
+      "metadata_checked_on": "2026-10-17"
+    },
+    {
+      "id": "boefca2024",
+      "type": "official_survey_report",
+      "authors": [
+        "Bank of England",
+        "Financial Conduct Authority"
+      ],
+      "year": 2024,
+      "date": "2024-11-21",
+      "title": "Artificial intelligence in UK financial services – 2024",
+      "venue": "Bank of England and Financial Conduct Authority",
+      "url": "https://www.bankofengland.co.uk/report/2024/artificial-intelligence-in-uk-financial-services-2024",
+      "verification_level": "official_full_HTML_executive_summary_and_methodology_verified",
+      "apa": "Bank of England, & Financial Conduct Authority. (2024, November 21). Artificial intelligence in UK financial services—2024. https://www.bankofengland.co.uk/report/2024/artificial-intelligence-in-uk-financial-services-2024",
+      "provenance": "public_data",
+      "metadata_checked_on": "2026-10-17"
+    },
+    {
+      "id": "schneider2025",
+      "type": "peer_reviewed_article",
+      "authors": [
+        "Constantin J. Schneider",
+        "Yahya Yilmaz"
+      ],
+      "year": 2025,
+      "date_online": "2025-05-19",
+      "issue_date": "2025-09",
+      "title": "Stock portfolio selection based on risk appetite: Evidence from ChatGPT",
+      "venue": "Finance Research Letters",
+      "volume": "82",
+      "article_number": "107517",
+      "doi": "10.1016/j.frl.2025.107517",
+      "url": "https://www.sciencedirect.com/science/article/pii/S1544612325007767",
+      "doi_url": "https://doi.org/10.1016/j.frl.2025.107517",
+      "author_posted_version_url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5014385",
+      "verification_level": "primary_publisher_metadata_abstract_and_indexed_section_2_2_verified; author_SSRN_revision_2025_06_10_verified",
+      "apa": "Schneider, C. J., & Yilmaz, Y. (2025). Stock portfolio selection based on risk appetite: Evidence from ChatGPT. Finance Research Letters, 82, 107517. https://doi.org/10.1016/j.frl.2025.107517",
+      "provenance": "direct_paper",
+      "metadata_checked_on": "2026-10-17"
+    },
+    {
+      "id": "hornuf2025",
+      "type": "working_paper",
+      "authors": [
+        "Lars Hornuf",
+        "David J. Streich",
+        "Niklas Töllich"
+      ],
+      "year": 2025,
+      "date": "2025-04",
+      "title": "Making GenAI Smarter: Evidence from a Portfolio Allocation Experiment",
+      "venue": "CESifo Working Paper",
+      "identifier": "11862",
+      "url": "https://www.ifo.de/DocDL/cesifo1_wp11862.pdf",
+      "metadata_url": "https://www.ifo.de/en/cesifo/publications/2025/working-paper/making-genai-smarter-evidence-portfolio-allocation-experiment",
+      "verification_level": "official_PDF_sections_3_1_3_2_3_3_4_1_5_4_and_6_read; no_later_primary_version_found_in_session",
+      "apa": "Hornuf, L., Streich, D. J., & Töllich, N. (2025). Making GenAI smarter: Evidence from a portfolio allocation experiment (CESifo Working Paper No. 11862). https://www.ifo.de/DocDL/cesifo1_wp11862.pdf",
+      "provenance": "direct_paper",
+      "metadata_checked_on": "2026-10-17"
+    },
+    {
+      "id": "hedden2026",
+      "type": "peer_reviewed_article",
+      "authors": [
+        "Brian Hedden",
+        "Manish Raghavan"
+      ],
+      "year": 2026,
+      "date": "2026-09-25",
+      "title": "Algorithmic Monoculture and Its Critics",
+      "venue": "Philosophical Perspectives",
+      "publication_status": "Advance online publication",
+      "doi": "10.1111/phpe.70018",
+      "url": "https://doi.org/10.1111/phpe.70018",
+      "author_preprint_url": "https://arxiv.org/abs/2604.06047v3",
+      "author_preprint_version_date": "2026-09-26",
+      "verification_level": "publisher_metadata_abstract_and_selected_introduction_verified; arxiv_v3_related_published_DOI_verified",
+      "apa": "Hedden, B., & Raghavan, M. (2026). Algorithmic monoculture and its critics. Philosophical Perspectives. Advance online publication. https://doi.org/10.1111/phpe.70018",
+      "provenance": "direct_paper",
+      "metadata_checked_on": "2026-10-17"
+    },
+    {
+      "id": "lewis2020",
+      "type": "peer_reviewed_conference_paper",
+      "authors": [
+        "Patrick Lewis",
+        "Ethan Perez",
+        "Aleksandra Piktus",
+        "Fabio Petroni",
+        "Vladimir Karpukhin",
+        "Naman Goyal",
+        "Heinrich Küttler",
+        "Mike Lewis",
+        "Wen-tau Yih",
+        "Tim Rocktäschel",
+        "Sebastian Riedel",
+        "Douwe Kiela"
+      ],
+      "year": 2020,
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "venue": "Advances in Neural Information Processing Systems",
+      "volume": "33",
+      "url": "https://papers.nips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html",
+      "author_preprint_url": "https://arxiv.org/abs/2005.11401",
+      "verification_level": "official_NeurIPS_proceedings_and_author_arxiv_metadata_and_abstract_verified; definition_claim_only",
+      "apa": "Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., Küttler, H., Lewis, M., Yih, W.-t., Rocktäschel, T., Riedel, S., & Kiela, D. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. Advances in Neural Information Processing Systems, 33. https://papers.nips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html",
+      "provenance": "direct_paper",
+      "metadata_checked_on": "2026-10-17"
+    }
+  ],
+  "entries": [
+    {
+      "id": "E01",
+      "parameter_or_claim": "Main scientific estimand",
+      "value": "Preservation of allocation differences warranted by explicitly different delegated risk objectives of fictional institutions under a common GenAI model and common market statistics.",
+      "source_ids": [
+        "salcher2026",
+        "portbench2026v6",
+        "hornuf2025"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1002/for.70134",
+        "https://arxiv.org/html/2605.27887v6",
+        "https://www.ifo.de/DocDL/cesifo1_wp11862.pdf"
+      ],
+      "exact_locator": "Salcher §3.2 Eq.(6); PortBench §2.2 and Appendix C.3; Hornuf §3.1",
+      "provenance": "LIBERA_adaptation",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "A controlled institutional mandate-alignment and workflow experiment.",
+      "limits": "Not an estimate of adoption effects, private information, true real-fund risk aversion, or financial-system instability.",
+      "support_relationship": "papers_motivate_construct; exact_LIBERA_question_is_not_their_experiment"
+    },
+    {
+      "id": "E02",
+      "parameter_or_claim": "Quadratic-utility objective",
+      "value": "U_gamma(w;mu,Sigma)=mu^T w-(gamma/2) w^T Sigma w; maximize subject to 1^T w=1.",
+      "source_ids": [
+        "salcher2026"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1002/for.70134"
+      ],
+      "exact_locator": "§3.2, Eq.(6); Eq.(7) gives the equality-only solution.",
+      "provenance": "direct_paper",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Use the exact objective with consistently scaled monthly moments.",
+      "limits": "The paper equation itself does not impose nonnegative weights. Eq.(7) is not the long-only solution."
+    },
+    {
+      "id": "E03",
+      "parameter_or_claim": "Risk-aversion coefficients",
+      "value": [
+        1,
+        3,
+        5
+      ],
+      "source_ids": [
+        "salcher2026"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1002/for.70134"
+      ],
+      "exact_locator": "Tables 1–5, columns 'Quadratic utility with FI', gamma=1, gamma=3, gamma=5; §3.2 Eq.(6).",
+      "provenance": "direct_paper",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Reuse the three coefficients as experimental mandate values in the same objective and return units.",
+      "limits": "They are selected strategy coefficients, not estimated preferences of Fidelity, Vanguard, Dodge & Cox, or T. Rowe Price."
+    },
+    {
+      "id": "E04",
+      "parameter_or_claim": "Fictional delegated mandates",
+      "value": [
+        {
+          "id": "G1",
+          "gamma": 1
+        },
+        {
+          "id": "G3",
+          "gamma": 3
+        },
+        {
+          "id": "G5",
+          "gamma": 5
+        }
+      ],
+      "source_ids": [
+        "salcher2026",
+        "portbench2026v6"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1002/for.70134",
+        "https://arxiv.org/html/2605.27887v6"
+      ],
+      "exact_locator": "Salcher Tables 1–5 for values; PortBench §2.2 / Appendix C.3 for explicit profile conditioning.",
+      "provenance": "LIBERA_adaptation",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Assign the three explicit utility objectives to neutrally labelled fictional institutions.",
+      "limits": "Do not infer actual institutional traits from these identifiers; relabeling controls should preserve identical numeric objectives."
+    },
+    {
+      "id": "E05",
+      "parameter_or_claim": "Long-only full-investment feasible set",
+      "value": "Delta_12={w in R^12: w_j>=0 for all j; sum_j w_j=1}.",
+      "source_ids": [
+        "portbench2026v6"
+      ],
+      "source_urls": [
+        "https://arxiv.org/html/2605.27887v6"
+      ],
+      "exact_locator": "Appendix C.1 T5; Appendix C.2 Eq.(7): sum_i w_i=1, w_i>=0.",
+      "provenance": "direct_paper",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "The long-only simplex is an existing portfolio-benchmark constraint.",
+      "limits": "PortBench also imposes signal/profile constraints in its dynamic reference; this entry borrows only the simplex principle, not its full policy."
+    },
+    {
+      "id": "E06",
+      "parameter_or_claim": "Combining Salcher objective with the long-only simplex",
+      "value": "w_star(t,gamma)=argmax_{w in Delta_12} U_gamma(w;mu_train(t),Sigma_train(t)).",
+      "source_ids": [
+        "salcher2026",
+        "portbench2026v6"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1002/for.70134",
+        "https://arxiv.org/html/2605.27887v6"
+      ],
+      "exact_locator": "Combination of Salcher §3.2 Eq.(6) and PortBench Appendix C.1/C.2 simplex; not an equation in either paper.",
+      "provenance": "LIBERA_adaptation",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "An independently computed, explicit model-conditional reference for each date and mandate.",
+      "limits": "This changes Salcher's feasible set. Neither Salcher Eq.(7) nor its TP risk-adjusted forecast-error theorem establishes this constrained reference or its utility-loss identity."
+    },
+    {
+      "id": "E07",
+      "parameter_or_claim": "Source asset universe and frequency",
+      "value": "Fama–French 12-industry monthly excess returns.",
+      "source_ids": [
+        "salcher2026"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1002/for.70134"
+      ],
+      "exact_locator": "§4.1 Data, first paragraph.",
+      "provenance": "direct_paper",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "The asset universe and monthly excess-return frequency have a direct recent empirical precedent.",
+      "limits": "FF12 denotes industry portfolios, not individually tradeable funds, actual institutions, or a multi-asset allocation universe."
+    },
+    {
+      "id": "E08",
+      "parameter_or_claim": "Source historical frame",
+      "value": {
+        "start": "1964-01",
+        "end": "2023-12"
+      },
+      "source_ids": [
+        "salcher2026"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1002/for.70134"
+      ],
+      "exact_locator": "§4.1; Tables 1–2 calibration notes; §6 / Table 4 empirical rolling-window note.",
+      "provenance": "direct_paper",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Use the same historical frame to build a finite decision-case set.",
+      "limits": "Current downloaded French CIZ data are revised data, not an exact reconstruction of the paper's raw vintage or historical point-in-time information."
+    },
+    {
+      "id": "E09",
+      "parameter_or_claim": "Return block and raw public inputs",
+      "value": "First block 'Average Value Weighted Returns -- Monthly' of 12_Industry_Portfolios.txt; RF from monthly F-F_Research_Data_Factors.txt.",
+      "source_ids": [
+        "french_public_data"
+      ],
+      "source_urls": [
+        "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html"
+      ],
+      "exact_locator": "Official library monthly TXT ZIP links; ZIP member headers; local data/french/manifest.json sources ff12_returns and factors.",
+      "provenance": "public_data",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Retain official raw files, downloaded UTC, ZIP/member hashes, and first-block identification.",
+      "limits": "Do not accidentally substitute equal-weighted, annual, daily, or ex-dividend blocks; current release is not historical-vintage replication."
+    },
+    {
+      "id": "E10",
+      "parameter_or_claim": "Decimal monthly excess-return conversion",
+      "value": "r_excess[t,j]=raw_industry_percent[t,j]/100-raw_RF_percent[t]/100.",
+      "source_ids": [
+        "french_public_data",
+        "salcher2026"
+      ],
+      "source_urls": [
+        "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html",
+        "https://doi.org/10.1002/for.70134"
+      ],
+      "exact_locator": "French monthly raw headers/data units; Salcher §4.1 specifies excess returns; research/prepare_public_inputs.py conversion.",
+      "provenance": "numerical_implementation",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "A transparent unit conversion implementing the paper's excess-return construct.",
+      "limits": "The paper directly states excess returns, not this parser implementation. Covariances are in decimal monthly return squared; no annualization while reusing these gamma values.",
+      "local_input": "data/french/ff12_excess_calibration_1964_2023.json",
+      "input_units": "decimal_monthly_return"
+    },
+    {
+      "id": "E11",
+      "parameter_or_claim": "Missing-value handling",
+      "value": "Interpret documented raw sentinels (-99.99, -999) as missing before division/subtraction; require complete finite observations in the selected FF12 frame.",
+      "source_ids": [
+        "french_public_data"
+      ],
+      "source_urls": [
+        "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html"
+      ],
+      "exact_locator": "Raw ZIP member introductory missing-data notes; research/prepare_public_inputs.py.",
+      "provenance": "numerical_implementation",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Avoid treating a sentinel as a financial loss and verify complete windows.",
+      "limits": "No invented imputation or eligibility threshold. Missing data in another universe or period require a separately stated policy."
+    },
+    {
+      "id": "E12",
+      "parameter_or_claim": "Training and holdout window lengths",
+      "value": {
+        "training_months": 60,
+        "holdout_months": 36
+      },
+      "source_ids": [
+        "salcher2026"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1002/for.70134"
+      ],
+      "exact_locator": "§4.1, second paragraph; §6 and Table 4 caption; Fig.2 caption uses train[t-60,t-1] / test[t,t+35].",
+      "provenance": "direct_paper",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Reuse the preceding 60-month estimation period and reserve the next 36 months to define the admissible historical frame. The active v4 experiment does not use or evaluate the reserved future block.",
+      "limits": "Salcher actually estimates future/test moments for economic evaluation; LIBERA v4 only preserves the 60+36 frame. The 36 future months never enter the prompt or main oracle and are unused in the active experiment."
+    },
+    {
+      "id": "E13",
+      "parameter_or_claim": "Main target versus future outcomes",
+      "value": "The active v4 main target uses training moments supplied to the LLM. The following 36-month block is reserved but not used for outcomes, prompts, or the main reference.",
+      "source_ids": [
+        "salcher2026",
+        "portbench2026v6"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1002/for.70134",
+        "https://arxiv.org/html/2605.27887v6"
+      ],
+      "exact_locator": "Salcher §4.1 and §6 separate estimated and realized parameters; PortBench Appendix C.2 separates lookback reference from subsequent outcomes.",
+      "provenance": "LIBERA_adaptation",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Measure whether an LLM respects an ex-ante delegated objective. A separately versioned later outcome module may compute ex-post diagnostics; legacy prototypes do not count as active v4 holdout analysis.",
+      "limits": "Do not call the training-moment optimum a true future-return optimum or report an active v4 holdout result. Do not conflate objective compliance with profitable forecasting."
+    },
+    {
+      "id": "E14",
+      "parameter_or_claim": "Finite rolling-case count",
+      "value": {
+        "months": 720,
+        "window_size": 96,
+        "monthly_step": 1,
+        "cases": 625,
+        "arithmetic": "720-60-36+1=625"
+      },
+      "source_ids": [
+        "salcher2026"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1002/for.70134"
+      ],
+      "exact_locator": "Salcher §4.1 / §6 specify frame and 60/36 rolling windows; 625 is LIBERA arithmetic for every admissible one-month shift.",
+      "provenance": "LIBERA_adaptation",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "A complete finite historical case set when all admissible monthly starts are retained.",
+      "limits": "625 is not a paper power recommendation or 625 independent market experiments; overlapping windows share most observations."
+    },
+    {
+      "id": "E15",
+      "parameter_or_claim": "Training sample moments",
+      "value": "mu_train=mean of 60 monthly decimal excess-return vectors; Sigma_train=sum_t (r_t-mu)(r_t-mu)^T/(60-1).",
+      "source_ids": [
+        "salcher2026",
+        "french_public_data"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1002/for.70134",
+        "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html"
+      ],
+      "exact_locator": "Salcher §4.1 specifies moment estimation; exact ddof=1 convention is the LIBERA implementation, not an independently asserted paper numeric prescription.",
+      "provenance": "numerical_implementation",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Use a reproducible unbiased sample covariance and record it with every case.",
+      "limits": "Do not silently mix author-code shrinkage with raw sample covariance; no annualization of the monthly objective."
+    },
+    {
+      "id": "E16",
+      "parameter_or_claim": "Paper text versus pinned author-code covariance",
+      "value": "The author-code reference mode uses 0.8*S+0.2*diag(diag(S)), with conditional ridge handling; this is distinct from the paper-text sample-moment mode.",
+      "source_ids": [
+        "salcher_author_code",
+        "salcher2026"
+      ],
+      "source_urls": [
+        "https://github.com/salcherlukas/Lost_in_Translation/tree/14c3a4c9567da966de5a4f7b9e5ef9ea6cff99fe",
+        "https://doi.org/10.1002/for.70134"
+      ],
+      "exact_locator": "Pinned author-code ridge_inverse implementation; research/compute_paper_reference.py author_covariance(); paper §4.1.",
+      "provenance": "numerical_implementation",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Retain and identify alternative replication modes separately.",
+      "limits": "The 0.2 shrinkage and ridge constants are code choices, not a paper-text recommendation for the v4 main constrained problem. Main covariance mode must be stated explicitly."
+    },
+    {
+      "id": "E17",
+      "parameter_or_claim": "Benchmark optimization and verification",
+      "value": "Prepared references use an active-set simplex QP with independent SLSQP cross-checks, SPD/KKT/feasibility checks, and two complementary benchmark-verification passes. Primary covariance is the unshrunk training sample covariance, ddof=1.",
+      "source_ids": [
+        "salcher2026",
+        "portbench2026v6"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1002/for.70134",
+        "https://arxiv.org/html/2605.27887v6"
+      ],
+      "exact_locator": "research/prepare_institutional_benchmark.py; data/institutional/summary.json numerical_verification; data/institutional/verification.json pass_1/pass_2; data/institutional/manifest.json generator and output hashes.",
+      "provenance": "numerical_implementation",
+      "verification_level": "local_prepared_artifacts_read_and_hash_verified; companion_numerical_checks_complete; not_AI_or_full_study_audit",
+      "permitted_inference": "A deterministic numerical reference independent of evaluation LLM output.",
+      "limits": "Global uniqueness is a mathematical implication of SPD covariance and positive gamma. General KKT checks are float64 numerical checks, not exact interval proofs; serialized vertex cases additionally have rational checks. Solver/precision constants are engineering settings, not paper-derived effect thresholds. This does not establish model access or observed AI performance.",
+      "implementation_artifacts": [
+        {
+          "path": "data/institutional/summary.json",
+          "sha256": "655fe361c1a91bbc93c5ecf870a8e9f19f77d64267f5c050fc553ec9e8ebaf03"
+        },
+        {
+          "path": "data/institutional/verification.json",
+          "sha256": "702532f318432e28a49b14060051c8886683edabf0ae6860c42a753284c65bea"
+        },
+        {
+          "path": "data/institutional/manifest.json",
+          "sha256": "aa09c97b8c7cabbe10a1f5187c5d31ad3560f6ec48d2a080fa27434341afe0d8"
+        }
+      ]
+    },
+    {
+      "id": "E18",
+      "parameter_or_claim": "Same-solution and weakly differentiated cases",
+      "value": "Keep all admissible cases, including cases where different gamma values yield identical or nearly identical constrained optimal portfolios; report reference contrasts continuously.",
+      "source_ids": [
+        "salcher2026",
+        "portbench2026v6"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1002/for.70134",
+        "https://arxiv.org/html/2605.27887v6"
+      ],
+      "exact_locator": "LIBERA implication of the constrained objective; no external paper claims all mandates must yield different weights.",
+      "provenance": "LIBERA_adaptation",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Avoid counting economically appropriate convergence as a failure.",
+      "limits": "Do not select only cases with visually large differences, divide by a zero reference contrast, or force portfolio separation."
+    },
+    {
+      "id": "E19",
+      "parameter_or_claim": "Four-stage workflow",
+      "value": [
+        "interpret situation",
+        "assess choices",
+        "draft recommendation",
+        "review and revise"
+      ],
+      "source_ids": [
+        "portbench2026v6",
+        "dellacqua2026"
+      ],
+      "source_urls": [
+        "https://arxiv.org/html/2605.27887v6",
+        "https://doi.org/10.1287/orsc.2025.21838"
+      ],
+      "exact_locator": "plan/LIBERA protocol v4 JSON workflow.stages and workflow.stage_count_main; research/prepare_workflow_v4.py STAGES. PortBench section 2.2 is a different five-stage pipeline.",
+      "provenance": "LIBERA_adaptation",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Make evidence-use timing a controlled organizational design intervention.",
+      "limits": "Four is not established as the optimal stage count by either cited paper."
+    },
+    {
+      "id": "E20",
+      "parameter_or_claim": "R1 evidence-onset policy",
+      "value": {
+        "first_mandate_stage": 1,
+        "retain_after_onset": true
+      },
+      "source_ids": [
+        "portbench2026v6"
+      ],
+      "source_urls": [
+        "https://arxiv.org/html/2605.27887v6"
+      ],
+      "exact_locator": "plan/LIBERA protocol v4 JSON workflow.mandate_inserted_at.R1; research/prepare_workflow_v4.py user_contents: R1 inserts MANDATE at stage index 0.",
+      "provenance": "LIBERA_adaptation",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Expose the exact assigned gamma and its objective interpretation from stage 1 onward.",
+      "limits": "PortBench does not directly test R1 versus R4."
+    },
+    {
+      "id": "E21",
+      "parameter_or_claim": "R4 evidence-onset policy",
+      "value": {
+        "first_mandate_stage": 4,
+        "retain_after_onset": true
+      },
+      "source_ids": [
+        "portbench2026v6"
+      ],
+      "source_urls": [
+        "https://arxiv.org/html/2605.27887v6"
+      ],
+      "exact_locator": "plan/LIBERA protocol v4 JSON workflow.mandate_inserted_at.R4; research/prepare_workflow_v4.py user_contents: R4 inserts MANDATE at stage index 3.",
+      "provenance": "LIBERA_adaptation",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Delay only the explicit institution-specific mandate packet while ensuring final information equality.",
+      "limits": "Earlier stages must be allowed to state missing mandate information, rather than forced to invent gamma; this is an onset-and-subsequent-use policy contrast, not a pure anchoring effect."
+    },
+    {
+      "id": "E22",
+      "parameter_or_claim": "FRESH diagnostic",
+      "value": {
+        "responses": 1,
+        "full_final_information": true,
+        "prior_drafts": false
+      },
+      "source_ids": [
+        "portbench2026v6",
+        "dellacqua2026"
+      ],
+      "source_urls": [
+        "https://arxiv.org/html/2605.27887v6",
+        "https://doi.org/10.1287/orsc.2025.21838"
+      ],
+      "exact_locator": "plan/LIBERA protocol v4 JSON workflow.diagnostic_arm and analysis.auxiliary_FRESH; research/prepare_workflow_v4.py user_contents FRESH branch.",
+      "provenance": "LIBERA_adaptation",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Diagnose whether carrying prior drafts matters under the same final information.",
+      "limits": "FRESH is not matched on the number of responses or compute; do not treat its difference as a pure timing causal effect.",
+      "support_relationship": "related_work_motivation_only"
+    },
+    {
+      "id": "E23",
+      "parameter_or_claim": "Total-variation allocation error",
+      "value": "TV(w_hat,w_star)=0.5*sum_j abs(w_hat_j-w_star_j).",
+      "source_ids": [
+        "portbench2026v6"
+      ],
+      "source_urls": [
+        "https://arxiv.org/html/2605.27887v6"
+      ],
+      "exact_locator": "PortBench Appendix C.2 Eq.(8) uses similarity 1-TV; LIBERA defines and reports error TV.",
+      "provenance": "LIBERA_adaptation",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "For feasible simplex portfolios, report bounded 0..1 allocation disagreement.",
+      "limits": "Use on valid comparable portfolios only. This is an allocation-distance definition, not proof of economic welfare loss."
+    },
+    {
+      "id": "E24",
+      "parameter_or_claim": "Direct constrained utility gap",
+      "value": "G(t,gamma)=U_gamma(w_star(t,gamma);mu_train,Sigma_train)-U_gamma(w_hat(t,gamma);mu_train,Sigma_train).",
+      "source_ids": [
+        "salcher2026"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1002/for.70134"
+      ],
+      "exact_locator": "Salcher §3.2 Eq.(6) supplies utility; direct constrained objective difference is a LIBERA metric.",
+      "provenance": "LIBERA_adaptation",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Evaluate how much of the assigned model-conditional objective the generated feasible portfolio loses.",
+      "limits": "Compute the two objective values directly. Do not replace this with gamma/2*(w_hat-w_star)^T Sigma (w_hat-w_star) when active inequality constraints add a first-order term. Do not apply Salcher TP Sharpe-gap theorem to long-only utility gaps."
+    },
+    {
+      "id": "E25",
+      "parameter_or_claim": "Response-contrast error",
+      "value": "RCE(t,g,h)=0.5*||(w_hat(t,g)-w_hat(t,h))-(w_star(t,g)-w_star(t,h))||_1.",
+      "source_ids": [
+        "salcher2026",
+        "portbench2026v6"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1002/for.70134",
+        "https://arxiv.org/html/2605.27887v6"
+      ],
+      "exact_locator": "LIBERA measurement definition: paired difference in mandate responses; no paper-direct formula.",
+      "provenance": "LIBERA_adaptation",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Measure whether the direction and size of economically warranted differences are preserved; defined even if reference contrast is zero.",
+      "limits": "For feasible simplex portfolios its range is 0..2, not necessarily 0..1. Report the pair definitions/aggregation and avoid denominator normalization by reference separation."
+    },
+    {
+      "id": "E26",
+      "parameter_or_claim": "Observed portfolio convergence is not sufficient evidence of harm",
+      "value": "Jointly report allocation contrast, reference contrast, constrained utility gap, and invalid-response coverage.",
+      "source_ids": [
+        "kleinberg2021",
+        "bommasani2022",
+        "chen2026",
+        "agarwal2026"
+      ],
+      "source_urls": [
+        "https://www.pnas.org/doi/10.1073/pnas.2018340118",
+        "https://papers.nips.cc/paper_files/paper/2022/hash/17a234c91f746d9625a75cf8a8731ee2-Abstract-Conference.html",
+        "https://www.nber.org/papers/w35273",
+        "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7294279"
+      ],
+      "exact_locator": "Kleinberg model distinction between individual and collective outcomes; Bommasani abstract mixed model-sharing effects; Chen/Agarwal primary abstracts use different financial outcomes.",
+      "provenance": "LIBERA_adaptation",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Distinguish harmful loss of warranted heterogeneity from justified agreement.",
+      "limits": "No claim that more diversity is always better, that all common-model output similarity is harmful, or that this experiment establishes systemic contagion."
+    },
+    {
+      "id": "E27",
+      "parameter_or_claim": "Primary model evaluated in the protocol source",
+      "value": "Qwen3.6-35B-A3B.",
+      "source_ids": [
+        "portbench2026v6"
+      ],
+      "source_urls": [
+        "https://arxiv.org/html/2605.27887v6"
+      ],
+      "exact_locator": "§3.1 'LLMs' evaluated-model list; Table 1 and Table 2 include this model.",
+      "provenance": "direct_paper",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Select a model with a directly documented portfolio-benchmark evaluation precedent.",
+      "limits": "An official model name does not freeze weights, tokenizer, hosting engine or API implementation; those must be versioned separately. Do not substitute a locally installed similarly named Qwen model silently."
+    },
+    {
+      "id": "E28",
+      "parameter_or_claim": "Decoding temperature",
+      "value": 0,
+      "source_ids": [
+        "portbench2026v6"
+      ],
+      "source_urls": [
+        "https://arxiv.org/html/2605.27887v6"
+      ],
+      "exact_locator": "§3.1 'Evaluation Protocol': temperature set to 0.",
+      "provenance": "direct_paper",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Reuse a documented evaluation setting.",
+      "limits": "This is not a universal vendor recommendation or proof of fully deterministic inference."
+    },
+    {
+      "id": "E29",
+      "parameter_or_claim": "Maximum generated output tokens per model response",
+      "value": 8192,
+      "source_ids": [
+        "portbench2026v6"
+      ],
+      "source_urls": [
+        "https://arxiv.org/html/2605.27887v6"
+      ],
+      "exact_locator": "§3.1 'Evaluation Protocol': maximum output length 8192 tokens.",
+      "provenance": "direct_paper",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Reuse the paper's per-response output cap.",
+      "limits": "Not an input-context cap, full-workflow cap, rationale length guarantee, or proof every result finishes within the limit."
+    },
+    {
+      "id": "E30",
+      "parameter_or_claim": "Thinking enabled",
+      "value": true,
+      "source_ids": [
+        "portbench2026v6"
+      ],
+      "source_urls": [
+        "https://arxiv.org/html/2605.27887v6"
+      ],
+      "exact_locator": "§3.1 'Evaluation Protocol': thinking mode enabled by default.",
+      "provenance": "direct_paper",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Attempt the same named evaluation condition when the serving implementation exposes it.",
+      "limits": "Record actual chat template/engine and whether thinking tokens count against the cap. Settings and execution must be verified rather than assumed from a model label."
+    },
+    {
+      "id": "E31",
+      "parameter_or_claim": "Actual fund documentary module",
+      "value": "FCNTX, VPMCX, DODGX and TRBCX are background and possible subsequent documentary-validation cases, not inputs defining v4 fictional institutions' gamma or true forecasts.",
+      "source_ids": [
+        "french_public_data",
+        "salcher2026"
+      ],
+      "source_urls": [
+        "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html",
+        "https://doi.org/10.1002/for.70134"
+      ],
+      "exact_locator": "LIBERA scope separation; public filings establish documents/holdings, not latent utility coefficients.",
+      "provenance": "LIBERA_adaptation",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Retain real-world context and document-grounding work without pretending that real-fund mandates were numerically recovered.",
+      "limits": "Do not assign gamma=1/3/5 to any actual fund or turn its historical holdings into optimal forecasts. Source/mapping completeness must be audited for a separate follow-up."
+    },
+    {
+      "id": "E32",
+      "parameter_or_claim": "Equity-sleeve interpretation",
+      "value": "All results concern allocation among 12 US-equity industry portfolios under the stated historical objective.",
+      "source_ids": [
+        "salcher2026",
+        "hornuf2025",
+        "portbench2026v6"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1002/for.70134",
+        "https://www.ifo.de/DocDL/cesifo1_wp11862.pdf",
+        "https://arxiv.org/html/2605.27887v6"
+      ],
+      "exact_locator": "Salcher §4.1; Hornuf §3.2 intentionally includes BND; PortBench §2.1 is multi-asset.",
+      "provenance": "LIBERA_adaptation",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "State the narrower domain explicitly.",
+      "limits": "No claim to reproduce total-fund allocations, risky-versus-defensive asset allocation, investor suitability across asset classes, or institution-wide investment performance."
+    },
+    {
+      "id": "B01",
+      "parameter_or_claim": "Financial-stability background",
+      "value": "Common models/data and market correlations are potential vulnerabilities, alongside model/data governance and third-party concentration.",
+      "source_ids": [
+        "fsb2024"
+      ],
+      "source_urls": [
+        "https://www.fsb.org/2024/11/the-financial-stability-implications-of-artificial-intelligence/"
+      ],
+      "exact_locator": "Official report §4.2.2, printed pp.20–22; official landing page vulnerability list.",
+      "provenance": "public_data",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Motivate investigation of organizational controls and heterogeneous decisions.",
+      "limits": "Policy-risk assessment is not causal evidence that GenAI already homogenizes funds or that LIBERA measures systemic risk."
+    },
+    {
+      "id": "B02",
+      "parameter_or_claim": "Monitoring background",
+      "value": "AI adoption and related vulnerabilities require indicators; financial authorities face measurement and taxonomy gaps.",
+      "source_ids": [
+        "fsb2025"
+      ],
+      "source_urls": [
+        "https://www.fsb.org/2025/10/monitoring-adoption-of-artificial-intelligence-and-related-vulnerabilities-in-the-financial-sector/"
+      ],
+      "exact_locator": "Official landing page report summary and high-level monitoring considerations.",
+      "provenance": "public_data",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Motivate precise definitions, logging and separation of adoption, exposure and outcome measures.",
+      "limits": "No numerical experimental setting or estimated treatment effect is borrowed."
+    },
+    {
+      "id": "B03",
+      "parameter_or_claim": "Latest governance background",
+      "value": "AI adoption/governance should align with each institution's business model, risk appetite and strategy; 12 non-prescriptive sound practices.",
+      "source_ids": [
+        "fsb2026final"
+      ],
+      "source_urls": [
+        "https://www.fsb.org/uploads/P151026-1.pdf"
+      ],
+      "exact_locator": "Final report §2.1 Sound Practice 1, printed p.20 / PDF p.24; executive summary printed pp.1–2; Annex printed p.65.",
+      "provenance": "public_data",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Connect preservation of an explicit delegated objective to institution-specific governance.",
+      "limits": "Final October 15 report supersedes consultation as latest reference. It is nonbinding guidance, not an empirical portfolio paper and not proof R1 is better than R4."
+    },
+    {
+      "id": "B04",
+      "parameter_or_claim": "Monoculture theoretical possibility",
+      "value": "A common more-accurate algorithm can reduce collective selection quality in the paper's competitive-selection model.",
+      "source_ids": [
+        "kleinberg2021"
+      ],
+      "source_urls": [
+        "https://www.pnas.org/doi/10.1073/pnas.2018340118"
+      ],
+      "exact_locator": "Primary author preprint abstract; PNAS article abstract/model framing.",
+      "provenance": "direct_paper",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Separate individual task quality from collective consequences.",
+      "limits": "A formal possibility in a specific model, not evidence for universal harm or a theorem for long-only portfolios."
+    },
+    {
+      "id": "B05",
+      "parameter_or_claim": "Outcome homogenization depends on what is shared and how it is adapted",
+      "value": "Shared data worsened homogenization on studied fairness benchmarks; model-sharing results were mixed and adaptation-sensitive.",
+      "source_ids": [
+        "bommasani2022"
+      ],
+      "source_urls": [
+        "https://papers.nips.cc/paper_files/paper/2022/hash/17a234c91f746d9625a75cf8a8731ee2-Abstract-Conference.html"
+      ],
+      "exact_locator": "Official NeurIPS proceedings abstract, especially model-sharing versus data-sharing results.",
+      "provenance": "direct_paper",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Motivate testing an information-use policy instead of assuming shared models mechanically yield identical outcomes.",
+      "limits": "Different domain and outcomes; no causal prediction for institutional allocations follows automatically."
+    },
+    {
+      "id": "B06",
+      "parameter_or_claim": "Quality and diversity need not move together",
+      "value": "GenAI assistance can raise individual creative quality while reducing collective content diversity.",
+      "source_ids": [
+        "doshi2024"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1126/sciadv.adn5290"
+      ],
+      "exact_locator": "Publisher abstract and article title; creative-writing experiment.",
+      "provenance": "direct_paper",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Keep a quality metric separate from an output-diversity metric.",
+      "limits": "Creative writing is not investing; lower diversity alone does not establish lower portfolio quality."
+    },
+    {
+      "id": "B07",
+      "parameter_or_claim": "Counterevidence on AI herding",
+      "value": "In the baseline laboratory-style investment experiment, agents relied strongly on private information; profit-maximizing prompts could induce optimal herding.",
+      "source_ids": [
+        "hansen2025"
+      ],
+      "source_urls": [
+        "https://www.federalreserve.gov/econres/feds/financial-stability-implications-of-generative-ai-taming-the-animal-spirits.htm"
+      ],
+      "exact_locator": "Official FEDS abstract.",
+      "provenance": "direct_paper",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Allow information use and incentives to change the sign of a convergence effect.",
+      "limits": "Working-paper experimental setting, not actual mutual funds or the v4 multi-asset utility task; do not claim AI always herds."
+    },
+    {
+      "id": "B08",
+      "parameter_or_claim": "Counterevidence from asset-management data",
+      "value": "AI hedge funds exhibit lower return comovement than non-AI peers; early outperformance declined over time.",
+      "source_ids": [
+        "chen2026"
+      ],
+      "source_urls": [
+        "https://www.nber.org/papers/w35273"
+      ],
+      "exact_locator": "NBER primary abstract; working paper 35273.",
+      "provenance": "direct_paper",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Avoid assuming all AI use increases financial homogeneity.",
+      "limits": "Abstract-only verification; broad AI and return comovement differ from common GenAI model use, holding overlap and necessary mandate-response differences."
+    },
+    {
+      "id": "B09",
+      "parameter_or_claim": "Recent GenAI asset-management evidence",
+      "value": "The paper reports heterogeneous benefits across hedge/non-hedge funds and complements involving AI talent and firm-specific information.",
+      "source_ids": [
+        "sheng2026"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1093/rfs/hhag050"
+      ],
+      "exact_locator": "Final publisher abstract; metadata published 2026-05-12, corrected/typeset 2026-06-15.",
+      "provenance": "direct_paper",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Motivate institution-specific complementary information and workflow organization.",
+      "limits": "Observational DiD/measurement assumptions and finance-specific sample limits remain; the prior 2025 conference manuscript must not be described as the final published text. No final-body-only claim is made here."
+    },
+    {
+      "id": "B10",
+      "parameter_or_claim": "Recent convergence evidence",
+      "value": "GenAI reliance and mutual-fund portfolio similarity are more strongly related after ChatGPT; stock-level herding, price-discovery and announcement-liquidity associations are reported.",
+      "source_ids": [
+        "agarwal2026"
+      ],
+      "source_urls": [
+        "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7294279"
+      ],
+      "exact_locator": "SSRN abstract, revision October 3, 2026.",
+      "provenance": "direct_paper",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Establish that relevant convergence research exists and motivate a more specific workflow question.",
+      "limits": "Abstract-only verification; do not claim no prior research, reproduce its causal identification, or equate observed holding similarity with loss of warranted objective differences."
+    },
+    {
+      "id": "B11",
+      "parameter_or_claim": "Knowledge-work workflow relevance",
+      "value": "GenAI assistance has uneven effects across tasks, including tasks within the same broad knowledge workflow.",
+      "source_ids": [
+        "dellacqua2026"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1287/orsc.2025.21838"
+      ],
+      "exact_locator": "Final publisher abstract; Organization Science 37(2),403–423.",
+      "provenance": "direct_paper",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Motivate stage-aware performance assessment.",
+      "limits": "Consultant field experiment does not validate the LIBERA four-stage sequence, evidence timing or portfolio objective."
+    },
+    {
+      "id": "B12",
+      "parameter_or_claim": "Observed adoption context",
+      "value": "The joint 2024 survey covers 118 responding firms; reported use spans many AI applications and governance arrangements.",
+      "source_ids": [
+        "boefca2024"
+      ],
+      "source_urls": [
+        "https://www.bankofengland.co.uk/report/2024/artificial-intelligence-in-uk-financial-services-2024"
+      ],
+      "exact_locator": "§1.2 Methodology and executive summary 'Use and adoption' / 'Governance and accountability'.",
+      "provenance": "public_data",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Document that institutional AI adoption is an operational governance issue.",
+      "limits": "Self-reported survey of respondents, not a population causal estimate of GenAI portfolio automation or a sample-size prescription for LIBERA."
+    },
+    {
+      "id": "B13",
+      "parameter_or_claim": "Risk-profile conditioning in a finance experiment",
+      "value": "Low-risk, high-risk and unspecified-risk prompts generate portfolio recommendations compared across ChatGPT models.",
+      "source_ids": [
+        "schneider2025"
+      ],
+      "source_urls": [
+        "https://www.sciencedirect.com/science/article/pii/S1544612325007767"
+      ],
+      "exact_locator": "§2.2 Prompting.",
+      "provenance": "direct_paper",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Use explicit risk objectives as controlled experimental conditions.",
+      "limits": "Verbal risk labels do not estimate gamma or provide ground-truth optimal allocations for actual institutions."
+    },
+    {
+      "id": "B14",
+      "parameter_or_claim": "Information provision can impair suitability despite improved historical returns",
+      "value": "A controlled portfolio experiment varies risk tolerance, horizon and ESG; company information can increase risk especially for risk-averse investors.",
+      "source_ids": [
+        "hornuf2025"
+      ],
+      "source_urls": [
+        "https://www.ifo.de/DocDL/cesifo1_wp11862.pdf"
+      ],
+      "exact_locator": "§3.1 Investor profiles; §3.2 Investment universe; §3.3 all conditions include investor circumstances; §6 Conclusion, printed p.26 / PDF p.28.",
+      "provenance": "direct_paper",
+      "verification_level": "verified_as_described",
+      "permitted_inference": "Distinguish objective alignment from historical performance and generic added-information benefits.",
+      "limits": "Working paper; Eikon/ESG inputs are not adopted as public-data inputs. Its 12 stocks+BND are different from FF12. No exact timing or workflow effect is directly established."
+    },
+    {
+      "id": "B15",
+      "parameter_or_claim": "Published critical review of algorithmic monoculture",
+      "value": "General objections to monoculture need assessment against explicit information structures and outcome criteria; several common objections fail or are conditional.",
+      "source_ids": [
+        "hedden2026"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1111/phpe.70018"
+      ],
+      "exact_locator": "Published abstract and Introduction; First published September 25,2026.",
+      "provenance": "direct_paper",
+      "verification_level": "publisher_abstract_metadata_and_selected_introduction_verified",
+      "permitted_inference": "Treat harm from shared algorithms as a hypothesis to evaluate under explicit objectives, not an automatic result of output similarity.",
+      "limits": "Philosophical/theoretical review in other decision domains; not a portfolio experiment, proof R1 beats R4, or a basis for new numeric experimental conditions."
+    },
+    {
+      "id": "B16",
+      "parameter_or_claim": "Definition of retrieval-augmented generation",
+      "value": "RAG combines a parametric generator with nonparametric memory accessed through retrieval; original models retrieve external passages for language generation.",
+      "source_ids": [
+        "lewis2020"
+      ],
+      "source_urls": [
+        "https://papers.nips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html"
+      ],
+      "exact_locator": "Official proceedings Abstract, description of dense Wikipedia index, pretrained retriever, and generated outputs.",
+      "provenance": "direct_paper",
+      "verification_level": "official_primary_abstract_and_metadata_verified; definition_only",
+      "permitted_inference": "Distinguish retrieval performance from using already supplied evidence.",
+      "limits": "The active LIBERA v4 task supplies a fixed mandate packet directly and therefore does not test an actual retrieval system or end-to-end RAG quality. No retrieval hyperparameter is borrowed."
+    },
+    {
+      "id": "E33",
+      "parameter_or_claim": "Raw response budget serialization allowance",
+      "value": {
+        "absolute_sum_tolerance": 1e-06,
+        "negative_weights_allowed": false,
+        "normalization_or_clipping": false
+      },
+      "source_ids": [
+        "salcher2026",
+        "portbench2026v6"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1002/for.70134",
+        "https://arxiv.org/html/2605.27887v6"
+      ],
+      "exact_locator": "plan v4 JSON numeric_implementation; prepare_workflow_v4.py SYSTEM; prepare_institutional_benchmark.py validate_response/evaluate_weights.",
+      "provenance": "numerical_implementation",
+      "verification_level": "final_v4_artifacts_read_and_checked_in_round2_evidence_audit",
+      "permitted_inference": "Apply the same explicitly declared serialization allowance to every arm; retain the raw budget residual and signed direct objective gap.",
+      "limits": "The value 1e-6 is an engineering setting, not a paper-derived treatment or economic-significance threshold. A small accepted sum-one mismatch can yield a tiny negative raw gap; it is not evidence of beating the exact simplex optimum."
+    },
+    {
+      "id": "E34",
+      "parameter_or_claim": "Planned run and response-call arithmetic",
+      "value": {
+        "market_windows": 625,
+        "mandates_per_window": 3,
+        "institution_cases": 1875,
+        "main_arms": 2,
+        "main_stages": 4,
+        "main_runs": 3750,
+        "main_response_calls": 15000,
+        "fresh_runs": 1875,
+        "fresh_response_calls": 1875,
+        "total_runs": 5625,
+        "total_response_calls": 16875
+      },
+      "source_ids": [
+        "salcher2026"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1002/for.70134"
+      ],
+      "exact_locator": "plan v4 JSON main/analysis; data/workflow/manifest.json; all runs.jsonl stage counts checked.",
+      "provenance": "LIBERA_adaptation",
+      "verification_level": "final_v4_artifacts_read_and_checked_in_round2_evidence_audit",
+      "permitted_inference": "Describe the fixed-corpus workload: 625*3=1875; 1875*2*4+1875=16875 response calls.",
+      "limits": "Only the source frame and gamma set come from the paper; workflow arm/stage multiplication is LIBERA arithmetic. These are planned calls, not AI observations or independent sample sizes."
+    },
+    {
+      "id": "E35",
+      "parameter_or_claim": "Number of full-corpus passes",
+      "value": 1,
+      "source_ids": [
+        "portbench2026v6"
+      ],
+      "source_urls": [
+        "https://arxiv.org/html/2605.27887v6"
+      ],
+      "exact_locator": "plan v4 JSON analysis.base_passes/base_pass_note.",
+      "provenance": "LIBERA_adaptation",
+      "verification_level": "final_v4_artifacts_read_and_checked_in_round2_evidence_audit",
+      "permitted_inference": "A single prespecified census under the fixed target model, with every failure retained.",
+      "limits": "One pass is a scope/resource choice, not a paper power recommendation or a claim of stochastic reproducibility. Temperature zero does not guarantee backend determinism."
+    },
+    {
+      "id": "E36",
+      "parameter_or_claim": "Prespecified execution ordering",
+      "value": {
+        "main_blocks": 625,
+        "runs_per_block": 6,
+        "composition": "all three gammas times R1/R4; paired policies adjacent; deterministic hash block/gamma/policy ordering",
+        "fresh_campaign": "separate diagnostic"
+      },
+      "source_ids": [
+        "salcher2026",
+        "portbench2026v6"
+      ],
+      "source_urls": [
+        "https://doi.org/10.1002/for.70134",
+        "https://arxiv.org/html/2605.27887v6"
+      ],
+      "exact_locator": "plan v4 JSON workflow.execution_order; prepare_workflow_v4.py prepare; all 625 six-run blocks in runs.jsonl checked.",
+      "provenance": "LIBERA_adaptation",
+      "verification_level": "final_v4_artifacts_read_and_checked_in_round2_evidence_audit",
+      "permitted_inference": "Avoid confounding a whole policy with a separate execution period and preserve matched market-condition blocks.",
+      "limits": "Hash ordering is an operational control, not random assignment of market histories or a paper-established optimal scheduling method. Actual timestamps/model revisions must still be logged."
+    },
+    {
+      "id": "E37",
+      "parameter_or_claim": "Calculated benchmark examples are not AI results",
+      "value": {
+        "all_three_same_vertex_windows": 83,
+        "all_windows": 625,
+        "reference_cases": 1875,
+        "first_training_window": [
+          "1964-01",
+          "1968-12"
+        ],
+        "gamma_1_percent": {
+          "Other": 100
+        },
+        "gamma_3_percent_rounded": {
+          "BusEq": 22.85,
+          "Other": 77.15
+        },
+        "gamma_5_percent_rounded": {
+          "Enrgy": 21.04,
+          "BusEq": 28.62,
+          "Other": 50.33
+        }
+      },
+      "source_ids": [
+        "french_public_data",
+        "salcher2026"
+      ],
+      "source_urls": [
+        "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html",
+        "https://doi.org/10.1002/for.70134"
+      ],
+      "exact_locator": "data/institutional/summary.json all_three_same_vertex.count and first_window.references_by_gamma; underlying cases and manifest hashes.",
+      "provenance": "numerical_implementation",
+      "verification_level": "final_v4_artifacts_read_and_checked_in_round2_evidence_audit",
+      "permitted_inference": "Show that the specified objective generates both distinct and shared normative allocations on actual public inputs.",
+      "limits": "Values are computed from the frozen input release under LIBERA long-only adaptation, not taken from a paper table, real-fund recommendation, or observed AI response. Displayed percentages are rounded; source weights retain full precision."
+    }
+  ],
+  "unresolved_items": [
+    {
+      "id": "U01",
+      "item": "Exact model availability and frozen implementation",
+      "status": "not_resolved_by_literature",
+      "required_action": "Verify the exact Qwen3.6-35B-A3B weights/API, revision, tokenizer, chat template, engine, precision, thinking/output accounting and full packet fit before generation."
+    },
+    {
+      "id": "U04",
+      "item": "Actual-fund documentary follow-up",
+      "status": "outside_main_experiment",
+      "required_action": "Audit original SEC documents, timestamps, issuer/SIC mapping and public constraint applicability separately; do not reuse fund names as numeric mandate identities."
+    },
+    {
+      "id": "U05",
+      "item": "Access-limited background papers",
+      "status": "explicitly_limited",
+      "required_action": "Chen/NBER and Agarwal/SSRN claims are limited to primary abstracts; Sheng final-body claims are limited to the final abstract while its accessible prior manuscript is labelled separately."
+    }
+  ],
+  "resolved_items": [
+    {
+      "id": "U06",
+      "item": "Numerical precision and covariance mode",
+      "status": "complete_for_prepared_numeric_benchmark",
+      "required_action": "Record final v4 sample-versus-shrunk covariance choice, numerical solver, tolerances and independent KKT checks; keep monthly decimal scaling consistent with gamma.",
+      "resolution": "Unshrunk ddof=1 monthly covariance and active-set QP/SLSQP implementation are frozen by the referenced generator/output hashes; both numerical verification passes report all_passed. This is separate from round2 study/artifact audit.",
+      "artifacts": [
+        {
+          "path": "data/institutional/summary.json",
+          "sha256": "655fe361c1a91bbc93c5ecf870a8e9f19f77d64267f5c050fc553ec9e8ebaf03"
+        },
+        {
+          "path": "data/institutional/verification.json",
+          "sha256": "702532f318432e28a49b14060051c8886683edabf0ae6860c42a753284c65bea"
+        },
+        {
+          "path": "data/institutional/manifest.json",
+          "sha256": "aa09c97b8c7cabbe10a1f5187c5d31ad3560f6ec48d2a080fa27434341afe0d8"
+        }
+      ]
+    },
+    {
+      "id": "U02",
+      "item": "Final executable v4 metric and workflow synchronization",
+      "status": "complete_round2_metric_workflow_synchronization",
+      "required_action": "Match this ledger's equations, R1/R4/FRESH information flow, all gamma pairs, and invalid-response rules to final prompts/config/scorer; mathematical suggestions in this ledger do not silently override the executable protocol.",
+      "resolution": "Final equations, all gamma pairs, direct utility gap, R1/R4/FRESH packet routing, strict response tolerance, failure rules and four-output pair-policy comparisons match the final protocol and scorer. Every one of 5625 prepared runs and 16875 stage-message assemblies was checked read-only.",
+      "artifacts": [
+        {
+          "path": "plan/LIBERA_실험설정_20261017.json",
+          "sha256": "706754b7344ecdf2c412affe66303d83e8ac787d210fa52d37462a2b237b2d2c"
+        },
+        {
+          "path": "research/prepare_workflow_v4.py",
+          "sha256": "d61c291aed03b743a4bc3b502de4ace26a6e1af49b4882652a33d2d3dd139116"
+        },
+        {
+          "path": "research/prepare_institutional_benchmark.py",
+          "sha256": "6a6cf0ec1118286eee3f92b4136e5723e3ffa75269e5e3bce75560c7a72fd648"
+        },
+        {
+          "path": "data/workflow/prompt_spec.json",
+          "sha256": "47cc5c3258ddc3bb65d07abc957dd4ceea32cfbd038029783d169259f54bb02b"
+        },
+        {
+          "path": "data/workflow/manifest.json",
+          "sha256": "2bd4f3626b951c884e6e3f147c7465f6531f518ec14d3edb136cdd090ff5ed02"
+        }
+      ],
+      "audit_report": "research/audits/round2_evidence.json"
+    },
+    {
+      "id": "U03",
+      "item": "Two-pass source/design audit",
+      "status": "complete_two_substantive_rounds_after_corrections",
+      "required_action": "Run one source/provenance audit and then an independent cross-artifact/mechanism audit after all v4 artifacts exist. Do not mark both complete from JSON schema validation.",
+      "round1_report": "research/audits/round1_evidence.json",
+      "round2_evidence_report": "research/audits/round2_evidence.json",
+      "resolution": "Two rounds of design, mathematical and primary-source review completed, followed by integration and mechanical rechecks. Execution model revision and actual AI observations remain outside this completed design audit.",
+      "artifacts": [
+        {
+          "path": "research/audits/round1_design.json",
+          "sha256": "3c7bf49bc1a95902834b8370adeef127b6e602523cbe56635a1527b4fb3e50ef"
+        },
+        {
+          "path": "research/audits/round1_math.json",
+          "sha256": "f92f87c9fd56e4beac40207fc71eefc99ebad5b275ae0d5fad463e6977417d81"
+        },
+        {
+          "path": "research/audits/round1_evidence.json",
+          "sha256": "8737601856914d76f757e01734254440ac61cac9f9a99e8196d261961bd7bdc7"
+        },
+        {
+          "path": "research/audits/round1_mechanical.json",
+          "sha256": "6732be2fa467d8ee0e4f0f97917add5dd2476218dc40631dcbea9ed87aa49c5d"
+        },
+        {
+          "path": "research/audits/round2_design.json",
+          "sha256": "75c76f51dd8fd6105411d39523fe0251f29150b6a0ab2bceec6d8d039f9087a7"
+        },
+        {
+          "path": "research/audits/round2_math.json",
+          "sha256": "76ee211450349be24312ca4e6d13f7528ffa35df556021e2cee31b4dcdc64412"
+        },
+        {
+          "path": "research/audits/round2_evidence.json",
+          "sha256": "e727ff8830941dbe0acf1870c161c76931ff2e898a6ca0c088978e607d56e1a3"
+        },
+        {
+          "path": "research/audits/round2_mechanical.json",
+          "sha256": "b70ff65edfddebe486218df5af47254a473ed37a36adb7fe1e136ed80e17c369"
+        }
+      ]
+    }
+  ],
+  "updated_at_utc": "2026-10-17T08:04:36.488694+00:00",
+  "revision_log": [
+    {
+      "reason": "Round1 evidence audit follow-up: add two missing cited primary sources; distinguish active unused holdout; close numeric implementation gate using frozen verification artifacts.",
+      "audit": "research/audits/round1_evidence.json",
+      "full_round2_audit_complete": false
+    },
+    {
+      "reason": "Round2: repair Unicode metadata, synchronize final v4 workflow locators, document engineering/call-count/census/order/example provenance, and resolve U02 after full prepared-message checks.",
+      "audit": "research/audits/round2_evidence.json",
+      "overall_U03_closed": false
+    },
+    {
+      "at_utc": "2026-10-17T08:04:36.488682+00:00",
+      "by": "root",
+      "change": "Audit completion metadata only: U03 resolved after all round2 reviewer reports. No source claim, number, equation or workflow changed."
+    }
+  ]
+}

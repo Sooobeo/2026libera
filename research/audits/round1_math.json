@@ -1,0 +1,186 @@
+{
+  "audit_id": "round1_math",
+  "round": 1,
+  "reviewed_protocol_version": "4.0",
+  "created_at_utc": "2026-10-17T07:56:34.419287+00:00",
+  "reviewer": "paper_numeric_audit",
+  "scope": "Read-only review of root-authored v4 plan HTML, protocol JSON and paper HTML: formulas, evaluation, denominators, identification, topic connection, response tolerance and result-status language. Own numerical benchmark files were not modified.",
+  "reviewer_independence": "Reviewer authored the separate numerical benchmark. This report reviews the root-authored documents; it is not presented as independent authorship review of that numerical code.",
+  "document_snapshots": [
+    {
+      "path": "plan/LIBERA_실험계획_20261017.html",
+      "sha256": "97daa4d54294a0361c1722dcfee2a26b20db81a26d9e46212e2477885ed7e49d",
+      "bytes": 33979
+    },
+    {
+      "path": "plan/LIBERA_실험설정_20261017.json",
+      "sha256": "4fc2f1b8c8472df8f21126aabb83848bed301661f4bc35b93672d27b0c35e03f",
+      "bytes": 8999
+    },
+    {
+      "path": "paper/LIBERA_텀페이퍼_초안_20261017.html",
+      "sha256": "6e95cb1922627aa1e02005d9c35af89bdd4982f897cf58cf02f8e9061bb4b06c",
+      "bytes": 49182
+    }
+  ],
+  "overall_verdict": "no_core_formula_or_identification_error_found; two_required_reporting_clarifications_and_one_minor_wording_change",
+  "blocking_errors": [],
+  "required_clarifications": [
+    {
+      "id": "MATH-R1-01",
+      "severity": "moderate",
+      "category": "response_tolerance_and_raw_objective_gap",
+      "locations": [
+        "plan HTML section 4.4",
+        "paper HTML section 4.4",
+        "protocol numeric_implementation and analysis.primary_quality"
+      ],
+      "finding": "The documents allow an absolute sum-one error of 1e-6 but describe U(w_star)-U(w) only as a loss. A raw vector accepted within that engineering tolerance need not lie exactly on the simplex; its direct objective gap can therefore be slightly negative. The evaluator already retains the raw vector and flags budget-residual explanations, but the reviewed document text does not explain this connection.",
+      "mathematical_reason": "For d=w-w_star, U(w_star)-U(w)=gamma/2*d.T@Sigma@d-gradient_U(w_star).T@d. At a simplex optimum gradient=lambda*1-nu, so the boundary term contains -lambda*(sum(w)-1)+nu.T@w. The nonnegative-loss claim applies to exactly feasible w. A serialization budget residual can change the raw sign.",
+      "required_change": "State that accepted raw weights are never renormalized; report raw budget residual, signed raw objective gap, and counts/flags of small negative gaps explained by the equality-multiplier budget allowance. Do not silently clip a negative gap to zero or claim it beats the constrained optimum.",
+      "implementation_evidence": "research.prepare_institutional_benchmark.evaluate_weights returns raw_budget_residual_minus_one, budget_residual_objective_allowance, negative_raw_regret_explained_by_allowed_budget_residual, and regret_not_clipped.",
+      "status": "open_at_review"
+    },
+    {
+      "id": "MATH-R1-02",
+      "severity": "moderate",
+      "category": "paired_validity_masks_and_denominators",
+      "locations": [
+        "plan HTML sections 4.4-4.5",
+        "paper HTML sections 4.4-4.5",
+        "protocol analysis.invalid_outputs and aggregation"
+      ],
+      "finding": "The general both-valid wording does not fully specify which responses must be valid for an institution loss, an institution-pair response error, and an R4-minus-R1 policy comparison. These require different masks. Arm-specific valid-case averages must not be subtracted and called a paired effect when their case sets differ.",
+      "required_change": {
+        "institution_within_arm": "L(t,gamma,arm) requires that one final portfolio to be valid; report the valid denominator and all scheduled final cases for its failure rate.",
+        "institution_paired_policy_delta": "L_R4-L_R1 requires both R1 and R4 final portfolios for the same t,gamma to be valid.",
+        "institution_pair_within_arm": "E(t,gamma_i,gamma_j,arm), D and G require both institutional responses in that arm to be valid.",
+        "institution_pair_paired_policy_delta": "E_R4-E_R1 (and paired D/G contrasts) requires all four final responses: two mandates times two policies. Use this same common mask for both policies.",
+        "reporting": "Show planned, completed, valid and excluded counts for each estimand; distinguish final-case failures from stage-call failures. Keep asymmetry in failure rates visible and do not impute fake utilities."
+      },
+      "status": "open_at_review"
+    }
+  ],
+  "minor_improvements": [
+    {
+      "id": "MATH-R1-03",
+      "severity": "minor",
+      "locations": [
+        "plan HTML section 4.2",
+        "paper HTML section 4.2"
+      ],
+      "finding": "The prose calls the risk penalty a volatility cost. The displayed expression penalizes portfolio variance w.T@Sigma@w, not its square root.",
+      "suggested_change": "Describe it as a risk cost proportional to portfolio variance, while retaining the accessible nontechnical explanation.",
+      "status": "open_at_review"
+    }
+  ],
+  "passed_checks": [
+    {
+      "topic": "topic_connection",
+      "result": "The main outcome is warranted institution-specific mandate response, not answer variety alone. E compares the signed vector of cross-mandate allocation changes with its normative counterpart; institution-specific utility gap is evaluated jointly. This connects an economic delegation question with a workflow-policy intervention."
+    },
+    {
+      "topic": "not_just_calculation_accuracy",
+      "result": "E=0 can coexist with a common allocation error shared by all mandates; the protocol already requires joint inspection of institution-specific L and failures, so common errors are not automatically treated as success. G alone is explicitly descriptive, not a welfare test."
+    },
+    {
+      "topic": "gamma_and_objective",
+      "result": "gamma={1,3,5}, U=mu.T@w-gamma/2*w.T@Sigma@w and full investment agree across documents and selected benchmark. Monthly decimal excess-return units preserve the meaning of the gamma values."
+    },
+    {
+      "topic": "long_only_adaptation",
+      "result": "The original Salcher quadratic problem permits shorts. The documents explicitly label the long-only combination with PortBench precedent as a LIBERA adaptation and do not claim a unified published replication."
+    },
+    {
+      "topic": "constrained_loss",
+      "result": "The documents correctly use direct objective differences and explicitly avoid reusing the unrestricted pure-quadratic distance identity."
+    },
+    {
+      "topic": "unique_within_mandate_not_necessarily_between_mandates",
+      "result": "Positive-definite covariance and positive gamma imply strict concavity and a unique optimum for each mandate. The documents correctly allow the three unique optima to coincide across mandates."
+    },
+    {
+      "topic": "no_effect_selection",
+      "result": "All 625 windows are retained and target-based same/distinct/unresolved strata are planned, without outcome-based market selection."
+    },
+    {
+      "topic": "window_counts",
+      "result": "720-60-36+1=625; 625*3=1875 institution cases. Last training interval 2016-01 through 2020-12 is consistent with retaining the existing 60/36 eligibility frame."
+    },
+    {
+      "topic": "training_only",
+      "result": "The future 36-month block is reserved only for corpus eligibility. The main model and oracle use training moments only; current revised vintage is distinguished from historical point-in-time data."
+    },
+    {
+      "topic": "call_counts",
+      "result": "625*3*2=3750 main final portfolios; four responses per main run yield 15000 planned response calls. FRESH adds 1875, totaling 16875. These are planned execution counts, not independent samples."
+    },
+    {
+      "topic": "inference",
+      "result": "The overlapping-window corpus is not treated as iid; no independent-sample p-values, standard errors or power claim are asserted."
+    },
+    {
+      "topic": "workflow_identification",
+      "result": "R1 versus R4 is explicitly a bundle of onset, position, context age and subsequent use opportunities, not a pure timing or anchoring mechanism. FRESH is a separate one-step diagnostic."
+    },
+    {
+      "topic": "information_leakage_specification",
+      "result": "The documents prohibit gamma-bearing IDs, other institutions answers and oracle tables in model inputs. Before mandate onset a pending allocation is allowed and intermediate outputs are not scored against a missing institution objective."
+    },
+    {
+      "topic": "claim_boundaries",
+      "result": "No causal effect of common-model adoption, actual RAG retrieval, real-fund private information, realized profitability or financial stability is claimed by this fixed-model mandate experiment."
+    },
+    {
+      "topic": "no_actual_AI_results",
+      "result": "The paper front matter, abstract, method and conclusion explicitly state that AI responses/results do not yet exist. Protocol results.ai_runs=0 and model.runtime_ready=false agree. Prepared numeric optima are consistently distinguished from observed AI performance."
+    }
+  ],
+  "expected_preannounced_updates": [
+    {
+      "item": "same_optimum_reference_counts",
+      "note": "Root already announced an upcoming descriptive corpus paragraph: same-vertex pair counts 170/83/86, all-three-same windows 83, unresolved 0. This is numeric benchmark preparation, not AI results."
+    },
+    {
+      "item": "PortBench_author_placeholder",
+      "note": "Root already announced a bibliography correction. Bibliographic authorship is outside this mathematical audit and is not counted as a newly discovered design error."
+    }
+  ],
+  "source_support": [
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/for.70134",
+      "locator": "Section 3.2 Eq.(6)-(7), Tables 2-5; Sections 4.1 and 6",
+      "scope": "objective, gamma table values, public industry data and rolling frame"
+    },
+    {
+      "url": "https://github.com/salcherlukas/Lost_in_Translation/blob/14c3a4c9567da966de5a4f7b9e5ef9ea6cff99fe/code/functions/data.R",
+      "locator": "build_excess_returns: RF/100, industry returns/100, subtraction",
+      "scope": "monthly decimal excess-return units"
+    },
+    {
+      "url": "https://arxiv.org/html/2605.27887v6",
+      "locator": "Appendix C.1 T5; Section 3.1",
+      "scope": "long-only simplex precedent for a different objective; model settings precedent, not the complete LIBERA protocol"
+    }
+  ],
+  "cross_checks": {
+    "protocol_ai_runs": 0,
+    "protocol_runtime_ready": false,
+    "reference_cases": 1875,
+    "reference_windows": 625,
+    "reference_shared_all_three": 83,
+    "unresolved_reference_pairs": {
+      "1-3": 0,
+      "1-5": 0,
+      "3-5": 0
+    }
+  },
+  "files_modified_by_this_audit": [
+    "research/audits/round1_math.json"
+  ],
+  "not_reviewed": [
+    "actual provider responses or runtime requests, which do not exist",
+    "public-fund document facts and full bibliography verification",
+    "independent authorship audit of the numerical reference code"
+  ]
+}

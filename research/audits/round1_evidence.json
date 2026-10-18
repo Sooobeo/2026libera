@@ -1,0 +1,362 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "LIBERA-v4-round1-evidence",
+  "round": 1,
+  "auditor": "runtime_paper_values",
+  "completed_at_utc": "2026-10-17 07:57:05 UTC",
+  "audit_type": "primary-source provenance, numeric attribution, bibliography freshness, and claim-scope cross-check",
+  "status": "completed_with_revisions_required",
+  "source_audit_conclusion": "The main experiment's financial objective, gamma values, public-data frame, constraint adaptation and interpretation are accurately separated. No material false paper-direct claim, invented AI result, or claim to evaluate actual retrieval was found. Bibliographic freshness/coverage and one ledger-versus-active-protocol wording discrepancy require correction.",
+  "source_files_edited": false,
+  "output_file": "research/audits/round1_evidence.json",
+  "snapshot": [
+    {
+      "path": "plan/LIBERA_실험계획_20261017.html",
+      "sha256": "97daa4d54294a0361c1722dcfee2a26b20db81a26d9e46212e2477885ed7e49d",
+      "bytes": 33979
+    },
+    {
+      "path": "plan/LIBERA_실험설정_20261017.json",
+      "sha256": "4fc2f1b8c8472df8f21126aabb83848bed301661f4bc35b93672d27b0c35e03f",
+      "bytes": 8999
+    },
+    {
+      "path": "paper/LIBERA_텀페이퍼_초안_20261017.html",
+      "sha256": "6e95cb1922627aa1e02005d9c35af89bdd4982f897cf58cf02f8e9061bb4b06c",
+      "bytes": 49182
+    },
+    {
+      "path": "research/prepare_workflow_v4.py",
+      "sha256": "61a8814987f3c0193756f16b16ffa026e482868cea515c6384411ea3ff6f6ba7",
+      "bytes": 18626
+    },
+    {
+      "path": "research/evidence_ledger_v4.json",
+      "sha256": "6d6002c6dbb4ffd50a0baba70797190b792037a0830e905be3cda68553054930",
+      "bytes": 63573
+    }
+  ],
+  "method": [
+    "Read the complete v4 JSON, workflow script, ledger, and readable content/references of both HTML artifacts.",
+    "Compare paper-direct values against primary sources verified earlier in the same session; browse anew only for bibliographic items newly present or clearly outdated.",
+    "Read the prepared workflow JSONL without running preparation or making model requests; check all arm counts and inspect all R4 pre-mandate packets for gamma leakage and all packets for future/gold fields.",
+    "Record SHA256 snapshots so later parent edits do not silently invalidate the audit's scope."
+  ],
+  "findings": [
+    {
+      "id": "R1-F01",
+      "severity": "medium",
+      "category": "APA_author_metadata",
+      "status_at_snapshot": "open_parent_fix_already_planned",
+      "locations": [
+        {
+          "path": "plan/LIBERA_실험계획_20261017.html",
+          "line": 75
+        },
+        {
+          "path": "paper/LIBERA_텀페이퍼_초안_20261017.html",
+          "line": 90
+        },
+        {
+          "path": "paper/LIBERA_텀페이퍼_초안_20261017.html",
+          "line": 26
+        }
+      ],
+      "observed": "PortBench reference omits authors and explicitly retains an author-metadata placeholder; in-text citation uses the project title.",
+      "primary_evidence": {
+        "url": "https://arxiv.org/abs/2605.27887v6",
+        "locator": "Title/authors and submission history",
+        "verified_fact": "Authors Yuxuan Zhao, Sijia Chen, Ningxin Su; v6 revised October 9, 2026."
+      },
+      "required_correction": "Use Zhao, Y., Chen, S., & Su, N. (2026) and an APA author-year in-text citation; retain v6 and 2026-10-09. The ledger already has the correct authors."
+    },
+    {
+      "id": "R1-F02",
+      "severity": "medium",
+      "category": "latest_publication_status",
+      "status_at_snapshot": "open",
+      "locations": [
+        {
+          "path": "plan/LIBERA_실험계획_20261017.html",
+          "line": 69
+        },
+        {
+          "path": "paper/LIBERA_텀페이퍼_초안_20261017.html",
+          "line": 84
+        }
+      ],
+      "observed": "Hedden and Raghavan are cited solely as arXiv Version 3 [Preprint], despite a published primary version existing by the audit date.",
+      "primary_evidence": {
+        "url": "https://doi.org/10.1111/phpe.70018",
+        "locator": "Publisher title/authors; 'First published: 25 September 2026'; Early View",
+        "verified_fact": "Brian Hedden and Manish Raghavan, Algorithmic Monoculture and Its Critics, Philosophical Perspectives, first published September 25, 2026. arXiv v3 September 26 links this published DOI."
+      },
+      "required_correction": "Update the work to Philosophical Perspectives, Advance online publication, DOI 10.1111/phpe.70018; the arXiv link may remain as an accessible author version. The cautious body claim is supported and need not be strengthened.",
+      "suggested_apa": "Hedden, B., & Raghavan, M. (2026). Algorithmic monoculture and its critics. Philosophical Perspectives. Advance online publication. https://doi.org/10.1111/phpe.70018"
+    },
+    {
+      "id": "R1-F03",
+      "severity": "low",
+      "category": "bibliography_freshness",
+      "status_at_snapshot": "open",
+      "locations": [
+        {
+          "path": "plan/LIBERA_실험계획_20261017.html",
+          "line": 64
+        },
+        {
+          "path": "paper/LIBERA_텀페이퍼_초안_20261017.html",
+          "line": 79
+        }
+      ],
+      "observed": "Dell'Acqua et al. remains labelled Organization Science, Advance online publication.",
+      "primary_evidence": {
+        "url": "https://doi.org/10.1287/orsc.2025.21838",
+        "locator": "Publisher 'Cite as' and article information",
+        "verified_fact": "The assigned publication is Organization Science, 37(2), 403–423 (2026); online publication March 11, 2026."
+      },
+      "required_correction": "Replace the advance-online placeholder with 37(2), 403–423. The ledger's source metadata already contains these details."
+    },
+    {
+      "id": "R1-F04",
+      "severity": "medium",
+      "category": "ledger_coverage",
+      "status_at_snapshot": "open",
+      "locations": [
+        {
+          "path": "research/evidence_ledger_v4.json",
+          "locator": "sources and entries"
+        },
+        {
+          "path": "paper/LIBERA_텀페이퍼_초안_20261017.html",
+          "locator": "§2.1 Hedden/Raghavan and §2.3 Lewis et al."
+        }
+      ],
+      "observed": "The manuscript cites Hedden/Raghavan and Lewis et al. (2020) for substantive claims, but neither work has a source record/claim entry in the ledger.",
+      "primary_evidence": [
+        {
+          "url": "https://doi.org/10.1111/phpe.70018",
+          "locator": "Abstract; introduction; published metadata"
+        },
+        {
+          "url": "https://arxiv.org/abs/2005.11401",
+          "locator": "Original author paper abstract; Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks"
+        }
+      ],
+      "required_correction": "Add primary-source metadata and narrowly scoped claim entries for the critical monoculture review and the definition of retrieval-augmented generation. Record exact verification level rather than implying complete full-text verification. No new experiment parameter should be attributed to these sources."
+    },
+    {
+      "id": "R1-F05",
+      "severity": "low",
+      "category": "active_protocol_ledger_alignment",
+      "status_at_snapshot": "open",
+      "locations": [
+        {
+          "path": "research/evidence_ledger_v4.json",
+          "locator": "E12–E13"
+        },
+        {
+          "path": "plan/LIBERA_실험설정_20261017.json",
+          "locator": "main.reserved_future_months and main.window_selection"
+        },
+        {
+          "path": "paper/LIBERA_텀페이퍼_초안_20261017.html",
+          "line": 36
+        }
+      ],
+      "observed": "Ledger E13 says holdout moments/realized utility/returns 'are ex-post diagnostics only', while active v4 text explicitly reserves the subsequent 36 months but does not use them. Earlier companion prototypes computed diagnostics, which are not the active experiment.",
+      "primary_evidence": {
+        "url": "https://doi.org/10.1002/for.70134",
+        "locator": "§4.1 and §6/Table 4 use actual 60/36 train/test empirical evaluation; the LIBERA decision to leave the 36-month block unused is a new application."
+      },
+      "required_correction": "State that the active v4 main experiment does not compute/use holdout outcomes; if calculated in a later module, they may only be separately labelled ex-post diagnostics. Preserve the distinction from archived prototypes."
+    },
+    {
+      "id": "R1-F06",
+      "severity": "low",
+      "category": "APA_reference_order",
+      "status_at_snapshot": "open",
+      "locations": [
+        {
+          "path": "plan/LIBERA_실험계획_20261017.html",
+          "locator": "Reference list"
+        },
+        {
+          "path": "paper/LIBERA_텀페이퍼_초안_20261017.html",
+          "locator": "Reference list"
+        }
+      ],
+      "observed": "References are not consistently alphabetized: French and Hornuf are appended after later surnames, and the authorless PortBench entry is placed by project title.",
+      "primary_evidence": {
+        "url": "https://arxiv.org/abs/2605.27887v6",
+        "locator": "Correct author metadata for Zhao/Chen/Su; existing ledger APA entries for the other works"
+      },
+      "required_correction": "Alphabetize references by author surname/corporate author after correcting source metadata; place Zhao under Z, French under F, Hornuf under H, and Salcher/Schneider/Sheng in the correct order.",
+      "note": "Formatting-level finding, not a scientific validity defect."
+    }
+  ],
+  "passed_checks": [
+    {
+      "id": "R1-P01",
+      "check": "Salcher author/title/venue/year",
+      "result": "pass",
+      "evidence": "Ledger source salcher2026 and both active references correctly identify Lukas Salcher, Sebastian Stöckl, Michael Hanke; Journal of Forecasting 45(5),2587–2605; DOI 10.1002/for.70134."
+    },
+    {
+      "id": "R1-P02",
+      "check": "Quadratic objective provenance",
+      "result": "pass",
+      "evidence": "U=mu^T w-gamma/2*w^T Sigma w is explicitly tied to Salcher §3.2 Eq.(6); the paper's equality-only original and the new nonnegative constraint are distinguished."
+    },
+    {
+      "id": "R1-P03",
+      "check": "Gamma values",
+      "result": "pass",
+      "evidence": "1,3,5 occur in the paper's quadratic-utility strategy tables and are not assigned to actual funds."
+    },
+    {
+      "id": "R1-P04",
+      "check": "Historical source frame",
+      "result": "pass",
+      "evidence": "Salcher §4.1, §6/Table4 support monthly FF12 excess returns,1964–2023,60/36 rolling windows. Decimal conversion is correctly treated as data processing."
+    },
+    {
+      "id": "R1-P05",
+      "check": "625 cases and corpus application",
+      "result": "pass",
+      "evidence": "720-60-36+1=625 is stated as LIBERA finite-corpus arithmetic, not a paper AI sample-size/power recommendation; future blocks are not prompt/oracle inputs."
+    },
+    {
+      "id": "R1-P06",
+      "check": "Training endpoint",
+      "result": "pass",
+      "evidence": "First training frame1964-01..1968-12; last2016-01..2020-12 are consistent with625 one-month shifts and reserved36 months through2023-12."
+    },
+    {
+      "id": "R1-P07",
+      "check": "Public data vintage",
+      "result": "pass",
+      "evidence": "Config/manuscript distinguish downloaded current revised French CIZ returns from historical point-in-time data and do not claim exact paper-value replication."
+    },
+    {
+      "id": "R1-P08",
+      "check": "Long-only combination",
+      "result": "pass",
+      "evidence": "PortBench simplex precedent is cited while combining it with Salcher objective is labelled a new LIBERA application; profile equity caps are not relabelled FF12 industry caps."
+    },
+    {
+      "id": "R1-P09",
+      "check": "New workflow counts and treatments",
+      "result": "pass",
+      "evidence": "Four stages,R1/R4 and one-stepFRESH are stated as LIBERA design choices rather than paper-direct prescriptions."
+    },
+    {
+      "id": "R1-P10",
+      "check": "Model and decoding source",
+      "result": "pass",
+      "evidence": "PortBench v6 §3.1 directly lists Qwen3.6-35B-A3B,temperature0,max8192,thinking enabled. Exact accessible revision is still marked unverified; no smaller installed-model substitution is claimed."
+    },
+    {
+      "id": "R1-P11",
+      "check": "New metric attribution and theorem limits",
+      "result": "pass",
+      "evidence": "TV-derived allocation response error/direct constrained utility gap are LIBERA measurements. The long-only utility gap is evaluated directly and is not replaced by the unrestricted pure quadratic identity or Salcher TP theorem."
+    },
+    {
+      "id": "R1-P12",
+      "check": "Same-optimum cases",
+      "result": "pass",
+      "evidence": "All frames are retained and shared optima are recognized; equal AI allocations are not automatically scored as harmful convergence."
+    },
+    {
+      "id": "R1-P13",
+      "check": "Response-call arithmetic",
+      "result": "pass",
+      "evidence": "625*3=1875 mandate cases;3750 main runs*4=15000 calls;1875 FRESH calls;total16875. Prepared runs.jsonl has1875 runs per arm and16875 stage calls."
+    },
+    {
+      "id": "R1-P14",
+      "check": "Actual RAG scope",
+      "result": "pass",
+      "evidence": "Both HTMLs/config describe direct fixed evidence injection and explicitly exclude actual retrieval recall or end-to-end RAG evaluation."
+    },
+    {
+      "id": "R1-P15",
+      "check": "No invented AI results",
+      "result": "pass",
+      "evidence": "Title/abstract/method/limitations/footer and config report zero AI/human runs. Deterministic numeric reference preparation is separately identified."
+    },
+    {
+      "id": "R1-P16",
+      "check": "Real institutional interpretation",
+      "result": "pass",
+      "evidence": "Four actual funds remain background/optional documentary follow-up; gamma/private forecasts are not claimed recovered from them."
+    },
+    {
+      "id": "R1-P17",
+      "check": "Causal scope and mixed results",
+      "result": "pass",
+      "evidence": "No non-AI/model-diversity comparison is claimed; workflow effect includes position/history/use opportunities; convergence sign alone is not harm evidence."
+    },
+    {
+      "id": "R1-P18",
+      "check": "Bibliographic verification levels",
+      "result": "pass_with_coverage_finding_R1_F04",
+      "evidence": "Agarwal/NBER abstract-only and Sheng final-abstract versus prior-manuscript limits are clear. FSB2026 cites the October15 final report rather than the superseded June consultation."
+    },
+    {
+      "id": "R1-P19",
+      "check": "Invalid output and inference claims",
+      "result": "pass",
+      "evidence": "All-case failure denominators,complete-pair numeric comparisons,no automatic normalization/clipping,and finite overlapping-corpus descriptive interpretation are explicit; no iid p-values/power claim."
+    },
+    {
+      "id": "R1-P20",
+      "check": "Prepared message evidence routing",
+      "result": "pass_read_only_packet_check",
+      "evidence": "All1875 R4 runs omit gamma in stages1–3; all5625 packets avoid evaluator_only/reference_weights/test_window. Full-history build_messages code preserves actual prior assistant content."
+    }
+  ],
+  "additional_verified_primary_metadata": [
+    {
+      "source": "Hedden & Raghavan",
+      "url": "https://doi.org/10.1111/phpe.70018",
+      "verified_on": "2026-10-17",
+      "verified_details": "Publisher Early View,first publication2026-09-25; authorsBrianHedden/ManishRaghavan; Philosophical Perspectives.",
+      "level": "publisher_metadata_and_abstract_selected_body"
+    },
+    {
+      "source": "Hedden & Raghavan author preprint",
+      "url": "https://arxiv.org/abs/2604.06047v3",
+      "verified_on": "2026-10-17",
+      "verified_details": "v3 revised2026-09-26; related published DOI10.1111/phpe.70018.",
+      "level": "primary_metadata"
+    },
+    {
+      "source": "Dell'Acqua et al.",
+      "url": "https://doi.org/10.1287/orsc.2025.21838",
+      "verified_on": "2026-10-17",
+      "verified_details": "Organization Science37(2),403–423; onlineMarch11,2026.",
+      "level": "publisher_metadata"
+    }
+  ],
+  "not_part_of_this_audit": [
+    "Independent rerun of every numerical optimizer/KKT certificate; a companion numerical audit handles solver correctness.",
+    "Actual model access, weights/backend freeze, API generation, or empirical AI performance.",
+    "Verification of the conference's Notion submission rules in this pass; that administrative source was checked earlier by the parent and is not a paper experimental condition.",
+    "Closure of findings after edits; round2 must inspect regenerated final artifacts."
+  ],
+  "summary_counts": {
+    "critical": 0,
+    "high": 0,
+    "medium": 3,
+    "low": 3,
+    "passed_checks": 20
+  },
+  "required_round2_focus": [
+    "Confirm all six findings are corrected or explicitly dispositioned.",
+    "Reconcile final ledger E12/E13 with unused reserved holdout.",
+    "Verify new source entries and alphabetized APA references across both generated HTMLs.",
+    "Verify unchanged core parameter values,actual-RAG/no-AI-result scope,protocol/prompt hashes and numerical-scoring consistency after regeneration."
+  ]
+}

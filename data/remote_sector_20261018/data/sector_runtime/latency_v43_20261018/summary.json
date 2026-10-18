@@ -1,0 +1,73 @@
+{
+  "status": "completed_with_probe_failures",
+  "finished_at_utc": "2026-10-18T05:57:12.454357+00:00",
+  "probe_invocations_attempted": 3,
+  "completed_probes": 1,
+  "generation_request_envelopes_recorded": 3,
+  "not_started_probes": 0,
+  "records": [
+    {
+      "probe_id": "4b_threads2",
+      "model": "qwen3.5:4b-q4_K_M",
+      "threads": 2,
+      "status": "hard_deadline",
+      "supervisor_status": "hard_deadline",
+      "elapsed_seconds": 120.00339300371706,
+      "generation_request_recorded": true,
+      "provider_metrics": null,
+      "prompt_eval_count": null,
+      "eval_count": null,
+      "response_assessment": null
+    },
+    {
+      "probe_id": "4b_threads4",
+      "model": "qwen3.5:4b-q4_K_M",
+      "threads": 4,
+      "status": "hard_deadline",
+      "supervisor_status": "hard_deadline",
+      "elapsed_seconds": 120.00155987590551,
+      "generation_request_recorded": true,
+      "provider_metrics": null,
+      "prompt_eval_count": null,
+      "eval_count": null,
+      "response_assessment": null
+    },
+    {
+      "probe_id": "1p7b_threads2",
+      "model": "qwen3:1.7b",
+      "threads": 2,
+      "status": "completed",
+      "supervisor_status": "worker_exited",
+      "elapsed_seconds": 61.17593143135309,
+      "generation_request_recorded": true,
+      "provider_metrics": {
+        "wall_seconds": 61.08317386545241,
+        "ttft_any_generated_seconds": 59.66858140565455,
+        "ttft_content_seconds": 59.668580036610365,
+        "token_count_source": "Ollama counters, not independent tokenization",
+        "duration_unit_in_response": "nanoseconds",
+        "total_duration_seconds": 61.080660012,
+        "load_duration_seconds": 2.302726452,
+        "prompt_eval_duration_seconds": 57.35727,
+        "eval_duration_seconds": 1.413919,
+        "prompt_eval_count": 365,
+        "eval_count": 6,
+        "prompt_eval_tokens_per_second": 6.363622257474946,
+        "eval_tokens_per_second": 4.2435245583375005
+      },
+      "prompt_eval_count": 365,
+      "eval_count": 6,
+      "response_assessment": {
+        "parseable_json_object": true,
+        "expected_synthetic_json": true,
+        "unexpected_thinking": false,
+        "response_model": "qwen3:1.7b",
+        "done_reason": "stop"
+      }
+    }
+  ],
+  "pilot_model_calls": 0,
+  "main_model_calls": 0,
+  "scope": "Engineering latency probes only; never merged into research responses.",
+  "output": "/root/libera_20261018/data/sector_runtime/latency_v43_20261018"
+}

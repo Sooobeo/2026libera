@@ -1,0 +1,70 @@
+{
+  "command": "pilot",
+  "status": "incomplete",
+  "output": "/root/libera_20261018/data/sector_runtime/pilot_v43",
+  "main_model_calls": 0,
+  "split": "pilot",
+  "planned_runs": 4,
+  "attempted_runs": 1,
+  "completed_runs": 0,
+  "records": [
+    {
+      "case_id": "fidelity_q2_2026__R1",
+      "source_id": "fidelity_q2_2026",
+      "arm": "R1",
+      "status": "failed",
+      "error_type": "RemoteCallError",
+      "error": "Remote end closed connection without response",
+      "model_calls_attempted": 1,
+      "http_call_folders": [
+        "http_0001_pilot"
+      ]
+    },
+    {
+      "case_id": "fidelity_q2_2026__R4",
+      "source_id": "fidelity_q2_2026",
+      "arm": "R4",
+      "status": "not_started"
+    },
+    {
+      "case_id": "ubs_june_2026__R1",
+      "source_id": "ubs_june_2026",
+      "arm": "R1",
+      "status": "not_started"
+    },
+    {
+      "case_id": "ubs_june_2026__R4",
+      "source_id": "ubs_june_2026",
+      "arm": "R4",
+      "status": "not_started"
+    }
+  ],
+  "pilot_model_calls": 1,
+  "failure_policy": "Raw and attempted cases retained; not-started cases are not observed model errors; no retry.",
+  "evaluation_status": "Not scored remotely; no gold uploaded or read; semantic human review remains separate.",
+  "finished_at_utc": "2026-10-18T05:47:11.142493+00:00",
+  "script_wall_seconds": 1512.5480044614524,
+  "diagnostic_calls": 0,
+  "calls": [
+    {
+      "kind": "pilot",
+      "folder": "http_0001_pilot",
+      "started_at_utc": "2026-10-18T05:21:58.734214+00:00",
+      "status": "cancelled",
+      "error_type": "RemoteDisconnected",
+      "error": "Remote end closed connection without response",
+      "metrics": {
+        "wall_seconds": 1512.1132832784206,
+        "ttft_any_generated_seconds": null,
+        "ttft_content_seconds": null,
+        "token_count_source": "Ollama counters, not independent tokenization",
+        "duration_unit_in_response": "nanoseconds",
+        "prompt_eval_tokens_per_second": null,
+        "eval_tokens_per_second": null
+      },
+      "raw_bytes_path": "http_0001_pilot/raw_stream.bin",
+      "no_automatic_retry": true,
+      "unexpected_thinking_with_disabled_request": false
+    }
+  ]
+}

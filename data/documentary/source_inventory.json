@@ -1,0 +1,361 @@
+{
+  "inventory_version": "1.0",
+  "checked_on": "2026-10-17",
+  "purpose": "A public-document evidence availability audit for investment objectives, strategies, explicit rules, source identity and document dates; not a frozen gold packet.",
+  "historical_public_cutoff_assumed": "2026-03-31",
+  "industry_mapping_required": false,
+  "evaluation_model_calls_performed": false,
+  "sampling_note": "The four funds are accessibility candidates, not a representative sample. No arbitrary fact or document quota is imposed by this inventory.",
+  "readiness": "Official evidence is available for all four funds; final source version, cutoff eligibility, amendment chain, content hashes and independent human gold review remain required.",
+  "access_note": "Direct data.sec.gov Submissions requests returned HTTP 403 for all four CIKs during this audit. No retry, identity rotation, proxy or other circumvention was used. Evidence below was read through normal web retrieval of official public sources. Some fund-manager URLs are mutable.",
+  "date_rule": "Document cover date, report-as-of date, publication/filing date, revision/supplement date and retrieval date are distinct. A current PDF bearing an old cover date is not automatically eligible for the historical cutoff.",
+  "funds": [
+    {
+      "ticker": "FCNTX",
+      "name": "Fidelity Contrafund",
+      "cik": "0000024238",
+      "series": "S000006037",
+      "sources": [
+        {
+          "id": "FCNTX_summary_20260228",
+          "role": "mandate evidence candidate",
+          "url": "https://fundresearch.fidelity.com/prospectus/sec",
+          "retrieved_document_url": "https://www.actionsxchangerepository.fidelity.com/ShowDocument/documentPDF.htm?_fax=-18%2342%23-61%23-110%23114%2378%23117%2320%23-1%2396%2339%23-62%23-21%2386%23-100%2337%2316%2335%23-68%2391%23-66%2354%23103%23-16%2369%23-30%2358%23-20%2376%23-84%23-11%23-87%2363%23122%23107%23-17%23-52%23-90%2329%23-4%2393%23113%23-112%23127%23-42%23-97%2330%23-58%23-101%2312%23108%2324%2369%23-76%23-37%23-3%2317%23-100%23-58%23-39%2333%23-86%23-49%2361%23-77%2362%2359%2372%23-69%23-107%2312%23-48%2361%23-67%23-76%2311%23-2%23-108%23127%23-55%23-45%23-28%23-62%23-34%235%23-33%23-100%23-122%23-21%2364%2358%23-118%23-78%2342%23-24%2380%2344%2381%2376%23-58%23-32%23126%2348%2310%2399%23-28%2331%23-27%23-120%2350%23124%23102%23-11%2360%2318%23-99%2375%23103%2397%23-93%2393%233%2317%23102%2319%2354%23100%23-98%23-41%23-56%23-5%23-98%23-83%2344%23-125%23-109%2373%23-90%23-44%23-126%23-99%23101%23-44%2316%2338%23-109%23-98%23-104%2376%23-95%233%23-90%2323%2333%2376%2328%23-102%2349%2357%23-9%23101%2339%23-51%23-50%23-40%23-34%23-83%23-52%23",
+          "type": "official manager-hosted summary prospectus",
+          "cover_date": "2026-02-28",
+          "identity_confirmed": "FCNTX on PDF cover",
+          "body_read": true,
+          "locations": [
+            "PDF page 2: Investment Objective",
+            "PDF page 3: Principal Investment Strategies"
+          ],
+          "publication_date_verified": false,
+          "revision_chain_verified": false,
+          "historical_cutoff_eligible": false,
+          "cutoff_status": "pending original filing/version verification; current PDF includes retirement-plan disclosure and cannot be treated as a historical version from cover date alone"
+        },
+        {
+          "id": "FCNTX_regulatory_index",
+          "role": "official document discovery",
+          "url": "https://institutional.fidelity.com/app/tabbed/literature/FIIS_FL_REGDOCS_FIDFUNDS_DPL6.html?navId=324&productLine=6&tab=literature",
+          "body_read": true,
+          "date_note": "Current index lists FCNTX full and summary prospectuses as 02/28/2026, but SAI is revised 09/29/2026. Index observation is not proof that today's PDF bytes were public by March."
+        },
+        {
+          "id": "FCNTX_current_summary",
+          "role": "accessibility corroboration only",
+          "url": "https://fundresearch.fidelity.com/mutual-funds/summary/316071109?type=sq-NavBar",
+          "body_read": true,
+          "historical_cutoff_eligible": false,
+          "date_note": "Dynamic page contains post-cutoff 2026 data."
+        },
+        {
+          "id": "FCNTX_ClassK_full",
+          "role": "same-fund mandate corroboration only; class-specific facts excluded",
+          "url": "https://institutional.fidelity.com/app/proxy/content?literatureURL=%2FB-CCON-K.PDF",
+          "type": "official Class K prospectus",
+          "cover_date": "2026-02-28",
+          "body_read": true,
+          "locations": [
+            "PDF pages 8-10: Investment Details / Other Investment Strategies"
+          ],
+          "historical_cutoff_eligible": false,
+          "date_note": "FCNKX share class, not FCNTX. Do not use class fee/eligibility/returns for FCNTX; version/publication gate pending."
+        }
+      ],
+      "candidate_fact_roles": [
+        {
+          "field": "investment_objective",
+          "paraphrase": "Capital appreciation.",
+          "source_id": "FCNTX_summary_20260228",
+          "location": "PDF page 2, Investment Objective"
+        },
+        {
+          "field": "principal_security_type",
+          "paraphrase": "Normally invests primarily in common stocks.",
+          "source_id": "FCNTX_summary_20260228",
+          "location": "PDF page 3, Principal Investment Strategies"
+        },
+        {
+          "field": "valuation_and_style",
+          "paraphrase": "Uses fundamental analysis; may invest in growth stocks, value stocks, or both, including domestic and foreign issuers.",
+          "source_id": "FCNTX_summary_20260228",
+          "location": "PDF page 3, Principal Investment Strategies"
+        },
+        {
+          "field": "numeric_mandate_not_stated",
+          "paraphrase": "This strategy paragraph does not specify an 80% equity floor or a numeric foreign-security cap. Absence here is not proof of absence from all governing documents.",
+          "source_id": "FCNTX_summary_20260228",
+          "location": "PDF page 3"
+        }
+      ],
+      "packet_feasibility": "feasible after original-version/cutoff verification; useful for testing whether a model invents a numeric mandate or mistakes a growth bias for an exclusive growth mandate"
+    },
+    {
+      "ticker": "VPMCX",
+      "name": "Vanguard PRIMECAP Fund Investor Shares",
+      "cik": "0000752177",
+      "series": "S000002568",
+      "sources": [
+        {
+          "id": "VPMCX_summary_20260128",
+          "role": "primary mandate evidence candidate",
+          "url": "https://personal1.vanguard.com/pub/Pdf/sp59.pdf",
+          "type": "official manager summary prospectus",
+          "cover_date": "2026-01-28",
+          "body_read": true,
+          "locations": [
+            "PDF page 2, Investment Objective",
+            "PDF page 3, Principal Investment Strategies"
+          ],
+          "historical_cutoff_eligible": true,
+          "cutoff_status": "Mandate text corroborated against dated SEC original; outstanding supplements must still be checked."
+        },
+        {
+          "id": "VPMCX_SEC_summary",
+          "role": "dated original corroboration",
+          "url": "https://www.sec.gov/Archives/edgar/data/752177/000119312526025001/f43838d1.htm",
+          "index_url": "https://www.sec.gov/Archives/edgar/data/752177/000119312526025001/0001193125-26-025001-index.htm",
+          "accession": "0001193125-26-025001",
+          "filing_date": "2026-01-28",
+          "cover_date": "2026-01-28",
+          "body_read": true,
+          "publication_date_verified": true,
+          "conservative_available_from": "2026-01-29"
+        },
+        {
+          "id": "VPMCX_current_factbook",
+          "role": "dated current supporting report; outside historical cutoff",
+          "url": "https://workplace.vanguard.com/iippdf/pdfs/fundbooks/0059.pdf",
+          "type": "official fund factbook",
+          "report_as_of": "2026-06-30",
+          "body_read": true,
+          "historical_cutoff_eligible": false,
+          "date_note": "Mutable URL. Current page 1 is as of June 30, 2026, not an A-period fact sheet."
+        }
+      ],
+      "candidate_fact_roles": [
+        {
+          "field": "investment_objective",
+          "paraphrase": "Long-term capital appreciation.",
+          "source_id": "VPMCX_summary_20260128",
+          "location": "PDF page 2"
+        },
+        {
+          "field": "investment_approach",
+          "paraphrase": "Active stock selection targets earnings growth potential that is not reflected in market prices; mainly large- and mid-cap stocks.",
+          "source_id": "VPMCX_summary_20260128",
+          "location": "PDF page 3"
+        },
+        {
+          "field": "foreign_security_cap",
+          "value": 0.25,
+          "operator": "<=",
+          "denominator": "Fund assets as worded in the source, not automatically net assets or the equity sleeve",
+          "eligible_assets": "foreign securities, including possible depositary receipts",
+          "source_id": "VPMCX_summary_20260128",
+          "location": "PDF page 3"
+        },
+        {
+          "field": "sector_concentration_risk",
+          "paraphrase": "Information technology and health care can each form a significant portfolio portion; the summary's risk text is not a universal 25% sector cap.",
+          "source_id": "VPMCX_SEC_summary",
+          "location": "Principal Risks"
+        }
+      ],
+      "packet_feasibility": "feasible; dated original and manager PDF both read. Final amendment scan, byte freeze and human review pending"
+    },
+    {
+      "ticker": "DODGX",
+      "name": "Dodge & Cox Stock Fund Class I",
+      "cik": "0000029440",
+      "series": "S000011202",
+      "sources": [
+        {
+          "id": "DODGX_SEC_summary_20250501",
+          "role": "dated primary mandate evidence candidate",
+          "url": "https://www.sec.gov/Archives/edgar/data/29440/000119312525097621/d815578d497k.htm",
+          "type": "official SEC-hosted summary prospectus",
+          "cover_date": "2025-05-01",
+          "body_read": true,
+          "locations": [
+            "Printed page 1: Investment Objectives",
+            "Printed page 2: Principal Investment Strategies"
+          ],
+          "publication_date_verified": false,
+          "revision_chain_verified": false,
+          "historical_cutoff_eligible": false,
+          "cutoff_status": "Source date and body read; final filing-date and June 30, 2025 supplement/current-at-cutoff check pending"
+        },
+        {
+          "id": "DODGX_manager_current",
+          "role": "official manager access/corroboration",
+          "url": "https://www.dodgeandcox.com/financial-professional/us/en/our-funds/stock-fund-dodgx.html",
+          "body_read": true,
+          "historical_cutoff_eligible": false,
+          "date_note": "Dynamic current marketing page; professional-site terms appear. No eligibility checkbox was affirmed. Use public SEC originals for the frozen packet rather than relying on this page."
+        },
+        {
+          "id": "DODGX_documents",
+          "role": "official manager document discovery",
+          "url": "https://www.dodgeandcox.com/financial-professional/us/en/our-funds/funds-at-a-glance-regulatory-documents.html",
+          "body_read": true,
+          "historical_cutoff_eligible": false,
+          "date_note": "Dynamic discovery page; do not confuse U.S. Stock Fund with Irish Dodge & Cox Worldwide U.S. Stock Fund."
+        },
+        {
+          "id": "DODGX_annual2025",
+          "role": "report identity and facts candidate",
+          "url": "https://www.sec.gov/Archives/edgar/data/29440/000002944026000002/8de7a3fff0d1081.htm",
+          "index_url": "https://www.sec.gov/Archives/edgar/data/29440/000002944026000002/0000029440-26-000002-index.htm",
+          "report_as_of": "2025-12-31",
+          "filing_date": "2026-03-05",
+          "conservative_available_from": "2026-03-06",
+          "body_read": false,
+          "partial_search_text_seen": true,
+          "date_note": "Earlier index/date audit confirmed; full document exceeds web extraction size. Stock Fund Class I must be selected, not Global Stock/Balanced or Class X."
+        }
+      ],
+      "candidate_fact_roles": [
+        {
+          "field": "investment_objectives",
+          "paraphrase": "Long-term growth of principal and income; reasonable current income is secondary.",
+          "source_id": "DODGX_SEC_summary_20250501",
+          "location": "Printed page 1"
+        },
+        {
+          "field": "equity_floor",
+          "value": 0.8,
+          "operator": ">=",
+          "denominator": "net assets",
+          "normal_circumstances": true,
+          "eligible_assets": "equity securities specified in source; derivatives count to the extent they provide covered exposure",
+          "source_id": "DODGX_SEC_summary_20250501",
+          "location": "Printed page 2"
+        },
+        {
+          "field": "foreign_issuer_cap",
+          "value": 0.2,
+          "operator": "<=",
+          "denominator": "total assets",
+          "eligible_assets": "securities of non-U.S. issuers that are not in the S&P 500 Index",
+          "source_id": "DODGX_SEC_summary_20250501",
+          "location": "Printed page 2"
+        },
+        {
+          "field": "non_usd_cap",
+          "value": 0.05,
+          "operator": "<=",
+          "denominator": "total assets",
+          "eligible_assets": "non-U.S.-dollar-denominated securities",
+          "source_id": "DODGX_SEC_summary_20250501",
+          "location": "Printed page 2"
+        },
+        {
+          "field": "valuation_approach",
+          "paraphrase": "Typically medium-to-large established companies viewed as temporarily undervalued, with favorable long-term growth prospects.",
+          "source_id": "DODGX_SEC_summary_20250501",
+          "location": "Printed page 2"
+        }
+      ],
+      "packet_feasibility": "feasible; particularly useful for denominator, issuer-versus-currency, and S&P 500 exception comprehension. Date/supplement and class-specific checks remain"
+    },
+    {
+      "ticker": "TRBCX",
+      "name": "T. Rowe Price Blue Chip Growth Fund Investor Class",
+      "cik": "0000902259",
+      "series": "S000002069",
+      "sources": [
+        {
+          "id": "TRBCX_full_20260301",
+          "role": "primary mandate evidence candidate",
+          "url": "https://www.troweprice.com/literature/public/country/us/language/en/literature-type/prospectus/sub-type/mf?currency=USD&productCode=BCI",
+          "type": "official manager full prospectus",
+          "cover_date": "2026-03-01",
+          "identity_confirmed": "TRBCX plus other classes listed on cover",
+          "body_read": true,
+          "locations": [
+            "PDF page 3 / printed page 1: Investment Objective(s)",
+            "PDF page 4 / printed page 2: Principal Investment Strategies",
+            "PDF pages 11-13 / printed pages 9-11: detailed objectives/strategies"
+          ],
+          "publication_date_verified": false,
+          "revision_chain_verified": false,
+          "historical_cutoff_eligible": false,
+          "cutoff_status": "Current official document and cover date verified; dated filing/version corroboration still required for historical cutoff"
+        },
+        {
+          "id": "TRBCX_prospectus_index",
+          "role": "official document discovery and date corroboration",
+          "url": "https://www.troweprice.com/financial-intermediary/us/en/search.html/literature/Prospectus",
+          "body_read": true,
+          "date_note": "Index labels Blue Chip Growth Fund full and summary prospectuses as updated 2026-03-01; not byte-level archival proof."
+        },
+        {
+          "id": "TRBCX_report_index",
+          "role": "public manager document discovery",
+          "url": "https://www.troweprice.com/personal-investing/funds/mutual-funds/prospectuses-reports.html",
+          "body_read": false,
+          "search_text_seen": true
+        },
+        {
+          "id": "TRBCX_current_factsheet",
+          "role": "dated supporting report; publication/cutoff pending",
+          "url": "https://www.troweprice.com/literature/public/country/us/language/en/literature-type/quarterly-factsheet/sub-type/mf-single-class?currency=USD&productCode=BCG",
+          "report_as_of": "2026-03-31",
+          "body_read": false,
+          "search_text_seen": true,
+          "historical_cutoff_eligible": false,
+          "date_note": "Report-as-of March 31 does not establish publication by March 31. Mutable URL may update."
+        }
+      ],
+      "candidate_fact_roles": [
+        {
+          "field": "investment_objectives",
+          "paraphrase": "Long-term capital growth; income is secondary.",
+          "source_id": "TRBCX_full_20260301",
+          "location": "Investment Objective(s), printed pages 1 and 9"
+        },
+        {
+          "field": "name_based_floor",
+          "value": 0.8,
+          "operator": ">=",
+          "denominator": "net assets plus borrowings for investment purposes",
+          "eligible_assets": "securities of blue chip companies with growth characteristics; applicable derivatives may count",
+          "normal_circumstances": true,
+          "source_id": "TRBCX_full_20260301",
+          "location": "Principal Investment Strategies, PDF pages 4 and 12"
+        },
+        {
+          "field": "definition_conditions",
+          "paraphrase": "For the 80% policy, blue chip is tied to S&P 500 representation and growth characteristics to an appropriate third-party growth-oriented index.",
+          "source_id": "TRBCX_full_20260301",
+          "location": "Principal Investment Strategies, PDF pages 4 and 12"
+        },
+        {
+          "field": "diversification_status",
+          "paraphrase": "Nondiversified; significant exposure to an economic sector can occur.",
+          "source_id": "TRBCX_full_20260301",
+          "location": "PDF pages 12-13"
+        },
+        {
+          "field": "defensive_exception",
+          "paraphrase": "Temporary defensive positioning may permit greater reserves or unlimited cash/liquid instruments; this is an exception to normal strategy, not an unconditional requirement.",
+          "source_id": "TRBCX_full_20260301",
+          "location": "PDF page 16, Temporary Defensive Positions"
+        }
+      ],
+      "packet_feasibility": "feasible; useful for normal-circumstance qualifier, denominator, qualifying-definition, and concentration versus diversification comprehension. Historical-version gate pending"
+    }
+  ],
+  "packet_build_next_steps": [
+    "Confirm A's actual cutoff policy; current-document audit and historical point-in-time audit are different tasks.",
+    "Freeze accessible official original bytes and hashes, retain source identifiers and document/supplement dates; do not infer historic eligibility from the cover date.",
+    "Choose answer roles from actual source content, retaining normal-circumstance qualifiers, denominators, exceptions and source locations.",
+    "Build absent/insufficient answers relative to the supplied corpus; do not treat an omitted field as proof that a fund has no such rule anywhere.",
+    "Keep full-portfolio compliance probes conditional on sufficient supplied totals and membership facts. No full holdings-to-industry map is required for document comprehension.",
+    "Complete an independent second human review before treating this inventory's paraphrases as gold."
+  ],
+  "frozen_gold_ready": false,
+  "raw_documents_saved": false
+}

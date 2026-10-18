@@ -1,0 +1,22 @@
+{
+  "path": "/api/chat",
+  "body": {
+    "model": "qwen3.5:4b-q4_K_M",
+    "stream": true,
+    "think": false,
+    "format": "json",
+    "keep_alive": 0,
+    "messages": [
+      {
+        "role": "user",
+        "content": "Return exactly this JSON object: {\"ready\":true}"
+      }
+    ],
+    "options": {
+      "temperature": 0,
+      "num_predict": 256,
+      "num_ctx": 65536
+    }
+  },
+  "kind": "diagnose"
+}

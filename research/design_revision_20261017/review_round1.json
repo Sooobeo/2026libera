@@ -1,0 +1,117 @@
+{
+  "review_round": 1,
+  "date": "2026-10-17",
+  "reviewer": "risk_metrics_review",
+  "review_type": "read-only construct, logic, evidence-role and cross-artifact consistency review; only this report written",
+  "protocol_version_reviewed": "4.1",
+  "status": "changes_required_before_consistent_draft_release; main_execution_is_already_correctly_marked_not_ready",
+  "reviewed_artifacts": [
+    "plan/LIBERA_실험설정_20261017.json",
+    "plan/LIBERA_실험계획_20261017.html",
+    "paper/LIBERA_텀페이퍼_초안_20261017.html",
+    "research/build_industry_revision_v41.py",
+    "research/design_revision_20261017/decision_note.json",
+    "research/design_revision_20261017/institution_packet_template.json",
+    "research/design_revision_20261017/revision_manifest.json",
+    "data/institutional_recent/summary.json",
+    "plan/문규리 제안서 상세_최종.html"
+  ],
+  "passed_scope_checks": [
+    "Industry-level allocation already appears in the original proposal; retaining that unit is not itself a change away from the research topic.",
+    "The revised main question requires document interpretation to affect allocation choice; gamma-only optimization is explicitly auxiliary.",
+    "Main taxonomy, common date, case count, rubric, source annotation and tool interface remain visibly pending.",
+    "The config explicitly rejects unsupported FF12-to-GICS conversion and real-fund prose-to-gamma calibration.",
+    "The config and main methods distinguish raw proposals from repaired allocations and report zero AI observations.",
+    "R1/R4 is described as an onset-plus-history workflow policy; actual retrieval and model-adoption effects are not claimed.",
+    "The recent 24-window numerical summary identifies overlapping windows, revised data and auxiliary scope, and does not label numerical reference values as AI observations.",
+    "Prior v4 audit scope is explicitly restricted to the prior version in the revised main artifacts."
+  ],
+  "findings": [
+    {
+      "id": "R1-01",
+      "severity": "high",
+      "location": "paper section#intro, paragraph beginning 이에 본 연구는 넓은 문제의식을",
+      "evidence": "The paragraph still says the study supplies the same public market data and sets hypothetical institutions differing only in paper-derived risk-aversion coefficients.",
+      "problem": "This describes the previous v4 main task, contradicting the new documentary main in the abstract, section 3 and config.",
+      "required_correction": "Replace that paragraph with the document-grounded main question and explicitly identify gamma variation as the auxiliary numerical task; correct the generator's selection rule so regeneration cannot restore the stale paragraph."
+    },
+    {
+      "id": "R1-02",
+      "severity": "high",
+      "location": "paper section#literature subsection 2.4, final paragraph",
+      "evidence": "The paragraph describes combining Salcher's objective, risk coefficients and public data to compare institution responses with independent reference answers, then calls that combination the study's concrete evaluation contribution.",
+      "problem": "It still centers the numerical design as the main contribution and leaves the impression that independent exact weights evaluate the documentary strategic task.",
+      "required_correction": "Assign Salcher explicitly to the numerical auxiliary module; connect the documentary main to source interpretation, applicable constraints and allocation choices, using the newer sector-task and raw-versus-repaired precedents with their adaptation limits."
+    },
+    {
+      "id": "R1-03",
+      "severity": "high",
+      "location": "config main.calculation and workflow; institution_packet_template.json evaluation_outputs",
+      "evidence": "Same deterministic facilities and separate original/repaired outputs are specified, but there is no rule limiting calculator input to information available in the current stage, and the template does not explicitly preserve calculator inputs or tool-visible constraints.",
+      "problem": "A feasibility checker supplied evaluator-only true constraints could reveal or enforce an institution's mandate during R4 stages 1-3, defeating the timing intervention even while raw outputs are retained.",
+      "required_correction": "State that model-facing calculators may use only current-stage model-visible facts or model-supplied parsed fields, never evaluator-only annotations or not-yet-revealed mandates; save tool arguments, stage-visible constraints and raw/tool results separately, and run gold checks offline."
+    },
+    {
+      "id": "R1-04",
+      "severity": "medium",
+      "location": "research/design_revision_20261017/decision_note.json active_protocol_note and period_candidates[0].limitations",
+      "evidence": "The note says v4 files remain unchanged and that recent data/cases have not been rebuilt, whereas the same file points to v4.1 and marks recent recomputation true.",
+      "problem": "Contradictory version and preparation status can mislead later work or the user about which design is authoritative.",
+      "required_correction": "Update the current-status fields to distinguish archived v4, current v4.1 and the prepared recent auxiliary data; retain earlier candidates only as explicitly dated research history."
+    },
+    {
+      "id": "R1-05",
+      "severity": "medium",
+      "location": "institution_packet_template.json model_visible_packet.fund_identity and decision_note.document_recommendation.unit",
+      "evidence": "The packet identity is restricted to a named fund/share class, while the new main accepts house sector outlooks and correctly states that house research cannot be assigned to unrelated funds.",
+      "problem": "The schema and recommendation do not yet represent the issuer, responsible organizational unit and document role required by the new candidate source types.",
+      "required_correction": "Add institution/organization-unit identity, document role and applicability fields, retain fund/share-class identity only when applicable, and identify mandate versus house research views without merging them."
+    },
+    {
+      "id": "R1-06",
+      "severity": "medium",
+      "location": "plan navigation link to ../research/design_revision_20261017/sector_document_candidates.json",
+      "evidence": "The linked target did not exist at review time.",
+      "problem": "The published candidate link is broken and the text claims document candidates have been obtained.",
+      "required_correction": "Finish the candidate inventory before final review, or temporarily label and remove the unavailable link; recheck all local links in round 2."
+    },
+    {
+      "id": "R1-07",
+      "severity": "medium",
+      "location": "paper and plan section 4.1: 사람에게 검토받은 추출 기준표는 평가용으로 보관하고",
+      "evidence": "The sentence uses completed human-review wording although independent annotation is listed as pending and no human review artifact is present.",
+      "problem": "It can be read as an already completed independent human verification.",
+      "required_correction": "Use prospective wording and mark the review method, reviewer and review record as pending; do not conflate automated agent checks with completed human review."
+    },
+    {
+      "id": "R1-08",
+      "severity": "low",
+      "location": "paper reference list and new source mentions",
+      "evidence": "Cai, the new Chen paper and Nosek are appended after Zhao outside the existing alphabetized reference list; the new Chen and existing Chen references both render as Chen et al. (2026).",
+      "problem": "The draft's APA formatting claim is not fully realized and the two author-year citations are ambiguous.",
+      "required_correction": "Integrate new references in author-alphabetic order and disambiguate the two different Chen author groups in text using initials or enough authors under APA conventions; do not automatically use 2026a/b unless the author groups actually match."
+    }
+  ],
+  "evidence_spot_checks": [
+    {
+      "source": "https://arxiv.org/html/2603.22305v1",
+      "locator": "abstract; section 3.3 and 3.4",
+      "result": "Supports sector/macro ETF allocation as an LLM task and narrative-to-allocation workflow; it does not validate LIBERA's institution-specific document design, which the draft correctly labels an adaptation."
+    },
+    {
+      "source": "https://arxiv.org/html/2608.09988v1",
+      "locator": "sections 3.3 and 6.3",
+      "result": "Supports typed mandate constraints and separate raw versus post-critic adherence; published presets are researcher-specified conditions, not estimates of real institutions' preferences."
+    },
+    {
+      "source": "https://arxiv.org/html/2605.27887v6",
+      "locator": "appendix F.3",
+      "result": "Supports distinguishing reference allocation agreement, exposure compliance and financial outcomes rather than treating weight similarity as strategic correctness."
+    }
+  ],
+  "review_limits": [
+    "This review does not certify source-corpus completeness, runtime readiness, causal treatment effects, statistical power or a finalized documentary rubric.",
+    "Recent numerical solver outputs were read for scope and consistency; the independent math audit remains a separate review.",
+    "The candidate document file may be under concurrent construction; the round-2 review should inspect its completed version."
+  ]
+}

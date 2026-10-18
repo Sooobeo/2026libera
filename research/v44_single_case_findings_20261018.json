@@ -1,0 +1,124 @@
+{
+  "created_at_utc": "2026-10-18T07:15:44.323633+00:00",
+  "scope": "One failed prespecified pilot and three completed offline review processes, not three passes or a completed four-stage experiment.",
+  "findings": [
+    {
+      "statement": "예비실험용 v4.4 조건을 생성 전에 고정했다. 기본 Qwen3.5-4B, greedy·thinking 비활성화·seed는 FinVector 선례를 참조한다. 출력 상한 8192는 PortBench에서 다른 과제에 옮긴 값이며, 벌점·엔진·문맥·GPU·시간 제한은 저자 코드, 공식 구현, 이전 실측 또는 운영상의 선택으로 근거 수준을 별도 공개한다. 모든 수치가 논문 직접값이라는 주장은 하지 않는다.",
+      "evidence": [
+        "research/v44_conditions_reference_20261018.html",
+        "data/sector_protocol/v44_single_case_registration_20261018.json"
+      ]
+    },
+    {
+      "statement": "Fidelity Q2/R1 한 사례의 4단계 실행을 시도했지만 첫 단계가 사전 설정한 900초 제한으로 종료됐다. 정리까지 전체 903.67초가 걸렸고, 생성 요청은 1회·완료 응답과 완료 단계는 0회다. 2~4단계는 미실행이며 자동 재시도는 없다. 이 기록은 완주한 예비실험이나 본과제 결과가 아니다.",
+      "evidence": [
+        "data/local_sector_runtime/single_case_v44_20261018/summary.json",
+        "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/supervisor_result.json"
+      ]
+    },
+    {
+      "statement": "저장된 스트림에서 첫 내용은 생성 HTTP 요청 시작 약 45.25초 뒤 관측됐지만 정상 종료 이벤트와 완성된 답변은 없다. 첫 내용이 빨리 나오는 것만으로 연구 과제를 수행할 수 있다고 판단하지 않는다. 스트림 이벤트 수를 토큰 수로 대체하지 않았다.",
+      "evidence": [
+        "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/http_0001_generation/events.jsonl",
+        "research/v44_single_case_round1_20261018.json",
+        "research/v44_single_case_round2_20261018.json"
+      ]
+    },
+    {
+      "statement": "1차 자체 검증: 실행 전에 고정한 조건·모델 식별값과 실제 전송을 대조했고, 첫 단계 입력의 가역적 중복 제거와 렌더링 문장 보존을 확인했다. 시간 제한 종료와 미실행 후속 단계는 실패·미관측으로 구분했다. 네 단계 전체 이력 보존이나 독립적인 토큰 용량 측정에 성공했다는 주장은 하지 않는다. 종료 후 모델 해제와 빈 실행 목록도 기록했다.",
+      "evidence": [
+        "research/v44_single_case_round1_20261018.json",
+        "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/unload_and_residency.json"
+      ]
+    },
+    {
+      "statement": "2차 자체 검증: 원본 스트림과 저장 이벤트의 일치를 독립 확인했다. 완료된 기관 등급·비중 제안이 없으므로 등급 정확도, 비중 합계, 능동 비중과 위험은 평가·계산 불가다. 원본 시장 공분산을 모델이 제출한 포트폴리오로 바꾸어 계산하거나 미제출을 0점으로 채점하지 않았다.",
+      "evidence": [
+        "research/v44_single_case_round2_20261018.json",
+        "research/v44_single_case_round2_20261018.html"
+      ]
+    },
+    {
+      "statement": "3차 자체 검증: 부분 출력에는 stage·task·common_market 등 입력의 재서술이 나타난다. 이를 기관 전망의 해석이나 근거 있는 배분 전략으로 세지 않는다. 완성된 주장·비중이 없어 전략의 타당성이나 원문 충실성의 성패를 점수화할 수 없다. 이 한 번의 실패로 모델 크기·입력 길이·JSON 설정 중 어느 요인이 원인인지 또는 R1/R4 중 어느 절차가 우월한지를 식별할 수 없다.",
+      "evidence": [
+        "research/v44_single_case_round3_20261018.json",
+        "research/v44_single_case_round3_20261018.html"
+      ]
+    },
+    {
+      "statement": "본과제 호출은 0회이고 조건 동결과 독립 사람 검토도 완료되지 않았다. 다음 단계는 실패 원인을 구분할 진단과 필요한 조건 개정의 근거를 별도 버전으로 정리한 뒤, 전체 예비실험을 다시 검증하는 것이다. 이번 관측을 보고 유리한 결과만 선택하거나 현재 조건을 본과제 준비 완료로 승인하지 않는다.",
+      "evidence": [
+        "data/local_sector_runtime/single_case_v44_20261018/summary.json",
+        "research/v44_single_case_round1_20261018.json",
+        "research/v44_single_case_round3_20261018.json"
+      ]
+    }
+  ],
+  "conditions_display_erratum": {
+    "original_field": "engine_and_backend",
+    "original_conditions_kept_immutable": true,
+    "correction": "Per-call checks pin engine version, model digest and template. Executable hash and GPU placement are separate installation/log observations, not per-call executable/Vulkan gates. No generation request or criterion was changed retrospectively."
+  },
+  "first_content_http_seconds": 45.25021299999207,
+  "source_files": [
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/http_0001_generation/events.jsonl",
+      "sha256": "20b6c4c7731f76cc04635dc4d82fbf6830c232ede28ee8067b84095a69621138"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/supervisor_result.json",
+      "sha256": "39bfc184554fae47ff124a64445679bcc7b7db85991d82a7dd0f066e4c967cbc"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/unload_and_residency.json",
+      "sha256": "61137646ed569e348e30c2e02da9e4470919334d1a184747840182ea36d9220d"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/summary.json",
+      "sha256": "c8c2f88e0a73322d32b6e8be1585a2a4f9b2bc15a0afa37aa93e0f66a17ce1e2"
+    },
+    {
+      "path": "data/sector_protocol/v44_single_case_registration_20261018.json",
+      "sha256": "3f5cf57e86ca05ca229a2f14a2391c01b80a72f4f955eb09dfe688f33a7f69d9"
+    },
+    {
+      "path": "research/build_sector_revision_v44.py",
+      "sha256": "0ffec5c020bdd11f15af6bf1198ad3a602db0c045c5193ed795bf8b8979064ec"
+    },
+    {
+      "path": "research/local_sector_single_case.py",
+      "sha256": "0b2596a223167136bb37578e86469d50c26e7883305d4db31f43b9ddd10d28d0"
+    },
+    {
+      "path": "research/v44_conditions_reference_20261018.html",
+      "sha256": "28367e502583fa6b2261ee24fe07e0dd105f176a1036e0508beffafaeed52528"
+    },
+    {
+      "path": "research/v44_conditions_reference_20261018.json",
+      "sha256": "a403d4c37d1581f9af21af8ba7a6333614d890ff15277e83181c1204549a9c5b"
+    },
+    {
+      "path": "research/v44_single_case_round1_20261018.json",
+      "sha256": "b28abd8840bb94431b950971a924e8d680fdd3a72df8517889bacd0384d2aa42"
+    },
+    {
+      "path": "research/v44_single_case_round2_20261018.html",
+      "sha256": "a1121694ad814e975b23cd072b5642a293a821cb24c34c538c2209a55a49ab41"
+    },
+    {
+      "path": "research/v44_single_case_round2_20261018.json",
+      "sha256": "a1cec8695d377669c9aac77073a7e425edf8ce5168a96651550fc5bd7b14f07a"
+    },
+    {
+      "path": "research/v44_single_case_round3_20261018.html",
+      "sha256": "c8922854ef17b6a111a3172a49bedb97891c090965c5ed806de111ab3b1ca27e"
+    },
+    {
+      "path": "research/v44_single_case_round3_20261018.json",
+      "sha256": "a858e209afd5cb4f770ea418778d806aa9f33fb17ae859f2de3635cd513b64eb"
+    }
+  ],
+  "model_calls_by_synthesis": 0,
+  "main_frozen": false,
+  "independent_human_review_complete": false
+}

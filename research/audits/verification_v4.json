@@ -1,0 +1,202 @@
+{
+  "version": "4.0",
+  "generated_at_utc": "2026-10-17T08:04:51.485130+00:00",
+  "two_round_records_present": true,
+  "scope": "consistency, logic, topic fit, and primary-source provenance of the pre-experiment design; not certification of AI outcomes or external validity",
+  "reports": {
+    "round1_design": {
+      "path": "round1_design.json",
+      "sha256": "3c7bf49bc1a95902834b8370adeef127b6e602523cbe56635a1527b4fb3e50ef",
+      "verdict": "requires_targeted_revisions_before_final_verification"
+    },
+    "round1_math": {
+      "path": "round1_math.json",
+      "sha256": "f92f87c9fd56e4beac40207fc71eefc99ebad5b275ae0d5fad463e6977417d81",
+      "verdict": "no_core_formula_or_identification_error_found; two_required_reporting_clarifications_and_one_minor_wording_change"
+    },
+    "round1_evidence": {
+      "path": "round1_evidence.json",
+      "sha256": "8737601856914d76f757e01734254440ac61cac9f9a99e8196d261961bd7bdc7",
+      "verdict": "completed_with_revisions_required"
+    },
+    "round1_mechanical": {
+      "path": "round1_mechanical.json",
+      "sha256": "6732be2fa467d8ee0e4f0f97917add5dd2476218dc40631dcbea9ed87aa49c5d",
+      "verdict": "mechanical checks recorded"
+    },
+    "round2_design": {
+      "path": "round2_design.json",
+      "sha256": "75c76f51dd8fd6105411d39523fe0251f29150b6a0ab2bceec6d8d039f9087a7",
+      "verdict": "pass_for_design_with_explicit_execution_gates"
+    },
+    "round2_math": {
+      "path": "round2_math.json",
+      "sha256": "76ee211450349be24312ca4e6d13f7528ffa35df556021e2cee31b4dcdc64412",
+      "verdict": "PASS_AFTER_REPRODUCED_INTEGRATION_ROBUSTNESS_FIX"
+    },
+    "round2_evidence": {
+      "path": "round2_evidence.json",
+      "sha256": "e727ff8830941dbe0acf1870c161c76931ff2e898a6ca0c088978e607d56e1a3",
+      "verdict": "passed_after_documented_ledger_corrections"
+    },
+    "round2_mechanical": {
+      "path": "round2_mechanical.json",
+      "sha256": "b70ff65edfddebe486218df5af47254a473ed37a36adb7fe1e136ed80e17c369",
+      "verdict": "mechanical checks recorded"
+    }
+  },
+  "first_round_corrections": [
+    {
+      "ids": [
+        "D1",
+        "MATH-R1-02"
+      ],
+      "issue": "정책별 유효 사례가 달라질 수 있는 비교 문제",
+      "fix": "기관별 정책 비교는 2개 응답, 기관쌍 정책 비교는 4개 응답의 공통 유효집합으로 계산. 예정·유효·제외 분모를 함께 기록.",
+      "evidence": [
+        "../../research/prepare_workflow_v4.py",
+        "round2_mechanical.json"
+      ]
+    },
+    {
+      "ids": [
+        "D2"
+      ],
+      "issue": "장시간 실행의 시점과 정책이 겹칠 가능성",
+      "fix": "625개 시장 묶음마다 γ 3종 × 정책 2종의 여섯 대화를 배치. 순서를 사전 해시로 고정하고 같은 기관의 두 정책을 인접 배치.",
+      "evidence": [
+        "../../data/workflow/manifest.json"
+      ]
+    },
+    {
+      "ids": [
+        "D3"
+      ],
+      "issue": "목표 인식과 계산 실패를 구분하는 해석 한계",
+      "fix": "배분의 목적 적합성을 평가하며 기억·인식·수치 계산의 원인을 단독 식별하지 않는다고 본문·설정에 명시.",
+      "evidence": [
+        "../../paper/LIBERA_텀페이퍼_초안_20261017.html#limits"
+      ]
+    },
+    {
+      "ids": [
+        "D4"
+      ],
+      "issue": "이전 신호·검색 실험의 표현 잔존",
+      "fix": "같은 γ별 최적 배분과 후속 검색 과제로 표현을 수정. 현재 주실험이 사적신호나 실제 검색을 평가한다는 인상을 제거.",
+      "evidence": [
+        "../../paper/LIBERA_텀페이퍼_초안_20261017.html#alternatives"
+      ]
+    },
+    {
+      "ids": [
+        "D5",
+        "R1-F01"
+      ],
+      "issue": "PortBench 저자와 APA 인용 미완성",
+      "fix": "Zhao, Chen, Su 저자·v6·2026년 10월 9일 버전 및 저자–연도 본문 인용 반영.",
+      "evidence": [
+        "../../paper/LIBERA_텀페이퍼_초안_20261017.html#ref-portbench"
+      ]
+    },
+    {
+      "ids": [
+        "D6"
+      ],
+      "issue": "실행 환경 미확정인데 동결로 표시",
+      "fix": "실험 설정으로 라벨 변경. 모델의 정확한 제공 버전과 실행 환경을 아직 검증하지 않았다고 명시.",
+      "evidence": [
+        "../../plan/LIBERA_실험설정_20261017.json"
+      ]
+    },
+    {
+      "ids": [
+        "MATH-R1-01"
+      ],
+      "issue": "합계 허용오차로 인한 작은 음수 목적값 차이",
+      "fix": "비중 보정·손실 0 절단 없이 원래 합계 잔차와 부호를 유지하고 예산 승수로 설명되는 오차를 별도 표시.",
+      "evidence": [
+        "../../research/prepare_institutional_benchmark.py"
+      ]
+    },
+    {
+      "ids": [
+        "MATH-R1-03"
+      ],
+      "issue": "분산 항을 변동성으로 설명",
+      "fix": "포트폴리오 분산에 비례하는 위험비용으로 명료화.",
+      "evidence": [
+        "../../paper/LIBERA_텀페이퍼_초안_20261017.html#design"
+      ]
+    },
+    {
+      "ids": [
+        "R1-F02",
+        "R1-F03"
+      ],
+      "issue": "정식 출판·권호 정보 갱신",
+      "fix": "Hedden–Raghavan 정식 게재 DOI와 Dell’Acqua 등의 37(2), 403–423 반영.",
+      "evidence": [
+        "../../research/evidence_ledger_v4.json"
+      ]
+    },
+    {
+      "ids": [
+        "R1-F04"
+      ],
+      "issue": "근거 대조표의 인용 문헌 누락",
+      "fix": "Hedden–Raghavan과 Lewis 원전을 확인 수준·적용 한계와 함께 추가.",
+      "evidence": [
+        "../../research/evidence_ledger_v4.json"
+      ]
+    },
+    {
+      "ids": [
+        "R1-F05"
+      ],
+      "issue": "36개월 미래 구간의 현재 사용 여부 불일치",
+      "fix": "프레임에서 예약하되 현재 주실험의 AI와 기준 답에는 사용하지 않는다고 통일.",
+      "evidence": [
+        "../../research/evidence_ledger_v4.json"
+      ]
+    },
+    {
+      "ids": [
+        "R1-F06"
+      ],
+      "issue": "참고문헌 정렬",
+      "fix": "저자명 알파벳 순으로 정렬.",
+      "evidence": [
+        "../../paper/LIBERA_텀페이퍼_초안_20261017.html#references"
+      ]
+    }
+  ],
+  "original_files_unchanged": true,
+  "original_sha256": {
+    "plan\\문규리 제안서 상세_최종.html": "3af00703a0e0246275f25e4ab4395610cee9d773a2d327e47905fe499d9e2db9",
+    "plan\\LIBERA_실험설계서0925.html": "dd7ddd202e6e0fcafb93082c5f558b919bce30b87424eea8fb6792f78a1dc002",
+    "plan\\LIBERA_실험수행보고서0925.docx": "0132e952457ec6dd867a0b46458e66e11788668049b28f0448398feb8d41c685"
+  },
+  "final_artifact_sha256": {
+    "plan\\LIBERA_실험계획_20261017.html": "92a4cdfe296422926c249e59ff76e3c5c10e9ead1deb57d264d6cb321937affb",
+    "plan\\LIBERA_실험설정_20261017.json": "706754b7344ecdf2c412affe66303d83e8ac787d210fa52d37462a2b237b2d2c",
+    "paper\\LIBERA_텀페이퍼_초안_20261017.html": "6bbab024cb47f39e5ee42153012db42cf27ec48e483f7b7abde343b5737ce843",
+    "research\\evidence_ledger_v4.json": "536080f58b1d5bef15a0ec7548caeb6b659e299463681ecfc7440d21a2ddf33d",
+    "research\\prepare_institutional_benchmark.py": "6a6cf0ec1118286eee3f92b4136e5723e3ffa75269e5e3bce75560c7a72fd648",
+    "research\\prepare_workflow_v4.py": "d61c291aed03b743a4bc3b502de4ace26a6e1af49b4882652a33d2d3dd139116",
+    "data\\institutional\\manifest.json": "aa09c97b8c7cabbe10a1f5187c5d31ad3560f6ec48d2a080fa27434341afe0d8",
+    "data\\workflow\\manifest.json": "2bd4f3626b951c884e6e3f147c7465f6531f518ec14d3edb136cdd090ff5ed02"
+  },
+  "AI_experiment_calls": 0,
+  "remaining_execution_conditions": [
+    "verify exact target model access and immutable backend/model revision",
+    "run the prepared campaign and preserve complete requests, responses, errors and timestamps",
+    "write observed results and revise abstract/discussion before representing this as an empirical results paper"
+  ],
+  "scope_limits": [
+    "hypothetical explicit mandates, not real fund risk-aversion estimates",
+    "fixed overlapping public-data corpus, descriptive comparison",
+    "provided gold mandate use, not actual RAG retrieval",
+    "new combination of paper-grounded modules and a declared new workflow treatment"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-17T06:58:09.453436+00:00",
+  "status": "preselection_data_and_reference_prototype_no_llm_runs",
+  "scope": "FF12 transfer of T5 objective/scoring; not original PortBench data reproduction, backtest, actual tradable assets, or evidence of LLM performance",
+  "paper": {
+    "title": "PortBench",
+    "version": "v6 2026-10-09",
+    "url": "https://arxiv.org/html/2605.27887v6",
+    "sections": [
+      "Appendix C.1 T5",
+      "Appendix B.2 annualization"
+    ]
+  },
+  "case_count": 132,
+  "first_decision_date": "2015-01-30",
+  "last_decision_date": "2025-12-31",
+  "status_counts": {
+    "verified_positive_excess_convex_qp": 126,
+    "verified_nonpositive_excess_vertex": 6
+  },
+  "verified_reference_count": 132,
+  "equal_weight_fallback_dates": [],
+  "fallback_warning": "Equal-weight fallback is the published failure policy, not a verified optimum",
+  "all_nonpositive_excess_dates": [
+    "2015-09-30",
+    "2016-01-29",
+    "2018-12-31",
+    "2020-03-31",
+    "2022-06-30",
+    "2023-10-31"
+  ],
+  "maximum_sum_residual": 2.220446049250313e-16,
+  "minimum_weight": 0.0,
+  "minimum_covariance_eigenvalue": 0.0004426991486110558,
+  "maximum_convex_relative_gap": 5.055730095807225e-16,
+  "maximum_scaled_kkt_dual_violation": 3.3306690738754696e-16,
+  "maximum_scaled_kkt_complementarity": 5.874848323380552e-16,
+  "self_check": {
+    "status": "passed",
+    "checks": [
+      "analytic diagonal positive optimum",
+      "binding long-only optimum",
+      "nonpositive excess global vertex",
+      "zero excess optimum",
+      "non-SPD failure is not called oracle",
+      "unparseable response scores zero",
+      "target cosine equals one"
+    ]
+  },
+  "llm_runs": 0,
+  "reference_file": "ff12_t5_references.json",
+  "reference_file_sha256": "f7b131908e12d7d5ba26405b27fe5725889cd4b26e06d4207684cb3184b6da99"
+}

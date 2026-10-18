@@ -1,0 +1,645 @@
+{
+  "protocol_version": "3.5",
+  "as_of_date": "2026-10-17",
+  "status": "original_institutional_judgment_question_preserved; narrowed_B1_main_design_reclassified_as_auxiliary; main_benchmark_pending",
+  "execution_authorized_by_this_file": false,
+  "active_main_experiment": null,
+  "previous_protocol": "archive/LIBERA_실험설정_v3.4.json",
+  "recommendation": {
+    "question_is_not_a_new_choice": true,
+    "recommended_evidence_scope": [
+      "institution_conditioned_judgment_main_experiment_pending",
+      "A_public_evidence_support",
+      "B1_auxiliary_diagnostic"
+    ],
+    "conditional_extension": "B2_future_research_only",
+    "financial_numeric_modules": "P_and_Q_appendix_diagnostics_only",
+    "recommended_onset_comparison": [
+      "R1",
+      "R4"
+    ],
+    "status": "A+B1-only main recommendation withdrawn as insufficient for original question",
+    "selected_onset_comparison": [
+      "R1",
+      "R4"
+    ],
+    "diagnostic_condition": "FRESH"
+  },
+  "selection_required": [
+    {
+      "stage": "model_and_resources",
+      "candidates": [
+        "one accessible fixed paper-evaluated model",
+        "primary plus another model family"
+      ],
+      "reason": "access, reproducibility, cost and generalization; not yet verified"
+    },
+    {
+      "stage": "document_sample",
+      "candidates": [
+        "audit existing four-fund candidates",
+        "prespecified public-data replacements"
+      ],
+      "reason": "accessibility sample, not paper-selected representative institutions"
+    }
+  ],
+  "paper_direct_modules": {
+    "P_PortBench_T5": {
+      "source": "https://arxiv.org/html/2605.27887v6",
+      "locator": "Appendix C.1 T5",
+      "objective": "max (mu.T @ w - rf)/sqrt(w.T @ Sigma @ w)",
+      "constraints": [
+        "sum(w)=1",
+        "w>=0"
+      ],
+      "lookback_trading_days": 60,
+      "annualization_days": 252,
+      "risk_free_annual": 0.04,
+      "input_returns": "total daily returns, decimal; no RF subtraction before fixed rf",
+      "covariance": "sample ddof=1",
+      "score": "cosine similarity; missing/unparseable answer scores zero",
+      "optimizer_failure": "equal-weight fallback per paper; flag and never call it a certified optimum",
+      "transfer_choices": [
+        "FF12 replaces paper asset set",
+        "2015-2025 month ends create 132 reference problems",
+        "EARLY/MID/LATE timing extension"
+      ],
+      "not_in_objective": [
+        "incumbent h",
+        "transaction costs",
+        "concentration cap",
+        "incumbent variance cap"
+      ],
+      "invalid_parseable_response_policy": "not frozen; preserve cosine plus explicit constraint validity; cosine alone is scale-invariant",
+      "estimator_provenance": {
+        "lookback_and_rf": "T5 direct",
+        "annualization_252": "PortBench B.2/C.4 convention applied to T5",
+        "arithmetic_mean_and_ddof1": "explicit sample-estimator implementation convention, not an optimized paper hyperparameter"
+      }
+    },
+    "Q_Salcher_quadratic": {
+      "source": "https://onlinelibrary.wiley.com/doi/full/10.1002/for.70134",
+      "locator": "Eq6-7; sections4/6; Table2",
+      "objective": "max mu.T @ w - gamma/2 * w.T @ Sigma @ w",
+      "constraints": [
+        "sum(w)=1"
+      ],
+      "negative_weights_allowed": true,
+      "gamma_candidates": [
+        1,
+        3,
+        5
+      ],
+      "single_gamma_selected": null,
+      "data": "FF12 monthly excess returns",
+      "start": "1964-01",
+      "end": "2023-12",
+      "train_months": 60,
+      "future_test_months": 36,
+      "sample_covariance_ddof": 1,
+      "primary_prototype_mode": "paper_equations_raw_sample_covariance",
+      "author_code_sensitivity": {
+        "commit": "14c3a4c9567da966de5a4f7b9e5ef9ea6cff99fe",
+        "diagonal_shrinkage": 0.2,
+        "provenance": "author_code_only_not_paper_fixed_number",
+        "active_paper_recommendation": false
+      },
+      "training_reference": "input-consistent optimal allocation, appropriate for utilization accuracy",
+      "test_reference": "perfect-foresight retrospective comparator; never exposed to model",
+      "derived_loss": "gamma/2 * (w-wstar).T @ Sigma @ (w-wstar), for feasible sum-one vectors",
+      "overlap": "625 empirical rolling windows are not 625 independent scenarios",
+      "not_in_objective": [
+        "incumbent h",
+        "long-only restriction",
+        "transaction cost",
+        "incumbent variance cap"
+      ]
+    }
+  },
+  "retired_v31_conditions": [
+    "Sigma/T prior",
+    "equal-precision public/private Gaussian errors",
+    "(m0+y+x)/3 posterior",
+    "incumbent variance cap",
+    "15bps allocation objective",
+    "old paired private-noise causal estimand",
+    "old independent synthetic-case inference",
+    "330N+384 call count"
+  ],
+  "weights": {
+    "h": "industry mapped eligible holding values / E_map",
+    "w": "raw model final weights",
+    "wstar": "solution of selected same-input objective",
+    "q_map": "E_map/NAV",
+    "full_nav_industry_share": "q_map*h_k",
+    "h_not_used_in_P_or_Q_objective": true,
+    "fund_weights_computed": false
+  },
+  "fund_document_protocol": {
+    "access": "public sources; no CRSP, Compustat, Bloomberg, proprietary research or licensed identifier crosswalk required",
+    "development": {
+      "holdings_date": "2025-09-30",
+      "public_cutoff_date": "2025-12-31"
+    },
+    "C": {
+      "holdings_date": "2026-03-31",
+      "public_cutoff_date": "2026-06-30"
+    },
+    "availability_resolution": "date; use a public filing no earlier than the day following its publicly disseminated filing date; retain raw acceptance metadata",
+    "return_vintage": "freeze downloaded French CIZ release and SHA256; not an historical point-in-time vintage",
+    "h_definition": "industry values divided by mapped eligible equity value",
+    "E_total_definition": "all direct equity positions reported as EC or EP with Long payoff, including unmapped and intentionally fixed private/preferred equity; exclude fund shares and derivatives",
+    "q_total_definition": "E_total divided by NAV",
+    "q_map_definition": "mapped eligible equity value divided by NAV",
+    "c_map_definition": "E_map divided by E_total: reallocation coverage of all reported direct equity, not only a SIC-matching success rate",
+    "fixed_assets": "all assets outside the mapped eligible equity sleeve, including liabilities and net residual, remain fixed",
+    "amendment_rule": "for each series and reporting date, incorporate amendments publicly available before the cutoff; preserve original accession, selected accession and amendment chain. Later amendments are audit-only and are not retroactively substituted into inputs",
+    "mapping_rule": "verified issuer identity and source-dated SEC SIC mapped through French FF12 rules; mark as SEC-SIC proxy, not exact CRSP/Compustat industry replication",
+    "fund_candidates": [
+      {
+        "id": "F01",
+        "ticker": "FCNTX",
+        "cik": "0000024238",
+        "series": "S000006037",
+        "A_accession": "0000035402-26-001161",
+        "C_accession": "0000035402-26-003312",
+        "A_url": "https://www.sec.gov/Archives/edgar/data/24238/000003540226001161/primary_doc.xml",
+        "C_url": "https://www.sec.gov/Archives/edgar/data/24238/000003540226003312/primary_doc.xml",
+        "structured_sources_confirmed": true,
+        "mapping_eligibility_confirmed": false
+      },
+      {
+        "id": "F02",
+        "ticker": "VPMCX",
+        "cik": "0000752177",
+        "series": "S000002568",
+        "A_accession": "0000752177-26-000071",
+        "C_accession": "0000752177-26-000225",
+        "A_url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000071/primary_doc.xml",
+        "C_url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000225/primary_doc.xml",
+        "structured_sources_confirmed": true,
+        "mapping_eligibility_confirmed": false
+      },
+      {
+        "id": "F03",
+        "ticker": "DODGX",
+        "cik": "0000029440",
+        "series": "S000011202",
+        "A_accession": "0001193125-26-080198",
+        "C_accession": "0001193125-26-250426",
+        "A_url": "https://www.sec.gov/Archives/edgar/data/29440/000119312526080198/primary_doc.xml",
+        "C_url": "https://www.sec.gov/Archives/edgar/data/29440/000119312526250426/primary_doc.xml",
+        "structured_sources_confirmed": true,
+        "mapping_eligibility_confirmed": false
+      },
+      {
+        "id": "F04",
+        "ticker": "TRBCX",
+        "cik": "0000902259",
+        "series": "S000002069",
+        "A_accession": "0001099263-26-002537",
+        "C_accession": "0001099263-26-006586",
+        "A_url": "https://www.sec.gov/Archives/edgar/data/902259/000109926326002537/primary_doc.xml",
+        "C_url": "https://www.sec.gov/Archives/edgar/data/902259/000109926326006586/primary_doc.xml",
+        "structured_sources_confirmed": true,
+        "mapping_eligibility_confirmed": false
+      }
+    ],
+    "replacement_order": [
+      {
+        "ticker": "OAKMX",
+        "cik": "0000872323",
+        "series": "S000002758",
+        "A_accession": "0001410368-26-018114",
+        "C_accession": "0001410368-26-055168",
+        "mapping_eligibility_confirmed": false
+      },
+      {
+        "ticker": "PRBLX",
+        "cik": "0000866256",
+        "series": "S000000856",
+        "A_accession": "0001003715-26-000215",
+        "C_accession": "0001003715-26-001630",
+        "mapping_eligibility_confirmed": false
+      }
+    ],
+    "replacement_rule": "fixed order before evaluation-model outcomes; verify active mandate, development/A/C source completeness, eligible-position mapping completion and ultimate-parent independence from current official documents",
+    "eligible_universe": "SEC-registered publicly listed common equity and common-stock ADR whose issuer identity and source-dated SEC SIC can be verified; all other positions fixed with reason and amount",
+    "mapping_completion_rule": "reconcile every source position to a prespecified asset class; unresolved issuer/SIC linkage within the eligible universe blocks completion; do not reclassify linkage failures as excluded assets",
+    "coverage_reporting": "report c_map, q_total and q_map continuously for every period; no arbitrary minimum coverage ratio; claims apply only to mapped sleeve",
+    "B_profile_usage": "A/C context only; never translate holdings into B1 private signal or B2 optimal forecast",
+    "A_document_profiles": {
+      "holdings_date": "2025-12-31",
+      "public_cutoff_date": "2026-03-31"
+    }
+  },
+  "A_C_document_tasks": {
+    "field_inventory": "all prespecified identifiers, dates, NAV, aggregate direct/mapped equity values and units, mandate/strategy/risk text and applicable rules with source spans; every individual holding row is audited in data construction, not required as an unlimited LLM fact-table output",
+    "facts_per_bundle": "derived from inventory, no fixed 12-fact quota",
+    "document_probes": "all prespecified source-supported mandate rules and evaluability/missing-field decisions; no fixed six-probe quota",
+    "math_probes": "deterministic units/dates/arithmetic checks; P/Q separate appendix diagnostics",
+    "gold_rule": "double source review before outputs; explicit absent versus insufficient-data states; no filtering by model success",
+    "packet_sources": [
+      "gold_evidence",
+      "actual_retrieval"
+    ],
+    "onset_policies": [
+      "R1",
+      "R4"
+    ],
+    "repeats": "pending pilot and resource design; no active K yet",
+    "output": "fact sheet and compliance/evaluability decisions; no forced allocation from absent quantitative forecasts",
+    "inference": "descriptive document-pipeline transfer; fields and repeats are not independent market scenarios",
+    "source_fund_period_combinations_if_panel_complete": 8,
+    "response_sequence": [
+      "plan required fields and sources",
+      "draft facts and rule/evaluability decisions",
+      "review evidence and missing fields",
+      "final facts and rule/evaluability decisions"
+    ],
+    "deterministic_checks": "units, dates, aggregate arithmetic and source availability only; no B-specific posterior or allocation helper",
+    "batching": "in development freeze field/rule-ID-ordered output bundles that fit actual input and output limits; retain every item; same partition for all policies and packet sources; Bdoc is actual output-bundle count, not necessarily eight source fund-period combinations",
+    "holdout_scope": "C withheld from development and A; not a claim of absence from model pretraining",
+    "onset_definition": "before first response versus before final response; identical own-task packet retained after onset"
+  },
+  "model_candidate_pending_access": {
+    "recommended_primary": "Qwen/Qwen3.6-35B-A3B",
+    "temperature": 0,
+    "thinking_enabled": true,
+    "max_output_tokens_per_model_response": 8192,
+    "origin": "PortBench v6 section 3.1 evaluated condition, not vendor-general optimal decoding",
+    "input_context_cap": "actual fixed model and engine capability; validate full packet fit in development, no invented universal input cap",
+    "weights_hash": null,
+    "tokenizer_revision": null,
+    "chat_template_hash": null,
+    "inference_engine": null,
+    "numeric_precision": null,
+    "hosting_candidates": [
+      "fixed public weights on available compute",
+      "public commercial hosting of the same model with verifiable settings"
+    ],
+    "replication_candidate_rule": "an accessible different-family model evaluated by PortBench, selected before main outcomes; separate versioned batch",
+    "access_verified": false,
+    "truncation": "count completed max-output exits as raw model failures if final schema invalid; no success-until-retry repair",
+    "drift_policy": "interleave conditions in complete scenario blocks; record exact model/engine/date; split changed versions rather than silently pooling",
+    "role": "numeric appendix candidate; B1 primary model requires scope-specific choice and fixed accessible version"
+  },
+  "retrieval_development_candidates": {
+    "access_filter": "common and own-fund documents; exact allowed public-cutoff and reporting-date metadata; never other funds or gold evaluation files",
+    "chunking": "hierarchical heading/section/table-aware; preserve titles, rows, headers, units, footnotes, source and page metadata; subdivide oversized structures to fit actual context",
+    "chunking_source": "Miola et al. 2609.03654v1 section 4.1.1; no unsupported fixed token-length grid",
+    "retrievers": [
+      "BM25",
+      "BM25 + BGE-M3 with RRF"
+    ],
+    "bm25": {
+      "k1": 1.2,
+      "b": 0.75
+    },
+    "RRF_c_candidates": [
+      10,
+      60
+    ],
+    "optional_reranker": "BAAI/bge-reranker-v2-m3",
+    "fusion": "fuse complete ranked allowed-corpus lists before candidate shortlist; not 50 per retriever",
+    "reranker_candidates_after_fusion": 50,
+    "reranked_retained": 10,
+    "final_top_k_candidates": [
+      5,
+      10
+    ],
+    "numerical_source": "Akarsu et al. 2604.01733v1 sections III-B/IV-B/IV-C; top-5 end-to-end precedent, top-10 generation candidate is an adaptation of evaluated retrieval depth",
+    "model_substitution": "paper dense/reranker replaced with public BGE models; new setting, revalidate in development",
+    "packet_input_limit": "actual frozen model context capability, not 8192 universal input tokens",
+    "selection_rule": "highest development mandatory evidence coverage; ties go to fewer input tokens, lower latency, then simpler retrieval; do not use E-L effect",
+    "evaluation": "continuous evidence recall and all-required coverage, wrong fund/date, citation support and missing-field behavior; no arbitrary 95-percent gate",
+    "query_packet_rule": "retrieve top-k per registered question; deduplicate union by document/segment ID within output bundle; context-fitting output bundles frozen in development, no gold-driven supplementation"
+  },
+  "analysis": {
+    "main_sample_size": null,
+    "main_call_count": null,
+    "monetary_budget": null,
+    "precision_target": null,
+    "overlapping_windows_are_independent": false,
+    "inference_plan": "Freeze after scope, history construction and pilot; pair policies within market states and cluster by underlying path; no active numerical N or confidence level",
+    "gamma_aggregation": "report separate strata, no arbitrary averaging",
+    "pilot_run": false,
+    "primary_quality": "not frozen until institution-conditioned model is verified",
+    "primary_heterogeneity": "warranted differences in institution-conditioned judgment, not generic signal-action distinction",
+    "no_arbitrary_combined_score": true,
+    "round_summary": "report per-round theoretical-history/signal-weighted results; equal-round grand mean is explicit LIBERA estimand",
+    "base_count_derivation": "255 histories * 2 signals * (4 R1 responses + 4 R4 responses + 1 FRESH response); excludes repetitions and A module",
+    "auxiliary_B1_base_response_opportunities": 4590
+  },
+  "artifacts": {
+    "public_manifest": {
+      "path": "data/french/manifest.json",
+      "sha256": "75ac2cf7042882f1f936acecfb17d70ce43fdb4edea5c37b5a1f00d993175a66"
+    },
+    "public_validation": {
+      "path": "data/french/validation_report.json",
+      "sha256": "cd1f7497278e67780aa6efbd29680562d8d03973ef29a189af3656691adf77dd"
+    },
+    "portbench_summary": {
+      "path": "data/reference_portbench/summary.json",
+      "sha256": "98ec57ec1c8b7f60d4737150afe7f39d68d99a7b5ff56f46d744664753e7b4f5"
+    },
+    "portbench_references": {
+      "path": "data/reference_portbench/ff12_t5_references.json",
+      "sha256": "f7b131908e12d7d5ba26405b27fe5725889cd4b26e06d4207684cb3184b6da99"
+    },
+    "salcher_summary": {
+      "path": "data/french/salcher_quadratic_reference_summary.json",
+      "sha256": "7eeddeee2aaaed286aafc994d2e623c67485a28fcb13c60f8e65b5dc71349318"
+    },
+    "salcher_references": {
+      "path": "data/french/salcher_quadratic_empirical_references.json",
+      "sha256": "7b2ff47432b204248014005bc9b24f6f7117329ad6a55527e91cfb653a1b877b"
+    },
+    "prepare_script": {
+      "path": "research/prepare_public_inputs.py",
+      "sha256": "2cdace001fbf5acb491256c12dc09c6517ac508deb3195693a51f319091a2440"
+    },
+    "portbench_script": {
+      "path": "research/compute_portbench_reference.py",
+      "sha256": "df7b00dc712d417da2136c0c7b713f2a4a01a9c2619a935bb4bffe9b242309ae"
+    },
+    "salcher_script": {
+      "path": "research/compute_paper_reference.py",
+      "sha256": "095b68220f91265439481d89e6bb6714003821a8159209c65d6a41a7e668bdee"
+    },
+    "hansen_reference_summary": {
+      "path": "data/hansen/summary.json",
+      "sha256": "75f6d38278f1739adce51427afb53e6d85b29a4ad8db591ca751973fdefb12fc"
+    },
+    "A_source_inventory": {
+      "path": "data/documentary/source_inventory.json",
+      "sha256": "62deedc9771c2fa69af88c6816bfc77dddcb1653a2290320f46a6a6c03d81509"
+    }
+  },
+  "gates_before_main": {
+    "core_question_aligned_to_proposal": true,
+    "conference_overview_read": true,
+    "scope_selected": false,
+    "B1_history_and_oracle_validated": false,
+    "fund_sources_complete_for_documentary_module": false,
+    "model_access_verified": false,
+    "pilot_complete": false,
+    "analysis_and_resource_limits_frozen": false,
+    "preregistration_frozen": false,
+    "B1_materials_and_model_frozen": false,
+    "original_question_preserved": true,
+    "institution_conditioned_benchmark_validated": false
+  },
+  "provenance_policy": "distinguish direct paper conditions, data-derived values, author-code-only details and LIBERA research design; no invented paper attribution",
+  "completed": {
+    "public_inputs_verified": true,
+    "P_reference_count": 132,
+    "P_verified": 132,
+    "P_fallback_count": 0,
+    "P_single_industry_reference_count": 34,
+    "P_single_industry_count_tolerance": 1e-08,
+    "Q_overlapping_windows": 625,
+    "Q_gammas": [
+      1,
+      3,
+      5
+    ],
+    "Q_covariance_modes": 2,
+    "Q_reference_count": 3750,
+    "Q_all_numerical_checks_passed": true,
+    "Q_all_windows_include_short_position_for_each_mode_and_gamma": true,
+    "Q_paper_mode_mean_gross_exposure": {
+      "1": 80.61767796666436,
+      "3": 26.97646907339383,
+      "5": 16.339623302105654
+    },
+    "AI_responses": 0,
+    "results_scope": "data preparation and deterministic reference calculation only",
+    "conference_overview_read": true,
+    "pre_experiment_manuscript_drafted": true,
+    "B1_model_experiment_run": false,
+    "B2_heterogeneous_reference_ready": false,
+    "scope_selected_A_plus_B1": false,
+    "B1_auxiliary_reference_prepared": true
+  },
+  "research_question": "Under a fixed common GenAI model, are economically warranted differences in judgment preserved, and how does evidence-onset policy affect information use and decision quality?",
+  "deliverable": "paper/LIBERA_텀페이퍼_초안_20261017.html",
+  "conference_requirements": {
+    "source": "https://app.notion.com/p/2026-agent-conference/LIBERA-3e00589711408053a7e5ff9a0c4ba804",
+    "tab": "개요",
+    "checked_on": "2026-10-17",
+    "source_status": "user-provided orientation summary, not original official rubric",
+    "theme": "AI가 재편하는 사회와 경제: 변화와 대응의 방향",
+    "paper_due": "2026-11-01",
+    "pitch_date": "2026-11-06",
+    "pitch_minutes": [
+      5,
+      10
+    ],
+    "citation_style": "APA",
+    "length": null,
+    "file_format": null,
+    "own_experiment_required": null,
+    "rubric_weights_are_official": false,
+    "note": "The overview explicitly labels evaluation weights as estimates. Missing requirements are not inferred."
+  },
+  "module_roles": {
+    "A": "public documentary accuracy and institutional context",
+    "B1": "auxiliary basic information-use diagnostic; not main hypothesis evidence",
+    "B2": "institution-conditioned main decision structure required; full real-fund replication not required",
+    "C": "optional documentary extension; not required for initial A+B1 claim",
+    "P": "appendix arithmetic diagnostic",
+    "Q": "appendix arithmetic diagnostic"
+  },
+  "workflow_policy": {
+    "steps": [
+      "interpret situation",
+      "assess choices",
+      "draft recommendation",
+      "review and revise"
+    ],
+    "onset": {
+      "R1": 1,
+      "R4": 4
+    },
+    "stage_count_provenance": "new LIBERA design from original proposal, not paper-validated optimum",
+    "retention": "retain identical evidence after onset",
+    "final_choice_set": "all choices remain available",
+    "final_information_equal": true,
+    "main_packet": "verified fixed evidence; not an actual retrieval evaluation",
+    "estimand": "onset-and-subsequent-use policy effect, not pure anchoring",
+    "controls": [
+      "same-information pair",
+      "irrelevant institution-ID relabel",
+      "cases with same optimal action"
+    ],
+    "full_context_duplicate_rule": "do not count full-context-early as a distinct arm if identical to R1",
+    "failures": "report invalid and missing outputs plus valid-pair coverage separately; no selective dropping or fabricated economic action; do not rank policies with differing failure rates by conditional valid-response mean regret alone",
+    "diagnostic_FRESH": "one final response from full identical information without prior drafts; not a stage-count-matched treatment",
+    "before_signal": "allow missing-evidence state, never force guessed private signal or premature choice"
+  },
+  "claims_excluded": [
+    "causal effect of adopting a shared model",
+    "real fund private forecasts observed",
+    "actual fund allocation homogenization established by B1",
+    "systemic risk or welfare quantified",
+    "actual RAG benefit established by fixed-packet experiment",
+    "combined A and B1 success proves real fund RAG mitigation"
+  ],
+  "retired_v32_main_proposal": {
+    "basis": "PortBench D.4 covariance full/restricted comparison; timing intervention is LIBERA extension",
+    "common_input": "mean returns, industry names, objective and constraints",
+    "packet": "exact same covariance matrix per case across onset policies",
+    "policies": {
+      "EARLY": "plan",
+      "MID": "draft",
+      "LATE": "review",
+      "NO_COV": "never",
+      "FRESH": "one final answer with full data"
+    },
+    "main_responses": [
+      "plan",
+      "draft",
+      "review",
+      "final"
+    ],
+    "helper": "schema/units only; no optimizer outputs or weight repairs",
+    "claims_excluded": [
+      "real fund private information",
+      "true manager strategy",
+      "causal effect of shared model adoption",
+      "realized investment outperformance",
+      "pure anchoring mechanism"
+    ],
+    "failure_rules_pending_objective_selection": true,
+    "old_hold_incumbent_policy_active": false,
+    "active": false,
+    "reason": "common covariance timing does not test institution-specific warranted heterogeneity"
+  },
+  "user_scope_decision": {
+    "date": "2026-10-17",
+    "selected": "A+B1",
+    "statement": "전자로 가자",
+    "excluded_from_current_scope": [
+      "B2_portfolio_allocation"
+    ],
+    "qualification": "A+B1-only main interpretation superseded after user questioned topic alignment; original topic retained"
+  },
+  "B1_protocol": {
+    "source": "https://www.federalreserve.gov/econres/feds/files/2025090pap.pdf",
+    "source_version": "2025-09-25 official paper; arXiv 2510.01451v1",
+    "direct_conditions_locator": "sections 4.1-4.2, equations 2-7",
+    "signal_accuracy": 0.7,
+    "fundamental_values": [
+      0,
+      50,
+      100
+    ],
+    "treatments": {
+      "I": {
+        "rho": 1,
+        "mu": 1
+      },
+      "II": {
+        "rho": 0.15,
+        "mu": 0.95
+      }
+    },
+    "actions": {
+      "sell": -1,
+      "no_trade": 0,
+      "buy": 1
+    },
+    "payoffs": {
+      "buy": "v-p",
+      "sell": "p-v",
+      "no_trade": "0"
+    },
+    "oracle": "Paper equations 2-7; distinguish market-maker q from informed-trader q_star",
+    "regret_derived_from_paper_payoffs": "abs(m-p)-a*(m-p)",
+    "ties": "all maximizing actions accepted",
+    "new_LIBERA_adaptations": [
+      "one realized signal per independent workflow instead of simultaneous two-signal strategy-method query",
+      "fixed public history and price across onset policies",
+      "same signal evidence packet retained after first provision",
+      "R1 versus R4 onset policy"
+    ],
+    "main_history_sample": "all 255 ordered BUY/SELL normative prefixes of lengths 0 through 7",
+    "sample_size": {
+      "history_states": 255,
+      "signal_cases": 510,
+      "independent_market_samples": null
+    },
+    "original_repeat_count_is_new_power_analysis": false,
+    "primary_treatment_candidate": "I",
+    "additional_rational_convergence_layer": "II future research, not in current main scope",
+    "event_knowledge": "if II is used, informed/event-occurrence knowledge is supplied from the outset in all onset conditions; delay only realized signal",
+    "signal_card_excludes": [
+      "optimal action",
+      "calculated posterior expected value"
+    ],
+    "history_candidates": {
+      "paper_record_replay": {
+        "status": "full original records not obtained"
+      },
+      "I_normative_path_enumeration": {
+        "status": "selected for preparation",
+        "paper_rounds": 8,
+        "derived_ordered_prefix_count": 255,
+        "prefix_lengths": [
+          0,
+          7
+        ],
+        "history_actions": [
+          "buy",
+          "sell"
+        ],
+        "model_response_actions": [
+          "buy",
+          "sell",
+          "no_trade"
+        ],
+        "history_probability": "0.5*0.7**B*0.3**S + 0.5*0.3**B*0.7**S",
+        "aggregation": "report each round using theoretical history probabilities; any equal-round summary explicitly designated as LIBERA estimand",
+        "scope": "normative reference paths only, not all possible AI-induced paths",
+        "independent_market_sample": false
+      }
+    },
+    "direct_institution_or_monoculture_claim": false,
+    "implementation_complete": false,
+    "status": "validated auxiliary reference table; no AI run",
+    "selected_treatment": "I",
+    "sample_size_provenance": "derived finite task count from 8-round paper horizon; enumeration is LIBERA design, not paper N",
+    "historical_model_adoption_effect_identified": false,
+    "ceiling_interpretation": "no loss observed in this simple information environment; not a conclusion that homogenization risk is absent",
+    "reference_artifacts_present": true,
+    "reference_summary_path": "data/hansen/summary.json",
+    "selected_for_main_experiment": false
+  },
+  "runtime_inventory": {
+    "checked_on": "2026-10-17",
+    "existing_ollama_models": [
+      "gemma4:e4b-it-qat",
+      "gemma3:4b",
+      "qwen3.5:9b",
+      "hermes-qwen3.5-4b:latest",
+      "qwen3.5:4b"
+    ],
+    "named_paper_model_installed": false,
+    "primary_model_selected": null,
+    "note": "inventory only; no generation or model download performed; no API secrets stored"
+  },
+  "scope_correction": {
+    "date": "2026-10-17",
+    "trigger": "user questioned whether narrowing conflicts with paper topic",
+    "reason": "A documentary accuracy plus B1 signal following does not test institution-specific warranted judgment heterogeneity",
+    "primary_objective_unchanged": true,
+    "main_requirements": [
+      "institution-specific valid information/objective/constraints enter the decision problem",
+      "institution-conditioned normative benchmark and overlapping-optimum handling",
+      "paired evidence-policy comparison with heterogeneity and institution-specific quality"
+    ],
+    "B1_role": "auxiliary only"
+  }
+}

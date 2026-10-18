@@ -1,0 +1,71 @@
+{
+  "AI_calls": 0,
+  "all_assets_officially_identified": true,
+  "baseline_sum": 1.0,
+  "benchmark_type": "reported_SP500_sector_market_composition",
+  "covariance_minimum_eigenvalue": 1.605480440241414e-05,
+  "cutoff_exclusive": "2026-07-17",
+  "price_dates": [
+    "2026-04-20",
+    "2026-07-16"
+  ],
+  "price_observations": 61,
+  "provenance": {
+    "ETF_proxy_precedent": {
+      "adopted": "Sector ETF proxies for allocation reasoning",
+      "limit": "The paper uses 14 Chinese sector instruments; selection of these 11 US SPDR funds is LIBERA's public implementation, not that paper's asset list.",
+      "locator": "Section 3.3 and Appendix B",
+      "url": "https://arxiv.org/html/2603.22305"
+    },
+    "GICS_definition": {
+      "status": "official industry classification source; GICS is separate from FF12",
+      "url": "https://www.msci.com/indexes/index-resources/gics"
+    },
+    "data": {
+      "identity_provider": "State Street official product pages",
+      "limit": "Yahoo's adjusted-close series is preserved without claiming issuer-certified NAV total return. Current vendor revisions/adjustments may differ from data published at the historical cutoff. Raw close and corporate-action events are retained separately.",
+      "price_field": "indicators.adjclose[0].adjclose",
+      "price_provider": "Yahoo Finance public chart endpoint",
+      "return_kind": "vendor_adjusted_close_return_proxy"
+    },
+    "lookback": {
+      "adopted": "60 trading-day return lookback and 252-day annualization convention for risk diagnostics",
+      "implementation": "61 closes produce 60 daily returns; all 11 assets use exactly the same observed dates.",
+      "limit": "Risk diagnostics only, no borrowed profile caps, objective coefficients, confidence levels or claimed future optimality.",
+      "locator": "Appendix B market context/B.2 covariance and C.1",
+      "url": "https://arxiv.org/html/2605.27887v6"
+    },
+    "sector_unit": {
+      "adopted": "Reasoning across 11 GICS sectors",
+      "locator": "Methodology and Appendix 9.3",
+      "not_adopted": "Paper-specific stock universe, agent models, long/short strategy or reported performance.",
+      "url": "https://arxiv.org/html/2503.09647v5"
+    }
+  },
+  "return_dates": [
+    "2026-04-21",
+    "2026-07-16"
+  ],
+  "return_kind": "vendor_adjusted_close_return_proxy",
+  "return_observations": 60,
+  "scope": "A common dated retrospective case input and risk diagnostic; not a historical causal/backtesting result.",
+  "sector_count": 11,
+  "source_percent_sum": 99.9,
+  "status": "prepared_verified_public_market_input_no_AI_results",
+  "verification": {
+    "AI_calls": 0,
+    "GICS_order_verified": true,
+    "all_passed": true,
+    "assets": 11,
+    "benchmark_reported_values_preserved": true,
+    "explicit_proportional_normalization_verified": true,
+    "independent_covariance_maximum_residual": 0.0,
+    "no_fill_or_imputation": true,
+    "price_dates": 61,
+    "raw_source_reconstruction": true,
+    "return_chain_maximum_residual": 8.881784197001252e-16,
+    "return_dates": 60,
+    "same_pre_cutoff_dates": true,
+    "scope": "Numerical/source interface validation, not empirical strategy validation."
+  }
+}

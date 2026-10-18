@@ -1,0 +1,29 @@
+{
+  "created_at_utc": "2026-10-18T06:29:58.236278+00:00",
+  "scope": "additive_metadata_correction_only_no_raw_overwrite",
+  "original_summary": "data/local_sector_runtime/laptop_realinput_1p7b_20261018/summary.json",
+  "original_summary_sha256": "8edb284127eb324190e8a13233881a81cba2e569e0e36d0bc1ef4fc9e7288e77",
+  "field": "deadline_scope",
+  "original_value": "180-second maximum applies to the supervised child lifetime; metadata checks and cleanup are outside that bound.",
+  "corrected_value": "120-second maximum applies to the supervised child lifetime; metadata checks and cleanup are outside that bound.",
+  "actual_deadline_seconds": 120,
+  "corroboration": {
+    "data/local_sector_runtime/laptop_realinput_1p7b_20261018/invocation.json": "deadline_seconds=120.0",
+    "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_probe/worker_spec.json": "deadline_seconds=120.0",
+    "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_probe/supervisor_result.json": "deadline_seconds=120.0"
+  },
+  "effect": "Display text correction only. No change to actual process deadline, timing, raw output, response status or research counts.",
+  "source_fix": {
+    "path": "research/benchmark_sector_real_input.py",
+    "executed_old_sha256": "2a64adcae546d74702c4b9ba5e60e2c81308389b5b6f2c7c663571bc5b0ac88e",
+    "preserved_executed_source_archive": "tmp/sector_bridge_20261018/real_input_bundle.tar.gz",
+    "current_corrected_sha256": "f8f299ed156435791287d57c83e03ea9992a4a56ce3d77500667146cffda1cb6",
+    "change": "Interpolate args.deadline_seconds in deadline_scope instead of fixed 180 text."
+  },
+  "validation": {
+    "command": "python -B -m unittest discover -s research -p test_benchmark_sector_real_input.py -v",
+    "tests_passed": 5,
+    "test_scope": "Offline fake HTTP only; custom 5-second success and 2-second timeout labels tested. No model calls."
+  },
+  "runtime_records_unchanged": true
+}

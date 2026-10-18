@@ -1,0 +1,33 @@
+{
+  "benchmark_id": "sp500_sector_reference_20260630",
+  "benchmark_name": "S&P 500 sector composition reported by Fidelity",
+  "source_id": "fidelity_q3_2026",
+  "source_url": "https://clearingcustody.fidelity.com/app/proxy/content?literatureURL=/9906006.PDF",
+  "source_page": 2,
+  "as_of": "2026-06-30",
+  "publisher_document_date": "2026-07-16",
+  "evidence_id": "fidelity_q3_2026:p2:benchmark",
+  "raw_percent_by_sector_code": {
+    "10": 3.0,
+    "15": 1.8,
+    "20": 8.8,
+    "25": 9.3,
+    "30": 4.6,
+    "35": 8.9,
+    "40": 11.8,
+    "45": 38.0,
+    "50": 9.7,
+    "55": 2.2,
+    "60": 1.8
+  },
+  "raw_percent_sum": 99.9,
+  "reported_precision_percentage_points": 0.1,
+  "rounding_handling": "Raw values retained. Any sum-to-one normalization must be separately labeled as a calculation, not a published target.",
+  "used_for_splits": [
+    "pilot",
+    "main"
+  ],
+  "market_snapshot_cutoff": "2026-07-17",
+  "not_institution_target_weights": true,
+  "scope_caution": "S&P 500 composition is a common reference, not the exact universe of Fidelity's top-3000-stock strategist research."
+}

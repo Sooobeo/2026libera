@@ -1,0 +1,29 @@
+﻿{
+    "status":  "pinned_api_ready",
+    "recorded_at_utc":  "2026-10-18T06:36:32.4810599Z",
+    "pid":  22048,
+    "binary":  "C:\\Users\\Insun\\AppData\\Local\\Programs\\Ollama\\ollama.exe",
+    "binary_sha256":  "3cc17c238b081adf2bd3a206e52a063b637af1bf283d95b4ffd73a2bdec8b027",
+    "origin":  "http://127.0.0.1:11434",
+    "observed_version":  {
+                             "version":  "0.35.1"
+                         },
+    "listener_observations":  [
+                                  {
+                                      "LocalAddress":  "127.0.0.1",
+                                      "LocalPort":  11434,
+                                      "OwningProcess":  22048
+                                  }
+                              ],
+    "listener_owner_verified":  true,
+    "ownership_observation_error":  null,
+    "requested_child_environment":  {
+                                        "OLLAMA_HOST":  "127.0.0.1:11434",
+                                        "OLLAMA_NO_CLOUD":  "1",
+                                        "OLLAMA_VULKAN":  "1",
+                                        "OLLAMA_IGPU_ENABLE":  "1"
+                                    },
+    "scope":  "Local process only. No persistent environment, driver, firewall or protocol changes. No model generation.",
+    "backend":  "Requested Vulkan iGPU; actual backend requires log and inference observations.",
+    "generation_requests":  0
+}

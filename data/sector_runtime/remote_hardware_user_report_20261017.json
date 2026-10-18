@@ -1,0 +1,22 @@
+{
+  "source": "user-pasted PowerShell output from RDP session",
+  "recorded_utc": "2026-10-17T10:04:35.204333+00:00",
+  "reported": {
+    "model": "Standard PC (Q35 + ICH9, 2009)",
+    "total_physical_memory_bytes": 12862369792,
+    "video_controllers": [
+      "Microsoft Remote Display Adapter",
+      "Microsoft 기본 디스플레이 어댑터"
+    ]
+  },
+  "derived": {
+    "ram_GiB": 11.979015350341797
+  },
+  "assessment": {
+    "environment": "Likely a virtual guest; inference from Q35/ICH9 model string, not verified hypervisor identity",
+    "usable_accelerator": "not confirmed; basic adapter name alone cannot rule out hardware lacking a driver",
+    "physical_host_capability": "unknown; guest specs do not measure physical server GPU/RAM",
+    "target_suitability": "Current reported guest not suitable for planned Qwen3.6 35B Q4 diagnostic without allocation/accelerator changes; model artifact alone about21.72GB plusruntime exceeds12GiB guest RAM",
+    "current_action": "Resume previously authorized laptop installation and runtime diagnostics. No remote modification."
+  }
+}

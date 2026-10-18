@@ -1,0 +1,126 @@
+{
+  "audit": "v4.2 software round 1",
+  "reviewer": "risk_metrics_review",
+  "reviewed_at_utc": "2026-10-17T09:48:13.398490+00:00",
+  "status": "pass_for_software_preparation_only",
+  "independence": "Runner and evaluator reviewed independently of their author. Engine author conducted engine tests; no claim of independent engine authorship. Round 1 additionally used independently assembled synthetic integration checks.",
+  "scope": [
+    "strict parsing and original response retention",
+    "R1/R4 four-stage information onset and hidden evidence boundary",
+    "continuous allocation and source-specific label/citation scoring",
+    "prespecified missing/failed case denominators",
+    "freeze and runtime identity safeguards"
+  ],
+  "findings": [
+    {
+      "id": "SW-01",
+      "issue": "source_id output schema and strict identity match",
+      "status": "resolved",
+      "verification": "SYSTEM explicitly requests source_id; scorer requires expected source identity."
+    },
+    {
+      "id": "SW-02",
+      "issue": "duplicate JSON key loss",
+      "status": "resolved",
+      "verification": "Runner delegates strict parse; duplicate keys fail without retry and raw provider response persists."
+    },
+    {
+      "id": "SW-03",
+      "issue": "online/offline separation",
+      "status": "resolved",
+      "verification": "Independent offline evaluator imports no model adapter calls; online run_case passes only visible IDs and explicit market/model values."
+    },
+    {
+      "id": "SW-04",
+      "issue": "freeze coverage and evaluation integrity",
+      "status": "resolved",
+      "verification": "Freeze includes runner, engine, evaluator, case roster, evaluation spec, runtime, review, packets, market and gold; main evaluation verifies the execution-copied manifest."
+    },
+    {
+      "id": "SW-05",
+      "issue": "runtime drift between calls",
+      "status": "resolved",
+      "verification": "Each model call repeats exact digest/template/version preflight; target name is protocol-locked."
+    },
+    {
+      "id": "SW-06",
+      "issue": "case input reread drift",
+      "status": "resolved",
+      "verification": "Run loads common corpus and market snapshots once before all cases."
+    },
+    {
+      "id": "SW-07",
+      "issue": "actual-run freeze traceability",
+      "status": "resolved",
+      "verification": "Main run copies the frozen manifest to its new output directory; original run output is not overwritten."
+    },
+    {
+      "id": "SW-08",
+      "issue": "evidence claims for source scope and rating semantics",
+      "status": "resolved",
+      "verification": "Gold validator permits scope/rating_semantics while rating/reason checks do not treat them as substitutes."
+    },
+    {
+      "id": "SW-09",
+      "issue": "UBS unstated reasons unfair denominator",
+      "status": "resolved",
+      "verification": "Explicit empty source reason references are excluded from reason-eligible count and separately reported; actual UBS denominator=5, Fidelity=11."
+    },
+    {
+      "id": "SW-10",
+      "issue": "common baseline identifier mismatch",
+      "status": "resolved",
+      "verification": "All actual sources and market share sp500_sector_reference_20260630; UBS labels are not converted to OW/UW."
+    }
+  ],
+  "remaining_critical_findings": [],
+  "verification": {
+    "engine_unit_tests": {
+      "passed": 20,
+      "command": "python -m unittest discover -s research -p test_sector_engine.py -v"
+    },
+    "independent_synthetic_integration_checks": {
+      "passed": 22,
+      "record": "research/design_revision_20261017/software_audit_checks_v42.json"
+    },
+    "runner_dry_verification": {
+      "passed": 19,
+      "record": "data/sector_protocol/workflow_verification.json"
+    },
+    "AI_calls": 0,
+    "synthetic_fixtures_are_not_experiment_results": true
+  },
+  "readiness": {
+    "main_ready": false,
+    "model_runtime_ready": false,
+    "selected_model": "qwen3.6:35b",
+    "selected_model_installed": false,
+    "actual_AI_pilot_completed": false,
+    "semantic_human_review": "pending",
+    "main_freeze_exists": false
+  },
+  "interpretation_limits": [
+    "Primary exact original-label accuracy is document-extraction fidelity, not automatic strategic quality.",
+    "Citation/source/sector identity checks cannot establish semantic entailment of reasons.",
+    "Valid portfolios have no unique correct weight vector; signed tilts and half-L1 distances are descriptive diagnostics.",
+    "Calculator ok denotes valid request/computation; positive submitted_constraint_checks.checks[].violation remains a constraint violation.",
+    "Actual pilot review and rubric approval must precede main freeze; software tests do not certify those approvals.",
+    "Not-started jobs remain in the prespecified roster but are explicitly not observed AI errors."
+  ],
+  "hashes": {
+    "research/sector_engine.py": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c",
+    "research/test_sector_engine.py": "8c383f11be35837fce6f2ce91a4754366dc15dcecb7dd065275da53f00b1378a",
+    "research/run_sector_workflow.py": "d46ccbefa7844d30d2d0d114661718dcaaf2f430ff42059eb985210155e38c6b",
+    "research/evaluate_sector_runs.py": "0a6bab7531ff9540fc3c7152ffb07fad52f27ddcbf766116445d2c8fde043e3d",
+    "data/sector_protocol/evaluation_spec.json": "cff49202b9da0da6bc094eb02a55e971afeab8c983a1a8fe3d686af1cff8df7f",
+    "data/sector_protocol/cases.json": "27be9fa986afcbef65979e1e3c74b8119cbf341615daf9824faba767adce04ad",
+    "data/sector_protocol/workflow_manifest.json": "0bd6c320a374025130303631df15b799ab13dc5f89bd1cae81c12b5749e2e96a",
+    "data/sector_protocol/workflow_verification.json": "c44251055c83b08f2c48e5188b7668db04bc25160d1f20648bdf21ae4263da4d",
+    "data/sector_protocol/runtime_candidate.json": "a3785063ba2f32c4f5e026ff0e8c24fe9dbed2fd6491896472ae255ac1ba8adf",
+    "data/sector_protocol/runtime_preflight.json": "b5a0b01fa7c98937181a6e4638018512d173fc817fdc545649999e05db80b090",
+    "data/sector_documents/model_packets.jsonl": "520bed87396eb815c87f362712a6ec39c0275076f9ef4c5d59ef5a7cbbe6afc7",
+    "data/sector_documents/evaluator_only/reference_annotations.jsonl": "3a83cbb386442f3263357a5e67cb1f52c59114c28cc81e636b28e111c3509ffc",
+    "data/sector_market/market_input.json": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f",
+    "research/design_revision_20261017/software_audit_checks_v42.json": "4cdf05c3f9dbaf0991337d6764bebdb8f811949a14f562d1243f24b5529a02ce"
+  }
+}

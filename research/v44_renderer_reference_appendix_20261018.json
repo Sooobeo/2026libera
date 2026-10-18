@@ -1,0 +1,45 @@
+{
+  "schema_version": "libera_v44_renderer_reference_appendix_1.0",
+  "scope": "Pre-generation implementation evidence appendix; no model calls, no alteration of the frozen conditions reference",
+  "created_at_utc": "2026-10-18T06:51:55.729617+00:00",
+  "conditions_reference": {
+    "path": "research/v44_conditions_reference_20261018.json",
+    "sha256": "a403d4c37d1581f9af21af8ba7a6333614d890ff15277e83181c1204549a9c5b",
+    "unchanged": true
+  },
+  "source": {
+    "path": "research/evidence/v44_renderer_appendix_20261018/ollama_qwen35_renderer_v0351.go",
+    "url": "https://raw.githubusercontent.com/ollama/ollama/v0.35.1/model/renderers/qwen35.go",
+    "sha256": "69bca99b53a3db8d599bb9ec8eadf65ce9a72868566a89bfac44d31fe3b565e0",
+    "bytes": 11201,
+    "line_count": 368,
+    "line_number_basis": "The saved UTF-8 source above, numbered from 1; cached web extraction line numbers differ."
+  },
+  "verified_facts": [
+    {
+      "claim": "The pinned Qwen3.5 renderer applies Go strings.TrimSpace to leading system content and each message content.",
+      "saved_source_lines": [254, 288],
+      "implication": "HTTP message strings can remain byte-identical while their rendered boundary whitespace differs. Literal byte identity of every HTTP string inside the rendered prompt is a stricter condition than this official renderer implements."
+    },
+    {
+      "claim": "The renderer reads an explicit non-null think value through think.Bool().",
+      "saved_source_lines": [217, 218, 219],
+      "implication": "Disabled thinking is a renderer control; it does not establish that the model lacks reasoning ability."
+    },
+    {
+      "claim": "The Qwen3.5 assistant branch calls splitQwen35ReasoningContent; tagged reasoning can be removed from assistant content even when no think block is emitted.",
+      "saved_source_lines": [92, 100, 101, 108, 300, 304],
+      "implication": "A boundary-whitespace-only validation exception must not silently authorize tag removal or other content changes. A mismatch outside the explicitly allowed boundary operation must stop the case."
+    }
+  ],
+  "pre_generation_validation_recommendation": {
+    "raw_http_history": "Keep complete assistant final-content strings, user strings, and calculator strings unchanged in saved and transmitted HTTP requests.",
+    "rendered_history": "Check every message in order against the officially documented renderer boundary-whitespace operation, record original and rendered content hashes plus removed boundary characters, and reject all other omissions or transformations.",
+    "whitespace_semantics": "If implementing Go TrimSpace, use its unicode.IsSpace character set exactly; Python str.strip() additionally recognizes some control characters. Alternatively allow only an explicitly limited ASCII boundary set and fail closed on other differences.",
+    "not_authorized": ["Internal whitespace rewriting", "JSON repair", "Reasoning-tag removal accepted as content preservation", "Summary replacement", "Silent context truncation"],
+    "context_limit": "Render-only evidence shows the assembled text, not an independently measured token count. truncate=false avoids the wrapper's message-removal path; shift=false requests no context shifting. Save backend failure/stop evidence rather than infer exact context sufficiency from character or byte length.",
+    "evidence_level": "Version-pinned official implementation and disclosed engineering validation policy, not a financial-paper experimental setting"
+  },
+  "model_generation_calls": 0,
+  "main_study_frozen": false
+}

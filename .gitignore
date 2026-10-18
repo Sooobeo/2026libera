@@ -1,0 +1,36 @@
+# Python caches, local environments, and disposable tooling output
+__pycache__/
+*.py[cod]
+/.venv/
+/venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Local environment values (keep shareable examples)
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+
+# OS/editor temporary files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+
+# Downloaded installers and local model weights, not research evidence
+/tmp/**/OllamaSetup*.exe
+/.ollama/
+*.gguf
+*.safetensors
+
+# Intentionally keep data/, plan/, paper/, research/, and tmp/ otherwise.
+# Even tmp/ contains checksum-pinned PDFs, rendered evidence, and source bundles.
+# Do not broadly ignore *.log, *.bin, *.jsonl, *.zip, or *.tar.gz:
+# these include recorded requests/responses and the evidence used by audits.

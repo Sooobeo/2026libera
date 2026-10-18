@@ -1,0 +1,100 @@
+{
+  "protocol_version": "4.4",
+  "scope": "one_predetermined_pilot_case",
+  "created_at_utc": "2026-10-18T06:55:42.326605+00:00",
+  "case_id": "fidelity_q2_2026__R1",
+  "arm": "R1",
+  "planned_cases": 1,
+  "planned_stages": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "selection": "Predetermined same first case; no selection by outcome.",
+  "main_freeze": false,
+  "human_semantic_pass": false,
+  "inputs": {
+    "runtime.json": "a8773b350570e9518fefa59ad5be017efd7067bbdc26d31e855f75dc3ff79aaa",
+    "model_packet.json": "2f506f346ebfc1be0f327163eb016dcec649e6301e4494d6a9230ab86c28d406",
+    "market_input.json": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f"
+  },
+  "source_request": {
+    "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\laptop_realinput_4b_20261018\\original_request_not_sent.json",
+    "sha256": "b9368d3d27c7208de9b5c89f836c28ed72bc4ca96837b86c537caa82a16dd163"
+  },
+  "selected_packet_value_sha256": "dd55b6d197d1732e3051d9361566c7db3a175a6a90e720c0053659c2f9124a46",
+  "software": {
+    "local_sector_single_case.py": "0b2596a223167136bb37578e86469d50c26e7883305d4db31f43b9ddd10d28d0",
+    "run_sector_workflow.py": "5625450a4dcbe1aa717c9809bf4955c1ef6b10aab4f0c83ef05dc2eb2c123cfd",
+    "sector_engine.py": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c",
+    "compact_sector_prompt.py": "6984ada966ad55c3089fc297ca6342fdb51685bebfe3107769086343bbe68c0d",
+    "benchmark_sector_latency.py": "0686444e608033be931922a26886ed4a4b5b0789385215b7b75bfacc4050458b",
+    "remote_sector_runtime.py": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5",
+    "probe_ollama_runtime.py": "2dd48936bbaf8fd090a26f92fd356fec3a11ac81e5b01b39d661ffe72552fddb"
+  },
+  "conditions_evidence": {
+    "path": "C:\\Users\\Insun\\2026libera\\research\\v44_conditions_reference_20261018.json",
+    "sha256": "a403d4c37d1581f9af21af8ba7a6333614d890ff15277e83181c1204549a9c5b"
+  },
+  "renderer_policy_evidence": [
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\v44_renderer_policy_20261018.json",
+      "sha256": "4135e7f2d0000e4f51ca3414af803805c823f681468807d3ab19f9fd116488a4"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v44_renderer_appendix_20261018\\ollama_qwen35_renderer_v0351.go",
+      "sha256": "69bca99b53a3db8d599bb9ec8eadf65ce9a72868566a89bfac44d31fe3b565e0",
+      "url": "https://raw.githubusercontent.com/ollama/ollama/v0.35.1/model/renderers/qwen35.go"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v44_renderer_appendix_20261018\\go_strings_public_snapshot.go",
+      "sha256": "a81bdf73a308277c322e35d0c602e3813f57b6f769c091f8f8962c8884a45ea3",
+      "url": "https://go.dev/src/strings/strings.go?m=text"
+    }
+  ],
+  "primary_source_evidence": [
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v44_primary_sources_20261018\\manifest.json",
+      "sha256": "97ad1d6a9ae3a4f5354940891944f0be1034d5795b8f3d322c742f2a5e504d99"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v44_primary_sources_20261018\\ollama_api_types_v0351.go",
+      "sha256": "e9c86add622033ade3d288dd6e1dfbd7f35be6a7ef1f31dda3486f0b859a1df3",
+      "url": "https://raw.githubusercontent.com/ollama/ollama/v0.35.1/api/types.go"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v44_primary_sources_20261018\\ollama_server_routes_v0351.go",
+      "sha256": "d0d524eae78da3a73c344e86ca9b215358c964845188a192e5c35ac41fb0a55d",
+      "url": "https://raw.githubusercontent.com/ollama/ollama/v0.35.1/server/routes.go"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v44_primary_sources_20261018\\ollama_server_prompt_v0351.go",
+      "sha256": "79411c4e15ff27fb8bac4dcd96076407e035ec407c0ab1a1840035f9668b4654",
+      "url": "https://raw.githubusercontent.com/ollama/ollama/v0.35.1/server/prompt.go"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v44_primary_sources_20261018\\ollama_llama_server_v0351.go",
+      "sha256": "10777cca3193c12b4cfcc90f5cfd88085c298f7a2c2c7333b0b95bb6e545d391",
+      "url": "https://raw.githubusercontent.com/ollama/ollama/v0.35.1/llm/llama_server.go"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v44_primary_sources_20261018\\finvector_public_inference_mlx.py",
+      "sha256": "57e2fedfb400fdf4d9e6b0b58d48b93f23a76741f6fb7420b840c7315b8c3bec",
+      "url": "https://raw.githubusercontent.com/alinakhay/FinVector-Market-4B/main/examples/inference_mlx.py"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v44_primary_sources_20261018\\mlx_lm_generate_v0313.py",
+      "sha256": "270778ad53eaca55a8533d82e6752660fe5d2605c4aa0879b48a50a91f69345f",
+      "url": "https://raw.githubusercontent.com/ml-explore/mlx-lm/v0.31.3/mlx_lm/generate.py"
+    }
+  ],
+  "controls": {
+    "decoding": "Explicit T0, thinking disabled, neutral penalties and seed. Attribution is in the separately pinned conditions evidence.",
+    "engineering": "65536 context, 8192 output allowance, thread2, batch512, keep_alive0 and 900-second stage deadline are recorded controls; do not label all as paper-derived.",
+    "deadline": "One supervised child per stage: setup, metadata, render-only and generation combined cannot exceed 900 seconds apart from OS kill/scheduling overhead. Cleanup is outside this bound.",
+    "context": "No UTF-8 token estimate. Pinned render-only output must include every expected content in order under the separately pinned JSON-boundary whitespace policy; HTTP strings stay unchanged. truncate=false and shift=false are sent on both requests. Overflow or missing evidence stops subsequent stages. This does not prove spare token capacity.",
+    "history": "Assistant final content and calculator message strings are retained verbatim. Only stage1 user JSON has the recorded reversible duplicate-field projection. No prior thinking is forwarded.",
+    "assessment": "Completion is workflow execution, not human semantic PASS or a main-study result."
+  }
+}

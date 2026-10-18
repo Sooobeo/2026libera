@@ -1,0 +1,300 @@
+{
+  "status": "paper_calculation_prototype_completed_main_design_not_frozen",
+  "paid_or_model_api_calls": 0,
+  "dataset": {
+    "start": "1964-01",
+    "end": "2023-12",
+    "months": 720,
+    "industries": [
+      "NoDur",
+      "Durbl",
+      "Manuf",
+      "Enrgy",
+      "Chems",
+      "BusEq",
+      "Telcm",
+      "Utils",
+      "Shops",
+      "Hlth",
+      "Money",
+      "Other"
+    ],
+    "units": "decimal_monthly_return"
+  },
+  "training_months": 60,
+  "test_months": 36,
+  "overlapping_actual_data_windows": 625,
+  "gammas_direct_paper_table_values": [
+    1,
+    3,
+    5
+  ],
+  "formula": {
+    "objective": "U_gamma(w) = mu_hat.T w - gamma/2 * w.T S w; sum(w)=1; w in R^12",
+    "solution": "w_star = solve(S, mu_hat - lambda*1)/gamma; lambda=(1.T solve(S,mu_hat)-gamma)/(1.T solve(S,1))",
+    "main_regret_identity": "U_train(w_star)-U_train(w) = gamma/2*(w-w_star).T S_train (w-w_star), for any sum-one w",
+    "sample_covariance": "ddof=1",
+    "code_covariance": "S=0.8*sample_covariance+0.2*diag(sample_covariance), plus code-defined ridge only if triggered"
+  },
+  "mode_summary": {
+    "paper_text_sample": {
+      "1": {
+        "windows": 625,
+        "windows_with_any_negative_weight": 625,
+        "fraction_windows_with_any_negative_weight": 1.0,
+        "fraction_individual_weights_negative": 0.48533333333333334,
+        "minimum_weight_all_windows": -57.69579144670924,
+        "maximum_weight_all_windows": 37.746434326094764,
+        "gross_leverage_mean": 80.61767796666436,
+        "gross_leverage_median": 77.45613591559085,
+        "gross_leverage_maximum": 192.06952477903567
+      },
+      "3": {
+        "windows": 625,
+        "windows_with_any_negative_weight": 625,
+        "fraction_windows_with_any_negative_weight": 1.0,
+        "fraction_individual_weights_negative": 0.47226666666666667,
+        "minimum_weight_all_windows": -19.388697330514876,
+        "maximum_weight_all_windows": 12.411923918710054,
+        "gross_leverage_mean": 26.97646907339383,
+        "gross_leverage_median": 25.89093141919865,
+        "gross_leverage_maximum": 63.98293524922143
+      },
+      "5": {
+        "windows": 625,
+        "windows_with_any_negative_weight": 625,
+        "fraction_windows_with_any_negative_weight": 1.0,
+        "fraction_individual_weights_negative": 0.456,
+        "minimum_weight_all_windows": -11.727278507276004,
+        "maximum_weight_all_windows": 7.345021837233112,
+        "gross_leverage_mean": 16.339623302105654,
+        "gross_leverage_median": 15.675836961048555,
+        "gross_leverage_maximum": 38.43226001571097
+      }
+    },
+    "author_code_shrink_02": {
+      "1": {
+        "windows": 625,
+        "windows_with_any_negative_weight": 625,
+        "fraction_windows_with_any_negative_weight": 1.0,
+        "fraction_individual_weights_negative": 0.4886666666666667,
+        "minimum_weight_all_windows": -14.008076130195896,
+        "maximum_weight_all_windows": 13.243290719021822,
+        "gross_leverage_mean": 30.804635380030795,
+        "gross_leverage_median": 29.034324987865066,
+        "gross_leverage_maximum": 63.191263046437506
+      },
+      "3": {
+        "windows": 625,
+        "windows_with_any_negative_weight": 625,
+        "fraction_windows_with_any_negative_weight": 1.0,
+        "fraction_individual_weights_negative": 0.47053333333333336,
+        "minimum_weight_all_windows": -4.681502087517385,
+        "maximum_weight_all_windows": 4.378735080882135,
+        "gross_leverage_mean": 10.366758666149545,
+        "gross_leverage_median": 9.739633106919932,
+        "gross_leverage_maximum": 21.17083759666981
+      },
+      "5": {
+        "windows": 625,
+        "windows_with_any_negative_weight": 625,
+        "fraction_windows_with_any_negative_weight": 1.0,
+        "fraction_individual_weights_negative": 0.45053333333333334,
+        "minimum_weight_all_windows": -2.8161872789816833,
+        "maximum_weight_all_windows": 2.623794144299734,
+        "gross_leverage_mean": 6.351619131473252,
+        "gross_leverage_median": 5.941929759416707,
+        "gross_leverage_maximum": 12.766752506716264
+      }
+    }
+  },
+  "code_only_optional_ridge_activated_windows": 0,
+  "implementation_weight_L1_differences": {
+    "1": {
+      "mean": 53.799673667738666,
+      "maximum": 144.3698066148975
+    },
+    "3": {
+      "mean": 17.92780804023933,
+      "maximum": 47.85140664263876
+    },
+    "5": {
+      "mean": 10.792570920899442,
+      "maximum": 28.583734562128228
+    }
+  },
+  "numerical_checks": {
+    "all_passed": true,
+    "maxima": {
+      "weight_sum_residual": 2.842170943040401e-14,
+      "gradient_residual": 1.717376241217039e-16,
+      "loss_identity_residual": 8.43769498715119e-15
+    },
+    "scope": "float64 algebra checks, not formal exact-arithmetic certification"
+  },
+  "first_window": {
+    "training_window": {
+      "start": "1964-01",
+      "end": "1968-12",
+      "months": 60
+    },
+    "test_window": {
+      "start": "1969-01",
+      "end": "1971-12",
+      "months": 36
+    },
+    "input_forecast_optima": {
+      "paper_text_sample": {
+        "1": [
+          -5.690417676168575,
+          -7.147047562141548,
+          22.805410869429476,
+          19.74212094726439,
+          -27.490691627823324,
+          -1.7445651614100697,
+          -12.255971593229559,
+          -10.16527586031279,
+          12.030004379776777,
+          7.646709661157964,
+          6.772294283743083,
+          -3.5025706602858198
+        ],
+        "3": [
+          -1.2393835033248801,
+          -2.5287074223319883,
+          7.619862067722949,
+          6.885615351450134,
+          -9.205396774181132,
+          -0.5547213395200689,
+          -3.8998322017235645,
+          -3.2566933051535334,
+          4.018402196248165,
+          2.4256063983319502,
+          1.9758805800096038,
+          -1.2406320475276351
+        ],
+        "5": [
+          -0.34917666875614106,
+          -1.6050393943700758,
+          4.582752307381644,
+          4.314314232287282,
+          -5.548337803452693,
+          -0.31675257514206867,
+          -2.2286043234223656,
+          -1.874976794121682,
+          2.4160817595424424,
+          1.3813857457667473,
+          1.0165978392629083,
+          -0.7882443249759981
+        ]
+      },
+      "author_code_shrink_02": {
+        "1": [
+          2.4960087069799393,
+          -4.235665382047015,
+          3.1436025146505977,
+          10.545917998459803,
+          -10.732971060149378,
+          2.131579274337665,
+          -10.561769904147475,
+          -5.565225176874891,
+          4.283403838023327,
+          2.8579915035717143,
+          4.220848662553148,
+          2.416279024642565
+        ],
+        "3": [
+          0.9974510125219312,
+          -1.4562588316516683,
+          1.064272172695463,
+          3.7415085698655126,
+          -3.58280994349045,
+          0.7524604950214573,
+          -3.3274437914689066,
+          -1.7189062317238788,
+          1.4918798176922186,
+          0.941383824056238,
+          1.3306051066054376,
+          0.765857799876645
+        ],
+        "5": [
+          0.6977394736303295,
+          -0.9003775215725988,
+          0.6484061043044358,
+          2.380626684146655,
+          -2.152777720158664,
+          0.4766367391582157,
+          -1.880578568933193,
+          -0.9496424426936763,
+          0.9335750136259966,
+          0.5580622881531427,
+          0.7525563954158956,
+          0.43577355492346115
+        ]
+      }
+    }
+  },
+  "distinctions_and_limitations": [
+    "Primary input-reflection reference uses supplied training moments. Future test optimum is an ex-post diagnostic only.",
+    "paper_text_sample follows the paper-text sample-covariance objective. It does not reproduce the authors' code-only 0.20 diagonal shrinkage.",
+    "author_code_shrink_02 follows the pinned replication-code covariance for forecast weights, including its optional numerical ridge. These constants are code-derived, not direct paper-text choices.",
+    "Both modes use unshrunk test sample covariance for perfect-foresight diagnostics, matching the pinned author code.",
+    "The 625 actual-data rolling windows overlap heavily. They are not 625 independent situations, simulated paths, LLM observations, or a sample-size recommendation.",
+    "No short-sale restriction, risk cap, transaction cost or weight clipping is introduced. Negative weights and large gross leverage are retained.",
+    "This computes only the quadratic-utility subset, not all 13 strategies or all published tables/figures. Current data revisions also prevent claiming exact numeric paper replication.",
+    "Research question, main experiment, private/public information construction, stage policies, and model execution remain unfrozen."
+  ],
+  "provenance": {
+    "paper": "Salcher, Stoeckl, Hanke (2026), Lost in Translation? Risk-Adjusting RMSE for Economic Forecast Performance",
+    "paper_url": "https://onlinelibrary.wiley.com/doi/full/10.1002/for.70134",
+    "paper_sections": [
+      "3.2 equations (6) and (7)",
+      "4.1",
+      "6"
+    ],
+    "author_code_commit": "14c3a4c9567da966de5a4f7b9e5ef9ea6cff99fe",
+    "author_code_date": "2026-09-17",
+    "author_code_urls": {
+      "configuration": "https://github.com/salcherlukas/Lost_in_Translation/blob/14c3a4c9567da966de5a4f7b9e5ef9ea6cff99fe/code/00_setup.R",
+      "portfolios": "https://github.com/salcherlukas/Lost_in_Translation/blob/14c3a4c9567da966de5a4f7b9e5ef9ea6cff99fe/code/functions/portfolios.R",
+      "window_evaluation": "https://github.com/salcherlukas/Lost_in_Translation/blob/14c3a4c9567da966de5a4f7b9e5ef9ea6cff99fe/code/functions/sharpe_gap.R",
+      "implementation_notes": "https://github.com/salcherlukas/Lost_in_Translation/blob/14c3a4c9567da966de5a4f7b9e5ef9ea6cff99fe/README.md"
+    },
+    "input_path": "C:\\Users\\Insun\\2026libera\\data\\french\\ff12_excess_calibration_1964_2023.json",
+    "input_sha256": "77150ae0f539b51207ac6ed9023e4232254520635389a7e87afd9c5da04c4a3d",
+    "input_units": "decimal_monthly_return",
+    "input_metadata": {
+      "schema_version": "1.0",
+      "units": "decimal_monthly_return",
+      "window": {
+        "start": "1964-01",
+        "end": "2023-12",
+        "n_months": 720
+      },
+      "columns": [
+        "NoDur",
+        "Durbl",
+        "Manuf",
+        "Enrgy",
+        "Chems",
+        "BusEq",
+        "Telcm",
+        "Utils",
+        "Shops",
+        "Hlth",
+        "Money",
+        "Other"
+      ],
+      "source_manifest": "data/french/manifest.json",
+      "reference": "Salcher (2026), Lost in Translation? Risk-Adjusting RMSE for Economic Forecast Performance, https://doi.org/10.1002/for.70134",
+      "purpose": "1964--2023 FF12 excess-return input preparation, not an exact paper or historical-vintage replication; no rolling model fit or risk preference frozen",
+      "vintage_caveat": "Current downloaded French CIZ vintage, including revised historical returns. Not a contemporaneous historical data vintage or exact values used in the paper."
+    },
+    "script_sha256": "095b68220f91265439481d89e6bb6714003821a8159209c65d6a41a7e668bdee",
+    "python_version": "3.13.3",
+    "numpy_version": "2.4.4",
+    "generated_at_utc": "2026-10-17T06:56:20.469526+00:00",
+    "original_data_vintage": "Paper author says April 2025. This computation uses the separately recorded current downloaded vintage; values can differ."
+  },
+  "full_reference_output": "C:\\Users\\Insun\\2026libera\\data\\french\\salcher_quadratic_empirical_references.json"
+}

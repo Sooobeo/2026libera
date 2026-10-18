@@ -1,0 +1,190 @@
+{
+  "protocol_version": "4.1",
+  "as_of_date": "2026-10-17",
+  "status": "industry_unit_selected; documentary_main_under_preparation; no_AI_results",
+  "previous_protocol": "archive/LIBERA_실험설정_v4.0.json",
+  "user_decision": "Retain industry-level allocation if construct validity and research meaning are preserved.",
+  "decision": {
+    "unit": "equity-sleeve industry/sector allocation",
+    "selected": true,
+    "reason": "The original proposal already studies industry weights; allocation across sectors can encode institution-specific judgments without testing individual-stock selection.",
+    "sufficiency_condition": "Document interpretation must affect a genuine allocation choice; changing gamma alone is only a numerical control and does not establish strategic-judgment coverage.",
+    "not_a_result": "This is a design-level adequacy judgment, not a claim that treatment effects or sufficient statistical power have been observed."
+  },
+  "research_question": "Within a common fixed AI, are institution-specific documented objectives, applicable constraints and sector judgments reflected in equity-sector recommendations, and how does early versus late evidence provision change that reflection?",
+  "main": {
+    "module": "documentary_sector_allocation",
+    "status": "design_draft; not ready for pilot or confirmatory execution",
+    "unit": "industry/sector basket, not individual stock",
+    "taxonomy": {
+      "finalized": false,
+      "rule": "Use one common taxonomy matching every included source and market input; no unsupported FF12-to-GICS conversion.",
+      "current_numeric_control": "FF12",
+      "documentary_candidate": "GICS 11 sectors, subject to source and public-return-series alignment",
+      "reason": "Official sector views commonly use GICS, while FF12 has different group boundaries. Choosing industry-level decisions does not prove the two taxonomies are interchangeable."
+    },
+    "period": {
+      "recent_only": true,
+      "finalized": false,
+      "candidate": "A matched recent document vintage, with 2026 sector outlooks now being checked; no 2026 document is presented as known in 2024."
+    },
+    "inputs": [
+      "common market evidence in the same sector taxonomy",
+      "dated institution documents containing relevant objectives, applicable constraints or sector judgments",
+      "source locations and document identity"
+    ],
+    "document_roles": "Legal investment mandates, fund-manager commentary and house research views are distinct evidence types. A house outlook is not silently assigned to an unrelated fund as its mandate.",
+    "risk_policy": "Preserve qualitative preferences; retain only explicitly supported numerical limits, denominators and exceptions. Do not map real-fund prose to gamma.",
+    "model_decisions": [
+      "identify relevant document facts",
+      "compare sector allocation alternatives",
+      "propose sector weights and explain the evidence supporting departures from a common baseline when one is specified"
+    ],
+    "gold_visibility": "Independently reviewed extraction references and evaluator-only annotations are withheld from the evaluated model.",
+    "calculation": "Both arms will receive the same deterministic arithmetic and feasibility-checking facilities. Preserve interpretation, proposed weights, calculator inputs and any repaired weights separately. Tool interface has not yet been implemented.",
+    "calculator_information_boundary": "Tools may use only evidence already exposed in that run and model-submitted inputs. Before R4 receives its institution packet, tools cannot read hidden mandates, evaluator annotations or institution-specific constraints. Missing constraints remain unknown; no automatic gold-based repair, lookup or informative feasibility response is allowed.",
+    "no_synthetic_real_facts": "Do not invent institutional expected returns, confidence, sector caps or exact target weights from qualitative prose.",
+    "pending": [
+      "common source taxonomy and market-series mapping",
+      "same-vintage source eligibility and independent annotation",
+      "allocation baseline and genuinely discretionary choice definition",
+      "calculator interface",
+      "pilot corpus distinct from main corpus",
+      "primary rubric and scoring implementation"
+    ]
+  },
+  "workflow": {
+    "arms": [
+      "R1",
+      "R4"
+    ],
+    "stages": [
+      "market and evidence interpretation",
+      "comparison of alternatives and risks",
+      "provisional sector allocation or pending",
+      "final reconsideration"
+    ],
+    "mandate_or_evidence_onset": {
+      "R1": 1,
+      "R4": 4
+    },
+    "same_final_facts": true,
+    "same_model_and_calculation_facilities": true,
+    "full_history_retained": true,
+    "interpretation": "Evidence-onset and subsequent-use workflow policy, including position and context age; not an isolated memory mechanism.",
+    "retrieval": "Directly supplied evidence first; actual retrieval quality remains a separate extension, not an executed RAG result.",
+    "planned_main_case_count": null
+  },
+  "evaluation": {
+    "status": "candidate_dimensions; final rubric after separate pilot and before main responses",
+    "dimensions": [
+      "valid sector identifiers and feasible weights",
+      "evidence-grounded interpretation",
+      "explicit constraint compliance before repair",
+      "document-supported exposure tendencies",
+      "institution-specific response under matched workflow comparison"
+    ],
+    "numeric_agreement": "A unique exact-weight reference is used only for the independent numerical control. Public holdings or qualitative views do not specify universally correct strategic weights.",
+    "convergence": "Similarity alone is not failure. Report whether a convergence accompanies loss of relevant evidence or objective/constraint violations. Do not force differences when source judgments agree.",
+    "counterfactuals": "If constructed, change an explicitly identified condition while keeping others fixed and label these as synthetic task interventions, not real institution history.",
+    "post_outcome_additions": "Allowed only with explicit exploratory labeling; no outcome-informed confirmatory threshold or exclusions.",
+    "no_arbitrary_composite_score": true
+  },
+  "numerical_control": {
+    "role": "auxiliary check of explicit objective implementation; cannot substitute for the documentary strategic task",
+    "prepared": true,
+    "path": "../data/institutional_recent/summary.json",
+    "reference_months": [
+      "2024-01",
+      "2025-12"
+    ],
+    "market_windows": 24,
+    "lookback_months": 60,
+    "input_coverage": [
+      "2019-01",
+      "2025-11"
+    ],
+    "assets": [
+      "NoDur",
+      "Durbl",
+      "Manuf",
+      "Enrgy",
+      "Chems",
+      "BusEq",
+      "Telcm",
+      "Utils",
+      "Shops",
+      "Hlth",
+      "Money",
+      "Other"
+    ],
+    "gammas": [
+      1,
+      3,
+      5
+    ],
+    "institution_cases": 72,
+    "objective": "U_gamma(w)=mu.T@w-gamma/2*w.T@Sigma@w",
+    "constraints": [
+      "sum(w)=1",
+      "w>=0"
+    ],
+    "data_status": "Revised historical French data; retrospective controlled task, not point-in-time trading reconstruction.",
+    "period_provenance": "LIBERA adaptation: PortBench QA test years 2024-2025 plus Salcher 60-month lookback. Not PortBench pipeline replication.",
+    "inference": "Overlapping fixed cases; no independent-sample or power claim. Shared optima retained. No future returns used."
+  },
+  "legacy_v4": {
+    "benchmark": "../data/institutional/summary.json",
+    "workflow": "../data/workflow/manifest.json",
+    "role": "historical numerical prototype, not the new documentary main task",
+    "audit": "../research/audits/verification_v4.html",
+    "audit_scope": "The v4 two-round audit applies to archived v4 files and hashes only; it is not a certification of this revised documentary design."
+  },
+  "model": {
+    "primary_target": "Qwen3.6-35B-A3B",
+    "basis": "https://arxiv.org/html/2605.27887v6",
+    "basis_locator": "section 3.1",
+    "temperature": 0,
+    "max_output_tokens": 8192,
+    "thinking": true,
+    "exact_served_revision": null,
+    "runtime_ready": false,
+    "note": "paper-evaluated target selected; local access and immutable revision must be verified before any run. Do not silently substitute installed smaller models.",
+    "backend_settings": "freeze chat template, quantization, thinking implementation, sampling defaults, context limit, engine version, any seed and model hash in runtime manifest",
+    "context_overflow": "fail and record; no silent truncation or change to output token budget"
+  },
+  "submission": {
+    "term_paper_due": "2026-11-01",
+    "pitch": "2026-11-06",
+    "pitch_minutes": [
+      5,
+      10
+    ],
+    "citation_style": "APA",
+    "source": "https://app.notion.com/p/2026-agent-conference/LIBERA-3e00589711408053a7e5ff9a0c4ba804",
+    "length_format_own_results_requirement": "not specified in available overview; do not infer exemption"
+  },
+  "sources": {
+    "sector_task": "https://arxiv.org/html/2603.22305v1",
+    "profiles": "https://www.ifo.de/DocDL/cesifo1_wp11862.pdf",
+    "workflow": "https://arxiv.org/html/2605.27887v6",
+    "raw_vs_repaired": "https://arxiv.org/html/2608.09988v1",
+    "quadratic": "https://onlinelibrary.wiley.com/doi/full/10.1002/for.70134",
+    "french": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_12_ind_port.html",
+    "preregistration": "https://www.pnas.org/doi/10.1073/pnas.1708274114",
+    "official_document_template": "https://www.sec.gov/files/form-n-1a.pdf"
+  },
+  "claims_not_identified": [
+    "individual-stock selection skill",
+    "overall stocks/bonds/cash allocation",
+    "true future optimal portfolios",
+    "actual private information",
+    "causal effect of shared-model adoption",
+    "market-wide convergence or financial stability"
+  ],
+  "results": {
+    "ai_runs": 0,
+    "human_runs": 0,
+    "main_execution_ready": false
+  }
+}

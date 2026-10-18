@@ -1,0 +1,219 @@
+{
+  "schema_version": "1.0",
+  "reviewed_at_utc": "2026-10-18T05:25:56.767250+00:00",
+  "review_type": "independent_read_only_artifact_review",
+  "status": "basic_runtime_verified_full_workflow_not_yet_verified",
+  "scope": {
+    "artifact_directories": [
+      "data/remote_sector_20261018/data/sector_runtime/inventory_v43",
+      "data/remote_sector_20261018/data/sector_runtime/diagnose_v43"
+    ],
+    "model_execution_by_reviewer": 0,
+    "server_actions_by_reviewer": 0,
+    "diagnostic_request_count_in_reviewed_artifact": 1,
+    "pilot_request_count_in_reviewed_artifact": 0,
+    "main_request_count_in_reviewed_artifact": 0,
+    "project_wide_counts_not_inferred": true,
+    "pilot_status": "Parent reports pilot started separately; no pilot raw artifacts were evaluated in this review."
+  },
+  "checks": {
+    "summary_and_raw_completed": true,
+    "actual_synthetic_request_exact": true,
+    "request_settings_verified": true,
+    "raw_content_matches_saved_response": true,
+    "json_ready_true": true,
+    "no_nonempty_thinking_channel": true,
+    "manifest_pin_matches_installed_metadata": true,
+    "template_pin_recomputed_matches": true,
+    "engine_pin_matches_observed": true,
+    "inventory_and_diagnostic_pins_identical": true,
+    "reported_resident_context_matches_request": true,
+    "reported_resident_vram_zero": true,
+    "resident_digests_match_pin": true,
+    "prompt_rate_recomputed_matches": true,
+    "generation_rate_recomputed_matches": true,
+    "short_diagnostic_not_counted_as_pilot_or_main": true,
+    "unload_reported_and_residency_empty_after": true
+  },
+  "model": {
+    "tag": "qwen3.5:4b-q4_K_M",
+    "manifest_sha256": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+    "template_sha256": "b507b9c2f6ca642bffcd06665ea7c91f235fd32daeefdf875a0f938db05fb315",
+    "engine_version": "0.35.1",
+    "quantization": "Q4_K_M",
+    "reported_family": "qwen35",
+    "installed_size_api_tags_bytes": 3324173934,
+    "installed_size_scope": "Ollama tags disk-size metadata, not RAM; registry layer sum excludes some metadata bytes.",
+    "model_declared_context_tokens": 262144,
+    "pinned_protocol_version": "4.3",
+    "pinned_protocol_history": "explicit_final_content"
+  },
+  "request_settings": {
+    "temperature": 0,
+    "thinking": false,
+    "output_cap_tokens": 256,
+    "context_tokens": 65536,
+    "keep_alive": 0,
+    "format": "json",
+    "basis": "Synthetic engineering health check; 256 cap/65536 context are not paper experimental results.",
+    "pilot_output_cap_in_pinned_file_not_used_in_this_diagnosis": 8192,
+    "model_default_parameters_recorded_in_show": "top_p                          0.95\npresence_penalty               1.5\ntemperature                    1\ntop_k                          20",
+    "sampling_limitation": "The request overrides temperature, num_predict and num_ctx only. Other model defaults, including presence_penalty 1.5, were not explicitly overridden. Do not describe the entire decoding setup as an exact paper replication."
+  },
+  "placement_and_context": {
+    "observed_cpu_model": "Intel(R) Pentium(R) Gold G6405 CPU @ 4.10GHz",
+    "os_reported_logical_cpus": 4,
+    "cpu_utilization_not_measured": true,
+    "proc_memtotal": {
+      "bytes": 12884901888,
+      "GiB": 12.0,
+      "MiB": 12288.0
+    },
+    "proc_swaptotal": {
+      "bytes": 8589930496,
+      "GiB": 7.999996185302734,
+      "MiB": 8191.99609375
+    },
+    "reported_resident_context_tokens": [
+      65536
+    ],
+    "resident_samples": 6,
+    "reported_vram_bytes": [
+      0
+    ],
+    "reported_resident_model_size_bytes": [
+      5630863604
+    ],
+    "interpretation": "Ollama reported zero model VRAM and 65536 resident context during this CPU-only diagnostic. This is a reported allocation, not evidence that 65536 input tokens were processed without truncation."
+  },
+  "performance": {
+    "request_started_at_utc": "2026-10-18T05:21:16.065325+00:00",
+    "response_created_at_utc": "2026-10-18T05:21:35.000091629Z",
+    "script_finished_at_utc": "2026-10-18T05:21:35.292844+00:00",
+    "script_wall_seconds": 19.2424558121711,
+    "request_wall_seconds": 18.93516548909247,
+    "ttft_content_seconds": 16.510315980762243,
+    "ollama_total_duration_seconds": 18.934236483,
+    "load_duration_seconds": 7.841581183,
+    "prompt_eval_count": 23,
+    "prompt_eval_cached_count": 0,
+    "prompt_eval_duration_seconds": 8.661671,
+    "prompt_eval_tokens_per_second": 2.655376774296784,
+    "eval_count": 6,
+    "eval_duration_seconds": 2.425285,
+    "eval_tokens_per_second": 2.47393605287626,
+    "counter_source": "Provider counters; not independently tokenized. Very short single cold-load sample, not a throughput benchmark.",
+    "done_reason": "stop",
+    "response_content": "{\"ready\":true}"
+  },
+  "memory_sampling": {
+    "samples": 10,
+    "nominal_interval_seconds": 2,
+    "observed_interval_min_seconds": 2.000040028244257,
+    "observed_interval_max_seconds": 2.000108053907752,
+    "sample_elapsed_range_seconds": [
+      0.006381019949913025,
+      18.00714210420847
+    ],
+    "allowlisted_runtime_rss_sampled_max": {
+      "bytes": 5830168576,
+      "GiB": 5.429767608642578,
+      "MiB": 5560.08203125,
+      "observed_at_utc": "2026-10-18T05:21:34.057544+00:00",
+      "scope": "Sum of ollama and llama-server resident sets; possible shared-page double counting; not private allocation or host memory."
+    },
+    "llama_server_rss_sampled_max": {
+      "bytes": 5798776832,
+      "GiB": 5.400531768798828,
+      "MiB": 5530.14453125
+    },
+    "visible_cgroup_memory_current_sampled_max": {
+      "bytes": 8659943424,
+      "GiB": 8.065200805664062,
+      "MiB": 8258.765625,
+      "observed_at_utc": "2026-10-18T05:21:28.057334+00:00",
+      "scope": "Entire sampled cgroup, including cache and other processes; cgroup hierarchy scope not fully established by these artifacts."
+    },
+    "visible_cgroup_memory_peak_before": {
+      "bytes": 7395799040,
+      "GiB": 6.887874603271484,
+      "MiB": 7053.18359375
+    },
+    "visible_cgroup_memory_peak_after": {
+      "bytes": 8714719232,
+      "GiB": 8.116214752197266,
+      "MiB": 8311.00390625
+    },
+    "memory_peak_interpretation": "memory.peak was not reset: it is a cumulative cgroup high-water mark. It rose during the reviewed interval, but is not a model-only allocation or the maximum of the 2-second samples. Concurrent cgroup activity is not isolated.",
+    "visible_cgroup_limits_before": {
+      "memory.max": "max",
+      "memory.swap.max": "max"
+    },
+    "cgroup_limit_limitation": "Both observed limits are max. Do not infer the effective LXC ancestor limits from this path; /proc reports 12 GiB memory and about 8 GiB swap, separate from UI-configured limits.",
+    "proc_memavailable_sampled_min": {
+      "bytes": 6810351616,
+      "GiB": 6.342634201049805,
+      "MiB": 6494.857421875
+    },
+    "proc_swap_used_before": {
+      "bytes": 17088512,
+      "GiB": 0.0159149169921875,
+      "MiB": 16.296875
+    },
+    "proc_swap_used_after": {
+      "bytes": 180727808,
+      "GiB": 0.16831588745117188,
+      "MiB": 172.35546875
+    },
+    "proc_swap_used_change": {
+      "bytes": 163639296,
+      "GiB": 0.15240097045898438,
+      "MiB": 156.05859375
+    },
+    "proc_swap_used_sampled_max": {
+      "bytes": 180953088,
+      "GiB": 0.16852569580078125,
+      "MiB": 172.5703125
+    },
+    "swap_interpretation": "Swap usage increased across the interval. No paging-rate, process attribution, or proof that swap caused the measured latency is available.",
+    "visible_cgroup_memory_events_before": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+    "visible_cgroup_memory_events_after": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+    "oom_scope": "No OOM/OOM-kill event was recorded in the sampled cgroup counters; this does not certify unobserved ancestor/host counters.",
+    "quantities_not_additive": "Do not add installed disk size, api/ps size, runtime RSS, cgroup memory.current and memory.peak. They measure overlapping or different scopes."
+  },
+  "limitations": [
+    "Exactly one synthetic request with 23 input tokens and 6 generated tokens; no repeated-run variance, warm-load comparison or sustained throughput measurement.",
+    "A 65536 context was requested and reported as resident, but the diagnostic did not fill that context or test history retention across four stages.",
+    "The health response tests basic JSON generation only; it provides no evidence about institutional rating accuracy, citations, allocations or strategy quality.",
+    "Two-second sampling can miss short RSS peaks; memory.peak is cumulative and broader than a model process.",
+    "Visible cgroup max values do not expose the effective ancestor allocation; /proc fields in LXC may have a virtualized scope.",
+    "Swap increase is observed but its source and performance effect are not determined.",
+    "Logical CPU count and model were observed; actual CPU utilization/thread scheduling and dedicated per-process CPU time were not measured.",
+    "Short-input token rates cannot be extrapolated reliably to the long-document pilot or used to classify a still-waiting first output as a hang.",
+    "Runtime keeps model defaults not explicitly overridden; the setup is a documented adaptation rather than an exact replication of all paper decoding settings.",
+    "Full pilot completion, observed context/history behavior, failure handling and semantic review remain separate checks; no main-readiness conclusion follows from this diagnosis."
+  ],
+  "source_sha256": {
+    "data/remote_sector_20261018/data/sector_runtime/inventory_v43/inventory_after.json": "59bbab6cfcc27cbacc1ccc9319a0393317e88813b689cec7e222748c223d3153",
+    "data/remote_sector_20261018/data/sector_runtime/inventory_v43/inventory_before.json": "5ccf9a05e5468744a7f672b35e348b72031e32f720e916ea21059d785ef162e9",
+    "data/remote_sector_20261018/data/sector_runtime/inventory_v43/invocation.json": "bdd5c7cfc2d23511534c6f89e0c2facac85ba5b03fcbe2f743d267e7e6076096",
+    "data/remote_sector_20261018/data/sector_runtime/inventory_v43/model_metadata.json": "d3fa9555fb73fb28924f9fcfdeb972a645796c95c035f44e4b71029190d7600b",
+    "data/remote_sector_20261018/data/sector_runtime/inventory_v43/monitor.jsonl": "53477bc87b1570917d96fd1824345461593a3f9009a3432e224b0143d2c676ef",
+    "data/remote_sector_20261018/data/sector_runtime/inventory_v43/runtime_pinned.json": "c04bcdee8093a6c6db0d8e93d4166aa89d3337e3acceac42d3ac409c295602b0",
+    "data/remote_sector_20261018/data/sector_runtime/inventory_v43/summary.json": "52879c0085ad24d3fb30053d684d629422c0abfc3566bcff6d431bca2535a755",
+    "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/diagnosis.json": "2fce19c1c890f50cb8827a5f1c9f9f97ce33e8d19f241ff514d1ca040a4a5e31",
+    "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/assembled_text.json": "c96c7f9101164683623c5ef075283b339c5bdd800b28755d9a6c12abd6e0abc8",
+    "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/events.jsonl": "a2a62d278c27f521a3d074ed67663342f808e53b0db39dcca9240aec768189f9",
+    "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/raw_stream.bin": "2458156c4fb30e60a6d7b727ca76a7bff86601c9f10f0f63e2de331e86ea7dcf",
+    "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/request.json": "9561da2cf2e899c590e7238c920c41f84d0618adada1389d932de4d788cd2ccb",
+    "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/response.json": "9395fe71fdd1053ae96843c8ca0dcf845ef28d79d5b22e7921ac8c7300386fdf",
+    "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/result.json": "81a78083fde1f15c5a460e3f4a913620bec6a76064a3328466d16d54d28de81d",
+    "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/inventory_after.json": "650670eb4400df1383aeb85bfa934fca9172fdd58f299de969999c5d5de0579c",
+    "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/inventory_before.json": "91a0ea20a98ab337148a81b1fb22e7eb2989df0db082679f49b3aae3c007accd",
+    "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/invocation.json": "1bfc6ea28e8f138bdd2b2751dbd053ab7b5629d9d566d5d4ea6d3e358eb7ee80",
+    "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/monitor.jsonl": "093842e0a25b0c79363e600196b95060a774d03758d7bc59b7278fa7969215d4",
+    "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/runtime_pinned.json": "c04bcdee8093a6c6db0d8e93d4166aa89d3337e3acceac42d3ac409c295602b0",
+    "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/summary.json": "bfe7dbdbf0d0a63b58b3edd16eda58987f51be8013c62bae1ccfb1b4ff710553",
+    "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/unload_result.json": "8c5e1f319d38a8890d1ab97b5a69bff6773c7cd04ee95933785df1f001b70416"
+  }
+}

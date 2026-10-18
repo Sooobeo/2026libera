@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>LIBERA 실험계획 3.2 — 산업·비중·목적식 선택과 공개자료 준비</title>
+<style>
+:root{--ink:#18212c;--muted:#586574;--line:#d9e0e6;--accent:#175b67;--paper:#fff;--bg:#f4f6f8}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 "Malgun Gothic","Apple SD Gothic Neo",sans-serif;word-break:keep-all;overflow-wrap:anywhere}a{color:var(--accent);text-underline-offset:3px}a:hover{color:#103d46}main{margin:32px auto 80px;padding:48px 54px;background:var(--paper);max-width:1080px}header{margin-bottom:36px}.eyebrow{color:var(--accent);font-size:13px;letter-spacing:.12em;font-weight:700}h1{font-size:32px;line-height:1.4;letter-spacing:-.035em;color:#000;margin:12px 0 20px}h2{font-size:24px;line-height:1.5;color:#000;margin:0 0 16px}h3{font-size:18px;color:#000;margin:28px 0 10px}p{margin:10px 0 16px}section{padding:32px 0;border-top:1px solid var(--line)}strong{font-weight:700}.meta,.note{font-size:14px;color:var(--muted)}.lead{font-size:18px;line-height:1.85}nav{padding:20px 0 30px;columns:2;column-gap:36px}nav a{display:block;margin:4px 0;break-inside:avoid;font-size:15px}.num{color:var(--accent);margin-right:9px;font-size:13px;letter-spacing:.08em}ul,ol{padding-left:24px;margin:12px 0 18px}li{margin:7px 0}.table-wrap{overflow-x:auto;margin:18px 0 24px}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.7}th,td{border:1px solid var(--line);padding:12px 14px;text-align:left;vertical-align:top}th{background:#eaf0f3;color:#000;font-weight:700}td.short,th.short{width:14%;white-space:normal}tbody tr:nth-child(even){background:#fafbfc}caption{caption-side:top;text-align:left;font-size:14px;color:var(--muted);padding-bottom:8px}code{font:13px/1.65 Consolas,monospace;background:#f1f4f6;padding:2px 5px;word-break:break-word}pre{background:#f5f7f9;padding:18px;overflow:auto;font:13px/1.7 Consolas,"Malgun Gothic",monospace;white-space:pre-wrap;word-break:break-word}.formula{font:15px/1.9 Consolas,"Malgun Gothic",monospace;margin:18px 0;padding-left:16px;border-left:2px solid var(--line)}.tag{display:inline-block;border:1px solid #bac9cf;padding:1px 8px;font-size:12px;color:#32515a;margin-right:6px}.research{color:#835d1e}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}button{font:14px "Malgun Gothic",sans-serif;padding:9px 16px;border:1px solid #b8c5cd;background:white;border-radius:3px;color:#173d46;cursor:pointer}.refs li{margin:14px 0}.refnote{display:block;color:var(--muted);font-size:13px}.top{font-size:13px;float:right}.schedule td:first-child{width:18%}footer{border-top:1px solid var(--line);padding-top:20px;font-size:13px;color:var(--muted)}@media(max-width:760px){main{margin:0;padding:28px 20px 50px}h1{font-size:27px}h2{font-size:22px}nav{columns:1}th,td{padding:10px}body{font-size:15px}}@media print{@page{size:A4;margin:16mm}body{background:#fff;font-size:10pt;line-height:1.6}main{margin:0;max-width:none;padding:0}h1{font-size:23pt}h2{font-size:16pt;break-after:avoid}h3{font-size:12pt;break-after:avoid}section{padding:20px 0}nav,.toolbar,.top{display:none}table{font-size:8.5pt}thead{display:table-header-group}tr{break-inside:avoid}a{color:inherit}pre,.formula{font-size:9pt}.note,.meta{font-size:9pt}}
+</style>
+<style>
+#decisions table{table-layout:fixed}#decisions th:nth-child(1){width:15%}#decisions th:nth-child(2){width:20%}#decisions th:nth-child(3){width:32%}#decisions th:nth-child(4){width:33%}
+</style>
+<style>#choices table{table-layout:fixed}#choices th:nth-child(1){width:18%}#choices th:nth-child(2){width:37%}#choices th:nth-child(3){width:45%}#completed th:first-child{width:20%}#completed th:last-child{width:25%}</style></head><body>
+<main id="top"><header>
+<div class="eyebrow">LIBERA · PAPER-BASED EXPERIMENT DESIGN</div>
+<h1>산업·비중·목적식을 정하는<br/>실험계획과 실행 준비</h1>
+<p class="meta">개정안 3.2 · 문헌 확인 기준 2026-10-17 · 공개자료·기준 배분 계산 / AI 본실험 전</p>
+<p class="lead">먼저 정할 것은 <strong>어느 산업에 몇 % 넣을지</strong>가 아니라, <strong>어떤 산업 분류를 쓰고 어떤 식을 잘 푼 답으로 볼지</strong>다. 산업별 제안 비중은 그 뒤 AI와 계산 프로그램에서 각각 나온다.</p>
+<p>현재 권고는 <strong>FF12 전체 산업＋매수만 가능한 PortBench T5 식</strong>이다. 실제 펀드의 산업 배분을 설명하기 쉽고 별도의 위험 선호 계수를 정할 필요가 없다. 공매도까지 허용하는 이론적 계산 정확도가 목적이면 <strong>Salcher 외(2026)의 이차효용 식</strong>이 대안이다. 두 금융 모형의 기준 계산을 준비하되, 어느 것을 본실험으로 쓸지는 구분해서 선택한다.</p>
+<p class="note">이 문서와 <a href="LIBERA_실험설정_20261017.json">설정 JSON</a>이 최신 기준이다. <a href="archive/LIBERA_실험계획_v3.1.html">v3.1</a>은 이력으로 보존했다. v3.1의 합성 신호·위험 상한·비용 목적식·실행량·주검정은 현재 실행 조건이 아니다. 9월 원본 세 파일은 수정하지 않았다.</p>
+<div class="toolbar"><button onclick="window.print()">인쇄 및 PDF 저장</button><a href="#choices">지금 선택할 항목</a><a href="#completed">실제로 준비한 산출물</a></div>
+</header>
+<nav aria-label="목차">
+<a href="#choices">01. 어느 단계에서 무엇을 선택하는가</a><a href="#plain">02. 실험을 쉬운 말로 설명하면</a>
+<a href="#weights">03. 세 가지 비중과 계산식</a><a href="#industries">04. 산업 후보와 매핑 규칙</a>
+<a href="#formulas">05. 목적식 두 후보의 차이</a><a href="#provenance">06. 논문 근거와 새 연구 설계의 경계</a>
+<a href="#completed">07. 공개자료와 계산 산출물</a><a href="#workflow">08. 선택 후 실행할 조건과 평가</a>
+<a href="#next">09. 남은 실행 작업과 결정 순서</a><a href="#references">10. 확인한 논문·공식자료</a>
+</nav>
+<section id="choices"><h2><span class="num">01</span>어느 단계에서 무엇을 선택하는가</h2>
+<div class="table-wrap"><table><thead><tr><th>실험 단계 / 결정</th><th>권고 후보</th><th>다른 후보와 바뀌는 점</th></tr></thead><tbody>
+<tr><td>연구질문 설정<br/>무슨 실패를 검증할까</td><td><strong>주어진 수익·위험 정보를 언제 제공해야 배분에 잘 반영하는가.</strong> 숫자로 계산 가능한 답을 두고 정보 제공 시점을 비교한다.</td><td><strong>기관별 고유 전망이 억압되는가.</strong> 이를 유지하려면 기관마다 다른 전망의 관측·생성 모형이 추가로 필요하다. 공개 보유 공시를 비공개 전망의 정답으로 볼 수 없으며, 지금 확인한 논문만으로 그 모형이 확정되지는 않는다.</td></tr>
+<tr><td>입력 구성<br/>산업을 얼마나 나눌까</td><td><strong>FF12 전체.</strong> Salcher(2026)에 직접 사용된 산업 체계. 12개 비중과 78개 독립 공분산 항목으로 구성되어 입력 검증이 용이하다.</td><td><strong>FF49.</strong> EFS 2026 개정판에 사용된 세분 체계. 반도체·소프트웨어·은행 등 차이를 보기 좋지만 비중 49개와 공분산 1,225개가 필요하다. 먼저 FF12를 검증하고 확장할 후보.</td></tr>
+<tr><td>기준 답 계산<br/>어떤 배분이 좋은 답인가</td><td><strong>P: PortBench T5 최대 샤프비율.</strong> 비중 합계 100%, 음수 금지. 실제 매수 배분을 다루려는 경우 권고.</td><td><strong>Q: Salcher 이차효용.</strong> 기대수익에서 위험 부담을 차감. 공매도·레버리지를 허용하는 원형이며 위험 계수 γ=1·3·5를 모두 비교한다. 음수를 임의로 0으로 바꾸면 다른 문제가 된다.</td></tr>
+<tr><td>정보 시점 처치<br/>무슨 자료를 늦게 줄까</td><td><strong>평균 수익 전망은 공통 제공하고 공분산표의 제공 시점을 비교.</strong> PortBench의 전체/공분산 제외 입력 비교를 시점 비교로 확장한다.</td><td><strong>평균 전망＋공분산 전체 묶음.</strong> 전망 자료 전체의 지연 효과를 보지만, 지연 조건은 초반에 정량 정보가 전혀 없다. 어느 경우든 EARLY/LATE라는 시간 처치는 LIBERA의 새 실험이다.</td></tr>
+<tr><td>문서 검증 대상<br/>어느 펀드를 조사할까</td><td><strong>FCNTX·VPMCX·DODGX·TRBCX 적격성 감사.</strong> 이미 확인한 공시 후보를 먼저 사용한다.</td><td>자료·식별자 매핑에 해결되지 않는 공백이 있으면 기존 대체 순서 OAKMX→PRBLX. 이 명단은 논문에서 뽑은 표본이 아니라 공개자료 접근성에 따른 연구자 선정이다.</td></tr>
+</tbody></table></div>
+<p>권고 조합은 <strong>정보 반영 시점 검증 → FF12 → P(매수만) → 공분산 제공 시점 비교</strong>다. 실제 기관의 고유 정보 억압을 핵심 주장으로 유지할 경우에는 첫 번째 선택부터 달라진다. 산업과 식만 골라 놓고 그 주장을 자동으로 유지하지 않는다.</p>
+</section>
+<section id="plain"><h2><span class="num">02</span>실험을 쉬운 말로 설명하면</h2>
+<p>AI에게 여러 산업에 돈을 나누어 담는 문제를 준다. 예를 들어 어떤 산업은 평균 수익이 높아 보여도 다른 산업과 늘 같이 떨어진다면, 여러 산업에 나눠 담았다는 이유만으로 위험이 줄지는 않는다. 이 관계를 숫자로 적은 표가 공분산표다. 연구자는 공개된 과거 산업 수익률로 평균 수익과 이 표를 미리 계산한다. AI가 숫자를 만들어 내도록 맡기지 않는다.</p>
+<p>같은 문제를 서로 분리된 대화에서 풀게 한다. 한쪽은 처음부터 필요한 표를 받고 계획·초안·검토를 진행한다. 다른 쪽은 같은 평균 수익 전망으로 계획과 초안을 만든 뒤 검토 때 같은 표를 처음 받는다. 마지막에는 두 쪽 모두 같은 자료와 같은 투자 규칙을 알고 있다. 그래서 일찍 받은 정보를 계속 활용하는 방식과, 뒤늦게 받은 정보로 이미 만든 초안을 수정하는 방식의 차이를 볼 수 있다. 단계 수와 검토 기회도 시점 효과의 일부이므로 결과를 순수한 심리적 고착 효과로 단정하지 않는다.</p>
+<p>평가용 프로그램은 AI와 별도로 똑같은 식을 풀어 기준 배분을 만든다. AI가 제안한 12개 산업의 비중이 이 기준과 얼마나 맞는지, 정해진 식의 점수가 얼마나 낮아지는지 확인한다. 기준 배분은 앞으로 돈을 가장 많이 벌어 줄 예언이 아니다. <strong>그때 제공한 숫자와 규칙을 충실히 적용했을 때의 답</strong>이다. 그래서 실제 미래 수익을 못 맞힌 문제와 주어진 자료조차 활용하지 못한 문제를 분리할 수 있다.</p>
+<p>이 계산 실험과 함께 실제 펀드 문서를 읽는 실험도 한다. 공시에서 보고일·보유금액·투자 규정 등을 찾아 정확히 설명하는지, 검색 과정에서 근거를 빠뜨리는지, 근거가 없을 때 없다고 말하는지 본다. 실제 펀드의 현재 비중은 공시 금액으로 계산한다. 금융 모형의 기준 답을 실제 운용사의 의도라고 해석하지 않는다. 문서 검증과 숫자 배분 검증의 결과를 따로 보고한다.</p>
+<p>현재는 공개자료를 내려받아 두 목적식의 기준 계산까지 끝낸 상태다. 아직 AI에 질문을 던져 얻은 결과는 없다. 먼저 두 후보 중 연구 목적에 맞는 식을 고른 뒤, 같은 모델·자료·질문 양식을 고정하고 파일럿으로 실행 시간과 실패 양상을 확인한다.</p>
+</section>
+<section id="weights"><h2><span class="num">03</span>세 가지 비중과 계산식</h2>
+<div class="table-wrap"><table><thead><tr><th>비중</th><th>어떻게 정하나</th><th>어디에 쓰나</th></tr></thead><tbody>
+<tr><td>현재 비중 h</td><td>공시의 보유금액을 산업별로 더해 계산한다. 사람이 목표 숫자를 고르지 않는다.</td><td>실제 펀드 상태 설명과 향후 재배분 과제. 현재 두 목적식에는 h가 들어가지 않는다.</td></tr>
+<tr><td>AI 제안 비중 w</td><td>AI의 최종 답에서 받는다.</td><td>평가 대상. 답을 본 뒤 유리하도록 기준식이나 산업 체계를 바꾸지 않는다.</td></tr>
+<tr><td>기준 비중 w*</td><td>동일한 입력과 제약으로 목적식을 계산한다.</td><td>정보 활용·계산 정확도 비교. 실제 운용사의 정답 또는 미래 수익 정답이 아니다.</td></tr>
+</tbody></table></div>
+<div class="formula">Vₖ = 산업 k로 분류된 적격 보유 주식의 공시금액 합계<br/>E_map = Σₖ Vₖ<br/>hₖ = Vₖ / E_map<br/>q_map = E_map / NAV<br/>펀드 전체 순자산 대비 해당 산업 비중 = q_map × hₖ = Vₖ / NAV</div>
+<p>이는 분모를 명확히 하기 위한 회계적 산출 정의다. 논문에서 권장한 산업별 비중으로 포장할 수 없다. 매핑 가능한 주식 부분의 합이 100%라는 것과 펀드 전체 자산의 합이 100%라는 것을 구분한다. 현금·파생상품·우선주 등 대상 밖 자산은 별도 집계하고, 적격 주식의 SIC가 없다는 이유로 기타 산업에 넣거나 대상 밖으로 옮기지 않는다.</p>
+<p><strong>같은 평균·공분산·제약을 받으면 두 목적식 모두 같은 기준 답을 낸다.</strong> 따라서 이 두 모형으로는 출발 비중이 다르다는 이유만으로 펀드마다 다른 최종 답을 강요할 수 없다. 펀드 고유의 제약·전망·거래 비용을 넣어야 하는 연구라면 그 입력과 식을 별도로 근거화해야 한다.</p>
+</section>
+<section id="industries"><h2><span class="num">04</span>산업 후보와 매핑 규칙</h2>
+<p>FF12에서는 일부 유망 산업을 골라내지 않고 다음 12개를 모두 선택지로 둔다. 이 체계의 ‘산업 포트폴리오’는 연구용 수익률 묶음이며 실제 매매 가능한 ETF와 동일하지 않다. <a href="https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_12_ind_port.html">공식 FF12 정의</a>와 SIC 구간을 기준으로 한다.</p>
+<div class="table-wrap"><table><thead><tr><th>코드</th><th>읽기 쉬운 이름</th><th>코드</th><th>읽기 쉬운 이름</th></tr></thead><tbody>
+<tr><td>NoDur</td><td>비내구 소비재</td><td>Durbl</td><td>내구 소비재</td></tr>
+<tr><td>Manuf</td><td>제조업</td><td>Enrgy</td><td>에너지</td></tr>
+<tr><td>Chems</td><td>화학</td><td>BusEq</td><td>컴퓨터·소프트웨어·전자장비</td></tr>
+<tr><td>Telcm</td><td>통신·방송 전송</td><td>Utils</td><td>공익사업</td></tr>
+<tr><td>Shops</td><td>도소매·일부 서비스</td><td>Hlth</td><td>의료·기기·제약</td></tr>
+<tr><td>Money</td><td>금융</td><td>Other</td><td>광업·건설·운송 등 나머지 지정 범위</td></tr>
+</tbody></table></div>
+<p>FF49는 별도 산업 체계다. FF49의 비중을 단순히 합쳐 FF12로 바꾸지 않고, 같은 종목의 SIC를 각 체계에 따로 적용한다. 한국어 이름은 설명용이며 자동 분류에는 공식 숫자 구간을 사용한다. SIC 미확인은 결측이다. FF12 Other는 확인된 유효 SIC의 잔여 범주이고 FF49 Other는 별도 명시 범위다.</p>
+<p>공식 French 산업 포트폴리오는 Compustat/CRSP SIC를 사용한다. 공개 SEC SIC로 실제 펀드 보유 주식을 연결하면 <strong>SEC-SIC 대체 매핑</strong>이므로 공식 구성 종목을 완전히 복제했다고 쓰지 않는다. ADR은 예탁은행이 아니라 실제 발행기업을 확인한다. <a href="https://arxiv.org/html/2507.17211v2">EFS v2 §V-A</a>는 FF49 사용 선례이며, FF49가 이번 과제에 더 좋다는 검증은 아니다.</p>
+</section>
+<section id="formulas"><h2><span class="num">05</span>목적식 두 후보의 차이</h2>
+<h3>P — 매수만 가능한 최대 샤프비율: 권고</h3>
+<div class="formula">w* = argmax [(μᵀw − r_f) / √(wᵀΣw)]<br/>조건: Σₖwₖ = 1, wₖ ≥ 0<br/>μ = 252 × 직전 60거래일 평균 수익률<br/>Σ = 252 × 같은 60거래일 표본 공분산<br/>r_f = 0.04 (연율)</div>
+<p>쉽게 말하면 ‘기본 이자 수익을 넘어서는 기대수익을 위험 한 단위당 얼마나 얻는가’를 가장 크게 하는 배분이다. <a href="https://arxiv.org/html/2605.27887v6#A3.SS1">PortBench v6 Appendix C.1 T5</a>의 식·매수 제약·추정 창·무위험수익률을 가져온다. 연 4%는 논문 실험 상수이며 현재 시장 금리라는 뜻이 아니다. 산업 수익률에는 총수익률을 사용하므로 RF를 먼저 빼고 다시 4%를 빼지 않는다.</p>
+<p class="note">252일 연율화는 PortBench의 B.2·C.4 관례를 적용한다. 산술평균과 표본 공분산의 분모 T−1은 이 코드에서 명시한 추정기 구현이며, T5가 최적이라고 검증한 추가 하이퍼파라미터로 주장하지 않는다.</p>
+<p>장점은 γ를 따로 고를 필요가 없고 비중이 0~100%로 해석된다는 것이다. 단점은 별도 집중 제한이 없어서 한 산업에 몰릴 수 있다는 것이다. 보기 좋게 20% 상한을 넣으면 새 제약이 되므로 넣지 않는다. FF12로 자산을 대체하고 월말 문제를 구성한 부분은 LIBERA의 적용 설계다.</p>
+<h3>Q — 공매도를 허용하는 이차효용: 대안</h3>
+<div class="formula">w*γ = argmax [μ̂ᵀw − (γ/2)wᵀΣ̂w], 1ᵀw = 1<br/>γ ∈ {1, 3, 5}<br/>λ = [1ᵀΣ̂⁻¹μ̂ − γ] / [1ᵀΣ̂⁻¹1]<br/>w*γ = Σ̂⁻¹(μ̂ − λ1) / γ</div>
+<p>기대수익에서 위험 부담을 뺀 점수를 최대화한다. γ가 크면 위험에 더 큰 감점을 준다. <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/for.70134">Salcher 외(2026), 식 (6)–(7)·§4·Table 2</a>의 원형을 쓰며, 세 γ를 모두 계산해 임의의 중간값 하나를 정답으로 선택하지 않는다. 입력은 월간 초과수익률의 60개월 추정치이고 이후 36개월은 사후 성과 확인용이다.</p>
+<p>양의 정부호 공분산이면 기준 답이 유일하고 직접 계산할 수 있다. 대신 음수 비중과 100%를 넘는 비중을 허용한다. 매수 전용 펀드의 실제 운용 규칙으로 그대로 쓰기 어렵다. 논문식 표본 공분산 모드와 저자 코드의 20% 대각 수축 모드를 따로 계산했다. 후자의 0.2는 논문 본문 고정값이 아니라 <a href="https://github.com/salcherlukas/Lost_in_Translation/commit/14c3a4c9567da966de5a4f7b9e5ef9ea6cff99fe">2026-09-17 저자 코드</a>의 구현값이므로 엄격한 ‘paper 직접 수치’ 권고에는 포함하지 않는다.</p>
+<p><strong>두 후보를 혼합하지 않는다.</strong> Q에 매수 제약을 추가하거나 P에 거래 비용·현재 위험 상한을 붙이면 새 조합이다. 그 조합이 필요한 이유와 추가 출처를 확보한 뒤 별도 실험으로 등록한다.</p>
+</section>
+<section id="provenance"><h2><span class="num">06</span>논문 근거와 새 연구 설계의 경계</h2>
+<div class="table-wrap"><table><thead><tr><th>구분</th><th>현재 처리</th></tr></thead><tbody>
+<tr><td>논문 직접 조건</td><td>P의 T5 식·60거래일·연 4%·매수 제약. Q의 FF12·1964–2023·60/36개월·γ=1·3·5·완전투자 식.</td></tr>
+<tr><td>자료에서 계산</td><td>평균·공분산·산업별 현재 보유비중·기준 배분. 월간 720개 관측에서 겹치는 96개월 창은 625개. 2015–2025 월말은 132개. 어느 수도 검정력으로 정한 AI 표본 수가 아니다.</td></tr>
+<tr><td>LIBERA의 연구 설계</td><td>EARLY/MID/LATE 시점, 단계별 질문, FF12에 T5 적용, 펀드 후보 선정, 문서 날짜 구분. 관련 논문에 기반한 새 질문이며 해당 논문이 이미 검증한 조건이라고 쓰지 않는다.</td></tr>
+<tr><td>확정 설정에서 제거</td><td>Σ/T 사전분포, 공개·개별 전망의 동일 오차, (m₀+y+x)/3 결합, 현재 비중과 같은 위험 상한, 15bps를 더한 배분 목적식. 수치 하나에 출처가 있어도 전체 식의 근거가 되는 것은 아니다.</td></tr>
+<tr><td>저자 코드와 논문 차이</td><td>Salcher의 시뮬레이션 경로 구성과 수축 구현을 구분한다. 이번 계산은 실제 월간 자료의 rolling 창만 사용했으며 10만 독립 시뮬레이션이나 출판 표 전체 재현을 완료했다는 뜻이 아니다.</td></tr>
+</tbody></table></div>
+<p>모든 임의 선택을 논문 인용으로 없앨 수는 없다. 연구질문과 처치를 새로 만드는 순간 연구자 설계가 생긴다. 여기서는 숫자의 출처를 강제로 붙이는 대신, 직접 차용·계산 결과·새 적용을 명시하고 근거 없는 금융 상수를 비활성화한다.</p>
+</section>
+<section id="completed"><h2><span class="num">07</span>공개자료와 계산 산출물</h2>
+<div id="computed-status">
+<p><strong>공개 원자료와 두 목적식의 기준 배분 계산을 완료했다. AI·유료 API 호출은 0회다.</strong> 다음 개수는 계산 문제 목록이며 독립 통계 표본 수나 AI 실험 결과가 아니다.</p>
+<div class="table-wrap"><table><thead><tr><th>완료 작업</th><th>확인 결과</th><th>산출물</th></tr></thead><tbody>
+<tr><td>공개 원자료 확보</td><td>FF12·FF49 월간 수익률, FF12 일간 수익률, 월간 RF, 두 산업 SIC 정의. 원본 ZIP 6개와 공식 출처 HTML 보존.</td><td><a href="../data/french/manifest.json">출처·원본 해시</a><br/><a href="../data/french/validation_report.json">자료 검증</a></td></tr>
+<tr><td>기간·단위·결측 검사</td><td>FF12 1964–2023: 720개월×12산업. FF12·49 2015–2025: 각각 132개월. 필요한 FF12 일간 2014–2025: 3,018일. 해당 구간 결측 없음.</td><td><a href="../data/french/moments_1964_2023.json">역사 구간 통계</a><br/><a href="../data/french/moments_2015_2025.json">최근 구간 통계</a></td></tr>
+<tr><td>P: 매수 전용 기준 계산</td><td>2015–2025 월말 132개 모두 비중·최적화 수치 검증 통과. 균등 비중 fallback 0개.</td><td><a href="../data/reference_portbench/summary.json">검증 요약</a><br/><a href="../data/reference_portbench/ff12_t5_references.json">전체 입력·기준 비중</a></td></tr>
+<tr><td>Q: 공매도 허용 기준 계산</td><td>625개 겹치는 창×γ 3개×공분산 모드 2개 = 3,750개 배분. 비중 합·기울기·손실 항등식 검사 통과.</td><td><a href="../data/french/salcher_quadratic_reference_summary.json">검증 요약</a><br/><a href="../data/french/salcher_quadratic_empirical_references.json">전체 기준 계산</a></td></tr>
+</tbody></table></div>
+<h3>실제 계산이 선택에 주는 정보</h3>
+<p>Q의 논문식 모드에서는 γ=1·3·5 모두 모든 창에 음수 비중이 있었다. 매수와 공매도 비중의 절댓값을 더한 총노출의 평균은 각각 <strong>80.62배·26.98배·16.34배</strong>였다. 이는 본 공개자료로 직접 계산한 결과이며 논문에 보고된 수치를 인용한 것이 아니다. 일반적인 매수 전용 산업 배분을 연구하려면 P를 택하는 편이 질문과 맞는다.</p>
+<p>P도 분산투자를 보장하지 않는다. <strong>132개 중 34개</strong>에서 한 산업의 비중이 100%였고, 마지막 2025-12-31 문제의 기준 답은 Hlth 100%였다. 이 날짜는 목록의 끝이라는 이유로 제시했으며 성과가 좋은 예를 고른 것이 아니다. 실제 투자 권고가 아니라 해당 과거 60일 입력과 식의 계산 결과다. 산업별 상한이 꼭 필요한 연구라면 상한 근거를 가진 다른 과제로 정해야 한다.</p>
+<p class="note">소수점 허용오차와 최적화 반복 제한은 프로그램의 수치 구현 설정이다. 금융 실험의 효과를 정하는 논문 조건으로 취급하지 않는다. 검증은 부동소수점 계산의 잔차 확인이며 기계 증명은 아니다.</p>
+<h3>다시 계산하는 방법</h3>
+<pre>python research/prepare_public_inputs.py --offline
+python research/compute_portbench_reference.py
+python research/compute_paper_reference.py</pre>
+<p><code>--offline</code>은 보존한 원본 해시를 확인해 같은 자료를 다시 처리한다. 새 다운로드는 원자료 수정 여부가 생길 수 있으므로 새 버전으로 관리한다.</p>
+</div>
+<p>원본 ZIP, 공식 페이지에서 확인한 내려받기 주소, 수집 UTC 시각, SHA256을 함께 보존한다. 월별 자료의 첫 value-weighted 수익률 표만 읽고 퍼센트를 소수로 변환한다. 결측 표시는 숫자 수익률로 쓰지 않는다. Q에서는 월별 RF를 한 번 차감하고 P에서는 총수익률에 T5의 연 4%를 적용한다.</p>
+<p>현재 French 파일은 다운로드 시점의 수정 자료다. 논문 작성 시점 파일과의 값 일치 또는 과거 당시 이용 가능했던 자료라는 성질을 보장하지 않는다. 이 자료로 만드는 것은 공개자료 기반 계산 검증이며 실시간 예측 성과 주장은 하지 않는다.</p>
+<p><strong>실제 펀드의 현재 비중은 아직 계산 완료가 아니다.</strong> SEC 공시 주소는 확인했지만 로컬 자동 다운로드 시 HTTP 403을 받았다. 원문 전체 확보·발행기업 연결·SIC 매핑·금액 대사가 남아 있다. 그 부분을 임의 비중으로 대체하지 않았다.</p>
+</section>
+<section id="workflow"><h2><span class="num">08</span>선택 후 실행할 조건과 평가</h2>
+<p>권고 입력 실험에서는 각 상황의 평균 수익 벡터를 모든 조건에 제공하고, 동일한 공분산표를 EARLY는 계획부터, MID는 초안부터, LATE는 검토부터 보여준다. NO-COV는 끝까지 받지 않는다. 서로 다른 대화로 실행하고 같은 상황·모델·식·최종 출력 형식을 맞춘다. 공분산을 받기 전 답에는 정보 부족과 유보를 허용한다. 누락된 표를 사실인 것처럼 생성하는지는 별도로 기록한다.</p>
+<p>각 대화의 모델 응답은 계획, 초안 배분, 근거 점검, 최종 배분이다. 근거 점검 뒤 모든 조건에 동일한 형식·단위 검사 결과만 제공할 수 있다. 최적 비중을 알려 주거나 모델의 비중을 자동으로 수리하지 않는다. 마지막 자료만 받고 한 번 답하는 FRESH도 비교하면 이전 초안이 있는 과정과의 차이를 진단할 수 있다. 이 4응답 구성은 LIBERA의 업무 흐름 정의다.</p><p>코사인 유사도는 비중 전체를 같은 배수로 늘려도 바뀌지 않는다. 따라서 비중 합계나 매수 제약을 어긴 답을 높은 유사도만으로 성공 처리하지 않는다. 형식은 읽히지만 제약을 위반한 답의 주평가 처리 규칙은 파일럿 전에 동결해야 하며, 현재 보조 코드에는 원시 점수와 제약 위반을 함께 보존한다.</p>
+<p>P를 택하면 T5의 기준 비중과 코사인 유사도를 원 논문 점수로 남긴다. 함께 비중 합계·음수 위반, 해석 가능한 답의 비율, 주어진 μ·Σ 아래 샤프비율 차이를 보고한다. 최적화 프로그램이 실패해 균등 비중으로 대체한 경우는 논문의 fallback으로 표시하고 진짜 최적해라고 부르지 않는다. AI의 무응답·형식 오류는 T5 점수 0으로 남기며 성공한 응답만 골라 비교하지 않는다.</p>
+<div class="formula">Q 선택 시 입력에 대한 손실:<br/>Uγ(w*) − Uγ(w) = (γ/2)(w − w*)ᵀΣ̂(w − w*) ≥ 0<br/>적용 조건: w와 w* 모두 비중 합계 1, 동일한 μ̂·Σ̂·γ</div>
+<p>Q의 손실식은 이차 목적식에서 유도되는 항등식이다. 논문의 별도 검정 통계량을 그대로 가져온 것은 아니다. 미래 36개월로 계산한 완전예지 배분을 AI에 주지 않으며, 그것을 사용한 사후 성과와 입력 충실도 점수를 구분한다. γ별 결과를 따로 보고 임의 가중평균으로 합치지 않는다.</p>
+<p>실제 문서 A/C 과제는 공개문서의 사실·규정·근거 확인을 유지한다. A와 C는 서로 다른 공시 시점이며 C에서 검색기나 질문을 고치지 않는다. 필요한 구절을 직접 준 경우와 검색기가 찾은 경우를 비교해 검색 실패와 활용 실패를 구분한다. 기존 개발용 검색 후보와 원문 접근 규칙은 JSON에 보존했지만, 이번 숫자 배분 과제의 점수와 합쳐 하나의 성적을 만들지 않는다.</p>
+<p><strong>겹치는 자료 창을 독립 표본으로 세지 않는다.</strong> Q의 625개 창과 P의 132개 월말은 기준 계산 문제 목록이다. 현재 계산에는 AI 응답·효과 크기·p값이 없다. 본실험 표본, 시계열 의존성 처리, 반복 실행의 불확실성은 선택한 금융 모듈·평가 범위·파일럿에 맞춰 별도 동결한다. v3.1의 독립 합성 상황용 검정식을 이 목록에 그대로 적용하지 않는다.</p>
+</section>
+<section id="next"><h2><span class="num">09</span>남은 실행 작업과 결정 순서</h2>
+<div class="table-wrap"><table><thead><tr><th>순서</th><th>결정 또는 작업</th><th>선택 후보 / 완료 조건</th></tr></thead><tbody>
+<tr><td>먼저 선택</td><td>핵심 주장</td><td>① 입력 정보의 반영 시점(권고) ② 기관별 고유 전망의 억압. ②는 현재 두 금융 모듈만으로 충족되지 않는다.</td></tr>
+<tr><td>그다음 선택</td><td>산업·금융 모듈</td><td>FF12＋P(매수만) 권고. 대안은 FF12＋Q(공매도 허용, γ 전부). FF49는 세분 산업 검증이 목적일 때 확장.</td></tr>
+<tr><td>자동 준비</td><td>문제·평가 파일 생성</td><td>선택한 기준 계산에서 입력 자료와 비공개 평가 답을 분리. 날짜·단위·산업 순서·누락 여부 검사. 질문과 출력 JSON 스키마를 동결.</td></tr>
+<tr><td>공개문서 확보</td><td>실제 펀드 h와 A/C 정답</td><td>SEC 원문 다운로드 경로 확보, 공시와 개정 공시 연결, 전 종목 금액 대사, 발행기업·SIC 확인. 확인되지 않은 항목은 미확인으로 보존.</td></tr>
+<tr><td>실행 경로 선택</td><td>동일 모델의 고정 버전</td><td>공개 가중치 서버 또는 같은 모델의 공개 호스팅. 기존 Qwen3.6-35B-A3B 후보를 우선 검토하되 실제 접근·설정 지원·버전·비용 확인 후 확정.</td></tr>
+<tr><td>파일럿 후 계산</td><td>AI 표본 수·자원</td><td>자원 한도 우선 또는 목표 정밀도 우선. 실행 시간·토큰·실패율·분산을 관측한 뒤 계산한다. 논문의 문제 개수를 근거 없이 이식하지 않는다.</td></tr>
+</tbody></table></div>
+<p>지금 사람의 선택이 필요한 핵심은 <strong>연구 주장과 공매도 허용 여부</strong>다. 데이터 파싱·산업별 합산·기준 비중 계산은 자동화할 수 있다. 표본 수와 검색 방식은 결과를 보기 전 개발·파일럿 자료로 결정할 수 있다. 본실험 시작 전에는 선택한 입력 묶음·평가법·실패 처리·분석 단위·자원 한도를 함께 기록한다.</p>
+</section>
+<section id="references"><h2><span class="num">10</span>확인한 논문·공식자료</h2>
+<ol class="refs">
+<li><a href="https://arxiv.org/html/2605.27887v6">Zhao 외, PortBench v6</a>, 2026-10-09 프리프린트. <span class="refnote">Appendix C.1 T5: 식·60거래일·연 4%·매수 제약·점수. §D.4: 공분산 제공/제외. FF12 적용과 제공 시점 처치는 LIBERA의 확장.</span></li>
+<li><a href="https://onlinelibrary.wiley.com/doi/full/10.1002/for.70134">Salcher·Stöckl·Hanke, Lost in Translation? Risk-Adjusting RMSE for Economic Forecast Performance</a>, Journal of Forecasting, 2026-04-13. <span class="refnote">식 (6)–(7), §4, §6, Table 2. 월간 FF12·60/36개월·이차효용 후보.</span></li>
+<li><a href="https://github.com/salcherlukas/Lost_in_Translation/commit/14c3a4c9567da966de5a4f7b9e5ef9ea6cff99fe">Salcher 저자 재현 코드의 2026-09-17 수정 커밋</a>. <span class="refnote">코드 고정 및 본문과의 구현 차이 확인용. 코드에서만 확인한 수치를 논문 본문 수치로 표기하지 않는다.</span></li>
+<li><a href="https://arxiv.org/html/2507.17211v2">Evolutionary Factor Searching for Sparse Portfolio Optimization by Large Language Models, v2</a>, 2026-08-07 개정 프리프린트. <span class="refnote">§V-A: FF49 사용 선례. 다른 수치나 성과를 LIBERA에 전용하지 않는다.</span></li>
+<li><a href="https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html">Kenneth French Data Library</a> 및 <a href="https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_12_ind_port.html">FF12 공식 정의</a>. <span class="refnote">공개 산업 수익률·RF·SIC 분류 원자료. 로컬 manifest에 실제 다운로드 주소와 해시 보존.</span></li>
+<li><a href="archive/LIBERA_실험계획_v3.1.html#references">기존 모델·검색·문서 평가 참고문헌</a>. <span class="refnote">문서 개발 참고용 이력. 폐기된 합성 신호·비용 목적식·통계 분석은 최신 조건으로 사용하지 않는다.</span></li>
+</ol></section>
+<footer>LIBERA 3.2 · 공개자료와 기준 계산 / 핵심 선택 후 AI 실험 · <a href="#top">처음으로</a></footer></main>
+</body></html>

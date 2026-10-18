@@ -1,0 +1,315 @@
+{
+  "schema_version": "1.0",
+  "audit_id": "LIBERA-v4-round2-evidence",
+  "round": 2,
+  "auditor": "runtime_paper_values",
+  "completed_at_utc": "2026-10-17T08:03:11.839179+00:00",
+  "status": "passed_after_documented_ledger_corrections",
+  "verdict_ko": "1차 근거감사의 6개 지적이 모두 해소됐다. 최신 계획·원고·설정·워크플로·대조표의 주요 수치, 수식, 근거 귀속과 해석 범위가 일치한다. 본문 추가 수정이 필요한 근거 과장이나 미실행 결과 주장은 발견하지 않았다.",
+  "snapshot": [
+    {
+      "path": "plan/LIBERA_실험계획_20261017.html",
+      "sha256": "92a4cdfe296422926c249e59ff76e3c5c10e9ead1deb57d264d6cb321937affb",
+      "bytes": 37213
+    },
+    {
+      "path": "plan/LIBERA_실험설정_20261017.json",
+      "sha256": "706754b7344ecdf2c412affe66303d83e8ac787d210fa52d37462a2b237b2d2c",
+      "bytes": 10127
+    },
+    {
+      "path": "paper/LIBERA_텀페이퍼_초안_20261017.html",
+      "sha256": "6bbab024cb47f39e5ee42153012db42cf27ec48e483f7b7abde343b5737ce843",
+      "bytes": 53086
+    },
+    {
+      "path": "research/prepare_workflow_v4.py",
+      "sha256": "d61c291aed03b743a4bc3b502de4ace26a6e1af49b4882652a33d2d3dd139116",
+      "bytes": 19123
+    },
+    {
+      "path": "research/evidence_ledger_v4.json",
+      "sha256": "80c3718eee84aee91d350997473b91f018388a8a80a69dcc85b60fec54ce8ad1",
+      "bytes": 79790
+    }
+  ],
+  "snapshot_note": "The ledger snapshot includes this auditor's authorized round2 metadata/locator/provenance corrections and U02 closure. The parent may subsequently update U03 aggregate-audit metadata only; such an audit-state update does not change the reviewed scientific content.",
+  "review_scope": [
+    "Final plan HTML, plan JSON, term-paper HTML, prepare_workflow_v4.py, and evidence_ledger_v4.json re-read and cross-compared.",
+    "All six round1 findings checked against regenerated references and ledger.",
+    "Primary source metadata verified earlier in this same dated session reused; no new unverified secondary-source claim introduced.",
+    "Read-only reconstruction of all 5625 prepared runs and 16875 stage-message assemblies, including full history, no early R4 gamma and no evaluator/future/run-ID leakage.",
+    "Read-only checks of configured metric definitions against evaluate_weights/evaluate_pair and the current workflow scorer, plus reference-zero checks.",
+    "Current workflow/config and numeric-artifact hashes checked."
+  ],
+  "round1_finding_disposition": [
+    {
+      "id": "R1-F01",
+      "status": "closed",
+      "evidence": "Both reference lists now identify Zhao, Y., Chen, S., & Su, N. (2026), v6. The manuscript uses Zhao et al. author-year citation. Ledger portbench2026v6 matches.",
+      "primary_url": "https://arxiv.org/abs/2605.27887v6"
+    },
+    {
+      "id": "R1-F02",
+      "status": "closed",
+      "evidence": "Hedden/Raghavan now cite the published Philosophical Perspectives article, DOI 10.1111/phpe.70018, online September 25,2026. Ledger hedden2026 distinguishes published article from author preprint.",
+      "primary_url": "https://doi.org/10.1111/phpe.70018"
+    },
+    {
+      "id": "R1-F03",
+      "status": "closed",
+      "evidence": "Dell'Acqua et al. now carry Organization Science 37(2),403–423 in both HTMLs and ledger source metadata; outdated advance-online label removed for this work.",
+      "primary_url": "https://doi.org/10.1287/orsc.2025.21838"
+    },
+    {
+      "id": "R1-F04",
+      "status": "closed",
+      "evidence": "Ledger contains hedden2026 and lewis2020 source records plus B15/B16 claim entries, with primary URLs, exact scope and explicit limitations.",
+      "primary_urls": [
+        "https://doi.org/10.1111/phpe.70018",
+        "https://papers.nips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html"
+      ]
+    },
+    {
+      "id": "R1-F05",
+      "status": "closed",
+      "evidence": "E12/E13 now state that the following 36-month block is reserved and unused in active v4; optional later diagnostics/legacy prototypes are distinguished from the main experiment.",
+      "primary_url": "https://doi.org/10.1002/for.70134"
+    },
+    {
+      "id": "R1-F06",
+      "status": "closed",
+      "evidence": "Both HTML reference lists have identical correct author/corporate-author ordering, with French under F, Hornuf under H, Salcher/Schneider/Sheng under S, and Zhao under Z."
+    }
+  ],
+  "additional_round2_corrections": [
+    {
+      "id": "R2-C01",
+      "status": "corrected_and_rechecked",
+      "severity": "low",
+      "file": "research/evidence_ledger_v4.json",
+      "issue": "The previous PowerShell-based ledger update introduced character substitution in Dell'Acqua page metadata and two Lewis coauthor names.",
+      "correction": "Restored 403–423, Heinrich Küttler and Tim Rocktäschel using a UTF-8 patch.",
+      "verification": "Author arrays contain no '?' substitutions; page string and APA names checked against Unicode codepoints and the already verified primary metadata."
+    },
+    {
+      "id": "R2-C02",
+      "status": "corrected_and_rechecked",
+      "severity": "low",
+      "file": "research/evidence_ledger_v4.json",
+      "issue": "E19–E22 retained obsolete workflow_policy JSON locators, and some newly explicit operational/calculated numbers lacked their own ledger entries.",
+      "correction": "Updated locators to final workflow.stages/mandate_inserted_at/diagnostic fields; added E33–E37 for 1e-6 serialization allowance, call arithmetic, one census pass, hash-block ordering, and computed reference examples.",
+      "verification": "All added values match final config/prompt/manifest/summary and are labelled numerical_implementation or LIBERA_adaptation, never direct_paper."
+    }
+  ],
+  "core_evidence_checks": [
+    {
+      "id": "R2-P01",
+      "result": "pass",
+      "claim": "Salcher authors,2026 venue,Eq.(6),gamma1/3/5,monthly FF12 excess-return frame1964–2023,and60/36 windows match the verified primary source."
+    },
+    {
+      "id": "R2-P02",
+      "result": "pass",
+      "claim": "Decimal conversion,ddof=1,unshrunk covariance,all625-case census and long-only combination are correctly distinguished from exact published-protocol replication."
+    },
+    {
+      "id": "R2-P03",
+      "result": "pass",
+      "claim": "PortBench simplex/profile-conditioning precedent is used narrowly; its multi-asset caps,maximum-Sharpe objective,4% rate,daily windows and reference fallback are not silently imported."
+    },
+    {
+      "id": "R2-P04",
+      "result": "pass",
+      "claim": "Four stages,R1/R4,FRESH,one full pass,scheduling and response rules are explicitly LIBERA design/implementation choices."
+    },
+    {
+      "id": "R2-P05",
+      "result": "pass",
+      "claim": "TV,direct constrained utility gap,response-contrast error and descriptive convergence have consistent formulas in plan JSON,HTMLs,ledger and evaluator."
+    },
+    {
+      "id": "R2-P06",
+      "result": "pass",
+      "claim": "Long-only utility gap is computed directly; unrestricted pure-quadratic distance identity and Salcher TP theorem are not misapplied. Raw near-budget signed gaps are not clipped or interpreted as superior investments."
+    },
+    {
+      "id": "R2-P07",
+      "result": "pass",
+      "claim": "Individual policy contrasts require both valid responses; institution-pair policy contrasts require all four valid answers on the same market window. Complete-case limits and all failure denominators remain explicit."
+    },
+    {
+      "id": "R2-P08",
+      "result": "pass",
+      "claim": "83 shared-reference windows and first-window rounded weights agree with the frozen summary and are labelled calculated examples,not AI findings."
+    },
+    {
+      "id": "R2-P09",
+      "result": "pass",
+      "claim": "Qwen3.6-35B-A3B,temperature0,max8192,thinking are direct PortBench v6 §3.1 values; runtime readiness and exact served revision remain an explicit future operational gate."
+    },
+    {
+      "id": "R2-P10",
+      "result": "pass",
+      "claim": "Actual four-fund gamma attribution,private forecasts,shared-model-adoption causality,market stability,investment profitability and actual retrieval quality are excluded from the main interpretation."
+    },
+    {
+      "id": "R2-P11",
+      "result": "pass",
+      "claim": "Both artifacts clearly state no AI experiment results; workflow manifest reports model_calls=0 and run_ready=false. Numerical benchmark preparation is distinct."
+    },
+    {
+      "id": "R2-P12",
+      "result": "pass",
+      "claim": "Latest policy context uses FSB October15,2026 final report; abstract-only limitations for access-limited finance sources and final-versus-prior Sheng manuscript distinction are preserved."
+    },
+    {
+      "id": "R2-P13",
+      "result": "pass",
+      "claim": "No iid inference,power claim,automatic population generalization,or forced separation when constrained optima coincide is introduced."
+    },
+    {
+      "id": "R2-P14",
+      "result": "pass",
+      "claim": "Prepared message packets and assembled histories match the documented onset/retention bundle and do not claim a pure anchoring or isolated timing mechanism."
+    }
+  ],
+  "read_only_executable_checks": {
+    "status": "passed",
+    "all_runs": 5625,
+    "arm_counts": {
+      "R1": 1875,
+      "R4": 1875,
+      "FRESH": 1875
+    },
+    "all_stage_messages_checked": 16875,
+    "main_complete_six_run_blocks": 625,
+    "one_mandate_insertion": true,
+    "R4_no_early_gamma": true,
+    "full_history_preserved": true,
+    "no_metadata_gold_future_leak": true,
+    "workflow_manifest_hashes_current": true,
+    "all_three_same_vertex_count": 83,
+    "first_window_example": {
+      "1": {
+        "active_face": [
+          11
+        ],
+        "utility": 0.012583811745762716,
+        "weights": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "3": {
+        "active_face": [
+          5,
+          11
+        ],
+        "utility": 0.010202429798797905,
+        "weights": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0.2285293076500241,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0.7714706923499759
+        ]
+      },
+      "5": {
+        "active_face": [
+          3,
+          5,
+          11
+        ],
+        "utility": 0.008249722511231086,
+        "weights": [
+          0,
+          0,
+          0,
+          0.21043343046381668,
+          0,
+          0.2862318257553106,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0.5033347437808727
+        ]
+      }
+    },
+    "metric_zero_check_cases": 3,
+    "APA_reference_order": [
+      "ref-agarwal",
+      "ref-bommasani",
+      "ref-chen",
+      "ref-dellacqua",
+      "ref-doshi",
+      "ref-fsb24",
+      "ref-fsb26",
+      "ref-french",
+      "ref-hansen",
+      "ref-hedden",
+      "ref-hornuf",
+      "ref-kleinberg",
+      "ref-lewis",
+      "ref-salcher",
+      "ref-schneider",
+      "ref-sheng",
+      "ref-portbench"
+    ],
+    "AI_calls": 0
+  },
+  "ledger_state": {
+    "sources": 20,
+    "evidence_entries": 53,
+    "U02": "resolved: final metric/workflow synchronization",
+    "U06": "resolved: completed numeric benchmark implementation, with verified artifact hashes",
+    "U03": "not closed by this auditor; overall round2 pending parent aggregation",
+    "U01": "exact runtime model/backend availability remains an operational prerequisite",
+    "other_scope_limits": "Actual-fund documentary follow-up and abstract-access limitations remain explicit, not concealed as completed work."
+  },
+  "files_modified_by_this_auditor": [
+    "research/evidence_ledger_v4.json",
+    "research/audits/round2_evidence.json"
+  ],
+  "manuscript_or_protocol_edited_by_this_auditor": false,
+  "open_findings": [],
+  "summary_counts": {
+    "round1_findings_closed": 6,
+    "round1_findings_remaining": 0,
+    "additional_round2_corrections_closed": 2,
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low_open": 0,
+    "core_checks_passed": 14
+  },
+  "limits": [
+    "This is a second source/provenance/synchronization review,not an observation of AI performance.",
+    "The independent numerical auditor owns full solver verification; this pass cross-checks formulas and frozen results rather than claiming exact-arithmetic certification of every nonvertex solution.",
+    "U03 requires the parent to aggregate all agents' second-round reviews. This report alone does not mark overall audit completion.",
+    "The protocol remains conditional on obtaining the exact fixed evaluation model and backend; no download,API call or experiment was authorized or performed here."
+  ],
+  "final_snapshot_followup": {
+    "change": "Parent added explicit PortBench Appendix C.1 T5 locator to both HTML reference notes after the substantive round2 review. Author metadata and source scope rechecked; no numeric or protocol change.",
+    "checked_at_utc": "2026-10-17T08:03:11.839167+00:00"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "scope": "Post-application verification of local engineering appendix only",
+  "checks": [
+    {
+      "check": "plan_original_text_preserved",
+      "pass": true
+    },
+    {
+      "check": "paper_original_text_preserved",
+      "pass": true
+    },
+    {
+      "check": "original_config_preserved",
+      "pass": true
+    },
+    {
+      "check": "reviewed_report_hash",
+      "pass": true
+    },
+    {
+      "check": "four_local_observations",
+      "pass": true
+    },
+    {
+      "check": "research_status_and_all_source_hashes_valid",
+      "pass": true
+    }
+  ],
+  "all_passed": true,
+  "files": [
+    {
+      "path": "plan/LIBERA_실험계획_20261018.html",
+      "sha256": "1c7da2ef2057e2bf9010513b9ee3817404164ec9608746a35c09b69775df451d"
+    },
+    {
+      "path": "paper/LIBERA_텀페이퍼_초안_20261018.html",
+      "sha256": "880700f88bb233117fb5c436832457e2b775a09b12b25517599ad9b9ecb8ae9e"
+    },
+    {
+      "path": "plan/LIBERA_실험설정_20261018.json",
+      "sha256": "09b3bf4a07135f2607cd08a6eb34750c05d7524b212d479d03ae0fae1764abb1"
+    }
+  ],
+  "report_sha256": "00fdaf93a48c3e1dde4dfa87bb6e0363f89bd0c90e7ab55db399804971ee0150",
+  "independent_final_review": "research/local_sector_report_final_review_round2_20261018.json",
+  "model_calls": 0
+}

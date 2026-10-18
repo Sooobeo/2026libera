@@ -1,0 +1,48 @@
+{
+  "template_status": "LIBERA proposed extraction schema based on public prospectus sections and paper workflows; not a verbatim published experimental template",
+  "model_visible_packet": {
+    "case_id": null,
+    "decision_as_of": null,
+    "source_identity": {
+      "issuing_institution": null,
+      "responsible_organizational_unit": null,
+      "named_author_or_team": null,
+      "document_role": null,
+      "applicability_scope": null,
+      "rule": "Distinguish fund mandate, fund-manager commentary and house sector research. Do not assign house views to a specific fund without source support."
+    },
+    "fund_identity": {"fund_name": null, "share_class": null, "ticker_or_series_id": null},
+    "source_documents": [{"document_id": null, "document_type": null, "url": null, "cover_date": null, "report_as_of_date": null, "publicly_available_from": null, "revision_or_supplement_date": null, "retrieved_at": null, "sha256": null, "original_text": null, "page_or_section": null}],
+    "common_market_packet_reference": null,
+    "allowed_asset_universe_reference": null,
+    "company_evidence_reference": null,
+    "task_instruction": null
+  },
+  "evaluator_only_annotation_DO_NOT_SEND_TO_MODEL": {
+    "primary_objective": {"value": null, "document_id": null, "source_location": null},
+    "secondary_objectives": [],
+    "qualitative_risk_preference": {"value": null, "stated_or_not_stated": null, "source_location": null},
+    "investment_horizon": {"value": null, "stated_or_not_stated": null, "source_location": null},
+    "constraints": [{"field": null, "operator": null, "numeric_value": null, "unit": null, "denominator": null, "eligible_assets_definition": null, "exceptions": null, "document_id": null, "source_location": null, "observable_in_selected_data": null}],
+    "qualitative_selection_rationale": [],
+    "not_stated_fields": [],
+    "unresolved_or_conflicting_statements": [],
+    "public_holdings_reference": {"optional": true, "report_as_of": null, "publication_date": null, "role": "observed allocation comparator, not a unique optimal strategy"},
+    "independent_review": {"reviewer": null, "reviewed_at": null, "disagreements_resolved": null}
+  },
+  "evaluation_outputs": {
+    "raw_model_interpretation": null,
+    "raw_proposed_allocation": null,
+    "tool_calls": [{"workflow_stage": null, "arguments": null, "currently_visible_evidence_ids": [], "model_supplied_constraints": null, "raw_tool_result": null}],
+    "tool_information_boundary": "Model-facing tools may use only evidence already received in the current run and submitted arguments. They cannot read evaluator-only annotations, hidden mandates or unrevealed constraints. Gold adherence checks occur offline, and their outputs must not be exposed during the run.",
+    "constraint_violations_before_repair": null,
+    "deterministic_repair_if_enabled": null,
+    "allocation_after_repair": null,
+    "note": "A repaired allocation cannot establish that the AI's original proposal followed the mandate. Independent human annotation is pending; automated agent review does not complete that step."
+  },
+  "source_basis": [
+    {"url": "https://www.sec.gov/files/form-n-1a.pdf", "role": "Official source-document structure; not an academic paper."},
+    {"url": "https://www.ifo.de/DocDL/cesifo1_wp11862.pdf", "role": "Investor profile and company-information separation, sections 3.1-3.3."},
+    {"url": "https://arxiv.org/html/2608.09988v1", "role": "Natural-language mandates, typed constraints and separation of raw proposals from deterministic enforcement, sections 3.3 and 6.3."}
+  ]
+}

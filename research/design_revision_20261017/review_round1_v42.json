@@ -1,0 +1,101 @@
+{
+  "review": "independent_machine_review_round1_v4.2",
+  "reviewer": "institution_templates subagent",
+  "reviewed_on": "2026-10-17",
+  "status": "changes_requested_no_critical_issue_found",
+  "critical_findings": 0,
+  "human_review": false,
+  "AI_experiment_run": false,
+  "scope": [
+    "plan and paper construct/implementation alignment",
+    "selected official document facts and dates",
+    "GICS sector ETF universe and market snapshot",
+    "original topic linkage and generalization limits",
+    "paper-derived numeric settings provenance"
+  ],
+  "findings": [
+    {
+      "id": "R1-01",
+      "severity": "medium",
+      "location": "paper section implications, paragraph 2",
+      "observed": "The prose refers to results repaired by the calculation system.",
+      "problem": "The implemented calculator never repairs or replaces weights. The next model response may revise its own allocation after numeric feedback. This wording misattributes the decision and conflicts with section 4.3.",
+      "requested_change": "Describe the raw proposal, calculator feedback, and subsequent AI revision as separate records; remove any claim of actual system-repaired allocations in this documentary experiment.",
+      "implementation_evidence": "research/run_sector_workflow.py run_case: repair_applied=False; research/sector_engine.py calculator no-repair contract."
+    },
+    {
+      "id": "R1-02",
+      "severity": "medium",
+      "location": "paper section literature 2.3",
+      "observed": "The novelty paragraph says the study compares economic quality along with information response.",
+      "problem": "The documentary task has no unique strategic target, future performance test, or validated semantic allocation-quality judge. Implemented feasibility, citations and lookback risk diagnostics are narrower than an established economic-quality measure.",
+      "requested_change": "Use evidence fidelity, executable allocation validity and historical risk diagnostics; distinguish economic outcomes or welfare as future extensions."
+    },
+    {
+      "id": "R1-03",
+      "severity": "medium",
+      "location": "paper section literature 2.4, opening sentence",
+      "observed": "Risk-preference input papers are called direct evidence for the present manipulation.",
+      "problem": "The present manipulation is early versus late public-sector-view delivery, not randomization of risk preferences. These papers support related profile-conditioned allocation methods but do not directly validate this onset manipulation.",
+      "requested_change": "Call them related methodological precedents and identify the R1/R4 scheduling as the LIBERA adaptation."
+    },
+    {
+      "id": "R1-04",
+      "severity": "low",
+      "location": "paper footer",
+      "observed": "The active paper footer remains v4.1.",
+      "problem": "The methods and linked assets are v4.2.",
+      "requested_change": "Update the footer version and preparation status consistently."
+    },
+    {
+      "id": "R1-05",
+      "severity": "low",
+      "location": "research/design_revision_20261017/parameter_basis_v42.json item independent pilot then freeze",
+      "observed": "The item calls the pilot independent.",
+      "problem": "The pilot uses earlier versions from the same institutions, overlapping language and unchanged UBS labels. The actual corpus explicitly states limited content independence.",
+      "requested_change": "Use separate pilot then freeze, with limited content independence; retain no external preregistration claim."
+    }
+  ],
+  "confirmed": [
+    "GICS11 and the 11 SPDR tickers match corpus/market/engine contracts; no FF12 mapping is claimed.",
+    "Two main documents plus two pilot documents match source IDs and splits.",
+    "Fidelity 6/31/26 typo remains unresolved and raw; 2026-07-17 is stated as retrospective cutoff, not historical trading reconstruction.",
+    "Benchmark raw sum99.9 and normalization match the numeric source; holdings/target-weight confusion is expressly rejected.",
+    "R1/R4 document onset, retained history, shared deterministic feedback and no-repair mechanics match the runner.",
+    "No target-model experiment or completed human source review is claimed; source labels and citation validity are expressly not strategic quality.",
+    "Only two source cases, repeated institutions, dissimilar dates/scales, and no shared-AI adoption causal comparison are all disclosed.",
+    "PortBench v6 section3.1 directly states Qwen3.6-35B-A3B in evaluated models, temperature0, maximum8192 and thinking default. Appendix B market context/B.2 supports60 trading days and252 convention; section2.2 supports half-L1 proximity adapted here as descriptive distance.",
+    "The original industry allocation and organizational evidence-transfer topic is preserved; the narrower observable construct is openly distinguished from full institution mandates."
+  ],
+  "web_checks": [
+    {
+      "url": "https://arxiv.org/html/2605.27887v6",
+      "locators": [
+        "section3.1",
+        "Appendix B market context and B.2",
+        "section2.2 and Appendix C.2"
+      ],
+      "status": "original full text inspected in this audit"
+    },
+    {
+      "url": "https://arxiv.org/html/2503.09647v5",
+      "locator": "section4",
+      "status": "original full text inspected during same preparation session"
+    }
+  ],
+  "limitations": [
+    "This is an independent automated review of integration, not independent human gold annotation.",
+    "Not every legacy literature citation was freshly re-fetched during this integration audit; full-reference claims remain limited to the existing source ledger and specifically inspected papers.",
+    "Substantive source entailment and proposed-allocation justification remain pending human or validated separate review."
+  ],
+  "hashes": {
+    "plan/LIBERA_실험계획_20261017.html": "38c405738d12ff523049f326ea9cde73d9172d79a09f75a1874f07281e6eab0e",
+    "paper/LIBERA_텀페이퍼_초안_20261017.html": "e77ac7158a9901bb460338e5223b866adc8f48bb08f146d1575f3a45f7772f63",
+    "plan/LIBERA_실험설정_20261017.json": "01518e95278b8f2e50cb786bcf6553ace74a1eebbc2f9110b250c6b509c73b6a",
+    "research/build_sector_revision_v42.py": "6fe03d87c89a34a2f671b2690a0b56f46e80667c3c2b753d94b36d78d5aaf0e2",
+    "research/run_sector_workflow.py": "d46ccbefa7844d30d2d0d114661718dcaaf2f430ff42059eb985210155e38c6b",
+    "research/sector_engine.py": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c",
+    "data/sector_documents/source_manifest.json": "d1af00ee2a1c5e3ba4ca9949b5f9427a9102a373ff19afa0e6c4309769627b28",
+    "data/sector_market/summary.json": "f30216057362811a82040b3b12fca1500196da29613c5967bb566462e563fcd0"
+  }
+}

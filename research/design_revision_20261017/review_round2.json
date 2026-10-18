@@ -1,0 +1,124 @@
+{
+  "review_round": 2,
+  "date": "2026-10-17",
+  "reviewer": "risk_metrics_review",
+  "review_type": "read-only construct, logic, source-role and cross-artifact consistency review; only this report written",
+  "protocol_version_reviewed": "4.1",
+  "status": "passed_for_revised_design_scope; not_ready_for_main_execution",
+  "new_critical_findings": [],
+  "round1_resolutions": [
+    {
+      "id": "R1-01",
+      "status": "resolved",
+      "evidence": "The old introductory paragraph describing gamma-only hypothetical institutions as the main task has been removed. The introduction now distinguishes documentary main and numerical auxiliary tasks."
+    },
+    {
+      "id": "R1-02",
+      "status": "resolved",
+      "evidence": "Literature section 2.4 now assigns Salcher to the FF12 auxiliary task and uses sector-allocation and raw-versus-repaired precedents for the documentary main; it explicitly calls the combination a LIBERA adaptation."
+    },
+    {
+      "id": "R1-03",
+      "status": "resolved_at_design_level; implementation_pending",
+      "evidence": "Config main.calculator_information_boundary and methods 4.3 prohibit model-facing tools from accessing hidden mandates or evaluator-only annotations. The packet schema records stage, arguments, visible evidence IDs, model-supplied constraints and raw results, and requires offline gold checks."
+    },
+    {
+      "id": "R1-04",
+      "status": "resolved",
+      "evidence": "decision_note identifies v4.1 as current authority, v4.0 as archived and recent 24-window/72-case control data as prepared. The reference-month calendar is explicitly retrospective and frozen, with historical release availability not asserted."
+    },
+    {
+      "id": "R1-05",
+      "status": "resolved",
+      "evidence": "source_identity now includes issuing institution, responsible organizational unit, author/team, document role and applicability scope; the rule forbids assigning house views to an unsupported fund mandate."
+    },
+    {
+      "id": "R1-06",
+      "status": "resolved",
+      "evidence": "sector_document_candidates.json now exists and is linked. All local targets and fragment anchors in the current plan and paper resolve; there are no duplicate HTML IDs."
+    },
+    {
+      "id": "R1-07",
+      "status": "resolved",
+      "evidence": "Methods 4.1 and the packet schema explicitly state that independent human annotation has not been performed and automated agent review is a separate activity."
+    },
+    {
+      "id": "R1-08",
+      "status": "resolved_for_reviewed_paper",
+      "evidence": "The reference list is integrated alphabetically; L. Chen et al. and Chen/Sialm/Xu are disambiguated in the paper. Final submission formatting remains a separate editorial task."
+    }
+  ],
+  "checks": {
+    "industry_unit_matches_original_proposal": true,
+    "document_interpretation_and_choice_required_beyond_gamma": true,
+    "documentary_main_and_numerical_auxiliary_separated": true,
+    "main_taxonomy_not_falsely_finalized": true,
+    "ff12_gics_mapping_not_assumed": true,
+    "main_period_and_case_count_pending": true,
+    "source_roles_fund_house_strategist_distinguished": true,
+    "qualitative_views_not_fabricated_into_exact_targets": true,
+    "raw_proposal_and_repaired_result_separated": true,
+    "stage_visibility_boundary_specified_for_tools": true,
+    "rubric_pilot_then_freeze_before_main": true,
+    "outcome_informed_additions_exploratory_only": true,
+    "no_AI_results_claimed": true,
+    "main_execution_ready_false": true,
+    "prior_audit_scope_restricted_to_archived_v4": true,
+    "no_claim_of_shared_model_adoption_causality": true,
+    "no_claim_of_retrieval_effect_from_direct_packets": true,
+    "no_claim_of_future_optimal_strategy_from_weight_agreement": true,
+    "local_links_resolve": true,
+    "fragment_anchors_resolve": true,
+    "duplicate_HTML_ids_absent": true,
+    "revision_manifest_hashes_match_plan_paper_config": true
+  },
+  "nonblocking_notes": [
+    {
+      "id": "R2-N01",
+      "location": "decision_note.json period_candidates[0].estimation_history",
+      "observed": "The historical candidate text still says observations were available at each decision and the calendar convention must be frozen before generation.",
+      "recommendation": "Update to the prepared retrospective reference-month convention and explicitly distinguish calendar precedence from proven historical release availability.",
+      "effect_on_review": "The authoritative config and recent numerical summary already state the correct retrospective and revised-vintage limitations; this is a secondary documentation inconsistency.",
+      "status": "corrected_and_rechecked_in_round2",
+      "resolution": "Frozen retrospective indexing: for each reference month 2024-01 through 2025-12, use exactly the preceding 60 observation months. Data are currently revised values, not verified historical publication-time availability."
+    },
+    {
+      "id": "R2-N02",
+      "location": "sector_document_candidates.json status",
+      "observed": "The inventory status ends with no change to v4 protocol.",
+      "recommendation": "Say that the inventory does not finalize the v4.1 documentary main instead, to prevent confusion with the archived version.",
+      "effect_on_review": "The candidate-only status and the active config are otherwise explicit; this does not imply execution readiness.",
+      "status": "corrected_and_rechecked_in_round2",
+      "resolution": "source candidates visually checked; this inventory does not finalize the v4.1 documentary main experiment"
+    }
+  ],
+  "remaining_execution_gates": [
+    "Freeze one common source taxonomy and aligned public market-return series.",
+    "Resolve source version, publication-date, organizational scope and rating-semantics eligibility, including the invalid Fidelity source date flagged in the candidate inventory.",
+    "Construct and independently review evaluator-only document annotations; no completed human annotation is asserted.",
+    "Specify the allocation baseline, real decision discretion and justified source-to-exposure evaluation without inventing numeric institutional targets.",
+    "Implement and verify tool boundaries and keep evaluator gold unavailable throughout the model run.",
+    "Separate exploratory pilot from held-out main cases and freeze scoring, missingness and invalid-response rules before main responses.",
+    "Verify model access and immutable runtime settings; runtime_ready remains false."
+  ],
+  "review_limits": [
+    "A design-scope pass does not certify a complete executable experiment, sufficient statistical power or treatment effects.",
+    "Source PDF visual extraction accuracy belongs to the candidate-document agent's review; this review checked source roles, caveats and design compatibility rather than re-reading every PDF page.",
+    "The independent numerical audit is separate; no model calls or human experimental observations were created by this review.",
+    "The source inventory is candidate evidence and does not establish calibrated institution-specific mandates or uniquely optimal sector weights."
+  ],
+  "reviewed_file_sha256": {
+    "plan/LIBERA_실험계획_20261017.html": "81793e4e733a9de74504fe98abd86bd643d57a65c725257eccaf20d61233e246",
+    "paper/LIBERA_텀페이퍼_초안_20261017.html": "187359a5d45f62351dfa318e25dbf871a8bc1b6c4a5a5b30a3de76ab7e66f66a",
+    "plan/LIBERA_실험설정_20261017.json": "41a8d63d7eb85bfe12c8a04ac2c714d901b8d358d787951361a630df650a28c0",
+    "research/build_industry_revision_v41.py": "fad4eafe78a8e6dc982795d9bae20cd9df003177eb2df8e3dcf598f59e85bba0",
+    "research/design_revision_20261017/decision_note.json": "dd67f119b1d5a4fd31fb2579b8e5ffe6321708f4313ca09b9c680c5ab3a361ed",
+    "research/design_revision_20261017/institution_packet_template.json": "cdf4b4e984e8d0e69dce6faed6e95c34095668e29d3691fe2d911ab33e98497f",
+    "research/design_revision_20261017/sector_document_candidates.json": "a84ed229ab471fd30298df3827e9149e6748c4fd0cb417d486d4785a4145550f",
+    "research/design_revision_20261017/revision_manifest.json": "2b9b319008d7d96d7627deb1e606712a68bfed66c00fa973eaef9188a13bffd4",
+    "research/design_revision_20261017/review_round1.json": "288879542233be75899cd1acb98657fa0367be264a743787117298e041258f63",
+    "data/institutional_recent/summary.json": "ee4a3e6a7a4b6b7116d422c4817dc128d8937ef392a7bd34ecf050f6945c1964"
+  },
+  "reviewed_at_utc": "2026-10-17T09:30:35.256513+00:00",
+  "unresolved_review_findings": []
+}

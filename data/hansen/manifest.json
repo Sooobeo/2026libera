@@ -1,0 +1,46 @@
+{
+  "deterministic": true,
+  "external_ai_or_network_calls": 0,
+  "generator": "research/prepare_hansen_benchmark.py",
+  "generator_sha256": "9e08ebb913252c4a7b453c8b460bc7a61a30f09eca6c629fd5cb671991403d5e",
+  "outputs": {
+    "cases.jsonl": {
+      "bytes": 830486,
+      "sha256": "68d6bab85820ef6b2b4656fd22e763e47aabd2aa6860d8096d6933b4ddd559e1"
+    },
+    "histories.jsonl": {
+      "bytes": 164176,
+      "sha256": "3c543892e680a898aa26f3156d35da064095a354985964bf25ab7fe9960d52ce"
+    },
+    "summary.json": {
+      "bytes": 18941,
+      "sha256": "75f6d38278f1739adce51427afb53e6d85b29a4ad8db591ca751973fdefb12fc"
+    }
+  },
+  "reproduce": "python research/prepare_hansen_benchmark.py prepare",
+  "schema_version": "1.0",
+  "source": {
+    "arxiv_url": "https://arxiv.org/abs/2510.01451",
+    "authors": [
+      "Anne Lundgaard Hansen",
+      "Seung Jung Lee"
+    ],
+    "landing_url": "https://www.federalreserve.gov/econres/feds/financial-stability-implications-of-generative-ai-taming-the-animal-spirits.htm",
+    "locations": {
+      "eight_round_horizon": "Section 5.2, printed pages 15-16: four sessions of eight trading rounds per model; only the eight-round horizon is used here.",
+      "market_update": "Section 4.1, equation (4): market-maker Bayesian update; use rho=mu=1 for Treatment I.",
+      "optimal_action": "Section 4.2, equation (5): buy/sell according to private expected value relative to price.",
+      "payoff": "Section 4.1, printed pages 9-10: one-unit, risk-neutral payoff v-p for BUY, p-v for SELL, zero for NO_TRADE. Table 5 (printed page 49) reports the corresponding conditional expected payoff. Regret is derived here, not copied as a reported paper statistic.",
+      "price": "Section 4.1, equation (2): p_t = 100 q_t.",
+      "private_posterior": "Section 4.2, equations (6),(7), printed page 11: WHITE/BLUE conditional value, with q*=q in Treatment I.",
+      "signal_accuracy": "Section 4.1, equation (1), printed page 9: correct WHITE/BLUE signal probability 0.7.",
+      "treatment_I": "Section 4.2, printed page 12: rho=mu=1; an informed trader always buys on WHITE and sells on BLUE."
+    },
+    "paper_date": "2025-09-25",
+    "pdf_url": "https://www.federalreserve.gov/econres/feds/files/2025090pap.pdf",
+    "series": "Finance and Economics Discussion Series 2025-090",
+    "title": "Financial Stability Implications of Generative AI: Taming the Animal Spirits",
+    "version_note": "The cited PDF is dated September 25, 2025; a landing-page update is not treated as a paper revision."
+  },
+  "status": "prepared_exact_answer_table_no_ai_experiment_run"
+}

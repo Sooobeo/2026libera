@@ -1,0 +1,380 @@
+{
+  "schema_version": "remote_sector_independent_review_1.0",
+  "review_round": 1,
+  "generated_at_utc": "2026-10-18T05:56:12.606985+00:00",
+  "reviewer": "recent_window_review subagent; separate archive, cancellation, count and visualization reconciliation",
+  "status": "pass_with_stated_limits",
+  "scope": "Recovered cancelled pilot artifacts and diagnostic plot only; no research evaluation, human semantic review or inference.",
+  "checks": [
+    {
+      "check": "transport_archive_digest",
+      "status": "pass",
+      "evidence_paths": [
+        "tmp/sector_bridge_20261018/pilot_artifacts.tar.gz"
+      ],
+      "detail": {
+        "expected": "245dc74fb90e1935e32633164f02ac4ed79299a5eac994c76a9bc5688b09f5d0",
+        "actual": "245dc74fb90e1935e32633164f02ac4ed79299a5eac994c76a9bc5688b09f5d0"
+      }
+    },
+    {
+      "check": "archive_member_names_unique",
+      "status": "pass",
+      "evidence_paths": [
+        "tmp/sector_bridge_20261018/pilot_artifacts.tar.gz"
+      ],
+      "detail": {
+        "regular_files": 24
+      }
+    },
+    {
+      "check": "all_recovered_files_equal_archive_bytes",
+      "status": "pass",
+      "evidence_paths": [
+        "tmp/sector_bridge_20261018/pilot_artifacts.tar.gz"
+      ],
+      "detail": {
+        "matched_files": 24,
+        "total_files": 24
+      }
+    },
+    {
+      "check": "pilot_collection_has_no_extra_or_missing_files",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43"
+      ],
+      "detail": {
+        "extra": [],
+        "missing": []
+      }
+    },
+    {
+      "check": "single_cancelled_generation_request_no_followup_in_this_pilot",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/summary.json",
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/result.json",
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/CANCEL"
+      ],
+      "detail": {
+        "request_count": 1,
+        "following_requests_recorded": 0,
+        "status": "cancelled",
+        "wall_seconds": 1512.1132832784206
+      }
+    },
+    {
+      "check": "cancellation_precedes_recorded_finish",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/CANCEL",
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/summary.json"
+      ],
+      "detail": {
+        "cancelled_at_utc": "2026-10-18T05:47:10.792260+00:00",
+        "finished_at_utc": "2026-10-18T05:47:11.142493+00:00"
+      }
+    },
+    {
+      "check": "no_client_visible_model_response_or_complete_stage",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/raw_stream.bin",
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/events.jsonl",
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot"
+      ],
+      "detail": {
+        "raw_bytes": 0,
+        "event_bytes": 0,
+        "stage_responses": 0,
+        "stage_records": 0,
+        "final_allocations": 0
+      }
+    },
+    {
+      "check": "attempted_failure_retained_and_three_cases_not_started",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/summary.json",
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/failure.json"
+      ],
+      "detail": {
+        "statuses": [
+          "failed",
+          "not_started",
+          "not_started",
+          "not_started"
+        ],
+        "failed_case_is_not_a_semantic_model_error": true
+      }
+    },
+    {
+      "check": "main_and_diagnostic_generation_counts_zero_in_pilot_record",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/summary.json"
+      ],
+      "detail": {
+        "main_calls": 0,
+        "diagnostic_calls": 0
+      }
+    },
+    {
+      "check": "selected_model_unload_completed_and_no_residency_observed",
+      "status": "pass",
+      "evidence_paths": [
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/unload_result.json",
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/inventory_after.json"
+      ],
+      "detail": {
+        "scope": "Selected Ollama model after this cancellation; not a whole-host or all-workload guarantee."
+      }
+    },
+    {
+      "check": "mechanical_audit_has_no_failed_or_pending_checks",
+      "status": "pass",
+      "evidence_paths": [
+        "research/remote_sector_audit_20261018.json"
+      ],
+      "detail": {
+        "check_counts": {
+          "pass": 70
+        },
+        "meaning": "Artifact consistency only; not successful execution of the research workflow."
+      }
+    },
+    {
+      "check": "plot_uses_distinct_observed_memory_series_and_correct_sample_counts",
+      "status": "pass",
+      "evidence_paths": [
+        "research/evidence/remote_sector_memory_20261018.png",
+        "data/remote_sector_20261018/data/sector_runtime/pilot_v43/monitor.jsonl"
+      ],
+      "detail": {
+        "image_dimensions": [
+          2520,
+          1314
+        ],
+        "visual_review": "Both panels, units, legends and limitation caption were inspected; no clipping found.",
+        "sampled_maximum_gib": {
+          "rss_sum": 5.7809906005859375,
+          "cgroup_memory_current": 8.400627136230469
+        }
+      }
+    }
+  ],
+  "archive_files": [
+    {
+      "archive_member": "data/sector_runtime/pilot_v43/CANCEL",
+      "local_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/CANCEL",
+      "size_bytes": 189,
+      "sha256": "824584764ee2dacd67a0a1d3e6772b8c9f91bf822be9d61a2df16d62fb80f0b6",
+      "bytes_match": true
+    },
+    {
+      "archive_member": "data/sector_runtime/pilot_v43/http_0001_pilot/events.jsonl",
+      "local_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/events.jsonl",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes_match": true
+    },
+    {
+      "archive_member": "data/sector_runtime/pilot_v43/http_0001_pilot/raw_stream.bin",
+      "local_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/raw_stream.bin",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes_match": true
+    },
+    {
+      "archive_member": "data/sector_runtime/pilot_v43/http_0001_pilot/request.json",
+      "local_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/request.json",
+      "size_bytes": 20887,
+      "sha256": "a319949a482f872d3f1dc781064de907248330cb4b9ce15ad41fcfe8590368ff",
+      "bytes_match": true
+    },
+    {
+      "archive_member": "data/sector_runtime/pilot_v43/http_0001_pilot/result.json",
+      "local_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/result.json",
+      "size_bytes": 705,
+      "sha256": "a5b5d53403e8376a1593b966e9ae322b82cfb9b95f4b75056d8d0c593640d088",
+      "bytes_match": true
+    },
+    {
+      "archive_member": "data/sector_runtime/pilot_v43/inventory_after.json",
+      "local_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/inventory_after.json",
+      "size_bytes": 3434,
+      "sha256": "191cc95a6d2be4f9a769946507a9428d04ea9a0eb1968450e270ca333ef4e099",
+      "bytes_match": true
+    },
+    {
+      "archive_member": "data/sector_runtime/pilot_v43/inventory_before.json",
+      "local_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/inventory_before.json",
+      "size_bytes": 3434,
+      "sha256": "8bfb19013de45d48039bc1ec8a154bbc73a9b3dfe9f159c8ca2865d60de81bf8",
+      "bytes_match": true
+    },
+    {
+      "archive_member": "data/sector_runtime/pilot_v43/invocation.json",
+      "local_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/invocation.json",
+      "size_bytes": 550,
+      "sha256": "1ae2ebfa4bc1c84a56b18f9b735bf7988314b701d28ad89bbbbf154623620eb5",
+      "bytes_match": true
+    },
+    {
+      "archive_member": "data/sector_runtime/pilot_v43/monitor.jsonl",
+      "local_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/monitor.jsonl",
+      "size_bytes": 1268254,
+      "sha256": "a2835b41eceea8ca186a1d6ed52396b4cd3fa2303aa918cd06e8df5fd8e96f73",
+      "bytes_match": true
+    },
+    {
+      "archive_member": "data/sector_runtime/pilot_v43/pilot/dependencies.json",
+      "local_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/dependencies.json",
+      "size_bytes": 144,
+      "sha256": "deef3244febb9a202b835c05abf94000044b4b183884244afcb16f2486300670",
+      "bytes_match": true
+    },
+    {
+      "archive_member": "data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/failure.json",
+      "local_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/failure.json",
+      "size_bytes": 203,
+      "sha256": "cb7cec7cba0143d394ba203497d711e087ba23ced70942a8b36244b60caf3dba",
+      "bytes_match": true
+    },
+    {
+      "archive_member": "data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/stage1_request.json",
+      "local_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/stage1_request.json",
+      "size_bytes": 20558,
+      "sha256": "fefbe28d6837019e00094e30bbf60c082a073a72a052e0eece342e325e86eb6c",
+      "bytes_match": true
+    },
+    {
+      "archive_member": "data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1_coordinator_failure.json",
+      "local_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1_coordinator_failure.json",
+      "size_bytes": 207,
+      "sha256": "444ebc037dfeb7040dbe327491e2b9a5cd1cad5ae2ddc5b84a76165a041ef1d8",
+      "bytes_match": true
+    },
+    {
+      "archive_member": "data/sector_runtime/pilot_v43/pilot/input_hashes.json",
+      "local_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/input_hashes.json",
+      "size_bytes": 444,
+      "sha256": "6a7479b348753e360abf5ca9b9329435236d8bd6296e2a7c8dcfe7b7ca00be99",
+      "bytes_match": true
+    },
+    {
+      "archive_member": "data/sector_runtime/pilot_v43/pilot/planned_cases.json",
+      "local_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/planned_cases.json",
+      "size_bytes": 511,
+      "sha256": "4587f3543bbc9b5b295f0b830553e02aba3087c26cb1954d38c8d411e6824203",
+      "bytes_match": true
+    },
+    {
+      "archive_member": "data/sector_runtime/pilot_v43/pilot/runtime.json",
+      "local_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/runtime.json",
+      "size_bytes": 2114,
+      "sha256": "a251ce3c7a235b11a70e85ccbdc28667d285390b68ca6b0b1ca5db84d332d7f3",
+      "bytes_match": true
+    },
+    {
+      "archive_member": "data/sector_runtime/pilot_v43/pilot/summary.json",
+      "local_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/summary.json",
+      "size_bytes": 1167,
+      "sha256": "221100419a9b7d6582dc0891c6661eb732e820b9843b562aec13744de8b8a6c7",
+      "bytes_match": true
+    },
+    {
+      "archive_member": "data/sector_runtime/pilot_v43/runtime_pinned.json",
+      "local_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/runtime_pinned.json",
+      "size_bytes": 1967,
+      "sha256": "c04bcdee8093a6c6db0d8e93d4166aa89d3337e3acceac42d3ac409c295602b0",
+      "bytes_match": true
+    },
+    {
+      "archive_member": "data/sector_runtime/pilot_v43/summary.json",
+      "local_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/summary.json",
+      "size_bytes": 2186,
+      "sha256": "3f116e14ef25527cc97693aaa092a58c55b955d266387395a6301811761124de",
+      "bytes_match": true
+    },
+    {
+      "archive_member": "data/sector_runtime/pilot_v43/unload_result.json",
+      "local_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/unload_result.json",
+      "size_bytes": 191,
+      "sha256": "2cc5774bbff0cc0dac03869c04fba46f51f5dbcd07ea413084bd1b2a7d90ff02",
+      "bytes_match": true
+    },
+    {
+      "archive_member": "pilot_v43.console.log",
+      "local_path": "data/remote_sector_20261018/pilot_v43.console.log",
+      "size_bytes": 223,
+      "sha256": "34ed797983fbbfe4ac7f28463fed6beefd532b5ccf655676d4d25587ec71b66d",
+      "bytes_match": true
+    },
+    {
+      "archive_member": "pilot_cpu_probe.json",
+      "local_path": "data/remote_sector_20261018/pilot_cpu_probe.json",
+      "size_bytes": 87,
+      "sha256": "fe8b9d776325de6c075e15b6b69f7c6c87123e1e2b772d781ba217ec8e8e1c76",
+      "bytes_match": true
+    },
+    {
+      "archive_member": "pilot_progress_log_excerpt.txt",
+      "local_path": "data/remote_sector_20261018/pilot_progress_log_excerpt.txt",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes_match": true
+    },
+    {
+      "archive_member": "latency_hardware.json",
+      "local_path": "data/remote_sector_20261018/latency_hardware.json",
+      "size_bytes": 685,
+      "sha256": "063bb70b86c205a6f1266007401defce9216087350df27f8687811c10de0fbf6",
+      "bytes_match": true
+    }
+  ],
+  "facts": {
+    "planned_pilot_cases": 4,
+    "attempted_pilot_cases": 1,
+    "cancelled_http_calls": 1,
+    "completed_pilot_cases": 0,
+    "completed_stage_records": 0,
+    "not_started_pilot_cases": 3,
+    "recorded_followup_calls_in_this_pilot": 0,
+    "main_calls": 0,
+    "elapsed_request_seconds": 1512.1132832784206,
+    "first_token_latency_seconds": null,
+    "provider_prompt_tokens": null,
+    "provider_generated_tokens": null,
+    "cpu_instruction_flags_observed": {
+      "avx": false,
+      "avx2": false,
+      "avx512f": false,
+      "sse4_1": true,
+      "sse4_2": true,
+      "fma": false
+    }
+  },
+  "limits": [
+    "Cancellation was requested by the user after no client-visible output. A failed case record here is not an observed bad investment judgment or failed semantic answer.",
+    "Zero saved response bytes does not prove zero internal server token processing; no terminal provider token counters were received.",
+    "Only the R1 first-stage request was exercised. R4 timing and four-stage history retention were not empirically exercised by this cancelled pilot.",
+    "No later request is recorded in this recovered pilot collection. This does not certify unrelated activity on the whole host.",
+    "CPU flags are an observed hardware limitation, not a measured causal estimate of the 25-minute delay. The separate engineering latency probes are needed for comparison.",
+    "RSS and cgroup.memory.current have different scopes. Sampled maxima are not continuous-time maxima, and the plot does not prove whole-host OOM absence or main-experiment readiness.",
+    "Per-call live model pin observations were not separately saved by the deployed coordinator; the existing audit states that evidence limit."
+  ],
+  "human_semantic_review": {
+    "performed": false,
+    "status": "not_assessed"
+  },
+  "evaluation_executed": false,
+  "review_model_calls": 0,
+  "source_runtime_files_modified": false,
+  "outputs": {
+    "research/remote_sector_audit_20261018.json": "0328872f2e20649598d55869def8a2541317cd816892513f5710755009e29df3",
+    "research/evidence/remote_sector_memory_20261018.png": "2364880bc8918564f0097f7552295e29439e2c436f7c2f6a3e380c908bd62f70"
+  },
+  "source_archive_sha256": "245dc74fb90e1935e32633164f02ac4ed79299a5eac994c76a9bc5688b09f5d0"
+}

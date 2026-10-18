@@ -1,0 +1,88 @@
+{
+  "client_date": "2026-10-18",
+  "recorded_at_utc": "2026-10-18T04:09:54.743538+00:00",
+  "scope": "Review of small-model research report only, not validation of an inference runtime.",
+  "report_file": "research\\small_model_review_20261018.html",
+  "report_sha256": "21e2449aba6e72252de7764a97c6021f51b18a950dce5c2a1a80250771f9e27d",
+  "registry_sha256": "6bc3c88cd170330ff6d64bb548964330c65e807ab666de7f27bc433ca915732c",
+  "round1": {
+    "reviewer": "root",
+    "result": "PASS",
+    "checks": [
+      {
+        "check": "active_file_unchanged",
+        "file": "research/run_sector_workflow.py",
+        "sha256": "d46ccbefa7844d30d2d0d114661718dcaaf2f430ff42059eb985210155e38c6b",
+        "pass": true
+      },
+      {
+        "check": "active_file_unchanged",
+        "file": "data/sector_protocol/runtime_candidate.json",
+        "sha256": "a3785063ba2f32c4f5e026ff0e8c24fe9dbed2fd6491896472ae255ac1ba8adf",
+        "pass": true
+      },
+      {
+        "check": "active_document_unchanged",
+        "label": "plan",
+        "pass": true,
+        "sha256": "01518e95278b8f2e50cb786bcf6553ace74a1eebbc2f9110b250c6b509c73b6a"
+      },
+      {
+        "check": "active_document_unchanged",
+        "label": "plan_html",
+        "pass": true,
+        "sha256": "38c405738d12ff523049f326ea9cde73d9172d79a09f75a1874f07281e6eab0e"
+      },
+      {
+        "check": "active_document_unchanged",
+        "label": "paper",
+        "pass": true,
+        "sha256": "c6df16ff12ed4fcb506c3f57319ba34684460d0e1faa6276f0a64b0dfda72c97"
+      },
+      {
+        "check": "local_reference_exists",
+        "href": "small_model_registry_20261018.json",
+        "pass": true
+      },
+      {
+        "check": "local_reference_exists",
+        "href": "../data/sector_runtime/proxmox_hardware_inventory_20261017.json",
+        "pass": true
+      },
+      {
+        "check": "short_4b_alias_is_thinking2507",
+        "pass": true
+      },
+      {
+        "check": "original_4b_is_distinct",
+        "pass": true
+      }
+    ],
+    "source_review": [
+      "Data-Centric Table 3 original-model scores and GPT-5.2 judge settings distinguished",
+      "FinVector section 4.1 decode settings distinguished from transferable budget",
+      "FinLCR Table 1 base model distinguished from adapted FinLCR",
+      "Registry sizes and alias confirmed with fresh independent reads"
+    ]
+  },
+  "round2": {
+    "reviewer": "recent_window_review",
+    "result": "PASS",
+    "checks": [
+      "model and checkpoint score attribution",
+      "download size versus conditional KV-only estimates",
+      "paper settings versus adaptation and vendor advice",
+      "non-thinking R1/R4 design coherence",
+      "no inference completion claims"
+    ],
+    "unresolved": [
+      "8GiB CPU runtime fit and duration",
+      "quantized-model task performance",
+      "four-stage rendered-history preservation"
+    ],
+    "reviewer_modified_files": false
+  },
+  "small_model_installations_this_review": 0,
+  "inference_calls_this_review": 0,
+  "active_protocol_modified": false
+}

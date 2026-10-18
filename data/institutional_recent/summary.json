@@ -1,0 +1,210 @@
+{
+  "AI_calls": 0,
+  "AI_results": 0,
+  "all_three_shared_optimum": {
+    "count": 0,
+    "window_ids": []
+  },
+  "baseline_scope": "Equal weight and mandate-blind gamma3 are constructed diagnostic portfolios, not AI or human observations.",
+  "calendar_interpretation": "Reference-month index only. Current revised source vintage does not establish prior-month public availability on historical month-start dates.",
+  "cases": 72,
+  "conditional_workload_if_legacy_four_stage_policy_is_used": {
+    "FRESH_outputs_and_calls": 72,
+    "R1_R4_final_outputs": 144,
+    "R1_R4_stage_calls": 576,
+    "status": "arithmetic only; no recent workflow runpack or AI execution created by this generator",
+    "total_final_outputs": 216,
+    "total_stage_calls": 648
+  },
+  "deterministic_baselines": {
+    "equal_weight_gamma_1": {
+      "cases": 24,
+      "maximum_utility_regret": 0.012570560156525534,
+      "mean_utility_regret": 0.009085782316422234,
+      "minimum_utility_regret": 0.007324617839718447
+    },
+    "equal_weight_gamma_3": {
+      "cases": 24,
+      "maximum_utility_regret": 0.008335378790427011,
+      "mean_utility_regret": 0.0058670300958514774,
+      "minimum_utility_regret": 0.004305741806167111
+    },
+    "equal_weight_gamma_5": {
+      "cases": 24,
+      "maximum_utility_regret": 0.007340345346779352,
+      "mean_utility_regret": 0.0048940999645626865,
+      "minimum_utility_regret": 0.0033288612774169755
+    },
+    "gamma_3_blind_gamma_1": {
+      "cases": 24,
+      "maximum_utility_regret": 0.0040327587674031246,
+      "mean_utility_regret": 0.001848807980714232,
+      "minimum_utility_regret": 0.0007254295539931947
+    },
+    "gamma_3_blind_gamma_3": {
+      "cases": 24,
+      "maximum_utility_regret": 0.0,
+      "mean_utility_regret": 0.0,
+      "minimum_utility_regret": 0.0
+    },
+    "gamma_3_blind_gamma_5": {
+      "cases": 24,
+      "maximum_utility_regret": 0.0011355432537023102,
+      "mean_utility_regret": 0.0003970141085677371,
+      "minimum_utility_regret": 1.101399544379926e-05
+    }
+  },
+  "first_training_window": {
+    "end": "2023-12",
+    "months": 60,
+    "start": "2019-01"
+  },
+  "future_months_reserved": 0,
+  "future_observations_used": 0,
+  "gammas": [
+    1,
+    3,
+    5
+  ],
+  "human_runs": 0,
+  "industry_order": [
+    "NoDur",
+    "Durbl",
+    "Manuf",
+    "Enrgy",
+    "Chems",
+    "BusEq",
+    "Telcm",
+    "Utils",
+    "Shops",
+    "Hlth",
+    "Money",
+    "Other"
+  ],
+  "input_months": 83,
+  "input_period": [
+    "2019-01",
+    "2025-11"
+  ],
+  "last_training_window": {
+    "end": "2025-11",
+    "months": 60,
+    "start": "2020-12"
+  },
+  "memory_limitation": "Historical data may overlap model pretraining. Inputs exclude future observations, but this is not proof of unseen data, no leakage, historical information-set reconstruction, or genuine future prediction.",
+  "model_exposure": "Only model_visible payloads may be used; identifiers, reference months, reference answers, pair classifications and all evaluator_only fields remain evaluator metadata unless a separately reviewed prompt explicitly defines otherwise.",
+  "numerical_verification": {
+    "KKT_checks": 72,
+    "KKT_maximum_residuals": {
+      "active_stationarity_residual": 8.239936510889834e-18,
+      "complementarity_residual": 3.891814930103155e-18,
+      "inactive_dual_violation": 0.0,
+      "weight_sum_residual": 0.0
+    },
+    "all_covariances_SPD": true,
+    "all_reference_KKT_checks_passed": true,
+    "covariance_checks": 24,
+    "independent_SLSQP_maximum_absolute_utility_gap": 5.0133508455729725e-15,
+    "independent_SLSQP_maximum_weight_difference": 1.0250572544112657e-06,
+    "independent_SLSQP_successes": 72,
+    "maximum_covariance_condition_number": 324.72335361384495,
+    "minimum_covariance_eigenvalue": 0.00013281074894812132,
+    "oracle_zero_scores_and_blind_pair_identities_passed": true,
+    "precision_note": "Imported float64 engineering checks: KKT factor 2048; SLSQP objective scale 100, ftol 1e-12, maxiter 1000. No effect-size threshold; not formal exact-arithmetic certification.",
+    "risk_aversion_return_and_variance_monotonicity_passed": true
+  },
+  "objective": "U_gamma(w)=mu.T @ w-gamma/2*(w.T @ Sigma @ w); w>=0, sum(w)=1.",
+  "overlap": "Adjacent windows share 59 of 60 months. These are 24 fixed overlapping scenarios, not 24 independent market samples or 72 observed institutions.",
+  "pair_reference_summary": {
+    "1-3": {
+      "classifications": {
+        "distinct_cross_KKT_rejects_shared_optimum": 24
+      },
+      "maximum_D_star": 0.8019275491102866,
+      "mean_D_star": 0.5142426184562661,
+      "median_D_star": 0.46964181916708164,
+      "minimum_D_star": 0.2524886082513078,
+      "windows": 24
+    },
+    "1-5": {
+      "classifications": {
+        "distinct_cross_KKT_rejects_shared_optimum": 24
+      },
+      "maximum_D_star": 0.9622785124922284,
+      "mean_D_star": 0.6139648803290109,
+      "median_D_star": 0.586665579999839,
+      "minimum_D_star": 0.37935104010926957,
+      "windows": 24
+    },
+    "3-5": {
+      "classifications": {
+        "distinct_cross_KKT_rejects_shared_optimum": 24
+      },
+      "maximum_D_star": 0.28929383703819933,
+      "mean_D_star": 0.11412489365491214,
+      "median_D_star": 0.0994270178546561,
+      "minimum_D_star": 0.02054424020604928,
+      "windows": 24
+    }
+  },
+  "reference_interpretation": "Conditional optimum for supplied estimated statistics; not true future returns, actual fund holdings, or realized profitability.",
+  "reference_months": [
+    "2024-01",
+    "2024-02",
+    "2024-03",
+    "2024-04",
+    "2024-05",
+    "2024-06",
+    "2024-07",
+    "2024-08",
+    "2024-09",
+    "2024-10",
+    "2024-11",
+    "2024-12",
+    "2025-01",
+    "2025-02",
+    "2025-03",
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12"
+  ],
+  "response_sum_tolerance_if_imported_evaluator_is_used": 1e-06,
+  "role": "numerical_auxiliary_control_not_documentary_strategy_main",
+  "same_optimum_policy": "Keep every case including shared optima; equality of recommended portfolios is not harmful convergence when the conditional optima coincide.",
+  "schema_version": "1.0",
+  "scope_ko": "최근 24개 기준월의 과거 60개월 통계에 대해 가상 기관의 명시된 수치 목적을 따르는지 확인하기 위한 보조 과제. 실제 월초 투자·문서해석·전략형성의 역사적 재현이 아니다.",
+  "selection_rule": "All 24 months of 2024-2025 retained before AI execution; no selection by reference separation or model performance.",
+  "sources": {
+    "engineering_tolerances": "Float64/KKT tolerances, SLSQP convergence settings and response serialization tolerance are implementation choices, not paper-derived behavioral parameters.",
+    "french": {
+      "adopted": "Value-weighted monthly total returns for 12 industry baskets and date-matched monthly risk-free returns.",
+      "industry_construction": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_12_ind_port.html",
+      "limits": "Industry membership changes historically. Current revised CIZ vintage; not historical point-in-time releases or fixed constituent baskets.",
+      "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html"
+    },
+    "portbench": {
+      "adopted": "2024-2025 QA evaluation-year range as the calendar precedent, and long-only sum-one feasibility.",
+      "locators": "Appendix B.2 QA test years 2024-2025; Appendix C.1 T5 long-only full-investment feasible set.",
+      "not_adopted": "Its dynamic 2024 normal-period backtest, 60-trading-day lookback, max-Sharpe objective, constant annual 4% risk-free rate, or scoring weights.",
+      "url": "https://arxiv.org/html/2605.27887v6"
+    },
+    "provenance": "LIBERA_adaptation combining distinct paper conditions; not one published unified protocol.",
+    "researcher_choices": "24 monthly reference tasks, no future evaluation, three fictional mandates, auxiliary-control role, deterministic numerical baselines.",
+    "salcher": {
+      "adopted": "Monthly decimal excess returns, 60-month sample moments, quadratic utility and gamma values.",
+      "locators": "Section 3.2 Eq.(6), Tables 1-5 quadratic gamma=1,3,5; Section 4.1 60-month means/covariances.",
+      "not_adopted": "1964-2023 full period, future 36-month evaluation, unrestricted-short optimum, code-only covariance shrinkage.",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/for.70134"
+    }
+  },
+  "status": "prepared_verified_numerical_auxiliary_control_no_AI_results",
+  "training_months": 60,
+  "unresolved_pairs": [],
+  "windows": 24
+}

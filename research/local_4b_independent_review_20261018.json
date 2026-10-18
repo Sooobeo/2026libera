@@ -1,0 +1,553 @@
+{
+  "created_at_utc": "2026-10-18T06:37:36.711552+00:00",
+  "status": "pass_with_stated_limits",
+  "scope": "Independent mechanical audit of existing 4B engineering artifacts. No new model calls, no semantic/research evaluation, no raw edits.",
+  "checks_passed": 37,
+  "checks_failed": 0,
+  "checks": [
+    {
+      "check": "synthetic_one_attempt_no_research_no_retry",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_latency_4b_20261018/summary.json",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/worker_summary.json",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/supervisor_result.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "synthetic_request_and_options",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/http_0001_latency_probe/request.json",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/worker_spec.json"
+      ],
+      "detail": "Engineering controls, including explicit override of inherited presence_penalty=1.5; not claimed as paper sampling replication."
+    },
+    {
+      "check": "synthetic_engine_digest_template_quantization_pin",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/model_observation.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "synthetic_raw_stream_events_identity",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/http_0001_latency_probe/raw_stream.bin",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/http_0001_latency_probe/events.jsonl"
+      ],
+      "detail": null
+    },
+    {
+      "check": "synthetic_assembled_content_no_thinking",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/http_0001_latency_probe/assembled_text.json",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/http_0001_latency_probe/response.json",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/worker_summary.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "synthetic_provider_metrics_recomputed",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/http_0001_latency_probe/result.json",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/http_0001_latency_probe/events.jsonl"
+      ],
+      "detail": null
+    },
+    {
+      "check": "synthetic_ttft_wall_and_120_second_deadline",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/http_0001_latency_probe/events.jsonl",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/http_0001_latency_probe/result.json",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/supervisor_result.json",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/invocation.json",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/worker_spec.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "synthetic_windows_memory_observed",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/monitor.jsonl"
+      ],
+      "detail": null
+    },
+    {
+      "check": "synthetic_api_placement_model_context",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/monitor.jsonl"
+      ],
+      "detail": "API placement accounting, not physical dedicated VRAM capacity."
+    },
+    {
+      "check": "synthetic_cleanup_done_and_empty_residency",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/unload_and_residency.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "synthetic_initial_residency_empty",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_latency_4b_20261018/residency_before.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "synthetic_ready_json_only",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/http_0001_latency_probe/assembled_text.json",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/worker_summary.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "synthetic_local_remote_exact_body_bytes",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/http_0001_latency_probe/request.json",
+        "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/http_0001_latency_probe/request.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "synthetic_local_remote_exact_pins_and_inherited_parameters",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/model_observation.json",
+        "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/model_observation.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "synthetic_actual_sent_prompt_1093_bytes_hash",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/http_0001_latency_probe/request.json",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/invocation.json",
+        "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/invocation.json"
+      ],
+      "detail": "Compare the sent message; local prompt.txt has Windows line endings."
+    },
+    {
+      "check": "server_4b_threads2_timeout_zero_captured_bytes_cleanup",
+      "status": "pass",
+      "evidence": [
+        "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/supervisor_result.json",
+        "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/http_0001_latency_probe/raw_stream.bin",
+        "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/unload_and_residency.json"
+      ],
+      "detail": "No captured output by deadline; internal progress/provider counts unavailable, not zero."
+    },
+    {
+      "check": "synthetic_source_hashes_match",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_latency_4b_20261018/invocation.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "actual_input_one_attempt_no_research_no_retry",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/summary.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/worker_summary.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/supervisor_result.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "actual_input_request_and_options",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/http_0001_latency_probe/request.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/worker_spec.json"
+      ],
+      "detail": "Engineering controls, including explicit override of inherited presence_penalty=1.5; not claimed as paper sampling replication."
+    },
+    {
+      "check": "actual_input_engine_digest_template_quantization_pin",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/model_observation_before_request.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "actual_input_raw_stream_events_identity",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/http_0001_latency_probe/raw_stream.bin",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/http_0001_latency_probe/events.jsonl"
+      ],
+      "detail": null
+    },
+    {
+      "check": "actual_input_assembled_content_no_thinking",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/http_0001_latency_probe/assembled_text.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/http_0001_latency_probe/response.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/worker_summary.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "actual_input_provider_metrics_recomputed",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/http_0001_latency_probe/result.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/http_0001_latency_probe/events.jsonl"
+      ],
+      "detail": null
+    },
+    {
+      "check": "actual_input_ttft_wall_and_120_second_deadline",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/http_0001_latency_probe/events.jsonl",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/http_0001_latency_probe/result.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/supervisor_result.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/invocation.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/worker_spec.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "actual_input_windows_memory_observed",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/monitor.jsonl"
+      ],
+      "detail": null
+    },
+    {
+      "check": "actual_input_api_placement_model_context",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/monitor.jsonl"
+      ],
+      "detail": "API placement accounting, not physical dedicated VRAM capacity."
+    },
+    {
+      "check": "actual_input_cleanup_done_and_empty_residency",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/unload_and_residency_after.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "actual_input_initial_residency_empty",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/residency_before.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "actual_output_cap_expected_and_quality_not_scored",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/summary.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/worker_summary.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/http_0001_latency_probe/response.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "actual_deadline_text_corrected",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/summary.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "actual_roundtrip_original_system_and_all_values",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/original_request_not_sent.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_request_to_send.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "actual_public_source_input_reproduces",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/roundtrip_and_sizes.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_request_to_send.json",
+        "data/sector_documents/model_packets.jsonl",
+        "data/sector_market/market_input.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "actual_source_and_public_input_hashes_match",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/invocation.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "actual_two_pin_observations_match",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/model_observation.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/model_observation_before_request.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "actual_idle_confirmed_before_call",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/idle_confirmation_before.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "actual_1p7b_message_identity_other_options_equal",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_request_to_send.json",
+        "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_request_to_send.json"
+      ],
+      "detail": "Only model and context differ: 4B=65536, 1.7B=32768. Template/tokenizer also differ; not a controlled model-only comparison."
+    },
+    {
+      "check": "all_raw_artifacts_unchanged",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_latency_4b_20261018/invocation.json",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/prompt.txt",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/residency_before.json",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/summary.json",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/model_observation.json",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/monitor.jsonl",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/supervisor_result.json",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/unload_and_residency.json",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/worker.console.log",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/worker_spec.json",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/worker_summary.json",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/http_0001_latency_probe/assembled_text.json",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/http_0001_latency_probe/events.jsonl",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/http_0001_latency_probe/raw_stream.bin",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/http_0001_latency_probe/request.json",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/http_0001_latency_probe/response.json",
+        "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/http_0001_latency_probe/result.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_request_to_send.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/idle_confirmation_before.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/invocation.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/model_observation.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/model_observation_before_request.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/original_request_not_sent.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/residency_before.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/roundtrip_and_sizes.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/summary.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/unload_and_residency_after.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/monitor.jsonl",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/supervisor_result.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/worker.console.log",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/worker_spec.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/worker_summary.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/http_0001_latency_probe/assembled_text.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/http_0001_latency_probe/events.jsonl",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/http_0001_latency_probe/raw_stream.bin",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/http_0001_latency_probe/request.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/http_0001_latency_probe/response.json",
+        "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/http_0001_latency_probe/result.json",
+        "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/model_observation.json",
+        "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/monitor.jsonl",
+        "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/supervisor_result.json",
+        "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/unload_and_residency.json",
+        "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/worker.console.log",
+        "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/worker_spec.json",
+        "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/http_0001_latency_probe/events.jsonl",
+        "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/http_0001_latency_probe/raw_stream.bin",
+        "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/http_0001_latency_probe/request.json",
+        "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/invocation.json",
+        "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/summary.json",
+        "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_request_to_send.json"
+      ],
+      "detail": null
+    }
+  ],
+  "observations": {
+    "synthetic": {
+      "status": "completed",
+      "metrics": {
+        "wall_seconds": 13.556900600000517,
+        "ttft_any_generated_seconds": 13.012620900000911,
+        "ttft_content_seconds": 13.01261939998949,
+        "token_count_source": "Ollama counters, not independent tokenization",
+        "duration_unit_in_response": "nanoseconds",
+        "total_duration_seconds": 13.5411569,
+        "load_duration_seconds": 9.9484859,
+        "prompt_eval_duration_seconds": 3.036411,
+        "eval_duration_seconds": 0.539764,
+        "prompt_eval_count": 377,
+        "eval_count": 6,
+        "prompt_eval_tokens_per_second": 124.15973990345839,
+        "eval_tokens_per_second": 11.115969201354666
+      },
+      "content_utf8_bytes": 1093,
+      "serialized_http_body_bytes": 1447,
+      "raw_stream_bytes": 1006,
+      "event_count": 6,
+      "output_utf8_bytes": 14,
+      "deadline_seconds": 120,
+      "supervisor_elapsed_seconds": 14.066069299995434,
+      "memory_sample_count": 7,
+      "sampled_maximum_named_process_working_set_sum_bytes": 4844699648,
+      "sampled_minimum_available_physical_bytes": 5522915328,
+      "loaded_model_api_sample_count": 2,
+      "api_model_sizes_bytes": [
+        3273664756
+      ],
+      "api_model_size_vram_bytes": [
+        3273664756
+      ],
+      "api_context_length": 8192,
+      "unload_confirmed": true,
+      "remote_comparator": {
+        "status": "hard_deadline",
+        "deadline_seconds": 120,
+        "supervisor_elapsed_seconds": 120.00339300371706,
+        "captured_raw_bytes": 0,
+        "provider_metrics": null
+      }
+    },
+    "actual_input": {
+      "status": "output_limit_reached",
+      "metrics": {
+        "wall_seconds": 58.77487999999721,
+        "ttft_any_generated_seconds": 56.35920019999321,
+        "ttft_content_seconds": 56.35919849999482,
+        "token_count_source": "Ollama counters, not independent tokenization",
+        "duration_unit_in_response": "nanoseconds",
+        "total_duration_seconds": 58.7631286,
+        "load_duration_seconds": 8.854979,
+        "prompt_eval_duration_seconds": 47.453427,
+        "eval_duration_seconds": 2.408645,
+        "prompt_eval_count": 8518,
+        "eval_count": 32,
+        "prompt_eval_tokens_per_second": 179.50231497505965,
+        "eval_tokens_per_second": 13.285477934689421
+      },
+      "content_utf8_bytes": 16114,
+      "serialized_http_body_bytes": 17069,
+      "raw_stream_bytes": 4022,
+      "event_count": 28,
+      "output_utf8_bytes": 138,
+      "deadline_seconds": 120,
+      "supervisor_elapsed_seconds": 60.885992099996656,
+      "memory_sample_count": 28,
+      "sampled_maximum_named_process_working_set_sum_bytes": 6884761600,
+      "sampled_minimum_available_physical_bytes": 3391320064,
+      "loaded_model_api_sample_count": 22,
+      "api_model_sizes_bytes": [
+        5211433204
+      ],
+      "api_model_size_vram_bytes": [
+        5211433204
+      ],
+      "api_context_length": 65536,
+      "unload_confirmed": true
+    }
+  },
+  "recorded_local_generation_attempts": 2,
+  "recorded_local_completed_http_streams": 2,
+  "recorded_local_output_cap_cases": 1,
+  "recorded_local_pilot_calls": 0,
+  "recorded_local_main_calls": 0,
+  "model_manifest_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+  "engine_version": "0.35.1",
+  "template_sha256": "b507b9c2f6ca642bffcd06665ea7c91f235fd32daeefdf875a0f938db05fb315",
+  "limits": [
+    "Synthetic ready JSON success and capped first-stage output measure resource feasibility only, not institutional fidelity or strategy quality.",
+    "Real-input cap is 32 tokens. Full 8192-token outputs, explicit four-stage history, and R1/R4 completion remain untested by these probes.",
+    "Real-input 4B and 1.7B share message contents but use different model/template/tokenizer and context (65536 versus 32768). No isolated model-only speed ranking.",
+    "Server/laptop synthetic bodies match, but hardware, OS, backend and placement differ. One server timeout cannot supply an exact speed ratio or causal hardware effect.",
+    "The host was not isolated: root reports report-builder --help and monitoring ran during the 4B actual-input call. This is operational timing, not an isolated microbenchmark.",
+    "One attempt per setting; unloading does not evict OS file cache; no statistical estimates.",
+    "API size_vram is placement accounting, not dedicated physical VRAM capacity. Working-set sums may double-count shared pages, and sampled extrema are not continuous peaks or whole-host OOM guarantees.",
+    "Provider counts/durations are Ollama counters, not independent tokenization.",
+    "Historical server and Windows diagnostic scripts differ due to explicit single-probe selection, Windows monitoring and unload-guard support. Actual transmitted synthetic body bytes were compared directly."
+  ],
+  "evidence_sha256": {
+    "data/local_sector_runtime/laptop_latency_4b_20261018/invocation.json": "418212d014aae1e3fed55d10f3619b7d19f24e16d821aff148fcba3652232e0e",
+    "data/local_sector_runtime/laptop_latency_4b_20261018/prompt.txt": "3810addf534dd5dc8a73c74a6eda7667d41bc8c0be1f55cafd4db32f52ddb305",
+    "data/local_sector_runtime/laptop_latency_4b_20261018/residency_before.json": "7f9fc2997f5fc9f5a40bc2302e51ed9331c744cd56a88e709136d1762ff7be89",
+    "data/local_sector_runtime/laptop_latency_4b_20261018/summary.json": "644568a32366667f93aa5e216f720c4df30051478d0dac97bd626b9940947d12",
+    "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/model_observation.json": "d9a2ae3d36476b70c820f27336197000e4c9c9fdfb3dc36e32207bd6025c80fd",
+    "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/monitor.jsonl": "7da2416f1d16c1af89b0711c0ae195c869734d649007dcc50aa34f380cbe3a94",
+    "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/supervisor_result.json": "13945ded626a3e1678bb9f019585398265dc7ebc4453f67b7c2cac308d6d2c64",
+    "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/unload_and_residency.json": "4d3701b34ba32fc969ead8c05db221b18d43044bd73664544c0c6ee2471a268f",
+    "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/worker.console.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/worker_spec.json": "7a4010d405f4f82627c775a0b84271af3572cb3710c6b998fa3af4298d5ef503",
+    "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/worker_summary.json": "953fcf40e801a2d3116888c36d6347db0d7de91df15b62ef13cda41c87744059",
+    "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/http_0001_latency_probe/assembled_text.json": "e8f5812bcc4d2e25c9e5cc6a0cd8a7ce40605850e6681eb3ba6368db496e84fe",
+    "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/http_0001_latency_probe/events.jsonl": "da1da456497d6ecc9f6f40a246f66985485a589de082a87ff6f53b4e7189d04f",
+    "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/http_0001_latency_probe/raw_stream.bin": "94956d867c17eec12498be6a0244ef85b16408d26667caceb09769b8dc2df623",
+    "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/http_0001_latency_probe/request.json": "24f79b0f6248d6509a6915d81e8b997ee8a809b53f6d08ea64dcbadd5b0b0295",
+    "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/http_0001_latency_probe/response.json": "a95a0c04e856939cc3dac8180f4b020e5ef426aa27b8ac2af1de92a8051e5d7e",
+    "data/local_sector_runtime/laptop_latency_4b_20261018/4b_threads2/http_0001_latency_probe/result.json": "6d88d3498140d1ae4fa1b4de0f1850d9900d7ff583ba495577e060b05bbd6f91",
+    "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_request_to_send.json": "88ce7874a4cd971a6595d8ee85a6e4162bedd60cf7200f5e40072cc29f5287c4",
+    "data/local_sector_runtime/laptop_realinput_4b_20261018/idle_confirmation_before.json": "fe588b5d8862a52c20c2c7d024ba79f8fa3d756a726dae81a4b6151a2f57802c",
+    "data/local_sector_runtime/laptop_realinput_4b_20261018/invocation.json": "fa5bd3d17a4405d81cc034abe5cb9d4d50c5bf661e9b26bbf59b996945de9c2c",
+    "data/local_sector_runtime/laptop_realinput_4b_20261018/model_observation.json": "d9a2ae3d36476b70c820f27336197000e4c9c9fdfb3dc36e32207bd6025c80fd",
+    "data/local_sector_runtime/laptop_realinput_4b_20261018/model_observation_before_request.json": "d9a2ae3d36476b70c820f27336197000e4c9c9fdfb3dc36e32207bd6025c80fd",
+    "data/local_sector_runtime/laptop_realinput_4b_20261018/original_request_not_sent.json": "b9368d3d27c7208de9b5c89f836c28ed72bc4ca96837b86c537caa82a16dd163",
+    "data/local_sector_runtime/laptop_realinput_4b_20261018/residency_before.json": "7f9fc2997f5fc9f5a40bc2302e51ed9331c744cd56a88e709136d1762ff7be89",
+    "data/local_sector_runtime/laptop_realinput_4b_20261018/roundtrip_and_sizes.json": "543cce148d575fb5b19275a4ad1aba65eccae5536437bbcdbcd67e92cad47cc8",
+    "data/local_sector_runtime/laptop_realinput_4b_20261018/summary.json": "735c345c6141028fea58868dadeda971293da03fe8ea03706a88954c72efe1d5",
+    "data/local_sector_runtime/laptop_realinput_4b_20261018/unload_and_residency_after.json": "00c6f559548c1ae477d999ed46943e2aa9d2862a57c037151f82061030325f55",
+    "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/monitor.jsonl": "33464100d19d8dfba885d2f1a64d5238d062567524bea68e5257c52a482267c6",
+    "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/supervisor_result.json": "5182d5088871145d680448910e3e8a9478ea0c5a78e25a5f63b6201d251c288f",
+    "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/worker.console.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/worker_spec.json": "4051ad1def1a303c3872f773c6ca8ff62eb407dce1e41b48db415d66846928ae",
+    "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/worker_summary.json": "d7547086905b2d50dbb564bebe7573397d3853c72c22c19db2bc87307ef2c5a8",
+    "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/http_0001_latency_probe/assembled_text.json": "813aa17ae7560a32162317dd7076710c080006ecebd7ee880ee55a59c1e5885b",
+    "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/http_0001_latency_probe/events.jsonl": "6902777b8d41dc62e890e8d217beda2e61d3da6ccba570b3d9f58fffd9ef8b55",
+    "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/http_0001_latency_probe/raw_stream.bin": "93c9485c0965b78f284aeee7cf39292fb5ed3d9eea865559efc3cf67d761da42",
+    "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/http_0001_latency_probe/request.json": "dae94ba91b1d8380612facf67f2b82bf7e441566c4920fee1df8f8f57fbe5374",
+    "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/http_0001_latency_probe/response.json": "1c9e4cf88816ebcc82ec04a7f1fcf30612cd65b27b04572eb30172204361c5a0",
+    "data/local_sector_runtime/laptop_realinput_4b_20261018/compact_probe/http_0001_latency_probe/result.json": "ebd64347559c0961a230f90736fc8edbfe03f341cb38a05a3a90dd04012f5709",
+    "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/model_observation.json": "d3fa9555fb73fb28924f9fcfdeb972a645796c95c035f44e4b71029190d7600b",
+    "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/monitor.jsonl": "840ae5cd64d0bdfe61d9fdeba1b212c6b5a28fafeecdeae6c21777191725a020",
+    "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/supervisor_result.json": "c20eb3a6c7b691e9f4377e982756314d898a60abf1915442725ffc687d3bf803",
+    "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/unload_and_residency.json": "0ce92c5cbddb91713ffac2f2bed2770b81f42cfa282e5a65662cb928f49e5f3a",
+    "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/worker.console.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/worker_spec.json": "0d44ad176215dc7f39a886248f6f5ad0110bd130487fbb8aaf1b3bece223eca0",
+    "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/http_0001_latency_probe/events.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/http_0001_latency_probe/raw_stream.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/http_0001_latency_probe/request.json": "20213e202d73203ba143f3ea714f57f04f82dac7b0212ec93e2f91343a558c79",
+    "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/invocation.json": "c83a8c04283dc5d7759e3a75557eee27f1e2139640a32b9b17458dcbaf7e3e93",
+    "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/summary.json": "2e684f396f6ab6c4e4d63472f319e3728f1e6fe5f5eaebe9d4bdbe8f915af64a",
+    "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_request_to_send.json": "99f3e6e4e17f4958953ca814eb1c004a0077148286d26136024c114183a593aa",
+    "research/benchmark_sector_real_input.py": "f8f299ed156435791287d57c83e03ea9992a4a56ce3d77500667146cffda1cb6",
+    "research/benchmark_sector_latency.py": "0686444e608033be931922a26886ed4a4b5b0789385215b7b75bfacc4050458b",
+    "research/remote_sector_runtime.py": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5",
+    "research/probe_ollama_runtime.py": "2dd48936bbaf8fd090a26f92fd356fec3a11ac81e5b01b39d661ffe72552fddb",
+    "research/run_sector_workflow.py": "5625450a4dcbe1aa717c9809bf4955c1ef6b10aab4f0c83ef05dc2eb2c123cfd",
+    "research/compact_sector_prompt.py": "6984ada966ad55c3089fc297ca6342fdb51685bebfe3107769086343bbe68c0d",
+    "data/sector_documents/model_packets.jsonl": "520bed87396eb815c87f362712a6ec39c0275076f9ef4c5d59ef5a7cbbe6afc7",
+    "data/sector_market/market_input.json": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f"
+  }
+}

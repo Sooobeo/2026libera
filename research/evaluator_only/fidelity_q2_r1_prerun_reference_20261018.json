@@ -1,0 +1,449 @@
+{
+  "schema_version": "fidelity_q2_r1_prerun_semantic_reference_1.0",
+  "created_at_utc": "2026-10-18T06:48:00.548929+00:00",
+  "status": "prepared_before_authorized_four_stage_case; no_run_output_inspected",
+  "access_role": "evaluator_only; never append to model prompts, calculator inputs, online tool registry or deployment bundle",
+  "case": {
+    "source_id": "fidelity_q2_2026",
+    "workflow": "R1",
+    "expected_stages": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "split": "pilot_single_case",
+    "institution_document_visible_from_stage": 1,
+    "research_case_outputs_read_for_this_rubric": 0,
+    "main_case": false
+  },
+  "review_scope": "Evidence-linked descriptive review of one preselected four-stage case. No weighted aggregate, pass-score cutoff, unique allocation target, return-performance claim or R1/R4 treatment-effect estimate.",
+  "source_reference": {
+    "title": "Quarterly Sector and Investment Research Update Q2 2026",
+    "url": "https://www.fidelity.com/bin-public/600_Fidelity_Com_English/documents/learning-center/Quarterly-Sector-And-Investment-Research-Update-Second-Quarter-2026.pdf",
+    "pdf_path": "tmp/pdfs/sector_documents/fidelity_q2_2026.pdf",
+    "pdf_sha256": "d11c4403f90e7bbd1d06a7fa83c91673d8c772be325042d4d1f01fab4e7076d6",
+    "pages_visually_inspected": [
+      2,
+      3,
+      17,
+      18
+    ],
+    "model_visible_pages_via_paraphrase": [
+      2,
+      3
+    ],
+    "additional_pages_for_auditor_scope_only": [
+      17,
+      18
+    ],
+    "source_identity": "Denise Chisholm strategist commentary; not automatically Fidelity firm-wide policy or a fund legal mandate",
+    "human_review": "pending; this AI source check is not human sign-off"
+  },
+  "evidence_boundary": {
+    "two_distinct_questions": [
+      "Does the response follow evidence actually supplied to the model at this stage?",
+      "Is the supplied paraphrase/annotation faithful to the original PDF?"
+    ],
+    "model_visible_evidence": "Exactly the pinned public packet plus common market and already-visible calculator feedback. PDF pages17-18 and evaluator notes are not supplied by this rubric.",
+    "hidden_source_rule": "A fact appearing only elsewhere in the full PDF is not support within the supplied packet. Record full-source status separately; do not penalize a model for omitting unseen material or silently make it part of the prompt.",
+    "stage_history": "Earlier errors and later explicit corrections are reported chronologically. Primary extraction is judged on final raw stage4; do not count four stages as four independent cases.",
+    "no_repair": "Review the stored original messages and raw final response. Never normalize weights, repair JSON, replace labels, add evidence citations, retry or insert auditor answers into later stages."
+  },
+  "categories": {
+    "supported": {
+      "definition": "The visible cited evidence entails the atomic factual claim at the asserted scope, date, direction and strength. A derived arithmetic claim additionally matches the recorded inputs/formula.",
+      "basis": "FEVER supported and ALCE citation entailment principles; application to this packet."
+    },
+    "contradicted": {
+      "definition": "The visible source or checked arithmetic gives the opposite or an incompatible fact. State the exact conflict; a mere absence of evidence is not a contradiction.",
+      "basis": "FEVER refuted principle."
+    },
+    "not_stated": {
+      "definition": "The supplied evidence neither establishes nor directly refutes the claim. This is a support limitation, not proof of real-world falsity.",
+      "basis": "FEVER NotEnoughInfo principle adapted to a closed supplied context."
+    },
+    "uncertain": {
+      "definition": "The claim/evidence scope is ambiguous, internally conflicting, visually unclear or cannot be adjudicated reproducibly. Preserve the issue and require independent human adjudication.",
+      "basis": "Explicit reviewer-abstention extension for this audit; not a fourth FEVER benchmark label, not a paper-reported numeric score."
+    }
+  },
+  "claim_record_contract": {
+    "fields": [
+      "claim_id",
+      "stage",
+      "response_path",
+      "response_sha256",
+      "json_pointer_or_text_span",
+      "claim_text",
+      "claim_kind",
+      "claimed_source_id",
+      "cited_evidence_ids",
+      "visible_evidence_status",
+      "original_source_status",
+      "source_page_and_row",
+      "reason_for_category",
+      "alternative_or_missing_evidence",
+      "human_review_required"
+    ],
+    "claim_kind_values": [
+      "source_rating",
+      "source_reason",
+      "source_scope",
+      "institution_objective_or_constraint",
+      "historical_market_fact",
+      "derived_arithmetic",
+      "forecast_or_risk_claim",
+      "model_proposed_decision"
+    ],
+    "atomicity": "Split compound factual statements when their clauses have different support. Keep the original full text and mark the assessed span.",
+    "decision_rule": "A proposed allocation is a decision, not a published fact. Do not label its exact weight as supported/contradicted against an invented target. Assess its factual premises, attribution, explicit tradeoff and internal consistency separately."
+  },
+  "sector_reference": [
+    {
+      "sector_code": "10",
+      "sector_name": "Energy",
+      "original_strategist_view": "Underweight",
+      "allowed_evidence_id": "fidelity_q2_2026:p3:sector:10",
+      "original_pdf_page": 3,
+      "original_location": "Scorecard: row Energy; Strategist View colour/shape, and same-row Comments",
+      "reason_paraphrase_for_offline_auditor": "The strategist reads the indicators as an unfavorable risk/reward balance.",
+      "packet_and_annotation_match": true,
+      "source_visual_check": "completed_by_AI_reviewer; not independent human adjudication"
+    },
+    {
+      "sector_code": "15",
+      "sector_name": "Materials",
+      "original_strategist_view": "Underweight",
+      "allowed_evidence_id": "fidelity_q2_2026:p3:sector:15",
+      "original_pdf_page": 3,
+      "original_location": "Scorecard: row Materials; Strategist View colour/shape, and same-row Comments",
+      "reason_paraphrase_for_offline_auditor": "Increasing capital investment is described as a possible drag on the sector.",
+      "packet_and_annotation_match": true,
+      "source_visual_check": "completed_by_AI_reviewer; not independent human adjudication"
+    },
+    {
+      "sector_code": "20",
+      "sector_name": "Industrials",
+      "original_strategist_view": "Overweight",
+      "allowed_evidence_id": "fidelity_q2_2026:p3:sector:20",
+      "original_pdf_page": 3,
+      "original_location": "Scorecard: row Industrials; Strategist View colour/shape, and same-row Comments",
+      "reason_paraphrase_for_offline_auditor": "The commentary treats forward-oriented valuation signals as favorable.",
+      "packet_and_annotation_match": true,
+      "source_visual_check": "completed_by_AI_reviewer; not independent human adjudication"
+    },
+    {
+      "sector_code": "25",
+      "sector_name": "Consumer Discretionary",
+      "original_strategist_view": "Overweight",
+      "allowed_evidence_id": "fidelity_q2_2026:p3:sector:25",
+      "original_pdf_page": 3,
+      "original_location": "Scorecard: row Consumer Discretionary; Strategist View colour/shape, and same-row Comments",
+      "reason_paraphrase_for_offline_auditor": "Forward valuation analysis is described as implying a favorable risk/reward balance.",
+      "packet_and_annotation_match": true,
+      "source_visual_check": "completed_by_AI_reviewer; not independent human adjudication"
+    },
+    {
+      "sector_code": "30",
+      "sector_name": "Consumer Staples",
+      "original_strategist_view": "Underweight",
+      "allowed_evidence_id": "fidelity_q2_2026:p3:sector:30",
+      "original_pdf_page": 3,
+      "original_location": "Scorecard: row Consumer Staples; Strategist View colour/shape, and same-row Comments",
+      "reason_paraphrase_for_offline_auditor": "Weak business fundamentals raise the possibility that apparent value is misleading.",
+      "packet_and_annotation_match": true,
+      "source_visual_check": "completed_by_AI_reviewer; not independent human adjudication"
+    },
+    {
+      "sector_code": "35",
+      "sector_name": "Health Care",
+      "original_strategist_view": "Neutral",
+      "allowed_evidence_id": "fidelity_q2_2026:p3:sector:35",
+      "original_pdf_page": 3,
+      "original_location": "Scorecard: row Health Care; Strategist View colour/shape, and same-row Comments",
+      "reason_paraphrase_for_offline_auditor": "The stated risk/reward assessment is balanced rather than positive or negative.",
+      "packet_and_annotation_match": true,
+      "source_visual_check": "completed_by_AI_reviewer; not independent human adjudication"
+    },
+    {
+      "sector_code": "40",
+      "sector_name": "Financials",
+      "original_strategist_view": "Overweight",
+      "allowed_evidence_id": "fidelity_q2_2026:p3:sector:40",
+      "original_pdf_page": 3,
+      "original_location": "Scorecard: row Financials; Strategist View colour/shape, and same-row Comments",
+      "reason_paraphrase_for_offline_auditor": "Relative valuation is viewed as potentially cushioning downside, not eliminating losses.",
+      "packet_and_annotation_match": true,
+      "source_visual_check": "completed_by_AI_reviewer; not independent human adjudication"
+    },
+    {
+      "sector_code": "45",
+      "sector_name": "Information Technology",
+      "original_strategist_view": "Overweight",
+      "allowed_evidence_id": "fidelity_q2_2026:p3:sector:45",
+      "original_pdf_page": 3,
+      "original_location": "Scorecard: row Information Technology; Strategist View colour/shape, and same-row Comments",
+      "reason_paraphrase_for_offline_auditor": "Fundamental strength and valuations after the recent price decline motivate the favorable assessment.",
+      "packet_and_annotation_match": true,
+      "source_visual_check": "completed_by_AI_reviewer; not independent human adjudication"
+    },
+    {
+      "sector_code": "50",
+      "sector_name": "Communication Services",
+      "original_strategist_view": "Underweight",
+      "allowed_evidence_id": "fidelity_q2_2026:p3:sector:50",
+      "original_pdf_page": 3,
+      "original_location": "Scorecard: row Communication Services; Strategist View colour/shape, and same-row Comments",
+      "reason_paraphrase_for_offline_auditor": "The commentary distinguishes favorable technology-like components from less favorable defensive components. The aggregate sector view remains Underweight.",
+      "packet_and_annotation_match": true,
+      "source_visual_check": "completed_by_AI_reviewer; not independent human adjudication"
+    },
+    {
+      "sector_code": "55",
+      "sector_name": "Utilities",
+      "original_strategist_view": "Underweight",
+      "allowed_evidence_id": "fidelity_q2_2026:p3:sector:55",
+      "original_pdf_page": 3,
+      "original_location": "Scorecard: row Utilities; Strategist View colour/shape, and same-row Comments",
+      "reason_paraphrase_for_offline_auditor": "Valuations are judged unfavorable.",
+      "packet_and_annotation_match": true,
+      "source_visual_check": "completed_by_AI_reviewer; not independent human adjudication"
+    },
+    {
+      "sector_code": "60",
+      "sector_name": "Real Estate",
+      "original_strategist_view": "Overweight",
+      "allowed_evidence_id": "fidelity_q2_2026:p3:sector:60",
+      "original_pdf_page": 3,
+      "original_location": "Scorecard: row Real Estate; Strategist View colour/shape, and same-row Comments",
+      "reason_paraphrase_for_offline_auditor": "Wide valuation differences are described as creating a favorable risk/reward assessment.",
+      "packet_and_annotation_match": true,
+      "source_visual_check": "completed_by_AI_reviewer; not independent human adjudication"
+    }
+  ],
+  "audit_dimensions": [
+    {
+      "id": "source_labels",
+      "rule": "For final stage4, compare all11 unique GICS sector entries with the original Strategist View legend/row, not time-horizon factor signs or past performance. Missing/duplicate entries remain visible in the mechanical check.",
+      "reference": "Fidelity PDFp3; original source annotation; existing evaluation_spec primary_candidate",
+      "report": "Exact source-label numerator/11 and full mismatch/missing/duplicate list, separately from semantic rationale.11 is the source universe, not an invented threshold."
+    },
+    {
+      "id": "citation_entailment",
+      "rule": "Check that each citation belongs to the same source and sector and that its full passage supports the actual attached claim. A valid ID alone is insufficient. Assess unreferenced factual clauses and irrelevant citations separately.",
+      "reference": "ALCE2023 sections3.3 and6; source packet evidence IDs",
+      "report": "Per-claim statuses with evidence. No automatic entailment pass from nonempty text or correct ID."
+    },
+    {
+      "id": "reason_fidelity",
+      "rule": "Compare reasons with same-row source comments and preserve conditional wording. Do not turn potential downside support into guaranteed protection. Do not infer positive whole-sector Communication Services judgment from a positive fundamentals cell or its technology-like subindustries.",
+      "reference": "Fidelity PDFp3 Comments and separate Strategist View column",
+      "report": "Supported/contradicted/not-stated/uncertain factual reasons; omissions reported without invented replacements."
+    },
+    {
+      "id": "benchmark_and_weight_semantics",
+      "rule": "Overweight/Underweight are relative to a benchmark, not a ranking of absolute weights. Report active weight w_s-b_s continuously against the declared common benchmark. Neutral does not require exact equality.",
+      "reference": "Fidelity PDFp2 footnote; market.baseline_id; evaluation_spec separate_dimensions.Fidelity_tilts",
+      "report": "Original label and signed active weight side-by-side; explanatory link or documented deviation. No exact-weight gold, arbitrary tilt magnitude, sign tolerance or automatic strategic failure."
+    },
+    {
+      "id": "scope_and_invented_mandates",
+      "rule": "Keep author/firm/client roles separate. No source-based gamma, client risk appetite, mandatory caps, minimums, target returns, horizons or optimized institutional weights unless actually stated in supplied evidence. Task rules may be followed but must not be attributed to Fidelity.",
+      "reference": "Fidelity PDFp2 scope footnote; p18 general disclaimer (auditor context only); packet task_scope",
+      "report": "Source-origin and task-origin constraints separated. Presenting an optional model choice as an institutional requirement is a support/attribution defect."
+    },
+    {
+      "id": "market_and_risk_claims",
+      "rule": "Observed ETF returns/covariance describe the pinned historical sample. Volatility is not a probability of loss, downside-only risk, or forecast guarantee. Any mean/covariance/volatility figure must use declared units and any disclosed annualization.",
+      "reference": "market.interpretation/units/asof_scope; existing evaluation_spec risk; Fidelityp2 andp18 historical-performance caution",
+      "report": "Arithmetic correctness and interpretation separately; no prediction score or realized future-performance inference."
+    },
+    {
+      "id": "strategy_link_and_deviations",
+      "rule": "For each nontrivial allocation rationale, identify the source premise, common-data premise and stated decision/tradeoff. A deviation from a source tendency is not automatically wrong if the original view is preserved and the model explains its choice using supplied evidence.",
+      "reference": "Pinned SYSTEM decision contract; Fidelityp2 individualized goals/tolerance scope; OpenPM raw-versus-post-critic separation; PortBench distinct allocation/exposure/outcome dimensions",
+      "report": "An explicit evidence-to-decision trail and unresolved tensions. Do not judge strategic quality from fluent prose, diversity alone, label accuracy alone or calculator feasibility alone."
+    },
+    {
+      "id": "temporal_and_universe_scope",
+      "rule": "Treat this as a retrospective source-conditioned case. Fidelityp3 view is as of2026-03-31, while common market is later and its baseline date is2026-06-30. The source top3000 universe is not identical to SP500-sector ETF proxies.",
+      "reference": "Source packet dates; PDFp2/p3; market cutoff and classification_scope",
+      "report": "Whether output preserves the limitations; no contemporaneous trading replay or exact Fidelity portfolio-replication claim."
+    }
+  ],
+  "benchmark_reference": {
+    "baseline_id": "sp500_sector_reference_20260630",
+    "baseline_weights": {
+      "10": 0.03003003003003003,
+      "15": 0.018018018018018018,
+      "20": 0.08808808808808809,
+      "25": 0.09309309309309309,
+      "30": 0.04604604604604604,
+      "35": 0.0890890890890891,
+      "40": 0.11811811811811812,
+      "45": 0.38038038038038036,
+      "50": 0.09709709709709709,
+      "55": 0.022022022022022022,
+      "60": 0.018018018018018018
+    },
+    "derivation": "Each reported percentage divided by the reported 99.9 total, solely to obtain an exact full-investment starting vector. These derived values are not additional source precision or institutional target weights.",
+    "source_universe_difference": "Original strategist factors use top3000 US stocks; common benchmark is a separate SP500-sector reference. It is not Fidelity holdings or a unique target allocation.",
+    "direction_formula": "active_weight_s = proposed_weight_s - common_baseline_weight_s",
+    "no_unique_numeric_target": true
+  },
+  "arithmetic_reference": {
+    "covariance_unit": "daily_decimal_return_squared",
+    "risk_formula": "variance_daily = w^T Sigma_daily w; volatility_daily = sqrt(variance_daily) for valid covariance and weights",
+    "annualization": "Only if explicitly declared: annualized volatility = daily volatility * sqrt(market.annualization_trading_days). The supplied252 convention is recorded market metadata, not an institution risk limit.",
+    "mean_return": "Historical daily mean is descriptive; do not relabel it as an institution forecast or true expected return.",
+    "raw_weight_rule": "All11 sector weights when required at stages3/4; finite, long-only, total1. Sum residual and violations remain raw.",
+    "engineering_tolerances": {
+      "sum_tolerance": 1e-06,
+      "negative_weight_tolerance": 0,
+      "weight_above_one_tolerance": 0,
+      "covariance_symmetry_and_PSD_tolerance": 1e-12,
+      "provenance": "Implementation precision checks, not paper-derived treatment magnitudes or effect thresholds.",
+      "reporting": "Retain signed raw sum residual; never normalize, clip, repair or assign zero distance to invalid/missing allocations."
+    },
+    "tolerance_scope": "Reuse the existing declared numeric precision checks only. They are engineering choices and not evidence-based effect thresholds; no new thresholds are introduced."
+  },
+  "known_source_ambiguities": [
+    {
+      "location": "PDFp2 performance table header versus title/narrative/footnote",
+      "issue": "Header prints12/31/25 while Q1 narrative and source footnote refer to3/31/2026.",
+      "handling": "Not used to manufacture this case common numeric benchmark; retain discrepancy instead of silently changing dates."
+    },
+    {
+      "location": "PDFp18 introductory disclaimer",
+      "issue": "General disclaimer prints views as of3/31/25, whereas the sector-view table footer onp3 prints3/31/2026.",
+      "handling": "Anchor specific sector labels to the explicitp3 as-of date; do not claim every page has a consistent date. This unseen disclaimer is not a hidden requirement for model recall."
+    },
+    {
+      "location": "PDFp3 factor columns versus Strategist View",
+      "issue": "Individual valuation/fundamental/relative-strength signals can differ from the strategist rating.",
+      "handling": "Gold label is the visual Strategist View; do not reconstruct it by majority voting factor signs."
+    }
+  ],
+  "three_review_round_plan": [
+    {
+      "round": 1,
+      "focus": "Runtime/provenance",
+      "checks": [
+        "Exact selected model/engine/template/options and input/code hashes",
+        "Four recorded stage calls and temporal order",
+        "Visible-document onset, preserved history and actual no-truncation evidence",
+        "No automatic retry or hidden gold access; raw failures retained"
+      ],
+      "output": "A run validity record. This is not semantic/financial quality."
+    },
+    {
+      "round": 2,
+      "focus": "Deterministic structure/arithmetic",
+      "checks": [
+        "Strict raw JSON and duplicate keys",
+        "Sector IDs/source identity/original label coverage and citation membership",
+        "Raw long-only/sum and declared constraint provenance",
+        "Independent recomputation of w^T Sigma w, baseline deltas and recorded calculator numbers"
+      ],
+      "output": "Separate descriptive counts, residuals and mismatches; no weighted composite or repairs."
+    },
+    {
+      "round": 3,
+      "focus": "Independent source/semantic audit",
+      "owner": "risk_metrics_review",
+      "checks": [
+        "Read final raw response and all prior stage outputs without editing",
+        "Apply this pre-run claim/evidence rubric to actual visible evidence",
+        "Verify each claimed rating/reason/scope against pinned original source",
+        "Explain unsupported mandates, future-risk claims, benchmark confusion and allocation deviations",
+        "Keep uncertainty and human adjudication pending explicitly"
+      ],
+      "output": "Evidence-linked claim table and narrow case conclusion; no automatic extrapolation to R4, another institution, main experiment or shared-model convergence."
+    }
+  ],
+  "method_sources": [
+    {
+      "id": "openpm_2026",
+      "url": "https://arxiv.org/html/2608.09988v1",
+      "locator": "sections3.3,6.3 and audit artifacts",
+      "used_for": "Separate raw mandate adherence, deterministic feasibility and auditable records. No OpenPM risk presets or caps are imported as Fidelity facts."
+    },
+    {
+      "id": "portbench_2026",
+      "url": "https://arxiv.org/html/2605.27887v6",
+      "locator": "appendixF.3",
+      "used_for": "Keep allocation agreement, exposure compliance and financial outcomes distinct. Does not supply exact institutional weights for this case."
+    },
+    {
+      "id": "alce_2023_foundational",
+      "url": "https://aclanthology.org/2023.emnlp-main.398/",
+      "pdf_url": "https://aclanthology.org/2023.emnlp-main.398.pdf",
+      "locator": "sections3.3 and6",
+      "used_for": "Citation entailment/relevance is distinct from content correctness. This audit does not run or claim the paper automatic scorer."
+    },
+    {
+      "id": "fever_2018_foundational",
+      "url": "https://aclanthology.org/N18-1074/",
+      "locator": "section3 and task definition",
+      "used_for": "Supported/refuted/not-enough-information evidence relations; uncertain is our explicit abstention extension. These are methodological precedents, not claimed latest portfolio-parameter values."
+    }
+  ],
+  "paper_basis_limit": "The2026 portfolio papers ground separation of evaluation dimensions. Exact sector ratings and scope come from the actual institution source. Four audit labels are an explicit operationalization with foundational entailment precedents; no paper reports this complete case-specific rubric or certifies its reliability. User-requested self-verification is not independent human validation.",
+  "evidence_files": {
+    "tmp/pdfs/sector_documents/fidelity_q2_2026.pdf": {
+      "sha256": "d11c4403f90e7bbd1d06a7fa83c91673d8c772be325042d4d1f01fab4e7076d6",
+      "size_bytes": 321996
+    },
+    "tmp/pdfs/sector_documents/fidelity_q2_2026_2.png": {
+      "sha256": "f3368fcdec2581ff14bcf6c1b9d1de4e8586165298453f20405372fa0a6f1d56",
+      "size_bytes": 180650
+    },
+    "tmp/pdfs/sector_documents/fidelity_q2_2026_3.png": {
+      "sha256": "316931d86edf4475e45605ba55c6db5e47e682464a49dc10437b77b73740962d",
+      "size_bytes": 162695
+    },
+    "tmp/pdfs/sector_documents/fidelity_q2_2026_17.png": {
+      "sha256": "e7698f86e98821fecb1cc6e8b9440b5893924b3301ac4608ae4d56288ee3a9aa",
+      "size_bytes": 170695
+    },
+    "tmp/pdfs/sector_documents/fidelity_q2_2026_18.png": {
+      "sha256": "2767d86a74b844bce61edf6ebd9483c2d5f6310f606e1f9b44f68040ce9fba5d",
+      "size_bytes": 217728
+    },
+    "data/sector_documents/source_manifest.json": {
+      "sha256": "d1af00ee2a1c5e3ba4ca9949b5f9427a9102a373ff19afa0e6c4309769627b28",
+      "size_bytes": 11536
+    },
+    "data/sector_documents/model_packets.jsonl": {
+      "sha256": "520bed87396eb815c87f362712a6ec39c0275076f9ef4c5d59ef5a7cbbe6afc7",
+      "size_bytes": 22728
+    },
+    "data/sector_documents/packets/pilot/fidelity_q2_2026.json": {
+      "sha256": "2f506f346ebfc1be0f327163eb016dcec649e6301e4494d6a9230ab86c28d406",
+      "size_bytes": 6688
+    },
+    "data/sector_documents/evaluator_only/reference_annotations.jsonl": {
+      "sha256": "3a83cbb386442f3263357a5e67cb1f52c59114c28cc81e636b28e111c3509ffc",
+      "size_bytes": 23659
+    },
+    "data/sector_market/market_input.json": {
+      "sha256": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f",
+      "size_bytes": 15480
+    },
+    "data/sector_protocol/evaluation_spec.json": {
+      "sha256": "cff49202b9da0da6bc094eb02a55e971afeab8c983a1a8fe3d686af1cff8df7f",
+      "size_bytes": 9398
+    }
+  },
+  "pre_run_checks": {
+    "pdf_hash_matches_manifest": true,
+    "all11_original_visual_labels_match_packet_and_gold": true,
+    "separately_stated_reason_present_for_all11": true,
+    "exact_weight_reference_is_null": true,
+    "source_human_review_still_pending": true,
+    "model_calls_by_preparer": 0,
+    "runtime_code_changes": 0,
+    "plan_changes": 0
+  }
+}

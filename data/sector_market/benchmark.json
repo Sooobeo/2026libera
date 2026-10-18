@@ -1,0 +1,81 @@
+{
+  "baseline_weights": [
+    0.03003003003003003,
+    0.018018018018018018,
+    0.08808808808808809,
+    0.09309309309309309,
+    0.04604604604604604,
+    0.0890890890890891,
+    0.11811811811811812,
+    0.38038038038038036,
+    0.09709709709709709,
+    0.022022022022022022,
+    0.018018018018018018
+  ],
+  "benchmark_proxy_limit": "Sector ETF portfolios have their own index caps, fees and tracking error. Weighting them by S&P 500 sector proportions is a sector-exposure proxy and does not exactly replicate the S&P 500.",
+  "benchmark_type": "reported_SP500_sector_market_composition",
+  "normalization": "Each reported percentage divided by the reported 99.9 total, solely to obtain an exact full-investment starting vector. These derived values are not additional source precision or institutional target weights.",
+  "reported_sum_percent": 99.9,
+  "reported_weights_percent": [
+    3.0,
+    1.8,
+    8.8,
+    9.3,
+    4.6,
+    8.9,
+    11.8,
+    38.0,
+    9.7,
+    2.2,
+    1.8
+  ],
+  "role": "Same market-composition reference for both institutions; not either institution's optimal allocation, a generic equal-weight assumption, or a model response.",
+  "sector_codes": [
+    "10",
+    "15",
+    "20",
+    "25",
+    "30",
+    "35",
+    "40",
+    "45",
+    "50",
+    "55",
+    "60"
+  ],
+  "source_file": "data/sector_documents/shared_benchmarks.json",
+  "source_file_sha256": "9663a2ce1996d1b87f9954d67809139f7df6ae77adf9137b479232318086fb35",
+  "source_record": {
+    "as_of": "2026-06-30",
+    "benchmark_id": "sp500_sector_reference_20260630",
+    "benchmark_name": "S&P 500 sector composition reported by Fidelity",
+    "evidence_id": "fidelity_q3_2026:p2:benchmark",
+    "market_snapshot_cutoff": "2026-07-17",
+    "not_institution_target_weights": true,
+    "publisher_document_date": "2026-07-16",
+    "raw_percent_by_sector_code": {
+      "10": 3.0,
+      "15": 1.8,
+      "20": 8.8,
+      "25": 9.3,
+      "30": 4.6,
+      "35": 8.9,
+      "40": 11.8,
+      "45": 38.0,
+      "50": 9.7,
+      "55": 2.2,
+      "60": 1.8
+    },
+    "raw_percent_sum": 99.9,
+    "reported_precision_percentage_points": 0.1,
+    "rounding_handling": "Raw values retained. Any sum-to-one normalization must be separately labeled as a calculation, not a published target.",
+    "scope_caution": "S&P 500 composition is a common reference, not the exact universe of Fidelity's top-3000-stock strategist research.",
+    "source_id": "fidelity_q3_2026",
+    "source_page": 2,
+    "source_url": "https://clearingcustody.fidelity.com/app/proxy/content?literatureURL=/9906006.PDF",
+    "used_for_splits": [
+      "pilot",
+      "main"
+    ]
+  }
+}

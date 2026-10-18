@@ -1,0 +1,326 @@
+{
+  "AI_calls": 0,
+  "FF12_inputs": 0,
+  "benchmark_source_file": "data/sector_documents/shared_benchmarks.json",
+  "benchmark_source_sha256": "9663a2ce1996d1b87f9954d67809139f7df6ae77adf9137b479232318086fb35",
+  "generator": "research/prepare_sector_market.py",
+  "generator_sha256": "6d25ce6d0c0ac691cc419120ddc6a47a276508a71c49a9cbb865f7c326988018",
+  "outputs": {
+    "aligned_panel.json": {
+      "bytes": 85370,
+      "sha256": "bd633357d2d8b271ac01e18cbfeecd0d1ee9159860daef67c6485748e69fa604"
+    },
+    "asset_registry.json": {
+      "bytes": 11437,
+      "sha256": "bebef4cbb7d43e53dd3eb80d94cce40e78f8218b883948458e3df2b95f433a81"
+    },
+    "benchmark.json": {
+      "bytes": 2719,
+      "sha256": "ebef9bd86acbce8d0ea5681c5cf685a79adc53a03e417971ac044b0fbf86d6e6"
+    },
+    "download_status.json": {
+      "bytes": 14318,
+      "sha256": "1baff106a2cc52435200c8f4e5fd13b60a7328a2b86d7d81835904d2fe3075c4"
+    },
+    "market_input.json": {
+      "bytes": 15480,
+      "sha256": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f"
+    },
+    "market_packet.json": {
+      "bytes": 15480,
+      "sha256": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f"
+    },
+    "summary.json": {
+      "bytes": 3270,
+      "sha256": "f30216057362811a82040b3b12fca1500196da29613c5967bb566462e563fcd0"
+    },
+    "verification.json": {
+      "bytes": 550,
+      "sha256": "d753487ecb0a584abf0f5351efafcdd34211135f119a429c80336c7f88ec1e88"
+    }
+  },
+  "provenance": {
+    "ETF_proxy_precedent": {
+      "adopted": "Sector ETF proxies for allocation reasoning",
+      "limit": "The paper uses 14 Chinese sector instruments; selection of these 11 US SPDR funds is LIBERA's public implementation, not that paper's asset list.",
+      "locator": "Section 3.3 and Appendix B",
+      "url": "https://arxiv.org/html/2603.22305"
+    },
+    "GICS_definition": {
+      "status": "official industry classification source; GICS is separate from FF12",
+      "url": "https://www.msci.com/indexes/index-resources/gics"
+    },
+    "data": {
+      "identity_provider": "State Street official product pages",
+      "limit": "Yahoo's adjusted-close series is preserved without claiming issuer-certified NAV total return. Current vendor revisions/adjustments may differ from data published at the historical cutoff. Raw close and corporate-action events are retained separately.",
+      "price_field": "indicators.adjclose[0].adjclose",
+      "price_provider": "Yahoo Finance public chart endpoint",
+      "return_kind": "vendor_adjusted_close_return_proxy"
+    },
+    "lookback": {
+      "adopted": "60 trading-day return lookback and 252-day annualization convention for risk diagnostics",
+      "implementation": "61 closes produce 60 daily returns; all 11 assets use exactly the same observed dates.",
+      "limit": "Risk diagnostics only, no borrowed profile caps, objective coefficients, confidence levels or claimed future optimality.",
+      "locator": "Appendix B market context/B.2 covariance and C.1",
+      "url": "https://arxiv.org/html/2605.27887v6"
+    },
+    "sector_unit": {
+      "adopted": "Reasoning across 11 GICS sectors",
+      "locator": "Methodology and Appendix 9.3",
+      "not_adopted": "Paper-specific stock universe, agent models, long/short strategy or reported performance.",
+      "url": "https://arxiv.org/html/2503.09647v5"
+    }
+  },
+  "refetch_new_vintage": "python research/prepare_sector_market.py --refresh",
+  "reproduce_cached": "python research/prepare_sector_market.py",
+  "runtime": {
+    "numpy": "2.4.4",
+    "python": "3.13.3"
+  },
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "bytes": 232493,
+      "content_type": "text/html;charset=utf-8",
+      "http_status": 200,
+      "kind": "issuer_identity",
+      "path": "data/sector_market/raw/ssga_XLE.html",
+      "resolved_url": "https://www.ssga.com/us/en/individual/etfs/state-street-energy-select-sector-spdr-etf-xle",
+      "retrieved_at_utc": "2026-10-17T09:43:09.480543+00:00",
+      "sha256": "42fd061a7b48d26c78272438cac454ea35a463d6d1ba275116acca22928eee1c",
+      "url": "https://www.ssga.com/us/en/individual/etfs/state-street-energy-select-sector-spdr-etf-xle"
+    },
+    {
+      "bytes": 11703,
+      "content_type": "application/json;charset=utf-8",
+      "http_status": 200,
+      "kind": "yahoo_chart",
+      "path": "data/sector_market/raw/yahoo_XLE.json",
+      "resolved_url": "https://query1.finance.yahoo.com/v8/finance/chart/XLE?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_at_utc": "2026-10-17T09:43:09.814105+00:00",
+      "sha256": "c84960af696aeea1f94273b4e4ec1dd45747c991c560d18dcc933144666ca72c",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLE?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true"
+    },
+    {
+      "bytes": 234360,
+      "content_type": "text/html;charset=utf-8",
+      "http_status": 200,
+      "kind": "issuer_identity",
+      "path": "data/sector_market/raw/ssga_XLB.html",
+      "resolved_url": "https://www.ssga.com/us/en/individual/etfs/state-street-materials-select-sector-spdr-etf-xlb",
+      "retrieved_at_utc": "2026-10-17T09:43:09.563725+00:00",
+      "sha256": "0d0bd206a9345398dce8e9e0b7a1e0b20bb0aa2037aecfacd18eadaaacfbd802",
+      "url": "https://www.ssga.com/us/en/individual/etfs/state-street-materials-select-sector-spdr-etf-xlb"
+    },
+    {
+      "bytes": 11621,
+      "content_type": "application/json;charset=utf-8",
+      "http_status": 200,
+      "kind": "yahoo_chart",
+      "path": "data/sector_market/raw/yahoo_XLB.json",
+      "resolved_url": "https://query1.finance.yahoo.com/v8/finance/chart/XLB?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_at_utc": "2026-10-17T09:43:09.805120+00:00",
+      "sha256": "6c82c250c833600fe5274bac6eab459d359a99bea7d175142362e96f5a14128b",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLB?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true"
+    },
+    {
+      "bytes": 241781,
+      "content_type": "text/html;charset=utf-8",
+      "http_status": 200,
+      "kind": "issuer_identity",
+      "path": "data/sector_market/raw/ssga_XLI.html",
+      "resolved_url": "https://www.ssga.com/us/en/individual/etfs/state-street-industrial-select-sector-spdr-etf-xli",
+      "retrieved_at_utc": "2026-10-17T09:43:09.749677+00:00",
+      "sha256": "7b6caac80fbea9c3c02515d6703fbd7909ada3124f75280d42eec6522b6a7dbb",
+      "url": "https://www.ssga.com/us/en/individual/etfs/state-street-industrial-select-sector-spdr-etf-xli"
+    },
+    {
+      "bytes": 11884,
+      "content_type": "application/json;charset=utf-8",
+      "http_status": 200,
+      "kind": "yahoo_chart",
+      "path": "data/sector_market/raw/yahoo_XLI.json",
+      "resolved_url": "https://query1.finance.yahoo.com/v8/finance/chart/XLI?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_at_utc": "2026-10-17T09:43:10.093115+00:00",
+      "sha256": "c867804929f1e7bfa57b59fff69ab65d4023ba236e603f22a216995a3414f05c",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLI?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true"
+    },
+    {
+      "bytes": 239515,
+      "content_type": "text/html;charset=utf-8",
+      "http_status": 200,
+      "kind": "issuer_identity",
+      "path": "data/sector_market/raw/ssga_XLY.html",
+      "resolved_url": "https://www.ssga.com/us/en/individual/etfs/state-street-consumer-discretionary-select-sector-spdr-etf-xly",
+      "retrieved_at_utc": "2026-10-17T09:43:09.888818+00:00",
+      "sha256": "5b39f01f8d0652d8c24098eaca34a30861848e626d26dffece0b514b2ff9273b",
+      "url": "https://www.ssga.com/us/en/individual/etfs/state-street-consumer-discretionary-select-sector-spdr-etf-xly"
+    },
+    {
+      "bytes": 12015,
+      "content_type": "application/json;charset=utf-8",
+      "http_status": 200,
+      "kind": "yahoo_chart",
+      "path": "data/sector_market/raw/yahoo_XLY.json",
+      "resolved_url": "https://query1.finance.yahoo.com/v8/finance/chart/XLY?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_at_utc": "2026-10-17T09:43:10.380520+00:00",
+      "sha256": "b743705647827a2331754541039edb9ca976ae4d0e982e338017ed7d18431d74",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLY?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true"
+    },
+    {
+      "bytes": 235811,
+      "content_type": "text/html;charset=utf-8",
+      "http_status": 200,
+      "kind": "issuer_identity",
+      "path": "data/sector_market/raw/ssga_XLP.html",
+      "resolved_url": "https://www.ssga.com/us/en/individual/etfs/state-street-consumer-staples-select-sector-spdr-etf-xlp",
+      "retrieved_at_utc": "2026-10-17T09:43:10.011981+00:00",
+      "sha256": "bd1d9d6e27561aa525d24df5c250a7c4d0ab0fc6fc4620af8b83eae6ab2ff936",
+      "url": "https://www.ssga.com/us/en/individual/etfs/state-street-consumer-staples-select-sector-spdr-etf-xlp"
+    },
+    {
+      "bytes": 11619,
+      "content_type": "application/json;charset=utf-8",
+      "http_status": 200,
+      "kind": "yahoo_chart",
+      "path": "data/sector_market/raw/yahoo_XLP.json",
+      "resolved_url": "https://query1.finance.yahoo.com/v8/finance/chart/XLP?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_at_utc": "2026-10-17T09:43:10.505048+00:00",
+      "sha256": "2f3523b49ea4df1f5b756502c7301e11b507caad4e5630b9bfb3cc6104229098",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLP?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true"
+    },
+    {
+      "bytes": 235934,
+      "content_type": "text/html;charset=utf-8",
+      "http_status": 200,
+      "kind": "issuer_identity",
+      "path": "data/sector_market/raw/ssga_XLV.html",
+      "resolved_url": "https://www.ssga.com/us/en/individual/etfs/state-street-health-care-select-sector-spdr-etf-xlv",
+      "retrieved_at_utc": "2026-10-17T09:43:10.173509+00:00",
+      "sha256": "65c0e619feca1762394062f3c21997c2476bb1b1845318ba155bd9ab2c261e4b",
+      "url": "https://www.ssga.com/us/en/individual/etfs/state-street-health-care-select-sector-spdr-etf-xlv"
+    },
+    {
+      "bytes": 11873,
+      "content_type": "application/json;charset=utf-8",
+      "http_status": 200,
+      "kind": "yahoo_chart",
+      "path": "data/sector_market/raw/yahoo_XLV.json",
+      "resolved_url": "https://query1.finance.yahoo.com/v8/finance/chart/XLV?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_at_utc": "2026-10-17T09:43:10.529198+00:00",
+      "sha256": "073228420a26c7ecf8e3247484bd44d2352d79ebce2b78d430276b6d853ad054",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLV?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true"
+    },
+    {
+      "bytes": 235490,
+      "content_type": "text/html;charset=utf-8",
+      "http_status": 200,
+      "kind": "issuer_identity",
+      "path": "data/sector_market/raw/ssga_XLF.html",
+      "resolved_url": "https://www.ssga.com/us/en/individual/etfs/state-street-financial-select-sector-spdr-etf-xlf",
+      "retrieved_at_utc": "2026-10-17T09:43:10.395734+00:00",
+      "sha256": "44ac28a3391940554162106e6588a190f2701f3f36665479fa2096d246bcff7f",
+      "url": "https://www.ssga.com/us/en/individual/etfs/state-street-financial-select-sector-spdr-etf-xlf"
+    },
+    {
+      "bytes": 11760,
+      "content_type": "application/json;charset=utf-8",
+      "http_status": 200,
+      "kind": "yahoo_chart",
+      "path": "data/sector_market/raw/yahoo_XLF.json",
+      "resolved_url": "https://query1.finance.yahoo.com/v8/finance/chart/XLF?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_at_utc": "2026-10-17T09:43:10.865775+00:00",
+      "sha256": "008008ec3c0fc4f12882f3a53e40e4c0cc46f25241e4249ef40e9c6cdb6bee4d",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLF?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true"
+    },
+    {
+      "bytes": 236759,
+      "content_type": "text/html;charset=utf-8",
+      "http_status": 200,
+      "kind": "issuer_identity",
+      "path": "data/sector_market/raw/ssga_XLK.html",
+      "resolved_url": "https://www.ssga.com/us/en/individual/etfs/state-street-technology-select-sector-spdr-etf-xlk",
+      "retrieved_at_utc": "2026-10-17T09:43:10.612336+00:00",
+      "sha256": "ccaac50e5076ab54132c364467693d8cbcac90381267e51b84c5a3e5cbc3f8d3",
+      "url": "https://www.ssga.com/us/en/individual/etfs/state-street-technology-select-sector-spdr-etf-xlk"
+    },
+    {
+      "bytes": 11772,
+      "content_type": "application/json;charset=utf-8",
+      "http_status": 200,
+      "kind": "yahoo_chart",
+      "path": "data/sector_market/raw/yahoo_XLK.json",
+      "resolved_url": "https://query1.finance.yahoo.com/v8/finance/chart/XLK?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_at_utc": "2026-10-17T09:43:11.527680+00:00",
+      "sha256": "3c5d35c90b3a2a2d00d42b8640fb2aa29ab37943764f5d91e564727c4855de94",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLK?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true"
+    },
+    {
+      "bytes": 235648,
+      "content_type": "text/html;charset=utf-8",
+      "http_status": 200,
+      "kind": "issuer_identity",
+      "path": "data/sector_market/raw/ssga_XLC.html",
+      "resolved_url": "https://www.ssga.com/us/en/individual/etfs/state-street-communication-services-select-sector-spdr-etf-xlc",
+      "retrieved_at_utc": "2026-10-17T09:43:10.702937+00:00",
+      "sha256": "9bfc3a158278b1e54a16dbee84cc95e9e829f1c9c86bff89f2552764554881f4",
+      "url": "https://www.ssga.com/us/en/individual/etfs/state-street-communication-services-select-sector-spdr-etf-xlc"
+    },
+    {
+      "bytes": 11950,
+      "content_type": "application/json;charset=utf-8",
+      "http_status": 200,
+      "kind": "yahoo_chart",
+      "path": "data/sector_market/raw/yahoo_XLC.json",
+      "resolved_url": "https://query1.finance.yahoo.com/v8/finance/chart/XLC?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_at_utc": "2026-10-17T09:43:11.164851+00:00",
+      "sha256": "5aeefa01ec549fd8fae6a9ba0867f46c8a3924477b0f6fd4e53a84f164c615d8",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLC?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true"
+    },
+    {
+      "bytes": 235299,
+      "content_type": "text/html;charset=utf-8",
+      "http_status": 200,
+      "kind": "issuer_identity",
+      "path": "data/sector_market/raw/ssga_XLU.html",
+      "resolved_url": "https://www.ssga.com/us/en/individual/etfs/state-street-utilities-select-sector-spdr-etf-xlu",
+      "retrieved_at_utc": "2026-10-17T09:43:10.957160+00:00",
+      "sha256": "7f3ac117514d771e8ef0919bbaa895f88b6515963a0a0c44e69613957698abd1",
+      "url": "https://www.ssga.com/us/en/individual/etfs/state-street-utilities-select-sector-spdr-etf-xlu"
+    },
+    {
+      "bytes": 11679,
+      "content_type": "application/json;charset=utf-8",
+      "http_status": 200,
+      "kind": "yahoo_chart",
+      "path": "data/sector_market/raw/yahoo_XLU.json",
+      "resolved_url": "https://query1.finance.yahoo.com/v8/finance/chart/XLU?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_at_utc": "2026-10-17T09:43:11.553367+00:00",
+      "sha256": "c98b2c6b91a8b2a720cbd81b1ab9b411818794da7f51abb99bcdc4da2fd665c5",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLU?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true"
+    },
+    {
+      "bytes": 237783,
+      "content_type": "text/html;charset=utf-8",
+      "http_status": 200,
+      "kind": "issuer_identity",
+      "path": "data/sector_market/raw/ssga_XLRE.html",
+      "resolved_url": "https://www.ssga.com/us/en/individual/etfs/state-street-real-estate-select-sector-spdr-etf-xlre",
+      "retrieved_at_utc": "2026-10-17T09:43:11.338963+00:00",
+      "sha256": "ad77f74ff78e84669b3d0f5516d88b9dd2429234ba86b60a6fdfcf2087aadb99",
+      "url": "https://www.ssga.com/us/en/individual/etfs/state-street-real-estate-select-sector-spdr-etf-xlre"
+    },
+    {
+      "bytes": 11620,
+      "content_type": "application/json;charset=utf-8",
+      "http_status": 200,
+      "kind": "yahoo_chart",
+      "path": "data/sector_market/raw/yahoo_XLRE.json",
+      "resolved_url": "https://query1.finance.yahoo.com/v8/finance/chart/XLRE?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+      "retrieved_at_utc": "2026-10-17T09:43:11.560376+00:00",
+      "sha256": "e855cda7eed24153c51a84824ec3152167f84f49655e7ea03bfa06a148b0eeca",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLRE?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true"
+    }
+  ],
+  "status": "prepared_verified_public_market_input_no_AI_results"
+}

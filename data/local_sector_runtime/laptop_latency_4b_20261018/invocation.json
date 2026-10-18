@@ -1,0 +1,29 @@
+{
+  "scope": "Synthetic engineering latency diagnosis; excluded from research pilot/main and evaluation.",
+  "started_at_utc": "2026-10-18T06:34:13.317302+00:00",
+  "origin": "http://127.0.0.1:11434",
+  "deadline_seconds": 120.0,
+  "script_sha256": "0686444e608033be931922a26886ed4a4b5b0789385215b7b75bfacc4050458b",
+  "coordinator_sha256": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5",
+  "platform": "win32",
+  "selected_probe_ids": [
+    "4b_threads2"
+  ],
+  "windows_memory_collector_sha256": "2dd48936bbaf8fd090a26f92fd356fec3a11ac81e5b01b39d661ffe72552fddb",
+  "resource_observation_policy": "On Windows, reuse the existing native/optional-psutil read-only collector and retain Ollama /api/ps samples. Missing memory is null, not zero; observation failures do not trigger generation retries.",
+  "prompt_characters": 1093,
+  "prompt_utf8_bytes": 1093,
+  "prompt_sha256": "6fbb7b993d290e403fee655ac2224e24ad0d8bf6bca5d7dcdb1cb3a96c90bb2d",
+  "planned_probes": [
+    {
+      "probe_id": "4b_threads2",
+      "model": "qwen3.5:4b-q4_K_M",
+      "threads": 2,
+      "status": "not_started"
+    }
+  ],
+  "condition_basis": "8192 context, output cap32, T0, disabled thinking, batch512, neutral repeat/presence/frequency penalties, seed3407, thread counts and deadline are engineering controls for these latency probes; this is not a paper-derived experiment even where a number also appears in a paper.",
+  "comparison_limits": "One fixed-order attempt per configuration; unload does not evict OS file cache. Model/template/tokenizer differ. No statistical speed ranking or four-stage feasibility verdict.",
+  "pilot_model_calls": 0,
+  "main_model_calls": 0
+}

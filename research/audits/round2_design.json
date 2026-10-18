@@ -1,0 +1,240 @@
+{
+  "schema_version": "1.0",
+  "audit_round": 2,
+  "auditor": "/root/plain_design_review",
+  "audit_type": "independent_adversarial_design_and_argument_review",
+  "protocol_reviewed": "4.0",
+  "overall_status": "pass_for_design_with_explicit_execution_gates",
+  "main_conclusion_ko": "최신 원고·설정·빌더와 실제 workflow 묶음을 새로 대조한 결과, 1차의 D1–D6가 모두 해결되었다. 현재 설계는 원제안서의 '기관마다 필요한 판단 차이를 같은 AI가 보존하는가'를 명시적 위험선호·위임목적의 한 차원으로 좁힌 검증 가능한 연구다. 실제 펀드의 사적정보·RAG 검색·공통모델 도입의 인과효과를 다루는 원제안서 전체를 완성한 실증으로 읽어서는 안 된다. 설계와 오프라인 준비를 통과한 것이며 AI 실험 결과나 실행 모델의 동결을 인증한 것은 아니다.",
+  "review_method": {
+    "new_review_not_round1_copy": true,
+    "original_proposal_comparison": "이전 전체 독해에 더해 이번에 position, identification, measures, rigor, solutions 절을 다시 읽어 필요한 기관 차이·같은 모델의 업무절차 비교·품질 공동판정과 대조했다.",
+    "full_current_documents_read": [
+      "plan/LIBERA_실험계획_20261017.html",
+      "plan/LIBERA_실험설정_20261017.json",
+      "paper/LIBERA_텀페이퍼_초안_20261017.html",
+      "research/build_research_v4.py",
+      "data/workflow/manifest.json",
+      "data/workflow/prompt_spec.json"
+    ],
+    "additional_actual_artifacts_inspected": [
+      "data/workflow/runs.jsonl (5625개 전수 파싱)",
+      "data/institutional/cases.jsonl (모든 run의 모델 입력과 대응 대조)",
+      "research/prepare_workflow_v4.py (평가기·대화 조립·준비 코드)",
+      "research/verify_workflow_v4.py (합성 검증용 코드 독해)",
+      "research/audits/round1_design.json (지적별 수용조건 대조)"
+    ],
+    "final_regeneration_check": "2차 도중 PortBench C.1 T5 locator가 빠진 작은 서지 잔여를 보고했다. root가 빌더를 수정·재생성한 뒤 두 HTML의 해당 참고문헌과 최종 해시를 다시 읽어 반영을 확인했다. 금융 조건이나 프롬프트 변화는 없었다.",
+    "source_verification_scope": "1차에서 독립 확인한 Salcher 공식 원문과 PortBench v6의 직접 차용 범위를 최신 문구와 다시 대조했다. 모든 배경문헌 전문을 이번에 다시 검증한 감사라고 주장하지 않으며 초록만 확인한 문헌의 제한 표시는 유지된다.",
+    "own_validation_executed": "별도 일회성 읽기 전용 코드로 runs 전수 구조·패킷 내용·시장/목표 사실 동등성·누출 금지·순서·해시를 검증했다. verify_workflow_v4.py의 합성 점수검증 코드는 읽었으나 이 감사자가 그 스크립트를 별도로 실행하거나 기계감사 결과 파일을 작성하지 않았다."
+  },
+  "axes": {
+    "consistency": {
+      "status": "pass",
+      "conclusion": "두 HTML, JSON, 빌더, workflow 묶음에서 동일한 연구대상·정책·산술·준비상태를 기술한다.",
+      "evidence": [
+        "γ=1·3·5인 가상 기관, 공통 FF12 월간 초과수익 μΣ, long-only 완전투자 이차효용이 일치한다.",
+        "625개 시장창×3γ×2정책=3750개 본 대화, 4응답씩15000회다. FRESH1875개 한 응답을 합쳐 총5625개 대화·16875회 예정 응답이다.",
+        "개별 정책 대비는 같은 사례의 두 출력, 기관쌍 정책 대비는 같은 시장창에서 두 γ×두 정책의 네 출력을 요구한다.",
+        "공개문서 A와 신호과제 B1은 보조·후속 역할이며 주실험을 대신한 결과로 쓰이지 않는다.",
+        "현재 실험 미실행·정확한 모델 런타임 미동결 상태가 초록·설정·manifest와 일치한다."
+      ],
+      "unresolved_findings": []
+    },
+    "logic": {
+      "status": "pass_with_stated_identification_limits",
+      "conclusion": "기관별 규범적 차이와 정책에 따른 최종 반응 차이를 측정하는 논리는 성립한다. 현재 한정된 설계로 식별할 수 없는 기제는 명시적으로 제외되어 있다.",
+      "evidence": [
+        "위험선호 γ가 목적식에 직접 들어가므로, 공개 시장정보를 같게 두어도 기관별 적정 배분이 달라질 수 있다. 단순한 이름·역할 연기와 구별된다.",
+        "같은 최적해가 나오는 사례도 보존하고 shared/distinct를 구별하므로 기관 차이를 억지로 만들어 다양성을 성공으로 판정하지 않는다.",
+        "R4의 초기 미제공 단계에서는 pending을 허용하고 최종 완전정보 답만 채점하므로 불가능한 초기 판단을 벌하지 않는다.",
+        "최종 사실·최종 재검토 지시는 같지만 위치·이력·검토기회가 다르다. 이를 최초 제공과 이력 보존을 포함한 업무정책 묶음으로 해석하고 순수 시점·기억·심리 고착의 단독 원인으로 주장하지 않는다.",
+        "직접 목적값 차이 L과 반응오차 E, 실패율을 함께 본다. 제약 추가 후 무제약 quadratic-distance 항등식을 쓰지 않는다.",
+        "완전사례 비교는 해당 공통 유효집합의 조건부 기술결과이며 예정 코퍼스 전체의 품질 우월성으로 자동 확대하지 않는다."
+      ],
+      "necessary_limits": [
+        "목표 인식·기억·수치 최적화 실패를 최종 배분만으로 분리하지 못한다.",
+        "mandate_used_gamma와 근거 ID는 명시적 보고의 진단이며 실제 사용 또는 배분 성공을 증명하지 않는다.",
+        "FRESH는 한 응답의 별도 진단이며 4단계 주정책과 호출량을 맞춘 기제 식별 대조군이 아니다.",
+        "중첩 창에 대한 고정 코퍼스 대응 기술비교이며 iid 추론·검정력·금융기관 모집단 효과를 주장하지 않는다."
+      ],
+      "unresolved_findings": []
+    },
+    "connection_to_original_paper_question": {
+      "status": "pass_as_explicitly_narrowed_proof_of_concept",
+      "conclusion": "원제안서의 경제·경영 논점은 기관별 위임목적에 적합한 권고를 조직의 AI 업무절차가 보존하는가로 연결된다. 최적화기는 채점 기준이며 'LLM 대 정량모형' 우열을 연구질문으로 바꾸지 않았다.",
+      "required_narrowing_visible_at": [
+        "제목의 부제",
+        "초록",
+        "3장 연구질문",
+        "4장 설계",
+        "7장 한계",
+        "결론"
+      ],
+      "preserved_elements": [
+        "같은 AI 안에서 기관별로 달라야 하는 판단 차이를 정하고 그 보존을 비교한다.",
+        "유사한 배분만으로 해롭다고 하지 않고 규범적 차이와 목적상 품질을 함께 판정한다.",
+        "원제안서가 강조한 근거 제공과 최종 재검토의 업무 설계가 직접 비교 대상이다.",
+        "실제 매매·시장가격·금융안정 효과의 크기를 모형 속 권고 결과에서 추론하지 않는다."
+      ],
+      "important_difference_from_original": "원제안서는 공개 공시로 실제 펀드의 보유·제약·정보 맥락을 구성하고 실제 검색으로 확장하는 폭넓은 계획이었다. 현재 본실험은 실제 네 펀드 대신 논문 계수로 정의한 가상 위임목적의 통제 검증이다. 공개문서의 현실 맥락이 이 γ를 실제 운용사에서 추정했다는 증거가 되지는 않는다. 이 축소는 제목·초록·방법·한계에 공개되어 있어 현재 주장의 범위에서는 정당하지만 원래의 전체 실증 질문이 해결된 것은 아니다.",
+      "diversity_quality_logic": [
+        "G=D*−D가 줄거나 배분이 다양해진 것만으로 개선을 선언하지 않는다.",
+        "E는 필요한 차이의 방향·크기에 대한 오차이고 L은 기관별 목적 적합성이다. E가 공통 방향의 배분 오류를 놓칠 수 있으므로 L과 실패율을 함께 봐야 한다.",
+        "같은 최적해가 필요한 경우 수렴은 정상이며 이 층을 실패로 세지 않는다.",
+        "지표 방향이 엇갈리면 혼합 결과로 보고한다. 과잉수렴 자체가 관찰되지 않으면 그 과제에서 부정적 동질화를 확인하지 못한 것이다."
+      ],
+      "unresolved_findings": []
+    },
+    "evidence_and_provenance": {
+      "status": "pass_with_declared_new_combination",
+      "conclusion": "직접 논문 조건, 수학적 산술, 구현 허용오차, 연구팀의 새 처치를 구별하고 있다. 모든 조건이 한 논문의 직접 복제라고 읽히지 않는다.",
+      "direct_source_scope": [
+        {
+          "source": "Salcher et al. (2026), §3.2 Eq.6, §4.1, Tables2–5, §6",
+          "supports": "완전투자 quadratic 목적식·위험선호1/3/5·FF12 월간 초과수익1964–2023·60개월 추정/36개월 프레임",
+          "boundary": "원 논문은 공매도를 허용한다. 이번 long-only 결합을 직접 복제라고 하지 않는다."
+        },
+        {
+          "source": "Zhao, Chen, & Su (2026), PortBench v6, §3.1 및 Appendix C.1 T5",
+          "supports": "모델·생성 설정과 long-only 완전투자 허용집합의 선례",
+          "boundary": "원 T5의 max-Sharpe 목적을 Salcher quadratic과 동일하다고 하지 않는다."
+        }
+      ],
+      "provenance_distinctions": [
+        "625개는720개월에서60+36개월 프레임을 모두 열거한 산술이며 검정력으로 정한 표본수가 아니다.",
+        "4단계·R1/R4는 원제안서를 구체화한 새 업무정책 처치이며 논문이 입증한 최적 단계수가 아니다.",
+        "PortBench의 단계수와 숫자만 맞추는 것은 과업이 달라 직접 차용이 되지 않으므로, 정직하게 새 처치로 표시한 현재 방식이 적절하다.",
+        "허용오차1e-6 및 KKT·수치 검사 기준은 구현 조건이며 논문 경제계수라고 부르지 않는다.",
+        "계산된 기준 배분 예시는 AI 응답이나 실제 투자성과가 아니라고 명시되어 있다."
+      ],
+      "bibliography_final_check": "Zhao, Y., Chen, S., & Su, N. 및 본문 저자–연도 인용이 연결되었고, 두 HTML의 ref-portbench에 Appendix C.1 T5가 최종 반영되었다.",
+      "unresolved_findings": []
+    }
+  },
+  "round1_findings_disposition": [
+    {
+      "id": "D1",
+      "status": "resolved",
+      "locations": [
+        "설정 /analysis/invalid_outputs 및 /analysis/claim_rule",
+        "두 HTML §4.4",
+        "prepare_workflow_v4.py evaluate()"
+      ],
+      "new_review_evidence": "문구뿐 아니라 평가기에서 개별 a.valid&&b.valid와 기관쌍 early.both_valid&&late.both_valid를 직접 읽어 두/네 출력 공통집합을 확인했다. 예정·유효·실패 분모와 조건부 해석이 남는다."
+    },
+    {
+      "id": "D2",
+      "status": "resolved",
+      "locations": [
+        "설정 /workflow/execution_order 및 execution_logging",
+        "두 HTML §4.3",
+        "data/workflow/runs.jsonl"
+      ],
+      "new_review_evidence": "실제3750개 주대화를 연속6개씩 나누어625개 모두 같은 시장창의3γ×2정책인지 전수 검사했다. 각 γ의 R1/R4는 인접하고 선행순서는R1 933개·R4 942개로 해시 결정된다. 시간·모델버전·일탈 기록과 버전변경시 캠페인 분리가 명시된다."
+    },
+    {
+      "id": "D3",
+      "status": "resolved",
+      "locations": [
+        "두 HTML §4.4 및 §7",
+        "설정 /claim_scope/not_identified 및 /analysis/claim_rule",
+        "prepare_workflow_v4.py evaluate()"
+      ],
+      "new_review_evidence": "목표 인식·기억·수치계산의 원인을 분리하지 못한다는 한계, γ/근거ID가 진단용이라는 구분, FRESH의 비기제식별 지위가 모두 추가되었다. 평가기 역시 명시적γ 일치와 배분 점수를 별도 필드로 기록한다."
+    },
+    {
+      "id": "D4",
+      "status": "resolved",
+      "locations": [
+        "두 HTML §2.3 및 §5 첫 반론",
+        "research/build_research_v4.py"
+      ],
+      "new_review_evidence": "주실험의 반론은 γ가 달라도 같은 최적해일 수 있다는 것으로 정리되었다. 실제 검색 정확도는 보조·후속 문서 과제로 옮겨 주실험이 사적신호 억압이나 검색 효과를 이미 측정한다고 읽히지 않는다."
+    },
+    {
+      "id": "D5",
+      "status": "resolved_after_final_locator_followup",
+      "locations": [
+        "두 HTML ref-portbench",
+        "research/build_research_v4.py:213"
+      ],
+      "new_review_evidence": "저자·연도·본문 연결을 확인했다. 2차 도중 빠진 C.1 T5 locator를 추가 보고했고 최종 재생성본 두 HTML의 실제 참고문헌에 C.1 T5, C.2–C.3가 들어간 것을 다시 읽었다."
+    },
+    {
+      "id": "D6",
+      "status": "resolved",
+      "locations": [
+        "계획 HTML 설정 링크",
+        "설정 /model/exact_served_revision 및 /model/runtime_ready",
+        "data/workflow/manifest.json"
+      ],
+      "new_review_evidence": "링크는 실험 설정으로 바뀌었고 exact_served_revision=null, runtime_ready=false, run_ready=false 및 model_calls=0 상태와 충돌하지 않는다."
+    }
+  ],
+  "independently_executed_workflow_checks": {
+    "all_passed": true,
+    "runs_parsed": 5625,
+    "unique_run_ids": 5625,
+    "main_conversations": 3750,
+    "fresh_conversations": 1875,
+    "main_complete_six_conversation_blocks": 625,
+    "within_block_institutions": [
+      1,
+      3,
+      5
+    ],
+    "policy_first_counts": {
+      "R1": 933,
+      "R4": 942
+    },
+    "planned_main_response_calls": 15000,
+    "planned_diagnostic_response_calls": 1875,
+    "planned_total_response_calls": 16875,
+    "checks": [
+      "모든 주대화4개 단계 및 모든 FRESH1개 단계가 존재한다.",
+      "3750개 주대화는625개 완전한6대화 블록이며 각 γ의 두 정책이 인접한다.",
+      "모든 대화에서 시장 패킷과 위임목적 패킷이 각각 정확히 한 번 제공된다.",
+      "R1과 FRESH의 목표는 첫 메시지, R4의 목표는 네 번째 메시지에만 존재한다.",
+      "R4의 처음 세 메시지는 같은 시장창의 세 γ 사이에서 정확히 같고 실제 gamma 필드가 없다.",
+      "모든 모델 표시 시장·목표 값은 대응 institutional case의 값과 일치한다. 추가된 evidence_id는 고정 MARKET/MANDATE뿐이다.",
+      "1875개 각 기관 사례에 R1/R4/FRESH가 모두 존재하며 최종 이용 가능한 시장·목표 사실은 같고 주정책 최종 과업 문구도 같다.",
+      "run/case ID, 다른 기관γ, 기준 배분, 평가 전용 필드, reserved future 입력이 모델 메시지에 없다.",
+      "manifest에 기록한 runs/spec/example 해시와 현재 config·institutional case 해시가 일치한다.",
+      "대화 조립 코드는 실제 자기 응답 이력 전체만 유지하며 다른 실행의 응답을 주입하지 않는다."
+    ],
+    "distinction": "이 검사는 오프라인 요청과 평가 규칙의 준비 상태를 확인한다. 합성 기준답 fixture와 실제 AI 응답을 혼동하지 않으며 AI 성능 수치를 생성하지 않았다."
+  },
+  "new_unresolved_design_findings": [],
+  "remaining_execution_conditions": [
+    {
+      "condition": "정확한 served model revision, 엔진·양자화·thinking 설정의 지원/의미·context와 출력 예산·실행일을 실제 런타임 manifest로 확정",
+      "role": "실행 전 충족할 조건이며 현재 설계감사의 미해결 논리 오류는 아님"
+    },
+    {
+      "condition": "현재 고정 요청 순서·독립 세션·자기 이력 보존·실행시각/원요청/원응답 로그를 실제 runner에서도 지킬 것. 모델 revision이 바뀌면 새 캠페인으로 버전 분리",
+      "role": "오프라인 예정 순서가 실제 실행에서 지켜졌다는 증거는 실험 후 별도 확인해야 함"
+    },
+    {
+      "condition": "실제 AI 실행 후 실패율과 두/네 출력 공통집합 분모, 기관별 손실 및 기관쌍 반응오차를 함께 보고",
+      "role": "미실행 상태이므로 아직 결과·효과 방향·조직 권고의 우월성을 결론내릴 수 없음"
+    },
+    {
+      "condition": "실험 결과가 나오기 전에는 문헌검토·실험설계 초안이라는 현재 상태 표시를 유지하고 최종 제출본에서 실제 관측 결과와 설계상 예시를 구분",
+      "role": "학술 보고의 상태 구분"
+    }
+  ],
+  "actions_taken": "이 감사 JSON만 작성했다. 본문·설정·빌더·workflow 입력을 수정하지 않았으며 API 또는 모델 요청을 보내지 않았다.",
+  "ai_experiment_runs_performed_by_auditor": 0,
+  "recorded_at_utc": "2026-10-17T08:04:09.909136+00:00",
+  "reviewed_file_hashes": {
+    "plan/LIBERA_실험계획_20261017.html": "92a4cdfe296422926c249e59ff76e3c5c10e9ead1deb57d264d6cb321937affb",
+    "plan/LIBERA_실험설정_20261017.json": "706754b7344ecdf2c412affe66303d83e8ac787d210fa52d37462a2b237b2d2c",
+    "paper/LIBERA_텀페이퍼_초안_20261017.html": "6bbab024cb47f39e5ee42153012db42cf27ec48e483f7b7abde343b5737ce843",
+    "research/build_research_v4.py": "666522fcd87db5e071434a855ecedccc3aaee0478662f818753331e8db361d38",
+    "research/prepare_workflow_v4.py": "d61c291aed03b743a4bc3b502de4ace26a6e1af49b4882652a33d2d3dd139116",
+    "data/workflow/manifest.json": "2bd4f3626b951c884e6e3f147c7465f6531f518ec14d3edb136cdd090ff5ed02",
+    "data/workflow/runs.jsonl": "acb253908472db43fe0219384141f4da06630e4af4bbf57b086884f023b65dae",
+    "data/workflow/prompt_spec.json": "47cc5c3258ddc3bb65d07abc957dd4ceea32cfbd038029783d169259f54bb02b"
+  }
+}

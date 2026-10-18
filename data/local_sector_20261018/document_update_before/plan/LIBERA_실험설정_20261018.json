@@ -1,0 +1,1282 @@
+{
+  "protocol_version": "4.3",
+  "as_of_date": "2026-10-18",
+  "status": "small_model_application; observational_status_attached; no_automatic_suitability_claim",
+  "previous_protocol": "LIBERA_실험설정_20261017.json",
+  "user_decision": "Retain industry-level allocation if construct validity and research meaning are preserved.",
+  "decision": {
+    "unit": "equity-sleeve industry/sector allocation",
+    "selected": true,
+    "reason": "The original proposal already studies industry weights; allocation across sectors can encode institution-specific judgments without testing individual-stock selection.",
+    "sufficiency_condition": "Document interpretation must affect a genuine allocation choice; changing gamma alone is only a numerical control and does not establish strategic-judgment coverage.",
+    "not_a_result": "This is a design-level adequacy judgment, not a claim that treatment effects or sufficient statistical power have been observed."
+  },
+  "research_question": "Does a common AI preserve source-specific public sector judgments in justified equity-sector allocations, and how does early versus late evidence provision change that reflection?",
+  "main": {
+    "module": "documentary_sector_allocation",
+    "status": "not_run",
+    "unit": "industry/sector basket, not individual stock",
+    "taxonomy": {
+      "finalized": true,
+      "selected": "GICS 11",
+      "sector_codes": [
+        "10",
+        "15",
+        "20",
+        "25",
+        "30",
+        "35",
+        "40",
+        "45",
+        "50",
+        "55",
+        "60"
+      ],
+      "no_FF12_conversion": true
+    },
+    "period": {
+      "recent_only": true,
+      "finalized": true,
+      "common_cutoff": "2026-07-17",
+      "price_last_date": "2026-07-16",
+      "claim": "retrospective document-conditioned case, not point-in-time trading replay",
+      "fidelity_invalid_view_date_preserved": "6/31/26"
+    },
+    "inputs": [
+      "common market evidence in the same sector taxonomy",
+      "dated institution documents containing relevant objectives, applicable constraints or sector judgments",
+      "source locations and document identity"
+    ],
+    "document_roles": "Legal investment mandates, fund-manager commentary and house research views are distinct evidence types. A house outlook is not silently assigned to an unrelated fund as its mandate.",
+    "risk_policy": "Preserve qualitative preferences; retain only explicitly supported numerical limits, denominators and exceptions. Do not map real-fund prose to gamma.",
+    "model_decisions": [
+      "identify relevant document facts",
+      "compare sector allocation alternatives",
+      "propose sector weights and explain the evidence supporting departures from a common baseline when one is specified"
+    ],
+    "gold_visibility": "Offline provisional references mechanically cross-checked; independent human review pending; never read by online runner.",
+    "calculation": "Implemented pure calculator; automatic same feedback between stages; no repair or hidden-reference access",
+    "calculator_information_boundary": "Tools may use only evidence already exposed in that run and model-submitted inputs. Before R4 receives its institution packet, tools cannot read hidden mandates, evaluator annotations or institution-specific constraints. Missing constraints remain unknown; no automatic gold-based repair, lookup or informative feasibility response is allowed.",
+    "no_synthetic_real_facts": "Do not invent institutional expected returns, confidence, sector caps or exact target weights from qualitative prose.",
+    "pending": [
+      "check actual runtime pin and full four-stage pilot evidence",
+      "independent semantic/source review",
+      "freeze inputs, model and rubric before main responses",
+      "main execution and offline evaluation"
+    ],
+    "main_documents": [
+      "fidelity_q3_2026",
+      "ubs_july_2026"
+    ],
+    "pilot_documents": [
+      "fidelity_q2_2026",
+      "ubs_june_2026"
+    ],
+    "representation": "Researcher-selected short paraphrased evidence, original labels, source IDs and page locators; not full-document retrieval.",
+    "baseline": "Reported 2026-06-30 S&P500 sector weights, sum99.9%, original preserved and normalized for common arithmetic; not institution holdings/targets",
+    "paths": {
+      "documents": "../data/sector_documents/corpus_card.json",
+      "market": "../data/sector_market/market_input.json",
+      "calculator": "../research/sector_engine.py",
+      "runner": "../research/run_sector_workflow.py"
+    },
+    "blocking_design_decisions": [
+      {
+        "issue": "Inherited presence_penalty=1.5 is not a reported FinVector benchmark parameter; the paper does not report penalties.",
+        "required_before_main_freeze": "Decide and document treatment of unreported model defaults, evidence strength and limitations; record any runtime/protocol revision and required pilot revalidation.",
+        "current_pilot_settings_changed": false,
+        "all_parameters_paper_reported_claim_permitted": false
+      }
+    ],
+    "runtime_policy": "candidate selected; actual readiness requires separate reviewed runtime and pilot evidence"
+  },
+  "workflow": {
+    "arms": [
+      "R1",
+      "R4"
+    ],
+    "stages": [
+      "market and evidence interpretation",
+      "comparison of alternatives and risks",
+      "provisional sector allocation or pending",
+      "final reconsideration"
+    ],
+    "mandate_or_evidence_onset": {
+      "R1": 1,
+      "R4": 4
+    },
+    "same_final_facts": true,
+    "same_model_and_calculation_facilities": true,
+    "full_history_retained": true,
+    "interpretation": "Evidence-onset and subsequent-use workflow policy, including position and context age; not an isolated memory mechanism.",
+    "retrieval": "Directly supplied evidence first; actual retrieval quality remains a separate extension, not an executed RAG result.",
+    "planned_main_case_count": 4,
+    "planned_pilot_case_count": 4,
+    "calls_per_complete_case": 4,
+    "inference": "descriptive case study; two source documents, not powered population experiment",
+    "same_generated_history": false,
+    "history_semantics": "visible model responses and calculator feedback retained; not hidden thinking traces",
+    "internal_thinking_observed": false
+  },
+  "evaluation": {
+    "status": "mechanical_spec_implemented; see_observed_execution_for_reviews; freeze_after_pilot_before_main",
+    "dimensions": [
+      "valid sector identifiers and feasible weights",
+      "evidence-grounded interpretation",
+      "explicit constraint compliance before repair",
+      "document-supported exposure tendencies",
+      "institution-specific response under matched workflow comparison"
+    ],
+    "numeric_agreement": "A unique exact-weight reference is used only for the independent numerical control. Public holdings or qualitative views do not specify universally correct strategic weights.",
+    "convergence": "Similarity alone is not failure. Report whether a convergence accompanies loss of relevant evidence or objective/constraint violations. Do not force differences when source judgments agree.",
+    "counterfactuals": "If constructed, change an explicitly identified condition while keeping others fixed and label these as synthetic task interventions, not real institution history.",
+    "post_outcome_additions": "Rubric refinements allowed on pilot only before main freeze; additions after main outcomes are exploratory, not revised confirmatory rules.",
+    "no_arbitrary_composite_score": true,
+    "spec": "../data/sector_protocol/evaluation_spec.json",
+    "primary_rating_scope": "source label preservation only, not strategy quality",
+    "no_exact_weight_gold_for_documentary_task": true,
+    "semantic_categories": [
+      "supported",
+      "contradicted",
+      "not_stated",
+      "uncertain"
+    ],
+    "semantic_scoring_automated": false
+  },
+  "numerical_control": {
+    "role": "auxiliary check of explicit objective implementation; cannot substitute for the documentary strategic task",
+    "prepared": true,
+    "path": "../data/institutional_recent/summary.json",
+    "reference_months": [
+      "2024-01",
+      "2025-12"
+    ],
+    "market_windows": 24,
+    "lookback_months": 60,
+    "input_coverage": [
+      "2019-01",
+      "2025-11"
+    ],
+    "assets": [
+      "NoDur",
+      "Durbl",
+      "Manuf",
+      "Enrgy",
+      "Chems",
+      "BusEq",
+      "Telcm",
+      "Utils",
+      "Shops",
+      "Hlth",
+      "Money",
+      "Other"
+    ],
+    "gammas": [
+      1,
+      3,
+      5
+    ],
+    "institution_cases": 72,
+    "objective": "U_gamma(w)=mu.T@w-gamma/2*w.T@Sigma@w",
+    "constraints": [
+      "sum(w)=1",
+      "w>=0"
+    ],
+    "data_status": "Revised historical French data; retrospective controlled task, not point-in-time trading reconstruction.",
+    "period_provenance": "LIBERA adaptation: PortBench QA test years 2024-2025 plus Salcher 60-month lookback. Not PortBench pipeline replication.",
+    "inference": "Overlapping fixed cases; no independent-sample or power claim. Shared optima retained. No future returns used."
+  },
+  "legacy_v4": {
+    "benchmark": "../data/institutional/summary.json",
+    "workflow": "../data/workflow/manifest.json",
+    "role": "historical numerical prototype, not the new documentary main task",
+    "audit": "../research/audits/verification_v4.html",
+    "audit_scope": "The v4 two-round audit applies to archived v4 files and hashes only; it is not a certification of this revised documentary design."
+  },
+  "model": {
+    "primary_target": "Qwen3.5-4B",
+    "ollama_tag": "qwen3.5:4b-q4_K_M",
+    "quantization": "Q4_K_M",
+    "temperature": 0,
+    "max_output_tokens": 8192,
+    "thinking": false,
+    "context_tokens": 65536,
+    "runtime_ready": false,
+    "exact_served_revision": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+    "runtime_manifest_path": "data/remote_sector_20261018/data/sector_runtime/inventory_v43/runtime_pinned.json",
+    "candidate_not_observed_settings": false,
+    "settings_observation_scope": "Reported inventory/request settings from supplied status evidence; observed values do not certify execution suitability.",
+    "runtime_readiness_policy": "Installation or pilot status is reported separately; this builder never certifies execution readiness.",
+    "model_basis": [
+      {
+        "url": "https://arxiv.org/html/2609.10113",
+        "locator": "sections 5.1-5.3, Table 3",
+        "scope": "exact base model evaluated in finance; target decoding not fully disclosed"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2610.08882",
+        "locator": "section 4.1, Table 3",
+        "scope": "base Qwen3.5-4B; explicit JSON and disabled thinking; not the LoRA adapter"
+      }
+    ],
+    "parameter_basis": [
+      {
+        "parameter": "thinking",
+        "value": false,
+        "kind": "direct_financial_paper_precedent",
+        "url": "https://arxiv.org/pdf/2610.08882",
+        "locator": "section 4.1"
+      },
+      {
+        "parameter": "temperature",
+        "value": 0,
+        "kind": "backend_adaptation",
+        "url": "https://arxiv.org/pdf/2610.08882",
+        "locator": "section 4.1 greedy decoding",
+        "note": "Ollama implementation candidate; also T=0 in PortBench; not identical engine reproduction"
+      },
+      {
+        "parameter": "max_output_tokens",
+        "value": 8192,
+        "kind": "paper_value_transferred_to_different_model_and_task",
+        "url": "https://arxiv.org/html/2605.27887v6",
+        "locator": "section 3.1",
+        "note": "Not FinVector's 700-token condition; adequacy checked on pilot, before main"
+      },
+      {
+        "parameter": "context_tokens",
+        "value": 65536,
+        "kind": "engineering_candidate_not_paper_constant",
+        "note": "Preserve all four stages including visible responses and calculation feedback; verify actual tokenization and memory"
+      }
+    ],
+    "backend_settings": "Pin served digest, quantization, chat template, engine, context, sampling defaults and thinking implementation from actual runtime evidence.",
+    "context_overflow": "fail and record; no silent truncation, history deletion or budget change",
+    "limitations": [
+      "financial base-model paper scores do not measure this quantized runtime",
+      "small-model application, not PortBench replication",
+      "basic task inability can obscure workflow differences",
+      "no hidden-thinking or memory mechanism identification"
+    ],
+    "future_decoding_candidates_not_applied": [
+      {
+        "values": {
+          "seed": 3407
+        },
+        "basis": "directly reported in FinVector section 4.1",
+        "source": "https://arxiv.org/pdf/2610.08882",
+        "validated_for_libera": false
+      },
+      {
+        "values": {
+          "repeat_penalty": 1,
+          "presence_penalty": 0,
+          "frequency_penalty": 0
+        },
+        "basis": "implementation translation of the author's minimal public example and MLX-LM 0.31.3 default argmax with logits_processors=None; NOT reported benchmark penalty values",
+        "sources": [
+          "https://github.com/alinakhay/FinVector-Market-4B/blob/main/examples/inference_mlx.py",
+          "https://github.com/ml-explore/mlx-lm/blob/v0.31.3/mlx_lm/generate.py"
+        ],
+        "validated_for_libera": false
+      }
+    ],
+    "future_candidate_scope": "Not applied to the v4.3 research pilot/main protocol; separate engineering probes may use these values without establishing research validity.",
+    "review": "../research/small_model_review_20261018.html"
+  },
+  "submission": {
+    "term_paper_due": "2026-11-01",
+    "pitch": "2026-11-06",
+    "pitch_minutes": [
+      5,
+      10
+    ],
+    "citation_style": "APA",
+    "source": "https://app.notion.com/p/2026-agent-conference/LIBERA-3e00589711408053a7e5ff9a0c4ba804",
+    "length_format_own_results_requirement": "not specified in available overview; do not infer exemption"
+  },
+  "sources": {
+    "sector_task": "https://arxiv.org/html/2603.22305v1",
+    "profiles": "https://www.ifo.de/DocDL/cesifo1_wp11862.pdf",
+    "workflow": "https://arxiv.org/html/2605.27887v6",
+    "raw_vs_repaired": "https://arxiv.org/html/2608.09988v1",
+    "quadratic": "https://onlinelibrary.wiley.com/doi/full/10.1002/for.70134",
+    "french": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_12_ind_port.html",
+    "preregistration": "https://www.pnas.org/doi/10.1073/pnas.1708274114",
+    "official_document_template": "https://www.sec.gov/files/form-n-1a.pdf",
+    "small_model_finance": "https://arxiv.org/html/2609.10113",
+    "nonthinking_structured_finance": "https://arxiv.org/pdf/2610.08882"
+  },
+  "claims_not_identified": [
+    "individual-stock selection skill",
+    "overall stocks/bonds/cash allocation",
+    "true future optimal portfolios",
+    "actual private information",
+    "causal effect of shared-model adoption",
+    "market-wide convergence or financial stability"
+  ],
+  "results": {
+    "ai_runs": 0,
+    "ai_completed_calls": 0,
+    "pilot_completed_cases": 0,
+    "pilot_completed_calls": 0,
+    "main_completed_cases": 0,
+    "main_completed_calls": 0,
+    "pilot_attempted_calls_observed": 1,
+    "diagnostic_completed_calls_excluded_from_experiment": 1,
+    "human_runs": null,
+    "count_unit": "ai_runs counts completed four-stage cases; calls counted separately; diagnostics excluded",
+    "count_source": "observed_execution status input, or zero linked observations when no status supplied",
+    "main_execution_ready": false,
+    "readiness_assessment": "not_automatically_certified_by_document_builder",
+    "material_preparation_complete": true,
+    "software_tests_only": false,
+    "main_effect_estimate": null
+  },
+  "revision_provenance": {
+    "builder": "research/build_sector_revision_v43.py",
+    "source_version": "4.2",
+    "source_files": {
+      "plan": {
+        "path": "plan/LIBERA_실험계획_20261017.html",
+        "exists": true,
+        "sha256": "38c405738d12ff523049f326ea9cde73d9172d79a09f75a1874f07281e6eab0e"
+      },
+      "paper": {
+        "path": "paper/LIBERA_텀페이퍼_초안_20261017.html",
+        "exists": true,
+        "sha256": "c6df16ff12ed4fcb506c3f57319ba34684460d0e1faa6276f0a64b0dfda72c97"
+      },
+      "config": {
+        "path": "plan/LIBERA_실험설정_20261017.json",
+        "exists": true,
+        "sha256": "01518e95278b8f2e50cb786bcf6553ace74a1eebbc2f9110b250c6b509c73b6a"
+      }
+    },
+    "model_review": {
+      "path": "research/small_model_review_20261018.html",
+      "exists": true,
+      "sha256": "21e2449aba6e72252de7764a97c6021f51b18a950dce5c2a1a80250771f9e27d"
+    },
+    "registry_observation": {
+      "path": "research/small_model_registry_20261018.json",
+      "exists": true,
+      "sha256": "6bc3c88cd170330ff6d64bb548964330c65e807ab666de7f27bc433ca915732c"
+    },
+    "status_input": {
+      "path": "research/remote_sector_status_20261018.json",
+      "exists": true,
+      "sha256": "0b0a289caf9fdc39c46a1dd669113dfcff34956d704b19e5631c37c18512cd67"
+    },
+    "network_or_model_execution": false,
+    "previous_audits_apply_to_previous_versions_only": true
+  },
+  "observed_execution": {
+    "input_supplied": true,
+    "count_provenance": "operator_status_input; not an independent re-evaluation",
+    "warnings": [],
+    "evidence_files": [
+      {
+        "path": "data/remote_sector_20261018/data/sector_runtime/inventory_v43/summary.json",
+        "exists": true,
+        "sha256": "52879c0085ad24d3fb30053d684d629422c0abfc3566bcff6d431bca2535a755",
+        "status_field": "installation.manifest_path"
+      },
+      {
+        "path": "data/remote_sector_20261018/data/sector_runtime/inventory_v43/runtime_pinned.json",
+        "exists": true,
+        "sha256": "c04bcdee8093a6c6db0d8e93d4166aa89d3337e3acceac42d3ac409c295602b0",
+        "status_field": "runtime.runtime_manifest_path"
+      },
+      {
+        "path": "data/remote_sector_20261018/data/sector_runtime/inventory_v43/model_metadata.json",
+        "exists": true,
+        "sha256": "d3fa9555fb73fb28924f9fcfdeb972a645796c95c035f44e4b71029190d7600b",
+        "status_field": "runtime.model_metadata_path"
+      },
+      {
+        "path": "research/remote_sector_execution_20261018.html",
+        "exists": true,
+        "sha256": "4b3b9d3c445ab5b708d5adb236914a7bbbd5ce7d67467e95692f3d39c59497e5",
+        "status_field": "runtime.report_path"
+      },
+      {
+        "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/summary.json",
+        "exists": true,
+        "sha256": "221100419a9b7d6582dc0891c6661eb732e820b9843b562aec13744de8b8a6c7",
+        "status_field": "pilot.summary_path"
+      }
+    ],
+    "installation": {
+      "status": "installed",
+      "notes": [
+        "Exact tag/digest/engine/template consistency is checked from saved files; live service is not queried."
+      ],
+      "manifest_path": "data/remote_sector_20261018/data/sector_runtime/inventory_v43/summary.json"
+    },
+    "runtime": {
+      "status": "pinned",
+      "model_tag": "qwen3.5:4b-q4_K_M",
+      "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "engine_version": "0.35.1",
+      "template_sha256": "b507b9c2f6ca642bffcd06665ea7c91f235fd32daeefdf875a0f938db05fb315",
+      "quantization": "Q4_K_M",
+      "diagnostic_completed_calls": 1,
+      "context_tokens": 65536,
+      "thinking": false,
+      "temperature": 0,
+      "max_output_tokens": 8192,
+      "runtime_manifest_path": "data/remote_sector_20261018/data/sector_runtime/inventory_v43/runtime_pinned.json",
+      "model_metadata_path": "data/remote_sector_20261018/data/sector_runtime/inventory_v43/model_metadata.json",
+      "inherited_model_parameters": {
+        "top_p": 0.95,
+        "presence_penalty": 1.5,
+        "temperature": 1,
+        "top_k": 20
+      },
+      "request_overrides": {
+        "diagnosis": [
+          {
+            "temperature": 0,
+            "num_predict": 256,
+            "num_ctx": 65536,
+            "model": "qwen3.5:4b-q4_K_M",
+            "think": false,
+            "format": "json",
+            "keep_alive": 0
+          }
+        ],
+        "pilot": [
+          {
+            "temperature": 0,
+            "num_predict": 8192,
+            "num_ctx": 65536,
+            "model": "qwen3.5:4b-q4_K_M",
+            "think": false,
+            "format": "json",
+            "keep_alive": 0
+          }
+        ]
+      },
+      "resource_summary": {
+        "observed_cpu": "Intel(R) Pentium(R) Gold G6405 CPU @ 4.10GHz",
+        "os_logical_cpus": 4,
+        "reported_cpu_features": {
+          "avx": false,
+          "avx2": false,
+          "sse4_1": true,
+          "sse4_2": true,
+          "fma": false
+        },
+        "diagnosis": {
+          "sample_count": 10,
+          "proc_memory_total_bytes": 12884901888,
+          "proc_swap_total_bytes": 8589930496,
+          "runtime_rss_sum_sampled_max_bytes": 5830168576,
+          "cgroup_memory_current_sampled_max_bytes": 8659943424,
+          "proc_available_sampled_min_bytes": 6810351616,
+          "resident_vram_bytes": [
+            0
+          ]
+        },
+        "pilot": {
+          "sample_count": 757,
+          "runtime_rss_sum_sampled_max_bytes": 6207291392,
+          "cgroup_memory_current_sampled_max_bytes": 9020104704,
+          "proc_available_sampled_min_bytes": 6421153792,
+          "resident_vram_bytes": [
+            0
+          ]
+        }
+      },
+      "notes": [
+        "짧은 기술 진단 상태: 완료 기록. 로컬에서 확인한 완료 HTTP 응답: 1건. 예비 사례 수에 포함하지 않는다.",
+        "모델 기본 temperature와 실제 요청 temperature를 구분한다. show.parameters의 기본값 중 요청하지 않은 항목은 명시적으로 덮어쓰지 않았다.",
+        "기본값의 실제 적용 순서·효과는 엔진에 의존하며 FinVector의 전체 decoding 조건을 재현했다는 주장이 아니다.",
+        "호출 직전 pin 검증은 코드에 구현되어 있지만 조회 메타데이터를 호출별로 별도 저장하지 않았다. 최초 inventory, 요청·응답과 코드 해시가 보존 범위다.",
+        "설치·짧은 JSON 생성 성공은 전체 네 단계 수행이나 금융 판단의 유효성을 보장하지 않는다."
+      ],
+      "report_path": "research/remote_sector_execution_20261018.html"
+    },
+    "pilot": {
+      "status": "interrupted",
+      "completed_cases": 0,
+      "completed_calls": 0,
+      "attempted_calls_observed": 1,
+      "notes": [
+        "미수신 파일은 원격 미실행·실패를 뜻하지 않는다. not_started는 실제 coordinator 기록에서만 구분한다.",
+        "완료 응답 수는 저장된 HTTP 종료 응답 수이며 올바른 JSON·정확한 판단 수가 아니다.",
+        "완료 사례는 네 단계 record와 final 파일을 모두 확인한 수이며 내용의 의미 검토 완료가 아니다.",
+        "CANCEL 및 호출 기록에 따른 실행 중단이다. 시간 초과와 구분하며, 응답 미완료를 금융 판단의 의미 실패로 판정하지 않는다."
+      ],
+      "details": {
+        "status": "incomplete",
+        "directory_available": true,
+        "summary_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/summary.json",
+        "planned_cases": 4,
+        "roster_basis": "saved_planned_cases",
+        "completed_cases": 0,
+        "completed_calls": 0,
+        "completed_case_artifacts_observed": 0,
+        "completed_http_responses_observed": 0,
+        "call_artifact_count_matches_reported_attempts": true,
+        "attempted_http_calls_observed": 1,
+        "not_started_cases_reported": 3,
+        "cases": [
+          {
+            "case_id": "fidelity_q2_2026__R1",
+            "source_id": "fidelity_q2_2026",
+            "arm": "R1",
+            "status": "failed",
+            "coordinator_status": "failed",
+            "four_stage_artifact_complete": false,
+            "attempted_stages_observed": 1,
+            "completed_stage_records": 0,
+            "final_present": false,
+            "stages": [
+              {
+                "stage": 1,
+                "request_present": true,
+                "response_present": false,
+                "provider_done": null,
+                "done_reason": null,
+                "parsed_and_calculated_record_present": false,
+                "state": "attempted",
+                "response_path": null
+              },
+              {
+                "stage": 2,
+                "request_present": false,
+                "response_present": false,
+                "provider_done": null,
+                "done_reason": null,
+                "parsed_and_calculated_record_present": false,
+                "state": "not_observed",
+                "response_path": null
+              },
+              {
+                "stage": 3,
+                "request_present": false,
+                "response_present": false,
+                "provider_done": null,
+                "done_reason": null,
+                "parsed_and_calculated_record_present": false,
+                "state": "not_observed",
+                "response_path": null
+              },
+              {
+                "stage": 4,
+                "request_present": false,
+                "response_present": false,
+                "provider_done": null,
+                "done_reason": null,
+                "parsed_and_calculated_record_present": false,
+                "state": "not_observed",
+                "response_path": null
+              }
+            ],
+            "failure": {
+              "stage": 1,
+              "type": "RemoteCallError",
+              "message": "Remote end closed connection without response",
+              "excluded": false,
+              "handling": "Retain in attempted-run denominator; no automatic retry."
+            },
+            "coordinator_failure": {
+              "case_id": "fidelity_q2_2026__R1",
+              "source_id": "fidelity_q2_2026",
+              "arm": "R1",
+              "status": "failed",
+              "error_type": "RemoteCallError",
+              "error": "Remote end closed connection without response"
+            },
+            "http_call_folders": [
+              "http_0001_pilot"
+            ],
+            "model_calls_attempted_reported": 1,
+            "execution_interruption_observed": true,
+            "display_status": "interrupted",
+            "interpretation": "Coordinator failed status follows cancellation; not an observed semantic or investment-judgment failure."
+          },
+          {
+            "case_id": "fidelity_q2_2026__R4",
+            "source_id": "fidelity_q2_2026",
+            "arm": "R4",
+            "status": "not_started",
+            "coordinator_status": "not_started",
+            "four_stage_artifact_complete": false,
+            "attempted_stages_observed": 0,
+            "completed_stage_records": 0,
+            "final_present": false,
+            "stages": [
+              {
+                "stage": 1,
+                "request_present": false,
+                "response_present": false,
+                "provider_done": null,
+                "done_reason": null,
+                "parsed_and_calculated_record_present": false,
+                "state": "not_observed",
+                "response_path": null
+              },
+              {
+                "stage": 2,
+                "request_present": false,
+                "response_present": false,
+                "provider_done": null,
+                "done_reason": null,
+                "parsed_and_calculated_record_present": false,
+                "state": "not_observed",
+                "response_path": null
+              },
+              {
+                "stage": 3,
+                "request_present": false,
+                "response_present": false,
+                "provider_done": null,
+                "done_reason": null,
+                "parsed_and_calculated_record_present": false,
+                "state": "not_observed",
+                "response_path": null
+              },
+              {
+                "stage": 4,
+                "request_present": false,
+                "response_present": false,
+                "provider_done": null,
+                "done_reason": null,
+                "parsed_and_calculated_record_present": false,
+                "state": "not_observed",
+                "response_path": null
+              }
+            ],
+            "failure": null,
+            "coordinator_failure": null,
+            "http_call_folders": [],
+            "model_calls_attempted_reported": null,
+            "execution_interruption_observed": false
+          },
+          {
+            "case_id": "ubs_june_2026__R1",
+            "source_id": "ubs_june_2026",
+            "arm": "R1",
+            "status": "not_started",
+            "coordinator_status": "not_started",
+            "four_stage_artifact_complete": false,
+            "attempted_stages_observed": 0,
+            "completed_stage_records": 0,
+            "final_present": false,
+            "stages": [
+              {
+                "stage": 1,
+                "request_present": false,
+                "response_present": false,
+                "provider_done": null,
+                "done_reason": null,
+                "parsed_and_calculated_record_present": false,
+                "state": "not_observed",
+                "response_path": null
+              },
+              {
+                "stage": 2,
+                "request_present": false,
+                "response_present": false,
+                "provider_done": null,
+                "done_reason": null,
+                "parsed_and_calculated_record_present": false,
+                "state": "not_observed",
+                "response_path": null
+              },
+              {
+                "stage": 3,
+                "request_present": false,
+                "response_present": false,
+                "provider_done": null,
+                "done_reason": null,
+                "parsed_and_calculated_record_present": false,
+                "state": "not_observed",
+                "response_path": null
+              },
+              {
+                "stage": 4,
+                "request_present": false,
+                "response_present": false,
+                "provider_done": null,
+                "done_reason": null,
+                "parsed_and_calculated_record_present": false,
+                "state": "not_observed",
+                "response_path": null
+              }
+            ],
+            "failure": null,
+            "coordinator_failure": null,
+            "http_call_folders": [],
+            "model_calls_attempted_reported": null,
+            "execution_interruption_observed": false
+          },
+          {
+            "case_id": "ubs_june_2026__R4",
+            "source_id": "ubs_june_2026",
+            "arm": "R4",
+            "status": "not_started",
+            "coordinator_status": "not_started",
+            "four_stage_artifact_complete": false,
+            "attempted_stages_observed": 0,
+            "completed_stage_records": 0,
+            "final_present": false,
+            "stages": [
+              {
+                "stage": 1,
+                "request_present": false,
+                "response_present": false,
+                "provider_done": null,
+                "done_reason": null,
+                "parsed_and_calculated_record_present": false,
+                "state": "not_observed",
+                "response_path": null
+              },
+              {
+                "stage": 2,
+                "request_present": false,
+                "response_present": false,
+                "provider_done": null,
+                "done_reason": null,
+                "parsed_and_calculated_record_present": false,
+                "state": "not_observed",
+                "response_path": null
+              },
+              {
+                "stage": 3,
+                "request_present": false,
+                "response_present": false,
+                "provider_done": null,
+                "done_reason": null,
+                "parsed_and_calculated_record_present": false,
+                "state": "not_observed",
+                "response_path": null
+              },
+              {
+                "stage": 4,
+                "request_present": false,
+                "response_present": false,
+                "provider_done": null,
+                "done_reason": null,
+                "parsed_and_calculated_record_present": false,
+                "state": "not_observed",
+                "response_path": null
+              }
+            ],
+            "failure": null,
+            "coordinator_failure": null,
+            "http_call_folders": [],
+            "model_calls_attempted_reported": null,
+            "execution_interruption_observed": false
+          }
+        ],
+        "dependencies": {
+          "python_version": "3.13.3",
+          "numpy_version": "2.4.4",
+          "coordinator_standard_library_only": true,
+          "pilot_engine_dependency": "numpy"
+        },
+        "input_hashes": {
+          "packets_sha256": "f5bbd9bf0ee8267a8718439064604dfc499428a2fc728c95f672bc4abc5595b9",
+          "market_sha256": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f",
+          "coordinator_sha256": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5",
+          "runner_sha256": "5625450a4dcbe1aa717c9809bf4955c1ef6b10aab4f0c83ef05dc2eb2c123cfd",
+          "engine_sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c"
+        },
+        "offline_scores_path": null,
+        "offline_scores": null,
+        "score_scope": "Descriptive only; a not-started roster row is not an observed model error. Citation IDs do not establish semantic support."
+      },
+      "run": {
+        "directory": "data/remote_sector_20261018/data/sector_runtime/pilot_v43",
+        "directory_available": true,
+        "status": "incomplete",
+        "summary_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/summary.json",
+        "invocation": {
+          "command": "pilot",
+          "base_url": "http://127.0.0.1:11434",
+          "model": "qwen3.5:4b-q4_K_M",
+          "expected_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+          "expected_engine": "0.35.1",
+          "timeout_seconds": 1800,
+          "monitor_interval_seconds": 2,
+          "monitor_basis": "Engineering diagnostic interval",
+          "started_at_utc": "2026-10-18T05:21:58.594517+00:00",
+          "call_count_scope": "Attempted HTTP generation requests; requests failing before a response do not prove model execution.",
+          "main_automatic_execution": false
+        },
+        "reported_summary": {
+          "command": "pilot",
+          "status": "incomplete",
+          "output": "/root/libera_20261018/data/sector_runtime/pilot_v43",
+          "main_model_calls": 0,
+          "split": "pilot",
+          "planned_runs": 4,
+          "attempted_runs": 1,
+          "completed_runs": 0,
+          "records": [
+            {
+              "case_id": "fidelity_q2_2026__R1",
+              "source_id": "fidelity_q2_2026",
+              "arm": "R1",
+              "status": "failed",
+              "error_type": "RemoteCallError",
+              "error": "Remote end closed connection without response",
+              "model_calls_attempted": 1,
+              "http_call_folders": [
+                "http_0001_pilot"
+              ]
+            },
+            {
+              "case_id": "fidelity_q2_2026__R4",
+              "source_id": "fidelity_q2_2026",
+              "arm": "R4",
+              "status": "not_started"
+            },
+            {
+              "case_id": "ubs_june_2026__R1",
+              "source_id": "ubs_june_2026",
+              "arm": "R1",
+              "status": "not_started"
+            },
+            {
+              "case_id": "ubs_june_2026__R4",
+              "source_id": "ubs_june_2026",
+              "arm": "R4",
+              "status": "not_started"
+            }
+          ],
+          "pilot_model_calls": 1,
+          "failure_policy": "Raw and attempted cases retained; not-started cases are not observed model errors; no retry.",
+          "evaluation_status": "Not scored remotely; no gold uploaded or read; semantic human review remains separate.",
+          "finished_at_utc": "2026-10-18T05:47:11.142493+00:00",
+          "script_wall_seconds": 1512.5480044614524,
+          "diagnostic_calls": 0,
+          "calls": [
+            {
+              "kind": "pilot",
+              "folder": "http_0001_pilot",
+              "started_at_utc": "2026-10-18T05:21:58.734214+00:00",
+              "status": "cancelled",
+              "error_type": "RemoteDisconnected",
+              "error": "Remote end closed connection without response",
+              "metrics": {
+                "wall_seconds": 1512.1132832784206,
+                "ttft_any_generated_seconds": null,
+                "ttft_content_seconds": null,
+                "token_count_source": "Ollama counters, not independent tokenization",
+                "duration_unit_in_response": "nanoseconds",
+                "prompt_eval_tokens_per_second": null,
+                "eval_tokens_per_second": null
+              },
+              "raw_bytes_path": "http_0001_pilot/raw_stream.bin",
+              "no_automatic_retry": true,
+              "unexpected_thinking_with_disabled_request": false
+            }
+          ]
+        },
+        "inventory_before": {
+          "observed_at_utc": "2026-10-18T05:21:58.595161+00:00",
+          "platform": "Linux",
+          "machine": "x86_64",
+          "cpu": {
+            "vendor_id": "GenuineIntel",
+            "model name": "Intel(R) Pentium(R) Gold G6405 CPU @ 4.10GHz"
+          },
+          "os_cpu_count": 4,
+          "memory": {
+            "observed_at_utc": "2026-10-18T05:21:58.595330+00:00",
+            "source": "linux_proc_and_cgroup",
+            "processes": [
+              {
+                "pid": 2704,
+                "name": "ollama",
+                "VmSize_bytes": 2987884544,
+                "VmHWM_bytes": 42016768,
+                "VmRSS_bytes": 31391744,
+                "RssAnon_bytes": 13783040,
+                "RssFile_bytes": 17608704,
+                "RssShmem_bytes": 0
+              }
+            ],
+            "proc_meminfo": {
+              "MemTotal_bytes": 12884901888,
+              "MemFree_bytes": 10023944192,
+              "MemAvailable_bytes": 12604722176,
+              "Buffers_bytes": 0,
+              "Cached_bytes": 2308485120,
+              "SwapTotal_bytes": 8589930496,
+              "SwapFree_bytes": 8409231360,
+              "CommitLimit_bytes": 16861331456,
+              "Committed_AS_bytes": 15366746112
+            },
+            "cgroup": {
+              "memory.current": 2860957696,
+              "memory.peak": 8714719232,
+              "memory.max": "max",
+              "memory.swap.current": 180699136,
+              "memory.swap.max": "max",
+              "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+            },
+            "rss_sum_bytes": 31391744,
+            "interpretation": "RSS can double-count shared pages; cgroup includes cache and other processes; no GPU-memory inference from RSS."
+          },
+          "filesystem_bytes": {
+            "total": 151996149760,
+            "used": 12334870528,
+            "free": 133288087552
+          },
+          "filesystem_scope": "Container-visible filesystem only; shared host thin-pool free space must be checked separately.",
+          "ollama_version": {
+            "status": "ok",
+            "value": {
+              "version": "0.35.1"
+            }
+          },
+          "ollama_tags": {
+            "status": "ok",
+            "value": {
+              "models": [
+                {
+                  "name": "qwen3.5:4b-q4_K_M",
+                  "model": "qwen3.5:4b-q4_K_M",
+                  "modified_at": "2026-10-18T05:16:54.789617077Z",
+                  "size": 3324173934,
+                  "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+                  "details": {
+                    "parent_model": "model.gguf",
+                    "format": "gguf",
+                    "family": "qwen35",
+                    "families": [
+                      "qwen35"
+                    ],
+                    "parameter_size": "4.2B",
+                    "quantization_level": "Q4_K_M",
+                    "context_length": 262144,
+                    "embedding_length": 2560
+                  },
+                  "capabilities": [
+                    "completion",
+                    "vision",
+                    "tools",
+                    "thinking"
+                  ]
+                },
+                {
+                  "name": "qwen3:1.7b",
+                  "model": "qwen3:1.7b",
+                  "modified_at": "2026-10-05T07:52:29.42936286Z",
+                  "size": 1359293444,
+                  "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+                  "details": {
+                    "parent_model": "",
+                    "format": "gguf",
+                    "family": "qwen3",
+                    "families": [
+                      "qwen3"
+                    ],
+                    "parameter_size": "2.0B",
+                    "quantization_level": "Q4_K_M",
+                    "context_length": 40960,
+                    "embedding_length": 2048
+                  },
+                  "capabilities": [
+                    "completion",
+                    "tools",
+                    "thinking"
+                  ]
+                }
+              ]
+            }
+          },
+          "ollama_residency": {
+            "status": "ok",
+            "value": {
+              "models": []
+            }
+          }
+        },
+        "inventory_after": {
+          "observed_at_utc": "2026-10-18T05:47:11.136735+00:00",
+          "platform": "Linux",
+          "machine": "x86_64",
+          "cpu": {
+            "vendor_id": "GenuineIntel",
+            "model name": "Intel(R) Pentium(R) Gold G6405 CPU @ 4.10GHz"
+          },
+          "os_cpu_count": 4,
+          "memory": {
+            "observed_at_utc": "2026-10-18T05:47:11.136900+00:00",
+            "source": "linux_proc_and_cgroup",
+            "processes": [
+              {
+                "pid": 2704,
+                "name": "ollama",
+                "VmSize_bytes": 2987884544,
+                "VmHWM_bytes": 42016768,
+                "VmRSS_bytes": 26324992,
+                "RssAnon_bytes": 10420224,
+                "RssFile_bytes": 15904768,
+                "RssShmem_bytes": 0
+              }
+            ],
+            "proc_meminfo": {
+              "MemTotal_bytes": 12884901888,
+              "MemFree_bytes": 10022805504,
+              "MemAvailable_bytes": 12586579968,
+              "Buffers_bytes": 0,
+              "Cached_bytes": 2322419712,
+              "SwapTotal_bytes": 8589930496,
+              "SwapFree_bytes": 8405913600,
+              "CommitLimit_bytes": 16861331456,
+              "Committed_AS_bytes": 15589507072
+            },
+            "cgroup": {
+              "memory.current": 2862358528,
+              "memory.peak": 9020641280,
+              "memory.max": "max",
+              "memory.swap.current": 184016896,
+              "memory.swap.max": "max",
+              "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+            },
+            "rss_sum_bytes": 26324992,
+            "interpretation": "RSS can double-count shared pages; cgroup includes cache and other processes; no GPU-memory inference from RSS."
+          },
+          "filesystem_bytes": {
+            "total": 151996149760,
+            "used": 12336467968,
+            "free": 133286490112
+          },
+          "filesystem_scope": "Container-visible filesystem only; shared host thin-pool free space must be checked separately.",
+          "ollama_version": {
+            "status": "ok",
+            "value": {
+              "version": "0.35.1"
+            }
+          },
+          "ollama_tags": {
+            "status": "ok",
+            "value": {
+              "models": [
+                {
+                  "name": "qwen3.5:4b-q4_K_M",
+                  "model": "qwen3.5:4b-q4_K_M",
+                  "modified_at": "2026-10-18T05:16:54.789617077Z",
+                  "size": 3324173934,
+                  "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+                  "details": {
+                    "parent_model": "model.gguf",
+                    "format": "gguf",
+                    "family": "qwen35",
+                    "families": [
+                      "qwen35"
+                    ],
+                    "parameter_size": "4.2B",
+                    "quantization_level": "Q4_K_M",
+                    "context_length": 262144,
+                    "embedding_length": 2560
+                  },
+                  "capabilities": [
+                    "completion",
+                    "vision",
+                    "tools",
+                    "thinking"
+                  ]
+                },
+                {
+                  "name": "qwen3:1.7b",
+                  "model": "qwen3:1.7b",
+                  "modified_at": "2026-10-05T07:52:29.42936286Z",
+                  "size": 1359293444,
+                  "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+                  "details": {
+                    "parent_model": "",
+                    "format": "gguf",
+                    "family": "qwen3",
+                    "families": [
+                      "qwen3"
+                    ],
+                    "parameter_size": "2.0B",
+                    "quantization_level": "Q4_K_M",
+                    "context_length": 40960,
+                    "embedding_length": 2048
+                  },
+                  "capabilities": [
+                    "completion",
+                    "tools",
+                    "thinking"
+                  ]
+                }
+              ]
+            }
+          },
+          "ollama_residency": {
+            "status": "ok",
+            "value": {
+              "models": []
+            }
+          }
+        },
+        "calls": [
+          {
+            "folder": "http_0001_pilot",
+            "kind": "pilot",
+            "status": "cancelled",
+            "completed_response_observed": false,
+            "request_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/request.json",
+            "response_path": null,
+            "result_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/result.json",
+            "started_at_utc": "2026-10-18T05:21:58.734214+00:00",
+            "done_reason": null,
+            "raw_stream_bytes": 0,
+            "first_content_observed": false,
+            "request_content_utf8_bytes": 19872,
+            "request_settings": {
+              "temperature": 0,
+              "num_predict": 8192,
+              "num_ctx": 65536,
+              "model": "qwen3.5:4b-q4_K_M",
+              "think": false,
+              "format": "json",
+              "keep_alive": 0
+            },
+            "nonempty_thinking_observed": null,
+            "metrics": {
+              "wall_seconds": 1512.1132832784206,
+              "ttft_any_generated_seconds": null,
+              "ttft_content_seconds": null,
+              "token_count_source": "Ollama counters, not independent tokenization",
+              "duration_unit_in_response": "nanoseconds",
+              "prompt_eval_tokens_per_second": null,
+              "eval_tokens_per_second": null
+            },
+            "error_type": "RemoteDisconnected",
+            "error": "Remote end closed connection without response"
+          }
+        ],
+        "observed_http_calls": 1,
+        "observed_completed_http_responses": 0,
+        "resources": {
+          "monitor_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/monitor.jsonl",
+          "sample_count": 757,
+          "proc_memory_total_bytes": 12884901888,
+          "proc_swap_total_bytes": 8589930496,
+          "proc_available_sampled_min_bytes": 6421153792,
+          "runtime_rss_sum_sampled_max_bytes": 6207291392,
+          "cgroup_memory_current_sampled_max_bytes": 9020104704,
+          "cgroup_memory_peak_before_bytes": 8714719232,
+          "cgroup_memory_peak_after_bytes": 9020641280,
+          "cgroup_limits_before": {
+            "memory.max": "max",
+            "memory.swap.max": "max"
+          },
+          "cgroup_memory_events_before": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+          "cgroup_memory_events_after": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+          "proc_swap_used_before_bytes": 180699136,
+          "proc_swap_used_after_bytes": 184016896,
+          "proc_swap_used_sampled_max_bytes": 404508672,
+          "proc_committed_as_sampled_max_bytes": 24373125120,
+          "proc_commit_limit_before_bytes": 16861331456,
+          "observed_process_names": [
+            "ollama",
+            "llama-server"
+          ],
+          "resident_sample_count": 752,
+          "resident_context_tokens": [
+            65536
+          ],
+          "resident_size_bytes": [
+            5630863604
+          ],
+          "resident_vram_bytes": [
+            0
+          ],
+          "scope": "Sampled container-visible /proc, visible cgroup and named runtime process RSS; not an isolated physical host measurement.",
+          "limitations": [
+            "RSS may double-count shared pages; cgroup includes cache and unrelated activity; do not add them.",
+            "memory.peak is an unreset cumulative high-water mark, not the maximum of interval samples.",
+            "Visible cgroup max does not establish effective ancestor/LXC limits; /proc may be virtualized.",
+            "Swap usage does not attribute paging or its speed effect to the model.",
+            "VRAM zero is a residency observation, not an inventory of physical server GPUs.",
+            "Allocated context does not prove that long inputs/history were preserved without truncation."
+          ]
+        }
+      },
+      "cancellation": {
+        "interruption_observed": true,
+        "cancel_record_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/CANCEL",
+        "raw_cancel_record": {
+          "requested_at_utc": "2026-10-18T05:47:10.792260+00:00",
+          "reason": "User requested response-time repair; stop current long pilot and preserve records before new engineering latency probes"
+        },
+        "operator_supplement": null,
+        "operator_supplement_scope": "Additional operator-provided context; does not override raw timeout/cancel status.",
+        "cancelled_http_folders": [
+          "http_0001_pilot"
+        ],
+        "interpretation": "Cancellation is distinct from timeout. A response absent at cancellation does not establish semantic failure."
+      },
+      "summary_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/summary.json"
+    },
+    "main": {
+      "status": "not_run",
+      "completed_cases": 0,
+      "completed_calls": 0,
+      "attempted_calls_observed": 0,
+      "frozen": false,
+      "notes": [
+        "이 실행 범위는 pilot 전용이다. 본과제 실행·평가규칙 동결을 이 보고서가 승인하지 않는다.",
+        "본과제 동결 전 설정 결정이 필요하다. FinVector는 penalty를 보고하지 않으므로 상속된 presence_penalty=1.5는 논문 기반 수치라고 정당화할 수 없다. 미보고 기본값의 처리·근거 수준·한계를 명시하고 필요한 조건 개정과 예비 재검증을 마쳐야 한다."
+      ],
+      "blocking_design_decisions": [
+        "Resolve unreported inherited penalty defaults before main freeze; current pilot runtime is unchanged."
+      ],
+      "future_candidates_not_applied": [
+        {
+          "values": {
+            "seed": 3407
+          },
+          "evidence_kind": "paper_reported",
+          "source": "https://arxiv.org/pdf/2610.08882",
+          "locator": "section 4.1",
+          "validated_for_libera": false
+        },
+        {
+          "values": {
+            "repeat_penalty": 1,
+            "presence_penalty": 0,
+            "frequency_penalty": 0
+          },
+          "evidence_kind": "implementation_reference_not_reported_benchmark_conditions",
+          "sources": [
+            "https://github.com/alinakhay/FinVector-Market-4B/blob/main/examples/inference_mlx.py",
+            "https://github.com/ml-explore/mlx-lm/blob/v0.31.3/mlx_lm/generate.py"
+          ],
+          "reason": "Candidate translation of the public minimal example and MLX-LM 0.31.3 default argmax/logits_processors=None to neutral Ollama penalties; the actual benchmark runner is private.",
+          "validated_for_libera": false
+        }
+      ],
+      "future_candidates_automatically_applied": false
+    },
+    "human_review": {
+      "status": "pending",
+      "completed_reviews": null,
+      "notes": [
+        "자동·독립 코드 검토를 사람의 원문·의미 검토 완료로 세지 않는다."
+      ]
+    },
+    "notes": [
+      "예비·기술 진단의 결과이며 학술제 본실험 결과가 아니다.",
+      "FinVector는 thinking 비활성화·JSON·greedy의 선례다. 양자화·엔진·상속 기본값이 달라 전체 재현을 주장하지 않는다.",
+      "8192 출력 상한은 PortBench의 값을 다른 모델·과제로 옮긴 적용이며 65536 문맥은 구현 후보다.",
+      "실행 중 설정을 바꾸지 않고, 평가 기준 보완은 예비 단계에서만 한 뒤 본과제 전에 동결한다.",
+      "별도 합성 속도 진단 관측: 4b_threads2: 감시 프로세스 제한시간 종료, 감시 120.003초, HTTP 미확인초, 첫 내용 미확인초, 수신 0 bytes; 4b_threads4: 감시 프로세스 제한시간 종료, 감시 120.002초, HTTP 미확인초, 첫 내용 미확인초, 수신 0 bytes; 1p7b_threads2: 완료 기록, 감시 61.176초, HTTP 61.083초, 첫 내용 59.669초, 수신 977 bytes. 설정별 한 번의 공학 점검이며 예비·본과제 완료 수에 합산하지 않는다. 제한시간 종료는 완료시간이 아니며 모델·문맥·벌점 등 구성 차이로 일반적인 성능 배율을 계산하지 않는다.",
+      "실제 문서 첫 단계의 별도 기술 점검(qwen3:1.7b): 감시 프로세스 제한시간 종료, 감시 180.003초, 수신 0 bytes. 압축 입력만 보낸 32-token 상한의 단일 요청이며 원형 대비 속도 개선이나 네 단계 적합성을 입증하지 않는다. 현재 속도 문제의 해결과 작은 모델의 연구 과제 충족은 확인되지 않았다."
+    ],
+    "runtime_evidence_present": true,
+    "freeze_evidence_present": false
+  }
+}

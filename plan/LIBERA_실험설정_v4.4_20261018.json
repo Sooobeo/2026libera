@@ -1,0 +1,621 @@
+{
+  "protocol_version": "4.4",
+  "as_of_date": "2026-10-18",
+  "status": "one_prespecified_local_pilot; main_not_run_not_frozen",
+  "previous_protocol": "plan/LIBERA_실험설정_20261018.json",
+  "user_decision": "Retain industry-level allocation if construct validity and research meaning are preserved.",
+  "decision": {
+    "unit": "equity-sleeve industry/sector allocation",
+    "selected": true,
+    "reason": "The original proposal already studies industry weights; allocation across sectors can encode institution-specific judgments without testing individual-stock selection.",
+    "sufficiency_condition": "Document interpretation must affect a genuine allocation choice; changing gamma alone is only a numerical control and does not establish strategic-judgment coverage.",
+    "not_a_result": "This is a design-level adequacy judgment, not a claim that treatment effects or sufficient statistical power have been observed."
+  },
+  "research_question": "Does a common AI preserve source-specific public sector judgments in justified equity-sector allocations, and how does early versus late evidence provision change that reflection?",
+  "main": {
+    "module": "documentary_sector_allocation",
+    "status": "not_run",
+    "unit": "industry/sector basket, not individual stock",
+    "taxonomy": {
+      "finalized": true,
+      "selected": "GICS 11",
+      "sector_codes": [
+        "10",
+        "15",
+        "20",
+        "25",
+        "30",
+        "35",
+        "40",
+        "45",
+        "50",
+        "55",
+        "60"
+      ],
+      "no_FF12_conversion": true
+    },
+    "period": {
+      "recent_only": true,
+      "finalized": true,
+      "common_cutoff": "2026-07-17",
+      "price_last_date": "2026-07-16",
+      "claim": "retrospective document-conditioned case, not point-in-time trading replay",
+      "fidelity_invalid_view_date_preserved": "6/31/26"
+    },
+    "inputs": [
+      "common market evidence in the same sector taxonomy",
+      "dated institution documents containing relevant objectives, applicable constraints or sector judgments",
+      "source locations and document identity"
+    ],
+    "document_roles": "Legal investment mandates, fund-manager commentary and house research views are distinct evidence types. A house outlook is not silently assigned to an unrelated fund as its mandate.",
+    "risk_policy": "Preserve qualitative preferences; retain only explicitly supported numerical limits, denominators and exceptions. Do not map real-fund prose to gamma.",
+    "model_decisions": [
+      "identify relevant document facts",
+      "compare sector allocation alternatives",
+      "propose sector weights and explain the evidence supporting departures from a common baseline when one is specified"
+    ],
+    "gold_visibility": "Offline provisional references mechanically cross-checked; independent human review pending; never read by online runner.",
+    "calculation": "Implemented pure calculator; automatic same feedback between stages; no repair or hidden-reference access",
+    "calculator_information_boundary": "Tools may use only evidence already exposed in that run and model-submitted inputs. Before R4 receives its institution packet, tools cannot read hidden mandates, evaluator annotations or institution-specific constraints. Missing constraints remain unknown; no automatic gold-based repair, lookup or informative feasibility response is allowed.",
+    "no_synthetic_real_facts": "Do not invent institutional expected returns, confidence, sector caps or exact target weights from qualitative prose.",
+    "pending": [
+      "Address the observed one-case failure if present; then complete and review the full pilot under explicitly versioned conditions",
+      "Independent substantive human source review",
+      "Prepare and validate v4.4 main-run path",
+      "Freeze inputs, model and rubric before main responses",
+      "Main execution and offline evaluation"
+    ],
+    "main_documents": [
+      "fidelity_q3_2026",
+      "ubs_july_2026"
+    ],
+    "pilot_documents": [
+      "fidelity_q2_2026",
+      "ubs_june_2026"
+    ],
+    "representation": "Researcher-selected short paraphrased evidence, original labels, source IDs and page locators; not full-document retrieval.",
+    "baseline": "Reported 2026-06-30 S&P500 sector weights, sum99.9%, original preserved and normalized for common arithmetic; not institution holdings/targets",
+    "paths": {
+      "documents": "../data/sector_documents/corpus_card.json",
+      "market": "../data/sector_market/market_input.json",
+      "calculator": "../research/sector_engine.py",
+      "runner": null,
+      "single_case_runner": "../research/local_sector_single_case.py"
+    },
+    "blocking_design_decisions": [],
+    "runtime_policy": "Single-case v4.4 observations only. Remaining pilot cases, separate main-run path, human review and main freeze are pending."
+  },
+  "workflow": {
+    "arms": [
+      "R1",
+      "R4"
+    ],
+    "stages": [
+      "market and evidence interpretation",
+      "comparison of alternatives and risks",
+      "provisional sector allocation or pending",
+      "final reconsideration"
+    ],
+    "mandate_or_evidence_onset": {
+      "R1": 1,
+      "R4": 4
+    },
+    "same_final_facts": true,
+    "same_model_and_calculation_facilities": true,
+    "full_history_retained": true,
+    "interpretation": "Evidence-onset and subsequent-use workflow policy, including position and context age; not an isolated memory mechanism.",
+    "retrieval": "Directly supplied evidence first; actual retrieval quality remains a separate extension, not an executed RAG result.",
+    "planned_main_case_count": 4,
+    "planned_pilot_case_count": 4,
+    "calls_per_complete_case": 4,
+    "inference": "descriptive case study; two source documents, not powered population experiment",
+    "same_generated_history": false,
+    "history_semantics": "visible model responses and calculator feedback retained; not hidden thinking traces",
+    "internal_thinking_observed": false
+  },
+  "evaluation": {
+    "status": "mechanical_spec_implemented; see_observed_execution_for_reviews; freeze_after_pilot_before_main",
+    "dimensions": [
+      "valid sector identifiers and feasible weights",
+      "evidence-grounded interpretation",
+      "explicit constraint compliance before repair",
+      "document-supported exposure tendencies",
+      "institution-specific response under matched workflow comparison"
+    ],
+    "numeric_agreement": "A unique exact-weight reference is used only for the independent numerical control. Public holdings or qualitative views do not specify universally correct strategic weights.",
+    "convergence": "Similarity alone is not failure. Report whether a convergence accompanies loss of relevant evidence or objective/constraint violations. Do not force differences when source judgments agree.",
+    "counterfactuals": "If constructed, change an explicitly identified condition while keeping others fixed and label these as synthetic task interventions, not real institution history.",
+    "post_outcome_additions": "Rubric refinements allowed on pilot only before main freeze; additions after main outcomes are exploratory, not revised confirmatory rules.",
+    "no_arbitrary_composite_score": true,
+    "spec": "../data/sector_protocol/evaluation_spec.json",
+    "primary_rating_scope": "source label preservation only, not strategy quality",
+    "no_exact_weight_gold_for_documentary_task": true,
+    "semantic_categories": [
+      "supported",
+      "contradicted",
+      "not_stated",
+      "uncertain"
+    ],
+    "semantic_scoring_automated": false
+  },
+  "numerical_control": {
+    "role": "auxiliary check of explicit objective implementation; cannot substitute for the documentary strategic task",
+    "prepared": true,
+    "path": "../data/institutional_recent/summary.json",
+    "reference_months": [
+      "2024-01",
+      "2025-12"
+    ],
+    "market_windows": 24,
+    "lookback_months": 60,
+    "input_coverage": [
+      "2019-01",
+      "2025-11"
+    ],
+    "assets": [
+      "NoDur",
+      "Durbl",
+      "Manuf",
+      "Enrgy",
+      "Chems",
+      "BusEq",
+      "Telcm",
+      "Utils",
+      "Shops",
+      "Hlth",
+      "Money",
+      "Other"
+    ],
+    "gammas": [
+      1,
+      3,
+      5
+    ],
+    "institution_cases": 72,
+    "objective": "U_gamma(w)=mu.T@w-gamma/2*w.T@Sigma@w",
+    "constraints": [
+      "sum(w)=1",
+      "w>=0"
+    ],
+    "data_status": "Revised historical French data; retrospective controlled task, not point-in-time trading reconstruction.",
+    "period_provenance": "LIBERA adaptation: PortBench QA test years 2024-2025 plus Salcher 60-month lookback. Not PortBench pipeline replication.",
+    "inference": "Overlapping fixed cases; no independent-sample or power claim. Shared optima retained. No future returns used."
+  },
+  "legacy_v4": {
+    "benchmark": "../data/institutional/summary.json",
+    "workflow": "../data/workflow/manifest.json",
+    "role": "historical numerical prototype, not the new documentary main task",
+    "audit": "../research/audits/verification_v4.html",
+    "audit_scope": "The v4 two-round audit applies to archived v4 files and hashes only; it is not a certification of this revised documentary design."
+  },
+  "model": {
+    "primary_target": "Qwen3.5-4B",
+    "ollama_tag": "qwen3.5:4b-q4_K_M",
+    "quantization": "Q4_K_M",
+    "temperature": 0,
+    "max_output_tokens": 8192,
+    "thinking": false,
+    "context_tokens": 65536,
+    "runtime_ready": false,
+    "exact_served_revision": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+    "runtime_manifest_path": "data/sector_protocol/v44_single_case_20261018/manifest.json",
+    "candidate_not_observed_settings": false,
+    "settings_observation_scope": "Versioned request conditions; actual observations are in the linked single-case transport records.",
+    "runtime_readiness_policy": "Installation or pilot status is reported separately; this builder never certifies execution readiness.",
+    "model_basis": [
+      {
+        "url": "https://arxiv.org/html/2609.10113",
+        "locator": "sections 5.1-5.3, Table 3",
+        "scope": "exact base model evaluated in finance; target decoding not fully disclosed"
+      },
+      {
+        "url": "https://arxiv.org/pdf/2610.08882",
+        "locator": "section 4.1, Table 3",
+        "scope": "base Qwen3.5-4B; explicit JSON and disabled thinking; not the LoRA adapter"
+      }
+    ],
+    "parameter_basis": [
+      {
+        "parameter": "thinking",
+        "value": false,
+        "kind": "direct_financial_paper_precedent",
+        "url": "https://arxiv.org/pdf/2610.08882",
+        "locator": "section 4.1"
+      },
+      {
+        "parameter": "temperature",
+        "value": 0,
+        "kind": "backend_adaptation",
+        "url": "https://arxiv.org/pdf/2610.08882",
+        "locator": "section 4.1 greedy decoding",
+        "note": "Ollama implementation candidate; also T=0 in PortBench; not identical engine reproduction"
+      },
+      {
+        "parameter": "max_output_tokens",
+        "value": 8192,
+        "kind": "paper_value_transferred_to_different_model_and_task",
+        "url": "https://arxiv.org/html/2605.27887v6",
+        "locator": "section 3.1",
+        "note": "Not FinVector's 700-token condition; adequacy checked on pilot, before main"
+      },
+      {
+        "parameter": "context_tokens",
+        "value": 65536,
+        "kind": "engineering_candidate_not_paper_constant",
+        "note": "Preserve all four stages including visible responses and calculation feedback; verify actual tokenization and memory"
+      }
+    ],
+    "backend_settings": "Pin served digest, quantization, chat template, engine, context, sampling defaults and thinking implementation from actual runtime evidence.",
+    "context_overflow": "fail and record; no silent truncation, history deletion or budget change",
+    "limitations": [
+      "financial base-model paper scores do not measure this quantized runtime",
+      "small-model application, not PortBench replication",
+      "basic task inability can obscure workflow differences",
+      "no hidden-thinking or memory mechanism identification"
+    ],
+    "future_candidate_scope": "Superseded by the pinned v4.4 conditions evidence for this single pilot.",
+    "review": "../research/v44_conditions_reference_20261018.html",
+    "protocol_version": "4.4",
+    "explicit_request_options": {
+      "temperature": 0,
+      "seed": 3407,
+      "num_predict": 8192,
+      "num_ctx": 65536,
+      "num_thread": 2,
+      "num_batch": 512,
+      "repeat_penalty": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0.0
+    },
+    "context_check_policy": "Require render-only visible-history validation with explicit truncate=false/shift=false; no UTF-8 token heuristic. Actual checks are recorded stage by stage.",
+    "context_check_observed_stages": [
+      1
+    ],
+    "renderer_policy": {
+      "path": "research/v44_renderer_policy_20261018.json",
+      "sha256": "4135e7f2d0000e4f51ca3414af803805c823f681468807d3ab19f9fd116488a4",
+      "http_history": "verbatim",
+      "rendered_history": "Only declared JSON boundary whitespace removal; internal characters and parsed values unchanged."
+    },
+    "one_case_workflow_completed": false,
+    "decoding_revision_applied": "Neutral penalties and seed explicitly specified; not claimed as unreported benchmark values."
+  },
+  "submission": {
+    "term_paper_due": "2026-11-01",
+    "pitch": "2026-11-06",
+    "pitch_minutes": [
+      5,
+      10
+    ],
+    "citation_style": "APA",
+    "source": "https://app.notion.com/p/2026-agent-conference/LIBERA-3e00589711408053a7e5ff9a0c4ba804",
+    "length_format_own_results_requirement": "not specified in available overview; do not infer exemption"
+  },
+  "sources": {
+    "sector_task": "https://arxiv.org/html/2603.22305v1",
+    "profiles": "https://www.ifo.de/DocDL/cesifo1_wp11862.pdf",
+    "workflow": "https://arxiv.org/html/2605.27887v6",
+    "raw_vs_repaired": "https://arxiv.org/html/2608.09988v1",
+    "quadratic": "https://onlinelibrary.wiley.com/doi/full/10.1002/for.70134",
+    "french": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_12_ind_port.html",
+    "preregistration": "https://www.pnas.org/doi/10.1073/pnas.1708274114",
+    "official_document_template": "https://www.sec.gov/files/form-n-1a.pdf",
+    "small_model_finance": "https://arxiv.org/html/2609.10113",
+    "nonthinking_structured_finance": "https://arxiv.org/pdf/2610.08882"
+  },
+  "claims_not_identified": [
+    "individual-stock selection skill",
+    "overall stocks/bonds/cash allocation",
+    "true future optimal portfolios",
+    "actual private information",
+    "causal effect of shared-model adoption",
+    "market-wide convergence or financial stability"
+  ],
+  "results": {
+    "ai_runs": 0,
+    "ai_completed_calls": 0,
+    "pilot_completed_cases": 0,
+    "pilot_completed_calls": 0,
+    "pilot_completed_workflow_stages": 0,
+    "pilot_attempted_calls_observed": 1,
+    "main_completed_cases": 0,
+    "main_completed_calls": 0,
+    "count_scope": "This v4.4 one-case pilot only; earlier v4.3 and engineering probes remain separate.",
+    "human_runs": null,
+    "main_execution_ready": false,
+    "main_effect_estimate": null
+  },
+  "revision_provenance": {
+    "builder": "research/build_sector_revision_v44.py",
+    "source_version": "4.3",
+    "source_files": {
+      "plan": {
+        "path": "plan/LIBERA_실험계획_20261018.html",
+        "sha256": "1c7da2ef2057e2bf9010513b9ee3817404164ec9608746a35c09b69775df451d"
+      },
+      "paper": {
+        "path": "paper/LIBERA_텀페이퍼_초안_20261018.html",
+        "sha256": "880700f88bb233117fb5c436832457e2b775a09b12b25517599ad9b9ecb8ae9e"
+      },
+      "config": {
+        "path": "plan/LIBERA_실험설정_20261018.json",
+        "sha256": "09b3bf4a07135f2607cd08a6eb34750c05d7524b212d479d03ae0fae1764abb1"
+      }
+    },
+    "conditions": {
+      "path": "research/v44_conditions_reference_20261018.json",
+      "sha256": "a403d4c37d1581f9af21af8ba7a6333614d890ff15277e83181c1204549a9c5b"
+    },
+    "registration": {
+      "path": "data/sector_protocol/v44_single_case_registration_20261018.json",
+      "sha256": "3f5cf57e86ca05ca229a2f14a2391c01b80a72f4f955eb09dfe688f33a7f69d9"
+    },
+    "renderer_addendum": {
+      "path": "data/sector_protocol/v44_single_case_registration_renderer_addendum_20261018.json",
+      "sha256": "a76275e80a00161f449e3d86319d3fece7853c9ca0b27ba2f9117592826ca0d8"
+    },
+    "model_calls_by_builder": 0
+  },
+  "observed_execution": {
+    "pilot": {
+      "status": "hard_deadline",
+      "completed_cases": 0,
+      "completed_calls": 0,
+      "http_streams_completed": 0,
+      "attempted_calls": 1,
+      "stages": [
+        {
+          "stage": 1,
+          "workflow_record": false,
+          "generation_request": true,
+          "supervisor_status": "hard_deadline",
+          "transport_status": "started_without_terminal_response",
+          "render_validation": {
+            "status": "all_expected_renderer_contents_present_in_order",
+            "renderer_policy": "http_verbatim_json_outer_ascii_whitespace_only_v1",
+            "renderer_policy_sha256": "4135e7f2d0000e4f51ca3414af803805c823f681468807d3ab19f9fd116488a4",
+            "message_count": 2,
+            "message_spans": [
+              {
+                "message_index": 0,
+                "role": "system",
+                "start_character": 19,
+                "end_character": 2210,
+                "raw_content_utf8_sha256": "48dd2b82b2996ddf622b5d01627318e156779e442f993d6840f04eebf5fbd1ec",
+                "expected_renderer_content_utf8_sha256": "48dd2b82b2996ddf622b5d01627318e156779e442f993d6840f04eebf5fbd1ec",
+                "removed_outer_prefix": "",
+                "removed_outer_suffix": "",
+                "strict_json_payload_value_preservation": null,
+                "http_content_modified": false
+              },
+              {
+                "message_index": 1,
+                "role": "user",
+                "start_character": 2238,
+                "end_character": 16161,
+                "raw_content_utf8_sha256": "b4259266bae652b0023a30cabbdb9501fb12d2810b1537ee630e4fa7dad989a9",
+                "expected_renderer_content_utf8_sha256": "b4259266bae652b0023a30cabbdb9501fb12d2810b1537ee630e4fa7dad989a9",
+                "removed_outer_prefix": "",
+                "removed_outer_suffix": "",
+                "strict_json_payload_value_preservation": true,
+                "http_content_modified": false
+              }
+            ],
+            "rendered_utf8_sha256": "262c6a97b624d541b1a8e5e5db1a21f799cd8b03a5b31f06738a93d77820b286",
+            "exact_token_count": null,
+            "basis": "Observed pinned server rendering, predeclared JSON-boundary whitespace policy, and explicit truncate=false/shift=false. HTTP message strings are unchanged. This is not independent tokenization or a proof of spare context capacity."
+          },
+          "response_present": false,
+          "done_reason": null,
+          "metrics": null
+        },
+        {
+          "stage": 2,
+          "workflow_record": false,
+          "generation_request": false,
+          "supervisor_status": "not_started",
+          "transport_status": "not_started",
+          "render_validation": null,
+          "response_present": false,
+          "done_reason": null,
+          "metrics": null
+        },
+        {
+          "stage": 3,
+          "workflow_record": false,
+          "generation_request": false,
+          "supervisor_status": "not_started",
+          "transport_status": "not_started",
+          "render_validation": null,
+          "response_present": false,
+          "done_reason": null,
+          "metrics": null
+        },
+        {
+          "stage": 4,
+          "workflow_record": false,
+          "generation_request": false,
+          "supervisor_status": "not_started",
+          "transport_status": "not_started",
+          "render_validation": null,
+          "response_present": false,
+          "done_reason": null,
+          "metrics": null
+        }
+      ],
+      "main_model_calls": 0,
+      "path": "data/local_sector_runtime/single_case_v44_20261018",
+      "summary_sha256": "c8c2f88e0a73322d32b6e8be1585a2a4f9b2bc15a0afa37aa93e0f66a17ce1e2",
+      "wall_seconds": 903.6723634000082,
+      "error": "Stage stopped: hard_deadline",
+      "render_validations_observed": [
+        1
+      ]
+    },
+    "main": {
+      "status": "not_run",
+      "completed_cases": 0,
+      "completed_calls": 0,
+      "frozen": false
+    },
+    "human_review": {
+      "status": "pending"
+    },
+    "historical_v43_record": "plan/LIBERA_실험설정_20261018.json"
+  },
+  "execution_conditions": {
+    "reference": "research/v44_conditions_reference_20261018.json",
+    "sha256": "a403d4c37d1581f9af21af8ba7a6333614d890ff15277e83181c1204549a9c5b",
+    "request": {
+      "model": "qwen3.5:4b-q4_K_M",
+      "think": false,
+      "format": "json",
+      "keep_alive": 0,
+      "truncate": false,
+      "shift": false,
+      "options": {
+        "temperature": 0,
+        "seed": 3407,
+        "num_predict": 8192,
+        "num_ctx": 65536,
+        "num_thread": 2,
+        "num_batch": 512,
+        "repeat_penalty": 1.0,
+        "presence_penalty": 0.0,
+        "frequency_penalty": 0.0,
+        "top_p": 0.95,
+        "top_k": 20,
+        "min_p": 0.0
+      }
+    },
+    "execution": {
+      "engine": "0.35.1",
+      "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "request_timeout_seconds": 900,
+      "serial_requests": 1,
+      "authorized_pilot_cases": 1,
+      "stages_per_case": 4,
+      "count_basis": "One case and four stages follow the authorized LIBERA pilot design, not a paper-derived statistical sample-size calculation.",
+      "automatic_retry": false,
+      "main_frozen": false
+    },
+    "documentation_correction": "Per-call automatic pinning covers engine version, model digest and template. Binary hash and GPU placement are separate installation/log observations, not additional per-call gates. The immutable original conditions evidence is retained.",
+    "all_numbers_reported_by_papers": false
+  },
+  "current_single_case": {
+    "status": "hard_deadline",
+    "completed_cases": 0,
+    "completed_calls": 0,
+    "http_streams_completed": 0,
+    "attempted_calls": 1,
+    "stages": [
+      {
+        "stage": 1,
+        "workflow_record": false,
+        "generation_request": true,
+        "supervisor_status": "hard_deadline",
+        "transport_status": "started_without_terminal_response",
+        "render_validation": {
+          "status": "all_expected_renderer_contents_present_in_order",
+          "renderer_policy": "http_verbatim_json_outer_ascii_whitespace_only_v1",
+          "renderer_policy_sha256": "4135e7f2d0000e4f51ca3414af803805c823f681468807d3ab19f9fd116488a4",
+          "message_count": 2,
+          "message_spans": [
+            {
+              "message_index": 0,
+              "role": "system",
+              "start_character": 19,
+              "end_character": 2210,
+              "raw_content_utf8_sha256": "48dd2b82b2996ddf622b5d01627318e156779e442f993d6840f04eebf5fbd1ec",
+              "expected_renderer_content_utf8_sha256": "48dd2b82b2996ddf622b5d01627318e156779e442f993d6840f04eebf5fbd1ec",
+              "removed_outer_prefix": "",
+              "removed_outer_suffix": "",
+              "strict_json_payload_value_preservation": null,
+              "http_content_modified": false
+            },
+            {
+              "message_index": 1,
+              "role": "user",
+              "start_character": 2238,
+              "end_character": 16161,
+              "raw_content_utf8_sha256": "b4259266bae652b0023a30cabbdb9501fb12d2810b1537ee630e4fa7dad989a9",
+              "expected_renderer_content_utf8_sha256": "b4259266bae652b0023a30cabbdb9501fb12d2810b1537ee630e4fa7dad989a9",
+              "removed_outer_prefix": "",
+              "removed_outer_suffix": "",
+              "strict_json_payload_value_preservation": true,
+              "http_content_modified": false
+            }
+          ],
+          "rendered_utf8_sha256": "262c6a97b624d541b1a8e5e5db1a21f799cd8b03a5b31f06738a93d77820b286",
+          "exact_token_count": null,
+          "basis": "Observed pinned server rendering, predeclared JSON-boundary whitespace policy, and explicit truncate=false/shift=false. HTTP message strings are unchanged. This is not independent tokenization or a proof of spare context capacity."
+        },
+        "response_present": false,
+        "done_reason": null,
+        "metrics": null
+      },
+      {
+        "stage": 2,
+        "workflow_record": false,
+        "generation_request": false,
+        "supervisor_status": "not_started",
+        "transport_status": "not_started",
+        "render_validation": null,
+        "response_present": false,
+        "done_reason": null,
+        "metrics": null
+      },
+      {
+        "stage": 3,
+        "workflow_record": false,
+        "generation_request": false,
+        "supervisor_status": "not_started",
+        "transport_status": "not_started",
+        "render_validation": null,
+        "response_present": false,
+        "done_reason": null,
+        "metrics": null
+      },
+      {
+        "stage": 4,
+        "workflow_record": false,
+        "generation_request": false,
+        "supervisor_status": "not_started",
+        "transport_status": "not_started",
+        "render_validation": null,
+        "response_present": false,
+        "done_reason": null,
+        "metrics": null
+      }
+    ],
+    "main_model_calls": 0,
+    "path": "data/local_sector_runtime/single_case_v44_20261018",
+    "summary_sha256": "c8c2f88e0a73322d32b6e8be1585a2a4f9b2bc15a0afa37aa93e0f66a17ce1e2",
+    "wall_seconds": 903.6723634000082,
+    "error": "Stage stopped: hard_deadline",
+    "render_validations_observed": [
+      1
+    ]
+  },
+  "review_records": [
+    {
+      "path": "research/v44_single_case_round1_20261018.json",
+      "sha256": "b28abd8840bb94431b950971a924e8d680fdd3a72df8517889bacd0384d2aa42"
+    },
+    {
+      "path": "research/v44_single_case_round2_20261018.json",
+      "sha256": "a1cec8695d377669c9aac77073a7e425edf8ce5168a96651550fc5bd7b14f07a"
+    },
+    {
+      "path": "research/v44_single_case_round3_20261018.json",
+      "sha256": "a858e209afd5cb4f770ea418778d806aa9f33fb17ae859f2de3635cd513b64eb"
+    }
+  ],
+  "findings_reference": {
+    "path": "research/v44_single_case_findings_20261018.json",
+    "sha256": "e15c1c1e48e04e15051a107edec63f829f252dc40566eec7c56602dfc8fdfb33"
+  }
+}

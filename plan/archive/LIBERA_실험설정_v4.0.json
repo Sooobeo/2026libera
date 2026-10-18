@@ -1,0 +1,190 @@
+{
+  "protocol_version": "4.0",
+  "as_of_date": "2026-10-17",
+  "status": "main_design_and_public_data_benchmark_prepared; no_AI_experiment_results",
+  "previous_protocol": "archive/LIBERA_실험설정_v3.5.json",
+  "active_main_experiment": "institutional_mandate_conditioned_FF12_allocation",
+  "research_question": "Does a common fixed GenAI model preserve warranted differences in hypothetical institutional equity-sleeve allocation, and how does mandate-onset workflow change that performance?",
+  "claim_scope": {
+    "institutions": "hypothetical explicit mandates, not calibrated real funds",
+    "heterogeneity_source": "risk preference gamma in delegated objective; not heterogeneous private forecasts",
+    "decision": "allocation within a fully invested equity sleeve across FF12 industries",
+    "identified_comparison": "early retained mandate versus late mandate under one fixed model; workflow policy including position and context age",
+    "not_identified": [
+      "causal effect of shared-model adoption",
+      "actual retrieval quality",
+      "real-fund convergence",
+      "market prices or financial stability",
+      "realized investment profitability",
+      "separate causal mechanisms of mandate recognition, memory loss and numerical optimization failure"
+    ]
+  },
+  "main": {
+    "assets": [
+      "NoDur",
+      "Durbl",
+      "Manuf",
+      "Enrgy",
+      "Chems",
+      "BusEq",
+      "Telcm",
+      "Utils",
+      "Shops",
+      "Hlth",
+      "Money",
+      "Other"
+    ],
+    "data_source": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html",
+    "data_vintage": "local manifest frozen on 2026-10-17; current revised CIZ data, not historical point-in-time vintage",
+    "data_period": [
+      "1964-01",
+      "2023-12"
+    ],
+    "monthly_observations": 720,
+    "training_months": 60,
+    "reserved_future_months": 36,
+    "window_selection": "all 625 overlapping 60+36 month frames; future 36-month block never passed to model or oracle",
+    "market_windows": 625,
+    "gammas": [
+      1,
+      3,
+      5
+    ],
+    "institution_cases": 1875,
+    "return_units": "monthly decimal excess return; percent values divided by 100 then monthly RF subtracted",
+    "mu": "training sample mean of monthly industry excess returns",
+    "Sigma": "training sample covariance, ddof=1, without shrinkage",
+    "objective": "U_gamma(w)=mu.T@w-gamma/2*w.T@Sigma@w",
+    "constraints": [
+      "sum(w)=1",
+      "w>=0"
+    ],
+    "oracle": "independent constrained optimizer; SPD and KKT certification",
+    "paper_basis": {
+      "objective_gamma_data_frame": "https://onlinelibrary.wiley.com/doi/full/10.1002/for.70134",
+      "long_only_profile_conditioned_precedent": "https://arxiv.org/html/2605.27887v6"
+    },
+    "adaptation": "LIBERA combines Salcher quadratic preferences with long-only feasibility; not a published unified protocol replication",
+    "reference_not_truth": "optimizer of the stated estimated objective, not true future returns or a recommended real-world portfolio",
+    "same_optimum_cases": "retain all; classify using common optimum KKT certificates, never force different allocations"
+  },
+  "workflow": {
+    "main_arms": [
+      "R1",
+      "R4"
+    ],
+    "diagnostic_arm": "FRESH",
+    "stages": [
+      "interpret provided facts and identify missing mandate",
+      "analyze market tradeoffs",
+      "draft provisional allocation or pending",
+      "fully reconsider and output final allocation"
+    ],
+    "stage_count_main": 4,
+    "mandate_inserted_at": {
+      "R1": 1,
+      "R4": 4,
+      "FRESH": 1
+    },
+    "mandate_text_occurrences_per_run": 1,
+    "market_inserted_at": 1,
+    "full_history_retained": true,
+    "final_available_facts_identical_within_case": true,
+    "allow_pending_before_mandate": true,
+    "score_final_only": true,
+    "new_conversation_per_case_and_arm": true,
+    "no_cross_case_history_or_shared_memory": true,
+    "model_visible_ids": false,
+    "evaluator_gold_visible": false,
+    "external_search_or_solver_tools": false,
+    "execution_order": "625 market-window complete blocks in deterministic hash order; each block contains all three gammas x two policies; gamma order and adjacent paired-policy order hashed independently. FRESH separate diagnostic campaign.",
+    "execution_logging": "retain scheduled sequence, actual timestamps, complete requests/responses, model/backend manifest and any deviation; stop and version a new campaign if model revision changes",
+    "interpretation": "onset, position and retention policy bundle; not isolated exposure-free timing effect"
+  },
+  "model": {
+    "primary_target": "Qwen3.6-35B-A3B",
+    "basis": "https://arxiv.org/html/2605.27887v6",
+    "basis_locator": "section 3.1",
+    "temperature": 0,
+    "max_output_tokens": 8192,
+    "thinking": true,
+    "exact_served_revision": null,
+    "runtime_ready": false,
+    "note": "paper-evaluated target selected; local access and immutable revision must be verified before any run. Do not silently substitute installed smaller models.",
+    "backend_settings": "freeze chat template, quantization, thinking implementation, sampling defaults, context limit, engine version, any seed and model hash in runtime manifest",
+    "context_overflow": "fail and record; no silent truncation or change to output token budget"
+  },
+  "analysis": {
+    "population": "fixed public-data benchmark, not an independent sample of institutions or market periods",
+    "base_passes": 1,
+    "base_pass_note": "LIBERA deterministic-target census; temperature zero does not guarantee backend determinism. No stochastic reproducibility claim.",
+    "main_final_outputs_planned": 3750,
+    "main_response_calls_planned": 15000,
+    "fresh_final_outputs_planned": 1875,
+    "fresh_response_calls_planned": 1875,
+    "total_response_calls_planned": 16875,
+    "primary_quality": "direct U_gamma(w_star)-U_gamma(w), by gamma",
+    "primary_alignment": "0.5*L1((w_i-w_j)-(w_star_i-w_star_j)), by gamma pair",
+    "descriptive_convergence": "D_star-D_AI, where D=0.5*L1(w_i-w_j); sign alone is not failure evidence",
+    "individual_distance": "0.5*L1(w-w_star)",
+    "invalid_outputs": "all-case failure rate; do not repair or assign fake utility. Individual policy contrasts require both answers; institution-pair policy contrasts require all four answers (two gammas x two policies) on the same window. Report planned, valid and excluded counts and invalid-rate asymmetry.",
+    "negative_raw_gap_policy": "retain signed direct gap and raw budget residual; flag tiny negative gaps explained by equality-multiplier times allowed budget mismatch. Do not clip or interpret them as beating the exact simplex optimum.",
+    "aggregation": "per-gamma and per-pair mean, median, full distribution, and paired R4-minus-R1 differences; any all-case average is equal-case descriptive, not social welfare",
+    "strata": [
+      "all windows",
+      "KKT-certified distinct optimum pairs",
+      "KKT-certified shared optimum pairs",
+      "numerically unresolved pairs if any"
+    ],
+    "inference": "descriptive finite-corpus comparison; no iid standard errors, p-values, power claim or automatic population generalization",
+    "claim_rule": "evaluate mandate-response error, direct utility loss, invalid outputs and signed convergence jointly. Mixed directions are mixed results; no composite score or arbitrary threshold. Complete-case differences describe that subset, not automatically the whole scheduled corpus. Recognizing gamma in prose is diagnostic only; it does not isolate recognition versus calculation failure.",
+    "missingness": "report every scheduled, completed, invalid, transport-failed and overflowed case; never replace a difficult case based on observed output",
+    "transport_retry": "no automatic retries; log failed request, mark missing, resolve infrastructure before a separately versioned full or prespecified resumed run",
+    "auxiliary_FRESH": "one-step full-information diagnostic, not a call-budget-matched causal arm"
+  },
+  "numeric_implementation": {
+    "feasibility_sum_tolerance": 1e-06,
+    "negative_weights_allowed": false,
+    "finite_values_required": true,
+    "normalization_or_clipping": false,
+    "tolerances_are": "engineering precision checks, not paper-derived behavioral treatment values"
+  },
+  "module_roles": {
+    "A_public_documents": "contextual evidence and optional separate extraction extension; not actual institution inputs or gamma calibration",
+    "B1_Hansen": "auxiliary signal-use diagnostic only",
+    "P_Q_legacy": "archived numerical prototypes, not main estimand"
+  },
+  "alternatives": [
+    {
+      "candidate": "Black-Litterman institution-specific views",
+      "decision": "defer",
+      "reason": "public evidence does not independently identify per-institution views and confidence; using the tested LLM for gold views is circular"
+    },
+    {
+      "candidate": "four real fund mandates converted to FF12 constraints",
+      "decision": "defer",
+      "reason": "issuer nationality, blue-chip status and denominators cannot be reconstructed from industry returns; gamma cannot be inferred from prose"
+    },
+    {
+      "candidate": "full stock/bond/cash portfolio profiles",
+      "decision": "future robustness",
+      "reason": "closer to total risk choice but requires a different public asset universe and independent benchmark, not an undocumented addition to FF12"
+    }
+  ],
+  "submission": {
+    "term_paper_due": "2026-11-01",
+    "pitch": "2026-11-06",
+    "pitch_minutes": [
+      5,
+      10
+    ],
+    "citation_style": "APA",
+    "source": "https://app.notion.com/p/2026-agent-conference/LIBERA-3e00589711408053a7e5ff9a0c4ba804",
+    "length_format_own_results_requirement": "not specified in available overview; do not infer exemption"
+  },
+  "results": {
+    "ai_runs": 0,
+    "human_runs": 0,
+    "benchmark_preparation_only": true
+  }
+}

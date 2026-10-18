@@ -1,0 +1,32 @@
+{
+  "protocol_version": "4.4",
+  "backend": "ollama",
+  "model": "qwen3.5:4b-q4_K_M",
+  "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+  "template_sha256": "b507b9c2f6ca642bffcd06665ea7c91f235fd32daeefdf875a0f938db05fb315",
+  "engine_version": "0.35.1",
+  "options": {
+    "temperature": 0,
+    "num_ctx": 65536,
+    "num_predict": 8192,
+    "num_thread": 2,
+    "num_batch": 512,
+    "repeat_penalty": 1.0,
+    "presence_penalty": 0.0,
+    "frequency_penalty": 0.0,
+    "seed": 3407,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0
+  },
+  "think": false,
+  "truncate": false,
+  "shift": false,
+  "stream": true,
+  "format": "json",
+  "keep_alive": 0,
+  "deadline_seconds": 900,
+  "history_policy": "explicit_final_content",
+  "renderer_policy": "http_verbatim_json_outer_ascii_whitespace_only_v1",
+  "projection_version": "sector_market_exact_duplicates_v1"
+}

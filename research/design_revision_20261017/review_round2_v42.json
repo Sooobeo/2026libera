@@ -1,0 +1,72 @@
+{
+  "review": "independent_machine_review_round2_v4.2",
+  "reviewer": "institution_templates subagent",
+  "reviewed_on": "2026-10-17",
+  "status": "PASS_WITHIN_DOCUMENT_SOURCE_IMPLEMENTATION_SCOPE",
+  "critical_findings": 0,
+  "unresolved_substantive_findings": [],
+  "round1_findings_resolved": [
+    "R1-01",
+    "R1-02",
+    "R1-03",
+    "R1-04",
+    "R1-05"
+  ],
+  "nonblocking_editorial_note": null,
+  "human_review": false,
+  "AI_experiment_run": false,
+  "checks": [
+    {
+      "dimension": "consistency",
+      "result": "pass",
+      "evidence": "Plan/paper/config identify GICS11, four source packets, main/pilot split, identical common market input and R1/R4 onset. New table has11 rows,22 ratings and11 raw benchmark percentages exactly matching pinned references."
+    },
+    {
+      "dimension": "logic",
+      "result": "pass",
+      "evidence": "No unique qualitative allocation gold, no strategy quality inferred from copied ratings, no obligatory UBS attractive-to-overweight mapping, no automatic calculator repair, and no difference-is-success rule."
+    },
+    {
+      "dimension": "topic_connection",
+      "result": "pass_with_explicit_scope",
+      "evidence": "Industry capital allocation and organizational evidence-transfer workflow remain the observable case; complete mandates, private preferences, whole-market homogenization and common-AI adoption causality are explicitly outside identification."
+    },
+    {
+      "dimension": "evidence",
+      "result": "pass_with_review_limits",
+      "evidence": "Official document dates, Fidelity invalid date,99.9 raw benchmark total,ETF price-data caveats and source scale differences are disclosed. PortBench numerical settings and half-L1 form verified against v6; Quek GICS reference verified against v5. Research operating dates/counts and engineering tolerances are not presented as paper estimates."
+    },
+    {
+      "dimension": "source_to_strategy_difficulty",
+      "result": "pass_with_construct_limit",
+      "evidence": "Packets explicitly preserve rating labels and summarize sources; paper discloses this can be easier than full-document retrieval. Meaning and allocation explanation review remains pending rather than being replaced by label accuracy."
+    },
+    {
+      "dimension": "independence_and_denominators",
+      "result": "pass",
+      "evidence": "Same institutions/related wording pilot limitation is retained; no22-independent-institution claim; separate pilot phrasing replaces independent pilot. UBS source reasons present for5sectors and absent for6are kept distinct."
+    },
+    {
+      "dimension": "artifacts_and_links",
+      "result": "pass",
+      "evidence": "All relative links in active plan/paper resolve. Actual runner/engine follow no-repair/evaluator-separation boundaries. Source and market builders retain provenance hashes."
+    }
+  ],
+  "limits": [
+    "This PASS covers the inspected documentary design, data contracts and prose coherence, not experimental success, population validity or human gold adjudication.",
+    "Actual target-model pilot/main responses and independent substantive source/semantic review remain absent.",
+    "Unexamined legacy literature references are not newly certified by this integration audit.",
+    "A final model/runtime choice and pre-main rubric/input/version freeze remain necessary before formal execution."
+  ],
+  "hashes": {
+    "plan/LIBERA_실험계획_20261017.html": "38c405738d12ff523049f326ea9cde73d9172d79a09f75a1874f07281e6eab0e",
+    "paper/LIBERA_텀페이퍼_초안_20261017.html": "c6df16ff12ed4fcb506c3f57319ba34684460d0e1faa6276f0a64b0dfda72c97",
+    "plan/LIBERA_실험설정_20261017.json": "01518e95278b8f2e50cb786bcf6553ace74a1eebbc2f9110b250c6b509c73b6a",
+    "research/build_sector_revision_v42.py": "8a05d7e45dfa9232ab5c7d2a9205c6a77fb89affdf8d4a53132cde2349db2469",
+    "research/run_sector_workflow.py": "d46ccbefa7844d30d2d0d114661718dcaaf2f430ff42059eb985210155e38c6b",
+    "research/sector_engine.py": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c",
+    "data/sector_documents/source_manifest.json": "d1af00ee2a1c5e3ba4ca9949b5f9427a9102a373ff19afa0e6c4309769627b28",
+    "data/sector_market/summary.json": "f30216057362811a82040b3b12fca1500196da29613c5967bb566462e563fcd0",
+    "research/design_revision_20261017/parameter_basis_v42.json": "fb20375d145fe41eb92a69f2486ed8abb92b612cf89715f851d439a67b070be9"
+  }
+}

@@ -1,0 +1,289 @@
+{
+  "schema_version": "compact_prompt_and_document_review_1.0",
+  "review_round": 2,
+  "generated_at_utc": "2026-10-18T06:01:56.456506+00:00",
+  "reviewer": "risk_metrics_review subagent; separate review of root-authored documents and archived evidence",
+  "status": "pass_with_explicit_limits",
+  "scope": "Local artifact consistency, exact-value projection proof, document logic/topic/evidence review; not measured model performance or human semantic review.",
+  "reviewer_independence_limit": "This agent authored the compact/probe modules. The module checks are a second implementation review, not a different-author software audit. The document review is separate from its authors.",
+  "checks": [
+    {
+      "id": "all_original_market_leaf_values_exact",
+      "status": "pass",
+      "detail": "Independent reconstruction; compare every field path/type, float.hex representation, and scalar value. No tolerance."
+    },
+    {
+      "id": "full_covariance_and_correlation_retained",
+      "status": "pass",
+      "detail": "No matrix removal or numerical rounding. Only exact covariance alias and baseline array are omitted."
+    },
+    {
+      "id": "all_unique_fields_preserved",
+      "status": "pass",
+      "detail": "Preserves sector codes/names/ETFs, original benchmark percentages, normalized weights, dates, returns, volatility, methodology and limitations."
+    },
+    {
+      "id": "source_market_not_mutated",
+      "status": "pass",
+      "detail": "Projection is detached from the source market object."
+    },
+    {
+      "id": "deterministic_calculator_same_result",
+      "status": "pass",
+      "detail": "Arithmetic only using the common public benchmark vector; not an AI output or strategy-quality test."
+    },
+    {
+      "id": "all_four_first_stage_branches_lossless",
+      "status": "pass",
+      "detail": [
+        {
+          "case_id": "fidelity_q2_2026__R1",
+          "exact_all_payload_leaves": true,
+          "institution_onset_preserved": true,
+          "original_content_utf8_bytes": 19872,
+          "compact_content_utf8_bytes": 16114,
+          "original_screening_bound": 21035,
+          "compact_screening_bound": 17275
+        },
+        {
+          "case_id": "fidelity_q2_2026__R4",
+          "exact_all_payload_leaves": true,
+          "institution_onset_preserved": true,
+          "original_content_utf8_bytes": 14161,
+          "compact_content_utf8_bytes": 10619,
+          "original_screening_bound": 14922,
+          "compact_screening_bound": 11378
+        },
+        {
+          "case_id": "ubs_june_2026__R1",
+          "exact_all_payload_leaves": true,
+          "institution_onset_preserved": true,
+          "original_content_utf8_bytes": 19875,
+          "compact_content_utf8_bytes": 16107,
+          "original_screening_bound": 21056,
+          "compact_screening_bound": 17286
+        },
+        {
+          "case_id": "ubs_june_2026__R4",
+          "exact_all_payload_leaves": true,
+          "institution_onset_preserved": true,
+          "original_content_utf8_bytes": 14161,
+          "compact_content_utf8_bytes": 10619,
+          "original_screening_bound": 14922,
+          "compact_screening_bound": 11378
+        }
+      ]
+    },
+    {
+      "id": "actual_archived_v43_input_matches_probe_original",
+      "status": "pass",
+      "detail": "Probe changes the engineering model/decoding/context/output budget but uses the exact archived first-stage SYSTEM and full source/market input before reversible projection."
+    },
+    {
+      "id": "probe_has_engineering_output32_context32768",
+      "status": "pass",
+      "detail": "This is a one-stage capped timing request, not the v4.3 research generation budget of 8192."
+    },
+    {
+      "id": "research_results_zero_but_attempt_retained",
+      "status": "pass",
+      "detail": "One attempted v4.3 pilot request is retained; zero completed research stages/cases/final allocations. Do not report zero attempts."
+    },
+    {
+      "id": "cancelled_not_semantic_failure",
+      "status": "pass",
+      "detail": "Cancellation after 1512.1132832784206 seconds; no client-visible response. Internal token work, semantic correctness and cause of delay are unobserved."
+    },
+    {
+      "id": "three_cases_not_started",
+      "status": "pass",
+      "detail": "Unattempted cases are not observed wrong model answers."
+    },
+    {
+      "id": "status_keeps_main_unfrozen",
+      "status": "pass",
+      "detail": "No main execution or freeze certified by diagnostics."
+    },
+    {
+      "id": "status_keeps_semantic_human_review_pending",
+      "status": "pass",
+      "detail": "Software audit and source citation identity checks are not human semantic validation."
+    },
+    {
+      "id": "plan_paper_same_runtime_statement",
+      "status": "pass",
+      "detail": "Both state interrupted pilot, zero completed research responses/cases, main unrun/unfrozen, and human review pending."
+    },
+    {
+      "id": "document_model_remains_v43_not_silent_1p7_switch",
+      "status": "pass",
+      "detail": "The 1.7B engineering probe has not silently replaced the selected research model."
+    },
+    {
+      "id": "recorded_runtime_pin_matches_v43",
+      "status": "pass",
+      "detail": "Installed model identification remains distinct from four-stage feasibility."
+    },
+    {
+      "id": "inherited_penalty_not_claimed_paper_value",
+      "status": "pass",
+      "detail": "Manual reading confirms explicit unresolved penalty disclosure and separate paper-reported seed versus implementation-reference neutral penalties."
+    },
+    {
+      "id": "engineering_results_excluded_from_research_counts",
+      "status": "pass",
+      "detail": "Engineering results do not update the research protocol automatically."
+    },
+    {
+      "id": "no_speed_success_evidence_in_local_collection",
+      "status": "pass",
+      "detail": "At this audit snapshot the local collection has no completed synthetic-comparison or real-input feasibility artifacts. Remote execution reports are not promoted to measured success."
+    }
+  ],
+  "four_dimension_review": {
+    "consistency": {
+      "status": "pass",
+      "finding": "Current plan and paper agree with archived v4.3 installation/cancellation/count records. The 1.7B speed probe is not represented as the research runtime."
+    },
+    "logic": {
+      "status": "pass_with_limit",
+      "finding": "Exact JSON field-value reconstruction proves lossless data representation only. It does not prove unchanged tokenizer counts, numerical backend behavior, LLM responses, reasoning quality or faster completion."
+    },
+    "topic_connection": {
+      "status": "pass",
+      "finding": "11-sector common market inputs, source-specific ratings/evidence, R1-versus-R4 timing, unrestricted rationale review and deterministic arithmetic remain intact. No unique target weights or profit-prediction claim is introduced."
+    },
+    "evidence": {
+      "status": "pass_with_limit",
+      "finding": "FinVector supports greedy/thinking-off/explicit output precedent, not Ollama Q4 behavior or 1.7B adequacy. PortBench v6 reports 8192/T0/thinking-on; transferring only the budget is disclosed. Compression/32-token cap/context/thread/deadline are engineering choices."
+    }
+  },
+  "verified_research_counts": {
+    "attempted_v43_pilot_http_calls": 1,
+    "completed_v43_pilot_http_calls": 0,
+    "completed_pilot_cases": 0,
+    "completed_research_stage_records": 0,
+    "main_calls": 0,
+    "new_research_results": 0,
+    "semantic_outcomes_observed": 0
+  },
+  "real_input_probe_status": "Reported started remotely by root; completed local raw result not yet available to this reviewer. Speed success unknown.",
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/2610.08882",
+      "locator": "section 4.1 and section 10",
+      "supported_fact": "seed3407, greedy, thinking disabled, batch8, output700, MLX evaluation; published example is not the private benchmark runner."
+    },
+    {
+      "url": "https://arxiv.org/html/2605.27887v6",
+      "locator": "section 3.1",
+      "supported_fact": "temperature0, maximum output8192, thinking enabled by default; no validation of our 1.7B four-stage allocation task."
+    },
+    {
+      "url": "https://github.com/alinakhay/FinVector-Market-4B/blob/6ea2b6547787ddc639c525c38f00b325f0acac0a/examples/inference_mlx.py",
+      "locator": "minimal public inference example",
+      "supported_fact": "No explicit logits processors; not a full benchmark script."
+    }
+  ],
+  "blocking_before_research_model_switch": [
+    "Receive and inspect raw latency/real-input evidence and exact pins; do not infer success from started process or stdout silence.",
+    "Record an explicit research protocol revision for a selected model/renderer/quantization/decoding/input representation; do not transfer FinVector4B claims to Qwen3:1.7b.",
+    "Run the complete four-stage pilot for both documents and both R1/R4 arms with the declared research output budget and full-history checks.",
+    "Assess raw JSON completion, 11-sector coverage, source-label/citation handling and rationale separately; engineering cap32 truncation is neither a financial answer nor an answer-quality failure.",
+    "Resolve unreported decoding defaults and complete required source/semantic review before evaluation rules and main inputs are frozen."
+  ],
+  "recommendation": "A successful 32-token 1.7B probe would show only bounded first-stage input-processing feasibility. It cannot establish complete allocation generation, R4 late-evidence handling, four-stage memory/context integrity, model quality or absence of regression.",
+  "unresolved_critical_document_corrections": [],
+  "source_files": [
+    {
+      "path": "research/compact_sector_prompt.py",
+      "sha256": "6984ada966ad55c3089fc297ca6342fdb51685bebfe3107769086343bbe68c0d",
+      "size_bytes": 6600
+    },
+    {
+      "path": "research/benchmark_sector_real_input.py",
+      "sha256": "2a64adcae546d74702c4b9ba5e60e2c81308389b5b6f2c7c663571bc5b0ac88e",
+      "size_bytes": 11693
+    },
+    {
+      "path": "research/test_compact_sector_prompt.py",
+      "sha256": "95f9219133fdda87d20d11a074699403219a7e7635977fc2115eb6a615d4d5ec",
+      "size_bytes": 5233
+    },
+    {
+      "path": "research/test_benchmark_sector_real_input.py",
+      "sha256": "9c287151d4ec62690f4b2d7e84389c9ca25d5dccca0597af9e5161856906600f",
+      "size_bytes": 6408
+    },
+    {
+      "path": "research/benchmark_sector_latency.py",
+      "sha256": "4c6c751891964250b71b221073e3ce4e2407b8548ec62ccb9bf514945da7ae45",
+      "size_bytes": 13645
+    },
+    {
+      "path": "research/run_sector_workflow.py",
+      "sha256": "5625450a4dcbe1aa717c9809bf4955c1ef6b10aab4f0c83ef05dc2eb2c123cfd",
+      "size_bytes": 23842
+    },
+    {
+      "path": "data/sector_market/market_input.json",
+      "sha256": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f",
+      "size_bytes": 15480
+    },
+    {
+      "path": "data/sector_documents/model_packets.jsonl",
+      "sha256": "520bed87396eb815c87f362712a6ec39c0275076f9ef4c5d59ef5a7cbbe6afc7",
+      "size_bytes": 22728
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/request.json",
+      "sha256": "a319949a482f872d3f1dc781064de907248330cb4b9ce15ad41fcfe8590368ff",
+      "size_bytes": 20887
+    },
+    {
+      "path": "plan/LIBERA_실험계획_20261018.html",
+      "sha256": "08161fc581e8ef5d6baf14204059a74731abeabd5db7d6d673c85a3f868c78ac",
+      "size_bytes": 42190
+    },
+    {
+      "path": "paper/LIBERA_텀페이퍼_초안_20261018.html",
+      "sha256": "36f797773ff7f1b4aaee7928b226ea5ef630fcb851a0686ae08e7eab7d5a819e",
+      "size_bytes": 62072
+    },
+    {
+      "path": "plan/LIBERA_실험설정_20261018.json",
+      "sha256": "ccc0abc3e0f10233baf3cf75441b86215ecde2e3b8517054c4bd09b9d71a00ba",
+      "size_bytes": 55007
+    },
+    {
+      "path": "research/remote_sector_status_20261018.json",
+      "sha256": "65b083e145cddf13e8a23cd4eb61b1cefbc9408a3c2e634fe78fc341376bbee9",
+      "size_bytes": 87090
+    },
+    {
+      "path": "research/remote_sector_execution_20261018.html",
+      "sha256": "ffd8c38c777b87c9e0b09bbc5a52b26130fdb5d894164de2d8aaa3924b199875",
+      "size_bytes": 11443
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/summary.json",
+      "sha256": "3f116e14ef25527cc97693aaa092a58c55b955d266387395a6301811761124de",
+      "size_bytes": 2186
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/summary.json",
+      "sha256": "221100419a9b7d6582dc0891c6661eb732e820b9843b562aec13744de8b8a6c7",
+      "size_bytes": 1167
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/result.json",
+      "sha256": "a5b5d53403e8376a1593b966e9ae322b82cfb9b95f4b75056d8d0c593640d088",
+      "size_bytes": 705
+    }
+  ],
+  "review_model_calls": 0,
+  "remote_actions": 0,
+  "plan_or_protocol_files_modified": false,
+  "main_freeze_performed": false,
+  "human_semantic_review_performed": false
+}

@@ -1,0 +1,84 @@
+{
+  "AI_calls": 0,
+  "generator": {
+    "path": "research/prepare_recent_industry_control.py",
+    "sha256": "be07eeedc6683f4d853fbf038682a5cd9c0cb2dd4ef27ffaec62c1c0b01b9724"
+  },
+  "imported_numerical_helpers": {
+    "original_prepare_not_called": true,
+    "path": "research/prepare_institutional_benchmark.py",
+    "sha256": "6a6cf0ec1118286eee3f92b4136e5723e3ffa75269e5e3bce75560c7a72fd648"
+  },
+  "input": {
+    "fields_used": [
+      "datasets.FF12.columns",
+      "datasets.FF12.dates",
+      "datasets.FF12.value_weighted_total_returns",
+      "risk_free.dates",
+      "risk_free.values"
+    ],
+    "full_source_first_month": "1926-07",
+    "full_source_last_month": "2026-08",
+    "path": "data/french/monthly_returns.json",
+    "selected_dates": [
+      "2019-01",
+      "2025-11"
+    ],
+    "sha256": "cf2aee8587eec33a09bf83775bed498d70c527696acf62525eca276a4c1a91a5"
+  },
+  "legacy_core_mutation": "This generator only writes data/institutional_recent; it does not modify data/institutional, data/workflow or their generators.",
+  "network_calls": 0,
+  "outputs": {
+    "cases.jsonl": {
+      "bytes": 568668,
+      "sha256": "0d8bc73b2fd91e0a997fb09aeb83c87b8b026e8ce6df7d84c02a357af900bfda"
+    },
+    "selected_input.json": {
+      "bytes": 45689,
+      "sha256": "18cdf9d870e09ee4cfd7b0b63b8061a196e7a0c3135291d4b48d6ff2dfd65443"
+    },
+    "summary.json": {
+      "bytes": 8900,
+      "sha256": "ee4a3e6a7a4b6b7116d422c4817dc128d8937ef392a7bd34ecf050f6945c1964"
+    },
+    "verification.json": {
+      "bytes": 445,
+      "sha256": "46c4c4a7b1cbebcdd473a8c840be6cb2b1cd8a543377c0a34c878f8bd1b2b4f2"
+    },
+    "windows.jsonl": {
+      "bytes": 157589,
+      "sha256": "4d8ce087db00fbd5498cac448b106e16e9b4a520008c2773172d03a06f586677"
+    }
+  },
+  "reproduce": "python research/prepare_recent_industry_control.py",
+  "runtime": {
+    "numpy": "2.4.4",
+    "python": "3.13.3",
+    "scipy": "1.17.1"
+  },
+  "schema_version": "1.0",
+  "sources": {
+    "engineering_tolerances": "Float64/KKT tolerances, SLSQP convergence settings and response serialization tolerance are implementation choices, not paper-derived behavioral parameters.",
+    "french": {
+      "adopted": "Value-weighted monthly total returns for 12 industry baskets and date-matched monthly risk-free returns.",
+      "industry_construction": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_12_ind_port.html",
+      "limits": "Industry membership changes historically. Current revised CIZ vintage; not historical point-in-time releases or fixed constituent baskets.",
+      "url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html"
+    },
+    "portbench": {
+      "adopted": "2024-2025 QA evaluation-year range as the calendar precedent, and long-only sum-one feasibility.",
+      "locators": "Appendix B.2 QA test years 2024-2025; Appendix C.1 T5 long-only full-investment feasible set.",
+      "not_adopted": "Its dynamic 2024 normal-period backtest, 60-trading-day lookback, max-Sharpe objective, constant annual 4% risk-free rate, or scoring weights.",
+      "url": "https://arxiv.org/html/2605.27887v6"
+    },
+    "provenance": "LIBERA_adaptation combining distinct paper conditions; not one published unified protocol.",
+    "researcher_choices": "24 monthly reference tasks, no future evaluation, three fictional mandates, auxiliary-control role, deterministic numerical baselines.",
+    "salcher": {
+      "adopted": "Monthly decimal excess returns, 60-month sample moments, quadratic utility and gamma values.",
+      "locators": "Section 3.2 Eq.(6), Tables 1-5 quadratic gamma=1,3,5; Section 4.1 60-month means/covariances.",
+      "not_adopted": "1964-2023 full period, future 36-month evaluation, unrestricted-short optimum, code-only covariance shrinkage.",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/for.70134"
+    }
+  },
+  "status": "prepared_verified_numerical_auxiliary_control_no_AI_results"
+}

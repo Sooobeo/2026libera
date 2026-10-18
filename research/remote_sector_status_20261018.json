@@ -1,0 +1,3516 @@
+{
+  "schema_version": "1.0",
+  "protocol_version": "4.3",
+  "generated_at_utc": "2026-10-18T06:09:42.996331+00:00",
+  "builder": "research/build_remote_sector_report.py",
+  "runtime_root": "data/remote_sector_20261018/data/sector_runtime",
+  "scope": "Read-only summary of retrieved inventory, synthetic diagnosis and pilot artifacts. No inference, scoring or main experiment executed by builder.",
+  "installation": {
+    "status": "installed",
+    "notes": [
+      "Exact tag/digest/engine/template consistency is checked from saved files; live service is not queried."
+    ],
+    "manifest_path": "data/remote_sector_20261018/data/sector_runtime/inventory_v43/summary.json"
+  },
+  "runtime": {
+    "status": "pinned",
+    "model_tag": "qwen3.5:4b-q4_K_M",
+    "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+    "engine_version": "0.35.1",
+    "template_sha256": "b507b9c2f6ca642bffcd06665ea7c91f235fd32daeefdf875a0f938db05fb315",
+    "quantization": "Q4_K_M",
+    "diagnostic_completed_calls": 1,
+    "context_tokens": 65536,
+    "thinking": false,
+    "temperature": 0,
+    "max_output_tokens": 8192,
+    "runtime_manifest_path": "data/remote_sector_20261018/data/sector_runtime/inventory_v43/runtime_pinned.json",
+    "model_metadata_path": "data/remote_sector_20261018/data/sector_runtime/inventory_v43/model_metadata.json",
+    "inherited_model_parameters": {
+      "top_p": 0.95,
+      "presence_penalty": 1.5,
+      "temperature": 1,
+      "top_k": 20
+    },
+    "request_overrides": {
+      "diagnosis": [
+        {
+          "temperature": 0,
+          "num_predict": 256,
+          "num_ctx": 65536,
+          "model": "qwen3.5:4b-q4_K_M",
+          "think": false,
+          "format": "json",
+          "keep_alive": 0
+        }
+      ],
+      "pilot": [
+        {
+          "temperature": 0,
+          "num_predict": 8192,
+          "num_ctx": 65536,
+          "model": "qwen3.5:4b-q4_K_M",
+          "think": false,
+          "format": "json",
+          "keep_alive": 0
+        }
+      ]
+    },
+    "resource_summary": {
+      "observed_cpu": "Intel(R) Pentium(R) Gold G6405 CPU @ 4.10GHz",
+      "os_logical_cpus": 4,
+      "reported_cpu_features": {
+        "avx": false,
+        "avx2": false,
+        "sse4_1": true,
+        "sse4_2": true,
+        "fma": false
+      },
+      "diagnosis": {
+        "sample_count": 10,
+        "proc_memory_total_bytes": 12884901888,
+        "proc_swap_total_bytes": 8589930496,
+        "runtime_rss_sum_sampled_max_bytes": 5830168576,
+        "cgroup_memory_current_sampled_max_bytes": 8659943424,
+        "proc_available_sampled_min_bytes": 6810351616,
+        "resident_vram_bytes": [
+          0
+        ]
+      },
+      "pilot": {
+        "sample_count": 757,
+        "runtime_rss_sum_sampled_max_bytes": 6207291392,
+        "cgroup_memory_current_sampled_max_bytes": 9020104704,
+        "proc_available_sampled_min_bytes": 6421153792,
+        "resident_vram_bytes": [
+          0
+        ]
+      }
+    },
+    "notes": [
+      "짧은 기술 진단 상태: 완료 기록. 로컬에서 확인한 완료 HTTP 응답: 1건. 예비 사례 수에 포함하지 않는다.",
+      "모델 기본 temperature와 실제 요청 temperature를 구분한다. show.parameters의 기본값 중 요청하지 않은 항목은 명시적으로 덮어쓰지 않았다.",
+      "기본값의 실제 적용 순서·효과는 엔진에 의존하며 FinVector의 전체 decoding 조건을 재현했다는 주장이 아니다.",
+      "호출 직전 pin 검증은 코드에 구현되어 있지만 조회 메타데이터를 호출별로 별도 저장하지 않았다. 최초 inventory, 요청·응답과 코드 해시가 보존 범위다.",
+      "설치·짧은 JSON 생성 성공은 전체 네 단계 수행이나 금융 판단의 유효성을 보장하지 않는다."
+    ],
+    "report_path": "research/remote_sector_execution_20261018.html"
+  },
+  "diagnostics": {
+    "status": "completed",
+    "completed_calls": 1,
+    "detail": {
+      "status": "completed",
+      "synthetic_health_prompt_only": true,
+      "json_ready_response": true,
+      "unexpected_thinking_with_disabled_request": false,
+      "done_reason": "stop",
+      "diagnostic_calls": 1,
+      "pilot_model_calls": 0,
+      "main_model_calls": 0,
+      "settings_basis": "256 output tokens and 65536 context are engineering diagnostics, not paper conditions.",
+      "interpretation": "One short response does not establish complete four-stage feasibility or research quality."
+    },
+    "run": {
+      "directory": "data/remote_sector_20261018/data/sector_runtime/diagnose_v43",
+      "directory_available": true,
+      "status": "completed",
+      "summary_path": "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/summary.json",
+      "invocation": {
+        "command": "diagnose",
+        "base_url": "http://127.0.0.1:11434",
+        "model": "qwen3.5:4b-q4_K_M",
+        "expected_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+        "expected_engine": "0.35.1",
+        "timeout_seconds": 1800,
+        "monitor_interval_seconds": 2,
+        "monitor_basis": "Engineering diagnostic interval",
+        "started_at_utc": "2026-10-18T05:21:16.050413+00:00",
+        "call_count_scope": "Attempted HTTP generation requests; requests failing before a response do not prove model execution.",
+        "main_automatic_execution": false
+      },
+      "reported_summary": {
+        "command": "diagnose",
+        "status": "completed",
+        "output": "/root/libera_20261018/data/sector_runtime/diagnose_v43",
+        "main_model_calls": 0,
+        "synthetic_health_prompt_only": true,
+        "json_ready_response": true,
+        "unexpected_thinking_with_disabled_request": false,
+        "done_reason": "stop",
+        "diagnostic_calls": 1,
+        "pilot_model_calls": 0,
+        "settings_basis": "256 output tokens and 65536 context are engineering diagnostics, not paper conditions.",
+        "interpretation": "One short response does not establish complete four-stage feasibility or research quality.",
+        "finished_at_utc": "2026-10-18T05:21:35.292844+00:00",
+        "script_wall_seconds": 19.2424558121711,
+        "calls": [
+          {
+            "kind": "diagnose",
+            "folder": "http_0001_diagnose",
+            "started_at_utc": "2026-10-18T05:21:16.065325+00:00",
+            "status": "completed",
+            "http_status": 200,
+            "metrics": {
+              "wall_seconds": 18.93516548909247,
+              "ttft_any_generated_seconds": 16.510316671803594,
+              "ttft_content_seconds": 16.510315980762243,
+              "token_count_source": "Ollama counters, not independent tokenization",
+              "duration_unit_in_response": "nanoseconds",
+              "total_duration_seconds": 18.934236483,
+              "load_duration_seconds": 7.841581183,
+              "prompt_eval_duration_seconds": 8.661671,
+              "eval_duration_seconds": 2.425285,
+              "prompt_eval_count": 23,
+              "eval_count": 6,
+              "prompt_eval_tokens_per_second": 2.655376774296784,
+              "eval_tokens_per_second": 2.47393605287626
+            },
+            "raw_bytes_path": "http_0001_diagnose/raw_stream.bin",
+            "no_automatic_retry": true,
+            "unexpected_thinking_with_disabled_request": false
+          }
+        ]
+      },
+      "inventory_before": {
+        "observed_at_utc": "2026-10-18T05:21:16.051058+00:00",
+        "platform": "Linux",
+        "machine": "x86_64",
+        "cpu": {
+          "vendor_id": "GenuineIntel",
+          "model name": "Intel(R) Pentium(R) Gold G6405 CPU @ 4.10GHz"
+        },
+        "os_cpu_count": 4,
+        "memory": {
+          "observed_at_utc": "2026-10-18T05:21:16.051227+00:00",
+          "source": "linux_proc_and_cgroup",
+          "processes": [
+            {
+              "pid": 2704,
+              "name": "ollama",
+              "VmSize_bytes": 2987884544,
+              "VmHWM_bytes": 42016768,
+              "VmRSS_bytes": 41328640,
+              "RssAnon_bytes": 16248832,
+              "RssFile_bytes": 25079808,
+              "RssShmem_bytes": 0
+            }
+          ],
+          "proc_meminfo": {
+            "MemTotal_bytes": 12884901888,
+            "MemFree_bytes": 6027096064,
+            "MemAvailable_bytes": 12552325120,
+            "Buffers_bytes": 0,
+            "Cached_bytes": 6135021568,
+            "SwapTotal_bytes": 8589930496,
+            "SwapFree_bytes": 8572841984,
+            "CommitLimit_bytes": 16861331456,
+            "Committed_AS_bytes": 15367270400
+          },
+          "cgroup": {
+            "memory.current": 6857805824,
+            "memory.peak": 7395799040,
+            "memory.max": "max",
+            "memory.swap.current": 17088512,
+            "memory.swap.max": "max",
+            "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+          },
+          "rss_sum_bytes": 41328640,
+          "interpretation": "RSS can double-count shared pages; cgroup includes cache and other processes; no GPU-memory inference from RSS."
+        },
+        "filesystem_bytes": {
+          "total": 151996149760,
+          "used": 12334751744,
+          "free": 133288206336
+        },
+        "filesystem_scope": "Container-visible filesystem only; shared host thin-pool free space must be checked separately.",
+        "ollama_version": {
+          "status": "ok",
+          "value": {
+            "version": "0.35.1"
+          }
+        },
+        "ollama_tags": {
+          "status": "ok",
+          "value": {
+            "models": [
+              {
+                "name": "qwen3.5:4b-q4_K_M",
+                "model": "qwen3.5:4b-q4_K_M",
+                "modified_at": "2026-10-18T05:16:54.789617077Z",
+                "size": 3324173934,
+                "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+                "details": {
+                  "parent_model": "model.gguf",
+                  "format": "gguf",
+                  "family": "qwen35",
+                  "families": [
+                    "qwen35"
+                  ],
+                  "parameter_size": "4.2B",
+                  "quantization_level": "Q4_K_M",
+                  "context_length": 262144,
+                  "embedding_length": 2560
+                },
+                "capabilities": [
+                  "completion",
+                  "vision",
+                  "tools",
+                  "thinking"
+                ]
+              },
+              {
+                "name": "qwen3:1.7b",
+                "model": "qwen3:1.7b",
+                "modified_at": "2026-10-05T07:52:29.42936286Z",
+                "size": 1359293444,
+                "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+                "details": {
+                  "parent_model": "",
+                  "format": "gguf",
+                  "family": "qwen3",
+                  "families": [
+                    "qwen3"
+                  ],
+                  "parameter_size": "2.0B",
+                  "quantization_level": "Q4_K_M",
+                  "context_length": 40960,
+                  "embedding_length": 2048
+                },
+                "capabilities": [
+                  "completion",
+                  "tools",
+                  "thinking"
+                ]
+              }
+            ]
+          }
+        },
+        "ollama_residency": {
+          "status": "ok",
+          "value": {
+            "models": []
+          }
+        }
+      },
+      "inventory_after": {
+        "observed_at_utc": "2026-10-18T05:21:35.288488+00:00",
+        "platform": "Linux",
+        "machine": "x86_64",
+        "cpu": {
+          "vendor_id": "GenuineIntel",
+          "model name": "Intel(R) Pentium(R) Gold G6405 CPU @ 4.10GHz"
+        },
+        "os_cpu_count": 4,
+        "memory": {
+          "observed_at_utc": "2026-10-18T05:21:35.288647+00:00",
+          "source": "linux_proc_and_cgroup",
+          "processes": [
+            {
+              "pid": 2704,
+              "name": "ollama",
+              "VmSize_bytes": 2987884544,
+              "VmHWM_bytes": 42016768,
+              "VmRSS_bytes": 31391744,
+              "RssAnon_bytes": 13783040,
+              "RssFile_bytes": 17608704,
+              "RssShmem_bytes": 0
+            }
+          ],
+          "proc_meminfo": {
+            "MemTotal_bytes": 12884901888,
+            "MemFree_bytes": 10016239616,
+            "MemAvailable_bytes": 12593434624,
+            "Buffers_bytes": 0,
+            "Cached_bytes": 2305019904,
+            "SwapTotal_bytes": 8589930496,
+            "SwapFree_bytes": 8409202688,
+            "CommitLimit_bytes": 16861331456,
+            "Committed_AS_bytes": 15384608768
+          },
+          "cgroup": {
+            "memory.current": 2868662272,
+            "memory.peak": 8714719232,
+            "memory.max": "max",
+            "memory.swap.current": 180727808,
+            "memory.swap.max": "max",
+            "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+          },
+          "rss_sum_bytes": 31391744,
+          "interpretation": "RSS can double-count shared pages; cgroup includes cache and other processes; no GPU-memory inference from RSS."
+        },
+        "filesystem_bytes": {
+          "total": 151996149760,
+          "used": 12334850048,
+          "free": 133288108032
+        },
+        "filesystem_scope": "Container-visible filesystem only; shared host thin-pool free space must be checked separately.",
+        "ollama_version": {
+          "status": "ok",
+          "value": {
+            "version": "0.35.1"
+          }
+        },
+        "ollama_tags": {
+          "status": "ok",
+          "value": {
+            "models": [
+              {
+                "name": "qwen3.5:4b-q4_K_M",
+                "model": "qwen3.5:4b-q4_K_M",
+                "modified_at": "2026-10-18T05:16:54.789617077Z",
+                "size": 3324173934,
+                "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+                "details": {
+                  "parent_model": "model.gguf",
+                  "format": "gguf",
+                  "family": "qwen35",
+                  "families": [
+                    "qwen35"
+                  ],
+                  "parameter_size": "4.2B",
+                  "quantization_level": "Q4_K_M",
+                  "context_length": 262144,
+                  "embedding_length": 2560
+                },
+                "capabilities": [
+                  "completion",
+                  "vision",
+                  "tools",
+                  "thinking"
+                ]
+              },
+              {
+                "name": "qwen3:1.7b",
+                "model": "qwen3:1.7b",
+                "modified_at": "2026-10-05T07:52:29.42936286Z",
+                "size": 1359293444,
+                "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+                "details": {
+                  "parent_model": "",
+                  "format": "gguf",
+                  "family": "qwen3",
+                  "families": [
+                    "qwen3"
+                  ],
+                  "parameter_size": "2.0B",
+                  "quantization_level": "Q4_K_M",
+                  "context_length": 40960,
+                  "embedding_length": 2048
+                },
+                "capabilities": [
+                  "completion",
+                  "tools",
+                  "thinking"
+                ]
+              }
+            ]
+          }
+        },
+        "ollama_residency": {
+          "status": "ok",
+          "value": {
+            "models": []
+          }
+        }
+      },
+      "calls": [
+        {
+          "folder": "http_0001_diagnose",
+          "kind": "diagnose",
+          "status": "completed",
+          "completed_response_observed": true,
+          "request_path": "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/request.json",
+          "response_path": "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/response.json",
+          "result_path": "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/result.json",
+          "started_at_utc": "2026-10-18T05:21:16.065325+00:00",
+          "done_reason": "stop",
+          "raw_stream_bytes": 1018,
+          "first_content_observed": true,
+          "request_content_utf8_bytes": 47,
+          "request_settings": {
+            "temperature": 0,
+            "num_predict": 256,
+            "num_ctx": 65536,
+            "model": "qwen3.5:4b-q4_K_M",
+            "think": false,
+            "format": "json",
+            "keep_alive": 0
+          },
+          "nonempty_thinking_observed": false,
+          "metrics": {
+            "wall_seconds": 18.93516548909247,
+            "ttft_any_generated_seconds": 16.510316671803594,
+            "ttft_content_seconds": 16.510315980762243,
+            "token_count_source": "Ollama counters, not independent tokenization",
+            "duration_unit_in_response": "nanoseconds",
+            "total_duration_seconds": 18.934236483,
+            "load_duration_seconds": 7.841581183,
+            "prompt_eval_duration_seconds": 8.661671,
+            "eval_duration_seconds": 2.425285,
+            "prompt_eval_count": 23,
+            "eval_count": 6,
+            "prompt_eval_tokens_per_second": 2.655376774296784,
+            "eval_tokens_per_second": 2.47393605287626
+          },
+          "error_type": null,
+          "error": null
+        }
+      ],
+      "observed_http_calls": 1,
+      "observed_completed_http_responses": 1,
+      "resources": {
+        "monitor_path": "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/monitor.jsonl",
+        "sample_count": 10,
+        "proc_memory_total_bytes": 12884901888,
+        "proc_swap_total_bytes": 8589930496,
+        "proc_available_sampled_min_bytes": 6810351616,
+        "runtime_rss_sum_sampled_max_bytes": 5830168576,
+        "cgroup_memory_current_sampled_max_bytes": 8659943424,
+        "cgroup_memory_peak_before_bytes": 7395799040,
+        "cgroup_memory_peak_after_bytes": 8714719232,
+        "cgroup_limits_before": {
+          "memory.max": "max",
+          "memory.swap.max": "max"
+        },
+        "cgroup_memory_events_before": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+        "cgroup_memory_events_after": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+        "proc_swap_used_before_bytes": 17088512,
+        "proc_swap_used_after_bytes": 180727808,
+        "proc_swap_used_sampled_max_bytes": 180953088,
+        "proc_committed_as_sampled_max_bytes": 23933865984,
+        "proc_commit_limit_before_bytes": 16861331456,
+        "observed_process_names": [
+          "ollama",
+          "llama-server"
+        ],
+        "resident_sample_count": 6,
+        "resident_context_tokens": [
+          65536
+        ],
+        "resident_size_bytes": [
+          5630863604
+        ],
+        "resident_vram_bytes": [
+          0
+        ],
+        "scope": "Sampled container-visible /proc, visible cgroup and named runtime process RSS; not an isolated physical host measurement.",
+        "limitations": [
+          "RSS may double-count shared pages; cgroup includes cache and unrelated activity; do not add them.",
+          "memory.peak is an unreset cumulative high-water mark, not the maximum of interval samples.",
+          "Visible cgroup max does not establish effective ancestor/LXC limits; /proc may be virtualized.",
+          "Swap usage does not attribute paging or its speed effect to the model.",
+          "VRAM zero is a residency observation, not an inventory of physical server GPUs.",
+          "Allocated context does not prove that long inputs/history were preserved without truncation."
+        ]
+      }
+    },
+    "independent_machine_review_path": "research/remote_diagnostic_review_20261018.json",
+    "independent_machine_review_status": "basic_runtime_verified_full_workflow_not_yet_verified"
+  },
+  "pilot": {
+    "status": "interrupted",
+    "completed_cases": 0,
+    "completed_calls": 0,
+    "attempted_calls_observed": 1,
+    "notes": [
+      "미수신 파일은 원격 미실행·실패를 뜻하지 않는다. not_started는 실제 coordinator 기록에서만 구분한다.",
+      "완료 응답 수는 저장된 HTTP 종료 응답 수이며 올바른 JSON·정확한 판단 수가 아니다.",
+      "완료 사례는 네 단계 record와 final 파일을 모두 확인한 수이며 내용의 의미 검토 완료가 아니다.",
+      "CANCEL 및 호출 기록에 따른 실행 중단이다. 시간 초과와 구분하며, 응답 미완료를 금융 판단의 의미 실패로 판정하지 않는다."
+    ],
+    "details": {
+      "status": "incomplete",
+      "directory_available": true,
+      "summary_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/summary.json",
+      "planned_cases": 4,
+      "roster_basis": "saved_planned_cases",
+      "completed_cases": 0,
+      "completed_calls": 0,
+      "completed_case_artifacts_observed": 0,
+      "completed_http_responses_observed": 0,
+      "call_artifact_count_matches_reported_attempts": true,
+      "attempted_http_calls_observed": 1,
+      "not_started_cases_reported": 3,
+      "cases": [
+        {
+          "case_id": "fidelity_q2_2026__R1",
+          "source_id": "fidelity_q2_2026",
+          "arm": "R1",
+          "status": "failed",
+          "coordinator_status": "failed",
+          "four_stage_artifact_complete": false,
+          "attempted_stages_observed": 1,
+          "completed_stage_records": 0,
+          "final_present": false,
+          "stages": [
+            {
+              "stage": 1,
+              "request_present": true,
+              "response_present": false,
+              "provider_done": null,
+              "done_reason": null,
+              "parsed_and_calculated_record_present": false,
+              "state": "attempted",
+              "response_path": null
+            },
+            {
+              "stage": 2,
+              "request_present": false,
+              "response_present": false,
+              "provider_done": null,
+              "done_reason": null,
+              "parsed_and_calculated_record_present": false,
+              "state": "not_observed",
+              "response_path": null
+            },
+            {
+              "stage": 3,
+              "request_present": false,
+              "response_present": false,
+              "provider_done": null,
+              "done_reason": null,
+              "parsed_and_calculated_record_present": false,
+              "state": "not_observed",
+              "response_path": null
+            },
+            {
+              "stage": 4,
+              "request_present": false,
+              "response_present": false,
+              "provider_done": null,
+              "done_reason": null,
+              "parsed_and_calculated_record_present": false,
+              "state": "not_observed",
+              "response_path": null
+            }
+          ],
+          "failure": {
+            "stage": 1,
+            "type": "RemoteCallError",
+            "message": "Remote end closed connection without response",
+            "excluded": false,
+            "handling": "Retain in attempted-run denominator; no automatic retry."
+          },
+          "coordinator_failure": {
+            "case_id": "fidelity_q2_2026__R1",
+            "source_id": "fidelity_q2_2026",
+            "arm": "R1",
+            "status": "failed",
+            "error_type": "RemoteCallError",
+            "error": "Remote end closed connection without response"
+          },
+          "http_call_folders": [
+            "http_0001_pilot"
+          ],
+          "model_calls_attempted_reported": 1,
+          "execution_interruption_observed": true,
+          "display_status": "interrupted",
+          "interpretation": "Coordinator failed status follows cancellation; not an observed semantic or investment-judgment failure."
+        },
+        {
+          "case_id": "fidelity_q2_2026__R4",
+          "source_id": "fidelity_q2_2026",
+          "arm": "R4",
+          "status": "not_started",
+          "coordinator_status": "not_started",
+          "four_stage_artifact_complete": false,
+          "attempted_stages_observed": 0,
+          "completed_stage_records": 0,
+          "final_present": false,
+          "stages": [
+            {
+              "stage": 1,
+              "request_present": false,
+              "response_present": false,
+              "provider_done": null,
+              "done_reason": null,
+              "parsed_and_calculated_record_present": false,
+              "state": "not_observed",
+              "response_path": null
+            },
+            {
+              "stage": 2,
+              "request_present": false,
+              "response_present": false,
+              "provider_done": null,
+              "done_reason": null,
+              "parsed_and_calculated_record_present": false,
+              "state": "not_observed",
+              "response_path": null
+            },
+            {
+              "stage": 3,
+              "request_present": false,
+              "response_present": false,
+              "provider_done": null,
+              "done_reason": null,
+              "parsed_and_calculated_record_present": false,
+              "state": "not_observed",
+              "response_path": null
+            },
+            {
+              "stage": 4,
+              "request_present": false,
+              "response_present": false,
+              "provider_done": null,
+              "done_reason": null,
+              "parsed_and_calculated_record_present": false,
+              "state": "not_observed",
+              "response_path": null
+            }
+          ],
+          "failure": null,
+          "coordinator_failure": null,
+          "http_call_folders": [],
+          "model_calls_attempted_reported": null,
+          "execution_interruption_observed": false
+        },
+        {
+          "case_id": "ubs_june_2026__R1",
+          "source_id": "ubs_june_2026",
+          "arm": "R1",
+          "status": "not_started",
+          "coordinator_status": "not_started",
+          "four_stage_artifact_complete": false,
+          "attempted_stages_observed": 0,
+          "completed_stage_records": 0,
+          "final_present": false,
+          "stages": [
+            {
+              "stage": 1,
+              "request_present": false,
+              "response_present": false,
+              "provider_done": null,
+              "done_reason": null,
+              "parsed_and_calculated_record_present": false,
+              "state": "not_observed",
+              "response_path": null
+            },
+            {
+              "stage": 2,
+              "request_present": false,
+              "response_present": false,
+              "provider_done": null,
+              "done_reason": null,
+              "parsed_and_calculated_record_present": false,
+              "state": "not_observed",
+              "response_path": null
+            },
+            {
+              "stage": 3,
+              "request_present": false,
+              "response_present": false,
+              "provider_done": null,
+              "done_reason": null,
+              "parsed_and_calculated_record_present": false,
+              "state": "not_observed",
+              "response_path": null
+            },
+            {
+              "stage": 4,
+              "request_present": false,
+              "response_present": false,
+              "provider_done": null,
+              "done_reason": null,
+              "parsed_and_calculated_record_present": false,
+              "state": "not_observed",
+              "response_path": null
+            }
+          ],
+          "failure": null,
+          "coordinator_failure": null,
+          "http_call_folders": [],
+          "model_calls_attempted_reported": null,
+          "execution_interruption_observed": false
+        },
+        {
+          "case_id": "ubs_june_2026__R4",
+          "source_id": "ubs_june_2026",
+          "arm": "R4",
+          "status": "not_started",
+          "coordinator_status": "not_started",
+          "four_stage_artifact_complete": false,
+          "attempted_stages_observed": 0,
+          "completed_stage_records": 0,
+          "final_present": false,
+          "stages": [
+            {
+              "stage": 1,
+              "request_present": false,
+              "response_present": false,
+              "provider_done": null,
+              "done_reason": null,
+              "parsed_and_calculated_record_present": false,
+              "state": "not_observed",
+              "response_path": null
+            },
+            {
+              "stage": 2,
+              "request_present": false,
+              "response_present": false,
+              "provider_done": null,
+              "done_reason": null,
+              "parsed_and_calculated_record_present": false,
+              "state": "not_observed",
+              "response_path": null
+            },
+            {
+              "stage": 3,
+              "request_present": false,
+              "response_present": false,
+              "provider_done": null,
+              "done_reason": null,
+              "parsed_and_calculated_record_present": false,
+              "state": "not_observed",
+              "response_path": null
+            },
+            {
+              "stage": 4,
+              "request_present": false,
+              "response_present": false,
+              "provider_done": null,
+              "done_reason": null,
+              "parsed_and_calculated_record_present": false,
+              "state": "not_observed",
+              "response_path": null
+            }
+          ],
+          "failure": null,
+          "coordinator_failure": null,
+          "http_call_folders": [],
+          "model_calls_attempted_reported": null,
+          "execution_interruption_observed": false
+        }
+      ],
+      "dependencies": {
+        "python_version": "3.13.3",
+        "numpy_version": "2.4.4",
+        "coordinator_standard_library_only": true,
+        "pilot_engine_dependency": "numpy"
+      },
+      "input_hashes": {
+        "packets_sha256": "f5bbd9bf0ee8267a8718439064604dfc499428a2fc728c95f672bc4abc5595b9",
+        "market_sha256": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f",
+        "coordinator_sha256": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5",
+        "runner_sha256": "5625450a4dcbe1aa717c9809bf4955c1ef6b10aab4f0c83ef05dc2eb2c123cfd",
+        "engine_sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c"
+      },
+      "offline_scores_path": null,
+      "offline_scores": null,
+      "score_scope": "Descriptive only; a not-started roster row is not an observed model error. Citation IDs do not establish semantic support."
+    },
+    "run": {
+      "directory": "data/remote_sector_20261018/data/sector_runtime/pilot_v43",
+      "directory_available": true,
+      "status": "incomplete",
+      "summary_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/summary.json",
+      "invocation": {
+        "command": "pilot",
+        "base_url": "http://127.0.0.1:11434",
+        "model": "qwen3.5:4b-q4_K_M",
+        "expected_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+        "expected_engine": "0.35.1",
+        "timeout_seconds": 1800,
+        "monitor_interval_seconds": 2,
+        "monitor_basis": "Engineering diagnostic interval",
+        "started_at_utc": "2026-10-18T05:21:58.594517+00:00",
+        "call_count_scope": "Attempted HTTP generation requests; requests failing before a response do not prove model execution.",
+        "main_automatic_execution": false
+      },
+      "reported_summary": {
+        "command": "pilot",
+        "status": "incomplete",
+        "output": "/root/libera_20261018/data/sector_runtime/pilot_v43",
+        "main_model_calls": 0,
+        "split": "pilot",
+        "planned_runs": 4,
+        "attempted_runs": 1,
+        "completed_runs": 0,
+        "records": [
+          {
+            "case_id": "fidelity_q2_2026__R1",
+            "source_id": "fidelity_q2_2026",
+            "arm": "R1",
+            "status": "failed",
+            "error_type": "RemoteCallError",
+            "error": "Remote end closed connection without response",
+            "model_calls_attempted": 1,
+            "http_call_folders": [
+              "http_0001_pilot"
+            ]
+          },
+          {
+            "case_id": "fidelity_q2_2026__R4",
+            "source_id": "fidelity_q2_2026",
+            "arm": "R4",
+            "status": "not_started"
+          },
+          {
+            "case_id": "ubs_june_2026__R1",
+            "source_id": "ubs_june_2026",
+            "arm": "R1",
+            "status": "not_started"
+          },
+          {
+            "case_id": "ubs_june_2026__R4",
+            "source_id": "ubs_june_2026",
+            "arm": "R4",
+            "status": "not_started"
+          }
+        ],
+        "pilot_model_calls": 1,
+        "failure_policy": "Raw and attempted cases retained; not-started cases are not observed model errors; no retry.",
+        "evaluation_status": "Not scored remotely; no gold uploaded or read; semantic human review remains separate.",
+        "finished_at_utc": "2026-10-18T05:47:11.142493+00:00",
+        "script_wall_seconds": 1512.5480044614524,
+        "diagnostic_calls": 0,
+        "calls": [
+          {
+            "kind": "pilot",
+            "folder": "http_0001_pilot",
+            "started_at_utc": "2026-10-18T05:21:58.734214+00:00",
+            "status": "cancelled",
+            "error_type": "RemoteDisconnected",
+            "error": "Remote end closed connection without response",
+            "metrics": {
+              "wall_seconds": 1512.1132832784206,
+              "ttft_any_generated_seconds": null,
+              "ttft_content_seconds": null,
+              "token_count_source": "Ollama counters, not independent tokenization",
+              "duration_unit_in_response": "nanoseconds",
+              "prompt_eval_tokens_per_second": null,
+              "eval_tokens_per_second": null
+            },
+            "raw_bytes_path": "http_0001_pilot/raw_stream.bin",
+            "no_automatic_retry": true,
+            "unexpected_thinking_with_disabled_request": false
+          }
+        ]
+      },
+      "inventory_before": {
+        "observed_at_utc": "2026-10-18T05:21:58.595161+00:00",
+        "platform": "Linux",
+        "machine": "x86_64",
+        "cpu": {
+          "vendor_id": "GenuineIntel",
+          "model name": "Intel(R) Pentium(R) Gold G6405 CPU @ 4.10GHz"
+        },
+        "os_cpu_count": 4,
+        "memory": {
+          "observed_at_utc": "2026-10-18T05:21:58.595330+00:00",
+          "source": "linux_proc_and_cgroup",
+          "processes": [
+            {
+              "pid": 2704,
+              "name": "ollama",
+              "VmSize_bytes": 2987884544,
+              "VmHWM_bytes": 42016768,
+              "VmRSS_bytes": 31391744,
+              "RssAnon_bytes": 13783040,
+              "RssFile_bytes": 17608704,
+              "RssShmem_bytes": 0
+            }
+          ],
+          "proc_meminfo": {
+            "MemTotal_bytes": 12884901888,
+            "MemFree_bytes": 10023944192,
+            "MemAvailable_bytes": 12604722176,
+            "Buffers_bytes": 0,
+            "Cached_bytes": 2308485120,
+            "SwapTotal_bytes": 8589930496,
+            "SwapFree_bytes": 8409231360,
+            "CommitLimit_bytes": 16861331456,
+            "Committed_AS_bytes": 15366746112
+          },
+          "cgroup": {
+            "memory.current": 2860957696,
+            "memory.peak": 8714719232,
+            "memory.max": "max",
+            "memory.swap.current": 180699136,
+            "memory.swap.max": "max",
+            "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+          },
+          "rss_sum_bytes": 31391744,
+          "interpretation": "RSS can double-count shared pages; cgroup includes cache and other processes; no GPU-memory inference from RSS."
+        },
+        "filesystem_bytes": {
+          "total": 151996149760,
+          "used": 12334870528,
+          "free": 133288087552
+        },
+        "filesystem_scope": "Container-visible filesystem only; shared host thin-pool free space must be checked separately.",
+        "ollama_version": {
+          "status": "ok",
+          "value": {
+            "version": "0.35.1"
+          }
+        },
+        "ollama_tags": {
+          "status": "ok",
+          "value": {
+            "models": [
+              {
+                "name": "qwen3.5:4b-q4_K_M",
+                "model": "qwen3.5:4b-q4_K_M",
+                "modified_at": "2026-10-18T05:16:54.789617077Z",
+                "size": 3324173934,
+                "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+                "details": {
+                  "parent_model": "model.gguf",
+                  "format": "gguf",
+                  "family": "qwen35",
+                  "families": [
+                    "qwen35"
+                  ],
+                  "parameter_size": "4.2B",
+                  "quantization_level": "Q4_K_M",
+                  "context_length": 262144,
+                  "embedding_length": 2560
+                },
+                "capabilities": [
+                  "completion",
+                  "vision",
+                  "tools",
+                  "thinking"
+                ]
+              },
+              {
+                "name": "qwen3:1.7b",
+                "model": "qwen3:1.7b",
+                "modified_at": "2026-10-05T07:52:29.42936286Z",
+                "size": 1359293444,
+                "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+                "details": {
+                  "parent_model": "",
+                  "format": "gguf",
+                  "family": "qwen3",
+                  "families": [
+                    "qwen3"
+                  ],
+                  "parameter_size": "2.0B",
+                  "quantization_level": "Q4_K_M",
+                  "context_length": 40960,
+                  "embedding_length": 2048
+                },
+                "capabilities": [
+                  "completion",
+                  "tools",
+                  "thinking"
+                ]
+              }
+            ]
+          }
+        },
+        "ollama_residency": {
+          "status": "ok",
+          "value": {
+            "models": []
+          }
+        }
+      },
+      "inventory_after": {
+        "observed_at_utc": "2026-10-18T05:47:11.136735+00:00",
+        "platform": "Linux",
+        "machine": "x86_64",
+        "cpu": {
+          "vendor_id": "GenuineIntel",
+          "model name": "Intel(R) Pentium(R) Gold G6405 CPU @ 4.10GHz"
+        },
+        "os_cpu_count": 4,
+        "memory": {
+          "observed_at_utc": "2026-10-18T05:47:11.136900+00:00",
+          "source": "linux_proc_and_cgroup",
+          "processes": [
+            {
+              "pid": 2704,
+              "name": "ollama",
+              "VmSize_bytes": 2987884544,
+              "VmHWM_bytes": 42016768,
+              "VmRSS_bytes": 26324992,
+              "RssAnon_bytes": 10420224,
+              "RssFile_bytes": 15904768,
+              "RssShmem_bytes": 0
+            }
+          ],
+          "proc_meminfo": {
+            "MemTotal_bytes": 12884901888,
+            "MemFree_bytes": 10022805504,
+            "MemAvailable_bytes": 12586579968,
+            "Buffers_bytes": 0,
+            "Cached_bytes": 2322419712,
+            "SwapTotal_bytes": 8589930496,
+            "SwapFree_bytes": 8405913600,
+            "CommitLimit_bytes": 16861331456,
+            "Committed_AS_bytes": 15589507072
+          },
+          "cgroup": {
+            "memory.current": 2862358528,
+            "memory.peak": 9020641280,
+            "memory.max": "max",
+            "memory.swap.current": 184016896,
+            "memory.swap.max": "max",
+            "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+          },
+          "rss_sum_bytes": 26324992,
+          "interpretation": "RSS can double-count shared pages; cgroup includes cache and other processes; no GPU-memory inference from RSS."
+        },
+        "filesystem_bytes": {
+          "total": 151996149760,
+          "used": 12336467968,
+          "free": 133286490112
+        },
+        "filesystem_scope": "Container-visible filesystem only; shared host thin-pool free space must be checked separately.",
+        "ollama_version": {
+          "status": "ok",
+          "value": {
+            "version": "0.35.1"
+          }
+        },
+        "ollama_tags": {
+          "status": "ok",
+          "value": {
+            "models": [
+              {
+                "name": "qwen3.5:4b-q4_K_M",
+                "model": "qwen3.5:4b-q4_K_M",
+                "modified_at": "2026-10-18T05:16:54.789617077Z",
+                "size": 3324173934,
+                "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+                "details": {
+                  "parent_model": "model.gguf",
+                  "format": "gguf",
+                  "family": "qwen35",
+                  "families": [
+                    "qwen35"
+                  ],
+                  "parameter_size": "4.2B",
+                  "quantization_level": "Q4_K_M",
+                  "context_length": 262144,
+                  "embedding_length": 2560
+                },
+                "capabilities": [
+                  "completion",
+                  "vision",
+                  "tools",
+                  "thinking"
+                ]
+              },
+              {
+                "name": "qwen3:1.7b",
+                "model": "qwen3:1.7b",
+                "modified_at": "2026-10-05T07:52:29.42936286Z",
+                "size": 1359293444,
+                "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+                "details": {
+                  "parent_model": "",
+                  "format": "gguf",
+                  "family": "qwen3",
+                  "families": [
+                    "qwen3"
+                  ],
+                  "parameter_size": "2.0B",
+                  "quantization_level": "Q4_K_M",
+                  "context_length": 40960,
+                  "embedding_length": 2048
+                },
+                "capabilities": [
+                  "completion",
+                  "tools",
+                  "thinking"
+                ]
+              }
+            ]
+          }
+        },
+        "ollama_residency": {
+          "status": "ok",
+          "value": {
+            "models": []
+          }
+        }
+      },
+      "calls": [
+        {
+          "folder": "http_0001_pilot",
+          "kind": "pilot",
+          "status": "cancelled",
+          "completed_response_observed": false,
+          "request_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/request.json",
+          "response_path": null,
+          "result_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/result.json",
+          "started_at_utc": "2026-10-18T05:21:58.734214+00:00",
+          "done_reason": null,
+          "raw_stream_bytes": 0,
+          "first_content_observed": false,
+          "request_content_utf8_bytes": 19872,
+          "request_settings": {
+            "temperature": 0,
+            "num_predict": 8192,
+            "num_ctx": 65536,
+            "model": "qwen3.5:4b-q4_K_M",
+            "think": false,
+            "format": "json",
+            "keep_alive": 0
+          },
+          "nonempty_thinking_observed": null,
+          "metrics": {
+            "wall_seconds": 1512.1132832784206,
+            "ttft_any_generated_seconds": null,
+            "ttft_content_seconds": null,
+            "token_count_source": "Ollama counters, not independent tokenization",
+            "duration_unit_in_response": "nanoseconds",
+            "prompt_eval_tokens_per_second": null,
+            "eval_tokens_per_second": null
+          },
+          "error_type": "RemoteDisconnected",
+          "error": "Remote end closed connection without response"
+        }
+      ],
+      "observed_http_calls": 1,
+      "observed_completed_http_responses": 0,
+      "resources": {
+        "monitor_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/monitor.jsonl",
+        "sample_count": 757,
+        "proc_memory_total_bytes": 12884901888,
+        "proc_swap_total_bytes": 8589930496,
+        "proc_available_sampled_min_bytes": 6421153792,
+        "runtime_rss_sum_sampled_max_bytes": 6207291392,
+        "cgroup_memory_current_sampled_max_bytes": 9020104704,
+        "cgroup_memory_peak_before_bytes": 8714719232,
+        "cgroup_memory_peak_after_bytes": 9020641280,
+        "cgroup_limits_before": {
+          "memory.max": "max",
+          "memory.swap.max": "max"
+        },
+        "cgroup_memory_events_before": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+        "cgroup_memory_events_after": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+        "proc_swap_used_before_bytes": 180699136,
+        "proc_swap_used_after_bytes": 184016896,
+        "proc_swap_used_sampled_max_bytes": 404508672,
+        "proc_committed_as_sampled_max_bytes": 24373125120,
+        "proc_commit_limit_before_bytes": 16861331456,
+        "observed_process_names": [
+          "ollama",
+          "llama-server"
+        ],
+        "resident_sample_count": 752,
+        "resident_context_tokens": [
+          65536
+        ],
+        "resident_size_bytes": [
+          5630863604
+        ],
+        "resident_vram_bytes": [
+          0
+        ],
+        "scope": "Sampled container-visible /proc, visible cgroup and named runtime process RSS; not an isolated physical host measurement.",
+        "limitations": [
+          "RSS may double-count shared pages; cgroup includes cache and unrelated activity; do not add them.",
+          "memory.peak is an unreset cumulative high-water mark, not the maximum of interval samples.",
+          "Visible cgroup max does not establish effective ancestor/LXC limits; /proc may be virtualized.",
+          "Swap usage does not attribute paging or its speed effect to the model.",
+          "VRAM zero is a residency observation, not an inventory of physical server GPUs.",
+          "Allocated context does not prove that long inputs/history were preserved without truncation."
+        ]
+      }
+    },
+    "cancellation": {
+      "interruption_observed": true,
+      "cancel_record_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/CANCEL",
+      "raw_cancel_record": {
+        "requested_at_utc": "2026-10-18T05:47:10.792260+00:00",
+        "reason": "User requested response-time repair; stop current long pilot and preserve records before new engineering latency probes"
+      },
+      "operator_supplement": null,
+      "operator_supplement_scope": "Additional operator-provided context; does not override raw timeout/cancel status.",
+      "cancelled_http_folders": [
+        "http_0001_pilot"
+      ],
+      "interpretation": "Cancellation is distinct from timeout. A response absent at cancellation does not establish semantic failure."
+    },
+    "summary_path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/summary.json"
+  },
+  "main": {
+    "status": "not_run",
+    "completed_cases": 0,
+    "completed_calls": 0,
+    "attempted_calls_observed": 0,
+    "frozen": false,
+    "notes": [
+      "이 실행 범위는 pilot 전용이다. 본과제 실행·평가규칙 동결을 이 보고서가 승인하지 않는다.",
+      "본과제 동결 전 설정 결정이 필요하다. FinVector는 penalty를 보고하지 않으므로 상속된 presence_penalty=1.5는 논문 기반 수치라고 정당화할 수 없다. 미보고 기본값의 처리·근거 수준·한계를 명시하고 필요한 조건 개정과 예비 재검증을 마쳐야 한다."
+    ],
+    "blocking_design_decisions": [
+      "Resolve unreported inherited penalty defaults before main freeze; current pilot runtime is unchanged."
+    ],
+    "future_candidates_not_applied": [
+      {
+        "values": {
+          "seed": 3407
+        },
+        "evidence_kind": "paper_reported",
+        "source": "https://arxiv.org/pdf/2610.08882",
+        "locator": "section 4.1",
+        "validated_for_libera": false
+      },
+      {
+        "values": {
+          "repeat_penalty": 1,
+          "presence_penalty": 0,
+          "frequency_penalty": 0
+        },
+        "evidence_kind": "implementation_reference_not_reported_benchmark_conditions",
+        "sources": [
+          "https://github.com/alinakhay/FinVector-Market-4B/blob/main/examples/inference_mlx.py",
+          "https://github.com/ml-explore/mlx-lm/blob/v0.31.3/mlx_lm/generate.py"
+        ],
+        "reason": "Candidate translation of the public minimal example and MLX-LM 0.31.3 default argmax/logits_processors=None to neutral Ollama penalties; the actual benchmark runner is private.",
+        "validated_for_libera": false
+      }
+    ],
+    "future_candidates_automatically_applied": false
+  },
+  "human_review": {
+    "status": "pending",
+    "completed_reviews": null,
+    "notes": [
+      "자동·독립 코드 검토를 사람의 원문·의미 검토 완료로 세지 않는다."
+    ]
+  },
+  "assessment": {
+    "status": "execution_interrupted",
+    "failure_records": [],
+    "execution_readiness_certified": false,
+    "model_recommendation": null,
+    "notes": [
+      "실패 기록은 원인과 조건 수정의 검토 대상이며 자동으로 새 설정을 적용하지 않는다."
+    ]
+  },
+  "engineering_results": {
+    "latency": [
+      {
+        "summary_path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/summary.json",
+        "status": "completed_with_probe_failures",
+        "reported_summary": {
+          "status": "completed_with_probe_failures",
+          "finished_at_utc": "2026-10-18T05:57:12.454357+00:00",
+          "probe_invocations_attempted": 3,
+          "completed_probes": 1,
+          "generation_request_envelopes_recorded": 3,
+          "not_started_probes": 0,
+          "records": [
+            {
+              "probe_id": "4b_threads2",
+              "model": "qwen3.5:4b-q4_K_M",
+              "threads": 2,
+              "status": "hard_deadline",
+              "supervisor_status": "hard_deadline",
+              "elapsed_seconds": 120.00339300371706,
+              "generation_request_recorded": true,
+              "provider_metrics": null,
+              "prompt_eval_count": null,
+              "eval_count": null,
+              "response_assessment": null
+            },
+            {
+              "probe_id": "4b_threads4",
+              "model": "qwen3.5:4b-q4_K_M",
+              "threads": 4,
+              "status": "hard_deadline",
+              "supervisor_status": "hard_deadline",
+              "elapsed_seconds": 120.00155987590551,
+              "generation_request_recorded": true,
+              "provider_metrics": null,
+              "prompt_eval_count": null,
+              "eval_count": null,
+              "response_assessment": null
+            },
+            {
+              "probe_id": "1p7b_threads2",
+              "model": "qwen3:1.7b",
+              "threads": 2,
+              "status": "completed",
+              "supervisor_status": "worker_exited",
+              "elapsed_seconds": 61.17593143135309,
+              "generation_request_recorded": true,
+              "provider_metrics": {
+                "wall_seconds": 61.08317386545241,
+                "ttft_any_generated_seconds": 59.66858140565455,
+                "ttft_content_seconds": 59.668580036610365,
+                "token_count_source": "Ollama counters, not independent tokenization",
+                "duration_unit_in_response": "nanoseconds",
+                "total_duration_seconds": 61.080660012,
+                "load_duration_seconds": 2.302726452,
+                "prompt_eval_duration_seconds": 57.35727,
+                "eval_duration_seconds": 1.413919,
+                "prompt_eval_count": 365,
+                "eval_count": 6,
+                "prompt_eval_tokens_per_second": 6.363622257474946,
+                "eval_tokens_per_second": 4.2435245583375005
+              },
+              "prompt_eval_count": 365,
+              "eval_count": 6,
+              "response_assessment": {
+                "parseable_json_object": true,
+                "expected_synthetic_json": true,
+                "unexpected_thinking": false,
+                "response_model": "qwen3:1.7b",
+                "done_reason": "stop"
+              }
+            }
+          ],
+          "pilot_model_calls": 0,
+          "main_model_calls": 0,
+          "scope": "Engineering latency probes only; never merged into research responses.",
+          "output": "/root/libera_20261018/data/sector_runtime/latency_v43_20261018"
+        },
+        "invocation": {
+          "scope": "Synthetic engineering latency diagnosis; excluded from research pilot/main and evaluation.",
+          "started_at_utc": "2026-10-18T05:52:10.819719+00:00",
+          "origin": "http://127.0.0.1:11434",
+          "deadline_seconds": 120.0,
+          "script_sha256": "a846d4d7faa02d26a43520bafdaabb3ec63aba7fcbc6ff37496213e8a3963122",
+          "coordinator_sha256": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5",
+          "prompt_characters": 1093,
+          "prompt_utf8_bytes": 1093,
+          "prompt_sha256": "6fbb7b993d290e403fee655ac2224e24ad0d8bf6bca5d7dcdb1cb3a96c90bb2d",
+          "planned_probes": [
+            {
+              "probe_id": "4b_threads2",
+              "model": "qwen3.5:4b-q4_K_M",
+              "threads": 2,
+              "status": "not_started"
+            },
+            {
+              "probe_id": "4b_threads4",
+              "model": "qwen3.5:4b-q4_K_M",
+              "threads": 4,
+              "status": "not_started"
+            },
+            {
+              "probe_id": "1p7b_threads2",
+              "model": "qwen3:1.7b",
+              "threads": 2,
+              "status": "not_started"
+            }
+          ],
+          "condition_basis": "8192 context, output cap32, T0, disabled thinking, batch512, neutral repeat/presence/frequency penalties, seed3407, thread counts and deadline are engineering controls for these latency probes; this is not a paper-derived experiment even where a number also appears in a paper.",
+          "comparison_limits": "One fixed-order attempt per configuration; unload does not evict OS file cache. Model/template/tokenizer differ. No statistical speed ranking or four-stage feasibility verdict.",
+          "pilot_model_calls": 0,
+          "main_model_calls": 0
+        },
+        "probes": [
+          {
+            "probe_id": "4b_threads2",
+            "model": "qwen3.5:4b-q4_K_M",
+            "threads": 2,
+            "status": "hard_deadline",
+            "supervisor_status": "hard_deadline",
+            "elapsed_seconds": 120.00339300371706,
+            "reported_metrics": null,
+            "response_assessment": null,
+            "request_settings": {
+              "temperature": 0,
+              "num_ctx": 8192,
+              "num_predict": 32,
+              "num_thread": 2,
+              "num_batch": 512,
+              "repeat_penalty": 1.0,
+              "presence_penalty": 0.0,
+              "frequency_penalty": 0.0,
+              "seed": 3407,
+              "model": "qwen3.5:4b-q4_K_M",
+              "think": false,
+              "format": "json",
+              "keep_alive": 0
+            },
+            "settings_source": "saved_http_request",
+            "deadline_seconds": 120.0,
+            "observed_model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+            "observed_engine": "0.35.1",
+            "worker_summary": null,
+            "supervisor_result": {
+              "supervisor_status": "hard_deadline",
+              "worker_exit_code": -9,
+              "elapsed_seconds": 120.00339300371706,
+              "deadline_seconds": 120.0,
+              "deadline_scope": "Child process lifetime includes setup, connect, headers and complete stream; OS scheduling/kill overhead is separately included in elapsed_seconds.",
+              "automatic_retries": 0,
+              "worker_summary_missing": true
+            },
+            "calls": [
+              {
+                "folder": "http_0001_latency_probe",
+                "kind": "latency_probe",
+                "status": "in_progress_or_incomplete_artifacts",
+                "completed_response_observed": false,
+                "request_path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/http_0001_latency_probe/request.json",
+                "response_path": null,
+                "result_path": null,
+                "started_at_utc": null,
+                "done_reason": null,
+                "raw_stream_bytes": 0,
+                "first_content_observed": null,
+                "request_content_utf8_bytes": 1093,
+                "request_settings": {
+                  "temperature": 0,
+                  "num_ctx": 8192,
+                  "num_predict": 32,
+                  "num_thread": 2,
+                  "num_batch": 512,
+                  "repeat_penalty": 1.0,
+                  "presence_penalty": 0.0,
+                  "frequency_penalty": 0.0,
+                  "seed": 3407,
+                  "model": "qwen3.5:4b-q4_K_M",
+                  "think": false,
+                  "format": "json",
+                  "keep_alive": 0
+                },
+                "nonempty_thinking_observed": null,
+                "metrics": {
+                  "prompt_eval_tokens_per_second": null,
+                  "eval_tokens_per_second": null
+                },
+                "error_type": null,
+                "error": null
+              }
+            ],
+            "resources": {
+              "monitor_path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/monitor.jsonl",
+              "sample_count": 60,
+              "proc_memory_total_bytes": null,
+              "proc_swap_total_bytes": null,
+              "proc_available_sampled_min_bytes": 8718420992,
+              "runtime_rss_sum_sampled_max_bytes": 3912523776,
+              "cgroup_memory_current_sampled_max_bytes": 9189789696,
+              "cgroup_memory_peak_before_bytes": null,
+              "cgroup_memory_peak_after_bytes": null,
+              "cgroup_limits_before": {
+                "memory.max": null,
+                "memory.swap.max": null
+              },
+              "cgroup_memory_events_before": null,
+              "cgroup_memory_events_after": null,
+              "proc_swap_used_before_bytes": null,
+              "proc_swap_used_after_bytes": null,
+              "proc_swap_used_sampled_max_bytes": 183832576,
+              "proc_committed_as_sampled_max_bytes": 20202541056,
+              "proc_commit_limit_before_bytes": null,
+              "observed_process_names": [
+                "ollama",
+                "llama-server"
+              ],
+              "resident_sample_count": 55,
+              "resident_context_tokens": [
+                8192
+              ],
+              "resident_size_bytes": [
+                3274660903
+              ],
+              "resident_vram_bytes": [
+                0
+              ],
+              "scope": "Sampled container-visible /proc, visible cgroup and named runtime process RSS; not an isolated physical host measurement.",
+              "limitations": [
+                "RSS may double-count shared pages; cgroup includes cache and unrelated activity; do not add them.",
+                "memory.peak is an unreset cumulative high-water mark, not the maximum of interval samples.",
+                "Visible cgroup max does not establish effective ancestor/LXC limits; /proc may be virtualized.",
+                "Swap usage does not attribute paging or its speed effect to the model.",
+                "VRAM zero is a residency observation, not an inventory of physical server GPUs.",
+                "Allocated context does not prove that long inputs/history were preserved without truncation."
+              ]
+            }
+          },
+          {
+            "probe_id": "4b_threads4",
+            "model": "qwen3.5:4b-q4_K_M",
+            "threads": 4,
+            "status": "hard_deadline",
+            "supervisor_status": "hard_deadline",
+            "elapsed_seconds": 120.00155987590551,
+            "reported_metrics": null,
+            "response_assessment": null,
+            "request_settings": {
+              "temperature": 0,
+              "num_ctx": 8192,
+              "num_predict": 32,
+              "num_thread": 4,
+              "num_batch": 512,
+              "repeat_penalty": 1.0,
+              "presence_penalty": 0.0,
+              "frequency_penalty": 0.0,
+              "seed": 3407,
+              "model": "qwen3.5:4b-q4_K_M",
+              "think": false,
+              "format": "json",
+              "keep_alive": 0
+            },
+            "settings_source": "saved_http_request",
+            "deadline_seconds": 120.0,
+            "observed_model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+            "observed_engine": "0.35.1",
+            "worker_summary": null,
+            "supervisor_result": {
+              "supervisor_status": "hard_deadline",
+              "worker_exit_code": -9,
+              "elapsed_seconds": 120.00155987590551,
+              "deadline_seconds": 120.0,
+              "deadline_scope": "Child process lifetime includes setup, connect, headers and complete stream; OS scheduling/kill overhead is separately included in elapsed_seconds.",
+              "automatic_retries": 0,
+              "worker_summary_missing": true
+            },
+            "calls": [
+              {
+                "folder": "http_0001_latency_probe",
+                "kind": "latency_probe",
+                "status": "in_progress_or_incomplete_artifacts",
+                "completed_response_observed": false,
+                "request_path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads4/http_0001_latency_probe/request.json",
+                "response_path": null,
+                "result_path": null,
+                "started_at_utc": null,
+                "done_reason": null,
+                "raw_stream_bytes": 0,
+                "first_content_observed": null,
+                "request_content_utf8_bytes": 1093,
+                "request_settings": {
+                  "temperature": 0,
+                  "num_ctx": 8192,
+                  "num_predict": 32,
+                  "num_thread": 4,
+                  "num_batch": 512,
+                  "repeat_penalty": 1.0,
+                  "presence_penalty": 0.0,
+                  "frequency_penalty": 0.0,
+                  "seed": 3407,
+                  "model": "qwen3.5:4b-q4_K_M",
+                  "think": false,
+                  "format": "json",
+                  "keep_alive": 0
+                },
+                "nonempty_thinking_observed": null,
+                "metrics": {
+                  "prompt_eval_tokens_per_second": null,
+                  "eval_tokens_per_second": null
+                },
+                "error_type": null,
+                "error": null
+              }
+            ],
+            "resources": {
+              "monitor_path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads4/monitor.jsonl",
+              "sample_count": 60,
+              "proc_memory_total_bytes": null,
+              "proc_swap_total_bytes": null,
+              "proc_available_sampled_min_bytes": 8757462016,
+              "runtime_rss_sum_sampled_max_bytes": 3873312768,
+              "cgroup_memory_current_sampled_max_bytes": 9181085696,
+              "cgroup_memory_peak_before_bytes": null,
+              "cgroup_memory_peak_after_bytes": null,
+              "cgroup_limits_before": {
+                "memory.max": null,
+                "memory.swap.max": null
+              },
+              "cgroup_memory_events_before": null,
+              "cgroup_memory_events_after": null,
+              "proc_swap_used_before_bytes": null,
+              "proc_swap_used_after_bytes": null,
+              "proc_swap_used_sampled_max_bytes": 183681024,
+              "proc_committed_as_sampled_max_bytes": 20297678848,
+              "proc_commit_limit_before_bytes": null,
+              "observed_process_names": [
+                "ollama",
+                "llama-server"
+              ],
+              "resident_sample_count": 57,
+              "resident_context_tokens": [
+                8192
+              ],
+              "resident_size_bytes": [
+                3274660903
+              ],
+              "resident_vram_bytes": [
+                0
+              ],
+              "scope": "Sampled container-visible /proc, visible cgroup and named runtime process RSS; not an isolated physical host measurement.",
+              "limitations": [
+                "RSS may double-count shared pages; cgroup includes cache and unrelated activity; do not add them.",
+                "memory.peak is an unreset cumulative high-water mark, not the maximum of interval samples.",
+                "Visible cgroup max does not establish effective ancestor/LXC limits; /proc may be virtualized.",
+                "Swap usage does not attribute paging or its speed effect to the model.",
+                "VRAM zero is a residency observation, not an inventory of physical server GPUs.",
+                "Allocated context does not prove that long inputs/history were preserved without truncation."
+              ]
+            }
+          },
+          {
+            "probe_id": "1p7b_threads2",
+            "model": "qwen3:1.7b",
+            "threads": 2,
+            "status": "completed",
+            "supervisor_status": "worker_exited",
+            "elapsed_seconds": 61.17593143135309,
+            "reported_metrics": {
+              "wall_seconds": 61.08317386545241,
+              "ttft_any_generated_seconds": 59.66858140565455,
+              "ttft_content_seconds": 59.668580036610365,
+              "token_count_source": "Ollama counters, not independent tokenization",
+              "duration_unit_in_response": "nanoseconds",
+              "total_duration_seconds": 61.080660012,
+              "load_duration_seconds": 2.302726452,
+              "prompt_eval_duration_seconds": 57.35727,
+              "eval_duration_seconds": 1.413919,
+              "prompt_eval_count": 365,
+              "eval_count": 6,
+              "prompt_eval_tokens_per_second": 6.363622257474946,
+              "eval_tokens_per_second": 4.2435245583375005
+            },
+            "response_assessment": {
+              "parseable_json_object": true,
+              "expected_synthetic_json": true,
+              "unexpected_thinking": false,
+              "response_model": "qwen3:1.7b",
+              "done_reason": "stop"
+            },
+            "request_settings": {
+              "temperature": 0,
+              "num_ctx": 8192,
+              "num_predict": 32,
+              "num_thread": 2,
+              "num_batch": 512,
+              "repeat_penalty": 1.0,
+              "presence_penalty": 0.0,
+              "frequency_penalty": 0.0,
+              "seed": 3407,
+              "model": "qwen3:1.7b",
+              "think": false,
+              "format": "json",
+              "keep_alive": 0
+            },
+            "settings_source": "saved_http_request",
+            "deadline_seconds": 120.0,
+            "observed_model_digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+            "observed_engine": "0.35.1",
+            "worker_summary": {
+              "status": "completed",
+              "model_requests_attempted": 1,
+              "done_reason": "stop",
+              "parseable_json_object": true,
+              "unexpected_thinking": false,
+              "expected_synthetic_json": true,
+              "response_model": "qwen3:1.7b",
+              "worker_wall_seconds": 61.0844395570457,
+              "calls": [
+                {
+                  "kind": "latency_probe",
+                  "folder": "http_0001_latency_probe",
+                  "started_at_utc": "2026-10-18T05:56:11.241989+00:00",
+                  "status": "completed",
+                  "http_status": 200,
+                  "metrics": {
+                    "wall_seconds": 61.08317386545241,
+                    "ttft_any_generated_seconds": 59.66858140565455,
+                    "ttft_content_seconds": 59.668580036610365,
+                    "token_count_source": "Ollama counters, not independent tokenization",
+                    "duration_unit_in_response": "nanoseconds",
+                    "total_duration_seconds": 61.080660012,
+                    "load_duration_seconds": 2.302726452,
+                    "prompt_eval_duration_seconds": 57.35727,
+                    "eval_duration_seconds": 1.413919,
+                    "prompt_eval_count": 365,
+                    "eval_count": 6,
+                    "prompt_eval_tokens_per_second": 6.363622257474946,
+                    "eval_tokens_per_second": 4.2435245583375005
+                  },
+                  "raw_bytes_path": "http_0001_latency_probe/raw_stream.bin",
+                  "no_automatic_retry": true,
+                  "unexpected_thinking_with_disabled_request": false
+                }
+              ],
+              "pilot_model_calls": 0,
+              "main_model_calls": 0,
+              "automatic_retries": 0
+            },
+            "supervisor_result": {
+              "supervisor_status": "worker_exited",
+              "worker_exit_code": 0,
+              "elapsed_seconds": 61.17593143135309,
+              "deadline_seconds": 120.0,
+              "deadline_scope": "Child process lifetime includes setup, connect, headers and complete stream; OS scheduling/kill overhead is separately included in elapsed_seconds.",
+              "automatic_retries": 0,
+              "worker": {
+                "status": "completed",
+                "model_requests_attempted": 1,
+                "done_reason": "stop",
+                "parseable_json_object": true,
+                "unexpected_thinking": false,
+                "expected_synthetic_json": true,
+                "response_model": "qwen3:1.7b",
+                "worker_wall_seconds": 61.0844395570457,
+                "calls": [
+                  {
+                    "kind": "latency_probe",
+                    "folder": "http_0001_latency_probe",
+                    "started_at_utc": "2026-10-18T05:56:11.241989+00:00",
+                    "status": "completed",
+                    "http_status": 200,
+                    "metrics": {
+                      "wall_seconds": 61.08317386545241,
+                      "ttft_any_generated_seconds": 59.66858140565455,
+                      "ttft_content_seconds": 59.668580036610365,
+                      "token_count_source": "Ollama counters, not independent tokenization",
+                      "duration_unit_in_response": "nanoseconds",
+                      "total_duration_seconds": 61.080660012,
+                      "load_duration_seconds": 2.302726452,
+                      "prompt_eval_duration_seconds": 57.35727,
+                      "eval_duration_seconds": 1.413919,
+                      "prompt_eval_count": 365,
+                      "eval_count": 6,
+                      "prompt_eval_tokens_per_second": 6.363622257474946,
+                      "eval_tokens_per_second": 4.2435245583375005
+                    },
+                    "raw_bytes_path": "http_0001_latency_probe/raw_stream.bin",
+                    "no_automatic_retry": true,
+                    "unexpected_thinking_with_disabled_request": false
+                  }
+                ],
+                "pilot_model_calls": 0,
+                "main_model_calls": 0,
+                "automatic_retries": 0
+              }
+            },
+            "calls": [
+              {
+                "folder": "http_0001_latency_probe",
+                "kind": "latency_probe",
+                "status": "completed",
+                "completed_response_observed": true,
+                "request_path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/1p7b_threads2/http_0001_latency_probe/request.json",
+                "response_path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/1p7b_threads2/http_0001_latency_probe/response.json",
+                "result_path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/1p7b_threads2/http_0001_latency_probe/result.json",
+                "started_at_utc": "2026-10-18T05:56:11.241989+00:00",
+                "done_reason": "stop",
+                "raw_stream_bytes": 977,
+                "first_content_observed": true,
+                "request_content_utf8_bytes": 1093,
+                "request_settings": {
+                  "temperature": 0,
+                  "num_ctx": 8192,
+                  "num_predict": 32,
+                  "num_thread": 2,
+                  "num_batch": 512,
+                  "repeat_penalty": 1.0,
+                  "presence_penalty": 0.0,
+                  "frequency_penalty": 0.0,
+                  "seed": 3407,
+                  "model": "qwen3:1.7b",
+                  "think": false,
+                  "format": "json",
+                  "keep_alive": 0
+                },
+                "nonempty_thinking_observed": false,
+                "metrics": {
+                  "wall_seconds": 61.08317386545241,
+                  "ttft_any_generated_seconds": 59.66858140565455,
+                  "ttft_content_seconds": 59.668580036610365,
+                  "token_count_source": "Ollama counters, not independent tokenization",
+                  "duration_unit_in_response": "nanoseconds",
+                  "total_duration_seconds": 61.080660012,
+                  "load_duration_seconds": 2.302726452,
+                  "prompt_eval_duration_seconds": 57.35727,
+                  "eval_duration_seconds": 1.413919,
+                  "prompt_eval_count": 365,
+                  "eval_count": 6,
+                  "prompt_eval_tokens_per_second": 6.363622257474946,
+                  "eval_tokens_per_second": 4.2435245583375005
+                },
+                "error_type": null,
+                "error": null
+              }
+            ],
+            "resources": {
+              "monitor_path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/1p7b_threads2/monitor.jsonl",
+              "sample_count": 31,
+              "proc_memory_total_bytes": null,
+              "proc_swap_total_bytes": null,
+              "proc_available_sampled_min_bytes": 10198239232,
+              "runtime_rss_sum_sampled_max_bytes": 2434977792,
+              "cgroup_memory_current_sampled_max_bytes": 7742451712,
+              "cgroup_memory_peak_before_bytes": null,
+              "cgroup_memory_peak_after_bytes": null,
+              "cgroup_limits_before": {
+                "memory.max": null,
+                "memory.swap.max": null
+              },
+              "cgroup_memory_events_before": null,
+              "cgroup_memory_events_after": null,
+              "proc_swap_used_before_bytes": null,
+              "proc_swap_used_after_bytes": null,
+              "proc_swap_used_sampled_max_bytes": 183545856,
+              "proc_committed_as_sampled_max_bytes": 18095575040,
+              "proc_commit_limit_before_bytes": null,
+              "observed_process_names": [
+                "ollama",
+                "llama-server"
+              ],
+              "resident_sample_count": 29,
+              "resident_context_tokens": [
+                8192
+              ],
+              "resident_size_bytes": [
+                2356380957
+              ],
+              "resident_vram_bytes": [
+                0
+              ],
+              "scope": "Sampled container-visible /proc, visible cgroup and named runtime process RSS; not an isolated physical host measurement.",
+              "limitations": [
+                "RSS may double-count shared pages; cgroup includes cache and unrelated activity; do not add them.",
+                "memory.peak is an unreset cumulative high-water mark, not the maximum of interval samples.",
+                "Visible cgroup max does not establish effective ancestor/LXC limits; /proc may be virtualized.",
+                "Swap usage does not attribute paging or its speed effect to the model.",
+                "VRAM zero is a residency observation, not an inventory of physical server GPUs.",
+                "Allocated context does not prove that long inputs/history were preserved without truncation."
+              ]
+            }
+          }
+        ],
+        "scope": "Synthetic engineering latency only; neither pilot cases nor main responses.",
+        "comparison_limits": "One fixed-order attempt per configuration, differing models/tokenizers and persistent OS cache; no statistical speed ranking or four-stage feasibility conclusion."
+      }
+    ],
+    "real_input": [
+      {
+        "summary_path": "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/summary.json",
+        "status": "hard_deadline",
+        "scope": "Real first-stage input engineering feasibility only; no semantic scoring or research case completion.",
+        "reported_summary": {
+          "status": "hard_deadline",
+          "output": "/root/libera_20261018/data/sector_runtime/realinput_1p7b_v1",
+          "scope": "real_input_engineering_feasibility_only",
+          "model": "qwen3:1.7b",
+          "case_input": "fidelity_q2_2026__R1__stage1",
+          "probe_invocations_attempted": 1,
+          "generation_request_envelopes_recorded": 1,
+          "pilot_model_calls": 0,
+          "main_model_calls": 0,
+          "automatic_retries": 0,
+          "response_quality_scored": false,
+          "four_stage_feasibility_established": false,
+          "supervisor": {
+            "supervisor_status": "hard_deadline",
+            "worker_exit_code": -9,
+            "elapsed_seconds": 180.0034051090479,
+            "deadline_seconds": 180,
+            "deadline_scope": "Child process lifetime includes setup, connect, headers and complete stream; OS scheduling/kill overhead is separately included in elapsed_seconds.",
+            "automatic_retries": 0,
+            "worker_summary_missing": true
+          },
+          "output_limit_reached": false,
+          "output_limit_is_expected_engineering_ceiling": true,
+          "cleanup_status": "no_resident_models_observed",
+          "finished_at_utc": "2026-10-18T06:02:34.719765+00:00",
+          "script_wall_seconds": 180.25418036989868,
+          "deadline_scope": "180-second maximum applies to the supervised child lifetime; metadata checks and cleanup are outside that bound."
+        },
+        "invocation": {
+          "started_at_utc": "2026-10-18T05:59:34.472178+00:00",
+          "scope": "real_input_engineering_feasibility_only",
+          "model": "qwen3:1.7b",
+          "approved_manifest_digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+          "approved_engine": "0.35.1",
+          "origin": "http://127.0.0.1:11434",
+          "deadline_seconds": 180,
+          "file_hashes": {
+            "research/benchmark_sector_real_input.py": "2a64adcae546d74702c4b9ba5e60e2c81308389b5b6f2c7c663571bc5b0ac88e",
+            "research/benchmark_sector_latency.py": "4c6c751891964250b71b221073e3ce4e2407b8548ec62ccb9bf514945da7ae45",
+            "research/remote_sector_runtime.py": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5",
+            "research/run_sector_workflow.py": "5625450a4dcbe1aa717c9809bf4955c1ef6b10aab4f0c83ef05dc2eb2c123cfd",
+            "research/compact_sector_prompt.py": "6984ada966ad55c3089fc297ca6342fdb51685bebfe3107769086343bbe68c0d",
+            "market_file_sha256": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f",
+            "packet_file_sha256": "f5bbd9bf0ee8267a8718439064604dfc499428a2fc728c95f672bc4abc5595b9",
+            "selected_packet_value_sha256": "dd55b6d197d1732e3051d9361566c7db3a175a6a90e720c0053659c2f9124a46"
+          },
+          "projection_version": "sector_market_exact_duplicates_v1",
+          "request_options": {
+            "temperature": 0,
+            "num_ctx": 32768,
+            "num_predict": 32,
+            "num_thread": 2,
+            "num_batch": 512,
+            "repeat_penalty": 1.0,
+            "presence_penalty": 0.0,
+            "frequency_penalty": 0.0,
+            "seed": 3407
+          },
+          "only_compact_request_sent": true,
+          "planned_generation_attempts": 1,
+          "pilot_model_calls": 0,
+          "main_model_calls": 0,
+          "condition_basis": "Output cap32, context32768/65536, thread/batch settings, decoding overrides and timeout are engineering probe controls, not a claimed paper-condition replication.",
+          "interpretation_limits": "One first-stage request. No allocation/rating scoring, no full workflow verdict, no original-versus-compact latency comparison; OS file cache is not evicted."
+        },
+        "validation": {
+          "exact_original_field_value_roundtrip": true,
+          "input_mutation": false,
+          "system_unchanged": true,
+          "institution_document_unchanged": true,
+          "projection_version": "sector_market_exact_duplicates_v1",
+          "sizes": {
+            "original": {
+              "content_characters": 19872,
+              "content_utf8_bytes": 19872,
+              "messages_serialized_utf8_bytes": 20527,
+              "request_serialized_utf8_bytes": 20822,
+              "request_value_sha256": "7812455eed94b3516a9dd6287c2c497fb79cafb2b3f63f14aa07e04e62f63f82",
+              "conservative_screening_bound": 21035,
+              "screening_plus_output_allowance": 21067
+            },
+            "compact": {
+              "content_characters": 16114,
+              "content_utf8_bytes": 16114,
+              "messages_serialized_utf8_bytes": 16767,
+              "request_serialized_utf8_bytes": 17062,
+              "request_value_sha256": "38c46bc1e1d6e2d4b49f484b5ae99e86e90d4f889f7c26147fd8142b0ad27def",
+              "conservative_screening_bound": 17275,
+              "screening_plus_output_allowance": 17307
+            }
+          },
+          "interpretation": "Bytes and conservative screen are not actual tokenizer counts or speed predictions."
+        },
+        "model_observation": {
+          "version": {
+            "version": "0.35.1"
+          },
+          "selected_model": {
+            "name": "qwen3:1.7b",
+            "model": "qwen3:1.7b",
+            "modified_at": "2026-10-05T07:52:29.42936286Z",
+            "size": 1359293444,
+            "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "qwen3",
+              "families": [
+                "qwen3"
+              ],
+              "parameter_size": "2.0B",
+              "quantization_level": "Q4_K_M",
+              "context_length": 40960,
+              "embedding_length": 2048
+            },
+            "capabilities": [
+              "completion",
+              "tools",
+              "thinking"
+            ]
+          },
+          "show": {
+            "thinking": {
+              "values": [
+                false,
+                true
+              ],
+              "default": true
+            },
+            "license": "                                 Apache License\n                           Version 2.0, January 2004\n                        http://www.apache.org/licenses/\n\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n   1. Definitions.\n\n      \"License\" shall mean the terms and conditions for use, reproduction,\n      and distribution as defined by Sections 1 through 9 of this document.\n\n      \"Licensor\" shall mean the copyright owner or entity authorized by\n      the copyright owner that is granting the License.\n\n      \"Legal Entity\" shall mean the union of the acting entity and all\n      other entities that control, are controlled by, or are under common\n      control with that entity. For the purposes of this definition,\n      \"control\" means (i) the power, direct or indirect, to cause the\n      direction or management of such entity, whether by contract or\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n      outstanding shares, or (iii) beneficial ownership of such entity.\n\n      \"You\" (or \"Your\") shall mean an individual or Legal Entity\n      exercising permissions granted by this License.\n\n      \"Source\" form shall mean the preferred form for making modifications,\n      including but not limited to software source code, documentation\n      source, and configuration files.\n\n      \"Object\" form shall mean any form resulting from mechanical\n      transformation or translation of a Source form, including but\n      not limited to compiled object code, generated documentation,\n      and conversions to other media types.\n\n      \"Work\" shall mean the work of authorship, whether in Source or\n      Object form, made available under the License, as indicated by a\n      copyright notice that is included in or attached to the work\n      (an example is provided in the Appendix below).\n\n      \"Derivative Works\" shall mean any work, whether in Source or Object\n      form, that is based on (or derived from) the Work and for which the\n      editorial revisions, annotations, elaborations, or other modifications\n      represent, as a whole, an original work of authorship. For the purposes\n      of this License, Derivative Works shall not include works that remain\n      separable from, or merely link (or bind by name) to the interfaces of,\n      the Work and Derivative Works thereof.\n\n      \"Contribution\" shall mean any work of authorship, including\n      the original version of the Work and any modifications or additions\n      to that Work or Derivative Works thereof, that is intentionally\n      submitted to Licensor for inclusion in the Work by the copyright owner\n      or by an individual or Legal Entity authorized to submit on behalf of\n      the copyright owner. For the purposes of this definition, \"submitted\"\n      means any form of electronic, verbal, or written communication sent\n      to the Licensor or its representatives, including but not limited to\n      communication on electronic mailing lists, source code control systems,\n      and issue tracking systems that are managed by, or on behalf of, the\n      Licensor for the purpose of discussing and improving the Work, but\n      excluding communication that is conspicuously marked or otherwise\n      designated in writing by the copyright owner as \"Not a Contribution.\"\n\n      \"Contributor\" shall mean Licensor and any individual or Legal Entity\n      on behalf of whom a Contribution has been received by Licensor and\n      subsequently incorporated within the Work.\n\n   2. Grant of Copyright License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      copyright license to reproduce, prepare Derivative Works of,\n      publicly display, publicly perform, sublicense, and distribute the\n      Work and such Derivative Works in Source or Object form.\n\n   3. Grant of Patent License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      (except as stated in this section) patent license to make, have made,\n      use, offer to sell, sell, import, and otherwise transfer the Work,\n      where such license applies only to those patent claims licensable\n      by such Contributor that are necessarily infringed by their\n      Contribution(s) alone or by combination of their Contribution(s)\n      with the Work to which such Contribution(s) was submitted. If You\n      institute patent litigation against any entity (including a\n      cross-claim or counterclaim in a lawsuit) alleging that the Work\n      or a Contribution incorporated within the Work constitutes direct\n      or contributory patent infringement, then any patent licenses\n      granted to You under this License for that Work shall terminate\n      as of the date such litigation is filed.\n\n   4. Redistribution. You may reproduce and distribute copies of the\n      Work or Derivative Works thereof in any medium, with or without\n      modifications, and in Source or Object form, provided that You\n      meet the following conditions:\n\n      (a) You must give any other recipients of the Work or\n          Derivative Works a copy of this License; and\n\n      (b) You must cause any modified files to carry prominent notices\n          stating that You changed the files; and\n\n      (c) You must retain, in the Source form of any Derivative Works\n          that You distribute, all copyright, patent, trademark, and\n          attribution notices from the Source form of the Work,\n          excluding those notices that do not pertain to any part of\n          the Derivative Works; and\n\n      (d) If the Work includes a \"NOTICE\" text file as part of its\n          distribution, then any Derivative Works that You distribute must\n          include a readable copy of the attribution notices contained\n          within such NOTICE file, excluding those notices that do not\n          pertain to any part of the Derivative Works, in at least one\n          of the following places: within a NOTICE text file distributed\n          as part of the Derivative Works; within the Source form or\n          documentation, if provided along with the Derivative Works; or,\n          within a display generated by the Derivative Works, if and\n          wherever such third-party notices normally appear. The contents\n          of the NOTICE file are for informational purposes only and\n          do not modify the License. You may add Your own attribution\n          notices within Derivative Works that You distribute, alongside\n          or as an addendum to the NOTICE text from the Work, provided\n          that such additional attribution notices cannot be construed\n          as modifying the License.\n\n      You may add Your own copyright statement to Your modifications and\n      may provide additional or different license terms and conditions\n      for use, reproduction, or distribution of Your modifications, or\n      for any such Derivative Works as a whole, provided Your use,\n      reproduction, and distribution of the Work otherwise complies with\n      the conditions stated in this License.\n\n   5. Submission of Contributions. Unless You explicitly state otherwise,\n      any Contribution intentionally submitted for inclusion in the Work\n      by You to the Licensor shall be under the terms and conditions of\n      this License, without any additional terms or conditions.\n      Notwithstanding the above, nothing herein shall supersede or modify\n      the terms of any separate license agreement you may have executed\n      with Licensor regarding such Contributions.\n\n   6. Trademarks. This License does not grant permission to use the trade\n      names, trademarks, service marks, or product names of the Licensor,\n      except as required for reasonable and customary use in describing the\n      origin of the Work and reproducing the content of the NOTICE file.\n\n   7. Disclaimer of Warranty. Unless required by applicable law or\n      agreed to in writing, Licensor provides the Work (and each\n      Contributor provides its Contributions) on an \"AS IS\" BASIS,\n      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\n      implied, including, without limitation, any warranties or conditions\n      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\n      PARTICULAR PURPOSE. You are solely responsible for determining the\n      appropriateness of using or redistributing the Work and assume any\n      risks associated with Your exercise of permissions under this License.\n\n   8. Limitation of Liability. In no event and under no legal theory,\n      whether in tort (including negligence), contract, or otherwise,\n      unless required by applicable law (such as deliberate and grossly\n      negligent acts) or agreed to in writing, shall any Contributor be\n      liable to You for damages, including any direct, indirect, special,\n      incidental, or consequential damages of any character arising as a\n      result of this License or out of the use or inability to use the\n      Work (including but not limited to damages for loss of goodwill,\n      work stoppage, computer failure or malfunction, or any and all\n      other commercial damages or losses), even if such Contributor\n      has been advised of the possibility of such damages.\n\n   9. Accepting Warranty or Additional Liability. While redistributing\n      the Work or Derivative Works thereof, You may choose to offer,\n      and charge a fee for, acceptance of support, warranty, indemnity,\n      or other liability obligations and/or rights consistent with this\n      License. However, in accepting such obligations, You may act only\n      on Your own behalf and on Your sole responsibility, not on behalf\n      of any other Contributor, and only if You agree to indemnify,\n      defend, and hold each Contributor harmless for any liability\n      incurred by, or claims asserted against, such Contributor by reason\n      of your accepting any such warranty or additional liability.\n\n   END OF TERMS AND CONDITIONS\n\n   APPENDIX: How to apply the Apache License to your work.\n\n      To apply the Apache License to your work, attach the following\n      boilerplate notice, with the fields enclosed by brackets \"[]\"\n      replaced with your own identifying information. (Don't include\n      the brackets!)  The text should be enclosed in the appropriate\n      comment syntax for the file format. We also recommend that a\n      file or class name and description of purpose be included on the\n      same \"printed page\" as the copyright notice for easier\n      identification within third-party archives.\n   Copyright 2024 Alibaba Cloud\n   Licensed under the Apache License, Version 2.0 (the \"License\");\n   you may not use this file except in compliance with the License.\n   You may obtain a copy of the License at\n       http://www.apache.org/licenses/LICENSE-2.0\n   Unless required by applicable law or agreed to in writing, software\n   distributed under the License is distributed on an \"AS IS\" BASIS,\n   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n   See the License for the specific language governing permissions and\n   limitations under the License.",
+            "modelfile": "# Modelfile generated by \"ollama show\"\n# To build a new Modelfile based on this, replace FROM with:\n# FROM qwen3:1.7b\n\nFROM /usr/share/ollama/.ollama/models/blobs/sha256-3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6\nTEMPLATE \"\"\"\n{{- $lastUserIdx := -1 -}}\n{{- range $idx, $msg := .Messages -}}\n{{- if eq $msg.Role \"user\" }}{{ $lastUserIdx = $idx }}{{ end -}}\n{{- end }}\n{{- if or .System .Tools }}<|im_start|>system\n{{ if .System }}\n{{ .System }}\n{{- end }}\n{{- if .Tools }}\n\n# Tools\n\nYou may call one or more functions to assist with the user query.\n\nYou are provided with function signatures within <tools></tools> XML tags:\n<tools>\n{{- range .Tools }}\n{\"type\": \"function\", \"function\": {{ .Function }}}\n{{- end }}\n</tools>\n\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\n<tool_call>\n{\"name\": <function-name>, \"arguments\": <args-json-object>}\n</tool_call>\n{{- end -}}\n<|im_end|>\n{{ end }}\n{{- range $i, $_ := .Messages }}\n{{- $last := eq (len (slice $.Messages $i)) 1 -}}\n{{- if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}\n{{- if and $.IsThinkSet (eq $i $lastUserIdx) }}\n   {{- if $.Think -}}\n      {{- \" \"}}/think\n   {{- else -}}\n      {{- \" \"}}/no_think\n   {{- end -}}\n{{- end }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ if (and $.IsThinkSet (and .Thinking (or $last (gt $i $lastUserIdx)))) -}}\n<think>{{ .Thinking }}</think>\n{{ end -}}\n{{ if .Content }}{{ .Content }}\n{{- else if .ToolCalls }}<tool_call>\n{{ range .ToolCalls }}{\"name\": \"{{ .Function.Name }}\", \"arguments\": {{ .Function.Arguments }}}\n{{ end }}</tool_call>\n{{- end }}{{ if not $last }}<|im_end|>\n{{ end }}\n{{- else if eq .Role \"tool\" }}<|im_start|>user\n<tool_response>\n{{ .Content }}\n</tool_response><|im_end|>\n{{ end }}\n{{- if and (ne .Role \"assistant\") $last }}<|im_start|>assistant\n{{ if and $.IsThinkSet (not $.Think) -}}\n<think>\n\n</think>\n\n{{ end -}}\n{{ end }}\n{{- end }}\"\"\"\nPARAMETER stop <|im_start|>\nPARAMETER stop <|im_end|>\nPARAMETER temperature 0.6\nPARAMETER top_k 20\nPARAMETER top_p 0.95\nPARAMETER repeat_penalty 1\nLICENSE \"\"\"                                 Apache License\n                           Version 2.0, January 2004\n                        http://www.apache.org/licenses/\n\n   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION\n\n   1. Definitions.\n\n      \"License\" shall mean the terms and conditions for use, reproduction,\n      and distribution as defined by Sections 1 through 9 of this document.\n\n      \"Licensor\" shall mean the copyright owner or entity authorized by\n      the copyright owner that is granting the License.\n\n      \"Legal Entity\" shall mean the union of the acting entity and all\n      other entities that control, are controlled by, or are under common\n      control with that entity. For the purposes of this definition,\n      \"control\" means (i) the power, direct or indirect, to cause the\n      direction or management of such entity, whether by contract or\n      otherwise, or (ii) ownership of fifty percent (50%) or more of the\n      outstanding shares, or (iii) beneficial ownership of such entity.\n\n      \"You\" (or \"Your\") shall mean an individual or Legal Entity\n      exercising permissions granted by this License.\n\n      \"Source\" form shall mean the preferred form for making modifications,\n      including but not limited to software source code, documentation\n      source, and configuration files.\n\n      \"Object\" form shall mean any form resulting from mechanical\n      transformation or translation of a Source form, including but\n      not limited to compiled object code, generated documentation,\n      and conversions to other media types.\n\n      \"Work\" shall mean the work of authorship, whether in Source or\n      Object form, made available under the License, as indicated by a\n      copyright notice that is included in or attached to the work\n      (an example is provided in the Appendix below).\n\n      \"Derivative Works\" shall mean any work, whether in Source or Object\n      form, that is based on (or derived from) the Work and for which the\n      editorial revisions, annotations, elaborations, or other modifications\n      represent, as a whole, an original work of authorship. For the purposes\n      of this License, Derivative Works shall not include works that remain\n      separable from, or merely link (or bind by name) to the interfaces of,\n      the Work and Derivative Works thereof.\n\n      \"Contribution\" shall mean any work of authorship, including\n      the original version of the Work and any modifications or additions\n      to that Work or Derivative Works thereof, that is intentionally\n      submitted to Licensor for inclusion in the Work by the copyright owner\n      or by an individual or Legal Entity authorized to submit on behalf of\n      the copyright owner. For the purposes of this definition, \"submitted\"\n      means any form of electronic, verbal, or written communication sent\n      to the Licensor or its representatives, including but not limited to\n      communication on electronic mailing lists, source code control systems,\n      and issue tracking systems that are managed by, or on behalf of, the\n      Licensor for the purpose of discussing and improving the Work, but\n      excluding communication that is conspicuously marked or otherwise\n      designated in writing by the copyright owner as \"Not a Contribution.\"\n\n      \"Contributor\" shall mean Licensor and any individual or Legal Entity\n      on behalf of whom a Contribution has been received by Licensor and\n      subsequently incorporated within the Work.\n\n   2. Grant of Copyright License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      copyright license to reproduce, prepare Derivative Works of,\n      publicly display, publicly perform, sublicense, and distribute the\n      Work and such Derivative Works in Source or Object form.\n\n   3. Grant of Patent License. Subject to the terms and conditions of\n      this License, each Contributor hereby grants to You a perpetual,\n      worldwide, non-exclusive, no-charge, royalty-free, irrevocable\n      (except as stated in this section) patent license to make, have made,\n      use, offer to sell, sell, import, and otherwise transfer the Work,\n      where such license applies only to those patent claims licensable\n      by such Contributor that are necessarily infringed by their\n      Contribution(s) alone or by combination of their Contribution(s)\n      with the Work to which such Contribution(s) was submitted. If You\n      institute patent litigation against any entity (including a\n      cross-claim or counterclaim in a lawsuit) alleging that the Work\n      or a Contribution incorporated within the Work constitutes direct\n      or contributory patent infringement, then any patent licenses\n      granted to You under this License for that Work shall terminate\n      as of the date such litigation is filed.\n\n   4. Redistribution. You may reproduce and distribute copies of the\n      Work or Derivative Works thereof in any medium, with or without\n      modifications, and in Source or Object form, provided that You\n      meet the following conditions:\n\n      (a) You must give any other recipients of the Work or\n          Derivative Works a copy of this License; and\n\n      (b) You must cause any modified files to carry prominent notices\n          stating that You changed the files; and\n\n      (c) You must retain, in the Source form of any Derivative Works\n          that You distribute, all copyright, patent, trademark, and\n          attribution notices from the Source form of the Work,\n          excluding those notices that do not pertain to any part of\n          the Derivative Works; and\n\n      (d) If the Work includes a \"NOTICE\" text file as part of its\n          distribution, then any Derivative Works that You distribute must\n          include a readable copy of the attribution notices contained\n          within such NOTICE file, excluding those notices that do not\n          pertain to any part of the Derivative Works, in at least one\n          of the following places: within a NOTICE text file distributed\n          as part of the Derivative Works; within the Source form or\n          documentation, if provided along with the Derivative Works; or,\n          within a display generated by the Derivative Works, if and\n          wherever such third-party notices normally appear. The contents\n          of the NOTICE file are for informational purposes only and\n          do not modify the License. You may add Your own attribution\n          notices within Derivative Works that You distribute, alongside\n          or as an addendum to the NOTICE text from the Work, provided\n          that such additional attribution notices cannot be construed\n          as modifying the License.\n\n      You may add Your own copyright statement to Your modifications and\n      may provide additional or different license terms and conditions\n      for use, reproduction, or distribution of Your modifications, or\n      for any such Derivative Works as a whole, provided Your use,\n      reproduction, and distribution of the Work otherwise complies with\n      the conditions stated in this License.\n\n   5. Submission of Contributions. Unless You explicitly state otherwise,\n      any Contribution intentionally submitted for inclusion in the Work\n      by You to the Licensor shall be under the terms and conditions of\n      this License, without any additional terms or conditions.\n      Notwithstanding the above, nothing herein shall supersede or modify\n      the terms of any separate license agreement you may have executed\n      with Licensor regarding such Contributions.\n\n   6. Trademarks. This License does not grant permission to use the trade\n      names, trademarks, service marks, or product names of the Licensor,\n      except as required for reasonable and customary use in describing the\n      origin of the Work and reproducing the content of the NOTICE file.\n\n   7. Disclaimer of Warranty. Unless required by applicable law or\n      agreed to in writing, Licensor provides the Work (and each\n      Contributor provides its Contributions) on an \"AS IS\" BASIS,\n      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or\n      implied, including, without limitation, any warranties or conditions\n      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A\n      PARTICULAR PURPOSE. You are solely responsible for determining the\n      appropriateness of using or redistributing the Work and assume any\n      risks associated with Your exercise of permissions under this License.\n\n   8. Limitation of Liability. In no event and under no legal theory,\n      whether in tort (including negligence), contract, or otherwise,\n      unless required by applicable law (such as deliberate and grossly\n      negligent acts) or agreed to in writing, shall any Contributor be\n      liable to You for damages, including any direct, indirect, special,\n      incidental, or consequential damages of any character arising as a\n      result of this License or out of the use or inability to use the\n      Work (including but not limited to damages for loss of goodwill,\n      work stoppage, computer failure or malfunction, or any and all\n      other commercial damages or losses), even if such Contributor\n      has been advised of the possibility of such damages.\n\n   9. Accepting Warranty or Additional Liability. While redistributing\n      the Work or Derivative Works thereof, You may choose to offer,\n      and charge a fee for, acceptance of support, warranty, indemnity,\n      or other liability obligations and/or rights consistent with this\n      License. However, in accepting such obligations, You may act only\n      on Your own behalf and on Your sole responsibility, not on behalf\n      of any other Contributor, and only if You agree to indemnify,\n      defend, and hold each Contributor harmless for any liability\n      incurred by, or claims asserted against, such Contributor by reason\n      of your accepting any such warranty or additional liability.\n\n   END OF TERMS AND CONDITIONS\n\n   APPENDIX: How to apply the Apache License to your work.\n\n      To apply the Apache License to your work, attach the following\n      boilerplate notice, with the fields enclosed by brackets \"[]\"\n      replaced with your own identifying information. (Don't include\n      the brackets!)  The text should be enclosed in the appropriate\n      comment syntax for the file format. We also recommend that a\n      file or class name and description of purpose be included on the\n      same \"printed page\" as the copyright notice for easier\n      identification within third-party archives.\n   Copyright 2024 Alibaba Cloud\n   Licensed under the Apache License, Version 2.0 (the \"License\");\n   you may not use this file except in compliance with the License.\n   You may obtain a copy of the License at\n       http://www.apache.org/licenses/LICENSE-2.0\n   Unless required by applicable law or agreed to in writing, software\n   distributed under the License is distributed on an \"AS IS\" BASIS,\n   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n   See the License for the specific language governing permissions and\n   limitations under the License.\"\"\"\n",
+            "parameters": "stop                           \"<|im_start|>\"\nstop                           \"<|im_end|>\"\ntemperature                    0.6\ntop_k                          20\ntop_p                          0.95\nrepeat_penalty                 1",
+            "template": "\n{{- $lastUserIdx := -1 -}}\n{{- range $idx, $msg := .Messages -}}\n{{- if eq $msg.Role \"user\" }}{{ $lastUserIdx = $idx }}{{ end -}}\n{{- end }}\n{{- if or .System .Tools }}<|im_start|>system\n{{ if .System }}\n{{ .System }}\n{{- end }}\n{{- if .Tools }}\n\n# Tools\n\nYou may call one or more functions to assist with the user query.\n\nYou are provided with function signatures within <tools></tools> XML tags:\n<tools>\n{{- range .Tools }}\n{\"type\": \"function\", \"function\": {{ .Function }}}\n{{- end }}\n</tools>\n\nFor each function call, return a json object with function name and arguments within <tool_call></tool_call> XML tags:\n<tool_call>\n{\"name\": <function-name>, \"arguments\": <args-json-object>}\n</tool_call>\n{{- end -}}\n<|im_end|>\n{{ end }}\n{{- range $i, $_ := .Messages }}\n{{- $last := eq (len (slice $.Messages $i)) 1 -}}\n{{- if eq .Role \"user\" }}<|im_start|>user\n{{ .Content }}\n{{- if and $.IsThinkSet (eq $i $lastUserIdx) }}\n   {{- if $.Think -}}\n      {{- \" \"}}/think\n   {{- else -}}\n      {{- \" \"}}/no_think\n   {{- end -}}\n{{- end }}<|im_end|>\n{{ else if eq .Role \"assistant\" }}<|im_start|>assistant\n{{ if (and $.IsThinkSet (and .Thinking (or $last (gt $i $lastUserIdx)))) -}}\n<think>{{ .Thinking }}</think>\n{{ end -}}\n{{ if .Content }}{{ .Content }}\n{{- else if .ToolCalls }}<tool_call>\n{{ range .ToolCalls }}{\"name\": \"{{ .Function.Name }}\", \"arguments\": {{ .Function.Arguments }}}\n{{ end }}</tool_call>\n{{- end }}{{ if not $last }}<|im_end|>\n{{ end }}\n{{- else if eq .Role \"tool\" }}<|im_start|>user\n<tool_response>\n{{ .Content }}\n</tool_response><|im_end|>\n{{ end }}\n{{- if and (ne .Role \"assistant\") $last }}<|im_start|>assistant\n{{ if and $.IsThinkSet (not $.Think) -}}\n<think>\n\n</think>\n\n{{ end -}}\n{{ end }}\n{{- end }}",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "qwen3",
+              "families": [
+                "qwen3"
+              ],
+              "parameter_size": "2.0B",
+              "quantization_level": "Q4_K_M"
+            },
+            "model_info": {
+              "general.architecture": "qwen3",
+              "general.basename": "Qwen3",
+              "general.file_type": 15,
+              "general.parameter_count": 2031739904,
+              "general.quantization_version": 2,
+              "general.size_label": "1.7B",
+              "general.type": "model",
+              "qwen3.attention.head_count": 16,
+              "qwen3.attention.head_count_kv": 8,
+              "qwen3.attention.key_length": 128,
+              "qwen3.attention.layer_norm_rms_epsilon": 1e-06,
+              "qwen3.attention.value_length": 128,
+              "qwen3.block_count": 28,
+              "qwen3.context_length": 40960,
+              "qwen3.embedding_length": 2048,
+              "qwen3.feed_forward_length": 6144,
+              "qwen3.rope.freq_base": 1000000,
+              "tokenizer.ggml.add_bos_token": false,
+              "tokenizer.ggml.bos_token_id": 151643,
+              "tokenizer.ggml.eos_token_id": 151645,
+              "tokenizer.ggml.merges": [],
+              "tokenizer.ggml.model": "gpt2",
+              "tokenizer.ggml.padding_token_id": 151643,
+              "tokenizer.ggml.pre": "qwen2",
+              "tokenizer.ggml.token_type": [],
+              "tokenizer.ggml.tokens": []
+            },
+            "capabilities": [
+              "completion",
+              "tools",
+              "thinking"
+            ],
+            "modified_at": "2026-10-05T07:52:29.42936286Z"
+          },
+          "template_sha256": "ae370d884f108d16e7cc8fd5259ebc5773a0afa6e078b11f4ed7e39a27e0dfc4"
+        },
+        "cleanup": {
+          "status": "no_resident_models_observed",
+          "unload": {
+            "status": "ok",
+            "value": {
+              "model": "qwen3:1.7b",
+              "created_at": "2026-10-18T06:02:34.718856125Z",
+              "response": "",
+              "done": true,
+              "done_reason": "unload"
+            }
+          },
+          "ps": [
+            {
+              "status": "ok",
+              "value": {
+                "models": []
+              }
+            }
+          ]
+        },
+        "calls": [
+          {
+            "folder": "http_0001_latency_probe",
+            "kind": "latency_probe",
+            "status": "in_progress_or_incomplete_artifacts",
+            "completed_response_observed": false,
+            "request_path": "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/http_0001_latency_probe/request.json",
+            "response_path": null,
+            "result_path": null,
+            "started_at_utc": null,
+            "done_reason": null,
+            "raw_stream_bytes": 0,
+            "first_content_observed": null,
+            "request_content_utf8_bytes": 16114,
+            "request_settings": {
+              "temperature": 0,
+              "num_ctx": 32768,
+              "num_predict": 32,
+              "num_thread": 2,
+              "num_batch": 512,
+              "repeat_penalty": 1.0,
+              "presence_penalty": 0.0,
+              "frequency_penalty": 0.0,
+              "seed": 3407,
+              "model": "qwen3:1.7b",
+              "think": false,
+              "format": "json",
+              "keep_alive": 0
+            },
+            "nonempty_thinking_observed": null,
+            "metrics": {
+              "prompt_eval_tokens_per_second": null,
+              "eval_tokens_per_second": null
+            },
+            "error_type": null,
+            "error": null
+          }
+        ],
+        "worker_summary": null,
+        "supervisor_result": {
+          "supervisor_status": "hard_deadline",
+          "worker_exit_code": -9,
+          "elapsed_seconds": 180.0034051090479,
+          "deadline_seconds": 180,
+          "deadline_scope": "Child process lifetime includes setup, connect, headers and complete stream; OS scheduling/kill overhead is separately included in elapsed_seconds.",
+          "automatic_retries": 0,
+          "worker_summary_missing": true
+        },
+        "request_settings": {
+          "temperature": 0,
+          "num_ctx": 32768,
+          "num_predict": 32,
+          "num_thread": 2,
+          "num_batch": 512,
+          "repeat_penalty": 1.0,
+          "presence_penalty": 0.0,
+          "frequency_penalty": 0.0,
+          "seed": 3407,
+          "model": "qwen3:1.7b",
+          "think": false,
+          "format": "json",
+          "keep_alive": 0
+        },
+        "settings_source": "saved_http_request",
+        "resources": {
+          "monitor_path": "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/monitor.jsonl",
+          "sample_count": 90,
+          "proc_memory_total_bytes": null,
+          "proc_swap_total_bytes": null,
+          "proc_available_sampled_min_bytes": 7353555968,
+          "runtime_rss_sum_sampled_max_bytes": 5272690688,
+          "cgroup_memory_current_sampled_max_bytes": 9518526464,
+          "cgroup_memory_peak_before_bytes": null,
+          "cgroup_memory_peak_after_bytes": null,
+          "cgroup_limits_before": {
+            "memory.max": null,
+            "memory.swap.max": null
+          },
+          "cgroup_memory_events_before": null,
+          "cgroup_memory_events_after": null,
+          "proc_swap_used_before_bytes": null,
+          "proc_swap_used_after_bytes": null,
+          "proc_swap_used_sampled_max_bytes": 183377920,
+          "proc_committed_as_sampled_max_bytes": 20921552896,
+          "proc_commit_limit_before_bytes": null,
+          "observed_process_names": [
+            "ollama",
+            "llama-server"
+          ],
+          "resident_sample_count": 87,
+          "resident_context_tokens": [
+            32768
+          ],
+          "resident_size_bytes": [
+            5200119069
+          ],
+          "resident_vram_bytes": [
+            0
+          ],
+          "scope": "Sampled container-visible /proc, visible cgroup and named runtime process RSS; not an isolated physical host measurement.",
+          "limitations": [
+            "RSS may double-count shared pages; cgroup includes cache and unrelated activity; do not add them.",
+            "memory.peak is an unreset cumulative high-water mark, not the maximum of interval samples.",
+            "Visible cgroup max does not establish effective ancestor/LXC limits; /proc may be virtualized.",
+            "Swap usage does not attribute paging or its speed effect to the model.",
+            "VRAM zero is a residency observation, not an inventory of physical server GPUs.",
+            "Allocated context does not prove that long inputs/history were preserved without truncation."
+          ]
+        },
+        "interpretation_limits": "Only the compact version was sent. Exact-value round-trip is not equal-model-behavior evidence; no original/compact latency ratio, four-stage feasibility, financial quality or speed-resolution claim."
+      }
+    ],
+    "independent_machine_reviews": [
+      {
+        "path": "research/remote_sector_latency_audit_20261018.json",
+        "status": "pass_with_stated_limits",
+        "scope": "Saved engineering latency artifacts only. No research evaluation or new model calls.",
+        "check_count": 27,
+        "reported_pass_count": 27,
+        "summary_sha256_matches": [
+          "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/summary.json"
+        ],
+        "human_semantic_review": false
+      },
+      {
+        "path": "research/remote_realinput_independent_review_20261018.json",
+        "status": "pass_with_runtime_feasibility_not_established",
+        "scope": null,
+        "check_count": 19,
+        "reported_pass_count": 19,
+        "summary_sha256_matches": [
+          "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/summary.json"
+        ],
+        "human_semantic_review": false
+      }
+    ],
+    "hardware": {
+      "status": "available",
+      "path": "data/remote_sector_20261018/latency_hardware.json",
+      "raw_record": {
+        "observed_at_utc": "2026-10-18T05:48:30.403595+00:00",
+        "cpu_instruction_flags": {
+          "avx": false,
+          "avx2": false,
+          "avx512f": false,
+          "sse4_1": true,
+          "sse4_2": true,
+          "fma": false
+        },
+        "visible_cgroup": {
+          "cpu.max": "max 100000\n",
+          "cpuset.cpus.effective": "0-3\n",
+          "cpu.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=47567657\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=34765592\n",
+          "memory.pressure": "some avg10=0.00 avg60=0.00 avg300=0.00 total=1205089\nfull avg10=0.00 avg60=0.00 avg300=0.00 total=1162442\n"
+        },
+        "scope": "container-visible CPU/cgroup only; ancestor quotas and host contention not independently isolated"
+      },
+      "reported_cpu_features": {
+        "avx": false,
+        "avx2": false,
+        "sse4_1": true,
+        "sse4_2": true,
+        "fma": false
+      },
+      "scope": "Features exposed to the remote environment, not an independent physical-host inventory."
+    },
+    "included_in_research_pilot_or_main_counts": false,
+    "research_runtime_automatically_changed": false,
+    "latency_problem_resolved": null,
+    "research_suitability_established": false
+  },
+  "inventory": {
+    "directory": "data/remote_sector_20261018/data/sector_runtime/inventory_v43",
+    "directory_available": true,
+    "status": "completed",
+    "summary_path": "data/remote_sector_20261018/data/sector_runtime/inventory_v43/summary.json",
+    "invocation": {
+      "command": "inventory",
+      "base_url": "http://127.0.0.1:11434",
+      "model": "qwen3.5:4b-q4_K_M",
+      "expected_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "expected_engine": "0.35.1",
+      "timeout_seconds": 1800,
+      "monitor_interval_seconds": 2,
+      "monitor_basis": "Engineering diagnostic interval",
+      "started_at_utc": "2026-10-18T05:20:54.204388+00:00",
+      "call_count_scope": "Attempted HTTP generation requests; requests failing before a response do not prove model execution.",
+      "main_automatic_execution": false
+    },
+    "reported_summary": {
+      "command": "inventory",
+      "status": "completed",
+      "output": "/root/libera_20261018/data/sector_runtime/inventory_v43",
+      "main_model_calls": 0,
+      "metadata_pinned": true,
+      "diagnostic_calls": 0,
+      "pilot_model_calls": 0,
+      "finished_at_utc": "2026-10-18T05:20:54.366278+00:00",
+      "script_wall_seconds": 0.16191529110074043,
+      "calls": []
+    },
+    "inventory_before": {
+      "observed_at_utc": "2026-10-18T05:20:54.206723+00:00",
+      "platform": "Linux",
+      "machine": "x86_64",
+      "cpu": {
+        "vendor_id": "GenuineIntel",
+        "model name": "Intel(R) Pentium(R) Gold G6405 CPU @ 4.10GHz"
+      },
+      "os_cpu_count": 4,
+      "memory": {
+        "observed_at_utc": "2026-10-18T05:20:54.206951+00:00",
+        "source": "linux_proc_and_cgroup",
+        "processes": [
+          {
+            "pid": 2704,
+            "name": "ollama",
+            "VmSize_bytes": 2987687936,
+            "VmHWM_bytes": 42016768,
+            "VmRSS_bytes": 39268352,
+            "RssAnon_bytes": 14188544,
+            "RssFile_bytes": 25079808,
+            "RssShmem_bytes": 0
+          }
+        ],
+        "proc_meminfo": {
+          "MemTotal_bytes": 12884901888,
+          "MemFree_bytes": 6029594624,
+          "MemAvailable_bytes": 12554468352,
+          "Buffers_bytes": 0,
+          "Cached_bytes": 6134775808,
+          "SwapTotal_bytes": 8589930496,
+          "SwapFree_bytes": 8572841984,
+          "CommitLimit_bytes": 16861331456,
+          "Committed_AS_bytes": 15366955008
+        },
+        "cgroup": {
+          "memory.current": 6855307264,
+          "memory.peak": 7395799040,
+          "memory.max": "max",
+          "memory.swap.current": 17088512,
+          "memory.swap.max": "max",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+        },
+        "rss_sum_bytes": 39268352,
+        "interpretation": "RSS can double-count shared pages; cgroup includes cache and other processes; no GPU-memory inference from RSS."
+      },
+      "filesystem_bytes": {
+        "total": 151996149760,
+        "used": 12334628864,
+        "free": 133288329216
+      },
+      "filesystem_scope": "Container-visible filesystem only; shared host thin-pool free space must be checked separately.",
+      "ollama_version": {
+        "status": "ok",
+        "value": {
+          "version": "0.35.1"
+        }
+      },
+      "ollama_tags": {
+        "status": "ok",
+        "value": {
+          "models": [
+            {
+              "name": "qwen3.5:4b-q4_K_M",
+              "model": "qwen3.5:4b-q4_K_M",
+              "modified_at": "2026-10-18T05:16:54.789617077Z",
+              "size": 3324173934,
+              "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+              "details": {
+                "parent_model": "model.gguf",
+                "format": "gguf",
+                "family": "qwen35",
+                "families": [
+                  "qwen35"
+                ],
+                "parameter_size": "4.2B",
+                "quantization_level": "Q4_K_M",
+                "context_length": 262144,
+                "embedding_length": 2560
+              },
+              "capabilities": [
+                "completion",
+                "vision",
+                "tools",
+                "thinking"
+              ]
+            },
+            {
+              "name": "qwen3:1.7b",
+              "model": "qwen3:1.7b",
+              "modified_at": "2026-10-05T07:52:29.42936286Z",
+              "size": 1359293444,
+              "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+              "details": {
+                "parent_model": "",
+                "format": "gguf",
+                "family": "qwen3",
+                "families": [
+                  "qwen3"
+                ],
+                "parameter_size": "2.0B",
+                "quantization_level": "Q4_K_M",
+                "context_length": 40960,
+                "embedding_length": 2048
+              },
+              "capabilities": [
+                "completion",
+                "tools",
+                "thinking"
+              ]
+            }
+          ]
+        }
+      },
+      "ollama_residency": {
+        "status": "ok",
+        "value": {
+          "models": []
+        }
+      }
+    },
+    "inventory_after": {
+      "observed_at_utc": "2026-10-18T05:20:54.361653+00:00",
+      "platform": "Linux",
+      "machine": "x86_64",
+      "cpu": {
+        "vendor_id": "GenuineIntel",
+        "model name": "Intel(R) Pentium(R) Gold G6405 CPU @ 4.10GHz"
+      },
+      "os_cpu_count": 4,
+      "memory": {
+        "observed_at_utc": "2026-10-18T05:20:54.361798+00:00",
+        "source": "linux_proc_and_cgroup",
+        "processes": [
+          {
+            "pid": 2704,
+            "name": "ollama",
+            "VmSize_bytes": 2987884544,
+            "VmHWM_bytes": 42016768,
+            "VmRSS_bytes": 41197568,
+            "RssAnon_bytes": 16117760,
+            "RssFile_bytes": 25079808,
+            "RssShmem_bytes": 0
+          }
+        ],
+        "proc_meminfo": {
+          "MemTotal_bytes": 12884901888,
+          "MemFree_bytes": 6024904704,
+          "MemAvailable_bytes": 12550069248,
+          "Buffers_bytes": 0,
+          "Cached_bytes": 6134988800,
+          "SwapTotal_bytes": 8589930496,
+          "SwapFree_bytes": 8572841984,
+          "CommitLimit_bytes": 16861331456,
+          "Committed_AS_bytes": 15378223104
+        },
+        "cgroup": {
+          "memory.current": 6860255232,
+          "memory.peak": 7395799040,
+          "memory.max": "max",
+          "memory.swap.current": 17088512,
+          "memory.swap.max": "max",
+          "memory.events": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0"
+        },
+        "rss_sum_bytes": 41197568,
+        "interpretation": "RSS can double-count shared pages; cgroup includes cache and other processes; no GPU-memory inference from RSS."
+      },
+      "filesystem_bytes": {
+        "total": 151996149760,
+        "used": 12334735360,
+        "free": 133288222720
+      },
+      "filesystem_scope": "Container-visible filesystem only; shared host thin-pool free space must be checked separately.",
+      "ollama_version": {
+        "status": "ok",
+        "value": {
+          "version": "0.35.1"
+        }
+      },
+      "ollama_tags": {
+        "status": "ok",
+        "value": {
+          "models": [
+            {
+              "name": "qwen3.5:4b-q4_K_M",
+              "model": "qwen3.5:4b-q4_K_M",
+              "modified_at": "2026-10-18T05:16:54.789617077Z",
+              "size": 3324173934,
+              "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+              "details": {
+                "parent_model": "model.gguf",
+                "format": "gguf",
+                "family": "qwen35",
+                "families": [
+                  "qwen35"
+                ],
+                "parameter_size": "4.2B",
+                "quantization_level": "Q4_K_M",
+                "context_length": 262144,
+                "embedding_length": 2560
+              },
+              "capabilities": [
+                "completion",
+                "vision",
+                "tools",
+                "thinking"
+              ]
+            },
+            {
+              "name": "qwen3:1.7b",
+              "model": "qwen3:1.7b",
+              "modified_at": "2026-10-05T07:52:29.42936286Z",
+              "size": 1359293444,
+              "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+              "details": {
+                "parent_model": "",
+                "format": "gguf",
+                "family": "qwen3",
+                "families": [
+                  "qwen3"
+                ],
+                "parameter_size": "2.0B",
+                "quantization_level": "Q4_K_M",
+                "context_length": 40960,
+                "embedding_length": 2048
+              },
+              "capabilities": [
+                "completion",
+                "tools",
+                "thinking"
+              ]
+            }
+          ]
+        }
+      },
+      "ollama_residency": {
+        "status": "ok",
+        "value": {
+          "models": []
+        }
+      }
+    },
+    "calls": [],
+    "observed_http_calls": 0,
+    "observed_completed_http_responses": 0,
+    "resources": {
+      "monitor_path": "data/remote_sector_20261018/data/sector_runtime/inventory_v43/monitor.jsonl",
+      "sample_count": 1,
+      "proc_memory_total_bytes": 12884901888,
+      "proc_swap_total_bytes": 8589930496,
+      "proc_available_sampled_min_bytes": 12550401024,
+      "runtime_rss_sum_sampled_max_bytes": 40947712,
+      "cgroup_memory_current_sampled_max_bytes": 6859526144,
+      "cgroup_memory_peak_before_bytes": 7395799040,
+      "cgroup_memory_peak_after_bytes": 7395799040,
+      "cgroup_limits_before": {
+        "memory.max": "max",
+        "memory.swap.max": "max"
+      },
+      "cgroup_memory_events_before": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+      "cgroup_memory_events_after": "low 0\nhigh 0\nmax 0\noom 0\noom_kill 0\noom_group_kill 0",
+      "proc_swap_used_before_bytes": 17088512,
+      "proc_swap_used_after_bytes": 17088512,
+      "proc_swap_used_sampled_max_bytes": 17088512,
+      "proc_committed_as_sampled_max_bytes": 15378239488,
+      "proc_commit_limit_before_bytes": 16861331456,
+      "observed_process_names": [
+        "ollama"
+      ],
+      "resident_sample_count": 0,
+      "resident_context_tokens": [],
+      "resident_size_bytes": [],
+      "resident_vram_bytes": [],
+      "scope": "Sampled container-visible /proc, visible cgroup and named runtime process RSS; not an isolated physical host measurement.",
+      "limitations": [
+        "RSS may double-count shared pages; cgroup includes cache and unrelated activity; do not add them.",
+        "memory.peak is an unreset cumulative high-water mark, not the maximum of interval samples.",
+        "Visible cgroup max does not establish effective ancestor/LXC limits; /proc may be virtualized.",
+        "Swap usage does not attribute paging or its speed effect to the model.",
+        "VRAM zero is a residency observation, not an inventory of physical server GPUs.",
+        "Allocated context does not prove that long inputs/history were preserved without truncation."
+      ]
+    }
+  },
+  "metadata_pin_consistent": true,
+  "approved_runtime_match": true,
+  "approved_runtime_reference": {
+    "model": "qwen3.5:4b-q4_K_M",
+    "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+    "engine_version": "0.35.1",
+    "quantization": "Q4_K_M",
+    "basis": "The explicitly selected v4.3 runtime constants; not a new model recommendation."
+  },
+  "notes": [
+    "예비·기술 진단의 결과이며 학술제 본실험 결과가 아니다.",
+    "FinVector는 thinking 비활성화·JSON·greedy의 선례다. 양자화·엔진·상속 기본값이 달라 전체 재현을 주장하지 않는다.",
+    "8192 출력 상한은 PortBench의 값을 다른 모델·과제로 옮긴 적용이며 65536 문맥은 구현 후보다.",
+    "실행 중 설정을 바꾸지 않고, 평가 기준 보완은 예비 단계에서만 한 뒤 본과제 전에 동결한다.",
+    "별도 합성 속도 진단 관측: 4b_threads2: 감시 프로세스 제한시간 종료, 감시 120.003초, HTTP 미확인초, 첫 내용 미확인초, 수신 0 bytes; 4b_threads4: 감시 프로세스 제한시간 종료, 감시 120.002초, HTTP 미확인초, 첫 내용 미확인초, 수신 0 bytes; 1p7b_threads2: 완료 기록, 감시 61.176초, HTTP 61.083초, 첫 내용 59.669초, 수신 977 bytes. 설정별 한 번의 공학 점검이며 예비·본과제 완료 수에 합산하지 않는다. 제한시간 종료는 완료시간이 아니며 모델·문맥·벌점 등 구성 차이로 일반적인 성능 배율을 계산하지 않는다.",
+    "실제 문서 첫 단계의 별도 기술 점검(qwen3:1.7b): 감시 프로세스 제한시간 종료, 감시 180.003초, 수신 0 bytes. 압축 입력만 보낸 32-token 상한의 단일 요청이며 원형 대비 속도 개선이나 네 단계 적합성을 입증하지 않는다. 현재 속도 문제의 해결과 작은 모델의 연구 과제 충족은 확인되지 않았다."
+  ],
+  "sources": {
+    "finvector": "https://arxiv.org/pdf/2610.08882",
+    "portbench": "https://arxiv.org/html/2605.27887v6#S3.SS1",
+    "finvector_public_minimal_example": "https://github.com/alinakhay/FinVector-Market-4B/blob/main/examples/inference_mlx.py",
+    "mlx_lm_0313_generate": "https://github.com/ml-explore/mlx-lm/blob/v0.31.3/mlx_lm/generate.py"
+  },
+  "source_files": [
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/inventory_v43/summary.json",
+      "exists": true,
+      "sha256": "52879c0085ad24d3fb30053d684d629422c0abfc3566bcff6d431bca2535a755",
+      "bytes": 346
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/inventory_v43/invocation.json",
+      "exists": true,
+      "sha256": "bdd5c7cfc2d23511534c6f89e0c2facac85ba5b03fcbe2f743d267e7e6076096",
+      "bytes": 554
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/inventory_v43/inventory_before.json",
+      "exists": true,
+      "sha256": "5ccf9a05e5468744a7f672b35e348b72031e32f720e916ea21059d785ef162e9",
+      "bytes": 3432
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/inventory_v43/inventory_after.json",
+      "exists": true,
+      "sha256": "59bbab6cfcc27cbacc1ccc9319a0393317e88813b689cec7e222748c223d3153",
+      "bytes": 3432
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/inventory_v43/monitor.jsonl",
+      "exists": true,
+      "sha256": "53477bc87b1570917d96fd1824345461593a3f9009a3432e224b0143d2c676ef",
+      "bytes": 1078
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/summary.json",
+      "exists": true,
+      "sha256": "bfe7dbdbf0d0a63b58b3edd16eda58987f51be8013c62bae1ccfb1b4ff710553",
+      "bytes": 1702
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/invocation.json",
+      "exists": true,
+      "sha256": "1bfc6ea28e8f138bdd2b2751dbd053ab7b5629d9d566d5d4ea6d3e358eb7ee80",
+      "bytes": 553
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/inventory_before.json",
+      "exists": true,
+      "sha256": "91a0ea20a98ab337148a81b1fb22e7eb2989df0db082679f49b3aae3c007accd",
+      "bytes": 3432
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/inventory_after.json",
+      "exists": true,
+      "sha256": "650670eb4400df1383aeb85bfa934fca9172fdd58f299de969999c5d5de0579c",
+      "bytes": 3434
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/request.json",
+      "exists": true,
+      "sha256": "9561da2cf2e899c590e7238c920c41f84d0618adada1389d932de4d788cd2ccb",
+      "bytes": 414
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/response.json",
+      "exists": true,
+      "sha256": "9395fe71fdd1053ae96843c8ca0dcf845ef28d79d5b22e7921ac8c7300386fdf",
+      "bytes": 417
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/result.json",
+      "exists": true,
+      "sha256": "81a78083fde1f15c5a460e3f4a913620bec6a76064a3328466d16d54d28de81d",
+      "bytes": 911
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/raw_stream.bin",
+      "exists": true,
+      "sha256": "2458156c4fb30e60a6d7b727ca76a7bff86601c9f10f0f63e2de331e86ea7dcf",
+      "bytes": 1018
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/events.jsonl",
+      "exists": true,
+      "sha256": "a2a62d278c27f521a3d074ed67663342f808e53b0db39dcca9240aec768189f9",
+      "bytes": 1393
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/http_0001_diagnose/assembled_text.json",
+      "exists": true,
+      "sha256": "c96c7f9101164683623c5ef075283b339c5bdd800b28755d9a6c12abd6e0abc8",
+      "bytes": 74
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/monitor.jsonl",
+      "exists": true,
+      "sha256": "093842e0a25b0c79363e600196b95060a774d03758d7bc59b7278fa7969215d4",
+      "bytes": 14990
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/summary.json",
+      "exists": true,
+      "sha256": "3f116e14ef25527cc97693aaa092a58c55b955d266387395a6301811761124de",
+      "bytes": 2186
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/invocation.json",
+      "exists": true,
+      "sha256": "1ae2ebfa4bc1c84a56b18f9b735bf7988314b701d28ad89bbbbf154623620eb5",
+      "bytes": 550
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/inventory_before.json",
+      "exists": true,
+      "sha256": "8bfb19013de45d48039bc1ec8a154bbc73a9b3dfe9f159c8ca2865d60de81bf8",
+      "bytes": 3434
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/inventory_after.json",
+      "exists": true,
+      "sha256": "191cc95a6d2be4f9a769946507a9428d04ea9a0eb1968450e270ca333ef4e099",
+      "bytes": 3434
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/request.json",
+      "exists": true,
+      "sha256": "a319949a482f872d3f1dc781064de907248330cb4b9ce15ad41fcfe8590368ff",
+      "bytes": 20887
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/response.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/result.json",
+      "exists": true,
+      "sha256": "a5b5d53403e8376a1593b966e9ae322b82cfb9b95f4b75056d8d0c593640d088",
+      "bytes": 705
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/raw_stream.bin",
+      "exists": true,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/events.jsonl",
+      "exists": true,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/assembled_text.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/monitor.jsonl",
+      "exists": true,
+      "sha256": "a2835b41eceea8ca186a1d6ed52396b4cd3fa2303aa918cd06e8df5fd8e96f73",
+      "bytes": 1268254
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/summary.json",
+      "exists": true,
+      "sha256": "221100419a9b7d6582dc0891c6661eb732e820b9843b562aec13744de8b8a6c7",
+      "bytes": 1167
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/planned_cases.json",
+      "exists": true,
+      "sha256": "4587f3543bbc9b5b295f0b830553e02aba3087c26cb1954d38c8d411e6824203",
+      "bytes": 511
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/stage1_request.json",
+      "exists": true,
+      "sha256": "fefbe28d6837019e00094e30bbf60c082a073a72a052e0eece342e325e86eb6c",
+      "bytes": 20558
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/stage1_response.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/stage1_record.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/stage2_request.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/stage2_response.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/stage2_record.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/stage3_request.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/stage3_response.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/stage3_record.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/stage4_request.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/stage4_response.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/stage4_record.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/final.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1/failure.json",
+      "exists": true,
+      "sha256": "cb7cec7cba0143d394ba203497d711e087ba23ced70942a8b36244b60caf3dba",
+      "bytes": 203
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R1_coordinator_failure.json",
+      "exists": true,
+      "sha256": "444ebc037dfeb7040dbe327491e2b9a5cd1cad5ae2ddc5b84a76165a041ef1d8",
+      "bytes": 207
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R4/stage1_request.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R4/stage1_response.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R4/stage1_record.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R4/stage2_request.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R4/stage2_response.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R4/stage2_record.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R4/stage3_request.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R4/stage3_response.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R4/stage3_record.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R4/stage4_request.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R4/stage4_response.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R4/stage4_record.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R4/final.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R4/failure.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/fidelity_q2_2026__R4_coordinator_failure.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R1/stage1_request.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R1/stage1_response.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R1/stage1_record.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R1/stage2_request.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R1/stage2_response.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R1/stage2_record.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R1/stage3_request.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R1/stage3_response.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R1/stage3_record.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R1/stage4_request.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R1/stage4_response.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R1/stage4_record.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R1/final.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R1/failure.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R1_coordinator_failure.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R4/stage1_request.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R4/stage1_response.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R4/stage1_record.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R4/stage2_request.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R4/stage2_response.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R4/stage2_record.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R4/stage3_request.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R4/stage3_response.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R4/stage3_record.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R4/stage4_request.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R4/stage4_response.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R4/stage4_record.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R4/final.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R4/failure.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/ubs_june_2026__R4_coordinator_failure.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/offline_scores.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/dependencies.json",
+      "exists": true,
+      "sha256": "deef3244febb9a202b835c05abf94000044b4b183884244afcb16f2486300670",
+      "bytes": 144
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/pilot/input_hashes.json",
+      "exists": true,
+      "sha256": "6a7479b348753e360abf5ca9b9329435236d8bd6296e2a7c8dcfe7b7ca00be99",
+      "bytes": 444
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/pilot_v43/CANCEL",
+      "exists": true,
+      "sha256": "824584764ee2dacd67a0a1d3e6772b8c9f91bf822be9d61a2df16d62fb80f0b6",
+      "bytes": 189
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/summary.json",
+      "exists": true,
+      "sha256": "2e684f396f6ab6c4e4d63472f319e3728f1e6fe5f5eaebe9d4bdbe8f915af64a",
+      "bytes": 2474
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/invocation.json",
+      "exists": true,
+      "sha256": "c83a8c04283dc5d7759e3a75557eee27f1e2139640a32b9b17458dcbaf7e3e93",
+      "bytes": 1528
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/worker_spec.json",
+      "exists": true,
+      "sha256": "0d44ad176215dc7f39a886248f6f5ad0110bd130487fbb8aaf1b3bece223eca0",
+      "bytes": 1657
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/model_observation.json",
+      "exists": true,
+      "sha256": "d3fa9555fb73fb28924f9fcfdeb972a645796c95c035f44e4b71029190d7600b",
+      "bytes": 29305
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/worker_summary.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/supervisor_result.json",
+      "exists": true,
+      "sha256": "c20eb3a6c7b691e9f4377e982756314d898a60abf1915442725ffc687d3bf803",
+      "bytes": 370
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/http_0001_latency_probe/request.json",
+      "exists": true,
+      "sha256": "20213e202d73203ba143f3ea714f57f04f82dac7b0212ec93e2f91343a558c79",
+      "bytes": 1640
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/http_0001_latency_probe/response.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/http_0001_latency_probe/result.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/http_0001_latency_probe/raw_stream.bin",
+      "exists": true,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/http_0001_latency_probe/events.jsonl",
+      "exists": true,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/http_0001_latency_probe/assembled_text.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads2/monitor.jsonl",
+      "exists": true,
+      "sha256": "840ae5cd64d0bdfe61d9fdeba1b212c6b5a28fafeecdeae6c21777191725a020",
+      "bytes": 98437
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads4/worker_spec.json",
+      "exists": true,
+      "sha256": "88a21b70135e21b97ebf74346bafc7e5686fb83836498e4d044eb59c98199a09",
+      "bytes": 1657
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads4/model_observation.json",
+      "exists": true,
+      "sha256": "d3fa9555fb73fb28924f9fcfdeb972a645796c95c035f44e4b71029190d7600b",
+      "bytes": 29305
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads4/worker_summary.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads4/supervisor_result.json",
+      "exists": true,
+      "sha256": "9210bdc2ba2d4f689a8aaf435e155a8d9cff490477a848b610fc3e3e3beb3b5b",
+      "bytes": 370
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads4/http_0001_latency_probe/request.json",
+      "exists": true,
+      "sha256": "8d427d00dc1dd9f0a7e18f1143e21252e93a0535d924380dcde0d1845c85943e",
+      "bytes": 1640
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads4/http_0001_latency_probe/response.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads4/http_0001_latency_probe/result.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads4/http_0001_latency_probe/raw_stream.bin",
+      "exists": true,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads4/http_0001_latency_probe/events.jsonl",
+      "exists": true,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads4/http_0001_latency_probe/assembled_text.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/4b_threads4/monitor.jsonl",
+      "exists": true,
+      "sha256": "50f27ecd88b722d10e2a39762722c480e4ad0c8649aa3e458f15112272908ae5",
+      "bytes": 99244
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/1p7b_threads2/worker_spec.json",
+      "exists": true,
+      "sha256": "6c1824439a32dc14cdbfc059df47300ad11e9345d9f5b6bb4dd872c34a921ac9",
+      "bytes": 1650
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/1p7b_threads2/model_observation.json",
+      "exists": true,
+      "sha256": "9fcbf3c39952dd574a38670c4d42263e822dd0dcfecdfbeb4a60a757dd88eaa2",
+      "bytes": 29791
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/1p7b_threads2/worker_summary.json",
+      "exists": true,
+      "sha256": "2190faf1b4031a15b9cb965449a4c4074c3bd811b9732af6ddf3feb70952df3d",
+      "bytes": 1386
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/1p7b_threads2/supervisor_result.json",
+      "exists": true,
+      "sha256": "ed429d9f77418d737657bdc28722bb48eed1cd41f5ea993c00b1d2073aaacb5d",
+      "bytes": 1811
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/1p7b_threads2/http_0001_latency_probe/request.json",
+      "exists": true,
+      "sha256": "c27722092b54a1a17f3908c89c263f2f3689533327380858b94c45a7c4782f37",
+      "bytes": 1633
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/1p7b_threads2/http_0001_latency_probe/response.json",
+      "exists": true,
+      "sha256": "a7dfb361507e1c80a1823ca55857bc079a484db7c170ffb152ed90d5f08daedb",
+      "bytes": 412
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/1p7b_threads2/http_0001_latency_probe/result.json",
+      "exists": true,
+      "sha256": "ddccf701fd19695e5e2570c26d428ec7ab373be4d8ef3b5f2af0224b97100014",
+      "bytes": 928
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/1p7b_threads2/http_0001_latency_probe/raw_stream.bin",
+      "exists": true,
+      "sha256": "34fcc7712a17ef6ae5705a369f1fec5ccb44e0565be1a3b2abc7ba73d5e9212f",
+      "bytes": 977
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/1p7b_threads2/http_0001_latency_probe/events.jsonl",
+      "exists": true,
+      "sha256": "58c46b294c9bd0cfd8426fe9e2ee182407df2f669e8b0c64c057ef6c60273356",
+      "bytes": 1348
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/1p7b_threads2/http_0001_latency_probe/assembled_text.json",
+      "exists": true,
+      "sha256": "c96c7f9101164683623c5ef075283b339c5bdd800b28755d9a6c12abd6e0abc8",
+      "bytes": 74
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/1p7b_threads2/monitor.jsonl",
+      "exists": true,
+      "sha256": "a653e6a518010eefaff81a1d3f50d71cdbab3830a38c019dfef57eabcc449f27",
+      "bytes": 50569
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/summary.json",
+      "exists": true,
+      "sha256": "da9d116d7c77953cc0ac56fd548fb0bf24044f36be15fce5d9327bc0e83e7f81",
+      "bytes": 1254
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/invocation.json",
+      "exists": true,
+      "sha256": "84c0e4dff4278111c65348ad9ae3706cb6971a5966ec71632e419de4a11aff91",
+      "bytes": 2000
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/roundtrip_and_sizes.json",
+      "exists": true,
+      "sha256": "90dbd0dad295ae42f9f8ec6b24b694348d7c8378ce949423bb9167d4b1563250",
+      "bytes": 1088
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/model_observation_before_request.json",
+      "exists": true,
+      "sha256": "9fcbf3c39952dd574a38670c4d42263e822dd0dcfecdfbeb4a60a757dd88eaa2",
+      "bytes": 29791
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/unload_and_residency_after.json",
+      "exists": true,
+      "sha256": "d9eb8c4d428a17003305949bdb82a5553395b6668102efd615e7009e22243876",
+      "bytes": 356
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/original_request_not_sent.json",
+      "exists": true,
+      "sha256": "a7ffd1561b3546982297461b41a4001923227894d8ffa821bc2e5cb90ecfcf14",
+      "bytes": 20927
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_request_to_send.json",
+      "exists": true,
+      "sha256": "bde43ece35a099ee33b73d025394070fa9f9e6cc6d2918a164ef91f5518c9f88",
+      "bytes": 17167
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/worker_summary.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/supervisor_result.json",
+      "exists": true,
+      "sha256": "01c5ba39f92d98fa473583f8a8d7ebd14ab873b4e72ef3d661f47c045122fae6",
+      "bytes": 367
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/worker_spec.json",
+      "exists": true,
+      "sha256": "141cd96248dc9f73a56c8e76f8310a2a200dedccb09b7adfafff2b069b94e4f5",
+      "bytes": 17340
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/http_0001_latency_probe/request.json",
+      "exists": true,
+      "sha256": "13d871c3b5333ca8611bc60f6065691448e4212ace86f6b45e107dcea215dbb6",
+      "bytes": 17285
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/http_0001_latency_probe/response.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/http_0001_latency_probe/result.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/http_0001_latency_probe/raw_stream.bin",
+      "exists": true,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/http_0001_latency_probe/events.jsonl",
+      "exists": true,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/http_0001_latency_probe/assembled_text.json",
+      "exists": false,
+      "sha256": null,
+      "bytes": null
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/monitor.jsonl",
+      "exists": true,
+      "sha256": "71aa0db4bc803017ef496b0b5a6f960d7bc085bd2ad5e70d77e7894cf993ec4e",
+      "bytes": 148265
+    },
+    {
+      "path": "research/remote_sector_latency_audit_20261018.json",
+      "exists": true,
+      "sha256": "898a94421f4874cdaafb968083be60872a176ea2dd41905e7be35c28167e7a13",
+      "bytes": 35618
+    },
+    {
+      "path": "research/remote_realinput_independent_review_20261018.json",
+      "exists": true,
+      "sha256": "16d5a66fc231375b3e070edabd7e3312054c143855b2bffc330dffb02e9d9307",
+      "bytes": 14800
+    },
+    {
+      "path": "data/remote_sector_20261018/latency_hardware.json",
+      "exists": true,
+      "sha256": "063bb70b86c205a6f1266007401defce9216087350df27f8687811c10de0fbf6",
+      "bytes": 685
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/inventory_v43/runtime_pinned.json",
+      "exists": true,
+      "sha256": "c04bcdee8093a6c6db0d8e93d4166aa89d3337e3acceac42d3ac409c295602b0",
+      "bytes": 1967
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/inventory_v43/model_metadata.json",
+      "exists": true,
+      "sha256": "d3fa9555fb73fb28924f9fcfdeb972a645796c95c035f44e4b71029190d7600b",
+      "bytes": 29305
+    },
+    {
+      "path": "data/remote_sector_20261018/data/sector_runtime/diagnose_v43/diagnosis.json",
+      "exists": true,
+      "sha256": "2fce19c1c890f50cb8827a5f1c9f9f97ce33e8d19f241ff514d1ca040a4a5e31",
+      "bytes": 478
+    },
+    {
+      "path": "research/remote_diagnostic_review_20261018.json",
+      "exists": true,
+      "sha256": "e46787eb25e85e5ff3747b6a0e2a02cf70d789f7e2255ca883645ef2d029365f",
+      "bytes": 13137
+    }
+  ],
+  "warnings": [],
+  "report_html_path": "research/remote_sector_execution_20261018.html",
+  "report_json_path": "research/remote_sector_status_20261018.json"
+}

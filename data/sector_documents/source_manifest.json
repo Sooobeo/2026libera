@@ -1,0 +1,232 @@
+{
+  "schema_version": "sector_documents_v4.2.1",
+  "inventory_path": "research/design_revision_20261017/sector_document_candidates.json",
+  "inventory_sha256": "9a45a5d401ea9ea57f65773691048dfc5d406366edb4b4b662e5f915f79017c1",
+  "builder_sha256": "864a8447f46d9fb0e2630c219675ec22144e60653dc2116c5cbf5a839d17d9ad",
+  "historical_availability_status": "publisher-dated retrospective snapshot; historical bytes not independently archived",
+  "pdf_redistribution": "No PDFs are copied to data/sector_documents; checksum-pinned research cache is referenced only.",
+  "sources": [
+    {
+      "source_id": "fidelity_q2_2026",
+      "split": "pilot",
+      "title": "Quarterly Sector and Investment Research Update Q2 2026",
+      "url": "https://www.fidelity.com/bin-public/600_Fidelity_Com_English/documents/learning-center/Quarterly-Sector-And-Investment-Research-Update-Second-Quarter-2026.pdf",
+      "landing_url": "https://clearingcustody.fidelity.com/insights/topics/market-commentary/second-quarter-2026-quarterly-sector-and-investment-research-update",
+      "metadata_url": null,
+      "dates": {
+        "publisher_document_date": "2026-04-17",
+        "publisher_date_kind": "official landing page updated date",
+        "publisher_html_datePublished": null,
+        "sector_view_as_of_raw": "3/31/2026",
+        "sector_view_as_of_normalized": "2026-03-31",
+        "sector_view_date_status": "valid_reported_date",
+        "market_statistics_as_of": null,
+        "snapshot_cutoff": "2026-07-17",
+        "cutoff_interpretation": "retrospective document-snapshot availability cutoff; not contemporaneous information or historical replay"
+      },
+      "cache": {
+        "path": "tmp/pdfs/sector_documents/fidelity_q2_2026.pdf",
+        "sha256": "d11c4403f90e7bbd1d06a7fa83c91673d8c772be325042d4d1f01fab4e7076d6",
+        "size_bytes": 321996
+      },
+      "live_link_audit": {
+        "url": {
+          "status": 200,
+          "final_url": "https://www.fidelity.com/bin-public/600_Fidelity_Com_English/documents/learning-center/Quarterly-Sector-And-Investment-Research-Update-Second-Quarter-2026.pdf",
+          "content_type": "application/pdf; charset=utf-8",
+          "bytes": 321996,
+          "sha256": "d11c4403f90e7bbd1d06a7fa83c91673d8c772be325042d4d1f01fab4e7076d6",
+          "checked_at_utc": "2026-10-17T09:43:28.126272+00:00",
+          "success": true,
+          "is_pdf": true,
+          "matches_pinned_pdf": true
+        },
+        "landing_url": {
+          "status": 200,
+          "final_url": "https://clearingcustody.fidelity.com/insights/topics/market-commentary/second-quarter-2026-quarterly-sector-and-investment-research-update",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 92891,
+          "sha256": "5a4d63dc5c0897ea0917978f44d23b28a73452adaf73ae2eac5e190736cbd69d",
+          "checked_at_utc": "2026-10-17T09:43:29.348517+00:00",
+          "success": true
+        }
+      },
+      "source_pages": {
+        "ratings": 3,
+        "interpretation_and_scope": 2
+      },
+      "human_review_status": "pending",
+      "known_source_issues": [
+        "Current Q2 landing page download link points to Q3; direct Q2 PDF was inspected separately.",
+        "Underlying strategist universe is top 3000 US stocks, while displayed benchmark statistics are S&P 500.",
+        "No precise mandate or gamma stated.",
+        "PDF p2 performance header reads 12/31/25, while narrative and source footnote refer to Q1/3/31/2026. This inconsistent table is not used for the common numeric benchmark."
+      ]
+    },
+    {
+      "source_id": "ubs_june_2026",
+      "split": "pilot",
+      "title": "UBS House View Investment Strategy Guide June 2026",
+      "url": "https://advisors.ubs.com/mediahandler/media/808505/UBS%20House%20View%20for%20June%202026.pdf",
+      "landing_url": null,
+      "metadata_url": null,
+      "dates": {
+        "publisher_document_date": "2026-05-22",
+        "publisher_date_kind": "PDF p2 publication statement",
+        "publisher_html_datePublished": null,
+        "sector_view_as_of_raw": "21 May 2026",
+        "sector_view_as_of_normalized": "2026-05-21",
+        "sector_view_date_status": "valid_reported_date",
+        "market_statistics_as_of": null,
+        "snapshot_cutoff": "2026-07-17",
+        "cutoff_interpretation": "retrospective document-snapshot availability cutoff; not contemporaneous information or historical replay"
+      },
+      "cache": {
+        "path": "tmp/pdfs/sector_documents/ubs_june_2026.pdf",
+        "sha256": "1f8ec8afee56898124a450acf3557a1a493e282a4139c4cffa2212471b12b5a2",
+        "size_bytes": 2205941
+      },
+      "live_link_audit": {
+        "url": {
+          "status": 200,
+          "final_url": "https://advisors.ubs.com/mediahandler/media/808505/UBS%20House%20View%20for%20June%202026.pdf",
+          "content_type": "application/pdf",
+          "bytes": 2205941,
+          "sha256": "1f8ec8afee56898124a450acf3557a1a493e282a4139c4cffa2212471b12b5a2",
+          "checked_at_utc": "2026-10-17T09:43:31.832985+00:00",
+          "success": true,
+          "is_pdf": true,
+          "matches_pinned_pdf": true
+        }
+      },
+      "source_pages": {
+        "ratings_and_us_sector_reasons": 21,
+        "rating_semantics": 27
+      },
+      "human_review_status": "pending",
+      "known_source_issues": [
+        "Ratings are house views, not automatically overweight/underweight portfolio instructions.",
+        "US sector section must be separated from regional-equity and asset-class sections."
+      ]
+    },
+    {
+      "source_id": "fidelity_q3_2026",
+      "split": "main",
+      "title": "Quarterly Sector and Investment Research Update Q3 2026",
+      "url": "https://clearingcustody.fidelity.com/app/proxy/content?literatureURL=/9906006.PDF",
+      "landing_url": "https://clearingcustody.fidelity.com/insights/topics/market-commentary/third-quarter-2026-quarterly-sector-and-investment-research-update",
+      "metadata_url": "https://clearingcustody.fidelity.com/app/literature/view?itemCode=9906006&renditionType=PDF",
+      "dates": {
+        "publisher_document_date": "2026-07-16",
+        "publisher_date_kind": "official landing page updated date",
+        "publisher_html_datePublished": "2026-07-15T23:00:00-05:00",
+        "sector_view_as_of_raw": "6/31/26",
+        "sector_view_as_of_normalized": null,
+        "sector_view_date_status": "invalid_calendar_date_printed_6/31/26_unresolved",
+        "market_statistics_as_of": "2026-06-30",
+        "snapshot_cutoff": "2026-07-17",
+        "cutoff_interpretation": "retrospective document-snapshot availability cutoff; not contemporaneous information or historical replay"
+      },
+      "cache": {
+        "path": "tmp/pdfs/sector_documents/fidelity_q3_2026.pdf",
+        "sha256": "4179aa3e97f3146e664655ac1008cc87942341069ec4bccfbfe7d7436467dd04",
+        "size_bytes": 286906
+      },
+      "live_link_audit": {
+        "url": {
+          "status": 200,
+          "final_url": "https://clearingcustody.fidelity.com/app/proxy/content?literatureURL=/9906006.PDF",
+          "content_type": "application/pdf;charset=ISO-8859-1",
+          "bytes": 286906,
+          "sha256": "4179aa3e97f3146e664655ac1008cc87942341069ec4bccfbfe7d7436467dd04",
+          "checked_at_utc": "2026-10-17T09:43:28.032341+00:00",
+          "success": true,
+          "is_pdf": true,
+          "matches_pinned_pdf": true
+        },
+        "landing_url": {
+          "status": 200,
+          "final_url": "https://clearingcustody.fidelity.com/insights/topics/market-commentary/third-quarter-2026-quarterly-sector-and-investment-research-update",
+          "content_type": "text/html; charset=utf-8",
+          "bytes": 93645,
+          "sha256": "f5db7b0d4a48ca5a3119d2b9882d468567c3da3b0e11bdcb9732cf639c0528ce",
+          "checked_at_utc": "2026-10-17T09:43:29.317331+00:00",
+          "success": true
+        },
+        "metadata_url": {
+          "status": 200,
+          "final_url": "https://clearingcustody.fidelity.com/app/literature/view?itemCode=9906006&renditionType=PDF",
+          "content_type": "text/html;charset=ISO-8859-1",
+          "bytes": 8275,
+          "sha256": "dd1ecddcfb9b7a2c274fb2d6d8f1b9b1c134bccea3ce7973bbef3e254f89b257",
+          "checked_at_utc": "2026-10-17T09:43:30.258695+00:00",
+          "success": true
+        }
+      },
+      "source_pages": {
+        "ratings_and_reasons": 3,
+        "interpretation_and_scope": 2
+      },
+      "human_review_status": "pending",
+      "known_source_issues": [
+        "Published in July: not eligible as information available on June 30.",
+        "Invalid as-of date for view table requires explicit handling.",
+        "Uses GICS, with strategist view based on top 3000 US stocks.",
+        "Displayed S&P 500 sector weights are benchmark weights, not Fidelity holdings or target allocations."
+      ]
+    },
+    {
+      "source_id": "ubs_july_2026",
+      "split": "main",
+      "title": "UBS House View Investment Strategy Guide July 2026",
+      "url": "https://advisors.ubs.com/mediahandler/media/816396/UBS%20House%20View%20for%20July%202026.pdf",
+      "landing_url": null,
+      "metadata_url": null,
+      "dates": {
+        "publisher_document_date": "2026-06-22",
+        "publisher_date_kind": "PDF p2 publication statement",
+        "publisher_html_datePublished": null,
+        "sector_view_as_of_raw": "18 June 2026",
+        "sector_view_as_of_normalized": "2026-06-18",
+        "sector_view_date_status": "valid_reported_date",
+        "market_statistics_as_of": null,
+        "snapshot_cutoff": "2026-07-17",
+        "cutoff_interpretation": "retrospective document-snapshot availability cutoff; not contemporaneous information or historical replay"
+      },
+      "cache": {
+        "path": "tmp/pdfs/sector_documents/ubs_july_2026.pdf",
+        "sha256": "07369578859be743e2323ea611f8d9b47e9bb7bc1e7b0e081d4b8df5ad2b4b7b",
+        "size_bytes": 2110541
+      },
+      "live_link_audit": {
+        "url": {
+          "status": 200,
+          "final_url": "https://advisors.ubs.com/mediahandler/media/816396/UBS%20House%20View%20for%20July%202026.pdf",
+          "content_type": "application/pdf",
+          "bytes": 2110541,
+          "sha256": "07369578859be743e2323ea611f8d9b47e9bb7bc1e7b0e081d4b8df5ad2b4b7b",
+          "checked_at_utc": "2026-10-17T09:43:31.724612+00:00",
+          "success": true,
+          "is_pdf": true,
+          "matches_pinned_pdf": true
+        }
+      },
+      "source_pages": {
+        "ratings_and_us_sector_reasons": 21,
+        "rating_semantics": 27
+      },
+      "human_review_status": "pending",
+      "known_source_issues": [
+        "Do not convert Attractive directly into a numeric overweight or expected-return forecast.",
+        "No numeric client risk limit or portfolio-level mandate.",
+        "S&P 500 US sector preferences; global health-care or European sector statements elsewhere must not be mixed."
+      ]
+    }
+  ],
+  "paper_scope": {
+    "url": "https://arxiv.org/html/2503.09647v5",
+    "version_date": "2025-04-10",
+    "supports": "GICS sector-allocation stage and separation from stock-level decisions; section 4.",
+    "does_not_support": "Our document dates, qualitative labels, exact numeric allocation targets, or arbitrary thresholds."
+  }
+}

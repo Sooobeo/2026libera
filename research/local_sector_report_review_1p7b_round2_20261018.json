@@ -1,0 +1,237 @@
+{
+  "created_at_utc": "2026-10-18T06:33:18.825815+00:00",
+  "scope": "Second read-only review of current 1.7B local report and preview; four-B local observations are pending and excluded. No model calls or live study-document writes.",
+  "status": "pass_with_engineering_only_limits",
+  "check_count": 19,
+  "checks": [
+    {
+      "id": "source_hashes_current",
+      "status": "pass",
+      "detail": "All 97 cited source existence/hash records verified against current files; two local observations, not six local observations."
+    },
+    {
+      "id": "research_counts_excluded",
+      "status": "pass",
+      "detail": "Engineering calls remain excluded from research counts; suitability/latency solution not certified."
+    },
+    {
+      "id": "row_and_envelope_counts",
+      "status": "pass",
+      "detail": "Two local requests (one synthetic, one real first stage), four historical remote observations."
+    },
+    {
+      "id": "raw_call_and_request_agreement",
+      "status": "pass",
+      "detail": "Request value hashes, HTTP wall/TTFT metrics and raw stream byte counts exactly match saved records."
+    },
+    {
+      "id": "provider_counters_and_rates",
+      "status": "pass",
+      "detail": "Token counts and nanosecond duration conversions recomputed from original terminal responses; both rates reproduce the report."
+    },
+    {
+      "id": "local_raw_count_and_cleanup",
+      "status": "pass",
+      "detail": "Both local source summaries explicitly exclude pilot/main counts and report completed unload followed by empty ps."
+    },
+    {
+      "id": "synthetic_vs_real_status",
+      "status": "pass",
+      "detail": "Six-token readiness JSON completed; real first-stage output stopped at deliberate cap32. Real output is not a completed research answer or a semantic failure assessment."
+    },
+    {
+      "id": "same_inputs_not_causal_claim",
+      "status": "pass",
+      "detail": "Saved messages/options/full-body and exact model/engine/template pins match corresponding remote requests. No general speedup or causal attribution is certified."
+    },
+    {
+      "id": "parameter_text_order_not_semantics",
+      "status": "pass",
+      "detail": "Independent parsing confirms inherited parameter map equality despite display-line order; duplicate stop values are retained in ordered lists."
+    },
+    {
+      "id": "deadline_difference_explicit",
+      "status": "pass",
+      "detail": "Actual-input supervisor deadlines differ: local120s versus remote180s; they are not included in the saved-model-request equality claim."
+    },
+    {
+      "id": "deadline_metadata_correction_additive",
+      "status": "pass",
+      "detail": "Old raw summary wording is preserved and explicitly corrected via additive120s note, corroborated by three original control records."
+    },
+    {
+      "id": "remote_timeout_not_completion",
+      "status": "pass",
+      "detail": "Remote actual-input180s timeout is not reported as completion time or zero model speed; unreceived token counters remain unknown."
+    },
+    {
+      "id": "immutable_gpu_evidence",
+      "status": "pass",
+      "detail": "Saved Vulkan/device/layer excerpts match immutable log. GPU offload is an observed backend configuration, not dedicated VRAM capacity or an isolated causal effect."
+    },
+    {
+      "id": "independent_reviews_not_human",
+      "status": "pass",
+      "detail": "Linked machine audits are not relabeled human semantic review; report parser currently reports no warnings."
+    },
+    {
+      "id": "plan_preview_additive_and_styled",
+      "status": "pass",
+      "detail": "Existing document reproduced exactly after stripping own blocks; preview appendix is styled and maintains research boundary wording."
+    },
+    {
+      "id": "plan_preview_links",
+      "status": "pass",
+      "detail": "Readable report, JSON and local service-start tool exist in final plan/paper link context; this does not certify fresh startup."
+    },
+    {
+      "id": "paper_preview_additive_and_styled",
+      "status": "pass",
+      "detail": "Existing document reproduced exactly after stripping own blocks; preview appendix is styled and maintains research boundary wording."
+    },
+    {
+      "id": "paper_preview_links",
+      "status": "pass",
+      "detail": "Readable report, JSON and local service-start tool exist in final plan/paper link context; this does not certify fresh startup."
+    },
+    {
+      "id": "study_config_and_local_appendix",
+      "status": "pass",
+      "detail": "Plan and paper have identical local appendix; all previous config values, main0/unfrozen/readiness and remote historical record remain unchanged."
+    }
+  ],
+  "verified_local_metrics": [
+    {
+      "input_kind": "synthetic",
+      "model": "qwen3:1.7b",
+      "row_status": "completed",
+      "done_reason": "stop",
+      "http_wall_seconds": 6.400585499999579,
+      "ttft_content_seconds": 5.749645800009603,
+      "prompt_eval_count": 365,
+      "eval_count": 6,
+      "prompt_tokens_per_second": 397.7234960875994,
+      "generation_tokens_per_second": 9.226411525633278,
+      "body_sha256": "3184657decc9badae1b762cd1cc41e9dacf344838a98ab7020d8874a32b0c146",
+      "placement": {
+        "model_residency_samples": 1,
+        "reported_vram_bytes": [
+          2172355869
+        ],
+        "reported_resident_bytes": [
+          2172355869
+        ],
+        "reported_context_lengths": [
+          8192
+        ],
+        "physical_gpu_capacity_inferred": false
+      },
+      "memory": {
+        "sample_count": 4,
+        "working_set_sum_sampled_max_bytes": 2592251904,
+        "system_available_physical_sampled_min_bytes": 8090959872,
+        "system_total_physical_bytes_observed": [
+          33834049536
+        ],
+        "system_committed_sampled_max_bytes": 32981237760,
+        "system_commit_limit_bytes_observed": [
+          48866435072
+        ],
+        "observed_process_names": [
+          "ollama.exe",
+          "llama-server.exe"
+        ],
+        "process_memory_sources": [
+          "windows_ctypes_Toolhelp32_GetProcessMemoryInfo"
+        ],
+        "missing_working_set_samples": 0,
+        "interpretation": "Named process working sets may double-count shared pages; system available RAM and commit have distinct scopes. No cgroup or dedicated VRAM capacity is inferred."
+      }
+    },
+    {
+      "input_kind": "real_input",
+      "model": "qwen3:1.7b",
+      "row_status": "output_limit_reached",
+      "done_reason": "length",
+      "http_wall_seconds": 42.52470520000497,
+      "ttft_content_seconds": 40.736387000011746,
+      "prompt_eval_count": 8521,
+      "eval_count": 32,
+      "prompt_tokens_per_second": 250.28277606570575,
+      "generation_tokens_per_second": 17.961201559481328,
+      "body_sha256": "38c46bc1e1d6e2d4b49f484b5ae99e86e90d4f889f7c26147fd8142b0ad27def",
+      "placement": {
+        "model_residency_samples": 18,
+        "reported_vram_bytes": [
+          5016093981
+        ],
+        "reported_resident_bytes": [
+          5016093981
+        ],
+        "reported_context_lengths": [
+          32768
+        ],
+        "physical_gpu_capacity_inferred": false
+      },
+      "memory": {
+        "sample_count": 22,
+        "working_set_sum_sampled_max_bytes": 5443379200,
+        "system_available_physical_sampled_min_bytes": 5273849856,
+        "system_total_physical_bytes_observed": [
+          33834049536
+        ],
+        "system_committed_sampled_max_bytes": 35922235392,
+        "system_commit_limit_bytes_observed": [
+          48866435072
+        ],
+        "observed_process_names": [
+          "ollama.exe",
+          "llama-server.exe"
+        ],
+        "process_memory_sources": [
+          "windows_ctypes_Toolhelp32_GetProcessMemoryInfo"
+        ],
+        "missing_working_set_samples": 0,
+        "interpretation": "Named process working sets may double-count shared pages; system available RAM and commit have distinct scopes. No cgroup or dedicated VRAM capacity is inferred."
+      }
+    }
+  ],
+  "evidence_files": {
+    "research/local_sector_latency_20261018.json": {
+      "sha256": "737aac03cc4b677fb5504d13010fb7c55d6eee343534cf49d17cd76c68f1d9ff",
+      "size_bytes": 336845
+    },
+    "research/local_sector_latency_20261018.html": {
+      "sha256": "518c191eb1b9ef3e57351ef80858b9ba672bcbe91f28f35081edbbfe5991a97a",
+      "size_bytes": 14653
+    },
+    "research/build_local_engineering_addendum.py": {
+      "sha256": "a1b676d40bd82b9857e904105aae41d108b2a73e372deec708b364f284d62ce3",
+      "size_bytes": 15683
+    },
+    "research/local_engineering_addendum_preview/validation.json": {
+      "sha256": "93381b09d875948d99fa7bec05cc9a33344106633ecec1df69e66672fa3b259c",
+      "size_bytes": 3975
+    },
+    "research/local_engineering_addendum_preview/plan/LIBERA_실험계획_20261018.html": {
+      "sha256": "7468a7d347b5e983c17e995d636fe08e8650fe35f241544bfc9a9d60f7b5e1f3",
+      "size_bytes": 48395
+    },
+    "research/local_engineering_addendum_preview/paper/LIBERA_텀페이퍼_초안_20261018.html": {
+      "sha256": "5d66da9672d9d5353b05ab4b3adbe653dbf1222ce270db4410124a62bc018a68",
+      "size_bytes": 68277
+    },
+    "research/local_engineering_addendum_preview/plan/LIBERA_실험설정_20261018.json": {
+      "sha256": "3dc0ed8dbc6e2617dac1ea1a2d10487abe7590f2cee510a45b872d9d8e494053",
+      "size_bytes": 126629
+    }
+  },
+  "not_certified": [
+    "Financial task accuracy or complete required JSON",
+    "Four-stage R1/R4 feasibility under8192 output budget",
+    "Model selection or compact-prompt adoption for main",
+    "Fresh-start branch of local service helper",
+    "General speedup or isolated hardware/model-size effects"
+  ],
+  "report_snapshot_note": "Future4B additions change report hashes and require new review; this audit is limited to the recorded snapshot."
+}

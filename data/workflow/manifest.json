@@ -1,0 +1,31 @@
+{
+  "protocol_version": "4.0",
+  "status": "offline preparation only; no model request sent",
+  "model_calls": 0,
+  "runs": 5625,
+  "main_runs": 3750,
+  "diagnostic_runs": 1875,
+  "planned_response_calls": 16875,
+  "main_response_calls": 15000,
+  "diagnostic_response_calls": 1875,
+  "case_sha256": "3ec2d5a56c842fdf688367ff1987d1dfcd905fa1723f65cade5cfe3bb7e69703",
+  "protocol_sha256": "706754b7344ecdf2c412affe66303d83e8ac787d210fa52d37462a2b237b2d2c",
+  "sha256": {
+    "runs.jsonl": "acb253908472db43fe0219384141f4da06630e4af4bbf57b086884f023b65dae",
+    "prompt_spec.json": "47cc5c3258ddc3bb65d07abc957dd4ceea32cfbd038029783d169259f54bb02b",
+    "example_packets.json": "39124f2706863d36781620c7fe097910e8aad8964eca1d5ecb7a1e3faa3a2f9c"
+  },
+  "execution_order": "625 complete market-window blocks of all three gammas x two policies; hashed block and gamma order, paired policy runs adjacent in hashed order; FRESH separate diagnostic campaign",
+  "run_ready": false,
+  "remaining_runtime_gate": "verify fixed target model access and immutable model/backend manifest; no silent substitution",
+  "validation": {
+    "all_runs_checked": 5625,
+    "complete_six_run_main_blocks": 625,
+    "mandate_appears_once": true,
+    "market_appears_once": true,
+    "R4_no_early_gamma": true,
+    "no_gold_or_future_window_or_run_metadata_in_messages": true,
+    "same_final_facts": true,
+    "full_history_assembly": true
+  }
+}

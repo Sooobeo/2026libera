@@ -1,0 +1,394 @@
+{
+  "created_at_utc": "2026-10-18T06:29:58.236278+00:00",
+  "status": "pass_with_documented_metadata_correction_and_stated_limits",
+  "scope": "Independent mechanical audit of existing engineering artifacts; no model calls, no research evaluation, no original artifact edits.",
+  "checks_passed": 25,
+  "checks_failed": 0,
+  "checks": [
+    {
+      "check": "one_generation_request_no_retry_no_research",
+      "status": "pass",
+      "evidence": [
+        "summary.json",
+        "compact_probe/http_0001_latency_probe/request.json"
+      ],
+      "detail": "Counts apply to this recorded engineering run, not global machine activity."
+    },
+    {
+      "check": "recorded_sent_body_equals_compact_and_supervisor_spec",
+      "status": "pass",
+      "evidence": [
+        "compact_request_to_send.json",
+        "compact_probe/worker_spec.json",
+        "compact_probe/http_0001_latency_probe/request.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "local_remote_request_values_and_serialized_bytes_identical",
+      "status": "pass",
+      "evidence": [
+        "compact_request_to_send.json",
+        "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_request_to_send.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "local_remote_uncompacted_inputs_identical",
+      "status": "pass",
+      "evidence": [
+        "original_request_not_sent.json",
+        "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/original_request_not_sent.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "exact_roundtrip_all_original_values_and_system",
+      "status": "pass",
+      "evidence": [
+        "compact_request_to_send.json",
+        "original_request_not_sent.json"
+      ],
+      "detail": "Duplicate-only projection reconstructs every original JSON field value; key order need not match."
+    },
+    {
+      "check": "original_and_compact_reproduce_from_public_packet_and_market",
+      "status": "pass",
+      "evidence": [
+        "roundtrip_and_sizes.json",
+        "original_request_not_sent.json",
+        "compact_request_to_send.json",
+        "data/sector_documents/model_packets.jsonl",
+        "data/sector_market/market_input.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "explicit_options_and_thinking_policy",
+      "status": "pass",
+      "evidence": [
+        "compact_request_to_send.json"
+      ],
+      "detail": "Engineering feasibility settings, not the 8192-output research protocol."
+    },
+    {
+      "check": "both_observations_pinned_engine_digest_template",
+      "status": "pass",
+      "evidence": [
+        "model_observation.json",
+        "model_observation_before_request.json",
+        "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/model_observation_before_request.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "inherited_parameter_multimap_equal_despite_line_order",
+      "status": "pass",
+      "evidence": [
+        "model_observation_before_request.json",
+        "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/model_observation_before_request.json"
+      ],
+      "detail": {
+        "raw_text_equal": false,
+        "normalized_multimap": {
+          "top_k": [
+            "20"
+          ],
+          "top_p": [
+            "0.95"
+          ],
+          "repeat_penalty": [
+            "1"
+          ],
+          "stop": [
+            "\"<|im_end|>\"",
+            "\"<|im_start|>\""
+          ],
+          "temperature": [
+            "0.6"
+          ]
+        }
+      }
+    },
+    {
+      "check": "raw_stream_events_terminal_response_consistent",
+      "status": "pass",
+      "evidence": [
+        "compact_probe/http_0001_latency_probe/raw_stream.bin",
+        "compact_probe/http_0001_latency_probe/events.jsonl",
+        "compact_probe/http_0001_latency_probe/response.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "assembled_partial_content_retained_without_quality_claim",
+      "status": "pass",
+      "evidence": [
+        "compact_probe/http_0001_latency_probe/assembled_text.json",
+        "compact_probe/http_0001_latency_probe/response.json",
+        "summary.json"
+      ],
+      "detail": "Completion denotes HTTP stream completion. JSON object is truncated by the expected 32-token engineering cap; no semantic score is assigned."
+    },
+    {
+      "check": "provider_metrics_recomputed_and_summary_equal",
+      "status": "pass",
+      "evidence": [
+        "compact_probe/http_0001_latency_probe/result.json",
+        "compact_probe/http_0001_latency_probe/events.jsonl",
+        "summary.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "ttft_and_wall_order_consistent",
+      "status": "pass",
+      "evidence": [
+        "compact_probe/http_0001_latency_probe/events.jsonl",
+        "compact_probe/http_0001_latency_probe/result.json",
+        "summary.json"
+      ],
+      "detail": "Sub-millisecond event-log/TTFT clock differences reflect separate timestamp reads."
+    },
+    {
+      "check": "actual_supervisor_deadline_120_not_top_level_text",
+      "status": "pass",
+      "evidence": [
+        "invocation.json",
+        "compact_probe/worker_spec.json",
+        "compact_probe/supervisor_result.json",
+        "summary.json"
+      ],
+      "detail": "The original top-level deadline_scope incorrectly says 180 seconds. Additive correction records 120; original raw file is preserved."
+    },
+    {
+      "check": "idle_confirmation_before",
+      "status": "pass",
+      "evidence": [
+        "idle_confirmation_before.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "unload_and_residency_after",
+      "status": "pass",
+      "evidence": [
+        "unload_and_residency_after.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "native_windows_memory_observed_not_missing_zero",
+      "status": "pass",
+      "evidence": [
+        "compact_probe/monitor.jsonl"
+      ],
+      "detail": null
+    },
+    {
+      "check": "observed_api_placement_model_context_and_digest",
+      "status": "pass",
+      "evidence": [
+        "compact_probe/monitor.jsonl"
+      ],
+      "detail": "API placement accounting only; does not establish dedicated physical VRAM capacity or complete backend identity."
+    },
+    {
+      "check": "executed_helper_source_preserved_in_preexisting_archive",
+      "status": "pass",
+      "evidence": [
+        "invocation.json",
+        "tmp/sector_bridge_20261018/real_input_bundle.tar.gz"
+      ],
+      "detail": "Current source differs only by the requested deadline text correction; old executed source remains in the deployment archive."
+    },
+    {
+      "check": "source_hash_benchmark_sector_latency.py",
+      "status": "pass",
+      "evidence": [
+        "invocation.json",
+        "research/benchmark_sector_latency.py"
+      ],
+      "detail": null
+    },
+    {
+      "check": "source_hash_remote_sector_runtime.py",
+      "status": "pass",
+      "evidence": [
+        "invocation.json",
+        "research/remote_sector_runtime.py"
+      ],
+      "detail": null
+    },
+    {
+      "check": "source_hash_run_sector_workflow.py",
+      "status": "pass",
+      "evidence": [
+        "invocation.json",
+        "research/run_sector_workflow.py"
+      ],
+      "detail": null
+    },
+    {
+      "check": "source_hash_compact_sector_prompt.py",
+      "status": "pass",
+      "evidence": [
+        "invocation.json",
+        "research/compact_sector_prompt.py"
+      ],
+      "detail": null
+    },
+    {
+      "check": "public_input_hashes_match",
+      "status": "pass",
+      "evidence": [
+        "invocation.json",
+        "data/sector_documents/model_packets.jsonl",
+        "data/sector_market/market_input.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "raw_local_and_remote_artifacts_unchanged",
+      "status": "pass",
+      "evidence": [
+        "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_request_to_send.json",
+        "data/local_sector_runtime/laptop_realinput_1p7b_20261018/idle_confirmation_before.json",
+        "data/local_sector_runtime/laptop_realinput_1p7b_20261018/invocation.json",
+        "data/local_sector_runtime/laptop_realinput_1p7b_20261018/model_observation.json",
+        "data/local_sector_runtime/laptop_realinput_1p7b_20261018/model_observation_before_request.json",
+        "data/local_sector_runtime/laptop_realinput_1p7b_20261018/original_request_not_sent.json",
+        "data/local_sector_runtime/laptop_realinput_1p7b_20261018/residency_before.json",
+        "data/local_sector_runtime/laptop_realinput_1p7b_20261018/roundtrip_and_sizes.json",
+        "data/local_sector_runtime/laptop_realinput_1p7b_20261018/summary.json",
+        "data/local_sector_runtime/laptop_realinput_1p7b_20261018/unload_and_residency_after.json",
+        "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_probe/monitor.jsonl",
+        "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_probe/supervisor_result.json",
+        "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_probe/worker.console.log",
+        "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_probe/worker_spec.json",
+        "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_probe/worker_summary.json",
+        "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_probe/http_0001_latency_probe/assembled_text.json",
+        "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_probe/http_0001_latency_probe/events.jsonl",
+        "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_probe/http_0001_latency_probe/raw_stream.bin",
+        "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_probe/http_0001_latency_probe/request.json",
+        "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_probe/http_0001_latency_probe/response.json",
+        "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_probe/http_0001_latency_probe/result.json",
+        "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_request_to_send.json",
+        "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/idle_confirmation_before.json",
+        "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/invocation.json",
+        "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/model_observation.json",
+        "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/model_observation_before_request.json",
+        "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/original_request_not_sent.json",
+        "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/residency_before.json",
+        "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/roundtrip_and_sizes.json",
+        "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/summary.json",
+        "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/unload_and_residency_after.json",
+        "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/monitor.jsonl",
+        "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/supervisor_result.json",
+        "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/worker.console.log",
+        "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/worker_spec.json",
+        "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/http_0001_latency_probe/events.jsonl",
+        "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/http_0001_latency_probe/raw_stream.bin",
+        "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/http_0001_latency_probe/request.json"
+      ],
+      "detail": "Read-only verification; audit/correction outputs are outside runtime artifact directories."
+    }
+  ],
+  "known_original_metadata_defect": "research/local_realinput_deadline_correction_20261018.json",
+  "observations": {
+    "model": "qwen3:1.7b",
+    "manifest_digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+    "engine": "0.35.1",
+    "template_sha256": "ae370d884f108d16e7cc8fd5259ebc5773a0afa6e078b11f4ed7e39a27e0dfc4",
+    "local_generation_requests": 1,
+    "local_pilot_calls": 0,
+    "local_main_calls": 0,
+    "local_status": "output_limit_reached",
+    "local_supervisor_deadline_seconds": 120,
+    "remote_status": "hard_deadline",
+    "remote_supervisor_deadline_seconds": 180,
+    "same_sent_request_body": true,
+    "compact_content_utf8_bytes": 16114,
+    "serialized_http_request_body_bytes": 17062,
+    "raw_stream_bytes": 4422,
+    "event_count": 33,
+    "assembled_content_utf8_bytes": 107,
+    "provider_metrics": {
+      "wall_seconds": 42.52470520000497,
+      "ttft_any_generated_seconds": 40.73638820000633,
+      "ttft_content_seconds": 40.736387000011746,
+      "token_count_source": "Ollama counters, not independent tokenization",
+      "duration_unit_in_response": "nanoseconds",
+      "total_duration_seconds": 42.5072997,
+      "load_duration_seconds": 6.5857575,
+      "prompt_eval_duration_seconds": 34.045491,
+      "eval_duration_seconds": 1.781618,
+      "prompt_eval_count": 8521,
+      "eval_count": 32,
+      "prompt_eval_tokens_per_second": 250.28277606570575,
+      "eval_tokens_per_second": 17.961201559481328
+    },
+    "windows_memory_samples": 22,
+    "sampled_maximum_named_process_working_set_sum_bytes": 5443379200,
+    "sampled_minimum_available_physical_bytes": 5273849856,
+    "loaded_model_api_samples": 18,
+    "observed_api_model_size_bytes": 5016093981,
+    "observed_api_model_size_vram_bytes": 5016093981,
+    "observed_api_context_length": 32768
+  },
+  "limits": [
+    "Single resource feasibility observation with a 32-token output cap. Full 8192-token output and four-stage conversation are untested by this run.",
+    "Output is incomplete JSON because of the expected cap; it is not scored for institutional fidelity or strategy quality.",
+    "Equal request/model settings do not make hardware, OS, backend or memory placement equal. Server timeout versus local completion is not an isolated causal hardware experiment.",
+    "Current API size_vram accounts for model placement and is not evidence of dedicated physical GPU memory capacity.",
+    "Working-set sums cover observed named processes and may double-count shared pages. Available memory is system-wide; sample maxima/minima are not continuous peaks or whole-host OOM guarantees.",
+    "Provider token counts are Ollama counters, not independent tokenization. Byte-preserving input construction does not independently verify every rendered template token.",
+    "Top-level deadline text in original summary is inaccurate; the preserved numeric supervisor and invocation records establish 120 seconds and the separate correction documents this."
+  ],
+  "evidence_sha256": {
+    "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_request_to_send.json": "99f3e6e4e17f4958953ca814eb1c004a0077148286d26136024c114183a593aa",
+    "data/local_sector_runtime/laptop_realinput_1p7b_20261018/idle_confirmation_before.json": "97cacf6f3a57af1a4034af1c4819880510c5bdd8aeea7b0c93e710533283241d",
+    "data/local_sector_runtime/laptop_realinput_1p7b_20261018/invocation.json": "8a678a5ee1a2d9845705a5e0a678ec7165bb5b11d835a059017a6f1b80446bf9",
+    "data/local_sector_runtime/laptop_realinput_1p7b_20261018/model_observation.json": "3c46f48e7502a50320ad3057c1335915f618b581541712b9e3e7d7c969890dcd",
+    "data/local_sector_runtime/laptop_realinput_1p7b_20261018/model_observation_before_request.json": "3c46f48e7502a50320ad3057c1335915f618b581541712b9e3e7d7c969890dcd",
+    "data/local_sector_runtime/laptop_realinput_1p7b_20261018/original_request_not_sent.json": "f36fa7d2e48a41b93fe75eef5336457ee2b13d14fc3b204e14cdae06adb81cb5",
+    "data/local_sector_runtime/laptop_realinput_1p7b_20261018/residency_before.json": "7f9fc2997f5fc9f5a40bc2302e51ed9331c744cd56a88e709136d1762ff7be89",
+    "data/local_sector_runtime/laptop_realinput_1p7b_20261018/roundtrip_and_sizes.json": "88aba503105e6db699c58bde7435adcdfc57db6e73e22bc378698d2f4001438a",
+    "data/local_sector_runtime/laptop_realinput_1p7b_20261018/summary.json": "8edb284127eb324190e8a13233881a81cba2e569e0e36d0bc1ef4fc9e7288e77",
+    "data/local_sector_runtime/laptop_realinput_1p7b_20261018/unload_and_residency_after.json": "cfcb0fa90fd41e6145b3eadce5dd79eec07b21dea8eec5d257129d07f947a418",
+    "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_probe/monitor.jsonl": "b9e29e7605e2150b9c0916cdfb17649f1b1e39fa9040b221707707b7a564b235",
+    "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_probe/supervisor_result.json": "9cef38a3fb63bbb6034cd98f086821b6e83e0544a818d14e5ad43c5cc41218af",
+    "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_probe/worker.console.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_probe/worker_spec.json": "52620a4d55f123e8c6cc00f63c8ad5126a29ddf387ab8e6c1d3c39d7bf8051e6",
+    "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_probe/worker_summary.json": "57ab6a80b6e39b92fa7b8e8c156b89b3da5fb53ad435c6032a483c8468b91193",
+    "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_probe/http_0001_latency_probe/assembled_text.json": "daff98340adc7431d918848e159c831e57bfd7d5032948d91b014efdee507a15",
+    "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_probe/http_0001_latency_probe/events.jsonl": "3f86137eaf88cfbf81ec96e162bfb4ffab1dd5e55d20a7461103632f906f636c",
+    "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_probe/http_0001_latency_probe/raw_stream.bin": "b64c9cd8f0e36eaabdef2ac5aee43c99b434e85ab3fdb07f4177606891760784",
+    "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_probe/http_0001_latency_probe/request.json": "b5d732ff7017230902385631dce5079d8e27c62b08edeb13d823458ab1dcb838",
+    "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_probe/http_0001_latency_probe/response.json": "d262d5b3a0c163668f7c68d17990d6eb80dc00bf1b38226c334e1ceb3a4c759f",
+    "data/local_sector_runtime/laptop_realinput_1p7b_20261018/compact_probe/http_0001_latency_probe/result.json": "88bcafd439d1750bbfc3a674279e14dd0f9689a81bb01e891d68ae6a4d84e7bc",
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_request_to_send.json": "bde43ece35a099ee33b73d025394070fa9f9e6cc6d2918a164ef91f5518c9f88",
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/idle_confirmation_before.json": "438398660593960cb0e5a1ab3a7749f40d1d79317eff1ad37ee5d2bc8f51af6f",
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/invocation.json": "84c0e4dff4278111c65348ad9ae3706cb6971a5966ec71632e419de4a11aff91",
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/model_observation.json": "9fcbf3c39952dd574a38670c4d42263e822dd0dcfecdfbeb4a60a757dd88eaa2",
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/model_observation_before_request.json": "9fcbf3c39952dd574a38670c4d42263e822dd0dcfecdfbeb4a60a757dd88eaa2",
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/original_request_not_sent.json": "a7ffd1561b3546982297461b41a4001923227894d8ffa821bc2e5cb90ecfcf14",
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/residency_before.json": "c8cdda2058dfad73596cb9baef30bb2a825485859ad54c8d9cf5a10a457b0c8c",
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/roundtrip_and_sizes.json": "90dbd0dad295ae42f9f8ec6b24b694348d7c8378ce949423bb9167d4b1563250",
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/summary.json": "da9d116d7c77953cc0ac56fd548fb0bf24044f36be15fce5d9327bc0e83e7f81",
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/unload_and_residency_after.json": "d9eb8c4d428a17003305949bdb82a5553395b6668102efd615e7009e22243876",
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/monitor.jsonl": "71aa0db4bc803017ef496b0b5a6f960d7bc085bd2ad5e70d77e7894cf993ec4e",
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/supervisor_result.json": "01c5ba39f92d98fa473583f8a8d7ebd14ab873b4e72ef3d661f47c045122fae6",
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/worker.console.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/worker_spec.json": "141cd96248dc9f73a56c8e76f8310a2a200dedccb09b7adfafff2b069b94e4f5",
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/http_0001_latency_probe/events.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/http_0001_latency_probe/raw_stream.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/http_0001_latency_probe/request.json": "13d871c3b5333ca8611bc60f6065691448e4212ace86f6b45e107dcea215dbb6",
+    "tmp/sector_bridge_20261018/real_input_bundle.tar.gz": "7981ccd844cc446ed5b08a312334ffbe9dec2132588ff7a797e6f682e0641334",
+    "research/local_realinput_deadline_correction_20261018.json": "e4a069b57a0c7c2054fdc6bf1a93f1f2cefd4fb23dde09ce841020147609098e",
+    "research/benchmark_sector_real_input.py": "f8f299ed156435791287d57c83e03ea9992a4a56ce3d77500667146cffda1cb6",
+    "research/test_benchmark_sector_real_input.py": "75a98515738d685998f2e955fd9624817b04d89206ac10db36a732e5ce3d593b",
+    "data/sector_documents/model_packets.jsonl": "520bed87396eb815c87f362712a6ec39c0275076f9ef4c5d59ef5a7cbbe6afc7",
+    "data/sector_market/market_input.json": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f"
+  }
+}

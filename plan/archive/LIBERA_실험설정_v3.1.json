@@ -1,0 +1,489 @@
+{
+  "protocol_version": "3.1",
+  "as_of_date": "2026-10-17",
+  "status": "paper_audited_design_pre_main_freeze",
+  "execution_authorized_by_this_file": false,
+  "title": "공개 펀드 프로필을 활용한 생성형 AI의 정보 반영과 근거 제공 시점 실험",
+  "scope": {
+    "primary_estimand": "EARLY versus LATE information-onset policy effect within one model, including an explicitly specified hold-incumbent fallback",
+    "claims_excluded": [
+      "causal effect of sharing a model",
+      "actual fund manager behavior",
+      "realized investment performance",
+      "financial-system contagion"
+    ],
+    "B": "gold-evidence controlled allocation task",
+    "A": "public-document fact and constraint evaluation at the first evaluation date",
+    "C": "the same frozen document pipeline on a later held-out date"
+  },
+  "numeric_provenance_policy": {
+    "direct": "a paper actually used the same value and definition",
+    "adapted": "a published value or method moved to this task; differences must be disclosed",
+    "derived": "computed from data, model algebra or explicit workflow counts; not called a published optimum",
+    "structural": "new comparison architecture, fixed panel or implementation/reproducibility identifier; not a paper-recommended empirical constant",
+    "removed_fixed_choices": [
+      "120 or 60 independent scenarios",
+      "2 repeats",
+      "0.20 turnover cap and 0.10/0.30 candidates",
+      "Sigma/12 prior scale",
+      "r grid 0.5/1/2",
+      "0.90 coverage cutoff",
+      "512/1024 and 400/50 chunk sizes",
+      "8192 input-token cap",
+      "0.95 retrieval target",
+      "4 or 2 free tool rounds",
+      "12 facts and 6 probes",
+      "12 pilot and 12 negative and 24 sensitivity scenarios",
+      "0.01 reference width gate",
+      "20-times screening cap",
+      "$50/$150/$300 budget caps"
+    ]
+  },
+  "data": {
+    "access": "public sources; no CRSP, Compustat, Bloomberg, proprietary research or licensed identifier crosswalk required",
+    "development": {
+      "holdings_date": "2025-09-30",
+      "public_cutoff_date": "2025-12-31"
+    },
+    "A_and_B_profiles": {
+      "holdings_date": "2025-12-31",
+      "public_cutoff_date": "2026-03-31"
+    },
+    "C": {
+      "holdings_date": "2026-03-31",
+      "public_cutoff_date": "2026-06-30"
+    },
+    "availability_resolution": "date; use a public filing no earlier than the day following its publicly disseminated filing date; retain raw acceptance metadata",
+    "return_window": {
+      "start": "2015-01",
+      "end": "profile_holdings_month",
+      "B_end": "2025-12",
+      "B_complete_months_if_no_missing": 132,
+      "development_end": "2025-09",
+      "frequency": "monthly",
+      "weighting": "value_weighted",
+      "dividends": "included",
+      "units": "decimal",
+      "origin": "calendar span adapted from PortBench 2015-2025; count is derived, not a power recommendation"
+    },
+    "return_vintage": "freeze downloaded French CIZ release and SHA256; not an historical point-in-time vintage",
+    "h_definition": "industry values divided by mapped eligible equity value",
+    "E_total_definition": "all direct equity positions reported as EC or EP with Long payoff, including unmapped and intentionally fixed private/preferred equity; exclude fund shares and derivatives",
+    "q_total_definition": "E_total divided by NAV",
+    "q_map_definition": "mapped eligible equity value divided by NAV",
+    "c_map_definition": "E_map divided by E_total: reallocation coverage of all reported direct equity, not only a SIC-matching success rate",
+    "fixed_assets": "all assets outside the mapped eligible equity sleeve, including liabilities and net residual, remain fixed",
+    "amendment_rule": "for each series and reporting date, incorporate amendments publicly available before the cutoff; preserve original accession, selected accession and amendment chain. Later amendments are audit-only and are not retroactively substituted into inputs",
+    "mapping_rule": "verified issuer identity and source-dated SEC SIC mapped through French FF12 rules; mark as SEC-SIC proxy, not exact CRSP/Compustat industry replication",
+    "fund_candidates": [
+      {
+        "id": "F01",
+        "ticker": "FCNTX",
+        "cik": "0000024238",
+        "series": "S000006037",
+        "A_accession": "0000035402-26-001161",
+        "C_accession": "0000035402-26-003312",
+        "A_url": "https://www.sec.gov/Archives/edgar/data/24238/000003540226001161/primary_doc.xml",
+        "C_url": "https://www.sec.gov/Archives/edgar/data/24238/000003540226003312/primary_doc.xml",
+        "structured_sources_confirmed": true,
+        "mapping_eligibility_confirmed": false
+      },
+      {
+        "id": "F02",
+        "ticker": "VPMCX",
+        "cik": "0000752177",
+        "series": "S000002568",
+        "A_accession": "0000752177-26-000071",
+        "C_accession": "0000752177-26-000225",
+        "A_url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000071/primary_doc.xml",
+        "C_url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000225/primary_doc.xml",
+        "structured_sources_confirmed": true,
+        "mapping_eligibility_confirmed": false
+      },
+      {
+        "id": "F03",
+        "ticker": "DODGX",
+        "cik": "0000029440",
+        "series": "S000011202",
+        "A_accession": "0001193125-26-080198",
+        "C_accession": "0001193125-26-250426",
+        "A_url": "https://www.sec.gov/Archives/edgar/data/29440/000119312526080198/primary_doc.xml",
+        "C_url": "https://www.sec.gov/Archives/edgar/data/29440/000119312526250426/primary_doc.xml",
+        "structured_sources_confirmed": true,
+        "mapping_eligibility_confirmed": false
+      },
+      {
+        "id": "F04",
+        "ticker": "TRBCX",
+        "cik": "0000902259",
+        "series": "S000002069",
+        "A_accession": "0001099263-26-002537",
+        "C_accession": "0001099263-26-006586",
+        "A_url": "https://www.sec.gov/Archives/edgar/data/902259/000109926326002537/primary_doc.xml",
+        "C_url": "https://www.sec.gov/Archives/edgar/data/902259/000109926326006586/primary_doc.xml",
+        "structured_sources_confirmed": true,
+        "mapping_eligibility_confirmed": false
+      }
+    ],
+    "replacement_order": [
+      {
+        "ticker": "OAKMX",
+        "cik": "0000872323",
+        "series": "S000002758",
+        "A_accession": "0001410368-26-018114",
+        "C_accession": "0001410368-26-055168",
+        "mapping_eligibility_confirmed": false
+      },
+      {
+        "ticker": "PRBLX",
+        "cik": "0000866256",
+        "series": "S000000856",
+        "A_accession": "0001003715-26-000215",
+        "C_accession": "0001003715-26-001630",
+        "mapping_eligibility_confirmed": false
+      }
+    ],
+    "replacement_rule": "fixed order before evaluation-model outcomes; verify active mandate, development/A/C source completeness, eligible-position mapping completion and ultimate-parent independence from current official documents",
+    "eligible_universe": "SEC-registered publicly listed common equity and common-stock ADR whose issuer identity and source-dated SEC SIC can be verified; all other positions fixed with reason and amount",
+    "mapping_completion_rule": "reconcile every source position to a prespecified asset class; unresolved issuer/SIC linkage within the eligible universe blocks completion; do not reclassify linkage failures as excluded assets",
+    "coverage_reporting": "report c_map, q_total and q_map continuously for every period; no arbitrary minimum coverage ratio; claims apply only to mapped sleeve"
+  },
+  "B_generator": {
+    "industries": 12,
+    "industry_count_origin": "French FF12 data definition",
+    "covariance_estimator": "Ledoit-Wolf analytic shrinkage, no manually tuned coefficient",
+    "m0": "historical monthly mean over complete aligned observations",
+    "T": "number of complete aligned monthly observations through profile date",
+    "V0": "Sigma_hat / T",
+    "V0_origin": "derived under iid Gaussian unknown-mean sampling with plug-in estimated covariance; not a scalar directly prescribed by Lin et al.",
+    "theta": "Normal(m0,V0)",
+    "public_signal": "y = theta + epsilon_public",
+    "private_signal": "x_i = theta + epsilon_i",
+    "noise_covariances": "Omega_public = Omega_private = V0",
+    "noise_origin": "equal-precision symmetry control, an explicit model assumption rather than empirical information-quality calibration",
+    "posterior_public": "(m0+y)/2",
+    "posterior_full": "(m0+y+x_i)/3",
+    "assumptions": "conditionally independent Gaussian errors; synthetic expectations, not proprietary manager beliefs or actual future realized returns",
+    "signal_pair": "hold theta,y,h,Sigma and other funds fixed; resample only assigned fund observation error",
+    "rng": "NumPy PCG64 with separate SeedSequence streams; actual seeds frozen in release manifest",
+    "display_precision": "freeze serialized numeric inputs and use the same values in the evaluator",
+    "oracle_preflight": "diagnose zero/small optimal response before any main LLM calls; retain no-trade and ambiguous scenarios; no effect-driven parameter tuning"
+  },
+  "B_task": {
+    "objective": "maximize J_i(w;mu) = mu.T @ w - c * norm1(w-h_i)",
+    "cost_coefficient": 0.0015,
+    "cost_components_bps": {
+      "commission": 5,
+      "slippage": 10
+    },
+    "cost_definition": "gross sum of absolute changes in security/sleeve weights, no one-half multiplier",
+    "cost_origin": "PortBench v6 Appendix C.4 actual fee assumptions, adapted to an illustrative one-rebalance monthly industry-sleeve objective; not actual market cost estimation",
+    "horizon": "one month expected return less one rebalance cost",
+    "constraints": [
+      "w >= 0",
+      "sum(w) = 1",
+      "w.T @ Sigma_hat @ w <= h.T @ Sigma_hat @ h"
+    ],
+    "risk_limit_origin": "incumbent-derived relative-risk constraint, not an actual fund legal mandate",
+    "incumbent_must_be_feasible": true,
+    "stages": [
+      "plan",
+      "construct",
+      "review"
+    ],
+    "policies": {
+      "N": [
+        false,
+        false,
+        false
+      ],
+      "E": [
+        true,
+        true,
+        true
+      ],
+      "M": [
+        false,
+        true,
+        true
+      ],
+      "L": [
+        false,
+        false,
+        true
+      ]
+    },
+    "stage_origin": "new research workflow; not identical to PortBench S1/S2/S3"
+  },
+  "workflow": {
+    "model_responses_per_full_workflow": 4,
+    "response_sequence": [
+      "plan: extract observations and evidence",
+      "construct: propose allocation",
+      "review: emit updated observations",
+      "review: final allocation after deterministic posterior calculation"
+    ],
+    "deterministic_schedule": [
+      "posterior from plan extraction before construct",
+      "constraint and cost report after construct",
+      "posterior from review extraction before review final allocation"
+    ],
+    "call_count_origin": "derived from explicitly specified architecture, not a paper-optimized tool-round constant",
+    "tools": "no unconstrained tool loop; never replace extracted fields with gold; enforce evidence availability; do not expose theta, other funds private signals or oracle allocations",
+    "history": "only explicit frozen stage JSON and visible evidence; no hidden reasoning state",
+    "fresh": "one final allocation response with full current information and no generated history; descriptive path/history diagnostic, not anchoring identification",
+    "negative_control": "reuse every main scenario with one profile cloned over F virtual IDs, identical h,y,x and constraints; E/L, same repeats; analyze clustered by source scenario"
+  },
+  "model": {
+    "recommended_primary": "Qwen/Qwen3.6-35B-A3B",
+    "temperature": 0,
+    "thinking_enabled": true,
+    "max_output_tokens_per_model_response": 8192,
+    "origin": "PortBench v6 section 3.1 evaluated condition, not vendor-general optimal decoding",
+    "input_context_cap": "actual fixed model and engine capability; validate full packet fit in development, no invented universal input cap",
+    "weights_hash": null,
+    "tokenizer_revision": null,
+    "chat_template_hash": null,
+    "inference_engine": null,
+    "numeric_precision": null,
+    "hosting_candidates": [
+      "fixed public weights on available compute",
+      "public commercial hosting of the same model with verifiable settings"
+    ],
+    "replication_candidate_rule": "an accessible different-family model evaluated by PortBench, selected before main outcomes; separate versioned batch",
+    "access_verified": false,
+    "truncation": "count completed max-output exits as raw model failures if final schema invalid; no success-until-retry repair",
+    "drift_policy": "interleave conditions in complete scenario blocks; record exact model/engine/date; split changed versions rather than silently pooling"
+  },
+  "evaluation": {
+    "fallback": "valid raw final allocation is used unchanged; completed attempts with a model refusal, malformed/incomplete output or invalid allocation keep incumbent h in evaluation only. Unsent or unresolved infrastructure requests are incomplete-release records, resumed under the same input rather than automatically counted as model failures",
+    "primary_metrics": [
+      "reference_robust_paired_response_error_contrast_upper_bound",
+      "mean_full_information_cost_adjusted_regret_over_a_b"
+    ],
+    "response_error_formula": "E_p = 0.5*norm1((wtilde_b_p-wtilde_a_p)-(wstar_b-wstar_a))",
+    "regret_formula": "mean_variant(J_full(wstar_full)-J_full(wtilde))",
+    "primary_contrast": "E minus L within the same scenario and repeat",
+    "all_scenarios_retained": true,
+    "raw_failures_reported": true,
+    "valid_only_analysis": "secondary",
+    "reference_sets": "verified primal/dual L_v <= Jstar_v <= U_v; S_v={w in F: J_v(w)>=L_v-delta_num}; delta_num derived from validated numerical certification",
+    "coordinate_bounds": "l_vk=min_Sv(w_k), u_vk=max_Sv(w_k); z_k lies in [a_k=l_bk-u_ak,b_k=u_bk-l_ak]",
+    "paired_error_contrast_bounds": "g_k(z)=abs(q_Ek-z)-abs(q_Lk-z); d_lower=0.5*sum(min(g_k(a_k),g_k(b_k))); d_upper=0.5*sum(max(g_k(a_k),g_k(b_k)))",
+    "reference_representative": "within S_v select the allocation minimizing squared distance to incumbent h; a declared tie rule, not proof of mathematical uniqueness",
+    "robust_response_claim": "mean d_upper has an upper uncertainty bound below zero with declared multiplicity control; retain and report ambiguity rather than screening scenarios",
+    "G_role": "descriptive only; G_E-G_L=D_L-D_E cancels reference separation",
+    "information_loss_decomposition": "J_full(wstar_full)-J_full(wtilde)=[J_full(wstar_full)-J_full(wstar_available)]+[J_full(wstar_available)-J_full(wtilde)]",
+    "solver": {
+      "framework": "CVXPY",
+      "solver": "CLARABEL",
+      "version": null,
+      "settings_manifest": null,
+      "require_verified_primal_dual_bounds": true,
+      "numeric_rule": "archive solver precision and verify constraints with higher precision as required; unresolved certification blocks completion, no arbitrary 1pp gate",
+      "certification_scope": "numerically verified primal/dual feasibility and objective-gap bounds; do not equate a floating-point solver status with a formal exact-arithmetic proof"
+    },
+    "secondary_metrics": [
+      "raw failure rates and constraint residuals",
+      "oracle response magnitude and no-trade frequency",
+      "representative response error",
+      "available-information regret",
+      "evidence extraction and citation support",
+      "cost and latency"
+    ]
+  },
+  "analysis": {
+    "independent_unit": "scenario, conditional on fixed profiles and generator",
+    "fixed_strata": "assigned signal-pair fund, equal weights",
+    "recommended_repeats": 3,
+    "repeat_origin": "OpenPM three-seed frozen-capture precedent adapted to full workflow replication; not a power guarantee",
+    "main_scenarios": null,
+    "main_scenario_rule": "after independent pilot, record resource limit and choose maximum affordable complete balanced scenario blocks at K=3; report achieved precision, no unsupported power guarantee",
+    "alternative_scenario_rule": "predeclare scientifically meaningful effect or CI half-width, then compute N from pilot within/between variance, validate small-sample inference, freeze before main",
+    "pilot_scenarios": null,
+    "pilot_rule": "separate data and RNG; record full protocol and resource allowance before pilot; estimate variance and cost; no fixed 12-scenario sufficiency claim",
+    "design_variance": "(1/F^2)*sum_s[(sigma_between_s^2+sigma_within_s^2/K)/n_s]",
+    "estimator": "(1/F)*sum_s mean_j(mean_r D_sjr)",
+    "standard_error_squared": "(1/F^2)*sum_s variance_j(mean_r D_sjr)/n_s",
+    "main_tests": "two two-sided stratified paired-difference t approximations with Welch-Satterthwaite degrees of freedom; response uses d_upper, regret uses R_E-R_L; negative direction required",
+    "family_alpha": 0.05,
+    "multiplicity": "Holm across two primary tests; distinguish individual intervals from family-level inference",
+    "repeats_aggregation": "calculate metrics per repeat before averaging; never average weights first",
+    "bootstrap": {
+      "iterations": 10000,
+      "origin": "PortBench C.5 count, adapted to scenario resampling",
+      "unit": "whole scenario within fixed assigned-fund strata",
+      "role": "secondary uncertainty check; preserve all policies/funds/variants/repeats together"
+    },
+    "joint_improvement_rule": "both endpoints support negative effects under multiplicity control and response reference-robustness; do not infer equivalence from nonsignificance; report failures",
+    "cost_sensitivity_optional_multipliers": [
+      0,
+      0.5,
+      1,
+      1.5,
+      2
+    ],
+    "cost_sensitivity_origin": "OpenPM five-point default-cost multipliers; adaptation requires recomputing objectives and references on identical cases",
+    "methods_sources": [
+      "NIST AI 800-3 (2026)",
+      "TEE 2604.11581v1 section 4.3 and SI.8"
+    ],
+    "cost_sensitivity_modes": "rerunning allocation under changed costs is a separate robustness experiment; merely rescoring fixed allocations is evaluation sensitivity and must be labeled separately"
+  },
+  "A_C": {
+    "field_inventory": "all prespecified identifiers, dates, NAV, aggregate direct/mapped equity values and units, mandate/strategy/risk text and applicable rules with source spans; every individual holding row is audited in data construction, not required as an unlimited LLM fact-table output",
+    "facts_per_bundle": "derived from inventory, no fixed 12-fact quota",
+    "document_probes": "all prespecified source-supported mandate rules and evaluability/missing-field decisions; no fixed six-probe quota",
+    "math_probes": "not included in A/C documentary scores; B allocation outputs are checked for nonnegativity, sum and risk separately",
+    "gold_rule": "double source review before outputs; explicit absent versus insufficient-data states; no filtering by model success",
+    "packet_sources": [
+      "gold_evidence",
+      "actual_retrieval"
+    ],
+    "onset_policies": [
+      "E",
+      "L"
+    ],
+    "repeats": "same K as B",
+    "output": "fact sheet and compliance/evaluability decisions; no forced allocation from absent quantitative forecasts",
+    "inference": "descriptive document-pipeline transfer; fields and repeats are not independent market scenarios",
+    "source_fund_period_combinations_if_panel_complete": 8,
+    "response_sequence": [
+      "plan required fields and sources",
+      "draft facts and rule/evaluability decisions",
+      "review evidence and missing fields",
+      "final facts and rule/evaluability decisions"
+    ],
+    "deterministic_checks": "units, dates, aggregate arithmetic and source availability only; no B-specific posterior or allocation helper",
+    "batching": "in development freeze field/rule-ID-ordered output bundles that fit actual input and output limits; retain every item; same partition for all policies and packet sources; Bdoc is actual output-bundle count, not necessarily eight source fund-period combinations",
+    "holdout_scope": "C withheld from development and A; not a claim of absence from model pretraining"
+  },
+  "retrieval_development": {
+    "access_filter": "common and own-fund documents; exact allowed public-cutoff and reporting-date metadata; never other funds or gold evaluation files",
+    "chunking": "hierarchical heading/section/table-aware; preserve titles, rows, headers, units, footnotes, source and page metadata; subdivide oversized structures to fit actual context",
+    "chunking_source": "Miola et al. 2609.03654v1 section 4.1.1; no unsupported fixed token-length grid",
+    "retrievers": [
+      "BM25",
+      "BM25 + BGE-M3 with RRF"
+    ],
+    "bm25": {
+      "k1": 1.2,
+      "b": 0.75
+    },
+    "RRF_c_candidates": [
+      10,
+      60
+    ],
+    "optional_reranker": "BAAI/bge-reranker-v2-m3",
+    "fusion": "fuse complete ranked allowed-corpus lists before candidate shortlist; not 50 per retriever",
+    "reranker_candidates_after_fusion": 50,
+    "reranked_retained": 10,
+    "final_top_k_candidates": [
+      5,
+      10
+    ],
+    "numerical_source": "Akarsu et al. 2604.01733v1 sections III-B/IV-B/IV-C; top-5 end-to-end precedent, top-10 generation candidate is an adaptation of evaluated retrieval depth",
+    "model_substitution": "paper dense/reranker replaced with public BGE models; new setting, revalidate in development",
+    "packet_input_limit": "actual frozen model context capability, not 8192 universal input tokens",
+    "selection_rule": "highest development mandatory evidence coverage; ties go to fewer input tokens, lower latency, then simpler retrieval; do not use E-L effect",
+    "evaluation": "continuous evidence recall and all-required coverage, wrong fund/date, citation support and missing-field behavior; no arbitrary 95-percent gate",
+    "query_packet_rule": "retrieve top-k per registered question; deduplicate union by document/segment ID within output bundle; context-fitting output bundles frozen in development, no gold-driven supplementation"
+  },
+  "execution_counts": {
+    "symbols": "N independent scenarios, F fixed fund profiles, K repeats, Bdoc actual A/C document output bundles after deterministic context-fitting partition",
+    "B_base": "16*N*F*K",
+    "signal_pair_additions": "12*N*K",
+    "fresh": "2*N*K",
+    "negative_controls": "8*N*F*K",
+    "A_C": "16*Bdoc*K",
+    "core_model_responses": "K*((24*F+14)*N+16*Bdoc)",
+    "conditional_panel_substitution": "only if no A/C output-bundle subdivision: F=4,K=3,Bdoc=8 gives 330*N+384",
+    "counts_are": "model responses, not workflow stages or independent observations; review contains two responses",
+    "excluded_additions": [
+      "development and pilot",
+      "optional cost sensitivity",
+      "second model",
+      "infrastructure retries"
+    ]
+  },
+  "budget": {
+    "project_resource_limit": null,
+    "currency_or_compute_units": null,
+    "pilot_measured_usage": null,
+    "rule": "measure tokens including thinking, latency and serving/compute cost by policy and response type; use contemporaneous hosting rates or compute hours; include retrieval, failures and applicable overhead; freeze N and resource limit before main",
+    "fixed_dollar_cap_from_paper": false,
+    "paid_execution_started": false,
+    "overrun_rule": "stop new blocks at recorded limit; report completed and incomplete blocks and reasons; never retain only favorable-policy outcomes"
+  },
+  "gates_before_main": {
+    "all_period_documents_complete": false,
+    "eligible_asset_inventory_and_mapping_complete": false,
+    "incumbents_and_objective_bound_certification_verified": false,
+    "oracle_response_and_ambiguity_reported": false,
+    "fact_and_constraint_gold_double_reviewed": false,
+    "model_weights_engine_schema_access_verified": false,
+    "pilot_variance_and_cost_measured": false,
+    "sample_and_resource_limits_frozen": false,
+    "retrieval_and_workflow_choices_frozen": false,
+    "preregistration_and_hash_manifest_frozen": false
+  },
+  "source_manifest": {
+    "PortBench": {
+      "url": "https://arxiv.org/html/2605.27887v6",
+      "version": "v6 2026-10-09",
+      "use": [
+        "model decoding condition",
+        "5+10 bps fee",
+        "10000 bootstrap count",
+        "calendar span"
+      ]
+    },
+    "OpenPM": {
+      "url": "https://arxiv.org/html/2608.09988v1",
+      "use": [
+        "frozen evidence",
+        "3 seeds adapted",
+        "cost multiplier candidates"
+      ]
+    },
+    "NIST_AI_800_3": {
+      "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.800-3.pdf",
+      "use": [
+        "evaluation variance components and uncertainty"
+      ]
+    },
+    "TEE": {
+      "url": "https://arxiv.org/html/2604.11581v1",
+      "use": [
+        "pilot to design variance projection"
+      ]
+    },
+    "Akarsu": {
+      "url": "https://arxiv.org/html/2604.01733v1",
+      "use": [
+        "BM25 constants",
+        "RRF candidates",
+        "fused 50 to 10 reranking",
+        "top5 generation precedent"
+      ]
+    },
+    "Miola": {
+      "url": "https://arxiv.org/html/2609.03654v1",
+      "use": [
+        "structure-preserving financial document splitting"
+      ]
+    },
+    "Lin_BL": {
+      "url": "https://arxiv.org/html/2505.02185",
+      "use": [
+        "Gaussian prior/view model; not the 1/T scalar"
+      ]
+    },
+    "Cost_optimization": {
+      "url": "https://arxiv.org/html/2603.07881v1",
+      "use": [
+        "cost-aware objective structure; no proprietary source data or incompatible alpha constants copied"
+      ]
+    }
+  }
+}

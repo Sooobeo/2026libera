@@ -1,0 +1,37 @@
+{
+  "started_at_utc": "2026-10-18T05:59:34.472178+00:00",
+  "scope": "real_input_engineering_feasibility_only",
+  "model": "qwen3:1.7b",
+  "approved_manifest_digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+  "approved_engine": "0.35.1",
+  "origin": "http://127.0.0.1:11434",
+  "deadline_seconds": 180,
+  "file_hashes": {
+    "research/benchmark_sector_real_input.py": "2a64adcae546d74702c4b9ba5e60e2c81308389b5b6f2c7c663571bc5b0ac88e",
+    "research/benchmark_sector_latency.py": "4c6c751891964250b71b221073e3ce4e2407b8548ec62ccb9bf514945da7ae45",
+    "research/remote_sector_runtime.py": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5",
+    "research/run_sector_workflow.py": "5625450a4dcbe1aa717c9809bf4955c1ef6b10aab4f0c83ef05dc2eb2c123cfd",
+    "research/compact_sector_prompt.py": "6984ada966ad55c3089fc297ca6342fdb51685bebfe3107769086343bbe68c0d",
+    "market_file_sha256": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f",
+    "packet_file_sha256": "f5bbd9bf0ee8267a8718439064604dfc499428a2fc728c95f672bc4abc5595b9",
+    "selected_packet_value_sha256": "dd55b6d197d1732e3051d9361566c7db3a175a6a90e720c0053659c2f9124a46"
+  },
+  "projection_version": "sector_market_exact_duplicates_v1",
+  "request_options": {
+    "temperature": 0,
+    "num_ctx": 32768,
+    "num_predict": 32,
+    "num_thread": 2,
+    "num_batch": 512,
+    "repeat_penalty": 1.0,
+    "presence_penalty": 0.0,
+    "frequency_penalty": 0.0,
+    "seed": 3407
+  },
+  "only_compact_request_sent": true,
+  "planned_generation_attempts": 1,
+  "pilot_model_calls": 0,
+  "main_model_calls": 0,
+  "condition_basis": "Output cap32, context32768/65536, thread/batch settings, decoding overrides and timeout are engineering probe controls, not a claimed paper-condition replication.",
+  "interpretation_limits": "One first-stage request. No allocation/rating scoring, no full workflow verdict, no original-versus-compact latency comparison; OS file cache is not evicted."
+}

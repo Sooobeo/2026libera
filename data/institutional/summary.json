@@ -1,0 +1,533 @@
+{
+  "all_three_numerically_same": {
+    "count": 83,
+    "window_ids": [
+      19,
+      37,
+      40,
+      47,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      110,
+      111,
+      112,
+      113,
+      115,
+      116,
+      117,
+      119,
+      120,
+      121,
+      122,
+      123,
+      134,
+      135,
+      144,
+      207,
+      209,
+      210,
+      211,
+      212,
+      213,
+      216,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      276,
+      288,
+      289,
+      290,
+      326,
+      513,
+      515,
+      516,
+      517,
+      518,
+      519,
+      520,
+      521,
+      522,
+      523,
+      524,
+      525,
+      548,
+      558,
+      559,
+      560,
+      564,
+      565,
+      594,
+      595,
+      596,
+      597,
+      598,
+      599,
+      613,
+      614,
+      615,
+      616,
+      617,
+      618,
+      619,
+      620,
+      621,
+      622,
+      623
+    ]
+  },
+  "all_three_same_vertex": {
+    "count": 83,
+    "window_ids": [
+      19,
+      37,
+      40,
+      47,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      110,
+      111,
+      112,
+      113,
+      115,
+      116,
+      117,
+      119,
+      120,
+      121,
+      122,
+      123,
+      134,
+      135,
+      144,
+      207,
+      209,
+      210,
+      211,
+      212,
+      213,
+      216,
+      218,
+      219,
+      220,
+      221,
+      222,
+      223,
+      276,
+      288,
+      289,
+      290,
+      326,
+      513,
+      515,
+      516,
+      517,
+      518,
+      519,
+      520,
+      521,
+      522,
+      523,
+      524,
+      525,
+      548,
+      558,
+      559,
+      560,
+      564,
+      565,
+      594,
+      595,
+      596,
+      597,
+      598,
+      599,
+      613,
+      614,
+      615,
+      616,
+      617,
+      618,
+      619,
+      620,
+      621,
+      622,
+      623
+    ]
+  },
+  "baseline_interpretation": "Oracle, equal weight and mandate-blind gamma3 are deterministic sanity checks, not observations of any AI model. gamma3 blind applies the gamma3 optimum to all three mandates, so its missing mandate response is known by construction.",
+  "case_count": 1875,
+  "coverage_rule": "All 625 existing Salcher empirical 60/36-eligible windows, without effect-based selection. Only their training moments enter this benchmark; future test moments, test dates and old unrestricted weights are excluded from output cases.",
+  "dataset": {
+    "end": "2023-12",
+    "industries": [
+      "NoDur",
+      "Durbl",
+      "Manuf",
+      "Enrgy",
+      "Chems",
+      "BusEq",
+      "Telcm",
+      "Utils",
+      "Shops",
+      "Hlth",
+      "Money",
+      "Other"
+    ],
+    "months": 720,
+    "start": "1964-01",
+    "units": "decimal_monthly_return"
+  },
+  "deterministic_baselines": {
+    "equal_weight_gamma_1": {
+      "cases": 625,
+      "maximum_utility_regret": 0.017354718316737287,
+      "mean_utility_regret": 0.005934651747776774,
+      "minimum_utility_regret": 0.0015068649471170169
+    },
+    "equal_weight_gamma_3": {
+      "cases": 625,
+      "maximum_utility_regret": 0.012845821616878528,
+      "mean_utility_regret": 0.005410462424982795,
+      "minimum_utility_regret": 0.0009715800865008274
+    },
+    "equal_weight_gamma_5": {
+      "cases": 625,
+      "maximum_utility_regret": 0.011067212143387007,
+      "mean_utility_regret": 0.005333666391846772,
+      "minimum_utility_regret": 0.0009047590265563584
+    },
+    "gamma_3_blind_gamma_1": {
+      "cases": 625,
+      "maximum_utility_regret": 0.002788222577364923,
+      "mean_utility_regret": 0.0002515402426944127,
+      "minimum_utility_regret": 0.0
+    },
+    "gamma_3_blind_gamma_3": {
+      "cases": 625,
+      "maximum_utility_regret": 0.0,
+      "mean_utility_regret": 0.0,
+      "minimum_utility_regret": 0.0
+    },
+    "gamma_3_blind_gamma_5": {
+      "cases": 625,
+      "maximum_utility_regret": 0.001462260716710708,
+      "mean_utility_regret": 0.00019585304696354312,
+      "minimum_utility_regret": 0.0
+    }
+  },
+  "evaluation_policy": {
+    "economic_scope": "Fictional institution-specific equity-sector mandates; not actual fund preference estimates, privileged institutional forecasts, game-theoretic strategic interaction or realized financial stability.",
+    "raw_invalid_weights": "Reject missing, nonnumeric, nonfinite, negative, above-one or wrong-length vectors and weight sums outside the explicit engineering allowance; never normalize, clip or impute a portfolio.",
+    "response_sum_one_absolute_tolerance": 1e-06,
+    "sum_tolerance_provenance": "LIBERA runner engineering allowance for response serialization; not a paper-sourced treatment condition. The raw budget residual is retained and scored without repair. A possible negative raw regret attributable to the small budget mismatch is explicitly flagged using the reference equality multiplier."
+  },
+  "first_window": {
+    "pairs": [
+      {
+        "classification": "distinct_cross_KKT_rejects_shared_optimum",
+        "cross_active_stationarity_residuals": [
+          0.0,
+          0.0004638888888888904
+        ],
+        "cross_inactive_dual_violations": [
+          0.0008546932485875664,
+          0.0
+        ],
+        "deterministic_gamma_3_blind_pair": {
+          "candidate_distance_D": 0.0,
+          "distance_reduction_G_descriptive": 0.2285293076500241,
+          "gammas": [
+            1,
+            3
+          ],
+          "interpretation": "Positive G describes reduced distance; it alone is not a welfare loss or proof of harmful homogenization. Use response error and institution-specific utility regret together.",
+          "pair_response_error": 0.2285293076500241,
+          "reference_distance_D_star": 0.2285293076500241,
+          "window_id": 1
+        },
+        "distance_D_star": 0.2285293076500241,
+        "gammas": [
+          1,
+          3
+        ],
+        "i_weights_satisfy_j_KKT": false,
+        "j_weights_satisfy_i_KKT": false,
+        "no_experimental_distance_cutoff_used": true,
+        "same_vertex_index": null
+      },
+      {
+        "classification": "distinct_cross_KKT_rejects_shared_optimum",
+        "cross_active_stationarity_residuals": [
+          0.0,
+          0.0028395555555555552
+        ],
+        "cross_inactive_dual_violations": [
+          0.002731033220338977,
+          0.0
+        ],
+        "deterministic_gamma_3_blind_pair": {
+          "candidate_distance_D": 0.0,
+          "distance_reduction_G_descriptive": 0.49666525621912727,
+          "gammas": [
+            1,
+            5
+          ],
+          "interpretation": "Positive G describes reduced distance; it alone is not a welfare loss or proof of harmful homogenization. Use response error and institution-specific utility regret together.",
+          "pair_response_error": 0.49666525621912727,
+          "reference_distance_D_star": 0.49666525621912727,
+          "window_id": 1
+        },
+        "distance_D_star": 0.49666525621912727,
+        "gammas": [
+          1,
+          5
+        ],
+        "i_weights_satisfy_j_KKT": false,
+        "j_weights_satisfy_i_KKT": false,
+        "no_experimental_distance_cutoff_used": true,
+        "same_vertex_index": null
+      },
+      {
+        "classification": "distinct_cross_KKT_rejects_shared_optimum",
+        "cross_active_stationarity_residuals": [
+          0.00046388888888888955,
+          0.0014197777777777794
+        ],
+        "cross_inactive_dual_violations": [
+          0.0016501899569922726,
+          0.0
+        ],
+        "deterministic_gamma_3_blind_pair": {
+          "candidate_distance_D": 0.0,
+          "distance_reduction_G_descriptive": 0.26813594856910317,
+          "gammas": [
+            3,
+            5
+          ],
+          "interpretation": "Positive G describes reduced distance; it alone is not a welfare loss or proof of harmful homogenization. Use response error and institution-specific utility regret together.",
+          "pair_response_error": 0.26813594856910317,
+          "reference_distance_D_star": 0.26813594856910317,
+          "window_id": 1
+        },
+        "distance_D_star": 0.26813594856910317,
+        "gammas": [
+          3,
+          5
+        ],
+        "i_weights_satisfy_j_KKT": false,
+        "j_weights_satisfy_i_KKT": false,
+        "no_experimental_distance_cutoff_used": true,
+        "same_vertex_index": null
+      }
+    ],
+    "references_by_gamma": {
+      "1": {
+        "active_face": [
+          11
+        ],
+        "utility": 0.012583811745762716,
+        "weights": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "3": {
+        "active_face": [
+          5,
+          11
+        ],
+        "utility": 0.010202429798797905,
+        "weights": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.2285293076500241,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.7714706923499759
+        ]
+      },
+      "5": {
+        "active_face": [
+          3,
+          5,
+          11
+        ],
+        "utility": 0.008249722511231086,
+        "weights": [
+          0.0,
+          0.0,
+          0.0,
+          0.21043343046381668,
+          0.0,
+          0.2862318257553106,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.5033347437808727
+        ]
+      }
+    },
+    "training_window": {
+      "end": "1968-12",
+      "months": 60,
+      "start": "1964-01"
+    },
+    "window_id": 1
+  },
+  "formula": {
+    "correct_constrained_expansion": "With d=w-w_star: regret=gamma/2*d.T Sigma d-gradient_U(w_star).T d. The boundary linear term is generally nonzero. The old unrestricted pure-quadratic loss identity is not used.",
+    "distance_reduction_G": "G=D_star-.5*||w_i-w_j||_1; descriptive only, interpreted jointly with response error and utility regret.",
+    "pair_response_error": ".5*||(w_i-w_j)-(w_i_star-w_j_star)||_1",
+    "primary_utility_regret": "U_gamma(w_star)-U_gamma(w), evaluated directly without clipping.",
+    "reference": "Unique maximizer of the supplied training-moment objective on the simplex.",
+    "reference_pair_distance": "D_star=.5*||w_i_star-w_j_star||_1",
+    "utility": "U_gamma(w)=mu.T w-gamma/2*w.T Sigma w; w>=0, sum(w)=1."
+  },
+  "gammas": [
+    1,
+    3,
+    5
+  ],
+  "not_independent_samples": "The 625 rolling windows overlap; 1875 mandate cases are not independent observations or a paper-backed sample-size/power recommendation.",
+  "numerical_verification": {
+    "KKT_maximum_residuals": {
+      "active_stationarity_residual": 5.204170427930421e-18,
+      "complementarity_residual": 3.469349854401039e-18,
+      "inactive_dual_violation": 0.0,
+      "weight_sum_residual": 2.220446049250313e-16
+    },
+    "active_set_maximum_iterations": 8,
+    "all_1875_reference_KKT_checks_passed": true,
+    "all_625_covariances_positive_definite": true,
+    "equal_weight_and_gamma3_blind_regret_nonnegative_to_machine_precision": true,
+    "formal_certification_limit": "Global uniqueness follows mathematically from positive-definite Sigma and gamma>0; this implementation checks its prerequisites and KKT numerically, not with interval or exact arithmetic.",
+    "gamma3_blind_has_zero_candidate_pair_distance_and_response_error_equal_D_star": true,
+    "independent_SLSQP_maximum_utility_shortfall": 5.3273357947247746e-15,
+    "independent_SLSQP_maximum_weight_difference": 2.415992565868441e-06,
+    "independent_SLSQP_successes": 1875,
+    "maximum_covariance_condition_number": 698.4614314496807,
+    "minimum_covariance_eigenvalue": 4.30700383578711e-05,
+    "oracle_zero_scores_all_passed": true,
+    "precision_note": "Numerical feasibility and KKT tolerances are derived from float64 machine epsilon, dimension and input scale (factor 2048). SLSQP uses objective scale100, ftol1e-12,maxiter1000 as implementation checks, not paper-sourced experimental conditions. No AI response is normalized or repaired.",
+    "risk_aversion_return_and_variance_monotonicity_all_passed": true
+  },
+  "pair_reference_summary": {
+    "1-3": {
+      "classifications": {
+        "distinct_cross_KKT_rejects_shared_optimum": 455,
+        "same_vertex_mutual_KKT_verified": 170
+      },
+      "maximum_D_star": 0.9469344991962542,
+      "mean_D_star": 0.22621640259598608,
+      "median_D_star": 0.17773836053698755,
+      "minimum_D_star": 0.0,
+      "unresolved_window_ids": [],
+      "windows": 625
+    },
+    "1-5": {
+      "classifications": {
+        "distinct_cross_KKT_rejects_shared_optimum": 542,
+        "same_vertex_mutual_KKT_verified": 83
+      },
+      "maximum_D_star": 1.0,
+      "mean_D_star": 0.3807568436312312,
+      "median_D_star": 0.3946451960840397,
+      "minimum_D_star": 0.0,
+      "unresolved_window_ids": [],
+      "windows": 625
+    },
+    "3-5": {
+      "classifications": {
+        "distinct_cross_KKT_rejects_shared_optimum": 539,
+        "same_vertex_mutual_KKT_verified": 86
+      },
+      "maximum_D_star": 0.6174415285087897,
+      "mean_D_star": 0.17154843960485144,
+      "median_D_star": 0.16530251453019407,
+      "minimum_D_star": 0.0,
+      "unresolved_window_ids": [],
+      "windows": 625
+    }
+  },
+  "prompt_exposure": {
+    "allowed": [
+      "model_visible.public_market_data",
+      "model_visible.institution_mandate only at the assigned onset stage and later"
+    ],
+    "metadata_leak_warning": "case_id contains gamma. Institution labels must not reveal gamma before the assigned onset stage. The external solver's optimum, utility scores and pair classifications are never model inputs.",
+    "runner_only_never_serialize_to_model": [
+      "case_id",
+      "window_id",
+      "evaluator_only",
+      "reference_weights",
+      "pair_references_evaluator_only"
+    ],
+    "workflow_scope": "R1/R4/FRESH packet construction, stage tasks and AI execution are prepared elsewhere. Before a mandate is revealed no unique institution-specific allocation objective is supplied; intermediate draft outputs have no institution-specific oracle score."
+  },
+  "same_optimum_policy": "Classify identical vertices with mutual KKT as shared optima. Other pairs require mutual KKT; residual-small but unequal vectors are labeled unresolved, not declared identical by an arbitrary distance cutoff. Preserve all windows. D_star=0 gives no evidence that equal AI portfolios erase normative heterogeneity; distance ratios at zero are undefined.",
+  "schema_version": "1.0",
+  "source": {
+    "covariance_implementation_distinction": "Use the existing paper-text sample covariance (ddof=1), not the author's code-only 0.2 diagonal shrinkage mode.",
+    "gamma_author_code": "https://github.com/salcherlukas/Lost_in_Translation/blob/14c3a4c9567da966de5a4f7b9e5ef9ea6cff99fe/code/00_setup.R",
+    "libera_extension": "A combination of Salcher quadratic utility with PortBench's long-only simplex, interpreted as three fictional equity-sector mandates. This is not a full replication, an estimate of actual institutions' preferences, or a private-forecast model.",
+    "portbench_location": "Appendix C.1 T5 supplies long-only weights and sum-one constraints for a maximum-Sharpe objective. Only those feasible-set conditions are borrowed; its 4% rate, daily lookback, objective, scoring and fallback are not used.",
+    "portbench_paper": "https://arxiv.org/html/2605.27887v6",
+    "salcher_locations": "Section 3.2 Eq.(6), full investment quadratic utility; Tables 2-5 gamma=1,3,5; Sections 4.1 and 6 monthly FF12 excess returns 1964-2023 and rolling 60/36-month windows.",
+    "salcher_paper": "https://onlinelibrary.wiley.com/doi/10.1002/for.70134",
+    "units_author_code": "https://github.com/salcherlukas/Lost_in_Translation/blob/14c3a4c9567da966de5a4f7b9e5ef9ea6cff99fe/code/functions/data.R"
+  },
+  "status": "prepared_numerically_KKT_verified_references_no_AI_experiment_run",
+  "training_window_coverage": {
+    "first": {
+      "end": "1968-12",
+      "months": 60,
+      "start": "1964-01"
+    },
+    "last": {
+      "end": "2020-12",
+      "months": 60,
+      "start": "2016-01"
+    }
+  },
+  "training_window_months": 60,
+  "window_count": 625
+}

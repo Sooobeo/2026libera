@@ -1,0 +1,43 @@
+{
+  "split": "pilot",
+  "planned_runs": 4,
+  "attempted_runs": 1,
+  "completed_runs": 0,
+  "records": [
+    {
+      "case_id": "fidelity_q2_2026__R1",
+      "source_id": "fidelity_q2_2026",
+      "arm": "R1",
+      "status": "failed",
+      "error_type": "RemoteCallError",
+      "error": "Remote end closed connection without response",
+      "model_calls_attempted": 1,
+      "http_call_folders": [
+        "http_0001_pilot"
+      ]
+    },
+    {
+      "case_id": "fidelity_q2_2026__R4",
+      "source_id": "fidelity_q2_2026",
+      "arm": "R4",
+      "status": "not_started"
+    },
+    {
+      "case_id": "ubs_june_2026__R1",
+      "source_id": "ubs_june_2026",
+      "arm": "R1",
+      "status": "not_started"
+    },
+    {
+      "case_id": "ubs_june_2026__R4",
+      "source_id": "ubs_june_2026",
+      "arm": "R4",
+      "status": "not_started"
+    }
+  ],
+  "pilot_model_calls": 1,
+  "main_model_calls": 0,
+  "status": "incomplete",
+  "failure_policy": "Raw and attempted cases retained; not-started cases are not observed model errors; no retry.",
+  "evaluation_status": "Not scored remotely; no gold uploaded or read; semantic human review remains separate."
+}

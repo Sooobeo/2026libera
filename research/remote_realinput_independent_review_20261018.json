@@ -1,0 +1,285 @@
+{
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-18T06:09:33.942670+00:00",
+  "reviewer": "risk_metrics_review",
+  "review_scope": "Separate review of retrieved real-input engineering raw artifacts; no model calls or remote actions performed by reviewer. Reviewer authored compact/helper modules; provenance and independent reconstruction are not a separate-author software certification.",
+  "status": "pass_with_runtime_feasibility_not_established",
+  "check_count": 19,
+  "pass_count": 19,
+  "fail_count": 0,
+  "checks": [
+    {
+      "id": "archive_digest",
+      "status": "pass",
+      "detail": "Received archive is 34613 bytes and matches the transfer SHA256 reported by the operator."
+    },
+    {
+      "id": "archive_members",
+      "status": "pass",
+      "detail": "All 19 archived files match the extracted local bytes; no inference from missing remote files is used."
+    },
+    {
+      "id": "code_archive_pins",
+      "status": "pass",
+      "detail": "Five currently inspected source files match both deployed bundle bytes and hashes recorded by the remote invocation; this is provenance, not model-quality validation."
+    },
+    {
+      "id": "input_archive_pins",
+      "status": "pass",
+      "detail": "Full market archive and the two-pilot-document deployment corpus match recorded hashes; selected Fidelity packet value hash also matches."
+    },
+    {
+      "id": "public_inputs_only",
+      "status": "pass",
+      "detail": "The inspected deployment bundles contain pilot public packets and common market, with no evaluator gold file."
+    },
+    {
+      "id": "actual_original_input",
+      "status": "pass",
+      "detail": "The saved original messages are exactly the actual earlier cancelled 4B pilot first-stage messages, including SYSTEM; model/runtime options are intentionally different engineering controls."
+    },
+    {
+      "id": "independent_full_value_roundtrip",
+      "status": "pass",
+      "detail": "Independent reconstruction without compact module restore: identical object keys, list positions, scalar types and values; every float compared via float.hex(), including signed zero."
+    },
+    {
+      "id": "all_original_market_values",
+      "status": "pass",
+      "detail": "Original request market and institution document equal pinned deployment inputs."
+    },
+    {
+      "id": "no_unique_information_removal",
+      "status": "pass",
+      "detail": "Only exact duplicate covariance alias and ordered weight array are removed; ddof=1 explicitly retained; full covariance, correlation, original precision and document remain."
+    },
+    {
+      "id": "compact_request_copies",
+      "status": "pass",
+      "detail": "Saved compact request, worker specification and sole HTTP request envelope are identical; original request is archived but not sent."
+    },
+    {
+      "id": "explicit_engineering_options",
+      "status": "pass",
+      "detail": "Requested T0, context32768, cap32, thread2, batch512, neutral penalties, seed3407, think=false, format=json and keep_alive=0 are explicit engineering controls, not a claimed paper replication."
+    },
+    {
+      "id": "model_engine_template_pins",
+      "status": "pass",
+      "detail": "Both observations agree: exact tag/digest, Ollama0.35.1, Q4_K_M and independently hashed model template. Tag is 1.7b; model metadata reports 2031739904 parameters / size label 1.7B / display 2.0B."
+    },
+    {
+      "id": "size_and_context_screen",
+      "status": "pass",
+      "detail": "Recomputed byte counts, content lengths, request hashes and UTF8+256/message screening bound match. These are not actual tokenizer counts or observed throughput."
+    },
+    {
+      "id": "no_response_received",
+      "status": "pass",
+      "detail": "Zero received stream/event bytes, no terminal worker summary. Provider token counts, TTFT and actual decoding compliance are unobserved; zero bytes does not establish zero internal computation."
+    },
+    {
+      "id": "bounded_single_attempt",
+      "status": "pass",
+      "detail": "One recorded request, no automatic retries; supervisor killed its child at hard deadline, not the Ollama service. Child elapsed 180.0034051090479s; total script 180.25418036989868s includes preflight and cleanup."
+    },
+    {
+      "id": "before_after_idle_confirmed",
+      "status": "pass",
+      "detail": "Both pre-run and post-deadline selected-model unload returned ok+done=true+unload, followed by successful /api/ps with models=[]; no inference that OS page cache was cleared."
+    },
+    {
+      "id": "resident_context_and_cpu_placement",
+      "status": "pass",
+      "detail": "90 sampled monitor observations; resident entries show requested model, context32768 and size_vram=0. This establishes resident CPU placement, not an actual prompt token count."
+    },
+    {
+      "id": "thread_scope_not_misreported",
+      "status": "pass",
+      "detail": "Two threads were requested. This run does not archive actual backend thread count or CPU utilization; earlier pilot_cpu_probe threads=11 belongs to the older 4B pilot and is not reused here."
+    },
+    {
+      "id": "no_research_result",
+      "status": "pass",
+      "detail": "This is one engineering invocation with no received answer and no completed research stage/case/main result. It does not establish four-stage or R1/R4 feasibility, accuracy, or model regression."
+    }
+  ],
+  "verified_metrics": {
+    "monitor_sample_count": 90,
+    "sample_window_seconds": [
+      0.00023957714438438416,
+      178.0081824529916
+    ],
+    "ollama_allowlist_rss_sum_sample_max_bytes": 5272690688,
+    "cgroup_memory_current_sample_max_bytes": 9518526464,
+    "cgroup_memory_peak_before_bytes": 9193975808,
+    "cgroup_memory_peak_last_bytes": 9539567616,
+    "cgroup_swap_current_first_bytes": 183377920,
+    "cgroup_swap_current_last_bytes": 183304192,
+    "proc_mem_available_sample_min_bytes": 7353555968,
+    "ollama_ps_model_size_bytes_values": [
+      5200119069
+    ],
+    "model_registry_disk_size_bytes": 1359293444,
+    "received_stream_bytes": 0,
+    "received_event_bytes": 0,
+    "prompt_eval_count": null,
+    "eval_count": null,
+    "prompt_tokens_per_second": null,
+    "generation_tokens_per_second": null,
+    "time_to_first_token_seconds": null,
+    "requested_num_thread": 2,
+    "actual_backend_thread_count": null,
+    "supervised_child_seconds": 180.0034051090479,
+    "script_wall_seconds": 180.25418036989868
+  },
+  "verified_request_sizes": {
+    "original": {
+      "content_characters": 19872,
+      "content_utf8_bytes": 19872,
+      "messages_serialized_utf8_bytes": 20527,
+      "request_serialized_utf8_bytes": 20822,
+      "request_value_sha256": "7812455eed94b3516a9dd6287c2c497fb79cafb2b3f63f14aa07e04e62f63f82",
+      "conservative_screening_bound": 21035,
+      "screening_plus_output_allowance": 21067
+    },
+    "compact": {
+      "content_characters": 16114,
+      "content_utf8_bytes": 16114,
+      "messages_serialized_utf8_bytes": 16767,
+      "request_serialized_utf8_bytes": 17062,
+      "request_value_sha256": "38c46bc1e1d6e2d4b49f484b5ae99e86e90d4f889f7c26147fd8142b0ad27def",
+      "conservative_screening_bound": 17275,
+      "screening_plus_output_allowance": 17307
+    }
+  },
+  "evidence_files": {
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_request_to_send.json": {
+      "sha256": "bde43ece35a099ee33b73d025394070fa9f9e6cc6d2918a164ef91f5518c9f88",
+      "size_bytes": 17167
+    },
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/idle_confirmation_before.json": {
+      "sha256": "438398660593960cb0e5a1ab3a7749f40d1d79317eff1ad37ee5d2bc8f51af6f",
+      "size_bytes": 356
+    },
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/invocation.json": {
+      "sha256": "84c0e4dff4278111c65348ad9ae3706cb6971a5966ec71632e419de4a11aff91",
+      "size_bytes": 2000
+    },
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/model_observation.json": {
+      "sha256": "9fcbf3c39952dd574a38670c4d42263e822dd0dcfecdfbeb4a60a757dd88eaa2",
+      "size_bytes": 29791
+    },
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/model_observation_before_request.json": {
+      "sha256": "9fcbf3c39952dd574a38670c4d42263e822dd0dcfecdfbeb4a60a757dd88eaa2",
+      "size_bytes": 29791
+    },
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/original_request_not_sent.json": {
+      "sha256": "a7ffd1561b3546982297461b41a4001923227894d8ffa821bc2e5cb90ecfcf14",
+      "size_bytes": 20927
+    },
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/residency_before.json": {
+      "sha256": "c8cdda2058dfad73596cb9baef30bb2a825485859ad54c8d9cf5a10a457b0c8c",
+      "size_bytes": 19
+    },
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/roundtrip_and_sizes.json": {
+      "sha256": "90dbd0dad295ae42f9f8ec6b24b694348d7c8378ce949423bb9167d4b1563250",
+      "size_bytes": 1088
+    },
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/summary.json": {
+      "sha256": "da9d116d7c77953cc0ac56fd548fb0bf24044f36be15fce5d9327bc0e83e7f81",
+      "size_bytes": 1254
+    },
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/unload_and_residency_after.json": {
+      "sha256": "d9eb8c4d428a17003305949bdb82a5553395b6668102efd615e7009e22243876",
+      "size_bytes": 356
+    },
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/monitor.jsonl": {
+      "sha256": "71aa0db4bc803017ef496b0b5a6f960d7bc085bd2ad5e70d77e7894cf993ec4e",
+      "size_bytes": 148265
+    },
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/supervisor_result.json": {
+      "sha256": "01c5ba39f92d98fa473583f8a8d7ebd14ab873b4e72ef3d661f47c045122fae6",
+      "size_bytes": 367
+    },
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/worker.console.log": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/worker_spec.json": {
+      "sha256": "141cd96248dc9f73a56c8e76f8310a2a200dedccb09b7adfafff2b069b94e4f5",
+      "size_bytes": 17340
+    },
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/http_0001_latency_probe/events.jsonl": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/http_0001_latency_probe/raw_stream.bin": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    "data/remote_sector_20261018/data/sector_runtime/realinput_1p7b_v1/compact_probe/http_0001_latency_probe/request.json": {
+      "sha256": "13d871c3b5333ca8611bc60f6065691448e4212ace86f6b45e107dcea215dbb6",
+      "size_bytes": 17285
+    },
+    "tmp/sector_bridge_20261018/realinput_artifacts.tar.gz": {
+      "sha256": "41f25d8a141feb7857a3ff25b8c44e2bedb5e223f4e5f86e4a8b37039360385b",
+      "size_bytes": 34613
+    },
+    "data/remote_sector_20261018/realinput_1p7b_v1.console.log": {
+      "sha256": "09b52012bce59b6dfc623d75e29d706c5528ea74e3345e90de98f54a6872516a",
+      "size_bytes": 292
+    },
+    "data/remote_sector_20261018/real_input_bundle_manifest.json": {
+      "sha256": "3613a3f742b2809f47c0dece0fcddcc6d733e84388841b6f4b00cf12e1786cae",
+      "size_bytes": 332
+    },
+    "data/remote_sector_20261018/data/sector_runtime/pilot_v43/http_0001_pilot/request.json": {
+      "sha256": "a319949a482f872d3f1dc781064de907248330cb4b9ce15ad41fcfe8590368ff",
+      "size_bytes": 20887
+    },
+    "tmp/sector_bridge_20261018/bundle.tar.gz": {
+      "sha256": "2d01c7ad0af6f1d919ed9fd969a4b8e397e247b5cf634acc0426a3717dba1a2a",
+      "size_bytes": 30205
+    },
+    "tmp/sector_bridge_20261018/real_input_bundle.tar.gz": {
+      "sha256": "7981ccd844cc446ed5b08a312334ffbe9dec2132588ff7a797e6f682e0641334",
+      "size_bytes": 10130
+    },
+    "research/benchmark_sector_real_input.py": {
+      "sha256": "2a64adcae546d74702c4b9ba5e60e2c81308389b5b6f2c7c663571bc5b0ac88e",
+      "size_bytes": 11693
+    },
+    "research/benchmark_sector_latency.py": {
+      "sha256": "4c6c751891964250b71b221073e3ce4e2407b8548ec62ccb9bf514945da7ae45",
+      "size_bytes": 13645
+    },
+    "research/remote_sector_runtime.py": {
+      "sha256": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5",
+      "size_bytes": 32605
+    },
+    "research/run_sector_workflow.py": {
+      "sha256": "5625450a4dcbe1aa717c9809bf4955c1ef6b10aab4f0c83ef05dc2eb2c123cfd",
+      "size_bytes": 23842
+    },
+    "research/compact_sector_prompt.py": {
+      "sha256": "6984ada966ad55c3089fc297ca6342fdb51685bebfe3107769086343bbe68c0d",
+      "size_bytes": 6600
+    }
+  },
+  "interpretation_limits": [
+    "The small-model compact-input request did not return visible output within the 180-second engineering deadline. This is a latency-limit observation, not an allocation/rating error or proof that execution never started.",
+    "Actual sampled memory peak is not historical memory.peak. Cgroup totals include unrelated processes/cache; RSS sums may double-count shared pages; Ollama size and disk bytes are separate measures. Memory.peak was not reset.",
+    "The full-values encoding preserves source data but does not prove identical model behavior. Original versus compact latency was not compared.",
+    "No actual token counts, TTFT or tokens/sec are available; do not fill missing counters with zero. Effective thinking and penalty compliance cannot be observed from absent responses.",
+    "Requested thread count2 is not OS thread count. Earlier pilot thread11/CPU snapshot must not be attributed to this run.",
+    "No completed research pilot or main result is created. Before changing research model, record an explicit version and exact model/decoding/input representation, then validate all four stages and R1/R4 under research output budgets. Cap32 cannot validate completion of the prescribed JSON or source-conditioned allocation quality.",
+    "No speed success, model-quality regression, validated strategy quality, or main-experiment readiness is established."
+  ],
+  "actions_performed": {
+    "model_inference": 0,
+    "remote_operations": 0,
+    "live_protocol_changes": 0,
+    "plan_or_paper_edits": 0
+  }
+}

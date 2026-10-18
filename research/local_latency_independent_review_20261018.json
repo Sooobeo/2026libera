@@ -1,0 +1,352 @@
+{
+  "schema_version": "local_latency_independent_review_1.0",
+  "generated_at_utc": "2026-10-18T06:26:32.364938+00:00",
+  "status": "pass_with_stated_limits",
+  "scope": "Saved 1.7B synthetic engineering comparison only; the in-progress actual-input run is excluded.",
+  "check_count": 15,
+  "checks": [
+    {
+      "check": "actual_request_body_and_messages_identical",
+      "status": "pass",
+      "evidence_paths": [
+        "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/http_0001_latency_probe/request.json",
+        "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/1p7b_threads2/http_0001_latency_probe/request.json"
+      ],
+      "detail": {
+        "body_value_sha256": "3184657decc9badae1b762cd1cc41e9dacf344838a98ab7020d8874a32b0c146",
+        "serialized_HTTP_body_utf8_bytes": 1440
+      }
+    },
+    {
+      "check": "actual_prompt_is_1093_bytes_and_matches_invocation",
+      "status": "pass",
+      "evidence_paths": [
+        "data/local_sector_runtime/laptop_latency_1p7b_20261018/invocation.json",
+        "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/invocation.json",
+        "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/http_0001_latency_probe/request.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "saved_prompt_newline_representation_preserves_sent_text",
+      "status": "pass",
+      "evidence_paths": [
+        "data/local_sector_runtime/laptop_latency_1p7b_20261018/prompt.txt",
+        "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/prompt.txt"
+      ],
+      "detail": {
+        "local_file_bytes": 1111,
+        "remote_file_bytes": 1093,
+        "sent_prompt_bytes": 1093,
+        "difference": "Windows text file CRLF versus server LF; the sent request content and HTTP body are identical."
+      }
+    },
+    {
+      "check": "engine_model_manifest_quantization_and_template_equal",
+      "status": "pass",
+      "evidence_paths": [
+        "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/model_observation.json",
+        "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/1p7b_threads2/model_observation.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "inherited_parameters_equal_after_key_order_normalization",
+      "status": "pass",
+      "evidence_paths": [
+        "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/model_observation.json",
+        "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/1p7b_threads2/model_observation.json"
+      ],
+      "detail": {
+        "raw_parameter_strings_identical": false,
+        "normalized_parameters": {
+          "top_k": [
+            20
+          ],
+          "top_p": [
+            0.95
+          ],
+          "repeat_penalty": [
+            1
+          ],
+          "stop": [
+            "<|im_start|>",
+            "<|im_end|>"
+          ],
+          "temperature": [
+            0.6
+          ]
+        },
+        "method": "Group every value by key, preserve repeated values including both stop strings in original within-key order; dictionary key order is ignored. No values are dropped."
+      }
+    },
+    {
+      "check": "historical_script_and_collector_hashes_match_recorded_local_revision",
+      "status": "pass",
+      "evidence_paths": [
+        "data/local_sector_runtime/laptop_latency_1p7b_20261018/invocation.json",
+        "research/benchmark_sector_latency.py",
+        "research/remote_sector_runtime.py",
+        "research/probe_ollama_runtime.py"
+      ],
+      "detail": null
+    },
+    {
+      "check": "raw_stream_and_logged_events_match",
+      "status": "pass",
+      "evidence_paths": [
+        "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/http_0001_latency_probe/raw_stream.bin",
+        "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/http_0001_latency_probe/events.jsonl"
+      ],
+      "detail": null
+    },
+    {
+      "check": "completed_ready_response_is_raw_and_no_thinking",
+      "status": "pass",
+      "evidence_paths": [
+        "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/http_0001_latency_probe/raw_stream.bin",
+        "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/http_0001_latency_probe/response.json",
+        "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/worker_summary.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "provider_metrics_and_tokens_recalculate",
+      "status": "pass",
+      "evidence_paths": [
+        "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/http_0001_latency_probe/response.json",
+        "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/http_0001_latency_probe/result.json",
+        "data/local_sector_runtime/laptop_latency_1p7b_20261018/summary.json"
+      ],
+      "detail": {
+        "rates": {
+          "prompt_eval_tokens_per_second": 397.7234960875994,
+          "eval_tokens_per_second": 9.226411525633278
+        },
+        "numeric_tolerance_is_engineering_only": true
+      }
+    },
+    {
+      "check": "TTFT_matches_first_content_event_and_within_HTTP_wall",
+      "status": "pass",
+      "evidence_paths": [
+        "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/http_0001_latency_probe/events.jsonl",
+        "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/http_0001_latency_probe/result.json",
+        "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/supervisor_result.json"
+      ],
+      "detail": {
+        "first_content_event_seconds": 5.749493299997994,
+        "TTFT_seconds": 5.749645800009603,
+        "difference_seconds": 0.0001525000116089359,
+        "timing_tolerance_is_engineering_only": true
+      }
+    },
+    {
+      "check": "unload_completed_and_initial_final_residency_empty",
+      "status": "pass",
+      "evidence_paths": [
+        "data/local_sector_runtime/laptop_latency_1p7b_20261018/residency_before.json",
+        "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/unload_and_residency.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "exact_single_engineering_request_no_research_calls",
+      "status": "pass",
+      "evidence_paths": [
+        "data/local_sector_runtime/laptop_latency_1p7b_20261018/summary.json",
+        "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/http_0001_latency_probe/result.json"
+      ],
+      "detail": null
+    },
+    {
+      "check": "Windows_memory_uses_observed_native_working_sets_not_zero_fallback",
+      "status": "pass",
+      "evidence_paths": [
+        "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/monitor.jsonl"
+      ],
+      "detail": {
+        "samples": 4,
+        "collector": "Existing read-only ctypes Windows fallback; psutil not installed."
+      }
+    },
+    {
+      "check": "placement_difference_is_explicit_API_observation",
+      "status": "pass",
+      "evidence_paths": [
+        "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/monitor.jsonl",
+        "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/1p7b_threads2/monitor.jsonl"
+      ],
+      "detail": {
+        "local_model_residency_samples": 1,
+        "local_reported_size_vram_bytes": [
+          2172355869
+        ],
+        "remote_model_residency_samples": 29,
+        "remote_reported_size_vram_bytes": [
+          0
+        ],
+        "dedicated_physical_VRAM_capacity_inferred": false
+      }
+    },
+    {
+      "check": "all_read_evidence_unchanged_during_review",
+      "status": "pass",
+      "evidence_paths": [],
+      "detail": null
+    }
+  ],
+  "facts": {
+    "actual_request_body_identical": true,
+    "engine": "0.35.1",
+    "model": "qwen3:1.7b",
+    "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+    "prompt_utf8_bytes": 1093,
+    "local_raw_stream_bytes": 962,
+    "local_final_content_utf8_bytes": 14,
+    "local_http_wall_seconds": 6.400585499999579,
+    "remote_http_wall_seconds": 61.08317386545241,
+    "local_TTFT_seconds": 5.749645800009603,
+    "remote_TTFT_seconds": 59.668580036610365,
+    "local_provider_durations_seconds": {
+      "load_duration_seconds": 4.8115949,
+      "prompt_eval_duration_seconds": 0.917723,
+      "eval_duration_seconds": 0.650307,
+      "total_duration_seconds": 6.3878605
+    },
+    "local_recalculated_tokens_per_second": {
+      "prompt_eval_tokens_per_second": 397.7234960875994,
+      "eval_tokens_per_second": 9.226411525633278
+    },
+    "local_windows_memory_samples": 4,
+    "local_working_set_sampled_max_bytes": 2592251904,
+    "local_available_physical_sampled_min_bytes": 8090959872,
+    "local_API_placement_reported_size_vram_bytes": [
+      2172355869
+    ],
+    "remote_API_placement_reported_size_vram_bytes": [
+      0
+    ]
+  },
+  "representation_differences": [
+    {
+      "field": "show.parameters",
+      "difference": "Line ordering only; all per-key values including both repeated stop values match. Raw string hashes differ."
+    },
+    {
+      "field": "prompt.txt",
+      "difference": "Windows CRLF versus Linux LF. Actual request message and serialized HTTP body values match."
+    }
+  ],
+  "limits": [
+    "The request controls, manifest, engine, quantization, template and normalized inherited parameters match, but hardware, OS, observed GPU placement, process/OS cache and monitor implementations differ. This one pair is not a controlled CPU-only or GPU-only causal estimate.",
+    "The local API reported size_vram equal to size at one sampled instant. This is an Ollama placement/accounting observation, not an independent measurement of physical dedicated VRAM capacity.",
+    "Windows working-set sums cover observed named processes and may count shared pages twice. System available RAM includes unrelated workloads; neither number is a model-only allocation budget.",
+    "The short synthetic answer contains six provider-reported generated tokens. It does not establish real-document or four-stage feasibility, semantic correctness or readiness for the main experiment.",
+    "First-event time and TTFT are separate local reads; tiny differences do not identify network transfer time."
+  ],
+  "review_model_calls": 0,
+  "research_evaluation_executed": false,
+  "report_builder_modified": false,
+  "raw_records_modified": false,
+  "actual_input_run_reviewed": false,
+  "human_semantic_review": "not_performed",
+  "evidence_files": {
+    "data/local_sector_runtime/laptop_latency_1p7b_20261018/summary.json": {
+      "size_bytes": 1791,
+      "sha256": "65e78b287914e7bfaf2905ee5fea11897627374ec9eb2bc45da77958fdb702f5"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/summary.json": {
+      "size_bytes": 2474,
+      "sha256": "2e684f396f6ab6c4e4d63472f319e3728f1e6fe5f5eaebe9d4bdbe8f915af64a"
+    },
+    "data/local_sector_runtime/laptop_latency_1p7b_20261018/invocation.json": {
+      "size_bytes": 1707,
+      "sha256": "a9ff8105d4867df1d6462b550e19eb82cecd5a89440ceb46d6af2490c5ff004c"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/invocation.json": {
+      "size_bytes": 1528,
+      "sha256": "c83a8c04283dc5d7759e3a75557eee27f1e2139640a32b9b17458dcbaf7e3e93"
+    },
+    "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/http_0001_latency_probe/request.json": {
+      "size_bytes": 1661,
+      "sha256": "58a617e7248d26a25a0ff1974c932a3a3fd581780756af80add1220e958d6676"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/1p7b_threads2/http_0001_latency_probe/request.json": {
+      "size_bytes": 1633,
+      "sha256": "c27722092b54a1a17f3908c89c263f2f3689533327380858b94c45a7c4782f37"
+    },
+    "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/model_observation.json": {
+      "size_bytes": 29889,
+      "sha256": "3c46f48e7502a50320ad3057c1335915f618b581541712b9e3e7d7c969890dcd"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/1p7b_threads2/model_observation.json": {
+      "size_bytes": 29791,
+      "sha256": "9fcbf3c39952dd574a38670c4d42263e822dd0dcfecdfbeb4a60a757dd88eaa2"
+    },
+    "data/local_sector_runtime/laptop_latency_1p7b_20261018/prompt.txt": {
+      "size_bytes": 1111,
+      "sha256": "3810addf534dd5dc8a73c74a6eda7667d41bc8c0be1f55cafd4db32f52ddb305"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/prompt.txt": {
+      "size_bytes": 1093,
+      "sha256": "6fbb7b993d290e403fee655ac2224e24ad0d8bf6bca5d7dcdb1cb3a96c90bb2d"
+    },
+    "research/benchmark_sector_latency.py": {
+      "size_bytes": 17919,
+      "sha256": "0686444e608033be931922a26886ed4a4b5b0789385215b7b75bfacc4050458b"
+    },
+    "research/remote_sector_runtime.py": {
+      "size_bytes": 32605,
+      "sha256": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5"
+    },
+    "research/probe_ollama_runtime.py": {
+      "size_bytes": 28324,
+      "sha256": "2dd48936bbaf8fd090a26f92fd356fec3a11ac81e5b01b39d661ffe72552fddb"
+    },
+    "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/http_0001_latency_probe/result.json": {
+      "size_bytes": 947,
+      "sha256": "3167779dbcd8c2a68c839b077968a7aa68d68474083e79475364116b81daa7ee"
+    },
+    "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/http_0001_latency_probe/response.json": {
+      "size_bytes": 423,
+      "sha256": "3c2c6941ef4359675cc3724cc2f65232c6d63f2e29cd28ef529eb3e94d6ca50d"
+    },
+    "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/worker_summary.json": {
+      "size_bytes": 1472,
+      "sha256": "482b5bdbfc5d9705dc4e476f87d4a8c03b125077b9fecec54a535c29ab9d632f"
+    },
+    "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/supervisor_result.json": {
+      "size_bytes": 1906,
+      "sha256": "7c354810b3f5c4e80c7fe9dd7cf45d5d18414b7bd43b376e1bbc1549676027a5"
+    },
+    "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/http_0001_latency_probe/raw_stream.bin": {
+      "size_bytes": 962,
+      "sha256": "8632ff7000a0af6b960ee3abd6fa2c0b432e6c7b0aa34978a62bfc4f25a6ea98"
+    },
+    "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/http_0001_latency_probe/events.jsonl": {
+      "size_bytes": 1338,
+      "sha256": "68781292d266ad2dc220720cb73a3715770f272e67cae251d3234b03b906d5d0"
+    },
+    "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/unload_and_residency.json": {
+      "size_bytes": 375,
+      "sha256": "0cc4664ac2ff1ac7f49112cc29331f48db247715b4a4c6f7b39f81c1d97ceeed"
+    },
+    "data/local_sector_runtime/laptop_latency_1p7b_20261018/residency_before.json": {
+      "size_bytes": 22,
+      "sha256": "7f9fc2997f5fc9f5a40bc2302e51ed9331c744cd56a88e709136d1762ff7be89"
+    },
+    "data/local_sector_runtime/laptop_latency_1p7b_20261018/1p7b_threads2/monitor.jsonl": {
+      "size_bytes": 9910,
+      "sha256": "732b8798bd27eebad0a1643c20321181d75ddf050709799dfbd07eb0b820220e"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/1p7b_threads2/monitor.jsonl": {
+      "size_bytes": 50569,
+      "sha256": "a653e6a518010eefaff81a1d3f50d71cdbab3830a38c019dfef57eabcc449f27"
+    },
+    "data/remote_sector_20261018/data/sector_runtime/latency_v43_20261018/1p7b_threads2/http_0001_latency_probe/result.json": {
+      "size_bytes": 928,
+      "sha256": "ddccf701fd19695e5e2570c26d428ec7ab373be4d8ef3b5f2af0224b97100014"
+    }
+  }
+}

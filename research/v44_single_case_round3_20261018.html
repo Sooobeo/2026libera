@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>단일 사례 3차 감사 — 미완료·평가 불가</title>
+<style>body{font-family:system-ui,sans-serif;line-height:1.65;color:#172434;background:#f3f6f8;margin:0}main{max-width:900px;margin:28px auto;padding:30px;background:white;border-radius:12px}h1{font-size:1.75rem}h2{font-size:1.2rem;margin-top:28px}.status{border-left:5px solid #a35a17;padding:12px 18px;background:#fff6e9}table{border-collapse:collapse;width:100%;font-size:.95rem}th,td{border-bottom:1px solid #dce3e8;text-align:left;vertical-align:top;padding:9px}code,pre{font-family:ui-monospace,monospace;font-size:.83rem}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f3f6f8;padding:14px}a{color:#145c91}.small{font-size:.88rem;color:#4b5b68}</style></head><body><main>
+<p class="small">2026-10-18 · Fidelity Q2 2026 · R1 · 사전 지정 1사례 · 독립 3차 검토</p>
+<h1>감사는 완료됐지만, 사례가 끝나지 않아 의미 평가는 불가능합니다</h1>
+<p class="status">첫 단계가 제한시간에 종료됐습니다. 완료된 답변·단계·사례는 모두 0개이고, 2–4단계는 시작되지 않았습니다. 본실험 호출은 0회이며 동결·사람의 의미 검증 승인도 없습니다.</p>
+<table><thead><tr><th>관찰</th><th>원본에서 확인한 내용</th></tr></thead><tbody>
+<tr><td>시간</td><td>전체 903.672초; 감독 대상 프로세스 900.982초 / 설정 제한 900초. 정리 작업과 운영체제 오버헤드 때문에 범위가 다릅니다.</td></tr>
+<tr><td>생성 도중의 출력</td><td>818,079바이트, 정상 파싱된 스트림 이벤트 6,191개, 내용 7,681자. 이벤트 수는 토큰 수가 아닙니다. 완료 이벤트는 0개이며 전체 내용은 미완성 JSON입니다.</td></tr>
+<tr><td>입력 반복</td><td>완료된 개별 필드 17개의 값이 실제 입력과 일치했습니다. 업무 설명과 시장 행렬 등 일부 입력을 재출력한 관찰이며, 입력 전체 복사나 완성된 기관 해석을 뜻하지 않습니다.</td></tr>
+<tr><td>응답 형식</td><td>요구된 7개 응답 키는 현재 접두 부분에 없습니다. 문자열 검사는 보조 관찰일 뿐이며, 완료된 제출물이 없다는 판정은 종료 상태와 응답 기록 부재에 근거합니다.</td></tr>
+<tr><td>종료 후 상태</td><td>모델 해제 응답과 빈 상주 모델 목록이 기록됐습니다. 재시도·대체 사례는 없고 시도한 사례는 그대로 남깁니다.</td></tr>
+</tbody></table>
+<h2>어떤 것을 평가할 수 없나</h2>
+<p>기관의 산업별 등급·이유·인용 근거, 기준 비중 대비 배분, 위험 해석과 전략의 논리 연결을 평가할 완성 답변이 없습니다. 따라서 <strong>supported / contradicted / not_stated / uncertain</strong>에 배정할 완료 주장도 없고, 정확도·비중·위험·전략 점수는 모두 미산출입니다. 응답 부재를 출처와 모순되는 주장이나 0점짜리 전략으로 바꾸지 않았습니다.</p>
+<p>첫 두 단계에서는 비중이 비어 있어도 허용됩니다. 이번에 관측된 문제는 초기 비중의 부재 자체가 아니라, 첫 단계 해석을 마치지 못했다는 점입니다. 입력에 포함된 기준 비중과 공분산을 모델의 투자 제안으로 간주하지 않습니다.</p>
+<h2>소논문 논점과의 연결</h2>
+<p>본 연구가 보려는 것은 기관 문서의 판단이 산업 배분 과정에 어떻게 보존되는가입니다. 이번 시도는 그 비교에 필요한 해석·배분 경로를 만들지 못했습니다. 기관별 전략의 차이, R1과 R4의 효과, 전략의 수렴이나 성과는 이 사례로 판단할 수 없습니다. 입력 반복은 후속 업무 수행 방식 검토의 단서지만, 원인이나 개선책의 효과가 입증된 것은 아닙니다.</p>
+<p class="small">사전 근거표와 원문 PDF의 해시를 다시 대조했습니다. 사전 기준의 8개 의미 평가 차원은 유지했고, 완성 응답이 없으므로 적용 결과는 모두 평가 불가입니다. 기관의 관점과 모델의 독립적 배분 선택을 혼동하거나 정확 비중 정답·임의 위험 상한을 만들지 않았습니다. 감사 확인 14개 통과는 실험 성공이나 사람 검증 통과를 의미하지 않습니다.</p>
+<h2>짧은 원본 관찰</h2><pre>{
+  &quot;stage&quot;: 1,
+  &quot;task&quot;: &quot;Interpret the common market information and any institution document supplied so far. Identify uncertainties.&quot;,
+  &quot;common_market&quot;: {
+    &quot;annualization_trading_days&quot;: 252,
+    &quot;annualized_volatility_diagnostic&quot;: [</pre>
+<p class="small">위 내용은 완성 답변이 아닌 스트림 접두 부분입니다. 원본을 닫힌 JSON으로 고치거나 보충하지 않았습니다.</p>
+<p><a href="v44_single_case_round3_20261018.json">전체 감사 JSON·검사·해시</a> · <a href="../data/local_sector_runtime/single_case_v44_20261018/summary.json">실행 종료 요약</a> · <a href="../data/local_sector_runtime/single_case_v44_20261018/stage1_transport/http_0001_generation/raw_stream.bin">보존된 부분 스트림</a> · <a href="evaluator_only/fidelity_q2_r1_prerun_reference_20261018.json">실행 전 평가자 전용 근거표</a></p>
+<p class="small">기관 원문: <a href="https://www.fidelity.com/bin-public/600_Fidelity_Com_English/documents/learning-center/Quarterly-Sector-And-Investment-Research-Update-Second-Quarter-2026.pdf">Fidelity Q2 2026 보고서</a>, 산업 판단 p.3 및 해석 범위 p.2. 원문 전체와 평가자 정답은 모델에 추가로 제공하지 않았습니다. 이번 감사에서는 모델 호출·원본 수정·런타임 수정·소논문 수정이 모두 0회입니다.</p>
+</main></body></html>

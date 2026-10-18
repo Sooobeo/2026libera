@@ -1,0 +1,48 @@
+{
+  "status": "completed",
+  "finished_at_utc": "2026-10-18T06:24:10.455740+00:00",
+  "probe_invocations_attempted": 1,
+  "completed_probes": 1,
+  "generation_request_envelopes_recorded": 1,
+  "not_started_probes": 0,
+  "records": [
+    {
+      "probe_id": "1p7b_threads2",
+      "model": "qwen3:1.7b",
+      "threads": 2,
+      "status": "completed",
+      "supervisor_status": "worker_exited",
+      "elapsed_seconds": 6.65987529999984,
+      "generation_request_recorded": true,
+      "provider_metrics": {
+        "wall_seconds": 6.400585499999579,
+        "ttft_any_generated_seconds": 5.749646800002665,
+        "ttft_content_seconds": 5.749645800009603,
+        "token_count_source": "Ollama counters, not independent tokenization",
+        "duration_unit_in_response": "nanoseconds",
+        "total_duration_seconds": 6.3878605,
+        "load_duration_seconds": 4.8115949,
+        "prompt_eval_duration_seconds": 0.917723,
+        "eval_duration_seconds": 0.650307,
+        "prompt_eval_count": 365,
+        "eval_count": 6,
+        "prompt_eval_tokens_per_second": 397.7234960875994,
+        "eval_tokens_per_second": 9.226411525633278
+      },
+      "prompt_eval_count": 365,
+      "eval_count": 6,
+      "response_assessment": {
+        "parseable_json_object": true,
+        "expected_synthetic_json": true,
+        "assessment_scope": "synthetic_ready_json_only",
+        "unexpected_thinking": false,
+        "response_model": "qwen3:1.7b",
+        "done_reason": "stop"
+      }
+    }
+  ],
+  "pilot_model_calls": 0,
+  "main_model_calls": 0,
+  "scope": "Engineering latency probes only; never merged into research responses.",
+  "output": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\laptop_latency_1p7b_20261018"
+}

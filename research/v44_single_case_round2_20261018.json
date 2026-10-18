@@ -1,0 +1,293 @@
+{
+  "schema_version": "libera_v44_single_case_round2_1.0",
+  "created_at_utc": "2026-10-18T07:12:12.094782+00:00",
+  "run_directory": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v44_20261018",
+  "case_id": "fidelity_q2_2026__R1",
+  "review_status": "completed_no_consistency_mismatch",
+  "review_scope": "Independent exact arithmetic and existing mechanical label/citation rules on completed records only; no engine import, repair, model call or new quality score.",
+  "run_status": "hard_deadline",
+  "completed_workflow_records_reviewed": 0,
+  "run_counts": {
+    "generation_requests_attempted": 1,
+    "http_streams_completed": 0,
+    "completed_workflow_stages": 0,
+    "generation_stages_not_started": [
+      2,
+      3,
+      4
+    ],
+    "main_model_calls": 0,
+    "cases_with_generation_attempt": 1,
+    "completed_cases": 0,
+    "automatic_retries": 0
+  },
+  "stages": [
+    {
+      "stage": 1,
+      "status": "no_completed_workflow_record",
+      "numeric_or_label_result": null,
+      "incomplete_transport_observations": {
+        "status": "generation_attempted_without_completed_workflow_record",
+        "raw_stream_bytes": 818079,
+        "parseable_stream_events": 6191,
+        "unparsed_lines": [],
+        "terminal_done_true_events": 0,
+        "event_log_matches_parseable_raw_events": true,
+        "partial_content_character_count": 7681,
+        "partial_content_utf8_sha256": "e66e1bcd8ea0fd9d5b0a732035b70ba061fe1ec22f9cf4277653c4482f30ffe8",
+        "partial_content_prefix_240_characters": "{\n  \"stage\": 1,\n  \"task\": \"Interpret the common market information and any institution document supplied so far. Identify uncertainties.\",\n  \"common_market\": {\n    \"annualization_trading_days\": 252,\n    \"annualized_volatility_diagnostic\": [",
+        "partial_content_is_complete_json_object": false,
+        "workflow_or_http_completed_response_file_present": false,
+        "supervisor": {
+          "status": "hard_deadline",
+          "worker_exit_code": 1,
+          "elapsed_seconds": "900.9815200000012",
+          "deadline_seconds": 900,
+          "deadline_scope": "Child setup, metadata, render-only and generation combined. Cleanup is outside; OS scheduling/kill overhead may add to elapsed time.",
+          "automatic_retries": 0
+        },
+        "ratings_weights_and_risk": null,
+        "scoring_policy": "The partial prefix is preserved, not repaired or evaluated as a completed interpretation/allocation. No zero score is assigned."
+      },
+      "scope": "Missing completion is not a fabricated zero-score or a repaired response."
+    },
+    {
+      "stage": 2,
+      "status": "no_completed_workflow_record",
+      "numeric_or_label_result": null,
+      "incomplete_transport_observations": {
+        "status": "generation_not_started",
+        "completed_response": null,
+        "ratings_weights_and_risk": null
+      },
+      "scope": "Missing completion is not a fabricated zero-score or a repaired response."
+    },
+    {
+      "stage": 3,
+      "status": "no_completed_workflow_record",
+      "numeric_or_label_result": null,
+      "incomplete_transport_observations": {
+        "status": "generation_not_started",
+        "completed_response": null,
+        "ratings_weights_and_risk": null
+      },
+      "scope": "Missing completion is not a fabricated zero-score or a repaired response."
+    },
+    {
+      "stage": 4,
+      "status": "no_completed_workflow_record",
+      "numeric_or_label_result": null,
+      "incomplete_transport_observations": {
+        "status": "generation_not_started",
+        "completed_response": null,
+        "ratings_weights_and_risk": null
+      },
+      "scope": "Missing completion is not a fabricated zero-score or a repaired response."
+    }
+  ],
+  "model_observations": [],
+  "consistency_findings": [],
+  "market_checks": {
+    "covariance_unit": "daily_decimal_return_squared",
+    "exact_max_symmetry_residual": {
+      "fraction": "0",
+      "decimal_80_digits": "0"
+    },
+    "PSD_scope": "Existing engine PSD tolerance is 1e-12 for numerical validation only; this audit does not turn it into a behavioral acceptance rule.",
+    "reported_benchmark_percent_sum": {
+      "fraction": "999/10",
+      "decimal_80_digits": "99.9"
+    },
+    "baseline_derivation_audit": {
+      "10": {
+        "exact_ratio_of_reported_percentages": {
+          "fraction": "10/333",
+          "decimal_80_digits": "0.030030030030030030030030030030030030030030030030030030030030030030030030030030030"
+        },
+        "supplied_baseline_minus_ratio": {
+          "fraction": "-1/33300000000000000000",
+          "decimal_80_digits": "-3.0030030030030030030030030030030030030030030030030030030030030030030030030030030E-20"
+        }
+      },
+      "15": {
+        "exact_ratio_of_reported_percentages": {
+          "fraction": "2/111",
+          "decimal_80_digits": "0.018018018018018018018018018018018018018018018018018018018018018018018018018018018"
+        },
+        "supplied_baseline_minus_ratio": {
+          "fraction": "-1/55500000000000000000",
+          "decimal_80_digits": "-1.8018018018018018018018018018018018018018018018018018018018018018018018018018018E-20"
+        }
+      },
+      "20": {
+        "exact_ratio_of_reported_percentages": {
+          "fraction": "88/999",
+          "decimal_80_digits": "0.088088088088088088088088088088088088088088088088088088088088088088088088088088088"
+        },
+        "supplied_baseline_minus_ratio": {
+          "fraction": "191/99900000000000000000",
+          "decimal_80_digits": "1.9119119119119119119119119119119119119119119119119119119119119119119119119119119E-18"
+        }
+      },
+      "25": {
+        "exact_ratio_of_reported_percentages": {
+          "fraction": "31/333",
+          "decimal_80_digits": "0.093093093093093093093093093093093093093093093093093093093093093093093093093093093"
+        },
+        "supplied_baseline_minus_ratio": {
+          "fraction": "-103/33300000000000000000",
+          "decimal_80_digits": "-3.0930930930930930930930930930930930930930930930930930930930930930930930930930931E-18"
+        }
+      },
+      "30": {
+        "exact_ratio_of_reported_percentages": {
+          "fraction": "46/999",
+          "decimal_80_digits": "0.046046046046046046046046046046046046046046046046046046046046046046046046046046046"
+        },
+        "supplied_baseline_minus_ratio": {
+          "fraction": "-151/24975000000000000000",
+          "decimal_80_digits": "-6.0460460460460460460460460460460460460460460460460460460460460460460460460460460E-18"
+        }
+      },
+      "35": {
+        "exact_ratio_of_reported_percentages": {
+          "fraction": "89/999",
+          "decimal_80_digits": "0.089089089089089089089089089089089089089089089089089089089089089089089089089089089"
+        },
+        "supplied_baseline_minus_ratio": {
+          "fraction": "109/9990000000000000000",
+          "decimal_80_digits": "1.0910910910910910910910910910910910910910910910910910910910910910910910910910911E-17"
+        }
+      },
+      "40": {
+        "exact_ratio_of_reported_percentages": {
+          "fraction": "118/999",
+          "decimal_80_digits": "0.11811811811811811811811811811811811811811811811811811811811811811811811811811812"
+        },
+        "supplied_baseline_minus_ratio": {
+          "fraction": "47/24975000000000000000",
+          "decimal_80_digits": "1.8818818818818818818818818818818818818818818818818818818818818818818818818818819E-18"
+        }
+      },
+      "45": {
+        "exact_ratio_of_reported_percentages": {
+          "fraction": "380/999",
+          "decimal_80_digits": "0.38038038038038038038038038038038038038038038038038038038038038038038038038038038"
+        },
+        "supplied_baseline_minus_ratio": {
+          "fraction": "-509/24975000000000000000",
+          "decimal_80_digits": "-2.0380380380380380380380380380380380380380380380380380380380380380380380380380380E-17"
+        }
+      },
+      "50": {
+        "exact_ratio_of_reported_percentages": {
+          "fraction": "97/999",
+          "decimal_80_digits": "0.097097097097097097097097097097097097097097097097097097097097097097097097097097097"
+        },
+        "supplied_baseline_minus_ratio": {
+          "fraction": "-709/99900000000000000000",
+          "decimal_80_digits": "-7.0970970970970970970970970970970970970970970970970970970970970970970970970970971E-18"
+        }
+      },
+      "55": {
+        "exact_ratio_of_reported_percentages": {
+          "fraction": "22/999",
+          "decimal_80_digits": "0.022022022022022022022022022022022022022022022022022022022022022022022022022022022"
+        },
+        "supplied_baseline_minus_ratio": {
+          "fraction": "-11/499500000000000000000",
+          "decimal_80_digits": "-2.2022022022022022022022022022022022022022022022022022022022022022022022022022022E-20"
+        }
+      },
+      "60": {
+        "exact_ratio_of_reported_percentages": {
+          "fraction": "2/111",
+          "decimal_80_digits": "0.018018018018018018018018018018018018018018018018018018018018018018018018018018018"
+        },
+        "supplied_baseline_minus_ratio": {
+          "fraction": "-1/55500000000000000000",
+          "decimal_80_digits": "-1.8018018018018018018018018018018018018018018018018018018018018018018018018018018E-20"
+        }
+      }
+    }
+  },
+  "reference_status": "machine_prepared_source_annotations_independent_human_review_pending",
+  "human_semantic_review": "pending_separate_round3_and_human_review",
+  "limits": [
+    "Each stage belongs to one same case and is not an independent sample.",
+    "Labels use the prespecified fixed 11-sector denominator; citation IDs verify identity/scope, not entailment.",
+    "Under the existing allocation citation rule, every cited ID must include the row sector. A cross-sector comparison can therefore fail this mechanical scope check without proving a reasoning or strategy error; semantic review is separate and the rule is not changed after observing results.",
+    "Weights have no unique institution-provided numeric gold. Differences or directional departures are descriptive.",
+    "All exact arithmetic uses JSON decimal literals as rational numbers. Calculator binary-floating differences are disclosed continuously without inventing a pass threshold.",
+    "Missing/failed stages are not imputed. No R1-versus-R4 effect or population conclusion follows from this one R1 case."
+  ],
+  "main_frozen": false,
+  "model_calls_by_reviewer": 0,
+  "source_files": [
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v44_20261018\\summary.json",
+      "sha256": "c8c2f88e0a73322d32b6e8be1585a2a4f9b2bc15a0afa37aa93e0f66a17ce1e2",
+      "size_bytes": 1319
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v44_20261018\\invocation.json",
+      "sha256": "8cafaecf7d57d9b587653e8465748c70b8178b531d683faf12979d4b0a9dedc8",
+      "size_bytes": 1800
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v44_20261018\\manifest_snapshot.json",
+      "sha256": "6fd367154e352bdc0167c8af14b1959589ddde01cd5b99e62dbec953f1c963ab",
+      "size_bytes": 6223
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v44_single_case_20261018\\market_input.json",
+      "sha256": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f",
+      "size_bytes": 15480
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v44_single_case_20261018\\model_packet.json",
+      "sha256": "2f506f346ebfc1be0f327163eb016dcec649e6301e4494d6a9230ab86c28d406",
+      "size_bytes": 6688
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\sector_documents\\evaluator_only\\reference_annotations.jsonl",
+      "sha256": "3a83cbb386442f3263357a5e67cb1f52c59114c28cc81e636b28e111c3509ffc",
+      "size_bytes": 23659
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\audit_v44_single_case_round2.py",
+      "sha256": "ea264a1e531c6f481e3dc201a86abd3d73c4e57963c7e86be0414973af1fbaa4",
+      "size_bytes": 28538
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v44_20261018\\stage1_transport\\authoritative_body.json",
+      "sha256": "fa9e4b82bd14272023d9dce1b08da7e04eb6f03193ad9599928bf1893b92b1e2",
+      "size_bytes": 17302
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v44_20261018\\stage1_transport\\supervisor_result.json",
+      "sha256": "39bfc184554fae47ff124a64445679bcc7b7db85991d82a7dd0f066e4c967cbc",
+      "size_bytes": 314
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v44_20261018\\stage1_transport\\unload_and_residency.json",
+      "sha256": "61137646ed569e348e30c2e02da9e4470919334d1a184747840182ea36d9220d",
+      "size_bytes": 382
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v44_20261018\\stage1_transport\\http_0001_generation\\request.json",
+      "sha256": "f7576483f39de45164024018afe6fc5bfceec5f78a894a5aca63383ecf362510",
+      "size_bytes": 17431
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v44_20261018\\stage1_transport\\http_0001_generation\\raw_stream.bin",
+      "sha256": "e71de67463fa9224e6e218519749a2c2bb41b419091f851f16872742672aa935",
+      "size_bytes": 818079
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\single_case_v44_20261018\\stage1_transport\\http_0001_generation\\events.jsonl",
+      "sha256": "20b6c4c7731f76cc04635dc4d82fbf6830c232ede28ee8067b84095a69621138",
+      "size_bytes": 1190684
+    }
+  ]
+}

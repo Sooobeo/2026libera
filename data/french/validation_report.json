@@ -1,0 +1,133 @@
+{
+  "schema_version": "1.0",
+  "validated_at_utc": "2026-10-17T06:56:13+00:00",
+  "all_raw_hashes_verified": true,
+  "calendar_rows_unique_contiguous": true,
+  "monthly_first_block_only": true,
+  "source_percent_converted_to_decimal": true,
+  "required_windows": {
+    "1964-01..2023-12": {
+      "FF12": {
+        "n_months": 720,
+        "n_industries": 12,
+        "missing": 0
+      }
+    },
+    "2015-01..2025-12": {
+      "FF12": {
+        "n_months": 132,
+        "n_industries": 12,
+        "missing": 0
+      },
+      "FF49": {
+        "n_months": 132,
+        "n_industries": 49,
+        "missing": 0
+      }
+    }
+  },
+  "full_source": {
+    "FF12": {
+      "start": "1926-07",
+      "end": "2026-08",
+      "n_months": 1202,
+      "missing_by_column": {
+        "NoDur": 0,
+        "Durbl": 0,
+        "Manuf": 0,
+        "Enrgy": 0,
+        "Chems": 0,
+        "BusEq": 0,
+        "Telcm": 0,
+        "Utils": 0,
+        "Shops": 0,
+        "Hlth": 0,
+        "Money": 0,
+        "Other": 0
+      },
+      "source_header": "This file was created using the 202608 CRSP database.",
+      "first_data_line_1based": 13,
+      "last_data_line_1based": 1214,
+      "following_block": "Average Equal Weighted Returns -- Monthly"
+    },
+    "FF49": {
+      "start": "1926-07",
+      "end": "2026-08",
+      "n_months": 1202,
+      "missing_by_column": {
+        "Agric": 0,
+        "Food": 0,
+        "Soda": 444,
+        "Beer": 0,
+        "Smoke": 0,
+        "Toys": 0,
+        "Fun": 0,
+        "Books": 0,
+        "Hshld": 0,
+        "Clths": 0,
+        "Hlth": 516,
+        "MedEq": 0,
+        "Drugs": 0,
+        "Chems": 0,
+        "Rubbr": 60,
+        "Txtls": 0,
+        "BldMt": 0,
+        "Cnstr": 0,
+        "Steel": 0,
+        "FabPr": 444,
+        "Mach": 0,
+        "ElcEq": 0,
+        "Autos": 0,
+        "Aero": 0,
+        "Ships": 0,
+        "Guns": 444,
+        "Gold": 444,
+        "Mines": 0,
+        "Coal": 0,
+        "Oil": 0,
+        "Util": 0,
+        "Telcm": 0,
+        "PerSv": 12,
+        "BusSv": 0,
+        "Hardw": 0,
+        "Softw": 468,
+        "Chips": 0,
+        "LabEq": 0,
+        "Paper": 36,
+        "Boxes": 0,
+        "Trans": 0,
+        "Whlsl": 0,
+        "Rtail": 0,
+        "Meals": 0,
+        "Banks": 0,
+        "Insur": 0,
+        "RlEst": 0,
+        "Fin": 0,
+        "Other": 0
+      },
+      "source_header": "This file was created using the 202608 CRSP database.",
+      "first_data_line_1based": 13,
+      "last_data_line_1based": 1214,
+      "following_block": "Average Equal Weighted Returns -- Monthly"
+    }
+  },
+  "sample_covariance_crosschecked": true,
+  "ff12_daily": {
+    "start": "1926-07-01",
+    "end": "2026-08-31",
+    "n_observed_trading_dates": 26317,
+    "required_window_audit": {
+      "start": "2014-01-02",
+      "end": "2025-12-31",
+      "n_observed_trading_dates": 3018,
+      "missing_cells": 0
+    },
+    "following_block": "Average Equal Weighted Returns -- Daily"
+  },
+  "classification": "Official intervals audited for duplicate IDs, interval overlaps and exact return-column order; no name-based or missing-SIC imputation",
+  "limitations": [
+    "Current downloaded French CIZ vintage, including revised historical returns. Not a contemporaneous historical data vintage or exact values used in the paper.",
+    "SEC-SIC mapping is a proxy for Compustat/CRSP classification",
+    "Statistics are sample moments, not chosen covariance-model parameters"
+  ]
+}

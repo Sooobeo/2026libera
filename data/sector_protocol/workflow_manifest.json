@@ -1,0 +1,21 @@
+{
+  "protocol_version": "4.3",
+  "cases": 8,
+  "planned_pilot_runs": 4,
+  "planned_main_runs": 4,
+  "planned_calls_per_complete_run": 4,
+  "executed_ai_runs": 0,
+  "execution_count_scope": "Preparation makes no model calls; this value does not inventory existing run directories.",
+  "runtime_candidate": "runtime_candidate_v43.json",
+  "history_policy": "explicit_final_content",
+  "interpretation": "2 sources x 2 arms per split. Each source-pair is a descriptive case, not 22 independent institutions.",
+  "case_order": "fixed source then R1/R4; local stateless runtime, no carryover across cases; source ID hidden before onset",
+  "tool_policy": "Automatic deterministic feedback on submitted weights after stages 1-3; final raw proposal retained. No repairs or reference lookup.",
+  "failure_policy": "Retain attempted runs and raw responses; no automatic retries; syntax failure stops that case.",
+  "hashes": {
+    "data\\sector_documents\\model_packets.jsonl": "520bed87396eb815c87f362712a6ec39c0275076f9ef4c5d59ef5a7cbbe6afc7",
+    "data\\sector_market\\market_input.json": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f",
+    "research\\run_sector_workflow.py": "5625450a4dcbe1aa717c9809bf4955c1ef6b10aab4f0c83ef05dc2eb2c123cfd"
+  },
+  "not_yet_frozen": "Pilot feedback may change protocol; any revision is logged and main hashes frozen before first main response."
+}

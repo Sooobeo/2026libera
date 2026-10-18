@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LIBERA 소형 모델 조사 · 2026-10-18</title>
+<style>
+:root{font-family:"Malgun Gothic",system-ui,sans-serif;color:#172234;background:#f2f5fa;line-height:1.8}body{margin:0}main{max-width:1080px;margin:35px auto;padding:40px;background:white;border-radius:16px}h1{font-size:29px;line-height:1.4}h2{margin-top:36px;font-size:21px}p{margin:14px 0}.meta{color:#5c697c;font-size:14px}.lead{background:#eaf2ff;border-left:5px solid #2663bc;padding:18px 22px}.note{background:#f6f7fa;padding:15px 20px}table{width:100%;border-collapse:collapse;font-size:14px}th,td{padding:12px;border:1px solid #dce2ec;text-align:left;vertical-align:top}th{background:#eef3fa}a{color:#205eb1}code{overflow-wrap:anywhere;font-size:.94em}li{margin:9px 0}.scroll{overflow-x:auto}@media(max-width:700px){main{margin:0;padding:22px;border-radius:0}h1{font-size:24px}table{min-width:720px}}@media print{body{background:white}main{margin:0;padding:0}h2{break-after:avoid}tr{break-inside:avoid}a{color:inherit}}
+</style></head><body><main>
+<p class="meta">2026-10-18 · 문헌·공식 배포 정보 조사 · 본실험 모델 확정 전</p>
+<h1>작은 모델로 바꿀 때 무엇을 선택해야 하는가</h1>
+<div class="lead"><strong>우선 진단 후보: Qwen3.5-4B의 Q4_K_M 배포본.</strong> 정확한 Ollama 태그는 <code>qwen3.5:4b-q4_K_M</code>이다. 최신 금융 평가 선례와 저장 용량을 함께 고려한 추천이며, 현재 8 GiB 서버에서 네 단계 실험을 완주했다고 확인한 결과는 아니다.</div>
+<p>이번 조사에서는 설치·추론·원격 설정 변경을 하지 않았다. 기존 실험계획·소논문·실행 설정은 v4.2 상태이며, 이 문서는 변경 후보와 근거를 별도로 기록한다.</p>
+
+<h2>1. 후보와 선정 이유</h2>
+<p>아래 용량은 공식 Ollama manifest의 배포 레이어 합계를 십진 GB로 반올림한 다운로드 크기다. <strong>실행 중 필요한 RAM과 다르다.</strong> 금융 논문의 점수도 해당 논문 환경의 원본 모델 결과이며, Ollama 양자화본의 성능을 보장하지 않는다. <a href="small_model_registry_20261018.json">조회 시점의 크기·전체 digest·배포 config 기록</a></p>
+<div class="scroll"><table><thead><tr><th>후보 / 정확한 태그</th><th>용량</th><th>논문 근거와 판단</th></tr></thead><tbody>
+<tr><td><strong>Qwen3.5-4B · 우선 진단</strong><br><code>qwen3.5:4b-q4_K_M</code></td><td>약 3.32 GB<br>Q4_K_M</td><td>2026년 9월 금융 평가와 10월 구조화 금융 과제에서 원본 모델을 직접 평가했다. 현재 후보 중 우선 진단할 근거가 가장 분명하다. 추가 금융 학습 없이 공개 원본의 양자화본을 사용할 후보이다. <a href="https://arxiv.org/html/2609.10113v1#S5">금융 평가</a> · <a href="https://arxiv.org/pdf/2610.08882">구조화 과제</a> · <a href="https://registry.ollama.ai/v2/library/qwen3.5/manifests/4b-q4_K_M">배포 정보</a></td></tr>
+<tr><td><strong>Qwen3-1.7B · 기존 설치 활용</strong><br><code>qwen3:1.7b</code></td><td>약 1.36 GB<br>Q4_K_M</td><td>추가 다운로드 없이 진단을 시작할 수 있다. 2026년 금융 평가에 포함돼 선정 근거도 있다. 다만 긴 문맥의 메모리까지 가장 적다고 단정할 수 없고, 우리 과제의 판단·형식 수행 여부를 확인해야 한다. <a href="https://arxiv.org/html/2609.10113v1#S5">논문</a> · <a href="https://registry.ollama.ai/v2/library/qwen3/manifests/1.7b">배포 정보</a></td></tr>
+<tr><td><strong>원래 Qwen3-4B · 보조 대안</strong><br><code>qwen3:4b-q4_K_M</code></td><td>약 2.62 GB<br>Q4_K_M</td><td>1.7B와 같은 금융 평가에 포함됐다. 파일은 3.5-4B보다 작지만 긴 문맥의 메모리 절감용 대안으로 볼 수는 없다. <a href="https://arxiv.org/html/2609.10113v1#S5">논문</a> · <a href="https://registry.ollama.ai/v2/library/qwen3/manifests/4b-q4_K_M">배포 정보</a></td></tr>
+<tr><td>Qwen3-4B-Thinking-2507 · 후순위<br><code>qwen3:4b-thinking-2507-q4_K_M</code></td><td>약 2.50 GB<br>Q4_K_M</td><td>FinLCR 논문에서 원본의 FinQA 67.79%, DocFinQA 42.52%를 보고했다. 장문 금융 추론 근거는 있으나 thinking 전용이고, 원래 4B와 별개다. <a href="https://cdn.amazon.science/73/b9/614adb0a4f74b4cdbf147e1714ed/scipub-approval152129-44545501-finlcr-scaling-financial-longcontext-reasoning-via-curriculum-reinforcement-learning.pdf">FinLCR Table 1</a> · <a href="https://registry.ollama.ai/v2/library/qwen3/manifests/4b-thinking-2507-q4_K_M">배포 정보</a></td></tr>
+<tr><td>Qwen3.5-2B · 더 작은 예비 후보<br><code>qwen3.5:2b-q4_K_M</code></td><td>약 1.95 GB<br>Q4_K_M</td><td>작지만 이번 조사에서 이 정확한 모델의 금융 평가 논문은 확인하지 못했다. 공식 카드에는 thinking 반복 문제도 명시돼 있다. 논문 근거 우선 원칙에서는 우선순위를 낮춘다. <a href="https://huggingface.co/Qwen/Qwen3.5-2B">공식 카드</a> · <a href="https://registry.ollama.ai/v2/library/qwen3.5/manifests/2b-q4_K_M">배포 정보</a></td></tr>
+</tbody></table></div>
+<p class="note"><strong>태그 주의:</strong> 조사 시점의 <code>qwen3:4b</code>는 Thinking-2507을 가리킨다. 원래 4B 논문 점수를 이 태그의 근거로 그대로 쓰면 모델이 달라진다. 또한 <code>qwen3.5:2b</code> 기본은 Q8_0, 약 2.68 GB이므로 위의 1.95 GB Q4_K_M과 구분한다. 설치 후에는 이름뿐 아니라 manifest digest·실행 엔진 버전·대화 템플릿을 고정해야 한다.</p>
+
+<h2>2. 금융 점수가 말해 주는 범위</h2>
+<p><a href="https://arxiv.org/html/2609.10113v1#S5">Data-Centric Post-Training(2026-09-09), §5·Table 3</a>의 동일 778문항 평가에서 원본 Qwen3.5-4B는 75.2, Qwen3-4B는 61.0, Qwen3-1.7B는 56.0이었다. 모델별 추론 설정이 적용됐고 GPT-5.2가 정오를 채점했다. 이 수치는 후보 선정의 보조 근거이며, 우리 산업 배분 과제의 성공률·수익률·양자화본 성능으로 바꿔 읽을 수 없다. 본문에 나온 temperature 0과 32,768토큰은 채점 모델 설정이다. 평가대상 Qwen의 상세 생성 조건은 확인되지 않는다.</p>
+<p><a href="https://arxiv.org/pdf/2610.08882">FinVector-Market-4B(2026-10-06), §4.1·6.4·7.3·10</a>는 Qwen3.5-4B 원본과 추가 학습 모델을 구분해 평가했다. 원본에도 명시적 JSON 구조를 제공했으며, greedy decoding·thinking 비활성화·최대 700토큰을 사용했다. 명시적 구조를 받은 원본에서도 23/600개 출력이 상한에 도달했다. 비공개 평가 자료, 학습·평가 문서 중복, 일부 정답 수치 오류라는 한계가 있다. 이 연구는 구조화 응답과 non-thinking 실행의 선례가 되지만 700토큰이 우리 과제에 충분하다는 근거는 아니다.</p>
+
+<h2>3. 설치 크기는 작아도 전체 실험은 별도 확인이 필요하다</h2>
+<p>10월 17일 읽기 전용 확인 기록상 서버 컨테이너는 RAM 8 GiB, CPU 4개 할당이며 GPU가 노출되지 않았다. 물리 호스트는 약 16 GiB RAM의 Pentium G6405이고 다른 작업과 자원을 공유한다. 실제 공유 저장 풀의 잔여 공간은 당시 약 23.14 GiB였다. 3.32 GB 다운로드는 기존 약 22.62 GB 후보보다 저장 부담이 작지만, 현재 여유 공간은 실행 전에 다시 확인해야 한다. <a href="../data/sector_runtime/proxmox_hardware_inventory_20261017.json">현장 확인 기록</a></p>
+<p>메모리에는 모델 파일 외에도 이전 문장을 처리하는 캐시와 실행 버퍼가 필요하다. 공식 구조에 f16 캐시·단일 시퀀스를 가정한 full-attention KV 부분만 계산하면, 32,768토큰에서 Qwen3.5-4B는 약 1 GiB, 원래 Qwen3-4B는 약 4.5 GiB, Qwen3-1.7B는 약 3.5 GiB다. <strong>이는 구조를 이용한 설명용 추정이며 총 RAM 실측이 아니다.</strong> 가중치·선형 attention 상태·버퍼·실행기 정책은 제외한다. 따라서 파일이 가장 작은 모델이 긴 실험에서도 메모리를 가장 적게 쓰는 것은 아니다. <a href="https://huggingface.co/Qwen/Qwen3.5-4B#model-overview">3.5-4B 구조</a> · <a href="https://huggingface.co/Qwen/Qwen3-4B#model-overview">원래 4B 구조</a> · <a href="https://huggingface.co/Qwen/Qwen3-1.7B#model-overview">1.7B 구조</a></p>
+<p><a href="https://registry.ollama.ai/v2/library/qwen3.5/blobs/sha256:788a4d94bc3f431ac0cd067005be4b838a09330427962952420b05d10ecf84db">Qwen3.5-4B 배포 config</a>의 최소 Ollama 버전은 0.30.0으로, 확인된 서버 버전 0.35.1은 이 선언 조건을 충족한다. 실제 로딩·CPU 실행·긴 문맥의 정상 동작까지 확인한 것은 아니다. 네 단계 동안 쌓인 최종 응답·기관 문서·계산 피드백을 유지한 전체 예비실험이 필요하다.</p>
+
+<h2>4. 모델과 함께 선택해야 할 추론 방식</h2>
+<div class="scroll"><table><thead><tr><th>설정 후보</th><th>근거</th><th>LIBERA에서의 의미</th></tr></thead><tbody>
+<tr><td><strong>A. Qwen3.5-4B / thinking 끔 / greedy</strong><br>우선 검토할 실행안</td><td>FinVector 원본 모델 평가의 실제 모드. Ollama에서는 temperature 0이 대응하는 후보지만 동일 엔진의 재현은 아니다.</td><td>별도 내부 추론 생성 없이 명시적 해석·대안·배분·재검토를 수행한다. 네 단계 구조는 유지된다. 총 소요시간 감소 가능성은 실측해야 한다. 기존 thinking 조건에서 바뀐 점은 프로토콜에 기록한다.</td></tr>
+<tr><td>B. Qwen3.5-4B / thinking 켬</td><td>기존 PortBench의 추론 조건을 참고하거나 해당 모델의 공식 권고를 적용하는 별도 선택</td><td>내부 추론 토큰이 출력 예산과 시간을 쓴다. PortBench의 temperature 0이 이 작은 모델의 적절한 조건으로 검증된 것은 아니다. 공식 카드 설정은 논문 실험값과 구분한다.</td></tr>
+</tbody></table></div>
+<p><a href="https://arxiv.org/html/2605.27887v6#S3.SS1">PortBench §3.1</a>의 8,192토큰 출력 한도는 기존 설계의 출처다. 이를 새 모델에 유지한다면 <em>다른 모델·과제로 옮긴 연구자 선택</em>으로 기록해야 한다. FinVector의 700이나 제조사의 권장값을 섞어서 하나의 논문을 그대로 재현했다고 쓰지 않는다. 한도 도달은 실패 기록에 남기며 자동 재시도·출력 수정을 하지 않는다. 구체적인 출력·문맥 예산은 네 단계 pilot으로 검증한 뒤 본실험 전에 고정한다.</p>
+<p>문맥 32K는 네 단계의 최대 출력 이력을 모두 담는다고 보장할 수 없다. 과거 최종 응답 세 개와 새 출력에 각 8,192토큰을 허용하면 그것만으로 32,768이므로 원문 입력이 들어갈 자리가 없다. 현재 코드의 UTF-8 상계도 실제 tokenizer 토큰 수와 다르다. 실제 대화 템플릿에 맞춘 길이 확인이 필요하며, 편의를 위해 이력을 삭제하거나 요약하면 비교 조건이 달라진다. 과거 내부 thinking의 보존 여부와 명시적 응답 보존도 구별한다.</p>
+
+<h2>5. 소논문 주제와 다음 단계</h2>
+<p>같은 소형 모델·양자화·추론 설정·시장 자료·계산 지원을 R1과 R4에 공통 적용하면, <strong>“기관 자료를 처음 제공할 때와 마지막에 제공할 때 그 기관의 판단을 얼마나 보존하는가”</strong>라는 질문은 유지된다. 다만 결과는 그 모델과 공개 문서 사례의 관찰이다. 두 조건 모두 과제를 수행하지 못하면 절차 효과가 없다고 단정할 수 없다. AI 전반이나 실제 금융기관 전체의 획일화로 일반화하지 않는다.</p>
+<ol><li>Qwen3.5-4B Q4_K_M을 우선 진단 후보로 기록하고 정확한 모델·버전·설정을 고정한다.</li><li>짧은 합성 입력으로 로딩·메모리·시간·종료·JSON 동작을 점검한다. 기술 점검을 실험 결과로 계산하지 않는다.</li><li>이전 시점의 문서로 R1/R4 네 단계 pilot을 수행한다. 문맥 보존, 출력 완결성, 근거 해석을 확인한다.</li><li>실패·설정 변경 기록을 남기고 실행기·계획·소논문을 함께 수정한 뒤 본실험 기준을 동결한다. R1/R4 차이가 크게 나온 모델을 선택 기준으로 삼지 않는다.</li></ol>
+<p class="note">이번 조사로 확정된 것은 후보 선정의 근거와 확인할 항목이다. 설치 완료·실행 적합성·본실험 준비 완료를 뜻하지 않는다. 단계별 실제 AI 결과는 아직 없다.</p>
+</main></body></html>

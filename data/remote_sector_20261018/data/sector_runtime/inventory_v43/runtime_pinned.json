@@ -1,0 +1,33 @@
+{
+  "protocol_version": "4.3",
+  "backend": "ollama",
+  "model": "qwen3.5:4b-q4_K_M",
+  "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+  "template_sha256": "b507b9c2f6ca642bffcd06665ea7c91f235fd32daeefdf875a0f938db05fb315",
+  "engine_version": "0.35.1",
+  "temperature": 0,
+  "max_output_tokens": 8192,
+  "thinking": false,
+  "context_tokens": 65536,
+  "history_policy": "explicit_final_content",
+  "history_scope": "All explicit assistant final content, supplied documents and calculator feedback are retained verbatim in requests; historical thinking is archived in raw responses, not forwarded.",
+  "context_basis": "65536 is an engineering candidate for the complete four-stage history, not a paper condition or verified effective context. Record any measured revision before main freeze.",
+  "timeout_seconds": 1800,
+  "status": "metadata_pinned; no claim of diagnosis or completed pilot",
+  "sampling_basis": {
+    "url": "https://arxiv.org/pdf/2610.08882",
+    "locator": "section 4.1",
+    "scope": "FinVector base Qwen3.5-4B uses greedy decoding and disabled thinking; Ollama Q4_K_M is a LIBERA implementation adaptation, not the paper engine."
+  },
+  "output_budget_basis": {
+    "url": "https://arxiv.org/html/2605.27887v6#S3.SS1",
+    "scope": "8192 carries forward the earlier PortBench-derived budget to a different model/task; researcher transfer, not a demonstrated optimum. FinVector uses 700, not 8192."
+  },
+  "local_variant": "Q4_K_M; pin the exact manifest/model digest, template and engine before execution.",
+  "context_check": "Conservative UTF-8 screening estimate plus output allowance; not a tokenizer count or proof against renderer/server truncation.",
+  "base_url": "http://127.0.0.1:11434",
+  "pinned_at_utc": "2026-10-18T05:20:54.360496+00:00",
+  "intended_split": "pilot",
+  "main_authorized_by_this_file": false,
+  "timeout_basis": "Engineering cancellation limit per request; not a paper condition"
+}

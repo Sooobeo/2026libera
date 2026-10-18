@@ -1,0 +1,43 @@
+{
+  "schema_version": "libera_v44_renderer_policy_1.0",
+  "policy_id": "http_verbatim_json_outer_ascii_whitespace_only_v1",
+  "scope": "Predetermined one-case v4.4 pilot; approved before generation. Official renderer compatibility is an engineering control, not a financial-paper parameter.",
+  "frozen_conditions_reference": {
+    "path": "research/v44_conditions_reference_20261018.json",
+    "sha256": "a403d4c37d1581f9af21af8ba7a6333614d890ff15277e83181c1204549a9c5b",
+    "unchanged": true
+  },
+  "policy": {
+    "http_content": "Save and transmit each original message content string verbatim. This policy does not edit HTTP history or prior model output.",
+    "system_message": "Require exact original fixed system content without trimming.",
+    "json_message": "For each non-system JSON message, remove only contiguous outer U+0020, U+0009, U+000D, U+000A to construct the expected renderer content. Require the original and expected strings to parse as the same JSON value. Preserve every internal character.",
+    "allowed_outer_codepoints": ["U+0020", "U+0009", "U+000D", "U+000A"],
+    "render_validation": "Find each expected content in the rendered prompt in original message order; save original and expected hashes, removed prefix and suffix, and observed character spans. Stop before generation if any expected content is absent or changed.",
+    "reject": ["Non-JSON content outside the fixed system message", "Non-JSON boundary whitespace such as form feed or vertical tab", "Tagged reasoning removal", "Internal whitespace changes", "Changed JSON value", "Summary substitution", "Unexplained omission or reordering", "Unexpected generated content, thinking, tool calls, or nonzero generation/prompt-evaluation counts in a render-only response"],
+    "context_control": "Keep truncate=false and shift=false on both render and generation requests. Render inspection establishes visible text preservation under this restricted boundary policy, not an independent token-count or context-capacity proof.",
+    "postrun_reporting": "Report HTTP string preservation separately from renderer boundary-whitespace transformation. Record any runtime overflow, length stop, malformed output, or failure without repair, retry, or substitution."
+  },
+  "primary_sources": [
+    {
+      "path": "research/evidence/v44_renderer_appendix_20261018/ollama_qwen35_renderer_v0351.go",
+      "url": "https://raw.githubusercontent.com/ollama/ollama/v0.35.1/model/renderers/qwen35.go",
+      "sha256": "69bca99b53a3db8d599bb9ec8eadf65ce9a72868566a89bfac44d31fe3b565e0",
+      "saved_source_lines": [254, 288, 300],
+      "support": "Version-pinned renderer applies strings.TrimSpace and can extract tagged assistant reasoning. The policy allows only the JSON boundary subset and rejects other differences."
+    },
+    {
+      "path": "research/evidence/v44_renderer_appendix_20261018/go_strings_public_snapshot.go",
+      "url": "https://go.dev/src/strings/strings.go?m=text",
+      "sha256": "a81bdf73a308277c322e35d0c602e3813f57b6f769c091f8f8962c8884a45ea3",
+      "saved_source_lines": [1087, 1088, 1089, 1095, 1105],
+      "support": "Go TrimSpace removes boundary whitespace and leaves internal characters untouched. This public implementation snapshot is a definition reference; it does not identify the exact Go compiler/library used to build the installed Ollama binary."
+    },
+    {
+      "url": "https://www.rfc-editor.org/rfc/rfc8259#section-2",
+      "section": "2, JSON Grammar",
+      "support": "JSON whitespace is space, horizontal tab, line feed, and carriage return. The accepted set is specified by this standard, not a token-length heuristic."
+    }
+  ],
+  "model_generation_calls": 0,
+  "main_study_frozen": false
+}

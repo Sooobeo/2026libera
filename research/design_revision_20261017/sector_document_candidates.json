@@ -1,0 +1,284 @@
+{
+  "version": "candidate_audit_1.1",
+  "checked_on": "2026-10-17",
+  "status": "Four source versions pinned for v4.2 case-corpus preparation; independent substantive human validation remains pending.",
+  "finding": "Industry-level decisions can be retained. Real public sector views fit a common GICS sector action space more directly than FF12. These sources are published analyst or house views, not institution-specific client risk mandates or actual fund portfolio targets.",
+  "classifications": {
+    "proposed_candidate": "11 GICS sectors",
+    "ff12_compatibility": "No validated one-to-one mapping. FF12 SIC groups and GICS sector groups differ; do not map by similar names.",
+    "sectors": [
+      "Communication Services",
+      "Consumer Discretionary",
+      "Consumer Staples",
+      "Energy",
+      "Financials",
+      "Health Care",
+      "Industrials",
+      "Information Technology",
+      "Materials",
+      "Real Estate",
+      "Utilities"
+    ],
+    "selected_for_v42": "11 GICS sectors; no FF12 translation"
+  },
+  "candidate_decision_cutoffs": [
+    {
+      "date": "2026-06-30",
+      "status": "Possible cutoff for Fidelity Q2 plus UBS July; source ages differ materially. Not valid for Fidelity Q3, which was published in July.",
+      "constraints": [
+        "Audit whether selected documents were superseded before cutoff.",
+        "Do not call mismatched as-of dates contemporaneous equal-information institutional differences."
+      ]
+    },
+    {
+      "date": "2026-07-17",
+      "status": "Selected retrospective document-snapshot availability cutoff for v4.2. This is LIBERA scheduling, not a paper-derived numeric constant; does not establish contemporaneous information or latest institution views.",
+      "pair": [
+        "fidelity_q3_2026",
+        "ubs_july_2026"
+      ],
+      "constraints": [
+        "Fidelity view-date typo remains explicitly unresolved.",
+        "As-of dates are not identical.",
+        "One source-date snapshot is a case study, not a representative sample of institutions or market regimes.",
+        "Current downloaded bytes are not authenticated historical archived snapshots.",
+        "Pilot uses the same common market snapshot as main for mechanical rehearsal, not historical replay."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "fidelity_q2_2026",
+      "issuer": "Fidelity Investments / Denise Chisholm",
+      "title": "Quarterly Sector and Investment Research Update Q2 2026",
+      "url": "https://www.fidelity.com/bin-public/600_Fidelity_Com_English/documents/learning-center/Quarterly-Sector-And-Investment-Research-Update-Second-Quarter-2026.pdf",
+      "landing_url": "https://clearingcustody.fidelity.com/insights/topics/market-commentary/second-quarter-2026-quarterly-sector-and-investment-research-update",
+      "landing_updated": "2026-04-17",
+      "source_as_of": "2026-03-31",
+      "pages": {
+        "ratings": 3,
+        "interpretation_and_scope": 2
+      },
+      "ratings": {
+        "Communication Services": "Underweight",
+        "Consumer Discretionary": "Overweight",
+        "Consumer Staples": "Underweight",
+        "Energy": "Underweight",
+        "Financials": "Overweight",
+        "Health Care": "Neutral",
+        "Industrials": "Overweight",
+        "Information Technology": "Overweight",
+        "Materials": "Underweight",
+        "Real Estate": "Overweight",
+        "Utilities": "Underweight"
+      },
+      "ratings_visually_checked": true,
+      "weight_targets_provided": false,
+      "rating_semantics": "Overweight and underweight refer to hypothetical tilts relative to broad-market sector weights; source warns these are not necessarily Fidelity or affiliate-wide views.",
+      "limitations": [
+        "Current Q2 landing page download link points to Q3; direct Q2 PDF was inspected separately.",
+        "Underlying strategist universe is top 3000 US stocks, while displayed benchmark statistics are S&P 500.",
+        "No precise mandate or gamma stated.",
+        "PDF p2 performance header reads 12/31/25, while narrative and source footnote refer to Q1/3/31/2026. This inconsistent table is not used for the common numeric benchmark."
+      ],
+      "local_evidence_pdf": "tmp/pdfs/sector_documents/fidelity_q2_2026.pdf",
+      "sha256": "d11c4403f90e7bbd1d06a7fa83c91673d8c772be325042d4d1f01fab4e7076d6",
+      "independent_substantive_human_review": "pending"
+    },
+    {
+      "id": "fidelity_q3_2026",
+      "issuer": "Fidelity Investments / Denise Chisholm",
+      "title": "Quarterly Sector and Investment Research Update Q3 2026",
+      "url": "https://clearingcustody.fidelity.com/app/proxy/content?literatureURL=/9906006.PDF",
+      "landing_url": "https://clearingcustody.fidelity.com/insights/topics/market-commentary/third-quarter-2026-quarterly-sector-and-investment-research-update",
+      "metadata_url": "https://clearingcustody.fidelity.com/app/literature/view?itemCode=9906006&renditionType=PDF",
+      "landing_updated": "2026-07-16",
+      "publisher_html_datePublished": "2026-07-15T23:00:00-05:00",
+      "publisher_html_dateModified": "2026-07-15T23:00:00-05:00",
+      "market_statistics_as_of": "2026-06-30",
+      "sector_view_as_of_raw": "6/31/26",
+      "sector_view_as_of_status": "Invalid calendar date printed on p3; visually confirmed, not silently corrected. Nearby p2 statistics are dated 6/30/26.",
+      "pages": {
+        "ratings_and_reasons": 3,
+        "interpretation_and_scope": 2
+      },
+      "ratings": {
+        "Communication Services": "Underweight",
+        "Consumer Discretionary": "Overweight",
+        "Consumer Staples": "Underweight",
+        "Energy": "Underweight",
+        "Financials": "Overweight",
+        "Health Care": "Neutral",
+        "Industrials": "Overweight",
+        "Information Technology": "Overweight",
+        "Materials": "Overweight",
+        "Real Estate": "Underweight",
+        "Utilities": "Underweight"
+      },
+      "ratings_visually_checked": true,
+      "weight_targets_provided": false,
+      "reasons_paraphrased": {
+        "Financials": "Relative valuation support.",
+        "Real Estate": "Potential higher-rate headwind.",
+        "Consumer Discretionary": "Favorable forward valuation evidence.",
+        "Information Technology": "Fundamentals and post-decline valuations.",
+        "Industrials": "Predictive valuation evidence.",
+        "Materials": "Selected mining opportunities.",
+        "Consumer Staples": "Weak fundamentals.",
+        "Health Care": "Balanced risk-return evidence.",
+        "Energy": "Unfavorable indicators.",
+        "Communication Services": "Positive technology-related subsectors but weaker defensive components.",
+        "Utilities": "Unattractive valuations."
+      },
+      "rating_semantics": "Hypothetical tilts relative to broad-market sector weights, not precise target percentages; strategist views are not necessarily firm-wide views.",
+      "limitations": [
+        "Published in July: not eligible as information available on June 30.",
+        "Invalid as-of date for view table requires explicit handling.",
+        "Uses GICS, with strategist view based on top 3000 US stocks.",
+        "Displayed S&P 500 sector weights are benchmark weights, not Fidelity holdings or target allocations."
+      ],
+      "local_evidence_pdf": "tmp/pdfs/sector_documents/fidelity_q3_2026.pdf",
+      "sha256": "4179aa3e97f3146e664655ac1008cc87942341069ec4bccfbfe7d7436467dd04",
+      "independent_substantive_human_review": "pending"
+    },
+    {
+      "id": "ubs_june_2026",
+      "issuer": "UBS Chief Investment Office Global Wealth Management",
+      "title": "UBS House View Investment Strategy Guide June 2026",
+      "url": "https://advisors.ubs.com/mediahandler/media/808505/UBS%20House%20View%20for%20June%202026.pdf",
+      "publication_date": "2026-05-22",
+      "publication_locator": "PDF p2 states publication date",
+      "sector_view_as_of": "2026-05-21",
+      "pages": {
+        "ratings_and_us_sector_reasons": 21,
+        "rating_semantics": 27
+      },
+      "ratings": {
+        "Communication Services": "Neutral",
+        "Consumer Discretionary": "Attractive",
+        "Consumer Staples": "Neutral",
+        "Energy": "Neutral",
+        "Financials": "Attractive",
+        "Health Care": "Attractive",
+        "Industrials": "Attractive",
+        "Information Technology": "Neutral",
+        "Materials": "Neutral",
+        "Real Estate": "Neutral",
+        "Utilities": "Attractive"
+      },
+      "ratings_visually_checked": true,
+      "weight_targets_provided": false,
+      "limitations": [
+        "Ratings are house views, not automatically overweight/underweight portfolio instructions.",
+        "US sector section must be separated from regional-equity and asset-class sections."
+      ],
+      "local_evidence_pdf": "tmp/pdfs/sector_documents/ubs_june_2026.pdf",
+      "sha256": "1f8ec8afee56898124a450acf3557a1a493e282a4139c4cffa2212471b12b5a2",
+      "independent_substantive_human_review": "pending"
+    },
+    {
+      "id": "ubs_july_2026",
+      "issuer": "UBS Chief Investment Office Global Wealth Management",
+      "title": "UBS House View Investment Strategy Guide July 2026",
+      "url": "https://advisors.ubs.com/mediahandler/media/816396/UBS%20House%20View%20for%20July%202026.pdf",
+      "publication_date": "2026-06-22",
+      "publication_locator": "PDF p2 states publication date",
+      "sector_view_as_of": "2026-06-18",
+      "pages": {
+        "ratings_and_us_sector_reasons": 21,
+        "rating_semantics": 27
+      },
+      "ratings": {
+        "Communication Services": "Neutral",
+        "Consumer Discretionary": "Attractive",
+        "Consumer Staples": "Neutral",
+        "Energy": "Neutral",
+        "Financials": "Attractive",
+        "Health Care": "Attractive",
+        "Industrials": "Attractive",
+        "Information Technology": "Neutral",
+        "Materials": "Neutral",
+        "Real Estate": "Neutral",
+        "Utilities": "Attractive"
+      },
+      "ratings_visually_checked": true,
+      "weight_targets_provided": false,
+      "reasons_paraphrased": {
+        "Industrials": "Aerospace growth and transportation recovery potential.",
+        "Consumer Discretionary": "AI adoption, fiscal support, wealth effects and fading tariff pressure.",
+        "Financials": "Regulatory easing and capital-markets activity.",
+        "Health Care": "Resilience if economic growth weakens.",
+        "Utilities": "Defensive resilience plus AI-related demand."
+      },
+      "rating_semantics": "Attractive/Neutral/Unattractive are high-level opportunity assessments. Appendix explicitly distinguishes these views from actual tactical allocations, which may differ with construction, concentration and borrowing constraints.",
+      "limitations": [
+        "Do not convert Attractive directly into a numeric overweight or expected-return forecast.",
+        "No numeric client risk limit or portfolio-level mandate.",
+        "S&P 500 US sector preferences; global health-care or European sector statements elsewhere must not be mixed."
+      ],
+      "local_evidence_pdf": "tmp/pdfs/sector_documents/ubs_july_2026.pdf",
+      "sha256": "07369578859be743e2323ea611f8d9b47e9bb7bc1e7b0e081d4b8df5ad2b4b7b",
+      "independent_substantive_human_review": "pending"
+    },
+    {
+      "id": "ssga_june_2026",
+      "issuer": "State Street Investment Management Investment Solutions Group",
+      "title": "Equities overweight edges higher",
+      "url": "https://www.ssga.com/ae/en_gb/institutional/insights/taa-june-2026",
+      "publication_date": "2026-06-16",
+      "source_as_of": "2026-06-05",
+      "status": "Backup qualitative source, not complete 11-sector label grid.",
+      "observed_sector_views": {
+        "Communication Services": "Top-ranked; momentum, sentiment and quality.",
+        "Energy": "Positive; discounted valuations and sentiment.",
+        "Industrials": "Consistent positive model characteristics.",
+        "Consumer Staples": "Ranking declined but forecast remains positive."
+      },
+      "weight_targets_provided": false,
+      "limitations": [
+        "Country page serves global/institutional audiences; equity-sector geographic universe requires further confirmation.",
+        "All-asset tactical allocation language must not be confused with equity-sector labels.",
+        "Cannot score unmentioned sectors as Neutral."
+      ]
+    }
+  ],
+  "operational_rules": [
+    "Preserve each source rating scale and dates; Attractive and Overweight are not automatically identical.",
+    "Interpret overweight relative to the explicitly chosen benchmark, not as larger absolute weight than another sector.",
+    "Do not invent a unique numeric allocation from qualitative views; numeric agreement needs an independently specified allocation model or published target.",
+    "Document interpretation can be scored against source labels and reasons independently of portfolio weights.",
+    "Use same eligible sector baskets, market data and common execution constraints across workflow arms; any differing policy must be observable and independently evidenced.",
+    "Do not use different sector-specialist funds as institution treatments without addressing different feasible-universe confounding.",
+    "Source dates, source ages, geographic scope and source-specific scales remain explicit design variables.",
+    "Fidelity labels denote one strategist report and UBS labels denote CIO house views, not every fund or employee of each company.",
+    "Current files do not establish private-information loss, complete institutional strategy replication, welfare loss or future performance."
+  ],
+  "papers": [
+    {
+      "title": "Leveraging LLMs for Top-Down Sector Allocation in Automated Trading",
+      "year": 2025,
+      "url": "https://arxiv.org/html/2503.09647v5",
+      "locator": "Sections 3, 4, 7 and Appendix 9.3",
+      "supports": "A top-down allocation stage across 11 GICS sectors, followed by stock selection; date filtering of source information.",
+      "limits": "Ultimately selects individual stocks. Section 3 and Table 1 use January-June 2019, while section 7 still says 2019-2024. Does not validate our document treatment, dates, or numeric thresholds.",
+      "version": "v5, 2025-04-10"
+    },
+    {
+      "title": "CN-Buzz2Portfolio",
+      "year": 2026,
+      "url": "https://arxiv.org/html/2603.22305v1",
+      "locator": "Sections 3.3-3.4",
+      "supports": "Sector ETF action space and separate interpretation/allocation stages.",
+      "limits": "Preprint, Chinese-market benchmark, no institution-specific mandate experiment. Repository link is promised rather than verified in v1. Not a direct justification of US GICS or FF12 mapping."
+    },
+    {
+      "title": "PortBench",
+      "year": 2026,
+      "url": "https://arxiv.org/html/2605.27887v6",
+      "locator": "Appendix F.3 and F.5",
+      "supports": "Separates reference-weight agreement, exposure compliance and outcomes; profile-response comparison.",
+      "limits": "Does not make public institution sector views equivalent to numeric risk profiles or unique target allocations."
+    }
+  ],
+  "v42_corpus_output": "data/sector_documents/source_manifest.json"
+}

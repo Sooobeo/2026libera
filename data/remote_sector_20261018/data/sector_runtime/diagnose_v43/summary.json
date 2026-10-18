@@ -1,0 +1,43 @@
+{
+  "command": "diagnose",
+  "status": "completed",
+  "output": "/root/libera_20261018/data/sector_runtime/diagnose_v43",
+  "main_model_calls": 0,
+  "synthetic_health_prompt_only": true,
+  "json_ready_response": true,
+  "unexpected_thinking_with_disabled_request": false,
+  "done_reason": "stop",
+  "diagnostic_calls": 1,
+  "pilot_model_calls": 0,
+  "settings_basis": "256 output tokens and 65536 context are engineering diagnostics, not paper conditions.",
+  "interpretation": "One short response does not establish complete four-stage feasibility or research quality.",
+  "finished_at_utc": "2026-10-18T05:21:35.292844+00:00",
+  "script_wall_seconds": 19.2424558121711,
+  "calls": [
+    {
+      "kind": "diagnose",
+      "folder": "http_0001_diagnose",
+      "started_at_utc": "2026-10-18T05:21:16.065325+00:00",
+      "status": "completed",
+      "http_status": 200,
+      "metrics": {
+        "wall_seconds": 18.93516548909247,
+        "ttft_any_generated_seconds": 16.510316671803594,
+        "ttft_content_seconds": 16.510315980762243,
+        "token_count_source": "Ollama counters, not independent tokenization",
+        "duration_unit_in_response": "nanoseconds",
+        "total_duration_seconds": 18.934236483,
+        "load_duration_seconds": 7.841581183,
+        "prompt_eval_duration_seconds": 8.661671,
+        "eval_duration_seconds": 2.425285,
+        "prompt_eval_count": 23,
+        "eval_count": 6,
+        "prompt_eval_tokens_per_second": 2.655376774296784,
+        "eval_tokens_per_second": 2.47393605287626
+      },
+      "raw_bytes_path": "http_0001_diagnose/raw_stream.bin",
+      "no_automatic_retry": true,
+      "unexpected_thinking_with_disabled_request": false
+    }
+  ]
+}

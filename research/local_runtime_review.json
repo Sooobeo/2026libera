@@ -1,0 +1,281 @@
+{
+  "reviewed_at_utc": "2026-10-17T09:57:03.000515+00:00",
+  "scope": "Read-only documentation/code review and diagnostic plan. This agent did not pull a model, call inference, modify the server, or change experimental runtime settings.",
+  "model_calls_by_this_review": 0,
+  "status": "diagnostic_plan_not_benchmark_result",
+  "hardware_context": {
+    "reported_target": "Windows laptop; Intel Arc 140V; nominal 32 GB system RAM",
+    "parent_reported_observation": {
+      "physical_ram_GiB": 31.5,
+      "free_ram_GiB": 9.65,
+      "independently_remeasured_here": false
+    },
+    "server_alternative": "A remotely accessed server is a valid execution location. Assess the server hardware and actual backend; the RDP client laptop does not supply the server inference GPU.",
+    "inventory_record": "data/sector_runtime/hardware_inventory_20261017.json",
+    "remote_status": "Server hardware and execution identity remain unverified; remote specifications are pending. Shared public host names or NAT addresses alone do not prove the SSH and RDP endpoints are the same computer."
+  },
+  "parameter_basis": [
+    {
+      "item": "temperature=0, max_output_tokens=8192, thinking enabled",
+      "classification": "direct_paper_values",
+      "source": "portbench",
+      "implementation": "Ollama request think=true; options.temperature=0 and options.num_predict=8192. Do not silently replace these with catalog defaults."
+    },
+    {
+      "item": "context 131072",
+      "classification": "official_model_guidance_and_local_engineering_choice",
+      "source": "qwen_card",
+      "explanation": "The model supports 262144 native tokens and recommends at least 128K for reasoning; it allows lowering context for OOM. This is not a reported PortBench context setting."
+    },
+    {
+      "item": "context 32768",
+      "classification": "diagnostic_engineering_condition_only",
+      "explanation": "Use to measure reduced context memory/runtime if needed. It does not establish the same experimental condition as 128K and must not silently become main configuration."
+    },
+    {
+      "item": "Q4_K_M, llamacpp/GGUF, MTP defaults, timeout and memory-sampling interval",
+      "classification": "implementation_or_diagnostic_engineering",
+      "explanation": "These are not established as exact PortBench settings. Record and freeze any eventual experimental implementation adaptation."
+    }
+  ],
+  "official_live_registry_observation": {
+    "retrieved_manifest_sha256": "a7eb95c53bcf96b4bdd008d0fab4a5dac88047d9c1a7a9ab88ed453423fbd87c",
+    "manifest": {
+      "schemaVersion": 2,
+      "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+      "config": {
+        "mediaType": "application/vnd.docker.container.image.v1+json",
+        "digest": "sha256:99afa5bbf1e7038bda7d028e100ee76b7337c943468d52590de3282db7b52adb",
+        "size": 220
+      },
+      "layers": [
+        {
+          "mediaType": "application/vnd.ollama.image.model",
+          "digest": "sha256:d372de8e934898a59e6ccfabc3368474711384d8f1fd4d22d87a3f0a45400cdc",
+          "size": 21718480960,
+          "from": "qwen3.6-source:35b-a3b-mtp-q4_K_M-20260824"
+        },
+        {
+          "mediaType": "application/vnd.ollama.image.projector",
+          "digest": "sha256:a62390d25b4b4a2d8afd7cc3c90021c11935c1fdd48d7cb0723ab71cd02a598e",
+          "size": 902821728,
+          "from": "qwen3.6-source:35b-a3b-mtp-q4_K_M-20260824"
+        },
+        {
+          "mediaType": "application/vnd.ollama.image.license",
+          "digest": "sha256:5f3a3c817e78f5b8a4ad2d2c458a3e4b2cce470d6c12642c4eeb12cb8a9bf51d",
+          "size": 11357,
+          "from": "qwen3.6-source:35b-a3b-mtp-q4_K_M-20260824"
+        },
+        {
+          "mediaType": "application/vnd.ollama.image.params",
+          "digest": "sha256:ce44c0f3ca1f7a126724e5285be7e1afdab202186c6379515ab0c1ffd40d3ecc",
+          "size": 116
+        }
+      ],
+      "runner": "llamacpp",
+      "format": "gguf"
+    },
+    "config_url": "https://registry.ollama.ai/v2/library/qwen3.6/blobs/sha256:99afa5bbf1e7038bda7d028e100ee76b7337c943468d52590de3282db7b52adb",
+    "config_sha256": "99afa5bbf1e7038bda7d028e100ee76b7337c943468d52590de3282db7b52adb",
+    "config": {
+      "model_format": "gguf",
+      "model_family": "qwen35moe",
+      "model_families": [
+        "qwen35moe"
+      ],
+      "model_type": "35.5B",
+      "file_type": "Q4_K_M",
+      "renderer": "qwen3.5",
+      "parser": "qwen3.5",
+      "requires": "0.30.0",
+      "architecture": "amd64",
+      "os": "linux"
+    },
+    "params_sha256": "ce44c0f3ca1f7a126724e5285be7e1afdab202186c6379515ab0c1ffd40d3ecc",
+    "params": {
+      "draft_num_predict": 2,
+      "min_p": 0,
+      "presence_penalty": 1.5,
+      "repeat_penalty": 1,
+      "temperature": 1,
+      "top_k": 20,
+      "top_p": 0.95
+    },
+    "interpretation": [
+      "The current catalog displays both MLX and llama.cpp variants. The retrieved default registry manifest is GGUF/llamacpp; local /api/show and digest must confirm the actual artifact on Windows.",
+      "Current config requires Ollama 0.30.0. The previously observed local 0.40.5 is above that minimum; this is necessary metadata compatibility, not a successful execution test.",
+      "Catalog sizes are disk-artifact sizes, not measured peak RAM. Model plus projector layers are about 22.62 decimal GB before runtime buffers/cache/OS. Only 3B active parameters does not imply storing only a 3B model.",
+      "Current defaults include draft_num_predict=2, presence_penalty=1.5 and temperature=1. Record them and explicit overrides. A mutable model tag alone is insufficient identification.",
+      "The config os=linux/architecture=amd64 fields are registry metadata, not evidence that this GGUF cannot run on Windows."
+    ]
+  },
+  "backend_checks": {
+    "sources": [
+      "ollama_gpu",
+      "ollama_ps",
+      "ollama_context"
+    ],
+    "required_observations": [
+      "Ollama executable and /api/version; model full digest; GGUF format and Q4_K_M; capabilities and accepted thinking values; renderer/parser; model_info; catalog default parameters.",
+      "GPU driver/version and actual runner backend/device/offload logs; /api/ps size,size_vram,context_length and ollama ps PROCESSOR/CONTEXT while loaded.",
+      "Actual environment relevant to backend, Flash Attention, KV cache type, parallelism and model residency. Do not change these between compared diagnostics without recording it."
+    ],
+    "interpretation": "Current official docs say Vulkan is enabled by default when that backend is installed; Windows vendor drivers generally include it. Do not assume Arc acceleration from the device name, or blindly apply older opt-in advice. CPU fallback and partial offload are possible observations, not equivalent GPU results."
+  },
+  "memory_measurement": {
+    "sources": [
+      "windows_workingset",
+      "windows_gpu_memory",
+      "windows_memory_counters",
+      "ollama_ps"
+    ],
+    "record_separately": [
+      "System physical total/available/in-use before loading, during execution and after unload.",
+      "System committed bytes and commit limit; pagefile use, hard page inputs and disk activity where available.",
+      "Ollama server and runner process PIDs; sampled working set/RSS, private bytes and peak working set separately.",
+      "Adapter-level dedicated/shared GPU use and active compute engine; actual GPU budget if exposed.",
+      "Ollama /api/ps reported size and size_vram; actual context length."
+    ],
+    "interpretation": [
+      "Working set/RSS counts resident pageable process pages; it is not complete system resource use and excludes some nonpageable allocations.",
+      "Integrated shared GPU memory uses system RAM; do not add it to physical RAM as extra capacity, or simply add process RSS and shared GPU bytes.",
+      "Per-process shared allocations can be counted multiple times. Prefer adapter-level totals and system-level available/commit changes for corroboration.",
+      "Low free RAM relative to model artifact size suggests substantial reclaim/offload/paging may be needed; it does not prove inevitable OOM or predict exact tokens/s.",
+      "State the sampling interval and report sampled maxima as sampled maxima. An engineering interval such as 1 second is a monitoring choice, not a research success threshold."
+    ]
+  },
+  "diagnostic_plan": [
+    {
+      "step": 1,
+      "action": "Snapshot hardware, driver, free RAM/commit/disk capacity, model digest/show/config/defaults and runtime version before inference. Keep other workload and server settings recorded.",
+      "scope": "read-only preflight"
+    },
+    {
+      "step": 2,
+      "action": "Root runs a short, clearly synthetic JSON prompt with the selected model and the paper T=0/thinking/8192 cap, in a separate diagnostic output directory. No main source documents or gold are used. Save request, complete response/status and timings.",
+      "scope": "functional diagnostic, not a pilot result"
+    },
+    {
+      "step": 3,
+      "action": "Compare the same synthetic input at explicit num_ctx=32768 and 131072 only if the hardware can safely attempt both. Record load failure, fallback, allocated context, memory/commit/page activity and throughput; do not claim 128K was successfully filled from a short prompt alone.",
+      "scope": "context resource diagnostic"
+    },
+    {
+      "step": 4,
+      "action": "Distinguish cold load from warm/resident measurements. Existing experimental runner keep_alive=0 unloads after each request, so its four stages incur reload costs; a warm benchmark is not its end-to-end runtime estimate.",
+      "scope": "timing interpretation"
+    },
+    {
+      "step": 5,
+      "action": "If basic diagnostics pass, a real pilot must still exercise the full four-stage retained message history and final JSON/11-sector output. Observe actual maximum prompt/output counts; never shorten history to make 32K fit.",
+      "scope": "future pilot, not authorized or performed by this review"
+    },
+    {
+      "step": 6,
+      "action": "Use descriptive timings and observed failure categories to compare laptop versus server. If changing host, digest, backend, quantization, context, cache type or output cap for main, record the adaptation and freeze after the real pilot.",
+      "scope": "decision support"
+    }
+  ],
+  "metric_definitions": {
+    "source": "ollama_chat",
+    "generation_tokens_per_second": "eval_count * 1e9 / eval_duration, only with positive complete duration; label as all generated tokens, not final answer tokens alone.",
+    "prompt_tokens_per_second": "For a cold/uncached prompt use prompt_eval_count * 1e9 / prompt_eval_duration. If prompt_eval_cached_count is present, report it and derive uncached rate using (prompt_eval_count - prompt_eval_cached_count); keep raw counters.",
+    "durations": "total_duration, load_duration, prompt_eval_duration, eval_duration are ns; report seconds and client wall time separately.",
+    "streaming": "A separate diagnostic stream may timestamp first thinking chunk and first answer chunk independently and retain partial output on interruption; these are not interchangeable TTFT. Current experimental runner stream=false provides no first-chunk measurement.",
+    "avoid": "Do not treat download speed, prompt prefill rate, generation rate, and full four-stage elapsed time as the same speed metric."
+  },
+  "failure_classification": [
+    "Load/OOM/resource refusal before generation; capture exact error and observed memory state.",
+    "done_reason=length with empty or incomplete content is an output-budget-limited failure even if thinking tokens were produced; preserve it and do not silently extend 8192 or disable thinking.",
+    "Timeout/cancel/transport interruption without a terminal response is censored; final eval_count/rate are unknown, not zero. Preserve chunks if diagnostic streaming was used.",
+    "Invalid/duplicate-key JSON or missing/invalid weights is a response/schema failure, separate from hardware failure and from successful generation.",
+    "Context overflow, server truncation or context shifting is a history-integrity failure. A short prompt fitting 32K does not show the four-stage workflow fits; three prior maximum outputs alone can consume 24576 tokens before source data, feedback and a fresh 8192-token allowance.",
+    "Record repeated/looping output and whether final content exists; do not score a thinking-only generation as a completed strategic answer."
+  ],
+  "historical_thinking_caveat": {
+    "sources": [
+      "qwen_card",
+      "qwen_renderer_factory",
+      "qwen_renderer",
+      "qwen_parser"
+    ],
+    "finding": "The present GGUF config selects qwen3.5 renderer/parser. In Ollama v0.40.5, that renderer ordinarily emits assistant thinking only after the last normal user turn; earlier assistant final content remains. New stage and calculator-feedback user messages therefore prevent assuming preservation of all earlier thinking.",
+    "implication": "Saving and resending message.thinking in raw requests does not by itself prove it enters the model prompt. Existing R1/R4 can still study retained explicit judgments/proposals. Do not describe it as verified Qwen preserve_thinking=true unless separately implemented and verified.",
+    "action": "Archive effective renderer/parser/version plus request history. Treat enabling a distinct reasoning-preservation policy as an explicit protocol change; this review changes no code."
+  },
+  "next_decision_information": [
+    "Remote server OS, CPU/RAM/free RAM, GPU model and actual dedicated VRAM/free VRAM, runtime version and available storage.",
+    "Measured diagnostic completion, total/load/prefill/generation time, sampled memory and paging, actual offload/context, and any truncation/token-limit failure under unchanged request settings."
+  ],
+  "sources": {
+    "portbench": {
+      "url": "https://arxiv.org/html/2605.27887v6#S3.SS1",
+      "type": "paper",
+      "locator": "section 3.1 Evaluation Protocol"
+    },
+    "qwen_card": {
+      "url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+      "type": "official_model_card",
+      "locator": "Serving Qwen3.6; Preserve Thinking; Best Practices"
+    },
+    "ollama_tag": {
+      "url": "https://ollama.com/library/qwen3.6:35b",
+      "type": "official_model_catalog"
+    },
+    "ollama_registry": {
+      "url": "https://registry.ollama.ai/v2/library/qwen3.6/manifests/35b",
+      "type": "official_registry_live_metadata"
+    },
+    "ollama_gpu": {
+      "url": "https://docs.ollama.com/gpu",
+      "type": "official_runtime_docs",
+      "locator": "Vulkan GPU Support"
+    },
+    "ollama_context": {
+      "url": "https://docs.ollama.com/context-length",
+      "type": "official_runtime_docs"
+    },
+    "ollama_chat": {
+      "url": "https://docs.ollama.com/api/chat",
+      "type": "official_runtime_docs"
+    },
+    "ollama_ps": {
+      "url": "https://docs.ollama.com/api/ps",
+      "type": "official_runtime_docs"
+    },
+    "ollama_faq": {
+      "url": "https://docs.ollama.com/faq",
+      "type": "official_runtime_docs",
+      "locator": "concurrency; keep-alive; Flash Attention; KV quantization"
+    },
+    "windows_workingset": {
+      "url": "https://learn.microsoft.com/windows/win32/memory/working-set",
+      "type": "official_os_docs"
+    },
+    "windows_gpu_memory": {
+      "url": "https://devblogs.microsoft.com/directx/gpus-in-the-task-manager/",
+      "type": "official_os_docs"
+    },
+    "windows_memory_counters": {
+      "url": "https://learn.microsoft.com/en-us/troubleshoot/windows-server/performance/troubleshoot-performance-problems-in-windows",
+      "type": "official_os_docs"
+    },
+    "qwen_renderer_factory": {
+      "url": "https://raw.githubusercontent.com/ollama/ollama/v0.40.5/model/renderers/renderer.go",
+      "type": "official_versioned_runtime_source",
+      "locator": "case qwen3.5"
+    },
+    "qwen_renderer": {
+      "url": "https://raw.githubusercontent.com/ollama/ollama/v0.40.5/model/renderers/qwen35.go",
+      "type": "official_versioned_runtime_source",
+      "locator": "lastQueryIndex and renderAssistantThinkBlock"
+    },
+    "qwen_parser": {
+      "url": "https://raw.githubusercontent.com/ollama/ollama/v0.40.5/model/parsers/qwen35.go",
+      "type": "official_versioned_runtime_source",
+      "locator": "thinking/content separation"
+    }
+  },
+  "execution_status_at_review": "Parent reports local model pull and inference both 0; no server/model changes made by this reviewer. Await target hardware comparison before root executes diagnostics."
+}

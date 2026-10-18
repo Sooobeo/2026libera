@@ -1,0 +1,912 @@
+{
+  "round": 1,
+  "scope": "Execution/input/history/transport audit, not semantic quality or substantive human review",
+  "case_id": "fidelity_q2_2026__R1",
+  "run_dir": "data/local_sector_runtime/single_case_v44_20261018",
+  "run_summary_status": "hard_deadline",
+  "audit_status": "partial_or_failed_run_audit",
+  "checks": [
+    {
+      "check": "manifest_snapshot_identical",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "runtime_snapshot_identical",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "manifest_hash_at_launch",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "prepared_runtime.json",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "prepared_model_packet.json",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "prepared_market_input.json",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "software_local_sector_single_case.py",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "software_run_sector_workflow.py",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "software_sector_engine.py",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "software_compact_sector_prompt.py",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "software_benchmark_sector_latency.py",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "software_remote_sector_runtime.py",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "software_probe_ollama_runtime.py",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "manifest_primary_source_evidence_present",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "manifest_renderer_policy_evidence_present",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "reference_research/v44_conditions_reference_20261018.json",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "reference_data/local_sector_runtime/laptop_realinput_4b_20261018/original_request_not_sent.json",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "reference_research/evidence/v44_primary_sources_20261018/manifest.json",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "reference_research/evidence/v44_primary_sources_20261018/ollama_api_types_v0351.go",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "reference_research/evidence/v44_primary_sources_20261018/ollama_server_routes_v0351.go",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "reference_research/evidence/v44_primary_sources_20261018/ollama_server_prompt_v0351.go",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "reference_research/evidence/v44_primary_sources_20261018/ollama_llama_server_v0351.go",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "reference_research/evidence/v44_primary_sources_20261018/finvector_public_inference_mlx.py",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "reference_research/evidence/v44_primary_sources_20261018/mlx_lm_generate_v0313.py",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "reference_research/v44_renderer_policy_20261018.json",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "reference_research/evidence/v44_renderer_appendix_20261018/ollama_qwen35_renderer_v0351.go",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "reference_research/evidence/v44_renderer_appendix_20261018/go_strings_public_snapshot.go",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fixed_renderer_policy_manifest",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "case_fixed_before_outcomes",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "selected_packet_value_hash",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "runtime_renderer_policy_id",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "pre_run_registration_fixed_hash",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "pre_run_renderer_addendum_fixed_hash",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "registration_reference_research/v44_conditions_reference_20261018.json",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "registration_reference_research/evaluator_only/fidelity_q2_r1_prerun_reference_20261018.json",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "registration_reference_data/sector_protocol/evaluation_spec.json",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "registration_reference_data/sector_documents/source_manifest.json",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "registration_reference_data/sector_market/market_input.json",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "registration_recorded_before_launch",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "addendum_reference_data/sector_protocol/v44_single_case_registration_20261018.json",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "addendum_reference_research/v44_renderer_policy_20261018.json",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "addendum_reference_research/v44_single_case_preflight_independent_review_20261018.json",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "addendum_reference_research/local_sector_single_case.py",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "addendum_reference_research/test_local_sector_single_case.py",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "addendum_recorded_before_launch",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "registration_same_case_no_main",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "addendum_before_generation",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no_retry_main_or_human_pass",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "case_completed_four_stages",
+      "status": "fail",
+      "pass": false,
+      "detail": null
+    },
+    {
+      "check": "s1_no_duplicate_generation_requests",
+      "status": "pass",
+      "pass": true,
+      "detail": {
+        "recorded_request_envelopes": 1
+      }
+    },
+    {
+      "check": "s1_authoritative_request",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "s1_authoritative_serialization",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "s1_planned_conditions_exact",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "s1_sent_conditions_exact",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "s1_logical_history_record",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "s1_expected_message_count",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "s1_ordered_stage",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "s1_public_packet_market_exact",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "s1_exact_projection_roundtrip",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "s1_remaining_strings_unchanged",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "s1_render_request_matches",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "s1_render_request_bytes",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "s1_render_response_bytes",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "s1_rendered_prompt_file_bytes",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "s1_render_validation_recomputed",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "s1_no_render_generation",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "s1_before_render_pins",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "s1_before_generation_pins",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "available:data/local_sector_runtime/single_case_v44_20261018/stage1_transport/http_0001_generation/response.json",
+      "status": "not_observed",
+      "pass": null,
+      "detail": "File absent at audit time."
+    },
+    {
+      "check": "available:data/local_sector_runtime/single_case_v44_20261018/stage1_transport/http_0001_generation/result.json",
+      "status": "not_observed",
+      "pass": null,
+      "detail": "File absent at audit time."
+    },
+    {
+      "check": "available:data/local_sector_runtime/single_case_v44_20261018/stage1_transport/http_0001_generation/assembled_text.json",
+      "status": "not_observed",
+      "pass": null,
+      "detail": "File absent at audit time."
+    },
+    {
+      "check": "s1_raw_decoded_prefix_matches_events",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "s1_terminal_stop_without_cap",
+      "status": "not_observed",
+      "pass": null,
+      "detail": "Required evidence missing; not PASS."
+    },
+    {
+      "check": "s1_response_metadata_matches_raw_terminal",
+      "status": "not_observed",
+      "pass": null,
+      "detail": "Required evidence missing; not PASS."
+    },
+    {
+      "check": "s1_raw_content_identical",
+      "status": "not_observed",
+      "pass": null,
+      "detail": "Required evidence missing; not PASS."
+    },
+    {
+      "check": "s1_no_thinking_toolcalls",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "s1_response_model_pin",
+      "status": "not_observed",
+      "pass": null,
+      "detail": "Required evidence missing; not PASS."
+    },
+    {
+      "check": "available:data/local_sector_runtime/single_case_v44_20261018/fidelity_q2_2026__R1/stage1_response.json",
+      "status": "not_observed",
+      "pass": null,
+      "detail": "File absent at audit time."
+    },
+    {
+      "check": "available:data/local_sector_runtime/single_case_v44_20261018/fidelity_q2_2026__R1/stage1_record.json",
+      "status": "not_observed",
+      "pass": null,
+      "detail": "File absent at audit time."
+    },
+    {
+      "check": "s1_workflow_response_identical",
+      "status": "not_observed",
+      "pass": null,
+      "detail": "Required evidence missing; not PASS."
+    },
+    {
+      "check": "s1_no_output_repair",
+      "status": "not_observed",
+      "pass": null,
+      "detail": "Required evidence missing; not PASS."
+    },
+    {
+      "check": "s1_visible_evidence_ids",
+      "status": "not_observed",
+      "pass": null,
+      "detail": "Required evidence missing; not PASS."
+    },
+    {
+      "check": "available:data/local_sector_runtime/single_case_v44_20261018/stage1_transport/worker_summary.json",
+      "status": "not_observed",
+      "pass": null,
+      "detail": "File absent at audit time."
+    },
+    {
+      "check": "s1_supervised_success",
+      "status": "fail",
+      "pass": false,
+      "detail": null
+    },
+    {
+      "check": "s1_worker_counts",
+      "status": "not_observed",
+      "pass": null,
+      "detail": "Required evidence missing; not PASS."
+    },
+    {
+      "check": "s1_unload_confirmed",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "s1_server_log_hash_and_prefix",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "s2_stage_evidence",
+      "status": "not_observed",
+      "pass": null,
+      "detail": "Stage absent: not started or not observed, never PASS."
+    },
+    {
+      "check": "s3_stage_evidence",
+      "status": "not_observed",
+      "pass": null,
+      "detail": "Stage absent: not started or not observed, never PASS."
+    },
+    {
+      "check": "s4_stage_evidence",
+      "status": "not_observed",
+      "pass": null,
+      "detail": "Stage absent: not started or not observed, never PASS."
+    },
+    {
+      "check": "available:data/local_sector_runtime/single_case_v44_20261018/fidelity_q2_2026__R1/final.json",
+      "status": "not_observed",
+      "pass": null,
+      "detail": "File absent at audit time."
+    },
+    {
+      "check": "available:data/local_sector_runtime/single_case_v44_20261018/fidelity_q2_2026__R1/stage4_record.json",
+      "status": "not_observed",
+      "pass": null,
+      "detail": "File absent at audit time."
+    },
+    {
+      "check": "final_is_fourth_raw_proposal",
+      "status": "not_observed",
+      "pass": null,
+      "detail": "Required evidence missing; not PASS."
+    },
+    {
+      "check": "summary_counts_match_artifacts",
+      "status": "pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "four_generation_four_render_requests",
+      "status": "fail",
+      "pass": false,
+      "detail": null
+    }
+  ],
+  "check_count": 95,
+  "failed_checks": [
+    "case_completed_four_stages",
+    "s1_supervised_success",
+    "four_generation_four_render_requests"
+  ],
+  "not_observed_checks": [
+    "available:data/local_sector_runtime/single_case_v44_20261018/stage1_transport/http_0001_generation/response.json",
+    "available:data/local_sector_runtime/single_case_v44_20261018/stage1_transport/http_0001_generation/result.json",
+    "available:data/local_sector_runtime/single_case_v44_20261018/stage1_transport/http_0001_generation/assembled_text.json",
+    "s1_terminal_stop_without_cap",
+    "s1_response_metadata_matches_raw_terminal",
+    "s1_raw_content_identical",
+    "s1_response_model_pin",
+    "available:data/local_sector_runtime/single_case_v44_20261018/fidelity_q2_2026__R1/stage1_response.json",
+    "available:data/local_sector_runtime/single_case_v44_20261018/fidelity_q2_2026__R1/stage1_record.json",
+    "s1_workflow_response_identical",
+    "s1_no_output_repair",
+    "s1_visible_evidence_ids",
+    "available:data/local_sector_runtime/single_case_v44_20261018/stage1_transport/worker_summary.json",
+    "s1_worker_counts",
+    "s2_stage_evidence",
+    "s3_stage_evidence",
+    "s4_stage_evidence",
+    "available:data/local_sector_runtime/single_case_v44_20261018/fidelity_q2_2026__R1/final.json",
+    "available:data/local_sector_runtime/single_case_v44_20261018/fidelity_q2_2026__R1/stage4_record.json",
+    "final_is_fourth_raw_proposal"
+  ],
+  "all_passed": false,
+  "complete_case_observed": false,
+  "stage_facts": [
+    {
+      "stage": 1,
+      "status": "partial_or_failed",
+      "generation_request_recorded": true,
+      "render_request_recorded": true,
+      "supervisor_status": "hard_deadline",
+      "worker_status": null,
+      "stream_status": null,
+      "http_status": null,
+      "observed_prompt_tokens": null,
+      "observed_output_tokens": null,
+      "metrics": null,
+      "done_reason": null,
+      "decoded_raw_events": 6191,
+      "partial_raw_line": false,
+      "independent_tokenization": false,
+      "explicit_no_truncation": true,
+      "stage_delta_contains_truncated_zero": false,
+      "memory_samples": 402,
+      "sampled_max_working_set_sum_bytes": 6877118464,
+      "sampled_min_available_physical_bytes": 4883726336,
+      "memory_partial_line": false
+    },
+    {
+      "stage": 2,
+      "status": "not_started_or_not_observed",
+      "generation_request_recorded": false
+    },
+    {
+      "stage": 3,
+      "status": "not_started_or_not_observed",
+      "generation_request_recorded": false
+    },
+    {
+      "stage": 4,
+      "status": "not_started_or_not_observed",
+      "generation_request_recorded": false
+    }
+  ],
+  "observed_counts": {
+    "generation_requests_attempted": 1,
+    "render_requests_attempted": 1,
+    "completed_workflow_stages": 0,
+    "http_streams_completed": 0,
+    "unexpected_generation_evidence_in_render": 0,
+    "generation_stages_not_started": [
+      2,
+      3,
+      4
+    ]
+  },
+  "sources": [
+    {
+      "path": "data/sector_protocol/v44_single_case_20261018/manifest.json",
+      "sha256": "6fd367154e352bdc0167c8af14b1959589ddde01cd5b99e62dbec953f1c963ab"
+    },
+    {
+      "path": "data/sector_protocol/v44_single_case_20261018/runtime.json",
+      "sha256": "a8773b350570e9518fefa59ad5be017efd7067bbdc26d31e855f75dc3ff79aaa"
+    },
+    {
+      "path": "data/sector_protocol/v44_single_case_20261018/model_packet.json",
+      "sha256": "2f506f346ebfc1be0f327163eb016dcec649e6301e4494d6a9230ab86c28d406"
+    },
+    {
+      "path": "data/sector_protocol/v44_single_case_20261018/market_input.json",
+      "sha256": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/summary.json",
+      "sha256": "c8c2f88e0a73322d32b6e8be1585a2a4f9b2bc15a0afa37aa93e0f66a17ce1e2"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/invocation.json",
+      "sha256": "8cafaecf7d57d9b587653e8465748c70b8178b531d683faf12979d4b0a9dedc8"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/manifest_snapshot.json",
+      "sha256": "6fd367154e352bdc0167c8af14b1959589ddde01cd5b99e62dbec953f1c963ab"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/runtime.json",
+      "sha256": "a8773b350570e9518fefa59ad5be017efd7067bbdc26d31e855f75dc3ff79aaa"
+    },
+    {
+      "path": "research/local_sector_single_case.py",
+      "sha256": "0b2596a223167136bb37578e86469d50c26e7883305d4db31f43b9ddd10d28d0"
+    },
+    {
+      "path": "research/run_sector_workflow.py",
+      "sha256": "5625450a4dcbe1aa717c9809bf4955c1ef6b10aab4f0c83ef05dc2eb2c123cfd"
+    },
+    {
+      "path": "research/sector_engine.py",
+      "sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c"
+    },
+    {
+      "path": "research/compact_sector_prompt.py",
+      "sha256": "6984ada966ad55c3089fc297ca6342fdb51685bebfe3107769086343bbe68c0d"
+    },
+    {
+      "path": "research/benchmark_sector_latency.py",
+      "sha256": "0686444e608033be931922a26886ed4a4b5b0789385215b7b75bfacc4050458b"
+    },
+    {
+      "path": "research/remote_sector_runtime.py",
+      "sha256": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5"
+    },
+    {
+      "path": "research/probe_ollama_runtime.py",
+      "sha256": "2dd48936bbaf8fd090a26f92fd356fec3a11ac81e5b01b39d661ffe72552fddb"
+    },
+    {
+      "path": "research/v44_conditions_reference_20261018.json",
+      "sha256": "a403d4c37d1581f9af21af8ba7a6333614d890ff15277e83181c1204549a9c5b"
+    },
+    {
+      "path": "data/local_sector_runtime/laptop_realinput_4b_20261018/original_request_not_sent.json",
+      "sha256": "b9368d3d27c7208de9b5c89f836c28ed72bc4ca96837b86c537caa82a16dd163"
+    },
+    {
+      "path": "research/evidence/v44_primary_sources_20261018/manifest.json",
+      "sha256": "97ad1d6a9ae3a4f5354940891944f0be1034d5795b8f3d322c742f2a5e504d99"
+    },
+    {
+      "path": "research/evidence/v44_primary_sources_20261018/ollama_api_types_v0351.go",
+      "sha256": "e9c86add622033ade3d288dd6e1dfbd7f35be6a7ef1f31dda3486f0b859a1df3"
+    },
+    {
+      "path": "research/evidence/v44_primary_sources_20261018/ollama_server_routes_v0351.go",
+      "sha256": "d0d524eae78da3a73c344e86ca9b215358c964845188a192e5c35ac41fb0a55d"
+    },
+    {
+      "path": "research/evidence/v44_primary_sources_20261018/ollama_server_prompt_v0351.go",
+      "sha256": "79411c4e15ff27fb8bac4dcd96076407e035ec407c0ab1a1840035f9668b4654"
+    },
+    {
+      "path": "research/evidence/v44_primary_sources_20261018/ollama_llama_server_v0351.go",
+      "sha256": "10777cca3193c12b4cfcc90f5cfd88085c298f7a2c2c7333b0b95bb6e545d391"
+    },
+    {
+      "path": "research/evidence/v44_primary_sources_20261018/finvector_public_inference_mlx.py",
+      "sha256": "57e2fedfb400fdf4d9e6b0b58d48b93f23a76741f6fb7420b840c7315b8c3bec"
+    },
+    {
+      "path": "research/evidence/v44_primary_sources_20261018/mlx_lm_generate_v0313.py",
+      "sha256": "270778ad53eaca55a8533d82e6752660fe5d2605c4aa0879b48a50a91f69345f"
+    },
+    {
+      "path": "research/v44_renderer_policy_20261018.json",
+      "sha256": "4135e7f2d0000e4f51ca3414af803805c823f681468807d3ab19f9fd116488a4"
+    },
+    {
+      "path": "research/evidence/v44_renderer_appendix_20261018/ollama_qwen35_renderer_v0351.go",
+      "sha256": "69bca99b53a3db8d599bb9ec8eadf65ce9a72868566a89bfac44d31fe3b565e0"
+    },
+    {
+      "path": "research/evidence/v44_renderer_appendix_20261018/go_strings_public_snapshot.go",
+      "sha256": "a81bdf73a308277c322e35d0c602e3813f57b6f769c091f8f8962c8884a45ea3"
+    },
+    {
+      "path": "data/sector_protocol/v44_single_case_registration_20261018.json",
+      "sha256": "3f5cf57e86ca05ca229a2f14a2391c01b80a72f4f955eb09dfe688f33a7f69d9"
+    },
+    {
+      "path": "data/sector_protocol/v44_single_case_registration_renderer_addendum_20261018.json",
+      "sha256": "a76275e80a00161f449e3d86319d3fece7853c9ca0b27ba2f9117592826ca0d8"
+    },
+    {
+      "path": "research/evaluator_only/fidelity_q2_r1_prerun_reference_20261018.json",
+      "sha256": "8022c19d7b5e9654139996d88cac230cb12d29b30fcf7e817850203c02c35f38"
+    },
+    {
+      "path": "data/sector_protocol/evaluation_spec.json",
+      "sha256": "cff49202b9da0da6bc094eb02a55e971afeab8c983a1a8fe3d686af1cff8df7f"
+    },
+    {
+      "path": "data/sector_documents/source_manifest.json",
+      "sha256": "d1af00ee2a1c5e3ba4ca9949b5f9427a9102a373ff19afa0e6c4309769627b28"
+    },
+    {
+      "path": "data/sector_market/market_input.json",
+      "sha256": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f"
+    },
+    {
+      "path": "research/v44_single_case_preflight_independent_review_20261018.json",
+      "sha256": "f0cb4eb901a74db4ea8b027582c220fc09ca22d3834252dafd6598aa2e665602"
+    },
+    {
+      "path": "research/test_local_sector_single_case.py",
+      "sha256": "669e711b193ae1c9669de85827ea643e4ca33e28e2eeb821d9cf7f6d8e870ec3"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/fidelity_q2_2026__R1/stage1_request.json",
+      "sha256": "021aa18ec6b495a6c6323f4b7fae66279340cd1f8ba18f6109b98f768abb5c70"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/logical_messages.json",
+      "sha256": "021aa18ec6b495a6c6323f4b7fae66279340cd1f8ba18f6109b98f768abb5c70"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/authoritative_body.json",
+      "sha256": "fa9e4b82bd14272023d9dce1b08da7e04eb6f03193ad9599928bf1893b92b1e2"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/worker_spec.json",
+      "sha256": "feeb6ec4503d967ad9dcf320b5454f3608f0a4db755b75291d513e165627f10a"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/http_0001_generation/request.json",
+      "sha256": "f7576483f39de45164024018afe6fc5bfceec5f78a894a5aca63383ecf362510"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/authoritative_body.bin",
+      "sha256": "120707dc3112400046519b1e9012ea990bab4ed9e108a8f6a6c25572efc773ab"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/render_only/request.json",
+      "sha256": "60f892ed816d4a4ac0afab1483cec1289d368b640d4d43edd776402e3c3cb568"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/render_only/response.json",
+      "sha256": "38618abb8205bdbe463447ab239dca729bab686ab52d80f0a0226bdd7d2ad8f6"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/render_only/validation.json",
+      "sha256": "597f1add645a1498022f92f02615c17e0437dd79474fb99635986e22bcd1b506"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/render_only/result.json",
+      "sha256": "1a28b6dd3f7c020a05eab3f579bfe7352d54d869b510ad3e55044377da878c2f"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/render_only/request_body.bin",
+      "sha256": "7c2a7ce2292441c4bd09084f4ff6528d5e925375b20846e23c789f62cdbcdbde"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/render_only/response_body.bin",
+      "sha256": "c9aa203bb4fe295224f6456c55f184469a56211f32cd8db1faaa624fcacf1d3a"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/render_only/rendered_prompt.txt",
+      "sha256": "262c6a97b624d541b1a8e5e5db1a21f799cd8b03a5b31f06738a93d77820b286"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/pin_before_render.json",
+      "sha256": "95b93267f20153799280a32169a7496e61fa10ea417ae53fc22bea9dbc1afddc"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/pin_before_generation.json",
+      "sha256": "95b93267f20153799280a32169a7496e61fa10ea417ae53fc22bea9dbc1afddc"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/http_0001_generation/raw_stream.bin",
+      "sha256": "e71de67463fa9224e6e218519749a2c2bb41b419091f851f16872742672aa935"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/http_0001_generation/events.jsonl",
+      "sha256": "20b6c4c7731f76cc04635dc4d82fbf6830c232ede28ee8067b84095a69621138"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/supervisor_result.json",
+      "sha256": "39bfc184554fae47ff124a64445679bcc7b7db85991d82a7dd0f066e4c967cbc"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/unload_and_residency.json",
+      "sha256": "61137646ed569e348e30c2e02da9e4470919334d1a184747840182ea36d9220d"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/server_log_before.json",
+      "sha256": "2ca75abb89a1abab22fd4aec786fcd6a16c5b6230ddebea08e2d171b3b31800d"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/server_log_delta.json",
+      "sha256": "aa593ec4cba7e72884b07776cb6029f5a5228e73ab6ed9ec0bb4348e091ba522"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/server_log_after_snapshot.bin",
+      "sha256": "717658a8da90df820e224c77d654630e9bde78f3075ff15b5431b0096d46093a"
+    },
+    {
+      "path": "data/local_sector_runtime/single_case_v44_20261018/stage1_transport/monitor.jsonl",
+      "sha256": "36631b7372b158cbedc36615ac6593419c60ef7aba17e0de5c233ffec0e9a0b6"
+    }
+  ],
+  "auditor_source_sha256": "8f36dd7771152fa6c32b2edc1a39fb256b455173a892061aed9af779f8375aaa",
+  "limits": [
+    "Missing evidence or unstarted stages are not PASS; incomplete streams support only a decoded-prefix audit.",
+    "Rendered text uses the predeclared JSON-boundary policy; HTTP strings remain unchanged.",
+    "Provider counters and stage-local log strings are observations, not independent tokenization or context-capacity proof.",
+    "Only the stage log delta is searched; earlier entries in the full server log are excluded.",
+    "Memory extrema are sampled observations, not host-wide peaks or dedicated physical GPU capacity.",
+    "Registration times are local records, not externally timestamped preregistration. Evaluator references are hashed as opaque bytes only.",
+    "Arithmetic and claim-to-source interpretation belong to rounds 2 and 3.",
+    "Files are read once each; re-audit a settled archive before final completion claims if the process was still writing."
+  ],
+  "model_calls_by_auditor": 0,
+  "response_repairs_by_auditor": 0,
+  "human_semantic_pass": false
+}

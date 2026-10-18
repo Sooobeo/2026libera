@@ -1,0 +1,40 @@
+{
+  "schema_version": "sector_documents_v4.2.1",
+  "mechanical_checks": {
+    "four_packets_two_per_split": true,
+    "all_sources_hash_pinned": true,
+    "exactly_11_gold_sectors_each": true,
+    "all_ratings_in_source_vocabulary": true,
+    "all_gold_evidence_resolves_in_same_packet": true,
+    "all_source_labels_present_in_source_passage": true,
+    "no_reference_answers_as_packet_fields": true,
+    "publisher_document_dates_not_after_cutoff": true,
+    "invalid_fidelity_date_preserved_not_normalized": true,
+    "benchmark_raw_sum_preserved": true,
+    "no_unique_numeric_allocation_gold": true,
+    "all_human_review_pending": true,
+    "each_source_paraphrase_under_200_words": true
+  },
+  "all_mechanical_checks_passed": true,
+  "source_paraphrase_word_counts": {
+    "fidelity_q2_2026": 131,
+    "ubs_june_2026": 131,
+    "fidelity_q3_2026": 129,
+    "ubs_july_2026": 133
+  },
+  "verification_limits": "These checks establish packaging, ID integrity and pinned source versions. They do not constitute independent human validation of facts or entailment.",
+  "live_url_checks_recorded": true,
+  "live_pdf_hashes_match": true,
+  "artifact_sha256": {
+    "blind_review_worksheet.html": "08af9ccb3b6e89da6237a34a36404a30bb17f169829540129d0a39002ed13977",
+    "corpus_card.json": "6f526764044fe0f1ebd855b8500b2954a812c522cb9f73f252096b671194a134",
+    "evaluator_only/reference_annotations.jsonl": "3a83cbb386442f3263357a5e67cb1f52c59114c28cc81e636b28e111c3509ffc",
+    "model_packets.jsonl": "520bed87396eb815c87f362712a6ec39c0275076f9ef4c5d59ef5a7cbbe6afc7",
+    "packets/main/fidelity_q3_2026.json": "3f84c5d1e1302238fd270b41f1b9bcf86e3ae5c8c44a74f7a49a19941407d297",
+    "packets/main/ubs_july_2026.json": "49f47f8c628b53231cdfb09fa90eabfa0a5d271fb6a439e75360bdb97db29d30",
+    "packets/pilot/fidelity_q2_2026.json": "2f506f346ebfc1be0f327163eb016dcec649e6301e4494d6a9230ab86c28d406",
+    "packets/pilot/ubs_june_2026.json": "a5cadf72d68cafe46244c9bf8e500da04e1c58aef12eaf493e76408654e6148a",
+    "shared_benchmarks.json": "9663a2ce1996d1b87f9954d67809139f7df6ae77adf9137b479232318086fb35",
+    "source_manifest.json": "d1af00ee2a1c5e3ba4ca9949b5f9427a9102a373ff19afa0e6c4309769627b28"
+  }
+}

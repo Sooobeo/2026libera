@@ -1,0 +1,35 @@
+{
+  "scope": "Synthetic engineering latency diagnosis; excluded from research pilot/main and evaluation.",
+  "started_at_utc": "2026-10-18T05:52:10.819719+00:00",
+  "origin": "http://127.0.0.1:11434",
+  "deadline_seconds": 120.0,
+  "script_sha256": "a846d4d7faa02d26a43520bafdaabb3ec63aba7fcbc6ff37496213e8a3963122",
+  "coordinator_sha256": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5",
+  "prompt_characters": 1093,
+  "prompt_utf8_bytes": 1093,
+  "prompt_sha256": "6fbb7b993d290e403fee655ac2224e24ad0d8bf6bca5d7dcdb1cb3a96c90bb2d",
+  "planned_probes": [
+    {
+      "probe_id": "4b_threads2",
+      "model": "qwen3.5:4b-q4_K_M",
+      "threads": 2,
+      "status": "not_started"
+    },
+    {
+      "probe_id": "4b_threads4",
+      "model": "qwen3.5:4b-q4_K_M",
+      "threads": 4,
+      "status": "not_started"
+    },
+    {
+      "probe_id": "1p7b_threads2",
+      "model": "qwen3:1.7b",
+      "threads": 2,
+      "status": "not_started"
+    }
+  ],
+  "condition_basis": "8192 context, output cap32, T0, disabled thinking, batch512, neutral repeat/presence/frequency penalties, seed3407, thread counts and deadline are engineering controls for these latency probes; this is not a paper-derived experiment even where a number also appears in a paper.",
+  "comparison_limits": "One fixed-order attempt per configuration; unload does not evict OS file cache. Model/template/tokenizer differ. No statistical speed ranking or four-stage feasibility verdict.",
+  "pilot_model_calls": 0,
+  "main_model_calls": 0
+}
