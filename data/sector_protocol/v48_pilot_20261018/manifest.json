@@ -1,0 +1,90 @@
+{
+  "protocol_version": "4.8",
+  "scope": "all_four_fixed_pilot_cases_only",
+  "prepared_at_utc": "2026-10-18T11:28:06.175309+00:00",
+  "roster": [
+    {
+      "case_id": "fidelity_q2_2026__R1",
+      "source_id": "fidelity_q2_2026",
+      "arm": "R1",
+      "split": "pilot"
+    },
+    {
+      "case_id": "fidelity_q2_2026__R4",
+      "source_id": "fidelity_q2_2026",
+      "arm": "R4",
+      "split": "pilot"
+    },
+    {
+      "case_id": "ubs_june_2026__R1",
+      "source_id": "ubs_june_2026",
+      "arm": "R1",
+      "split": "pilot"
+    },
+    {
+      "case_id": "ubs_june_2026__R4",
+      "source_id": "ubs_june_2026",
+      "arm": "R4",
+      "split": "pilot"
+    }
+  ],
+  "main_authorized": false,
+  "main_frozen": false,
+  "input_hashes": {
+    "market_input.json": "e0017731851f7d93a7c1e3d56e7674b28fc945a9a33b8bf89d33b429e96cdf0f",
+    "packets/fidelity_q2_2026.json": "2f506f346ebfc1be0f327163eb016dcec649e6301e4494d6a9230ab86c28d406",
+    "packets/ubs_june_2026.json": "a5cadf72d68cafe46244c9bf8e500da04e1c58aef12eaf493e76408654e6148a",
+    "prompt_contract.json": "6352355f20bde763d8bcbc2a7db02bfe466e92f80c60f12488a81cd021cdd5c8",
+    "public_numeric_registry.json": "5463226c35c53a0ab4caefe89c0bf857dc81853c4c982fba51254c0f5395c375",
+    "runtime.json": "e4e663b8efdef2f04f367c7b7cb1bd2e237b54a1a322bf9666dd682b42ca4017",
+    "schemas/R1_stage1.json": "8213c165349f435e7f2aff29cc089ebb51578f474c243c60fcd2eb7739484327",
+    "schemas/R1_stage2.json": "8213c165349f435e7f2aff29cc089ebb51578f474c243c60fcd2eb7739484327",
+    "schemas/R1_stage3.json": "5d9292759ec0469592a7c67279582e3a48fe3a0a04b7f679561f123734a2ea0a",
+    "schemas/R1_stage4.json": "5d9292759ec0469592a7c67279582e3a48fe3a0a04b7f679561f123734a2ea0a",
+    "schemas/R4_stage1.json": "eba1e12a7bf4ed01480acd81758841240d895e42be6f0fdab492f1083b7fc03a",
+    "schemas/R4_stage2.json": "eba1e12a7bf4ed01480acd81758841240d895e42be6f0fdab492f1083b7fc03a",
+    "schemas/R4_stage3.json": "c23d7693813583fb30c0fe5fc34897e87cf24727224736d27add997559e86dce",
+    "schemas/R4_stage4.json": "5d9292759ec0469592a7c67279582e3a48fe3a0a04b7f679561f123734a2ea0a"
+  },
+  "software_hashes": {
+    "run_sector_v48.py": "46279c42af90e828368d75cc5d662d25a23ccdcdba6e06d3efd273ad455d1b60",
+    "sector_v48_transport.py": "ca50b97a2b498883c6d5160c41914f96e486d3e4fac1f67b26473e9e264f1a60",
+    "sector_v48_contract.py": "6bdf9f31e155a056a9d6e5dcab9f4f970f7b0674f0bc4ab13f467a7bad27028d",
+    "sector_response_schema.py": "bedbf782a041ba7da4f944408dd19596d74cbf78b77bee1c75d12ce71a598c41",
+    "sector_engine.py": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c",
+    "compact_sector_prompt.py": "6984ada966ad55c3089fc297ca6342fdb51685bebfe3107769086343bbe68c0d",
+    "local_sector_single_case.py": "0b2596a223167136bb37578e86469d50c26e7883305d4db31f43b9ddd10d28d0",
+    "remote_sector_runtime.py": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5",
+    "benchmark_sector_latency.py": "0686444e608033be931922a26886ed4a4b5b0789385215b7b75bfacc4050458b",
+    "probe_ollama_runtime.py": "2dd48936bbaf8fd090a26f92fd356fec3a11ac81e5b01b39d661ffe72552fddb",
+    "run_sector_workflow.py": "5625450a4dcbe1aa717c9809bf4955c1ef6b10aab4f0c83ef05dc2eb2c123cfd"
+  },
+  "design_references": [
+    {
+      "path": "plan/LIBERA_실험설정_v4.8_20261018.json",
+      "sha256": "95d03ab44a75c477bced0a6c9868facd58b66562ab90e24a0a6854e8cac659d3"
+    },
+    {
+      "path": "research/v48_handoff_20261018.json",
+      "sha256": "27e884dcf87805436c78267efd10ce88d991c6eac0264ea83837a009351a4882"
+    }
+  ],
+  "planned_core_calls": 16,
+  "maximum_auxiliary_calls": 8,
+  "maximum_total_generation_calls": 24,
+  "controls": {
+    "first_final_C0_is_primary": true,
+    "automatic_retries": 0,
+    "maximum_auxiliary_per_case": 2,
+    "no_projection_or_target_weights": true,
+    "no_hidden_gold_or_evaluator_read": true,
+    "prior_historical_failures_preserved": true,
+    "same_fixed_case_order": true,
+    "fixed_order_limit": "Order is operational, not randomized or counterbalanced. Model unload does not flush OS cache.",
+    "runtime_limit": "900 seconds per worker including setup/render/generation; cleanup separately recorded.",
+    "systematic_failure": "Protocol/pin/render/context integrity incidents stop bundle; model output failure stops affected case, stays in denominator.",
+    "three_review_gate": "Three offline implementation review rounds before this pilot; three post-pilot review rounds before any next phase.",
+    "topic": "Source judgment -> rationale -> actual allocation under R1/R4; arithmetic is a separate outcome, never a strategy-quality surrogate."
+  },
+  "model_calls_by_preparation": 0
+}

@@ -1,0 +1,80 @@
+{
+  "artifact_kind": "postpilot_assistant_self_review_procedure",
+  "protocol_version": "4.8",
+  "role": "assistant_self_review_not_independent_human",
+  "timing_disclosure": "Prepared after the fixed pilot was launched and before this reviewer received a C0 result. This is a work plan implementing the existing evaluation protocol, not a newly claimed preregistration or an amendment to frozen generation rules.",
+  "authoring_agent": "/root/v48_offline_evaluator",
+  "conflict_and_independence": "This assistant implemented the offline evaluator and renderer. Its review is a transparent author/assistant check, not an independent human expert review. Source validation and semantic adjudication by a distinct human remain pending.",
+  "source_contracts": [
+    "research/v48_evaluation_protocol_20261018.json",
+    "research/v48_review_template_20261018.json",
+    "research/evaluator_only/v48_source_comparison_20261018.json",
+    "data/sector_protocol/v48_pilot_r2_20261018/manifest.json"
+  ],
+  "frozen_artifacts_policy": "Read only. Never change the live protocol, prompts, model pins, original responses, existing annotations, historical failures or criteria while this pilot is running.",
+  "research_question": "공통 모델을 사용하는 절차에서 공개 산업 판단이 해석·선택 이유·실제 원비중에 연결되는가, 그리고 처음/마지막 문서 제공 절차에서 그 연결이 어떻게 관찰되는가?",
+  "materials_required": [
+    "The full prespecified four-case roster, including unattempted and early-stopped cases.",
+    "Prepared source packets and their original-document links; the packet is a researcher paraphrase and does not replace the original source.",
+    "Actual C0 record, request, visible evidence before generation and calculator facts available before generation, where present.",
+    "C1/C2 records only as separately labelled auxiliary observations; never replace C0.",
+    "Stage1-3 raw text and timestamps where needed to trace changes, without treating stages as independent samples.",
+    "Captured public market facts and named baseline, with units, periods and data versions."
+  ],
+  "review_order": [
+    "Verify case/endpoint identity, source exposure and whether a completed C0 exists before reviewing its content.",
+    "Record source propositions, literal model attribution and raw action separately for all 11 expected sectors. Missing and duplicate rows remain visible.",
+    "Record the model's literal stance before assessing support: adoption, qualification, deferral, departure, ambiguity, omission or unassessability, using only the existing protocol categories.",
+    "Compare attributed reasons against source passages. Explicit model inference is distinct from invented attribution to the institution.",
+    "Compare any claimed overweight/underweight/increase/decrease with the named baseline or identified previous vector, as appropriate. Do not substitute cross-sector size comparisons for benchmark-relative direction.",
+    "Read alternatives, risk discussion and unresolved items for cross-sector context; distinguish forecasts, uncertainty, plans and claims of completed action.",
+    "For a literal numeric assertion, transcribe its exact quote and response location, then check the complete applicable fact tuple and calculation lineage. Do not count merely matching digits, or invent precision tolerances after observing the text.",
+    "Repeat applicable checks separately for actual auxiliary attempts, recording actual changes and any literal claims of repair. Do not transfer C0 semantic judgments to C1/C2.",
+    "Interpret within-source R1/R4 comparisons jointly with completion and feasibility. Only eligible raw allocations support allocation distances; invalidity does not erase readable reasoning.",
+    "Review every conclusion against the paper's scope: a small retrospective public-document development pilot, not evidence about private institution strategies, AI adoption causality, market-wide convergence or financial harm."
+  ],
+  "per_observation_record": {
+    "case_id": null,
+    "endpoint": null,
+    "sector_code_or_cross_sector_scope": null,
+    "response_record_path_and_sha256": null,
+    "exact_response_field_and_span": null,
+    "literal_model_text": null,
+    "literal_source_text_and_evidence_id": null,
+    "source_visibility_confirmed": null,
+    "literal_stance": null,
+    "claim_support": null,
+    "action_consistency": null,
+    "numeric_claim_tuple_and_deterministic_check_if_applicable": null,
+    "assessment_reason": null,
+    "uncertainty_or_missingness_reason": null,
+    "reviewer_role": "assistant_self_review",
+    "independent_human_judgment": null
+  },
+  "guardrails_for_interpretation": [
+    "A correct rating string or existing evidence ID does not establish source-reason fidelity or strategic preservation.",
+    "Fidelity Overweight and UBS Attractive remain distinct source-defined terms. Neutral does not require an exact baseline weight.",
+    "A source-supported interpretation does not require a unique numeric target. Reasoned departures, uncertainty and deferral may be legitimate.",
+    "Do not infer a legal mandate, risk-aversion coefficient or private institutional objective from a public outlook or the model's own preference.",
+    "An assertion that a weight was increased or arithmetic was repaired must be compared with the actual submitted numbers; a future plan is not a completed change.",
+    "Incomplete response text can support explicitly scoped readable-material observations, but receives no completed-C0 label credit or valid-C0 allocation status.",
+    "If valid allocations are absent, state the allocation part is unobserved. Do not interpret null distance as zero difference or as evidence of successful preservation.",
+    "Two documents, two arms, 11 sectors, intermediate stages and repairs do not create independent population replications. No composite score, behavioral threshold or significance test is added.",
+    "A review PASS means the instrument/record/reporting check passed; it does not require a favorable model outcome or certify the unresolved human semantic review."
+  ],
+  "pilot_vintage_limits": {
+    "fidelity_q2_2026": {"view_as_of": "2026-03-31", "publication_or_landing_update": "2026-04-17"},
+    "ubs_june_2026": {"view_as_of": "2026-05-21", "publication": "2026-05-22"},
+    "common_market_returns": ["2026-04-21", "2026-07-16"],
+    "interpretation": "These mixed-vintage document views and a later shared market snapshot form a retrospective reasoning case. They are not contemporaneous latest opinions or a tradable historical information set."
+  },
+  "outputs_expected_after_actual_records_available": [
+    "A new dated assistant review artifact with exact quotes, locations, source evidence and unresolved issues.",
+    "A round-3 topic/logic check separating observed facts from untested components and all pending human judgments.",
+    "Exact v4.8.1 paper replacement suggestions based on actual attempted/completed/valid counts, without rewriting the frozen v4.8 paper."
+  ],
+  "model_calls_by_preparing_this_plan": 0,
+  "independent_human_review_completed": false,
+  "actual_C0_results_reviewed_when_plan_written": 0,
+  "status": "awaiting_actual_records_from_coordinator"
+}

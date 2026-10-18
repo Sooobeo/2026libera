@@ -1,0 +1,244 @@
+{
+  "artifact_kind": "implementation_round2_final_followup",
+  "protocol_version": "4.8",
+  "round": 2,
+  "status": "PASS",
+  "created_at_utc": "2026-10-18T11:34:32.539042+00:00",
+  "reviewer": {
+    "agent": "/root/v48_calculator",
+    "role": "AI calculator implementer and separate reader of parent-authored coordinator/transport code",
+    "independent_human": false,
+    "independence_disclosure": "The reviewer authored sector_v48_contract.py and its tests; those checks are self-review. Coordinator and transport were authored by the parent and reviewed separately here. This is not an independent human source/semantic review."
+  },
+  "manifest": {
+    "path": "data/sector_protocol/v48_pilot_r2_20261018/manifest.json",
+    "sha256": "64da4953578301aa059f8befe7f223ae4d7f8ad60b94afa22c22c9e1fc9d4efb"
+  },
+  "manifest_sha256": "64da4953578301aa059f8befe7f223ae4d7f8ad60b94afa22c22c9e1fc9d4efb",
+  "reviewed_files": [
+    {
+      "path": "research/run_sector_v48.py",
+      "sha256": "c244791be125988c696852547b8b066dfae6b6ee9cebdb93213683707fca8607"
+    },
+    {
+      "path": "research/sector_v48_transport.py",
+      "sha256": "db395eb3d54ebec93aa67556e1f2424aba1d591ba8b9fcfce7fbd3332db0379c"
+    },
+    {
+      "path": "research/sector_v48_contract.py",
+      "sha256": "6bdf9f31e155a056a9d6e5dcab9f4f970f7b0674f0bc4ab13f467a7bad27028d"
+    },
+    {
+      "path": "research/sector_response_schema.py",
+      "sha256": "bedbf782a041ba7da4f944408dd19596d74cbf78b77bee1c75d12ce71a598c41"
+    },
+    {
+      "path": "research/sector_engine.py",
+      "sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c"
+    },
+    {
+      "path": "research/compact_sector_prompt.py",
+      "sha256": "6984ada966ad55c3089fc297ca6342fdb51685bebfe3107769086343bbe68c0d"
+    },
+    {
+      "path": "research/local_sector_single_case.py",
+      "sha256": "0b2596a223167136bb37578e86469d50c26e7883305d4db31f43b9ddd10d28d0"
+    },
+    {
+      "path": "research/remote_sector_runtime.py",
+      "sha256": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5"
+    },
+    {
+      "path": "research/benchmark_sector_latency.py",
+      "sha256": "0686444e608033be931922a26886ed4a4b5b0789385215b7b75bfacc4050458b"
+    },
+    {
+      "path": "research/probe_ollama_runtime.py",
+      "sha256": "2dd48936bbaf8fd090a26f92fd356fec3a11ac81e5b01b39d661ffe72552fddb"
+    },
+    {
+      "path": "research/run_sector_workflow.py",
+      "sha256": "5625450a4dcbe1aa717c9809bf4955c1ef6b10aab4f0c83ef05dc2eb2c123cfd"
+    }
+  ],
+  "prior_review": {
+    "path": "research/v48_implementation_round2_draft_20261018.json",
+    "sha256": "a1a99a3b2b6f872e13147cbea70385388147447a0708021016fe101c1269fddb"
+  },
+  "review_method": "Retain the earlier round-2 review for unchanged components, inspect both changed code paths, independently run their offline tests, preserve new raw test evidence, and bind current executable hashes to the new prepared manifest.",
+  "changed_executable_files": [
+    {
+      "path": "research/run_sector_v48.py",
+      "before_sha256": "46279c42af90e828368d75cc5d662d25a23ccdcdba6e06d3efd273ad455d1b60",
+      "after_sha256": "c244791be125988c696852547b8b066dfae6b6ee9cebdb93213683707fca8607"
+    },
+    {
+      "path": "research/sector_v48_transport.py",
+      "before_sha256": "ca50b97a2b498883c6d5160c41914f96e486d3e4fac1f67b26473e9e264f1a60",
+      "after_sha256": "db395eb3d54ebec93aa67556e1f2424aba1d591ba8b9fcfce7fbd3332db0379c"
+    }
+  ],
+  "checks": [
+    {
+      "id": "only_two_executable_files_changed",
+      "status": "PASS",
+      "finding": "Only coordinator and transport differ from the prior round-2 inventory; all nine other executable hashes are unchanged."
+    },
+    {
+      "id": "supervisor_interruption_authority",
+      "status": "PASS",
+      "finding": "A partial worker_summary JSON after a supervisor cancellation/deadline is recorded as a read error without overriding the actual stop decision."
+    },
+    {
+      "id": "uninterrupted_corruption_not_success",
+      "status": "PASS",
+      "finding": "Without an interruption, unusable worker summary remains worker_summary_missing and an instrument incident. The fix does not silently accept corrupted completion records."
+    },
+    {
+      "id": "partial_response_not_completed",
+      "status": "PASS",
+      "finding": "An unreadable response artifact after cancellation/deadline remains stored, response=None, and is separately flagged. Prior preservation failures or unconfirmed cleanup still block progression."
+    },
+    {
+      "id": "raw_envelope_fallback",
+      "status": "PASS",
+      "finding": "Malformed response/assembled JSON and non-dict message/non-string content fall back to already-flushed event text. No source envelope is overwritten."
+    },
+    {
+      "id": "partial_utf8_tail",
+      "status": "PASS",
+      "finding": "Strict decoding is applied separately to flushed event lines. A partial final UTF-8 character cannot erase earlier valid chunks, and replacement decoding does not invent content."
+    },
+    {
+      "id": "request_denominator_and_no_extra_call",
+      "status": "PASS",
+      "finding": "Existing durable-request recount and cancellation bundle-stop rules remain unchanged and covered by coordinator tests. No retry, extra generation, content normalization or recovered completed-endpoint claim is introduced."
+    },
+    {
+      "id": "primary_endpoint_unchanged",
+      "status": "PASS",
+      "finding": "C0 is still the first stage-4 raw submission. Partial recovered text is readable evidence only, not a completed or arithmetically valid C0. C1/C2 eligibility/cap and terminal selection remain unchanged."
+    },
+    {
+      "id": "targeted_tests_pass",
+      "status": "PASS",
+      "finding": "25 changed-component tests passed; after the final coordinator-only UTF-8 edit, 10 coordinator tests passed again. One separate retained partial-UTF-8 fixture passed. Fake HTTP/synthetic outputs only."
+    },
+    {
+      "id": "original_failure_not_rewritten",
+      "status": "PASS",
+      "finding": "The earlier expanded 113-test run remains FAIL. An isolated legacy rerun passed. Fault injection confirms a possible incomplete-write mechanism but cannot prove the deleted original temporary failure had that cause."
+    },
+    {
+      "id": "manifest_binding",
+      "status": "PASS",
+      "finding": "The current 11-file executable inventory and all prepared inputs were verified against the new r2 manifest; the old manifest remains historical, not silently updated."
+    },
+    {
+      "id": "topic_invariance",
+      "status": "PASS",
+      "finding": "Changes concern artifact recovery and failure accounting. They alter no source packet, numerical target, R1/R4 source onset, primary metric, model choice, or semantic evaluation requirement."
+    }
+  ],
+  "test_records": [
+    {
+      "path": "research/evidence/v48_round2_followup_20261018/test_invocation.json",
+      "sha256": "1aa8e00837184ac9c45aa552e58589ab4fec849831b0f96fe88a4fa5efd3ba22"
+    },
+    {
+      "path": "research/evidence/v48_round2_followup_20261018/tests.stdout.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/evidence/v48_round2_followup_20261018/tests.stderr.bin",
+      "sha256": "03d576eb8550c176aaa359fad4644b6b77682f3904e575604e6088dc53d1b3d5"
+    },
+    {
+      "path": "research/evidence/v48_round2_followup_20261018/coordinator_final_invocation.json",
+      "sha256": "98f1338f2aface549ea04ddc5a11cfc7d80314036045e79bc44e9fa818371917"
+    },
+    {
+      "path": "research/evidence/v48_round2_followup_20261018/coordinator_final.stdout.bin",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "research/evidence/v48_round2_followup_20261018/coordinator_final.stderr.bin",
+      "sha256": "7d3ce1a7f29cf4759717e0f0846785e192775912b39e4a8ddfd4ddca5908f842"
+    },
+    {
+      "path": "research/evidence/v48_round2_followup_20261018/utf8_tail_check.json",
+      "sha256": "ff7e0e723c9f61a58ed862f728a8f93833e3d4cba0670265cfb17cd371fcb386"
+    }
+  ],
+  "targeted_test_results": [
+    {
+      "suite": "transport plus coordinator",
+      "tests": 25,
+      "elapsed_seconds": 20.082,
+      "exit_code": 0
+    },
+    {
+      "suite": "final coordinator after UTF-8 tail handling change",
+      "tests": 10,
+      "elapsed_seconds": 1.273,
+      "exit_code": 0
+    },
+    {
+      "fixture": "partial final UTF-8 character with earlier complete event",
+      "status": "PASS"
+    }
+  ],
+  "test_timing_disclosure": "The final coordinator edit occurred while the combined 25-test run was active. Its invocation retains the earlier coordinator hash; the separate 10-test final-coordinator invocation and retained UTF-8 fixture verify the final hash. Unchanged transport tests were not needlessly rerun.",
+  "investigation_evidence": [
+    {
+      "path": "research/evidence/v48_implementation_20261018/round1.json",
+      "sha256": "c7f980b95ba55419624d12cf4ba2d474bcef6ce110a9004a534e94acf9384890"
+    },
+    {
+      "path": "research/evidence/v48_implementation_20261018/tests.stderr.txt",
+      "sha256": "93263a8511ba9ec2f15accb08392a92f64858d60cc7f5959e78bca5a3307048f"
+    },
+    {
+      "path": "research/evidence/v48_legacy_cancel_investigation/isolated_result.json",
+      "sha256": "3147facca128149d6329a295224bf07d7e9a8aa2345a9b2e0ef6433ed528c6cd"
+    },
+    {
+      "path": "research/evidence/v48_legacy_cancel_investigation/deterministic_before_fix.json",
+      "sha256": "fbec47ce6aba821a51ba4492baa6dfc988b6349eb185749387e44f62b5ffd70d"
+    },
+    {
+      "path": "research/evidence/v48_legacy_cancel_investigation/deterministic_legacy_result.json",
+      "sha256": "6a04021d2463f0e489fd6afec9ce8db7d80b214edf2c42dcae7f4a364fa6fd85"
+    },
+    {
+      "path": "research/evidence/v48_legacy_cancel_investigation/transport_after_fix.json",
+      "sha256": "d86c80a25d28c2711f0b5e243573cdcf7050508707a529c352732faf644d2ba2"
+    }
+  ],
+  "historical_failure_limit": "The deleted original temporary artifacts cannot support an exact root-cause claim. The frozen legacy runner was not changed, and an isolated later PASS does not establish that its race no longer exists. The selected v4.8 transport receives the forward-only fix.",
+  "topic_alignment": {
+    "status": "PASS_FOR_IMPLEMENTATION_SCOPE",
+    "paper_question": "Whether a common generative AI preserves source-specific public investment judgments through interpretation, rationale and sector allocation under early versus late evidence provision.",
+    "mechanism_preserved": "The primary R1/R4 contrast retains four stages, common market inputs and common model controls. Prompt requirements connect source meaning, supported reasons, adopted/deferred/departed decisions and actual raw weights.",
+    "no_arithmetic_substitution": "Budget validity and exact-label extraction remain separate from evidence-to-action and strategic interpretation. Invalid allocations do not erase readable source/rationale observations.",
+    "interpretive_limits": [
+      "R1/R4 jointly changes onset, position, context age and later reconsideration opportunities; no isolated memory/anchoring effect is identified.",
+      "Public house views are not observed portfolios, private preferences or mandates.",
+      "Conditional distances require valid raw allocations; missing pairs cannot become zero convergence.",
+      "The small case roster is descriptive and dependent sector/stage/repair units are not additional independent institutions.",
+      "Auxiliary C1/C2 recovery does not replace C0 or establish a causal repair benefit."
+    ],
+    "human_review": "Independent human source and semantic review remains pending; AI implementation reviews do not substitute for it."
+  },
+  "topic_delta": "Preserving partial literal text supports source/rationale review while explicit non-completion prevents artifact damage from being recoded as a portfolio or model-strategy success. Planned-case denominators and C0/auxiliary separation remain intact.",
+  "limits": [
+    "Offline implementation readiness is not model success or an observed R1/R4 result.",
+    "Independent human source and semantic review remain pending; this is an AI review.",
+    "Main experiment is still unrun and unfrozen.",
+    "No new paper-derived parameter or heuristic financial threshold was introduced by these recovery changes."
+  ],
+  "model_calls": 0,
+  "main_frozen": false,
+  "human_review_completed": false,
+  "unresolved_blocking_findings_in_reviewed_scope": []
+}

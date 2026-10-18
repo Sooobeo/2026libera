@@ -1,0 +1,143 @@
+{
+  "round": 3,
+  "status": "PASS",
+  "created_at_utc": "2026-10-18T11:33:53.368789+00:00",
+  "manifest_sha256": "64da4953578301aa059f8befe7f223ae4d7f8ad60b94afa22c22c9e1fc9d4efb",
+  "reviewed_files": [
+    {
+      "path": "research/run_sector_v48.py",
+      "sha256": "c244791be125988c696852547b8b066dfae6b6ee9cebdb93213683707fca8607"
+    },
+    {
+      "path": "research/sector_v48_transport.py",
+      "sha256": "db395eb3d54ebec93aa67556e1f2424aba1d591ba8b9fcfce7fbd3332db0379c"
+    },
+    {
+      "path": "research/sector_v48_contract.py",
+      "sha256": "6bdf9f31e155a056a9d6e5dcab9f4f970f7b0674f0bc4ab13f467a7bad27028d"
+    },
+    {
+      "path": "research/sector_response_schema.py",
+      "sha256": "bedbf782a041ba7da4f944408dd19596d74cbf78b77bee1c75d12ce71a598c41"
+    },
+    {
+      "path": "research/sector_engine.py",
+      "sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c"
+    },
+    {
+      "path": "research/compact_sector_prompt.py",
+      "sha256": "6984ada966ad55c3089fc297ca6342fdb51685bebfe3107769086343bbe68c0d"
+    },
+    {
+      "path": "research/local_sector_single_case.py",
+      "sha256": "0b2596a223167136bb37578e86469d50c26e7883305d4db31f43b9ddd10d28d0"
+    },
+    {
+      "path": "research/remote_sector_runtime.py",
+      "sha256": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5"
+    },
+    {
+      "path": "research/benchmark_sector_latency.py",
+      "sha256": "0686444e608033be931922a26886ed4a4b5b0789385215b7b75bfacc4050458b"
+    },
+    {
+      "path": "research/probe_ollama_runtime.py",
+      "sha256": "2dd48936bbaf8fd090a26f92fd356fec3a11ac81e5b01b39d661ffe72552fddb"
+    },
+    {
+      "path": "research/run_sector_workflow.py",
+      "sha256": "5625450a4dcbe1aa717c9809bf4955c1ef6b10aab4f0c83ef05dc2eb2c123cfd"
+    }
+  ],
+  "source_reviews": [
+    {
+      "path": "research/v48_implementation_round3_draft_20261018.json",
+      "sha256": "a99fa14e945007717627ee68b262c6fd36385eb8d57b6e3d17e1e79e7ac5db1a"
+    },
+    {
+      "path": "research/evidence/v48_legacy_cancel_investigation/investigation_and_round3_delta.json",
+      "sha256": "80c7f8ae0dddc129a8f850b417c8dae38a6e7887b32ac8111e63e3cf9a49b595"
+    }
+  ],
+  "cross_reviewed_source_files": [
+    {
+      "path": "research/run_sector_v48.py",
+      "sha256": "c244791be125988c696852547b8b066dfae6b6ee9cebdb93213683707fca8607"
+    },
+    {
+      "path": "research/sector_v48_contract.py",
+      "sha256": "6bdf9f31e155a056a9d6e5dcab9f4f970f7b0674f0bc4ab13f467a7bad27028d"
+    },
+    {
+      "path": "research/evaluate_sector_v48.py",
+      "sha256": "b0bb4c6c4d0216657672bdba465e57ece526d903a6476e99cdb750aa6dc1a088"
+    },
+    {
+      "path": "research/sector_v48_transport.py",
+      "sha256": "db395eb3d54ebec93aa67556e1f2424aba1d591ba8b9fcfce7fbd3332db0379c"
+    },
+    {
+      "path": "research/test_run_sector_v48.py",
+      "sha256": "2ec3c83560bd0b1497a890cdba2cbf63297de91f8bb15175aba824f2aecbb3a6"
+    },
+    {
+      "path": "research/test_sector_v48_contract.py",
+      "sha256": "c37db5b90c7ce73798ff5ec028477c4d1ba27f396481a844aa70eb0b185b41cf"
+    },
+    {
+      "path": "research/test_evaluate_sector_v48.py",
+      "sha256": "1791c18a67339f01f3f056f8d2838ca278a33195bffe4347d9bd24b4b36b867b"
+    },
+    {
+      "path": "research/test_sector_v48_transport.py",
+      "sha256": "f3cee2d887b8cf067f0912fd21be69937792f991e8e56db60409ea9a846925a5"
+    },
+    {
+      "path": "research/sector_engine.py",
+      "sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c"
+    },
+    {
+      "path": "research/sector_response_schema.py",
+      "sha256": "bedbf782a041ba7da4f944408dd19596d74cbf78b77bee1c75d12ce71a598c41"
+    }
+  ],
+  "reviewer_disclosure": "The reviewer authored sector_v48_transport.py and its tests. This round independently cross-reviews the separately authored coordinator, pure calculator/prompt helper and offline evaluator against the already reviewed paper and design. It is not an independent certification of the reviewer's own transport, a human expert review, a model-quality pass, or a main-study freeze.",
+  "binding_role": "Root verifies the complete executable hash inventory against the prepared manifest; actual cross-review scope and authorship remain as stated in the linked reviews.",
+  "checks": {
+    "initial_cross_review": 17,
+    "forward_delta": 12,
+    "reviewed_hashes_current": true,
+    "frozen_design_unchanged": true
+  },
+  "topic_alignment": [
+    {
+      "source": "https://arxiv.org/html/2609.14302v1",
+      "locator": "Sections 3.1-3.4 and 4.2",
+      "implementation": "Separate factual grounding, explanation-action consistency and coverage; no NDR composite or unique investment answer imported."
+    },
+    {
+      "source": "https://arxiv.org/html/2609.38869v2",
+      "locator": "Sections 3.4-4.1.2",
+      "implementation": "One public evidence registry, actual numeric fact lineage and explicit visibility; structured scalar claim checks do not certify all free prose."
+    },
+    {
+      "source": "https://arxiv.org/html/2609.25192v1",
+      "locator": "Sections 2.2.2-2.3",
+      "implementation": "Trace source locations, periods, units and definitions, and do not punish valid alternative evidence paths using unstated target weights."
+    },
+    {
+      "source": "https://arxiv.org/html/2607.15388v1",
+      "locator": "Appendix I, Table 12",
+      "implementation": "Three total final candidates including C0 are the already declared budget precedent; placement after four LIBERA stages is a local adaptation, not optimality or an exact replication."
+    },
+    {
+      "source": "https://arxiv.org/html/2609.19844v2",
+      "locator": "Sections V-VII",
+      "implementation": "Measurement/execution contract validity is distinct from model success; broken input/execution contracts cannot be treated as treatment evidence."
+    }
+  ],
+  "historical_failure": "The older expanded 113-test run remains FAIL. This binds only the new v4.8 execution path, not the retired one-case workflow.",
+  "main_authorized": false,
+  "model_calls": 0,
+  "independent_human_review_completed": false
+}

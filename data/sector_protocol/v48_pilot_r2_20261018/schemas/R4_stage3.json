@@ -1,0 +1,184 @@
+{
+  "type": "object",
+  "properties": {
+    "source_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "interpretations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sector_code": {
+            "type": "string",
+            "enum": [
+              "10",
+              "15",
+              "20",
+              "25",
+              "30",
+              "35",
+              "40",
+              "45",
+              "50",
+              "55",
+              "60"
+            ]
+          },
+          "rating": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "sector_code",
+          "rating",
+          "evidence_ids",
+          "reason"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0,
+      "maxItems": 0
+    },
+    "weights": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "sector_code": {
+            "type": "string",
+            "enum": [
+              "10",
+              "15",
+              "20",
+              "25",
+              "30",
+              "35",
+              "40",
+              "45",
+              "50",
+              "55",
+              "60"
+            ]
+          },
+          "weight": {
+            "type": "number"
+          },
+          "rationale": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "sector_code",
+          "weight",
+          "rationale",
+          "evidence_ids"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 11,
+      "maxItems": 11
+    },
+    "alternatives": {
+      "type": "string",
+      "minLength": 1
+    },
+    "risk_discussion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "unresolved": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "submitted_constraints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "constraint_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sector_code": {
+            "type": "string",
+            "enum": [
+              "10",
+              "15",
+              "20",
+              "25",
+              "30",
+              "35",
+              "40",
+              "45",
+              "50",
+              "55",
+              "60"
+            ]
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "sector_min_weight",
+              "sector_max_weight"
+            ]
+          },
+          "bound": {
+            "type": "number"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "required": [
+          "constraint_id",
+          "sector_code",
+          "kind",
+          "bound",
+          "evidence_ids"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "source_id",
+    "interpretations",
+    "weights",
+    "alternatives",
+    "risk_discussion",
+    "unresolved",
+    "submitted_constraints"
+  ],
+  "additionalProperties": false
+}

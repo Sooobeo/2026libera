@@ -1,0 +1,58 @@
+{
+  "protocol_version": "4.8",
+  "registered_at_utc": "2026-10-18T11:34:56.922083+00:00",
+  "manifest": {
+    "path": "data/sector_protocol/v48_pilot_r2_20261018/manifest.json",
+    "sha256": "64da4953578301aa059f8befe7f223ae4d7f8ad60b94afa22c22c9e1fc9d4efb"
+  },
+  "roster": [
+    {
+      "case_id": "fidelity_q2_2026__R1",
+      "source_id": "fidelity_q2_2026",
+      "arm": "R1",
+      "split": "pilot"
+    },
+    {
+      "case_id": "fidelity_q2_2026__R4",
+      "source_id": "fidelity_q2_2026",
+      "arm": "R4",
+      "split": "pilot"
+    },
+    {
+      "case_id": "ubs_june_2026__R1",
+      "source_id": "ubs_june_2026",
+      "arm": "R1",
+      "split": "pilot"
+    },
+    {
+      "case_id": "ubs_june_2026__R4",
+      "source_id": "ubs_june_2026",
+      "arm": "R4",
+      "split": "pilot"
+    }
+  ],
+  "planned_core_calls": 16,
+  "maximum_auxiliary_calls": 8,
+  "maximum_total_generation_calls": 24,
+  "reviews": [
+    {
+      "path": "research/evidence/v48_implementation_r2_20261018/round1.json",
+      "sha256": "1bc0c378246e44034b0a1b042ef00c71513f3b62a07ba4db5386869deed15655"
+    },
+    {
+      "path": "research/v48_implementation_round2_final_20261018.json",
+      "sha256": "ffacdbf30f52df1bf8e8bda8e477cb992af4202fdc8d871ee2d16e4df7cdaf51"
+    },
+    {
+      "path": "research/v48_implementation_round3_final_20261018.json",
+      "sha256": "ac01f64fffc9158c30ccf4fb698e6bb752a3c23baa85808f5a5470b690f941f2"
+    }
+  ],
+  "automatic_retries": 0,
+  "model_failure_not_exclusion": true,
+  "main_authorized": false,
+  "human_review_completed": false,
+  "scope": "Local prerecord of an authorized development pilot, not independent confirmation or a public timestamp authority.",
+  "comparison_scope": "Different exposure/use workflows under one shared model; not pure memory mechanism or market-wide homogenization.",
+  "model_calls_by_registration": 0
+}

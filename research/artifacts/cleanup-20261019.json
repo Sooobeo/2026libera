@@ -1,0 +1,32 @@
+{
+  "created_at_utc": "2026-10-18T23:39:48.926077+00:00",
+  "pending_files_before": 2098,
+  "archive": "research/artifacts/runtime-evidence-20261019.manifest.json",
+  "archived_files": 1959,
+  "archive_bytes": 12738111,
+  "original_files_deleted": 0,
+  "nested_python_sources_preserved": 23,
+  "stopped_tracking_live_logs": [
+    "data/local_sector_runtime/service_20261018T063629957Z/server.stderr.log",
+    "data/local_sector_runtime/service_20261018T063629957Z/server.stdout.log"
+  ],
+  "checks": {
+    "round1_archive_and_original_hashes": "PASS",
+    "round2_ignore_scope_and_paper_integrity": "PASS",
+    "round3_full_restore_and_overwrite_protection": "PASS"
+  },
+  "unchanged_pinned_documents": {
+    "paper/LIBERA_텀페이퍼_초안_v4.8.1_20261019_r3.html": "4e05b630509256d8f0188892fe0d1f43d718c2400010203940805df5c0eb319a",
+    "plan/LIBERA_실험준비현황_v4.8.1_20261019_r3.html": "68c601b1b2a780f2bada5e67fbd52e6a33f5c16f65f49b93d33dc4492f5d2289",
+    "research/v481_handoff_20261019.json": "6da6a453d5476b4e7d6a2950eeb74e372bafb8c4ef830f767115307e84490dd6"
+  },
+  "pending_files_after": 147,
+  "byte_preserved_paths": 141,
+  "pre_commit_verification": {
+    "exact_byte_staged_files_checked": 142,
+    "exact_byte_check": "PASS",
+    "whitespace_check": "PASS (git -c core.whitespace=cr-at-eol diff --cached --check; original CRLF preserved)",
+    "credential_pattern_scan": "No private-key, GitHub-token or AWS-access-key patterns found in pending and archived files",
+    "remote_before_commit": "HEAD and origin/main aligned"
+  }
+}

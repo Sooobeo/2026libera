@@ -1,0 +1,373 @@
+{
+  "artifact_type": "implementation_cross_method_and_topic_review",
+  "round": 3,
+  "status": "PASS",
+  "protocol_version": "4.8",
+  "reviewer": "/root/v48_runtime_audit",
+  "independence_disclosure": "The reviewer authored sector_v48_transport.py and its tests. This round independently cross-reviews the separately authored coordinator, pure calculator/prompt helper and offline evaluator against the already reviewed paper and design. It is not an independent certification of the reviewer's own transport, a human expert review, a model-quality pass, or a main-study freeze.",
+  "review_scope": "Whether source judgment -> evidence -> stated rationale -> actual raw allocation remains the research object, and whether implementation preserves the assigned R1/R4 policy, raw C0, denominators and separate auxiliary revisions.",
+  "manifest_sha256": null,
+  "binding_status": "Draft source-hash review; root must bind the unchanged reviewed files to the prepared pilot manifest before registration.",
+  "checks": [
+    {
+      "id": "paper_question_preserved",
+      "passed": true,
+      "evidence": [
+        "paper v4.8 #framework",
+        "sector_v48_contract.SYSTEM_BASIS",
+        "sector_v48_contract.build_system",
+        "evaluate_sector_v48.evaluate_case"
+      ],
+      "reason": "The system and inherited instructions ask for original-source interpretation, adoption/qualification/deferral/departure, supporting and competing reasons, and their connection to the submitted baseline-relative weight. The evaluator preserves those literal texts and prepares sector-specific support/action reviews. It does not replace this chain with arithmetic accuracy."
+    },
+    {
+      "id": "economics_management_link",
+      "passed": true,
+      "evidence": [
+        "paper v4.8 #framework",
+        "run_sector_v48.prepare controls.topic",
+        "evaluate_sector_v48.review_preparation"
+      ],
+      "reason": "Sector allocation observes capital allocation across economic activities; evidence transmission and the timing of reconsideration observe organizational decision procedures. This supports the stated narrow case-study question without claiming actual institutional portfolios or market-wide homogenization."
+    },
+    {
+      "id": "R1_R4_exposure_policy",
+      "passed": true,
+      "evidence": [
+        "sector_v48_contract.stage_payload",
+        "run_sector_v48.run_case",
+        "test_run_sector_v48.CoordinatorTests.test_R4_four_stages_no_source_leak_or_history_rewrite"
+      ],
+      "reason": "One assigned packet appears at R1 stage1 or R4 stage4. Earlier R4 task bodies omit assigned-source identity and interpretation labels. Calculator IDs use neutral stage/candidate identities, and tools receive only common facts plus currently visible evidence IDs. Full prior visible strings remain in later requests."
+    },
+    {
+      "id": "comparison_not_pure_memory",
+      "passed": true,
+      "evidence": [
+        "paper v4.8 #design",
+        "run_sector_v48.register comparison_scope",
+        "run_sector_v48.prepare controls.fixed_order_limit"
+      ],
+      "reason": "The registration describes evidence exposure/use workflows, not an isolated memory mechanism. Fixed operational order is disclosed as neither randomized nor counterbalanced. Different generated histories and realized repair calls are not represented as identical compute."
+    },
+    {
+      "id": "no_unique_weight_gold_or_label_equivalence",
+      "passed": true,
+      "evidence": [
+        "sector_v48_contract.SYSTEM_BASIS",
+        "evaluate_sector_v48.evaluate_case",
+        "evaluate_sector_v48._citations"
+      ],
+      "reason": "Attractive is not converted into Overweight; Neutral is not an exact benchmark target. Exact source labels and citation resolution are supporting factual diagnostics only. Semantic fields remain unjudged, and justified departures remain permissible. No gamma, target weight, behavioral pass threshold or composite scoring weight is added."
+    },
+    {
+      "id": "C0_primary_and_bounded_auxiliary",
+      "passed": true,
+      "evidence": [
+        "run_sector_v48.run_case",
+        "sector_v48_contract.repair_eligible",
+        "evaluate_sector_v48.evaluate_bundle",
+        "test_run_sector_v48.CoordinatorTests.test_raw_C0_preserved_and_two_revision_cap"
+      ],
+      "reason": "The stage4 first final response is C0. Only a complete structurally valid finite 11-sector vector with budget/bound violations can trigger C1/C2. The first arithmetic-valid candidate, finite-vector/contract/transport failure, or cap stops auxiliary calls. Primary bundle rejects repaired endpoints, and no best-response selection or normalization replaces C0."
+    },
+    {
+      "id": "optional_early_weights_not_false_failure",
+      "passed": true,
+      "evidence": [
+        "sector_v48_contract.evaluate_proposal",
+        "test_sector_v48_contract.ContractTests.test_early_empty_weights_are_not_a_zero_budget_portfolio"
+      ],
+      "reason": "Empty stage1/2 weights are not-yet-proposed, with no budget-zero violation, sum or valid risk. The task still requires complete sector rows at stages3/4. This prevents an arithmetic interface artifact from overwhelming the institution-interpretation task."
+    },
+    {
+      "id": "raw_vector_and_response_contract_separate",
+      "passed": true,
+      "evidence": [
+        "evaluate_sector_v48._execution",
+        "test_evaluate_sector_v48.CaseEvaluationTests.test_bad_contract_does_not_destroy_valid_raw_vector",
+        "run_sector_v48.run_case C0_contract_valid"
+      ],
+      "reason": "An otherwise complete captured finite feasible vector can remain assessable when an unrelated rationale field fails the seven-field contract. The contract failure and missing text remain visible. Repair eligibility requires the full structural response, and incomplete transport cannot become a valid captured endpoint. This preserves the prespecified measurement denominators."
+    },
+    {
+      "id": "fixed_denominators_and_null_comparisons",
+      "passed": true,
+      "evidence": [
+        "evaluate_sector_v48.evaluate_bundle",
+        "test_evaluate_sector_v48.BundleEvaluationTests"
+      ],
+      "reason": "All four scheduled cases remain in reporting, with 11 expected labels per case, 22 per arm and 44 per split. Workflow attempts and C0 attempts are distinct. Pairwise allocation distance requires both raw vectors; the cross-arm distance contrast requires all four. Missingness never becomes zero distance or an inferred no-effect finding."
+    },
+    {
+      "id": "numeric_claim_tuple_and_lineage",
+      "passed": true,
+      "evidence": [
+        "sector_v48_contract.stage_payload",
+        "sector_v48_contract.evaluate_proposal",
+        "evaluate_sector_v48.verify_claim",
+        "test_evaluate_sector_v48.NumericClaimTests"
+      ],
+      "reason": "Public IDs resolve to existing market values, units, periods and locations. Calculator facts have candidate-specific vector hashes and formulas. Numeric verification checks the full normalized tuple, rejects same numbers under wrong entities/periods/units, future IDs and earlier-candidate verification of current weights. Missing tuple fields remain unassessed; favorable post-output rounding is not inferred."
+    },
+    {
+      "id": "manual_semantics_not_automatic_success",
+      "passed": true,
+      "evidence": [
+        "evaluate_sector_v48.evaluate_case review_preparation",
+        "test_evaluate_sector_v48.CaseEvaluationTests.test_correct_labels_do_not_certify_strategy"
+      ],
+      "reason": "The evaluator retains literal interpretation/reason/rationale/alternatives/risk text and source passages, but literal stance, claim support and action-consistency judgments are left null pending review. Citation matching is explicitly not entailment, and copied labels plus feasible weights cannot produce a strategic-preservation verdict."
+    },
+    {
+      "id": "invalid_weights_keep_readable_evidence",
+      "passed": true,
+      "evidence": [
+        "evaluate_sector_v48.evaluate_case",
+        "test_evaluate_sector_v48.CaseEvaluationTests.test_invalid_vector_retains_rationale_and_labels",
+        "test_evaluate_sector_v48.CaseEvaluationTests.test_unparsed_readable_text_stays_available"
+      ],
+      "reason": "Arithmetic-invalid responses retain assessable explanations and factual fields. Unparsed readable fragments are kept with exact raw-text locations. Invalid vectors have no valid portfolio risk or distance; missing reasoning is not silently marked correct."
+    },
+    {
+      "id": "risk_is_historical_diagnostic",
+      "passed": true,
+      "evidence": [
+        "sector_v48_contract.SYSTEM_BASIS",
+        "sector_v48_contract.evaluate_proposal",
+        "evaluate_sector_v48.evaluate_case"
+      ],
+      "reason": "Portfolio volatility is computed only for valid raw allocations with supplied covariance lineage, unit and observation period. The task and evaluator do not identify it as loss probability, future return, institutional risk appetite or a strategic-quality score."
+    },
+    {
+      "id": "post_call_failures_stay_in_accounting",
+      "passed": true,
+      "evidence": [
+        "run_sector_v48.run_case finally",
+        "test_run_sector_v48.CoordinatorTests.test_post_call_exception_still_counts_durable_request",
+        "test_run_sector_v48.CoordinatorTests.test_timeout_retains_partial_and_later_stages_unstarted"
+      ],
+      "reason": "Durable request envelopes determine attempted calls even if later parsing/calculation/record creation fails. Planned later stages are marked not_started. Model response failures stop a case but remain in denominators; instrument incidents and operator cancellation stop the bundle under distinct statuses."
+    },
+    {
+      "id": "no_main_or_human_review_claim",
+      "passed": true,
+      "evidence": [
+        "run_sector_v48.ROSTER",
+        "run_sector_v48.verify_manifest",
+        "run_sector_v48.register",
+        "evaluate_sector_v48.review_preparation"
+      ],
+      "reason": "Only the four fixed pilot source-arm cases are executable; main authorization and freeze stay false. Review artifacts disclose development exposure and pending independent human review. Three assistant reviews do not substitute for the human source and semantic review required before main freeze."
+    },
+    {
+      "id": "frozen_12_design_artifacts_unchanged",
+      "passed": true,
+      "evidence": [
+        "research/v48_handoff_20261018.json delivered_artifacts"
+      ],
+      "reason": "The implementation review does not rewrite the already delivered design or its measurement rules."
+    },
+    {
+      "id": "current_offline_suite_and_hash_stability",
+      "passed": true,
+      "evidence": [
+        "test_execution in this report"
+      ],
+      "reason": "Current pure-helper, evaluator and coordinator fixtures pass, with source hashes stable during the test call."
+    }
+  ],
+  "earlier_review_points": [
+    {
+      "point": "Source design references were recorded but initially not revalidated by verify_manifest.",
+      "resolution": "Root added current-hash validation for design_references and registration policy constants; reviewed in the current source."
+    },
+    {
+      "point": "The reviewer's early suggestion would have tied raw-vector feasibility to all seven schema fields.",
+      "resolution": "Withdrawn after rechecking the frozen measurement policy. Full contract validity and fully captured vector feasibility remain separate; only auxiliary eligibility requires full structure. No new exclusion was introduced."
+    },
+    {
+      "point": "Cancellation and post-call exceptions could otherwise hide case disposition or attempted requests.",
+      "resolution": "Root added explicit cancellation stop and durable request counting, with targeted coordinator tests."
+    }
+  ],
+  "paper_to_implementation_mapping": [
+    {
+      "source": "https://arxiv.org/html/2609.14302v1",
+      "locator": "Sections 3.1-3.4 and 4.2",
+      "implementation": "Separate factual grounding, explanation-action consistency and coverage; no NDR composite or unique investment answer imported."
+    },
+    {
+      "source": "https://arxiv.org/html/2609.38869v2",
+      "locator": "Sections 3.4-4.1.2",
+      "implementation": "One public evidence registry, actual numeric fact lineage and explicit visibility; structured scalar claim checks do not certify all free prose."
+    },
+    {
+      "source": "https://arxiv.org/html/2609.25192v1",
+      "locator": "Sections 2.2.2-2.3",
+      "implementation": "Trace source locations, periods, units and definitions, and do not punish valid alternative evidence paths using unstated target weights."
+    },
+    {
+      "source": "https://arxiv.org/html/2607.15388v1",
+      "locator": "Appendix I, Table 12",
+      "implementation": "Three total final candidates including C0 are the already declared budget precedent; placement after four LIBERA stages is a local adaptation, not optimality or an exact replication."
+    },
+    {
+      "source": "https://arxiv.org/html/2609.19844v2",
+      "locator": "Sections V-VII",
+      "implementation": "Measurement/execution contract validity is distinct from model success; broken input/execution contracts cannot be treated as treatment evidence."
+    }
+  ],
+  "limitations_remaining": [
+    "No live pilot or model capability is established by this offline implementation review.",
+    "The qualitative categories remain LIBERA's declared operational adaptation, not a validated expert investment-quality scale.",
+    "Scalar claim verification requires honest manual quotation and normalization; it is not exhaustive automated detection of claims in prose.",
+    "Source-document semantics and the pre-output difference inventory still require independent human review before main freeze.",
+    "If the pilot yields no valid C0 allocation pairs, the allocation-contrast part of the research question remains unobserved; readable rationale findings cannot fill that gap.",
+    "Two documents, one shared model and one market snapshot support a descriptive case only; sectors and revisions are dependent components."
+  ],
+  "model_generation_calls_for_this_review": 0,
+  "main_experiment_authorized_by_this_review": false,
+  "independent_human_review_completed": false,
+  "semantic_model_performance_pass": null,
+  "reviewed_files": [
+    {
+      "path": "research/run_sector_v48.py",
+      "sha256": "46279c42af90e828368d75cc5d662d25a23ccdcdba6e06d3efd273ad455d1b60"
+    },
+    {
+      "path": "research/sector_v48_contract.py",
+      "sha256": "6bdf9f31e155a056a9d6e5dcab9f4f970f7b0674f0bc4ab13f467a7bad27028d"
+    },
+    {
+      "path": "research/evaluate_sector_v48.py",
+      "sha256": "b0bb4c6c4d0216657672bdba465e57ece526d903a6476e99cdb750aa6dc1a088"
+    },
+    {
+      "path": "research/sector_v48_transport.py",
+      "sha256": "ca50b97a2b498883c6d5160c41914f96e486d3e4fac1f67b26473e9e264f1a60"
+    },
+    {
+      "path": "research/test_run_sector_v48.py",
+      "sha256": "a489709c65d197a38fa63f27844dee4a0e1e4fed30a061cfbf5130f759e42f39"
+    },
+    {
+      "path": "research/test_sector_v48_contract.py",
+      "sha256": "c37db5b90c7ce73798ff5ec028477c4d1ba27f396481a844aa70eb0b185b41cf"
+    },
+    {
+      "path": "research/test_evaluate_sector_v48.py",
+      "sha256": "1791c18a67339f01f3f056f8d2838ca278a33195bffe4347d9bd24b4b36b867b"
+    },
+    {
+      "path": "research/test_sector_v48_transport.py",
+      "sha256": "fc0b7cf63597443328b3632a9832409e6a25d045dfdea91daf2c7ce99d322453"
+    },
+    {
+      "path": "research/sector_engine.py",
+      "sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c"
+    },
+    {
+      "path": "research/sector_response_schema.py",
+      "sha256": "bedbf782a041ba7da4f944408dd19596d74cbf78b77bee1c75d12ce71a598c41"
+    }
+  ],
+  "frozen_design_integrity": [
+    {
+      "path": "plan/LIBERA_실험계획_v4.8_20261018.html",
+      "sha256": "9b2b0dd6bc348f745f648ab03f9f7ce36573de6643700e896449894e75982423",
+      "current_sha256": "9b2b0dd6bc348f745f648ab03f9f7ce36573de6643700e896449894e75982423",
+      "unchanged": true
+    },
+    {
+      "path": "paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+      "sha256": "0775e2d64633d51c2f35a0378406e744ea7e0b0489a71a45b6651599c08ae7d1",
+      "current_sha256": "0775e2d64633d51c2f35a0378406e744ea7e0b0489a71a45b6651599c08ae7d1",
+      "unchanged": true
+    },
+    {
+      "path": "plan/LIBERA_실험설정_v4.8_20261018.json",
+      "sha256": "95d03ab44a75c477bced0a6c9868facd58b66562ab90e24a0a6854e8cac659d3",
+      "current_sha256": "95d03ab44a75c477bced0a6c9868facd58b66562ab90e24a0a6854e8cac659d3",
+      "unchanged": true
+    },
+    {
+      "path": "data/sector_protocol/v48_design_20261018/prompt_contract.json",
+      "sha256": "6352355f20bde763d8bcbc2a7db02bfe466e92f80c60f12488a81cd021cdd5c8",
+      "current_sha256": "6352355f20bde763d8bcbc2a7db02bfe466e92f80c60f12488a81cd021cdd5c8",
+      "unchanged": true
+    },
+    {
+      "path": "data/sector_protocol/v48_design_20261018/public_numeric_registry.json",
+      "sha256": "5463226c35c53a0ab4caefe89c0bf857dc81853c4c982fba51254c0f5395c375",
+      "current_sha256": "5463226c35c53a0ab4caefe89c0bf857dc81853c4c982fba51254c0f5395c375",
+      "unchanged": true
+    },
+    {
+      "path": "research/evaluator_only/v48_source_comparison_20261018.json",
+      "sha256": "0a020fe160122c9802cc4ed1f17ea2f07e5d255d00919eaf101cfed6fb248634",
+      "current_sha256": "0a020fe160122c9802cc4ed1f17ea2f07e5d255d00919eaf101cfed6fb248634",
+      "unchanged": true
+    },
+    {
+      "path": "research/v48_evaluation_protocol_20261018.json",
+      "sha256": "c870c8383aa0b6ffbf56eceea75618ea12c0819311d97a500a968f1742b48059",
+      "current_sha256": "c870c8383aa0b6ffbf56eceea75618ea12c0819311d97a500a968f1742b48059",
+      "unchanged": true
+    },
+    {
+      "path": "research/v48_review_template_20261018.json",
+      "sha256": "15251035d307ae7a57c5fed3404363fcf5b0bfd77ef128faeca38c0e407bd0f2",
+      "current_sha256": "15251035d307ae7a57c5fed3404363fcf5b0bfd77ef128faeca38c0e407bd0f2",
+      "unchanged": true
+    },
+    {
+      "path": "research/v48_reference_basis_20261018.json",
+      "sha256": "421e6c39900beccea72a2996eb31077c84d10270f677a4478fb4d6d44e25e95b",
+      "current_sha256": "421e6c39900beccea72a2996eb31077c84d10270f677a4478fb4d6d44e25e95b",
+      "unchanged": true
+    },
+    {
+      "path": "research/v48_topic_alignment_basis_20261018.json",
+      "sha256": "6f8057c99a160a2b481b1394aa65569cd27eb9f42a0857169f1e1f1caec1ae28",
+      "current_sha256": "6f8057c99a160a2b481b1394aa65569cd27eb9f42a0857169f1e1f1caec1ae28",
+      "unchanged": true
+    },
+    {
+      "path": "research/build_sector_revision_v48.py",
+      "sha256": "0a3a54aeb083b488983f922ba35745a11d13b15da9bcd152218c89af7c927e0f",
+      "current_sha256": "0a3a54aeb083b488983f922ba35745a11d13b15da9bcd152218c89af7c927e0f",
+      "unchanged": true
+    },
+    {
+      "path": "research/v48_parameter_reference_addendum_20261018.json",
+      "sha256": "37af0008222199720a65483512b32ed08292f21be18ea610d63d258dbcb5d474",
+      "current_sha256": "37af0008222199720a65483512b32ed08292f21be18ea610d63d258dbcb5d474",
+      "unchanged": true
+    }
+  ],
+  "test_execution": {
+    "argv": [
+      "C:\\Users\\Insun\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+      "-B",
+      "-X",
+      "utf8",
+      "-m",
+      "unittest",
+      "test_sector_v48_contract",
+      "test_evaluate_sector_v48",
+      "test_run_sector_v48",
+      "-v"
+    ],
+    "cwd": "research",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "test_aggregate_overflow_cannot_be_valid (test_sector_v48_contract.ContractTests.test_aggregate_overflow_cannot_be_valid) ... ok\ntest_bool_missing_duplicate_unknown_and_nonfinite_not_repairable (test_sector_v48_contract.ContractTests.test_bool_missing_duplicate_unknown_and_nonfinite_not_repairable) ... ok\ntest_changed_market_changes_lineage_and_algebra (test_sector_v48_contract.ContractTests.test_changed_market_changes_lineage_and_algebra) ... ok\ntest_common_market_and_index_only_stage1 (test_sector_v48_contract.ContractTests.test_common_market_and_index_only_stage1) ... ok\ntest_complete_invalid_sum_is_raw_and_has_no_valid_portfolio_risk (test_sector_v48_contract.ContractTests.test_complete_invalid_sum_is_raw_and_has_no_valid_portfolio_risk) ... ok\ntest_early_empty_weights_are_not_a_zero_budget_portfolio (test_sector_v48_contract.ContractTests.test_early_empty_weights_are_not_a_zero_budget_portfolio) ... ok\ntest_endpoint_cannot_include_hidden_case_identity_or_future_stage (test_sector_v48_contract.ContractTests.test_endpoint_cannot_include_hidden_case_identity_or_future_stage) ... ok\ntest_fact_ids_and_hashes_track_actual_candidate (test_sector_v48_contract.ContractTests.test_fact_ids_and_hashes_track_actual_candidate) ... ok\ntest_fact_registry_must_match_supplied_market (test_sector_v48_contract.ContractTests.test_fact_registry_must_match_supplied_market) ... ok\ntest_incomplete_response_structure_is_not_repairable (test_sector_v48_contract.ContractTests.test_incomplete_response_structure_is_not_repairable) ... ok\ntest_invalid_visible_ids_and_stage_are_rejected (test_sector_v48_contract.ContractTests.test_invalid_visible_ids_and_stage_are_rejected) ... ok\ntest_matrix_reference_ids_are_visible_without_duplicate_values (test_sector_v48_contract.ContractTests.test_matrix_reference_ids_are_visible_without_duplicate_values) ... ok\ntest_negative_and_above_one_are_eligible_even_when_sum_is_one (test_sector_v48_contract.ContractTests.test_negative_and_above_one_are_eligible_even_when_sum_is_one) ... ok\ntest_payload_and_calculator_do_not_mutate_supplied_objects (test_sector_v48_contract.ContractTests.test_payload_and_calculator_do_not_mutate_supplied_objects) ... ok\ntest_r4_visibility_and_complete_structural_schema (test_sector_v48_contract.ContractTests.test_r4_visibility_and_complete_structural_schema) ... ok\ntest_schema_requires_zero_or_eleven_early_and_eleven_late (test_sector_v48_contract.ContractTests.test_schema_requires_zero_or_eleven_early_and_eleven_late) ... ok\ntest_source_packet_occurs_only_at_assigned_onset (test_sector_v48_contract.ContractTests.test_source_packet_occurs_only_at_assigned_onset) ... ok\ntest_stage3_empty_is_invalid_without_imputation (test_sector_v48_contract.ContractTests.test_stage3_empty_is_invalid_without_imputation) ... ok\ntest_system_preserves_topic_and_permitted_departure (test_sector_v48_contract.ContractTests.test_system_preserves_topic_and_permitted_departure) ... ok\ntest_unavailable_constraint_evidence_cannot_expand_visibility (test_sector_v48_contract.ContractTests.test_unavailable_constraint_evidence_cannot_expand_visibility) ... ok\ntest_valid_portfolio_risk_and_fact_units (test_sector_v48_contract.ContractTests.test_valid_portfolio_risk_and_fact_units) ... ok\ntest_all_absent_fixed_denominator (test_evaluate_sector_v48.BundleEvaluationTests.test_all_absent_fixed_denominator) ... ok\ntest_all_four_valid_distances_are_descriptive (test_evaluate_sector_v48.BundleEvaluationTests.test_all_four_valid_distances_are_descriptive) ... ok\ntest_duplicates_and_repairs_not_silently_pooled (test_evaluate_sector_v48.BundleEvaluationTests.test_duplicates_and_repairs_not_silently_pooled) ... ok\ntest_one_case_earns_eleven_of_fortyfour (test_evaluate_sector_v48.BundleEvaluationTests.test_one_case_earns_eleven_of_fortyfour) ... ok\ntest_pair_requires_both_valid (test_evaluate_sector_v48.BundleEvaluationTests.test_pair_requires_both_valid) ... ok\ntest_workflow_attempted_without_C0_is_not_wholly_unattempted (test_evaluate_sector_v48.BundleEvaluationTests.test_workflow_attempted_without_C0_is_not_wholly_unattempted) ... ok\ntest_bad_contract_does_not_destroy_valid_raw_vector (test_evaluate_sector_v48.CaseEvaluationTests.test_bad_contract_does_not_destroy_valid_raw_vector) ... ok\ntest_boolean_weight_is_not_numeric (test_evaluate_sector_v48.CaseEvaluationTests.test_boolean_weight_is_not_numeric) ... ok\ntest_correct_labels_do_not_certify_strategy (test_evaluate_sector_v48.CaseEvaluationTests.test_correct_labels_do_not_certify_strategy) ... ok\ntest_duplicate_json_keys_and_nonfinite_are_distinct (test_evaluate_sector_v48.CaseEvaluationTests.test_duplicate_json_keys_and_nonfinite_are_distinct) ... ok\ntest_duplicate_label_no_credit_and_duplicate_text_retained (test_evaluate_sector_v48.CaseEvaluationTests.test_duplicate_label_no_credit_and_duplicate_text_retained) ... ok\ntest_invalid_vector_retains_rationale_and_labels (test_evaluate_sector_v48.CaseEvaluationTests.test_invalid_vector_retains_rationale_and_labels) ... ok\ntest_no_mutation_of_evidence_or_response (test_evaluate_sector_v48.CaseEvaluationTests.test_no_mutation_of_evidence_or_response) ... ok\ntest_public_numeric_citation_does_not_break_document_citation (test_evaluate_sector_v48.CaseEvaluationTests.test_public_numeric_citation_does_not_break_document_citation) ... ok\ntest_timeout_complete_looking_json_not_valid_endpoint (test_evaluate_sector_v48.CaseEvaluationTests.test_timeout_complete_looking_json_not_valid_endpoint) ... ok\ntest_unparsed_readable_text_stays_available (test_evaluate_sector_v48.CaseEvaluationTests.test_unparsed_readable_text_stays_available) ... ok\ntest_visibility_not_inferred_from_quoted_ids (test_evaluate_sector_v48.CaseEvaluationTests.test_visibility_not_inferred_from_quoted_ids) ... ok\ntest_wrong_source_identity_zero_label_credit (test_evaluate_sector_v48.CaseEvaluationTests.test_wrong_source_identity_zero_label_credit) ... ok\ntest_actual_calculator_fact_provenance_and_nontemporal_algebra (test_evaluate_sector_v48.NumericClaimTests.test_actual_calculator_fact_provenance_and_nontemporal_algebra) ... ok\ntest_complete_tuple_matches (test_evaluate_sector_v48.NumericClaimTests.test_complete_tuple_matches) ... ok\ntest_future_and_invisible_facts_not_evidence (test_evaluate_sector_v48.NumericClaimTests.test_future_and_invisible_facts_not_evidence) ... ok\ntest_missing_literal_or_tuple_remains_unassessed (test_evaluate_sector_v48.NumericClaimTests.test_missing_literal_or_tuple_remains_unassessed) ... ok\ntest_no_favorable_rounding_without_reference_policy (test_evaluate_sector_v48.NumericClaimTests.test_no_favorable_rounding_without_reference_policy) ... ok\ntest_nonsector_public_subject_uses_exact_input_pointer (test_evaluate_sector_v48.NumericClaimTests.test_nonsector_public_subject_uses_exact_input_pointer) ... ok\ntest_prior_candidate_not_current_verification (test_evaluate_sector_v48.NumericClaimTests.test_prior_candidate_not_current_verification) ... ok\ntest_same_value_wrong_entity_unit_metric_period_version (test_evaluate_sector_v48.NumericClaimTests.test_same_value_wrong_entity_unit_metric_period_version) ... ok\ntest_self_derived_claim_requires_captured_current_formula (test_evaluate_sector_v48.NumericClaimTests.test_self_derived_claim_requires_captured_current_formula) ... ok\ntest_R4_four_stages_no_source_leak_or_history_rewrite (test_run_sector_v48.CoordinatorTests.test_R4_four_stages_no_source_leak_or_history_rewrite) ... ok\ntest_cancelled_transport_does_not_start_next_case (test_run_sector_v48.CoordinatorTests.test_cancelled_transport_does_not_start_next_case) ... ok\ntest_case_whitelist_and_pilot_budget (test_run_sector_v48.CoordinatorTests.test_case_whitelist_and_pilot_budget) ... ok\ntest_exponent_overflow_is_model_failure_with_raw_preserved (test_run_sector_v48.CoordinatorTests.test_exponent_overflow_is_model_failure_with_raw_preserved) ... ok\ntest_model_schema_failure_stops_case_not_instrument (test_run_sector_v48.CoordinatorTests.test_model_schema_failure_stops_case_not_instrument) ... ok\ntest_post_call_exception_still_counts_durable_request (test_run_sector_v48.CoordinatorTests.test_post_call_exception_still_counts_durable_request) ... ok\ntest_raw_C0_preserved_and_two_revision_cap (test_run_sector_v48.CoordinatorTests.test_raw_C0_preserved_and_two_revision_cap) ... ok\ntest_timeout_retains_partial_and_later_stages_unstarted (test_run_sector_v48.CoordinatorTests.test_timeout_retains_partial_and_later_stages_unstarted) ... ok\ntest_valid_C1_stops_before_C2 (test_run_sector_v48.CoordinatorTests.test_valid_C1_stops_before_C2) ... ok\n\n----------------------------------------------------------------------\nRan 57 tests in 1.020s\n\nOK\n",
+    "real_model_calls": 0,
+    "reviewed_sources_unchanged_during_tests": true,
+    "interpretation": "Offline fixtures only; no research observations or model success asserted."
+  },
+  "created_at_utc": "2026-10-18T11:28:02.701614+00:00",
+  "check_count": 17,
+  "pass_count": 17
+}

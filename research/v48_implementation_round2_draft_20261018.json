@@ -1,0 +1,295 @@
+{
+  "artifact_kind": "implementation_review_draft_before_manifest_binding",
+  "protocol_version": "4.8",
+  "round": 2,
+  "status": "PASS",
+  "created_at_utc": "2026-10-18T11:29:04.328730+00:00",
+  "reviewer": {
+    "agent": "/root/v48_calculator",
+    "role": "AI calculator implementer and separate reader of parent-authored coordinator/transport code",
+    "independent_human": false,
+    "independence_disclosure": "The reviewer authored sector_v48_contract.py and its tests; those checks are self-review. Coordinator and transport were authored by the parent and reviewed separately here. This is not an independent human source/semantic review."
+  },
+  "manifest_sha256": null,
+  "manifest_binding": "Pending. This draft reviews the file hashes below. Final registration must bind the later prepared manifest and recheck every hash; this file does not itself authorize online execution.",
+  "reviewed_files": [
+    {
+      "path": "research/run_sector_v48.py",
+      "sha256": "46279c42af90e828368d75cc5d662d25a23ccdcdba6e06d3efd273ad455d1b60"
+    },
+    {
+      "path": "research/sector_v48_transport.py",
+      "sha256": "ca50b97a2b498883c6d5160c41914f96e486d3e4fac1f67b26473e9e264f1a60"
+    },
+    {
+      "path": "research/sector_v48_contract.py",
+      "sha256": "6bdf9f31e155a056a9d6e5dcab9f4f970f7b0674f0bc4ab13f467a7bad27028d"
+    },
+    {
+      "path": "research/sector_response_schema.py",
+      "sha256": "bedbf782a041ba7da4f944408dd19596d74cbf78b77bee1c75d12ce71a598c41"
+    },
+    {
+      "path": "research/sector_engine.py",
+      "sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c"
+    },
+    {
+      "path": "research/compact_sector_prompt.py",
+      "sha256": "6984ada966ad55c3089fc297ca6342fdb51685bebfe3107769086343bbe68c0d"
+    },
+    {
+      "path": "research/local_sector_single_case.py",
+      "sha256": "0b2596a223167136bb37578e86469d50c26e7883305d4db31f43b9ddd10d28d0"
+    },
+    {
+      "path": "research/remote_sector_runtime.py",
+      "sha256": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5"
+    },
+    {
+      "path": "research/benchmark_sector_latency.py",
+      "sha256": "0686444e608033be931922a26886ed4a4b5b0789385215b7b75bfacc4050458b"
+    },
+    {
+      "path": "research/probe_ollama_runtime.py",
+      "sha256": "2dd48936bbaf8fd090a26f92fd356fec3a11ac81e5b01b39d661ffe72552fddb"
+    },
+    {
+      "path": "research/run_sector_workflow.py",
+      "sha256": "5625450a4dcbe1aa717c9809bf4955c1ef6b10aab4f0c83ef05dc2eb2c123cfd"
+    }
+  ],
+  "additional_evidence_files": [
+    {
+      "path": "research/test_sector_v48_contract.py",
+      "sha256": "c37db5b90c7ce73798ff5ec028477c4d1ba27f396481a844aa70eb0b185b41cf"
+    },
+    {
+      "path": "research/test_run_sector_v48.py",
+      "sha256": "a489709c65d197a38fa63f27844dee4a0e1e4fed30a061cfbf5130f759e42f39"
+    },
+    {
+      "path": "research/test_sector_v48_transport.py",
+      "sha256": "fc0b7cf63597443328b3632a9832409e6a25d045dfdea91daf2c7ce99d322453"
+    },
+    {
+      "path": "research/test_evaluate_sector_v48.py",
+      "sha256": "1791c18a67339f01f3f056f8d2838ca278a33195bffe4347d9bd24b4b36b867b"
+    },
+    {
+      "path": "research/evaluate_sector_v48.py",
+      "sha256": "b0bb4c6c4d0216657672bdba465e57ece526d903a6476e99cdb750aa6dc1a088"
+    }
+  ],
+  "design_basis": [
+    {
+      "path": "data/sector_protocol/v48_design_20261018/prompt_contract.json",
+      "sha256": "6352355f20bde763d8bcbc2a7db02bfe466e92f80c60f12488a81cd021cdd5c8"
+    },
+    {
+      "path": "research/v48_evaluation_protocol_20261018.json",
+      "sha256": "c870c8383aa0b6ffbf56eceea75618ea12c0819311d97a500a968f1742b48059"
+    },
+    {
+      "path": "research/v48_handoff_20261018.json",
+      "sha256": "27e884dcf87805436c78267efd10ce88d991c6eac0264ea83837a009351a4882"
+    }
+  ],
+  "checks": [
+    {
+      "id": "fixed_pilot_scope",
+      "status": "PASS",
+      "finding": "Only four pilot source-arm cases are in the executable roster; no main command exists. Sixteen core requests and at most eight auxiliary requests are declared.",
+      "evidence": [
+        "research/run_sector_v48.py:SOURCES/ROSTER,prepare,verify_manifest,main"
+      ]
+    },
+    {
+      "id": "immutable_input_software_design_binding",
+      "status": "PASS",
+      "finding": "Manifest verification checks exact input/software inventories and their hashes, original design-reference inventory and hashes, runtime, schema and packet identity before calls. Registration requires three passing manifest-bound reviews and the complete executable file inventory.",
+      "evidence": [
+        "research/run_sector_v48.py:verify_manifest,register,verify_registration,run.check_pins"
+      ]
+    },
+    {
+      "id": "treatment_visibility",
+      "status": "PASS",
+      "finding": "R1 receives its source once at stage 1; R4 once at stage 4. R4 stages 1-3 do not expose assigned source identity. The same public market and 60 public numeric/matrix fact IDs are available from stage 1.",
+      "evidence": [
+        "research/sector_v48_contract.py:stage_payload",
+        "research/test_run_sector_v48.py:test_R4_four_stages_no_source_leak_or_history_rewrite"
+      ]
+    },
+    {
+      "id": "fixed_four_stage_primary",
+      "status": "PASS",
+      "finding": "The four-stage core does not insert repair calls before C0. C0 is the original stage-4 submission. Raw assistant content is retained rather than rewritten or replaced by a repaired candidate.",
+      "evidence": [
+        "research/run_sector_v48.py:run_case",
+        "research/test_run_sector_v48.py:test_raw_C0_preserved_and_two_revision_cap"
+      ]
+    },
+    {
+      "id": "empty_early_weights",
+      "status": "PASS",
+      "finding": "Empty stage-1/2 weights mean not_yet_proposed, with no zero-budget violation, sum or portfolio risk. Stage 3 requires an actual vector.",
+      "evidence": [
+        "research/sector_v48_contract.py:evaluate_proposal",
+        "research/test_sector_v48_contract.py:test_early_empty_weights_are_not_a_zero_budget_portfolio"
+      ]
+    },
+    {
+      "id": "arithmetic_not_semantic_success",
+      "status": "PASS",
+      "finding": "Source interpretation and reasoned allocation choice are explicit prompt requirements. Arithmetic checks provide no semantic verdict, hidden gold, suggested target, projection, clipping or normalization.",
+      "evidence": [
+        "research/sector_v48_contract.py:build_system,evaluate_proposal",
+        "research/run_sector_v48.py:record.semantic_review"
+      ]
+    },
+    {
+      "id": "raw_allocation_separate_from_full_contract",
+      "status": "PASS",
+      "finding": "A complete captured C0 vector is arithmetically assessed separately from seven-field contract success. Unrelated missing rationale does not change its numbers. Schema failure still stops the case and forbids auxiliary repair under the design.",
+      "evidence": [
+        "research/run_sector_v48.py:endpoint C0 final_allocation_valid branch",
+        "research/test_evaluate_sector_v48.py:test_bad_contract_does_not_destroy_valid_raw_vector"
+      ]
+    },
+    {
+      "id": "bounded_auxiliary",
+      "status": "PASS",
+      "finding": "C1/C2 require completed structurally valid C0, all 11 unique finite numeric weights, and a budget/bound violation. Stop at arithmetic validity, the second revision, or failure. The actual terminal submission is retained, never best-of selected; C0 remains primary.",
+      "evidence": [
+        "research/sector_v48_contract.py:repair_eligible",
+        "research/run_sector_v48.py:run_case auxiliary loop",
+        "research/test_run_sector_v48.py:test_valid_C1_stops_before_C2"
+      ]
+    },
+    {
+      "id": "raw_arithmetic_and_risk_domains",
+      "status": "PASS",
+      "finding": "Complete invalid vectors retain raw sum, residual, bounds and active-weight algebra. Valid-portfolio risk is absent for invalid vectors. Booleans, duplicates, missing sectors and nonfinite values cannot become valid portfolios.",
+      "evidence": [
+        "research/sector_v48_contract.py:complete_vector,evaluate_proposal",
+        "research/test_sector_v48_contract.py"
+      ]
+    },
+    {
+      "id": "candidate_fact_lineage",
+      "status": "PASS",
+      "finding": "Every actual calculator fact has a candidate-scoped C: ID, subject, metric, unit, applicable period scope, vector hash and market hash. Candidate deltas additionally retain prior-vector version. Future calculation IDs are not provided before computation.",
+      "evidence": [
+        "research/sector_v48_contract.py:evaluate_proposal.fact",
+        "research/test_sector_v48_contract.py:test_fact_ids_and_hashes_track_actual_candidate"
+      ]
+    },
+    {
+      "id": "raw_response_and_request_accounting",
+      "status": "PASS",
+      "finding": "Durable generation request envelopes are recounted even if post-response parsing or calculation raises. Attempted failed stages and later not-started stages are separate. Raw stream/response artifacts remain available when a normalized record cannot be produced.",
+      "evidence": [
+        "research/run_sector_v48.py:run_case finally",
+        "research/sector_v48_transport.py:call_accounting",
+        "research/test_run_sector_v48.py:test_post_call_exception_still_counts_durable_request"
+      ]
+    },
+    {
+      "id": "nonfinite_model_failure_classification",
+      "status": "PASS",
+      "finding": "Exponent-overflow JSON such as 1e309 is rejected as a model-output value failure before serializing normalized records. Raw response and its attempted-request denominator remain. It does not become an instrument failure merely because JSON parsing produced infinity.",
+      "evidence": [
+        "research/run_sector_v48.py:endpoint canonical parsed-value guard",
+        "research/test_run_sector_v48.py:test_exponent_overflow_is_model_failure_with_raw_preserved"
+      ]
+    },
+    {
+      "id": "cancellation_stops_bundle",
+      "status": "PASS",
+      "finding": "A transport cancellation, including Ctrl+C handled in the supervisor, stops the case and then the entire bundle; the coordinator cannot silently start another source-arm case.",
+      "evidence": [
+        "research/run_sector_v48.py:run cancellation branch",
+        "research/test_run_sector_v48.py:test_cancelled_transport_does_not_start_next_case"
+      ]
+    },
+    {
+      "id": "instrument_failure_boundaries",
+      "status": "PASS",
+      "finding": "Render/pin/artifact/cleanup integrity failures stop the bundle. Model JSON/schema/truncation and generation timeouts stop affected cases and remain accounted. Metadata, render-only and actual generation requests are counted separately.",
+      "evidence": [
+        "research/sector_v48_transport.py:worker,run_transport,call_accounting",
+        "research/test_sector_v48_transport.py"
+      ]
+    },
+    {
+      "id": "history_preservation_scope",
+      "status": "PASS",
+      "finding": "Only new task messages are serialized. Earlier assistant strings remain unchanged. Render checks require the expected JSON content in order, allow only declared outer ASCII whitespace treatment, and explicitly do not claim an independently measured token count or spare capacity.",
+      "evidence": [
+        "research/run_sector_v48.py:endpoint",
+        "research/sector_v48_transport.py:validate_spec,validate_render",
+        "research/test_sector_v48_transport.py:test_renderer_only_ascii_boundary_whitespace"
+      ]
+    },
+    {
+      "id": "offline_tests",
+      "status": "PASS",
+      "finding": "69 offline tests passed, including fake-local-HTTP transport and pure synthetic coordinator/evaluator fixtures. No installed model or live experiment was invoked by this audit.",
+      "evidence": [
+        "python -B -X utf8 -m unittest discover -s research -p test_*v48*.py -v"
+      ]
+    }
+  ],
+  "test_execution": {
+    "command": "python -B -X utf8 -m unittest discover -s research -p test_*v48*.py -v",
+    "tests_run": 69,
+    "elapsed_seconds_reported_by_unittest": 17.134,
+    "exit_code": 0,
+    "terminal_summary": "Ran 69 tests in 17.134s; OK",
+    "evidence_form": "Observed terminal test result; this audit does not invent a separately captured raw test log.",
+    "live_model_calls": 0
+  },
+  "resolved_findings": [
+    {
+      "issue": "A set of visible IDs did not meet the helper list contract.",
+      "resolution": "Coordinator passes sorted visible IDs."
+    },
+    {
+      "issue": "Matrix fact IDs were registered as visible but omitted from the model-facing registry index.",
+      "resolution": "Matrix references are explicitly exposed without duplicated matrix values."
+    },
+    {
+      "issue": "Transport-handled Ctrl+C could fall through to the next case.",
+      "resolution": "Coordinator stops the bundle on cancelled/stopped_cancelled and regression test passes."
+    },
+    {
+      "issue": "A post-call exception could hide an attempted call from summary counts.",
+      "resolution": "Finally block recounts durable request envelopes; failure versus later not-started states are separate."
+    },
+    {
+      "issue": "Exponent overflow could be misclassified as an instrument failure during record serialization.",
+      "resolution": "Parsed values receive a finite serialization guard before normalized recording; raw failure remains and regression test passes."
+    }
+  ],
+  "topic_alignment": {
+    "status": "PASS_FOR_IMPLEMENTATION_SCOPE",
+    "paper_question": "Whether a common generative AI preserves source-specific public investment judgments through interpretation, rationale and sector allocation under early versus late evidence provision.",
+    "mechanism_preserved": "The primary R1/R4 contrast retains four stages, common market inputs and common model controls. Prompt requirements connect source meaning, supported reasons, adopted/deferred/departed decisions and actual raw weights.",
+    "no_arithmetic_substitution": "Budget validity and exact-label extraction remain separate from evidence-to-action and strategic interpretation. Invalid allocations do not erase readable source/rationale observations.",
+    "interpretive_limits": [
+      "R1/R4 jointly changes onset, position, context age and later reconsideration opportunities; no isolated memory/anchoring effect is identified.",
+      "Public house views are not observed portfolios, private preferences or mandates.",
+      "Conditional distances require valid raw allocations; missing pairs cannot become zero convergence.",
+      "The small case roster is descriptive and dependent sector/stage/repair units are not additional independent institutions.",
+      "Auxiliary C1/C2 recovery does not replace C0 or establish a causal repair benefit."
+    ],
+    "human_review": "Independent human source and semantic review remains pending; AI implementation reviews do not substitute for it."
+  },
+  "remaining_boundaries": [
+    "This is an offline implementation review, not evidence that the installed model will complete the four-stage pilot.",
+    "No claim of financial optimality, future performance, harmful market-wide convergence or successful strategic preservation is made.",
+    "Pilot observation and its own three-stage review remain necessary before the next phase; main experiment remains unrun and unfrozen."
+  ],
+  "main_model_calls_by_review": 0,
+  "unresolved_blocking_findings_in_reviewed_scope": []
+}

@@ -1,0 +1,113 @@
+{
+  "kind": "one_explicit_sleep_disrupted_pilot_repeat",
+  "registered_at_utc": "2026-10-18T22:18:17.199481+00:00",
+  "user_instruction_ko": "절전때문에 중단된거 다시 실행해봐",
+  "authorization_scope": "One fresh fixed four-case development bundle; no MAIN or automatic repeated bundles.",
+  "manifest": {
+    "path": "C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v48_pilot_r2_20261018\\manifest.json",
+    "sha256": "64da4953578301aa059f8befe7f223ae4d7f8ad60b94afa22c22c9e1fc9d4efb"
+  },
+  "prior_registration": {
+    "path": "C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v48_pilot_registration_20261018.json",
+    "sha256": "158a20a0b5cdb7610c250904debaf1276e5f0b237336189494b3b7e65af53188"
+  },
+  "prior_run_summary": {
+    "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\pilot_v48_20261018\\summary.json",
+    "sha256": "e2196cc979acea5adad97cfadbe68696e8ed761f2de588826f7d8b44d54a9437"
+  },
+  "prior_run_reviews": [
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v48_actual_pilot_20261018\\round1_with_environment.json",
+      "sha256": "9517cea7312f8cfd80bdca4387a7071e7912d8341efd2dcce7344cf15073b3e4"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v48_actual_pilot_20261018\\round2_actual.json",
+      "sha256": "72fab5302a84496032706682b51f99326f14b81a6cb1e26486f4a45570697321"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v48_actual_pilot_20261018\\round3.json",
+      "sha256": "6e71fec63406363477f6c4aaf4a87d8c52d3bd7913ce675db841a383a7da8c6e"
+    }
+  ],
+  "prior_review_statuses_retained": [
+    "FAIL",
+    "PASS",
+    "PASS"
+  ],
+  "new_run_root": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\pilot_v48_guarded_20261019",
+  "guard_record_root": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\pilot_v48_guarded_20261019_operating",
+  "roster": [
+    {
+      "case_id": "fidelity_q2_2026__R1",
+      "source_id": "fidelity_q2_2026",
+      "arm": "R1",
+      "split": "pilot"
+    },
+    {
+      "case_id": "fidelity_q2_2026__R4",
+      "source_id": "fidelity_q2_2026",
+      "arm": "R4",
+      "split": "pilot"
+    },
+    {
+      "case_id": "ubs_june_2026__R1",
+      "source_id": "ubs_june_2026",
+      "arm": "R1",
+      "split": "pilot"
+    },
+    {
+      "case_id": "ubs_june_2026__R4",
+      "source_id": "ubs_june_2026",
+      "arm": "R4",
+      "split": "pilot"
+    }
+  ],
+  "planned_core_calls": 16,
+  "maximum_auxiliary_calls": 8,
+  "repeat_bundle_limit": 1,
+  "automatic_retries": 0,
+  "main_authorized": false,
+  "main_model_calls": 0,
+  "operating_software_hashes": {
+    "run_sector_v48_guarded_pilot.py": "9b478a42ed904671928e25369deefe7a58762e3264f4517c0c710ba17c61038a",
+    "sector_v48_main_awake.py": "185a9f6be9471ff7808730153227682f0f0eae25f72ee1474602106a950fa98a"
+  },
+  "operating_reviews": [
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v48_guarded_repeat_20261019\\round1\\review.json",
+      "sha256": "578d585a36642af1eec9993cd24bde6ef350b51fb0200069f7bf52e4398e1f21"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v48_guarded_repeat_20261019\\round2\\review.json",
+      "sha256": "9e71ddb8a4bb542b57ece36ec7d93977d7f2295fd84de71047154a7e2e0a78a7"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v48_actual_pilot_20261018\\guarded_wrapper_round3.json",
+      "sha256": "a89f8c356512f541db504099bdb808568dd23fa94005b230d49d49a604fd5eb0"
+    }
+  ],
+  "environment_evidence": [
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\evidence\\v48_pilot_timing_investigation_20261018\\postpilot_environmental_deviation.json",
+      "sha256": "7eb80a8f0b589d6fe320db71b0a70bbbaf4ca69505f4c8155cb87e79ec86c414"
+    }
+  ],
+  "operating_change": "Acquire ES_CONTINUOUS | ES_SYSTEM_REQUIRED on the calling thread for the whole unchanged pilot.run; restore previous execution state in finally. No permanent power-plan change.",
+  "unchanged": [
+    "model and template hashes",
+    "generation options",
+    "public documents and market input",
+    "case order",
+    "prompt and full history",
+    "900-second configured supervisor rule",
+    "raw C0 primary endpoint",
+    "C1/C2 eligibility and cap",
+    "all-case and sector denominators",
+    "evaluation definitions"
+  ],
+  "interpretation": "Separate development repeat after environmental disruption. Preserve and report the first run; never pool as independent cases or select better responses across runs.",
+  "scientific_basis": "No scientific parameter changed. The power request is an operating measure grounded in Microsoft API documentation, not a paper-derived strategic threshold.",
+  "official_api_reference": "https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-setthreadexecutionstate",
+  "limits": "Manual sleep/lid/power actions remain possible; API acceptance does not prove uninterrupted operation. Capture actual timing and later OS events.",
+  "model_calls_by_registration": 0
+}

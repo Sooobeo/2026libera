@@ -23,6 +23,8 @@ Thumbs.db
 Desktop.ini
 *.swp
 *.swo
+# Disposable headless-browser profiles; screenshots and QA receipts stay tracked.
+/tmp/browser_profiles/
 
 # Downloaded installers and local model weights, not research evidence
 /tmp/**/OllamaSetup*.exe
@@ -30,7 +32,18 @@ Desktop.ini
 *.gguf
 *.safetensors
 
-# Intentionally keep data/, plan/, paper/, research/, and tmp/ otherwise.
-# Even tmp/ contains checksum-pinned PDFs, rendered evidence, and source bundles.
-# Do not broadly ignore *.log, *.bin, *.jsonl, *.zip, or *.tar.gz:
-# these include recorded requests/responses and the evidence used by audits.
+# Expanded runtime/evaluation evidence is archived losslessly in research/artifacts/.
+# Keep Python source in these directories individually tracked.
+# Already tracked historical evidence remains tracked (except mutable server logs).
+/data/local_sector_runtime/**
+!/data/local_sector_runtime/**/
+!/data/local_sector_runtime/**/*.py
+/research/evidence/**
+!/research/evidence/**/
+!/research/evidence/**/*.py
+/research/evaluator_only/**
+!/research/evaluator_only/**/
+!/research/evaluator_only/**/*.py
+
+# Keep source data, experiment inputs, papers, plans, and evidence ZIPs otherwise.
+# Do not broadly ignore *.log, *.bin, *.jsonl, *.zip, or *.tar.gz.

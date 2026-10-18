@@ -1,0 +1,84 @@
+{
+  "artifact_kind": "exact_future_paper_replacement_suggestions_not_applied",
+  "target_new_version": "4.8.1",
+  "source_paper": "paper/LIBERA_텀페이퍼_초안_v4.8_20261018.html",
+  "frozen_source_policy": "Do not edit v4.8 while the registered pilot is running. Apply verified observations only in a new version after the pilot and its review records are available.",
+  "status": "templates_await_actual_pilot_counts_and_review",
+  "numeric_placeholders": {
+    "workflow_attempted": "Cases with any preserved generation request, out of the full four-case roster.",
+    "core_calls": "Actual stage1-stage4 generation request count; not planned maximum 16.",
+    "auxiliary_calls": "Actual C1/C2 generation request count; not planned maximum 8.",
+    "completed_C0": "Captured stage4 response with a confirmed terminal completion, before any repair.",
+    "valid_C0": "Independently checked valid original allocation count, without substituting auxiliary candidates.",
+    "eligible_within_pairs": "Number of sources with both R1 and R4 valid original allocations, out of 2.",
+    "eligible_between_pairs": "Number of arms with both source allocations valid at C0, out of 2."
+  },
+  "replacements": [
+    {
+      "location": "header .status",
+      "old_exact": "v4.8 재설계·오프라인 준비본 · 실행기 통합·전체 예비실험·독립 사람 검토·동결 전 · 본실험 0건",
+      "new_template": "v4.8.1 · 실행기·평가기 구현 및 개발 예비실행 기록 반영 · 계획 4사례 중 {workflow_attempted}사례 시도, 완료 C0 {completed_C0}건 · 독립 사람 검토·본실험 동결 전 · 본실험 0건"
+    },
+    {
+      "location": "abstract paragraph; replace only the obsolete status sentence",
+      "old_exact": "현재는 재설계와 오프라인 자료 준비 단계이고 새 절차의 실험 결과는 없다.",
+      "new_template": "새 실행기와 평가기를 구현한 뒤 네 사례로 계획한 개발 예비실행에서 {workflow_attempted}사례를 시도했으며, 완료된 최초 최종안은 {completed_C0}건이었다. 이 기록은 절차의 관측 가능성과 실패 양상을 점검한 예비자료로, 독립 사람의 의미 검토와 본실험을 대신하지 않는다.",
+      "caution": "Fill only after verified actual counts; do not call all four completed if one or more cases stopped early."
+    },
+    {
+      "location": "#intro last two paragraphs; replace the two overlapping economics/management paragraphs with one",
+      "old_paragraph_starts": [
+        "경제학적으로는 서로 다른 정보와 판단에 따른 자원 배분의 문제이며, 경영학적으로는 AI를 사용하는 업무에서 근거 전달과 재검토를 조직하는 문제다.",
+        "경제학적으로는 정보와 판단에 따른 자본 배분의 문제이며, 경영학적으로는 AI 업무의 근거 전달과 재검토 책임의 문제다."
+      ],
+      "new_exact": "경제학적으로는 서로 다른 정보와 판단에 따른 자본 배분의 문제이며, 경영학적으로는 AI를 사용하는 업무에서 근거 전달과 재검토 책임을 조직하는 문제다. 본 연구는 공개 산업전망으로 관찰할 수 있는 범위에 질문을 맞추고, 같은 모델·시장자료 아래 두 문서의 R1/R4 사례에서 원문 판단·선택 이유·산업 비중의 관계를 검토한다. 공개 전망은 기관 전체의 운용목적이나 고객 위험선호를 측정한 자료가 아니므로, 이에 관한 주장은 제한한다. 이하에서는 선행연구와 반론, 조작적 정의, 비교 절차 및 관측의 한계를 연결한다.",
+      "reason": "Remove duplicate topic framing and keep runtime status in the abstract and section 6, rather than repeat a changing readiness list in the introduction."
+    },
+    {
+      "location": "#design section 4.1; add after the existing pilot/main document roster paragraph",
+      "new_exact": "예비자료의 시점도 구분한다. Fidelity Q2의 산업 판단 기준일은 2026년 3월 31일이고 공식 소개 페이지의 갱신일은 4월 17일이다. UBS June의 산업 판단 기준일은 5월 21일이고 발행일은 5월 22일이다. 이 문서들을 4월 21일부터 7월 16일까지의 공통 시장자료와 결합하므로, 예비실행은 서로 다른 시점의 공개 판단을 같은 자료 아래 해석하는 회고적 사례다. 양 기관의 동시점 최신 판단이나 당시 실제 거래 가능한 정보집합을 복원한 것으로 해석하지 않는다.",
+      "basis_paths": [
+        "data/sector_documents/packets/pilot/fidelity_q2_2026.json#/dates",
+        "data/sector_documents/packets/pilot/ubs_june_2026.json#/dates",
+        "data/sector_market/market_input.json"
+      ]
+    },
+    {
+      "location": "#readiness heading",
+      "old_exact": "6. 준비 상태와 다음 단계",
+      "new_exact": "6. 개발 예비실행과 본실험 준비 상태"
+    },
+    {
+      "location": "#readiness first paragraph; replace obsolete zero-call implementation status, preserve model limitations in a separate paragraph",
+      "old_start": "이 버전은 문헌 검토를 반영한 재설계와 오프라인 입력·검토 서식이다.",
+      "new_template": "v4.8 절차의 실행기·계산 지원·오프라인 평가기와 사람 검토 서식을 구현하고, 실행 전 세 차례 자체 검증 기록에 연결하였다. 네 사례로 계획한 개발 예비실행에서 {workflow_attempted}사례가 실제 모델 요청을 시작했고, 주과제 요청은 {core_calls}회, 별도 사후 수정 요청은 {auxiliary_calls}회였다. C0 완료 응답은 {completed_C0}건이며 유효한 원배분은 {valid_C0}건이다. 모델 실패와 실행 환경 사건은 구분하여 남기고, 본실험은 수행하지 않았다.",
+      "followup_exact": "이 예비자료에는 이미 개발 과정에서 반복 확인한 Fidelity Q2/R1이 포함되어 있어 독립 확인 표본으로 볼 수 없다. 실행기·평가기 검증, 모델 결과의 의미 검토, 독립 사람의 출처·판정 검토는 서로 다른 단계다. 자체 검증을 통과했거나 산술적으로 유효한 응답이 나왔다는 이유만으로 기관 판단이 보존되었다고 결론 내리지 않는다.",
+      "model_limit_to_preserve": "설치된 모델은 Qwen3.5-4B의 Q4_K_M 실행본이고, 금융 논문의 기본 모델이나 다른 양자화·하드웨어에서 보고된 성능과 동등하다고 주장하지 않는다."
+    },
+    {
+      "location": "#evaluation after denominator and missing-value policy",
+      "new_exact": "workflow 시도와 C0 시도는 별도로 집계한다. 앞 단계에서 중단된 사례도 전체 계획 사례에 남지만 C0를 시도했다고 세지 않는다. 전송이 끝나지 않은 읽을 수 있는 일부 내용은 별도 검토 자료로 보존하되, 완료된 C0의 등급 일치나 유효 배분 결과로 인정하지 않는다. 형식 준수와 배분 유효성도 분리한다. 예를 들어 설명 필드가 누락되어 전체 응답 형식은 실패하더라도, 완료 응답에서 해석이 모호하지 않은 11개 원비중 벡터가 확인되면 산술·범위 조건에 따른 배분 유효성은 별도로 계산한다.",
+      "basis": "Clarifies rules implemented and tested before the live pilot; not a new result-dependent exclusion or scoring threshold."
+    },
+    {
+      "location": "#conclusion last sentence",
+      "old_exact": "현재는 재설계 단계이며 문헌이 제안하는 방법의 타당성과 실제 모델이 수행한 결과를 구별한다.",
+      "new_template": "이번 버전에 제시한 실행 관측은 두 공개 전망과 한 공통 시장자료를 사용하는 개발 예비실행에 한정된다. 이 기록은 본실험의 관측 가능성과 오류 처리 절차를 점검하는 자료이며, 공통 AI 도입의 인과효과나 기관 전체의 전략 획일화를 입증하지 않는다. 기관 판단과 실제 선택의 연결에 대한 결론은 확인 가능한 원문과 배분의 범위 안에서 제시하고, 독립 사람 검토 및 미관측 비교는 남은 과제로 명시한다."
+    }
+  ],
+  "conditional_result_wording": {
+    "no_completed_C0": "완료된 C0가 없어 공개 문서의 판단이 최종 산업 배분에 어떻게 남는지는 이번 예비실행에서 관측하지 못했다. 앞 단계의 설명과 실행 실패는 개발 과정의 관측으로만 보고한다.",
+    "completed_C0_but_no_valid_allocation_pairs": "읽을 수 있는 C0의 출처 해석과 선택 이유는 검토할 수 있지만, 유효한 원배분 쌍이 없어 배분 거리로 R1/R4 또는 출처 간 차이를 비교하지 못했다. 이를 차이가 없다는 결과로 해석하지 않는다.",
+    "some_valid_pairs": "유효한 원배분을 가진 제한된 쌍에서만 기술적 거리를 계산하였다. 각 쌍의 누락 사유·출처 차이·근거와 선택의 연결을 함께 제시하며, 이 조건부 부분집합을 전체 사례의 효과로 일반화하지 않는다.",
+    "all_four_valid": "네 C0 배분이 모두 유효하여 설계된 거리 비교를 계산할 수 있었다. 그러나 배분 유효성과 거리만으로 기관 판단 보존이나 유해한 수렴을 판정할 수 없으므로, 문서 간 실제 차이와 원문–이유–선택 연결의 검토를 함께 제시한다."
+  },
+  "forbidden_shortcuts": [
+    "Do not insert the planned 16 or 24 calls as observed call counts.",
+    "Do not describe pilot sources as Fidelity Q3 and UBS July; those are still the planned main sources.",
+    "Do not combine C0 and repaired allocations into the same primary comparison.",
+    "Do not relabel assistant semantic observations as independent human review.",
+    "Do not claim the arithmetic failure was solved merely because the instrument or reporting check passed."
+  ],
+  "applied_to_paper": false,
+  "model_calls_by_preparing_suggestions": 0
+}

@@ -1,0 +1,266 @@
+{
+  "model": "qwen3.5:4b-q4_K_M",
+  "think": false,
+  "truncate": false,
+  "shift": false,
+  "stream": true,
+  "keep_alive": 0,
+  "options": {
+    "temperature": 0,
+    "num_ctx": 65536,
+    "num_predict": 8192,
+    "num_thread": 2,
+    "num_batch": 512,
+    "repeat_penalty": 1.0,
+    "presence_penalty": 0.0,
+    "frequency_penalty": 0.0,
+    "seed": 3407,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0
+  },
+  "format": {
+    "type": "object",
+    "properties": {
+      "source_id": {
+        "type": [
+          "string",
+          "null"
+        ]
+      },
+      "interpretations": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "sector_code": {
+              "type": "string",
+              "enum": [
+                "10",
+                "15",
+                "20",
+                "25",
+                "30",
+                "35",
+                "40",
+                "45",
+                "50",
+                "55",
+                "60"
+              ]
+            },
+            "rating": {
+              "type": "string",
+              "minLength": 1
+            },
+            "evidence_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "required": [
+            "sector_code",
+            "rating",
+            "evidence_ids",
+            "reason"
+          ],
+          "additionalProperties": false
+        },
+        "minItems": 11,
+        "maxItems": 11
+      },
+      "weights": {
+        "anyOf": [
+          {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "sector_code": {
+                  "type": "string",
+                  "enum": [
+                    "10",
+                    "15",
+                    "20",
+                    "25",
+                    "30",
+                    "35",
+                    "40",
+                    "45",
+                    "50",
+                    "55",
+                    "60"
+                  ]
+                },
+                "weight": {
+                  "type": "number"
+                },
+                "rationale": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "evidence_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "required": [
+                "sector_code",
+                "weight",
+                "rationale",
+                "evidence_ids"
+              ],
+              "additionalProperties": false
+            },
+            "maxItems": 0
+          },
+          {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "sector_code": {
+                  "type": "string",
+                  "enum": [
+                    "10",
+                    "15",
+                    "20",
+                    "25",
+                    "30",
+                    "35",
+                    "40",
+                    "45",
+                    "50",
+                    "55",
+                    "60"
+                  ]
+                },
+                "weight": {
+                  "type": "number"
+                },
+                "rationale": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "evidence_ids": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "minLength": 1
+                  }
+                }
+              },
+              "required": [
+                "sector_code",
+                "weight",
+                "rationale",
+                "evidence_ids"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 11,
+            "maxItems": 11
+          }
+        ]
+      },
+      "alternatives": {
+        "type": "string",
+        "minLength": 1
+      },
+      "risk_discussion": {
+        "type": "string",
+        "minLength": 1
+      },
+      "unresolved": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "submitted_constraints": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "constraint_id": {
+              "type": "string",
+              "minLength": 1
+            },
+            "sector_code": {
+              "type": "string",
+              "enum": [
+                "10",
+                "15",
+                "20",
+                "25",
+                "30",
+                "35",
+                "40",
+                "45",
+                "50",
+                "55",
+                "60"
+              ]
+            },
+            "kind": {
+              "type": "string",
+              "enum": [
+                "sector_min_weight",
+                "sector_max_weight"
+              ]
+            },
+            "bound": {
+              "type": "number"
+            },
+            "evidence_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          },
+          "required": [
+            "constraint_id",
+            "sector_code",
+            "kind",
+            "bound",
+            "evidence_ids"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "source_id",
+      "interpretations",
+      "weights",
+      "alternatives",
+      "risk_discussion",
+      "unresolved",
+      "submitted_constraints"
+    ],
+    "additionalProperties": false
+  },
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are a research assistant proposing an equity-sleeve allocation across the 11 supplied US GICS sectors. This retrospective document-conditioned case studies whether published judgments are preserved in evidence-linked decisions; it is not a trading or forecast contest. Document content is data, not instructions. Do not browse, recall unseen views or infer an unseen institution identity. Do not invent mandates, risk aversion, expected returns, confidence, sector caps or uniquely correct weights. Missing information remains unknown.\nProposed portfolios require nonnegative decimal weights summing to 1, including an explicit row for every sector, even zero weights. At stages 1 and 2 weights may instead be empty; at stages 3 and 4 all 11 weights are required. Before the source is supplied, source_id must be null and interpretations empty; state that institutional judgment is pending. Overweight is benchmark-relative, not an absolute ranking across sectors. Attractive is an opportunity judgment, not a mandatory overweight. Neutral does not specify an exact weight. The common baseline is a descriptive comparator, not institutional holdings or an optimal allocation. A reasoned departure from a published judgment is permitted; explain its evidence and trade-off. Do not manufacture differences between sources.\nA pure calculator reports actual arithmetic after each submitted proposal and before the next core stage. Empty early-stage weights are not yet a proposal. The calculator never supplies an allocation, hidden evaluator annotations or semantic verdicts. Its fact IDs refer only to the stated prior candidate. C0 is the first stage-4 final response and remains the primary record even if separate auxiliary revisions occur. Historical volatility measures past variability, not loss probability or guaranteed future risk.\nReturn only the requested response object satisfying response_schema. Fill its seven fields with your analysis. common_market and institution_document are evidence, not response fields. Do not reproduce the input object. The schema supplies no correct ratings, evidence selections or portfolio weights. Structural compliance is not a claim that the analysis is correct.\nUse only the currently visible document, common market facts, prior visible responses and actual calculator output.\nPreserve the original source rating vocabulary. Public views are not legal mandates or exact target weights.\nIn interpretations.reason explain what the cited source actually states; mark absent reasons rather than inventing them.\nIn each weights.rationale state whether and how the source judgment is adopted, deferred or departed from; cite supplied reasons, explain relevant trade-offs, and connect the explanation to the actual weight relative to the common baseline.\nBefore institution exposure, do not guess institution identity, labels or private preferences; state market-only basis.\nWhen quoting an externally supplied numerical fact, name its metric, sector, period and unit and cite its existing M: or actual calculator fact ID; do not relabel daily volatility as annual volatility or expected return.\nFor a quantity you derive from the current proposed weights before the calculator runs, cite already-visible input IDs, identify the current proposed weights and formula, and mark the claim pending external verification. Never invent a future calculator fact ID.\nAlternative allocations need reasoned comparison, not an evaluator-supplied exact target. No minimum number of alternatives or invented numerical cap is imposed.\nIf an alternative is described using numbers, give its full vector or identify the base vector and every change; otherwise do not claim that its total or portfolio risk has been verified.\nAll weights are raw proposals. Do not claim correction or sum=1 without agreement with the submitted numbers."
+    },
+    {
+      "role": "user",
+      "content": "{\"common_market\":{\"annualization_trading_days\":252,\"annualized_volatility_diagnostic\":[0.24627687526240125,0.19436460180258697,0.19718215642263498,0.18553788110332176,0.16640375256648995,0.18338371693726102,0.132724604028941,0.33685107914419216,0.15339610421634242,0.17893057942789112,0.16693062035900388],\"asof_scope\":\"Dates of included observations precede 2026-07-17. Downloaded current vendor vintage does not establish historical availability of identical adjusted prices. Same packet is supplied to both institutions and all compared workflows.\",\"baseline_annualized_volatility_diagnostic\":0.13902338650295984,\"baseline_derivation\":\"Each reported percentage divided by the reported 99.9 total, solely to obtain an exact full-investment starting vector. These derived values are not additional source precision or institutional target weights.\",\"baseline_id\":\"sp500_sector_reference_20260630\",\"baseline_weights\":{\"10\":0.03003003003003003,\"15\":0.018018018018018018,\"20\":0.08808808808808809,\"25\":0.09309309309309309,\"30\":0.04604604604604604,\"35\":0.0890890890890891,\"40\":0.11811811811811812,\"45\":0.38038038038038036,\"50\":0.09709709709709709,\"55\":0.022022022022022022,\"60\":0.018018018018018018},\"benchmark_label\":\"S&P 500 sector reference, 2026-06-30\",\"benchmark_reported_sum_percent\":99.9,\"benchmark_reported_weights_percent\":[3.0,1.8,8.8,9.3,4.6,8.9,11.8,38.0,9.7,2.2,1.8],\"classification_scope\":\"11 GICS sectors represented by US Select Sector SPDR ETFs; not the FF12 industry portfolios or stock-picking universe.\",\"correlation\":[[1.0,-0.32379903338191096,-0.39051391603974206,-0.5624594575349527,0.21353174382647352,0.08928004258085857,-0.14430365343536009,-0.29647100079739025,-0.27762495441075924,0.06359101121759164,0.007530800586237627],[-0.323799033381911,1.0,0.7412218161587915,0.48757050553898046,0.06470831420643097,0.22164476929945534,0.4048706217707579,0.3289270569021747,0.21785010565211488,0.34291891655129736,0.38739685185710676],[-0.390513916039742,0.7412218161587913,1.0,0.48506563181732876,-0.13958525948329376,0.1258804175952232,0.2729857393100799,0.453516012705863,0.16203461248637901,0.3137968608782013,0.19886763964125642],[-0.5624594575349527,0.48757050553898046,0.4850656318173288,1.0,0.004154101189466491,0.13886992430975126,0.2657465514021927,0.4436211124510747,0.620280820950556,0.07496065164095642,0.19096539012053843],[0.21353174382647352,0.06470831420643097,-0.13958525948329376,0.004154101189466491,0.9999999999999999,0.5787066037988189,0.12575193737202026,-0.6118248607527289,0.22730573072718424,0.4909317346035245,0.6412771945585662],[0.08928004258085857,0.22164476929945537,0.1258804175952232,0.13886992430975129,0.5787066037988188,0.9999999999999999,0.3630797189724782,-0.453574673402942,0.28681486920853627,0.46455394690186813,0.6670528880380335],[-0.14430365343536009,0.4048706217707579,0.27298573931007986,0.26574655140219267,0.12575193737202026,0.3630797189724782,0.9999999999999998,-0.21601463703870655,0.47263345760489994,0.2266918633577015,0.4686684052929235],[-0.29647100079739025,0.32892705690217466,0.45351601270586306,0.4436211124510747,-0.6118248607527289,-0.45357467340294194,-0.21601463703870652,1.0,0.021719290003936645,-0.2953000428845471,-0.4232948404803988],[-0.2776249544107593,0.21785010565211488,0.162034612486379,0.620280820950556,0.2273057307271842,0.28681486920853627,0.47263345760489994,0.021719290003936645,1.0,-0.03866413150893694,0.29209123176777835],[0.06359101121759164,0.34291891655129736,0.3137968608782013,0.0749606516409564,0.49093173460352457,0.46455394690186813,0.2266918633577015,-0.29530004288454703,-0.03866413150893694,1.0,0.6807173707327729],[0.007530800586237628,0.38739685185710676,0.19886763964125642,0.19096539012053843,0.6412771945585662,0.6670528880380335,0.4686684052929235,-0.42329484048039884,0.29209123176777835,0.680717370732773,1.0]],\"covariance\":[[0.00024068372733735056,-6.150576361173584e-05,-7.525358955639695e-05,-0.00010198749153060033,3.472551189691199e-05,1.600067314238951e-05,-1.8717673127652807e-05,-9.759852546334934e-05,-4.16194104622954e-05,1.1119964309256391e-05,1.2285709695492435e-06],[-6.150576361173584e-05,0.00014991110489634204,0.00011272816492261877,6.977288018140325e-05,8.305003764016206e-06,3.134980832147569e-05,4.1446163424709464e-05,8.545828525544038e-05,2.577441026093484e-05,4.732522019817808e-05,4.987796505689818e-05],[-7.525358955639695e-05,0.00011272816492261877,0.0001542889000455575,7.042067253516372e-05,-1.817480437921235e-05,1.8062839254763047e-05,2.8350352921898904e-05,0.000119535702930326,1.9448638138186e-05,4.393394824503138e-05,2.5975696270879265e-05],[-0.00010198749153060033,6.977288018140325e-05,7.042067253516372e-05,0.00013660438620758078,5.089466251054099e-07,1.8749989185308998e-05,2.5968754903117616e-05,0.00011002267537565705,7.005428982531532e-05,9.875292620189182e-06,2.347052063738069e-05],[3.472551189691199e-05,8.305003764016206e-06,-1.817480437921235e-05,5.089466251054099e-07,0.00010988178122305403,7.007801381410824e-05,1.1021195292526496e-05,-0.00013609044622621384,2.302434531788103e-05,5.8005376472225726e-05,7.068778576476422e-05],[1.600067314238951e-05,3.134980832147569e-05,1.8062839254763047e-05,1.8749989185308998e-05,7.007801381410824e-05,0.0001334507445941487,3.506821489592819e-05,-0.00011118519697286735,3.2016674651225944e-05,6.048963344830776e-05,8.103199034972248e-05],[-1.8717673127652807e-05,4.1446163424709464e-05,2.8350352921898904e-05,2.5968754903117616e-05,1.1021195292526496e-05,3.506821489592819e-05,6.990404966126661e-05,-3.832410490368374e-05,3.818472696349674e-05,2.1363450471320777e-05,4.1205252708108606e-05],[-9.759852546334934e-05,8.545828525544038e-05,0.000119535702930326,0.00011002267537565705,-0.00013609044622621384,-0.00011118519697286735,-3.832410490368374e-05,0.0004502724187325668,4.453457954557096e-06,-7.062939408810914e-05,-9.445313658438821e-05],[-4.16194104622954e-05,2.577441026093484e-05,1.9448638138186e-05,7.005428982531532e-05,2.302434531788103e-05,3.2016674651225944e-05,3.818472696349674e-05,4.453457954557096e-06,9.337446344742454e-05,-4.211207265262895e-06,2.9680302077111267e-05],[1.1119964309256391e-05,4.732522019817808e-05,4.393394824503138e-05,9.875292620189182e-06,5.8005376472225726e-05,6.048963344830776e-05,2.1363450471320777e-05,-7.062939408810914e-05,-4.211207265262895e-06,0.00012704822323174943,8.068389732615275e-05],[1.2285709695492435e-06,4.987796505689818e-05,2.5975696270879265e-05,2.347052063738069e-05,7.068778576476422e-05,8.103199034972248e-05,4.1205252708108606e-05,-9.445313658438821e-05,2.9680302077111267e-05,8.068389732615275e-05,0.00011057869846603921]],\"covariance_unit\":\"daily_decimal_return_squared\",\"cutoff_exclusive\":\"2026-07-17\",\"daily_mean_return\":[0.000818731323068254,-0.0002971167790446594,0.000705407660168093,-0.0002551436565336444,0.0008473073009094685,0.0016911255792328938,0.00134955413291194,0.002553795883943505,-0.0007892623852291706,6.628032293669965e-05,0.0005032809748320636],\"daily_volatility\":[0.015513984895485446,0.012243819048660513,0.012421308306517373,0.01168778790907761,0.010482451107591871,0.011552088321777527,0.008360864169526175,0.021219623435220682,0.009663046281966393,0.011271567026449757,0.010515640658849046],\"interpretation\":\"Observed historical ETF return and covariance diagnostics, not true expected future returns, an optimal answer, or realized post-decision performance.\",\"last_observation_date\":\"2026-07-16\",\"lookback_compound_return\":[0.04287667814038709,-0.022012639294049507,0.03848895413108133,-0.019155630332708284,0.04873642549989987,0.10238502092729651,0.08205961595157252,0.14992022077727252,-0.04890051427558073,0.0002261198808994891,0.02729295962855538],\"lookback_return_dates\":[\"2026-04-21\",\"2026-07-16\"],\"return_observations\":60,\"role\":\"common_market_input_for_documentary_retrospective_case\",\"schema_version\":\"1.0\",\"sector_codes\":[\"10\",\"15\",\"20\",\"25\",\"30\",\"35\",\"40\",\"45\",\"50\",\"55\",\"60\"],\"sector_names\":[\"Energy\",\"Materials\",\"Industrials\",\"Consumer Discretionary\",\"Consumer Staples\",\"Health Care\",\"Financials\",\"Information Technology\",\"Communication Services\",\"Utilities\",\"Real Estate\"],\"tickers\":[\"XLE\",\"XLB\",\"XLI\",\"XLY\",\"XLP\",\"XLV\",\"XLF\",\"XLK\",\"XLC\",\"XLU\",\"XLRE\"],\"units\":\"Daily decimal vendor-adjusted-close returns and daily decimal-squared sample covariance; no RF subtraction.\",\"covariance_ddof\":1},\"institution_document\":{\"common_market_snapshot_cutoff\":\"2026-07-17\",\"dates\":{\"cutoff_interpretation\":\"retrospective document-snapshot availability cutoff; not contemporaneous information or historical replay\",\"market_statistics_as_of\":null,\"publisher_date_kind\":\"PDF p2 publication statement\",\"publisher_document_date\":\"2026-05-22\",\"publisher_html_datePublished\":null,\"sector_view_as_of_normalized\":\"2026-05-21\",\"sector_view_as_of_raw\":\"21 May 2026\",\"sector_view_date_status\":\"valid_reported_date\",\"snapshot_cutoff\":\"2026-07-17\"},\"evidence_passages\":[{\"evidence_id\":\"ubs_june_2026:p21:scope\",\"representation\":\"researcher paraphrase; original rating labels preserved\",\"source_id\":\"ubs_june_2026\",\"source_page\":21,\"text\":\"This section presents UBS CIO's S&P 500 sector preferences. It combines cyclical and longer-term growth opportunities. Sector ratings here are distinct from the report's regional and asset-class views.\"},{\"evidence_id\":\"ubs_june_2026:p27:scale\",\"representation\":\"researcher paraphrase; original rating labels preserved\",\"source_id\":\"ubs_june_2026\",\"source_page\":27,\"text\":\"Preferences express opportunity judgments over twelve months. Actual tactical allocations may differ because of portfolio construction, concentration, or borrowing constraints. Attractive is not an automatic overweight instruction. Neutral does not prescribe an exact benchmark weight.\"},{\"evidence_id\":\"ubs_june_2026:p21:sector:10\",\"representation\":\"researcher paraphrase; original rating labels preserved\",\"source_id\":\"ubs_june_2026\",\"source_page\":21,\"text\":\"Energy receives Neutral.\"},{\"evidence_id\":\"ubs_june_2026:p21:sector:15\",\"representation\":\"researcher paraphrase; original rating labels preserved\",\"source_id\":\"ubs_june_2026\",\"source_page\":21,\"text\":\"Materials receives Neutral.\"},{\"evidence_id\":\"ubs_june_2026:p21:sector:20\",\"representation\":\"researcher paraphrase; original rating labels preserved\",\"source_id\":\"ubs_june_2026\",\"source_page\":21,\"text\":\"Industrials receives Attractive. Aerospace growth and transportation's cyclical potential.\"},{\"evidence_id\":\"ubs_june_2026:p21:sector:25\",\"representation\":\"researcher paraphrase; original rating labels preserved\",\"source_id\":\"ubs_june_2026\",\"source_page\":21,\"text\":\"Consumer Discretionary receives Attractive. AI adoption and fiscal support for consumer spending.\"},{\"evidence_id\":\"ubs_june_2026:p21:sector:30\",\"representation\":\"researcher paraphrase; original rating labels preserved\",\"source_id\":\"ubs_june_2026\",\"source_page\":21,\"text\":\"Consumer Staples receives Neutral.\"},{\"evidence_id\":\"ubs_june_2026:p21:sector:35\",\"representation\":\"researcher paraphrase; original rating labels preserved\",\"source_id\":\"ubs_june_2026\",\"source_page\":21,\"text\":\"Health Care receives Attractive. Resilience if economic growth disappoints.\"},{\"evidence_id\":\"ubs_june_2026:p21:sector:40\",\"representation\":\"researcher paraphrase; original rating labels preserved\",\"source_id\":\"ubs_june_2026\",\"source_page\":21,\"text\":\"Financials receives Attractive. Regulatory easing and capital-markets activity.\"},{\"evidence_id\":\"ubs_june_2026:p21:sector:45\",\"representation\":\"researcher paraphrase; original rating labels preserved\",\"source_id\":\"ubs_june_2026\",\"source_page\":21,\"text\":\"Information Technology receives Neutral.\"},{\"evidence_id\":\"ubs_june_2026:p21:sector:50\",\"representation\":\"researcher paraphrase; original rating labels preserved\",\"source_id\":\"ubs_june_2026\",\"source_page\":21,\"text\":\"Communication Services receives Neutral.\"},{\"evidence_id\":\"ubs_june_2026:p21:sector:55\",\"representation\":\"researcher paraphrase; original rating labels preserved\",\"source_id\":\"ubs_june_2026\",\"source_page\":21,\"text\":\"Utilities receives Attractive. Defensive resilience and AI-related exposure.\"},{\"evidence_id\":\"ubs_june_2026:p21:sector:60\",\"representation\":\"researcher paraphrase; original rating labels preserved\",\"source_id\":\"ubs_june_2026\",\"source_page\":21,\"text\":\"Real Estate receives Neutral.\"}],\"interpretation_notes\":[\"Keep the source's rating vocabulary; do not translate Attractive to Overweight.\",\"Some sectors have a displayed rating without a separately stated sector reason; do not invent one.\",\"Portfolio weights are your proposed decision, not hidden published institutional targets.\"],\"issuer\":\"UBS Chief Investment Office Global Wealth Management\",\"numeric_target_weights_published_in_selected_section\":false,\"packet_id\":\"ubs_june_2026\",\"rating_vocabulary\":[\"Unattractive\",\"Neutral\",\"Attractive\"],\"schema_version\":\"sector_documents_v4.2.1\",\"sectors\":[{\"sector_code\":\"10\",\"sector_name\":\"Energy\"},{\"sector_code\":\"15\",\"sector_name\":\"Materials\"},{\"sector_code\":\"20\",\"sector_name\":\"Industrials\"},{\"sector_code\":\"25\",\"sector_name\":\"Consumer Discretionary\"},{\"sector_code\":\"30\",\"sector_name\":\"Consumer Staples\"},{\"sector_code\":\"35\",\"sector_name\":\"Health Care\"},{\"sector_code\":\"40\",\"sector_name\":\"Financials\"},{\"sector_code\":\"45\",\"sector_name\":\"Information Technology\"},{\"sector_code\":\"50\",\"sector_name\":\"Communication Services\"},{\"sector_code\":\"55\",\"sector_name\":\"Utilities\"},{\"sector_code\":\"60\",\"sector_name\":\"Real Estate\"}],\"shared_benchmark_id\":\"sp500_sector_reference_20260630\",\"source_id\":\"ubs_june_2026\",\"source_url\":\"https://advisors.ubs.com/mediahandler/media/808505/UBS%20House%20View%20for%20June%202026.pdf\",\"split\":\"pilot\",\"task_scope\":\"Interpret this published sector judgment and propose a justified allocation under the separate common market packet and execution rules.\",\"title\":\"UBS House View Investment Strategy Guide June 2026\"},\"public_numeric_fact_index\":{\"columns\":[\"fact_id\",\"sector_code\",\"metric\",\"unit\",\"period\",\"common_market_json_pointer\"],\"matrix_references\":[{\"fact_id\":\"M:covariance\",\"period\":[\"2026-04-21\",\"2026-07-16\"],\"sector_order\":[\"10\",\"15\",\"20\",\"25\",\"30\",\"35\",\"40\",\"45\",\"50\",\"55\",\"60\"],\"source_json_pointer\":\"/covariance\",\"unit\":\"daily_decimal_return_squared\"},{\"fact_id\":\"M:correlation\",\"period\":[\"2026-04-21\",\"2026-07-16\"],\"sector_order\":[\"10\",\"15\",\"20\",\"25\",\"30\",\"35\",\"40\",\"45\",\"50\",\"55\",\"60\"],\"source_json_pointer\":\"/correlation\",\"unit\":\"unitless\"}],\"meaning\":\"Each ID denotes the value at its common_market JSON pointer, with the stated metric, sector, period and unit. Values are not targets or forecasts.\",\"rows\":[[\"M:baseline_weights:10\",\"10\",\"normalized_baseline_weight\",\"decimal_weight\",[\"2026-06-30\"],\"/baseline_weights/10\"],[\"M:baseline_weights:15\",\"15\",\"normalized_baseline_weight\",\"decimal_weight\",[\"2026-06-30\"],\"/baseline_weights/15\"],[\"M:baseline_weights:20\",\"20\",\"normalized_baseline_weight\",\"decimal_weight\",[\"2026-06-30\"],\"/baseline_weights/20\"],[\"M:baseline_weights:25\",\"25\",\"normalized_baseline_weight\",\"decimal_weight\",[\"2026-06-30\"],\"/baseline_weights/25\"],[\"M:baseline_weights:30\",\"30\",\"normalized_baseline_weight\",\"decimal_weight\",[\"2026-06-30\"],\"/baseline_weights/30\"],[\"M:baseline_weights:35\",\"35\",\"normalized_baseline_weight\",\"decimal_weight\",[\"2026-06-30\"],\"/baseline_weights/35\"],[\"M:baseline_weights:40\",\"40\",\"normalized_baseline_weight\",\"decimal_weight\",[\"2026-06-30\"],\"/baseline_weights/40\"],[\"M:baseline_weights:45\",\"45\",\"normalized_baseline_weight\",\"decimal_weight\",[\"2026-06-30\"],\"/baseline_weights/45\"],[\"M:baseline_weights:50\",\"50\",\"normalized_baseline_weight\",\"decimal_weight\",[\"2026-06-30\"],\"/baseline_weights/50\"],[\"M:baseline_weights:55\",\"55\",\"normalized_baseline_weight\",\"decimal_weight\",[\"2026-06-30\"],\"/baseline_weights/55\"],[\"M:baseline_weights:60\",\"60\",\"normalized_baseline_weight\",\"decimal_weight\",[\"2026-06-30\"],\"/baseline_weights/60\"],[\"M:daily_volatility:10\",\"10\",\"daily_return_standard_deviation\",\"daily_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/daily_volatility/0\"],[\"M:daily_volatility:15\",\"15\",\"daily_return_standard_deviation\",\"daily_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/daily_volatility/1\"],[\"M:daily_volatility:20\",\"20\",\"daily_return_standard_deviation\",\"daily_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/daily_volatility/2\"],[\"M:daily_volatility:25\",\"25\",\"daily_return_standard_deviation\",\"daily_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/daily_volatility/3\"],[\"M:daily_volatility:30\",\"30\",\"daily_return_standard_deviation\",\"daily_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/daily_volatility/4\"],[\"M:daily_volatility:35\",\"35\",\"daily_return_standard_deviation\",\"daily_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/daily_volatility/5\"],[\"M:daily_volatility:40\",\"40\",\"daily_return_standard_deviation\",\"daily_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/daily_volatility/6\"],[\"M:daily_volatility:45\",\"45\",\"daily_return_standard_deviation\",\"daily_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/daily_volatility/7\"],[\"M:daily_volatility:50\",\"50\",\"daily_return_standard_deviation\",\"daily_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/daily_volatility/8\"],[\"M:daily_volatility:55\",\"55\",\"daily_return_standard_deviation\",\"daily_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/daily_volatility/9\"],[\"M:daily_volatility:60\",\"60\",\"daily_return_standard_deviation\",\"daily_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/daily_volatility/10\"],[\"M:annualized_volatility_diagnostic:10\",\"10\",\"annualized_return_standard_deviation\",\"annual_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/annualized_volatility_diagnostic/0\"],[\"M:annualized_volatility_diagnostic:15\",\"15\",\"annualized_return_standard_deviation\",\"annual_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/annualized_volatility_diagnostic/1\"],[\"M:annualized_volatility_diagnostic:20\",\"20\",\"annualized_return_standard_deviation\",\"annual_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/annualized_volatility_diagnostic/2\"],[\"M:annualized_volatility_diagnostic:25\",\"25\",\"annualized_return_standard_deviation\",\"annual_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/annualized_volatility_diagnostic/3\"],[\"M:annualized_volatility_diagnostic:30\",\"30\",\"annualized_return_standard_deviation\",\"annual_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/annualized_volatility_diagnostic/4\"],[\"M:annualized_volatility_diagnostic:35\",\"35\",\"annualized_return_standard_deviation\",\"annual_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/annualized_volatility_diagnostic/5\"],[\"M:annualized_volatility_diagnostic:40\",\"40\",\"annualized_return_standard_deviation\",\"annual_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/annualized_volatility_diagnostic/6\"],[\"M:annualized_volatility_diagnostic:45\",\"45\",\"annualized_return_standard_deviation\",\"annual_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/annualized_volatility_diagnostic/7\"],[\"M:annualized_volatility_diagnostic:50\",\"50\",\"annualized_return_standard_deviation\",\"annual_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/annualized_volatility_diagnostic/8\"],[\"M:annualized_volatility_diagnostic:55\",\"55\",\"annualized_return_standard_deviation\",\"annual_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/annualized_volatility_diagnostic/9\"],[\"M:annualized_volatility_diagnostic:60\",\"60\",\"annualized_return_standard_deviation\",\"annual_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/annualized_volatility_diagnostic/10\"],[\"M:lookback_compound_return:10\",\"10\",\"historical_compound_return\",\"decimal_return_over_window\",[\"2026-04-21\",\"2026-07-16\"],\"/lookback_compound_return/0\"],[\"M:lookback_compound_return:15\",\"15\",\"historical_compound_return\",\"decimal_return_over_window\",[\"2026-04-21\",\"2026-07-16\"],\"/lookback_compound_return/1\"],[\"M:lookback_compound_return:20\",\"20\",\"historical_compound_return\",\"decimal_return_over_window\",[\"2026-04-21\",\"2026-07-16\"],\"/lookback_compound_return/2\"],[\"M:lookback_compound_return:25\",\"25\",\"historical_compound_return\",\"decimal_return_over_window\",[\"2026-04-21\",\"2026-07-16\"],\"/lookback_compound_return/3\"],[\"M:lookback_compound_return:30\",\"30\",\"historical_compound_return\",\"decimal_return_over_window\",[\"2026-04-21\",\"2026-07-16\"],\"/lookback_compound_return/4\"],[\"M:lookback_compound_return:35\",\"35\",\"historical_compound_return\",\"decimal_return_over_window\",[\"2026-04-21\",\"2026-07-16\"],\"/lookback_compound_return/5\"],[\"M:lookback_compound_return:40\",\"40\",\"historical_compound_return\",\"decimal_return_over_window\",[\"2026-04-21\",\"2026-07-16\"],\"/lookback_compound_return/6\"],[\"M:lookback_compound_return:45\",\"45\",\"historical_compound_return\",\"decimal_return_over_window\",[\"2026-04-21\",\"2026-07-16\"],\"/lookback_compound_return/7\"],[\"M:lookback_compound_return:50\",\"50\",\"historical_compound_return\",\"decimal_return_over_window\",[\"2026-04-21\",\"2026-07-16\"],\"/lookback_compound_return/8\"],[\"M:lookback_compound_return:55\",\"55\",\"historical_compound_return\",\"decimal_return_over_window\",[\"2026-04-21\",\"2026-07-16\"],\"/lookback_compound_return/9\"],[\"M:lookback_compound_return:60\",\"60\",\"historical_compound_return\",\"decimal_return_over_window\",[\"2026-04-21\",\"2026-07-16\"],\"/lookback_compound_return/10\"],[\"M:daily_mean_return:10\",\"10\",\"historical_mean_daily_return\",\"daily_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/daily_mean_return/0\"],[\"M:daily_mean_return:15\",\"15\",\"historical_mean_daily_return\",\"daily_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/daily_mean_return/1\"],[\"M:daily_mean_return:20\",\"20\",\"historical_mean_daily_return\",\"daily_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/daily_mean_return/2\"],[\"M:daily_mean_return:25\",\"25\",\"historical_mean_daily_return\",\"daily_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/daily_mean_return/3\"],[\"M:daily_mean_return:30\",\"30\",\"historical_mean_daily_return\",\"daily_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/daily_mean_return/4\"],[\"M:daily_mean_return:35\",\"35\",\"historical_mean_daily_return\",\"daily_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/daily_mean_return/5\"],[\"M:daily_mean_return:40\",\"40\",\"historical_mean_daily_return\",\"daily_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/daily_mean_return/6\"],[\"M:daily_mean_return:45\",\"45\",\"historical_mean_daily_return\",\"daily_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/daily_mean_return/7\"],[\"M:daily_mean_return:50\",\"50\",\"historical_mean_daily_return\",\"daily_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/daily_mean_return/8\"],[\"M:daily_mean_return:55\",\"55\",\"historical_mean_daily_return\",\"daily_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/daily_mean_return/9\"],[\"M:daily_mean_return:60\",\"60\",\"historical_mean_daily_return\",\"daily_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/daily_mean_return/10\"],[\"M:baseline_annualized_volatility_diagnostic\",null,\"baseline_annualized_return_standard_deviation\",\"annual_decimal_return\",[\"2026-04-21\",\"2026-07-16\"],\"/baseline_annualized_volatility_diagnostic\"],[\"M:return_observations\",null,\"number_of_daily_returns\",\"count\",[\"2026-04-21\",\"2026-07-16\"],\"/return_observations\"],[\"M:annualization_trading_days\",null,\"annualization_multiplier\",\"trading_days_per_year\",[\"2026-04-21\",\"2026-07-16\"],\"/annualization_trading_days\"]]},\"response_schema\":{\"additionalProperties\":false,\"properties\":{\"alternatives\":{\"minLength\":1,\"type\":\"string\"},\"interpretations\":{\"items\":{\"additionalProperties\":false,\"properties\":{\"evidence_ids\":{\"items\":{\"minLength\":1,\"type\":\"string\"},\"type\":\"array\"},\"rating\":{\"minLength\":1,\"type\":\"string\"},\"reason\":{\"minLength\":1,\"type\":\"string\"},\"sector_code\":{\"enum\":[\"10\",\"15\",\"20\",\"25\",\"30\",\"35\",\"40\",\"45\",\"50\",\"55\",\"60\"],\"type\":\"string\"}},\"required\":[\"sector_code\",\"rating\",\"evidence_ids\",\"reason\"],\"type\":\"object\"},\"maxItems\":11,\"minItems\":11,\"type\":\"array\"},\"risk_discussion\":{\"minLength\":1,\"type\":\"string\"},\"source_id\":{\"type\":[\"string\",\"null\"]},\"submitted_constraints\":{\"items\":{\"additionalProperties\":false,\"properties\":{\"bound\":{\"type\":\"number\"},\"constraint_id\":{\"minLength\":1,\"type\":\"string\"},\"evidence_ids\":{\"items\":{\"minLength\":1,\"type\":\"string\"},\"type\":\"array\"},\"kind\":{\"enum\":[\"sector_min_weight\",\"sector_max_weight\"],\"type\":\"string\"},\"sector_code\":{\"enum\":[\"10\",\"15\",\"20\",\"25\",\"30\",\"35\",\"40\",\"45\",\"50\",\"55\",\"60\"],\"type\":\"string\"}},\"required\":[\"constraint_id\",\"sector_code\",\"kind\",\"bound\",\"evidence_ids\"],\"type\":\"object\"},\"type\":\"array\"},\"unresolved\":{\"items\":{\"minLength\":1,\"type\":\"string\"},\"type\":\"array\"},\"weights\":{\"anyOf\":[{\"items\":{\"additionalProperties\":false,\"properties\":{\"evidence_ids\":{\"items\":{\"minLength\":1,\"type\":\"string\"},\"type\":\"array\"},\"rationale\":{\"minLength\":1,\"type\":\"string\"},\"sector_code\":{\"enum\":[\"10\",\"15\",\"20\",\"25\",\"30\",\"35\",\"40\",\"45\",\"50\",\"55\",\"60\"],\"type\":\"string\"},\"weight\":{\"type\":\"number\"}},\"required\":[\"sector_code\",\"weight\",\"rationale\",\"evidence_ids\"],\"type\":\"object\"},\"maxItems\":0,\"type\":\"array\"},{\"items\":{\"additionalProperties\":false,\"properties\":{\"evidence_ids\":{\"items\":{\"minLength\":1,\"type\":\"string\"},\"type\":\"array\"},\"rationale\":{\"minLength\":1,\"type\":\"string\"},\"sector_code\":{\"enum\":[\"10\",\"15\",\"20\",\"25\",\"30\",\"35\",\"40\",\"45\",\"50\",\"55\",\"60\"],\"type\":\"string\"},\"weight\":{\"type\":\"number\"}},\"required\":[\"sector_code\",\"weight\",\"rationale\",\"evidence_ids\"],\"type\":\"object\"},\"maxItems\":11,\"minItems\":11,\"type\":\"array\"}]}},\"required\":[\"source_id\",\"interpretations\",\"weights\",\"alternatives\",\"risk_discussion\",\"unresolved\",\"submitted_constraints\"],\"type\":\"object\"},\"stage\":1,\"task\":\"Interpret common market facts and any visible source judgments.\"}"
+    }
+  ]
+}
