@@ -1,0 +1,54 @@
+{
+  "captured_at_utc": "2026-10-19T10:24:08.030Z",
+  "purpose": "Fixed evidence snapshot before removing continuously rewritten observer state and process lock from Git tracking.",
+  "status_source": "research/v492_postpilot_status_20261019.json",
+  "status_source_sha256": "8bbc66a08d31a66cb649fbe0d8c7cbcee0bd683012ce774ed6b22515e8ecbafc",
+  "status": {
+    "watcher_version": "v492_postpilot_watcher_1",
+    "started_at_utc": "2026-10-19T08:56:43.850172+00:00",
+    "pid": 26072,
+    "config_ref": {
+      "path": "research/v492_postpilot_config_20261019_r2.json",
+      "sha256": "412034bff24f6d1b403e76e70245b20c191462a8837989fe20237f43001acc02"
+    },
+    "state": "watcher_error_no_retry",
+    "model_calls": 0,
+    "semantic_evaluation": "pending",
+    "automatic_retry": false,
+    "archive_or_delete": false,
+    "launch_script_refs": {
+      "analysis": {
+        "path": "research/analyze_v492_pilot.py",
+        "sha256": "841c1f941e2c39165f84f51f5df283ca7a3c5727de285d4ad56edfa50166529f"
+      },
+      "masked": {
+        "path": "research/build_v492_masked_review.py",
+        "sha256": "f4f9295a657892431d76b79310b3af229dc5bc7d972b098adb10ff5dd29a1f77"
+      },
+      "shutdown": {
+        "path": "research/stop_sector_v492_cpu.ps1",
+        "sha256": "065b97e1d4005e8ab55eff1f3c9be553fa897b075896d50ccc318386ad74f308"
+      }
+    },
+    "poll_seconds": 30,
+    "last_checked_at_utc": "2026-10-19T10:22:36.969328+00:00",
+    "polls": 149,
+    "last_wait_reason": "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\Insun\\\\2026libera\\\\data\\\\local_sector_runtime\\\\v492_pilot_20261019\\\\pilot_summary.json'",
+    "unchanged_invalid_summary_polls": 0,
+    "error_type": "PermissionError",
+    "error": "[WinError 5] 액세스가 거부되었습니다: 'C:\\\\Users\\\\Insun\\\\2026libera\\\\research\\\\v492_postpilot_status_20261019.json.writing' -> 'C:\\\\Users\\\\Insun\\\\2026libera\\\\research\\\\v492_postpilot_status_20261019.json'",
+    "finished_at_utc": "2026-10-19T10:22:37.493097+00:00"
+  },
+  "lock_source": "research/v492_postpilot_status_20261019.json.lock",
+  "lock_source_sha256": "20fba3184281904320c2283b5c7f4ede814ca2d9fd6c40e3930ede35faac8a61",
+  "lock": {
+    "pid": 26072,
+    "started_at_utc": "2026-10-19T08:56:43.645542+00:00",
+    "config_ref": {
+      "path": "research/v492_postpilot_config_20261019_r2.json",
+      "sha256": "412034bff24f6d1b403e76e70245b20c191462a8837989fe20237f43001acc02"
+    }
+  },
+  "model_calls_performed_by_cleanup": 0,
+  "observer_restarted_by_cleanup": false
+}

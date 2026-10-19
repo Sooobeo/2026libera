@@ -48,3 +48,8 @@ Desktop.ini
 
 # Keep source data, experiment inputs, papers, plans, and evidence ZIPs otherwise.
 # Do not broadly ignore *.log, *.bin, *.jsonl, *.zip, or *.tar.gz.
+
+# Live post-pilot observer state is machine-local; preserve fixed snapshots separately.
+/research/v*_postpilot_status_*.json
+/research/v*_postpilot_status_*.json.lock
+/research/v*_postpilot_status_*.json.writing
