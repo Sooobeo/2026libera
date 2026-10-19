@@ -1,0 +1,538 @@
+{
+  "protocol_version": "4.9.1",
+  "round": 2,
+  "status": "PASS",
+  "scope": "Ordered round-2 revalidation after the corrected round-1 r2 PASS. Direct HTML delta inspection plus unchanged semantic contract/reference checks; not runtime or human validation.",
+  "reviewer_role": "AI methods reviewer; also author of the mandate-basis proposal. Separate from the root implementation author, but not an independent human evaluator.",
+  "checked_at_utc": "2026-10-19T05:31:56.477758+00:00",
+  "prior_round": {
+    "path": "research/v491_validation_round1_20261019_r2.json",
+    "sha256": "9a87099556fcb2ba3b3abdf64efc3a2d17e6d49eea658cced7bc616cf890b305",
+    "status": "PASS",
+    "check_count": 148,
+    "unit_suites_reported": {
+      "new_contract_tests": 32,
+      "existing_engine_tests": 20
+    },
+    "relationship": "Read corrected first-round receipt and independently verified all current recorded hashes. No redundant unit rerun is claimed."
+  },
+  "checks": [
+    {
+      "check": "prior_round_complete_before_this_review",
+      "pass": true,
+      "evidence": "Round 1 r2 is PASS before this revision; the superseded receipt is preserved separately."
+    },
+    {
+      "check": "reviewed_artifacts_match_round1",
+      "pass": true,
+      "evidence": "All 29 current hashes match corrected round 1 r2; historical HTML hashes are resolved only through the archive mapping."
+    },
+    {
+      "check": "context_has_operating_and_market_layers",
+      "pass": true,
+      "evidence": "common_context combines an explicit operating_brief with release-dated macro facts; existing sector diagnostics remain a separate common input."
+    },
+    {
+      "check": "hypothetical_assignment_not_private_mandate",
+      "pass": true,
+      "evidence": "CTX:task, plan context, method and full paper identify the assignment as hypothetical and do not impersonate Fidelity/UBS mandates."
+    },
+    {
+      "check": "new_money_state_consistent",
+      "pass": true,
+      "evidence": "CTX:starting_state, config task, method and full paper all define initial allocation with no existing sector holdings."
+    },
+    {
+      "check": "null_holdings_not_unknown_real_holdings",
+      "pass": true,
+      "evidence": "existing_holdings_meaning explicitly defines null as no sector portfolio within the new-money task."
+    },
+    {
+      "check": "benchmark_only_comparator",
+      "pass": true,
+      "evidence": "Benchmark is not starting holdings, institutional targets or an optimal solution; benchmark distance is not turnover."
+    },
+    {
+      "check": "horizon_numeric_source_located",
+      "pass": true,
+      "evidence": "Hornuf Table A1, physical PDF page 56 / printed A-1, contains 1, 6 and 12 months; local selection of 12 is explicit."
+    },
+    {
+      "check": "horizon_choice_not_optimality_claim",
+      "pass": true,
+      "evidence": "Plan and both papers say the selected 12-month horizon is not optimality evidence or the institutions' actual horizon."
+    },
+    {
+      "check": "horizon_not_future_return_test",
+      "pass": true,
+      "evidence": "CTX:horizon, evaluation and paper limitations distinguish decision horizon from realized 12-month performance."
+    },
+    {
+      "check": "source_dates_not_silently_rebased",
+      "pass": true,
+      "evidence": "CTX:evidence_use and method preserve report age and source horizon; an older source is not attributed knowledge of later releases."
+    },
+    {
+      "check": "risk_numbers_not_invented",
+      "pass": true,
+      "evidence": "Risk coefficient, volatility ceiling, loss budget, required return and sector cap remain absent; zero/one bounds are budget identities."
+    },
+    {
+      "check": "risk_profile_not_unjustifiably_transferred",
+      "pass": true,
+      "evidence": "No conservative/balanced/aggressive label or multi-asset numerical risk limit is copied into the equity-only sleeve."
+    },
+    {
+      "check": "liquidity_ESG_assumptions_explicit",
+      "pass": true,
+      "evidence": "CTX:liquidity_and_ESG and current plan/papers state no scheduled withdrawals or separate ESG exclusions as task assumptions, not institutional facts."
+    },
+    {
+      "check": "mandate_basis_matches_visible_brief",
+      "pass": true,
+      "evidence": "Purpose, horizon, risk scope, new-money state, benchmark role, liquidity and ESG scope agree with v491_mandate_basis."
+    },
+    {
+      "check": "sector_universe_retained",
+      "pass": true,
+      "evidence": "The same 11 GICS sectors and all-row output contract remain; no individual-stock or bond/cash selection is added."
+    },
+    {
+      "check": "macro_dimensions_paper_supported",
+      "pass": true,
+      "evidence": "PortBench 2.1/H.1 supports market context; Quek sections 3-4 explicitly supply rate/inflation/employment/growth categories."
+    },
+    {
+      "check": "macro_variable_definitions_supported",
+      "pass": true,
+      "evidence": "LiveMacroEval Appendix D Table 2 distinguishes GDP QoQ SAAR, CPI YoY, monthly NFP change and the unemployment-rate level."
+    },
+    {
+      "check": "macro_subset_adaptation_disclosed",
+      "pass": true,
+      "evidence": "Documents and source audit do not call the seven-fact subset optimal or equivalent to Quek's PMI pipeline; no macro-to-sector target rule is introduced."
+    },
+    {
+      "check": "macro_fact_table_semantics",
+      "pass": true,
+      "evidence": "Tables distinguish the Fed target range, CPI MoM SA, CPI YoY NSA, core CPI YoY NSA, unemployment SA, NFP persons and GDP QoQ SAAR third estimate."
+    },
+    {
+      "check": "cutoff_release_observation_separation",
+      "pass": true,
+      "evidence": "Decision reference is July 17, releases are before that date, and observation periods differ explicitly. October retrieval does not become July observation."
+    },
+    {
+      "check": "point_in_time_limit_preserved",
+      "pass": true,
+      "evidence": "Current-vendor adjusted-price limitation and October archive retrieval remain disclosed; the complete task is not relabelled a verified historical trading replay."
+    },
+    {
+      "check": "pilot_older_document_context_disclosed",
+      "pass": true,
+      "evidence": "Q2/June development documents use the same July situation; method/evaluation explicitly retain their age and forbid attributing later information to authors."
+    },
+    {
+      "check": "common_context_visible_from_D0",
+      "pass": true,
+      "evidence": "build_draft_messages includes identical common_context, market and index regardless of source/arm; prepared inputs are covered by round 1."
+    },
+    {
+      "check": "late_source_identity_absent",
+      "pass": true,
+      "evidence": "L payload omits institution_document and controller arm/source metadata. Only the assigned packet enters E D0 and each F0."
+    },
+    {
+      "check": "final_common_packet_and_history",
+      "pass": true,
+      "evidence": "build_final_messages preserves exact draft messages and draft text, then supplies real calculator feedback and the complete assigned packet."
+    },
+    {
+      "check": "same_position_not_same_token_position",
+      "pass": true,
+      "evidence": "Plan states the same final block order does not equal identical absolute token position, history length or computation."
+    },
+    {
+      "check": "estimand_is_workflow_bundle",
+      "pass": true,
+      "evidence": "Paper and config do not isolate pure memory or anchoring; early exposure, repetition and generated history change together."
+    },
+    {
+      "check": "calculator_not_strategy_control",
+      "pass": true,
+      "evidence": "E/L is the comparison; deterministic arithmetic support does not supply an institutional gold vector or normalize model allocations."
+    },
+    {
+      "check": "first_final_no_repair_or_selection",
+      "pass": true,
+      "evidence": "F0 is the sole primary endpoint; no automatic retry, post-final repair or favorable-output selection is permitted."
+    },
+    {
+      "check": "wrong_citations_preserved_as_outcomes",
+      "pass": true,
+      "evidence": "validate_response computes continuation_eligible from schema and complete finite vector before citation/label diagnostics. build_final_messages gates on that field, not semantic correctness."
+    },
+    {
+      "check": "arithmetic_failure_not_semantic_gate",
+      "pass": true,
+      "evidence": "Weights have number type without schema min/max; complete finite vectors can proceed despite raw-sum/range failure. Failures remain reported."
+    },
+    {
+      "check": "no_source_label_weight_mapping",
+      "pass": true,
+      "evidence": "Overweight and Attractive retain their own scales; no rating-to-weight rule or institution-specific numeric utility is introduced."
+    },
+    {
+      "check": "context_use_separate_from_source_fidelity",
+      "pass": true,
+      "evidence": "Evaluation adds context_use beside source fidelity, numeric fidelity and reason-weight linkage; common macro facts do not become the institution's opinion."
+    },
+    {
+      "check": "no_citation_quota_or_predetermined_direction",
+      "pass": true,
+      "evidence": "Context assessment evaluates supported claims actually made; it does not require every indicator to be cited or force a sector tilt."
+    },
+    {
+      "check": "no_arbitrary_composite_strategy_score",
+      "pass": true,
+      "evidence": "No weighted sum is introduced across semantic, arithmetic or context dimensions."
+    },
+    {
+      "check": "source_difference_pre_output_all_sectors",
+      "pass": true,
+      "evidence": "All 11 source comparisons and meanings require pre-output review; source-label vocabulary differences alone do not establish substantive conflict."
+    },
+    {
+      "check": "valid_pair_domain_and_missingness",
+      "pass": true,
+      "evidence": "Distances use valid raw vectors; all four finals are needed for the full contrast. Missing/invalid outputs are not assigned zero distance or benchmark replacements."
+    },
+    {
+      "check": "same_weights_can_be_defensible",
+      "pass": true,
+      "evidence": "Shared task/market/benchmark can rationally yield common weights; distinct supported reasons and justified departures remain assessable."
+    },
+    {
+      "check": "no_population_or_significance_overclaim",
+      "pass": true,
+      "evidence": "Two documents, one market snapshot and one model are finite cases; sector rows/calls are not independent samples or proof of market-wide effects."
+    },
+    {
+      "check": "macro_addition_effect_not_identified",
+      "pass": true,
+      "evidence": "No no-context arm exists; plan, paper and evaluation explicitly avoid a causal quality-improvement claim for adding context."
+    },
+    {
+      "check": "economic_management_topic_link",
+      "pass": true,
+      "evidence": "The question connects public institutional evidence to capital-allocation recommendations and the timing of evidence in organizational drafting/review."
+    },
+    {
+      "check": "historical_theory_and_counterevidence_retained",
+      "pass": true,
+      "evidence": "Full-paper introduction and literature retain algorithmic-monoculture theory, contrary financial evidence and the possibility of rational convergence; the new experiment's narrower scope is stated."
+    },
+    {
+      "check": "old_FF12_and_repair_commitments_removed",
+      "pass": true,
+      "evidence": "Salcher note says no FF12 auxiliary task/risk coefficients; Yang and Zhang notes now identify historical development and current no-post-F0-repair policy."
+    },
+    {
+      "check": "Laban_basis_present_in_full_paper",
+      "pass": true,
+      "evidence": "Full-paper section 2.6 and bibliography now link information timing/final restatement to Laban, while marking two stages as a local design choice."
+    },
+    {
+      "check": "new_macro_basis_present_in_full_paper",
+      "pass": true,
+      "evidence": "Quek and LiveMacroEval appear in section 2.6, methods and bibliography; LiveMacroEval formal authors/year/title match the checked paper."
+    },
+    {
+      "check": "reference_check_dates_not_overclaimed",
+      "pass": true,
+      "evidence": "Bibliography separates inherited checks through October 18 from October 19 additions; it does not claim every inherited reference was freshly revalidated."
+    },
+    {
+      "check": "historical_failures_not_new_results",
+      "pass": true,
+      "evidence": "Readiness/limitations preserve v4.8 failures separately, keep new model calls at zero and do not pool old/new outputs."
+    },
+    {
+      "check": "old_byte_savings_not_new_latency_claim",
+      "pass": true,
+      "evidence": "Plan says v4.9 byte comparisons do not establish v4.9.1 input size, speed, token budget or device stability."
+    },
+    {
+      "check": "human_and_live_gates_remain_pending",
+      "pass": true,
+      "evidence": "Config and papers keep independent human review, live backend/token checks, pilot and freeze incomplete; offline preparation is not a successful experiment."
+    },
+    {
+      "check": "complete_paper_not_submission_ready_claim",
+      "pass": true,
+      "evidence": "Full paper integrates theory/method/limitations but explicitly remains a pre-experiment draft with results, human review, author and final submission-format checks pending."
+    },
+    {
+      "check": "historical_review_snapshots_verified",
+      "pass": true,
+      "evidence": "All four archived HTML/receipt snapshots match their original hashes and manifest mapping."
+    },
+    {
+      "check": "plan_delta_exactly_two_review_links",
+      "pass": true,
+      "evidence": "Byte comparison after replacing exactly the round-1/round-2 link filenames reproduces the current plan; no plan wording changed."
+    },
+    {
+      "check": "paper_body_unchanged_after_footer_correction",
+      "pass": true,
+      "evidence": "Parsed HTML equality after removing the footer confirms every body section and bibliography is unchanged from the inspected semantic revision."
+    },
+    {
+      "check": "footer_now_matches_current_protocol",
+      "pass": true,
+      "evidence": "Current footer explicitly says v4.9.1, E/L, D0 and F0 and no longer labels current rules v4.8."
+    },
+    {
+      "check": "context_contract_evaluation_unchanged",
+      "pass": true,
+      "evidence": "Only plan, full paper, document builder and first-round verifier hashes changed. Prepared model inputs, context, config, schema, prompt and evaluation remain identical."
+    },
+    {
+      "check": "superseded_receipt_not_current_html_validation",
+      "pass": true,
+      "evidence": "Earlier receipt is linked once as superseded history; current reviewed_files bind only current artifact versions."
+    }
+  ],
+  "check_count": 57,
+  "prior_findings_resolved_before_round1": [
+    {
+      "finding": "Historical Yang/Zhang repair annotations could be read as the current procedure",
+      "resolution": "Both now explicitly refer to prior development and state current two-stage/no-post-final-repair scope."
+    },
+    {
+      "finding": "Whole-paper merge omitted the Laban workflow rationale and reference",
+      "resolution": "Section 2.6 and a formal reference now present."
+    },
+    {
+      "finding": "Reference check-date line implied only October 18 coverage",
+      "resolution": "Inherited October 18 coverage and October 19 additions are distinguished."
+    },
+    {
+      "finding": "Macro category/unit rationale appeared primarily in an audit JSON",
+      "resolution": "Quek and LiveMacroEval also appear in full-paper narrative and references."
+    },
+    {
+      "finding": "Basis specified liquidity/ESG assumptions absent from initial common brief",
+      "resolution": "CTX:liquidity_and_ESG and corresponding plan/method/full-paper text now declare them as hypothetical task assumptions."
+    }
+  ],
+  "direct_primary_reference_checks": [
+    {
+      "id": "hornuf2025",
+      "url": "https://www.ifo.de/DocDL/cesifo1_wp11862.pdf",
+      "locators": [
+        "3.1",
+        "3.2",
+        "3.3",
+        "Table A1, physical PDF p56"
+      ],
+      "support": "Explicit investor circumstances and eligible assets; horizon level 12 months exists. Stock/bond risk-share setting differs from this equity-only sleeve.",
+      "transfer_limit": "Dimension and selected horizon precedent, not optimality, real-institution mandate or calibrated risk limit."
+    },
+    {
+      "id": "portbench2026v6",
+      "url": "https://arxiv.org/html/2605.27887v6",
+      "locators": [
+        "2.1",
+        "2.2",
+        "Appendix G",
+        "H.1"
+      ],
+      "support": "Market snapshot combines asset, macro, correlation and portfolio-state information; explicit profiles and execution are distinct components.",
+      "transfer_limit": "No multi-asset profile cap, execution normalization, performance effect or optimal seven-indicator subset is imported."
+    },
+    {
+      "id": "quek2025v5",
+      "url": "https://arxiv.org/html/2503.09647v5",
+      "locators": [
+        "3 Data Source",
+        "4 Design Process"
+      ],
+      "support": "Rates/inflation/employment/growth categories, CPI/NFP/FOMC/PMI inputs and release-date filtering are explicit.",
+      "transfer_limit": "GDP replaces PMI only as a declared local public-activity measure; stock news, agent memory, trading parameters and returns are not reproduced."
+    },
+    {
+      "id": "livemacroeval2026v1",
+      "url": "https://arxiv.org/html/2608.30110v1",
+      "locators": [
+        "3.3",
+        "Appendix D Table 2",
+        "title/author block"
+      ],
+      "support": "GDP QoQ SAAR, CPI YoY, monthly NFP change and unemployment-level definitions match the adopted variable semantics.",
+      "transfer_limit": "Already-released facts are contextual inputs here, not nowcast targets; private consensus data and macro scoring are not adopted."
+    },
+    {
+      "id": "laban2025v1",
+      "url": "https://arxiv.org/html/2505.06120v1",
+      "locators": [
+        "3.3 Recap",
+        "6.3",
+        "7.1",
+        "Appendix N"
+      ],
+      "support": "Information disclosure and final restatement are distinct experimental choices; two-turn difficulty and residual nondeterminism are discussed.",
+      "transfer_limit": "Does not validate this exact two-stage finance task, isolate its mechanism, guarantee an E advantage or establish a required effect size."
+    }
+  ],
+  "inherited_reference_policy": "Other theory/evaluation/model references remain backed by the existing v4.9 reference/method reviews and the original paper's stated verification scope. This incremental review did not freshly validate every historical paper or empirical result.",
+  "unresolved_blocking_design_findings": [],
+  "remaining_execution_and_external_requirements": [
+    "Measure exact rendered token/history bounds and supported-backend operation without silent truncation.",
+    "Run and retain the separately logged four-case pilot under this precise context; do not tune for E winning or semantic correctness.",
+    "Complete independent human source-meaning review, preserving separate judgments and disagreements.",
+    "Freeze exact inputs/model/settings/evaluation/order/resource ceilings before main outputs.",
+    "Complete the third ordered review and final handoff link/hash check; finalize submission formatting and actual results later."
+  ],
+  "reviewed_files": [
+    {
+      "path": "plan/LIBERA_실험설정_v4.9.1_20261019.json",
+      "sha256": "0d7ad14eb7f07fb9a7e7607a1cdb1ff148794d88878d6706b7b6a66bbc319110"
+    },
+    {
+      "path": "plan/LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html",
+      "sha256": "81fb8579ac0da25f052075075176305904134cec1e9de44221db43bacd848da3"
+    },
+    {
+      "path": "paper/LIBERA_소논문_방법개정안_v4.9.1_20261019.html",
+      "sha256": "b7da065a8efc0948c31536cc5721f45c672e9ab55e84e4b97b0202aa64ae215f"
+    },
+    {
+      "path": "paper/LIBERA_텀페이퍼_초안_v4.9.1_20261019.html",
+      "sha256": "6082188d2469feaf221b54845e5462681709a59e776307234c9705b3be79f6a6"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/public_compact_candidate.json",
+      "sha256": "afe810b2bfb69ae4bfa372e65fa587bc6253eecf8028d5fde39cf3ec395bcb8d"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prompt_contract.json",
+      "sha256": "4a16ae185b1a5e65f47c2749695070b20826bea48612a28c30e0f44fb2d68d09"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/response_schema.json",
+      "sha256": "944a232de9f4a1e9ae672b172196aa906077ee03c3f6bf2ab06ad032d6d0b147"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/preparation_manifest.json",
+      "sha256": "ceeedfbb81c329c7fff83e65d90fb29aaf9be054b1751ea58a24ae33f385dfac"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/common_context.json",
+      "sha256": "67d94bdee3d38854097970cdfb74f40e2557a11e22b016e9a68374e6f13cb96f"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/market_context.json",
+      "sha256": "87fe629ae6051b73f623b74e7befc27a83fdc854032efa5c596ae7de47fff739"
+    },
+    {
+      "path": "research/v491_macro_source_audit_20261019.json",
+      "sha256": "0567efc4a5ae8eee60b66c3cf0904d376a8b4943a27f45f780053dee3746e6fc"
+    },
+    {
+      "path": "research/v491_mandate_basis_20261019.json",
+      "sha256": "141744fabbb44d4a91a47449b44ad186931a4cb998fc555dc9da3d642e07dd6b"
+    },
+    {
+      "path": "research/v491_evaluation_protocol_20261019.json",
+      "sha256": "b9ff937ca478062c79af1c1065a2dbcb87cea39b3f4c917dd5ccdcd9b0a6d5b6"
+    },
+    {
+      "path": "research/v491_human_review_template_20261019.json",
+      "sha256": "54ea9c9f1ab6a2780e8532b50a1558badbf1dea9d7abf0ddc595c900101431e7"
+    },
+    {
+      "path": "research/build_v491_context_plan.py",
+      "sha256": "6c41d2696f80de7ff16f3c3994077faebf035ae85e3de1505c79f142cada251d"
+    },
+    {
+      "path": "research/sector_v491_contract.py",
+      "sha256": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397"
+    },
+    {
+      "path": "research/prepare_sector_v491.py",
+      "sha256": "0e8188630a8b3a36da08671519b2bfeba7d3d2ca412568f789bfeca2ea4192e7"
+    },
+    {
+      "path": "research/test_sector_v491_contract.py",
+      "sha256": "bfecb94ba4e8beedb5e77d3d43bfe0afb1255c74b611fead756427fcc1b98149"
+    },
+    {
+      "path": "research/requirements-v491.txt",
+      "sha256": "025d1a266ce796794e90b314029b9e8200b5268ea7f93f3cc72c976b1b75030c"
+    },
+    {
+      "path": "research/verify_v491_round1.py",
+      "sha256": "531672242a3959a976ec07a7342241c59700118b0de726592fa34af560e4f875"
+    },
+    {
+      "path": "plan/LIBERA_실험설정_v4.9_20261019.json",
+      "sha256": "01f9819cba917923c9892ac5d75c953a7bed9d47a733496f3a7ceff2ab9781a2"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/pilot/fidelity_q2_2026__E__D0_messages.json",
+      "sha256": "956a0e3f6a265583abd18e8354b2f3a6102ffee61b49f3aa17add893d86ee2f9"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/pilot/fidelity_q2_2026__L__D0_messages.json",
+      "sha256": "3b53227438dd6c5b450a7ed2e30751388d27d6c0054a89a544b88b5095eedf61"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/pilot/ubs_june_2026__E__D0_messages.json",
+      "sha256": "c42a0ec43f680a408d7667d6417f83f482febcb0fb7d1297c10d1653290874b3"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/pilot/ubs_june_2026__L__D0_messages.json",
+      "sha256": "3b53227438dd6c5b450a7ed2e30751388d27d6c0054a89a544b88b5095eedf61"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/main/fidelity_q3_2026__E__D0_messages.json",
+      "sha256": "f4e00e18e9fc17e37701999159e2acb35e4e9a79d60063899f897839eff49dcd"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/main/fidelity_q3_2026__L__D0_messages.json",
+      "sha256": "3b53227438dd6c5b450a7ed2e30751388d27d6c0054a89a544b88b5095eedf61"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/main/ubs_july_2026__E__D0_messages.json",
+      "sha256": "6905c838dace1c97ff8bd328844b7c7319f8627843677a77c843feb60d985696"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/main/ubs_july_2026__L__D0_messages.json",
+      "sha256": "3b53227438dd6c5b450a7ed2e30751388d27d6c0054a89a544b88b5095eedf61"
+    }
+  ],
+  "model_calls": 0,
+  "independent_human_review_completed": false,
+  "live_runtime_validated": false,
+  "main_experiment_started": false,
+  "guarantee_boundary": "Passing the design review establishes internal correspondence and bounded source support for the inspected artifacts. It does not guarantee valid generated portfolios, nonzero contrasts, statistical significance, authentic institutional strategy or profitable investment.",
+  "reviewed_files_scope": "Current hashes from completed round 1 r2 were all independently verified. Plan differs solely in two review links; full paper differs solely in footer. All earlier semantic body, prompt, schema, context, config and evaluation findings remain checked against unchanged content. Builder and audit-code revisions are bound to current round 1 r2.",
+  "revision": "r2",
+  "supersedes": {
+    "path": "research/v491_validation_round2_20261019.json",
+    "sha256": "a37450dd64f8ca01b5b590f9bfba83e1a2d31e5f4675fc3ab036308b342f6e2a",
+    "reason": "Third review found inherited v4.8 wording in the full-paper footer, missed by the first semantic pass. Current footer and plan review links are corrected. Original receipt remains historical, not a validation of current HTML."
+  },
+  "preserved_snapshot_manifest": {
+    "path": "research/artifacts/v491_review_history_20261019/snapshot_manifest.json",
+    "sha256": "1beb0f070887cf23b33a98bf8255ae865c27659e8c5311a11be5cf1fc129896f",
+    "all_archive_hashes_verified": true
+  },
+  "footer_correction": {
+    "old_footer": "v4.8.1 · 실험 규칙은 v4.8. 이전 버전과 실패 원문을 보존한다. 자체 검증·개발 예비실험·독립 사람 검토·본실험은 서로 다른 상태다.",
+    "current_footer": "v4.9.1 · 현재 실험 규칙: 공통 업무·시장상황 아래 E/L × 초안 D0·첫 최종안 F0. 이전 버전과 실패 원문은 별도 개발 이력으로 보존한다.",
+    "method": "Inspected exact textual delta and verified all non-footer parsed HTML unchanged.",
+    "remaining_blocker": false
+  }
+}

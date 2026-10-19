@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
+<title>LIBERA v4.9.1 — 근거 제공 시점과 기관별 판단 반영</title>
+<style>
+:root{--ink:#1c2b36;--muted:#526673;--line:#d7e1e5;--accent:#176878}*{box-sizing:border-box}body{margin:0;background:#f4f7f8;color:var(--ink);font:16px/1.85 "Malgun Gothic",system-ui,sans-serif;word-break:keep-all;overflow-wrap:anywhere}main{max-width:1100px;margin:32px auto;padding:40px 48px;background:white}h1{font-size:31px;line-height:1.45}h2{font-size:23px;line-height:1.5;margin:0 0 18px}h3{font-size:18px}section{border-top:1px solid var(--line);padding:30px 0}a{color:var(--accent)}p{margin:12px 0}nav{display:flex;flex-wrap:wrap;gap:10px 20px;margin:24px 0}.note,.meta{color:var(--muted);font-size:14px}.callout{background:#edf5f6;border-left:4px solid var(--accent);padding:16px 22px;margin:20px 0}.caution{background:#fbf5e9;border-left:4px solid #9b762d;padding:16px 22px}.table{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.7}th,td{border:1px solid var(--line);text-align:left;vertical-align:top;padding:11px 13px}th{background:#edf3f5}code{font-family:Consolas,monospace;background:#f1f4f5;padding:2px 4px}.formula{padding:14px 18px;background:#f5f7f8;overflow-wrap:anywhere}li{margin:9px 0}.tag{font-size:13px;color:var(--accent);letter-spacing:.08em}footer{border-top:1px solid var(--line);padding-top:24px;font-size:14px;color:var(--muted)}@media(max-width:700px){main{margin:0;padding:26px 18px}h1{font-size:26px}body{font-size:15px}th,td{padding:9px}table{font-size:13px}}@media print{@page{size:A4;margin:16mm}body{background:white;font-size:10pt}main{margin:0;padding:0;max-width:none}h1{font-size:21pt}h2{font-size:15pt;break-after:avoid}section{padding:20px 0}nav{display:none}table{font-size:8.5pt}thead{display:table-header-group}tr{break-inside:avoid}a{color:inherit}.callout,.caution{background:transparent}}
+</style></head><body><main>
+<header><div class="tag">LIBERA · 2026-10-19 · v4.9.1</div>
+<h1>공통 AI의 기관별 공개 투자판단 반영<br/>초안 전후 근거 제공을 비교하는 축소 실험계획</h1>
+<p class="meta">상경·경영학술제 텀페이퍼용 · 설계 개정안 · 본실험 미실행</p>
+<div class="callout"><strong>2개 기관 자료 × 2개 제공 절차 × 2단계 = 본실험 최대 8회 생성.</strong><br/>기관별 차이·11개 산업·근거와 비중의 연결은 유지한다. 4단계의 반복 출력과 최종안 뒤 추가 수정은 제거한다. 최종 단계에는 양쪽 모두 동일한 기관 자료를 다시 제공한다.</div>
+<p>이 문서는 실행 가능한 비교를 위한 새 설계다. 질문과 관측의 연결을 명시하지만, 모델의 성공·통계적 유의성·장치 안정성을 보장하지 않는다. 현재 확인한 것은 문헌과 오프라인 입력 구조이며, v4.9.1 모델 호출은 0회다.</p>
+<nav><a href="#plain">쉽게 보는 실험</a><a href="#topic">논문과의 연결</a><a href="#design">비교 조건</a><a href="#data">산업·자료</a><a href="#outcomes">평가</a><a href="#cost">축소 효과</a><a href="#basis">문헌 근거</a><a href="#gates">진행 조건</a><a href="#context">공통 업무·시장상황</a></nav>
+</header>
+<section id="plain"><h2>1. 실제로 무엇을 하는가</h2>
+<p>같은 AI에게 미국 주식시장의 11개 산업에 투자금을 어떻게 나눌지 제안하게 한다. 공통 업무·시장자료는 모든 경우에 같다. 달라지는 것은 Fidelity와 UBS의 공개 산업전망 중 어느 자료를 받는지, 그리고 그 자료를 초안을 만들기 전부터 받는지 아니면 초안 이후에 처음 받는지다.</p>
+<p><strong>E 조건</strong>은 공통 업무·시장자료와 해당 기관 자료를 함께 읽고 첫 배분안과 이유를 작성한다. 계산기가 실제 제출한 비중의 합계와 역사적 위험 등을 검사한다. AI는 그 결과와 다시 제공된 같은 기관 자료를 읽고 최종안을 낸다. <strong>L 조건</strong>은 기관을 모르는 상태에서 공통 업무·시장자료로 초안을 만든다. 그 다음 같은 방식의 계산 결과와 해당 기관 자료를 처음 받아 최종안을 낸다. 각 사례는 새 대화로 시작하고 다른 기관의 답변을 보지 않는다.</p>
+<p>최종적으로 “기관 문구를 외웠는가”만 보는 것이 아니다. 기관이 강조한 이유를 정확히 이해했는지, 그 이유를 받아들이거나 다른 근거와 비교했는지, 설명한 선택이 실제 비중에 들어갔는지 확인한다. 기관 의견과 다르게 배분해도 근거 있는 설명이라면 무조건 오답으로 처리하지 않는다.</p>
+<p>예를 들어 유틸리티에 대해 한 자료가 비싼 가치평가를 우려하고 다른 자료가 방어력과 AI 관련 수요를 강조한다면, 모델이 이 차이를 읽고 어떻게 저울질했는지 본다. 두 자료에 “정답 비중 5%와 10%”가 있다고 가정하지 않는다. 이 예시는 결과를 보고 고른 산업이 아니며, 평가에는 11개 산업 모두 포함한다.</p>
+</section><section id="context"><h2>공통 업무와 시장상황: AI가 실제로 받는 조건</h2>
+<p><strong>업무:</strong> 새로 맡긴 미국 주식 투자금을 11개 산업 바구니에 배분하는 제안서를 만든다. 판단 기준일은 2026년 7월 17일이며, 7월 16일까지의 가격과 7월 17일 전에 발표된 아래 공개 통계를 사용한다. 이 자료는 모든 E/L 사례의 초안부터 동일하게 들어간다.</p>
+<p><strong>목적과 기간:</strong> 12개월을 내다보고 자본증식을 위한 배분을 제안하되, 분산과 위험의 대가를 설명한다. 12개월은 Hornuf 등의 Table A1에 사용된 1·6·12개월 중 채택한 조건이다. 최적 기간이라는 뜻이 아니며 12개월 후 수익률을 이번 연구에서 측정한다는 뜻도 아니다. 기존 포트폴리오를 고치는 과제가 아니므로 실제 보유 비중과 거래회전율을 가정하지 않는다.</p>
+<p><strong>위험과 제약:</strong> 주식시장 손실 가능성을 수용하는 가상 주식 투자 과제다. 차입·공매도 없이 주어진 산업에 전액 배분하고 비중 합계는 100%가 되어야 한다. 허용손실률·위험회피계수·산업별 상한·목표수익률은 정하지 않았다. 공개 전망에서 알 수 없는 기관의 목적이나 임의 숫자를 만들어 넣지 않고, 남은 불확실성과 위험–수익 상충을 설명하게 한다. 이는 고객의 전체 재산에 대한 투자 적합성 평가가 아니다.</p>
+<p><strong>현재 보유상태:</strong> 신규 자금이므로 기존 산업 보유분은 없다. S&amp;P 500 산업 비중은 비교 기준이며 기관의 현재 보유량이나 정답 배분이 아니다. 기준과 얼마나 다르게 제안했는지는 설명하지만, 그 거리를 실제 매매량이나 비용으로 부르지 않는다.</p>
+<p>가상 업무의 조건으로 해당 기간의 예정된 인출과 별도 ESG 제외조건은 없다고 명시한다. 실제 고객·기관의 사정이라는 뜻은 아니다. 돈의 액수는 임의로 만들지 않고 맡긴 주식 투자금의 비중으로 제안한다.</p>
+<div class="table"><table><thead><tr><th>공통 공개 지표</th><th>발표 값</th><th>관측 기간</th><th>발표일·공식 출처</th></tr></thead><tbody><tr><td>연방기금금리 목표범위</td><td>3.50–3.75%</td><td>2026-06-17 policy decision</td><td><a href="https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm">2026-06-17</a></td></tr><tr><td>소비자물가 전월 대비 · 계절조정</td><td>-0.4%</td><td>2026-06</td><td><a href="https://www.bls.gov/news.release/archives/cpi_07142026.htm">2026-07-14</a></td></tr><tr><td>소비자물가 전년 대비 · 비조정</td><td>3.5%</td><td>2025-06 to 2026-06</td><td><a href="https://www.bls.gov/news.release/archives/cpi_07142026.htm">2026-07-14</a></td></tr><tr><td>근원 소비자물가 전년 대비 · 비조정</td><td>2.6%</td><td>2025-06 to 2026-06</td><td><a href="https://www.bls.gov/news.release/archives/cpi_07142026.htm">2026-07-14</a></td></tr><tr><td>실업률 · 계절조정</td><td>4.2%</td><td>2026-06</td><td><a href="https://www.bls.gov/news.release/archives/empsit_07022026.htm">2026-07-02</a></td></tr><tr><td>비농업 고용 전월 증감 · 계절조정</td><td>+57,000명</td><td>2026-06</td><td><a href="https://www.bls.gov/news.release/archives/empsit_07022026.htm">2026-07-02</a></td></tr><tr><td>실질 GDP 전기 대비 연율 · 계절조정 · 3차 추계</td><td>2.1%</td><td>2026-Q1</td><td><a href="https://www.bea.gov/sites/default/files/2026-06/gdp1q26-3rd.pdf">2026-06-25</a></td></tr></tbody></table></div>
+<p>이 표에 기존 산업별 수익률·변동성·상관관계·공분산과 기준 산업비중이 함께 제공된다. 각 지표는 발표일과 관측기간을 따로 기록한다. 분기 GDP의 전기 대비 연율, CPI의 전월·전년 변화율, 실업률의 수준을 섞지 않는다. 전부 같은 달의 지표라는 뜻도 아니다.</p>
+<p>기관 보고서가 먼저 발표되고 시장 지표가 나중에 발표된 경우, AI는 그 차이를 명시하며 현재 주어진 시장자료와 기존 전망을 함께 검토한다. 기관이 나중 정보를 이미 알고 있었다고 바꾸어 쓰면 오류다. 개발용 Q2·6월 문서에도 같은 7월 상황을 쓰므로, 이를 과거 운용의 실시간 재현이라고 하지 않는다. 기존 ETF 조정가격은 현재 수집본이라는 한계도 유지한다.</p>
+<p>시장 상황은 연구자가 특정 산업 매수를 지시하는 서술로 만들지 않았다. AI가 무엇을 근거로 어떤 선택을 했는지 평가하며, 모든 지표를 인용하거나 비중을 반드시 바꾸도록 강요하지 않는다. 공통상황 추가의 효과 자체는 별도 대조군이 없어 추정하지 않는다.</p>
+<p class="note">근거: <a href="https://arxiv.org/html/2605.27887v6">PortBench v6 §2.1·Appendix B·H.1</a>의 시장·거시·포트폴리오 상황 구성, <a href="https://www.ifo.de/DocDL/cesifo1_wp11862.pdf">Hornuf 등 §3·Table A1</a>의 투자자 조건과 판단기간. 개별 미국 공식 지표의 선택과 신규 주식 부문 과제는 우리 연구의 적용 선택이다. <a href="../research/v491_mandate_basis_20261019.json">선택 근거표</a> · <a href="../research/v491_macro_source_audit_20261019.json">공식 통계 출처·시점 검증</a> · <a href="../data/sector_context/v491_20261019/common_context.json">실제 공통 입력 JSON</a></p>
+<p class="note"><a href="https://arxiv.org/html/2503.09647v5">Quek 등(2025), §§3–4</a>는 산업배분 입력에 금리·물가·고용·성장 범주와 CPI·비농업고용을 사용하며 공식 발표일을 기준으로 정보를 제한한다. <a href="https://arxiv.org/html/2608.30110v1">LiveMacroEval(2026), Appendix D Table 2</a>는 GDP 전기비 연율·CPI 전년비·고용 증감·실업률의 단위와 정의를 구분한다. 여기서는 발표된 사실을 배경정보로 쓰며, 그 연구의 예측 목표·매매전략·수익률·비중 규칙을 가져오지 않는다. 7개 항목이 최적 조합이라고 주장하지 않는다.</p>
+</section>
+<section id="topic"><h2>2. 소논문 주제와 무엇이 연결되는가</h2>
+<div class="table"><table><thead><tr><th>논문의 논점</th><th>실험에서 관측하는 것</th><th>해석의 한계</th></tr></thead><tbody>
+<tr><td>공통 AI를 쓰면 조직별 판단 맥락이 사라지는가</td><td>같은 모델·시장자료에 서로 다른 공개 산업판단을 넣고, 출처→해석→설명→비중의 연결을 비교한다.</td><td>실제 기관 내부 목적·보유종목·직원 행동은 관측하지 않는다.</td></tr>
+<tr><td>업무 과정의 어디에서 근거를 제공해야 하는가</td><td>초안 전 제공 E와 초안 후 첫 제공 L을 같은 최종 정보 아래 비교한다.</td><td>초기 노출·자체 초안·노출 횟수의 묶음이다. 순수한 기억이나 앵커링 효과로 단정하지 않는다.</td></tr>
+<tr><td>AI 사용의 조직적 대응은 무엇인가</td><td>근거 해석, 설명과 행동의 불일치, 계산 오류 중 어느 지점이 문제인지 구분한다.</td><td>관측된 문제에 맞는 검토 절차를 제안할 수 있으나 비용효과나 수익률 개선은 검증하지 않는다.</td></tr>
+<tr><td>원제안서의 시장 전체 동질화·금융안정 문제</td><td>문헌상 문제의식과 후속 연구로 연결한다.</td><td>이번 작은 문서 실험으로 부정적 동질화, 필요한 다양성의 상실, 시장 손실을 직접 입증하지 않는다.</td></tr>
+</tbody></table></div>
+<p><strong>수정할 논문 제목:</strong> 「공통 생성형 AI의 기관별 공개 투자판단 반영: 초안 전후 근거 제공을 비교한 산업배분 사례연구」. 기존 v4.8.1의 공개 판단 보존 질문은 유지하되, 네 단계 분산 활용이나 실제 RAG 검색을 검증했다는 문장은 사용하지 않는다. 원제안서의 더 강한 시장 동질화 가설을 그대로 실증했다고 제시하려면 별도 통제과제와 자료가 필요하다.</p>
+<p>학술제의 경제·조직 문제와 대응이라는 방향에는, 조직의 판단 근거가 AI 권고안으로 전달되는 과정을 점검한다는 방식으로 연결한다. 제출 개요의 추정 배점은 실험 점수로 사용하지 않는다.</p>
+</section>
+<section id="design"><h2>3. 비교 조건과 진행 순서</h2>
+<div class="table"><table><thead><tr><th>사례</th><th>1단계 D0: 초안</th><th>2단계 F0: 첫 최종안</th></tr></thead><tbody>
+<tr><td>Fidelity–E</td><td>공통 업무·시장자료 + Fidelity 자료</td><td>자기 초안 + 실제 계산 결과 + Fidelity 자료 재제공</td></tr>
+<tr><td>Fidelity–L</td><td>공통 업무·시장자료만. 기관 이름도 숨김.</td><td>자기 초안 + 실제 계산 결과 + Fidelity 자료 첫 제공</td></tr>
+<tr><td>UBS–E</td><td>공통 업무·시장자료 + UBS 자료</td><td>자기 초안 + 실제 계산 결과 + UBS 자료 재제공</td></tr>
+<tr><td>UBS–L</td><td>공통 업무·시장자료만. 기관 이름도 숨김.</td><td>자기 초안 + 실제 계산 결과 + UBS 자료 첫 제공</td></tr>
+</tbody></table></div>
+<p>최종 단계의 지시문·출력 형식·해당 기관 패킷·패킷 위치는 E/L에서 같다. 여기서 위치는 마지막 메시지의 같은 구성 순서를 뜻하며 절대 토큰 위치까지 같다는 의미는 아니다. 자기 초안과 그 계산 결과는 각 사례에서 나온 그대로 유지한다. 따라서 <strong>최종 자료는 같지만 이전에 자료를 활용할 기회와 생성된 이력은 다르다.</strong> 이는 자료 제공 절차의 비교이며 완전히 동일한 입력 길이나 동일 계산량을 뜻하지 않는다.</p>
+<p>L 초안은 서로 재사용하지 않는다. 기관당 두 조건을 짝지어 분석하되 네 사례를 독립 기관 네 곳으로 세지 않는다. 실행 순서는 본실험 전에 기록된 난수로 정하고, 사례마다 대화 상태를 분리한다. 순서·seed·모델 버전은 기록하되 결정적 설정이 GPU에서 바이트 단위 동일 출력을 보장한다고 쓰지 않는다.</p>
+<p><strong>계산기는 대조군이 아니다.</strong> 양쪽에 동일하게 제공하는 지원 도구다. 모델이 낸 비중의 합계·범위·위험·기준 대비 차이만 계산한다. 전략을 대신 정하거나 비중을 정규화하거나 숨겨진 기관 정답을 주지 않는다. 실제 대조는 E와 L이다.</p>
+<p>새 결과 이름은 D0/F0다. 기존 R1/R4·C0/C1/C2와 섞지 않는다. F0 이후 추가 답변·자동 재시도·가장 잘 나온 답변 선택은 없다. 초안의 산술 오류는 그대로 피드백할 수 있지만, 초안 자체의 전송 실패로 필요한 이력이 없으면 그 사례의 최종 단계도 미시도로 기록한다.</p>
+</section>
+<section id="data"><h2>4. 어떤 산업과 자료를 쓰는가</h2>
+<p>투자 대상은 <strong>GICS 11개 산업 바구니</strong>다. 에너지, 소재, 산업재, 경기소비재, 필수소비재, 헬스케어, 금융, 정보기술, 커뮤니케이션 서비스, 유틸리티, 부동산을 모두 포함한다. 개별 종목 선택이나 주식·채권·현금 전체 배분을 평가하지 않는다. 기존 공개 산업 ETF 시장자료와 공통 기준비중을 유지한다.</p>
+<div class="table"><table><thead><tr><th>구분</th><th>자료</th><th>사용 원칙</th></tr></thead><tbody>
+<tr><td>개발·예비실험</td><td>Fidelity 2026년 2분기 / UBS 2026년 6월</td><td>이미 개발 중 여러 번 보았으므로 독립 확인 표본으로 주장하지 않는다.</td></tr>
+<tr><td>본실험</td><td>Fidelity 2026년 3분기 / UBS 2026년 7월</td><td>v4.9.1 답변을 보기 전에 자료·평가를 동결한다. 사람이 준비한 자료까지 미열람이라고 주장하지 않는다.</td></tr>
+<tr><td>공통 시장자료</td><td>기존 2026-07-17 기준, 마지막 가격 07-16, 60개 일간 수익률 관측</td><td>기존 자료를 재사용한다. 수집·정정 이력 때문에 당시 실거래 재현으로 해석하지 않는다.</td></tr>
+<tr><td>기준 포트폴리오</td><td>기존 공개 S&amp;P 500 산업 비중</td><td>합계 99.9%의 공시 원본과 연구용 정규화 기준을 구분한다. 모델 답변을 정규화하는 것은 아니다.</td></tr>
+<tr><td>원문 접근</td><td>공개 PDF, 페이지 위치, 원래 등급, 기존 연구자 요약 패킷</td><td>유료 단말·내부 투자지침을 요구하지 않는다. 전체 원문 독해나 자동 검색 실험으로 확대하지 않는다.</td></tr>
+</tbody></table></div>
+<p>Fidelity의 Overweight와 UBS의 Attractive는 같은 숫자 척도가 아니다. 기관 간 평가 어휘의 차이만으로 견해 충돌을 확정하지 않는다. 본실험 전에 모든 산업에 대해 ‘실질적 차이 근거 있음 / 유사성 근거 있음 / 척도 차이로 직접 비교 곤란 / 근거 부족 / 불확실’을 기록한다. 특정 산업의 근거가 없으면 없다고 남긴다.</p>
+<p>유틸리티의 대비는 사전 검토 후보다. Fidelity Q3의 3쪽 가치평가 우려와 UBS July의 21쪽 방어력·AI 관련 설명을 비교할 수 있다. 다만 패킷 전사와 척도 해석의 독립 사람 검토는 아직 남아 있다. 산업재·경기소비재처럼 양쪽 모두 긍정적이지만 이유가 다른 산업도 그대로 남겨, 차이만 강제로 만들어내지 않는다.</p>
+</section>
+<section id="output"><h2>5. 출력은 짧게 하되 판단은 남긴다</h2>
+<p>기존에는 산업 해석 목록과 배분 목록에서 긴 설명이 반복됐다. 새 출력은 <strong>산업별 한 행</strong>에 정보를 모은다. 각 행에는 산업 코드, 원문 등급, 원문 의미, 원문 근거 ID, 의견 수용·수정·이탈 여부, 실제 비중, 배분 이유와 그 근거 ID를 구분해 둔다. 공통 항목으로 대안·위험·미해결 사항·명시적 수치 제약을 남긴다.</p>
+<p>줄이는 것은 중복 서술과 메타데이터다. 근거와 다른 의견을 선택한 이유, 대안 간 비교, 불확실성은 지우지 않는다. 단어 수나 문장 수를 근거 없이 제한하지 않으며, 짧게 답했다는 이유로 높은 점수를 주지 않는다. 자료를 받지 않은 L 초안은 기관 등급을 추측하지 않고 <code>null / not_available</code>로 표시한다.</p>
+<p class="note">새 오프라인 코드가 단계별 자료 선택, 11개 고유 산업·유한 비중 검사, 원배분 계산과 최종 이력 보존을 연결한다. 출력의 잘못된 등급·인용은 평가할 오류로 남기며, 읽을 수 있는 초안을 의미 정답 여부로 탈락시키지 않는다. 입력 단계에서는 다른 기관·평가자 자료를 차단한다. 실제 모델 전송과 장치 안정성은 별도 실행 검증 대상이다.</p>
+<p>공개 입력은 같은 값·단위·날짜·근거 ID를 표의 공통 열로 묶는 방식으로 압축했다. 모든 원래 필드로 복원되는지 검사했다. 이 검사는 정보 보존을 확인하며, 표가 모델에게 똑같이 이해된다는 보장은 아니다. 양쪽에 동일한 표현을 쓰고 예비실험에서 누락·오독을 확인한다.</p>
+<p>공통 <code>context_assessment</code>에는 업무·시장 해석, 실제 배분에 대한 함의, 근거 ID와 한계를 기록한다. 산업별 판단 11행은 유지하며, 전 산업에 같은 거시 설명을 반복하도록 요구하지 않는다.</p></section>
+<section id="outcomes"><h2>6. 무엇을 평가하고 어떻게 해석하는가</h2>
+<div class="table"><table><thead><tr><th>평가 축</th><th>확인 내용</th><th>하지 않는 해석</th></tr></thead><tbody>
+<tr><td>사실·출처 충실성</td><td>기관, 산업, 원문 등급, 원문이 실제로 든 이유, 날짜·단위·수치</td><td>근거 ID가 있다는 이유만으로 내용까지 옳다고 판정하지 않는다.</td></tr>
+<tr><td>근거→판단→행동 연결</td><td>의견을 수용·유보·수정·거절한 이유와 실제 비중·초안 대비 변화가 맞는지</td><td>원문 등급 복사, 배분 다양성, 근거 없는 차이를 성공으로 세지 않는다.</td></tr>
+<tr><td>실행 가능성</td><td>11개 산업의 누락·중복, 유한 비중, 합계, 음수, 명시적 제약</td><td>계산기의 자동 보정 결과를 모델의 원래 성공으로 바꾸지 않는다.</td></tr>
+<tr><td>완료·비용</td><td>예정·시도·완료·읽을 수 있음·유효 배분 건수, 토큰·시간·오류</td><td>완료된 사례만 남겨 전체 성공률을 높이지 않는다.</td></tr>
+</tbody></table></div>
+<p>정성 평가는 ‘연결 지지됨 / 근거 부족 또는 모순 / 미해결 / 누락·판정 불가’를 행별로 기록하고 원문 인용 위치와 이유를 남긴다. 사실·전략 연결·산술을 임의 가중합하지 않는다. 기관 의견과 다르더라도 올바르게 이해하고 경쟁 근거를 설명하면 지지 가능한 판단으로 평가할 수 있다. 이것은 실제 투자수익의 우수성 판정이 아니다.</p>
+<p>두 사람은 가능한 범위에서 E/L 표시를 가린 상태로 먼저 따로 검토하고, 의견 불일치를 보존한 뒤 조정한다. 내용으로 조건이 드러날 수 있어 완전한 눈가림이라고 주장하지 않는다. AI의 세 차례 자체검토는 이 사람 검토를 대체하지 않는다.</p>
+<div class="formula">배분 거리: TV(wᴀ, wʙ) = ½ Σₛ |wᴀₛ − wʙₛ|<br/>자료별 절차 대비: 같은 기관의 E와 L 비교<br/>절차별 출처 대비: 같은 절차의 Fidelity와 UBS 비교</div>
+<p>거리식은 <strong>유효한 두 원배분 사이</strong>의 차이를 설명한다. 기관의 정답 배분과의 오차가 아니다. E에서 기관 간 거리가 더 커졌어도 근거와 선택의 연결이 나쁘면 개선이라고 하지 않는다. 비중이 같아도 서로 다른 근거를 충실히 검토한 결과일 수 있다.</p>
+<div class="caution"><strong>배분 연구질문이 답해졌다고 인정할 조건:</strong> 전체 2×2 배분 대비에는 네 개의 유효한 F0가 필요하다. 일부만 유효하면 가능한 사전 지정 쌍과 결측을 함께 보고한다. 유효한 배분쌍이 없으면 근거 해석 진단은 남지만 배분 연구질문은 미답이다. GPU 오류를 전략 무시로 해석하거나, 실패했어도 주제가 입증됐다고 쓰지 않는다.</div>
+<p>표본은 본문서 2개·공통 시장상황 1개·모델 1개다. 44개 산업 행이나 8번 호출을 독립 표본으로 세지 않는다. p값·모집단 효과·우열의 통계적 보장·동등성 주장을 하지 않고 각 사례의 근거와 차이를 제시한다. 무차이·이유가 있는 유사성·근거 없는 다양성·미관측 모두 가능한 결과다.</p>
+<p><strong>공통상황 활용 평가:</strong> 기준일·발표일·관측기간, 신규자금 상태, 12개월 판단기간을 정확히 이해했는지, 시장 근거와 기관 전망을 비교한 설명이 실제 비중과 맞는지 본다. 사실 나열, 근거 없는 업종 방향, 보고서 날짜 바꾸기, 가짜 보유량·위험한도는 구분하여 기록한다. 지표 인용 개수나 임의 가중점수는 사용하지 않는다. 공통 목적과 기준비중이 같아 합리적으로 비슷한 배분이 나올 수 있다는 대안 설명을 유지한다.</p></section>
+<section id="cost"><h2>7. 얼마나 줄어들고 무엇이 아직 불확실한가</h2>
+<div class="table"><table><thead><tr><th>항목</th><th>v4.8</th><th>v4.9.1</th></tr></thead><tbody>
+<tr><td>사례 수 / 산업 수</td><td>4 / 11</td><td>4 / 11 유지</td></tr>
+<tr><td>사례당 생성 단계</td><td>기본 4 + 보조 최대 2</td><td>초안·최종안 2</td></tr>
+<tr><td>본실험 생성 요청</td><td>기본 16 / 최대 24</td><td>최대 8</td></tr>
+<tr><td>예비실험과 본실험 합계</td><td>기본 32 / 최대 48</td><td>최대 16. 별도 장치 진단 호출은 추가로 기록.</td></tr>
+<tr><td>새 입력 표현의 실측</td><td>동일 초기 사용자 입력 25,178바이트</td><td>20,617바이트, 18.1% 감소. 같은 과제·스키마로 표현만 비교한 값.</td></tr>
+<tr><td>기관 패킷 / 수치 색인</td><td>기존 반복 메타데이터</td><td>각각 약 31–33% / 31.4% 바이트 감소</td></tr>
+<tr><td>실제 토큰·속도·GPU 안정성</td><td>장문 누적·시간 초과·Vulkan 장치 오류 관측</td><td>미측정. 바이트 감소를 속도나 메모리 감소율로 바꾸지 않는다.</td></tr>
+</tbody></table></div>
+<p>호출 상한은 기본 대비 50%, 보조 포함 상한 대비 약 67% 줄지만 실행 시간이 같은 비율로 줄어든다는 뜻은 아니다. 기존 실패에서는 R1의 추가 수정 두 요청만 약 29분을 차지했다. 이 비용을 제거하는 근거는 실제 기록이며, 장치 오류의 원인이 입력 길이라는 증거는 아직 없다.</p>
+<p>모델은 우선 기존 Qwen3.5-4B Q4_K_M을 유지한다. 더 작은 모델로 바꿔 능력과 절차를 동시에 바꾸지 않는다. GPU 사용 여부와 문맥 용량은 정확한 입력 토큰·메모리·완주 여부로 선택하고 별도 버전으로 기록한다. 현재 선택된 새 백엔드는 없다.</p>
+<p class="note">위 바이트 비교는 v4.9의 표현 압축에 한정된 과거 측정이다. v4.9.1에는 업무·거시 자료와 출력 필드가 추가되므로 그 감소율을 새 전체 입력이나 속도에 적용하지 않는다. 호출 상한은 여전히 묶음당 8회다.</p></section>
+<section id="basis"><h2>8. 논문 근거와 우리 설계 선택의 구분</h2>
+<p>2026-10-19에 확인한 최근 금융·다중 대화 연구와 직접 관련된 이전 통제실험을 함께 사용했다. 최신이라는 이유만으로 다른 과제의 숫자를 복사하지 않는다. 상세 판본·저자·적용 범위는 <a href="../research/v49_reference_review_20261019.json">문헌 근거표</a>와 <a href="../research/v49_methods_review_20261019.json">방법 검토표</a>에 있다.</p>
+<div class="table"><table><thead><tr><th>일차 연구</th><th>이 계획에 적용한 원칙</th><th>가져오지 않은 주장</th></tr></thead><tbody>
+<tr><td><a href="https://arxiv.org/html/2505.06120v1">Laban et al. (2025), §§3.3, 6.3, 7.1</a></td><td>정보 제공 순서와 최종 재제공을 구분한다. 마지막에 근거를 다시 제시하는 설계 선례.</td><td>2단계가 최적이거나 실패를 없앤다는 주장. 논문의 대규모 효과를 이 사례로 이전하지 않는다.</td></tr>
+<tr><td><a href="https://www.ifo.de/DocDL/cesifo1_wp11862.pdf">Hornuf, Streich, &amp; Töllich (2025), §§1, 3.3</a></td><td>제공 정보를 통제하고 실제 배분 권고의 변화를 평가한다. 검색기를 고정 패킷으로 분리하는 선례.</td><td>정보를 추가하면 반드시 품질이 좋아진다는 가정. 인간 비교나 수익률 결과는 여기서 재현하지 않는다.</td></tr>
+<tr><td><a href="https://arxiv.org/html/2609.14302v1">E2A-Bench (2026), §§3.2–3.4, App. C.1</a></td><td>사실·설명·행동과 산출 범위를 함께 평가한다. 질의당 1회 평가 선례.</td><td>기관별 정답 비중, 검증된 전략 종합점수, 네 사례의 통계적 검정력.</td></tr>
+<tr><td><a href="https://arxiv.org/html/2609.38869v2">Reasoning Externalization (2026), §§3.4–4.1.4</a></td><td>근거 ID와 계산 관계를 추적하고, 계산을 외부화하되 판단과 구분한다.</td><td>유료 CRSP/WRDS 자료나 SHAP 목표를 차용하지 않는다. 비중 자동 보정 근거로 쓰지 않는다.</td></tr>
+<tr><td><a href="https://arxiv.org/html/2609.25192v1">FinFIRST (2026), §§2.2–2.3</a></td><td>출처·시점·정의·계산 입력 추적, 과제 요구와 평가의 사전 일치.</td><td>검색 실험의 성공률이나 채점 가중치를 산업배분에 그대로 적용하지 않는다.</td></tr>
+<tr><td><a href="https://arxiv.org/html/2605.27887v6">PortBench v6 (2026), §3.1, App. C.2</a></td><td>실제 배분과 계산 검사를 분리하고, 배분 간 거리를 기술한다. 기존 출력 상한의 출처.</td><td>원논문의 최적화 정답·위험계수·4B 성능·2단계 최적성.</td></tr>
+<tr><td><a href="https://arxiv.org/pdf/2610.08882v1">FinVector-Market-4B (2026), §4.1</a></td><td>Qwen3.5-4B의 구조화 금융 과제, greedy/no-thinking·seed 설정의 선례.</td><td>700토큰이 11산업의 근거·비중을 담기에 충분하다는 가정. 다른 엔진·양자화의 동일 성능.</td></tr>
+<tr><td><a href="https://arxiv.org/html/2602.07338v1">Intent Mismatch (2026), §§3–5</a></td><td>의도 해석과 실제 과제 수행을 구분해 관측한다.</td><td>중개 모델이나 숨은 대화 요약을 추가하지 않는다.</td></tr>
+</tbody></table></div>
+<h3>수치의 출처</h3>
+<p><strong>2개 자료·2조건·2단계·8호출</strong>은 자료 범위와 비교 논리에서 나온 연구자 선택이다. <strong>11산업</strong>은 기존 GICS 분류다. <strong>출력 상한 8,192</strong>는 PortBench에서 이전한 기존 후보이며, 실제 필요한 길이를 보증하지 않는다. FinVector의 700은 이 출력 계약에 적용하지 않는다. <strong>temperature 0·thinking 비활성·seed 3407</strong>은 원논문과 실행기 차이를 구분해 유지한다. <strong>합계 허용오차 10⁻⁶</strong>와 문맥·스레드·시간 제한은 수치·운영 설정이며 논문의 행동 기준으로 꾸미지 않는다.</p>
+<p>새 문맥 상한이나 설명 길이를 지금 임의로 정하지 않는다. 필요한 모든 이력과 허용 출력이 들어가는지를 실제 모델 토큰화로 검사하고, 잘림 없이 작동하는 설정을 본실험 전에 고정한다. 이때 변경한 설정은 모든 조건에 동일하게 적용한다.</p>
+</section>
+<section id="gates"><h2>9. 검증과 실행 전 남은 조건</h2>
+<p>검증은 순서대로 진행한다. 1차는 공개 원문·발표일·단위·입력 일치와 오프라인 코드, 2차는 논문 근거 및 전체 계획·소논문·평가의 논리, 3차는 앞선 수정 반영 후 주제 연결과 반례를 확인한다. 결과는 <a href="../research/v491_validation_round1_20261019_r2.json">1차</a>, <a href="../research/v491_validation_round2_20261019_r2.json">2차</a>, <a href="../research/v491_validation_round3_20261019.json">3차</a>에 기록한다. AI 검증은 독립 사람 검토나 실제 모델 성공의 증거가 아니다.</p>
+<p>공통 업무·시장 입력, 모델용 초안 메시지, 최종 메시지 조립·검사 코드와 평가명세를 준비했다. 실제 전송 백엔드와 전체 이력의 토큰·메모리 검증, 새 조건의 네 사례 예비실험, 두 사람의 출처·의미 검토, 실행순서·자원한도·모델을 포함한 본실험 동결은 남아 있다. 현재 모델 호출·본실험 결과는 0건이다.</p>
+<p>자료가 늘어난 이후 속도를 추정하지 않는다. 예비실험은 E가 이기는지나 근거가 맞는지로 설계를 고르는 과정이 아니다. 실행 실패와 관측 가능한 결과를 분리하고, 본실험 결과를 본 뒤 지표·산업·문서를 바꾸지 않는다.</p></section>
+<section id="files"><h2>10. 연결 파일과 소논문 반영</h2>
+<ul><li><a href="LIBERA_실험설정_v4.9.1_20261019.json">v4.9.1 설정과 진행 조건</a></li>
+<li><a href="../research/v491_evaluation_protocol_20261019.json">평가 규칙·분모·해석 명세</a> · <a href="../research/v491_human_review_template_20261019.json">사람 검토용 빈 표</a></li>
+<li><a href="../data/sector_protocol/v491_design_20261019/prompt_contract.json">초안·최종안 지시문</a> · <a href="../data/sector_protocol/v491_design_20261019/response_schema.json">출력 형식</a></li>
+<li><a href="../research/v49_compaction_review_20261019.json">입력 압축·복원 검증</a> · <a href="../data/sector_protocol/v491_design_20261019/public_compact_candidate.json">오프라인 공개 입력 후보</a> — 여러 기관을 모아 둔 파일이므로 모델에 통째로 전달하지 않는다.</li>
+<li><a href="../paper/LIBERA_소논문_방법개정안_v4.9.1_20261019.html">소논문 제목·연구질문·방법·한계의 교체 본문</a></li>
+</ul>
+<ul><li><a href="../paper/LIBERA_텀페이퍼_초안_v4.9.1_20261019.html">공통상황을 통합한 텀페이퍼 전체 초안</a></li><li><a href="../data/sector_protocol/v491_design_20261019/prepared/preparation_manifest.json">초안 입력 8건의 파일·동일성 기록</a> — 예비 4건·본 4건의 준비 입력이며 생성 결과가 아니다.</li><li><a href="../research/sector_v491_contract.py">오프라인 입력·최종안 조립·검사 코드</a> · <a href="../research/v491_handoff_20261019.json">최종 인계 기록</a></li></ul></section>
+<footer>이 문서는 이전 설계와 실패 기록을 덮어쓰지 않는 새 개정안이다. 기존 v4.8.1 결과는 개발 이력으로 보존하며 v4.9.1 결과와 합치지 않는다. 공개 자료의 의미 차이를 관측 가능한 조직 의사결정 문제로 연결하되, 시장 전체의 효과는 주장하지 않는다.</footer>
+</main></body></html>
+

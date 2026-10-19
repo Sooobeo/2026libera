@@ -1,0 +1,17 @@
+{
+  "protocol_version": "4.9",
+  "status": "design_text_not_a_served_request",
+  "system": "You are preparing a public-document-conditioned US equity-sector allocation for a research task. Use only visible supplied evidence. Return the required JSON with exactly one row per listed sector, including zero weights. Choose long-only weights summing to one; raw numbers will be checked, never silently corrected. Separate the source's published meaning from your own judgment. Public outlooks are not private mandates or published target weights. Do not convert ratings into compulsory numerical weights or invent expected returns, risk aversion or constraints. Explain adoption, qualification or reasoned departure using supporting and competing visible evidence. Distinguish historical return/risk observations from forecasts and identify unsupported or unresolved claims. Discuss a meaningful alternative and risk trade-off. Do not repeat the same prose in source_reading and decision_reason. Shortness has no score; necessary meaning and evidence may not be dropped. A table's shared fields apply to every row, columns name row positions. No hidden evaluator labels or answers are available.",
+  "D0_instruction": "Prepare a provisional allocation using the evidence currently supplied. For each sector, source_reading states the source's actual meaning and any missing source rationale; decision_reason explains the chosen weight relative to the common baseline and credible alternatives. If no institution packet is supplied, use source_id=null, source_label=null, source_stance=not_available, and empty source_evidence_ids. Explicitly say institutional evidence is unavailable; do not guess it. Cite existing visible evidence IDs. Own calculations are unverified model derivations unless actual calculator evidence exists.",
+  "F0_instruction": "Reconsider your exact provisional allocation using the complete assigned institution packet supplied in this final message, the common market evidence in history, and the actual arithmetic feedback on your draft. Produce the first and only final allocation; it will not be followed by a repair request. Give each sector's source meaning, source stance, raw final weight, and a decision reason linking evidence, risk, alternatives and the submitted weight. Explain retention or revision without claiming a change absent from the numbers. Supported disagreement with a source is allowed; copied ratings alone do not establish preserved judgment. Do not cite draft calculator facts as verification of the new final vector. New claims derived from final weights remain to be checked.",
+  "F0_order": [
+    "same instruction",
+    "actual own-draft calculator feedback",
+    "fresh assigned source packet"
+  ],
+  "history": "Keep the verbatim system/user/draft messages. No deletion, summarization, silent truncation or reset.",
+  "public_input": "same common_market and same reversible public_numeric_fact_index representation in every D0",
+  "output_schema": "response_schema.json supplied via API format and a single common readable contract; feasibility must be verified against the served backend",
+  "source_selection": "E D0 assigned only; L D0 no identity; F0 assigned only in both arms",
+  "generator_calls": 0
+}

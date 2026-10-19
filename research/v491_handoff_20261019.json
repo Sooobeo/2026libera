@@ -1,0 +1,365 @@
+{
+  "protocol_version": "4.9.1",
+  "recorded_at_utc": "2026-10-19T05:34:47.974523+00:00",
+  "status": "common_context_design_inputs_paper_and_offline_contract_complete",
+  "experiment_frozen": false,
+  "model_calls": 0,
+  "pilot_calls": 0,
+  "main_calls": 0,
+  "independent_human_review_completed": false,
+  "entrypoints": {
+    "plan": {
+      "path": "plan/LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html",
+      "sha256": "81fb8579ac0da25f052075075176305904134cec1e9de44221db43bacd848da3"
+    },
+    "full_term_paper_draft": {
+      "path": "paper/LIBERA_텀페이퍼_초안_v4.9.1_20261019.html",
+      "sha256": "6082188d2469feaf221b54845e5462681709a59e776307234c9705b3be79f6a6"
+    },
+    "methods_replacement": {
+      "path": "paper/LIBERA_소논문_방법개정안_v4.9.1_20261019.html",
+      "sha256": "b7da065a8efc0948c31536cc5721f45c672e9ab55e84e4b97b0202aa64ae215f"
+    },
+    "configuration": {
+      "path": "plan/LIBERA_실험설정_v4.9.1_20261019.json",
+      "sha256": "0d7ad14eb7f07fb9a7e7607a1cdb1ff148794d88878d6706b7b6a66bbc319110"
+    },
+    "prepared_messages": {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/preparation_manifest.json",
+      "sha256": "ceeedfbb81c329c7fff83e65d90fb29aaf9be054b1751ea58a24ae33f385dfac"
+    }
+  },
+  "ordered_reviews": [
+    {
+      "review": {
+        "path": "research/v491_validation_round1_20261019_r2.json",
+        "sha256": "9a87099556fcb2ba3b3abdf64efc3a2d17e6d49eea658cced7bc616cf890b305"
+      },
+      "status": "PASS"
+    },
+    {
+      "review": {
+        "path": "research/v491_validation_round2_20261019_r2.json",
+        "sha256": "5ef2119a884713ec6a1f5f481e4592c2bd6d79ffe1eb77f09bb11dced8d8daac"
+      },
+      "status": "PASS"
+    },
+    {
+      "review": {
+        "path": "research/v491_validation_round3_20261019.json",
+        "sha256": "807310ba8e8c67595b514487ceb77e83a781feccd2e5ac5857d28a7a1d02e931"
+      },
+      "status": "PASS"
+    }
+  ],
+  "process_chain": {
+    "events": 5,
+    "last_event_sha256": "14b21b7d2a200383f09e254d2652af21dfc7c5dc212355b23c91392e3e0799be",
+    "valid": true
+  },
+  "exact_delivery_files": [
+    {
+      "path": ".gitattributes",
+      "sha256": "f718d829ecac305ca0202f32161d54d28c1c5294c9009fc4482b6a8cc74a0e7a"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "6e9a8977647e2ec0f653f7ac1323e97f527499d0800028f2ec13438c4e49a1f5"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/build_market_context.py",
+      "sha256": "8521d32bf6630eb20c1fb4fefee57af469e53aa60bf51869d6fb1deb841d81c5"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/common_context.json",
+      "sha256": "67d94bdee3d38854097970cdfb74f40e2557a11e22b016e9a68374e6f13cb96f"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/market_context.json",
+      "sha256": "87fe629ae6051b73f623b74e7befc27a83fdc854032efa5c596ae7de47fff739"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/sources/bea_gdp_20260625.extracted.txt",
+      "sha256": "3bf73cb011910694320b81fb8bbd9a665c290580a19fe9b1d2640f132c530081"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/sources/bea_gdp_20260625.pdf",
+      "sha256": "24194657c9036e5e1ed056f2ff3c523db1273a2dd789ec1b53b1d84164bc199e"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/sources/bea_gdp_20260625.pdf.retrieval.json",
+      "sha256": "6a9c9d9c806c404410a48fe2c4961e29bad3ed1929726fb6522fd44da0bee366"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/sources/bls_cpi_20260714.web_snapshot.extracted.txt",
+      "sha256": "1f1ce272d156d1dac58ecc186b9301994b158b28a5d7425fe29fc313845ca8f2"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/sources/bls_cpi_20260714.web_snapshot.txt",
+      "sha256": "991c12f722e5bf26b5136e1256bb09dbf077e4da721b9dd41c6e9e80b50e5c35"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/sources/bls_cpi_20260714.web_snapshot.txt.retrieval.json",
+      "sha256": "b63cf9b60bdc4e209392c72b50be65cea98b50d63c78535ca30a6761dca751e6"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/sources/bls_empsit_20260702.web_snapshot.extracted.txt",
+      "sha256": "3e1c90ac9c95ff5a1d84749c762da72415b1a7ac15bd230b7f50ae211531d0b7"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/sources/bls_empsit_20260702.web_snapshot.txt",
+      "sha256": "87e263e4848c7b52f02e3119c865afd81324d76cf4db917f474ef91bac40d4b3"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/sources/bls_empsit_20260702.web_snapshot.txt.retrieval.json",
+      "sha256": "465691303c7c5b58ed5ef79d3aa12784717e161e0d26fcac10f78a11ed319f0d"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/sources/fed_fomc_20260617.extracted.txt",
+      "sha256": "0575afa877c85cd7bb0980537adc49d3eda21d00d76ae1378c3fabf6150fe86b"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/sources/fed_fomc_20260617.html",
+      "sha256": "444c2c14910433345ca5357d769074b35abcb86734339cde1e77fb2f438ec9a0"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/sources/fed_fomc_20260617.html.retrieval.json",
+      "sha256": "d446ae3329dfb05a52b4b1feca5fae99bf3d1495b2722228a8f2778f48aadcd0"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/main/fidelity_q3_2026__E__D0_messages.json",
+      "sha256": "f4e00e18e9fc17e37701999159e2acb35e4e9a79d60063899f897839eff49dcd"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/main/fidelity_q3_2026__L__D0_messages.json",
+      "sha256": "3b53227438dd6c5b450a7ed2e30751388d27d6c0054a89a544b88b5095eedf61"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/main/ubs_july_2026__E__D0_messages.json",
+      "sha256": "6905c838dace1c97ff8bd328844b7c7319f8627843677a77c843feb60d985696"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/main/ubs_july_2026__L__D0_messages.json",
+      "sha256": "3b53227438dd6c5b450a7ed2e30751388d27d6c0054a89a544b88b5095eedf61"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/pilot/fidelity_q2_2026__E__D0_messages.json",
+      "sha256": "956a0e3f6a265583abd18e8354b2f3a6102ffee61b49f3aa17add893d86ee2f9"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/pilot/fidelity_q2_2026__L__D0_messages.json",
+      "sha256": "3b53227438dd6c5b450a7ed2e30751388d27d6c0054a89a544b88b5095eedf61"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/pilot/ubs_june_2026__E__D0_messages.json",
+      "sha256": "c42a0ec43f680a408d7667d6417f83f482febcb0fb7d1297c10d1653290874b3"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/pilot/ubs_june_2026__L__D0_messages.json",
+      "sha256": "3b53227438dd6c5b450a7ed2e30751388d27d6c0054a89a544b88b5095eedf61"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/preparation_manifest.json",
+      "sha256": "ceeedfbb81c329c7fff83e65d90fb29aaf9be054b1751ea58a24ae33f385dfac"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prompt_contract.json",
+      "sha256": "4a16ae185b1a5e65f47c2749695070b20826bea48612a28c30e0f44fb2d68d09"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/public_compact_candidate.json",
+      "sha256": "afe810b2bfb69ae4bfa372e65fa587bc6253eecf8028d5fde39cf3ec395bcb8d"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/response_schema.json",
+      "sha256": "944a232de9f4a1e9ae672b172196aa906077ee03c3f6bf2ab06ad032d6d0b147"
+    },
+    {
+      "path": "paper/LIBERA_소논문_방법개정안_v4.9.1_20261019.html",
+      "sha256": "b7da065a8efc0948c31536cc5721f45c672e9ab55e84e4b97b0202aa64ae215f"
+    },
+    {
+      "path": "paper/LIBERA_텀페이퍼_초안_v4.9.1_20261019.html",
+      "sha256": "6082188d2469feaf221b54845e5462681709a59e776307234c9705b3be79f6a6"
+    },
+    {
+      "path": "plan/LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html",
+      "sha256": "81fb8579ac0da25f052075075176305904134cec1e9de44221db43bacd848da3"
+    },
+    {
+      "path": "plan/LIBERA_실험설정_v4.9.1_20261019.json",
+      "sha256": "0d7ad14eb7f07fb9a7e7607a1cdb1ff148794d88878d6706b7b6a66bbc319110"
+    },
+    {
+      "path": "research/artifacts/v491_review_history_20261019/LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html",
+      "sha256": "63f45450d987bbcd26474119955bad2ba661a1ce4c31aa207e35c64ae8de44f5"
+    },
+    {
+      "path": "research/artifacts/v491_review_history_20261019/LIBERA_텀페이퍼_초안_v4.9.1_20261019.html",
+      "sha256": "f546e3f627c7125f56c11d8bf0a4e32182d8da5f4c59e4174f5f4cc6d23e2b76"
+    },
+    {
+      "path": "research/artifacts/v491_review_history_20261019/snapshot_manifest.json",
+      "sha256": "1beb0f070887cf23b33a98bf8255ae865c27659e8c5311a11be5cf1fc129896f"
+    },
+    {
+      "path": "research/artifacts/v491_review_history_20261019/v491_validation_round1_20261019.json",
+      "sha256": "f5c3cb7021cff76f1d496fb4da82006c4d3936c1619a6fadbe4e421903c5cd1b"
+    },
+    {
+      "path": "research/artifacts/v491_review_history_20261019/v491_validation_round2_20261019.json",
+      "sha256": "a37450dd64f8ca01b5b590f9bfba83e1a2d31e5f4675fc3ab036308b342f6e2a"
+    },
+    {
+      "path": "research/artifacts/v491_visual_20261019/capture_receipt.json",
+      "sha256": "5a0dec1eecee901f1fc1198b2396ec629e24680e3231a95c7ef6c450b2c14c14"
+    },
+    {
+      "path": "research/artifacts/v491_visual_20261019/context_table.png",
+      "sha256": "6a4caf09d43010f72a0023d905f213df09188fd1c29b3ef31a8a8f0e6848a0fc"
+    },
+    {
+      "path": "research/artifacts/v491_visual_20261019/paper_top.png",
+      "sha256": "2d571347f5b0d744402b1fe99e76211fac82f2994b6dbf917c07d7a19b2c599d"
+    },
+    {
+      "path": "research/artifacts/v491_visual_20261019/plan_narrow.png",
+      "sha256": "8d87750112ed0b16e13fc03738633288fea2cdda0cac574aca91d4db8f0dfb21"
+    },
+    {
+      "path": "research/artifacts/v491_visual_20261019/plan_top.png",
+      "sha256": "9415979dd13f4c6b344a0881ffdc4f7d3164f9d18ccc06940f20e5ed8e5b7449"
+    },
+    {
+      "path": "research/artifacts/v491_visual_20261019/r2/capture_receipt.json",
+      "sha256": "e8381ab00b284aa43d356e1326737cfd236503b916f83bfa6c574cb08b1f5a16"
+    },
+    {
+      "path": "research/artifacts/v491_visual_20261019/r2/context_table.png",
+      "sha256": "6a4caf09d43010f72a0023d905f213df09188fd1c29b3ef31a8a8f0e6848a0fc"
+    },
+    {
+      "path": "research/artifacts/v491_visual_20261019/r2/paper_top.png",
+      "sha256": "2d571347f5b0d744402b1fe99e76211fac82f2994b6dbf917c07d7a19b2c599d"
+    },
+    {
+      "path": "research/artifacts/v491_visual_20261019/r2/plan_narrow.png",
+      "sha256": "8d87750112ed0b16e13fc03738633288fea2cdda0cac574aca91d4db8f0dfb21"
+    },
+    {
+      "path": "research/artifacts/v491_visual_20261019/r2/plan_top.png",
+      "sha256": "9415979dd13f4c6b344a0881ffdc4f7d3164f9d18ccc06940f20e5ed8e5b7449"
+    },
+    {
+      "path": "research/artifacts/v491_visual_20261019/r2/visual_review.json",
+      "sha256": "a3f1d1c3a85bfb95e547e6af427b0b911889928e42cc200adf6982c0573a3c80"
+    },
+    {
+      "path": "research/artifacts/v491_visual_20261019/visual_review.json",
+      "sha256": "26bde63486187d2c97323460453dd6b0301e1bd5c8ae235670908f5e9f16e02a"
+    },
+    {
+      "path": "research/build_v491_context_plan.py",
+      "sha256": "6c41d2696f80de7ff16f3c3994077faebf035ae85e3de1505c79f142cada251d"
+    },
+    {
+      "path": "research/finalize_v491_delivery.py",
+      "sha256": "11c3e9764f48b271873a02b0a6b5c0d96a165189ae37677316fd1e81eb962f09"
+    },
+    {
+      "path": "research/prepare_sector_v491.py",
+      "sha256": "0e8188630a8b3a36da08671519b2bfeba7d3d2ca412568f789bfeca2ea4192e7"
+    },
+    {
+      "path": "research/render_v491_visualqa.py",
+      "sha256": "728639b116a269e8f2fec38af6ea6f199b62480e8e27cee8c2a587bb98d8bccb"
+    },
+    {
+      "path": "research/requirements-v491.txt",
+      "sha256": "025d1a266ce796794e90b314029b9e8200b5268ea7f93f3cc72c976b1b75030c"
+    },
+    {
+      "path": "research/sector_v491_contract.py",
+      "sha256": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397"
+    },
+    {
+      "path": "research/test_sector_v491_contract.py",
+      "sha256": "bfecb94ba4e8beedb5e77d3d43bfe0afb1255c74b611fead756427fcc1b98149"
+    },
+    {
+      "path": "research/v491_evaluation_protocol_20261019.json",
+      "sha256": "b9ff937ca478062c79af1c1065a2dbcb87cea39b3f4c917dd5ccdcd9b0a6d5b6"
+    },
+    {
+      "path": "research/v491_human_review_template_20261019.json",
+      "sha256": "54ea9c9f1ab6a2780e8532b50a1558badbf1dea9d7abf0ddc595c900101431e7"
+    },
+    {
+      "path": "research/v491_macro_source_audit_20261019.json",
+      "sha256": "0567efc4a5ae8eee60b66c3cf0904d376a8b4943a27f45f780053dee3746e6fc"
+    },
+    {
+      "path": "research/v491_mandate_basis_20261019.json",
+      "sha256": "141744fabbb44d4a91a47449b44ad186931a4cb998fc555dc9da3d642e07dd6b"
+    },
+    {
+      "path": "research/v491_process_20261019.jsonl",
+      "sha256": "621953b1fad03b4eb53a20090436f9321a3f05039d34d518b23ef0e47bf29773"
+    },
+    {
+      "path": "research/v491_validation_round1_20261019.json",
+      "sha256": "f5c3cb7021cff76f1d496fb4da82006c4d3936c1619a6fadbe4e421903c5cd1b"
+    },
+    {
+      "path": "research/v491_validation_round1_20261019_r2.json",
+      "sha256": "9a87099556fcb2ba3b3abdf64efc3a2d17e6d49eea658cced7bc616cf890b305"
+    },
+    {
+      "path": "research/v491_validation_round1_initial_20261019.json",
+      "sha256": "6bff75bd2626ca807e9aa14e287674b88c9a8614c79afcece16bbf45c5436f72"
+    },
+    {
+      "path": "research/v491_validation_round2_20261019.json",
+      "sha256": "a37450dd64f8ca01b5b590f9bfba83e1a2d31e5f4675fc3ab036308b342f6e2a"
+    },
+    {
+      "path": "research/v491_validation_round2_20261019_r2.json",
+      "sha256": "5ef2119a884713ec6a1f5f481e4592c2bd6d79ffe1eb77f09bb11dced8d8daac"
+    },
+    {
+      "path": "research/v491_validation_round3_20261019.json",
+      "sha256": "807310ba8e8c67595b514487ceb77e83a781feccd2e5ac5857d28a7a1d02e931"
+    },
+    {
+      "path": "research/verify_v491_round1.py",
+      "sha256": "531672242a3959a976ec07a7342241c59700118b0de726592fa34af560e4f875"
+    }
+  ],
+  "changes": [
+    "Explicit new-money US equity sleeve, 12-month judgment horizon, qualitative equity-loss acceptance",
+    "Seven dated official macro facts added identically from D0; release vintage and units preserved",
+    "Prepared eight D0 inputs; source exposure and later exact-history F0 calculation contract wired offline",
+    "Context use evaluation and full pre-experiment term paper synchronized",
+    "Disposable HTML browser profiles ignored; source evidence and previews retained"
+  ],
+  "reproduce_preparation": [
+    "python -B -X utf8 research/build_v491_context_plan.py",
+    "python -B -X utf8 research/prepare_sector_v491.py"
+  ],
+  "reproduction_note": "Rebuilding reviewed artifacts or modifying code requires new hash-bound review. Commands prepare data only and do not run a model.",
+  "remaining_before_main": [
+    "Validate live v4.9.1 transport and full retained-history token/memory/backend operation",
+    "Run and account for the separate four-case pilot without outcome-based selection",
+    "Complete two separate human source/meaning reviews and reconcile disagreements",
+    "Freeze exact input/model/evaluation/order/resource ceilings, then execute main"
+  ],
+  "not_claimed": [
+    "An executed experiment",
+    "A completed result-bearing submission",
+    "Guaranteed valid model portfolios or statistical significance",
+    "An institutional private mandate or whole-client suitability test",
+    "12-month realized performance or harmful market-wide homogenization"
+  ],
+  "visual_scope": "Four screenshots inspected; not a final printed-paper pagination audit",
+  "git_scope": "No commit or push of this new design performed in this task; prior cleanup push is separate."
+}

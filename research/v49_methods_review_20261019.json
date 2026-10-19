@@ -1,0 +1,162 @@
+{
+  "artifact_kind": "independent_methods_review_for_compact_design",
+  "candidate_version": "4.9",
+  "date_kst": "2026-10-19",
+  "author_role": "Codex subagent methods reviewer; not an independent human subject-matter reviewer",
+  "status": "conditional_design_recommendation_not_execution_or_empirical_validation",
+  "model_experiment_calls": 0,
+  "sources_read": [
+    "plan/문규리 제안서 상세_최종.html",
+    "paper/LIBERA_텀페이퍼_초안_v4.8.1_20261019_r3.html",
+    "plan/LIBERA_실험설정_v4.8_20261018.json",
+    "research/v48_evaluation_protocol_20261018.json",
+    "research/v48_topic_alignment_basis_20261018.json",
+    "research/evaluator_only/v48_source_comparison_20261018.json",
+    "research/evaluator_only/v48_source_comparison_original_excerpts_20261018.json"
+  ],
+  "central_judgment": {
+    "recommendation": "Two document sources by early/late provision, with a draft and a final response per cell; eight separately recorded generation calls, four final endpoints, no post-final repair calls.",
+    "topic_alignment": "Preserves the current paper's question about documented source judgments surviving into an allocation recommendation and about evidence provision before versus after a draft. It does not restore the original proposal's stronger identification of economically excessive convergence or market harm.",
+    "guarantee_boundary": "A design can make a question observable and its interpretation defensible. It cannot guarantee valid generated portfolios, a nonzero difference, statistical significance, external validity, or an eventual substantive answer before observing the outputs.",
+    "scope": "Controlled descriptive document-case comparison, not four independent institutions and not a powered population experiment.",
+    "positive_contribution": "Makes a management decision about when organizational evidence enters drafting observable while keeping actual capital-allocation choices, reasons, and mechanical feasibility in the same record. A null, mixed, or unsuccessful outcome remains reportable without claiming that the allocation research question was answered when it was not."
+  },
+  "recommended_workflow": {
+    "sources": ["fidelity_q3_2026", "ubs_july_2026"],
+    "units": "One fixed source document under one fixed workflow; eleven sectors are dependent components within a portfolio.",
+    "E_draft": "Common market packet plus the assigned document packet; submit all eleven raw weights with short source interpretation, adoption/qualification/departure reason, and a meaningful alternative.",
+    "L_draft": "Same common market packet and task, without assigned document identity, document content, evaluator labels, or source-specific feedback; submit the same response structure.",
+    "E_final": "Same final instruction and freshly repeated assigned document packet at the same prompt position as L_final; retain the actual E draft and common deterministic draft feedback.",
+    "L_final": "Same final instruction and freshly supplied assigned document packet at the same prompt position as E_final; retain the actual L draft and common deterministic draft feedback.",
+    "final_information_control": "Both final calls contain the identical source-packet bytes and common market facts for their source pair. This controls final packet location and accessibility but not prior exposure, exposure count, or generated draft/history.",
+    "estimand": "Observed early-versus-late workflow difference conditional on the chosen documents, market snapshot, model, runtime and fixed procedure. This is not an isolated memory or anchoring mechanism.",
+    "calculator": "Identical arithmetic and historical-risk support for both arms; it is a measurement/support tool, not the strategic control group or a source of optimal weights.",
+    "first_final": "The first submitted final response is the sole primary endpoint. Stop after it, retaining malformed, incomplete, or infeasible outputs. No until-success tuning, favorable response selection, clipping, renormalization, or residual cash insertion.",
+    "comparison_at_final": "Compare E and L within each document. Compare the two source allocations within E and within L only when their raw vectors are valid. Keep reasons and feasibility alongside distances.",
+    "shared_blind_draft_alternative": "One blind draft could be branched to both late-source finals, saving one call, but it creates explicit shared-draft dependence and changes the workflow. It is methodologically possible as a fixed branched case study; eight separate calls are simpler and recommended here.",
+    "not_required_control": "A source-blind final would help separate document-induced updating from generic self-revision, but that is a different estimand. The present E/L comparison must not claim to isolate document updating from all ordinary revision effects."
+  },
+  "primary_paper_basis": [
+    {
+      "id": "laban2025",
+      "title": "LLMs Get Lost In Multi-Turn Conversation",
+      "authors_year": "Laban, Hayashi, Zhou, and Neville (2025)",
+      "url": "https://arxiv.org/html/2505.06120v1",
+      "version_checked": "v1; arXiv submission history checked 2026-10-19 lists v1",
+      "locators": ["3.3 Simulation Types: Concat, Recap, Snowball", "6.3 Gradual Sharding Experiment", "7.1 Implications for System and Agent Builders", "Appendix N"],
+      "paper_finding": "The paper compares full versus progressively supplied information; final recapitulation is an evaluated intervention. Its gradual-sharding experiment finds reliability problems even with two turns. It discusses residual variability under deterministic-looking decoding settings.",
+      "application": "Repeat the same complete packet in both final calls, preserve the actual draft, and label the contrast as a workflow comparison. Restrict claims to observed cases.",
+      "not_transferred": "The paper does not establish two stages, eight calls, or this model as optimal. Its tasks are not financial allocations, and its effect size is not an expected LIBERA effect. Recap-like delivery here is an adaptation, not replication."
+    },
+    {
+      "id": "e2a2026",
+      "title": "E2A-Bench: Benchmarking Evidence-to-Action Reliability in Financial Chart Reasoning",
+      "authors_year": "Wang, Xu, and Wang (2026)",
+      "url": "https://arxiv.org/html/2609.14302v1",
+      "version_checked": "v1, submitted 2026-09-13; arXiv lists EMNLP Findings",
+      "locators": ["3.1 Design Principles", "3.2 Task Formulation", "3.3 Evidence Anchor Construction", "3.4 Evaluation Protocol", "3.5 Validation", "4.2 Overall Performance"],
+      "paper_finding": "Separates verifiable evidence, stated rationale, action consistency, and actionable coverage without assigning one correct trading action. Human annotations validate the automatic scorer rather than create trading-action truth.",
+      "application": "Keep factual accuracy, reason-to-weight consistency, response/sector coverage, and raw feasibility separate; verify source meanings independently before interpreting similarities.",
+      "not_transferred": "Do not copy chart-specific directional thresholds, confidence scale, BUY/SELL scoring, or NDR into qualitative sector allocation. LIBERA's semantic categories remain an explicitly adapted rubric requiring human review."
+    },
+    {
+      "id": "portbench2026",
+      "title": "PortBench: A Correlation-Aware, Full-Pipeline Benchmark for LLM-Driven Portfolio Management",
+      "authors_year": "Zhao, Chen, and Su (2026)",
+      "url": "https://arxiv.org/html/2605.27887v6",
+      "version_checked": "v6, revised 2026-10-09; current arXiv version checked 2026-10-19",
+      "locators": ["2.2 Evaluation Framework", "3.1 Experimental Setup", "4.1 Local Gains Can Fade or Reverse", "Appendix C.2"],
+      "paper_finding": "Distinguishes sequential model decisions from deterministic execution/risk scoring and traces downstream effects. Financial question-answering accuracy alone does not establish portfolio performance.",
+      "application": "Retain interpretation-to-allocation tracing and deterministic risk/feasibility measurement despite shorter generation. Keep allocation distance descriptive and separate from future performance.",
+      "not_transferred": "The two-stage workflow is not the paper's five-stage pipeline. Neither its sample size nor composite pipeline score provides statistical validity or a strategic target allocation for this four-cell case study."
+    },
+    {
+      "id": "hornuf2025",
+      "title": "Making GenAI Smarter: Evidence from a Portfolio Allocation Experiment",
+      "authors_year": "Hornuf, Streich, and Tollich (2025)",
+      "url": "https://www.ifo.de/DocDL/cesifo1_wp11862.pdf",
+      "version_checked": "CESifo Working Paper 11862, 95-page official PDF",
+      "locators": ["3.3.2 Treatment 1", "3.3.3 Treatment 2", "Appendix A, Table A1"],
+      "paper_finding": "Studies allocation responses to different information treatments and investor profiles. The official PDF explicitly describes using concise information summaries under context restrictions.",
+      "application": "Short source-grounded packets have a portfolio-experiment precedent, but packet fidelity and original-source coverage must be checked.",
+      "not_transferred": "Do not import profile risk tolerances into Fidelity/UBS, use its proprietary firm data as though publicly available, or present its summaries as a guarantee that ours preserve every relevant judgment."
+    }
+  ],
+  "source_difference_review": {
+    "status": "AI pre-coding of already preserved source excerpts; independent human adjudication pending",
+    "retain_all_sectors": ["10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "60"],
+    "policy": "Review all eleven sectors before model outcomes. Never select sectors from observed E/L differences. Compare stated rationales and source-specific definitions, not interchangeable rating codes. Missing separate source rationale stays missing.",
+    "definitions": {
+      "fidelity": "Original definition on page 2 describes opportunistic tilts relative to broad-market weights and explicitly qualifies the strategist view's institutional scope.",
+      "ubs": "Original definition on page 27 gives high-level opportunities and a twelve-month house-view frame; actual tactical allocations may differ because of portfolio construction and constraints.",
+      "consequence": "Attractive does not mean a specified overweight. Neither scale establishes target percentages or a common numerical distance between judgments."
+    },
+    "all_sector_candidates": [
+      {"sector": "10", "interpretation": "Fidelity negative risk-return versus UBS Neutral without separate sector rationale: differing published stance candidate, no shared target scale."},
+      {"sector": "15", "interpretation": "Fidelity selected mining opportunity versus UBS Neutral without separate sector rationale: unequal emphasis, not numerical allocation truth."},
+      {"sector": "20", "interpretation": "Both broadly positive; Fidelity valuation versus UBS aerospace/transportation reasons. Useful supported-similarity and reason-distinction case."},
+      {"sector": "25", "interpretation": "Both broadly positive; valuation versus AI/consumer-spending reasoning. Similar final direction may be justified."},
+      {"sector": "30", "interpretation": "Fidelity value-trap concern versus UBS Neutral without separate rationale. Do not invent UBS fundamentals."},
+      {"sector": "35", "interpretation": "Fidelity balanced risk-return versus UBS downside-resilience emphasis. Candidate difference in reason and stance, conditional on source definitions."},
+      {"sector": "40", "interpretation": "Both broadly positive; relative valuation versus deregulation/capital-markets rationale. Similarity need not imply loss of institutional evidence."},
+      {"sector": "45", "interpretation": "Fidelity positive fundamentals/valuation versus UBS Neutral without separate sector rationale. Distinct source statements do not require a fixed weight gap."},
+      {"sector": "50", "interpretation": "Fidelity mixed subsector reasoning and aggregate Underweight versus UBS Neutral without separate rationale. Preserve within-sector qualification."},
+      {"sector": "55", "interpretation": "Fidelity unattractive valuations and Underweight versus UBS defensive resilience/AI exposure and Attractive: substantive contrasting emphasis candidate grounded in original text."},
+      {"sector": "60", "interpretation": "Fidelity interest-rate headwind/Underweight versus UBS Neutral without separate rationale. Do not infer an institution-specific rate forecast absent from the packet."}
+    ],
+    "utilities_original_evidence": {
+      "fidelity_pdf": "tmp/pdfs/sector_documents/fidelity_q3_2026.pdf",
+      "fidelity_pdf_sha256": "4179aa3e97f3146e664655ac1008cc87942341069ec4bccfbfe7d7436467dd04",
+      "fidelity_url": "https://clearingcustody.fidelity.com/app/proxy/content?literatureURL=/9906006.PDF#page=3",
+      "fidelity_locator": "page 3 Utilities row; page 2 rating definition",
+      "fidelity_exact_excerpt": "Valuation levels are not attractive.",
+      "fidelity_rating_check": "Preserved Utilities row image visually inspected; Underweight is explicitly printed.",
+      "ubs_pdf": "tmp/pdfs/sector_documents/ubs_july_2026.pdf",
+      "ubs_pdf_sha256": "07369578859be743e2323ea611f8d9b47e9bb7bc1e7b0e081d4b8df5ad2b4b7b",
+      "ubs_url": "https://advisors.ubs.com/mediahandler/media/816396/UBS%20House%20View%20for%20July%202026.pdf#page=21",
+      "ubs_locator": "page 21 US equities-sectors prose and Utilities rating row; page 27 definition",
+      "ubs_excerpt_paraphrase": "The original prose jointly identifies healthcare and utilities as resilient if growth disappoints, and adds AI-trend exposure for utilities.",
+      "ubs_rating_check": "Preserved row image shows the green plus position; Attractive label comes from the existing packet transcription and still requires header-aware independent review.",
+      "interpretation": "There is an inspectable valuation caution versus defensive/growth rationale contrast, even without imposing numerical comparability of the rating scales. Same final weights can still be defensible if the stated trade-off is grounded.",
+      "use": "Illustration only; no new outcome-dependent subset and no target-weight constraint."
+    }
+  },
+  "measurement_recommendations": {
+    "primary_records": [
+      "For each expected source-sector final row: literal attributed source judgment and exact evidence location.",
+      "Whether the source attribution is supported, contradicted, omitted, or not assessable; preserve reviewer explanation.",
+      "Whether the model adopts, qualifies, defers, or departs from that judgment and which supplied evidence supports its stated choice.",
+      "Whether the stated relative allocation direction and numerical comparisons match the raw submitted weight and common baseline.",
+      "Completion, schema/coverage, raw weight sum, range violations, missing values, and valid-allocation status for every planned case."
+    ],
+    "do_not_combine": "No arbitrary weighted strategy score, cross-scale rating-to-percentage rule, success-rate threshold, or post hoc criterion. Exact-label extraction is a factual diagnostic, not institutional strategy preservation by itself.",
+    "distances": "Use the previously defined full-vector distance only on valid raw vectors, and report the full vectors and signed sector changes as well. Do not silently normalize an invalid vector to make the comparison possible.",
+    "risk": "Historical covariance/volatility diagnostics are descriptive properties of a valid submitted portfolio, not a forecast loss probability, institution risk appetite, or unique strategic optimum.",
+    "human_review": "Pre-output source coding and post-output semantic coding must remain distinct. Present final artifacts without E/L labels where practical; source identity cannot be fully blinded when source claims are evaluated. AI self-review cannot be relabelled independent human validation.",
+    "uncertainty": "Report two document-specific paired contrasts and all four cases. Eleven sectors are compositional and share one response; they cannot be counted as 44 independent replications. One seed and temperature zero do not quantify sampling uncertainty."
+  },
+  "meaningfulness_and_execution_gates": {
+    "before_main": [
+      "Freeze source packets and all-sector comparison inventory after source review, before viewing new final outputs.",
+      "Check that the complete compact request fits the actual context setting without truncation and that a pilot of the same structural size completes transport; report hardware errors separately from generated-content errors.",
+      "Verify equal final source bytes, no early source leak in L, same output obligations and calculator rules, and actual raw draft preservation.",
+      "Freeze model/runtime, request settings, planned case list, stop policy and evaluation questions. Numeric engineering limits must be identified as measured implementation settings, not invented paper-optimal constants."
+    ],
+    "not_a_gate": "Correct portfolio sums or desired E/L differences must not become a retry-until-success admission rule. They are outcomes.",
+    "after_main_full_comparison": "Claim the complete E/L-by-source portfolio comparison only if all four primary raw final vectors are valid. When fewer are valid, disclose the exact eligible within-source or between-source pairs and restrict conclusions to them.",
+    "all_invalid": "If no valid primary portfolio pair exists, the allocation-comparison question remains unanswered. The record supports a technical/reasoning diagnostic and an implementation limitation, not evidence that institutional differences disappeared or that timing had no effect.",
+    "no_effect": "If all valid portfolios are similar, inspect source reasons and justified trade-offs before deciding whether this is faithful common judgment, unsupported generic convergence, or an indeterminate case.",
+    "future_scale": "Generalizable effects require independent source documents, time/market contexts and/or model replications chosen in a new prespecified protocol. There is no paper-derived magical minimum N that makes the present four cells population evidence."
+  },
+  "provenance_classification": {
+    "paper_supported_principles": ["information-equivalent final recap", "evidence-to-rationale-to-action evaluation", "deterministic arithmetic/risk measurement separate from model decisions", "short financial information packets with fidelity checks"],
+    "local_design_choices": ["two sources", "two stages", "eight calls", "one primary final per cell", "no additional repair", "all eleven public sectors", "source-specific semantic coding"],
+    "engineering_choices": ["token/context limit", "deadline", "backend/device", "quantization", "arithmetic precision tolerance"],
+    "prohibited_claim": "No cited paper validates the exact complete eight-call LIBERA design or guarantees substantive/statistical significance."
+  },
+  "review_rounds": [
+    {"round": 1, "focus": "Topic and identification", "result": "Conditional pass for current documentary-case question; not sufficient for original market-homogenization claim."},
+    {"round": 2, "focus": "Literature and parameter provenance", "result": "Primary texts and current listed versions checked; exact stage/case numbers labelled local choices; no fabricated paper-derived optimum."},
+    {"round": 3, "focus": "Measurement and failure interpretation", "result": "All-sector pre-coding, source-scale asymmetry, valid-pair denominators, no-until-success policy, and incomplete-answer boundary explicitly required."}
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "protocol_version": "4.9.1",
+  "operating_brief": {
+    "assignment_type": "hypothetical_new_US_equity_sector_sleeve",
+    "decision_reference_date": "2026-07-17",
+    "information_cutoff_exclusive": "2026-07-17",
+    "judgment_horizon_months": 12,
+    "horizon_end_reference": "2027-07-17",
+    "decision_type": "new_target_allocation_not_rebalancing",
+    "existing_sector_holdings": null,
+    "existing_holdings_meaning": "No sector portfolio exists within this new-money task; null is not unknown actual institutional holdings.",
+    "benchmark_role": "comparison_only_not_holdings_not_gold",
+    "numeric_risk_limit": null,
+    "numeric_utility_coefficient": null,
+    "required_return": null,
+    "evidence_items": [
+      {
+        "evidence_id": "CTX:task",
+        "statement": "This is a hypothetical research assignment to recommend a new US equity-sector sleeve, not to impersonate any institution or infer its private mandate.",
+        "evidence_type": "declared_research_task_not_empirical_institution_fact"
+      },
+      {
+        "evidence_id": "CTX:date",
+        "statement": "Use a 2026-07-17 decision reference and only supplied observations and public releases before that date. This is a documentary retrospective case, not a point-in-time trading replay.",
+        "evidence_type": "declared_research_task_not_empirical_institution_fact"
+      },
+      {
+        "evidence_id": "CTX:horizon",
+        "statement": "The allocation judgment horizon is 12 months. This is not a 12-month realized-return test. Document view dates and horizons remain those of their respective sources.",
+        "evidence_type": "declared_research_task_not_empirical_institution_fact"
+      },
+      {
+        "evidence_id": "CTX:objective",
+        "statement": "Propose a reasoned allocation intended for capital appreciation over the stated horizon, explaining diversification and risk-return trade-offs relative to the common sector benchmark. No required return or unique optimal allocation is specified.",
+        "evidence_type": "declared_research_task_not_empirical_institution_fact"
+      },
+      {
+        "evidence_id": "CTX:risk",
+        "statement": "The hypothetical assignment accepts equity-market loss risk and provides no capital guarantee. No numerical risk-aversion coefficient, volatility ceiling, loss budget or sector cap is supplied. Do not invent one; discuss remaining risk and uncertainty.",
+        "evidence_type": "declared_research_task_not_empirical_institution_fact"
+      },
+      {
+        "evidence_id": "CTX:starting_state",
+        "statement": "This is new money assigned to an equity sleeve with no existing sector holdings. Recommend target weights, not trades from current holdings. The S&P sector benchmark is only a comparison anchor and is not the starting portfolio.",
+        "evidence_type": "declared_research_task_not_empirical_institution_fact"
+      },
+      {
+        "evidence_id": "CTX:universe",
+        "statement": "Use exactly the supplied 11 GICS sector baskets, with one row for each sector including zero weights. The submitted allocation must be long-only, unlevered and fully invested: raw weights sum to one. Individual stocks, cash, bonds and derivatives are outside this sleeve task.",
+        "evidence_type": "declared_research_task_not_empirical_institution_fact"
+      },
+      {
+        "evidence_id": "CTX:scope",
+        "statement": "The deliverable is an allocation proposal for review, not a trade order or a whole-client financial plan. Transaction costs, turnover, tax optimization, withdrawals and actual client suitability are not measured. Do not invent missing client or liquidity requirements.",
+        "evidence_type": "declared_research_task_not_empirical_institution_fact"
+      },
+      {
+        "evidence_id": "CTX:liquidity_and_ESG",
+        "statement": "For this hypothetical sleeve there are no scheduled withdrawals during the judgment horizon and no separate ESG exclusion. These are declared task assumptions, not observed facts about a real institution or customer.",
+        "evidence_type": "declared_research_task_not_empirical_institution_fact"
+      },
+      {
+        "evidence_id": "CTX:evidence_use",
+        "statement": "Use dated market observations and any institution packet currently supplied. Published outlook ratings are not binding weight constraints or target holdings. Explain justified adoption, qualification or departure and any age/horizon mismatch. Do not assume the outlook author had observed later common market releases.",
+        "evidence_type": "declared_research_task_not_empirical_institution_fact"
+      }
+    ]
+  },
+  "market_context": {
+    "packet_id": "us_macro_release_context_cutoff_20260717",
+    "cutoff_exclusive": "2026-07-17",
+    "cutoff_timezone": "America/New_York",
+    "decision_information_date": "2026-07-16",
+    "role": "Common factual macro context supplied from the first draft to every condition, alongside the existing eleven-sector market packet and common task brief.",
+    "information_policy": [
+      "Use these dated release values as the common information set. Observation periods and publication dates are different fields.",
+      "No fact in this packet implies a prescribed sector preference or allocation. A model may draw a conditional inference but must label it as its own inference and cite the relevant evidence IDs.",
+      "The target-date context is July 2026; do not insert knowledge of later outcomes, later statistical revisions, or today's market state.",
+      "A source outlook may have been written before these releases. Treat any resulting tension as dated evidence to explain, not as evidence that the outlook's author saw subsequent information."
+    ],
+    "fact_table": {
+      "shared": {
+        "publication_timezone": "America/New_York",
+        "cutoff_status": "dated_official_release_precedes_exclusive_cutoff"
+      },
+      "columns": [
+        "evidence_id",
+        "label",
+        "value",
+        "unit",
+        "observation_period",
+        "seasonal_adjustment",
+        "publication_date",
+        "publication_time_local",
+        "source_id",
+        "source_url",
+        "source_excerpt",
+        "source_locator",
+        "release_vintage",
+        "interpretation_note",
+        "variable_selection_basis"
+      ],
+      "rows": [
+        [
+          "MACRO_FED_TARGET_20260617",
+          "Federal funds target range announced by FOMC",
+          {
+            "lower": 3.5,
+            "upper": 3.75
+          },
+          "percent per year",
+          "2026-06-17 policy decision",
+          "not applicable",
+          "2026-06-17",
+          "14:00:00",
+          "FED_FOMC_20260617",
+          "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm",
+          "federal funds rate at 3-1/2 to 3-3/4 percent",
+          "Dated press release, first policy-decision paragraph",
+          "Dated policy announcement; not a later statistical time-series extraction",
+          "This is a policy target range, not an observed effective rate or an assumed future rate.",
+          "interest_rate"
+        ],
+        [
+          "MACRO_CPI_HEADLINE_MOM_202606",
+          "CPI-U all items change from previous month",
+          -0.4,
+          "percent month over month",
+          "2026-06",
+          "seasonally adjusted",
+          "2026-07-14",
+          "08:30:00",
+          "BLS_CPI_20260714",
+          "https://www.bls.gov/news.release/archives/cpi_07142026.htm",
+          "decreased 0.4 percent",
+          "Archive release header and opening CPI-U paragraphs; Table A",
+          "June 2026 figures as printed in the July 14 release, not a current BLS API series",
+          "Monthly price change; do not interpret as an annual inflation rate.",
+          "inflation"
+        ],
+        [
+          "MACRO_CPI_HEADLINE_YOY_202606",
+          "CPI-U all items change over twelve months",
+          3.5,
+          "percent year over year",
+          "2025-06 to 2026-06",
+          "not seasonally adjusted",
+          "2026-07-14",
+          "08:30:00",
+          "BLS_CPI_20260714",
+          "https://www.bls.gov/news.release/archives/cpi_07142026.htm",
+          "index increased 3.5 percent before seasonal adjustment",
+          "Archive release header and opening CPI-U paragraphs; Table A",
+          "June 2026 figures as printed in the July 14 release, not a current BLS API series",
+          "Twelve-month price change ending June 2026.",
+          "inflation"
+        ],
+        [
+          "MACRO_CPI_CORE_YOY_202606",
+          "CPI-U excluding food and energy change over twelve months",
+          2.6,
+          "percent year over year",
+          "2025-06 to 2026-06",
+          "not seasonally adjusted",
+          "2026-07-14",
+          "08:30:00",
+          "BLS_CPI_20260714",
+          "https://www.bls.gov/news.release/archives/cpi_07142026.htm",
+          "rose 2.6 percent",
+          "Archive release header and opening CPI-U paragraphs; Table A",
+          "June 2026 figures as printed in the July 14 release, not a current BLS API series",
+          "Core CPI excludes food and energy; it is not PCE inflation.",
+          "inflation"
+        ],
+        [
+          "MACRO_UNEMPLOYMENT_202606",
+          "Civilian unemployment rate",
+          4.2,
+          "percent of civilian labor force",
+          "2026-06",
+          "seasonally adjusted",
+          "2026-07-02",
+          "08:30:00",
+          "BLS_EMPSIT_20260702",
+          "https://www.bls.gov/news.release/archives/empsit_07022026.htm",
+          "unemployment rate (4.2 percent)",
+          "Archive release header and opening paragraph; Tables A-1 and B-1",
+          "June 2026 first-release estimates; subsequent payroll revisions are excluded",
+          "Household-survey unemployment measure; not the payroll employment growth rate.",
+          "labor_context"
+        ],
+        [
+          "MACRO_NONFARM_CHANGE_202606",
+          "Change in total nonfarm payroll employment",
+          57000,
+          "jobs from previous month",
+          "2026-06",
+          "seasonally adjusted",
+          "2026-07-02",
+          "08:30:00",
+          "BLS_EMPSIT_20260702",
+          "https://www.bls.gov/news.release/archives/empsit_07022026.htm",
+          "payroll employment (+57,000)",
+          "Archive release header and opening paragraph; Tables A-1 and B-1",
+          "June 2026 first-release estimates; subsequent payroll revisions are excluded",
+          "First-release establishment-survey estimate; subsequent revisions are excluded.",
+          "labor_context"
+        ],
+        [
+          "MACRO_REAL_GDP_Q1_2026_THIRD",
+          "Real GDP change from previous quarter, annualized",
+          2.1,
+          "percent quarter over quarter at annual rate",
+          "2026-Q1",
+          "seasonally adjusted annual rate",
+          "2026-06-25",
+          "08:30:00",
+          "BEA_GDP_20260625",
+          "https://www.bea.gov/sites/default/files/2026-06/gdp1q26-3rd.pdf",
+          "annual rate of 2.1 percent",
+          "Release PDF page 1 and Real GDP and Related Measures table on page 3",
+          "2026 Q1 third estimate released June 25; later annual updates are excluded",
+          "Third estimate for January-March 2026; not Q2 growth, a year-over-year rate, or a forecast.",
+          "activity_context"
+        ]
+      ]
+    },
+    "representation": "Each row inherits shared fields; columns identify row positions. All source fact fields are retained losslessly. Literature selection audit is outside model input."
+  }
+}

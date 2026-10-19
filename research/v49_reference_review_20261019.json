@@ -1,0 +1,403 @@
+{
+  "schema_version": "libera_v49_reference_review_1.0",
+  "checked_at_utc": "2026-10-19T03:25:14.954487+00:00",
+  "client_date": "2026-10-19",
+  "status": "reference_audit_for_proposed_redesign_not_execution_or_validity_guarantee",
+  "scope_ko": "Targeted review of eight primary papers and their current arXiv versions, not an exhaustive systematic literature review.",
+  "research_question_boundary_ko": "Whether one small shared generative model links supplied public institutional sector views to its allocation proposals, and whether the linkage differs between evidence supplied before versus after drafting. This does not identify private mandates, actual holdings, legal constraints, market-wide homogenization or investment returns.",
+  "papers": [
+    {
+      "id": "portbench",
+      "aid": "2605.27887",
+      "version": 6,
+      "version_date": "2026-10-09",
+      "locators": [
+        "Section 2.2",
+        "Section 3.1",
+        "Appendix C.1 T5",
+        "Appendix C.2 Eq.7-8",
+        "Appendix C.4"
+      ],
+      "support_ko": "Common market information and execution rules, model allocation separated from external calculation, a 60-day statistical lookback and allocation-distance formula are documented. The evaluation connects interpretation, signals and weights.",
+      "application_ko": "Precompute common market statistics for the 11 sectors while retaining model-authored interpretation, alternatives and weights. Use half-L1 distance only descriptively between two valid portfolios.",
+      "limits_ko": "Do not treat the original multi-asset optimization reference or risk-profile constraints as institutional truth. The paper does not establish two stages, four cases, 4B performance or projection validity. Distance is not strategy correctness or a significance threshold.",
+      "url": "https://arxiv.org/abs/2605.27887v6",
+      "latest_abstract_url": "https://arxiv.org/abs/2605.27887",
+      "title": "PortBench: A Correlation-Aware, Full-Pipeline Benchmark for LLM-Driven Portfolio Management",
+      "authors_original": [
+        "Zhao, Yuxuan",
+        "Chen, Sijia",
+        "Su, Ningxin"
+      ],
+      "first_submission_date": "2026-05-27",
+      "dateline": "[Submitted on 27 May 2026 ( v1 ), last revised 9 Oct 2026 (this version, v6)]",
+      "latest_version_observed": 6,
+      "version_matches": true,
+      "metadata_sha256": "257f60b60b7ce8335bd2e64672e55b4926eb598a68d139fb9f7c4700e256ae50",
+      "fulltext_url": "https://arxiv.org/html/2605.27887v6",
+      "citation": "Zhao, Yuxuan; Chen, Sijia; Su, Ningxin. (2026). PortBench: A Correlation-Aware, Full-Pipeline Benchmark for LLM-Driven Portfolio Management. arXiv:2605.27887v6. https://arxiv.org/abs/2605.27887v6"
+    },
+    {
+      "id": "e2a",
+      "aid": "2609.14302",
+      "version": 1,
+      "version_date": "2026-09-13",
+      "locators": [
+        "Sections 3.2-3.4",
+        "Section 3.5",
+        "Appendix C.1",
+        "Limitations"
+      ],
+      "support_ko": "The task does not presume a uniquely correct trading action. It separates factual grounding, rationale-action consistency and actionable coverage. Appendix C.1 reports one evaluation per query with deterministic decoding where supported.",
+      "application_ko": "Separately report source fidelity, rationale-weight linkage and output/arithmetic coverage. Retain failed scheduled cases. One fixed run has a documented evaluation precedent.",
+      "limits_ko": "Chart decisions are not institutional strategy or profitability ground truth. One run does not establish power, generalization or complete determinism for four local cases. Do not import NDR aggregation or technical thresholds.",
+      "url": "https://arxiv.org/abs/2609.14302v1",
+      "latest_abstract_url": "https://arxiv.org/abs/2609.14302",
+      "title": "E2A-Bench: Benchmarking Evidence-to-Action Reliability in Financial Chart Reasoning",
+      "authors_original": [
+        "Wang, Xiaoya",
+        "Xu, Yutong",
+        "Wang, Junjie"
+      ],
+      "first_submission_date": "2026-09-13",
+      "dateline": "[Submitted on 13 Sep 2026]",
+      "latest_version_observed": 1,
+      "version_matches": true,
+      "metadata_sha256": "87a59e24d4fcae57f69135bc6c5b976bc1fe8015df9b6e15d577faa763d3e04b",
+      "fulltext_url": "https://arxiv.org/html/2609.14302v1",
+      "citation": "Wang, Xiaoya; Xu, Yutong; Wang, Junjie. (2026). E2A-Bench: Benchmarking Evidence-to-Action Reliability in Financial Chart Reasoning. arXiv:2609.14302v1. https://arxiv.org/abs/2609.14302v1"
+    },
+    {
+      "id": "finfirst",
+      "aid": "2609.25192",
+      "version": 1,
+      "version_date": "2026-09-21",
+      "locators": [
+        "Sections 2.2.2-2.2.3",
+        "Section 2.3",
+        "Section 3.1"
+      ],
+      "support_ko": "Atomic evaluation links original source locations, dates, units, versions and intermediate calculations. Its reference package permits financially equivalent alternatives.",
+      "application_ko": "Freeze source-specific criteria, acceptable alternatives and unassessable items before outputs. Do not invent undisclosed institutional weights or risk aversion as answers.",
+      "limits_ko": "Financial search evaluation does not provide unique sector-optimal weights or a two-call design. Three automated reviews do not equal the original finance-expert independent review.",
+      "url": "https://arxiv.org/abs/2609.25192v1",
+      "latest_abstract_url": "https://arxiv.org/abs/2609.25192",
+      "title": "FinFIRST: Benchmarking Search Agents for Financial Information Retrieval, Sourcing and Traceability",
+      "authors_original": [
+        "Wang, Wenqing",
+        "Xiang, Haitao",
+        "Zhao, Xinyi",
+        "Yin, Mingming",
+        "Zhong, Ying",
+        "Huan, Zhaoxin",
+        "Zhou, Qiheng",
+        "Zhu, Jin",
+        "Zhang, Xiaolu",
+        "Chang, Shi",
+        "Zhou, Jun"
+      ],
+      "first_submission_date": "2026-09-21",
+      "dateline": "[Submitted on 21 Sep 2026]",
+      "latest_version_observed": 1,
+      "version_matches": true,
+      "metadata_sha256": "658bf62d3c90d66dc0dc8b476f27d80135da83dc10e7562d06a13bd27017aec6",
+      "fulltext_url": "https://arxiv.org/html/2609.25192v1",
+      "citation": "Wang, Wenqing; Xiang, Haitao; Zhao, Xinyi; Yin, Mingming; Zhong, Ying; Huan, Zhaoxin; Zhou, Qiheng; Zhu, Jin; Zhang, Xiaolu; Chang, Shi; Zhou, Jun. (2026). FinFIRST: Benchmarking Search Agents for Financial Information Retrieval, Sourcing and Traceability. arXiv:2609.25192v1. https://arxiv.org/abs/2609.25192v1"
+    },
+    {
+      "id": "externalization",
+      "aid": "2609.38869",
+      "version": 2,
+      "version_date": "2026-10-06",
+      "locators": [
+        "Sections 3.4-3.5, Table 1",
+        "Section 4.1.2",
+        "Sections 4.1.3-4.1.4"
+      ],
+      "support_ko": "Conditions share an evidence registry, system instruction and output schema while varying evidence exposure. Numerical and relational computations are performed externally and structured claims are checked against evidence IDs.",
+      "application_ko": "Supply compact common calculated tables and source-linked claims while preserving model interpretation and allocation choice. Reduce representation overhead without deleting decision-relevant information.",
+      "limits_ko": "SHAP narrative generation is not institutional portfolio construction. Structured-field checking does not establish truth of unrestricted prose. Do not import CRSP/WRDS data. External arithmetic does not itself justify correcting model weights.",
+      "url": "https://arxiv.org/abs/2609.38869v2",
+      "latest_abstract_url": "https://arxiv.org/abs/2609.38869",
+      "title": "Reasoning Externalization for Faithful Large Language Model Narratives of Stock Return Predictions",
+      "authors_original": [
+        "Kim, Sujung",
+        "Cho, Seung Hwan",
+        "Park, Sangjin",
+        "Kim, Young-Min"
+      ],
+      "first_submission_date": "2026-09-30",
+      "dateline": "[Submitted on 30 Sep 2026 ( v1 ), last revised 6 Oct 2026 (this version, v2)]",
+      "latest_version_observed": 2,
+      "version_matches": true,
+      "metadata_sha256": "14d3668bbce7d781b1f608f7ab3eff5a79e08b72a86e384903458da8202d256d",
+      "fulltext_url": "https://arxiv.org/html/2609.38869v2",
+      "citation": "Kim, Sujung; Cho, Seung Hwan; Park, Sangjin; Kim, Young-Min. (2026). Reasoning Externalization for Faithful Large Language Model Narratives of Stock Return Predictions. arXiv:2609.38869v2. https://arxiv.org/abs/2609.38869v2"
+    },
+    {
+      "id": "finvector",
+      "aid": "2610.08882",
+      "version": 1,
+      "version_date": "2026-10-06",
+      "locators": [
+        "Section 4.1, PDF page 4",
+        "Sections 6.1 and 6.4",
+        "Section 7.3",
+        "Section 10, Table 8"
+      ],
+      "support_ko": "The paper compares base/adapted Qwen3.5-4B with explicit JSON contracts. It reports shared seed 3407, greedy decoding, disabled thinking and a 700-new-token ceiling, scoring raw text without repair.",
+      "application_ko": "Supports identical output contracts, seed3407, no-thinking and greedy translated to T0. The 700-token ceiling is only a candidate requiring task-fit verification.",
+      "limits_ko": "MLX/Apple Metal differs from Ollama/Q4_K_M. A ceiling of700 is not established as sufficient for our evidence, alternatives and 11 weights. Valid JSON does not guarantee arithmetic or strategy. Do not attribute adapter performance to the base model.",
+      "url": "https://arxiv.org/abs/2610.08882v1",
+      "latest_abstract_url": "https://arxiv.org/abs/2610.08882",
+      "title": "FinVector-Market-4B: A Controlled Study of LoRA Adaptation for Structured Financial Tasks",
+      "authors_original": [
+        "Khaybullina, Alina"
+      ],
+      "first_submission_date": "2026-10-06",
+      "dateline": "[Submitted on 6 Oct 2026]",
+      "latest_version_observed": 1,
+      "version_matches": true,
+      "metadata_sha256": "f725bc2f591079d4d2d357e4f0c92165836eaab2fd6733bfe81bb33f095a9a49",
+      "fulltext_url": "https://arxiv.org/pdf/2610.08882v1",
+      "citation": "Khaybullina, Alina. (2026). FinVector-Market-4B: A Controlled Study of LoRA Adaptation for Structured Financial Tasks. arXiv:2610.08882v1. https://arxiv.org/abs/2610.08882v1"
+    },
+    {
+      "id": "data_centric",
+      "aid": "2609.10113",
+      "version": 1,
+      "version_date": "2026-09-09",
+      "locators": [
+        "Section 5.1-5.3, Table 3",
+        "Section 5.4",
+        "Discussion"
+      ],
+      "support_ko": "Includes financial benchmark evaluation of Qwen3.5-4B and smaller Qwen3 models, reporting both improvements and regressions under adaptation.",
+      "application_ko": "Provides additional precedent for studying a small base model in finance; frame the contribution as measuring conditional behavior rather than assuming high investment competence.",
+      "limits_ko": "Financial QA/post-training is not institutional sector allocation or quantized-runtime validation. Do not transfer FINESSE scores into allocation accuracy or model superiority, or use the paper to require new fine-tuning.",
+      "url": "https://arxiv.org/abs/2609.10113v1",
+      "latest_abstract_url": "https://arxiv.org/abs/2609.10113",
+      "title": "Data-Centric Post-Training for Financial Reasoning: Mining, Distillation, and Verifiable Learning",
+      "authors_original": [
+        "Hayrapetyan, Zhirayr",
+        "Kalmykov, Andrei",
+        "Kokosinskii, Denis",
+        "Stanishevskii, Dmitry",
+        "Zmitrovich, Dmitry"
+      ],
+      "first_submission_date": "2026-09-09",
+      "dateline": "[Submitted on 9 Sep 2026]",
+      "latest_version_observed": 1,
+      "version_matches": true,
+      "metadata_sha256": "2989abc3e6bdd416aef8a2a093eaa27751f8313f0a68419a529f15da2c67a82a",
+      "fulltext_url": "https://arxiv.org/html/2609.10113v1",
+      "citation": "Hayrapetyan, Zhirayr; Kalmykov, Andrei; Kokosinskii, Denis; Stanishevskii, Dmitry; Zmitrovich, Dmitry. (2026). Data-Centric Post-Training for Financial Reasoning: Mining, Distillation, and Verifiable Learning. arXiv:2609.10113v1. https://arxiv.org/abs/2609.10113v1"
+    },
+    {
+      "id": "lost_in_conversation",
+      "aid": "2505.06120",
+      "version": 1,
+      "version_date": "2025-05-09",
+      "locators": [
+        "Section 3.3",
+        "Section 6.1",
+        "Section 6.3",
+        "Section 7.1",
+        "Appendices F and M"
+      ],
+      "support_ko": "Compares the same task information presented at once versus across turns. Gradual sharding keeps complexity fixed and observes degradation even at two shards. Recap restates prior user information in a final turn; Appendix M specifies this intervention.",
+      "application_ko": "Motivates before/after-draft evidence procedures. Preserve the same final information and response contract, and explicitly state the information available at each step.",
+      "limits_ko": "Nonfinancial tasks do not establish two stages as optimal or safe or prove the local failure mechanism. Repeated exposure and prior outputs differ, so the estimand is a whole procedure rather than pure timing.",
+      "publication_note_ko": "Search returned an ICLR2026 published version, but direct OpenReview inspection was blocked by a browser challenge. This review therefore cites only the directly inspected arXiv v1.",
+      "url": "https://arxiv.org/abs/2505.06120v1",
+      "latest_abstract_url": "https://arxiv.org/abs/2505.06120",
+      "title": "LLMs Get Lost In Multi-Turn Conversation",
+      "authors_original": [
+        "Laban, Philippe",
+        "Hayashi, Hiroaki",
+        "Zhou, Yingbo",
+        "Neville, Jennifer"
+      ],
+      "first_submission_date": "2025-05-09",
+      "dateline": "[Submitted on 9 May 2025]",
+      "latest_version_observed": 1,
+      "version_matches": true,
+      "metadata_sha256": "355fd46185ccec7890f5e909eb6596b3bd298589e51979aff78a56edefdb684d",
+      "fulltext_url": "https://arxiv.org/html/2505.06120v1",
+      "citation": "Laban, Philippe; Hayashi, Hiroaki; Zhou, Yingbo; Neville, Jennifer. (2025). LLMs Get Lost In Multi-Turn Conversation. arXiv:2505.06120v1. https://arxiv.org/abs/2505.06120v1"
+    },
+    {
+      "id": "intent_mismatch",
+      "aid": "2602.07338",
+      "version": 1,
+      "version_date": "2026-02-07",
+      "locators": [
+        "Section 3.1",
+        "Sections 4.1-4.2",
+        "Section 5"
+      ],
+      "support_ko": "Separates intent interpretation from execution in multi-turn interaction and evaluates a mediator that reconstructs explicit instructions.",
+      "application_ko": "Supplementary motivation for separating interpretation contracts from execution/arithmetic checks and keeping source terminology and scope explicit.",
+      "limits_ko": "The mediator uses prior user histories and forms a different system. Do not introduce hidden summaries, rewritten institutional meanings or additional agents. Its causal argument does not prove how financial source processing works.",
+      "url": "https://arxiv.org/abs/2602.07338v1",
+      "latest_abstract_url": "https://arxiv.org/abs/2602.07338",
+      "title": "Intent Mismatch Causes LLMs to Get Lost in Multi-Turn Conversation",
+      "authors_original": [
+        "Liu, Geng",
+        "Zhu, Fei",
+        "Feng, Rong",
+        "Ma, Changyi",
+        "Wang, Shiqi",
+        "Meng, Gaofeng"
+      ],
+      "first_submission_date": "2026-02-07",
+      "dateline": "[Submitted on 7 Feb 2026]",
+      "latest_version_observed": 1,
+      "version_matches": true,
+      "metadata_sha256": "a4b6ee721cb14f8126894c2eb2756c16341b98b956cfa85e02cfe45f86c88de6",
+      "fulltext_url": "https://arxiv.org/html/2602.07338v1",
+      "citation": "Liu, Geng; Zhu, Fei; Feng, Rong; Ma, Changyi; Wang, Shiqi; Meng, Gaofeng. (2026). Intent Mismatch Causes LLMs to Get Lost in Multi-Turn Conversation. arXiv:2602.07338v1. https://arxiv.org/abs/2602.07338v1"
+    }
+  ],
+  "local_context": [
+    {
+      "path": "research/v48_reference_basis_20261018.json",
+      "sha256": "421e6c39900beccea72a2996eb31077c84d10270f677a4478fb4d6d44e25e95b",
+      "bytes": 43782
+    },
+    {
+      "path": "research/v48_parameter_reference_addendum_20261018.json",
+      "sha256": "37af0008222199720a65483512b32ed08292f21be18ea610d63d258dbcb5d474",
+      "bytes": 8958
+    },
+    {
+      "path": "research/v44_conditions_reference_20261018.json",
+      "sha256": "a403d4c37d1581f9af21af8ba7a6333614d890ff15277e83181c1204549a9c5b",
+      "bytes": 16107
+    },
+    {
+      "path": "research/small_model_registry_20261018.json",
+      "sha256": "6bc3c88cd170330ff6d64bb548964330c65e807ab666de7f27bc433ca915732c",
+      "bytes": 7063
+    }
+  ],
+  "numeric_provenance": [
+    {
+      "item": "2 institutions x 2 exposure procedures x 2 generations = 8 calls",
+      "class": "LIBERA operational design and arithmetic; not copied paper sample size",
+      "interpretation_ko": "A local minimal comparison retaining source and exposure contrasts: four fixed trajectories, not eight independent samples; no paper-derived optimum or power claim."
+    },
+    {
+      "item": "one deterministic run per case",
+      "class": "reported evaluation precedent with domain/backend adaptation",
+      "source_id": "e2a",
+      "locator": "Appendix C.1",
+      "interpretation_ko": "A precedent for fixed-input evaluation, not proof of stochastic stability, sufficient sample size or exact reproducibility."
+    },
+    {
+      "item": "Qwen3.5-4B, greedy/no-thinking, seed3407",
+      "class": "paper-reported model and generation conditions with backend adaptation",
+      "source_id": "finvector",
+      "locator": "Section 4.1",
+      "interpretation_ko": "Keep the existing model to avoid conflating protocol reduction with model replacement. Q4_K_M and Ollama remain implementation differences."
+    },
+    {
+      "item": "700 new tokens",
+      "class": "paper-reported candidate ceiling; NOT automatically selected for LIBERA",
+      "source_id": "finvector",
+      "locator": "Section 4.1",
+      "interpretation_ko": "Do not adopt unless the complete required schema, source meaning and untruncated pilot output fit. No sufficiency or optimality claim."
+    },
+    {
+      "item": "8192 new tokens",
+      "class": "existing transferred paper ceiling, not target response length",
+      "source_id": "portbench",
+      "locator": "Section 3.1",
+      "interpretation_ko": "A retained maximum need not be a target length; compact the response contract without claiming8192 is optimal or sufficient for4B."
+    },
+    {
+      "item": "60 daily returns; annualization252; d(w,v)=0.5*L1",
+      "class": "existing paper parameter/formula transfers with explicit domain adaptation",
+      "source_id": "portbench",
+      "locator": "Appendix C.1 T5; C.4; C.2 Eq.8",
+      "interpretation_ko": "Use for data summaries and descriptive distance, never to invent institutional preferences, strategic targets or success cutoffs."
+    },
+    {
+      "item": "runtime context, timeout, batch, threads, quantization and sum tolerance",
+      "class": "engineering or numerical controls, not established financial experimental constants",
+      "interpretation_ko": "Separately justify engineering values by measurement, correctness and resource bounds. Freeze and record them; do not describe them as financial-paper constants."
+    }
+  ],
+  "recommended_compaction": {
+    "retain_ko": [
+      "All11 model-authored sector weights",
+      "Explicit interpretation linked to source evidence IDs",
+      "Reasons and meaningful alternatives or reasons to reject them",
+      "Distinction among market statistics, published source meaning and model assumptions",
+      "Verbatim draft and first final outputs",
+      "All scheduled cases, including partial and failed outcomes"
+    ],
+    "remove_or_externalize_ko": [
+      "Duplicated prose and long re-statements of supplied market statistics",
+      "Repeated model computation of covariance, volatility and sums",
+      "Post-final C1/C2 repair generations"
+    ],
+    "method_ko": "Use one compact structured contract for all arms. Deterministic tools verify numbers. Do not omit decision-relevant qualifiers, caveats or time scope or replace source meaning with an undisclosed model summary. Keeping weights alone would weaken the research construct.",
+    "history_ko": "Retain the entire actual draft for final review. Repeated exposure and different generated histories are part of the procedure; do not label the contrast a pure timing effect."
+  },
+  "solver_and_projection_decision": {
+    "recommended_ko": "External tools compute market statistics and check sums, risk quantities and structured-claim evidence. Strategic judgment and final weights remain model outputs.",
+    "projection_ko": "The inspected papers do not establish that automatic projection/normalization preserves institutional strategic fidelity. Adding it changes the study from model allocation to a hybrid model-optimizer system; exclude it from this basic compact design.",
+    "if_future_hybrid_ko": "A separately registered hybrid design must preserve raw and transformed weights, report adjustment magnitude and direction changes, and evaluate them as hybrid outputs. Objectives, risk coefficients and source-view-to-number mapping require explicit source or independent experimental justification.",
+    "forbidden_unsupported_rules": [
+      "institution label -> fixed target weight",
+      "overweight/underweight label -> arbitrary +/- percentage",
+      "invented risk-aversion gamma",
+      "minimum-variance allocation -> institution strategic ground truth",
+      "projection success -> strategic faithfulness",
+      "valid-only outputs -> all-case preservation claim"
+    ]
+  },
+  "meaningfulness_requirements_ko": [
+    "Hold market evidence, investment universe and output contract fixed while varying only the specified source document and exposure procedure.",
+    "Verify substantively comparable source differences before generation. Do not force output differences when published meanings do not differ.",
+    "Freeze source-grounded criteria, permitted alternatives and indeterminate categories before viewing outputs.",
+    "Report allocation distance alongside source fidelity and rationale-action linkage. Greater distance alone does not imply better preservation.",
+    "Four fixed trajectories support a descriptive component audit/case comparison, not institutional population inference, market-wide causal effects or guaranteed significance.",
+    "Separate infrastructure and measurement incidents from financial reasoning failures. If no valid contrasts remain, defer the allocation conclusion."
+  ],
+  "three_review_scope_ko": "Separately check bibliographic metadata, transfer of methods and overclaiming of numerical settings or conclusions. Review completion does not guarantee an experimental effect, significance or error-free execution.",
+  "checks": [
+    {
+      "id": "all_8_latest_arxiv_versions_match",
+      "passed": true
+    },
+    {
+      "id": "each_paper_has_locator_support_application_limits",
+      "passed": true
+    },
+    {
+      "id": "all_numbers_are_classified_no_two_stage_or_casecount_claim_as_paper_parameter",
+      "passed": true
+    },
+    {
+      "id": "compact_schema_and_external_arithmetic_do_not_replace_model_strategy",
+      "passed": true
+    },
+    {
+      "id": "public_source_claim_does_not_import_WRDS_CRSP",
+      "passed": true
+    },
+    {
+      "id": "no_inference_call_or_frozen_protocol_edit",
+      "passed": true
+    }
+  ],
+  "model_calls": 0,
+  "main_calls": 0,
+  "historical_files_modified": false,
+  "files_written_by_this_review": [
+    "research/v49_reference_review_20261019.json"
+  ],
+  "text_language": "English; legacy _ko field names retained for compatibility after repairing PowerShell pipe encoding corruption."
+}

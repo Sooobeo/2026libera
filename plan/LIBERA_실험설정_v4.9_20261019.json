@@ -1,0 +1,170 @@
+{
+  "protocol_version": "4.9",
+  "as_of_date": "2026-10-19",
+  "status": "reviewable_design_not_runtime_validated_not_frozen",
+  "research_question_ko": "공통 AI가 기관별 공개 산업 판단을 근거 있는 배분에 보존하는가? 초안 작성 전에 기관 자료를 제공하는 절차와 최종 검토 때 처음 제공하는 절차에서 그 반영이 어떻게 다른가?",
+  "claim_scope": "Two-source, single-model documentary case comparison under one market snapshot; not population inference or a test of market-wide harmful homogenization.",
+  "prior_protocol": {
+    "path": "plan/LIBERA_실험설정_v4.8_20261018.json",
+    "sha256": "95d03ab44a75c477bced0a6c9868facd58b66562ab90e24a0a6854e8cac659d3"
+  },
+  "historical_run_policy": "Preserve all v4.8 failures. Do not pool old/new trajectories, relabel old attempts or select best outputs.",
+  "sources": {
+    "pilot": [
+      "fidelity_q2_2026",
+      "ubs_june_2026"
+    ],
+    "main": [
+      "fidelity_q3_2026",
+      "ubs_july_2026"
+    ]
+  },
+  "unit": "one prespecified source document under one workflow condition; sectors and turns are dependent components",
+  "arms": [
+    "E",
+    "L"
+  ],
+  "stages": [
+    "D0",
+    "F0"
+  ],
+  "sectors": [
+    "10",
+    "15",
+    "20",
+    "25",
+    "30",
+    "35",
+    "40",
+    "45",
+    "50",
+    "55",
+    "60"
+  ],
+  "source_exposure": {
+    "E": {
+      "D0": "assigned packet",
+      "F0": "same assigned packet freshly supplied"
+    },
+    "L": {
+      "D0": "no source identity, packet, labels or institutional facts",
+      "F0": "assigned packet first supplied"
+    }
+  },
+  "final_controls": {
+    "same_final_source_packet_bytes": true,
+    "same_market_input": true,
+    "same_final_instruction_and_schema": true,
+    "same_model_and_sampler": true,
+    "same_calculator_policy": true,
+    "same_final_packet_position": true,
+    "packet_position_meaning": "Same final-message block order; absolute token positions and history lengths differ.",
+    "own_complete_draft_history_retained": true,
+    "same_generated_history": false
+  },
+  "estimand": "Early prior exposure plus its generated draft/history versus first exposure at final review, conditional on a common final evidence refresh. Not pure memory, anchoring, exposure-count or position effect.",
+  "draft_policy": "Each case generates its own full 11-sector provisional raw allocation and evidence-linked rationale. No shared L draft and no reset or summary of previous responses.",
+  "final_policy": "First final response F0 is primary. Retain exact raw draft, actual draft arithmetic feedback, and a fresh complete assigned source packet. Never append post-F0 repair.",
+  "calculator_policy": "Same deterministic checker in both arms, using only the submitted raw draft and already visible facts. No automatic normalization, residual fill, optimization target, hidden source constraints or semantic verdict.",
+  "failure_policy": "No automatic generation retries or replacement of a failed case. Preserve readable/partial output and infrastructure failure separately. Draft transport/schema failure prevents its dependent final call; draft arithmetic error alone does not prevent final review if the complete vector is readable.",
+  "budget": {
+    "cases_per_split": 4,
+    "core_calls_per_complete_case": 2,
+    "max_calls_per_split": 8,
+    "post_final_calls": 0,
+    "pilot_and_main_max_core_calls": 16,
+    "runtime_diagnostics_counted_separately": true,
+    "old_core_calls_per_split": 16,
+    "old_max_calls_per_split": 24,
+    "basis": "Arithmetic of the local design, not a paper-derived optimum or power calculation. No latency reduction is claimed."
+  },
+  "data": {
+    "taxonomy": "GICS11",
+    "baseline": "Existing common S&P500 sector baseline, not source holdings or targets",
+    "market_cutoff": {
+      "recent_only": true,
+      "finalized": true,
+      "common_cutoff": "2026-07-17",
+      "price_last_date": "2026-07-16",
+      "claim": "retrospective document-conditioned case, not point-in-time trading replay",
+      "fidelity_invalid_view_date_preserved": "6/31/26"
+    },
+    "public_data_only": true,
+    "not_point_in_time_trading_replay": true,
+    "packet_scope": "Existing researcher paraphrases, original rating labels, source IDs and page locators. Original PDFs remain available for review.",
+    "compact_candidate": {
+      "path": "data/sector_protocol/v49_design_20261019/public_compact_candidate.json",
+      "sha256": "999c12d89ac60b4bdc3c05dad4a03e1997f314993b0670dfdf577e7812ceabd1"
+    },
+    "aggregate_candidate_model_visible": false,
+    "visibility_rule": "Select exactly the assigned public packet; never send the aggregate containing all pilot/main sources."
+  },
+  "model": {
+    "name": "Qwen3.5-4B",
+    "ollama_tag": "qwen3.5:4b-q4_K_M",
+    "served_digest_reference": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+    "same_model_in_all_cells": true,
+    "thinking": false,
+    "temperature": 0,
+    "options_reference_not_new_runtime_selection": {
+      "temperature": 0,
+      "seed": 3407,
+      "num_predict": 8192,
+      "num_ctx": 65536,
+      "num_thread": 2,
+      "num_batch": 512,
+      "repeat_penalty": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0.0
+    },
+    "selected_backend": null,
+    "selected_context_tokens": null,
+    "runtime_validated": false,
+    "output_limit_candidate": 8192,
+    "output_limit_basis": "PortBench v6 section3.1 transfer, not Qwen4B two-stage optimality. FinVector700 is not adopted for this richer task.",
+    "context_selection_rule": "Before main freeze, measure exact rendered model tokens including retained draft, actual feedback, refreshed packet, template and allowed output. Choose a supported capacity covering the full bound without truncation; log memory and completion. Do not estimate tokens from bytes.",
+    "backend_rule": "Isolate recorded Vulkan failure; compare supported backend operation only as separately logged engineering diagnostics. No GPU stability claim from byte compaction."
+  },
+  "evaluation_path": "research/v49_evaluation_protocol_20261019.json",
+  "schema_path": "data/sector_protocol/v49_design_20261019/response_schema.json",
+  "prompt_contract_path": "data/sector_protocol/v49_design_20261019/prompt_contract.json",
+  "semantic_validators_required_before_execution": [
+    "exactly11 unique allowed sector codes, not merely11 rows",
+    "finite numeric weights excluding booleans",
+    "L D0 source_id and source_label null, source_stance not_available, source_evidence_ids empty",
+    "E D0 and every F0 bound to assigned source, citations resolved only against already visible evidence",
+    "new sectors records extracted unchanged into existing calculator weights input",
+    "actual requests exclude all unassigned packets and evaluator artifacts"
+  ],
+  "prohibited_heuristics": [
+    "rating-to-fixed-weight mapping",
+    "institution-specific invented gamma",
+    "invented return/confidence/cap",
+    "weighted composite quality score",
+    "until-success reruns",
+    "successful-pair-only conclusion",
+    "post-hoc selection of sectors or documents"
+  ],
+  "pre_main_requirements": [
+    "lossless input and visibility audit",
+    "same-task backend and full-token feasibility",
+    "completed separate four-case pilot accounting",
+    "outcome-blinded source/meaning review",
+    "versioned prompt/calculator/evaluator implementation checks",
+    "freeze exact inputs, model, evaluation, execution order and resource ceilings"
+  ],
+  "four_way_allocation_observability": "The complete main E/L by source allocation contrast requires four valid F0 portfolios. Otherwise report available prespecified pairs and missing contrasts, and do not claim the allocation question fully answered.",
+  "source_contrast_observability": "Complete all11 source comparisons before model outputs. Do not infer substantive conflict from different rating vocabularies. If no meaningful source distinction is supported, between-source preservation is not identified; do not fabricate one.",
+  "outcome_blind_readiness": "Do not require E to win, larger source distance, correct reasoning or every response to be arithmetically valid as a prompt tuning target. Distinguish a runnable instrument from observed valid contrasts.",
+  "current_state": {
+    "v49_model_calls": 0,
+    "v49_pilot_calls": 0,
+    "v49_main_calls": 0,
+    "independent_human_review_completed": false,
+    "frozen": false,
+    "runner_implemented": false
+  }
+}

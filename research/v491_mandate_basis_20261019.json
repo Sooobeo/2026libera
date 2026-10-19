@@ -1,0 +1,183 @@
+{
+  "artifact_kind": "common_operating_brief_design_basis",
+  "protocol_version": "4.9.1",
+  "created_date_kst": "2026-10-19",
+  "status": "source_checked_design_decisions_not_empirical_validation",
+  "author_role": "AI methods assistant; not independent human source reviewer",
+  "files_read": [
+    "plan/LIBERA_실험설정_v4.9_20261019.json",
+    "data/sector_protocol/v49_design_20261019/prompt_contract.json",
+    "research/v49_methods_review_20261019.json",
+    "data/sector_documents/packets/main/ubs_july_2026.json",
+    "research/evaluator_only/v48_source_comparison_original_excerpts_20261018.json"
+  ],
+  "recommendation_ko": "공통 과제는 새로 배정된 미국주식 운용분을 11개 산업에 처음 배분하는 것으로 정한다. 판단기간은 12개월이다. 기관별 공개 전망은 참고할 조사자료이며 고객별 사적 위임사항이나 실제 보유비중이 아니다. 모든 조건에 동일한 업무상황과 기준일 시장상황을 처음부터 제공하고, 기관 전망자료의 첫 노출 시점만 달리한다.",
+  "selected_task": {
+    "id": "common_new_us_equity_sleeve_12m",
+    "institution_private_mandate": false,
+    "fictional_research_assignment_explicit": true,
+    "role": "Investment analyst recommending the initial sector allocation of a newly funded US-equity sleeve for an investment committee.",
+    "role_ko": "투자위원회에 새 미국주식 운용분의 최초 산업별 배분안을 제안하는 분석 담당자",
+    "decision_reference_date": "2026-07-17",
+    "information_cutoff_exclusive": "2026-07-17",
+    "last_price_observation_date": "2026-07-16",
+    "timing_claim": "A retrospective, document-conditioned decision case. This is not a claim that the model or adjusted-price vintage was available on the reference date.",
+    "allocation_type": "new_allocation",
+    "existing_invested_sector_holdings": "none_within_this_new_sleeve",
+    "starting_cash": "Newly assigned budget awaiting initial allocation; no continuing cash choice in the submitted target sector vector.",
+    "budget_representation": "Fractions of the assigned equity budget; no invented monetary notional or assumptions about the investor's total wealth.",
+    "objective": "Seek capital growth through a reasoned US equity-sector allocation over the stated judgment horizon; explain the return-opportunity, concentration and historical-risk trade-offs relative to the supplied sector reference.",
+    "objective_ko": "정해진 판단기간의 자본증식을 추구하는 미국주식 산업별 배분을 제안하고, 기준비중과 비교해 수익기회·집중·관측된 위험 간의 선택 이유를 설명한다.",
+    "judgment_horizon_months": 12,
+    "judgment_horizon_start": "2026-07-17",
+    "judgment_horizon_end": "2027-07-17",
+    "horizon_is_future_performance_test": false,
+    "horizon_scope": "A decision horizon common to the research task, not a rewrite of either source's original publication date, evidence date, or forecast horizon. An older source is interpreted as dated evidence and its horizon mismatch/staleness remains visible.",
+    "liquidity_assumption": "No scheduled withdrawal from this research sleeve during the judgment horizon. This is an explicit local task assumption, not a fact about any actual institution or customer.",
+    "risk_instruction": "This is an equity-only sleeve whose mandate accepts equity market losses. Explain how concentration, historical co-movement and supplied macroeconomic facts affect the recommendation. Discuss the implications of greater or lower historical risk than the reference where actual calculations support that comparison. A higher historical volatility is not automatically failure, and a lower one is not automatically success.",
+    "risk_profile_label": null,
+    "risk_aversion_coefficient": null,
+    "maximum_loss_threshold": null,
+    "volatility_ceiling": null,
+    "sector_cap": null,
+    "why_no_numeric_risk_appetite": "The public source documents do not identify a common investor's calibrated utility or tolerated loss. The experiment measures source-evidence use under one explicit task, not suitability across risk profiles. The equity-only universe cannot implement the stock/bond risk-share choice used in Hornuf et al.; multi-asset PortBench profile limits cannot be copied without changing the task.",
+    "feasibility_constraints": {
+      "universe": "existing eleven GICS sector sleeves represented by the existing sector-ETF market packet",
+      "one_row_per_sector_including_zero": true,
+      "long_only": true,
+      "fully_allocated_equity_budget": true,
+      "weight_sum": 1,
+      "short_sales": false,
+      "leverage": false,
+      "cash_bonds_other_assets_in_final_vector": false,
+      "institution_rating_implies_fixed_weight": false,
+      "numeric_origin": "0<=w_i<=1 and sum_i w_i=1 define a long-only fully invested sleeve. They are budget/representation identities, not paper-estimated behavioral constants. Existing arithmetic tolerance remains an engineering convention and is not a risk preference."
+    },
+    "benchmark": {
+      "id": "sp500_sector_reference_20260630",
+      "role": "Common dated comparison reference for explaining active sector weights, not initial holdings, institution targets or a uniquely correct allocation.",
+      "replication_required": false,
+      "outperformance_guaranteed": false,
+      "common_anchor_limitation": "The shared reference can itself induce similar weights. Similarity conditional on a shared reference and market packet does not by itself identify AI-induced strategy erasure or harmful market homogenization."
+    },
+    "execution_scope": "A target-allocation recommendation only. Do not invent an order schedule, fees, taxes, transaction-cost budget or turnover limit. No executed trade, net-return test or portfolio rebalancing skill is measured."
+  },
+  "decision_basis": [
+    {
+      "decision": "Supply an explicit common operating brief in every draft",
+      "basis_type": "paper_supported_dimension_and_local_control",
+      "paper_ids": ["hornuf2025", "portbench2026v6"],
+      "local_adaptation": "One shared assignment rather than varying investor profiles; keeps the early/late source-information contrast interpretable."
+    },
+    {
+      "decision": "Use a twelve-month judgment horizon",
+      "basis_type": "paper_observed_numeric_level_selected_for_local_task",
+      "paper_ids": ["hornuf2025"],
+      "document_cross_check": "UBS July house-view definition uses a twelve-month assessment frame; its source-relative timing remains distinct from the common research horizon.",
+      "exact_paper_locator": "Table A1, physical PDF page 56 (zero-based page 55), printed appendix page A-1: horizons include 1, 6 and 12 months.",
+      "local_adaptation": "Choose the existing twelve-month level to give a concrete horizon without adding a horizon treatment. This is a declared research choice, not a claim that twelve months is optimal or the actual mandate of Fidelity/UBS."
+    },
+    {
+      "decision": "Initial allocation of a new equity sleeve rather than rebalance",
+      "basis_type": "local_scope_choice_informed_by_paper_task_structures",
+      "paper_ids": ["hornuf2025", "portbench2026v6"],
+      "local_adaptation": "A recommendation task can be evaluated without pretending to observe actual starting holdings or execution. Rebalancing would require actual or explicitly hypothetical starting holdings and cost/turnover semantics; those would add another causal input and stronger performance claims. Initial allocation preserves the current weights-and-reasons question."
+    },
+    {
+      "decision": "Explicit equity-risk acceptance and risk discussion without calibrated risk coefficients",
+      "basis_type": "paper_supported_dimension_with_deliberate_nontransfer",
+      "paper_ids": ["hornuf2025", "portbench2026v6"],
+      "local_adaptation": "State what risk the sleeve can bear qualitatively and require transparent evidence-linked trade-offs. Do not call it a validated conservative/balanced/aggressive profile or a quantitative risk-suitability test. The absence of a utility coefficient means that this design has no uniquely optimal weight vector."
+    },
+    {
+      "decision": "No withdrawal and no separate ESG restriction in this task",
+      "basis_type": "explicit_local_scope_assumptions_not_empirical_facts",
+      "paper_ids": ["hornuf2025"],
+      "local_adaptation": "Investor circumstances should be explicit. Exclude extra liquidity and ESG treatments to isolate source provision timing; do not infer an institution's ESG policy, liquidity needs, or customer mandate. The packet does not claim a full suitability assessment."
+    }
+  ],
+  "primary_references": [
+    {
+      "id": "hornuf2025",
+      "title": "Making GenAI Smarter: Evidence from a Portfolio Allocation Experiment",
+      "authors": "Lars Hornuf, David Streich, Niklas Tollich",
+      "year": 2025,
+      "url": "https://www.ifo.de/DocDL/cesifo1_wp11862.pdf",
+      "version": "CESifo Working Paper 11862, official 95-page PDF",
+      "checked_date": "2026-10-19",
+      "locators": [
+        "Section 3.1: printed page 7, physical PDF page 9",
+        "Section 3.2: printed page 8, physical PDF page 10",
+        "Section 3.3: printed page 9, physical PDF page 11",
+        "Appendix A Table A1: printed A-1, physical PDF page 56"
+      ],
+      "verified_support": "Investor circumstances and eligible assets appear in all conditions. The study varies risk tolerance, horizon and sustainability preference; Table A1 includes 1, 6 and 12 months. Its universe adds a bond fund to twelve stocks so risk preferences can affect the risky share. This supports explicit context but cautions against copying its risk profiles into an all-equity sector sleeve.",
+      "not_supported": "No evidence here establishes twelve months as optimal, authentic Fidelity/UBS risk preferences, a necessary industry weight, or a calibrated risk limit for the LIBERA task."
+    },
+    {
+      "id": "portbench2026v6",
+      "title": "PortBench: A Correlation-Aware, Full-Pipeline Benchmark for LLM-Driven Portfolio Management",
+      "url": "https://arxiv.org/html/2605.27887v6",
+      "version": "v6, 2026-10-09",
+      "checked_date": "2026-10-19",
+      "locators": ["Section 2.1", "Section 2.2", "Appendix G", "Appendix H.1"],
+      "verified_support": "The market snapshot includes asset summaries, macroeconomic indicators, correlations and portfolio state. Profile constraints condition decisions. Its dynamic task executes rebalances and measures costs and outcomes; real-time inputs stop at the prior close. These motivate an explicit common situation, while clarifying what a static initial-allocation task omits.",
+      "not_supported": "The multi-asset risk limits, repeated trading, cost assumptions and execution normalization are not automatically valid for this sector-only documentary experiment. No exact macro value, volatility cap or target allocation is imported from an illustrative figure."
+    }
+  ],
+  "source_document_cross_check": {
+    "source_id": "ubs_july_2026",
+    "local_pdf": "tmp/pdfs/sector_documents/ubs_july_2026.pdf",
+    "local_pdf_sha256": "07369578859be743e2323ea611f8d9b47e9bb7bc1e7b0e081d4b8df5ad2b4b7b",
+    "definition_locator": "page 27, Global asset class preferences definitions",
+    "evidence_path": "research/evaluator_only/v48_source_comparison_original_excerpts_20261018.json",
+    "verified_meaning": "The house-view judgments use an approximately twelve-month prospective frame and actual tactical allocations can differ because of portfolio construction and other constraints.",
+    "model_visibility": "Only the assigned public source packet is shown at its authorized stage. This cross-check artifact and evaluator excerpts are not model input.",
+    "not_a_private_mandate": true
+  },
+  "common_market_requirements": {
+    "included_dimensions": ["existing sector trailing-return and volatility diagnostics", "existing sector covariance/correlation information", "dated public macroeconomic facts", "explicit new-sleeve starting state", "dated common sector benchmark"],
+    "all_conditions_same_from_D0": true,
+    "no_todays_data_in_july_case": true,
+    "release_dates_not_only_observation_dates": true,
+    "preserve_revisions_and_vintage_caveat": true,
+    "facts_not_researcher_recommendations": true,
+    "macro_does_not_become_institution_evidence": true,
+    "reasoning_rule": "The model may infer implications from supplied facts but must mark them as its interpretation. It may not claim a public macro fact proves a particular sector weight or an institution's unstated forecast.",
+    "source_timing_only": "E D0 receives the assigned source packet; L D0 receives no source identity or source facts. Both receive the same operating brief and common market packet. Both F0 calls receive the identical assigned source packet and retain their own full draft/history."
+  },
+  "measurement_implications": {
+    "primary_question": "Under the same task and market facts, how does early versus late source provision affect evidence-grounded institutional judgment in a sector-allocation recommendation?",
+    "add_context_checks": [
+      "Does the response preserve the cutoff, horizon and new-allocation scope?",
+      "Does it distinguish the common benchmark from actual starting holdings or an institution target?",
+      "Are macro claims linked to the supplied releases and dates, with inference distinguished from observation?",
+      "Does it invent a risk coefficient, mandatory numerical sector preference, fee, turnover cap or private mandate?"
+    ],
+    "context_check_role": "Separate factual/scope diagnostics alongside the existing source-to-reason-to-weight evaluation; no weighted composite score or post hoc strategy truth.",
+    "no_new_generation_calls_required": true,
+    "cannot_claim": [
+      "Investment suitability for a real person or institution",
+      "Recovery of private institutional holdings, utility functions or constraints",
+      "Optimal portfolio, future outperformance or quantitative risk-preference compliance",
+      "Rebalancing ability, transaction-cost efficiency or realized twelve-month performance",
+      "Causal effect of AI use versus no AI, or harmful market-wide convergence",
+      "Pure anchoring or pure memory effect independent of history and repeated exposure"
+    ],
+    "can_claim_if_observed": "A documented four-cell case comparison of source-evidence use, reasons, raw allocation feasibility and prespecified allocation contrasts under one shared, explicitly delimited situation.",
+    "independent_human_review_completed": false,
+    "freeze_completed": false,
+    "runtime_completion_established": false
+  },
+  "self_checks": {
+    "all_institution_private_constraints_avoided": true,
+    "all_risk_numbers_absent_except_budget_identities": true,
+    "twelve_month_numeric_source_located": true,
+    "same_common_situation_in_all_D0_conditions": true,
+    "source_horizon_not_silently_rebased": true,
+    "new_allocation_not_turnover": true,
+    "benchmark_not_actual_holdings": true,
+    "human_gate_not_relabelled_ai_completion": true,
+    "scope": "AI design audit only; independent human review and execution checks remain distinct."
+  }
+}

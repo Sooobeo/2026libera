@@ -1,0 +1,232 @@
+{
+  "status": "PASS",
+  "artifact_type": "offline_compaction_design_review",
+  "version": "v49_lossless_table_candidate_20261019",
+  "online_model_calls": 0,
+  "runtime_files_modified": false,
+  "method": "Exact typed-JSON equality verified after deterministic table factoring and restoration; no rounding, passage rewriting, label translation or selected-sector omission.",
+  "source_references": [
+    {
+      "path": "data/local_sector_runtime/pilot_v48_guarded_20261019/fidelity_q2_2026__R1/C1/authoritative_body.json",
+      "sha256": "8468684baf38917b58a4b0b6cf40ad20b98a8779c1300b3a674bdced34184976"
+    },
+    {
+      "path": "data/sector_documents/packets/pilot/fidelity_q2_2026.json",
+      "sha256": "2f506f346ebfc1be0f327163eb016dcec649e6301e4494d6a9230ab86c28d406"
+    },
+    {
+      "path": "data/sector_documents/packets/pilot/ubs_june_2026.json",
+      "sha256": "a5cadf72d68cafe46244c9bf8e500da04e1c58aef12eaf493e76408654e6148a"
+    },
+    {
+      "path": "data/sector_documents/packets/main/fidelity_q3_2026.json",
+      "sha256": "3f84c5d1e1302238fd270b41f1b9bcf86e3ae5c8c44a74f7a49a19941407d297"
+    },
+    {
+      "path": "data/sector_documents/packets/main/ubs_july_2026.json",
+      "sha256": "49f47f8c628b53231cdfb09fa90eabfa0a5d271fb6a439e75360bdb97db29d30"
+    },
+    {
+      "path": "research/compact_sector_prompt.py",
+      "sha256": "6984ada966ad55c3089fc297ca6342fdb51685bebfe3107769086343bbe68c0d"
+    },
+    {
+      "path": "research/sector_v48_contract.py",
+      "sha256": "6bdf9f31e155a056a9d6e5dcab9f4f970f7b0674f0bc4ab13f467a7bad27028d"
+    },
+    {
+      "path": "research/run_sector_v48.py",
+      "sha256": "c244791be125988c696852547b8b066dfae6b6ee9cebdb93213683707fca8607"
+    }
+  ],
+  "candidate": {
+    "path": "data/sector_protocol/v49_design_20261019/public_compact_candidate.json",
+    "sha256": "999c12d89ac60b4bdc3c05dad4a03e1997f314993b0670dfdf577e7812ceabd1"
+  },
+  "checks": {
+    "complete_first_payload_exact_typed_json_roundtrip": true,
+    "fidelity_q2_2026_all_metadata_passages_dates_ratings_preserved": true,
+    "ubs_june_2026_all_metadata_passages_dates_ratings_preserved": true,
+    "fidelity_q3_2026_all_metadata_passages_dates_ratings_preserved": true,
+    "ubs_july_2026_all_metadata_passages_dates_ratings_preserved": true,
+    "stage1_all_calculator_values_lineage_preserved": true,
+    "stage2_all_calculator_values_lineage_preserved": true,
+    "stage3_all_calculator_values_lineage_preserved": true,
+    "C0_all_calculator_values_lineage_preserved": true
+  },
+  "measurements": {
+    "measure": "Canonical UTF-8 bytes, not tokens, KV-cache memory, latency, or actual v4.9 model prompts.",
+    "numeric_index": {
+      "original_canonical_utf8_bytes": 9079,
+      "candidate_canonical_utf8_bytes": 6225,
+      "bytes_saved": 2854,
+      "reduction_percent": 31.435
+    },
+    "source_packets": {
+      "fidelity_q2_2026": {
+        "original_canonical_utf8_bytes": 5471,
+        "candidate_canonical_utf8_bytes": 3764,
+        "bytes_saved": 1707,
+        "reduction_percent": 31.201
+      },
+      "ubs_june_2026": {
+        "original_canonical_utf8_bytes": 5464,
+        "candidate_canonical_utf8_bytes": 3652,
+        "bytes_saved": 1812,
+        "reduction_percent": 33.163
+      },
+      "fidelity_q3_2026": {
+        "original_canonical_utf8_bytes": 5426,
+        "candidate_canonical_utf8_bytes": 3719,
+        "bytes_saved": 1707,
+        "reduction_percent": 31.46
+      },
+      "ubs_july_2026": {
+        "original_canonical_utf8_bytes": 5483,
+        "candidate_canonical_utf8_bytes": 3671,
+        "bytes_saved": 1812,
+        "reduction_percent": 33.048
+      }
+    },
+    "r1_stage1_user_payload_same_schema_same_task": {
+      "original_canonical_utf8_bytes": 25178,
+      "candidate_canonical_utf8_bytes": 20617,
+      "bytes_saved": 4561,
+      "reduction_percent": 18.115
+    },
+    "calculator_feedback": [
+      {
+        "endpoint": "stage1",
+        "original_canonical_utf8_bytes": 1400,
+        "candidate_canonical_utf8_bytes": 1463,
+        "bytes_saved": -63,
+        "reduction_percent": -4.5
+      },
+      {
+        "endpoint": "stage2",
+        "original_canonical_utf8_bytes": 1400,
+        "candidate_canonical_utf8_bytes": 1463,
+        "bytes_saved": -63,
+        "reduction_percent": -4.5
+      },
+      {
+        "endpoint": "stage3",
+        "original_canonical_utf8_bytes": 10165,
+        "candidate_canonical_utf8_bytes": 5032,
+        "bytes_saved": 5133,
+        "reduction_percent": 50.497
+      },
+      {
+        "endpoint": "C0",
+        "original_canonical_utf8_bytes": 17281,
+        "candidate_canonical_utf8_bytes": 6672,
+        "bytes_saved": 10609,
+        "reduction_percent": 61.391
+      }
+    ],
+    "observed_r1_C1_message_inventory": [
+      {
+        "position": 0,
+        "role": "system",
+        "content_utf8_bytes": 3863
+      },
+      {
+        "position": 1,
+        "role": "user",
+        "content_utf8_bytes": 25178
+      },
+      {
+        "position": 2,
+        "role": "assistant",
+        "content_utf8_bytes": 4750
+      },
+      {
+        "position": 3,
+        "role": "user",
+        "content_utf8_bytes": 1424
+      },
+      {
+        "position": 4,
+        "role": "user",
+        "content_utf8_bytes": 2276
+      },
+      {
+        "position": 5,
+        "role": "assistant",
+        "content_utf8_bytes": 4793
+      },
+      {
+        "position": 6,
+        "role": "user",
+        "content_utf8_bytes": 1424
+      },
+      {
+        "position": 7,
+        "role": "user",
+        "content_utf8_bytes": 1863
+      },
+      {
+        "position": 8,
+        "role": "assistant",
+        "content_utf8_bytes": 10471
+      },
+      {
+        "position": 9,
+        "role": "user",
+        "content_utf8_bytes": 10189
+      },
+      {
+        "position": 10,
+        "role": "user",
+        "content_utf8_bytes": 1930
+      },
+      {
+        "position": 11,
+        "role": "assistant",
+        "content_utf8_bytes": 10833
+      },
+      {
+        "position": 12,
+        "role": "user",
+        "content_utf8_bytes": 17305
+      },
+      {
+        "position": 13,
+        "role": "user",
+        "content_utf8_bytes": 2222
+      }
+    ],
+    "v49_true_prompt_tokens": null,
+    "v49_measured_runtime": null,
+    "token_estimate_performed": false
+  },
+  "findings": [
+    "The existing v4.8 runner already removed the exact duplicate sample covariance matrix and baseline array. These are not new v4.9 savings.",
+    "The 58 public scalar-fact rows repeat metric, unit and period; grouping equal metadata is reversible while every fact ID and source JSON pointer remains visible.",
+    "Public packets repeat source_id and representation for every passage. Factoring these does not shorten or paraphrase passage text.",
+    "Calculator facts repeat full candidate and market hashes, candidate identity and source-scope metadata. Factoring identical row fields removes repetition without changing calculator numbers or evidence IDs.",
+    "Full response schemas repeat in each stage task; previous responses and calculator messages accumulate. Removing intermediate stages changes the workflow and must be registered as a new design, not described as byte-equivalent v4.8.",
+    "There is no automatic runtime improvement guarantee: a shorter encoding can change model parsing difficulty, and the observed Vulkan device loss has no proven cause."
+  ],
+  "two_stage_execution_specification": {
+    "comparison": "Early document at draft E versus late document at final review L. Final review in both arms has identical public market values and the assigned document.",
+    "draft": "Both arms submit all 11 raw weights plus evidence-linked reasons, alternatives, risks and unknowns. E also interprets the assigned document; L must have source_id null and no guessed institutional interpretation.",
+    "between_stages": "Apply the same pure arithmetic calculator to the raw draft in both arms. Supply only actual draft facts, no suggested weights, hidden annotations or semantic verdict.",
+    "final": "Retain the exact draft content and calculator evidence in the conversation; L receives its assigned full document now. Ask for all 11 final raw weights, preserved or revised reasons and evidence IDs. Freeze the first final output as the endpoint.",
+    "failure": "No automatic retries, normalization, forced correction or successful-case replacement. Record every planned case, partial response, arithmetic error and infrastructure interruption separately.",
+    "source_boundary": "The candidate file collects all packets for offline inspection only. A runner must select exactly the assigned packet; never send the packet collection or another institution to a case.",
+    "output_schema": "Keep evidence interpretation and actual allocation rationale as separately assessable fields. Exact weight or word-count limits are not inferred from literature or compression gains.",
+    "preflight": "Before freeze, check exact source visibility, full 11-sector coverage and facts/units/date identity; measure actual model-tokenized longest input and complete two-stage generation. Hardware/time ceilings require measured feasibility, not invented paper authority."
+  },
+  "interpretation_pitfalls": [
+    "The source packets are researcher paraphrases of selected public sections, not complete documents or private institutional mandates; the paraphrases and source limits must remain disclosed.",
+    "Fidelity Overweight/Underweight and UBS Attractive are different constructs. Do not convert Attractive to a mandatory above-benchmark weight or assume identical ratings imply identical targets.",
+    "There are no published exact target weights in these selected sections; absolute distance from an invented institutional target is not an eligible outcome.",
+    "The common historical market packet is a documentary retrospective comparison, not contemporaneous investor replay or prospective return prediction.",
+    "E/L changes when evidence can influence drafting and subsequent revision. It identifies a workflow contrast conditional on the chosen model and cases, not a pure memory or anchoring mechanism.",
+    "A document-free common draft can be reused for both late-arm source branches only if explicitly preregistered as one shared counterfactual initial state. It changes dependence and is not two independent late-arm drafts.",
+    "If all final allocations fail, evidence/rationale observations can still be reported, but valid-portfolio differentiation is unobserved. It cannot be guaranteed in advance.",
+    "A material representation change can alter model behaviour even with exact fact preservation; do not pool v4.8 and v4.9 outputs as unchanged replicates."
+  ],
+  "scope_limit": "This audit establishes deterministic input preservation only. It is not source factual verification, human semantic review, experimental power, performance validation or confirmation of the research hypothesis."
+}

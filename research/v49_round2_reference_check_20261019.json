@@ -1,0 +1,353 @@
+{
+  "schema_version": "libera_v49_round2_reference_check_1.0",
+  "checked_at_utc": "2026-10-19T03:31:49.586639+00:00",
+  "status": "PASS_DESIGN_REFERENCE_AND_HTML_CLAIMS_NOT_RUNTIME_CERTIFICATION",
+  "scope": "Reference/provenance and construct consistency of generated config, evaluation, response schema, prompt contract and compact source candidate. Not runtime or experimental effect certification.",
+  "inputs": [
+    {
+      "path": "plan/LIBERA_실험설정_v4.9_20261019.json",
+      "sha256": "01f9819cba917923c9892ac5d75c953a7bed9d47a733496f3a7ceff2ab9781a2",
+      "bytes": 8569
+    },
+    {
+      "path": "research/build_v49_compact_plan.py",
+      "sha256": "8bfb5b06789d287aaa8ebc432af2cbabafb67a81b21c21dbeca3a0eac48bc813",
+      "bytes": 20161
+    },
+    {
+      "path": "research/v49_evaluation_protocol_20261019.json",
+      "sha256": "f2ea17b91a3d7b97e7ef3ffc81e2071aaa2133fb1d2d84aebe11cf238d877b1b",
+      "bytes": 6126
+    },
+    {
+      "path": "research/v49_reference_review_20261019.json",
+      "sha256": "d50ecef18f8defe8671fefd194185f58b9ed6f8d6618e23e652eb6c162f486ee",
+      "bytes": 24228
+    },
+    {
+      "path": "data/sector_protocol/v49_design_20261019/prompt_contract.json",
+      "sha256": "1628823b71210c80c93844ef7768ee6598cc3649c59a48f6a878dba875d6b73f",
+      "bytes": 3267
+    },
+    {
+      "path": "data/sector_protocol/v49_design_20261019/response_schema.json",
+      "sha256": "e9840bc36d02b1d34e43230531db877110ef54202a069057b8c7f1439a3a7071",
+      "bytes": 3505
+    },
+    {
+      "path": "data/sector_protocol/v49_design_20261019/public_compact_candidate.json",
+      "sha256": "999c12d89ac60b4bdc3c05dad4a03e1997f314993b0670dfdf577e7812ceabd1",
+      "bytes": 48027
+    },
+    {
+      "path": "research/v49_human_review_template_20261019.json",
+      "sha256": "d90ef73e7fbe5792efd45c0e86ae576500db2421c8b479d214b183b3f688668a",
+      "bytes": 43962
+    },
+    {
+      "path": "plan/LIBERA_축소실험계획_v4.9_20261019.html",
+      "sha256": "c8a577879a7e002c4753059a4a9ca4adf2c258642855f5db5348aee490626015",
+      "bytes": 27229
+    },
+    {
+      "path": "paper/LIBERA_소논문_방법개정안_v4.9_20261019.html",
+      "sha256": "34236b958a4ce466c9427c0d8d9aee684185b97801d6cd3a9107b45730e1581f",
+      "bytes": 11746
+    },
+    {
+      "path": "research/v49_methods_review_20261019.json",
+      "sha256": "99baebf4660b665240bd60de388ea51411016d09d6a7a41a9ce6e740a3c34e97",
+      "bytes": 19823
+    }
+  ],
+  "checks": [
+    {
+      "id": "review_encoding_repaired",
+      "passed": true,
+      "evidence": "All corrupted prose replaced with accurate English; field-name compatibility explicitly documented."
+    },
+    {
+      "id": "eight_current_arxiv_versions",
+      "passed": true,
+      "evidence": "Fresh abstract metadata and fulltext locators inspected in this turn."
+    },
+    {
+      "id": "historical_context_hashes_unchanged",
+      "passed": true,
+      "evidence": "Four local reference/model registries preserve their recorded bytes."
+    },
+    {
+      "id": "config_parent_and_compact_hashes_match",
+      "passed": true,
+      "evidence": "Parent v4.8 and compact public candidate references match."
+    },
+    {
+      "id": "model_identity_unchanged",
+      "passed": true,
+      "evidence": "Existing Qwen3.5-4B Q4_K_M manifest, not a claim of identical FinVector weights or backend."
+    },
+    {
+      "id": "paper_generation_settings_limited",
+      "passed": true,
+      "evidence": "FinVector4.1 and PortBench3.1 support model/generation precedents with disclosed backend adaptation."
+    },
+    {
+      "id": "output_cap_not_falsely_reduced",
+      "passed": true,
+      "evidence": "PortBench8192 retained as a ceiling candidate; no false700 sufficiency claim."
+    },
+    {
+      "id": "two_stage_budget_is_local_arithmetic",
+      "passed": true,
+      "evidence": "Two sources by two procedures, two generations each; not a power calculation."
+    },
+    {
+      "id": "strategy_not_replaced_by_calculator",
+      "passed": true,
+      "evidence": "Evidence interpretation, reasons, alternatives and model weights remain observable; no solver target."
+    },
+    {
+      "id": "all11_sectors_preserved",
+      "passed": true,
+      "evidence": "Sector rows are complete coverage, explicitly dependent components rather than44 samples."
+    },
+    {
+      "id": "same_final_evidence_and_contract",
+      "passed": true,
+      "evidence": "Recorded design controls, not yet verified served requests."
+    },
+    {
+      "id": "whole_procedure_estimand",
+      "passed": true,
+      "evidence": "Early exposure, repeated exposure and generated-history effects are not falsely isolated."
+    },
+    {
+      "id": "late_draft_has_no_source_identity",
+      "passed": true,
+      "evidence": "Defined no-source draft is retained; no hidden source target or shared draft."
+    },
+    {
+      "id": "raw_first_final_and_no_rerolls",
+      "passed": true,
+      "evidence": "Preserves original endpoint and failed-case accounting, consistent with diagnostic evaluation principles."
+    },
+    {
+      "id": "fidelity_action_and_coverage_separated",
+      "passed": true,
+      "evidence": "FinFIRST atomic traceability and E2A evidence/action/coverage principles are adapted, not imported as unsupported scores."
+    },
+    {
+      "id": "no_strategic_gold_or_rating_map",
+      "passed": true,
+      "evidence": "Keeps original source labels and prohibits arbitrary gamma or label-to-percentage rules."
+    },
+    {
+      "id": "descriptive_distance_only",
+      "passed": true,
+      "evidence": "PortBench Eq.8 distance component adapted to pairwise outputs; positive separation alone is not preservation."
+    },
+    {
+      "id": "failed_cases_not_silently_removed",
+      "passed": true,
+      "evidence": "E2A coverage principle and finite-case missingness remain explicit."
+    },
+    {
+      "id": "no_population_or_power_claim",
+      "passed": true,
+      "evidence": "Four fixed trajectories are descriptive evidence only; no sector/turn pseudoreplication."
+    },
+    {
+      "id": "human_validation_not_falsely_completed",
+      "passed": true,
+      "evidence": "Independent human semantic validation remains a pre-main requirement; two readers is labelled local QC."
+    },
+    {
+      "id": "runtime_not_claimed_passed",
+      "passed": true,
+      "evidence": "Token capacity, backend stability and actual schema rendering remain unverified."
+    },
+    {
+      "id": "public_data_and_source_visibility_bounded",
+      "passed": true,
+      "evidence": "Public evidence only; four-document aggregate is an offline artifact, not an allowed model input."
+    },
+    {
+      "id": "no_guaranteed_source_contrast",
+      "passed": true,
+      "evidence": "Pre-output source comparisons must establish actual meaningful contrast; differing vocabularies alone are insufficient."
+    },
+    {
+      "id": "html_both_fully_read",
+      "passed": true,
+      "evidence": "Read complete plan and paper amendment, not just headings or keyword checks. Both distinguish a proposed design from model results."
+    },
+    {
+      "id": "html_methods_reference_transfers_qualified",
+      "passed": true,
+      "evidence": "Financial controlled information provision is tied to Hornuf2025; multi-turn and final refresh to Laban2025; evidence/action/coverage to E2A; source tracing to Externalization/FinFIRST; 8192 and distance to PortBench; model/decoding to FinVector. Original effects and optimality are not transferred."
+    },
+    {
+      "id": "hornuf_primary_publication_verified",
+      "passed": true,
+      "evidence": "Official95-page CESifo11862 PDF, title page2025-04-30, sections1/2/3.3. Introduction explicitly controls exact injected information instead of retriever selection. Public candidate remains separate from original firm-data access."
+    },
+    {
+      "id": "laban_recap_locator_verified",
+      "passed": true,
+      "evidence": "ArXiv2505.06120v1 section3.3 Recap and7.1, AppendixM. Final restatement precedent checked; no guaranteed recovery or optimal two-stage claim."
+    },
+    {
+      "id": "html_counts_and_numeric_provenance_match",
+      "passed": true,
+      "evidence": "Main max8 calls, pilot+main16, 11 sectors, 44 dependent final rows, old16/24 calls, seed3407, no-thinking/T0, candidate8192 and engineering1e-6 match generated artifacts.700 is explicitly not adopted."
+    },
+    {
+      "id": "html_retains_topic_and_limits",
+      "passed": true,
+      "evidence": "Both documents connect public source interpretation to model allocation and organizational review; explicitly exclude market-wide causal homogenization, profitability and proof of internal reasoning."
+    },
+    {
+      "id": "html_preserves_failures_and_observability",
+      "passed": true,
+      "evidence": "Both retain old failures, prevent pooling, preserve missingness, require four valid finals for full2x2 allocation contrast and withhold allocation conclusions when no valid pair exists."
+    },
+    {
+      "id": "packet_position_ambiguity_fixed",
+      "passed": true,
+      "evidence": "Config and plan define same block order in final message, not equal absolute token positions or generated histories."
+    },
+    {
+      "id": "semantic_validation_explicitly_pending",
+      "passed": true,
+      "evidence": "Unique sectors, finite nonboolean numbers, stage-specific source identity, visible citations and calculator mapping are explicit requirements rather than assumed JSON-schema guarantees."
+    },
+    {
+      "id": "repaired_reference_json_has_no_corruption",
+      "passed": true,
+      "evidence": "English repair verified after reading byUTF8. Legacy_ko field names disclosed; metadata and citations preserved."
+    }
+  ],
+  "all_passed": true,
+  "blocking_reference_findings": [],
+  "open_requirements": [
+    "Runtime implementation, exact rendered token fit, backend stability and pilot remain unverified.",
+    "Independent human source-meaning/semantic review remains incomplete.",
+    "No significance, effect, generalizability or successful four-way allocation contrast can be guaranteed in advance."
+  ],
+  "clarifications": [
+    {
+      "item": "Existing common baseline normalization",
+      "resolution": "The public baseline derives exact budget weights from published rounded percentages totalling99.9. This disclosed input transformation is distinct from prohibited correction of model-generated weights."
+    },
+    {
+      "item": "Supplied researcher paraphrases",
+      "resolution": "Compaction preserves already documented researcher-prepared packets and original rating labels. Original PDFs/page locators must remain available; do not claim the model received entire verbatim institutional documents."
+    },
+    {
+      "item": "Submitted numerical constraints",
+      "resolution": "Schema permits model-submitted bounds for observation, while prompts prohibit invention and evaluation requires source support. Runtime must reject unsupported bounds as evidence failures, not treat them as institutional mandates."
+    }
+  ],
+  "model_calls": 0,
+  "historical_files_modified": false,
+  "html_review": {
+    "files": [
+      {
+        "path": "plan/LIBERA_축소실험계획_v4.9_20261019.html",
+        "sha256": "c8a577879a7e002c4753059a4a9ca4adf2c258642855f5db5348aee490626015",
+        "bytes": 27229,
+        "external_references": [
+          {
+            "text": "Laban et al. (2025), §§3.3, 6.3, 7.1",
+            "url": "https://arxiv.org/html/2505.06120v1"
+          },
+          {
+            "text": "Hornuf, Streich, & Töllich (2025), §§1, 3.3",
+            "url": "https://www.ifo.de/DocDL/cesifo1_wp11862.pdf"
+          },
+          {
+            "text": "E2A-Bench (2026), §§3.2–3.4, App. C.1",
+            "url": "https://arxiv.org/html/2609.14302v1"
+          },
+          {
+            "text": "Reasoning Externalization (2026), §§3.4–4.1.4",
+            "url": "https://arxiv.org/html/2609.38869v2"
+          },
+          {
+            "text": "FinFIRST (2026), §§2.2–2.3",
+            "url": "https://arxiv.org/html/2609.25192v1"
+          },
+          {
+            "text": "PortBench v6 (2026), §3.1, App. C.2",
+            "url": "https://arxiv.org/html/2605.27887v6"
+          },
+          {
+            "text": "FinVector-Market-4B (2026), §4.1",
+            "url": "https://arxiv.org/pdf/2610.08882v1"
+          },
+          {
+            "text": "Intent Mismatch (2026), §§3–5",
+            "url": "https://arxiv.org/html/2602.07338v1"
+          }
+        ],
+        "text_characters": 9334,
+        "reviewed_as": "Full textual content and every external citation inspected; not screenshot layout QA."
+      },
+      {
+        "path": "paper/LIBERA_소논문_방법개정안_v4.9_20261019.html",
+        "sha256": "34236b958a4ce466c9427c0d8d9aee684185b97801d6cd3a9107b45730e1581f",
+        "bytes": 11746,
+        "external_references": [
+          {
+            "text": "Making GenAI smarter: Evidence from a portfolio allocation experiment",
+            "url": "https://www.ifo.de/DocDL/cesifo1_wp11862.pdf"
+          },
+          {
+            "text": "LLMs get lost in multi-turn conversation",
+            "url": "https://arxiv.org/abs/2505.06120v1"
+          },
+          {
+            "text": "E2A-Bench: Benchmarking evidence-to-action reliability in financial chart reasoning",
+            "url": "https://arxiv.org/abs/2609.14302v1"
+          },
+          {
+            "text": "Reasoning externalization for faithful large language model narratives of stock return predictions",
+            "url": "https://arxiv.org/abs/2609.38869v2"
+          },
+          {
+            "text": "FinFIRST: Benchmarking search agents for financial information retrieval, sourcing and traceability",
+            "url": "https://arxiv.org/abs/2609.25192v1"
+          },
+          {
+            "text": "PortBench: A correlation-aware, full-pipeline benchmark for LLM-driven portfolio management",
+            "url": "https://arxiv.org/abs/2605.27887v6"
+          },
+          {
+            "text": "FinVector-Market-4B: A controlled study of LoRA adaptation for structured financial tasks",
+            "url": "https://arxiv.org/abs/2610.08882v1"
+          }
+        ],
+        "text_characters": 4854,
+        "reviewed_as": "Full textual content and every external citation inspected; not screenshot layout QA."
+      }
+    ],
+    "scope": "Textual consistency, bibliographic claims and numeric-source transfer; no inference, human adjudication or rendering test.",
+    "additional_verified_primary_source": {
+      "title": "Making GenAI Smarter: Evidence from a Portfolio Allocation Experiment",
+      "authors": [
+        "Lars Hornuf",
+        "David J. Streich",
+        "Niklas Toellich"
+      ],
+      "series": "CESifo Working Paper11862",
+      "version_date": "2025-04-30",
+      "url": "https://www.ifo.de/DocDL/cesifo1_wp11862.pdf",
+      "locators": [
+        "Sections1-2",
+        "Section3.3"
+      ],
+      "applied_support": "Control exact externally supplied information in an allocation task while isolating the generation step from retriever choice.",
+      "limits": "Does not establish institutional sector targets, two-stage optimality, our model performance or publication-source completeness."
+    }
+  }
+}

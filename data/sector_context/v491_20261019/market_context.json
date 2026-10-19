@@ -1,0 +1,200 @@
+{
+  "schema_version": "libera_common_market_context_v4.9.1",
+  "packet_id": "us_macro_release_context_cutoff_20260717",
+  "cutoff_exclusive": "2026-07-17",
+  "cutoff_timezone": "America/New_York",
+  "decision_information_date": "2026-07-16",
+  "role": "Common factual macro context supplied from the first draft to every condition, alongside the existing eleven-sector market packet and common task brief.",
+  "facts": [
+    {
+      "evidence_id": "MACRO_FED_TARGET_20260617",
+      "label": "Federal funds target range announced by FOMC",
+      "value": {
+        "lower": 3.5,
+        "upper": 3.75
+      },
+      "unit": "percent per year",
+      "observation_period": "2026-06-17 policy decision",
+      "seasonal_adjustment": "not applicable",
+      "publication_date": "2026-06-17",
+      "publication_time_local": "14:00:00",
+      "publication_timezone": "America/New_York",
+      "source_id": "FED_FOMC_20260617",
+      "source_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm",
+      "source_excerpt": "federal funds rate at 3-1/2 to 3-3/4 percent",
+      "source_locator": "Dated press release, first policy-decision paragraph",
+      "release_vintage": "Dated policy announcement; not a later statistical time-series extraction",
+      "cutoff_status": "dated_official_release_precedes_exclusive_cutoff",
+      "interpretation_note": "This is a policy target range, not an observed effective rate or an assumed future rate.",
+      "variable_selection_basis": "interest_rate"
+    },
+    {
+      "evidence_id": "MACRO_CPI_HEADLINE_MOM_202606",
+      "label": "CPI-U all items change from previous month",
+      "value": -0.4,
+      "unit": "percent month over month",
+      "observation_period": "2026-06",
+      "seasonal_adjustment": "seasonally adjusted",
+      "publication_date": "2026-07-14",
+      "publication_time_local": "08:30:00",
+      "publication_timezone": "America/New_York",
+      "source_id": "BLS_CPI_20260714",
+      "source_url": "https://www.bls.gov/news.release/archives/cpi_07142026.htm",
+      "source_excerpt": "decreased 0.4 percent",
+      "source_locator": "Archive release header and opening CPI-U paragraphs; Table A",
+      "release_vintage": "June 2026 figures as printed in the July 14 release, not a current BLS API series",
+      "cutoff_status": "dated_official_release_precedes_exclusive_cutoff",
+      "interpretation_note": "Monthly price change; do not interpret as an annual inflation rate.",
+      "variable_selection_basis": "inflation"
+    },
+    {
+      "evidence_id": "MACRO_CPI_HEADLINE_YOY_202606",
+      "label": "CPI-U all items change over twelve months",
+      "value": 3.5,
+      "unit": "percent year over year",
+      "observation_period": "2025-06 to 2026-06",
+      "seasonal_adjustment": "not seasonally adjusted",
+      "publication_date": "2026-07-14",
+      "publication_time_local": "08:30:00",
+      "publication_timezone": "America/New_York",
+      "source_id": "BLS_CPI_20260714",
+      "source_url": "https://www.bls.gov/news.release/archives/cpi_07142026.htm",
+      "source_excerpt": "index increased 3.5 percent before seasonal adjustment",
+      "source_locator": "Archive release header and opening CPI-U paragraphs; Table A",
+      "release_vintage": "June 2026 figures as printed in the July 14 release, not a current BLS API series",
+      "cutoff_status": "dated_official_release_precedes_exclusive_cutoff",
+      "interpretation_note": "Twelve-month price change ending June 2026.",
+      "variable_selection_basis": "inflation"
+    },
+    {
+      "evidence_id": "MACRO_CPI_CORE_YOY_202606",
+      "label": "CPI-U excluding food and energy change over twelve months",
+      "value": 2.6,
+      "unit": "percent year over year",
+      "observation_period": "2025-06 to 2026-06",
+      "seasonal_adjustment": "not seasonally adjusted",
+      "publication_date": "2026-07-14",
+      "publication_time_local": "08:30:00",
+      "publication_timezone": "America/New_York",
+      "source_id": "BLS_CPI_20260714",
+      "source_url": "https://www.bls.gov/news.release/archives/cpi_07142026.htm",
+      "source_excerpt": "rose 2.6 percent",
+      "source_locator": "Archive release header and opening CPI-U paragraphs; Table A",
+      "release_vintage": "June 2026 figures as printed in the July 14 release, not a current BLS API series",
+      "cutoff_status": "dated_official_release_precedes_exclusive_cutoff",
+      "interpretation_note": "Core CPI excludes food and energy; it is not PCE inflation.",
+      "variable_selection_basis": "inflation"
+    },
+    {
+      "evidence_id": "MACRO_UNEMPLOYMENT_202606",
+      "label": "Civilian unemployment rate",
+      "value": 4.2,
+      "unit": "percent of civilian labor force",
+      "observation_period": "2026-06",
+      "seasonal_adjustment": "seasonally adjusted",
+      "publication_date": "2026-07-02",
+      "publication_time_local": "08:30:00",
+      "publication_timezone": "America/New_York",
+      "source_id": "BLS_EMPSIT_20260702",
+      "source_url": "https://www.bls.gov/news.release/archives/empsit_07022026.htm",
+      "source_excerpt": "unemployment rate (4.2 percent)",
+      "source_locator": "Archive release header and opening paragraph; Tables A-1 and B-1",
+      "release_vintage": "June 2026 first-release estimates; subsequent payroll revisions are excluded",
+      "cutoff_status": "dated_official_release_precedes_exclusive_cutoff",
+      "interpretation_note": "Household-survey unemployment measure; not the payroll employment growth rate.",
+      "variable_selection_basis": "labor_context"
+    },
+    {
+      "evidence_id": "MACRO_NONFARM_CHANGE_202606",
+      "label": "Change in total nonfarm payroll employment",
+      "value": 57000,
+      "unit": "jobs from previous month",
+      "observation_period": "2026-06",
+      "seasonal_adjustment": "seasonally adjusted",
+      "publication_date": "2026-07-02",
+      "publication_time_local": "08:30:00",
+      "publication_timezone": "America/New_York",
+      "source_id": "BLS_EMPSIT_20260702",
+      "source_url": "https://www.bls.gov/news.release/archives/empsit_07022026.htm",
+      "source_excerpt": "payroll employment (+57,000)",
+      "source_locator": "Archive release header and opening paragraph; Tables A-1 and B-1",
+      "release_vintage": "June 2026 first-release estimates; subsequent payroll revisions are excluded",
+      "cutoff_status": "dated_official_release_precedes_exclusive_cutoff",
+      "interpretation_note": "First-release establishment-survey estimate; subsequent revisions are excluded.",
+      "variable_selection_basis": "labor_context"
+    },
+    {
+      "evidence_id": "MACRO_REAL_GDP_Q1_2026_THIRD",
+      "label": "Real GDP change from previous quarter, annualized",
+      "value": 2.1,
+      "unit": "percent quarter over quarter at annual rate",
+      "observation_period": "2026-Q1",
+      "seasonal_adjustment": "seasonally adjusted annual rate",
+      "publication_date": "2026-06-25",
+      "publication_time_local": "08:30:00",
+      "publication_timezone": "America/New_York",
+      "source_id": "BEA_GDP_20260625",
+      "source_url": "https://www.bea.gov/sites/default/files/2026-06/gdp1q26-3rd.pdf",
+      "source_excerpt": "annual rate of 2.1 percent",
+      "source_locator": "Release PDF page 1 and Real GDP and Related Measures table on page 3",
+      "release_vintage": "2026 Q1 third estimate released June 25; later annual updates are excluded",
+      "cutoff_status": "dated_official_release_precedes_exclusive_cutoff",
+      "interpretation_note": "Third estimate for January-March 2026; not Q2 growth, a year-over-year rate, or a forecast.",
+      "variable_selection_basis": "activity_context"
+    }
+  ],
+  "information_policy": [
+    "Use these dated release values as the common information set. Observation periods and publication dates are different fields.",
+    "No fact in this packet implies a prescribed sector preference or allocation. A model may draw a conditional inference but must label it as its own inference and cite the relevant evidence IDs.",
+    "The target-date context is July 2026; do not insert knowledge of later outcomes, later statistical revisions, or today's market state.",
+    "A source outlook may have been written before these releases. Treat any resulting tension as dated evidence to explain, not as evidence that the outlook's author saw subsequent information."
+  ],
+  "scope_limitations": [
+    "Compact public-release context is not an exhaustive professional information terminal, complete client mandate, or a forecast target.",
+    "These files were retrieved in October 2026 from official dated release archives. The original release date and retained release text support availability; there is no independently timestamped July download for this project.",
+    "Fed HTML and BEA PDF originals are saved. BLS direct downloads returned HTTP 403, so the accessible official archive text is retained as exact web-tool snapshots; these snapshots are explicitly not original HTML files.",
+    "The existing ETF adjusted-price input retains its current-vendor-vintage limitation. Adding release-vintage macro facts does not convert the full case into a verified point-in-time backtest.",
+    "GDP is lagged quarterly information; employment first estimates and seasonally adjusted series can be revised. This packet preserves the selected release vintage."
+  ],
+  "selection_provenance": {
+    "framework_reference": {
+      "paper": "PortBench: A Correlation-Aware, Full-Pipeline Benchmark for LLM-Driven Portfolio Management, v6",
+      "url": "https://arxiv.org/html/2605.27887v6",
+      "sections": [
+        "2.1 Benchmark Construction",
+        "Appendix B, Market context at decision time",
+        "Appendix H.1 Market Snapshot Examples"
+      ],
+      "supported_design": "Provide macroeconomic context together with trailing asset statistics, correlations and explicit portfolio/task state. Section 2.1 explicitly includes interest rates and inflation measures.",
+      "not_claimed": "This seven-fact subset, exact official series and the extra labor/activity indicators are not a verbatim PortBench replication or a paper-validated optimal feature set."
+    },
+    "sector_allocation_reference": {
+      "paper": "Quek et al., Leveraging LLMs for Top-Down Sector Allocation in Automated Trading",
+      "url": "https://arxiv.org/html/2503.09647v5",
+      "latest_version_checked": "v5, April 10, 2025; arXiv abstract submission history checked October 19, 2026",
+      "sections": [
+        "3 Data Source",
+        "4 Design Process"
+      ],
+      "supported_design": "Sector-allocation input categories explicitly include interest rates, inflation, employment and growth; CPI and nonfarm payrolls are named. Official release dates govern availability.",
+      "adaptation": "Use a compact dated-release table instead of the paper's multi-agent macro memory pipeline, stock news and PMI. Do not import its asset ranks, trading parameters or performance claims."
+    },
+    "macro_measurement_reference": {
+      "paper": "Zhao et al., Can LLMs Take the Pulse of the Economy? A Real-Time Evaluation of LLM Nowcasts on Macroeconomic Indicators",
+      "url": "https://arxiv.org/html/2608.30110v1",
+      "latest_version_checked": "v1, August 31, 2026; arXiv abstract submission history checked October 19, 2026",
+      "sections": [
+        "3.3 Macroeconomic Indicators",
+        "Appendix D, Table 2: Variable definitions"
+      ],
+      "supported_design": "The published variable table distinguishes real GDP quarterly annualized growth, CPI yearly growth, monthly nonfarm employment change and the unemployment-rate level, with explicit units and seasonal adjustment.",
+      "adaptation": "These already-released indicators are background facts here, not nowcast targets. This reference supports variable definitions and temporal discipline, not optimal sector allocation or this seven-row subset's sufficiency."
+    },
+    "interest_rate": "Paper-supported interest-rate category implemented using the dated official FOMC target-range announcement.",
+    "inflation": "Paper-supported inflation category implemented using headline monthly/yearly CPI-U and core yearly CPI-U from one dated BLS release.",
+    "labor_context": "Employment category and NFP are explicit in Quek et al. section 3. LiveMacroEval Table 2 defines both NFP monthly change and unemployment level. Transfer those categories to a compact common context using the original BLS release; do not import a regime label, weight or trading instruction.",
+    "activity_context": "Economic growth is explicit in Quek et al. section 3 (using PMI there); GDP QoQ SAAR is defined in LiveMacroEval Table 2. The local adaptation uses dated BEA GDP as a publicly archived activity measure and retains its quarter and estimate vintage; it is not asserted equivalent to PMI.",
+    "selection_lock": "Chosen before any v4.9.1 model output; same rows, values and ordering in every E/L and source condition. Do not add/remove facts after viewing an institutional contrast.",
+    "omitted_from_minimal_context": "No researcher-written sector outlook, causal trading rule, forecast, sentiment score or numerical macro-to-weight coefficient. No live FRED/current-vintage series substitutes for dated release figures."
+  }
+}

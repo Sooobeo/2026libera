@@ -1,0 +1,455 @@
+{
+  "artifact_kind": "v49_round3_adversarial_method_topic_review",
+  "date_kst": "2026-10-19",
+  "reviewer_role": "separate Codex methods reviewer; not independent human finance reviewer",
+  "status": "PASS_DESIGN_WITH_EXPLICIT_PRE_MAIN_GATES",
+  "scope": "Final config/evaluation/schema/prompt/public candidate plus the two current HTML documents. Textual method/topic review only; no model execution, rendered request audit, full tokenizer sizing, pilot validation, or visual-layout certification.",
+  "artifact_hashes": [
+    {
+      "path": "plan/LIBERA_실험설정_v4.9_20261019.json",
+      "sha256": "01f9819cba917923c9892ac5d75c953a7bed9d47a733496f3a7ceff2ab9781a2"
+    },
+    {
+      "path": "research/v49_evaluation_protocol_20261019.json",
+      "sha256": "f2ea17b91a3d7b97e7ef3ffc81e2071aaa2133fb1d2d84aebe11cf238d877b1b"
+    },
+    {
+      "path": "data/sector_protocol/v49_design_20261019/response_schema.json",
+      "sha256": "e9840bc36d02b1d34e43230531db877110ef54202a069057b8c7f1439a3a7071"
+    },
+    {
+      "path": "data/sector_protocol/v49_design_20261019/prompt_contract.json",
+      "sha256": "1628823b71210c80c93844ef7768ee6598cc3649c59a48f6a878dba875d6b73f"
+    },
+    {
+      "path": "data/sector_protocol/v49_design_20261019/public_compact_candidate.json",
+      "sha256": "999c12d89ac60b4bdc3c05dad4a03e1997f314993b0670dfdf577e7812ceabd1"
+    },
+    {
+      "path": "research/build_v49_compact_plan.py",
+      "sha256": "8bfb5b06789d287aaa8ebc432af2cbabafb67a81b21c21dbeca3a0eac48bc813"
+    },
+    {
+      "path": "research/v49_methods_review_20261019.json",
+      "sha256": "99baebf4660b665240bd60de388ea51411016d09d6a7a41a9ce6e740a3c34e97"
+    },
+    {
+      "path": "plan/LIBERA_축소실험계획_v4.9_20261019.html",
+      "sha256": "c8a577879a7e002c4753059a4a9ca4adf2c258642855f5db5348aee490626015"
+    },
+    {
+      "path": "paper/LIBERA_소논문_방법개정안_v4.9_20261019.html",
+      "sha256": "34236b958a4ce466c9427c0d8d9aee684185b97801d6cd3a9107b45730e1581f"
+    }
+  ],
+  "checks": [
+    {
+      "id": "RQ_DOCUMENT_TO_ALLOCATION",
+      "passed": true,
+      "evidence": "/claim_scope and /research_question_ko retain documented judgment to allocation as the estimand, conditional on E/L workflow."
+    },
+    {
+      "id": "TWO_SOURCES_MAIN",
+      "passed": true,
+      "evidence": "/sources/main"
+    },
+    {
+      "id": "PILOT_MAIN_DISTINCT",
+      "passed": true,
+      "evidence": "/sources; no source-document overlap, although institutions and market context are related."
+    },
+    {
+      "id": "TWO_ARMS_TWO_STAGES",
+      "passed": true,
+      "evidence": "/arms and /stages"
+    },
+    {
+      "id": "ALL_ELEVEN_SECTORS",
+      "passed": true,
+      "evidence": "/sectors; full industry universe retained."
+    },
+    {
+      "id": "EIGHT_MAX_CALLS",
+      "passed": true,
+      "evidence": "/budget; not a power calculation."
+    },
+    {
+      "id": "NO_SHARED_DRAFT",
+      "passed": true,
+      "evidence": "/draft_policy"
+    },
+    {
+      "id": "NO_POST_FINAL_REPAIR",
+      "passed": true,
+      "evidence": "/final_policy; /budget"
+    },
+    {
+      "id": "F0_PRIMARY",
+      "passed": true,
+      "evidence": "evaluation /primary_endpoint"
+    },
+    {
+      "id": "FRESH_SOURCE_BOTH_FINALS",
+      "passed": true,
+      "evidence": "/source_exposure; prompt /F0_instruction"
+    },
+    {
+      "id": "FINAL_SAME_PACKET_CONTROL",
+      "passed": true,
+      "evidence": "/final_controls; a declared requirement, not evidence from rendered requests."
+    },
+    {
+      "id": "FINAL_COMMON_MODEL_MARKET_SCHEMA",
+      "passed": true,
+      "evidence": "/final_controls"
+    },
+    {
+      "id": "HISTORY_NOT_RESET",
+      "passed": true,
+      "evidence": "/final_controls and prompt /history"
+    },
+    {
+      "id": "SAME_FINAL_BLOCK_ORDER",
+      "passed": true,
+      "evidence": "prompt /F0_order",
+      "limit": "This means structural block position within the final message; absolute token position is not controlled because draft and feedback lengths differ."
+    },
+    {
+      "id": "ESTIMAND_NOT_PURE_MECHANISM",
+      "passed": true,
+      "evidence": "/estimand"
+    },
+    {
+      "id": "L_SOURCE_BLIND_DRAFT",
+      "passed": true,
+      "evidence": "/source_exposure/L/D0; prompt /D0_instruction"
+    },
+    {
+      "id": "AGGREGATE_NOT_MODEL_INPUT",
+      "passed": true,
+      "evidence": "/data/visibility_rule: select assigned packet only."
+    },
+    {
+      "id": "COMMON_MARKET_NO_LITERAL_ASSIGNED_NAMES",
+      "passed": true,
+      "evidence": "Literal scan of common_market; does not prove freedom from every indirect clue."
+    },
+    {
+      "id": "SAME_CALCULATOR_NOT_GOLD",
+      "passed": true,
+      "evidence": "/calculator_policy; strategic judgments remain model outputs."
+    },
+    {
+      "id": "NO_HIDDEN_GOLD_IN_PROMPT",
+      "passed": true,
+      "evidence": "prompt /system; still requires implemented visibility audit."
+    },
+    {
+      "id": "INVALID_DRAFT_NOT_ARITHMETIC_SELECTION",
+      "passed": true,
+      "evidence": "/failure_policy"
+    },
+    {
+      "id": "STRUCTURAL_DRAFT_FAILURE_ACCOUNTED",
+      "passed": true,
+      "evidence": "/failure_policy; all planned final endpoints remain in denominators."
+    },
+    {
+      "id": "NO_AUTOMATIC_RETRY",
+      "passed": true,
+      "evidence": "/failure_policy"
+    },
+    {
+      "id": "NO_RATING_WEIGHT_HEURISTIC",
+      "passed": true,
+      "evidence": "/prohibited_heuristics and prompt /system"
+    },
+    {
+      "id": "SOURCE_SCALE_ASYMMETRY",
+      "passed": true,
+      "evidence": "evaluation /dimensions/source_fidelity"
+    },
+    {
+      "id": "FACT_AND_ACTION_SEPARATE",
+      "passed": true,
+      "evidence": "evaluation /dimensions"
+    },
+    {
+      "id": "REASONED_DEPARTURE_ALLOWED",
+      "passed": true,
+      "evidence": "evaluation /dimensions/evidence_decision_link"
+    },
+    {
+      "id": "NO_COMPOSITE_SCORE",
+      "passed": true,
+      "evidence": "evaluation /no_composite_score"
+    },
+    {
+      "id": "ALL44_EXPECTED_ROWS",
+      "passed": true,
+      "evidence": "evaluation fixed planned denominators; not independent sample size."
+    },
+    {
+      "id": "INVALID_MISSING_NO_SUBSTITUTION",
+      "passed": true,
+      "evidence": "evaluation /denominators/missing"
+    },
+    {
+      "id": "NO_LESS_TEXT_RELIABILITY_ARTIFACT",
+      "passed": true,
+      "evidence": "evaluation /denominators/claims"
+    },
+    {
+      "id": "FOUR_VALID_REQUIRED_FULL_CONTRAST",
+      "passed": true,
+      "evidence": "/four_way_allocation_observability"
+    },
+    {
+      "id": "NO_VALID_PAIR_UNANSWERED",
+      "passed": true,
+      "evidence": "evaluation /interpretation/no_valid_pairs"
+    },
+    {
+      "id": "NO_SOURCE_CONTRAST_NO_IDENTIFICATION",
+      "passed": true,
+      "evidence": "/source_contrast_observability"
+    },
+    {
+      "id": "NO_PSEUDOREPLICATION",
+      "passed": true,
+      "evidence": "evaluation /inference"
+    },
+    {
+      "id": "NO_EFFECT_NOT_EQUIVALENCE",
+      "passed": true,
+      "evidence": "evaluation /interpretation/no_E_L_difference"
+    },
+    {
+      "id": "DIVERSITY_NOT_SUCCESS",
+      "passed": true,
+      "evidence": "evaluation /interpretation"
+    },
+    {
+      "id": "SIMILARITY_NOT_FAILURE",
+      "passed": true,
+      "evidence": "evaluation /interpretation"
+    },
+    {
+      "id": "INFRASTRUCTURE_NOT_STRATEGY",
+      "passed": true,
+      "evidence": "evaluation /interpretation"
+    },
+    {
+      "id": "PREOUTPUT_ALL_SECTOR_REVIEW",
+      "passed": true,
+      "evidence": "evaluation /blind_review/before_generation; pending."
+    },
+    {
+      "id": "IMPERFECT_BLINDING_ACKNOWLEDGED",
+      "passed": true,
+      "evidence": "evaluation /blind_review/after_generation"
+    },
+    {
+      "id": "HUMAN_REVIEW_NOT_AI",
+      "passed": true,
+      "evidence": "evaluation /blind_review/AI_review_status"
+    },
+    {
+      "id": "HISTORICAL_FAILURES_RETAINED",
+      "passed": true,
+      "evidence": "/historical_run_policy"
+    },
+    {
+      "id": "NO_RUNTIME_READY_CLAIM",
+      "passed": true,
+      "evidence": "/current_state and /model"
+    },
+    {
+      "id": "NO_MODEL_CALLS_CLAIM",
+      "passed": true,
+      "evidence": "Declared zero-call state; this reviewer made no model calls."
+    },
+    {
+      "id": "NUMERIC_SETTINGS_PROVENANCE",
+      "passed": true,
+      "evidence": "Local case-count and engineering precision distinguished from literature precedent."
+    },
+    {
+      "id": "OUTPUT_ERRORS_REMAIN_OBSERVABLE",
+      "passed": true,
+      "evidence": "Schema does not covertly force nonnegative/in-range weights; evaluator must check raw numbers."
+    },
+    {
+      "id": "SCHEMA_COVERAGE_NOT_UNIQUENESS_CLAIM",
+      "passed": true,
+      "evidence": "Eleven rows alone cannot prove unique sectors; separate validator remains required."
+    },
+    {
+      "id": "COMPACT_CANDIDATE_HASH_MATCH",
+      "passed": true,
+      "evidence": "Config compact candidate hash resolves to current exact bytes."
+    },
+    {
+      "id": "POSITION_MEANING_EXPLICIT_CONFIG",
+      "passed": true,
+      "evidence": "Config /final_controls/packet_position_meaning",
+      "check_kind": "literal_field_check"
+    },
+    {
+      "id": "EXECUTION_VALIDATORS_EXPLICIT",
+      "passed": true,
+      "evidence": "Config requires unique sectors, finite non-bool numbers, L blindness, assigned-source visibility, calculator adaptation, and exclusion of other/evaluator packets.",
+      "check_kind": "literal_field_count_plus_manual_review"
+    },
+    {
+      "id": "HTML_PLAN_CONTROLS_MATCH",
+      "passed": true,
+      "evidence": "Plan section 3 describes own D0 for every cell and fresh identical assigned source packet in F0; no shared blind draft.",
+      "check_kind": "manual_semantic_review"
+    },
+    {
+      "id": "HTML_PLAN_STRUCTURAL_POSITION_CLARIFIED",
+      "passed": true,
+      "evidence": "Plan section 3 explicitly distinguishes final-message composition order from absolute token positions.",
+      "check_kind": "manual_semantic_review"
+    },
+    {
+      "id": "HTML_PAPER_WORKFLOW_ESTIMAND_MATCH",
+      "passed": true,
+      "evidence": "Paper Data and comparison procedure states prior exposure and self-generated history jointly vary; no isolated anchoring or memory claim.",
+      "check_kind": "manual_semantic_review"
+    },
+    {
+      "id": "HTML_TITLE_SCOPE_MATCH",
+      "passed": true,
+      "evidence": "Both titles concern public institutional judgment and a sector-allocation case study; the paper labels itself a method replacement draft before experiment.",
+      "check_kind": "manual_semantic_review"
+    },
+    {
+      "id": "HTML_ACTUAL_ALLOCATION_PRESERVED",
+      "passed": true,
+      "evidence": "Plan sections 1, 5, 6 and paper Measurement retain raw sector weights, source reasons, decision rationales, and their consistency; task is not reduced to fact extraction.",
+      "check_kind": "manual_semantic_review"
+    },
+    {
+      "id": "HTML_ECONOMICS_MANAGEMENT_CONNECTION",
+      "passed": true,
+      "evidence": "Plan section 2 and paper opening link organizational evidence entering capital-allocation recommendations to review responsibility, rather than presenting runtime repair as the research contribution.",
+      "check_kind": "manual_semantic_review"
+    },
+    {
+      "id": "HTML_ORIGINAL_STRONG_CLAIM_NOT_ASSERTED",
+      "passed": true,
+      "evidence": "Plan section 2 and paper opening/limitations explicitly exclude identification of necessary optimal allocation differences, harmful market convergence, and market losses.",
+      "check_kind": "manual_semantic_review"
+    },
+    {
+      "id": "HTML_NO_SUCCESS_GUARANTEE_BALANCED",
+      "passed": true,
+      "evidence": "Plan opening rejects guaranteed model success/significance/device stability, while sections 1-2 explain the observable institutional-evidence question; paper distinguishes contribution from investment-performance claims.",
+      "check_kind": "manual_semantic_review"
+    },
+    {
+      "id": "HTML_FULL_FOUR_VECTOR_GATE",
+      "passed": true,
+      "evidence": "Plan section 6 and paper Measurement require four valid F0s for the complete cross-comparison; zero eligible pairs leave the allocation question unanswered.",
+      "check_kind": "manual_semantic_review"
+    },
+    {
+      "id": "HTML_PARTIAL_RESULTS_NOT_SUCCESS_SELECTION",
+      "passed": true,
+      "evidence": "Plan section 6 reports eligible prespecified pairs together with missingness; paper Measurement keeps planned, attempted, readable, valid, and eligible-pair counts.",
+      "check_kind": "manual_semantic_review"
+    },
+    {
+      "id": "HTML_NO_RETRY_OR_NORMALIZATION",
+      "passed": true,
+      "evidence": "Plan section 3 excludes post-F0 generation, automatic retry, best-answer selection, and model-weight normalization; paper Measurement states calculator leaves submitted weights unchanged.",
+      "check_kind": "manual_semantic_review"
+    },
+    {
+      "id": "HTML_ALL11_NO_OUTCOME_SUBSET",
+      "passed": true,
+      "evidence": "Plan sections 1 and 4 retain all eleven sectors; Utilities is expressly a pre-output illustration with independent source review pending.",
+      "check_kind": "manual_semantic_review"
+    },
+    {
+      "id": "HTML_SOURCE_SCALE_DIFFERENCE",
+      "passed": true,
+      "evidence": "Plan section 4 and paper Measurement distinguish Fidelity Overweight from UBS Attractive and do not prescribe target weight gaps.",
+      "check_kind": "manual_semantic_review"
+    },
+    {
+      "id": "HTML_INDEPENDENT_HUMAN_STATUS",
+      "passed": true,
+      "evidence": "Plan sections 4, 6, 9 and paper Measurement separate two human semantic readers from AI self-checks; current independent review remains incomplete.",
+      "check_kind": "manual_semantic_review"
+    },
+    {
+      "id": "HTML_SMALL_N_NO_PSEUDOREPLICATION",
+      "passed": true,
+      "evidence": "Plan section 6 and paper Limitations identify two documents/one market context/one model, not 44 rows or eight calls as independent samples; no significance or equivalence claim.",
+      "check_kind": "manual_semantic_review"
+    },
+    {
+      "id": "HTML_HISTORICAL_FAILURES_NOT_POOLED",
+      "passed": true,
+      "evidence": "Plan sections 3 and 10 and paper Development history preserve v4.8 observations without relabelling them v4.9 outcomes.",
+      "check_kind": "manual_semantic_review"
+    },
+    {
+      "id": "HTML_PARAMETERS_PROVENANCE",
+      "passed": true,
+      "evidence": "Plan section 8 distinguishes local 2x2x2 design, paper-transferred output/seed precedents, and engineering precision/context settings; no claim that eight calls are scientifically optimal.",
+      "check_kind": "manual_semantic_review"
+    },
+    {
+      "id": "HTML_BYTES_NOT_SPEED_OR_TOKENS",
+      "passed": true,
+      "evidence": "Plan section 7 explicitly limits byte reductions to observed representation sizes and states tokens/speed/device stability are unmeasured.",
+      "check_kind": "manual_semantic_review"
+    },
+    {
+      "id": "HTML_EXECUTION_NOT_COMPLETED",
+      "passed": true,
+      "evidence": "Plan section 9 and paper opening state no v4.9 experiment yet; runner adaptation, device/token validation, pilot, human review and freeze remain outstanding.",
+      "check_kind": "manual_semantic_review"
+    },
+    {
+      "id": "HTML_INSTRUMENT_VALIDITY_NOT_OUTCOME_TUNING",
+      "passed": true,
+      "evidence": "Plan section 9 rejects E superiority or correct semantic answers as implementation pass requirements; preservation is evaluated after fixed execution.",
+      "check_kind": "manual_semantic_review"
+    }
+  ],
+  "checks_passed": 71,
+  "checks_total": 71,
+  "blocking_design_issues": [],
+  "nonblocking_clarifications": [
+    {
+      "id": "POSITION_IS_STRUCTURAL",
+      "text": "Same packet position is interpreted as the same last block of the final user message, not equal absolute token index. Different generated histories are part of the stated workflow estimand.",
+      "resolution": "Now explicit in config and plan section 3; no unresolved wording blocker."
+    },
+    {
+      "id": "SAMPLE_IS_CASES",
+      "text": "Four cells are a finite document-case comparison; eight calls and 44 final sector rows do not create independent institutional replications."
+    }
+  ],
+  "remaining_pre_main_gates": [
+    "lossless input and visibility audit",
+    "same-task backend and full-token feasibility",
+    "completed separate four-case pilot accounting",
+    "outcome-blinded source/meaning review",
+    "versioned prompt/calculator/evaluator implementation checks",
+    "freeze exact inputs, model, evaluation, execution order and resource ceilings"
+  ],
+  "substantive_claim_gate": "All four valid raw final allocations are required for the complete two-source by two-workflow contrast. Without valid pairs, allocation research remains unanswered; execution diagnostics cannot substitute for the paper question.",
+  "no_until_success": true,
+  "topic_judgment": "Aligned with current paper public-judgment preservation question; does not identify the stronger original excess-convergence/welfare question.",
+  "independent_human_review_completed": false,
+  "model_calls_by_reviewer": 0,
+  "execution_readiness_passed": false,
+  "html_review_completed": true,
+  "config_refresh_note": "Added packet_position_meaning and six semantic validator requirements read and checked. Evaluation/schema/prompt/public candidate bytes unchanged from previous review; builder/config hashes refreshed."
+}

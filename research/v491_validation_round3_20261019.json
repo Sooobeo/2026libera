@@ -1,0 +1,690 @@
+{
+  "protocol_version": "4.9.1",
+  "round": 3,
+  "status": "PASS",
+  "checked_at_utc": "2026-10-19T05:33:38.357271+00:00",
+  "scope": "Ordered final AI design/provenance/contract review after corrected round1 r2 and round2 r2. Includes actual prepared model inputs, independent synthetic adversarial probes and current artifact hash binding; no model generation or independent human certification.",
+  "reviewer_role": "AI macro-evidence reviewer; also author of the approved common macro packet. Separate from root implementation and round2 methods reviewer, but not an independent human reviewer and not independent of all data preparation.",
+  "prior_rounds": [
+    {
+      "path": "research/v491_validation_round1_20261019_r2.json",
+      "sha256": "9a87099556fcb2ba3b3abdf64efc3a2d17e6d49eea658cced7bc616cf890b305",
+      "status": "PASS",
+      "check_count": 148,
+      "checked_at_utc": "2026-10-19T05:31:03.537008+00:00"
+    },
+    {
+      "path": "research/v491_validation_round2_20261019_r2.json",
+      "sha256": "5ef2119a884713ec6a1f5f481e4592c2bd6d79ffe1eb77f09bb11dced8d8daac",
+      "status": "PASS",
+      "check_count": 57,
+      "checked_at_utc": "2026-10-19T05:31:56.477758+00:00"
+    }
+  ],
+  "initial_findings": [
+    {
+      "id": "R3_FOOTER_STALE_PROTOCOL",
+      "finding": "Whole-paper footer still called the current rules v4.8 despite a v4.9.1 body.",
+      "original_path": "paper/LIBERA_텀페이퍼_초안_v4.9.1_20261019.html",
+      "original_sha256": "f546e3f627c7125f56c11d8bf0a4e32182d8da5f4c59e4174f5f4cc6d23e2b76",
+      "resolution": "Root corrected the footer to v4.9.1 E/L × D0/F0, preserved old HTML and receipt bytes, and reran ordered rounds 1 and 2 as new r2 receipts.",
+      "resolved_current_sha256": "6082188d2469feaf221b54845e5462681709a59e776307234c9705b3be79f6a6",
+      "status": "RESOLVED_BEFORE_FINAL_SIGNOFF"
+    }
+  ],
+  "check_count": 74,
+  "checks": [
+    {
+      "check": "current_hashes_match_v491_validation_round1_20261019_r2",
+      "pass": true,
+      "evidence": "29 file hashes independently recomputed and equal to receipt."
+    },
+    {
+      "check": "current_hashes_match_v491_validation_round2_20261019_r2",
+      "pass": true,
+      "evidence": "29 file hashes independently recomputed and equal to receipt."
+    },
+    {
+      "check": "original_reviewed_bytes_and_receipts_preserved",
+      "pass": true,
+      "evidence": "All four immutable snapshot hashes match originals; old round1/2 receipts remain unchanged at original paths."
+    },
+    {
+      "check": "current_message_content_byte_measurements_verified",
+      "pass": true,
+      "evidence": "All eight prepared D0 content UTF-8 byte counts recomputed; range 29100-32888. These exclude JSON envelopes and are not tokenizer or runtime measurements."
+    },
+    {
+      "check": "macro_table_lossless",
+      "pass": true,
+      "evidence": "All seven dictionaries reconstructed from shared/columns/rows equal the audited official facts."
+    },
+    {
+      "check": "pilot/fidelity_q2_2026__E:actual_D0_common_context",
+      "pass": true,
+      "evidence": "Inspected the actual prepared model user message, not only manifest/config."
+    },
+    {
+      "check": "pilot/fidelity_q2_2026__E:all_common_macro_rows",
+      "pass": true,
+      "evidence": "All values, measurement periods, publication dates, units, adjustment labels and IDs survive projection."
+    },
+    {
+      "check": "pilot/fidelity_q2_2026__E:only_assigned_document",
+      "pass": true,
+      "evidence": "Actual early D0 contains the assigned packet exactly."
+    },
+    {
+      "check": "pilot/fidelity_q2_2026__L:actual_D0_common_context",
+      "pass": true,
+      "evidence": "Inspected the actual prepared model user message, not only manifest/config."
+    },
+    {
+      "check": "pilot/fidelity_q2_2026__L:all_common_macro_rows",
+      "pass": true,
+      "evidence": "All values, measurement periods, publication dates, units, adjustment labels and IDs survive projection."
+    },
+    {
+      "check": "pilot/fidelity_q2_2026__L:no_assigned_identity",
+      "pass": true,
+      "evidence": "No source ID or institution_document in actual late D0."
+    },
+    {
+      "check": "pilot/ubs_june_2026__E:actual_D0_common_context",
+      "pass": true,
+      "evidence": "Inspected the actual prepared model user message, not only manifest/config."
+    },
+    {
+      "check": "pilot/ubs_june_2026__E:all_common_macro_rows",
+      "pass": true,
+      "evidence": "All values, measurement periods, publication dates, units, adjustment labels and IDs survive projection."
+    },
+    {
+      "check": "pilot/ubs_june_2026__E:only_assigned_document",
+      "pass": true,
+      "evidence": "Actual early D0 contains the assigned packet exactly."
+    },
+    {
+      "check": "pilot/ubs_june_2026__L:actual_D0_common_context",
+      "pass": true,
+      "evidence": "Inspected the actual prepared model user message, not only manifest/config."
+    },
+    {
+      "check": "pilot/ubs_june_2026__L:all_common_macro_rows",
+      "pass": true,
+      "evidence": "All values, measurement periods, publication dates, units, adjustment labels and IDs survive projection."
+    },
+    {
+      "check": "pilot/ubs_june_2026__L:no_assigned_identity",
+      "pass": true,
+      "evidence": "No source ID or institution_document in actual late D0."
+    },
+    {
+      "check": "main/fidelity_q3_2026__E:actual_D0_common_context",
+      "pass": true,
+      "evidence": "Inspected the actual prepared model user message, not only manifest/config."
+    },
+    {
+      "check": "main/fidelity_q3_2026__E:all_common_macro_rows",
+      "pass": true,
+      "evidence": "All values, measurement periods, publication dates, units, adjustment labels and IDs survive projection."
+    },
+    {
+      "check": "main/fidelity_q3_2026__E:only_assigned_document",
+      "pass": true,
+      "evidence": "Actual early D0 contains the assigned packet exactly."
+    },
+    {
+      "check": "main/fidelity_q3_2026__L:actual_D0_common_context",
+      "pass": true,
+      "evidence": "Inspected the actual prepared model user message, not only manifest/config."
+    },
+    {
+      "check": "main/fidelity_q3_2026__L:all_common_macro_rows",
+      "pass": true,
+      "evidence": "All values, measurement periods, publication dates, units, adjustment labels and IDs survive projection."
+    },
+    {
+      "check": "main/fidelity_q3_2026__L:no_assigned_identity",
+      "pass": true,
+      "evidence": "No source ID or institution_document in actual late D0."
+    },
+    {
+      "check": "main/ubs_july_2026__E:actual_D0_common_context",
+      "pass": true,
+      "evidence": "Inspected the actual prepared model user message, not only manifest/config."
+    },
+    {
+      "check": "main/ubs_july_2026__E:all_common_macro_rows",
+      "pass": true,
+      "evidence": "All values, measurement periods, publication dates, units, adjustment labels and IDs survive projection."
+    },
+    {
+      "check": "main/ubs_july_2026__E:only_assigned_document",
+      "pass": true,
+      "evidence": "Actual early D0 contains the assigned packet exactly."
+    },
+    {
+      "check": "main/ubs_july_2026__L:actual_D0_common_context",
+      "pass": true,
+      "evidence": "Inspected the actual prepared model user message, not only manifest/config."
+    },
+    {
+      "check": "main/ubs_july_2026__L:all_common_macro_rows",
+      "pass": true,
+      "evidence": "All values, measurement periods, publication dates, units, adjustment labels and IDs survive projection."
+    },
+    {
+      "check": "main/ubs_july_2026__L:no_assigned_identity",
+      "pass": true,
+      "evidence": "No source ID or institution_document in actual late D0."
+    },
+    {
+      "check": "synthetic_final_retains_exact_initial_history",
+      "pass": true,
+      "evidence": "Synthetic probe only; no generated response saved or counted."
+    },
+    {
+      "check": "synthetic_final_retains_exact_raw_draft",
+      "pass": true,
+      "evidence": "Leading/trailing whitespace and original draft formatting preserved verbatim."
+    },
+    {
+      "check": "synthetic_final_refreshes_exact_source",
+      "pass": true,
+      "evidence": "Complete assigned packet refreshed in F0."
+    },
+    {
+      "check": "synthetic_feedback_is_computed_from_actual_probe",
+      "pass": true,
+      "evidence": "No fabricated optimization vector or source oracle."
+    },
+    {
+      "check": "unavailable_future_citation_recorded_not_silently_dropped",
+      "pass": true,
+      "evidence": "Future-ID citation becomes an output error; readable draft is not outcome-censored."
+    },
+    {
+      "check": "valid_ID_does_not_certify_wrong_period_or_unit",
+      "pass": true,
+      "evidence": "This deliberately false GDP claim remains semantically unverified; schema/ID validity is not truth. Human context_use/numeric review must reject its period and annualization."
+    },
+    {
+      "check": "invalid_raw_weights_get_actual_feedback_without_repair",
+      "pass": true,
+      "evidence": "Finite complete negative/sum-invalid draft remains a measured failure with actual feedback."
+    },
+    {
+      "check": "invalid_raw_weights_remain_unchanged",
+      "pass": true,
+      "evidence": "No clipping or normalization of raw draft."
+    },
+    {
+      "check": "early_source_cannot_switch_at_final",
+      "pass": true,
+      "evidence": "Passing the other source packet into an early case is rejected."
+    },
+    {
+      "check": "context_has_no_paper_or_evaluator_metadata",
+      "pass": true,
+      "evidence": "Research literature and hidden source-comparison artifacts are not in common model payload."
+    },
+    {
+      "check": "latest_observations_and_releases_before_cutoff",
+      "pass": true,
+      "evidence": "All current packet release dates and the final ETF observation precede the cutoff."
+    },
+    {
+      "check": "FED_FOMC_20260617:evidence_path_hash",
+      "pass": true,
+      "evidence": "data/sector_context/v491_20261019/sources/fed_fomc_20260617.html"
+    },
+    {
+      "check": "FED_FOMC_20260617:extracted_path_hash",
+      "pass": true,
+      "evidence": "data/sector_context/v491_20261019/sources/fed_fomc_20260617.extracted.txt"
+    },
+    {
+      "check": "BLS_CPI_20260714:evidence_path_hash",
+      "pass": true,
+      "evidence": "data/sector_context/v491_20261019/sources/bls_cpi_20260714.web_snapshot.txt"
+    },
+    {
+      "check": "BLS_CPI_20260714:extracted_path_hash",
+      "pass": true,
+      "evidence": "data/sector_context/v491_20261019/sources/bls_cpi_20260714.web_snapshot.extracted.txt"
+    },
+    {
+      "check": "BLS_EMPSIT_20260702:evidence_path_hash",
+      "pass": true,
+      "evidence": "data/sector_context/v491_20261019/sources/bls_empsit_20260702.web_snapshot.txt"
+    },
+    {
+      "check": "BLS_EMPSIT_20260702:extracted_path_hash",
+      "pass": true,
+      "evidence": "data/sector_context/v491_20261019/sources/bls_empsit_20260702.web_snapshot.extracted.txt"
+    },
+    {
+      "check": "BEA_GDP_20260625:evidence_path_hash",
+      "pass": true,
+      "evidence": "data/sector_context/v491_20261019/sources/bea_gdp_20260625.pdf"
+    },
+    {
+      "check": "BEA_GDP_20260625:extracted_path_hash",
+      "pass": true,
+      "evidence": "data/sector_context/v491_20261019/sources/bea_gdp_20260625.extracted.txt"
+    },
+    {
+      "check": "ordered_corrected_receipts_complete",
+      "pass": true,
+      "evidence": "Corrected round 1 r2 PASS precedes corrected round 2 r2 PASS; both receipts were read before this final round-3 sign-off."
+    },
+    {
+      "check": "current_footer_matches_current_experiment",
+      "pass": true,
+      "evidence": "Read the current whole-paper footer: v4.9.1, common operating/market context, E/L, D0 and F0; the inherited claim that current rules are v4.8 is gone."
+    },
+    {
+      "check": "dated_official_release_values_and_units",
+      "pass": true,
+      "evidence": "Retained official releases support target range 3.50–3.75%; June CPI MoM -0.4% SA, headline YoY 3.5% NSA, core YoY 2.6% NSA; June unemployment 4.2% SA, NFP +57,000 jobs SA; Q1 GDP 2.1% QoQ SAAR third estimate. Plan/table definitions agree."
+    },
+    {
+      "check": "fed_latest_meeting_before_cutoff",
+      "pass": true,
+      "evidence": "Official FOMC calendar lists June 16–17 and next July 28–29. June 17 policy decision is the latest scheduled meeting before July 17. The packet reports the target announcement, not EFFR or a future decision."
+    },
+    {
+      "check": "gdp_release_vintage_before_cutoff",
+      "pass": true,
+      "evidence": "BEA June 25 third estimate is Q1; the same release announces July 30 as the next Q2 advance release. The packet does not substitute Q2 or a current revised API value."
+    },
+    {
+      "check": "publication_date_not_observation_or_retrieval_date",
+      "pass": true,
+      "evidence": "Observation periods, release dates and October retrieval metadata remain separate. Cutoff is exclusive July 17 in New York; the snapshot does not claim July acquisition of the stored files."
+    },
+    {
+      "check": "archive_provenance_limit_explicit",
+      "pass": true,
+      "evidence": "BLS direct-download 403 led to preserved official-archive web-tool text snapshots, explicitly named as such; Fed HTML and BEA PDF originals remain preserved. BLS snapshots are not represented as original raw HTML."
+    },
+    {
+      "check": "whole_task_not_point_in_time_certified",
+      "pass": true,
+      "evidence": "ETF adjusted-price vendor-vintage limitation remains disclosed. Dated macro releases do not convert the complete exercise into a certified historical trading replay."
+    },
+    {
+      "check": "paper_basis_for_dimensions_not_exact_strategy",
+      "pass": true,
+      "evidence": "PortBench supports context layers; Quek supports interest/inflation/employment/growth and release filtering; LiveMacroEval supports indicator definitions. Seven facts and GDP replacing PMI are disclosed adaptations, not an optimal input set or allocation rule."
+    },
+    {
+      "check": "common_task_not_private_institution_mandate",
+      "pass": true,
+      "evidence": "The operating brief describes a hypothetical initial sector allocation. It does not invent either institution's actual portfolio, liabilities, risk coefficient, sector caps, private objective or ESG constraints."
+    },
+    {
+      "check": "new_money_state_and_benchmark_consistent",
+      "pass": true,
+      "evidence": "No existing sector holdings means initial allocation, not unknown actual holdings. Benchmark is an evaluation comparator, not a starting portfolio, turnover baseline or institutional gold vector."
+    },
+    {
+      "check": "horizon_is_task_definition_not_observed_return",
+      "pass": true,
+      "evidence": "The selected 12-month horizon is a literature-supported candidate chosen locally. Neither 12-month future performance nor knowledge of July information by older source authors is claimed."
+    },
+    {
+      "check": "neutral_macro_context_not_predetermined_sector_choice",
+      "pass": true,
+      "evidence": "Common facts carry units/date qualifiers without a researcher-imposed regime label, macro-to-sector recommendation, target weights or citation quota."
+    },
+    {
+      "check": "institution_evidence_and_common_facts_separate",
+      "pass": true,
+      "evidence": "Common context is shared by every case. Only the assigned institutional packet enters early D0 and each F0. Institution public opinions are not renamed mandates, optimal weights or actual holdings."
+    },
+    {
+      "check": "calculator_is_shared_arithmetic_support",
+      "pass": true,
+      "evidence": "E/L is the comparison. Deterministic risk/budget calculations supply common feedback, not an independent strategic control or recommended allocation. Raw invalid numbers remain recorded."
+    },
+    {
+      "check": "workflow_bundle_claim_limited",
+      "pass": true,
+      "evidence": "Earlier source exposure, repetition, draft content and history length differ together. Final source restatement has the same structural order, not an equal absolute token position or isolated anchoring manipulation."
+    },
+    {
+      "check": "context_addition_effect_not_claimed",
+      "pass": true,
+      "evidence": "No no-context condition exists, so adding context cannot be claimed to improve quality causally. It supplies a specified common decision setting for the timing comparison."
+    },
+    {
+      "check": "economic_management_topic_preserved",
+      "pass": true,
+      "evidence": "The experiment observes how a shared AI turns institution-specific public evidence into capital-allocation recommendations within a drafting/review workflow. This is linked to organizational judgment while the broader market-concentration thesis remains motivation, not a proven result."
+    },
+    {
+      "check": "finite_case_scope_and_failure_domain",
+      "pass": true,
+      "evidence": "Two institutional documents, one snapshot and one model define finite cases. Eleven sector rows are not independent samples. Full 2x2 allocation distance requires four valid final vectors; invalid/missing finals do not become zero distance or benchmark substitutes."
+    },
+    {
+      "check": "convergence_not_automatically_failure",
+      "pass": true,
+      "evidence": "Same weights can be defensible under a shared task, market and benchmark. Larger distance is not inherently better; evidence use, source fidelity and reason-weight linkage require separate interpretation."
+    },
+    {
+      "check": "semantic_truth_not_certified_by_schema",
+      "pass": true,
+      "evidence": "The adversarial valid-ID/wrong-GDP-period probe passes structural checks without becoming true. Context meaning, numerical definitions and source support still require the specified independent semantic review."
+    },
+    {
+      "check": "first_final_and_no_post_result_selection",
+      "pass": true,
+      "evidence": "F0 remains the sole primary endpoint with no post-final repair or favorable-response selection. Identical L inputs still require separate generations rather than draft reuse."
+    },
+    {
+      "check": "current_bytes_and_historical_compaction_distinguished",
+      "pass": true,
+      "evidence": "Plan cost table is read with its explicit v4.9-only historical note. The 20,617-byte/18.1% figure does not measure v4.9.1. Current eight D0 content-byte counts are independently checked at 29,100–32,888, excluding JSON envelopes."
+    },
+    {
+      "check": "hardware_token_latency_not_certified",
+      "pass": true,
+      "evidence": "UTF-8 bytes and offline assembly do not establish tokenizer fit, complete-history memory fit, response time, supported backend stability or successful generation."
+    },
+    {
+      "check": "pilot_human_freeze_still_pending",
+      "pass": true,
+      "evidence": "Configuration keeps model calls/pilot/main at zero, live runner unvalidated, independent human review incomplete and freeze false. Four-case pilot, exact full-history runtime checks, independent source/meaning review and frozen settings/order remain required."
+    },
+    {
+      "check": "preexperiment_paper_status_truthful",
+      "pass": true,
+      "evidence": "The full paper now integrates context, methods and limitations, but results, independent human review and final submission details remain pending. This report is a design review, not a completed experiment or human certification."
+    }
+  ],
+  "synthetic_probe_scope": {
+    "model_calls": 0,
+    "synthetic_review_probe_not_experiment": true,
+    "probe_origin": "Manually constructed in reviewer memory to exercise actual build_final_messages/validate_response paths; no synthetic response saved as an experimental observation.",
+    "adversarial_cases": [
+      "Unknown future evidence ID is retained as an output error without censoring a readable draft.",
+      "Valid Q1 GDP ID attached to false Q2/YoY words remains semantically unverified rather than auto-certified.",
+      "Finite complete vector with a negative weight remains unchanged and receives actual arithmetic feedback.",
+      "Wrong institutional packet at an early case final stage is rejected.",
+      "Exact draft whitespace, D0 history, common context and assigned final packet survive final-message assembly."
+    ],
+    "unit_test_rerun_claim": "No redundant complete-suite rerun claimed here. Round1 r2 reports 32 new contract tests and 20 existing engine tests; this review adds independent actual-input and adversarial checks."
+  },
+  "official_release_crosschecks": [
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "finding": "2026 meetings June 16–17 then July 28–29; July 8 minutes release does not change the date of the June target decision.",
+      "limit": "The selected packet is minimal, not an exhaustive archive of all communications available by July 16."
+    },
+    {
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a1.htm",
+      "finding": "June 17 announcement sets a 3.50–3.75% target range, effective June 18; target range is distinct from effective funds rate."
+    },
+    {
+      "url": "https://www.bea.gov/news/2026/gdp-third-estimate-industries-corporate-profits-state-gdp-and-state-personal-income-1st",
+      "finding": "June 25 Q1 third estimate is 2.1% QoQ annual rate; next Q2 advance estimate release is July 30.",
+      "limit": "Current page carries later modification/supersession metadata; numerical evidence is bound to the preserved dated release PDF rather than current revised API history."
+    }
+  ],
+  "performance_measurement_scope": {
+    "historical_plan_table": "20,617 bytes and 18.1% concern v4.9 expression compaction, explicitly restricted by the note under the table; they are not current v4.9.1 full-input measurements.",
+    "current_D0_message_content_utf8_bytes": {
+      "minimum": 29100,
+      "maximum": 32888,
+      "count": 8
+    },
+    "units": "Sum of UTF-8 byte lengths of prepared system/user content; excludes JSON envelopes. Not model-token count.",
+    "unmeasured": [
+      "Full-history served-model token fit",
+      "Memory/GPU stability",
+      "Response time",
+      "Four-case pilot completion"
+    ],
+    "presentation_note": "The v4.9.1 column heading can mislead if the historical-byte row is read in isolation. Read with its immediately following explicit scope note and use current manifest counts when describing current inputs. This is a presentation caveat, not evidence of measured runtime improvement."
+  },
+  "remaining_limitations": [
+    "Independent human source/meaning review is not completed by three AI design reviews.",
+    "Correct evidence IDs and valid JSON cannot certify factual or semantic support of generated claims.",
+    "BLS evidence is preserved official-archive web text after direct HTTP 403, not raw HTML; October retrieval is explicit.",
+    "Current vendor-adjusted ETF history prevents claiming the whole case is a certified point-in-time backtest.",
+    "Two source cases/one snapshot/one model support finite descriptive findings, not population effects or investment-performance claims.",
+    "No actual v4.9.1 draft/final output or pilot outcome exists yet.",
+    "Exact backend, all-history tokenizer/memory checks, pilot and final freeze must succeed before main execution."
+  ],
+  "model_calls": 0,
+  "independent_human_review_completed": false,
+  "main_experiment_started": false,
+  "design_blocking_findings_remaining": [],
+  "historical_snapshot_manifest": {
+    "path": "research/artifacts/v491_review_history_20261019/snapshot_manifest.json",
+    "sha256": "1beb0f070887cf23b33a98bf8255ae865c27659e8c5311a11be5cf1fc129896f",
+    "snapshots": [
+      {
+        "original_path": "plan/LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html",
+        "original_sha256": "63f45450d987bbcd26474119955bad2ba661a1ce4c31aa207e35c64ae8de44f5",
+        "archived": {
+          "path": "research/artifacts/v491_review_history_20261019/LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html",
+          "sha256": "63f45450d987bbcd26474119955bad2ba661a1ce4c31aa207e35c64ae8de44f5"
+        }
+      },
+      {
+        "original_path": "paper/LIBERA_텀페이퍼_초안_v4.9.1_20261019.html",
+        "original_sha256": "f546e3f627c7125f56c11d8bf0a4e32182d8da5f4c59e4174f5f4cc6d23e2b76",
+        "archived": {
+          "path": "research/artifacts/v491_review_history_20261019/LIBERA_텀페이퍼_초안_v4.9.1_20261019.html",
+          "sha256": "f546e3f627c7125f56c11d8bf0a4e32182d8da5f4c59e4174f5f4cc6d23e2b76"
+        }
+      },
+      {
+        "original_path": "research/v491_validation_round1_20261019.json",
+        "original_sha256": "f5c3cb7021cff76f1d496fb4da82006c4d3936c1619a6fadbe4e421903c5cd1b",
+        "archived": {
+          "path": "research/artifacts/v491_review_history_20261019/v491_validation_round1_20261019.json",
+          "sha256": "f5c3cb7021cff76f1d496fb4da82006c4d3936c1619a6fadbe4e421903c5cd1b"
+        }
+      },
+      {
+        "original_path": "research/v491_validation_round2_20261019.json",
+        "original_sha256": "a37450dd64f8ca01b5b590f9bfba83e1a2d31e5f4675fc3ab036308b342f6e2a",
+        "archived": {
+          "path": "research/artifacts/v491_review_history_20261019/v491_validation_round2_20261019.json",
+          "sha256": "a37450dd64f8ca01b5b590f9bfba83e1a2d31e5f4675fc3ab036308b342f6e2a"
+        }
+      }
+    ],
+    "original_receipts_policy": "Original round1/round2 receipts are retained for their historical bytes and are not cited as current HTML validation."
+  },
+  "reviewed_files": [
+    {
+      "path": "plan/LIBERA_실험설정_v4.9.1_20261019.json",
+      "sha256": "0d7ad14eb7f07fb9a7e7607a1cdb1ff148794d88878d6706b7b6a66bbc319110"
+    },
+    {
+      "path": "plan/LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html",
+      "sha256": "81fb8579ac0da25f052075075176305904134cec1e9de44221db43bacd848da3"
+    },
+    {
+      "path": "paper/LIBERA_소논문_방법개정안_v4.9.1_20261019.html",
+      "sha256": "b7da065a8efc0948c31536cc5721f45c672e9ab55e84e4b97b0202aa64ae215f"
+    },
+    {
+      "path": "paper/LIBERA_텀페이퍼_초안_v4.9.1_20261019.html",
+      "sha256": "6082188d2469feaf221b54845e5462681709a59e776307234c9705b3be79f6a6"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/public_compact_candidate.json",
+      "sha256": "afe810b2bfb69ae4bfa372e65fa587bc6253eecf8028d5fde39cf3ec395bcb8d"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prompt_contract.json",
+      "sha256": "4a16ae185b1a5e65f47c2749695070b20826bea48612a28c30e0f44fb2d68d09"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/response_schema.json",
+      "sha256": "944a232de9f4a1e9ae672b172196aa906077ee03c3f6bf2ab06ad032d6d0b147"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/preparation_manifest.json",
+      "sha256": "ceeedfbb81c329c7fff83e65d90fb29aaf9be054b1751ea58a24ae33f385dfac"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/common_context.json",
+      "sha256": "67d94bdee3d38854097970cdfb74f40e2557a11e22b016e9a68374e6f13cb96f"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/market_context.json",
+      "sha256": "87fe629ae6051b73f623b74e7befc27a83fdc854032efa5c596ae7de47fff739"
+    },
+    {
+      "path": "research/v491_macro_source_audit_20261019.json",
+      "sha256": "0567efc4a5ae8eee60b66c3cf0904d376a8b4943a27f45f780053dee3746e6fc"
+    },
+    {
+      "path": "research/v491_mandate_basis_20261019.json",
+      "sha256": "141744fabbb44d4a91a47449b44ad186931a4cb998fc555dc9da3d642e07dd6b"
+    },
+    {
+      "path": "research/v491_evaluation_protocol_20261019.json",
+      "sha256": "b9ff937ca478062c79af1c1065a2dbcb87cea39b3f4c917dd5ccdcd9b0a6d5b6"
+    },
+    {
+      "path": "research/v491_human_review_template_20261019.json",
+      "sha256": "54ea9c9f1ab6a2780e8532b50a1558badbf1dea9d7abf0ddc595c900101431e7"
+    },
+    {
+      "path": "research/build_v491_context_plan.py",
+      "sha256": "6c41d2696f80de7ff16f3c3994077faebf035ae85e3de1505c79f142cada251d"
+    },
+    {
+      "path": "research/sector_v491_contract.py",
+      "sha256": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397"
+    },
+    {
+      "path": "research/prepare_sector_v491.py",
+      "sha256": "0e8188630a8b3a36da08671519b2bfeba7d3d2ca412568f789bfeca2ea4192e7"
+    },
+    {
+      "path": "research/test_sector_v491_contract.py",
+      "sha256": "bfecb94ba4e8beedb5e77d3d43bfe0afb1255c74b611fead756427fcc1b98149"
+    },
+    {
+      "path": "research/requirements-v491.txt",
+      "sha256": "025d1a266ce796794e90b314029b9e8200b5268ea7f93f3cc72c976b1b75030c"
+    },
+    {
+      "path": "research/verify_v491_round1.py",
+      "sha256": "531672242a3959a976ec07a7342241c59700118b0de726592fa34af560e4f875"
+    },
+    {
+      "path": "plan/LIBERA_실험설정_v4.9_20261019.json",
+      "sha256": "01f9819cba917923c9892ac5d75c953a7bed9d47a733496f3a7ceff2ab9781a2"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/pilot/fidelity_q2_2026__E__D0_messages.json",
+      "sha256": "956a0e3f6a265583abd18e8354b2f3a6102ffee61b49f3aa17add893d86ee2f9"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/pilot/fidelity_q2_2026__L__D0_messages.json",
+      "sha256": "3b53227438dd6c5b450a7ed2e30751388d27d6c0054a89a544b88b5095eedf61"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/pilot/ubs_june_2026__E__D0_messages.json",
+      "sha256": "c42a0ec43f680a408d7667d6417f83f482febcb0fb7d1297c10d1653290874b3"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/pilot/ubs_june_2026__L__D0_messages.json",
+      "sha256": "3b53227438dd6c5b450a7ed2e30751388d27d6c0054a89a544b88b5095eedf61"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/main/fidelity_q3_2026__E__D0_messages.json",
+      "sha256": "f4e00e18e9fc17e37701999159e2acb35e4e9a79d60063899f897839eff49dcd"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/main/fidelity_q3_2026__L__D0_messages.json",
+      "sha256": "3b53227438dd6c5b450a7ed2e30751388d27d6c0054a89a544b88b5095eedf61"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/main/ubs_july_2026__E__D0_messages.json",
+      "sha256": "6905c838dace1c97ff8bd328844b7c7319f8627843677a77c843feb60d985696"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/main/ubs_july_2026__L__D0_messages.json",
+      "sha256": "3b53227438dd6c5b450a7ed2e30751388d27d6c0054a89a544b88b5095eedf61"
+    },
+    {
+      "path": "research/v491_validation_round1_20261019_r2.json",
+      "sha256": "9a87099556fcb2ba3b3abdf64efc3a2d17e6d49eea658cced7bc616cf890b305"
+    },
+    {
+      "path": "research/v491_validation_round2_20261019_r2.json",
+      "sha256": "5ef2119a884713ec6a1f5f481e4592c2bd6d79ffe1eb77f09bb11dced8d8daac"
+    },
+    {
+      "path": "research/artifacts/v491_review_history_20261019/snapshot_manifest.json",
+      "sha256": "1beb0f070887cf23b33a98bf8255ae865c27659e8c5311a11be5cf1fc129896f"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/build_market_context.py",
+      "sha256": "8521d32bf6630eb20c1fb4fefee57af469e53aa60bf51869d6fb1deb841d81c5"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/sources/bea_gdp_20260625.extracted.txt",
+      "sha256": "3bf73cb011910694320b81fb8bbd9a665c290580a19fe9b1d2640f132c530081"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/sources/bea_gdp_20260625.pdf",
+      "sha256": "24194657c9036e5e1ed056f2ff3c523db1273a2dd789ec1b53b1d84164bc199e"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/sources/bea_gdp_20260625.pdf.retrieval.json",
+      "sha256": "6a9c9d9c806c404410a48fe2c4961e29bad3ed1929726fb6522fd44da0bee366"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/sources/bls_cpi_20260714.web_snapshot.extracted.txt",
+      "sha256": "1f1ce272d156d1dac58ecc186b9301994b158b28a5d7425fe29fc313845ca8f2"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/sources/bls_cpi_20260714.web_snapshot.txt",
+      "sha256": "991c12f722e5bf26b5136e1256bb09dbf077e4da721b9dd41c6e9e80b50e5c35"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/sources/bls_cpi_20260714.web_snapshot.txt.retrieval.json",
+      "sha256": "b63cf9b60bdc4e209392c72b50be65cea98b50d63c78535ca30a6761dca751e6"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/sources/bls_empsit_20260702.web_snapshot.extracted.txt",
+      "sha256": "3e1c90ac9c95ff5a1d84749c762da72415b1a7ac15bd230b7f50ae211531d0b7"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/sources/bls_empsit_20260702.web_snapshot.txt",
+      "sha256": "87e263e4848c7b52f02e3119c865afd81324d76cf4db917f474ef91bac40d4b3"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/sources/bls_empsit_20260702.web_snapshot.txt.retrieval.json",
+      "sha256": "465691303c7c5b58ed5ef79d3aa12784717e161e0d26fcac10f78a11ed319f0d"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/sources/fed_fomc_20260617.extracted.txt",
+      "sha256": "0575afa877c85cd7bb0980537adc49d3eda21d00d76ae1378c3fabf6150fe86b"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/sources/fed_fomc_20260617.html",
+      "sha256": "444c2c14910433345ca5357d769074b35abcb86734339cde1e77fb2f438ec9a0"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/sources/fed_fomc_20260617.html.retrieval.json",
+      "sha256": "d446ae3329dfb05a52b4b1feca5fae99bf3d1495b2722228a8f2778f48aadcd0"
+    }
+  ],
+  "visual_review_scope": "No final visual review is claimed by this report. Root maintains a separate final visual receipt.",
+  "handoff_policy": "A later final handoff may refer to this report by its completed file hash. It is not a prerequisite artifact used to validate itself."
+}
+

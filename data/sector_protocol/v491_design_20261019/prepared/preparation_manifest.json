@@ -1,0 +1,260 @@
+{
+  "protocol_version": "4.9.1",
+  "status": "offline_D0_preparation_passed_no_generation",
+  "model_calls": 0,
+  "pilot_model_calls": 0,
+  "main_model_calls": 0,
+  "not_an_execution_or_readiness_certificate": true,
+  "manifest_visibility": "controller_metadata_never_model_input",
+  "inputs": {
+    "configuration": {
+      "path": "plan/LIBERA_실험설정_v4.9.1_20261019.json",
+      "sha256": "0d7ad14eb7f07fb9a7e7607a1cdb1ff148794d88878d6706b7b6a66bbc319110",
+      "bytes": 14054
+    },
+    "public_aggregate_never_sent": {
+      "path": "data/sector_protocol/v491_design_20261019/public_compact_candidate.json",
+      "sha256": "afe810b2bfb69ae4bfa372e65fa587bc6253eecf8028d5fde39cf3ec395bcb8d",
+      "bytes": 58581
+    },
+    "common_context": {
+      "path": "data/sector_context/v491_20261019/common_context.json",
+      "sha256": "67d94bdee3d38854097970cdfb74f40e2557a11e22b016e9a68374e6f13cb96f",
+      "bytes": 11615
+    },
+    "prompt_contract": {
+      "path": "data/sector_protocol/v491_design_20261019/prompt_contract.json",
+      "sha256": "4a16ae185b1a5e65f47c2749695070b20826bea48612a28c30e0f44fb2d68d09",
+      "bytes": 5000
+    },
+    "response_schema": {
+      "path": "data/sector_protocol/v491_design_20261019/response_schema.json",
+      "sha256": "944a232de9f4a1e9ae672b172196aa906077ee03c3f6bf2ab06ad032d6d0b147",
+      "bytes": 4250
+    },
+    "contract_implementation": {
+      "path": "research/sector_v491_contract.py",
+      "sha256": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397"
+    },
+    "preparer_implementation": {
+      "path": "research/prepare_sector_v491.py",
+      "sha256": "0e8188630a8b3a36da08671519b2bfeba7d3d2ca412568f789bfeca2ea4192e7"
+    }
+  },
+  "runtime_dependencies": {
+    "numpy": "2.4.4",
+    "jsonschema": "4.26.0"
+  },
+  "contract_version": "sector_v491_contract_1",
+  "prepared_cases": [
+    {
+      "case_id": "pilot/fidelity_q2_2026__E",
+      "split": "pilot",
+      "assigned_source_id": "fidelity_q2_2026",
+      "arm": "E",
+      "stage": "D0",
+      "path": "data/sector_protocol/v491_design_20261019/prepared/pilot/fidelity_q2_2026__E__D0_messages.json",
+      "sha256": "956a0e3f6a265583abd18e8354b2f3a6102ffee61b49f3aa17add893d86ee2f9",
+      "file_bytes": 34855,
+      "canonical_messages_sha256": "65cadd6cb80c55e8830630d07d47ae399b3e7062e418e1d88018868dcd59802e",
+      "canonical_messages_utf8_bytes": 34817,
+      "message_content_utf8_bytes": 32888,
+      "visible_evidence_count": 89,
+      "separate_generation_required": true,
+      "model_calls": 0,
+      "common_block_hashes": {
+        "common_context": "21299044035ac8ec4af7b4504fc0e5034789a0d25e45be17bd5554f3c61d8353",
+        "common_market": "dd4bca6d0765089a384d7ac4311126b4a545f0eed6aefb283167a6722d3cad6c",
+        "public_numeric_fact_index": "b70827e631b97ddda398823f884c9b4de7fc2bc7d947056255b29d3cab4b6664",
+        "response_schema": "b90d4f7a545d6fc62f98ca95b30fbccf8750205bd5bd51bf7874b0f97713d8f9"
+      }
+    },
+    {
+      "case_id": "pilot/fidelity_q2_2026__L",
+      "split": "pilot",
+      "assigned_source_id": "fidelity_q2_2026",
+      "arm": "L",
+      "stage": "D0",
+      "path": "data/sector_protocol/v491_design_20261019/prepared/pilot/fidelity_q2_2026__L__D0_messages.json",
+      "sha256": "3b53227438dd6c5b450a7ed2e30751388d27d6c0054a89a544b88b5095eedf61",
+      "file_bytes": 30843,
+      "canonical_messages_sha256": "34f98bcd60283f3b3f9caf63f01f8bc8f20341297261c02cd189c9aea90edb42",
+      "canonical_messages_utf8_bytes": 30805,
+      "message_content_utf8_bytes": 29100,
+      "visible_evidence_count": 77,
+      "separate_generation_required": true,
+      "model_calls": 0,
+      "common_block_hashes": {
+        "common_context": "21299044035ac8ec4af7b4504fc0e5034789a0d25e45be17bd5554f3c61d8353",
+        "common_market": "dd4bca6d0765089a384d7ac4311126b4a545f0eed6aefb283167a6722d3cad6c",
+        "public_numeric_fact_index": "b70827e631b97ddda398823f884c9b4de7fc2bc7d947056255b29d3cab4b6664",
+        "response_schema": "b90d4f7a545d6fc62f98ca95b30fbccf8750205bd5bd51bf7874b0f97713d8f9"
+      }
+    },
+    {
+      "case_id": "pilot/ubs_june_2026__E",
+      "split": "pilot",
+      "assigned_source_id": "ubs_june_2026",
+      "arm": "E",
+      "stage": "D0",
+      "path": "data/sector_protocol/v491_design_20261019/prepared/pilot/ubs_june_2026__E__D0_messages.json",
+      "sha256": "c42a0ec43f680a408d7667d6417f83f482febcb0fb7d1297c10d1653290874b3",
+      "file_bytes": 34747,
+      "canonical_messages_sha256": "6da44542d9c673acb4aa84feedcbf48e7597adc16f34dea3f831a854ece3ecbc",
+      "canonical_messages_utf8_bytes": 34709,
+      "message_content_utf8_bytes": 32776,
+      "visible_evidence_count": 90,
+      "separate_generation_required": true,
+      "model_calls": 0,
+      "common_block_hashes": {
+        "common_context": "21299044035ac8ec4af7b4504fc0e5034789a0d25e45be17bd5554f3c61d8353",
+        "common_market": "dd4bca6d0765089a384d7ac4311126b4a545f0eed6aefb283167a6722d3cad6c",
+        "public_numeric_fact_index": "b70827e631b97ddda398823f884c9b4de7fc2bc7d947056255b29d3cab4b6664",
+        "response_schema": "b90d4f7a545d6fc62f98ca95b30fbccf8750205bd5bd51bf7874b0f97713d8f9"
+      }
+    },
+    {
+      "case_id": "pilot/ubs_june_2026__L",
+      "split": "pilot",
+      "assigned_source_id": "ubs_june_2026",
+      "arm": "L",
+      "stage": "D0",
+      "path": "data/sector_protocol/v491_design_20261019/prepared/pilot/ubs_june_2026__L__D0_messages.json",
+      "sha256": "3b53227438dd6c5b450a7ed2e30751388d27d6c0054a89a544b88b5095eedf61",
+      "file_bytes": 30843,
+      "canonical_messages_sha256": "34f98bcd60283f3b3f9caf63f01f8bc8f20341297261c02cd189c9aea90edb42",
+      "canonical_messages_utf8_bytes": 30805,
+      "message_content_utf8_bytes": 29100,
+      "visible_evidence_count": 77,
+      "separate_generation_required": true,
+      "model_calls": 0,
+      "common_block_hashes": {
+        "common_context": "21299044035ac8ec4af7b4504fc0e5034789a0d25e45be17bd5554f3c61d8353",
+        "common_market": "dd4bca6d0765089a384d7ac4311126b4a545f0eed6aefb283167a6722d3cad6c",
+        "public_numeric_fact_index": "b70827e631b97ddda398823f884c9b4de7fc2bc7d947056255b29d3cab4b6664",
+        "response_schema": "b90d4f7a545d6fc62f98ca95b30fbccf8750205bd5bd51bf7874b0f97713d8f9"
+      }
+    },
+    {
+      "case_id": "main/fidelity_q3_2026__E",
+      "split": "main",
+      "assigned_source_id": "fidelity_q3_2026",
+      "arm": "E",
+      "stage": "D0",
+      "path": "data/sector_protocol/v491_design_20261019/prepared/main/fidelity_q3_2026__E__D0_messages.json",
+      "sha256": "f4e00e18e9fc17e37701999159e2acb35e4e9a79d60063899f897839eff49dcd",
+      "file_bytes": 34812,
+      "canonical_messages_sha256": "1f871a18c197bf0aabd46c7fc798bfa709de9fbe1877e5a07b7c2df679e5570c",
+      "canonical_messages_utf8_bytes": 34774,
+      "message_content_utf8_bytes": 32843,
+      "visible_evidence_count": 89,
+      "separate_generation_required": true,
+      "model_calls": 0,
+      "common_block_hashes": {
+        "common_context": "21299044035ac8ec4af7b4504fc0e5034789a0d25e45be17bd5554f3c61d8353",
+        "common_market": "dd4bca6d0765089a384d7ac4311126b4a545f0eed6aefb283167a6722d3cad6c",
+        "public_numeric_fact_index": "b70827e631b97ddda398823f884c9b4de7fc2bc7d947056255b29d3cab4b6664",
+        "response_schema": "b90d4f7a545d6fc62f98ca95b30fbccf8750205bd5bd51bf7874b0f97713d8f9"
+      }
+    },
+    {
+      "case_id": "main/fidelity_q3_2026__L",
+      "split": "main",
+      "assigned_source_id": "fidelity_q3_2026",
+      "arm": "L",
+      "stage": "D0",
+      "path": "data/sector_protocol/v491_design_20261019/prepared/main/fidelity_q3_2026__L__D0_messages.json",
+      "sha256": "3b53227438dd6c5b450a7ed2e30751388d27d6c0054a89a544b88b5095eedf61",
+      "file_bytes": 30843,
+      "canonical_messages_sha256": "34f98bcd60283f3b3f9caf63f01f8bc8f20341297261c02cd189c9aea90edb42",
+      "canonical_messages_utf8_bytes": 30805,
+      "message_content_utf8_bytes": 29100,
+      "visible_evidence_count": 77,
+      "separate_generation_required": true,
+      "model_calls": 0,
+      "common_block_hashes": {
+        "common_context": "21299044035ac8ec4af7b4504fc0e5034789a0d25e45be17bd5554f3c61d8353",
+        "common_market": "dd4bca6d0765089a384d7ac4311126b4a545f0eed6aefb283167a6722d3cad6c",
+        "public_numeric_fact_index": "b70827e631b97ddda398823f884c9b4de7fc2bc7d947056255b29d3cab4b6664",
+        "response_schema": "b90d4f7a545d6fc62f98ca95b30fbccf8750205bd5bd51bf7874b0f97713d8f9"
+      }
+    },
+    {
+      "case_id": "main/ubs_july_2026__E",
+      "split": "main",
+      "assigned_source_id": "ubs_july_2026",
+      "arm": "E",
+      "stage": "D0",
+      "path": "data/sector_protocol/v491_design_20261019/prepared/main/ubs_july_2026__E__D0_messages.json",
+      "sha256": "6905c838dace1c97ff8bd328844b7c7319f8627843677a77c843feb60d985696",
+      "file_bytes": 34766,
+      "canonical_messages_sha256": "c1e00d8f000ceb22c1de2e30f1156d8d336104b754ab545195041a55fd50b7ad",
+      "canonical_messages_utf8_bytes": 34728,
+      "message_content_utf8_bytes": 32795,
+      "visible_evidence_count": 90,
+      "separate_generation_required": true,
+      "model_calls": 0,
+      "common_block_hashes": {
+        "common_context": "21299044035ac8ec4af7b4504fc0e5034789a0d25e45be17bd5554f3c61d8353",
+        "common_market": "dd4bca6d0765089a384d7ac4311126b4a545f0eed6aefb283167a6722d3cad6c",
+        "public_numeric_fact_index": "b70827e631b97ddda398823f884c9b4de7fc2bc7d947056255b29d3cab4b6664",
+        "response_schema": "b90d4f7a545d6fc62f98ca95b30fbccf8750205bd5bd51bf7874b0f97713d8f9"
+      }
+    },
+    {
+      "case_id": "main/ubs_july_2026__L",
+      "split": "main",
+      "assigned_source_id": "ubs_july_2026",
+      "arm": "L",
+      "stage": "D0",
+      "path": "data/sector_protocol/v491_design_20261019/prepared/main/ubs_july_2026__L__D0_messages.json",
+      "sha256": "3b53227438dd6c5b450a7ed2e30751388d27d6c0054a89a544b88b5095eedf61",
+      "file_bytes": 30843,
+      "canonical_messages_sha256": "34f98bcd60283f3b3f9caf63f01f8bc8f20341297261c02cd189c9aea90edb42",
+      "canonical_messages_utf8_bytes": 30805,
+      "message_content_utf8_bytes": 29100,
+      "visible_evidence_count": 77,
+      "separate_generation_required": true,
+      "model_calls": 0,
+      "common_block_hashes": {
+        "common_context": "21299044035ac8ec4af7b4504fc0e5034789a0d25e45be17bd5554f3c61d8353",
+        "common_market": "dd4bca6d0765089a384d7ac4311126b4a545f0eed6aefb283167a6722d3cad6c",
+        "public_numeric_fact_index": "b70827e631b97ddda398823f884c9b4de7fc2bc7d947056255b29d3cab4b6664",
+        "response_schema": "b90d4f7a545d6fc62f98ca95b30fbccf8750205bd5bd51bf7874b0f97713d8f9"
+      }
+    }
+  ],
+  "checks": {
+    "eight_unique_case_identifiers": true,
+    "four_cases_per_split": true,
+    "all_common_blocks_identical": true,
+    "all_late_D0_messages_identical": true,
+    "late_D0_has_no_source_identity_or_packet": true,
+    "unassigned_sources_absent": true,
+    "controller_metadata_outside_messages": true,
+    "configuration_input_hashes_verified": true,
+    "standalone_and_aggregate_context_equal": true
+  },
+  "common_block_hashes": {
+    "common_context": "21299044035ac8ec4af7b4504fc0e5034789a0d25e45be17bd5554f3c61d8353",
+    "common_market": "dd4bca6d0765089a384d7ac4311126b4a545f0eed6aefb283167a6722d3cad6c",
+    "public_numeric_fact_index": "b70827e631b97ddda398823f884c9b4de7fc2bc7d947056255b29d3cab4b6664",
+    "response_schema": "b90d4f7a545d6fc62f98ca95b30fbccf8750205bd5bd51bf7874b0f97713d8f9"
+  },
+  "counts": {
+    "pilot_D0": 4,
+    "main_D0": 4,
+    "prepared_D0": 8,
+    "prepared_F0": 0
+  },
+  "late_draft_execution_rule": "Identical inputs do not authorize sharing one generated draft. Every case requires its own isolated generation and log.",
+  "F0_not_prepared_reason": "F0 depends on the exact actual D0 response and arithmetic calculated from that response. No synthetic draft or fabricated calculator feedback is stored.",
+  "run_order": "This inventory order is not the frozen execution order.",
+  "byte_measurement_scope": "UTF-8 bytes only; no token, memory, latency or completion claim.",
+  "remaining_requirements": [
+    "exact served-backend full-history token and memory check",
+    "four-case pilot",
+    "independent human source/meaning review",
+    "frozen runtime settings and order"
+  ]
+}

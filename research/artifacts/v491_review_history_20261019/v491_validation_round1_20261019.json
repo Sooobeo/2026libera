@@ -1,0 +1,936 @@
+{
+  "protocol_version": "4.9.1",
+  "round": 1,
+  "checked_at_utc": "2026-10-19T05:27:50.184539+00:00",
+  "scope": "actual input data/hash integrity, ordered context isolation, schema and arithmetic contracts, document links; not inference or human review",
+  "status": "PASS",
+  "check_count": 148,
+  "checks": [
+    {
+      "check": "macro_source_audit_matches_exact_packet",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "macro_source_checks_pass",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "macro_fact_factoring_is_lossless",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "shared_context_matches_aggregate",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "context_fact_count",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source_packets_preserved_exactly",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "all_numeric_market_values_unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_registry_unchanged",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "twelve_month_horizon_same_basis",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "benchmark_comparison_only",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no_unjustified_numeric_preferences",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "release_before_cutoff:MACRO_FED_TARGET_20260617",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fact_unit_period_source:MACRO_FED_TARGET_20260617",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "release_before_cutoff:MACRO_CPI_HEADLINE_MOM_202606",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fact_unit_period_source:MACRO_CPI_HEADLINE_MOM_202606",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "release_before_cutoff:MACRO_CPI_HEADLINE_YOY_202606",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fact_unit_period_source:MACRO_CPI_HEADLINE_YOY_202606",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "release_before_cutoff:MACRO_CPI_CORE_YOY_202606",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fact_unit_period_source:MACRO_CPI_CORE_YOY_202606",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "release_before_cutoff:MACRO_UNEMPLOYMENT_202606",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fact_unit_period_source:MACRO_UNEMPLOYMENT_202606",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "release_before_cutoff:MACRO_NONFARM_CHANGE_202606",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fact_unit_period_source:MACRO_NONFARM_CHANGE_202606",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "release_before_cutoff:MACRO_REAL_GDP_Q1_2026_THIRD",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "fact_unit_period_source:MACRO_REAL_GDP_Q1_2026_THIRD",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "hash:plan/LIBERA_실험설정_v4.9_20261019.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "hash:data/sector_protocol/v491_design_20261019/public_compact_candidate.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "hash:data/sector_context/v491_20261019/common_context.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "hash:research/v491_macro_source_audit_20261019.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "hash:research/v491_mandate_basis_20261019.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "hash:plan/LIBERA_실험설정_v4.9.1_20261019.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "hash:data/sector_protocol/v491_design_20261019/public_compact_candidate.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "hash:data/sector_context/v491_20261019/common_context.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "hash:data/sector_protocol/v491_design_20261019/prompt_contract.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "hash:data/sector_protocol/v491_design_20261019/response_schema.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "hash:research/sector_v491_contract.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "hash:research/prepare_sector_v491.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "hash:data/sector_protocol/v491_design_20261019/prepared/pilot/fidelity_q2_2026__E__D0_messages.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "hash:data/sector_protocol/v491_design_20261019/prepared/pilot/fidelity_q2_2026__L__D0_messages.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "hash:data/sector_protocol/v491_design_20261019/prepared/pilot/ubs_june_2026__E__D0_messages.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "hash:data/sector_protocol/v491_design_20261019/prepared/pilot/ubs_june_2026__L__D0_messages.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "hash:data/sector_protocol/v491_design_20261019/prepared/main/fidelity_q3_2026__E__D0_messages.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "hash:data/sector_protocol/v491_design_20261019/prepared/main/fidelity_q3_2026__L__D0_messages.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "hash:data/sector_protocol/v491_design_20261019/prepared/main/ubs_july_2026__E__D0_messages.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "hash:data/sector_protocol/v491_design_20261019/prepared/main/ubs_july_2026__L__D0_messages.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "eight_prepared_cases",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no_prepared_final_or_model_output",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no_live_success_claim",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "context_evaluation_prespecified",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "correct_context:pilot/fidelity_q2_2026__E",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no_controller_metadata:pilot/fidelity_q2_2026__E",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "early_assigned_packet_only:pilot/fidelity_q2_2026__E",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "correct_context:pilot/fidelity_q2_2026__L",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no_controller_metadata:pilot/fidelity_q2_2026__L",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "late_source_absent:pilot/fidelity_q2_2026__L",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "correct_context:pilot/ubs_june_2026__E",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no_controller_metadata:pilot/ubs_june_2026__E",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "early_assigned_packet_only:pilot/ubs_june_2026__E",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "correct_context:pilot/ubs_june_2026__L",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no_controller_metadata:pilot/ubs_june_2026__L",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "late_source_absent:pilot/ubs_june_2026__L",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "correct_context:main/fidelity_q3_2026__E",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no_controller_metadata:main/fidelity_q3_2026__E",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "early_assigned_packet_only:main/fidelity_q3_2026__E",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "correct_context:main/fidelity_q3_2026__L",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no_controller_metadata:main/fidelity_q3_2026__L",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "late_source_absent:main/fidelity_q3_2026__L",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "correct_context:main/ubs_july_2026__E",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no_controller_metadata:main/ubs_july_2026__E",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "early_assigned_packet_only:main/ubs_july_2026__E",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "correct_context:main/ubs_july_2026__L",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "no_controller_metadata:main/ubs_july_2026__L",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "late_source_absent:main/ubs_july_2026__L",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "all_common_inputs_identical",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "identical_L_inputs_independent_case_ids",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unicode_clean:LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html:#plain",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html:#topic",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html:#design",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html:#data",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html:#outcomes",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html:#cost",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html:#basis",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html:#gates",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html:#context",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html:../research/v491_mandate_basis_20261019.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html:../research/v491_macro_source_audit_20261019.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html:../data/sector_context/v491_20261019/common_context.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html:../research/v49_reference_review_20261019.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html:../research/v49_methods_review_20261019.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html:../research/v491_validation_round1_20261019.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html:LIBERA_실험설정_v4.9.1_20261019.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html:../research/v491_evaluation_protocol_20261019.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html:../research/v491_human_review_template_20261019.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html:../data/sector_protocol/v491_design_20261019/prompt_contract.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html:../data/sector_protocol/v491_design_20261019/response_schema.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html:../research/v49_compaction_review_20261019.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html:../data/sector_protocol/v491_design_20261019/public_compact_candidate.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html:../paper/LIBERA_소논문_방법개정안_v4.9.1_20261019.html",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html:../paper/LIBERA_텀페이퍼_초안_v4.9.1_20261019.html",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html:../data/sector_protocol/v491_design_20261019/prepared/preparation_manifest.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html:../research/sector_v491_contract.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unicode_clean:LIBERA_소논문_방법개정안_v4.9.1_20261019.html",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_소논문_방법개정안_v4.9.1_20261019.html:../plan/LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_소논문_방법개정안_v4.9.1_20261019.html:../research/v49_reference_review_20261019.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_소논문_방법개정안_v4.9.1_20261019.html:LIBERA_텀페이퍼_초안_v4.9.1_20261019.html",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_소논문_방법개정안_v4.9.1_20261019.html:../research/v491_evaluation_protocol_20261019.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_소논문_방법개정안_v4.9.1_20261019.html:../research/v491_macro_source_audit_20261019.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "unicode_clean:LIBERA_텀페이퍼_초안_v4.9.1_20261019.html",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_텀페이퍼_초안_v4.9.1_20261019.html:../plan/LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_텀페이퍼_초안_v4.9.1_20261019.html:../research/v491_evaluation_protocol_20261019.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_텀페이퍼_초안_v4.9.1_20261019.html:../research/v491_process_20261019.jsonl",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_텀페이퍼_초안_v4.9.1_20261019.html:#ref-fsb24",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_텀페이퍼_초안_v4.9.1_20261019.html:#ref-kleinberg",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_텀페이퍼_초안_v4.9.1_20261019.html:#ref-bommasani",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_텀페이퍼_초안_v4.9.1_20261019.html:#ref-hedden",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_텀페이퍼_초안_v4.9.1_20261019.html:#ref-agarwal",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_텀페이퍼_초안_v4.9.1_20261019.html:#ref-chen",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_텀페이퍼_초안_v4.9.1_20261019.html:#ref-hansen",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_텀페이퍼_초안_v4.9.1_20261019.html:#ref-sheng",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_텀페이퍼_초안_v4.9.1_20261019.html:#ref-doshi",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_텀페이퍼_초안_v4.9.1_20261019.html:#ref-dellacqua",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_텀페이퍼_초안_v4.9.1_20261019.html:#ref-lewis",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_텀페이퍼_초안_v4.9.1_20261019.html:#ref-schneider",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_텀페이퍼_초안_v4.9.1_20261019.html:#ref-hornuf",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_텀페이퍼_초안_v4.9.1_20261019.html:#ref-laban",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_텀페이퍼_초안_v4.9.1_20261019.html:#ref-quek",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_텀페이퍼_초안_v4.9.1_20261019.html:LIBERA_텀페이퍼_초안_v4.8.1_20261019_r3.html#readiness",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_텀페이퍼_초안_v4.9.1_20261019.html:../research/v491_mandate_basis_20261019.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_텀페이퍼_초안_v4.9.1_20261019.html:../research/v491_macro_source_audit_20261019.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_텀페이퍼_초안_v4.9.1_20261019.html:../plan/LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_텀페이퍼_초안_v4.9.1_20261019.html:../data/sector_context/v491_20261019/common_context.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "local_link:LIBERA_텀페이퍼_초안_v4.9.1_20261019.html:../data/sector_protocol/v491_design_20261019/prepared/preparation_manifest.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "full_paper_section:intro",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "full_paper_section:literature",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "full_paper_section:framework",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "full_paper_section:design",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "full_paper_section:evaluation",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "full_paper_section:readiness",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "full_paper_section:implications",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "full_paper_section:conclusion",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "full_paper_section:references",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "full_paper_section:appendix",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "paper_Laban_reference",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "paper_LiveMacro_reference",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "paper_macro_table",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "suite:test_sector_v491_contract.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "suite:test_sector_engine.py",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "unit_suites": [
+    {
+      "command": [
+        "C:\\Users\\Insun\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research",
+        "-p",
+        "test_sector_v491_contract.py"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "................................\n----------------------------------------------------------------------\nRan 32 tests in 0.730s\n\nOK\n"
+    },
+    {
+      "command": [
+        "C:\\Users\\Insun\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "research",
+        "-p",
+        "test_sector_engine.py"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "....................\n----------------------------------------------------------------------\nRan 20 tests in 0.005s\n\nOK\n"
+    }
+  ],
+  "reviewed_files": [
+    {
+      "path": "plan/LIBERA_실험설정_v4.9.1_20261019.json",
+      "sha256": "0d7ad14eb7f07fb9a7e7607a1cdb1ff148794d88878d6706b7b6a66bbc319110"
+    },
+    {
+      "path": "plan/LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html",
+      "sha256": "63f45450d987bbcd26474119955bad2ba661a1ce4c31aa207e35c64ae8de44f5"
+    },
+    {
+      "path": "paper/LIBERA_소논문_방법개정안_v4.9.1_20261019.html",
+      "sha256": "b7da065a8efc0948c31536cc5721f45c672e9ab55e84e4b97b0202aa64ae215f"
+    },
+    {
+      "path": "paper/LIBERA_텀페이퍼_초안_v4.9.1_20261019.html",
+      "sha256": "f546e3f627c7125f56c11d8bf0a4e32182d8da5f4c59e4174f5f4cc6d23e2b76"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/public_compact_candidate.json",
+      "sha256": "afe810b2bfb69ae4bfa372e65fa587bc6253eecf8028d5fde39cf3ec395bcb8d"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prompt_contract.json",
+      "sha256": "4a16ae185b1a5e65f47c2749695070b20826bea48612a28c30e0f44fb2d68d09"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/response_schema.json",
+      "sha256": "944a232de9f4a1e9ae672b172196aa906077ee03c3f6bf2ab06ad032d6d0b147"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/preparation_manifest.json",
+      "sha256": "ceeedfbb81c329c7fff83e65d90fb29aaf9be054b1751ea58a24ae33f385dfac"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/common_context.json",
+      "sha256": "67d94bdee3d38854097970cdfb74f40e2557a11e22b016e9a68374e6f13cb96f"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/market_context.json",
+      "sha256": "87fe629ae6051b73f623b74e7befc27a83fdc854032efa5c596ae7de47fff739"
+    },
+    {
+      "path": "research/v491_macro_source_audit_20261019.json",
+      "sha256": "0567efc4a5ae8eee60b66c3cf0904d376a8b4943a27f45f780053dee3746e6fc"
+    },
+    {
+      "path": "research/v491_mandate_basis_20261019.json",
+      "sha256": "141744fabbb44d4a91a47449b44ad186931a4cb998fc555dc9da3d642e07dd6b"
+    },
+    {
+      "path": "research/v491_evaluation_protocol_20261019.json",
+      "sha256": "b9ff937ca478062c79af1c1065a2dbcb87cea39b3f4c917dd5ccdcd9b0a6d5b6"
+    },
+    {
+      "path": "research/v491_human_review_template_20261019.json",
+      "sha256": "54ea9c9f1ab6a2780e8532b50a1558badbf1dea9d7abf0ddc595c900101431e7"
+    },
+    {
+      "path": "research/build_v491_context_plan.py",
+      "sha256": "9641baa6e77f906f8df92105659bd2e68791d900fed907e3d35ab4e4f71e058e"
+    },
+    {
+      "path": "research/sector_v491_contract.py",
+      "sha256": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397"
+    },
+    {
+      "path": "research/prepare_sector_v491.py",
+      "sha256": "0e8188630a8b3a36da08671519b2bfeba7d3d2ca412568f789bfeca2ea4192e7"
+    },
+    {
+      "path": "research/test_sector_v491_contract.py",
+      "sha256": "bfecb94ba4e8beedb5e77d3d43bfe0afb1255c74b611fead756427fcc1b98149"
+    },
+    {
+      "path": "research/requirements-v491.txt",
+      "sha256": "025d1a266ce796794e90b314029b9e8200b5268ea7f93f3cc72c976b1b75030c"
+    },
+    {
+      "path": "research/verify_v491_round1.py",
+      "sha256": "0d73e596e6eb7bb61a6e85a9937be4fae39140a86a02ff6418e6f2fcbe8f79eb"
+    },
+    {
+      "path": "plan/LIBERA_실험설정_v4.9_20261019.json",
+      "sha256": "01f9819cba917923c9892ac5d75c953a7bed9d47a733496f3a7ceff2ab9781a2"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/pilot/fidelity_q2_2026__E__D0_messages.json",
+      "sha256": "956a0e3f6a265583abd18e8354b2f3a6102ffee61b49f3aa17add893d86ee2f9"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/pilot/fidelity_q2_2026__L__D0_messages.json",
+      "sha256": "3b53227438dd6c5b450a7ed2e30751388d27d6c0054a89a544b88b5095eedf61"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/pilot/ubs_june_2026__E__D0_messages.json",
+      "sha256": "c42a0ec43f680a408d7667d6417f83f482febcb0fb7d1297c10d1653290874b3"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/pilot/ubs_june_2026__L__D0_messages.json",
+      "sha256": "3b53227438dd6c5b450a7ed2e30751388d27d6c0054a89a544b88b5095eedf61"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/main/fidelity_q3_2026__E__D0_messages.json",
+      "sha256": "f4e00e18e9fc17e37701999159e2acb35e4e9a79d60063899f897839eff49dcd"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/main/fidelity_q3_2026__L__D0_messages.json",
+      "sha256": "3b53227438dd6c5b450a7ed2e30751388d27d6c0054a89a544b88b5095eedf61"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/main/ubs_july_2026__E__D0_messages.json",
+      "sha256": "6905c838dace1c97ff8bd328844b7c7319f8627843677a77c843feb60d985696"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/main/ubs_july_2026__L__D0_messages.json",
+      "sha256": "3b53227438dd6c5b450a7ed2e30751388d27d6c0054a89a544b88b5095eedf61"
+    }
+  ],
+  "pending_cross_stage_links": [
+    {
+      "document": "LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html",
+      "target": "research/v491_validation_round2_20261019.json"
+    },
+    {
+      "document": "LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html",
+      "target": "research/v491_validation_round3_20261019.json"
+    },
+    {
+      "document": "LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html",
+      "target": "research/v491_handoff_20261019.json"
+    },
+    {
+      "document": "LIBERA_텀페이퍼_초안_v4.9.1_20261019.html",
+      "target": "research/v491_handoff_20261019.json"
+    }
+  ],
+  "pending_link_policy": "Only reports written after this ordered stage. Final handoff must verify all such links exist.",
+  "runtime_dependencies": {
+    "numpy": "2.4.4",
+    "jsonschema": "4.26.0",
+    "beautifulsoup4": "4.15.0"
+  },
+  "initial_audit_correction": {
+    "path": "research/v491_validation_round1_initial_20261019.json",
+    "reason": "The initial independent audit used substring ubs, which matched the ordinary word subsequent. Use institution-name word boundaries. Actual prepared inputs did not change; initial FAIL retained."
+  },
+  "model_calls": 0,
+  "independent_human_review_completed": false
+}

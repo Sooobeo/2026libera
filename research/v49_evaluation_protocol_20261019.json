@@ -1,0 +1,114 @@
+{
+  "protocol_version": "4.9",
+  "status": "prespecified_candidate_pending_human_review_and_freeze",
+  "primary_endpoint": "F0 first final raw submission; D0 is process evidence, not another independent observation",
+  "expected_cases_per_split": 4,
+  "expected_sector_rows_per_final_split": 44,
+  "dimensions": {
+    "source_fidelity": {
+      "assess": [
+        "correct source, label, meaning, scope and stated rationale",
+        "unsupported attribution",
+        "missing source rationale acknowledged"
+      ],
+      "rule": "Original labels remain source-specific. Overweight and Attractive are not equated."
+    },
+    "evidence_decision_link": {
+      "assess": [
+        "literal source meaning",
+        "stated adoption/qualification/departure",
+        "supporting and competing visible evidence",
+        "actual final weight and baseline-relative assertion",
+        "claimed draft-to-final change versus actual delta"
+      ],
+      "categories": [
+        "supported_link",
+        "unsupported_or_contradictory_link",
+        "unresolved",
+        "missing_or_not_assessable"
+      ],
+      "rule": "Human-evaluated evidence chain. A justified departure can be supported; no compulsory source target or hidden-thought inference."
+    },
+    "arithmetic_execution": {
+      "assess": [
+        "attempted",
+        "transport_complete",
+        "parseable",
+        "11 unique sectors",
+        "finite numbers excluding booleans",
+        "raw sum and residual",
+        "negative and above-one weights",
+        "source-supported explicit constraints"
+      ],
+      "sum_tolerance": 1e-06,
+      "tolerance_basis": "Inherited numerical precision convention, not a paper-derived behavioral threshold.",
+      "raw_repair": false
+    },
+    "numeric_fidelity": {
+      "assess": [
+        "subject",
+        "metric",
+        "value",
+        "unit",
+        "period",
+        "source_id",
+        "version",
+        "formula/input lineage"
+      ],
+      "rule": "Verify claimed numbers against visible facts and actual candidate calculations; IDs alone do not prove support."
+    }
+  },
+  "blind_review": {
+    "before_generation": "All11 source comparison rows, factual anchors and rubric must be reviewed before model outputs; source differences never chosen from outcomes.",
+    "after_generation": "Mask arm and run-order labels in final-output review. Provide corresponding source evidence, common market facts and draft only when assessing change. Actual content may reveal exposure, so masking is imperfect.",
+    "reviewers": "Use two separately working human readers for source meaning and semantic judgments; retain disagreements before reconciliation. This is a local quality-control choice, not two new samples.",
+    "AI_review_status": "Preparatory AI cross-checks are not completed independent human review."
+  },
+  "descriptive_comparisons": {
+    "within_source": "For each fixed source, compare E versus L category counts/row-level evidence and allocation distance; no pooled significance test.",
+    "between_sources": "For each arm compare full portfolios only alongside the pre-output source contrast matrix; similarity is not automatically homogenization.",
+    "distance_formula": "TV(w_a,w_b)=0.5*sum(abs(w_a[k]-w_b[k]))",
+    "distance_domain": "Only valid complete nonnegative sum-one raw vectors. This is distance between outputs, not distance to an institutional gold allocation.",
+    "difference_of_distances": "TV(F_E,U_E)-TV(F_L,U_L), descriptive only, requires all four valid F0 vectors. A positive sign is not by itself improvement.",
+    "change": "For each valid draft-final pair, delta=F0-D0; verify claimed increases/decreases. Invalid draft permits only explicitly raw arithmetic differences, not valid-portfolio change statistics.",
+    "benchmark": "Common market baseline is a descriptive anchor, not strategic ground truth or a non-AI treatment arm."
+  },
+  "denominators": {
+    "planned_cases": 4,
+    "planned_final_sector_rows": 44,
+    "report": [
+      "not_attempted",
+      "infrastructure_failure",
+      "completed",
+      "readable_partial",
+      "parseable",
+      "complete_vector",
+      "valid_raw_allocation",
+      "eligible_within_source_pairs",
+      "eligible_between_source_pairs"
+    ],
+    "missing": "No zero distance, benchmark replacement, normalization or inferred strategy for invalid/missing outputs.",
+    "claims": "Report claim count and output coverage; producing less text cannot mechanically count as stronger preservation."
+  },
+  "inference": "Finite descriptive cases; no p-values, bootstrap confidence intervals, population effect, equivalence claim, or sample size inflation from 11 sectors/two turns.",
+  "interpretation": {
+    "supported_difference": "Source meanings differ, claims are supported, stated choices agree with actual weights: evidence of preservation within these cases.",
+    "same_weights_different_supported_reasons": "Possible shared allocation with distinct justifications; not automatically loss of judgment.",
+    "different_weights_unsupported_reasons": "Diversity alone is not fidelity.",
+    "no_E_L_difference": "No observed procedural contrast in these cases, not proof of equivalence or absence of anchoring.",
+    "no_valid_pairs": "Allocation comparison unobserved. Describe interpretation/feasibility diagnostics; do not present the primary allocation question as answered.",
+    "infrastructure_failure": "Execution incident, not evidence that the model ignored institutional preferences."
+  },
+  "not_identified": [
+    "true institutional holdings or private objectives",
+    "required institution-specific optimal weights",
+    "harmful market-wide convergence",
+    "profitability or causal investment losses",
+    "pure memory/anchoring mechanism",
+    "RAG retrieval advantage",
+    "causal shared-AI-adoption effect"
+  ],
+  "no_composite_score": true,
+  "no_outcome_driven_filtering": true,
+  "pilot_main_separation": "Q2/June remains development evidence; Q3/July is held out from model runs, not unseen by human data preparation. Same-source/same-market dependence remains."
+}

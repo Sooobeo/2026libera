@@ -1,0 +1,251 @@
+{
+  "protocol_version": "4.9.1",
+  "as_of_date": "2026-10-19",
+  "status": "context_complete_offline_preparation_pending_live_runtime_human_review_freeze",
+  "research_question_ko": "공통 운용 과제와 동일한 시장상황에서 AI는 기관별 공개 산업판단을 근거 있는 배분 제안에 어떻게 반영하며, 자료의 초안 전후 제공에 따라 그 연결이 어떻게 달라지는가?",
+  "claim_scope": "Two-source, single-model documentary case comparison under one market snapshot; not population inference or a test of market-wide harmful homogenization.",
+  "prior_protocol": {
+    "path": "plan/LIBERA_실험설정_v4.9_20261019.json",
+    "sha256": "01f9819cba917923c9892ac5d75c953a7bed9d47a733496f3a7ceff2ab9781a2"
+  },
+  "historical_run_policy": "Preserve all v4.8 failures. Do not pool old/new trajectories, relabel old attempts or select best outputs.",
+  "sources": {
+    "pilot": [
+      "fidelity_q2_2026",
+      "ubs_june_2026"
+    ],
+    "main": [
+      "fidelity_q3_2026",
+      "ubs_july_2026"
+    ]
+  },
+  "unit": "one prespecified source document under one workflow condition; sectors and turns are dependent components",
+  "arms": [
+    "E",
+    "L"
+  ],
+  "stages": [
+    "D0",
+    "F0"
+  ],
+  "sectors": [
+    "10",
+    "15",
+    "20",
+    "25",
+    "30",
+    "35",
+    "40",
+    "45",
+    "50",
+    "55",
+    "60"
+  ],
+  "source_exposure": {
+    "E": {
+      "D0": "assigned packet",
+      "F0": "same assigned packet freshly supplied"
+    },
+    "L": {
+      "D0": "no source identity, packet, labels or institutional facts",
+      "F0": "assigned packet first supplied"
+    }
+  },
+  "final_controls": {
+    "same_final_source_packet_bytes": true,
+    "same_market_input": true,
+    "same_final_instruction_and_schema": true,
+    "same_model_and_sampler": true,
+    "same_calculator_policy": true,
+    "same_final_packet_position": true,
+    "packet_position_meaning": "Same final-message block order; absolute token positions and history lengths differ.",
+    "own_complete_draft_history_retained": true,
+    "same_generated_history": false,
+    "same_operating_brief_from_D0": true,
+    "same_dated_macro_context_from_D0": true
+  },
+  "estimand": "Early prior exposure plus its generated draft/history versus first exposure at final review, conditional on a common final evidence refresh. Not pure memory, anchoring, exposure-count or position effect.",
+  "draft_policy": "Each case generates its own full 11-sector provisional raw allocation and evidence-linked rationale. No shared L draft and no reset or summary of previous responses.",
+  "final_policy": "First final response F0 is primary. Retain exact raw draft, actual draft arithmetic feedback, and a fresh complete assigned source packet. Never append post-F0 repair.",
+  "calculator_policy": "Same deterministic checker in both arms, using only the submitted raw draft and already visible facts. No automatic normalization, residual fill, optimization target, hidden source constraints or semantic verdict.",
+  "failure_policy": "No retries or replacement. Draft transport, JSON/schema or complete finite-vector failure prevents the dependent final. Raw-sum failures and unsupported output citations/labels remain measured outcomes and do not censor readable drafts. The input visibility boundary is enforced before requests. Never supply hidden reference facts to correct model claims.",
+  "budget": {
+    "cases_per_split": 4,
+    "core_calls_per_complete_case": 2,
+    "max_calls_per_split": 8,
+    "post_final_calls": 0,
+    "pilot_and_main_max_core_calls": 16,
+    "runtime_diagnostics_counted_separately": true,
+    "old_core_calls_per_split": 16,
+    "old_max_calls_per_split": 24,
+    "basis": "Arithmetic of the local design, not a paper-derived optimum or power calculation. No latency reduction is claimed."
+  },
+  "data": {
+    "taxonomy": "GICS11",
+    "baseline": "Common S&P500 sector comparison benchmark only; new-money task has no existing sector portfolio",
+    "market_cutoff": {
+      "recent_only": true,
+      "finalized": true,
+      "common_cutoff": "2026-07-17",
+      "price_last_date": "2026-07-16",
+      "claim": "retrospective document-conditioned case, not point-in-time trading replay",
+      "fidelity_invalid_view_date_preserved": "6/31/26"
+    },
+    "public_data_only": true,
+    "not_point_in_time_trading_replay": true,
+    "packet_scope": "Existing researcher paraphrases, original rating labels, source IDs and page locators. Original PDFs remain available for review.",
+    "compact_candidate": {
+      "path": "data/sector_protocol/v491_design_20261019/public_compact_candidate.json",
+      "sha256": "afe810b2bfb69ae4bfa372e65fa587bc6253eecf8028d5fde39cf3ec395bcb8d"
+    },
+    "aggregate_candidate_model_visible": false,
+    "visibility_rule": "Select exactly the assigned public packet; never send the aggregate containing all pilot/main sources.",
+    "common_context": {
+      "path": "data/sector_context/v491_20261019/common_context.json",
+      "sha256": "67d94bdee3d38854097970cdfb74f40e2557a11e22b016e9a68374e6f13cb96f"
+    },
+    "macro_source_audit": {
+      "path": "research/v491_macro_source_audit_20261019.json",
+      "sha256": "0567efc4a5ae8eee60b66c3cf0904d376a8b4943a27f45f780053dee3746e6fc"
+    }
+  },
+  "model": {
+    "name": "Qwen3.5-4B",
+    "ollama_tag": "qwen3.5:4b-q4_K_M",
+    "served_digest_reference": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+    "same_model_in_all_cells": true,
+    "thinking": false,
+    "temperature": 0,
+    "options_reference_not_new_runtime_selection": {
+      "temperature": 0,
+      "seed": 3407,
+      "num_predict": 8192,
+      "num_ctx": 65536,
+      "num_thread": 2,
+      "num_batch": 512,
+      "repeat_penalty": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0.0
+    },
+    "selected_backend": null,
+    "selected_context_tokens": null,
+    "runtime_validated": false,
+    "output_limit_candidate": 8192,
+    "output_limit_basis": "PortBench v6 section3.1 transfer, not Qwen4B two-stage optimality. FinVector700 is not adopted for this richer task.",
+    "context_selection_rule": "Before main freeze, measure exact rendered model tokens including retained draft, actual feedback, refreshed packet, template and allowed output. Choose a supported capacity covering the full bound without truncation; log memory and completion. Do not estimate tokens from bytes.",
+    "backend_rule": "Isolate recorded Vulkan failure; compare supported backend operation only as separately logged engineering diagnostics. No GPU stability claim from byte compaction."
+  },
+  "evaluation_path": "research/v491_evaluation_protocol_20261019.json",
+  "schema_path": "data/sector_protocol/v491_design_20261019/response_schema.json",
+  "prompt_contract_path": "data/sector_protocol/v491_design_20261019/prompt_contract.json",
+  "semantic_validators_required_before_execution": [
+    "exactly11 unique allowed sector codes, not merely11 rows",
+    "finite numeric weights excluding booleans",
+    "L D0 source_id and source_label null, source_stance not_available, source_evidence_ids empty",
+    "E D0 and every F0 bound to assigned source, citations resolved only against already visible evidence",
+    "new sectors records extracted unchanged into existing calculator weights input",
+    "actual requests exclude all unassigned packets and evaluator artifacts"
+  ],
+  "prohibited_heuristics": [
+    "rating-to-fixed-weight mapping",
+    "institution-specific invented gamma",
+    "invented return/confidence/cap",
+    "weighted composite quality score",
+    "until-success reruns",
+    "successful-pair-only conclusion",
+    "post-hoc selection of sectors or documents"
+  ],
+  "pre_main_requirements": [
+    "ordered offline evidence/implementation/topic checks",
+    "supported backend with exact full-history token feasibility and no truncation",
+    "separately logged four-case pilot under this context",
+    "independent human source/meaning review",
+    "freeze exact inputs, model, evaluation, execution order and resource ceilings"
+  ],
+  "four_way_allocation_observability": "The complete main E/L by source allocation contrast requires four valid F0 portfolios. Otherwise report available prespecified pairs and missing contrasts, and do not claim the allocation question fully answered.",
+  "source_contrast_observability": "Complete all11 source comparisons before model outputs. Do not infer substantive conflict from different rating vocabularies. If no meaningful source distinction is supported, between-source preservation is not identified; do not fabricate one.",
+  "outcome_blind_readiness": "Do not require E to win, larger source distance, correct reasoning or every response to be arithmetically valid as a prompt tuning target. Distinguish a runnable instrument from observed valid contrasts.",
+  "current_state": {
+    "v491_model_calls": 0,
+    "v491_pilot_calls": 0,
+    "v491_main_calls": 0,
+    "independent_human_review_completed": false,
+    "frozen": false,
+    "offline_prompt_and_calculator_contract_implemented": true,
+    "live_v491_runner_validated": false
+  },
+  "task": {
+    "assignment_type": "hypothetical_new_US_equity_sector_sleeve",
+    "decision_reference_date": "2026-07-17",
+    "information_cutoff_exclusive": "2026-07-17",
+    "judgment_horizon_months": 12,
+    "horizon_end_reference": "2027-07-17",
+    "decision_type": "new_target_allocation_not_rebalancing",
+    "existing_sector_holdings": null,
+    "existing_holdings_meaning": "No sector portfolio exists within this new-money task; null is not unknown actual institutional holdings.",
+    "benchmark_role": "comparison_only_not_holdings_not_gold",
+    "numeric_risk_limit": null,
+    "numeric_utility_coefficient": null,
+    "required_return": null,
+    "evidence_items": [
+      {
+        "evidence_id": "CTX:task",
+        "statement": "This is a hypothetical research assignment to recommend a new US equity-sector sleeve, not to impersonate any institution or infer its private mandate.",
+        "evidence_type": "declared_research_task_not_empirical_institution_fact"
+      },
+      {
+        "evidence_id": "CTX:date",
+        "statement": "Use a 2026-07-17 decision reference and only supplied observations and public releases before that date. This is a documentary retrospective case, not a point-in-time trading replay.",
+        "evidence_type": "declared_research_task_not_empirical_institution_fact"
+      },
+      {
+        "evidence_id": "CTX:horizon",
+        "statement": "The allocation judgment horizon is 12 months. This is not a 12-month realized-return test. Document view dates and horizons remain those of their respective sources.",
+        "evidence_type": "declared_research_task_not_empirical_institution_fact"
+      },
+      {
+        "evidence_id": "CTX:objective",
+        "statement": "Propose a reasoned allocation intended for capital appreciation over the stated horizon, explaining diversification and risk-return trade-offs relative to the common sector benchmark. No required return or unique optimal allocation is specified.",
+        "evidence_type": "declared_research_task_not_empirical_institution_fact"
+      },
+      {
+        "evidence_id": "CTX:risk",
+        "statement": "The hypothetical assignment accepts equity-market loss risk and provides no capital guarantee. No numerical risk-aversion coefficient, volatility ceiling, loss budget or sector cap is supplied. Do not invent one; discuss remaining risk and uncertainty.",
+        "evidence_type": "declared_research_task_not_empirical_institution_fact"
+      },
+      {
+        "evidence_id": "CTX:starting_state",
+        "statement": "This is new money assigned to an equity sleeve with no existing sector holdings. Recommend target weights, not trades from current holdings. The S&P sector benchmark is only a comparison anchor and is not the starting portfolio.",
+        "evidence_type": "declared_research_task_not_empirical_institution_fact"
+      },
+      {
+        "evidence_id": "CTX:universe",
+        "statement": "Use exactly the supplied 11 GICS sector baskets, with one row for each sector including zero weights. The submitted allocation must be long-only, unlevered and fully invested: raw weights sum to one. Individual stocks, cash, bonds and derivatives are outside this sleeve task.",
+        "evidence_type": "declared_research_task_not_empirical_institution_fact"
+      },
+      {
+        "evidence_id": "CTX:scope",
+        "statement": "The deliverable is an allocation proposal for review, not a trade order or a whole-client financial plan. Transaction costs, turnover, tax optimization, withdrawals and actual client suitability are not measured. Do not invent missing client or liquidity requirements.",
+        "evidence_type": "declared_research_task_not_empirical_institution_fact"
+      },
+      {
+        "evidence_id": "CTX:liquidity_and_ESG",
+        "statement": "For this hypothetical sleeve there are no scheduled withdrawals during the judgment horizon and no separate ESG exclusion. These are declared task assumptions, not observed facts about a real institution or customer.",
+        "evidence_type": "declared_research_task_not_empirical_institution_fact"
+      },
+      {
+        "evidence_id": "CTX:evidence_use",
+        "statement": "Use dated market observations and any institution packet currently supplied. Published outlook ratings are not binding weight constraints or target holdings. Explain justified adoption, qualification or departure and any age/horizon mismatch. Do not assume the outlook author had observed later common market releases.",
+        "evidence_type": "declared_research_task_not_empirical_institution_fact"
+      }
+    ]
+  },
+  "task_basis": {
+    "path": "research/v491_mandate_basis_20261019.json",
+    "sha256": "141744fabbb44d4a91a47449b44ad186931a4cb998fc555dc9da3d642e07dd6b"
+  },
+  "offline_contract_implementation": "research/sector_v491_contract.py"
+}

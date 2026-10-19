@@ -1,6 +1,8 @@
 # Preserve exact bytes of evidence-linked files in this research delivery.
 # Explicit paths avoid renormalizing older tracked research files.
 # SHA-256 records depend on original LF/CRLF bytes across platforms.
+/.gitattributes -text
+/.gitignore -text
 "/data/sector_protocol/v48_pilot_20261018/manifest.json" -text
 "/data/sector_protocol/v48_pilot_20261018/market_input.json" -text
 "/data/sector_protocol/v48_pilot_20261018/packets/fidelity_q2_2026.json" -text
@@ -142,3 +144,16 @@
 "/research/verify_v48_guarded_repeat_round1_20261019.py" -text
 "/research/verify_v48_implementation_round1.py" -text
 "/research/verify_v48_main_technical_round1_20261019.py" -text
+
+# Preserve exact bytes of v4.9 design and its verification records.
+/research/*v49* -text
+/plan/*v4.9* -text
+/paper/*v4.9* -text
+/data/sector_protocol/v49_design_20261019/** -text
+/research/artifacts/v49_visual_20261019/** -text
+
+# v4.9.1 context, prepared prompts and exact-byte source evidence.
+/data/sector_protocol/v491_design_20261019/** -text
+/data/sector_context/v491_20261019/** -text
+/research/artifacts/v491_visual_20261019/** -text
+/research/artifacts/v491_review_history_20261019/** -text

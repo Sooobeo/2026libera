@@ -1,0 +1,395 @@
+{
+  "schema_version": "libera_v491_macro_source_audit_v1",
+  "checked_at_utc": "2026-10-19T05:23:54.355237+00:00",
+  "status": "PASS",
+  "scope": "Official release provenance, dates, units and exact source fragments. This is not model-output validation or independent human review.",
+  "packet_path": "data/sector_context/v491_20261019/market_context.json",
+  "packet_sha256": "87fe629ae6051b73f623b74e7befc27a83fdc854032efa5c596ae7de47fff739",
+  "fact_count": 7,
+  "release_count": 4,
+  "checks": [
+    {
+      "check": "FED_FOMC_20260617:publication_date_in_original",
+      "pass": true
+    },
+    {
+      "check": "FED_FOMC_20260617:published_before_cutoff",
+      "pass": true
+    },
+    {
+      "check": "FED_FOMC_20260617:official_publisher",
+      "pass": true
+    },
+    {
+      "check": "BLS_CPI_20260714:publication_date_in_original",
+      "pass": true
+    },
+    {
+      "check": "BLS_CPI_20260714:published_before_cutoff",
+      "pass": true
+    },
+    {
+      "check": "BLS_CPI_20260714:official_publisher",
+      "pass": true
+    },
+    {
+      "check": "BLS_EMPSIT_20260702:publication_date_in_original",
+      "pass": true
+    },
+    {
+      "check": "BLS_EMPSIT_20260702:published_before_cutoff",
+      "pass": true
+    },
+    {
+      "check": "BLS_EMPSIT_20260702:official_publisher",
+      "pass": true
+    },
+    {
+      "check": "BEA_GDP_20260625:publication_date_in_original",
+      "pass": true
+    },
+    {
+      "check": "BEA_GDP_20260625:published_before_cutoff",
+      "pass": true
+    },
+    {
+      "check": "BEA_GDP_20260625:official_publisher",
+      "pass": true
+    },
+    {
+      "check": "MACRO_FED_TARGET_20260617:excerpt_in_archived_release",
+      "pass": true
+    },
+    {
+      "check": "MACRO_CPI_HEADLINE_MOM_202606:excerpt_in_archived_release",
+      "pass": true
+    },
+    {
+      "check": "MACRO_CPI_HEADLINE_YOY_202606:excerpt_in_archived_release",
+      "pass": true
+    },
+    {
+      "check": "MACRO_CPI_CORE_YOY_202606:excerpt_in_archived_release",
+      "pass": true
+    },
+    {
+      "check": "MACRO_UNEMPLOYMENT_202606:excerpt_in_archived_release",
+      "pass": true
+    },
+    {
+      "check": "MACRO_NONFARM_CHANGE_202606:excerpt_in_archived_release",
+      "pass": true
+    },
+    {
+      "check": "MACRO_REAL_GDP_Q1_2026_THIRD:excerpt_in_archived_release",
+      "pass": true
+    },
+    {
+      "check": "unique_fact_evidence_ids",
+      "pass": true
+    }
+  ],
+  "validation_rounds": [
+    {
+      "round": 1,
+      "scope": "Official-source identity, release date before cutoff, source fragments and unique IDs",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "FED_FOMC_20260617:publication_date_in_original",
+          "pass": true
+        },
+        {
+          "check": "FED_FOMC_20260617:published_before_cutoff",
+          "pass": true
+        },
+        {
+          "check": "FED_FOMC_20260617:official_publisher",
+          "pass": true
+        },
+        {
+          "check": "BLS_CPI_20260714:publication_date_in_original",
+          "pass": true
+        },
+        {
+          "check": "BLS_CPI_20260714:published_before_cutoff",
+          "pass": true
+        },
+        {
+          "check": "BLS_CPI_20260714:official_publisher",
+          "pass": true
+        },
+        {
+          "check": "BLS_EMPSIT_20260702:publication_date_in_original",
+          "pass": true
+        },
+        {
+          "check": "BLS_EMPSIT_20260702:published_before_cutoff",
+          "pass": true
+        },
+        {
+          "check": "BLS_EMPSIT_20260702:official_publisher",
+          "pass": true
+        },
+        {
+          "check": "BEA_GDP_20260625:publication_date_in_original",
+          "pass": true
+        },
+        {
+          "check": "BEA_GDP_20260625:published_before_cutoff",
+          "pass": true
+        },
+        {
+          "check": "BEA_GDP_20260625:official_publisher",
+          "pass": true
+        },
+        {
+          "check": "MACRO_FED_TARGET_20260617:excerpt_in_archived_release",
+          "pass": true
+        },
+        {
+          "check": "MACRO_CPI_HEADLINE_MOM_202606:excerpt_in_archived_release",
+          "pass": true
+        },
+        {
+          "check": "MACRO_CPI_HEADLINE_YOY_202606:excerpt_in_archived_release",
+          "pass": true
+        },
+        {
+          "check": "MACRO_CPI_CORE_YOY_202606:excerpt_in_archived_release",
+          "pass": true
+        },
+        {
+          "check": "MACRO_UNEMPLOYMENT_202606:excerpt_in_archived_release",
+          "pass": true
+        },
+        {
+          "check": "MACRO_NONFARM_CHANGE_202606:excerpt_in_archived_release",
+          "pass": true
+        },
+        {
+          "check": "MACRO_REAL_GDP_Q1_2026_THIRD:excerpt_in_archived_release",
+          "pass": true
+        },
+        {
+          "check": "unique_fact_evidence_ids",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "scope": "Reconstruct each numeric value independently from preserved source text, including fraction conversion and negative monthly CPI sign",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "MACRO_FED_TARGET_20260617:independent_source_number_reconstruction",
+          "pass": true
+        },
+        {
+          "check": "MACRO_CPI_HEADLINE_MOM_202606:independent_source_number_reconstruction",
+          "pass": true
+        },
+        {
+          "check": "MACRO_CPI_HEADLINE_YOY_202606:independent_source_number_reconstruction",
+          "pass": true
+        },
+        {
+          "check": "MACRO_CPI_CORE_YOY_202606:independent_source_number_reconstruction",
+          "pass": true
+        },
+        {
+          "check": "MACRO_UNEMPLOYMENT_202606:independent_source_number_reconstruction",
+          "pass": true
+        },
+        {
+          "check": "MACRO_NONFARM_CHANGE_202606:independent_source_number_reconstruction",
+          "pass": true
+        },
+        {
+          "check": "MACRO_REAL_GDP_Q1_2026_THIRD:independent_source_number_reconstruction",
+          "pass": true
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "scope": "Common-context isolation and explicit measurement boundaries; no institutional forecast, sector weights or assigned macro regime",
+      "status": "PASS",
+      "checks": [
+        {
+          "check": "all_rows_common_macro_not_institution_source",
+          "pass": true
+        },
+        {
+          "check": "no_institution_names_in_common_packet",
+          "pass": true
+        },
+        {
+          "check": "all_fact_temporal_units_explicit",
+          "pass": true
+        },
+        {
+          "check": "no_sector_weight_or_regime_fields",
+          "pass": true
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "FED_FOMC_20260617",
+      "publisher": "Board of Governors of the Federal Reserve System",
+      "title": "Federal Reserve issues FOMC statement, June 17, 2026",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm",
+      "filename": "fed_fomc_20260617.html",
+      "publication_date": "2026-06-17",
+      "publication_time_local": "14:00:00",
+      "publication_timezone": "America/New_York",
+      "publication_date_text": "June 17, 2026",
+      "locator": "Dated press release, first policy-decision paragraph",
+      "vintage": "Dated policy announcement; not a later statistical time-series extraction",
+      "evidence_path": "data/sector_context/v491_20261019/sources/fed_fomc_20260617.html",
+      "evidence_sha256": "444c2c14910433345ca5357d769074b35abcb86734339cde1e77fb2f438ec9a0",
+      "capture_type": "direct_official_original_download",
+      "extracted_path": "data/sector_context/v491_20261019/sources/fed_fomc_20260617.extracted.txt",
+      "extracted_sha256": "0575afa877c85cd7bb0980537adc49d3eda21d00d76ae1378c3fabf6150fe86b",
+      "retrieval": {
+        "retrieved_at_utc": "2026-10-19T05:21:29.295799+00:00",
+        "requested_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm",
+        "final_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm",
+        "http_status": 200,
+        "content_type": "text/html",
+        "sha256": "444c2c14910433345ca5357d769074b35abcb86734339cde1e77fb2f438ec9a0"
+      }
+    },
+    {
+      "source_id": "BLS_CPI_20260714",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "title": "Consumer Price Index, June 2026, released July 14, 2026",
+      "url": "https://www.bls.gov/news.release/archives/cpi_07142026.htm",
+      "filename": "bls_cpi_20260714.web_snapshot.txt",
+      "capture_type": "web_tool_rendered_official_archive_excerpt",
+      "publication_date": "2026-07-14",
+      "publication_time_local": "08:30:00",
+      "publication_timezone": "America/New_York",
+      "publication_date_text": "July 14, 2026",
+      "locator": "Archive release header and opening CPI-U paragraphs; Table A",
+      "vintage": "June 2026 figures as printed in the July 14 release, not a current BLS API series",
+      "evidence_path": "data/sector_context/v491_20261019/sources/bls_cpi_20260714.web_snapshot.txt",
+      "evidence_sha256": "991c12f722e5bf26b5136e1256bb09dbf077e4da721b9dd41c6e9e80b50e5c35",
+      "extracted_path": "data/sector_context/v491_20261019/sources/bls_cpi_20260714.web_snapshot.extracted.txt",
+      "extracted_sha256": "1f1ce272d156d1dac58ecc186b9301994b158b28a5d7425fe29fc313845ca8f2",
+      "retrieval": {
+        "retrieved_at_utc": "2026-10-19T05:22:02.513Z",
+        "source_url": "https://www.bls.gov/news.release/archives/cpi_07142026.htm",
+        "capture_type": "web_tool_rendered_official_archive_excerpt",
+        "direct_download_status": 403,
+        "raw_original_downloaded": false,
+        "description": "Exact unmodified web tool response saved; line labels and tool citation metadata retained. This is not raw publisher HTML."
+      }
+    },
+    {
+      "source_id": "BLS_EMPSIT_20260702",
+      "publisher": "U.S. Bureau of Labor Statistics",
+      "title": "The Employment Situation, June 2026, released July 2, 2026",
+      "url": "https://www.bls.gov/news.release/archives/empsit_07022026.htm",
+      "filename": "bls_empsit_20260702.web_snapshot.txt",
+      "capture_type": "web_tool_rendered_official_archive_excerpt",
+      "publication_date": "2026-07-02",
+      "publication_time_local": "08:30:00",
+      "publication_timezone": "America/New_York",
+      "publication_date_text": "July 2, 2026",
+      "locator": "Archive release header and opening paragraph; Tables A-1 and B-1",
+      "vintage": "June 2026 first-release estimates; subsequent payroll revisions are excluded",
+      "evidence_path": "data/sector_context/v491_20261019/sources/bls_empsit_20260702.web_snapshot.txt",
+      "evidence_sha256": "87e263e4848c7b52f02e3119c865afd81324d76cf4db917f474ef91bac40d4b3",
+      "extracted_path": "data/sector_context/v491_20261019/sources/bls_empsit_20260702.web_snapshot.extracted.txt",
+      "extracted_sha256": "3e1c90ac9c95ff5a1d84749c762da72415b1a7ac15bd230b7f50ae211531d0b7",
+      "retrieval": {
+        "retrieved_at_utc": "2026-10-19T05:22:02.584Z",
+        "source_url": "https://www.bls.gov/news.release/archives/empsit_07022026.htm",
+        "capture_type": "web_tool_rendered_official_archive_excerpt",
+        "direct_download_status": 403,
+        "raw_original_downloaded": false,
+        "description": "Exact unmodified web tool response saved; line labels and tool citation metadata retained. This is not raw publisher HTML."
+      }
+    },
+    {
+      "source_id": "BEA_GDP_20260625",
+      "publisher": "U.S. Bureau of Economic Analysis",
+      "title": "GDP (Third Estimate), 1st Quarter 2026, June 25, 2026",
+      "url": "https://www.bea.gov/sites/default/files/2026-06/gdp1q26-3rd.pdf",
+      "filename": "bea_gdp_20260625.pdf",
+      "publication_date": "2026-06-25",
+      "publication_time_local": "08:30:00",
+      "publication_timezone": "America/New_York",
+      "publication_date_text": "June 25, 2026",
+      "locator": "Release PDF page 1 and Real GDP and Related Measures table on page 3",
+      "vintage": "2026 Q1 third estimate released June 25; later annual updates are excluded",
+      "evidence_path": "data/sector_context/v491_20261019/sources/bea_gdp_20260625.pdf",
+      "evidence_sha256": "24194657c9036e5e1ed056f2ff3c523db1273a2dd789ec1b53b1d84164bc199e",
+      "capture_type": "direct_official_original_download",
+      "extracted_path": "data/sector_context/v491_20261019/sources/bea_gdp_20260625.extracted.txt",
+      "extracted_sha256": "3bf73cb011910694320b81fb8bbd9a665c290580a19fe9b1d2640f132c530081",
+      "retrieval": {
+        "retrieved_at_utc": "2026-10-19T05:21:30.118066+00:00",
+        "requested_url": "https://www.bea.gov/sites/default/files/2026-06/gdp1q26-3rd.pdf",
+        "final_url": "https://www.bea.gov/sites/default/files/2026-06/gdp1q26-3rd.pdf",
+        "http_status": 200,
+        "content_type": "application/pdf",
+        "sha256": "24194657c9036e5e1ed056f2ff3c523db1273a2dd789ec1b53b1d84164bc199e"
+      }
+    }
+  ],
+  "method_reference_and_adaptations": {
+    "framework_reference": {
+      "paper": "PortBench: A Correlation-Aware, Full-Pipeline Benchmark for LLM-Driven Portfolio Management, v6",
+      "url": "https://arxiv.org/html/2605.27887v6",
+      "sections": [
+        "2.1 Benchmark Construction",
+        "Appendix B, Market context at decision time",
+        "Appendix H.1 Market Snapshot Examples"
+      ],
+      "supported_design": "Provide macroeconomic context together with trailing asset statistics, correlations and explicit portfolio/task state. Section 2.1 explicitly includes interest rates and inflation measures.",
+      "not_claimed": "This seven-fact subset, exact official series and the extra labor/activity indicators are not a verbatim PortBench replication or a paper-validated optimal feature set."
+    },
+    "sector_allocation_reference": {
+      "paper": "Quek et al., Leveraging LLMs for Top-Down Sector Allocation in Automated Trading",
+      "url": "https://arxiv.org/html/2503.09647v5",
+      "latest_version_checked": "v5, April 10, 2025; arXiv abstract submission history checked October 19, 2026",
+      "sections": [
+        "3 Data Source",
+        "4 Design Process"
+      ],
+      "supported_design": "Sector-allocation input categories explicitly include interest rates, inflation, employment and growth; CPI and nonfarm payrolls are named. Official release dates govern availability.",
+      "adaptation": "Use a compact dated-release table instead of the paper's multi-agent macro memory pipeline, stock news and PMI. Do not import its asset ranks, trading parameters or performance claims."
+    },
+    "macro_measurement_reference": {
+      "paper": "Zhao et al., Can LLMs Take the Pulse of the Economy? A Real-Time Evaluation of LLM Nowcasts on Macroeconomic Indicators",
+      "url": "https://arxiv.org/html/2608.30110v1",
+      "latest_version_checked": "v1, August 31, 2026; arXiv abstract submission history checked October 19, 2026",
+      "sections": [
+        "3.3 Macroeconomic Indicators",
+        "Appendix D, Table 2: Variable definitions"
+      ],
+      "supported_design": "The published variable table distinguishes real GDP quarterly annualized growth, CPI yearly growth, monthly nonfarm employment change and the unemployment-rate level, with explicit units and seasonal adjustment.",
+      "adaptation": "These already-released indicators are background facts here, not nowcast targets. This reference supports variable definitions and temporal discipline, not optimal sector allocation or this seven-row subset's sufficiency."
+    },
+    "interest_rate": "Paper-supported interest-rate category implemented using the dated official FOMC target-range announcement.",
+    "inflation": "Paper-supported inflation category implemented using headline monthly/yearly CPI-U and core yearly CPI-U from one dated BLS release.",
+    "labor_context": "Employment category and NFP are explicit in Quek et al. section 3. LiveMacroEval Table 2 defines both NFP monthly change and unemployment level. Transfer those categories to a compact common context using the original BLS release; do not import a regime label, weight or trading instruction.",
+    "activity_context": "Economic growth is explicit in Quek et al. section 3 (using PMI there); GDP QoQ SAAR is defined in LiveMacroEval Table 2. The local adaptation uses dated BEA GDP as a publicly archived activity measure and retains its quarter and estimate vintage; it is not asserted equivalent to PMI.",
+    "selection_lock": "Chosen before any v4.9.1 model output; same rows, values and ordering in every E/L and source condition. Do not add/remove facts after viewing an institutional contrast.",
+    "omitted_from_minimal_context": "No researcher-written sector outlook, causal trading rule, forecast, sentiment score or numerical macro-to-weight coefficient. No live FRED/current-vintage series substitutes for dated release figures."
+  },
+  "measurement_caveats": [
+    "Compact public-release context is not an exhaustive professional information terminal, complete client mandate, or a forecast target.",
+    "These files were retrieved in October 2026 from official dated release archives. The original release date and retained release text support availability; there is no independently timestamped July download for this project.",
+    "Fed HTML and BEA PDF originals are saved. BLS direct downloads returned HTTP 403, so the accessible official archive text is retained as exact web-tool snapshots; these snapshots are explicitly not original HTML files.",
+    "The existing ETF adjusted-price input retains its current-vendor-vintage limitation. Adding release-vintage macro facts does not convert the full case into a verified point-in-time backtest.",
+    "GDP is lagged quarterly information; employment first estimates and seasonally adjusted series can be revised. This packet preserves the selected release vintage."
+  ],
+  "reproduction_command": "python -B -X utf8 data/sector_context/v491_20261019/build_market_context.py",
+  "no_model_inference_performed": true
+}
