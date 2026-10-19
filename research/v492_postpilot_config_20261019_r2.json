@@ -1,0 +1,53 @@
+{
+  "version": "v492_postpilot_watcher_1",
+  "created_at_utc": "2026-10-19T08:26:37.666603+00:00",
+  "poll_seconds": 30,
+  "observer_lifetime_seconds": 86400,
+  "stable_invalid_summary_limit": 3,
+  "observer_limit_basis": "Explicit engineering observer limits: three unchanged invalid summary polls and a 24-hour watcher lifetime. Neither changes a model-stage deadline, creates a retry, or stops active model work.",
+  "python_executable": "C:\\Users\\Insun\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+  "run_dir": "data/local_sector_runtime/v492_pilot_20261019",
+  "service_evidence_dir": "data/local_sector_runtime/v492_pilot_cpu_20261019",
+  "status_path": "research/v492_postpilot_status_20261019.json",
+  "declaration_ref": {
+    "path": "data/local_sector_runtime/v492_pilot_20261019/pilot_declaration.json",
+    "sha256": "bf3f08ddd8e2e446be17e7dd7262403dbcbd924d5ad78a4e517de10ca2703102"
+  },
+  "gate_ref": {
+    "path": "research/v492_ai_review_gate_20261019.json",
+    "sha256": "6aa66fed309393e519b62136f120be6a0b4a389fb2198468062b2d34e414cb91"
+  },
+  "freeze_ref": {
+    "path": "research/v492_pilot_freeze_20261019.json",
+    "sha256": "d5ebc5e317130c8e2eedb10b47d1bb9f7eaa355582d6ded6c3381e818bb6ed56"
+  },
+  "service_ref": {
+    "path": "data/local_sector_runtime/v492_pilot_cpu_20261019/service_receipt.json",
+    "sha256": "56063e1cbcd7601609b634f1e8960e7a159e0e7fb00b41cab408c29fdb4d0d08"
+  },
+  "watcher_ref": {
+    "path": "research/watch_v492_postpilot.py",
+    "sha256": "f431a1b147a1f5b6053821820042074464dbd12bf592f3ece455e9b84ed583b9"
+  },
+  "scripts": {
+    "analysis": {
+      "path": "research/analyze_v492_pilot.py",
+      "sha256": "841c1f941e2c39165f84f51f5df283ca7a3c5727de285d4ad56edfa50166529f"
+    },
+    "masked": {
+      "path": "research/build_v492_masked_review.py",
+      "sha256": "f4f9295a657892431d76b79310b3af229dc5bc7d972b098adb10ff5dd29a1f77"
+    },
+    "shutdown": {
+      "path": "research/stop_sector_v492_cpu.ps1",
+      "sha256": "065b97e1d4005e8ab55eff1f3c9be553fa897b075896d50ccc318386ad74f308"
+    }
+  },
+  "analysis_output": "research/v492_pilot_arithmetic_20261019.json",
+  "judge_dir": "research/artifacts/v492_pilot_review_20261019/judge",
+  "mapping_dir": "research/artifacts/v492_pilot_review_20261019/private",
+  "model_calls": 0,
+  "semantic_scoring": false,
+  "automatic_retry": false,
+  "archive_or_delete": false
+}

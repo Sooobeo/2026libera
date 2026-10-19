@@ -1,0 +1,38 @@
+{
+  "status": "redundant_retest_cancelled_after_completed_receipt_confirmed",
+  "record_date": "2026-10-19",
+  "review_mode": "AI_technical_observation_only",
+  "independent_human_review_completed": false,
+  "accepted_test_receipt": "research/v492_postpilot_watcher_unit_review_20261019.json",
+  "accepted_test_evidence": {
+    "tests": 15,
+    "reported_unittest_seconds": 182.528,
+    "exit_code": 0,
+    "signal": null,
+    "result": "OK",
+    "source_sha256": "f431a1b147a1f5b6053821820042074464dbd12bf592f3ece455e9b84ed583b9",
+    "tests_sha256": "505251d68615efe707915fffbdcb74b119e9dd21031ffbab01f72131449eb303",
+    "observation": "Root read the completed receipt while the originating Node observer had not exposed its stdout/stderr or completion callback to this agent. The full receipt, not the delayed observer state, establishes completion."
+  },
+  "redundant_execution": {
+    "exec_session": 48865,
+    "command": "C:/Users/Insun/AppData/Local/Programs/Python/Python313/python.exe -B -X utf8 -m unittest test_watch_v492_postpilot -v",
+    "reason": "The earlier complete test result was not yet visible to this agent, and root requested a persistent exec test run.",
+    "interruption": "After root confirmed the earlier full 15-test PASS receipt, Ctrl+C was sent only to the owned redundant test session.",
+    "observed_exit_code_after_interrupt": 1,
+    "counted_as_additional_validation": false,
+    "partial_test_output_is_not_a_failure_of_the_prior_completed_suite": true
+  },
+  "earlier_owned_child": {
+    "pid": 26440,
+    "observed_exit_code_before_cancel_attempt": 0,
+    "observed_signal": null,
+    "kill_returned": false,
+    "kill_delivered": false
+  },
+  "actual_model_calls": 0,
+  "actual_service_shutdown_calls": 0,
+  "watcher_launched_by_this_agent": false,
+  "frozen_research_files_modified": false,
+  "prior_completed_receipt_overwritten": false
+}

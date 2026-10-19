@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "started_at_utc": "2026-10-19T08:17:21.397Z",
+  "finished_at_utc": "2026-10-19T08:21:08.566Z",
+  "exit_code": 0,
+  "signal": null,
+  "stdout": "",
+  "stderr": "test_config_hash_change_fails_before_commands (test_watch_v492_postpilot.WatcherTests.test_config_hash_change_fails_before_commands) ... ok\r\ntest_declaration_hash_change_fails_before_commands (test_watch_v492_postpilot.WatcherTests.test_declaration_hash_change_fails_before_commands) ... ok\r\ntest_dry_run_launches_nothing_and_writes_no_status (test_watch_v492_postpilot.WatcherTests.test_dry_run_launches_nothing_and_writes_no_status) ... ok\r\ntest_ineligible_draft_cannot_have_final (test_watch_v492_postpilot.WatcherTests.test_ineligible_draft_cannot_have_final) ... ok\r\ntest_no_resume_or_repeated_postprocessing (test_watch_v492_postpilot.WatcherTests.test_no_resume_or_repeated_postprocessing) ... ok\r\ntest_observer_lifetime_limit_never_stops_active_work (test_watch_v492_postpilot.WatcherTests.test_observer_lifetime_limit_never_stops_active_work) ... ok\r\ntest_omitted_stage_directory_prevents_completed_identity (test_watch_v492_postpilot.WatcherTests.test_omitted_stage_directory_prevents_completed_identity) ... ok\r\ntest_partial_summary_waits_without_commands (test_watch_v492_postpilot.WatcherTests.test_partial_summary_waits_without_commands) ... ok\r\ntest_partial_write_then_valid_summary_processes_once (test_watch_v492_postpilot.WatcherTests.test_partial_write_then_valid_summary_processes_once) ... ok\r\ntest_postprocessing_failure_still_runs_other_task_and_safe_shutdown (test_watch_v492_postpilot.WatcherTests.test_postprocessing_failure_still_runs_other_task_and_safe_shutdown) ... ok\r\ntest_same_invalid_summary_three_polls_exits_without_commands (test_watch_v492_postpilot.WatcherTests.test_same_invalid_summary_three_polls_exits_without_commands) ... ok\r\ntest_script_changed_after_launch_not_executed_and_cleanup_still_attempted (test_watch_v492_postpilot.WatcherTests.test_script_changed_after_launch_not_executed_and_cleanup_still_attempted) ... ok\r\ntest_stopped_before_first_generation_retains_five_missing_finals (test_watch_v492_postpilot.WatcherTests.test_stopped_before_first_generation_retains_five_missing_finals) ... ok\r\ntest_unconfirmed_cleanup_prevents_shutdown (test_watch_v492_postpilot.WatcherTests.test_unconfirmed_cleanup_prevents_shutdown) ... ok\r\ntest_wrong_count_and_wrong_order_never_trigger_processing (test_watch_v492_postpilot.WatcherTests.test_wrong_count_and_wrong_order_never_trigger_processing) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 15 tests in 182.528s\r\n\r\nOK\r\n",
+  "input_refs": [
+    {
+      "path": "research/watch_v492_postpilot.py",
+      "sha256": "f431a1b147a1f5b6053821820042074464dbd12bf592f3ece455e9b84ed583b9"
+    },
+    {
+      "path": "research/test_watch_v492_postpilot.py",
+      "sha256": "505251d68615efe707915fffbdcb74b119e9dd21031ffbab01f72131449eb303"
+    }
+  ],
+  "input_hashes_unchanged": true,
+  "actual_process_or_shutdown_commands": 0,
+  "model_calls": 0,
+  "fixture_scope": "Synthetic runner and temporary files only; watcher not launched on real pilot.",
+  "initial_attempt": "Earlier test log ended before a unittest summary; wrapper omitted signal metadata. That attempt is not treated as PASS."
+}

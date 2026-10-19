@@ -1,0 +1,442 @@
+{
+  "artifact_kind": "pre_output_methodological_and_primary_literature_review",
+  "protocol_version": "4.9.2",
+  "date_kst": "2026-10-19",
+  "author_role": "AI methods assistant; separate review task, not an independent human evaluator",
+  "status": "recommendations_for_new_protocol_before_any_v492_output; not empirical validation or authorization to run main",
+  "ollama_calls_by_this_review": 0,
+  "human_review_completed": false,
+  "old_files_modified": false,
+  "central_judgment_ko": "사람 두 명의 필수 검토는 기존 연구자가 정한 품질관리 선택이므로 사용자 결정에 따라 없앨 수 있다. 그 대신 계산으로 확인되는 결과와 AI가 잠정 해석한 의미 판단을 구분하고, 검증된 사람 평가나 독립 평가자 합의로 부르지 않는다. 기관자료를 전혀 받지 않는 동일 AI의 두 단계 대조군 C를 추가하면, 조기·후기 제공 비교와 자료 미제공 비교를 구분할 수 있다. 이 설계는 공통 업무상황에서 공개된 기관별 판단이 설명과 산업배분으로 이어지는지 조사하는 기술적 사례연구로서 주제와 연결된다. 작은 표본과 미검증 AI 의미 평가로 인해 시장 전체의 획일화, 인과효과, 투자성과, 실제 기관의 판단 복원을 보장할 수는 없다.",
+  "change_authority": {
+    "user_direction": "Parent relayed explicit removal of mandatory two-human review, delegation of remaining work, and requirement for a control group before outputs.",
+    "old_rule": "v4.9.1 blind_review.reviewers explicitly called the two-reader requirement a local quality-control choice, not a paper requirement or two new samples.",
+    "new_rule": "AI source audit plus programmatic checks can satisfy the new declared preparation process. Independent human validation remains not performed; never populate prior blank human signatures.",
+    "main_execution": "Remain disabled until the separately recorded v4.9.2 pilot feasibility decision. This methods review alone cannot clear main."
+  },
+  "prespecified_design": {
+    "market_scenario_count": 1,
+    "source_family_count": 2,
+    "primary_endpoint": "First F0 raw response per declared cell. D0 is process evidence, not an independent replicate.",
+    "main_cells": [
+      "Fidelity E",
+      "Fidelity L",
+      "UBS E",
+      "UBS L",
+      "common no-institution C"
+    ],
+    "main_planned_finals": 5,
+    "main_planned_sector_rows": 55,
+    "main_maximum_generation_calls": 10,
+    "count_origin": "Two source families times two provision schedules plus one shared no-institution control; two turns per cell. These are explicit resource/scope choices, not a paper-derived adequate sample size.",
+    "C": {
+      "draft": "Same model, common operating brief, common market packet, benchmark, constraints and schema; no institution identity, packet, rating, source evidence or document metadata.",
+      "final": "Same two-stage workflow and own complete D0 plus deterministic feedback; still no institutional source packet. Same common conditional instruction used in all F0 calls: use an assigned source only if one is supplied; otherwise state that no institutional view was supplied.",
+      "why_not_L_D0": "L_D0 is a different stage. Comparing it with E/L_F0 mixes institution information with another model turn and feedback.",
+      "shared_control_limit": "C is one observed common control, reused descriptively in comparisons with both sources. Reusing it does not create independent controls or a second sample.",
+      "remaining_confounding": "C versus E/L changes institution information and associated prompt length/exposure. It is a workflow information-availability contrast, not isolation of semantic content from length or of anchoring from history. Model pretraining knowledge is not erased.",
+      "source_fidelity_scoring": "Not applicable for C. No missing-source fidelity penalty. Unsupported claims that an institution said something remain assessable as unsupported attribution. Common-context, arithmetic and stated-choice consistency apply equally to all cells."
+    },
+    "source_timing": "E receives the assigned packet at D0 and again at F0; L first receives it at F0. Both retain their own exact full D0 and feedback. The comparison includes history, exposure count and timing; it does not identify one pure psychological mechanism.",
+    "pilot_main": "Keep development/pilot reports separate from main reports. Describe exactly which source/cell the feasibility pilot actually attempts. Pilot rows cannot be silently counted as main results."
+  },
+  "evaluation_layers": [
+    {
+      "id": "industry_existence_and_coverage",
+      "mode": "deterministic",
+      "measure": [
+        "JSON/schema status",
+        "11 required sector codes present exactly once",
+        "unknown or duplicate sector codes",
+        "reported zero versus strictly positive raw weights",
+        "allowed citation ID membership by stage"
+      ],
+      "interpretation": "All conditions require all 11 rows including zero allocations. Industry existence therefore measures universe adherence and coverage, not success at stock selection or discovery of an institution's holdings.",
+      "not_sufficient": "A real sector code or valid citation ID does not establish substantive support for a claim.",
+      "basis": "Representation identities and declared task; coverage separation informed by E2A2026. No paper-derived semantic threshold."
+    },
+    {
+      "id": "raw_vector_validity",
+      "mode": "deterministic",
+      "measure": [
+        "finite numeric weights excluding JSON booleans",
+        "nonnegative weights and values above one",
+        "raw sum",
+        "sum minus one",
+        "complete-vector status",
+        "valid-raw-allocation status"
+      ],
+      "constraint": "w_i >= 0; sum_i w_i = 1; i ranges over the same eleven sleeves",
+      "sum_tolerance": 1e-06,
+      "tolerance_origin": "Inherited floating-point/serialization convention, explicitly not a paper-estimated investment or behavioral parameter.",
+      "no_repair": "Never normalize, clip, impute, substitute a benchmark or rerun to obtain a valid result. Preserve readable invalid output as an outcome.",
+      "basis": "Long-only full-budget identity; Markowitz1952; deterministic allocation diagnostics in PortBench2026v6."
+    },
+    {
+      "id": "source_reading_and_weight_tendency",
+      "mode": "deterministic arithmetic plus separately labeled AI semantic coding",
+      "arithmetic": [
+        "For every sector record active weight a_i = w_i - b_i against the supplied dated common reference",
+        "For actual own D0/F0 record delta_i = w_F0_i - w_D0_i and compare explicit increase/decrease/equal claims",
+        "Record the signed values and raw residual; do not invent an economically meaningful cutoff"
+      ],
+      "semantic": [
+        "Check original source label, reference population, date, scope and cited reason",
+        "Code whether the model says it adopts, qualifies or departs from the source",
+        "Assess stated reasons against visible supplied source and common facts",
+        "Check whether its own stated intended direction agrees with its actual weights"
+      ],
+      "fidelity_limit": "Fidelity Overweight/Underweight are hypothetical tilts against broad-market sector weights, not binding numeric targets for this assignment. The supplied S&P 500 reference is a task comparator, not necessarily Fidelity's exact broad-market universe. A claim of following the source using that comparator must disclose the interpretation.",
+      "ubs_limit": "UBS Attractive/Neutral/Unattractive express house views; its definition allows actual tactical allocations to differ with construction and other constraints. Attractive is not automatically Overweight, Neutral is not a mandatory zero active weight, and source label vocabularies must not be collapsed.",
+      "departure": "A supported explicit departure can preserve accurate source interpretation. Mechanically matching the sign of a label is neither necessary nor sufficient for overall source fidelity.",
+      "baseline": "Source tendency is checked against the source's explicit semantics. Proposed allocation tendency is checked against the baseline actually stated by the model. Do not invent an unstated reference or a fixed rating-to-weight map.",
+      "basis": "Original source definitions; E2A2026 evidence-to-action separation; CLQT2026v3 distinction between mechanical direction and narrative coherence. The exact categorical rubric is researcher design."
+    },
+    {
+      "id": "numeric_fidelity",
+      "mode": "deterministic where the claim is unambiguously structured; otherwise AI claim extraction plus traceable deterministic recomputation",
+      "check_fields": [
+        "subject",
+        "metric",
+        "value",
+        "unit",
+        "observation period",
+        "release or decision date",
+        "source ID and version",
+        "formula and inputs",
+        "rounding displayed by the claim"
+      ],
+      "gold_truth_exclusion": "None of the four selected source packets publishes a full 11-sector numeric target allocation. Exact agreement with institution weights cannot be scored. The model's proposed weights are decisions, not facts copied from a hidden gold portfolio.",
+      "rounding": "Retain raw difference and displayed precision. Explicitly exact assertions can be checked exactly using decimal arithmetic. Approximate or vague claims remain marked approximate or unresolved; do not retrofit a pass band after outputs.",
+      "historic_risk": "Use the frozen covariance and calculator conventions to recompute variance/volatility when claimed. Historical covariance risk is not probability of loss, investor utility, maximum tolerated loss or a forecast. No new realized-performance test is introduced.",
+      "basis": "Verifiable factual anchors in E2A2026; covariance portfolio variance in Markowitz1952 and PortBench2026v6. Extraction quality remains unvalidated."
+    },
+    {
+      "id": "context_and_evidence_decision_link",
+      "mode": "unvalidated AI-assisted descriptive coding",
+      "positive_questions": [
+        "Does the quoted claim correctly preserve the supplied source meaning and scope?",
+        "Does the explanation state a supported link between available evidence and the choice?",
+        "Does the actual weight or weight change agree with the direction the explanation claims?",
+        "Does the response distinguish dated observations from forecasts and its own inference?",
+        "Does it preserve new-money allocation, twelve-month judgment horizon, report age and common benchmark scope?"
+      ],
+      "categories": [
+        "supported_link",
+        "unsupported_or_contradictory_link",
+        "unresolved",
+        "missing_or_not_assessable"
+      ],
+      "required_row_evidence": [
+        "output artifact SHA256",
+        "exact output field and short quote",
+        "source or market anchor ID",
+        "short relevant evidence quote or precise locator",
+        "calculated weight or delta where relevant",
+        "category",
+        "explicit reason",
+        "uncertainty or disagreement",
+        "AI reviewer identity and role"
+      ],
+      "visibility": "Judge the model against evidence actually supplied to that stage. Evaluator-only original-source checks assess packet fidelity separately and cannot penalize the model for an omitted fact it never saw.",
+      "no_hidden_thought_claim": "Assess stated reasons and observable allocation only, not the model's internal cognition.",
+      "no_composite_score": true,
+      "no_semantic_pass_threshold": true,
+      "basis": "E2A2026 and CLQT2026v3 motivate separate factual/process dimensions. Pombal2026v3 and Shi2025 motivate granular checks and caution about judging bias. Categories, evidence fields and the absence of a total score are local operational choices, not validated borrowed scales."
+    }
+  ],
+  "ai_review_protocol": {
+    "pre_output": "Freeze all 11 sector source-comparison rows for both source pairs, factual anchors, categories and comparison formulas before v492 task outputs. Freeze the actual evaluated packet version, including any amended packet, and record hashes.",
+    "individual_first": "Inspect one output at a time with the same rubric and only its relevant supplied evidence before comparing conditions. Do not ask an AI to choose a winning E/L/C answer from a side-by-side quality contest.",
+    "masking": "Remove arm labels, execution order and study-preferred hypothesis from review copies while keeping required evidence and dates. Save reversible mapping outside the judge bundle. Content and source absence can reveal the condition, so masking is incomplete.",
+    "identity": "Use a reviewer outside the evaluated Qwen generation when available; record the actual model identity, version when exposed, role and input hashes. A Codex assistant and its same-family child agents are AI assistance, not independent humans or independent statistical judges.",
+    "repeated_checks": "Requested three checks are process quality checks with retained corrections and disagreements, not three independent measurements or a majority-vote gold label. Do not repeat until a preferred verdict appears.",
+    "disagreement": "Retain distinct AI codings and evidence, then flag unresolved interpretation. Do not silently force consensus or fabricate a human adjudicator.",
+    "validity": "No human validation of this task-specific semantic scorer has been performed. Arithmetic tests validate code, not semantic judgments. Different model families or a committee mitigate some risks but do not establish independence or eliminate bias.",
+    "coverage": "Report assessable claim count, unresolved count, missing fields and total planned rows alongside supported/unsupported counts. Short or empty explanations cannot obtain a misleading perfect reliability label from having no detected errors.",
+    "post_output_changes": "Any rubric/prompt/threshold amendment after pilot output is development and requires a new version before main. Never retrospectively relabel the original run as prespecified."
+  },
+  "descriptive_comparisons": {
+    "distance": "d(w,v) = 0.5 * sum_i abs(w_i - v_i)",
+    "paper_origin": "PortBench2026v6 Appendix C.2 Eq.8 uses one minus this quantity for similarity to its own computed reference. Here only the distance formula is adapted; the paper's reference construction, composite weights and interpretation as reference accuracy are not transferred.",
+    "eligible_vectors": "Complete finite nonnegative raw vectors passing the declared numerical budget check. Report both raw sums. For floating-point sum residuals, label distance as a numerical approximation to total variation; do not renormalize or assert exact probability-distance properties without exact unit sums.",
+    "within_source": "d(F_E,F_L) and d(U_E,U_L), each one observed procedural contrast.",
+    "between_sources": "d(F_E,U_E) and d(F_L,U_L), interpreted alongside the pre-output source contrast rows.",
+    "difference_of_distances": "d(F_E,U_E) - d(F_L,U_L); requires all four valid source-conditioned F0 vectors and is descriptive, not a difference-in-differences causal estimate.",
+    "control": "For each institution and arm report d(w_source, w_C) and sector-wise w_source - w_C, plus common-context/stated-choice diagnostics. Larger distance from C alone is not better evidence use; similarity to C can be justified by shared data and task.",
+    "benchmark": "Report d(w,b) as deviation from the dated sector reference, not transaction turnover or institutional fidelity.",
+    "D0_F0": "Use each cell's own raw D0 and F0 only. If either vector is invalid, no valid-portfolio distance; explicitly raw component differences can still diagnose false change claims.",
+    "nulls": "A missing or invalid pair yields null plus reason, never zero distance or a replacement portfolio.",
+    "no_inference": [
+      "No population causal effect",
+      "No significance tests or bootstrap confidence intervals from five cells",
+      "No eleven-sector pseudo-replication",
+      "No inference that equal output proves erasure of institutional judgment",
+      "No inference that diverse output proves fidelity",
+      "No equivalence claim from no observed difference",
+      "No repeated-run stability claim from one run per cell"
+    ]
+  },
+  "computational_references": {
+    "role": "Diagnostic fixed allocation policies separate from the strategic AI control C; they do not read institution prose or produce strategy explanations.",
+    "equal_weight": {
+      "formula": "w_i = 1/N, with N=11 fixed eligible sector sleeves",
+      "why": "Transparent no-estimation reference; no invented return forecast, risk preference or rating conversion.",
+      "basis": "PortBench2026v6 Appendix C.4 EqW distributes capital across eligible securities. N=11 comes from the declared universe, not a fitted numeric constant."
+    },
+    "long_only_global_minimum_variance": {
+      "formula": "w_GMV in argmin_w w^T Sigma w, subject to w_i >= 0 and 1^T w = 1",
+      "inputs": "Use exactly the existing frozen eleven-sector covariance matrix, sector order, observation dates and units; record their hashes. No mu forecast, risk-aversion lambda, return floor, sector cap or future observations.",
+      "why": "A reproducible risk-focused numerical comparison within the same feasible allocation set. The common task seeks growth with trade-offs, so GMV is deliberately a narrow reference rather than its complete objective.",
+      "basis": "Markowitz1952 derives covariance-weighted variance and a long-only full-budget feasible set; PortBench2026v6 Appendix C.4 explicitly uses long-only MinVar among classical comparators.",
+      "verification": "Before interpreting a solution, check sector-order binding, matrix symmetry and positive semidefiniteness within declared numerical precision, solver completion, constraints and first-order/KKT residuals where implemented. Report solver/library/version/tolerances as engineering settings. A failure remains failure; no silent covariance repair or substitute output.",
+      "tie_and_estimation": "If multiple minima arise, document solver-selected solution and equal objective ambiguity. In-sample minimal estimated variance says nothing by itself about optimal future return, true future risk or an institution's target."
+    },
+    "not_model_input": "Calculate these references as evaluator diagnostics unless a separate pre-output protocol explicitly supplies them to every AI condition. Supplying a new numerical reference only to selected cells would change the intervention.",
+    "no_performance_claim": "Without a declared subsequent outcome window and execution/cost rules, report allocations and lookback diagnostics only. Do not call the lower-variance reference the superior strategy or a profitable investment."
+  },
+  "primary_paper_basis": [
+    {
+      "id": "hornuf2025",
+      "title": "Making GenAI Smarter: Evidence from a Portfolio Allocation Experiment",
+      "authors": "Lars Hornuf, David Streich, Niklas Tollich",
+      "version": "CESifo Working Paper 11862, 2025, official 95-page PDF",
+      "url": "https://www.ifo.de/DocDL/cesifo1_wp11862.pdf",
+      "locators": [
+        "Section 3.3",
+        "Table 3: printed page 38, physical PDF page 40",
+        "Table A1: physical PDF page 56"
+      ],
+      "verified_paper_basis": "Baseline and information treatments share investor circumstances and eligible securities; treatments add investment theory, quantitative metrics and/or qualitative reports. The paper also varies investor profiles and uses a twelve-month horizon among its tested levels.",
+      "local_adaptation": "Keep common task/market fixed and add C without institution text across both turns. The two-turn control, five cells, public sector summaries and one run per cell are local design, not replication or an adequately powered sample justified by this paper.",
+      "non_transfer": "Do not import its proprietary firm metrics or investor preferences as facts about Fidelity/UBS."
+    },
+    {
+      "id": "portbench2026v6",
+      "title": "PortBench: A Correlation-Aware, Full-Pipeline Benchmark for LLM-Driven Portfolio Management",
+      "version": "arXiv:2605.27887v6, 2026-10-09; current version history checked 2026-10-19",
+      "url": "https://arxiv.org/html/2605.27887v6",
+      "locators": [
+        "Appendix C.2 Eq.8 and asset-level covariance analysis",
+        "Appendix C.4 Classical strategies",
+        "Appendix D.4 Information ablation"
+      ],
+      "verified_paper_basis": "Separates model stages from deterministic portfolio diagnostics. Defines allocation similarity using one minus half the L1 weight difference. Uses equal-weight and long-only minimum-variance comparators. Its information ablation removes selected statistics while retaining the task.",
+      "local_adaptation": "Use the distance descriptively between raw valid outputs, and use EqW/GMV as computational references. C removes institution text only. These are not the paper's optimizer target, five-stage system or multi-asset performance evaluation.",
+      "non_transfer": "No CEPS composite weights, risk-profile limits, covariance-removal effect, execution normalization, sample size or future-performance conclusion is imported."
+    },
+    {
+      "id": "e2a2026",
+      "title": "E2A-Bench: Benchmarking Evidence-to-Action Reliability in Financial Chart Reasoning",
+      "version": "arXiv:2609.14302v1, 2026-09-13",
+      "url": "https://arxiv.org/html/2609.14302v1",
+      "locators": [
+        "Sections 3.2-3.5",
+        "Appendix A.5",
+        "Appendix C.5"
+      ],
+      "verified_paper_basis": "Constructs factual evidence anchors rather than unique trading-action truth; separates unsupported claims, rationale/action consistency and coverage. Professional annotations validate its automatic scorer, not a unique correct trading action.",
+      "local_adaptation": "Keep source facts, claimed decisions, actual weights and coverage separate; do not fabricate institutional target weights. Because LIBERA does not replicate professional scorer validation, its semantic AI coding remains unvalidated.",
+      "non_transfer": "Do not copy chart-specific directional thresholds, confidence bins or NDR composite into sector allocation."
+    },
+    {
+      "id": "pombal2026v3",
+      "title": "Self-Preference Bias in Rubric-Based Evaluation of Large Language Models",
+      "authors": "Jose Pombal, Ricardo Rei, Andre F. T. Martins",
+      "version": "arXiv:2604.06996v3, 2026-08-03; current version history checked 2026-10-19",
+      "url": "https://arxiv.org/html/2604.06996v3",
+      "locators": [
+        "Sections 1, 3, 4 and 6",
+        "Appendix F: judge error correlation"
+      ],
+      "verified_paper_basis": "Finds self/family preference even for objectively verifiable rubric items. Granular rubric assessment and ensembles do not eliminate this bias. Rubric-based assessment is less susceptible than pairwise comparison in its experiments, without immunity or automatic calibration.",
+      "local_adaptation": "Use code for code-verifiable facts and single-output, evidence-linked categories for semantics. Disclose shared-family reviewers and retain disagreement. Do not treat three AI checks or a different-family reviewer as validated independent consensus.",
+      "non_transfer": "Its bias magnitudes are not estimates for this evaluator, Qwen outputs or financial task."
+    },
+    {
+      "id": "shi2025",
+      "title": "Judging the Judges: A Systematic Study of Position Bias in LLM-as-a-Judge",
+      "authors": "Lin Shi, Chiyu Ma, Wenhua Liang, Xingjian Diao, Weicheng Ma, Soroush Vosoughi",
+      "version": "IJCNLP-AACL 2025 proceedings, pages 292-314",
+      "url": "https://aclanthology.org/2025.ijcnlp-long.18.pdf",
+      "locators": [
+        "Abstract",
+        "Sections defining repetition stability, position consistency and preference fairness"
+      ],
+      "verified_paper_basis": "Studies position bias in pairwise/listwise judging and finds substantial variation across judges, candidates and tasks. Repetition and answer-order consistency are distinct from correctness.",
+      "local_adaptation": "Avoid side-by-side winner selection as the primary semantic instrument; code each output first using identical questions. Mask arm/order metadata while stating masking is imperfect.",
+      "non_transfer": "Single-output coding is a local risk-reduction choice; the paper does not validate this rubric or guarantee absence of order/context bias."
+    },
+    {
+      "id": "panickssery2024",
+      "title": "LLM Evaluators Recognize and Favor Their Own Generations",
+      "authors": "Arjun Panickssery, Samuel R. Bowman, Shi Feng",
+      "version": "NeurIPS 2024 proceedings",
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2024/file/7f1f0218e45f5414c79c0679633e47bc-Paper-Conference.pdf",
+      "locators": [
+        "Abstract and controlled self-recognition/self-preference experiments"
+      ],
+      "verified_paper_basis": "Connects self-recognition ability with self-preference in evaluated models. Withholding the explicit model name is not proof that an evaluator cannot recognize familiar output.",
+      "local_adaptation": "Record evaluator/generator relationship and do not describe label masking as full independence. Prefer an evaluator outside the generating cohort where available.",
+      "non_transfer": "No self-preference rate or causal effect is estimated for LIBERA by citing this paper."
+    },
+    {
+      "id": "clqt2026v3",
+      "title": "CLQT: A Closed-Loop, Cost-Aware, Strategy-Consistent Benchmark for Diagnostic Evaluation of LLM Portfolio-Management Agents",
+      "authors": "Bo Qu, Mingguang Chen",
+      "version": "arXiv:2606.29771v3, 2026-09-12; current version history checked 2026-10-19",
+      "url": "https://arxiv.org/html/2606.29771v3",
+      "locators": [
+        "Sections 6.4.1 and 6.5",
+        "Limitations: judge independence and validity",
+        "Appendix F.5"
+      ],
+      "verified_paper_basis": "Separates mechanical signal/action agreement from a held-out judge's allocation coherence assessment and excludes profitability from that question. Its latest revision includes blinded human anchoring and acknowledges that the human rater is an author, not an independent expert panel.",
+      "local_adaptation": "Use auditable stated-reason/weight links separately from arithmetic and outcomes. LIBERA lacks this human-anchoring study, so it cannot inherit the paper's judge-validity evidence.",
+      "non_transfer": "No 1-5 scale, half/half composite, reported judge correlation, return ranking or repeated-run claim is imported."
+    },
+    {
+      "id": "laban2025",
+      "title": "LLMs Get Lost In Multi-Turn Conversation",
+      "version": "arXiv:2505.06120v1",
+      "url": "https://arxiv.org/html/2505.06120v1",
+      "locators": [
+        "Recap and Snowball comparison",
+        "Appendix M",
+        "Appendix N"
+      ],
+      "verified_paper_basis": "Evaluates repeated recapitulation of supplied information and discusses residual unreliability under zero-temperature decoding.",
+      "local_adaptation": "Retain full own draft/history and identify E/L as a workflow contrast. One run per cell does not measure repeatability even with fixed decoding.",
+      "non_transfer": "No optimal number of turns, effect size or sufficiency of one run follows for this financial task."
+    },
+    {
+      "id": "markowitz1952",
+      "title": "Portfolio Selection",
+      "authors": "Harry Markowitz",
+      "version": "Journal of Finance 7(1), 1952, pages 77-91; original article scan",
+      "url": "https://traders.berkeley.edu/papers/Markowitz.pdf",
+      "publisher_url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1540-6261.1952.tb01525.x",
+      "locators": [
+        "Printed pages 78-82: long-only budget and covariance variance",
+        "Printed page 84: minimum-variance point"
+      ],
+      "verified_paper_basis": "Derives portfolio variance from asset covariances and explains why minimum variance and maximum expected return need not coincide under the long-only full-budget set.",
+      "local_adaptation": "Use the standard w^T Sigma w objective for the narrow GMV reference; modern precedent is PortBench2026v6. The frozen sample covariance is an estimate, not known forward-looking risk.",
+      "non_transfer": "No historical covariance window, desired risk, unique institutional strategy or performance guarantee is supplied by the original formula."
+    }
+  ],
+  "source_packet_cross_check": {
+    "all_four_selected_sections_publish_numeric_target_weights": false,
+    "fidelity_definition_locator": "Original PDF page 2; strategist views may differ from Fidelity firm-wide; hypothetical broad-market-relative tilts; investor goals and risk tolerance affect weights.",
+    "ubs_definition_locator": "Original PDF page 27; house-view preferences and twelve-month assessments; tactical allocations can differ due to portfolio construction, concentration and borrowing constraints.",
+    "source_files": [
+      "data/sector_documents/packets/pilot/fidelity_q2_2026.json",
+      "data/sector_documents/packets/pilot/ubs_june_2026.json",
+      "data/sector_documents/packets/main/fidelity_q3_2026.json",
+      "data/sector_documents/packets/main/ubs_july_2026.json"
+    ],
+    "original_excerpt_file": "research/evaluator_only/v48_source_comparison_original_excerpts_20261018.json",
+    "this_review_scope": "Read packet fields and original extracted definitions. This report does not claim new visual verification of every colored rating row; a separate source audit must accurately record its own checks."
+  },
+  "specific_protocol_changes": [
+    {
+      "field": "status/blind_review",
+      "change": "Replace pending mandatory two-human review with prespecified AI-assisted descriptive evaluation and explicit no-human-validation limitation; preserve old v491 files."
+    },
+    {
+      "field": "cases/denominators",
+      "change": "Declare main five finals, fifty-five sector rows and maximum ten calls; keep source-fidelity denominator to four source-conditioned finals and common metrics to all five."
+    },
+    {
+      "field": "dimensions.evidence_decision_link/context_use",
+      "change": "Replace human-evaluated wording with unvalidated AI-assisted row-level coding; require quote, source anchor, weight/delta, category and uncertainty."
+    },
+    {
+      "field": "dimensions.source_fidelity",
+      "change": "Keep source-specific scales and mark C not applicable; never award or penalize C for absent institutional source interpretation."
+    },
+    {
+      "field": "dimensions.numeric_fidelity",
+      "change": "Explicitly exclude institutional target-weight accuracy; verify factual numbers, formula lineage and actual change assertions."
+    },
+    {
+      "field": "descriptive_comparisons",
+      "change": "Add C distances and component differences, label C as shared, retain E/L and between-source distances, and keep null handling and no causal/significance claims."
+    },
+    {
+      "field": "computational_references",
+      "change": "Add fixed equal-weight and long-only GMV evaluator diagnostics with frozen covariance provenance, distinct from C and from investment truth."
+    },
+    {
+      "field": "interpretation/not_identified",
+      "change": "Add unvalidated AI semantics, no independent-human consensus, residual bias despite masking, one shared C, prompt-length/exposure confounding and no repeated-run stability."
+    },
+    {
+      "field": "pre_generation_freeze",
+      "change": "Bind actual v492 inputs, source contrasts, rubric, control presence/absence, model/runtime and evaluator identity metadata before pilot; record any subsequent development amendment separately."
+    }
+  ],
+  "review_checks": [
+    {
+      "round": 1,
+      "kind": "primary_literature_and_version_check",
+      "result": "PASS_WITH_SCOPE_LIMITS",
+      "detail": "Read official papers and checked current histories for PortBench v6, rubric self-preference v3 and CLQT v3. Discarded older-version conclusions where current wording was narrower. Explicitly separate paper findings from local design."
+    },
+    {
+      "round": 2,
+      "kind": "construct_and_topic_check",
+      "result": "PASS_WITH_SCOPE_LIMITS",
+      "detail": "The measured chain is public source meaning -> stated choice -> actual sector weights under common market context. C supplies the strategic no-institution comparison; GMV/EqW are numerical diagnostics. No invented institution weight vector, utility or performance target."
+    },
+    {
+      "round": 3,
+      "kind": "denominator_and_inference_check",
+      "result": "PASS_WITH_SCOPE_LIMITS",
+      "detail": "Five F0 outputs do not become fifty-five independent samples; D0 is process evidence; shared C is not duplicated; source-specific metrics exclude C; invalid outputs remain denominators; human validation remains false; main remains gated by pilot."
+    }
+  ],
+  "files_read_sha256": [
+    {
+      "path": "research/v491_evaluation_protocol_20261019.json",
+      "sha256": "b9ff937ca478062c79af1c1065a2dbcb87cea39b3f4c917dd5ccdcd9b0a6d5b6"
+    },
+    {
+      "path": "research/v491_human_review_template_20261019.json",
+      "sha256": "54ea9c9f1ab6a2780e8532b50a1558badbf1dea9d7abf0ddc595c900101431e7"
+    },
+    {
+      "path": "research/v491_mandate_basis_20261019.json",
+      "sha256": "141744fabbb44d4a91a47449b44ad186931a4cb998fc555dc9da3d642e07dd6b"
+    },
+    {
+      "path": "research/v49_methods_review_20261019.json",
+      "sha256": "99baebf4660b665240bd60de388ea51411016d09d6a7a41a9ce6e740a3c34e97"
+    },
+    {
+      "path": "research/evaluator_only/v48_source_comparison_original_excerpts_20261018.json",
+      "sha256": "5d9037c3dacf98bed8bf31a2cd36e0705dc0b33bc4b3bc8bab9be263ab49773f"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/common_context.json",
+      "sha256": "67d94bdee3d38854097970cdfb74f40e2557a11e22b016e9a68374e6f13cb96f"
+    },
+    {
+      "path": "data/sector_documents/packets/pilot/fidelity_q2_2026.json",
+      "sha256": "2f506f346ebfc1be0f327163eb016dcec649e6301e4494d6a9230ab86c28d406"
+    },
+    {
+      "path": "data/sector_documents/packets/pilot/ubs_june_2026.json",
+      "sha256": "a5cadf72d68cafe46244c9bf8e500da04e1c58aef12eaf493e76408654e6148a"
+    },
+    {
+      "path": "data/sector_documents/packets/main/fidelity_q3_2026.json",
+      "sha256": "3f84c5d1e1302238fd270b41f1b9bcf86e3ae5c8c44a74f7a49a19941407d297"
+    },
+    {
+      "path": "data/sector_documents/packets/main/ubs_july_2026.json",
+      "sha256": "49f47f8c628b53231cdfb09fa90eabfa0a5d271fb6a439e75360bdb97db29d30"
+    }
+  ],
+  "follow_up_runtime_review": "Pending new v492 implementation; separately verify conditional source visibility, same two-stage C workflow, full own-history binding, schema/format equality, raw-outcome preservation, capacity checks, and pilot-only execution before the first pilot."
+}

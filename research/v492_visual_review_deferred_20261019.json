@@ -1,0 +1,33 @@
+{
+  "protocol_version": "4.9.2",
+  "status": "DEFERRED_DUE_TO_MACHINE_CONTENTION",
+  "recorded_at_utc": "2026-10-19T08:06:06.377889+00:00",
+  "scope": "Visual render and actual image inspection deferred; prior text/DOM review remains a separate completed artifact.",
+  "input_refs": [
+    {
+      "path": "plan/LIBERA_대조군포함_실험계획_v4.9.2_20261019.html",
+      "sha256": "a3c21e64e9e30c87dc6b39d4311b57e0475e9fe85cc6bab9fd6794032ae08c83"
+    },
+    {
+      "path": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "sha256": "680f33b8cc58712c876b588ccc6f2004a4525cf6eded2f6d7431561cb2343123"
+    }
+  ],
+  "frozen_HTML_hashes_unchanged": true,
+  "observed_capture_files": [],
+  "observed_owned_profile_directories": [],
+  "launch_boundary_evidence": "No capture files or v492_frozen_ profile-root directory exist. The submitted helper creates the artifact directory and unique profile root before its first Chrome Popen and never deletes those directories. This supports the inference that cancellation occurred before any owned Chrome launch; a process inventory was not completed and is not misrepresented as such.",
+  "capture_helper_session": 70997,
+  "capture_helper_cancellation": {
+    "method": "Ctrl+C sent to existing own exec session",
+    "reported_exit_code": 1,
+    "complete_capture_log_observed": false
+  },
+  "cleanup_status": "Owned Chrome command-line inventory did not complete; zero remaining browser processes is not certified. PowerShell inventory was cancelled. Python alternative failed because psutil is not installed. No generic process-name termination was attempted.",
+  "visual_inspection_completed": false,
+  "visual_pass_claim": false,
+  "model_calls_by_this_task": 0,
+  "reason": "Concurrent native pilot and severe system response delays. Parent instructed cancellation of own helper and deferral until pilot idle.",
+  "runtime_interpretation": "The attempted visual helper overlapped pilot execution; this interval is not a controlled isolated throughput benchmark.",
+  "next_action": "When pilot is idle, verify only the unique v492_frozen_ profile process ownership and cleanup, then capture and inspect the frozen HTML without editing it."
+}

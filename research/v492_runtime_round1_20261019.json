@@ -1,0 +1,71 @@
+{
+  "round": 1,
+  "protocol_version": "4.9.2",
+  "status": "PASS",
+  "recorded_at_utc": "2026-10-19T07:40:46.693726+00:00",
+  "scope": "Five-case pilot runtime and delegated-AI pre-output review/freeze gate; synthetic ephemeral fixtures only",
+  "model_generation_requests": 0,
+  "main_model_calls": 0,
+  "pilot_model_calls": 0,
+  "independent_human_review_completed": false,
+  "tests": [
+    {
+      "path": "research/test_sector_v492_runtime.py",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ".................................\n----------------------------------------------------------------------\nRan 33 tests in 20.029s\n\nOK\n"
+    },
+    {
+      "path": "research/test_sector_v492_review_gate.py",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ".............\n----------------------------------------------------------------------\nRan 13 tests in 1.177s\n\nOK\n"
+    }
+  ],
+  "artifact_refs": [
+    {
+      "path": "research/sector_v492_runtime.py",
+      "sha256": "cc8285db4d561aea10878db336771752965f4517405a93a1574b18f2fa300e04"
+    },
+    {
+      "path": "research/sector_v492_review_gate.py",
+      "sha256": "a93b575104509e9810663ec4feca3e6bbb6963ca03dd988b451e06744e23a092"
+    },
+    {
+      "path": "research/prepare_sector_v492.py",
+      "sha256": "bc60c7ecb972ad2ce0d9df3f3e41f715264dbeb6a4b3a3838a13216a5c56b098"
+    },
+    {
+      "path": "research/sector_v492_contract.py",
+      "sha256": "f77d1ddec9630a4c7edbf3928d298b7b05094345996ece1cf53d91fc40171a21"
+    },
+    {
+      "path": "research/test_sector_v492_runtime.py",
+      "sha256": "57e59791bd35749e6b6628104559e9a6c688a66f044f6f21ce5a455b478d59b3"
+    },
+    {
+      "path": "research/test_sector_v492_review_gate.py",
+      "sha256": "b32f220456b94cbffd6f3025d71651249ae49d07a5b6be89ec315b54060b4156"
+    },
+    {
+      "path": "data/sector_protocol/v492_design_20261019/prepared/preparation_manifest.json",
+      "sha256": "0cec3bf9b2d5837bb9e0d73ad7fb0f74259bdb17a0bdd6084c71ffc06b933c6e"
+    },
+    {
+      "path": "data/sector_protocol/v492_design_20261019/prompt_contract.json",
+      "sha256": "b03af4efc18358ec23eaf86a25340666aa6409c4a8386eab11c713c65ac0b65d"
+    }
+  ],
+  "author_review": [
+    "Explicit user-delegated AI review replaces mandatory human completion without fabricating human signatures",
+    "Exact source/evaluation/prompt/runtime/code hashes frozen before coordinator and worker start",
+    "Five fixed cases: four source E/L cells plus one separately generated never-source C; maximum10 generations",
+    "All five F0 requests use the same conditional instruction and own actual D0+arithmetic; E/L alone receive source refresh",
+    "Original4 D0 messages unchanged; L/C draft messages identical but require separate executions",
+    "Native exact tokens plus8192 output reserve; no shortening, normalization, retry or repair",
+    "Each stage deadline4500 seconds based on measured CPU scenario, not a paper optimum or performance guarantee",
+    "Supervisor permits901seconds and interrupts4501seconds in simulated monotonic-time tests",
+    "CPU8/context65536 fixed before output; no main entrypoint",
+    "C output hallucinations remain measured errors, not reasons to inject source data"
+  ]
+}

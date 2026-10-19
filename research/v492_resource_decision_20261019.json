@@ -1,0 +1,32 @@
+{
+  "recorded_at_utc": "2026-10-19T07:40:16.010005+00:00",
+  "scope": "Engineering ceiling selected before any v492 research output; not a paper-derived behavioral parameter.",
+  "prior_ceiling_seconds": 900,
+  "new_stage_ceiling_seconds": 4500,
+  "model_or_research_output_allowance_changed": false,
+  "observed_metrics_ref": {
+    "path": "data/local_sector_runtime/v491_cpu_preflight_20261019/synthetic_large_input_threads8/http_0001_latency_probe/result.json",
+    "sha256": "65be33f22d9281b08a4f45984908d0c6393dc3cdc603457b297fbc080e9efb92"
+  },
+  "observed_prompt_tokens": 13380,
+  "observed_output_tokens": 6,
+  "prompt_tokens_per_second": 29.28714491708981,
+  "output_tokens_per_second": 3.6188811505146954,
+  "context": 65536,
+  "reserved_output_tokens": 8192,
+  "maximum_admissible_prompt_tokens": 57344,
+  "scenario_formula": "max_prompt / observed_prefill_rate + output_allowance / observed_decode_rate + observed_load_seconds",
+  "scenario_seconds": 4227.855147041106,
+  "rounding_choice": "Round scenario upward to75minutes as an explicitly chosen operating ceiling.",
+  "limitations": [
+    "Decode rate came from only6tokens, so extrapolation is a rough resource scenario, not a forecast or completion guarantee.",
+    "F0 size is unknown until its actual D0 and deterministic feedback exist; exact token capacity is checked then.",
+    "First-attempt outputs, failures and unattempted cells remain in the planned denominator.",
+    "Stage unloading, no retries, raw-output preservation and the same settings in all five cells remain."
+  ],
+  "maximum_generations": 10,
+  "maximum_stage_ceiling_total_hours": 12.5,
+  "ceiling_total_is_expected_runtime": false,
+  "research_generation_requests_before_decision": 0,
+  "stop_policy": "User cancellation or transport/integrity/capacity failure as declared; no success-score-based retries or selection."
+}

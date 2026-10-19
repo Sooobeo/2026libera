@@ -1,0 +1,150 @@
+{
+  "artifact_kind": "independent_AI_code_and_methods_review_before_v492_pilot",
+  "recorded_at_utc": "2026-10-19T07:43:11.654986+00:00",
+  "status": "PASS",
+  "model_calls": 0,
+  "HTTP_calls": 0,
+  "human_review_completed": false,
+  "reviewer_role": "Separate Codex task; not an independent human or validated semantic scorer",
+  "checks": [
+    {
+      "id": "critical_capacity_render_generation_cleanup_functions_unchanged",
+      "pass": true,
+      "functions": [
+        "check_token_capacity",
+        "worker",
+        "supervise",
+        "run_transport",
+        "expected_stage_directory",
+        "validate_worker_location"
+      ]
+    },
+    {
+      "id": "persisted_D0_provenance_only_gate_field_renamed",
+      "pass": true
+    },
+    {
+      "id": "C_two_stages_use_saved_own_D0_with_no_source_evidence",
+      "pass": true
+    },
+    {
+      "id": "C_F0_cannot_inject_institution_document",
+      "pass": true,
+      "rejection": "API body differs from exact assigned request, controls or retained history"
+    },
+    {
+      "id": "C_F0_cannot_strip_own_D0_bytes",
+      "pass": true,
+      "rejection": "API body differs from exact assigned request, controls or retained history"
+    },
+    {
+      "id": "C_F0_self_consistent_replacement_cannot_override_saved_D0",
+      "pass": true,
+      "rejection": "Raw draft must equal the completed pinned D0 response content exactly"
+    },
+    {
+      "id": "C_F0_cannot_reuse_byte_identical_L_D0_artifacts",
+      "pass": true,
+      "rejection": "Prior draft must be the same run/case D0 artifact with an exact hash"
+    },
+    {
+      "id": "main_case_unavailable_even_under_valid_runtime",
+      "pass": true,
+      "rejection": "Only declared pilot D0/F0 stages are permitted"
+    },
+    {
+      "id": "JSON_boolean_cannot_impersonate_CPU_integer_zero",
+      "pass": true,
+      "rejection": "API body differs from exact assigned request, controls or retained history"
+    },
+    {
+      "id": "evaluation_denominators_keep_shared_C_and_source_fidelity_distinct",
+      "pass": true
+    }
+  ],
+  "test_suite": {
+    "returncode": 0,
+    "test_count": 46,
+    "stdout": "",
+    "stderr": "test_backend_reference_hash_is_verified (test_sector_v492_runtime.RuntimeTests.test_backend_reference_hash_is_verified) ... ok\ntest_blank_AI_review_receipt_is_rejected (test_sector_v492_runtime.RuntimeTests.test_blank_AI_review_receipt_is_rejected) ... ok\ntest_body_boolean_zero_is_not_integer_zero (test_sector_v492_runtime.RuntimeTests.test_body_boolean_zero_is_not_integer_zero) ... ok\ntest_controller_metadata_cannot_enter_messages (test_sector_v492_runtime.RuntimeTests.test_controller_metadata_cannot_enter_messages) ... ok\ntest_declared_4500_second_ceiling_rejects_old_900 (test_sector_v492_runtime.RuntimeTests.test_declared_4500_second_ceiling_rejects_old_900) ... ok\ntest_draft_cannot_accept_prior_draft_reference (test_sector_v492_runtime.RuntimeTests.test_draft_cannot_accept_prior_draft_reference) ... ok\ntest_exact_capacity_includes_full_output_allowance (test_sector_v492_runtime.RuntimeTests.test_exact_capacity_includes_full_output_allowance) ... ok\ntest_final_cannot_be_started_with_only_caller_supplied_draft (test_sector_v492_runtime.RuntimeTests.test_final_cannot_be_started_with_only_caller_supplied_draft) ... ok\ntest_final_prior_response_hash_mismatch_denied (test_sector_v492_runtime.RuntimeTests.test_final_prior_response_hash_mismatch_denied) ... ok\ntest_final_prior_response_other_case_denied (test_sector_v492_runtime.RuntimeTests.test_final_prior_response_other_case_denied) ... ok\ntest_final_request_must_retain_exact_own_history (test_sector_v492_runtime.RuntimeTests.test_final_request_must_retain_exact_own_history) ... ok\ntest_final_requires_saved_completion_and_continuation (test_sector_v492_runtime.RuntimeTests.test_final_requires_saved_completion_and_continuation) ... ok\ntest_final_saved_draft_spec_must_name_same_case (test_sector_v492_runtime.RuntimeTests.test_final_saved_draft_spec_must_name_same_case) ... ok\ntest_final_saved_response_requires_pinned_model_and_normal_stop (test_sector_v492_runtime.RuntimeTests.test_final_saved_response_requires_pinned_model_and_normal_stop) ... ok\ntest_final_self_consistent_changed_draft_cannot_replace_saved_response (test_sector_v492_runtime.RuntimeTests.test_final_self_consistent_changed_draft_cannot_replace_saved_response) ... ok\ntest_five_separate_cases_ten_calls_no_final_repair (test_sector_v492_runtime.RuntimeTests.test_five_separate_cases_ten_calls_no_final_repair) ... ok\ntest_fixed_options_cannot_drift (test_sector_v492_runtime.RuntimeTests.test_fixed_options_cannot_drift) ... ok\ntest_integrity_failure_stops_all_following_cases (test_sector_v492_runtime.RuntimeTests.test_integrity_failure_stops_all_following_cases) ... ok\ntest_late_source_injection_denied_before_transport (test_sector_v492_runtime.RuntimeTests.test_late_source_injection_denied_before_transport) ... ok\ntest_main_case_denied (test_sector_v492_runtime.RuntimeTests.test_main_case_denied) ... ok\ntest_oversize_actual_final_prevents_generation_and_is_capacity_failure (test_sector_v492_runtime.RuntimeTests.test_oversize_actual_final_prevents_generation_and_is_capacity_failure) ... ok\ntest_pilot_preparation_cannot_bypass_review_gate (test_sector_v492_runtime.RuntimeTests.test_pilot_preparation_cannot_bypass_review_gate) ... ok\ntest_pilot_run_rechecks_review_gate (test_sector_v492_runtime.RuntimeTests.test_pilot_run_rechecks_review_gate) ... ok\ntest_preexisting_cancel_prevents_all_generation (test_sector_v492_runtime.RuntimeTests.test_preexisting_cancel_prevents_all_generation) ... ok\ntest_raw_sum_failure_and_bad_citations_do_not_censor_final (test_sector_v492_runtime.RuntimeTests.test_raw_sum_failure_and_bad_citations_do_not_censor_final) ... ok\ntest_second_execution_is_not_a_resume_or_retry (test_sector_v492_runtime.RuntimeTests.test_second_execution_is_not_a_resume_or_retry) ... ok\ntest_supervisor_does_not_apply_legacy_900_second_cutoff (test_sector_v492_runtime.RuntimeTests.test_supervisor_does_not_apply_legacy_900_second_cutoff) ... ok\ntest_supervisor_stops_at_declared_4500_second_cutoff (test_sector_v492_runtime.RuntimeTests.test_supervisor_stops_at_declared_4500_second_cutoff) ... ok\ntest_token_counter_rejects_estimates_or_other_prompt (test_sector_v492_runtime.RuntimeTests.test_token_counter_rejects_estimates_or_other_prompt) ... ok\ntest_unreadable_draft_skips_only_its_final (test_sector_v492_runtime.RuntimeTests.test_unreadable_draft_skips_only_its_final) ... ok\ntest_worker_location_must_match_same_run_case_and_stage (test_sector_v492_runtime.RuntimeTests.test_worker_location_must_match_same_run_case_and_stage) ... ok\ntest_worker_requires_exact_review_gate_hash (test_sector_v492_runtime.RuntimeTests.test_worker_requires_exact_review_gate_hash) ... ok\ntest_worker_spec_cannot_bypass_review_gate (test_sector_v492_runtime.RuntimeTests.test_worker_spec_cannot_bypass_review_gate) ... ok\ntest_changed_code_after_freeze_denies (test_sector_v492_review_gate.ReviewGateTests.test_changed_code_after_freeze_denies) ... ok\ntest_changed_evaluation_after_freeze_denies (test_sector_v492_review_gate.ReviewGateTests.test_changed_evaluation_after_freeze_denies) ... ok\ntest_control_case_cannot_be_removed (test_sector_v492_review_gate.ReviewGateTests.test_control_case_cannot_be_removed) ... ok\ntest_fake_human_completion_claim_denies (test_sector_v492_review_gate.ReviewGateTests.test_fake_human_completion_claim_denies) ... ok\ntest_frozen_runtime_must_match_controls (test_sector_v492_review_gate.ReviewGateTests.test_frozen_runtime_must_match_controls) ... ok\ntest_main_cannot_be_enabled (test_sector_v492_review_gate.ReviewGateTests.test_main_cannot_be_enabled) ... ok\ntest_missing_source_review_row_denies (test_sector_v492_review_gate.ReviewGateTests.test_missing_source_review_row_denies) ... ok\ntest_original_user_instruction_provenance_required (test_sector_v492_review_gate.ReviewGateTests.test_original_user_instruction_provenance_required) ... ok\ntest_pending_material_revision_denies (test_sector_v492_review_gate.ReviewGateTests.test_pending_material_revision_denies) ... ok\ntest_source_review_after_freeze_denies (test_sector_v492_review_gate.ReviewGateTests.test_source_review_after_freeze_denies) ... ok\ntest_source_review_without_original_locator_denies (test_sector_v492_review_gate.ReviewGateTests.test_source_review_without_original_locator_denies) ... ok\ntest_synthetic_complete_AI_review_requires_no_human_signatures (test_sector_v492_review_gate.ReviewGateTests.test_synthetic_complete_AI_review_requires_no_human_signatures) ... ok\ntest_worker_requires_coordinator_declaration_after_freeze (test_sector_v492_review_gate.ReviewGateTests.test_worker_requires_coordinator_declaration_after_freeze) ... ok\n\n----------------------------------------------------------------------\nRan 46 tests in 51.855s\n\nOK\n",
+    "scope": "Synthetic fixtures only; no formal research response"
+  },
+  "source_refs": [
+    {
+      "path": "research/sector_v492_runtime.py",
+      "sha256": "cc8285db4d561aea10878db336771752965f4517405a93a1574b18f2fa300e04"
+    },
+    {
+      "path": "research/sector_v492_review_gate.py",
+      "sha256": "a93b575104509e9810663ec4feca3e6bbb6963ca03dd988b451e06744e23a092"
+    },
+    {
+      "path": "research/prepare_sector_v492.py",
+      "sha256": "bc60c7ecb972ad2ce0d9df3f3e41f715264dbeb6a4b3a3838a13216a5c56b098"
+    },
+    {
+      "path": "research/sector_v492_contract.py",
+      "sha256": "f77d1ddec9630a4c7edbf3928d298b7b05094345996ece1cf53d91fc40171a21"
+    },
+    {
+      "path": "research/test_sector_v492_runtime.py",
+      "sha256": "57e59791bd35749e6b6628104559e9a6c688a66f044f6f21ce5a455b478d59b3"
+    },
+    {
+      "path": "research/test_sector_v492_review_gate.py",
+      "sha256": "b32f220456b94cbffd6f3025d71651249ae49d07a5b6be89ec315b54060b4156"
+    },
+    {
+      "path": "research/test_sector_v492_contract.py",
+      "sha256": "e0352d51e9d6ecfae74bfc80698840f512dbc4fedfa6f7bb2cc2b2b150c856c6"
+    },
+    {
+      "path": "research/sector_v491_runtime.py",
+      "sha256": "a542a53ef7a9a035a3641e1e9637d3eb5bd442677318a82434e245bb1e5dc649"
+    },
+    {
+      "path": "research/sector_v491_contract.py",
+      "sha256": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397"
+    },
+    {
+      "path": "research/sector_v491_tokenizer.py",
+      "sha256": "1e25d31d18e659e90186d2a598d0bcad77824d0dbc5a0e76beed692a8373e440"
+    },
+    {
+      "path": "research/verify_v492_runtime_independent.py",
+      "sha256": "2eb0a8052956d3f840acbcfdf3d7a2d929a9fea6e70cdbe6bf800b8b1504b7ff"
+    }
+  ],
+  "author_round1_ref": {
+    "path": "research/v492_runtime_round1_20261019.json",
+    "sha256": "1f25fee8bd72921a3471a1c549b4cc03326e3ec2c10099acbcf023b6bf9718ab"
+  },
+  "prepared_manifest_ref": {
+    "path": "data/sector_protocol/v492_design_20261019/prepared/preparation_manifest.json",
+    "sha256": "0cec3bf9b2d5837bb9e0d73ad7fb0f74259bdb17a0bdd6084c71ffc06b933c6e"
+  },
+  "evaluation_protocol_ref": {
+    "path": "research/v492_evaluation_protocol_20261019.json",
+    "sha256": "94597a5bfff3fc45f75832b2d59751642742e0ef852a67657002237f9f94bcd3"
+  },
+  "methods_review_ref": {
+    "path": "research/v492_evaluation_methods_review_20261019.json",
+    "sha256": "f828fdffd75b8e7981530fe0df8f2b00320cf7433763de9d2a37ab66440830f3"
+  },
+  "contract_verification_ref": {
+    "path": "research/v492_contract_verification_20261019.json",
+    "sha256": "f95df55bc923dd20fa779fe3b7ba3c4638e86f0a564ab5cad1b37f33f4667189"
+  },
+  "methodological_acceptance": {
+    "split_specific_preoutput_source_review": "Accepted amendment to the earlier report recommendation. Common rubric/formulas and source selection must be fixed before outputs; each split's source contrasts precede that split's outputs. Disclose if main source contrast review follows pilot outputs.",
+    "C": "Matched-stage source-free strategic AI control; one shared C, not two independent controls.",
+    "computation": "EqW/GMV are diagnostic policies, not institution truth or future-performance winners.",
+    "semantics": "AI-assisted evidence-linked coding remains unvalidated; no human agreement is claimed."
+  },
+  "limitations": [
+    "This checks code and offline contracts, not real inference feasibility or semantic correctness.",
+    "A final real gate/freeze receipt and live runtime pin must still be verified by the coordinator before generation.",
+    "Persisted D0 hashes prevent accidental substitution, not deliberate forgery of an entire artifact tree.",
+    "No main endpoint is supplied; pilot evidence cannot be relabeled as main or population causal evidence."
+  ]
+}

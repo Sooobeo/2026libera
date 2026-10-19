@@ -1,0 +1,391 @@
+{
+  "artifact_kind": "v492_contract_offline_three_stage_verification",
+  "recorded_at_utc": "2026-10-19T07:37:51.225632+00:00",
+  "status": "PASS",
+  "model_calls": 0,
+  "network_calls": 0,
+  "synthetic_outputs_only": true,
+  "independent_human_review": false,
+  "round1": {
+    "kind": "16_adversarial_contract_tests",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": "test_C_D0_is_byte_identical_to_both_source_L_D0 (test_sector_v492_contract.Contract492Tests.test_C_D0_is_byte_identical_to_both_source_L_D0) ... ok\ntest_C_cannot_receive_packet_and_E_L_require_one (test_sector_v492_contract.Contract492Tests.test_C_cannot_receive_packet_and_E_L_require_one) ... ok\ntest_C_final_cannot_discard_an_early_source_packet (test_sector_v492_contract.Contract492Tests.test_C_final_cannot_discard_an_early_source_packet) ... ok\ntest_C_hallucinated_source_is_measured_not_censored_or_supplied_as_fact (test_sector_v492_contract.Contract492Tests.test_C_hallucinated_source_is_measured_not_censored_or_supplied_as_fact) ... ok\ntest_C_has_same_four_message_two_turn_structure_and_no_source (test_sector_v492_contract.Contract492Tests.test_C_has_same_four_message_two_turn_structure_and_no_source) ... ok\ntest_C_malformed_draft_stops_without_constructing_F0 (test_sector_v492_contract.Contract492Tests.test_C_malformed_draft_stops_without_constructing_F0) ... ok\ntest_C_preserves_entire_own_raw_D0_whitespace_and_invalid_sum (test_sector_v492_contract.Contract492Tests.test_C_preserves_entire_own_raw_D0_whitespace_and_invalid_sum) ... ok\ntest_C_rejects_even_null_institution_key_in_D0 (test_sector_v492_contract.Contract492Tests.test_C_rejects_even_null_institution_key_in_D0) ... ok\ntest_C_response_has_no_source_expectation_and_semantics_unvalidated (test_sector_v492_contract.Contract492Tests.test_C_response_has_no_source_expectation_and_semantics_unvalidated) ... ok\ntest_E_final_cannot_switch_source (test_sector_v492_contract.Contract492Tests.test_E_final_cannot_switch_source) ... ok\ntest_all_five_D0_common_inputs_and_schema_equal (test_sector_v492_contract.Contract492Tests.test_all_five_D0_common_inputs_and_schema_equal) ... ok\ntest_control_selection_does_not_read_source_corpus (test_sector_v492_contract.Contract492Tests.test_control_selection_does_not_read_source_corpus) ... ok\ntest_real_frozen_common_inputs_C_equal_all_four_L_and_no_institution_evidence (test_sector_v492_contract.Contract492Tests.test_real_frozen_common_inputs_C_equal_all_four_L_and_no_institution_evidence) ... ok\ntest_same_conditional_F0_task_and_feedback_shape_all_arms (test_sector_v492_contract.Contract492Tests.test_same_conditional_F0_task_and_feedback_shape_all_arms) ... ok\ntest_same_source_packet_repeated_E_L_final (test_sector_v492_contract.Contract492Tests.test_same_source_packet_repeated_E_L_final) ... ok\ntest_schema_json_types_and_extra_message_keys_not_silently_accepted (test_sector_v492_contract.Contract492Tests.test_schema_json_types_and_extra_message_keys_not_silently_accepted) ... ok\n\n----------------------------------------------------------------------\nRan 16 tests in 0.247s\n\nOK\n"
+  },
+  "round2": {
+    "kind": "real_public_inputs_old_E_L_regression_with_synthetic_drafts",
+    "cases": [
+      {
+        "source_id": "fidelity_q2_2026",
+        "arm": "E",
+        "D0_identical": true,
+        "F0_identical_except_declared_contract_version": true,
+        "raw_invalid_sum_retained": true
+      },
+      {
+        "source_id": "fidelity_q2_2026",
+        "arm": "L",
+        "D0_identical": true,
+        "F0_identical_except_declared_contract_version": true,
+        "raw_invalid_sum_retained": true
+      },
+      {
+        "source_id": "ubs_june_2026",
+        "arm": "E",
+        "D0_identical": true,
+        "F0_identical_except_declared_contract_version": true,
+        "raw_invalid_sum_retained": true
+      },
+      {
+        "source_id": "ubs_june_2026",
+        "arm": "L",
+        "D0_identical": true,
+        "F0_identical_except_declared_contract_version": true,
+        "raw_invalid_sum_retained": true
+      },
+      {
+        "source_id": "fidelity_q3_2026",
+        "arm": "E",
+        "D0_identical": true,
+        "F0_identical_except_declared_contract_version": true,
+        "raw_invalid_sum_retained": true
+      },
+      {
+        "source_id": "fidelity_q3_2026",
+        "arm": "L",
+        "D0_identical": true,
+        "F0_identical_except_declared_contract_version": true,
+        "raw_invalid_sum_retained": true
+      },
+      {
+        "source_id": "ubs_july_2026",
+        "arm": "E",
+        "D0_identical": true,
+        "F0_identical_except_declared_contract_version": true,
+        "raw_invalid_sum_retained": true
+      },
+      {
+        "source_id": "ubs_july_2026",
+        "arm": "L",
+        "D0_identical": true,
+        "F0_identical_except_declared_contract_version": true,
+        "raw_invalid_sum_retained": true
+      }
+    ]
+  },
+  "round3": {
+    "kind": "source_free_control_and_prior_artifact_integrity",
+    "C_D0_equals_four_L_inputs": true,
+    "institution_evidence_ids_in_C": [],
+    "prior_delivery_files_unchanged": [
+      {
+        "path": ".gitattributes",
+        "unchanged": true
+      },
+      {
+        "path": ".gitignore",
+        "unchanged": true
+      },
+      {
+        "path": "data/sector_context/v491_20261019/build_market_context.py",
+        "unchanged": true
+      },
+      {
+        "path": "data/sector_context/v491_20261019/common_context.json",
+        "unchanged": true
+      },
+      {
+        "path": "data/sector_context/v491_20261019/market_context.json",
+        "unchanged": true
+      },
+      {
+        "path": "data/sector_context/v491_20261019/sources/bea_gdp_20260625.extracted.txt",
+        "unchanged": true
+      },
+      {
+        "path": "data/sector_context/v491_20261019/sources/bea_gdp_20260625.pdf",
+        "unchanged": true
+      },
+      {
+        "path": "data/sector_context/v491_20261019/sources/bea_gdp_20260625.pdf.retrieval.json",
+        "unchanged": true
+      },
+      {
+        "path": "data/sector_context/v491_20261019/sources/bls_cpi_20260714.web_snapshot.extracted.txt",
+        "unchanged": true
+      },
+      {
+        "path": "data/sector_context/v491_20261019/sources/bls_cpi_20260714.web_snapshot.txt",
+        "unchanged": true
+      },
+      {
+        "path": "data/sector_context/v491_20261019/sources/bls_cpi_20260714.web_snapshot.txt.retrieval.json",
+        "unchanged": true
+      },
+      {
+        "path": "data/sector_context/v491_20261019/sources/bls_empsit_20260702.web_snapshot.extracted.txt",
+        "unchanged": true
+      },
+      {
+        "path": "data/sector_context/v491_20261019/sources/bls_empsit_20260702.web_snapshot.txt",
+        "unchanged": true
+      },
+      {
+        "path": "data/sector_context/v491_20261019/sources/bls_empsit_20260702.web_snapshot.txt.retrieval.json",
+        "unchanged": true
+      },
+      {
+        "path": "data/sector_context/v491_20261019/sources/fed_fomc_20260617.extracted.txt",
+        "unchanged": true
+      },
+      {
+        "path": "data/sector_context/v491_20261019/sources/fed_fomc_20260617.html",
+        "unchanged": true
+      },
+      {
+        "path": "data/sector_context/v491_20261019/sources/fed_fomc_20260617.html.retrieval.json",
+        "unchanged": true
+      },
+      {
+        "path": "data/sector_protocol/v491_design_20261019/prepared/main/fidelity_q3_2026__E__D0_messages.json",
+        "unchanged": true
+      },
+      {
+        "path": "data/sector_protocol/v491_design_20261019/prepared/main/fidelity_q3_2026__L__D0_messages.json",
+        "unchanged": true
+      },
+      {
+        "path": "data/sector_protocol/v491_design_20261019/prepared/main/ubs_july_2026__E__D0_messages.json",
+        "unchanged": true
+      },
+      {
+        "path": "data/sector_protocol/v491_design_20261019/prepared/main/ubs_july_2026__L__D0_messages.json",
+        "unchanged": true
+      },
+      {
+        "path": "data/sector_protocol/v491_design_20261019/prepared/pilot/fidelity_q2_2026__E__D0_messages.json",
+        "unchanged": true
+      },
+      {
+        "path": "data/sector_protocol/v491_design_20261019/prepared/pilot/fidelity_q2_2026__L__D0_messages.json",
+        "unchanged": true
+      },
+      {
+        "path": "data/sector_protocol/v491_design_20261019/prepared/pilot/ubs_june_2026__E__D0_messages.json",
+        "unchanged": true
+      },
+      {
+        "path": "data/sector_protocol/v491_design_20261019/prepared/pilot/ubs_june_2026__L__D0_messages.json",
+        "unchanged": true
+      },
+      {
+        "path": "data/sector_protocol/v491_design_20261019/prepared/preparation_manifest.json",
+        "unchanged": true
+      },
+      {
+        "path": "data/sector_protocol/v491_design_20261019/prompt_contract.json",
+        "unchanged": true
+      },
+      {
+        "path": "data/sector_protocol/v491_design_20261019/public_compact_candidate.json",
+        "unchanged": true
+      },
+      {
+        "path": "data/sector_protocol/v491_design_20261019/response_schema.json",
+        "unchanged": true
+      },
+      {
+        "path": "paper/LIBERA_소논문_방법개정안_v4.9.1_20261019.html",
+        "unchanged": true
+      },
+      {
+        "path": "paper/LIBERA_텀페이퍼_초안_v4.9.1_20261019.html",
+        "unchanged": true
+      },
+      {
+        "path": "plan/LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html",
+        "unchanged": true
+      },
+      {
+        "path": "plan/LIBERA_실험설정_v4.9.1_20261019.json",
+        "unchanged": true
+      },
+      {
+        "path": "research/artifacts/v491_review_history_20261019/LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html",
+        "unchanged": true
+      },
+      {
+        "path": "research/artifacts/v491_review_history_20261019/LIBERA_텀페이퍼_초안_v4.9.1_20261019.html",
+        "unchanged": true
+      },
+      {
+        "path": "research/artifacts/v491_review_history_20261019/snapshot_manifest.json",
+        "unchanged": true
+      },
+      {
+        "path": "research/artifacts/v491_review_history_20261019/v491_validation_round1_20261019.json",
+        "unchanged": true
+      },
+      {
+        "path": "research/artifacts/v491_review_history_20261019/v491_validation_round2_20261019.json",
+        "unchanged": true
+      },
+      {
+        "path": "research/artifacts/v491_visual_20261019/capture_receipt.json",
+        "unchanged": true
+      },
+      {
+        "path": "research/artifacts/v491_visual_20261019/context_table.png",
+        "unchanged": true
+      },
+      {
+        "path": "research/artifacts/v491_visual_20261019/paper_top.png",
+        "unchanged": true
+      },
+      {
+        "path": "research/artifacts/v491_visual_20261019/plan_narrow.png",
+        "unchanged": true
+      },
+      {
+        "path": "research/artifacts/v491_visual_20261019/plan_top.png",
+        "unchanged": true
+      },
+      {
+        "path": "research/artifacts/v491_visual_20261019/r2/capture_receipt.json",
+        "unchanged": true
+      },
+      {
+        "path": "research/artifacts/v491_visual_20261019/r2/context_table.png",
+        "unchanged": true
+      },
+      {
+        "path": "research/artifacts/v491_visual_20261019/r2/paper_top.png",
+        "unchanged": true
+      },
+      {
+        "path": "research/artifacts/v491_visual_20261019/r2/plan_narrow.png",
+        "unchanged": true
+      },
+      {
+        "path": "research/artifacts/v491_visual_20261019/r2/plan_top.png",
+        "unchanged": true
+      },
+      {
+        "path": "research/artifacts/v491_visual_20261019/r2/visual_review.json",
+        "unchanged": true
+      },
+      {
+        "path": "research/artifacts/v491_visual_20261019/visual_review.json",
+        "unchanged": true
+      },
+      {
+        "path": "research/build_v491_context_plan.py",
+        "unchanged": true
+      },
+      {
+        "path": "research/finalize_v491_delivery.py",
+        "unchanged": true
+      },
+      {
+        "path": "research/prepare_sector_v491.py",
+        "unchanged": true
+      },
+      {
+        "path": "research/render_v491_visualqa.py",
+        "unchanged": true
+      },
+      {
+        "path": "research/requirements-v491.txt",
+        "unchanged": true
+      },
+      {
+        "path": "research/sector_v491_contract.py",
+        "unchanged": true
+      },
+      {
+        "path": "research/test_sector_v491_contract.py",
+        "unchanged": true
+      },
+      {
+        "path": "research/v491_evaluation_protocol_20261019.json",
+        "unchanged": true
+      },
+      {
+        "path": "research/v491_human_review_template_20261019.json",
+        "unchanged": true
+      },
+      {
+        "path": "research/v491_macro_source_audit_20261019.json",
+        "unchanged": true
+      },
+      {
+        "path": "research/v491_mandate_basis_20261019.json",
+        "unchanged": true
+      },
+      {
+        "path": "research/v491_process_20261019.jsonl",
+        "unchanged": true
+      },
+      {
+        "path": "research/v491_validation_round1_20261019.json",
+        "unchanged": true
+      },
+      {
+        "path": "research/v491_validation_round1_20261019_r2.json",
+        "unchanged": true
+      },
+      {
+        "path": "research/v491_validation_round1_initial_20261019.json",
+        "unchanged": true
+      },
+      {
+        "path": "research/v491_validation_round2_20261019.json",
+        "unchanged": true
+      },
+      {
+        "path": "research/v491_validation_round2_20261019_r2.json",
+        "unchanged": true
+      },
+      {
+        "path": "research/v491_validation_round3_20261019.json",
+        "unchanged": true
+      },
+      {
+        "path": "research/verify_v491_round1.py",
+        "unchanged": true
+      }
+    ]
+  },
+  "source_refs": [
+    {
+      "path": "research/sector_v492_contract.py",
+      "sha256": "f77d1ddec9630a4c7edbf3928d298b7b05094345996ece1cf53d91fc40171a21"
+    },
+    {
+      "path": "research/test_sector_v492_contract.py",
+      "sha256": "e0352d51e9d6ecfae74bfc80698840f512dbc4fedfa6f7bb2cc2b2b150c856c6"
+    },
+    {
+      "path": "research/verify_v492_contract_rounds.py",
+      "sha256": "d3ce824dba83f0ced78c297f7157f6347d641d702358624f96da05a00026f89e"
+    },
+    {
+      "path": "research/sector_v491_contract.py",
+      "sha256": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397"
+    },
+    {
+      "path": "research/sector_engine.py",
+      "sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c"
+    },
+    {
+      "path": "research/test_sector_v491_contract.py",
+      "sha256": "bfecb94ba4e8beedb5e77d3d43bfe0afb1255c74b611fead756427fcc1b98149"
+    }
+  ],
+  "limits": [
+    "Three process checks are not independent human judgments.",
+    "Contract construction does not authenticate caller-supplied D0 provenance; runtime separately binds persisted same-case artifacts.",
+    "Source and schema gates enforce declared inputs; semantic support remains unvalidated AI-assisted evaluation.",
+    "No pilot or main generation was performed by this verification."
+  ]
+}

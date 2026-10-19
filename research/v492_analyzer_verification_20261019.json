@@ -1,0 +1,102 @@
+{
+  "status": "PASS",
+  "recorded_at_utc": "2026-10-19T08:21:34.373Z",
+  "scope": "Offline post-pilot arithmetic analyzer; no actual pilot output was read while designing or testing this code.",
+  "files": [
+    {
+      "path": "research/analyze_v492_pilot.py",
+      "sha256": "841c1f941e2c39165f84f51f5df283ca7a3c5727de285d4ad56edfa50166529f"
+    },
+    {
+      "path": "research/test_analyze_v492_pilot.py",
+      "sha256": "0049e5f131414701b48d536c8b1891b8501a95b55af6772b845a5c628e027098"
+    }
+  ],
+  "evaluation_protocol_ref": {
+    "path": "research/v492_evaluation_protocol_20261019_r2.json",
+    "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+  },
+  "checks": [
+    {
+      "id": "synthetic_execution",
+      "status": "PASS",
+      "command": [
+        "C:/Users/Insun/AppData/Local/Programs/Python/Python313/python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "-m",
+        "unittest",
+        "test_analyze_v492_pilot",
+        "-v"
+      ],
+      "cwd": "research",
+      "exec_session": 12662,
+      "exit_code": 0,
+      "tests_run": 20,
+      "elapsed_test_seconds": 63.392,
+      "terminal_result": "Ran 20 tests in 63.392s; OK",
+      "scope": "All fixture responses are synthetic."
+    },
+    {
+      "id": "independent_static_review",
+      "status": "PASS_after_corrections",
+      "reviewer": "/root/v491_runtime",
+      "corrections": [
+        "Pre-generation failure remains infrastructure/capacity evidence even when generation count is zero.",
+        "Expected timeout without a completed response is not automatically artifact corruption; partial content availability is recorded without extracting a portfolio.",
+        "Common-market declared evidence IDs are included alongside actual supplied source/common/feedback declarations."
+      ]
+    },
+    {
+      "id": "root_static_review",
+      "status": "PASS_after_corrections",
+      "reviewer": "/root",
+      "corrections": [
+        "L_D0 has no source document and source fidelity is not applicable.",
+        "Case/stage identity and actual source visibility are checked before output parsing; integrity failures cannot leave an eligible vector.",
+        "Zero-call transport integrity/status fields remain visible."
+      ]
+    },
+    {
+      "id": "post_test_exact_source_identity",
+      "status": "PASS",
+      "all_tested_source_hashes_unchanged": true
+    }
+  ],
+  "policy": {
+    "eligibility": "Whole preserved response must parse as one JSON object with complete finite nonnegative 11-vector passing inherited sum tolerance. Explanatory schema failure and length stop are reported separately and do not censor eligible vectors.",
+    "no_partial_vector_extraction": true,
+    "no_normalization_clipping_imputation_or_substitution": true,
+    "planned_final_denominator": 5,
+    "planned_final_sector_rows": 55,
+    "planned_stage_slots": 10,
+    "shared_C_count": 1,
+    "exact_decimal_differences": true,
+    "semantic_scoring_performed": false,
+    "three_checks_are_process_quality_checks_not_independent_semantic_measurements": true
+  },
+  "test_coverage": [
+    "Exact analytical distances and decimal raw differences",
+    "Invalid budget stays raw; valid distance null with reason",
+    "Missing, duplicate, unknown, boolean, negative and nonfinite weights",
+    "Whole JSON required; no code-fence/partial extraction",
+    "Schema failure and length stop separated from vector eligibility",
+    "All-five/ten planned denominators with missing cases",
+    "One shared source-independent C and L_D0 no-source status",
+    "Bound response hash and stage/source identity failures",
+    "Zero-call preflight/capacity failure and expected timeout partial text",
+    "No response artifact opens before completion marker"
+  ],
+  "generation_requests_by_development_and_tests": 0,
+  "actual_pilot_outputs_read": false,
+  "usage": [
+    "python -B -X utf8 research/analyze_v492_pilot.py --run-dir data/local_sector_runtime/v492_pilot_20261019 --output research/v492_pilot_arithmetic_20261019.json"
+  ],
+  "limitations": [
+    "Arithmetic verification does not validate an AI semantic scorer.",
+    "The report is descriptive, with no institution-specific numeric gold, causal/population inference or strategy performance claim.",
+    "The final run is not analyzed until pilot_summary.json marks completion.",
+    "Root third integration and live-run rejection checks are separate receipts."
+  ]
+}

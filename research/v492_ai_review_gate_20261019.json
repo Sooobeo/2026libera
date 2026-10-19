@@ -1,0 +1,65 @@
+{
+  "receipt_version": "v492_ai_preoutput_gate_1",
+  "status": "approved_for_pilot_before_generation",
+  "review_mode": "AI_delegated_by_user",
+  "recorded_at_utc": "2026-10-19T07:44:19.488069+00:00",
+  "user_instruction": {
+    "exact_text": "걍 다 너한테 맞길게 평가규칙 저거 아님",
+    "subsequent_clarification": "대조군은 있어야할거아냐",
+    "recorded_at_utc": "2026-10-19T07:34:19.9325199Z",
+    "timestamp_kind": "recorded_after_user_message",
+    "scope": "User delegates review to the assistant, rejects mandatory two-human review, and requires a meaningful control arm. Preserve honest AI-review disclosure and pre-output evaluation freeze."
+  },
+  "input_protocol_ref": {
+    "path": "plan/LIBERA_실험설정_v4.9.1_20261019.json",
+    "sha256": "0d7ad14eb7f07fb9a7e7607a1cdb1ff148794d88878d6706b7b6a66bbc319110"
+  },
+  "evaluation_protocol_ref": {
+    "path": "research/v492_evaluation_protocol_20261019_r2.json",
+    "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+  },
+  "source_review_ref": {
+    "path": "research/v492_source_review_20261019.json",
+    "sha256": "3f6e4bd952b0bbf1d4e3487bb00a5e839a9f907038e43e895807425c21747718"
+  },
+  "method_review_ref": {
+    "path": "research/v492_final_acceptance_20261019.json",
+    "sha256": "2bfe137505bffa15212582de7ff2975ec92e76c40f59b7fba4fe1e1606140bf4"
+  },
+  "prompt_contract_ref": {
+    "path": "data/sector_protocol/v492_design_20261019/prompt_contract.json",
+    "sha256": "b03af4efc18358ec23eaf86a25340666aa6409c4a8386eab11c713c65ac0b65d"
+  },
+  "prepared_manifest_ref": {
+    "path": "data/sector_protocol/v492_design_20261019/prepared/preparation_manifest.json",
+    "sha256": "0cec3bf9b2d5837bb9e0d73ad7fb0f74259bdb17a0bdd6084c71ffc06b933c6e"
+  },
+  "runtime_ref": {
+    "path": "research/v492_runtime_candidate_20261019.json",
+    "sha256": "3fc05ace24af7893e38ee5668acee977bec14f72809f236fb9401dcc597d5f0f"
+  },
+  "freeze_ref": {
+    "path": "research/v492_pilot_freeze_20261019.json",
+    "sha256": "d5ebc5e317130c8e2eedb10b47d1bb9f7eaa355582d6ded6c3381e818bb6ed56"
+  },
+  "review": {
+    "reviewer": "Codex",
+    "completed_at_utc": "2026-10-19T07:44:19.484532+00:00",
+    "source_meaning_checked": true,
+    "topic_alignment_checked": true,
+    "limitations": [
+      "AI-assisted source/semantic review has not been validated by independent human raters.",
+      "Common model/context and a single shared C define descriptive cases, not population effects.",
+      "No institution-specific optimal portfolio or future performance benchmark is observed.",
+      "Engineering timing is uncertain; original failures and unattempted cells must remain visible."
+    ]
+  },
+  "pilot_cases": [
+    "fidelity_q2_2026__E",
+    "fidelity_q2_2026__L",
+    "ubs_june_2026__E",
+    "ubs_june_2026__L",
+    "common_market_only__C"
+  ],
+  "main_allowed": false
+}

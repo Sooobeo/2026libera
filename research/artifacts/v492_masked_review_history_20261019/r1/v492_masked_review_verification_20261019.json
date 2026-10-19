@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "recorded_at_utc": "2026-10-19T08:21:08.274Z",
+  "scope": "Offline masked-review packaging; temporary synthetic outputs only; no live response reads or model calls",
+  "generation_requests": 0,
+  "tests": {
+    "command": "python -B -X utf8 research/test_v492_masked_review.py",
+    "expected_tests": 15,
+    "observed_tests": 15,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "...............\r\n----------------------------------------------------------------------\r\nRan 15 tests in 341.515s\r\n\r\nOK\r\n"
+  },
+  "artifact_refs": [
+    {
+      "path": "research/build_v492_masked_review.py",
+      "sha256": "158834315d9f26dc840117eb3dc58b89fa4bd0aa104da68eef70b0867e046703"
+    },
+    {
+      "path": "research/test_v492_masked_review.py",
+      "sha256": "d3fc0cba40c83717f90ee1836483761b1904d442bd3a5edb2249aebd18ed9b58"
+    },
+    {
+      "path": "research/v492_evaluation_protocol_20261019_r2.json",
+      "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+    }
+  ],
+  "independent_static_review": {
+    "reviewer": "v491_token_review agent",
+    "kind": "AI technical review, not independent human validation",
+    "finding": "Manifest keys, worker-location interface, five-case/ten-stage boundaries, own-D0 history and evaluator-only exclusion checked; no blocker. Length status remains explicit output_limit_reached."
+  }
+}

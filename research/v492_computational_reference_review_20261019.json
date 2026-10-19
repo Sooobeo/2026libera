@@ -1,0 +1,179 @@
+{
+  "protocol_version": "4.9.2",
+  "status": "PASS",
+  "recorded_at_utc": "2026-10-19T07:37:51.759338+00:00",
+  "reviewer": "Codex /root/v491_review_pack, separate review from reference builder author",
+  "review_kind": "AI mathematical/input/methods audit, not independent human review",
+  "input_refs": [
+    {
+      "path": "research/v492_computational_references_20261019.json",
+      "sha256": "d65a7d302ed03f4fc430134b947f9f81f10b8b84fec1855511f258144a46bd11"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/public_compact_candidate.json",
+      "sha256": "afe810b2bfb69ae4bfa372e65fa587bc6253eecf8028d5fde39cf3ec395bcb8d"
+    },
+    {
+      "path": "research/build_v492_computational_references.py",
+      "sha256": "8a917ab58743d9d1fb03581ae8946850414551a35c1b2544bf3cf05d29ee709c"
+    },
+    {
+      "path": "research/evidence/v48_reference_20261018/portbench_2605_27887v6.html",
+      "sha256": "1cfcc2234f076e011702265433fcdce14c29514546ed74ebf0bec090275ab62c"
+    }
+  ],
+  "checks": [
+    {
+      "check": "record binds exact frozen public input SHA",
+      "pass": true
+    },
+    {
+      "check": "covariance and all reference rows use the same 11-sector code order",
+      "pass": true
+    },
+    {
+      "check": "sector names and 60-return window preserve input identity",
+      "pass": true
+    },
+    {
+      "check": "daily squared-decimal covariance unit and sample-ddof retained",
+      "pass": true
+    },
+    {
+      "check": "exact covariance symmetry, finite values and positive-definite eigenspectrum",
+      "pass": true
+    },
+    {
+      "check": "252 annualization agrees with supplied volatility diagnostics",
+      "pass": true
+    },
+    {
+      "check": "exact reference set has two calculated references and existing market benchmark",
+      "pass": true
+    },
+    {
+      "check": "equal_weight: raw feasible long-only sum-one vector",
+      "pass": true
+    },
+    {
+      "check": "equal_weight: saved variance, annualized volatility and historical daily mean recompute",
+      "pass": true
+    },
+    {
+      "check": "equal_weight: institution gold and AI-arm flags remain false",
+      "pass": true
+    },
+    {
+      "check": "long_only_minimum_variance: raw feasible long-only sum-one vector",
+      "pass": true
+    },
+    {
+      "check": "long_only_minimum_variance: saved variance, annualized volatility and historical daily mean recompute",
+      "pass": true
+    },
+    {
+      "check": "long_only_minimum_variance: institution gold and AI-arm flags remain false",
+      "pass": true
+    },
+    {
+      "check": "existing_market_benchmark: raw feasible long-only sum-one vector",
+      "pass": true
+    },
+    {
+      "check": "existing_market_benchmark: saved variance, annualized volatility and historical daily mean recompute",
+      "pass": true
+    },
+    {
+      "check": "existing_market_benchmark: institution gold and AI-arm flags remain false",
+      "pass": true
+    },
+    {
+      "check": "equal-weight construction is exactly 1/11",
+      "pass": true
+    },
+    {
+      "check": "existing benchmark is carried verbatim from supplied comparison anchor",
+      "pass": true
+    },
+    {
+      "check": "independent active-set KKT linear system reproduces saved weights",
+      "pass": true
+    },
+    {
+      "check": "positive support stationarity and inactive inequalities hold",
+      "pass": true
+    },
+    {
+      "check": "saved support indices and exhaustive nonempty-face count agree",
+      "pass": true
+    },
+    {
+      "check": "saved eigenvalue and objective agree with direct calculations",
+      "pass": true
+    },
+    {
+      "check": "GMV objective no higher than either feasible comparison",
+      "pass": true
+    },
+    {
+      "check": "no generation and no reference added to prompts declared",
+      "pass": true
+    },
+    {
+      "check": "local implementation does not claim expected-return or macro optimization",
+      "pass": true
+    },
+    {
+      "check": "preserved primary paper identifies both standard comparator families",
+      "pass": true
+    }
+  ],
+  "independent_recalculation": {
+    "method": "KKT block linear system for saved positive support, then nonnegative dual-residual and positive-definite Hessian checks",
+    "support_indices": [
+      0,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "max_active_weight_difference": 4.996003610813204e-16,
+    "stationarity_max_abs_residual": 4.743384504624082e-20,
+    "inactive_min_reduced_gradient": 2.1749434401764625e-06,
+    "daily_variance": 1.7365105566054417e-05,
+    "sufficient_optimality_reason": "The positive-definite covariance makes the objective strictly convex on the simplex. Primal feasibility, equality stationarity on positive weights and nonnegative inactive reduced gradients establish the unique constrained minimum to the stated numerical tolerance."
+  },
+  "primary_paper_review": {
+    "url": "https://arxiv.org/html/2605.27887v6",
+    "locations": [
+      "Section 3.1 classical baselines",
+      "Appendix C.4 Classical strategies"
+    ],
+    "verified_on": "2026-10-19",
+    "inspection": "Fresh official arXiv page read and preserved prior HTML bound by SHA.",
+    "supported": "The paper uses uniform allocation and long-only minimum variance as classical comparators; covariance strategies use common trailing returns and 252-day annualization.",
+    "adaptation": "This audit approves their formulas on the frozen eleven-sector data only. It does not import the paper's multi-asset eligibility, replay, costs, investor profiles, outcome ranking or stage gold scores."
+  },
+  "topic_connection": "References expose the allocation produced by simple transparent numerical rules. They cannot interpret institution prose or the supplied macro context, so the common-context AI C arm supplies the appropriate task-level comparison while these remain arithmetic/risk references.",
+  "claims_allowed": [
+    "Equal weight is uniform over the eleven supplied sectors.",
+    "GMV is the minimum-variance long-only portfolio for this particular past-window sample covariance.",
+    "Distances to these references describe allocations; they are not source-fidelity scores."
+  ],
+  "claims_not_allowed": [
+    "This is the optimal investment for the common capital-appreciation objective.",
+    "This vector recovers Fidelity or UBS strategy.",
+    "Lower in-sample volatility establishes future superiority or lower actual realized risk.",
+    "1/N or GMV replaces the C control or proves a causal effect of institutional information."
+  ],
+  "scope_limitations": [
+    "The saved sample covariance was checked for identity and units; no new market data were downloaded.",
+    "The parent separately enumerated 2047 faces and ran SLSQP; this reviewer independently checked the saved solution with a different KKT formulation.",
+    "Source review and computation review are AI-assisted, with no fabricated human approval.",
+    "Solver tolerances are engineering precision conventions and not behavioral or investment thresholds."
+  ],
+  "material_findings": [],
+  "model_generation_requests": 0
+}

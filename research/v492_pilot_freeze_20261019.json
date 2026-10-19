@@ -1,0 +1,174 @@
+{
+  "freeze_version": "v492_pilot_preoutput_freeze_1",
+  "protocol_version": "4.9.2",
+  "status": "frozen_for_pilot_only",
+  "recorded_at_utc": "2026-10-19T07:44:19.484548+00:00",
+  "purpose": "pilot_only",
+  "user_instruction": {
+    "exact_text": "걍 다 너한테 맞길게 평가규칙 저거 아님",
+    "subsequent_clarification": "대조군은 있어야할거아냐",
+    "recorded_at_utc": "2026-10-19T07:34:19.9325199Z",
+    "timestamp_kind": "recorded_after_user_message",
+    "scope": "User delegates review to the assistant, rejects mandatory two-human review, and requires a meaningful control arm. Preserve honest AI-review disclosure and pre-output evaluation freeze."
+  },
+  "input_protocol_ref": {
+    "path": "plan/LIBERA_실험설정_v4.9.1_20261019.json",
+    "sha256": "0d7ad14eb7f07fb9a7e7607a1cdb1ff148794d88878d6706b7b6a66bbc319110"
+  },
+  "evaluation_protocol_ref": {
+    "path": "research/v492_evaluation_protocol_20261019_r2.json",
+    "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+  },
+  "source_review_ref": {
+    "path": "research/v492_source_review_20261019.json",
+    "sha256": "3f6e4bd952b0bbf1d4e3487bb00a5e839a9f907038e43e895807425c21747718"
+  },
+  "method_review_ref": {
+    "path": "research/v492_final_acceptance_20261019.json",
+    "sha256": "2bfe137505bffa15212582de7ff2975ec92e76c40f59b7fba4fe1e1606140bf4"
+  },
+  "prompt_contract_ref": {
+    "path": "data/sector_protocol/v492_design_20261019/prompt_contract.json",
+    "sha256": "b03af4efc18358ec23eaf86a25340666aa6409c4a8386eab11c713c65ac0b65d"
+  },
+  "prepared_manifest_ref": {
+    "path": "data/sector_protocol/v492_design_20261019/prepared/preparation_manifest.json",
+    "sha256": "0cec3bf9b2d5837bb9e0d73ad7fb0f74259bdb17a0bdd6084c71ffc06b933c6e"
+  },
+  "runtime_ref": {
+    "path": "research/v492_runtime_candidate_20261019.json",
+    "sha256": "3fc05ace24af7893e38ee5668acee977bec14f72809f236fb9401dcc597d5f0f"
+  },
+  "code_refs": [
+    {
+      "path": "research/benchmark_sector_latency.py",
+      "sha256": "0686444e608033be931922a26886ed4a4b5b0789385215b7b75bfacc4050458b"
+    },
+    {
+      "path": "research/build_v492_computational_references.py",
+      "sha256": "8a917ab58743d9d1fb03581ae8946850414551a35c1b2544bf3cf05d29ee709c"
+    },
+    {
+      "path": "research/build_v492_evaluation_protocol.py",
+      "sha256": "0d0d5bf91955744a817d6efa1186334fecddf677a84048a982af7eb4229cd5ed"
+    },
+    {
+      "path": "research/freeze_v492_pilot.py",
+      "sha256": "bc6af866e2636f3624af0d5237f45299aa706e7dc5fcbf652aff3c036b0ca899"
+    },
+    {
+      "path": "research/local_sector_single_case.py",
+      "sha256": "0b2596a223167136bb37578e86469d50c26e7883305d4db31f43b9ddd10d28d0"
+    },
+    {
+      "path": "research/prepare_sector_v491.py",
+      "sha256": "0e8188630a8b3a36da08671519b2bfeba7d3d2ca412568f789bfeca2ea4192e7"
+    },
+    {
+      "path": "research/prepare_sector_v492.py",
+      "sha256": "bc60c7ecb972ad2ce0d9df3f3e41f715264dbeb6a4b3a3838a13216a5c56b098"
+    },
+    {
+      "path": "research/probe_ollama_runtime.py",
+      "sha256": "2dd48936bbaf8fd090a26f92fd356fec3a11ac81e5b01b39d661ffe72552fddb"
+    },
+    {
+      "path": "research/remote_sector_runtime.py",
+      "sha256": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5"
+    },
+    {
+      "path": "research/sector_engine.py",
+      "sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c"
+    },
+    {
+      "path": "research/sector_v48_main_awake.py",
+      "sha256": "185a9f6be9471ff7808730153227682f0f0eae25f72ee1474602106a950fa98a"
+    },
+    {
+      "path": "research/sector_v48_transport.py",
+      "sha256": "db395eb3d54ebec93aa67556e1f2424aba1d591ba8b9fcfce7fbd3332db0379c"
+    },
+    {
+      "path": "research/sector_v491_contract.py",
+      "sha256": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397"
+    },
+    {
+      "path": "research/sector_v491_runtime.py",
+      "sha256": "a542a53ef7a9a035a3641e1e9637d3eb5bd442677318a82434e245bb1e5dc649"
+    },
+    {
+      "path": "research/sector_v491_tokenizer.py",
+      "sha256": "1e25d31d18e659e90186d2a598d0bcad77824d0dbc5a0e76beed692a8373e440"
+    },
+    {
+      "path": "research/sector_v492_contract.py",
+      "sha256": "f77d1ddec9630a4c7edbf3928d298b7b05094345996ece1cf53d91fc40171a21"
+    },
+    {
+      "path": "research/sector_v492_review_gate.py",
+      "sha256": "a93b575104509e9810663ec4feca3e6bbb6963ca03dd988b451e06744e23a092"
+    },
+    {
+      "path": "research/sector_v492_runtime.py",
+      "sha256": "cc8285db4d561aea10878db336771752965f4517405a93a1574b18f2fa300e04"
+    },
+    {
+      "path": "research/start_sector_v492_cpu.ps1",
+      "sha256": "95bd70ac342ffb4c04b1ab69b1bc1130b885b2d342a4278f9005226605872ef3"
+    },
+    {
+      "path": "research/stop_sector_v492_cpu.ps1",
+      "sha256": "065b97e1d4005e8ab55eff1f3c9be553fa897b075896d50ccc318386ad74f308"
+    }
+  ],
+  "case_order": [
+    "fidelity_q2_2026__E",
+    "fidelity_q2_2026__L",
+    "ubs_june_2026__E",
+    "ubs_june_2026__L",
+    "common_market_only__C"
+  ],
+  "controls": {
+    "backend": "cpu",
+    "num_thread": 8,
+    "num_ctx": 65536,
+    "num_predict": 8192,
+    "deadline_seconds": 4500,
+    "max_generation_requests": 10,
+    "main_allowed": false
+  },
+  "verification_refs": [
+    {
+      "path": "research/v492_runtime_round1_20261019.json",
+      "sha256": "1f25fee8bd72921a3471a1c549b4cc03326e3ec2c10099acbcf023b6bf9718ab"
+    },
+    {
+      "path": "research/v492_runtime_independent_review_20261019.json",
+      "sha256": "6dc86d486e07f494e227012750a2c2a44ee6f73c76fe63087a544f92786a9770"
+    },
+    {
+      "path": "research/v492_final_acceptance_20261019.json",
+      "sha256": "2bfe137505bffa15212582de7ff2975ec92e76c40f59b7fba4fe1e1606140bf4"
+    },
+    {
+      "path": "research/v492_final_methods_review_20261019.json",
+      "sha256": "b17f880a3dd6e0f9fa2a2585c016dac6018e2549b3bbe31dceafe2084abe9178"
+    },
+    {
+      "path": "research/v492_computational_reference_review_20261019.json",
+      "sha256": "fa2d70ee4692be0ff6c7540d9cb34d1f0586a8023fc9ba60dc0bc2e31a05e1f6"
+    }
+  ],
+  "resource_decision_ref": {
+    "path": "research/v492_resource_decision_20261019.json",
+    "sha256": "6a50c8e2871f80f609c488e71458ecc2ef9778584f54c84282b1c91af0345ac7"
+  },
+  "computational_references_ref": {
+    "path": "research/v492_computational_references_20261019.json",
+    "sha256": "d65a7d302ed03f4fc430134b947f9f81f10b8b84fec1855511f258144a46bd11"
+  },
+  "local_record_only": true,
+  "external_preregistration": false,
+  "research_generation_requests_before_freeze": 0,
+  "main_allowed": false
+}

@@ -1,0 +1,417 @@
+{
+  "protocol_version": "4.9.2",
+  "status": "PASS",
+  "reviewed_at_utc": "2026-10-19T07:43:06.161127+00:00",
+  "review_kind": "AI technical, editorial and methods-consistency review; no independent humans",
+  "input_refs": [
+    {
+      "path": "plan/LIBERA_대조군포함_실험계획_v4.9.2_20261019.html",
+      "sha256": "a3c21e64e9e30c87dc6b39d4311b57e0475e9fe85cc6bab9fd6794032ae08c83"
+    },
+    {
+      "path": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "sha256": "680f33b8cc58712c876b588ccc6f2004a4525cf6eded2f6d7431561cb2343123"
+    },
+    {
+      "path": "research/build_v492_reader_documents.py",
+      "sha256": "c3d588641d9bdd3942713885d34104338ed6d4624da509635427c9cd27c4fee7"
+    },
+    {
+      "path": "research/v492_evaluation_protocol_20261019_r2.json",
+      "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+    },
+    {
+      "path": "research/v492_source_review_20261019.json",
+      "sha256": "3f6e4bd952b0bbf1d4e3487bb00a5e839a9f907038e43e895807425c21747718"
+    },
+    {
+      "path": "research/v492_computational_references_20261019.json",
+      "sha256": "d65a7d302ed03f4fc430134b947f9f81f10b8b84fec1855511f258144a46bd11"
+    },
+    {
+      "path": "research/v492_resource_decision_20261019.json",
+      "sha256": "6a50c8e2871f80f609c488e71458ecc2ef9778584f54c84282b1c91af0345ac7"
+    }
+  ],
+  "initial_findings_resolved": [
+    {
+      "finding": "Stale VERSION 4.9.1 and independent-human-review-pending header",
+      "resolution": "Now VERSION 4.9.2 and actual preparation status without a human prerequisite."
+    },
+    {
+      "finding": "Three current navigation links targeted prior v491 artifacts",
+      "resolution": "Now current v492 plan, r2 evaluation and process ledger."
+    },
+    {
+      "finding": "Common-context ending described only first-exposure timing",
+      "resolution": "E/L timing and C permanent source absence are explicitly separated."
+    },
+    {
+      "finding": "Optional E/L-only masking wording conflicted with new protocol",
+      "resolution": "All E/L/C labels and execution order are removed, with imperfect-masking caveat."
+    },
+    {
+      "finding": "Literature paragraph said both final stages receive source without naming E/L scope",
+      "resolution": "Explicit E/L qualifier now prevents implying that C receives it."
+    }
+  ],
+  "checks": [
+    {
+      "check": "plan:no stale current-human-gate or four-total-final claim",
+      "pass": true,
+      "evidence": "Historical v4.9.1 citations are retained; four source-conditioned cases remain correctly distinguished from the five total cases."
+    },
+    {
+      "check": "plan:five-case and denominator statements",
+      "pass": true,
+      "evidence": "5 cases × 11 rows = 55; four source-conditioned finals give 44 and one C gives 11."
+    },
+    {
+      "check": "plan:C has no source penalty and no duplicated sample",
+      "pass": true,
+      "evidence": "One common C is reused only descriptively; invented source attribution remains an error."
+    },
+    {
+      "check": "plan:all condition labels removed with masking limitation",
+      "pass": true,
+      "evidence": "The new protocol masks labels while admitting that actual contents can reveal conditions."
+    },
+    {
+      "check": "plan:source interpretation is AI-assisted and not independent human validation",
+      "pass": true,
+      "evidence": "User-delegated AI review is not recast as a human-signature requirement."
+    },
+    {
+      "check": "plan:model and engineering settings are explicit",
+      "pass": true,
+      "evidence": "4500 sec = 75 min; roughly 70.46 min extrapolation is rounded to 70.5 for display, not represented as expected completion."
+    },
+    {
+      "check": "plan:short throughput scenario caveat",
+      "pass": true,
+      "evidence": "The operational ceiling is not described as a paper-estimated behavioral setting."
+    },
+    {
+      "check": "plan:no source gold or future-performance guarantee",
+      "pass": true,
+      "evidence": "1/N and sample GMV do not optimize the full research objective or recover an institution portfolio."
+    },
+    {
+      "check": "plan:raw outcomes, null comparisons and finite inference retained",
+      "pass": true,
+      "evidence": "Arithmetic invalidity and infrastructure failures remain visible; similarity alone is not interpretation loss."
+    },
+    {
+      "check": "plan:prepared status does not claim completed experimental results",
+      "pass": true,
+      "evidence": "At this review no v492 pilot output has been reported or examined."
+    },
+    {
+      "check": "plan:one complete numerical reference table",
+      "pass": true,
+      "evidence": "The table is a display of the saved evaluator references."
+    },
+    {
+      "check": "plan:all 22 reference numbers have correct two-decimal display",
+      "pass": true,
+      "evidence": "Compared each 1/N and GMV display value with the immutable full-precision JSON in the same sector order."
+    },
+    {
+      "check": "plan:unique HTML identifiers",
+      "pass": true,
+      "evidence": "No repeated section/reference anchor ID found."
+    },
+    {
+      "check": "plan:local paths and HTML fragments resolve",
+      "pass": true,
+      "evidence": "External citation URLs were not all re-fetched in this editorial review."
+    },
+    {
+      "check": "paper:no stale current-human-gate or four-total-final claim",
+      "pass": true,
+      "evidence": "Historical v4.9.1 citations are retained; four source-conditioned cases remain correctly distinguished from the five total cases."
+    },
+    {
+      "check": "paper:five-case and denominator statements",
+      "pass": true,
+      "evidence": "5 cases × 11 rows = 55; four source-conditioned finals give 44 and one C gives 11."
+    },
+    {
+      "check": "paper:C has no source penalty and no duplicated sample",
+      "pass": true,
+      "evidence": "One common C is reused only descriptively; invented source attribution remains an error."
+    },
+    {
+      "check": "paper:all condition labels removed with masking limitation",
+      "pass": true,
+      "evidence": "The new protocol masks labels while admitting that actual contents can reveal conditions."
+    },
+    {
+      "check": "paper:source interpretation is AI-assisted and not independent human validation",
+      "pass": true,
+      "evidence": "User-delegated AI review is not recast as a human-signature requirement."
+    },
+    {
+      "check": "paper:model and engineering settings are explicit",
+      "pass": true,
+      "evidence": "4500 sec = 75 min; roughly 70.46 min extrapolation is rounded to 70.5 for display, not represented as expected completion."
+    },
+    {
+      "check": "paper:short throughput scenario caveat",
+      "pass": true,
+      "evidence": "The operational ceiling is not described as a paper-estimated behavioral setting."
+    },
+    {
+      "check": "paper:no source gold or future-performance guarantee",
+      "pass": true,
+      "evidence": "1/N and sample GMV do not optimize the full research objective or recover an institution portfolio."
+    },
+    {
+      "check": "paper:raw outcomes, null comparisons and finite inference retained",
+      "pass": true,
+      "evidence": "Arithmetic invalidity and infrastructure failures remain visible; similarity alone is not interpretation loss."
+    },
+    {
+      "check": "paper:prepared status does not claim completed experimental results",
+      "pass": true,
+      "evidence": "At this review no v492 pilot output has been reported or examined."
+    },
+    {
+      "check": "paper:one complete numerical reference table",
+      "pass": true,
+      "evidence": "The table is a display of the saved evaluator references."
+    },
+    {
+      "check": "paper:all 22 reference numbers have correct two-decimal display",
+      "pass": true,
+      "evidence": "Compared each 1/N and GMV display value with the immutable full-precision JSON in the same sector order."
+    },
+    {
+      "check": "paper:unique HTML identifiers",
+      "pass": true,
+      "evidence": "No repeated section/reference anchor ID found."
+    },
+    {
+      "check": "paper:local paths and HTML fragments resolve",
+      "pass": true,
+      "evidence": "External citation URLs were not all re-fetched in this editorial review."
+    },
+    {
+      "check": "paper header and navigation name current version",
+      "pass": true,
+      "evidence": "Current plan, r2 evaluation and v492 process ledger are linked; historical references are left as history."
+    },
+    {
+      "check": "common-context paragraph distinguishes E/L and C",
+      "pass": true,
+      "evidence": "C absence is part of the design, not merely another first-exposure time."
+    },
+    {
+      "check": "literature timing statement scoped to E/L",
+      "pass": true,
+      "evidence": "C never receives that institution packet."
+    },
+    {
+      "check": "topic and claim boundaries preserved",
+      "pass": true,
+      "evidence": "The broader business/economics motivation remains connected to observable source-to-choice traces without overstating identification."
+    }
+  ],
+  "local_links": [
+    {
+      "document": "plan/LIBERA_대조군포함_실험계획_v4.9.2_20261019.html",
+      "href": "../research/v492_computational_references_20261019.json",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "plan/LIBERA_대조군포함_실험계획_v4.9.2_20261019.html",
+      "href": "../research/v492_evaluation_methods_review_20261019.json",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "plan/LIBERA_대조군포함_실험계획_v4.9.2_20261019.html",
+      "href": "../paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "plan/LIBERA_대조군포함_실험계획_v4.9.2_20261019.html",
+      "href": "../research/v492_evaluation_protocol_20261019_r2.json",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "plan/LIBERA_대조군포함_실험계획_v4.9.2_20261019.html",
+      "href": "../research/v492_source_review_20261019.json",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "href": "../plan/LIBERA_대조군포함_실험계획_v4.9.2_20261019.html",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "href": "../research/v492_evaluation_protocol_20261019_r2.json",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "href": "../research/v492_process_20261019.jsonl",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "href": "#ref-fsb24",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "href": "#ref-kleinberg",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "href": "#ref-bommasani",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "href": "#ref-hedden",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "href": "#ref-agarwal",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "href": "#ref-chen",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "href": "#ref-hansen",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "href": "#ref-sheng",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "href": "#ref-doshi",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "href": "#ref-dellacqua",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "href": "#ref-lewis",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "href": "#ref-schneider",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "href": "#ref-hornuf",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "href": "#ref-laban",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "href": "#ref-quek",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "href": "../research/v492_computational_references_20261019.json",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "href": "../research/v492_evaluation_methods_review_20261019.json",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "href": "../research/v491_mandate_basis_20261019.json",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "href": "../research/v491_macro_source_audit_20261019.json",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "href": "../plan/LIBERA_대조군포함_실험계획_v4.9.2_20261019.html",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "href": "../research/v492_evaluation_protocol_20261019_r2.json",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "href": "../research/v492_source_review_20261019.json",
+      "exists": true,
+      "fragment_valid": true
+    },
+    {
+      "document": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "href": "../research/v492_computational_references_20261019.json",
+      "exists": true,
+      "fragment_valid": true
+    }
+  ],
+  "open_material_findings": [],
+  "visual_render_inspected": false,
+  "scope_limits": [
+    "Text, DOM structure, local links and numeric displays checked; no browser screenshot/layout acceptance in this receipt.",
+    "Historical literature verification scope is inherited and disclosed; this task did not reread every background source.",
+    "No pilot/main results are present, and this receipt does not establish execution feasibility.",
+    "Reader documents may later update execution status; such versions require their own updated hash/review record."
+  ],
+  "model_calls_by_this_review": 0
+}

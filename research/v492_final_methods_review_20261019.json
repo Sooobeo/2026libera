@@ -1,0 +1,251 @@
+{
+  "protocol_version": "4.9.2",
+  "status": "PASS",
+  "completed_at_utc": "2026-10-19T07:42:14.766125+00:00",
+  "review_mode": "AI_technical_and_methods_check",
+  "reviewer": "Codex /root/v491_review_pack; separate task from protocol builder, not an independent human",
+  "independent_human_review_completed": false,
+  "scope": "Fixed r2 evaluation/source/math/prepared-input/resource consistency. This does not establish live native-run feasibility, semantic scorer validity, or permission to run main.",
+  "input_refs": [
+    {
+      "path": "research/v492_evaluation_protocol_20261019_r2.json",
+      "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+    },
+    {
+      "path": "research/v492_source_review_20261019.json",
+      "sha256": "3f6e4bd952b0bbf1d4e3487bb00a5e839a9f907038e43e895807425c21747718"
+    },
+    {
+      "path": "research/v492_computational_reference_review_20261019.json",
+      "sha256": "fa2d70ee4692be0ff6c7540d9cb34d1f0586a8023fc9ba60dc0bc2e31a05e1f6"
+    },
+    {
+      "path": "research/v492_computational_references_20261019.json",
+      "sha256": "d65a7d302ed03f4fc430134b947f9f81f10b8b84fec1855511f258144a46bd11"
+    },
+    {
+      "path": "research/v492_evaluation_methods_review_20261019.json",
+      "sha256": "f828fdffd75b8e7981530fe0df8f2b00320cf7433763de9d2a37ab66440830f3"
+    },
+    {
+      "path": "research/v492_resource_decision_20261019.json",
+      "sha256": "6a50c8e2871f80f609c488e71458ecc2ef9778584f54c84282b1c91af0345ac7"
+    },
+    {
+      "path": "data/sector_protocol/v492_design_20261019/prepared/preparation_manifest.json",
+      "sha256": "0cec3bf9b2d5837bb9e0d73ad7fb0f74259bdb17a0bdd6084c71ffc06b933c6e"
+    },
+    {
+      "path": "data/sector_protocol/v492_design_20261019/prompt_contract.json",
+      "sha256": "b03af4efc18358ec23eaf86a25340666aa6409c4a8386eab11c713c65ac0b65d"
+    },
+    {
+      "path": "research/v492_contract_verification_20261019.json",
+      "sha256": "f95df55bc923dd20fa779fe3b7ba3c4638e86f0a564ab5cad1b37f33f4667189"
+    }
+  ],
+  "checks": [
+    {
+      "check": "supersedes_evaluation_ref: exact SHA binding",
+      "pass": true,
+      "reason": "Read referenced bytes and recomputed SHA256."
+    },
+    {
+      "check": "user_direction_ref: exact SHA binding",
+      "pass": true,
+      "reason": "Read referenced bytes and recomputed SHA256."
+    },
+    {
+      "check": "prior_preoutput_draft_ref: exact SHA binding",
+      "pass": true,
+      "reason": "Read referenced bytes and recomputed SHA256."
+    },
+    {
+      "check": "methods_basis_ref: exact SHA binding",
+      "pass": true,
+      "reason": "Read referenced bytes and recomputed SHA256."
+    },
+    {
+      "check": "computational_references_ref: exact SHA binding",
+      "pass": true,
+      "reason": "Read referenced bytes and recomputed SHA256."
+    },
+    {
+      "check": "source_review_ref: exact SHA binding",
+      "pass": true,
+      "reason": "Read referenced bytes and recomputed SHA256."
+    },
+    {
+      "check": "common_task: exact SHA binding",
+      "pass": true,
+      "reason": "Read referenced bytes and recomputed SHA256."
+    },
+    {
+      "check": "five cases, 55 planned final rows, 44 source and 11 control rows",
+      "pass": true,
+      "reason": "Counts follow 2 sources × 2 timings + 1 shared C, with eleven sector rows per final. Rows are not independent samples."
+    },
+    {
+      "check": "maximum ten generations, one shared C and main disabled",
+      "pass": true,
+      "reason": "D0 and F0 are stages of one trajectory. The protocol does not authorize main."
+    },
+    {
+      "check": "C fidelity not applicable but unsupported attribution remains measurable",
+      "pass": true,
+      "reason": "Failure to mention an institution never supplied is not a source-fidelity error."
+    },
+    {
+      "check": "single AI interpretation is honestly disclosed",
+      "pass": true,
+      "reason": "The user removed the local human prerequisite. Neither synthetic checks nor repeated AI review create human raters."
+    },
+    {
+      "check": "all source rows and cross-source comparisons complete before outputs",
+      "pass": true,
+      "reason": "Original PDFs, packet meanings and all comparisons were reviewed without observing v492 research outputs."
+    },
+    {
+      "check": "source semantics have no invented target allocation",
+      "pass": true,
+      "reason": "Overweight and Attractive are not mapped to mandatory weights. The broad-market versus S&P universe difference remains explicit."
+    },
+    {
+      "check": "all seven shared macro anchors preserve dated facts",
+      "pass": true,
+      "reason": "Observation periods, release dates, units and vintages are distinct. Older reports are not assumed to know later data."
+    },
+    {
+      "check": "AI review categories are descriptive without composite or semantic threshold",
+      "pass": true,
+      "reason": "Code tests establish arithmetic execution, not semantic validity. Missing/unresolved claims and coverage remain visible."
+    },
+    {
+      "check": "post-output amendments remain development",
+      "pass": true,
+      "reason": "No retroactive assertion that a changed rubric was prespecified."
+    },
+    {
+      "check": "distance formula and raw-sum domain stay separate from institutional correctness",
+      "pass": true,
+      "reason": "The borrowed distance is descriptive. Tolerated floating-point residuals do not imply exact probability-distance identities."
+    },
+    {
+      "check": "failed outputs and absent C never become zero distance",
+      "pass": true,
+      "reason": "Reported denominators include unattempted and invalid outcomes. A technical failure does not show ignored institutional judgment."
+    },
+    {
+      "check": "C and computational references retain different roles",
+      "pass": true,
+      "reason": "The saved 1/N and constrained GMV passed independent KKT/input checks; they cannot read macro prose or identify an institution optimum."
+    },
+    {
+      "check": "residual confounding and finite descriptive inference disclosed",
+      "pass": true,
+      "reason": "One common C, one model and one market scenario do not identify market-wide convergence, pure anchoring or population effects."
+    },
+    {
+      "check": "offline preparation covers exactly five pilot cells without generation",
+      "pass": true,
+      "reason": "Preparation is input construction and is not an experimental observation."
+    },
+    {
+      "check": "fidelity_q2_2026__E: input file hash",
+      "pass": true,
+      "reason": "The actual prepared message bytes match the offline manifest."
+    },
+    {
+      "check": "fidelity_q2_2026__L: input file hash",
+      "pass": true,
+      "reason": "The actual prepared message bytes match the offline manifest."
+    },
+    {
+      "check": "ubs_june_2026__E: input file hash",
+      "pass": true,
+      "reason": "The actual prepared message bytes match the offline manifest."
+    },
+    {
+      "check": "ubs_june_2026__L: input file hash",
+      "pass": true,
+      "reason": "The actual prepared message bytes match the offline manifest."
+    },
+    {
+      "check": "common_market_only__C: input file hash",
+      "pass": true,
+      "reason": "The actual prepared message bytes match the offline manifest."
+    },
+    {
+      "check": "C and both L drafts share identical supplied messages",
+      "pass": true,
+      "reason": "They will be generated separately; equal input does not make their outputs the same observation."
+    },
+    {
+      "check": "all five D0 common payloads and schemas are identical",
+      "pass": true,
+      "reason": "Only the E drafts add their assigned institution packet."
+    },
+    {
+      "check": "C and L D0 have no institution packet or source IDs",
+      "pass": true,
+      "reason": "The retained system describes conditional source handling but does not reveal an actual issuer."
+    },
+    {
+      "check": "resource decision binds the actual source-neutral probe",
+      "pass": true,
+      "reason": "The rate came from six generated tokens and is a coarse engineering scenario, not a full-task result."
+    },
+    {
+      "check": "resource ceiling math and disclosed allowance agree",
+      "pass": true,
+      "reason": "4227.855 seconds = about 70.46 minutes; chosen 75-minute ceiling is engineering headroom, not a paper-derived condition or completion guarantee."
+    },
+    {
+      "check": "resource revision occurs before observed outputs without shrinking output allowance",
+      "pass": true,
+      "reason": "The evaluation r2 explicitly labels CPU/context/deadline as operational settings rather than measured scientific parameters."
+    },
+    {
+      "check": "research/v491_handoff_20261019.json: immutable historical files",
+      "pass": true,
+      "reason": "Version changes are additions; old human forms and prior artifacts remain untouched."
+    },
+    {
+      "check": "research/v491_runtimeprep_handoff_20261019.json: immutable historical files",
+      "pass": true,
+      "reason": "Version changes are additions; old human forms and prior artifacts remain untouched."
+    }
+  ],
+  "original_artifacts_preserved": [
+    {
+      "handoff": {
+        "path": "research/v491_handoff_20261019.json",
+        "sha256": "87d17f4e3e790b29f6466aa8ec3a26638618b7e8f5baacf547e1df891b2071ab"
+      },
+      "checked_files": 69,
+      "mismatches": []
+    },
+    {
+      "handoff": {
+        "path": "research/v491_runtimeprep_handoff_20261019.json",
+        "sha256": "7ee85989ae7bf31c0f494d7e7eeb76da545e43c266376641ec924349f158d205"
+      },
+      "checked_files": 88,
+      "mismatches": []
+    }
+  ],
+  "topic_acceptance": "The narrowed empirical question remains the preservation of public institutional evidence in visible reasons and actual sector choices under a shared AI workflow. The added common-only C distinguishes the availability of institutional material; E/L examines provision schedule with history/exposure confounding. Numeric references give context rather than institution gold.",
+  "source_review_limit": "The same AI task authored the source review. This acceptance confirms its completeness and alignment, not a second independent semantic rater.",
+  "literature_verification_scope": "Reuses separately documented primary-paper methods review and the fresh PortBench formula confirmation recorded in the computation audit. No claim that all background literature was newly reread here.",
+  "reader_documents": "Separate editorial review reports initial stale v491 header/navigation and E/L-only wording. Reader-document repair is not evidence of new research outputs and is tracked separately.",
+  "findings_requiring_protocol_revision": [],
+  "main_execution_allowed": false,
+  "model_generation_calls_by_this_check": 0,
+  "limitations": [
+    "No independent human semantic validation.",
+    "No observed v492 research output was used to select this rubric or comparisons.",
+    "Source, date, universe and rating-scale mismatches remain disclosed.",
+    "Prior CPU throughput is not a promise of F0 completion.",
+    "Three checks are quality-control layers, not three independent measurements."
+  ]
+}

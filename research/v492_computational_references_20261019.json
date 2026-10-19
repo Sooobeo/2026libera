@@ -1,0 +1,200 @@
+{
+  "protocol_version": "4.9.2",
+  "recorded_at_utc": "2026-10-19T07:34:05.370930+00:00",
+  "status": "PASS",
+  "visibility": "evaluator_only_not_added_to_any_model_prompt",
+  "input_ref": {
+    "path": "data/sector_protocol/v491_design_20261019/public_compact_candidate.json",
+    "sha256": "afe810b2bfb69ae4bfa372e65fa587bc6253eecf8028d5fde39cf3ec395bcb8d"
+  },
+  "input_pointer": "/common_market",
+  "covariance_unit": "daily_decimal_return_squared",
+  "dates": [
+    "2026-04-21",
+    "2026-07-16"
+  ],
+  "observations": 60,
+  "sector_codes": [
+    "10",
+    "15",
+    "20",
+    "25",
+    "30",
+    "35",
+    "40",
+    "45",
+    "50",
+    "55",
+    "60"
+  ],
+  "sector_names": [
+    "Energy",
+    "Materials",
+    "Industrials",
+    "Consumer Discretionary",
+    "Consumer Staples",
+    "Health Care",
+    "Financials",
+    "Information Technology",
+    "Communication Services",
+    "Utilities",
+    "Real Estate"
+  ],
+  "formulas": {
+    "equal_weight": "w_i=1/N, N=11 supplied sectors",
+    "minimum_variance": "argmin_w w^T Sigma w subject to w_i>=0 and sum(w_i)=1",
+    "annualized_in_sample_volatility": "sqrt(252*w^T Sigma w)"
+  },
+  "paper_basis": {
+    "url": "https://arxiv.org/html/2605.27887v6",
+    "locations": [
+      "Section3.1 classical baselines",
+      "AppendixC.4 classical strategies"
+    ],
+    "adopted": "Equal weighting and long-only minimum-variance reference strategies on common trailing returns.",
+    "local_adaptation": "Apply those strategies to the existing eleven-sector case. No replay, performance win, investor profile or institution-specific optimality is asserted."
+  },
+  "solver": {
+    "method": "all-simplex-face stationary solutions",
+    "examined_faces": 2047,
+    "feasible_stationary_points": 905,
+    "selected_support_indexes": [
+      0,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "daily_variance": 1.7365105566054417e-05,
+    "minimum_eigenvalue": 1.605480440241414e-05,
+    "condition_number": 43.62429988557621,
+    "KKT_support_max_residual": 2.0328790734103208e-20,
+    "KKT_inactive_min_margin": 1.0874717200882347e-06,
+    "independent_method": "scipy SLSQP, positive scalar objective scaling only",
+    "independent_success": true,
+    "independent_message": "Optimization terminated successfully",
+    "independent_max_weight_difference": 3.4549902126757015e-08
+  },
+  "implementation_numeric_tolerances": {
+    "purpose": "Floating-point/solver verification only; no behavioral cutoffs or investment thresholds.",
+    "KKT_atol": 1e-12,
+    "SLSQP_ftol": 1e-13,
+    "cross_solver_weight_atol": 1e-06
+  },
+  "references": [
+    {
+      "reference_id": "equal_weight",
+      "weights": {
+        "10": 0.09090909090909091,
+        "15": 0.09090909090909091,
+        "20": 0.09090909090909091,
+        "25": 0.09090909090909091,
+        "30": 0.09090909090909091,
+        "35": 0.09090909090909091,
+        "40": 0.09090909090909091,
+        "45": 0.09090909090909091,
+        "50": 0.09090909090909091,
+        "55": 0.09090909090909091,
+        "60": 0.09090909090909091
+      },
+      "daily_variance": 2.9665020883129154e-05,
+      "annualized_in_sample_volatility": 0.08646146692341362,
+      "historical_daily_mean": 0.0006539963961086768,
+      "institution_specific": false,
+      "institutional_gold": false,
+      "is_AI_experimental_arm": false
+    },
+    {
+      "reference_id": "long_only_minimum_variance",
+      "weights": {
+        "10": 0.13653777964449715,
+        "15": 0.0,
+        "20": 0.0,
+        "25": 0.0,
+        "30": 0.2693577551691947,
+        "35": 0.015680772910829924,
+        "40": 0.2954125940338565,
+        "45": 0.18588541846128195,
+        "50": 0.04759745443390786,
+        "55": 0.04952822534643188,
+        "60": 0.0
+      },
+      "daily_variance": 1.7365105566054417e-05,
+      "annualized_in_sample_volatility": 0.06615139153975307,
+      "historical_daily_mean": 0.0012056392757574975,
+      "institution_specific": false,
+      "institutional_gold": false,
+      "is_AI_experimental_arm": false
+    },
+    {
+      "reference_id": "existing_market_benchmark",
+      "weights": {
+        "10": 0.03003003003003003,
+        "15": 0.018018018018018018,
+        "20": 0.08808808808808809,
+        "25": 0.09309309309309309,
+        "30": 0.04604604604604604,
+        "35": 0.0890890890890891,
+        "40": 0.11811811811811812,
+        "45": 0.38038038038038036,
+        "50": 0.09709709709709709,
+        "55": 0.022022022022022022,
+        "60": 0.018018018018018018
+      },
+      "daily_variance": 7.669643648710855e-05,
+      "annualized_in_sample_volatility": 0.13902338650295984,
+      "historical_daily_mean": 0.0013120082692357016,
+      "institution_specific": false,
+      "institutional_gold": false,
+      "is_AI_experimental_arm": false
+    }
+  ],
+  "checks": [
+    {
+      "check": "all weights finite, nonnegative and sum one",
+      "pass": true
+    },
+    {
+      "check": "KKT stationarity on positive support",
+      "pass": true
+    },
+    {
+      "check": "KKT inactive inequality",
+      "pass": true
+    },
+    {
+      "check": "variance no greater than equal weighting or market benchmark",
+      "pass": true
+    },
+    {
+      "check": "independent SLSQP success",
+      "pass": true
+    },
+    {
+      "check": "independent SLSQP weight agreement",
+      "pass": true
+    },
+    {
+      "check": "independent SLSQP objective agreement",
+      "pass": true
+    },
+    {
+      "check": "input annualized volatility consistency",
+      "pass": true
+    }
+  ],
+  "dependencies": {
+    "numpy": "2.4.4",
+    "scipy": "1.17.1"
+  },
+  "limitations": [
+    "The sample covariance minimizes risk in the supplied past window; it is not a known future covariance.",
+    "Risk minimization does not optimize the capital-appreciation objective or implement institutional qualitative views.",
+    "These references do not interpret the supplied macro context; the matched common-context AI arm C is the strategic control.",
+    "No institution-specific expected returns, risk coefficient, target weights, rating-to-weight rule or gold answer was invented.",
+    "Current vendor-adjusted historical-price vintage is retained; this is not a point-in-time trading backtest."
+  ],
+  "model_generation_requests": 0
+}
