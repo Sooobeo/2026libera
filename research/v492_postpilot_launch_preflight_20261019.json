@@ -1,0 +1,104 @@
+{
+  "status": "PASS_for_background_observer_launch",
+  "recorded_at_utc": "2026-10-19T08:55:11.338848+00:00",
+  "review_mode": "AI_technical_check_not_independent_human_validation",
+  "verification_counts": {
+    "analyzer_unit_tests": 20,
+    "masked_unit_tests": 15,
+    "watcher_unit_tests": 15,
+    "actual_integration_checks": 14
+  },
+  "input_refs": [
+    {
+      "path": "research/v492_postpilot_config_20261019_r2.json",
+      "sha256": "412034bff24f6d1b403e76e70245b20c191462a8837989fe20237f43001acc02"
+    },
+    {
+      "path": "research/analyze_v492_pilot.py",
+      "sha256": "841c1f941e2c39165f84f51f5df283ca7a3c5727de285d4ad56edfa50166529f"
+    },
+    {
+      "path": "research/build_v492_masked_review.py",
+      "sha256": "f4f9295a657892431d76b79310b3af229dc5bc7d972b098adb10ff5dd29a1f77"
+    },
+    {
+      "path": "research/stop_sector_v492_cpu.ps1",
+      "sha256": "065b97e1d4005e8ab55eff1f3c9be553fa897b075896d50ccc318386ad74f308"
+    },
+    {
+      "path": "research/watch_v492_postpilot.py",
+      "sha256": "f431a1b147a1f5b6053821820042074464dbd12bf592f3ece455e9b84ed583b9"
+    },
+    {
+      "path": "research/v492_analyzer_verification_20261019.json",
+      "sha256": "b581f6e5eed386c3486cce355396e243908fbbb4a0d77c74108b6cc713b639e0"
+    },
+    {
+      "path": "research/v492_masked_review_verification_20261019_r2.json",
+      "sha256": "2a5ac8c9c05015cd2b4cc354a4203e8ecb1c6b5de390cb9da92efe57a11e8416"
+    },
+    {
+      "path": "research/v492_postpilot_watcher_unit_review_20261019.json",
+      "sha256": "9a49d4a91be46407f4130ad60ce4a603c0bd809e6742d1c168c9f9b42b3fe6d9"
+    },
+    {
+      "path": "research/v492_postprocessing_integration_20261019_r2.json",
+      "sha256": "f30a401d8e636ad521cfd522bf440c89657b25d4dde417d5aaf2fb732853b100"
+    }
+  ],
+  "recorder_ref": {
+    "path": "research/record_v492_postpilot_launch.py",
+    "sha256": "73509f0e46ad9e7109711db98fed2f8b59d9a462ee84a429a845859bdd28d69e"
+  },
+  "dry_run": {
+    "status": "dry_run_validated_no_commands",
+    "config_ref": {
+      "path": "research/v492_postpilot_config_20261019_r2.json",
+      "sha256": "412034bff24f6d1b403e76e70245b20c191462a8837989fe20237f43001acc02"
+    },
+    "commands": {
+      "analysis": [
+        "C:\\Users\\Insun\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "C:\\Users\\Insun\\2026libera\\research\\analyze_v492_pilot.py",
+        "--run-dir",
+        "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019",
+        "--output",
+        "C:\\Users\\Insun\\2026libera\\research\\v492_pilot_arithmetic_20261019.json"
+      ],
+      "masked": [
+        "C:\\Users\\Insun\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-B",
+        "-X",
+        "utf8",
+        "C:\\Users\\Insun\\2026libera\\research\\build_v492_masked_review.py",
+        "--run-dir",
+        "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019",
+        "--output-dir",
+        "C:\\Users\\Insun\\2026libera\\research\\artifacts\\v492_pilot_review_20261019\\judge",
+        "--mapping-dir",
+        "C:\\Users\\Insun\\2026libera\\research\\artifacts\\v492_pilot_review_20261019\\private"
+      ],
+      "shutdown": [
+        "powershell.exe",
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "C:\\Users\\Insun\\2026libera\\research\\stop_sector_v492_cpu.ps1",
+        "-EvidenceDirectory",
+        "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_cpu_20261019"
+      ]
+    },
+    "model_calls": 0,
+    "shutdown_performed": false
+  },
+  "generation_requests": 0,
+  "shutdown_performed": false,
+  "actual_model_output_content_read": false,
+  "pilot_complete": false,
+  "semantic_review": "pending_after_pilot",
+  "visual_qa": "deferred_until_machine_idle"
+}

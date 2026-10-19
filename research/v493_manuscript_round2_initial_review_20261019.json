@@ -1,0 +1,371 @@
+{
+  "status": "document_clarifications_requested_core_design_and_numbers_pass",
+  "round": 2,
+  "recorded_at_utc": "2026-10-19T09:17:36.205834+00:00",
+  "reviewer": "/root/v491_review_pack",
+  "review_kind": "independent AI technical/methods reading; not independent human validation",
+  "manuscript_scope": "A preserved intermediate revision; root was applying fixes during review. Open findings refer to this immutable copy, not an unexamined later file.",
+  "preserved_manuscript_ref": {
+    "path": "research/v493_manuscript_round2_input_20261019.json",
+    "sha256": "106b9aeaa1bff4251af2a33a3999962e1d5b34ebde5af332e9892ba55f3d04e0"
+  },
+  "current_source_at_recording_ref": {
+    "path": "paper/v493_manuscript_20261019.json",
+    "sha256": "7abb26c0737211610e74d092ed16aa6718a3ac5eaf5669e1d16f0137288642ca"
+  },
+  "input_refs": [
+    {
+      "path": "research/v493_manuscript_round2_input_20261019.json",
+      "sha256": "106b9aeaa1bff4251af2a33a3999962e1d5b34ebde5af332e9892ba55f3d04e0"
+    },
+    {
+      "path": "research/v492_evaluation_protocol_20261019_r2.json",
+      "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+    },
+    {
+      "path": "research/v492_computational_references_20261019.json",
+      "sha256": "d65a7d302ed03f4fc430134b947f9f81f10b8b84fec1855511f258144a46bd11"
+    },
+    {
+      "path": "research/v492_computational_reference_review_20261019.json",
+      "sha256": "fa2d70ee4692be0ff6c7540d9cb34d1f0586a8023fc9ba60dc0bc2e31a05e1f6"
+    },
+    {
+      "path": "research/v492_source_review_20261019.json",
+      "sha256": "3f6e4bd952b0bbf1d4e3487bb00a5e839a9f907038e43e895807425c21747718"
+    },
+    {
+      "path": "research/v492_runtime_candidate_20261019.json",
+      "sha256": "3fc05ace24af7893e38ee5668acee977bec14f72809f236fb9401dcc597d5f0f"
+    },
+    {
+      "path": "research/sector_v492_runtime.py",
+      "sha256": "cc8285db4d561aea10878db336771752965f4517405a93a1574b18f2fa300e04"
+    },
+    {
+      "path": "research/sector_v492_contract.py",
+      "sha256": "f77d1ddec9630a4c7edbf3928d298b7b05094345996ece1cf53d91fc40171a21"
+    },
+    {
+      "path": "research/sector_v491_contract.py",
+      "sha256": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397"
+    },
+    {
+      "path": "data/sector_market/manifest.json",
+      "sha256": "b60124bd5ccb14d0738bec7e80e59cc66f7d288af60b9ca3c14d61831a05cf6f"
+    },
+    {
+      "path": "data/sector_market/benchmark.json",
+      "sha256": "ebef9bd86acbce8d0ea5681c5cf685a79adc53a03e417971ac044b0fbf86d6e6"
+    },
+    {
+      "path": "research/v481_conference_alignment_20261018.json",
+      "sha256": "53f243350b8e009fde1c0960c963a57856e8317c43abc282fb318a7c2313ab75"
+    },
+    {
+      "path": "research/v493_paper_source_review_20261019.json",
+      "sha256": "516ea16cc16f4e2c9571c80d2a2a2cf0715cce0d6912e12078df03412f0ec5b3"
+    },
+    {
+      "path": "research/evidence/v48_reference_20261018/portbench_2605_27887v6.html",
+      "sha256": "1cfcc2234f076e011702265433fcdce14c29514546ed74ebf0bec090275ab62c"
+    },
+    {
+      "path": "research/v492_postpilot_launch_acceptance_20261019.json",
+      "sha256": "d20b5ff6f58e83f3094df45d161095141415d30a9bed421cf18db29955a28073"
+    }
+  ],
+  "checks": [
+    {
+      "check": "Eleven sector codes and ETF identities",
+      "pass": true,
+      "evidence": "Frozen market manifest and computational reference sector order"
+    },
+    {
+      "check": "Equal-weight displayed percent 10",
+      "pass": true,
+      "evidence": "Exact 1/11; display rounding only"
+    },
+    {
+      "check": "Minimum-variance displayed percent 10",
+      "pass": true,
+      "evidence": "Frozen all-face/SLSQP cross-checked solution"
+    },
+    {
+      "check": "Equal-weight displayed percent 15",
+      "pass": true,
+      "evidence": "Exact 1/11; display rounding only"
+    },
+    {
+      "check": "Minimum-variance displayed percent 15",
+      "pass": true,
+      "evidence": "Frozen all-face/SLSQP cross-checked solution"
+    },
+    {
+      "check": "Equal-weight displayed percent 20",
+      "pass": true,
+      "evidence": "Exact 1/11; display rounding only"
+    },
+    {
+      "check": "Minimum-variance displayed percent 20",
+      "pass": true,
+      "evidence": "Frozen all-face/SLSQP cross-checked solution"
+    },
+    {
+      "check": "Equal-weight displayed percent 25",
+      "pass": true,
+      "evidence": "Exact 1/11; display rounding only"
+    },
+    {
+      "check": "Minimum-variance displayed percent 25",
+      "pass": true,
+      "evidence": "Frozen all-face/SLSQP cross-checked solution"
+    },
+    {
+      "check": "Equal-weight displayed percent 30",
+      "pass": true,
+      "evidence": "Exact 1/11; display rounding only"
+    },
+    {
+      "check": "Minimum-variance displayed percent 30",
+      "pass": true,
+      "evidence": "Frozen all-face/SLSQP cross-checked solution"
+    },
+    {
+      "check": "Equal-weight displayed percent 35",
+      "pass": true,
+      "evidence": "Exact 1/11; display rounding only"
+    },
+    {
+      "check": "Minimum-variance displayed percent 35",
+      "pass": true,
+      "evidence": "Frozen all-face/SLSQP cross-checked solution"
+    },
+    {
+      "check": "Equal-weight displayed percent 40",
+      "pass": true,
+      "evidence": "Exact 1/11; display rounding only"
+    },
+    {
+      "check": "Minimum-variance displayed percent 40",
+      "pass": true,
+      "evidence": "Frozen all-face/SLSQP cross-checked solution"
+    },
+    {
+      "check": "Equal-weight displayed percent 45",
+      "pass": true,
+      "evidence": "Exact 1/11; display rounding only"
+    },
+    {
+      "check": "Minimum-variance displayed percent 45",
+      "pass": true,
+      "evidence": "Frozen all-face/SLSQP cross-checked solution"
+    },
+    {
+      "check": "Equal-weight displayed percent 50",
+      "pass": true,
+      "evidence": "Exact 1/11; display rounding only"
+    },
+    {
+      "check": "Minimum-variance displayed percent 50",
+      "pass": true,
+      "evidence": "Frozen all-face/SLSQP cross-checked solution"
+    },
+    {
+      "check": "Equal-weight displayed percent 55",
+      "pass": true,
+      "evidence": "Exact 1/11; display rounding only"
+    },
+    {
+      "check": "Minimum-variance displayed percent 55",
+      "pass": true,
+      "evidence": "Frozen all-face/SLSQP cross-checked solution"
+    },
+    {
+      "check": "Equal-weight displayed percent 60",
+      "pass": true,
+      "evidence": "Exact 1/11; display rounding only"
+    },
+    {
+      "check": "Minimum-variance displayed percent 60",
+      "pass": true,
+      "evidence": "Frozen all-face/SLSQP cross-checked solution"
+    },
+    {
+      "check": "Displayed volatility equal_weight",
+      "pass": true,
+      "evidence": "sqrt(252*w^T*Sigma*w), same frozen daily covariance"
+    },
+    {
+      "check": "Displayed volatility long_only_minimum_variance",
+      "pass": true,
+      "evidence": "sqrt(252*w^T*Sigma*w), same frozen daily covariance"
+    },
+    {
+      "check": "Displayed volatility existing_market_benchmark",
+      "pass": true,
+      "evidence": "sqrt(252*w^T*Sigma*w), same frozen daily covariance"
+    },
+    {
+      "check": "Window and date bounds",
+      "pass": true,
+      "evidence": "Frozen computational input, no new outcome window"
+    },
+    {
+      "check": "Five cells and ten maximum calls",
+      "pass": true,
+      "evidence": "Two sources times E/L plus one shared C; no pseudo-replication"
+    },
+    {
+      "check": "Current model and engineering ceiling",
+      "pass": true,
+      "evidence": "Frozen runtime; engineering settings distinguished from paper constants"
+    },
+    {
+      "check": "C treated as an AI strategy control",
+      "pass": true,
+      "evidence": "Frozen E/L/C matched-stage design"
+    },
+    {
+      "check": "No invented institutional numerical gold",
+      "pass": true,
+      "evidence": "Original outlooks do not publish a complete eleven-sector numeric target"
+    },
+    {
+      "check": "No realized return or loss-probability claim",
+      "pass": true,
+      "evidence": "Frozen historical risk diagnostic only"
+    },
+    {
+      "check": "No causal population or pure anchoring claim",
+      "pass": true,
+      "evidence": "One market/model and one first final per cell"
+    },
+    {
+      "check": "Honest ongoing-pilot status",
+      "pass": true,
+      "evidence": "18:00 KST manuscript cutoff; prior 08:58 UTC launch acceptance confirms pilot still in progress without reading response content"
+    },
+    {
+      "check": "AI review disclosure and no independent-human claim",
+      "pass": true,
+      "evidence": "Frozen delegated AI coding protocol"
+    },
+    {
+      "check": "Corrected D0 continuation versus final-vector eligibility",
+      "pass": true,
+      "evidence": "sector_v491_contract.py:234-264 and sector_v492_runtime.py:337-355,533-545"
+    },
+    {
+      "check": "Corrected source-comparison row identity in section 4.2",
+      "pass": true,
+      "evidence": "Two source documents times eleven sectors, then eleven within-sector cross-source comparisons"
+    },
+    {
+      "check": "Removed internal E2A bibliographic instruction",
+      "pass": true,
+      "evidence": "Reference retains arXiv v1 rather than an unverified proceedings claim"
+    },
+    {
+      "check": "Numerical self-checks all pass",
+      "pass": true,
+      "evidence": "No failed numeric or core-design check in this preserved revision"
+    }
+  ],
+  "passed_checks": 39,
+  "failed_checks": 0,
+  "findings": [
+    {
+      "id": "R2-01",
+      "severity": "required_clarification",
+      "status": "corrected_in_preserved_revision",
+      "location": "4.5 / block 45",
+      "issue": "Initial wording narrowed the D0 continuation gate to unavailable complete weights, omitting explanation-schema and normal-stop requirements.",
+      "verification": "The preserved revision now separates continuation from post-hoc vector analysis and explicitly states schema/termination gates. Frozen experiment code was not changed."
+    },
+    {
+      "id": "R2-02",
+      "severity": "required_source_disclosure",
+      "status": "open_in_preserved_revision",
+      "location": "4.3, data references, and table 1/benchmark description",
+      "issue": "The manuscript calls the ETF adjusted-price supplier only the current provider; Yahoo Finance and State Street provenance are absent from the data-reference list. The exact source/locator of the common S&P500 weights and the ETF-proxy replication limit should also be explicit.",
+      "evidence": "data/sector_market/manifest.json: provenance.data and source URLs; benchmark.json: source_record and benchmark_proxy_limit.",
+      "suggestion": "Name Yahoo Finance public chart adjusted-close data, collected 2026-10-17, with all eleven ticker requests retained in the manifest. Name State Street official product pages for ETF identity. Cite Fidelity Q3 p.2 for the 2026-06-30 S&P500 sector weights. Explain that ETF caps, fees and tracking error mean the resulting sleeve basket does not exactly replicate the index. These are data citations, not new paper-derived assumptions."
+    },
+    {
+      "id": "R2-03",
+      "severity": "required_interpretation_limit",
+      "status": "open_in_preserved_revision",
+      "location": "7 final limitations paragraph / 6.3 reporting rule",
+      "issue": "Null pairs are retained, but the text does not explicitly state that having no eligible comparison leaves the primary allocation question unanswered; the final claim that failed outcomes remain meaningful needs this boundary.",
+      "evidence": "Frozen protocol interpretation.no_valid_pairs and no_valid_control.",
+      "suggestion": "Add: 유효한 최종배분 비교쌍이 확보되지 않으면 기관 근거에 따른 배분 차이라는 주된 질문은 미답으로 남으며, 그 경우 실행 가능성과 측정 절차의 한계만 보고한다. C가 부적격이면 C 비교는 미관측으로 남기되 유효한 E/L 비교는 그 분모와 함께 별도로 보고한다."
+    },
+    {
+      "id": "R2-04",
+      "severity": "terminology",
+      "status": "partly_corrected_in_preserved_revision",
+      "location": "4.2 block 29 corrected; 5.4 block 59 still open",
+      "issue": "Section 4.2 now correctly says eleven within-sector two-source comparison rows, but section 5.4 still says 산업 간 비교행.",
+      "suggestion": "Use 산업별 기관 간 비교행 or 산업별 관찰행 in section 5.4 so it does not suggest a cross-industry comparison matrix."
+    },
+    {
+      "id": "R2-05",
+      "severity": "copy_edit",
+      "status": "open_in_preserved_revision",
+      "location": "Table 5 note",
+      "issue": "소수 둘째 자리에서 반올림 is ambiguous/technically inconsistent with two displayed decimal places.",
+      "suggestion": "Use 소수 셋째 자리에서 반올림하여 둘째 자리까지 표시하였다. All 22 displayed percentages were numerically checked and are correct."
+    },
+    {
+      "id": "R2-06",
+      "severity": "copy_edit",
+      "status": "corrected_in_preserved_revision",
+      "location": "E2A reference",
+      "issue": "An internal instruction about when to use arXiv versus proceedings had entered the bibliography.",
+      "verification": "The preserved revision retains arXiv v1, 13 September 2026 and removes that instruction."
+    }
+  ],
+  "source_notes": [
+    {
+      "claim": "60-observation lookback and 252-day annualization",
+      "status": "directly_supported",
+      "source": "research/evidence/v48_reference_20261018/portbench_2605_27887v6.html",
+      "locators": [
+        "Appendix B market context, local line 2007",
+        "Appendix B covariance, local line 2089",
+        "Appendix C.1 default L=60, local line 2133"
+      ],
+      "limit": "This supports a borrowed risk convention, not optimality for this sample or the entire five-case design."
+    },
+    {
+      "claim": "GMV, equal weighting, half-L1 distance and temperature/output settings",
+      "status": "consistent_with_retained_primary_source_reviews",
+      "sources": [
+        "research/v492_computational_reference_review_20261019.json",
+        "research/v493_paper_source_review_20261019.json"
+      ],
+      "limit": "The manuscript appropriately states that thinking mode, quantization, model size and hardware differ, and does not transfer composite scores."
+    },
+    {
+      "claim": "Other scholarly claims",
+      "status": "scope_checked_against_primary_verified_source_review",
+      "source": "research/v493_paper_source_review_20261019.json",
+      "limit": "This round did not freshly browse every bibliography entry; it independently checked how the verified claims are used in the manuscript. FSB remains a policy report, not a peer-reviewed experiment."
+    }
+  ],
+  "alignment": {
+    "topic": "PASS: public institutional evidence -> stated interpretation -> numerical allocation is a bounded economic/management workflow question.",
+    "conference": "PASS within the user-provided overview: concrete organizational problem, traceable evidence and response tied to observed findings. The overview is not an independently authenticated official grading rubric; submission-format compliance is not certified.",
+    "control": "PASS: matched-stage common-only AI C is the strategy control; 1/N and GMV are evaluator-only diagnostic references.",
+    "scope": "PASS: no market-wide homogenization, private-mandate recovery, pure anchoring, profitability or human-validation claim.",
+    "status": "PASS: ongoing pilot and absent completed comparison results are disclosed; implementation tests are not empirical financial outcomes."
+  },
+  "requested_changes_affect_experiment": false,
+  "requested_changes_are_manuscript_clarification_only": true,
+  "actual_model_generation_calls": 0,
+  "actual_pilot_response_content_read": false,
+  "frozen_experiment_files_modified": false,
+  "manuscript_source_modified_by_reviewer": false,
+  "visual_layout_review_performed": false
+}

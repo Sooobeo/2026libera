@@ -1,0 +1,380 @@
+{
+  "version": "v493_paper_source_review_1",
+  "recorded_at_utc": "2026-10-19T08:56:04.887Z",
+  "status": "completed_scholarly_source_and_scope_review",
+  "scope": "Read-only review for a new DOCX manuscript; no frozen file edits, Ollama calls or actual pilot answer content reads.",
+  "pilot_status_basis": "Parent assigned task states actual v492 pilot ongoing; this reviewer did not inspect answer content or claim completed final comparisons.",
+  "recommended_title_ko": "공통 생성형 AI는 기관별 공개 투자판단을 어떻게 반영하는가: 자료 제공 시점과 기관 자료 미제공 조건을 비교하는 산업배분 사례연구",
+  "recommended_document_type_ko": "문헌 검토·연구설계·구현 검증과 예비실험 진행상태를 담은 중간 소논문",
+  "topic_link_sentence_ko": "공통 AI 도입의 경제·경영적 쟁점을 공개 기관근거가 배분 제안에 전달되고 재검토되는 업무 경로로 좁혀 관찰한다. 이는 시장 전체 동질화나 투자손실을 직접 입증하지 않지만, 조직별 판단 근거를 보존하는 의사결정 지원 절차를 평가하는 중간 증거를 제공하도록 설계된다.",
+  "outline": [
+    {
+      "section": "초록",
+      "content": "문제–질문–5조건/2단계 설계–평가 구분–현재 진행상태를 한 문단에 제시. 완료되지 않은 실험 결과 문장을 만들지 않음."
+    },
+    {
+      "section": "1. 서론",
+      "content": "상경 논점은 서로 다른 공개 근거가 자본배분 판단에 남는가이고, 경영 논점은 자료 제공·재검토의 업무 설계다. 공통 AI 위험 논의와 관찰 가능한 문서–설명–원비중 연결 사이를 명시적으로 연결한다."
+    },
+    {
+      "section": "2. 이론적 배경과 선행연구",
+      "content": "공유 알고리즘의 조건부 집단효과(Kleinberg/Bommasani/FSB),품질–다양성 구분(Doshi),금융 정보조건 실험(Hornuf/Quek),대화 이력(Laban),근거–행동과 평가편향(E2A/Pombal/Shi)을 연결한다. 직접 재현과 방법 원칙의 적용을 구분한다."
+    },
+    {
+      "section": "3. 연구질문과 개념의 조작화",
+      "content": "RQ1 공개근거 해석과 배분의 연결;RQ2 같은 단계의 C 대비 관측차이;RQ3 E/L 절차 차이. 근거충실성·비중 유효성·수치사실성·배분거리를 분리한다. 방향 차이 자체를 좋고 나쁨으로 정의하지 않는다."
+    },
+    {
+      "section": "4. 자료와 연구설계",
+      "content": "11개 산업을 한글로 명시하고 ETF는 산업 수익률 대리자료임을 설명. 기준일2026-07-17,12개월 업무,공통 거시발표·시장자료·기준비중,공개보고서의 날짜와 의미 차이를 제시. E/L/C 조건표와 자신의 D0를 보존하는2단계 절차를 서술한다. pilot Q2/6월과 prospective main Q3/7월을 구분한다."
+    },
+    {
+      "section": "5. 사전 평가 및 분석방법",
+      "content": "산업코드·원합계·유한성·음수·진술과 실제 변화·공식수치·근거연결을 구분. d=0.5Σ|w-v|,동일비중1/11,GMV argmin wᵀΣw를 정의.5개 예정최종안/55행 전체 분모,유효쌍만 거리,누락 null,원출력 무보정,공통 C 재사용 한계를 적는다."
+    },
+    {
+      "section": "6. 구현·검증 및 현재 진행 현황",
+      "content": "완료된 사전 자료점검·코드/수치검증과 진행 중 pilot을 나누어 보고한다. CPU 진단은 기술적 실행가능성 자료이며 문서조건 효과가 아니다. 이전 실패를 새pilot 결과에 합치지 않는다. 상태 확인시점을 적는다."
+    },
+    {
+      "section": "7. 논의·한계·결론",
+      "content": "문서조건부 사례로서의 제한된 기여,사적목적 미관측,단일모델/단일시장/각1회,자료빈티지,노출·길이·순서 혼재,불완전 가림,AI 의미평가 미타당화를 설명. 유효비교가 없으면 연구질문은 미답이며 추후 연구계획으로 끝낸다."
+    },
+    {
+      "section": "부록",
+      "content": "산업–ETF 매핑,보고서·거시자료 목록과 시간 정의,모델/템플릿/입력 해시,계산 참고안/수치검증,개발이력. 엔지니어링 세부와 대화상의 승인 이력은 본문에서 분리한다."
+    }
+  ],
+  "must_correct_or_clarify": [
+    {
+      "priority": "required",
+      "location": "표지 상태·초록·제6절·결론",
+      "issue": "예비실험도 실행 전 준비 상태라고 쓰면 현재 진행 상황과 어긋남.",
+      "replacement": "2026년10월19일 기록 시점에 예비실험은 진행 중이며, 완료된 조건 간 최종배분 비교와 본실험 결과는 아직 제시하지 않는다. 본 문서는 문헌·자료·사전 설계·구현 검증까지의 중간 소논문이다.",
+      "basis": "Parent-reported ongoing pilot; no model answer content read for this review."
+    },
+    {
+      "priority": "required",
+      "location": "서론의 논제와 제3절 연구질문 사이",
+      "issue": "공통 AI 채택으로 기관 전체 판단이 획일화된다는 가설과 공개문서 조건비교가 직접 같은 검증인 것처럼 연결하면 과도함.",
+      "replacement": "본 연구는 시장 전체의 동질화 자체를 추정하지 않고, 그 우려와 관련된 한 업무 경로인 공개 기관근거의 전달·재검토·배분 연결을 관찰한다. 이 경로를 확인하는 것은 거시적 주장에 필요한 중간 증거이며 충분조건은 아니다."
+    },
+    {
+      "priority": "required",
+      "location": "기관/투자목적/위험선호 표현 전반",
+      "issue": "실제 기관을 참가자처럼 취급하거나 공개전망을 사적 운용목적의 측정으로 쓰는 구성타당도 문제.",
+      "replacement": "Fidelity·UBS 공개 산업전망 문서를 부여한 조건이라고 지칭한다. 실제 기관의 사적 목적·고객 위험선호·보유종목·최적배분은 관측하지 않는다."
+    },
+    {
+      "priority": "required",
+      "location": "비교결과 예상·해석",
+      "issue": "C와 큰 차이=근거 반영 성공, E-L 무차이=앵커링 없음으로 단정할 수 없음.",
+      "replacement": "배분 차이는 관찰값으로 먼저 제시하고 원문 의미·설명·실제 숫자의 연결을 별도로 검토한다. 공통 목표와 시장·기준비중 때문에 같은 배분도 합리적일 수 있다."
+    },
+    {
+      "priority": "required",
+      "location": "실험방법·표본 표현",
+      "issue": "무작위화·반복실행 없이 일반 인과효과나 통계적 표본 수를 주장하지 않음.",
+      "replacement": "두 자료원×두 제공절차+공통 C 한 조건의5개 사례, 조건당 첫 최종안1개이다. 55개 산업행·10개 생성단계·여러 비교쌍은 독립 표본이 아니다."
+    },
+    {
+      "priority": "required",
+      "location": "위험·최소분산 해석",
+      "issue": "위험을 하락확률·투자자 허용손실 또는 미래 전망으로 넓히지 않음.",
+      "replacement": "과거60개 일별 수익률의 공분산으로 산출한 변동성 진단이며, 미래 손실확률이나 투자자 효용을 추정한 것이 아니다."
+    },
+    {
+      "priority": "required",
+      "location": "계산 참고안 표 아래",
+      "issue": "전 범위 후보 계산·같은 결과는 연속가능집합의 완전열거 또는 수학적 동일성을 암시할 수 있음.",
+      "replacement": "비어 있지 않은 산업 활성집합별 후보해 비교와 별도 수치 최적화의 결과가 사전 수치 허용오차 내에서 일치했다. 소논문 본문은 두 계산방법으로 확인했다고 쓰고 세부 잔차는 부록에 둔다."
+    },
+    {
+      "priority": "required",
+      "location": "AI 검토 방법",
+      "issue": "사람2명 검토를 사용자 요청으로 제외했다는 대화 이력은 학술 방법 기술이 아님.",
+      "replacement": "의미 평가는 AI 보조 서술 코딩이며 사람에 의한 타당화와 독립 평가자 신뢰도 검증은 수행하지 않았다. 반복3회 확인은 과정 점검이고 독립 측정이나 합의 정답이 아니다."
+    },
+    {
+      "priority": "required",
+      "location": "평가/실패 처리",
+      "issue": "JSON 전체가 유효한 비중을 담지만 설명 schema나length 상태가 실패인 경우를 일괄 성공/실패로 압축하면 프로토콜과 어긋남.",
+      "replacement": "전송·종료·전체 JSON 파싱·설명형식·원비중 자격을 별도 보고한다. 전체 JSON의 원비중이 사전 자격을 충족하면 거리는 계산하되 의미적 성공·정상 완료로 승격하지 않는다. 불완전텍스트에서 부분비중을 복원하지 않는다."
+    },
+    {
+      "priority": "recommended",
+      "location": "선행연구와 참고문헌",
+      "issue": "현재 채택하지 않은 FF12/French,반복 self-refinement,RAG 검색 실험 문헌이 중심 논증을 흐림.",
+      "replacement": "본문은 공유알고리즘–조건부 금융업무–자료제공 절차–평가편향의 핵심 문헌으로 압축한다. 불채택 설계는 개발이력/후속연구 부록으로 이동한다. 본문 인용이 없는 참고문헌은 삭제하거나 부록 인용에 연결한다."
+    },
+    {
+      "priority": "required",
+      "location": "문헌과 수치의 출처 설명",
+      "issue": "모든 조건이 논문으로 보장된 것처럼 쓰지 않음.",
+      "replacement": "T=0·8192토큰·12개월 등의 차용 위치와 적용 차이를 밝히고,5조건·2단계·1회·11산업·CPU8·65536문맥·4500초·1e-6 허용오차는 연구 범위나 운영·수치 정밀도 설정으로 구분한다."
+    },
+    {
+      "priority": "required",
+      "location": "결과 및 결론",
+      "issue": "소프트웨어 합성검증과 실제 금융추론 성능을 혼동하지 않음.",
+      "replacement": "현재 확보된 것은 자료 검토·입력 고정·실행기 및 후처리 검증의 기록이다. 이는 측정 절차의 구현 확인이며 기관 판단 보존·투자수익·외적 타당성의 결과가 아니다."
+    }
+  ],
+  "bibliography_checked": [
+    {
+      "id": "kleinberg2021",
+      "authors": [
+        "Jon Kleinberg",
+        "Manish Raghavan"
+      ],
+      "year": 2021,
+      "title": "Algorithmic monoculture and social welfare",
+      "publication": "Proceedings of the National Academy of Sciences, 118(22), e2018340118",
+      "version": "Published article",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8179131/",
+      "doi": "10.1073/pnas.2018340118",
+      "verified": "Primary published article deposited in PMC; bibliographic metadata and theorem/conclusion checked.",
+      "supports_ko": "개별적으로 더 정확한 공통 알고리즘도 특정 선택·경쟁 조건에서 집단 후생을 낮출 수 있다는 이론적 가능성.",
+      "does_not_support_ko": "생성형 AI가 자산운용의 동질화나 손실을 일으킨다는 실증 결론. 논문의 조건부 정리를 보편 명제로 쓰면 안 됨."
+    },
+    {
+      "id": "bommasani2022",
+      "authors": [
+        "Rishi Bommasani",
+        "Kathleen A. Creel",
+        "Ananya Kumar",
+        "Dan Jurafsky",
+        "Percy Liang"
+      ],
+      "year": 2022,
+      "title": "Picking on the Same Person: Does Algorithmic Monoculture lead to Outcome Homogenization?",
+      "publication": "Advances in Neural Information Processing Systems, 35",
+      "version": "NeurIPS 2022 published proceedings",
+      "url": "https://papers.neurips.cc/paper_files/paper/2022/hash/17a234c91f746d9625a75cf8a8731ee2-Abstract-Conference.html",
+      "verified": "Official proceedings metadata and abstract checked.",
+      "supports_ko": "공유 자료와 공유 모델을 구분하며 모델 적응 방식에 따라 결과 동질화가 달라질 수 있음.",
+      "does_not_support_ko": "금융기관의 포트폴리오 동질화 크기나 본 실험에서 기관근거가 소실된다는 결론."
+    },
+    {
+      "id": "doshi2024",
+      "authors": [
+        "Anil R. Doshi",
+        "Oliver P. Hauser"
+      ],
+      "year": 2024,
+      "title": "Generative AI enhances individual creativity but reduces the collective diversity of novel content",
+      "publication": "Science Advances, 10, eadn5290",
+      "version": "Published article, 12 July 2024",
+      "url": "https://doi.org/10.1126/sciadv.adn5290",
+      "verified_fulltext_url": "https://discovery.ucl.ac.uk/id/eprint/10195027/1/Generative%20AI%20enhances%20individual%20creativity%20but%20reduces%20the%20collective%20diversity%20of%20novel%20content.pdf",
+      "verified": "Publisher PDF in author university repository; first-page metadata and results checked. Publisher website returned403; no access circumvention.",
+      "supports_ko": "개별 산출물 품질과 집단 다양성이 서로 다른 평가축임을 보여주는 창작 실험.",
+      "does_not_support_ko": "금융 판단의 방향·효과 크기·투자성과. 창작 결과를 금융 결과로 옮기지 않음."
+    },
+    {
+      "id": "hornuf2025",
+      "authors": [
+        "Lars Hornuf",
+        "David J. Streich",
+        "Niklas Töllich"
+      ],
+      "year": 2025,
+      "title": "Making GenAI Smarter: Evidence from a Portfolio Allocation Experiment",
+      "publication": "CESifo Working Paper No.11862",
+      "version": "Official working paper dated30April2025",
+      "url": "https://www.ifo.de/DocDL/cesifo1_wp11862.pdf",
+      "verified": "Official95-page PDF; author/title/date, Section3.3 and TableA1 checked.",
+      "locators": [
+        "Section3.3: common investor circumstances/universe and additional information treatments",
+        "Table3: information conditions",
+        "TableA1, printedA-1, physical page56:1/6/12-month horizons"
+      ],
+      "supports_ko": "기본 업무를 공통으로 유지하며 추가정보 조건을 비교하는 투자배분 과제의 선례; 12개월은 연구에서 사용된 기간 중 하나.",
+      "does_not_support_ko": "본 연구의 5조건·2턴·1회 실행이 충분한 표본이라는 근거, Fidelity/UBS의 실제 위험선호, 정보추가의 무조건적 개선."
+    },
+    {
+      "id": "quek2025",
+      "authors": [
+        "Ryan Quek Wei Heng",
+        "Edoardo Vittori",
+        "Keane Ong",
+        "Rui Mao",
+        "Erik Cambria",
+        "Gianmarco Mengaldo"
+      ],
+      "year": 2025,
+      "title": "Leveraging LLMs for Top-Down Sector Allocation in Automated Trading",
+      "publication": "arXiv:2503.09647",
+      "version": "v5,10April2025",
+      "url": "https://arxiv.org/abs/2503.09647v5",
+      "fulltext_url": "https://arxiv.org/html/2503.09647v5",
+      "verified": "Official arXiv metadata and Sections3–4 checked; first author displayed exactly as arXiv supplies it.",
+      "supports_ko": "금리·물가·고용·성장 등 거시 범주와 산업배분의 연결, 자료 발표일을 따르는 정보 시점 통제의 과제 선례.",
+      "does_not_support_ko": "LIBERA의 정확한7개 지표 조합이나 GDP 대체의 최적성, 수익률 우위. 원 논문의 PMI·뉴스·다중 에이전트·거래구조를 그대로 복제한 것이 아님."
+    },
+    {
+      "id": "laban2025",
+      "authors": [
+        "Philippe Laban",
+        "Hiroaki Hayashi",
+        "Yingbo Zhou",
+        "Jennifer Neville"
+      ],
+      "year": 2025,
+      "title": "LLMs Get Lost In Multi-Turn Conversation",
+      "publication": "arXiv:2505.06120",
+      "version": "v1,9May2025",
+      "url": "https://arxiv.org/abs/2505.06120v1",
+      "fulltext_url": "https://arxiv.org/html/2505.06120v1",
+      "verified": "Official arXiv metadata and abstract rechecked; detailed recap/history scope retained in earlier methods review.",
+      "supports_ko": "대화 초기에 형성된 가정과 다중 턴의 불안정성이 정보 전달 절차를 따로 관찰할 동기를 제공함.",
+      "does_not_support_ko": "금융 앵커링의 확인, 본2턴 설계의 최적성, 온도0의 반복 재현성 보장."
+    },
+    {
+      "id": "portbench2026",
+      "authors": [
+        "Yuxuan Zhao",
+        "Sijia Chen",
+        "Ningxin Su"
+      ],
+      "year": 2026,
+      "title": "PortBench: A Correlation-Aware, Full-Pipeline Benchmark for LLM-Driven Portfolio Management",
+      "publication": "arXiv:2605.27887",
+      "version": "v6,9October2026",
+      "url": "https://arxiv.org/abs/2605.27887v6",
+      "fulltext_url": "https://arxiv.org/html/2605.27887v6",
+      "verified": "Official version history and fulltext Sections3.1,C.4,D.4 rechecked; C.2 and risk conventions documented in retained methods review.",
+      "locators": [
+        "Section3.1: temperature0,maxoutput8192,thinking enabled",
+        "AppendixC.2 Eq.8: allocation similarity using half-L1 difference",
+        "AppendixC.4: equal-weight and long-only MinVar",
+        "AppendixD.4: selected numerical information ablation"
+      ],
+      "supports_ko": "배분·위험·성과의 평가축 분리, 비중거리 및 동일비중/최소분산 참고안, 정보제거 비교와 실행 설정의 선례.",
+      "does_not_support_ko": "Qwen3.5-4B 양자화·사고모드off·5조건 설계의 타당성 보증, 기관 정답비중, CEPS 점수 이전. CPU8/65536/4500초는 논문 수치가 아님."
+    },
+    {
+      "id": "e2a2026",
+      "authors": [
+        "Xiaoya Wang",
+        "Yutong Xu",
+        "Junjie Wang"
+      ],
+      "year": 2026,
+      "title": "E2A-Bench: Benchmarking Evidence-to-Action Reliability in Financial Chart Reasoning",
+      "publication": "arXiv:2609.14302",
+      "version": "v1,13September2026; arXiv comments identify EMNLP Findings; use arXiv version unless proceedings details separately verified",
+      "url": "https://arxiv.org/abs/2609.14302v1",
+      "fulltext_url": "https://arxiv.org/html/2609.14302v1",
+      "verified": "Official arXiv title/authors/version/abstract checked; fact/action/coverage scope also checked against retained methods review.",
+      "supports_ko": "사실 근거, 설명과 행동의 일치, 응답범위를 구별하여 적게 말한 답변이 과대평가되지 않도록 하는 평가 원칙.",
+      "does_not_support_ko": "기관별 유일한 정답배분, LIBERA AI 의미평가의 인간 검증, 수익성 보장. 해당 논문의 전문평가자 검증을 본 연구가 수행한 것으로 쓰면 안 됨."
+    },
+    {
+      "id": "markowitz1952",
+      "authors": [
+        "Harry Markowitz"
+      ],
+      "year": 1952,
+      "title": "Portfolio Selection",
+      "publication": "The Journal of Finance,7(1),77–91",
+      "version": "Published article,March1952",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.1952.tb01525.x",
+      "doi": "10.1111/j.1540-6261.1952.tb01525.x",
+      "verified_fulltext_url": "https://traders.berkeley.edu/papers/Markowitz.pdf",
+      "verified": "Publisher metadata rechecked; long-only budget/covariance derivation previously verified against original scan in retained methods record.",
+      "supports_ko": "포트폴리오 분산 wᵀΣw 및 최소분산 참고안의 수학적 기반.",
+      "does_not_support_ko": "60일 추정창·기관별 목표비중·미래 손실확률·투자전략 우월성. 역사적 표본 공분산은 미래 위험 자체가 아님."
+    },
+    {
+      "id": "pombal2026",
+      "authors": [
+        "José Pombal",
+        "Ricardo Rei",
+        "André F. T. Martins"
+      ],
+      "year": 2026,
+      "title": "Self-Preference Bias in Rubric-Based Evaluation of Large Language Models",
+      "publication": "arXiv:2604.06996",
+      "version": "v3,3August2026",
+      "url": "https://arxiv.org/abs/2604.06996v3",
+      "fulltext_url": "https://arxiv.org/html/2604.06996v3",
+      "verified": "Official version history/authors/abstract rechecked; detailed scope in retained methods record.",
+      "supports_ko": "항목별 rubric 평가에서도 자기/동일계열 선호가 남고 여러 judge를 묶어도 완전히 제거되지 않는다는 주의.",
+      "does_not_support_ko": "본 Codex 평가의 편향 크기, 세 번 검증의 독립성, 본 의미분류의 검증 완료."
+    },
+    {
+      "id": "shi2025",
+      "authors": [
+        "Lin Shi",
+        "Chiyu Ma",
+        "Wenhua Liang",
+        "Xingjian Diao",
+        "Weicheng Ma",
+        "Soroush Vosoughi"
+      ],
+      "year": 2025,
+      "title": "Judging the Judges: A Systematic Study of Position Bias in LLM-as-a-Judge",
+      "publication": "Proceedings of the14th International Joint Conference on Natural Language Processing and the4th Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics,292–314",
+      "version": "Published proceedings,December2025",
+      "url": "https://aclanthology.org/2025.ijcnlp-long.18/",
+      "doi": "10.18653/v1/2025.ijcnlp-long.18",
+      "verified": "Official ACL metadata, author order,pages,DOI and abstract checked.",
+      "supports_ko": "나란히 제시된 답변의 위치가 평가에 영향을 줄 수 있어 개별 답변·동일기준 검토와 불완전 가림의 필요성을 뒷받침.",
+      "does_not_support_ko": "단일 답변 평가가 무편향이라는 보장. 본 rubric의 유효성이나 사람 평가자 간 신뢰도."
+    },
+    {
+      "id": "fsb2024",
+      "authors": [
+        "Financial Stability Board"
+      ],
+      "year": 2024,
+      "title": "The Financial Stability Implications of Artificial Intelligence",
+      "publication": "Financial Stability Board policy report",
+      "version": "14November2024",
+      "url": "https://www.fsb.org/2024/11/the-financial-stability-implications-of-artificial-intelligence/",
+      "verified": "Official report landing page/date/title and stated vulnerabilities checked.",
+      "supports_ko": "공통 공급자 의존·시장 상관관계·모델 및 데이터 거버넌스를 금융 안정성의 잠재적 취약성으로 보는 문제 제기.",
+      "does_not_support_ko": "동료심사 학술실험, 특정 모델의 인과효과, 본 실험 수치 설정의 근거."
+    }
+  ],
+  "bibliography_scope": "12 core entries independently checked against primary publishing/repository pages or original article PDFs. This is not a fresh verification of every reference in the older long draft. FSB is a policy report, not a paper. No DOI was invented; DOI fields only retain directly verified publisher/proceedings identifiers.",
+  "source_reference_notes": [
+    "Retain Fidelity and UBS original public outlooks plus official macro release sources as data references distinct from scholarly literature. Their full-source/colored-rating verification is documented in the pinned source review, not newly claimed here.",
+    "For Quek, the full first-author display is supplied exactly; use author-provided BibTeX for final family/given-name formatting.",
+    "Add Markowitz,Pombal and Shi to the final reference list if their formulas or evaluator-bias arguments appear; the previous long draft does not list all methods sources directly."
+  ],
+  "files_read": [
+    {
+      "path": "paper/LIBERA_텀페이퍼_초안_v4.9.2_20261019.html",
+      "sha256": "680f33b8cc58712c876b588ccc6f2004a4525cf6eded2f6d7431561cb2343123"
+    },
+    {
+      "path": "plan/LIBERA_대조군포함_실험계획_v4.9.2_20261019.html",
+      "sha256": "a3c21e64e9e30c87dc6b39d4311b57e0475e9fe85cc6bab9fd6794032ae08c83"
+    },
+    {
+      "path": "research/v492_evaluation_protocol_20261019_r2.json",
+      "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+    },
+    {
+      "path": "research/v492_evaluation_methods_review_20261019.json",
+      "sha256": "f828fdffd75b8e7981530fe0df8f2b00320cf7433763de9d2a37ab66440830f3"
+    },
+    {
+      "path": "research/v492_source_review_20261019.json",
+      "sha256": "3f6e4bd952b0bbf1d4e3487bb00a5e839a9f907038e43e895807425c21747718"
+    },
+    {
+      "path": "research/v492_computational_references_20261019.json",
+      "sha256": "d65a7d302ed03f4fc430134b947f9f81f10b8b84fec1855511f258144a46bd11"
+    },
+    {
+      "path": "research/v492_analyzer_verification_20261019.json",
+      "sha256": "b581f6e5eed386c3486cce355396e243908fbbb4a0d77c74108b6cc713b639e0"
+    }
+  ],
+  "model_generation_calls": 0,
+  "actual_pilot_answer_content_read": false,
+  "frozen_files_modified": 0
+}

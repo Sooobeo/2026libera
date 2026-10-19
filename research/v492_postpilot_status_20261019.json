@@ -1,0 +1,33 @@
+{
+  "watcher_version": "v492_postpilot_watcher_1",
+  "started_at_utc": "2026-10-19T08:56:43.850172+00:00",
+  "pid": 26072,
+  "config_ref": {
+    "path": "research/v492_postpilot_config_20261019_r2.json",
+    "sha256": "412034bff24f6d1b403e76e70245b20c191462a8837989fe20237f43001acc02"
+  },
+  "state": "waiting_valid_completed_pilot_summary",
+  "model_calls": 0,
+  "semantic_evaluation": "pending",
+  "automatic_retry": false,
+  "archive_or_delete": false,
+  "launch_script_refs": {
+    "analysis": {
+      "path": "research/analyze_v492_pilot.py",
+      "sha256": "841c1f941e2c39165f84f51f5df283ca7a3c5727de285d4ad56edfa50166529f"
+    },
+    "masked": {
+      "path": "research/build_v492_masked_review.py",
+      "sha256": "f4f9295a657892431d76b79310b3af229dc5bc7d972b098adb10ff5dd29a1f77"
+    },
+    "shutdown": {
+      "path": "research/stop_sector_v492_cpu.ps1",
+      "sha256": "065b97e1d4005e8ab55eff1f3c9be553fa897b075896d50ccc318386ad74f308"
+    }
+  },
+  "poll_seconds": 30,
+  "last_checked_at_utc": "2026-10-19T10:17:48.700612+00:00",
+  "polls": 141,
+  "last_wait_reason": "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\Insun\\\\2026libera\\\\data\\\\local_sector_runtime\\\\v492_pilot_20261019\\\\pilot_summary.json'",
+  "unchanged_invalid_summary_polls": 0
+}

@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "recorded_at_utc": "2026-10-19T08:53:30.638Z",
+  "scope": "Offline masked-review packaging; temporary synthetic outputs only; no live response reads or model calls",
+  "generation_requests": 0,
+  "tests": {
+    "command": "C:/Users/Insun/AppData/Local/Programs/Python/Python313/python.exe -B -X utf8 research/test_v492_masked_review.py",
+    "expected_tests": 15,
+    "observed_tests": 15,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "...............\r\n----------------------------------------------------------------------\r\nRan 15 tests in 1379.184s\r\n\r\nOK\r\n",
+    "exec_session": 1053
+  },
+  "artifact_refs": [
+    {
+      "path": "research/build_v492_masked_review.py",
+      "sha256": "f4f9295a657892431d76b79310b3af229dc5bc7d972b098adb10ff5dd29a1f77"
+    },
+    {
+      "path": "research/test_v492_masked_review.py",
+      "sha256": "ce4816cb9d3b8566500c08fa596977fcf4402a27b9da09fc06343c13303c5582"
+    },
+    {
+      "path": "research/v492_evaluation_protocol_20261019_r2.json",
+      "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+    }
+  ],
+  "revision": "Only replace ambiguous diagnostic_only with saved_response_is_bound and explicitly separate binding from completion/schema/semantic success; no new quality threshold.",
+  "historical_source_snapshot_directory": "research/artifacts/v492_masked_review_history_20261019/r1",
+  "independent_static_review": {
+    "reviewers": [
+      "v491_token_review agent",
+      "v491_review_pack agent"
+    ],
+    "kind": "AI technical review, not independent human validation",
+    "finding": "Manifest and worker-location interfaces, exact own-D0 lineage, source-free control/hidden-main boundaries, current F0 evidence only, neutral rubric, evaluator-only exclusion, partial/missing retention and provenance-only labeling checked; no blocker."
+  }
+}

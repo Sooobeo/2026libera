@@ -1,0 +1,318 @@
+{
+  "schema_version": "v493_manuscript_round1_resolution_1",
+  "recorded_at_utc": "2026-10-19T09:44:00.505Z",
+  "status": "ALL_14_CONTENT_FINDINGS_ADDRESSED",
+  "scope": "1차 실질내용 검토의 14개 사항에 대한 수정 반영 확인. DOCX 렌더링·페이지 외형 검수나 학술적 효과 입증을 뜻하지 않음.",
+  "reviewer": "Codex /root/v491_token_review; AI review, not human peer review",
+  "prior_review_ref": {
+    "path": "research/v493_manuscript_round1_review_20261019.json",
+    "sha256": "f7aa361427a9a1b2a70a5906713641d53e823e6ebe572c0a92a10e337b8bc475"
+  },
+  "manuscript_ref": {
+    "path": "paper/v493_manuscript_20261019.json",
+    "sha256": "c14e5627035da92f1e28e4e50d5b3b81fd5432b4e67e8ac6cda9854c564a1018",
+    "blocks": 117,
+    "unchanged_during_resolution_check": true
+  },
+  "counts": {
+    "review_findings": 14,
+    "addressed": 14,
+    "partially_addressed": 0,
+    "unaddressed": 0
+  },
+  "resolutions": [
+    {
+      "finding_id": "R1-01",
+      "current_block_indices": [
+        24,
+        35,
+        36,
+        109,
+        110,
+        111
+      ],
+      "status": "반영됨",
+      "evidence_ko": "GICS 최상위 sector 정의와 MSCI 인용, State Street 상품 확인, Yahoo 조정종가·수집일·전일변화율·NAV 총수익률 비동일성을 명시. 각 ETF 11개 가격·발행사 URL을 정확히 추가했다.",
+      "current_excerpt": [
+        {
+          "block_index": 24,
+          "text": "본고의 산업은 GICS의 최상위 11개 섹터를 의미하며 세부 분류인 industry와 구분한다(MSCI, n.d.). 투자 가능 대상은 표 1의 산업 바구니이다. 각 바구니의 수익률은 대응하는 산업 ETF로 나타낸다. 개별 기업을 선택하지 않으며 모든 답변은 11개 산업을 한 번씩 제시하고 투자하지 않는 산업에도 0을 적어야 한다. 비중은 음수가 될 수 없고 합은 1이어야 한다. 현금, 채권, 파생상품, 차입은 포함하지 않는다. 별도의 인출 일정과 ESG 제외 목록을 두지 않은 것은 공통 가상 과제의 가정이며 실제 기관의 특성에 대한 진술이 아니다."
+        },
+        {
+          "block_index": 35,
+          "text": "수익률 자료는 Yahoo Finance 공개 chart 자료의 조정종가를 2026년 10월 17일 수집하여 전일 대비 변화율로 계산하였다. ETF의 상품 신원과 대응 산업은 State Street의 공식 상품 페이지에서 확인하였다. 수익률 자료는 2026년 4월 21일부터 7월 16일까지의 60개 일별 수익률을 사용한다. 표본 공분산은 자유도 보정 1을 적용하고 연율화에는 252거래일을 사용한다. 60개 관측치와 연율화 관례는 PortBench의 위험 계산 구성을 참고한 설정이다. 비교 기준은 Fidelity의 2026년 3분기 보고서 2쪽에 실린 6월 30일 S&P 500 산업 구성비이며, 원자료의 반올림 합계 99.9를 분모로 나누어 합계 1의 비교용 벡터로 만들었다. 이는 공통 입력의 사전 산출이며, AI가 제출한 비중을 사후 정규화하는 처리는 하지 않는다. S&P의 별도 원자료 파일을 직접 내려받은 것은 아니다. 이 구성비는 예비실험과 본실험에 공통으로 사용하되 공통 입력에는 기관명과 전망 등급 및 논거를 넣지 않았다. 따라서 C는 기관 전망 미제공 조건이며 숫자 자료의 최초 게시자가 금융기관인 자료까지 배제한 조건은 아니다."
+        },
+        {
+          "block_index": 36,
+          "text": "거시 발표 자료는 당시 날짜가 명시된 공식 보관본에 근거하지만 10월에 수집하였다. 일부 노동통계국 자료는 직접 내려받기가 제한되어 공식 보관 페이지의 텍스트 기록을 유지하였다. 산업 ETF의 조정가격도 Yahoo Finance가 현재 제공하는 과거 자료 버전을 이용하므로, 해당 시점에 완전히 동일한 자료가 이용 가능했음을 보증하지 않는다. 본 연구는 시점을 고정한 문서 해석 과제이며 엄밀한 당시 가용 자료 기반의 거래 백테스트가 아니다. 산업 ETF에는 자체 지수 규칙, 비용과 추적오차가 있으므로 S&P 500 구성비로 이 ETF들을 가중한 배분이 지수 자체를 정확히 복제한다고 보지 않는다. 조정종가 수익률을 발행사가 인증한 순자산가치 총수익률과 동일하다고 주장하지 않는다."
+        },
+        {
+          "block_index": 109,
+          "text": "MSCI. (n.d.). The Global Industry Classification Standard (GICS®). 2026년 10월 19일 확인."
+        },
+        {
+          "block_index": 110,
+          "text": "State Street Investment Management. (n.d.). Select Sector SPDR ETF 공식 상품 페이지: XLE, XLB, XLI, XLY, XLP, XLV, XLF, XLK, XLC, XLU, XLRE. 2026년 10월 17일 수집."
+        },
+        {
+          "block_index": 111,
+          "text": "Yahoo Finance. (2026). Select Sector SPDR ETF 11종의 일별 조정종가 [공개 chart JSON 자료]. 2026년 10월 17일 수집."
+        }
+      ]
+    },
+    {
+      "finding_id": "R1-02",
+      "current_block_indices": [
+        35,
+        103
+      ],
+      "status": "반영됨",
+      "evidence_ko": "Fidelity Q3 보고서 p.2의 6월30일 S&P 구성비임을 명시. 직접 S&P 원파일 수집 아님·99.9 정규화·공통자료에 기관 전망 제외·예비/본실험 공통사용을 모두 밝혔고 자료출처 역할도 수정했다.",
+      "current_excerpt": [
+        {
+          "block_index": 35,
+          "text": "수익률 자료는 Yahoo Finance 공개 chart 자료의 조정종가를 2026년 10월 17일 수집하여 전일 대비 변화율로 계산하였다. ETF의 상품 신원과 대응 산업은 State Street의 공식 상품 페이지에서 확인하였다. 수익률 자료는 2026년 4월 21일부터 7월 16일까지의 60개 일별 수익률을 사용한다. 표본 공분산은 자유도 보정 1을 적용하고 연율화에는 252거래일을 사용한다. 60개 관측치와 연율화 관례는 PortBench의 위험 계산 구성을 참고한 설정이다. 비교 기준은 Fidelity의 2026년 3분기 보고서 2쪽에 실린 6월 30일 S&P 500 산업 구성비이며, 원자료의 반올림 합계 99.9를 분모로 나누어 합계 1의 비교용 벡터로 만들었다. 이는 공통 입력의 사전 산출이며, AI가 제출한 비중을 사후 정규화하는 처리는 하지 않는다. S&P의 별도 원자료 파일을 직접 내려받은 것은 아니다. 이 구성비는 예비실험과 본실험에 공통으로 사용하되 공통 입력에는 기관명과 전망 등급 및 논거를 넣지 않았다. 따라서 C는 기관 전망 미제공 조건이며 숫자 자료의 최초 게시자가 금융기관인 자료까지 배제한 조건은 아니다."
+        },
+        {
+          "block_index": 103,
+          "text": "Fidelity Investments. (2026). Quarterly Sector and Investment Research Update Third Quarter 2026. 본실험용 전망 및 예비·본실험 공통 비교비중의 출처."
+        }
+      ]
+    },
+    {
+      "finding_id": "R1-03",
+      "current_block_indices": [
+        29,
+        59
+      ],
+      "status": "반영됨",
+      "evidence_ko": "11개 산업별 두 기관 비교행으로 수정했고 거리 단락의 기관 간 비교행 표현도 맞췄다.",
+      "current_excerpt": [
+        {
+          "block_index": 29,
+          "text": "원문에서 산업별 평가 방향, 명시된 이유, 날짜와 적용 범위를 추출하여 AI에게 제공할 자료 묶음으로 구성하였다. 예비실험 자료에 대해 22개 기관별 산업행과 11개 산업별 두 기관 비교행을 출력 열람 전에 검토하였다. 이 검토는 원문과 입력 자료의 대응을 확인하는 AI 보조 과정이며 전문가의 독립적인 사람 평가를 수행한 것은 아니다. 원문에 개별 산업의 이유가 없는 경우 그 사실을 유지하고 연구자가 이유를 보충하지 않는다."
+        },
+        {
+          "block_index": 59,
+          "text": "같은 기관의 E와 L, 같은 절차의 두 기관, C와 네 기관 조건의 최종안 사이에서 거리를 계산한다. 산업별 기관 간 비교행이나 같은 C를 여러 번 사용하는 비교를 독립적인 반복 관측으로 취급하지 않는다. 기관 간 거리의 절차별 차이는 기술적 비교이며 인과적인 이중차분 추정량으로 부르지 않는다. 결측이나 부적격 벡터는 0거리로 처리하지 않고 계산 불가로 남긴다."
+        }
+      ]
+    },
+    {
+      "finding_id": "R1-04",
+      "current_block_indices": [
+        45,
+        48
+      ],
+      "status": "반영됨",
+      "evidence_ko": "D0의 전송/종료/JSON/필수구조/완전유한벡터와 length 종료시 F0 미진행을 명시. 사후 거리 계산 자격은 별도로 유지한다. 실제 validate_response는 schema 통과가 진행의 선행조건이므로 현재 필수 설명 구조 표현도 구현과 일치한다.",
+      "current_excerpt": [
+        {
+          "block_index": 45,
+          "text": "다음 최종안을 생성할 수 있는 조건과 이미 제출된 비중을 사후 분석할 수 있는 조건은 구분한다. D0에서 전송 또는 종료 상태, 전체 JSON, 필수 설명 구조, 완전하고 유한한 비중이 사전 관문을 통과하지 못하면 해당 F0를 실행하지 않는다. 출력 토큰 상한 때문에 종료된 D0도 숫자가 읽히더라도 F0로 진행하지 않는다. 반면 읽을 수 있고 관문을 통과한 초안의 합계 오류나 근거 인용 오류는 결과로 보존하며 이를 이유로 더 좋은 답변이 나올 때까지 다시 생성하지 않는다. 무결성 위반이나 실행 감독 단계의 중대한 실패는 중단 사유로 기록한다. 실패 결과를 계산 참고안으로 대체하거나 누락된 비중을 보간하지 않는다."
+        },
+        {
+          "block_index": 48,
+          "text": "전송 완료, 응답 종료 사유, 전체 JSON 해석 가능성, 설명 형식, 원비중의 자격을 각각 기록한다. 배분 벡터는 11개 산업이 중복 없이 존재하고 숫자가 유한하며 음수가 없고 합계가 사전 수치 허용오차 안에 있을 때 거리 계산에 사용할 수 있다. 전체 JSON에 유효한 원비중이 존재하지만 설명 형식이나 종료 상태에 문제가 있으면, 거리는 계산하되 그 답변을 의미적으로 성공한 정상 응답으로 바꾸어 표시하지 않는다. 불완전한 텍스트에서 일부 숫자만 골라 벡터를 복구하지 않는다."
+        }
+      ]
+    },
+    {
+      "finding_id": "R1-05",
+      "current_block_indices": [
+        95
+      ],
+      "status": "반영됨",
+      "evidence_ko": "내부 검토 지시문을 제거하고 arXiv v1, 13 September 2026과 버전 URL만 남겼다. 확인되지 않은 학회 메타데이터를 추가하지 않았다.",
+      "current_excerpt": [
+        {
+          "block_index": 95,
+          "text": "Xiaoya Wang, Yutong Xu, Junjie Wang (2026). E2A-Bench: Benchmarking Evidence-to-Action Reliability in Financial Chart Reasoning. arXiv:2609.14302. v1, 13 September 2026. "
+        }
+      ]
+    },
+    {
+      "finding_id": "R1-06",
+      "current_block_indices": [
+        51
+      ],
+      "status": "반영됨",
+      "evidence_ko": "C와 기관 문서가 없는 L_D0의 자료 충실성을 해당 없음으로 명시했다.",
+      "current_excerpt": [
+        {
+          "block_index": 51,
+          "text": "기관 원문의 평가 용어, 방향, 대상 범위, 날짜, 명시된 이유를 보존했는지 확인한다. 이어 모델이 자료를 채택했는지, 일부 수정했는지, 다른 근거를 들어 따르지 않았는지 구분하고, 그 설명과 실제 배분을 대조한다. 기관 원문에 없는 위험선호나 숫자 목표를 기관의 입장으로 제시하면 근거 없는 귀속으로 기록한다. C와 기관 자료를 받기 전인 L의 D0에서 기관 자료 충실성은 해당 없음으로 처리하되, 받지 않은 기관의 견해를 인용한 주장은 별도로 확인한다."
+        }
+      ]
+    },
+    {
+      "finding_id": "R1-07",
+      "current_block_indices": [
+        68
+      ],
+      "status": "반영됨",
+      "evidence_ko": "셋째 자리에서 반올림하여 둘째 자리까지 표시로 수정했다.",
+      "current_excerpt": [
+        {
+          "block_index": 68,
+          "text": "표는 표시용으로 소수 셋째 자리에서 반올림하여 둘째 자리까지 표시하였다. 동일비중의 정확한 값은 각 1/11이며 계산에는 원값을 사용한다. 두 열 모두 기관별 정답이나 AI의 실험 결과가 아니다."
+        }
+      ]
+    },
+    {
+      "finding_id": "R1-08",
+      "current_block_indices": [
+        76
+      ],
+      "status": "반영됨",
+      "evidence_ko": "예정 시도 종료 또는 사전 중단 규칙에 따른 유효한 종료 요약으로 후처리를 설명하고 실패·미시도도 다섯 최종안 분모에 보존한다고 명시했다. 실행 정리의 기술적 세부는 이 단락에서 생략했으나 모든 조건 성공이 필요하다는 기존 오해는 해소했다.",
+      "current_excerpt": [
+        {
+          "block_index": 76,
+          "text": "예정된 시도를 마치거나 사전 중단 규칙에 따라 예비실험이 종료되어 유효한 종료 요약이 확인되면 원자료를 보존한 상태에서 산술 분석과 검토용 사본 생성을 수행하도록 후처리 절차를 연결하였다. 이 절차 자체는 추가 모델 생성이나 재시도를 하지 않는다. 이후 답변별 근거 코딩을 거쳐 관찰값과 실패를 함께 보고한다. 완전한 결과가 나오지 않더라도 운영 실패와 의미적 실패를 구분하며, 미완료 사례를 숨기거나 더 좋은 답변으로 교체하지 않는다. 실패와 미시도 사례도 계획된 다섯 최종안의 분모에 남긴다."
+        }
+      ]
+    },
+    {
+      "finding_id": "R1-09",
+      "current_block_indices": [
+        83
+      ],
+      "status": "반영됨",
+      "evidence_ko": "의미 보장의 단정을 탐색적·방법론적 의의로 바꾸고 유효한 비교 자료가 없으면 연구질문은 미해결이며 실행 가능성·실패 구조만 보고한다고 명시했다.",
+      "current_excerpt": [
+        {
+          "block_index": 83,
+          "text": "이 설계의 탐색적·방법론적 의의는 동일한 과제에서 기관 근거의 제공 방식과 관찰 가능한 배분을 연결하고, 산술적 정확성과 근거 충실성을 분리하는 데 있다. 다만 유효한 비교 자료가 생성되지 않으면 조건 차이에 관한 연구질문은 미해결로 남고 실행 가능성과 실패 구조만 보고할 수 있다. 실험의 의의와 원하는 효과가 이미 증명되었다는 주장은 구분해야 한다."
+        }
+      ]
+    },
+    {
+      "finding_id": "R1-10",
+      "current_block_indices": [
+        6,
+        112
+      ],
+      "status": "반영됨",
+      "evidence_ko": "본문 인용구를 유지하되 자료 출처에 사용자 제공 Notion 자료라는 성격과 10월18일 확인일을 추가했다. 공식 심사표를 검증했다는 주장은 없다.",
+      "current_excerpt": [
+        {
+          "block_index": 6,
+          "text": "본 연구는 학술제의 “AI가 재편하는 사회와 경제: 변화와 대응의 방향”이라는 문제의식 아래, AI를 활용하는 투자 의사결정 절차를 연구한다. 다만 공개 자료와 제한된 실행 자원으로 시장 전체의 자금 흐름이나 실제 기관의 행동을 관측할 수는 없다. 이에 연구 범위를 공통 AI에 기관별 공개 산업전망을 전달했을 때 나타나는 근거 해석과 산업배분 제안으로 한정하였다. 이 범위 설정은 큰 논점을 포기하기보다, 그 논점과 연결되는 관찰 가능한 과정 하나를 분리하기 위한 것이다."
+        },
+        {
+          "block_index": 112,
+          "text": "LIBERA. (2026). 학술제 개요 [사용자 제공 Notion 자료, 2026년 10월 18일 확인]."
+        }
+      ]
+    },
+    {
+      "finding_id": "R1-11",
+      "current_block_indices": [
+        36
+      ],
+      "status": "반영됨",
+      "evidence_ko": "자체 지수 규칙·비용·추적오차 때문에 ETF 가중값을 S&P 지수의 정확한 복제로 보지 않는다고 명시했다.",
+      "current_excerpt": [
+        {
+          "block_index": 36,
+          "text": "거시 발표 자료는 당시 날짜가 명시된 공식 보관본에 근거하지만 10월에 수집하였다. 일부 노동통계국 자료는 직접 내려받기가 제한되어 공식 보관 페이지의 텍스트 기록을 유지하였다. 산업 ETF의 조정가격도 Yahoo Finance가 현재 제공하는 과거 자료 버전을 이용하므로, 해당 시점에 완전히 동일한 자료가 이용 가능했음을 보증하지 않는다. 본 연구는 시점을 고정한 문서 해석 과제이며 엄밀한 당시 가용 자료 기반의 거래 백테스트가 아니다. 산업 ETF에는 자체 지수 규칙, 비용과 추적오차가 있으므로 S&P 500 구성비로 이 ETF들을 가중한 배분이 지수 자체를 정확히 복제한다고 보지 않는다. 조정종가 수익률을 발행사가 인증한 순자산가치 총수익률과 동일하다고 주장하지 않는다."
+        }
+      ]
+    },
+    {
+      "finding_id": "R1-12",
+      "current_block_indices": [
+        81
+      ],
+      "status": "반영됨",
+      "evidence_ko": "공급 자료 날짜 통제와 모델 내부 지식의 시점 검증을 구분하고 완전한 당시 정보 환경의 재현을 주장하지 않는다.",
+      "current_excerpt": [
+        {
+          "block_index": 81,
+          "text": "세 번째 한계는 자료와 모델이다. 현재 공급자의 조정가격과 짧은 과거 추정창은 공분산과 참고 배분에 영향을 줄 수 있다. 소형 양자화 모델의 형식 실패나 실행 지연은 모델 능력과 환경의 제약을 반영할 수 있어 모든 생성형 AI의 특성으로 일반화할 수 없다. 12개월을 판단 기간으로 지정하더라도 이후 12개월의 거래, 비용, 실현성과를 관측하지 않으므로 투자성과에 대한 결론을 도출하지 않는다. 공급한 자료의 날짜를 제한하더라도 모델 내부 지식의 시점을 별도로 검증한 것은 아니므로 완전한 당시 정보 환경의 재현으로 보지 않는다."
+        }
+      ]
+    },
+    {
+      "finding_id": "R1-13",
+      "current_block_indices": [
+        89,
+        91,
+        92,
+        93,
+        94,
+        96,
+        97,
+        98
+      ],
+      "status": "반영됨",
+      "evidence_ko": "제목 말미 ?., No.11862, 날짜 단어 간격, 저널 권호 쪽수 간격, the14th/the4th 등 지적한 서지 편집사항을 수정했다.",
+      "current_excerpt": [
+        {
+          "block_index": 89,
+          "text": "Rishi Bommasani, Kathleen A. Creel, Ananya Kumar, Dan Jurafsky, Percy Liang (2022). Picking on the Same Person: Does Algorithmic Monoculture lead to Outcome Homogenization? Advances in Neural Information Processing Systems, 35. "
+        },
+        {
+          "block_index": 91,
+          "text": "Lars Hornuf, David J. Streich, Niklas Töllich (2025). Making GenAI Smarter: Evidence from a Portfolio Allocation Experiment. CESifo Working Paper No. 11862. "
+        },
+        {
+          "block_index": 92,
+          "text": "Ryan Quek Wei Heng, Edoardo Vittori, Keane Ong, Rui Mao, Erik Cambria, Gianmarco Mengaldo (2025). Leveraging LLMs for Top-Down Sector Allocation in Automated Trading. arXiv:2503.09647. v5, 10 April 2025. "
+        },
+        {
+          "block_index": 93,
+          "text": "Philippe Laban, Hiroaki Hayashi, Yingbo Zhou, Jennifer Neville (2025). LLMs Get Lost In Multi-Turn Conversation. arXiv:2505.06120. v1, 9 May 2025. "
+        },
+        {
+          "block_index": 94,
+          "text": "Yuxuan Zhao, Sijia Chen, Ningxin Su (2026). PortBench: A Correlation-Aware, Full-Pipeline Benchmark for LLM-Driven Portfolio Management. arXiv:2605.27887. v6, 9 October 2026. "
+        },
+        {
+          "block_index": 96,
+          "text": "Harry Markowitz (1952). Portfolio Selection. The Journal of Finance, 7(1), 77–91. "
+        },
+        {
+          "block_index": 97,
+          "text": "José Pombal, Ricardo Rei, André F. T. Martins (2026). Self-Preference Bias in Rubric-Based Evaluation of Large Language Models. arXiv:2604.06996. v3, 3 August 2026. "
+        },
+        {
+          "block_index": 98,
+          "text": "Lin Shi, Chiyu Ma, Wenhua Liang, Xingjian Diao, Weicheng Ma, Soroush Vosoughi (2025). Judging the Judges: A Systematic Study of Position Bias in LLM-as-a-Judge. Proceedings of the 14th International Joint Conference on Natural Language Processing and the 4th Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics, 292–314. "
+        }
+      ]
+    },
+    {
+      "finding_id": "R1-14",
+      "current_block_indices": [
+        55
+      ],
+      "status": "반영됨",
+      "evidence_ko": "현재 구현된 구조화 산술 재계산과 후속 자연어 수치 주장 AI보조 코딩을 명시적으로 구분했다.",
+      "current_excerpt": [
+        {
+          "block_index": 55,
+          "text": "후속 의미 분석에서는 수치 주장을 대상, 지표, 값, 단위, 관측 기간, 발표일, 자료 버전, 계산식과 입력값에 연결한다. 현재 구현된 산술 분석은 구조화된 원비중, 비교 기준과 수정량을 결정론적으로 재계산하며 자연어 수치 주장의 추출과 판정은 별도의 AI 보조 코딩 대상으로 남긴다. 정확한 값이라고 명시한 주장은 십진수 계산으로 대조하고, 반올림이나 대략적 표현은 그 정밀도를 보존한다. 결과를 본 뒤 허용 구간을 새로 만들어 일치 판정을 늘리지 않는다."
+        }
+      ]
+    }
+  ],
+  "exact_link_checks": {
+    "state_street_url_count": 11,
+    "state_street_urls_exactly_equal_including_order": true,
+    "yahoo_url_count": 11,
+    "yahoo_urls_exactly_equal_including_order": true
+  },
+  "clarification_of_prior_review": "R1-04의 첫 검토 제안은 D0의 전체 schema 조건을 충분히 열거하지 않았다. 이번에 실제 sector_v491_contract.py 250~264행을 다시 확인했으며, 현재 본문이 명시한 필수 설명 구조 관문은 기존 구현에 이미 존재한다. 따라서 해당 표현을 삭제할 필요가 없고 현재 문구가 더 정확하다.",
+  "remaining_limitations": [
+    "18시 KST 현재상태 표현은 운영 메타데이터의 원저자 확인에 의존하며 실제 모델 답변 내용은 읽지 않았다.",
+    "시각 검수는 부모 에이전트의 렌더링 작업에서 별도 수행 중이다.",
+    "본 문서의 연구설계·구현 보고 성격은 유지된다. 예비실험의 비교결과·투자성과·인과효과를 새로 검증한 기록이 아니다."
+  ],
+  "files_modified": [
+    "research/v493_manuscript_round1_resolution_20261019.json"
+  ],
+  "model_calls": 0,
+  "actual_model_answer_content_read": false
+}

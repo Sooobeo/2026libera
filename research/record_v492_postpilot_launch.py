@@ -141,6 +141,7 @@ def record_launch(session_id):
     config = verified_inputs()
     preflight = read(PRECHECK)
     assert preflight['status'] == 'PASS_for_background_observer_launch'
+    watcher.checked(ROOT, preflight['recorder_ref'])
     for item in preflight['input_refs']:
         watcher.checked(ROOT, item)
     status_path = ROOT / config['status_path']

@@ -1,0 +1,507 @@
+{
+  "schema_version": "v493_manuscript_substantive_round1",
+  "reviewed_at_utc": "2026-10-19T09:15:17.016Z",
+  "status": "REVISIONS_REQUIRED",
+  "reviewer": "Codex /root/v491_token_review; independent AI review, not independent human peer review",
+  "scope": "113블록 소논문의 내용·수치·논리·근거·대조군·현재상태 표현 검토. 실제 모델 응답은 읽지 않았고, 호출·동결문서·실행기 변경 없음.",
+  "manuscript_ref": {
+    "path": "paper/v493_manuscript_20261019.json",
+    "block_count": 113,
+    "source_bytes_still_equal_to_reviewed_object": false,
+    "sha256": null,
+    "reviewed_object_canonical_sha256": "71c868c311acd3f981bf8467452c04da7fd77898ed0d7f0b5b830fd773a89262"
+  },
+  "input_refs": [
+    {
+      "path": "research/v493_paper_source_review_20261019.json",
+      "sha256": "516ea16cc16f4e2c9571c80d2a2a2cf0715cce0d6912e12078df03412f0ec5b3"
+    },
+    {
+      "path": "research/v492_evaluation_protocol_20261019_r2.json",
+      "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+    },
+    {
+      "path": "research/v492_pilot_freeze_20261019.json",
+      "sha256": "d5ebc5e317130c8e2eedb10b47d1bb9f7eaa355582d6ded6c3381e818bb6ed56"
+    },
+    {
+      "path": "research/v492_source_review_20261019.json",
+      "sha256": "3f6e4bd952b0bbf1d4e3487bb00a5e839a9f907038e43e895807425c21747718"
+    },
+    {
+      "path": "research/v492_computational_references_20261019.json",
+      "sha256": "d65a7d302ed03f4fc430134b947f9f81f10b8b84fec1855511f258144a46bd11"
+    },
+    {
+      "path": "research/v492_runtime_candidate_20261019.json",
+      "sha256": "3fc05ace24af7893e38ee5668acee977bec14f72809f236fb9401dcc597d5f0f"
+    },
+    {
+      "path": "research/v481_conference_alignment_20261018.json",
+      "sha256": "53f243350b8e009fde1c0960c963a57856e8317c43abc282fb318a7c2313ab75"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/common_context.json",
+      "sha256": "67d94bdee3d38854097970cdfb74f40e2557a11e22b016e9a68374e6f13cb96f"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/public_compact_candidate.json",
+      "sha256": "afe810b2bfb69ae4bfa372e65fa587bc6253eecf8028d5fde39cf3ec395bcb8d"
+    },
+    {
+      "path": "data/sector_market/asset_registry.json",
+      "sha256": "bebef4cbb7d43e53dd3eb80d94cce40e78f8218b883948458e3df2b95f433a81"
+    },
+    {
+      "path": "data/sector_market/manifest.json",
+      "sha256": "b60124bd5ccb14d0738bec7e80e59cc66f7d288af60b9ca3c14d61831a05cf6f"
+    },
+    {
+      "path": "data/sector_market/benchmark.json",
+      "sha256": "ebef9bd86acbce8d0ea5681c5cf685a79adc53a03e417971ac044b0fbf86d6e6"
+    },
+    {
+      "path": "data/sector_documents/shared_benchmarks.json",
+      "sha256": "9663a2ce1996d1b87f9954d67809139f7df6ae77adf9137b479232318086fb35"
+    },
+    {
+      "path": "data/sector_documents/source_manifest.json",
+      "sha256": "d1af00ee2a1c5e3ba4ca9949b5f9427a9102a373ff19afa0e6c4309769627b28"
+    },
+    {
+      "path": "research/v492_analyzer_verification_20261019.json",
+      "sha256": "b581f6e5eed386c3486cce355396e243908fbbb4a0d77c74108b6cc713b639e0"
+    },
+    {
+      "path": "research/v492_masked_review_verification_20261019_r2.json",
+      "sha256": "2a5ac8c9c05015cd2b4cc354a4203e8ecb1c6b5de390cb9da92efe57a11e8416"
+    },
+    {
+      "path": "research/v492_postpilot_watcher_unit_review_20261019.json",
+      "sha256": "9a49d4a91be46407f4130ad60ce4a603c0bd809e6742d1c168c9f9b42b3fe6d9"
+    },
+    {
+      "path": "research/v492_postprocessing_integration_20261019_r2.json",
+      "sha256": "f30a401d8e636ad521cfd522bf440c89657b25d4dde417d5aaf2fb732853b100"
+    }
+  ],
+  "assessment_ko": "주제와 설계의 중심 연결은 성립한다. 기관 전망의 의미→AI 해석→실제 비중을 관찰하고, 같은 두 단계의 AI 대조군 C를 계산 참고안과 구분하며, 아직 실증 결과가 없음을 명확히 밝힌다. 그러나 자료 출처 누락, 기준비중의 실제 수집 출처, 단계 진행 규칙, 참고문헌에 남은 내부 지시문은 수정해야 한다.",
+  "checked_consistent": [
+    {
+      "area": "주제 연결",
+      "finding": "공통 AI·기관 근거 전달·검토라는 경영 절차를 연구하며 실제 기관행동/시장 동질화 인과효과로 일반화하지 않음."
+    },
+    {
+      "area": "대조군",
+      "finding": "동일AI·시장·과제·계산피드백·두단계 C가 존재. 같은 C를 네 번 비교해도 독립 대조군 네 개로 부르지 않음."
+    },
+    {
+      "area": "기관 문서",
+      "finding": "공개 전망 조건을 실제 기관 목적·제약·보유포트폴리오로 해석하지 않음. Fidelity/UBS 등급을 공통 숫자정답으로 매핑하지 않음."
+    },
+    {
+      "area": "거시 수치",
+      "finding": "7개 관측값·단위·계절조정·발표일이 동결 common_context와 일치."
+    },
+    {
+      "area": "수익률 및 계산",
+      "finding": "60개 수익률, 2026-04-21~07-16, ddof1, 연율252 일치. GMV표·동일비중·변동성8.65/6.62/13.90%·두방법차3.45e-8 모두 기록과 일치."
+    },
+    {
+      "area": "실행조건",
+      "finding": "모델태그·Ollama0.35.1·temp0·seed3407·8192/65536·CPU8·4500초·thinkfalse·no truncate/shift가 동결 runtime과 일치."
+    },
+    {
+      "area": "평가규칙",
+      "finding": "whole JSON 원비중의 구조·유한·비음수·합계요건과 설명/전송/종료상태를 분리, 임의복구·정규화·대체 없음. 5사례·55산업행의 의사반복을 경계."
+    },
+    {
+      "area": "AI보조 평가",
+      "finding": "미타당화·불완전가림·자기선호/위치편향·3회검토와독립3측정의차이를 명시."
+    },
+    {
+      "area": "검증수",
+      "finding": "20산술/15검토사본r2/15관측기/14통합r2의 실제 성공 영수증을 확인. 금융추론 성공으로 해석하지 않음."
+    },
+    {
+      "area": "현재상태",
+      "finding": "완료된 것은 구현·자료고정·계산참고안; 예비실험 진행 중·본실험 미실행·의미평가 미실시로 서술. 실제 답변 내용 미열람."
+    }
+  ],
+  "findings": [
+    {
+      "id": "R1-01",
+      "severity": "required",
+      "blocks": [
+        24,
+        25,
+        35,
+        36,
+        100
+      ],
+      "issue": "ETF 상품 확인 출처, 실제 가격 공급자와 필드, GICS 분류 출처가 자료 출처에서 빠져 있다.",
+      "replacement_ko": "산업 분류는 GICS 최상위 11개 섹터를 따른다(MSCI, n.d.). ETF의 상품명과 대응 산업은 State Street 공식 상품 페이지에서 확인하였고, 가격은 Yahoo Finance 공개 chart 자료의 조정종가를 2026년 10월 17일 내려받아 사용하였다. 수익률은 조정종가의 전일 대비 변화율이며, 발행사가 인증한 순자산가치 총수익률과 같다고 주장하지 않는다.",
+      "basis": [
+        "data/sector_market/asset_registry.json",
+        "data/sector_market/manifest.json"
+      ],
+      "action": "별도 자료 출처 항목 및 표1/4.3 인용을 추가. 아래 data_citation_proposals 사용."
+    },
+    {
+      "id": "R1-02",
+      "severity": "required",
+      "blocks": [
+        35,
+        103
+      ],
+      "issue": "S&P 500 비중의 실제 수집 출처와 그 문서의 이중 역할이 드러나지 않는다.",
+      "replacement_ko": "비교 기준은 Fidelity의 2026년 3분기 보고서 2쪽에 실린 2026년 6월 30일 S&P 500 산업 구성비이다. S&P의 별도 원자료 파일을 직접 내려받은 것이 아니다. 보고된 합계 99.9를 분모로 나누어 공통 비교용 비중을 만들었으며, 기관의 목표배분으로 해석하지 않는다. 이 숫자는 예비실험과 본실험에 공통으로 쓰되, 기관명과 전망 등급·논거는 공통 입력에서 제외하였다.",
+      "basis": [
+        "data/sector_documents/shared_benchmarks.json",
+        "data/sector_market/benchmark.json",
+        "data/sector_protocol/v491_design_20261019/public_compact_candidate.json"
+      ],
+      "action": "Fidelity Q3 자료출처 설명을 본실험용 전망 및 예비·본실험 공통 비교비중 출처(p.2)로 바꿀 것. C는 기관 전망 미제공 조건이라는 뜻을 유지."
+    },
+    {
+      "id": "R1-03",
+      "severity": "required",
+      "blocks": [
+        29
+      ],
+      "issue": "11개 산업 간 비교행은 산업끼리 비교한 것으로 오해된다.",
+      "before": "22개 기관별 산업행과 11개 산업 간 비교행",
+      "replacement_ko": "22개 기관별 산업행과 11개 산업별 두 기관 비교행",
+      "basis": [
+        "research/v492_source_review_20261019.json"
+      ]
+    },
+    {
+      "id": "R1-04",
+      "severity": "required",
+      "blocks": [
+        45,
+        48
+      ],
+      "issue": "D0에서 F0로 진행하는 조건과 사후 거리 계산 자격의 차이가 불완전하게 설명되었다. length 종료 D0는 벡터가 파싱되어도 F0를 실행하지 않는다.",
+      "replacement_ko": "초안은 전송과 감독 절차가 정상적으로 끝나고, 정상 종료 사유(stop)와 전체 JSON의 완전한 11개 숫자 비중이 확인되어야 다음 단계로 진행한다. 출력 상한(length)으로 끝난 초안은 최종안을 실행하지 않는다. 다만 보존된 응답 전체가 단일 JSON 객체로 해석되고 원비중의 거리 계산 요건을 충족하면, 사후 산술 거리에는 포함할 수 있다. 이는 후속 생성 진행 자격과 분석 자격을 구분한 것이다.",
+      "basis": [
+        "research/sector_v492_runtime.py",
+        "research/v492_evaluation_protocol_20261019_r2.json",
+        "research/analyze_v492_pilot.py"
+      ],
+      "limit": "합계·부호·인용 오류 등 내용 오류만을 이유로 재생성하지 않는다는 원칙 유지. 형식 전체 성공을 F0 진행 요건으로 새로 만들지 말 것."
+    },
+    {
+      "id": "R1-05",
+      "severity": "required",
+      "blocks": [
+        95
+      ],
+      "issue": "참고문헌에 내부 검토 지시문이 그대로 들어갔다.",
+      "before": "v1,13September2026; arXiv comments identify EMNLP Findings; use arXiv version unless proceedings details separately verified.",
+      "replacement_ko": "Version 1, 13 September 2026 [Preprint]. arXiv:2609.14302.",
+      "basis": [
+        "research/v493_paper_source_review_20261019.json"
+      ],
+      "action": "확인되지 않은 학회 서지사항은 추가하지 말고 arXiv v1만 인용."
+    },
+    {
+      "id": "R1-06",
+      "severity": "recommended",
+      "blocks": [
+        51
+      ],
+      "issue": "C 외에 기관 문서를 아직 받지 않은 L의 D0도 자료 충실성 평가가 해당 없음임을 명시하면 단계 평가가 정확해진다.",
+      "replacement_ko": "C의 두 단계와 L의 초안은 기관 문서를 제공받지 않았으므로 기관 자료 충실성은 해당 없음으로 처리한다. 제공되지 않은 기관 견해를 사실처럼 인용한 주장은 별도로 확인한다.",
+      "basis": [
+        "research/v492_evaluation_protocol_20261019_r2.json",
+        "research/analyze_v492_pilot.py"
+      ]
+    },
+    {
+      "id": "R1-07",
+      "severity": "recommended",
+      "blocks": [
+        68
+      ],
+      "issue": "표는 소수 둘째 자리까지 표시하지만 주석의 반올림 위치 표현이 부정확하다.",
+      "before": "소수 둘째 자리에서 반올림하였다",
+      "replacement_ko": "소수 셋째 자리에서 반올림하여 둘째 자리까지 표시하였다",
+      "basis": [
+        "research/v492_computational_references_20261019.json"
+      ]
+    },
+    {
+      "id": "R1-08",
+      "severity": "recommended",
+      "blocks": [
+        76
+      ],
+      "issue": "후처리 실행은 모든 조건의 성공이 아니라 유효한 종료 요약과 정리 확인에 의존한다. 사전 중단도 종료 요약으로 처리한다.",
+      "before": "전체 예비실험이 완료되면",
+      "replacement_ko": "예정된 시도를 마치거나 사전 중단 규칙에 따라 예비실험이 종료되어 유효한 종료 요약과 실행 정리가 확인되면",
+      "basis": [
+        "research/watch_v492_postpilot.py",
+        "research/v492_postpilot_watcher_unit_review_20261019.json"
+      ],
+      "action": "실패·미시도 역시 계획된 다섯 최종안 분모에 남긴다는 문장 보충 가능."
+    },
+    {
+      "id": "R1-09",
+      "severity": "recommended",
+      "blocks": [
+        83
+      ],
+      "issue": "결과 없이 실험의 유의미성을 확정적으로 보장하는 인상을 낮출 필요가 있다. 유효 비교가 하나도 없으면 연구질문에 실증 답을 주지 못한다.",
+      "replacement_ko": "이 설계의 탐색적·방법론적 의의는 기관 근거의 제공 방식과 관찰 가능한 배분을 연결하고, 산술적 정확성과 근거 충실성을 분리하는 데 있다. 다만 유효한 비교 자료가 충분히 생성되지 않으면 조건 차이에 관한 연구질문은 미해결로 남고, 실행 가능성과 실패 구조만 보고할 수 있다.",
+      "basis": [
+        "research/v492_evaluation_protocol_20261019_r2.json",
+        "research/v492_pilot_freeze_20261019.json"
+      ]
+    },
+    {
+      "id": "R1-10",
+      "severity": "recommended",
+      "blocks": [
+        6
+      ],
+      "issue": "학술제 문구는 사용자 제공 Notion 개요에서 확인했으며 공식 심사표를 독립 검증한 것이 아니다.",
+      "replacement_ko": "사용자가 제공한 학술제 개요의 “AI가 재편하는 사회와 경제: 변화와 대응의 방향”이라는 문제의식 아래…",
+      "basis": [
+        "research/v481_conference_alignment_20261018.json"
+      ],
+      "action": "각주 또는 자료 출처에 Notion 개요 링크와 2026-10-18 확인을 기재. 공식 심사표 검증으로 표현하지 않음."
+    },
+    {
+      "id": "R1-11",
+      "severity": "recommended",
+      "blocks": [
+        35,
+        36
+      ],
+      "issue": "ETF 산업 바구니에 S&P 구성비를 적용한 값은 S&P 지수 자체의 정확한 복제가 아니다.",
+      "replacement_ko": "산업 ETF에는 자체 지수 규칙, 비용과 추적오차가 있으므로 S&P 500 산업 구성비로 이 ETF들을 가중한 배분은 산업노출의 대용치이며 지수 자체를 정확히 복제하지 않는다.",
+      "basis": [
+        "data/sector_market/benchmark.json"
+      ]
+    },
+    {
+      "id": "R1-12",
+      "severity": "recommended",
+      "blocks": [
+        81
+      ],
+      "issue": "과거 시점 자료 제한은 공급 자료에 대한 통제이며 모델 학습자료 시점과 내부 지식을 검증한 것이 아님을 덧붙일 수 있다.",
+      "replacement_ko": "또한 공급한 자료의 날짜를 제한하더라도 모델 내부 지식의 시점을 별도로 검증한 것은 아니므로 완전한 당시 정보 환경의 재현으로 보지 않는다.",
+      "basis": [
+        "data/sector_context/v491_20261019/common_context.json",
+        "research/v492_runtime_candidate_20261019.json"
+      ],
+      "classification": "식별 한계에 관한 검토자의 논리적 제안; 새 실험 결과나 원 논문의 수치가 아님"
+    },
+    {
+      "id": "R1-13",
+      "severity": "editorial",
+      "blocks": [
+        89,
+        91,
+        92,
+        93,
+        94,
+        96,
+        97,
+        98
+      ],
+      "issue": "참고문헌 간격과 구두점 정리가 필요하다.",
+      "action": "Homogenization?. → Homogenization?; No.11862 → No. 11862; v5,10April2025 등 날짜 간격; Finance,7(1),77–91 → Finance, 7(1), 77–91; the14th/the4th → the 14th/the 4th. 저자·제목·연도·버전은 선행 서지 검토와 일치."
+    },
+    {
+      "id": "R1-14",
+      "severity": "recommended",
+      "blocks": [
+        55
+      ],
+      "issue": "계획된 숫자 주장 의미 추출과 현재 구현된 산술 분석의 범위가 혼동되지 않도록 시제를 분명히 할 수 있다.",
+      "replacement_ko": "후속 의미 분석에서는 수치 주장을 대상·지표·단위·기간·자료 버전에 연결한다. 현재 구현된 산술 분석은 구조화된 원비중, 비교 기준 및 수정량을 결정론적으로 재계산하며, 자연어 수치 주장의 추출·판정은 별도의 AI 보조 코딩 대상으로 남긴다.",
+      "basis": [
+        "research/analyze_v492_pilot.py",
+        "research/v492_evaluation_protocol_20261019_r2.json"
+      ],
+      "action": "이미 모든 자연어 수치 검증이 자동 구현되었다고 읽히지 않도록 계획과 구현을 분리."
+    }
+  ],
+  "data_citation_proposals": [
+    {
+      "id": "msci_gics",
+      "citation": "MSCI. (n.d.). The Global Industry Classification Standard (GICS®). 2026년 10월 19일 확인.",
+      "url": "https://www.msci.com/indexes/index-resources/gics",
+      "role": "GICS 정의와 최상위 섹터 범위",
+      "verification": "기존 원자료 등록부 및 MSCI 공식 페이지 직접 확인; 기관 전망·비중 정답 근거 아님"
+    },
+    {
+      "id": "state_street_identity",
+      "citation": "State Street Investment Management. (n.d.). Select Sector SPDR ETF 공식 상품 페이지: XLE, XLB, XLI, XLY, XLP, XLV, XLF, XLK, XLC, XLU, XLRE. 2026년 10월 17일 수집.",
+      "role": "상품 신원과 대응 산업만 확인; 현재 보유종목·평가수치·가격은 실험 입력에서 제외",
+      "individual_pages": [
+        {
+          "ticker": "XLE",
+          "title": "XLE State Street® Energy Select Sector SPDR® ETF",
+          "url": "https://www.ssga.com/us/en/individual/etfs/state-street-energy-select-sector-spdr-etf-xle"
+        },
+        {
+          "ticker": "XLB",
+          "title": "XLB State Street® Materials Select Sector SPDR® ETF",
+          "url": "https://www.ssga.com/us/en/individual/etfs/state-street-materials-select-sector-spdr-etf-xlb"
+        },
+        {
+          "ticker": "XLI",
+          "title": "XLI State Street® Industrial Select Sector SPDR® ETF",
+          "url": "https://www.ssga.com/us/en/individual/etfs/state-street-industrial-select-sector-spdr-etf-xli"
+        },
+        {
+          "ticker": "XLY",
+          "title": "XLY State Street® Consumer Discretionary Select Sector SPDR® ETF",
+          "url": "https://www.ssga.com/us/en/individual/etfs/state-street-consumer-discretionary-select-sector-spdr-etf-xly"
+        },
+        {
+          "ticker": "XLP",
+          "title": "XLP State Street® Consumer Staples Select Sector SPDR® ETF",
+          "url": "https://www.ssga.com/us/en/individual/etfs/state-street-consumer-staples-select-sector-spdr-etf-xlp"
+        },
+        {
+          "ticker": "XLV",
+          "title": "XLV State Street® Health Care Select Sector SPDR® ETF",
+          "url": "https://www.ssga.com/us/en/individual/etfs/state-street-health-care-select-sector-spdr-etf-xlv"
+        },
+        {
+          "ticker": "XLF",
+          "title": "XLF State Street® Financial Select Sector SPDR® ETF",
+          "url": "https://www.ssga.com/us/en/individual/etfs/state-street-financial-select-sector-spdr-etf-xlf"
+        },
+        {
+          "ticker": "XLK",
+          "title": "XLK State Street® Technology Select Sector SPDR® ETF",
+          "url": "https://www.ssga.com/us/en/individual/etfs/state-street-technology-select-sector-spdr-etf-xlk"
+        },
+        {
+          "ticker": "XLC",
+          "title": "XLC State Street® Communication Services Select Sector SPDR® ETF",
+          "url": "https://www.ssga.com/us/en/individual/etfs/state-street-communication-services-select-sector-spdr-etf-xlc"
+        },
+        {
+          "ticker": "XLU",
+          "title": "XLU State Street® Utilities Select Sector SPDR® ETF",
+          "url": "https://www.ssga.com/us/en/individual/etfs/state-street-utilities-select-sector-spdr-etf-xlu"
+        },
+        {
+          "ticker": "XLRE",
+          "title": "XLRE State Street® Real Estate Select Sector SPDR® ETF",
+          "url": "https://www.ssga.com/us/en/individual/etfs/state-street-real-estate-select-sector-spdr-etf-xlre"
+        }
+      ],
+      "verification": "asset_registry와 manifest의 11개 원문 보존 해시 확인. XLE 공식 웹 페이지도 재확인."
+    },
+    {
+      "id": "yahoo_adjusted_close",
+      "citation": "Yahoo Finance. (2026). Select Sector SPDR ETF 11종의 일별 조정종가 [공개 chart JSON 자료]. 2026년 10월 17일 수집.",
+      "role": "실제 수익률 자료 공급자; 공식 issuer NAV 총수익률 아님",
+      "field": "indicators.adjclose[0].adjclose",
+      "return_formula": "r_t = P_adj,t / P_adj,t-1 - 1",
+      "observation_dates": "2026-04-21 through 2026-07-16, 60 returns from 61 common prices",
+      "individual_urls": [
+        {
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLE?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+          "retrieved_at_utc": "2026-10-17T09:43:09.814105+00:00",
+          "raw_path": "data/sector_market/raw/yahoo_XLE.json",
+          "sha256": "c84960af696aeea1f94273b4e4ec1dd45747c991c560d18dcc933144666ca72c"
+        },
+        {
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLB?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+          "retrieved_at_utc": "2026-10-17T09:43:09.805120+00:00",
+          "raw_path": "data/sector_market/raw/yahoo_XLB.json",
+          "sha256": "6c82c250c833600fe5274bac6eab459d359a99bea7d175142362e96f5a14128b"
+        },
+        {
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLI?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+          "retrieved_at_utc": "2026-10-17T09:43:10.093115+00:00",
+          "raw_path": "data/sector_market/raw/yahoo_XLI.json",
+          "sha256": "c867804929f1e7bfa57b59fff69ab65d4023ba236e603f22a216995a3414f05c"
+        },
+        {
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLY?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+          "retrieved_at_utc": "2026-10-17T09:43:10.380520+00:00",
+          "raw_path": "data/sector_market/raw/yahoo_XLY.json",
+          "sha256": "b743705647827a2331754541039edb9ca976ae4d0e982e338017ed7d18431d74"
+        },
+        {
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLP?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+          "retrieved_at_utc": "2026-10-17T09:43:10.505048+00:00",
+          "raw_path": "data/sector_market/raw/yahoo_XLP.json",
+          "sha256": "2f3523b49ea4df1f5b756502c7301e11b507caad4e5630b9bfb3cc6104229098"
+        },
+        {
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLV?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+          "retrieved_at_utc": "2026-10-17T09:43:10.529198+00:00",
+          "raw_path": "data/sector_market/raw/yahoo_XLV.json",
+          "sha256": "073228420a26c7ecf8e3247484bd44d2352d79ebce2b78d430276b6d853ad054"
+        },
+        {
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLF?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+          "retrieved_at_utc": "2026-10-17T09:43:10.865775+00:00",
+          "raw_path": "data/sector_market/raw/yahoo_XLF.json",
+          "sha256": "008008ec3c0fc4f12882f3a53e40e4c0cc46f25241e4249ef40e9c6cdb6bee4d"
+        },
+        {
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLK?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+          "retrieved_at_utc": "2026-10-17T09:43:11.527680+00:00",
+          "raw_path": "data/sector_market/raw/yahoo_XLK.json",
+          "sha256": "3c5d35c90b3a2a2d00d42b8640fb2aa29ab37943764f5d91e564727c4855de94"
+        },
+        {
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLC?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+          "retrieved_at_utc": "2026-10-17T09:43:11.164851+00:00",
+          "raw_path": "data/sector_market/raw/yahoo_XLC.json",
+          "sha256": "5aeefa01ec549fd8fae6a9ba0867f46c8a3924477b0f6fd4e53a84f164c615d8"
+        },
+        {
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLU?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+          "retrieved_at_utc": "2026-10-17T09:43:11.553367+00:00",
+          "raw_path": "data/sector_market/raw/yahoo_XLU.json",
+          "sha256": "c98b2c6b91a8b2a720cbd81b1ab9b411818794da7f51abb99bcdc4da2fd665c5"
+        },
+        {
+          "url": "https://query1.finance.yahoo.com/v8/finance/chart/XLRE?period1=1772323200&period2=1784246400&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+          "retrieved_at_utc": "2026-10-17T09:43:11.560376+00:00",
+          "raw_path": "data/sector_market/raw/yahoo_XLRE.json",
+          "sha256": "e855cda7eed24153c51a84824ec3152167f84f49655e7ea03bfa06a148b0eeca"
+        }
+      ]
+    },
+    {
+      "id": "sp500_reported_by_fidelity",
+      "citation": "Fidelity Investments. (2026). Quarterly Sector and Investment Research Update, Third Quarter 2026, p. 2. S&P 500 sector composition as of 30 June 2026.",
+      "url": "https://clearingcustody.fidelity.com/app/proxy/content?literatureURL=/9906006.PDF",
+      "role": "예비·본실험 공통 비교비중; 기관 전망 등급은 별도 처리",
+      "raw_percent_sum": 99.9,
+      "normalization": "각 원비중%/99.9",
+      "evidence_id": "fidelity_q3_2026:p2:benchmark",
+      "limit": "Fidelity 보고서에서 수집; S&P 별도 공식 원파일 직접 수집으로 표현하지 않음."
+    },
+    {
+      "id": "conference_overview",
+      "citation": "LIBERA. (2026). 학술제 개요 [사용자 제공 Notion 자료, 2026년 10월 18일 확인].",
+      "url": "https://app.notion.com/p/3e00589711408053a7e5ff9a0c4ba804",
+      "role": "주제 연결; 공식 심사표 또는 확정 제출 규정이 아님"
+    }
+  ],
+  "bibliography_review_ref": "research/v493_paper_source_review_20261019.json",
+  "unverified_or_limited": [
+    "18:00 KST 정각의 실행상태는 이 검토에서 실제 모델 응답이나 진행 로그를 새로 열어 검증하지 않았다. 원저자의 운영 메타데이터 확인에 의존한다. 08:38 UTC 통합 영수증은 당시 실행 중임을 확인한다.",
+    "현재 웹사이트의 2026-10-19 상태 확인은 원래 10월17일 가격 자료의 해시를 대체하지 않는다. 시장 수치는 재수집하지 않았다.",
+    "제출 분량·지정 양식·실증 결과 필수 여부는 사용자 개요에 명시되지 않은 상태이며, 이 내용 검토는 공식 제출 적합성 보증이 아니다."
+  ],
+  "model_calls": 0,
+  "actual_model_answer_content_read": false,
+  "frozen_files_modified": false
+}
