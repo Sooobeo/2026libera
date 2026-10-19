@@ -1,0 +1,34 @@
+{
+  "recorded_at_utc": "2026-10-19T06:27:42.680097+00:00",
+  "selection_basis": "Lowest observed supervisor walltime among completed predeclared source-free large-input probes; provisional only.",
+  "outcomes_all_preserved": [
+    {
+      "probe": "synthetic_large_input",
+      "status": "completed",
+      "supervisor_seconds": 876.3740201999899,
+      "cleanup": "no_resident_models_observed"
+    },
+    {
+      "probe": "synthetic_large_input_threads8",
+      "status": "completed",
+      "supervisor_seconds": 465.0344498999766,
+      "cleanup": "no_resident_models_observed"
+    }
+  ],
+  "selected_probe": "data/local_sector_runtime/v491_cpu_preflight_20261019/synthetic_large_input_threads8",
+  "num_thread": 8,
+  "num_ctx": 65536,
+  "selected_backend": "cpu",
+  "full_task_feasibility_validated": false,
+  "human_review_completed": false,
+  "main_allowed": false,
+  "frozen": false,
+  "confounders": [
+    "Fixed order",
+    "OS file cache not evicted",
+    "Concurrent development and verification may consume CPU",
+    "Synthetic repeated inventory differs from task content",
+    "Diagnostic output cap32 differs from research cap8192"
+  ],
+  "unchanged_research_controls": "Same model/digest/template, common context, source conditions, schema, calculator, evaluation and8192output allowance."
+}

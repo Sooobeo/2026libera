@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "reviewed_at_utc": "2026-10-19T06:14:56.697364+00:00",
+  "files": [
+    {
+      "path": "research/sector_v491_human_gate.py",
+      "sha256": "2908f8466efe6d9bd7b2b59453c6fd7c54eeca9ea9e84482796d4c3ad4d6edcb"
+    },
+    {
+      "path": "research/test_sector_v491_human_gate.py",
+      "sha256": "f48bcec03efaaf2225cca816bcca838aa52a15739b3baf8730172e444aef7b18"
+    }
+  ],
+  "independent_checks": [
+    "Exact final blank-form SHA pins and split-specific scope match delivered reviewer pack.",
+    "Metadata, shared anchors, all 22 source rows and all 11 source comparisons required for pilot; 99 main-only answer fields may remain null.",
+    "Independent original named submissions, explicit attestations and input/submission hashes preserved.",
+    "Completion <= export <= reconciliation UTC ordering checked; null original SHA cannot bypass integrity checks.",
+    "All original comparison decisions retained, disagreements explicitly preserved; uncertainty, similarity and noncomparability remain permitted.",
+    "Material input/rubric revisions prevent approval; runtime cannot infer or certify human identity or semantic correctness."
+  ],
+  "test_command": "python -B -X utf8 -m unittest -v test_sector_v491_human_gate",
+  "tests_passed": 14,
+  "tests_failed": 0,
+  "fixture_scope": "Temporary synthetic fixtures only; no genuine human review answers created or completed.",
+  "remaining_human_gate": "pending; original R1/R2 answers remain null",
+  "revision": "r2",
+  "prior_review": {
+    "path": "research/artifacts/v491_runtimeprep_20261019/human_gate_independent_review.json",
+    "sha256": "a3ee4ce7a576a20061ede76fbe974d8d6d2077421d2ab6f00759c235544acb8e"
+  },
+  "change_note": "Four new negative cases were independently checked against the unchanged gate implementation; earlier ten tests remain applicable."
+}

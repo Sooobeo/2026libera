@@ -1,0 +1,58 @@
+{
+  "status": "PASS_scoped_visual_inspection",
+  "reviewed_at_utc": "2026-10-19T06:09:01.950187+00:00",
+  "source": {
+    "path": "research/v491_human_review_pack_20261019_R1.html",
+    "sha256": "ab578b188f79203bd6278af3336d097fe58611d8687226958d996da2c86d6286"
+  },
+  "capture_receipt": {
+    "path": "research/artifacts/v491_runtimeprep_20261019/human_pack_capture_receipt.json",
+    "sha256": "08609c8eae47a0474584706b670ecdcee3c9d824b66697eace72ce2f8c73fb1c"
+  },
+  "inspected_images": [
+    {
+      "path": "research/artifacts/v491_runtimeprep_20261019/human_R1_top_desktop.png",
+      "sha256": "849864d8ecbf2f2663ab56bdde277dc4740044b0b7a28d5e8260daa7d65504ea"
+    },
+    {
+      "path": "research/artifacts/v491_runtimeprep_20261019/human_R1_top_narrow.png",
+      "sha256": "701ff194989c0e7a2f2b62981a1b1d849d99dc61b5173cc8d7f02e391718ad5b"
+    },
+    {
+      "path": "research/artifacts/v491_runtimeprep_20261019/human_R1_pilot_desktop.png",
+      "sha256": "261902b6c3b9a4cd2b012cae242e3af720608df4d87c1800e7f590bad354459b"
+    },
+    {
+      "path": "research/artifacts/v491_runtimeprep_20261019/human_R1_pilot_narrow.png",
+      "sha256": "f2f37c86045ba93b54d4f2e9af68c14665429e712861b5f914e7dc3274d68d71"
+    }
+  ],
+  "checks": [
+    {
+      "name": "desktop_top",
+      "pass": true,
+      "observation": "Korean title, pilot-first 129/99-field guidance, navigation, independence notice and JSON save/import controls are legible without clipping or overlap."
+    },
+    {
+      "name": "600px_top",
+      "pass": true,
+      "observation": "Long guidance and navigation wrap inside viewport; save/import/progress wrap to multiple rows without overlap. First identity field remains within page width."
+    },
+    {
+      "name": "desktop_pilot_section",
+      "pass": true,
+      "observation": "Original PDF link, SHA, page locators and first sector paraphrase are visible. Expanded sector exposes two blank text areas and one blank select with associated labels."
+    },
+    {
+      "name": "600px_pilot_section",
+      "pass": true,
+      "observation": "Source title, evidence ID, paragraph and labels wrap; all first-row controls fit viewport. All 11 sector headings are present in the inspected capture."
+    }
+  ],
+  "scope_limit": [
+    "Top of actual R1 page plus first pilot document section extracted from the same exact HTML; section capture opens the first sector disclosure for inspection.",
+    "Not a full-page screenshot audit of every row, browser automation of save/import, PDF print pagination, or visual inspection of R2. R2 has identical layout/content except reviewer slot and export metadata; export/import logic was separately executed in Node checks.",
+    "No human source interpretation or evaluation was completed by this visual inspection."
+  ],
+  "rendering_incidents_retained": true
+}

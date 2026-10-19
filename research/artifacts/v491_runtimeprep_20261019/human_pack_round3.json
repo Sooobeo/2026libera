@@ -1,0 +1,183 @@
+{
+  "status": "PASS",
+  "round": 3,
+  "checked_at_utc": "2026-10-19T06:04:16.691183+00:00",
+  "scope": "Research topic, inference limits, pre-output human gate and outcome-blindness",
+  "check_count": 21,
+  "checks": [
+    {
+      "name": "previous_round_passed",
+      "pass": true,
+      "evidence": "PASS"
+    },
+    {
+      "name": "previous_round_bytes_unchanged:research/v491_human_review_pack_20261019_R1.json",
+      "pass": true,
+      "evidence": {
+        "path": "research/v491_human_review_pack_20261019_R1.json",
+        "sha256": "ea6bd366adf09da0f79c9811fb760dc4b33b9b4a1618ac13435aecb20915f411"
+      }
+    },
+    {
+      "name": "previous_round_bytes_unchanged:research/v491_human_review_pack_20261019_R1.html",
+      "pass": true,
+      "evidence": {
+        "path": "research/v491_human_review_pack_20261019_R1.html",
+        "sha256": "ab578b188f79203bd6278af3336d097fe58611d8687226958d996da2c86d6286"
+      }
+    },
+    {
+      "name": "previous_round_bytes_unchanged:research/v491_human_review_pack_20261019_R2.json",
+      "pass": true,
+      "evidence": {
+        "path": "research/v491_human_review_pack_20261019_R2.json",
+        "sha256": "4b6d6f4d584dad86e3cd299a74c6a04c85df017c870a219061d5b2daaf74fa00"
+      }
+    },
+    {
+      "name": "previous_round_bytes_unchanged:research/v491_human_review_pack_20261019_R2.html",
+      "pass": true,
+      "evidence": {
+        "path": "research/v491_human_review_pack_20261019_R2.html",
+        "sha256": "393a169619b269bbd9a9ab49f363001f72f0e972c2cf339fa3b4190bfc567fbb"
+      }
+    },
+    {
+      "name": "previous_round_bytes_unchanged:research/v491_human_review_pack_20261019_gate_blank.json",
+      "pass": true,
+      "evidence": {
+        "path": "research/v491_human_review_pack_20261019_gate_blank.json",
+        "sha256": "bd0bbfd4f3a125514d4acf27f4fec4732411bc2f673befd96567ea22c3ee132f"
+      }
+    },
+    {
+      "name": "previous_round_bytes_unchanged:research/v491_human_review_pack_20261019_manifest.json",
+      "pass": true,
+      "evidence": {
+        "path": "research/v491_human_review_pack_20261019_manifest.json",
+        "sha256": "b8780e214219a10756a7db7dbe9a162cff30c4a48f029a89d5e7c8957d791160"
+      }
+    },
+    {
+      "name": "previous_round_bytes_unchanged:research/build_v491_human_review_pack.py",
+      "pass": true,
+      "evidence": {
+        "path": "research/build_v491_human_review_pack.py",
+        "sha256": "37d6566dc8dd677418eece50af571c19ffb414f846504de31ccc46b6bd38d223"
+      }
+    },
+    {
+      "name": "rubric_matches_current_frozen_candidate",
+      "pass": true,
+      "evidence": "No score, threshold, gold weights or new semantic labels introduced"
+    },
+    {
+      "name": "all11_pre_output_contrasts_per_split",
+      "pass": true,
+      "evidence": "Avoid choosing source differences after seeing output"
+    },
+    {
+      "name": "source_roles_and_scope_match",
+      "pass": true,
+      "evidence": {
+        "pilot": [
+          "fidelity_q2_2026",
+          "ubs_june_2026"
+        ],
+        "main": [
+          "fidelity_q3_2026",
+          "ubs_july_2026"
+        ]
+      }
+    },
+    {
+      "name": "comparison_categories_preserved",
+      "pass": true,
+      "evidence": "Supports difference, similarity, noncomparability, insufficient evidence, uncertainty"
+    },
+    {
+      "name": "no_forced_success_requirement",
+      "pass": true,
+      "evidence": "Human gate does not select E wins, diversity, or successful model outputs"
+    },
+    {
+      "name": "pre_output_pilot_and_main_gate_explicit",
+      "pass": true,
+      "evidence": "The pre-output review gate applies to pilot as well as main. Content-neutral runtime diagnostics may precede it; research-output diagnostics must not be shown to reviewers."
+    },
+    {
+      "name": "human_not_AI_and_not_samples",
+      "pass": true,
+      "evidence": "Two distinct human readers complete their own forms before any corresponding v4.9.1 research outputs are viewed. This is quality control, not extra statistical samples."
+    },
+    {
+      "name": "independent_originals_and_reconciliation",
+      "pass": true,
+      "evidence": "Preserve originals, disagreements, unresolved findings; do not coerce agreement"
+    },
+    {
+      "name": "new_version_after_material_change",
+      "pass": true,
+      "evidence": "After both forms are saved, compare all source and context findings and all 11 contrasts per split. Preserve both originals, disagreements, reconciliation rationale and unresolved items. Material input/rubric changes require a new version and renewed relevant review before generation."
+    },
+    {
+      "name": "topic_evidence_to_decision_not_similarity",
+      "pass": true,
+      "evidence": "Assess whether differing public organizational judgments survive as supported interpretations and allocation reasons. Different words or weights alone do not establish fidelity or harmful homogenization."
+    },
+    {
+      "name": "machine_limit_explicit",
+      "pass": true,
+      "evidence": "Machine checks can validate completeness and file identity, not certify that a human performed a review."
+    },
+    {
+      "name": "pilot_can_proceed_without_main_answers",
+      "pass": true,
+      "evidence": {
+        "pilot_fields": 129,
+        "later_main_fields": 99
+      }
+    },
+    {
+      "name": "current_readiness_not_overclaimed",
+      "pass": true,
+      "evidence": "These are blank handoff materials; no human source judgment or research outcome has been invented"
+    }
+  ],
+  "artifact_refs": [
+    {
+      "path": "research/v491_human_review_pack_20261019_R1.json",
+      "sha256": "ea6bd366adf09da0f79c9811fb760dc4b33b9b4a1618ac13435aecb20915f411"
+    },
+    {
+      "path": "research/v491_human_review_pack_20261019_R1.html",
+      "sha256": "ab578b188f79203bd6278af3336d097fe58611d8687226958d996da2c86d6286"
+    },
+    {
+      "path": "research/v491_human_review_pack_20261019_R2.json",
+      "sha256": "4b6d6f4d584dad86e3cd299a74c6a04c85df017c870a219061d5b2daaf74fa00"
+    },
+    {
+      "path": "research/v491_human_review_pack_20261019_R2.html",
+      "sha256": "393a169619b269bbd9a9ab49f363001f72f0e972c2cf339fa3b4190bfc567fbb"
+    },
+    {
+      "path": "research/v491_human_review_pack_20261019_gate_blank.json",
+      "sha256": "bd0bbfd4f3a125514d4acf27f4fec4732411bc2f673befd96567ea22c3ee132f"
+    },
+    {
+      "path": "research/v491_human_review_pack_20261019_manifest.json",
+      "sha256": "b8780e214219a10756a7db7dbe9a162cff30c4a48f029a89d5e7c8957d791160"
+    },
+    {
+      "path": "research/build_v491_human_review_pack.py",
+      "sha256": "37d6566dc8dd677418eece50af571c19ffb414f846504de31ccc46b6bd38d223"
+    }
+  ],
+  "human_review_completed": false,
+  "main_or_pilot_model_calls": 0,
+  "limits": [
+    "These automated preparation checks do not complete independent human review.",
+    "No claims about browser visual layout, review quality, or human authenticity follow from these checks."
+  ]
+}

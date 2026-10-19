@@ -1,0 +1,83 @@
+{
+  "checked_at_utc": "2026-10-19T06:09:01.949009+00:00",
+  "source": {
+    "path": "research/v491_human_review_pack_20261019_R1.html",
+    "sha256": "ab578b188f79203bd6278af3336d097fe58611d8687226958d996da2c86d6286"
+  },
+  "captures": [
+    {
+      "name": "human_R1_top_desktop",
+      "viewport": "1360,1200",
+      "image": {
+        "path": "research/artifacts/v491_runtimeprep_20261019/human_R1_top_desktop.png",
+        "sha256": "849864d8ecbf2f2663ab56bdde277dc4740044b0b7a28d5e8260daa7d65504ea"
+      },
+      "original_source": {
+        "path": "research/v491_human_review_pack_20261019_R1.html",
+        "sha256": "ab578b188f79203bd6278af3336d097fe58611d8687226958d996da2c86d6286"
+      },
+      "extracted_section_only": false,
+      "expanded_first_source_row_for_inspection": false,
+      "original_html_unchanged": true
+    },
+    {
+      "name": "human_R1_top_narrow",
+      "viewport": "600,1600",
+      "image": {
+        "path": "research/artifacts/v491_runtimeprep_20261019/human_R1_top_narrow.png",
+        "sha256": "701ff194989c0e7a2f2b62981a1b1d849d99dc61b5173cc8d7f02e391718ad5b"
+      },
+      "original_source": {
+        "path": "research/v491_human_review_pack_20261019_R1.html",
+        "sha256": "ab578b188f79203bd6278af3336d097fe58611d8687226958d996da2c86d6286"
+      },
+      "extracted_section_only": false,
+      "expanded_first_source_row_for_inspection": false,
+      "original_html_unchanged": true
+    },
+    {
+      "name": "human_R1_pilot_desktop",
+      "viewport": "1360,1600",
+      "image": {
+        "path": "research/artifacts/v491_runtimeprep_20261019/human_R1_pilot_desktop.png",
+        "sha256": "261902b6c3b9a4cd2b012cae242e3af720608df4d87c1800e7f590bad354459b"
+      },
+      "original_source": {
+        "path": "research/v491_human_review_pack_20261019_R1.html",
+        "sha256": "ab578b188f79203bd6278af3336d097fe58611d8687226958d996da2c86d6286"
+      },
+      "extracted_section_only": true,
+      "expanded_first_source_row_for_inspection": true,
+      "original_html_unchanged": true
+    },
+    {
+      "name": "human_R1_pilot_narrow",
+      "viewport": "600,2000",
+      "image": {
+        "path": "research/artifacts/v491_runtimeprep_20261019/human_R1_pilot_narrow.png",
+        "sha256": "f2f37c86045ba93b54d4f2e9af68c14665429e712861b5f914e7dc3274d68d71"
+      },
+      "original_source": {
+        "path": "research/v491_human_review_pack_20261019_R1.html",
+        "sha256": "ab578b188f79203bd6278af3336d097fe58611d8687226958d996da2c86d6286"
+      },
+      "extracted_section_only": true,
+      "expanded_first_source_row_for_inspection": true,
+      "original_html_unchanged": true
+    }
+  ],
+  "headless_instances_in_parallel": 1,
+  "browser_gpu_disabled": true,
+  "profiles": [
+    "tmp/v491_visual/human_pack_20261019T060514Z",
+    "tmp/v491_visual/human_pack_20261019T060717Z"
+  ],
+  "rendering_incidents": [
+    "Initial 20261019T060514Z attempt produced both top images, but the second headless Chrome did not close within 45 seconds; subprocess inherited pipes delayed return. Only owned headless profiles under that exact task directory were terminated.",
+    "Second 20261019T060717Z attempt produced both pilot section images using DEVNULL and a stable image-size check. The final owned process tree was terminated, but process.wait exceeded 10 seconds before cleanup completed. A subsequent exact-profile process inventory found no remaining owned Chrome processes.",
+    "The renderer helper exit code 1 was a cleanup timeout after valid image production. It is retained as an engineering incident; it was not a model call or experiment failure. No real user Chrome session was targeted."
+  ],
+  "capture_artifacts_complete": true,
+  "visual_review_completed": true,
+  "research_model_calls": 0
+}

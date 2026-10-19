@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "reviewed_at_utc": "2026-10-19T06:09:01.970088+00:00",
+  "files": [
+    {
+      "path": "research/sector_v491_human_gate.py",
+      "sha256": "2908f8466efe6d9bd7b2b59453c6fd7c54eeca9ea9e84482796d4c3ad4d6edcb"
+    },
+    {
+      "path": "research/test_sector_v491_human_gate.py",
+      "sha256": "72a3d6c7b7a1f3673a6fcc783d9857de8ce240f96e461d61ffcf4b3a9156cc0a"
+    }
+  ],
+  "independent_checks": [
+    "Exact final blank-form SHA pins and split-specific scope match delivered reviewer pack.",
+    "Metadata, shared anchors, all 22 source rows and all 11 source comparisons required for pilot; 99 main-only answer fields may remain null.",
+    "Independent original named submissions, explicit attestations and input/submission hashes preserved.",
+    "Completion <= export <= reconciliation UTC ordering checked; null original SHA cannot bypass integrity checks.",
+    "All original comparison decisions retained, disagreements explicitly preserved; uncertainty, similarity and noncomparability remain permitted.",
+    "Material input/rubric revisions prevent approval; runtime cannot infer or certify human identity or semantic correctness."
+  ],
+  "test_command": "python -B -X utf8 -m unittest -v test_sector_v491_human_gate",
+  "tests_passed": 10,
+  "tests_failed": 0,
+  "fixture_scope": "Temporary synthetic fixtures only; no genuine human review answers created or completed.",
+  "remaining_human_gate": "pending; original R1/R2 answers remain null"
+}

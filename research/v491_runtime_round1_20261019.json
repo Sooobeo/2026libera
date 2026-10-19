@@ -1,0 +1,55 @@
+{
+  "round": 1,
+  "status": "PASS",
+  "recorded_at_utc": "2026-10-19T06:09:13.769478+00:00",
+  "scope": "Implementation tests and author review; synthetic ephemeral fixtures only; no human review performed",
+  "model_generation_requests": 0,
+  "main_model_calls": 0,
+  "pilot_model_calls": 0,
+  "tests": [
+    {
+      "path": "research/test_sector_v491_runtime.py",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ".....................\n----------------------------------------------------------------------\nRan 21 tests in 46.085s\n\nOK\n"
+    },
+    {
+      "path": "research/test_sector_v491_human_gate.py",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "..............\n----------------------------------------------------------------------\nRan 14 tests in 7.037s\n\nOK\n"
+    }
+  ],
+  "implementation_refs": [
+    {
+      "path": "research/sector_v491_runtime.py",
+      "sha256": "64e229148ffe1cf9c361db39a9ffa2e703e530d3638da1e245b6ec8492166538"
+    },
+    {
+      "path": "research/sector_v491_human_gate.py",
+      "sha256": "2908f8466efe6d9bd7b2b59453c6fd7c54eeca9ea9e84482796d4c3ad4d6edcb"
+    },
+    {
+      "path": "research/test_sector_v491_runtime.py",
+      "sha256": "376f18c680d3d5f04009efa116172466ff659fd5f1687ab1ff91bc7e2ada7e4c"
+    },
+    {
+      "path": "research/test_sector_v491_human_gate.py",
+      "sha256": "f48bcec03efaaf2225cca816bcca838aa52a15739b3baf8730172e444aef7b18"
+    },
+    {
+      "path": "research/sector_v491_tokenizer.py",
+      "sha256": "1e25d31d18e659e90186d2a598d0bcad77824d0dbc5a0e76beed692a8373e440"
+    }
+  ],
+  "author_review": [
+    "Four explicit pilot cases only and no main entrypoint",
+    "Human receipt required at prepare, run and worker spec boundary; actual blank receipt rejected",
+    "Exact own D0 raw content retained; arithmetic/citation errors do not censor readable drafts",
+    "Native exact rendered token count plus full8192 output reserve; oversize F0 makeszero generation requests",
+    "No automatic retries, resume, post-final repair, model substitution or response selection",
+    "CPU backend and2/8thread selection bound to exact source-free diagnostic evidence",
+    "Bounded subprocess, raw HTTP records, observed pins, awake lifecycle and cleanup retained",
+    "Only actual pilot execution can establish full task memory/latency; none attempted"
+  ]
+}

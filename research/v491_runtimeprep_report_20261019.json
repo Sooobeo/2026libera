@@ -1,0 +1,182 @@
+{
+  "recorded_at_utc": "2026-10-19T06:29:39.606078+00:00",
+  "status": "runtime_prepared_and_engineering_measured_human_review_pending",
+  "prior_delivery_69_files_unchanged": true,
+  "engineering_probes": [
+    {
+      "probe_id": "synthetic_smoke",
+      "purpose": "One source-free CPU smoke test. No institution, market, evaluation, or pilot input.",
+      "threads": 2,
+      "context": 65536,
+      "prompt_tokens_exact_preflight": null,
+      "output_limit": 32,
+      "supervisor_status": "worker_exited",
+      "worker_status": "completed",
+      "request_attempts": 1,
+      "metrics": {
+        "wall_seconds": 6.444343799987109,
+        "ttft_any_generated_seconds": 5.9337523999856785,
+        "ttft_content_seconds": 5.933751900010975,
+        "token_count_source": "Ollama counters, not independent tokenization",
+        "duration_unit_in_response": "nanoseconds",
+        "total_duration_seconds": 6.4361067,
+        "load_duration_seconds": 5.1634054,
+        "prompt_eval_duration_seconds": 0.757107,
+        "eval_duration_seconds": 0.511753,
+        "prompt_eval_count": 25,
+        "eval_count": 6,
+        "prompt_eval_tokens_per_second": 33.02043172233251,
+        "eval_tokens_per_second": 11.724406109978837
+      },
+      "supervisor_elapsed_seconds": 6.623763899988262,
+      "available_ram_min_bytes": 8015495168,
+      "named_process_working_set_max_bytes": 5788672000,
+      "memory_scope": "System available RAM and observed named Ollama process working sets (may double-count shared pages); sampled values, not exclusive model allocation.",
+      "incomplete_monitor_lines": 0,
+      "awake_release": "released",
+      "cleanup": "no_resident_models_observed",
+      "supervisor_evidence": {
+        "path": "data/local_sector_runtime/v491_cpu_preflight_20261019/synthetic_smoke/supervisor_result.json",
+        "sha256": "c7c5ffc906f2e3ced91fe5dbf2ac93f7c22da7bf6bdf22d61224b5b578f18fff",
+        "bytes": 1923
+      },
+      "not_a_pilot_or_full_task": true
+    },
+    {
+      "probe_id": "synthetic_large_input",
+      "purpose": "Source-free large-input engineering diagnostic; no model research case or output.",
+      "threads": 2,
+      "context": 65536,
+      "prompt_tokens_exact_preflight": 13380,
+      "output_limit": 32,
+      "supervisor_status": "worker_exited",
+      "worker_status": "completed",
+      "request_attempts": 1,
+      "metrics": {
+        "wall_seconds": 876.1322274999984,
+        "ttft_any_generated_seconds": 874.3071195000084,
+        "ttft_content_seconds": 874.3071182999993,
+        "token_count_source": "Ollama counters, not independent tokenization",
+        "duration_unit_in_response": "nanoseconds",
+        "total_duration_seconds": 876.123403,
+        "load_duration_seconds": 4.2926179,
+        "prompt_eval_duration_seconds": 869.989842,
+        "eval_duration_seconds": 1.823717,
+        "prompt_eval_count": 13380,
+        "eval_count": 6,
+        "prompt_eval_tokens_per_second": 15.37948991363051,
+        "eval_tokens_per_second": 3.2899841367931537
+      },
+      "supervisor_elapsed_seconds": 876.3740201999899,
+      "available_ram_min_bytes": 7790596096,
+      "named_process_working_set_max_bytes": 5960884224,
+      "memory_scope": "System available RAM and observed named Ollama process working sets (may double-count shared pages); sampled values, not exclusive model allocation.",
+      "incomplete_monitor_lines": 0,
+      "awake_release": "released",
+      "cleanup": "no_resident_models_observed",
+      "supervisor_evidence": {
+        "path": "data/local_sector_runtime/v491_cpu_preflight_20261019/synthetic_large_input/supervisor_result.json",
+        "sha256": "f87c49f4359af6144e389c7f928af88e8dcd0134a2a9270b7c30ce6585517b21",
+        "bytes": 1928
+      },
+      "not_a_pilot_or_full_task": true
+    },
+    {
+      "probe_id": "synthetic_large_input_threads8",
+      "purpose": "Source-free large-input engineering diagnostic; no model research case or output.",
+      "threads": 8,
+      "context": 65536,
+      "prompt_tokens_exact_preflight": 13380,
+      "output_limit": 32,
+      "supervisor_status": "worker_exited",
+      "worker_status": "completed",
+      "request_attempts": 1,
+      "metrics": {
+        "wall_seconds": 464.74312679999275,
+        "ttft_any_generated_seconds": 463.0817215999996,
+        "ttft_content_seconds": 463.0817179000005,
+        "token_count_source": "Ollama counters, not independent tokenization",
+        "duration_unit_in_response": "nanoseconds",
+        "total_duration_seconds": 464.728882,
+        "load_duration_seconds": 6.1799197,
+        "prompt_eval_duration_seconds": 456.855731,
+        "eval_duration_seconds": 1.657971,
+        "prompt_eval_count": 13380,
+        "eval_count": 6,
+        "prompt_eval_tokens_per_second": 29.28714491708981,
+        "eval_tokens_per_second": 3.6188811505146954
+      },
+      "supervisor_elapsed_seconds": 465.0344498999766,
+      "available_ram_min_bytes": 8404160512,
+      "named_process_working_set_max_bytes": 5963472896,
+      "memory_scope": "System available RAM and observed named Ollama process working sets (may double-count shared pages); sampled values, not exclusive model allocation.",
+      "incomplete_monitor_lines": 0,
+      "awake_release": "released",
+      "cleanup": "no_resident_models_observed",
+      "supervisor_evidence": {
+        "path": "data/local_sector_runtime/v491_cpu_preflight_20261019/synthetic_large_input_threads8/supervisor_result.json",
+        "sha256": "ff368df86c9c87cf0eeab048ebaaa47bde9ae52a041b4c698d9b92e7ce40ced7",
+        "bytes": 1930
+      },
+      "not_a_pilot_or_full_task": true
+    }
+  ],
+  "engineering_generation_requests": 3,
+  "pilot_generation_requests": 0,
+  "main_generation_requests": 0,
+  "research_frozen": false,
+  "independent_human_review_completed": false,
+  "D0_token_range": [
+    12228,
+    13225
+  ],
+  "D0_schema_included_render_receipt": {
+    "path": "research/v491_token_review_20261019_r2.json",
+    "sha256": "ee9a8ce0389a72b89a4b210d52a4010750031e03b233001d4c73c911a85c4d4e",
+    "bytes": 42174
+  },
+  "runtime_candidate": {
+    "path": "research/v491_runtime_candidate_20261019.json",
+    "sha256": "cef7cfb08ee3e06532cfcfef2facca3792ccfec27b3605557adfa92fd7169f55",
+    "bytes": 2224
+  },
+  "runtime_selection": {
+    "path": "research/v491_runtime_selection_20261019.json",
+    "sha256": "5ba71b2db85113544600370ec17088ce155cdb80d1544741a7f2a9cfe7884105",
+    "bytes": 1342
+  },
+  "selected_cpu_threads": 8,
+  "owned_service_shutdown": {
+    "path": "data/local_sector_runtime/v491_cpu_preflight_20261019/service_shutdown_receipt.json",
+    "sha256": "306b4719eaf1aff17a4cf5000ca2d795295df2fac0a91f42e83d1bf4bd370a0b",
+    "bytes": 1392
+  },
+  "archive": {
+    "path": "research/artifacts/v491_runtimeprep_20261019/cpu_engineering_evidence.zip",
+    "sha256": "7e11da588e5e0df7125d3329f71f826f3ec2026c2e7758c672b733d1adbfa8d9",
+    "bytes": 199148
+  },
+  "archive_manifest": {
+    "path": "research/artifacts/v491_runtimeprep_20261019/cpu_engineering_evidence.manifest.json",
+    "sha256": "a540f715bf8d43fa98b749e755be3e67463a7a68293391561fb1c48ec18c33e6",
+    "bytes": 17653
+  },
+  "archive_verification": {
+    "verified_files": 74,
+    "restored_files": 0,
+    "archive_sha256": "7e11da588e5e0df7125d3329f71f826f3ec2026c2e7758c672b733d1adbfa8d9"
+  },
+  "limits": [
+    "Synthetic input/output differ from the investment task; no full D0/F0 feasibility or reliability guarantee.",
+    "Single fixed-order engineering probes with OS cache/background-work differences; not a controlled speed ranking.",
+    "Context65536, CPU threads and deadlines are engineering choices, not invented paper-derived behavioral conditions.",
+    "Actual F0 must be exactly tokenized after its own D0; all possible unknown histories are not bounded in advance.",
+    "The initial short-probe coordinator raised a duplicate receipt-write error after successful generation and cleanup. It was fixed without rerunning; incident retained.",
+    "Independent humans must review source meanings before formal pilot outputs under the existing evaluation protocol."
+  ],
+  "next_required": [
+    "Two independent human pilot-source/common-context reviews and recorded reconciliation.",
+    "Four-case pilot, first D0/F0 attempts only, with actual capacity/memory/latency and failure denominators.",
+    "Main-source human review, exact protocol/runtime/evaluation/order freeze, then main experiment."
+  ]
+}

@@ -1,0 +1,275 @@
+{
+  "round": 2,
+  "reviewer": "independent tokenizer/runtime reviewer agent",
+  "created_at_utc": "2026-10-19T06:09:27.434705+00:00",
+  "status": "pass",
+  "checks": [
+    {
+      "check": "round1_receipt_present",
+      "passed": true,
+      "finding": "Bound prior independent implementation/test receipt"
+    },
+    {
+      "check": "only_four_pilot_cases",
+      "passed": true,
+      "finding": "Main D0 is absent from the pilot coordinator inventory"
+    },
+    {
+      "check": "late_drafts_same_input_separate_cases",
+      "passed": true,
+      "finding": "Two independent draft attempts remain required despite identical L messages"
+    },
+    {
+      "check": "fidelity_q2_2026__E:visibility",
+      "passed": true,
+      "finding": "Source first-exposure timing is the only intended D0 source-information difference"
+    },
+    {
+      "check": "fidelity_q2_2026__E:common_context",
+      "passed": true,
+      "finding": "Common operating situation and macro facts retained at D0"
+    },
+    {
+      "check": "fidelity_q2_2026__E:actual_own_history",
+      "passed": true,
+      "finding": "Original two-message D0 and verbatim own raw response, including outer CR/LF/tab, are retained"
+    },
+    {
+      "check": "fidelity_q2_2026__E:fresh_source_and_unrepaired_feedback",
+      "passed": true,
+      "finding": "Synthetic 1.1 budget error continues as measured error; fresh source is appended and no normalization occurs"
+    },
+    {
+      "check": "fidelity_q2_2026__L:visibility",
+      "passed": true,
+      "finding": "Source first-exposure timing is the only intended D0 source-information difference"
+    },
+    {
+      "check": "fidelity_q2_2026__L:common_context",
+      "passed": true,
+      "finding": "Common operating situation and macro facts retained at D0"
+    },
+    {
+      "check": "fidelity_q2_2026__L:actual_own_history",
+      "passed": true,
+      "finding": "Original two-message D0 and verbatim own raw response, including outer CR/LF/tab, are retained"
+    },
+    {
+      "check": "fidelity_q2_2026__L:fresh_source_and_unrepaired_feedback",
+      "passed": true,
+      "finding": "Synthetic 1.1 budget error continues as measured error; fresh source is appended and no normalization occurs"
+    },
+    {
+      "check": "ubs_june_2026__E:visibility",
+      "passed": true,
+      "finding": "Source first-exposure timing is the only intended D0 source-information difference"
+    },
+    {
+      "check": "ubs_june_2026__E:common_context",
+      "passed": true,
+      "finding": "Common operating situation and macro facts retained at D0"
+    },
+    {
+      "check": "ubs_june_2026__E:actual_own_history",
+      "passed": true,
+      "finding": "Original two-message D0 and verbatim own raw response, including outer CR/LF/tab, are retained"
+    },
+    {
+      "check": "ubs_june_2026__E:fresh_source_and_unrepaired_feedback",
+      "passed": true,
+      "finding": "Synthetic 1.1 budget error continues as measured error; fresh source is appended and no normalization occurs"
+    },
+    {
+      "check": "ubs_june_2026__L:visibility",
+      "passed": true,
+      "finding": "Source first-exposure timing is the only intended D0 source-information difference"
+    },
+    {
+      "check": "ubs_june_2026__L:common_context",
+      "passed": true,
+      "finding": "Common operating situation and macro facts retained at D0"
+    },
+    {
+      "check": "ubs_june_2026__L:actual_own_history",
+      "passed": true,
+      "finding": "Original two-message D0 and verbatim own raw response, including outer CR/LF/tab, are retained"
+    },
+    {
+      "check": "ubs_june_2026__L:fresh_source_and_unrepaired_feedback",
+      "passed": true,
+      "finding": "Synthetic 1.1 budget error continues as measured error; fresh source is appended and no normalization occurs"
+    },
+    {
+      "check": "fidelity_q3_2026__E:exact_bound",
+      "passed": true,
+      "finding": "Observed actual rendered string is hash-bound to exact native count, plus full output allowance; format-inclusive rerender is separately recorded in token review r2"
+    },
+    {
+      "check": "fidelity_q3_2026__L:exact_bound",
+      "passed": true,
+      "finding": "Observed actual rendered string is hash-bound to exact native count, plus full output allowance; format-inclusive rerender is separately recorded in token review r2"
+    },
+    {
+      "check": "ubs_july_2026__E:exact_bound",
+      "passed": true,
+      "finding": "Observed actual rendered string is hash-bound to exact native count, plus full output allowance; format-inclusive rerender is separately recorded in token review r2"
+    },
+    {
+      "check": "ubs_july_2026__L:exact_bound",
+      "passed": true,
+      "finding": "Observed actual rendered string is hash-bound to exact native count, plus full output allowance; format-inclusive rerender is separately recorded in token review r2"
+    },
+    {
+      "check": "fidelity_q2_2026__E:exact_bound",
+      "passed": true,
+      "finding": "Observed actual rendered string is hash-bound to exact native count, plus full output allowance; format-inclusive rerender is separately recorded in token review r2"
+    },
+    {
+      "check": "fidelity_q2_2026__L:exact_bound",
+      "passed": true,
+      "finding": "Observed actual rendered string is hash-bound to exact native count, plus full output allowance; format-inclusive rerender is separately recorded in token review r2"
+    },
+    {
+      "check": "ubs_june_2026__E:exact_bound",
+      "passed": true,
+      "finding": "Observed actual rendered string is hash-bound to exact native count, plus full output allowance; format-inclusive rerender is separately recorded in token review r2"
+    },
+    {
+      "check": "ubs_june_2026__L:exact_bound",
+      "passed": true,
+      "finding": "Observed actual rendered string is hash-bound to exact native count, plus full output allowance; format-inclusive rerender is separately recorded in token review r2"
+    },
+    {
+      "check": "receipt_mutation_1",
+      "passed": true,
+      "finding": "Reject changed count/renderer/model/template/native tokenizer provenance: {'token_count': False}"
+    },
+    {
+      "check": "receipt_mutation_2",
+      "passed": true,
+      "finding": "Reject changed count/renderer/model/template/native tokenizer provenance: {'token_count': 0}"
+    },
+    {
+      "check": "receipt_mutation_3",
+      "passed": true,
+      "finding": "Reject changed count/renderer/model/template/native tokenizer provenance: {'token_count': -1}"
+    },
+    {
+      "check": "receipt_mutation_4",
+      "passed": true,
+      "finding": "Reject changed count/renderer/model/template/native tokenizer provenance: {'token_count': '10'}"
+    },
+    {
+      "check": "receipt_mutation_5",
+      "passed": true,
+      "finding": "Reject changed count/renderer/model/template/native tokenizer provenance: {'rendered_utf8_sha256': '0000000000000000000000000000000000000000000000000000000000000000'}"
+    },
+    {
+      "check": "receipt_mutation_6",
+      "passed": true,
+      "finding": "Reject changed count/renderer/model/template/native tokenizer provenance: {'model_digest': '0000000000000000000000000000000000000000000000000000000000000000'}"
+    },
+    {
+      "check": "receipt_mutation_7",
+      "passed": true,
+      "finding": "Reject changed count/renderer/model/template/native tokenizer provenance: {'template_sha256': '0000000000000000000000000000000000000000000000000000000000000000'}"
+    },
+    {
+      "check": "receipt_mutation_8",
+      "passed": true,
+      "finding": "Reject changed count/renderer/model/template/native tokenizer provenance: {'method': 'bytes_div_four'}"
+    },
+    {
+      "check": "receipt_mutation_9",
+      "passed": true,
+      "finding": "Reject changed count/renderer/model/template/native tokenizer provenance: {'add_special': False}"
+    },
+    {
+      "check": "receipt_mutation_10",
+      "passed": true,
+      "finding": "Reject changed count/renderer/model/template/native tokenizer provenance: {'parse_special': False}"
+    },
+    {
+      "check": "receipt_mutation_11",
+      "passed": true,
+      "finding": "Reject changed count/renderer/model/template/native tokenizer provenance: {'generation_calls': 1}"
+    },
+    {
+      "check": "receipt_mutation_12",
+      "passed": true,
+      "finding": "Reject changed count/renderer/model/template/native tokenizer provenance: {'gguf_sha256': '0000000000000000000000000000000000000000000000000000000000000000'}"
+    },
+    {
+      "check": "receipt_mutation_13",
+      "passed": true,
+      "finding": "Reject changed count/renderer/model/template/native tokenizer provenance: {'library_hashes': {'wrong': '0000000000000000000000000000000000000000000000000000000000000000'}}"
+    },
+    {
+      "check": "one_token_insufficient_context",
+      "passed": true,
+      "finding": "The request stops before generation instead of truncating retained history"
+    },
+    {
+      "check": "actual_blank_human_gate",
+      "passed": true,
+      "finding": "Prepared forms and software/AI reviews are insufficient; actual independent human attestations required"
+    },
+    {
+      "check": "worker_orders_render_count_generation",
+      "passed": true,
+      "finding": "Source inspection: actual body rendered, exact full-history token count checked, then one generation; there is no retry branch"
+    },
+    {
+      "check": "awake_release_in_finally",
+      "passed": true,
+      "finding": "Worker holds temporary awake request and releases it on normal/exception paths; abrupt process kill skips finally, and the supervisor treats a missing completed record as a global stop"
+    },
+    {
+      "check": "json_type_exact_runtime_and_body",
+      "passed": true,
+      "finding": "Independent review found Python False==0 / float==integer comparison weakness; canonical JSON comparison now preserves JSON type distinctions"
+    },
+    {
+      "check": "preoutput_gate_all_entrypoints",
+      "passed": true,
+      "finding": "Manual source review: prepare, run, worker/supervisor spec validation require the same hash-bound human gate"
+    }
+  ],
+  "check_count": 46,
+  "failed_checks": [],
+  "model_generation_calls": 0,
+  "human_reviews_fabricated": 0,
+  "prior_round1": {
+    "path": "research/v491_runtime_round1_20261019.json",
+    "sha256": "685b161ed72afde8356f7b3cbe92f3352115f562b6c53f9f2c0ec3a09b77120c"
+  },
+  "reviewed_files": [
+    {
+      "path": "research/sector_v491_runtime.py",
+      "sha256": "64e229148ffe1cf9c361db39a9ffa2e703e530d3638da1e245b6ec8492166538"
+    },
+    {
+      "path": "research/sector_v491_human_gate.py",
+      "sha256": "2908f8466efe6d9bd7b2b59453c6fd7c54eeca9ea9e84482796d4c3ad4d6edcb"
+    },
+    {
+      "path": "research/sector_v491_tokenizer.py",
+      "sha256": "1e25d31d18e659e90186d2a598d0bcad77824d0dbc5a0e76beed692a8373e440"
+    },
+    {
+      "path": "research/test_sector_v491_runtime.py",
+      "sha256": "376f18c680d3d5f04009efa116172466ff659fd5f1687ab1ff91bc7e2ada7e4c"
+    },
+    {
+      "path": "research/verify_v491_runtime_token_round2.py",
+      "sha256": "3de2ad32f35855503ba30ebbc0e70639e12ca54005222308c909e1c711e78eb5"
+    }
+  ],
+  "limits": [
+    "Offline correctness/guard review is not proof of successful formal pilot or main runtime.",
+    "Actual F0 capacity is only decided after an actual D0; no universal unseen-response bound is claimed.",
+    "Human identity and interpretation accuracy cannot be certified by this completeness validator.",
+    "Renderer whitespace policy is unchanged: HTTP history verbatim, only documented outer JSON whitespace trimming in actual renderer.",
+    "D0 context and native token correctness do not establish semantic quality, 12-month performance, or significance."
+  ]
+}

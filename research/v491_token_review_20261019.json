@@ -1,0 +1,524 @@
+{
+  "review": "v4.9.1 exact tokenizer and D0 context capacity",
+  "created_at_utc": "2026-10-19T06:04:14.263632+00:00",
+  "status": "pass_for_exact_D0_sizing_and_dynamic_stage_guard_only",
+  "generation_calls": 0,
+  "render_only_calls": 8,
+  "native_backend": "installed Ollama 0.35.1 libllama.dll; llama.cpp commit 6f767fe96; GGUF vocabulary-only, no tensors/context/backend load",
+  "actual_D0_cases": [
+    {
+      "case_id": "pilot/fidelity_q2_2026__E",
+      "token_count": 13213,
+      "required_tokens": 21405,
+      "fits_with_output_reserve": true,
+      "rendered_utf8_sha256": "59dc35f1a67e22c6deaab7b334fb2810ff6a3641a0cd03946573409a012b579d",
+      "token_ids_sha256": "e3a260c69c6b52b01f0644757516941ecf517f1dcbd72c28e13269e615047f88"
+    },
+    {
+      "case_id": "pilot/fidelity_q2_2026__L",
+      "token_count": 12228,
+      "required_tokens": 20420,
+      "fits_with_output_reserve": true,
+      "rendered_utf8_sha256": "7535ea920dcc61409a39d21f47603731250adaa6d06ce3b30722dd025f2233a5",
+      "token_ids_sha256": "af5a873703e2c5b584df5750ba7ea74dac0e507117e7c89af54968411206eac6"
+    },
+    {
+      "case_id": "pilot/ubs_june_2026__E",
+      "token_count": 13221,
+      "required_tokens": 21413,
+      "fits_with_output_reserve": true,
+      "rendered_utf8_sha256": "b88e7c90db79cede3a779dd2d6f0fa5f8ad089810288d6c86142bd1ca4a42fcf",
+      "token_ids_sha256": "c344ec058f7ac3ef3fac34fb5b55cd96537247fcd5bbda64d66f509b4bbb3403"
+    },
+    {
+      "case_id": "pilot/ubs_june_2026__L",
+      "token_count": 12228,
+      "required_tokens": 20420,
+      "fits_with_output_reserve": true,
+      "rendered_utf8_sha256": "7535ea920dcc61409a39d21f47603731250adaa6d06ce3b30722dd025f2233a5",
+      "token_ids_sha256": "af5a873703e2c5b584df5750ba7ea74dac0e507117e7c89af54968411206eac6"
+    },
+    {
+      "case_id": "main/fidelity_q3_2026__E",
+      "token_count": 13224,
+      "required_tokens": 21416,
+      "fits_with_output_reserve": true,
+      "rendered_utf8_sha256": "095651bdfaf799d50db53634889dd7a4bc84bd7dd82df6ce37dd011569654be8",
+      "token_ids_sha256": "7d0ddf5eb1b9d9e3e896b24dffb3145061cec5cdccfcec5496c0f24fb030f25f"
+    },
+    {
+      "case_id": "main/fidelity_q3_2026__L",
+      "token_count": 12228,
+      "required_tokens": 20420,
+      "fits_with_output_reserve": true,
+      "rendered_utf8_sha256": "7535ea920dcc61409a39d21f47603731250adaa6d06ce3b30722dd025f2233a5",
+      "token_ids_sha256": "af5a873703e2c5b584df5750ba7ea74dac0e507117e7c89af54968411206eac6"
+    },
+    {
+      "case_id": "main/ubs_july_2026__E",
+      "token_count": 13225,
+      "required_tokens": 21417,
+      "fits_with_output_reserve": true,
+      "rendered_utf8_sha256": "37dcc0b2199fd7c945c360d28356dbe35ba375d7fe82c40977230773ff264f51",
+      "token_ids_sha256": "d7a8652660badf313d8b9265663dcc9f25c2ffdc8ef5cadcabd5d48c45775210"
+    },
+    {
+      "case_id": "main/ubs_july_2026__L",
+      "token_count": 12228,
+      "required_tokens": 20420,
+      "fits_with_output_reserve": true,
+      "rendered_utf8_sha256": "7535ea920dcc61409a39d21f47603731250adaa6d06ce3b30722dd025f2233a5",
+      "token_ids_sha256": "af5a873703e2c5b584df5750ba7ea74dac0e507117e7c89af54968411206eac6"
+    }
+  ],
+  "exact_D0_token_range": [
+    12228,
+    13225
+  ],
+  "selected_engineering_capacity_for_this_check": 65536,
+  "paper_derived_output_allowance": 8192,
+  "parameter_scope": "65536 is inherited engineering capacity, not a paper-derived optimal value. 8192 is a transferred PortBench allowance, not proof of task sufficiency.",
+  "ordered_reviews": [
+    {
+      "round": 1,
+      "scope": "All 8 unchanged prepared D0 inputs, actual render-only preservation and exact native count",
+      "status": "pass",
+      "case_count": 8
+    },
+    {
+      "round": 2,
+      "scope": "Pinned source ABI / native binary / GGUF and independent count against 5 archived actual provider counters",
+      "status": "pass",
+      "crosschecks": [
+        {
+          "stage": "stage1",
+          "archived_render_sha256": "eb0d01a8bb645f488921aa5bdfdfbe9cd95bd94d148f11c42dd38f1f3a3b586f",
+          "archived_result_sha256": "cc4d6c882442ec973556af8bab3d67dc4fcdd7e65848d3346d2d42064d4dd144",
+          "native_exact_count": 12587,
+          "archived_provider_prompt_eval_count": 12587,
+          "matches": true,
+          "no_replay": true
+        },
+        {
+          "stage": "stage2",
+          "archived_render_sha256": "f7b233b6aa9bf2453490f5780a05d2c4c4ee4c9310870b9f2f31255712ac1005",
+          "archived_result_sha256": "e8bb18aecabecfcd0d0a2b61560480e71816455cd6711128d8442d82671db03b",
+          "native_exact_count": 14927,
+          "archived_provider_prompt_eval_count": 14927,
+          "matches": true,
+          "no_replay": true
+        },
+        {
+          "stage": "stage3",
+          "archived_render_sha256": "924374ecf5ba4efd614008fed711381a1b8d58406f667a50d05d6c50c2a3f625",
+          "archived_result_sha256": "6d8c0004d3540a750f1f266169920bcdfb7250a34c95dd1f17894cd317069e45",
+          "native_exact_count": 17157,
+          "archived_provider_prompt_eval_count": 17157,
+          "matches": true,
+          "no_replay": true
+        },
+        {
+          "stage": "C0",
+          "archived_render_sha256": "e6e1386f7d804dc2342d81c1eb96310fb9ced8de511295d401e692ad7c282da4",
+          "archived_result_sha256": "b80f346fe77184bee85495ecb2632d3401aa379bfc6c8a0840e894d54d2b3223",
+          "native_exact_count": 24771,
+          "archived_provider_prompt_eval_count": 24771,
+          "matches": true,
+          "no_replay": true
+        },
+        {
+          "stage": "C1",
+          "archived_render_sha256": "d9dce58e790223b8fe5bf01c5ae29793cdd17005527209d02edbe81cfac1db0f",
+          "archived_result_sha256": "a8ad79cba90d8197ab3b4c285f9073007884ab13d5c2888636a0474560392948",
+          "native_exact_count": 35702,
+          "archived_provider_prompt_eval_count": 35702,
+          "matches": true,
+          "no_replay": true
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "scope": "Native integration and fail-closed malformed input / changed binary / changed model checks",
+      "status": "pass",
+      "test_count": 12,
+      "test_receipt": "research/evidence/v491_tokenizer_20261019/tests_r2_result.json"
+    }
+  ],
+  "F0_universal_capacity_proven": false,
+  "full_two_stage_memory_or_latency_proven": false,
+  "required_F0_guard": "Render the actual retained D0 and computed feedback, exact-tokenize, then require tokens+8192<=num_ctx before the single final generation. Stop and record failure if insufficient; do not truncate.",
+  "limits": [
+    "D0 fit is not full two-stage runtime feasibility.",
+    "Unbounded strings/arrays and feedback echoes preclude a claimed generic F0 bound from these D0 counts.",
+    "Exact vocabulary tokenization does not measure inference RAM, latency or semantic quality.",
+    "Independent native tokenizer uses same binary/GGUF as installed runner, not an independent algorithm implementation.",
+    "An 8192-token generated response can retokenize differently; calculator feedback may echo unbounded constraint/citation fields. Adding 8192 to D0 cannot certify every future F0.",
+    "A failed actual F0 capacity check must be an execution failure in the denominator, with no truncation, retry, repair or convenient case replacement.",
+    "Native tokenizer pins the GGUF/library bytes; live manifest and chat-template pins remain runtime checks.",
+    "CPU isolation is a diagnostic response to observed prior Vulkan device-lost failures; it does not establish faster response or guarantee stability.",
+    "No formal pilot or main generation was performed by this audit; prior source-blinded human gates remain required."
+  ],
+  "sources": [
+    {
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/6f767fe96/include/llama.h",
+      "local_path": "research/evidence/v491_tokenizer_20261019/include_llama.h",
+      "sha256": "22ff1934a939e3bea6f144113889c64f62568516d02ad1395101495622de5f96",
+      "supports": "Exact model-params ABI, vocabulary-only loading and tokenizer C API"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/6f767fe96/src/llama.cpp",
+      "local_path": "research/evidence/v491_tokenizer_20261019/src_llama.cpp",
+      "sha256": "1c1c2a9adbfe2124e08cbaa76838a754ce5d144d319fce6c2e9c7342b0d311fa",
+      "supports": "Vocabulary-only mode returns before tensor loading; no backend initialization required"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/6f767fe96/tools/server/server-context.cpp",
+      "local_path": "research/evidence/v491_tokenizer_20261019/tools_server_server-context.cpp",
+      "sha256": "7b991aba7bd66d3c294fece1ff1065bf323146e07ac4ee9e23773808e3855879",
+      "supports": "Completion handler tokenizes input with add_special=true and parse_special=true"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/ggml-org/llama.cpp/6f767fe96/tools/server/server-common.cpp",
+      "local_path": "research/evidence/v491_tokenizer_20261019/tools_server_server-common.cpp",
+      "sha256": "7423d66fb1b6d8fe8d18812526cc73808017a7181df3e47c67f356cedd321113",
+      "supports": "Text path delegates to native common_tokenize"
+    }
+  ],
+  "code": [
+    {
+      "path": "research/sector_v491_tokenizer.py",
+      "sha256": "1e25d31d18e659e90186d2a598d0bcad77824d0dbc5a0e76beed692a8373e440"
+    },
+    {
+      "path": "research/test_sector_v491_tokenizer.py",
+      "sha256": "7b69557009bd68826b38cf554db05f12e2a9c45cd0898e8949c63c57bbdf252b"
+    },
+    {
+      "path": "research/v491_token_capacity_audit.py",
+      "sha256": "d0b76e0539f0150e32a314e1277fb807a611104237e52719b2572b2ec1b81012"
+    },
+    {
+      "path": "research/v491_token_review_finalize.py",
+      "sha256": "9f78211769851dbc98b669e83f351cc81607c6446525d6a5824a057c8928cc67"
+    }
+  ],
+  "evidence_archive": {
+    "path": "research/artifacts/v491_tokenizer_evidence_20261019.zip",
+    "sha256": "180bfc824b716ad4233c82d10b5807b8419e6ee66ada8c3bb1987c9c66249b0f",
+    "file_count": 62,
+    "all_archived_member_hashes_verified": true
+  },
+  "evidence_files": [
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/invocation.json",
+      "sha256": "488d7eaa1ea6cc1922ee66440d011df129550cf181c3d991540ff4803589529b",
+      "bytes": 301
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/main/fidelity_q3_2026__E/render_validation.json",
+      "sha256": "9ee3efcefaa2115106706f46497f4fb86cec0436e1c831b876058a0e114126c0",
+      "bytes": 1557
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/main/fidelity_q3_2026__E/rendered_prompt.txt",
+      "sha256": "095651bdfaf799d50db53634889dd7a4bc84bd7dd82df6ce37dd011569654be8",
+      "bytes": 32942
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/main/fidelity_q3_2026__E/request.json",
+      "sha256": "83bc459ac6d04070b029b2baad850349ea5c5f1061057755f6834dc6fc7fde88",
+      "bytes": 35496
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/main/fidelity_q3_2026__E/response.json",
+      "sha256": "b13598472dc94b29c3eb956175510c70d34c590f0c10eec06382e58edff49aee",
+      "bytes": 35039
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/main/fidelity_q3_2026__E/response_body.bin",
+      "sha256": "f24ba38e062dfc08b8fbb83c05c25b311ae700784e82b5130c03729dcc82baf5",
+      "bytes": 35061
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/main/fidelity_q3_2026__E/token_count.json",
+      "sha256": "b577bfe789225e734f7eada0f216f2b54cbf00864921d4fa06ce81cc1e7c1dbc",
+      "bytes": 1408
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/main/fidelity_q3_2026__L/render_validation.json",
+      "sha256": "1839dfe539e9a13f2131ee2be908646aaf3f37e19c064bd6c03040b3fc358ab6",
+      "bytes": 1557
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/main/fidelity_q3_2026__L/rendered_prompt.txt",
+      "sha256": "7535ea920dcc61409a39d21f47603731250adaa6d06ce3b30722dd025f2233a5",
+      "bytes": 29199
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/main/fidelity_q3_2026__L/request.json",
+      "sha256": "8555fc7cb2f6e94751b87712cc8f2ed270e7eebd72db10ed5dcdc57093935a75",
+      "bytes": 31527
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/main/fidelity_q3_2026__L/response.json",
+      "sha256": "d8734ce2bee9963f40cbc18bcba5cf2352411224ee47ca707d75c13f43e3976c",
+      "bytes": 31070
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/main/fidelity_q3_2026__L/response_body.bin",
+      "sha256": "2a9c1ecba13d65543635f7b91cb79d7ed9388b51e289c0b18546ac64ad1197f0",
+      "bytes": 31092
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/main/fidelity_q3_2026__L/token_count.json",
+      "sha256": "e079fb56132e52f3be42511d38ee9c86b138e55c767acadad64f5b1153ed14d8",
+      "bytes": 1408
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/main/ubs_july_2026__E/render_validation.json",
+      "sha256": "1a81edd2e79af02ae5fa96586f95f2d5152ea44bd2e97f5623e1e76d8a54f30d",
+      "bytes": 1557
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/main/ubs_july_2026__E/rendered_prompt.txt",
+      "sha256": "37dcc0b2199fd7c945c360d28356dbe35ba375d7fe82c40977230773ff264f51",
+      "bytes": 32894
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/main/ubs_july_2026__E/request.json",
+      "sha256": "7de36980aabde7561a20ecb14ebca39a7e1b7dd5ab5e90d7598bb6b1b5d07c8d",
+      "bytes": 35450
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/main/ubs_july_2026__E/response.json",
+      "sha256": "0fdd97a5cde7a8dfb95f1732bb5603d79ddc72ccc86e90029573565a8f5f738a",
+      "bytes": 34993
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/main/ubs_july_2026__E/response_body.bin",
+      "sha256": "065c23afd346cfd1c3b99365a593954c8cfdb0fe0d2fcea22edccd31c373cc72",
+      "bytes": 35020
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/main/ubs_july_2026__E/token_count.json",
+      "sha256": "ead604d490953853e73f3642b0c536ac13dff2ca76bdb0aa1cca8f04ec232739",
+      "bytes": 1408
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/main/ubs_july_2026__L/render_validation.json",
+      "sha256": "1839dfe539e9a13f2131ee2be908646aaf3f37e19c064bd6c03040b3fc358ab6",
+      "bytes": 1557
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/main/ubs_july_2026__L/rendered_prompt.txt",
+      "sha256": "7535ea920dcc61409a39d21f47603731250adaa6d06ce3b30722dd025f2233a5",
+      "bytes": 29199
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/main/ubs_july_2026__L/request.json",
+      "sha256": "8555fc7cb2f6e94751b87712cc8f2ed270e7eebd72db10ed5dcdc57093935a75",
+      "bytes": 31527
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/main/ubs_july_2026__L/response.json",
+      "sha256": "f253152204c7b59d818164c699687e964ab0ef36fdf73810caa99b5972be2a57",
+      "bytes": 31070
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/main/ubs_july_2026__L/response_body.bin",
+      "sha256": "e7f532e50a4aa26d97f9a1cff90bacd016c6a5e52b3ef5cc5a34d1baa33945ad",
+      "bytes": 31092
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/main/ubs_july_2026__L/token_count.json",
+      "sha256": "e079fb56132e52f3be42511d38ee9c86b138e55c767acadad64f5b1153ed14d8",
+      "bytes": 1408
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/manifest.json",
+      "sha256": "44e0e972c7b5a19736ddf38032963b5e7798bd03187655f9bff30512be0a6369",
+      "bytes": 11727
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/pilot/fidelity_q2_2026__E/render_validation.json",
+      "sha256": "bc6eb30f88fc19ff113f2bc8aa7c64eea448c095614177008fbabe9455375359",
+      "bytes": 1557
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/pilot/fidelity_q2_2026__E/rendered_prompt.txt",
+      "sha256": "59dc35f1a67e22c6deaab7b334fb2810ff6a3641a0cd03946573409a012b579d",
+      "bytes": 32987
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/pilot/fidelity_q2_2026__E/request.json",
+      "sha256": "1013aa3d3291cea3123aa51ae65569a40808402ada6b208374a8d2313100ab64",
+      "bytes": 35539
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/pilot/fidelity_q2_2026__E/response.json",
+      "sha256": "fdb7d73e5c50912435a9821569543776a5e41562b8a0694c53f79555fb133687",
+      "bytes": 35082
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/pilot/fidelity_q2_2026__E/response_body.bin",
+      "sha256": "de55692137653a25b72dff33bf75696d45386d8fa7dee47771c1ff0fba7ade9f",
+      "bytes": 35104
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/pilot/fidelity_q2_2026__E/token_count.json",
+      "sha256": "0ed4703abec291dbd5276d35544e8d025addb347c5285f68b456a84cc7980372",
+      "bytes": 1408
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/pilot/fidelity_q2_2026__L/render_validation.json",
+      "sha256": "1839dfe539e9a13f2131ee2be908646aaf3f37e19c064bd6c03040b3fc358ab6",
+      "bytes": 1557
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/pilot/fidelity_q2_2026__L/rendered_prompt.txt",
+      "sha256": "7535ea920dcc61409a39d21f47603731250adaa6d06ce3b30722dd025f2233a5",
+      "bytes": 29199
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/pilot/fidelity_q2_2026__L/request.json",
+      "sha256": "8555fc7cb2f6e94751b87712cc8f2ed270e7eebd72db10ed5dcdc57093935a75",
+      "bytes": 31527
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/pilot/fidelity_q2_2026__L/response.json",
+      "sha256": "77bc084b7f408f363a81795a022d7fc72124f2cad1c044452ba7a3894beeffee",
+      "bytes": 31070
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/pilot/fidelity_q2_2026__L/response_body.bin",
+      "sha256": "19d31d4c222b03912ea034865e60c1d13526c54c19f5e28527b0e02d5c3eb4f1",
+      "bytes": 31092
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/pilot/fidelity_q2_2026__L/token_count.json",
+      "sha256": "e079fb56132e52f3be42511d38ee9c86b138e55c767acadad64f5b1153ed14d8",
+      "bytes": 1408
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/pilot/ubs_june_2026__E/render_validation.json",
+      "sha256": "60578d81e425d1a49224b16d75dbad6e9813bc39766439cc4c136107a391d1f1",
+      "bytes": 1557
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/pilot/ubs_june_2026__E/rendered_prompt.txt",
+      "sha256": "b88e7c90db79cede3a779dd2d6f0fa5f8ad089810288d6c86142bd1ca4a42fcf",
+      "bytes": 32875
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/pilot/ubs_june_2026__E/request.json",
+      "sha256": "c656184db403cafa4f98fadf793e94231b379b6514657e3c19ca99de43aaa741",
+      "bytes": 35431
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/pilot/ubs_june_2026__E/response.json",
+      "sha256": "0242f3dbc87c023c5ea77a5e8a72c998edda5049734dd53725a89bc63ef16904",
+      "bytes": 34974
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/pilot/ubs_june_2026__E/response_body.bin",
+      "sha256": "9d800733f2eb31623f4c8fdaba6b262e55b55f3d089fb82e99499f50f0982e42",
+      "bytes": 35001
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/pilot/ubs_june_2026__E/token_count.json",
+      "sha256": "537861bb2dccb29983fe7b501c74b26ddca75bb992006a5b9308724cf1a8831b",
+      "bytes": 1408
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/pilot/ubs_june_2026__L/render_validation.json",
+      "sha256": "1839dfe539e9a13f2131ee2be908646aaf3f37e19c064bd6c03040b3fc358ab6",
+      "bytes": 1557
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/pilot/ubs_june_2026__L/rendered_prompt.txt",
+      "sha256": "7535ea920dcc61409a39d21f47603731250adaa6d06ce3b30722dd025f2233a5",
+      "bytes": 29199
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/pilot/ubs_june_2026__L/request.json",
+      "sha256": "8555fc7cb2f6e94751b87712cc8f2ed270e7eebd72db10ed5dcdc57093935a75",
+      "bytes": 31527
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/pilot/ubs_june_2026__L/response.json",
+      "sha256": "ec37e1a809bc60f0474ad2cdbe2c5e8ef9aeec71c3d3b086d54f91800f52f302",
+      "bytes": 31070
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/pilot/ubs_june_2026__L/response_body.bin",
+      "sha256": "4a7106a37b9f58a4ce9a4874873bac03a8266c6227defc33827bca1a7da4a321",
+      "bytes": 31092
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/pilot/ubs_june_2026__L/token_count.json",
+      "sha256": "e079fb56132e52f3be42511d38ee9c86b138e55c767acadad64f5b1153ed14d8",
+      "bytes": 1408
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_capacity/summary.json",
+      "sha256": "3e31fa1c755cfb8dda978d93d651b18516966704088af3fc1fd08c8297f3f577",
+      "bytes": 18391
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_run.stderr.log",
+      "sha256": "3be10dfd0826f4ab5a02878b8e7086d4b717d1efb2c9f9aed7f57ddf90a64f80",
+      "bytes": 16788
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/d0_run.stdout.log",
+      "sha256": "eff7b36ec6fc9eacb047fb174969ce157e3ddb988bae72610bfd7b1a451b6ffe",
+      "bytes": 3480
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/include_llama.h",
+      "sha256": "22ff1934a939e3bea6f144113889c64f62568516d02ad1395101495622de5f96",
+      "bytes": 89917
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/src_llama.cpp",
+      "sha256": "1c1c2a9adbfe2124e08cbaa76838a754ce5d144d319fce6c2e9c7342b0d311fa",
+      "bytes": 22132
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/tests.stderr.log",
+      "sha256": "17a6a05f9f26d2be93096e9ef21039fbfd47a5288f7fe335f27279b26c556e87",
+      "bytes": 17020
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/tests.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/tests_r2.stderr.log",
+      "sha256": "2fa524fbb9d952a28d90b4694bb957a61555581767e151bb020e13017cf27623",
+      "bytes": 8062
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/tests_r2.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/tests_r2_result.json",
+      "sha256": "1d1debece5b346c6cbb0f29b3881b877053f1c80edd9d6fc9f685b74c438873a",
+      "bytes": 352
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/tools_server_server-common.cpp",
+      "sha256": "7423d66fb1b6d8fe8d18812526cc73808017a7181df3e47c67f356cedd321113",
+      "bytes": 69833
+    },
+    {
+      "path": "research/evidence/v491_tokenizer_20261019/tools_server_server-context.cpp",
+      "sha256": "7b991aba7bd66d3c294fece1ff1065bf323146e07ac4ee9e23773808e3855879",
+      "bytes": 226279
+    }
+  ]
+}

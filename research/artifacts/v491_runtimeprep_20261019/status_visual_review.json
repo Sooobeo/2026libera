@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "reviewed_at_utc": "2026-10-19T06:31:07.718888+00:00",
+  "source": {
+    "path": "plan/LIBERA_실행준비현황_v4.9.1_20261019.html",
+    "sha256": "d699098018e3e6c439a09b1d288ca67d20f10aa38d153b1878e3eb67ba8ece03"
+  },
+  "capture_receipt": {
+    "path": "research/artifacts/v491_runtimeprep_20261019/status_capture_receipt.json",
+    "sha256": "6b9a7c80f828e15f2341ddb34ee8376fd85d63692c5b52ce0f84500a16c29882"
+  },
+  "inspected_images": [
+    {
+      "path": "research/artifacts/v491_runtimeprep_20261019/status_desktop.png",
+      "sha256": "f3d8859cb253d6f6d61b4b0dee221f00dbf68e383370078738f3206edb41bff2"
+    },
+    {
+      "path": "research/artifacts/v491_runtimeprep_20261019/status_narrow.png",
+      "sha256": "f7cf3058143e622ca18bc5d6fff181313f6c801675acee945220ba939988ee07"
+    }
+  ],
+  "visual_review_completed": true,
+  "checks": [
+    {
+      "name": "desktop_actual_page",
+      "pass": true,
+      "observation": "Title, research-generation-zero notice, preparation explanation, three-row CPU table, human-review instructions and topic/scope footer are visible without clipping or overlap."
+    },
+    {
+      "name": "600px_actual_page",
+      "pass": true,
+      "observation": "Inspected original-resolution 600px capture. Korean text and links wrap within page; all five table columns and all three values are legible; no horizontal clipping or overlapping blocks."
+    },
+    {
+      "name": "numbers_and_scope_visible",
+      "pass": true,
+      "observation": "Displayed long-input times are 876.4 and 465.0 seconds; both are explicitly supervisor total time. CPU 8 threads is a provisional pilot candidate. Synthetic 32-output-token tests are distinguished from the task allowance of 8192 and from zero research generations."
+    },
+    {
+      "name": "reader_next_step",
+      "pass": true,
+      "observation": "Two separate reviewer links and pilot-first instructions are clear; source checks do not ask humans to invent target portfolio weights. Main fields can remain blank for pilot."
+    },
+    {
+      "name": "six_local_links",
+      "pass": true,
+      "observation": "Both reviewer pages, evaluation protocol, existing plan, pre-experiment paper and machine report all resolve to existing files inside workspace."
+    },
+    {
+      "name": "owned_browser_cleanup",
+      "pass": true,
+      "observation": "Exact profile-scoped cleanup finished with no remaining Chrome PIDs. Initial immediate cleanup check stopped conservatively during termination; existing desktop capture retained and subsequent bounded poll confirmed cleanup."
+    },
+    {
+      "name": "original_files_preserved",
+      "pass": true,
+      "observation": "New status source hash unchanged during capture and review; all 69 prior delivery files retain exact original hashes."
+    }
+  ],
+  "model_calls": 0,
+  "human_source_review_completed": false,
+  "scope_limits": [
+    "Screen layout and local-link validation of this status page only; not a browser click-through study, PDF pagination review, or human semantic source review.",
+    "The initial cleanup observation is preserved in capture receipt; no model or experiment calls were made during visual inspection."
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "pack_id": "v491_preoutput_review_20261019",
+  "status": "blank_human_materials_ready_no_human_review_completed",
+  "model_calls": 0,
+  "human_review_completed": false,
+  "counts": {
+    "reviewers": 2,
+    "source_documents_per_reviewer": 4,
+    "source_sector_rows_per_reviewer": 44,
+    "source_comparison_rows_per_reviewer": 22,
+    "macro_facts_per_reviewer": 7,
+    "answer_fields_per_reviewer": 228,
+    "required_fields_for_pilot": 129,
+    "additional_fields_for_main": 99
+  },
+  "output_refs": [
+    {
+      "path": "research/v491_human_review_pack_20261019_R1.json",
+      "sha256": "ea6bd366adf09da0f79c9811fb760dc4b33b9b4a1618ac13435aecb20915f411"
+    },
+    {
+      "path": "research/v491_human_review_pack_20261019_R1.html",
+      "sha256": "ab578b188f79203bd6278af3336d097fe58611d8687226958d996da2c86d6286"
+    },
+    {
+      "path": "research/v491_human_review_pack_20261019_R2.json",
+      "sha256": "4b6d6f4d584dad86e3cd299a74c6a04c85df017c870a219061d5b2daaf74fa00"
+    },
+    {
+      "path": "research/v491_human_review_pack_20261019_R2.html",
+      "sha256": "393a169619b269bbd9a9ab49f363001f72f0e972c2cf339fa3b4190bfc567fbb"
+    },
+    {
+      "path": "research/v491_human_review_pack_20261019_gate_blank.json",
+      "sha256": "bd0bbfd4f3a125514d4acf27f4fec4732411bc2f673befd96567ea22c3ee132f"
+    }
+  ],
+  "prior_input_refs": [
+    {
+      "path": "research/v491_human_review_template_20261019.json",
+      "sha256": "54ea9c9f1ab6a2780e8532b50a1558badbf1dea9d7abf0ddc595c900101431e7"
+    },
+    {
+      "path": "research/v491_evaluation_protocol_20261019.json",
+      "sha256": "b9ff937ca478062c79af1c1065a2dbcb87cea39b3f4c917dd5ccdcd9b0a6d5b6"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/common_context.json",
+      "sha256": "67d94bdee3d38854097970cdfb74f40e2557a11e22b016e9a68374e6f13cb96f"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/public_compact_candidate.json",
+      "sha256": "afe810b2bfb69ae4bfa372e65fa587bc6253eecf8028d5fde39cf3ec395bcb8d"
+    },
+    {
+      "path": "data/sector_documents/source_manifest.json",
+      "sha256": "d1af00ee2a1c5e3ba4ca9949b5f9427a9102a373ff19afa0e6c4309769627b28"
+    },
+    {
+      "path": "data/sector_documents/packets/pilot/fidelity_q2_2026.json",
+      "sha256": "2f506f346ebfc1be0f327163eb016dcec649e6301e4494d6a9230ab86c28d406"
+    },
+    {
+      "path": "tmp/pdfs/sector_documents/fidelity_q2_2026.pdf",
+      "sha256": "d11c4403f90e7bbd1d06a7fa83c91673d8c772be325042d4d1f01fab4e7076d6"
+    },
+    {
+      "path": "data/sector_documents/packets/pilot/ubs_june_2026.json",
+      "sha256": "a5cadf72d68cafe46244c9bf8e500da04e1c58aef12eaf493e76408654e6148a"
+    },
+    {
+      "path": "tmp/pdfs/sector_documents/ubs_june_2026.pdf",
+      "sha256": "1f8ec8afee56898124a450acf3557a1a493e282a4139c4cffa2212471b12b5a2"
+    },
+    {
+      "path": "data/sector_documents/packets/main/fidelity_q3_2026.json",
+      "sha256": "3f84c5d1e1302238fd270b41f1b9bcf86e3ae5c8c44a74f7a49a19941407d297"
+    },
+    {
+      "path": "tmp/pdfs/sector_documents/fidelity_q3_2026.pdf",
+      "sha256": "4179aa3e97f3146e664655ac1008cc87942341069ec4bccfbfe7d7436467dd04"
+    },
+    {
+      "path": "data/sector_documents/packets/main/ubs_july_2026.json",
+      "sha256": "49f47f8c628b53231cdfb09fa90eabfa0a5d271fb6a439e75360bdb97db29d30"
+    },
+    {
+      "path": "tmp/pdfs/sector_documents/ubs_july_2026.pdf",
+      "sha256": "07369578859be743e2323ea611f8d9b47e9bb7bc1e7b0e081d4b8df5ad2b4b7b"
+    }
+  ],
+  "generator_ref": {
+    "path": "research/build_v491_human_review_pack.py",
+    "sha256": "37d6566dc8dd677418eece50af571c19ffb414f846504de31ccc46b6bd38d223"
+  }
+}

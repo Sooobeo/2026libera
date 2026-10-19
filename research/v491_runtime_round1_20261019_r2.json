@@ -1,0 +1,60 @@
+{
+  "round": 1,
+  "revision": "r2",
+  "status": "PASS",
+  "recorded_at_utc": "2026-10-19T06:14:56.381061+00:00",
+  "prior_report": {
+    "path": "research/v491_runtime_round1_20261019.json",
+    "sha256": "685b161ed72afde8356f7b3cbe92f3352115f562b6c53f9f2c0ec3a09b77120c"
+  },
+  "prior_versions_snapshot": "research/artifacts/v491_runtime_review_history_20261019/r1/snapshot_manifest.json",
+  "scope": "Full implementation tests after same-run/case D0 artifact binding correction; synthetic ephemeral fixtures only; no human review performed",
+  "model_generation_requests": 0,
+  "main_model_calls": 0,
+  "pilot_model_calls": 0,
+  "tests": [
+    {
+      "path": "research/test_sector_v491_runtime.py",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "..............................\n----------------------------------------------------------------------\nRan 30 tests in 88.842s\n\nOK\n"
+    },
+    {
+      "path": "research/test_sector_v491_human_gate.py",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "..............\n----------------------------------------------------------------------\nRan 14 tests in 6.204s\n\nOK\n"
+    }
+  ],
+  "implementation_refs": [
+    {
+      "path": "research/sector_v491_runtime.py",
+      "sha256": "a542a53ef7a9a035a3641e1e9637d3eb5bd442677318a82434e245bb1e5dc649"
+    },
+    {
+      "path": "research/sector_v491_human_gate.py",
+      "sha256": "2908f8466efe6d9bd7b2b59453c6fd7c54eeca9ea9e84482796d4c3ad4d6edcb"
+    },
+    {
+      "path": "research/test_sector_v491_runtime.py",
+      "sha256": "da2d08c67ad2d30804cbf7255516b1be86cf93c8eaef5b69da6dd579210868b4"
+    },
+    {
+      "path": "research/test_sector_v491_human_gate.py",
+      "sha256": "f48bcec03efaaf2225cca816bcca838aa52a15739b3baf8730172e444aef7b18"
+    },
+    {
+      "path": "research/sector_v491_tokenizer.py",
+      "sha256": "1e25d31d18e659e90186d2a598d0bcad77824d0dbc5a0e76beed692a8373e440"
+    }
+  ],
+  "revision_findings": [
+    "F0 caller draft alone is insufficient; same-run/case D0 response/spec/worker/supervisor/transport files are hash bound",
+    "F0 raw draft equals pinned-model completed D0 content byte for byte",
+    "D0 worker and supervisor success, one generation, continuation and cleanup-approved transport records must agree",
+    "Worker artifact directory must match declared run/case/stage",
+    "D0 cannot contain prior-draft artifacts",
+    "No additional generation, retries, repair, main entrypoint or semantic-success censorship introduced",
+    "Hash consistency detects accidental substitution; it cannot certify files against deliberate fabrication"
+  ]
+}

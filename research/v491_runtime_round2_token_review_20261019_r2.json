@@ -1,0 +1,119 @@
+{
+  "round": 2,
+  "revision": "r2",
+  "created_at_utc": "2026-10-19T06:16:03.885014+00:00",
+  "status": "pass",
+  "scope": "Limited independent recheck after F0 saved-D0 provenance fix; earlier unaffected review retained",
+  "previous_round2": {
+    "path": "research/v491_runtime_round2_token_review_20261019.json",
+    "sha256": "ac86bd0d7c8fcd027fdd4fe5a449248e09ba30a8e3f25acd8c731f347e62508b"
+  },
+  "prior_round1_r2": {
+    "path": "research/v491_runtime_round1_20261019_r2.json",
+    "sha256": "b3dddf743e8166f408c0ed08e2d612c0990935170e7c203379c401aca3135cac"
+  },
+  "history_manifest": {
+    "path": "research/artifacts/v491_runtime_review_history_20261019/r1/snapshot_manifest.json",
+    "sha256": "8597a870cbfaff0f759e9bf0ec1c97df09643003082c292ad47ff516e535815d"
+  },
+  "checks": [
+    {
+      "check": "candidate_runtime_unchanged_AST",
+      "passed": true,
+      "finding": "Previous review of CPU/options/source inventory/exact capacity remains applicable; runtime version advances explicitly"
+    },
+    {
+      "check": "validate_runtime_unchanged_AST",
+      "passed": true,
+      "finding": "Previous review of CPU/options/source inventory/exact capacity remains applicable; runtime version advances explicitly"
+    },
+    {
+      "check": "load_bundle_unchanged_AST",
+      "passed": true,
+      "finding": "Previous review of CPU/options/source inventory/exact capacity remains applicable; runtime version advances explicitly"
+    },
+    {
+      "check": "request_body_unchanged_AST",
+      "passed": true,
+      "finding": "Previous review of CPU/options/source inventory/exact capacity remains applicable; runtime version advances explicitly"
+    },
+    {
+      "check": "check_token_capacity_unchanged_AST",
+      "passed": true,
+      "finding": "Previous review of CPU/options/source inventory/exact capacity remains applicable; runtime version advances explicitly"
+    },
+    {
+      "check": "sector_v491_human_gate.py_unchanged_bytes",
+      "passed": true,
+      "finding": "Previously reviewed native tokenizer and genuine-human completeness gate remain byte-identical"
+    },
+    {
+      "check": "sector_v491_tokenizer.py_unchanged_bytes",
+      "passed": true,
+      "finding": "Previously reviewed native tokenizer and genuine-human completeness gate remain byte-identical"
+    },
+    {
+      "check": "affected_provenance_and_integration_tests",
+      "passed": true,
+      "finding": "Direct F0 cannot bypass saved own-D0 provenance; same-case/schema/error-preservation/capacity and full4case8call synthetic path remain valid"
+    },
+    {
+      "check": "five_prior_artifacts_bound",
+      "passed": true,
+      "finding": "Actual D0 response bytes, source/case/runtime spec, worker completion, supervisor completion and final cleanup/continuation records must agree"
+    },
+    {
+      "check": "provenance_precedes_F0_build",
+      "passed": true,
+      "finding": "The raw draft is bound to saved same-run/case completion before F0 is constructed or sent"
+    }
+  ],
+  "check_count": 10,
+  "failed_checks": [],
+  "tests_run": 13,
+  "test_names": [
+    "test_final_cannot_be_started_with_only_caller_supplied_draft",
+    "test_final_prior_response_hash_mismatch_denied",
+    "test_final_prior_response_other_case_denied",
+    "test_final_self_consistent_changed_draft_cannot_replace_saved_response",
+    "test_final_requires_saved_completion_and_continuation",
+    "test_final_saved_response_requires_pinned_model_and_normal_stop",
+    "test_final_saved_draft_spec_must_name_same_case",
+    "test_draft_cannot_accept_prior_draft_reference",
+    "test_worker_location_must_match_same_run_case_and_stage",
+    "test_final_request_must_retain_exact_own_history",
+    "test_oversize_actual_final_prevents_generation_and_is_capacity_failure",
+    "test_four_separate_cases_eight_calls_no_final_repair",
+    "test_raw_sum_failure_and_bad_citations_do_not_censor_final"
+  ],
+  "test_log": "test_final_cannot_be_started_with_only_caller_supplied_draft (test_sector_v491_runtime.RuntimeTests.test_final_cannot_be_started_with_only_caller_supplied_draft) ... ok\ntest_final_prior_response_hash_mismatch_denied (test_sector_v491_runtime.RuntimeTests.test_final_prior_response_hash_mismatch_denied) ... ok\ntest_final_prior_response_other_case_denied (test_sector_v491_runtime.RuntimeTests.test_final_prior_response_other_case_denied) ... ok\ntest_final_self_consistent_changed_draft_cannot_replace_saved_response (test_sector_v491_runtime.RuntimeTests.test_final_self_consistent_changed_draft_cannot_replace_saved_response) ... ok\ntest_final_requires_saved_completion_and_continuation (test_sector_v491_runtime.RuntimeTests.test_final_requires_saved_completion_and_continuation) ... ok\ntest_final_saved_response_requires_pinned_model_and_normal_stop (test_sector_v491_runtime.RuntimeTests.test_final_saved_response_requires_pinned_model_and_normal_stop) ... ok\ntest_final_saved_draft_spec_must_name_same_case (test_sector_v491_runtime.RuntimeTests.test_final_saved_draft_spec_must_name_same_case) ... ok\ntest_draft_cannot_accept_prior_draft_reference (test_sector_v491_runtime.RuntimeTests.test_draft_cannot_accept_prior_draft_reference) ... ok\ntest_worker_location_must_match_same_run_case_and_stage (test_sector_v491_runtime.RuntimeTests.test_worker_location_must_match_same_run_case_and_stage) ... ok\ntest_final_request_must_retain_exact_own_history (test_sector_v491_runtime.RuntimeTests.test_final_request_must_retain_exact_own_history) ... ok\ntest_oversize_actual_final_prevents_generation_and_is_capacity_failure (test_sector_v491_runtime.RuntimeTests.test_oversize_actual_final_prevents_generation_and_is_capacity_failure) ... ok\ntest_four_separate_cases_eight_calls_no_final_repair (test_sector_v491_runtime.RuntimeTests.test_four_separate_cases_eight_calls_no_final_repair) ... ok\ntest_raw_sum_failure_and_bad_citations_do_not_censor_final (test_sector_v491_runtime.RuntimeTests.test_raw_sum_failure_and_bad_citations_do_not_censor_final) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 56.070s\n\nOK\n",
+  "model_generation_calls": 0,
+  "real_human_reviews_performed": 0,
+  "reviewed_files": [
+    {
+      "path": "research/sector_v491_runtime.py",
+      "sha256": "a542a53ef7a9a035a3641e1e9637d3eb5bd442677318a82434e245bb1e5dc649"
+    },
+    {
+      "path": "research/sector_v491_human_gate.py",
+      "sha256": "2908f8466efe6d9bd7b2b59453c6fd7c54eeca9ea9e84482796d4c3ad4d6edcb"
+    },
+    {
+      "path": "research/sector_v491_tokenizer.py",
+      "sha256": "1e25d31d18e659e90186d2a598d0bcad77824d0dbc5a0e76beed692a8373e440"
+    },
+    {
+      "path": "research/test_sector_v491_runtime.py",
+      "sha256": "da2d08c67ad2d30804cbf7255516b1be86cf93c8eaef5b69da6dd579210868b4"
+    },
+    {
+      "path": "research/verify_v491_runtime_token_round2_r2.py",
+      "sha256": "daf62681ad0c20f9cac7926137e4e84f18a243584234f42f197b5ea25d263632"
+    }
+  ],
+  "limits": [
+    "Hash-bound internal records prevent accidental cross-case substitution; they do not authenticate an operator who deliberately fabricates every file.",
+    "Synthetic in-memory/file fixtures are instrument tests, not actual model responses or human review attestations.",
+    "Actual F0 capacity and complete pilot performance remain unmeasured until real D0 outputs exist after the human gate."
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "recorded_at_utc": "2026-10-19T06:30:33.903347+00:00",
+  "source": {
+    "path": "plan/LIBERA_실행준비현황_v4.9.1_20261019.html",
+    "sha256": "d699098018e3e6c439a09b1d288ca67d20f10aa38d153b1878e3eb67ba8ece03"
+  },
+  "captures": [
+    {
+      "image": {
+        "path": "research/artifacts/v491_runtimeprep_20261019/status_desktop.png",
+        "sha256": "f3d8859cb253d6f6d61b4b0dee221f00dbf68e383370078738f3206edb41bff2"
+      },
+      "viewport": "1360,3000",
+      "source": {
+        "path": "plan/LIBERA_실행준비현황_v4.9.1_20261019.html",
+        "sha256": "d699098018e3e6c439a09b1d288ca67d20f10aa38d153b1878e3eb67ba8ece03"
+      },
+      "owned_profile": "tmp/v491_visual/runtimeprep_status_20261019T062947Z/status_desktop_profile",
+      "cleanup": {
+        "cleanup_polls": 1,
+        "targeted_pids": [],
+        "remaining_pids": []
+      },
+      "reused_after_initial_cleanup_check": true
+    },
+    {
+      "image": {
+        "path": "research/artifacts/v491_runtimeprep_20261019/status_narrow.png",
+        "sha256": "f7cf3058143e622ca18bc5d6fff181313f6c801675acee945220ba939988ee07"
+      },
+      "viewport": "600,5000",
+      "source": {
+        "path": "plan/LIBERA_실행준비현황_v4.9.1_20261019.html",
+        "sha256": "d699098018e3e6c439a09b1d288ca67d20f10aa38d153b1878e3eb67ba8ece03"
+      },
+      "owned_profile": "tmp/v491_visual/runtimeprep_status_20261019T062947Z/status_narrow_profile",
+      "cleanup": {
+        "cleanup_polls": 1,
+        "targeted_pids": [
+          14080,
+          26776,
+          39164,
+          34988,
+          34148,
+          17872,
+          37728,
+          7564
+        ],
+        "remaining_pids": []
+      },
+      "initial_browser_pid": 14080
+    }
+  ],
+  "local_link_checks": [
+    {
+      "href": "../research/v491_human_review_pack_20261019_R1.html",
+      "exists_inside_workspace": true
+    },
+    {
+      "href": "../research/v491_human_review_pack_20261019_R2.html",
+      "exists_inside_workspace": true
+    },
+    {
+      "href": "../research/v491_evaluation_protocol_20261019.json",
+      "exists_inside_workspace": true
+    },
+    {
+      "href": "LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html",
+      "exists_inside_workspace": true
+    },
+    {
+      "href": "../paper/LIBERA_텀페이퍼_초안_v4.9.1_20261019.html",
+      "exists_inside_workspace": true
+    },
+    {
+      "href": "../research/v491_runtimeprep_report_20261019.json",
+      "exists_inside_workspace": true
+    }
+  ],
+  "prior_69_files_unchanged": true,
+  "model_calls": 0,
+  "headless_instances_in_parallel": 1,
+  "visual_review_completed": false,
+  "scope": "Actual new status page at desktop and 600px; no prior design or paper edits.",
+  "initial_incident": "Initial desktop screenshot completed. Immediate post-Stop-Process inventory briefly showed a terminating owned Chrome process, so the first helper stopped. Subsequent exact-profile inventory found zero. Cleanup now waits with bounded short polls; original desktop image was retained without overwrite and source mtime predates capture."
+}
