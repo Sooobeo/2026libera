@@ -1,0 +1,54 @@
+{
+  "version": "terminal_git_hygiene_review_1",
+  "created_at_utc": "2026-10-26T01:38:23.572Z",
+  "scope": "Quiet final evidence inventory before archive; original bytes and source paths preserved. Cached runtime/model payloads remain separately ignored environment dependencies.",
+  "archive_plan_ref": {
+    "path": "research/continuation_20261026/archive_preparation/archive_plan_terminal_r2.json",
+    "sha256": "422a79a49c258c6996384ae23f17765db57b97b0149dd6f4e4364e8a629c3996"
+  },
+  "scanned_text_files": 0,
+  "scanned_text_bytes": 0,
+  "binary_or_compressed_files_skipped": 0,
+  "new_or_changed_text_files_rescanned": 0,
+  "rules": [
+    "private_key_header",
+    "aws_access_key_id",
+    "github_personal_token",
+    "openai_style_api_key",
+    "credential_in_url",
+    "jwt_shaped_credential"
+  ],
+  "candidate_dispositions": [
+    {
+      "path": "research/evidence/v45_structured_output_20261018/ollama_chat_api.html",
+      "rule": "credential_in_url",
+      "status": "false_positive_crossed_JSON_string_boundary",
+      "actual_url_origin": "https://docs.ollama.com",
+      "actual_url_has_credentials": false,
+      "reason": "Pattern ran beyond a closing URL quote into the next JSON object field and its @ metadata key; it was not URL userinfo."
+    },
+    {
+      "path": "research/evidence/v45_structured_output_20261018/ollama_structured_outputs.html",
+      "rule": "credential_in_url",
+      "status": "false_positive_crossed_JSON_string_boundary",
+      "actual_url_origin": "https://docs.ollama.com",
+      "actual_url_has_credentials": false,
+      "reason": "Pattern ran beyond a closing URL quote into the next JSON object field and its @ metadata key; it was not URL userinfo."
+    }
+  ],
+  "unresolved_credential_pattern_candidates": [],
+  "credential_values_emitted": false,
+  "limitations": "Bounded pattern scan, not exhaustive absence proof. Binary/compressed payloads were not searched for secrets; legacy compressed documents are preserved as historical opaque evidence.",
+  "file_refs": [],
+  "ignore_rules_proposed_after_verified_archive_only": [
+    "/research/continuation_20261026/runtime/service_ready/server.stderr.log",
+    "/research/continuation_20261026/runtime/service_ready/server.stdout.log",
+    "/research/continuation_20261026/run_reports/events/"
+  ],
+  "preserve_expanded_files_on_disk": true,
+  "no_deletions": true,
+  "no_frozen_artifact_newline_rewrites": true,
+  "source_and_audit_documents_remain_tracked": true,
+  "git_push_requested": false,
+  "archive_execution_state": "pending"
+}

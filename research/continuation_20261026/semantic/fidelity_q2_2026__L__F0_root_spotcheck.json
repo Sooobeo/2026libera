@@ -1,0 +1,117 @@
+{
+  "version": "continuation_root_F0_spotcheck_1",
+  "created_at_utc": "2026-10-26T01:22:11.260Z",
+  "scope": "Root spot checks of complete F0; not a substitute for full row-by-row semantic review.",
+  "generation_calls": 0,
+  "input_refs": [
+    {
+      "path": "research/continuation_20261026/semantic/fidelity_q2_2026__L__F0_bundle.json",
+      "sha256": "0a4150cb02f8721d1143e6bcffd67a2448c94add170b18afb2930a582d8f1aeb"
+    },
+    {
+      "path": "research/continuation_20261026/run_reports/allocation_math/fidelity_q2_2026__L__D0.json",
+      "sha256": "0204354c41d50c2a9b0963d6061e67ac0255d42b71909472e28105dd88397114"
+    },
+    {
+      "path": "research/continuation_20261026/run_reports/allocation_math/fidelity_q2_2026__L__F0.json",
+      "sha256": "59a29264efca5795ca2789d6fdd019b99b9431089dcb6d0d80e83d0696df1183"
+    }
+  ],
+  "raw_weight_token_check": {
+    "tokens": [
+      "0.02",
+      "0.01",
+      "0.11",
+      "0.10",
+      "0.03",
+      "0.08",
+      "0.13",
+      "0.36",
+      "0.01",
+      "0.01",
+      "0.02"
+    ],
+    "count": 11,
+    "sum_hundredths_of_weight": "88",
+    "raw_sum_exact_decimal": "0.88",
+    "derived_total_units": 10000
+  },
+  "findings": [
+    {
+      "claim": "The Fidelity report explicitly recommends an Underweight position for Energy due to unfavorable risk-return indicators. This aligns with the historical data showing negative compound returns (-4.29%) and negative daily means. The weight is set at 2%, reflecting the consensus view that the sector is out of favor. This departs from the D0 weight of 4% to better align with the institutional view and historical underperformance.",
+      "verdict": "contradicted_sign",
+      "actual_return_decimal": 0.04287667814038709,
+      "actual_daily_mean_decimal": 0.000818731323068254,
+      "evidence_locators": [
+        "/common_market/lookback_compound_return/0",
+        "/common_market/daily_mean_return/0"
+      ],
+      "explanation": "Both Energy return and daily mean are positive in the actual input."
+    },
+    {
+      "claim": "Fidelity recommends Overweight for Information Technology based on fundamentals and post-decline valuations. This aligns with the sector's massive historical return (149.92%) and positive daily mean. The weight is reduced to 36% from the D0 level of 38% to reflect a slight caution, acknowledging the extreme volatility while maintaining the highest allocation among sectors.",
+      "verdict": "contradicted_percentage_scale",
+      "actual_return_decimal": 0.14992022077727252,
+      "actual_percent": 14.992022077727253,
+      "evidence_locator": "/common_market/lookback_compound_return/7"
+    },
+    {
+      "claim": "The allocation assumes a 12-month horizon with no capital guarantee. The primary risk is the concentration in Information Technology (45) at 36%, which carries high volatility (21.2% annualized). If the sector corrects, portfolio volatility could spike. Conversely, the negative daily means in Energy (10) and Utilities (55) suggest potential drawdowns if the current trend reverses. The macro context of moderate inflation (3.5% YoY) and stable employment (4.2%) supports the growth-oriented tilt but does not eliminate sector-specific risks. The Fidelity report's emphasis on valuation dispersion in Real Estate (60) offers a hedge against broad market declines.",
+      "verdict": "contradicted_annualized_volatility",
+      "actual_annualized_volatility_decimal": 0.33685107914419216,
+      "actual_percent": 33.68510791441921,
+      "evidence_locator": "/common_market/annualized_volatility_diagnostic/7"
+    },
+    {
+      "claim": "The allocation is derived primarily from the Fidelity institutional report, which provides clear Overweight/Underweight/Neutral signals. These are cross-verified with historical risk-return diagnostics. Weights are adjusted to sum to exactly 1.0, reflecting the institutional views on growth (IT, Fin, ConsDisc) and value (Real Estate) while avoiding underperforming sectors (Energy, Materials, Utilities, Comms).",
+      "verdict": "raw_budget_claim_false",
+      "explanation": "Raw11 weights total0.88. The external deterministic sidecar totals10000units; this does not retroactively make the raw exactly1.0 claim true."
+    },
+    {
+      "claim": "The lack of institutional packets prevents verification of sector-specific outlooks that might contradict the historical data.",
+      "verdict": "contradicted_input_presence_and_same_output",
+      "evidence_locator": "/source_packet",
+      "same_output_quote": "The task is a hypothetical new-money allocation for a 12-month US equity sleeve, using a 2026-07-17 decision date. The common context includes macro data (Fed rate 3.5-3.75%, CPI 3.5% YoY, Unemployment 4.2%) and historical sector diagnostics from April-July 2026. A Fidelity Q2 2026 report is supplied, providing sector ratings from March 2026."
+    },
+    {
+      "claim": "The 12-month horizon is short relative to the lookback period, making the historical mean a strong predictor but not a guarantee.",
+      "verdict": "wrong_horizon_comparison_and_unsupported_predictive_inference",
+      "return_observations": 60,
+      "lookback_first_return_date": "2026-04-21",
+      "lookback_last_return_date": "2026-07-16",
+      "evidence_locators": [
+        "/common_market/return_observations",
+        "/common_market/lookback_return_dates"
+      ],
+      "explanation": "The12-month mandate is longer than the supplied roughly3-month lookback; this input does not establish a strong future-return predictor."
+    }
+  ],
+  "raw_and_derived_direction_separation": [
+    {
+      "sector_code": "35",
+      "raw_D0": "0.09",
+      "raw_F0": "0.08",
+      "derived_D0_units": 882,
+      "derived_F0_units": 909,
+      "derived_delta_units": 27
+    },
+    {
+      "sector_code": "45",
+      "raw_D0": "0.38",
+      "raw_F0": "0.36",
+      "derived_D0_units": 3726,
+      "derived_F0_units": 4091,
+      "derived_delta_units": 365
+    },
+    {
+      "sector_code": "60",
+      "raw_D0": "0.02",
+      "raw_F0": "0.02",
+      "derived_D0_units": 196,
+      "derived_F0_units": 227,
+      "derived_delta_units": 31
+    }
+  ],
+  "interpretation": "Provided-packet fidelity and numeric claim support are distinct. Preserve raw source→reason→weight statements, derived100% vectors and their changed directions separately; no causal or accuracy-rate conclusion.",
+  "model_content_modified": false
+}

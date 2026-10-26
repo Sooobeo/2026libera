@@ -1,0 +1,170 @@
+{
+  "version": "continuation_review_reconciliation_1",
+  "created_at_utc": "2026-10-26T01:29:46.476Z",
+  "status": "CORE_FACTUAL_AND_COUNTING_CHECKS_RECONCILED_WITH_QUALITATIVE_LIMITS",
+  "refs": [
+    {
+      "path": "research/continuation_20261026/semantic/fidelity_q2_2026__L__F0_review.json",
+      "sha256": "03462024514d4dfe61df318b149a5cb78e6c264c09f4137cc8d92238d557d58c"
+    },
+    {
+      "path": "research/continuation_20261026/semantic/fidelity_q2_2026__L__F0_review_validation.json",
+      "sha256": "2ebc6b0580fdd64dd4ae96d588866c03adbc3e0fc51edb6707e07d51dfd9e6af"
+    },
+    {
+      "path": "research/continuation_20261026/masked_continuation_fresh_review.json",
+      "sha256": "93cb6de10773782fb842ef349a64bad5795d9a885aa29971d3cf1355fe65ab47"
+    },
+    {
+      "path": "research/continuation_20261026/semantic/fidelity_q2_2026__L__F0_root_spotcheck.json",
+      "sha256": "648594ab59d1df002fb11455c13275a125fd8012df552653560e1e429a3d84a3"
+    }
+  ],
+  "same_exact_final_text_sha256": "2358f7a6cb84168177171942a530e748fee6a71825965990e1cf7f5ac74c7831",
+  "shared_findings": {
+    "provided_packet_labels_and_readings": 11,
+    "raw_prior_change_descriptions_supported": 11,
+    "raw_sum": "0.88",
+    "citation_occurrences": 107,
+    "unique_visible_cited_IDs": 63,
+    "missing_citation_IDs": 0,
+    "source_presence_contradiction": true,
+    "horizon_relation_contradiction": true,
+    "source_date_kind_ambiguity_preserved": true
+  },
+  "counting_reconciliation": {
+    "unmasked": {
+      "explicit_numeric_date_period_occurrences": 56,
+      "contradicted_literal_occurrences": 14,
+      "rule": "Each explicit narrative percentage, raw-weight value, horizon, date/period or numeric range is one occurrence; a range or date interval is one occurrence. Repeats in different fields count again. Citation/sector/stage identifier digits and bare structural weights are excluded. The one2% Real Estate occurrence also states equality to D0 and is not double-counted."
+    },
+    "fresh": {
+      "numeric_occurrences": 60,
+      "temporal_occurrences_separate": 5,
+      "contradicted_numeric_or_relation_occurrences": 19,
+      "rule": "One located assertion occurrence about subject/metric/value-or-direction/unit/period. A prior/final weight pair and change direction count as one process assertion; a policy range counts as one assertion. Repetitions at different output locations remain separate occurrences. One sentence with two sector subjects produces two subject-specific claims. Structured proposed weights are separate from prose weight-pair claims. Direction/sign and duration relation claims are included and labeled."
+    },
+    "matching_literal_contradictions": [
+      {
+        "unmasked_claim": "N001",
+        "masked_claim": "N003",
+        "output_pointer": "/sectors/0/decision_reason",
+        "shared_literal": "-4.29%"
+      },
+      {
+        "unmasked_claim": "N010",
+        "masked_claim": "N015",
+        "output_pointer": "/sectors/3/decision_reason",
+        "shared_literal": "10.24%"
+      },
+      {
+        "unmasked_claim": "N013",
+        "masked_claim": "N020",
+        "output_pointer": "/sectors/4/decision_reason",
+        "shared_literal": "-0.26%"
+      },
+      {
+        "unmasked_claim": "N016",
+        "masked_claim": "N023",
+        "output_pointer": "/sectors/5/decision_reason",
+        "shared_literal": "8.21%"
+      },
+      {
+        "unmasked_claim": "N017",
+        "masked_claim": "N024",
+        "output_pointer": "/sectors/5/decision_reason",
+        "shared_literal": "8.4%"
+      },
+      {
+        "unmasked_claim": "N020",
+        "masked_claim": "N027",
+        "output_pointer": "/sectors/6/decision_reason",
+        "shared_literal": "14.99%"
+      },
+      {
+        "unmasked_claim": "N021",
+        "masked_claim": "N028",
+        "output_pointer": "/sectors/6/decision_reason",
+        "shared_literal": "2.55%"
+      },
+      {
+        "unmasked_claim": "N024",
+        "masked_claim": "N031",
+        "output_pointer": "/sectors/7/decision_reason",
+        "shared_literal": "149.92%"
+      },
+      {
+        "unmasked_claim": "N027",
+        "masked_claim": "N036",
+        "output_pointer": "/sectors/8/decision_reason",
+        "shared_literal": "0.02%"
+      },
+      {
+        "unmasked_claim": "N030",
+        "masked_claim": "N040",
+        "output_pointer": "/sectors/9/decision_reason",
+        "shared_literal": "-4.89%"
+      },
+      {
+        "unmasked_claim": "N031",
+        "masked_claim": "N041",
+        "output_pointer": "/sectors/9/decision_reason",
+        "shared_literal": "-0.79%"
+      },
+      {
+        "unmasked_claim": "N034",
+        "masked_claim": "N044",
+        "output_pointer": "/sectors/10/decision_reason",
+        "shared_literal": "0.02%"
+      },
+      {
+        "unmasked_claim": "N040",
+        "masked_claim": "N056",
+        "output_pointer": "/risk_discussion",
+        "shared_literal": "21.2% annualized"
+      },
+      {
+        "unmasked_claim": "N054",
+        "masked_claim": "N060",
+        "output_pointer": "/context_assessment/allocation_implication",
+        "shared_literal": "exactly 1.0"
+      }
+    ],
+    "additional_sign_or_relation_occurrences": [
+      {
+        "masked_claim": "N004",
+        "unmasked_locator": "/sector_reviews/0/additional_claims/0",
+        "reason": "Positive Energy daily mean was described as negative; qualitative sign claim is outside the unmasked explicit-numeric list."
+      },
+      {
+        "masked_claim": "N016",
+        "unmasked_locator": "/sector_reviews/3/additional_claims/0",
+        "reason": "Negative Consumer Discretionary daily mean was described as positive."
+      },
+      {
+        "masked_claim": "N057",
+        "unmasked_locator": "/top_level_reviews/4",
+        "reason": "Energy sign is one of two subject-specific occurrences in the fresh review."
+      },
+      {
+        "masked_claim": "N058",
+        "unmasked_locator": "/top_level_reviews/4",
+        "reason": "Utilities sign is the second subject-specific occurrence of the same sentence."
+      },
+      {
+        "masked_claim": "N059",
+        "unmasked_locator": "/top_level_reviews/10",
+        "reason": "False horizon/lookback relation is audited separately from the literal12-month mandate value."
+      }
+    ],
+    "conclusion": "The19-vs14 discrepancy is explained by five sign/relation occurrences recorded outside the unmasked numeric list. The56-vs60 lists use different units: structured weights, grouped prior/final pairs, dates and qualitative sign/relationship claims are included or grouped differently. Do not pool these denominators or derive accuracy/agreement rates."
+  },
+  "interpretation_limits": [
+    "A separate fresh AI reader received only judge-side material; masking remains incomplete and this is not independent-human or statistical-rater validation.",
+    "Only common factual checks and the specified counting discrepancy were reconciled. Qualitative strength/scope judgments remain in their original reports; no forced consensus score.",
+    "Supplied-packet fidelity is distinct from fidelity of the packet paraphrase to the original publication and from support for the allocation decision.",
+    "External normalized allocations are not model-observed evidence and cannot make raw explanations true."
+  ],
+  "generation_calls": 0,
+  "original_reports_modified": false
+}

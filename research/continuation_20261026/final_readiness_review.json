@@ -1,0 +1,238 @@
+{
+  "version": "continuation_final_readiness_review_1",
+  "completed_at_utc": "2026-10-26T01:37:38.120Z",
+  "status": "BLOCKED_FOR_MAIN_INCOMPLETE_PILOT_COVERAGE",
+  "main_allowed": false,
+  "main_generation_calls": 0,
+  "coverage_reviewed": true,
+  "all_attempted_continuation_stages_reviewed": true,
+  "reviewed_case_order": [
+    "fidelity_q2_2026__L",
+    "ubs_june_2026__E",
+    "ubs_june_2026__L",
+    "common_market_only__C"
+  ],
+  "continuation": {
+    "generation_requests": 2,
+    "completed_stages": 2,
+    "available_final_cells": 1,
+    "planned_final_cells": 4,
+    "stop_reason": {
+      "type": "RuntimeError",
+      "message": "AC unavailable before stage; no new generation started"
+    },
+    "ordinary_model_errors_are_outcomes": true,
+    "case_stage_states": [
+      {
+        "case_id": "fidelity_q2_2026__L",
+        "raw_case_status": "stopped_for_integrity_or_cancellation",
+        "stages": [
+          {
+            "stage": "D0",
+            "status": "completed",
+            "generation_requests_attempted": 1
+          },
+          {
+            "stage": "F0",
+            "status": "completed",
+            "generation_requests_attempted": 1
+          }
+        ],
+        "interpreted_final_availability": "available_completed_F0"
+      },
+      {
+        "case_id": "ubs_june_2026__E",
+        "raw_case_status": "not_attempted_after_stop",
+        "stages": [],
+        "interpreted_final_availability": "unavailable_not_attempted"
+      },
+      {
+        "case_id": "ubs_june_2026__L",
+        "raw_case_status": "not_attempted_after_stop",
+        "stages": [],
+        "interpreted_final_availability": "unavailable_not_attempted"
+      },
+      {
+        "case_id": "common_market_only__C",
+        "raw_case_status": "not_attempted_after_stop",
+        "stages": [],
+        "interpreted_final_availability": "unavailable_not_attempted"
+      }
+    ],
+    "summary_label_caveat": "Recovery accounting uses a generic stopped_for_integrity_or_cancellation label for the last populated case. Both actual Fidelity L D0 and F0 stage records completed; stop occurred before the next independent stage. The raw summary is preserved without rewriting."
+  },
+  "combined_completion_dataset": {
+    "available_final_cells": 2,
+    "planned_final_cells": 5,
+    "total_generation_requests_including_original_interrupted_attempt": 5,
+    "original_first_attempt_final_cells": 1,
+    "original_first_attempt_planned_final_cells": 5,
+    "original_first_attempt_generation_requests": 3,
+    "not_a_replacement_for_original_first_attempt_analysis": true,
+    "missing_conditions": [
+      "ubs_june_2026__E",
+      "ubs_june_2026__L",
+      "common_market_only__C"
+    ],
+    "missing_outcomes_imputed": false
+  },
+  "allocation": {
+    "deterministic_policy": "Exact proportional normalization and largest-remainder rounding to10000integer units with fixed sector-code tie order.",
+    "new_D0_raw_sum": "1.02",
+    "new_D0_derived_total_percent": "100.00",
+    "new_F0_raw_sum": "0.88",
+    "new_F0_derived_total_percent": "100.00",
+    "new_F0_integer_units": [
+      227,
+      114,
+      1250,
+      1136,
+      341,
+      909,
+      1477,
+      4091,
+      114,
+      114,
+      227
+    ],
+    "new_F0_independent_recalculation_matches": true,
+    "no_model_reprompt_for_budget": true,
+    "raw_original_content_preserved": true,
+    "raw_and_derived_changes_kept_separate": [
+      "35",
+      "45",
+      "60"
+    ],
+    "arithmetic_is_not_the_current_blocker": true
+  },
+  "semantic_review": {
+    "all_new_D0_and_F0_11_sector_rows_and_top_level_fields_read": true,
+    "fresh_masked_F0_review_completed": true,
+    "provided_packet_F0_labels_and_readings_preserved_rows": 11,
+    "F0_raw_D0_change_statements_supported_rows": 11,
+    "F0_citation_occurrences": 107,
+    "F0_unique_visible_cited_IDs": 63,
+    "unsupported_or_contradictory_reasoning_retained": true,
+    "examples": [
+      "Energy return and daily mean sign errors.",
+      "IT historical return149.92% versus supplied14.9920%; annualized volatility21.2% versus33.6851%.",
+      "Raw88% contradicts the statement that weights sum exactly1.0.",
+      "Claim that no institutional packet exists contradicts actual supplied packet and other statements in the same response.",
+      "12-month horizon wrongly described as shorter than the60-return lookback."
+    ],
+    "counts_are_coverage_not_accuracy": true,
+    "provided_packet_fidelity_does_not_certify_original_publication_paraphrase": true,
+    "masked_and_unmasked_counting_reconciled": true
+  },
+  "operating_feasibility": {
+    "pass": false,
+    "reason": "The recorded AC transition prevented the next stage before generation; only one of four independent continuation cells was attempted. The actual main gate requires addressed coverage of all four and a clean terminal operational review. All three remaining independent cells stay unavailable.",
+    "completed_stage_instrument_integrity_pass": true,
+    "coordinator_awake_release": "released",
+    "owned_service_stopped": true,
+    "existing_user_service_11434_unchanged": true,
+    "permanent_power_settings_changed": false,
+    "automatic_retries": 0
+  },
+  "main_preparation": {
+    "candidate_only": true,
+    "model_calls": 0,
+    "new_source_packets_and_prepared_manifest_ready": true,
+    "all_five_D0_native_token_preflights_passed_without_generation": true,
+    "actual_F0_capacity_must_use_own_future_D0": true,
+    "runner_and_gate_implemented_and_reviewed": true,
+    "allocation_primary_endpoint_amendment_is_prospective_for_unrun_main": true,
+    "final_protocol_and_freeze_not_approved_or_created": true
+  },
+  "review_axes": {
+    "errors": {
+      "status": "AUDITED_WITH_MODEL_ERRORS_AND_EXTERNAL_OPERATING_BLOCK",
+      "reason": "Completed-stage instrument checks, deterministic arithmetic and independent semantic readings finished. Model factual and source-scope errors remain measured outcomes; an AC-stage-boundary stop prevents further generation."
+    },
+    "consistency": {
+      "status": "BOUND_EVIDENCE_AND_EXPLICIT_MISSINGNESS",
+      "reason": "Own D0/F0 bindings, all historical attempts, exact10000-unit sidecars, original first-attempt dataset and unattempted denominator cells remain distinct. Cleanup and current accepted direct78bindings are verified;24 older versions remain explicitly unlocated in the bounded history search."
+    },
+    "paper_topic": {
+      "status": "CONNECTION_PRESERVED_WITH_DESCRIPTIVE_LIMITS",
+      "reason": "The records trace supplied institution meaning to stated reasons and observable raw/derived allocation. They do not assume hidden institutional targets or mandatory rating-to-weight rules. E/L exposure timing also changes repetition/history; fixed small cells and partial coverage do not establish causal anchoring, population effects, hidden cognition or investment performance."
+    }
+  },
+  "next_required_conditions": [
+    "Restore an AC-powered execution environment before another generation stage.",
+    "Prospectively specify any remaining-only continuation namespace and accounting without erasing the completed or interrupted attempts; no automatic retry is active.",
+    "Review all remaining independent pilot cells and operational feasibility before an approved main protocol/freeze."
+  ],
+  "archiving": {
+    "plan_ref": {
+      "path": "research/continuation_20261026/archive_preparation/archive_plan_terminal_r2.json",
+      "sha256": "422a79a49c258c6996384ae23f17765db57b97b0149dd6f4e4364e8a629c3996"
+    },
+    "state_at_this_review": "prepared_for_final_quiet_inventory_and_byte_verification",
+    "history_limit": "24historical versions were not found in current files, prior verified archive or bounded Git search; current accepted direct78bindings match. Portable/model payloads are separately pinned environment dependencies."
+  },
+  "input_refs": [
+    {
+      "path": "research/continuation_20261026/run_reports/terminal_receipt.json",
+      "sha256": "77bd98f4172e78eb2890d21b41bf128012ad02cd36d474ca2d5e77b5ae415f47"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_continuation_20261026/campaign_summary.json",
+      "sha256": "88f6c466914ad1eea593e99d2582ca64df06d3f6c2ddea7075100d1e51edac3d"
+    },
+    {
+      "path": "research/continuation_20261026/runtime/service_ready/service_shutdown_receipt.json",
+      "sha256": "17a847df5cb2f62011a801faf94429d53944e38a088a9af3f4b981cb2fa1a843"
+    },
+    {
+      "path": "research/continuation_20261026/combined_pilot_allocation_review.json",
+      "sha256": "29742f8d5367d201b11a906ba1e6a52e96e5103335b89d539a7535dc5df4b38c"
+    },
+    {
+      "path": "research/continuation_20261026/semantic/fidelity_q2_2026__L__D0_review_r2.json",
+      "sha256": "6c976c606c1f962ec93bd0c9e5a33f4ccca7541a100cf6bd6a0ee250e837e4d9"
+    },
+    {
+      "path": "research/continuation_20261026/semantic/fidelity_q2_2026__L__D0_audit_validation.json",
+      "sha256": "10be2e8cecf39e4f1c93d9025fc3495707854470ef7d36a3eff54fe2c2588337"
+    },
+    {
+      "path": "research/continuation_20261026/semantic/fidelity_q2_2026__L__F0_review.json",
+      "sha256": "03462024514d4dfe61df318b149a5cb78e6c264c09f4137cc8d92238d557d58c"
+    },
+    {
+      "path": "research/continuation_20261026/semantic/fidelity_q2_2026__L__F0_review_validation.json",
+      "sha256": "2ebc6b0580fdd64dd4ae96d588866c03adbc3e0fc51edb6707e07d51dfd9e6af"
+    },
+    {
+      "path": "research/continuation_20261026/semantic_review_reconciliation.json",
+      "sha256": "cfa4b3959bbc3906b0989afa5bffe15e26a370bf14dc5d9726b8b77d1da0fc3b"
+    },
+    {
+      "path": "research/continuation_20261026/main_protocol_candidate.json",
+      "sha256": "052c92f4867ce07265ff37bf05c72ab1eacf0ab2dc8324493d060702c3544440"
+    },
+    {
+      "path": "research/continuation_20261026/main_preflight/execution_review.json",
+      "sha256": "0a6c005e18d104818f0812ed8bce78fefe268f9b6828ad664f8a36e6a568cff8"
+    },
+    {
+      "path": "research/continuation_20261026/main_implementation/implementation_review.json",
+      "sha256": "0dfe741959245d2a88f07b2b6b0fd7935ca3cf245324445566378eed58afa086"
+    },
+    {
+      "path": "research/continuation_20261026/main_stage_semantic_preparer_review.json",
+      "sha256": "bfa482830506ec237dd1dca2c99f4ff7edfb452a224faf4f9e67b396e0341e93"
+    },
+    {
+      "path": "research/continuation_20261026/archive_preparation/reference_closure_review.json",
+      "sha256": "c55e0081686f30819d3606770ccc9c0593aff115e9b1357b3dcdb311b8736e4a"
+    },
+    {
+      "path": "research/continuation_20261026/archive_preparation/archive_plan_terminal_r2.json",
+      "sha256": "422a79a49c258c6996384ae23f17765db57b97b0149dd6f4e4364e8a629c3996"
+    }
+  ],
+  "generation_calls_by_this_review": 0,
+  "raw_outputs_modified": false
+}

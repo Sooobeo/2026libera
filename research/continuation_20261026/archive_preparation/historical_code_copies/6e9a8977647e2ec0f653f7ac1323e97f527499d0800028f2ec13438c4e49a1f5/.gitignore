@@ -1,0 +1,50 @@
+# Python caches, local environments, and disposable tooling output
+__pycache__/
+*.py[cod]
+/.venv/
+/venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Local environment values (keep shareable examples)
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+
+# OS/editor temporary files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+# Disposable headless-browser profiles; screenshots and QA receipts stay tracked.
+/tmp/browser_profiles/
+/tmp/v491_visual/
+
+# Downloaded installers and local model weights, not research evidence
+/tmp/**/OllamaSetup*.exe
+/.ollama/
+*.gguf
+*.safetensors
+
+# Expanded runtime/evaluation evidence is archived losslessly in research/artifacts/.
+# Keep Python source in these directories individually tracked.
+# Already tracked historical evidence remains tracked (except mutable server logs).
+/data/local_sector_runtime/**
+!/data/local_sector_runtime/**/
+!/data/local_sector_runtime/**/*.py
+/research/evidence/**
+!/research/evidence/**/
+!/research/evidence/**/*.py
+/research/evaluator_only/**
+!/research/evaluator_only/**/
+!/research/evaluator_only/**/*.py
+
+# Keep source data, experiment inputs, papers, plans, and evidence ZIPs otherwise.
+# Do not broadly ignore *.log, *.bin, *.jsonl, *.zip, or *.tar.gz.

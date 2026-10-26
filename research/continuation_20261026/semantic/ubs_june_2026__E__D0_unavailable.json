@@ -1,0 +1,32 @@
+{
+  "version": "completed_stage_semantic_availability_1",
+  "recorded_at_utc": "2026-10-26T01:21:13.380Z",
+  "case_id": "ubs_june_2026__E",
+  "stage": "D0",
+  "status": "unavailable_not_attempted_after_campaign_stop",
+  "semantic_verdict": null,
+  "reason": "Campaign stopped at next stage boundary: AC unavailable before stage; no new generation started.",
+  "model_claims_read": 0,
+  "raw_partial_content_read": false,
+  "model_calls_by_audit": 0,
+  "stage_directory_exists": false,
+  "transport_result_exists": false,
+  "stage_review_exists": false,
+  "generation_requests_for_this_stage": 0,
+  "refs": [
+    {
+      "path": "data/local_sector_runtime/v494_continuation_20261026/campaign_summary.json",
+      "sha256": "88f6c466914ad1eea593e99d2582ca64df06d3f6c2ddea7075100d1e51edac3d"
+    },
+    {
+      "path": "research/continuation_20261026/run_reports/terminal_receipt.json",
+      "sha256": "77bd98f4172e78eb2890d21b41bf128012ad02cd36d474ca2d5e77b5ae415f47"
+    }
+  ],
+  "review_axes": {
+    "errors": "No output exists to audit; no fabricated semantic or allocation result.",
+    "consistency": "Stage remains in declared case denominator with zero attempts; earlier Fidelity L completed results do not substitute for UBS.",
+    "paper_topic": "E source-fidelity, numeric claims and allocation comparison remain unavailable for this condition."
+  },
+  "scope": "Only stage availability checked; no service calls, generation, retries or frozen-file edits."
+}

@@ -1,0 +1,311 @@
+{
+  "version": "exact_historical_byte_copies_1",
+  "recorded_at_utc": "2026-10-26T01:22:47.364Z",
+  "original_files_modified": false,
+  "git_search": {
+    "scope": "git log --all --format=%H --max-count=100 -- declared mismatched paths, then ls-tree and cat-file exact blobs",
+    "paths": [
+      "research/archive_sector_continuation.py",
+      "research/test_archive_sector_continuation.py",
+      "research/sector_main_gate.py",
+      "research/sector_main_runtime.py",
+      "research/test_sector_main.py",
+      "research/test_prepare_main_stage_semantic_audit.py",
+      "research/continuation_20261026/prepare_stage_semantic_audit.py",
+      "research/continuation_20261026/test_prepare_stage_semantic_audit.py",
+      "research/archive_v494_recovery.py",
+      "research/review_sector_v494_stage.py",
+      ".gitattributes",
+      ".gitignore",
+      "plan/LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html",
+      "paper/LIBERA_텀페이퍼_초안_v4.9.1_20261019.html",
+      "research/build_v491_context_plan.py",
+      "research/verify_v491_round1.py",
+      "research/build_v491_runtimeprep_report.py",
+      "research/verify_v491_runtimeprep_round3.py",
+      "research/sector_v491_runtime.py",
+      "research/test_sector_v491_runtime.py",
+      "research/test_sector_v491_human_gate.py",
+      "research/v491_token_capacity_audit.py",
+      "research/v491_token_review_finalize.py",
+      "research/benchmark_sector_real_input.py",
+      "research/benchmark_sector_latency.py",
+      "research/register_plan_execute_diagnostic.py"
+    ],
+    "commits": [
+      "5ac0cedb580f1437a70e02e456b860dc279a56aa",
+      "ac176e52065906d6870f48bad78ac4a2f0dc2332",
+      "13b0bf2da04ee03eaa63911774f94a6fc724cd9b",
+      "75c3f7363115824e5a40cf415550435a2f7ce622",
+      "5885326de08b1ace7ca42ea0d9f138eca10e7df7",
+      "c27822bb344ae6184d1b77556ff27b2e78e7a9b0",
+      "8fec5ec985bb61fce00b41d92b8c82a7d9bf575f",
+      "7f652ded08ad7566cd1d1596b921781a1eba0001",
+      "1161541b4800936b92d26a509be54acb2b0ba78f",
+      "f4b3a7c30b19bc198c5168a3770acea33940aee2"
+    ],
+    "distinct_blobs_examined": 34,
+    "search_exhaustiveness": "bounded path history search; absence is not a proof that bytes cannot be recovered elsewhere"
+  },
+  "copies": [
+    {
+      "original_path": ".gitattributes",
+      "sha256": "f718d829ecac305ca0202f32161d54d28c1c5294c9009fc4482b6a8cc74a0e7a",
+      "copy_path": "research/continuation_20261026/archive_preparation/historical_code_copies/f718d829ecac305ca0202f32161d54d28c1c5294c9009fc4482b6a8cc74a0e7a/.gitattributes",
+      "bytes": 9878,
+      "recovery": "git_blob_exact_bytes",
+      "git_blob": "9d2177d7afe2d81738d0d4bf8be4dabc4b75423f",
+      "commit_locations": [
+        {
+          "commit": "5885326de08b1ace7ca42ea0d9f138eca10e7df7",
+          "path": ".gitattributes"
+        },
+        {
+          "commit": "c27822bb344ae6184d1b77556ff27b2e78e7a9b0",
+          "path": ".gitattributes"
+        },
+        {
+          "commit": "8fec5ec985bb61fce00b41d92b8c82a7d9bf575f",
+          "path": ".gitattributes"
+        }
+      ],
+      "copy_ref": {
+        "path": "research/continuation_20261026/archive_preparation/historical_code_copies/f718d829ecac305ca0202f32161d54d28c1c5294c9009fc4482b6a8cc74a0e7a/.gitattributes",
+        "sha256": "f718d829ecac305ca0202f32161d54d28c1c5294c9009fc4482b6a8cc74a0e7a"
+      }
+    },
+    {
+      "original_path": ".gitignore",
+      "sha256": "6e9a8977647e2ec0f653f7ac1323e97f527499d0800028f2ec13438c4e49a1f5",
+      "copy_path": "research/continuation_20261026/archive_preparation/historical_code_copies/6e9a8977647e2ec0f653f7ac1323e97f527499d0800028f2ec13438c4e49a1f5/.gitignore",
+      "bytes": 1259,
+      "recovery": "git_blob_exact_bytes",
+      "git_blob": "b9c30e4a50bb5e6e59dd5b05da288ba30ea2cd80",
+      "commit_locations": [
+        {
+          "commit": "c27822bb344ae6184d1b77556ff27b2e78e7a9b0",
+          "path": ".gitignore"
+        },
+        {
+          "commit": "8fec5ec985bb61fce00b41d92b8c82a7d9bf575f",
+          "path": ".gitignore"
+        }
+      ],
+      "copy_ref": {
+        "path": "research/continuation_20261026/archive_preparation/historical_code_copies/6e9a8977647e2ec0f653f7ac1323e97f527499d0800028f2ec13438c4e49a1f5/.gitignore",
+        "sha256": "6e9a8977647e2ec0f653f7ac1323e97f527499d0800028f2ec13438c4e49a1f5"
+      }
+    },
+    {
+      "original_path": "research/test_prepare_main_stage_semantic_audit.py",
+      "sha256": "d4e440723241a79ede0277645e646caba65110aed60b5206e5b4fd87a3a9a576",
+      "copy_path": "research/continuation_20261026/archive_preparation/historical_code_copies/d4e440723241a79ede0277645e646caba65110aed60b5206e5b4fd87a3a9a576/test_prepare_main_stage_semantic_audit.py",
+      "bytes": 10134,
+      "recovery": "exact_reverse_patch_from_published_fixture_correction",
+      "source_ref": {
+        "path": "research/continuation_20261026/main_stage_semantic_preparer_test_result.json",
+        "sha256": "24561250b1f6b2a51bd1ce9ea0acb68ee66c544866a33b0b73d953bf465080f9"
+      },
+      "current_source_sha256": "86dbced4814ed5f621a9a79bad035a91372241be1fa306176110647557a1c225",
+      "single_exact_replacement": true,
+      "copy_ref": {
+        "path": "research/continuation_20261026/archive_preparation/historical_code_copies/d4e440723241a79ede0277645e646caba65110aed60b5206e5b4fd87a3a9a576/test_prepare_main_stage_semantic_audit.py",
+        "sha256": "d4e440723241a79ede0277645e646caba65110aed60b5206e5b4fd87a3a9a576"
+      }
+    }
+  ],
+  "not_recovered_here": [
+    {
+      "original_path": "research/archive_sector_continuation.py",
+      "expected_sha256": "bec6926ff33eedfb7c7ae414f942827406f6d2985f61ea3928c30d2823e1166e",
+      "current_sha256": "ef4ec5463d4ea57acd1895823e6e478800c24b0a2657cf75ae57b18599fc7439",
+      "declaring_record": "research/continuation_20261026/archive_preparation/tests_initial_historical.json",
+      "locator": "/sources_before/0",
+      "status": "not_found_in_current_file_previous_verified_archive_or_bounded_git_search"
+    },
+    {
+      "original_path": "research/test_archive_sector_continuation.py",
+      "expected_sha256": "ef34e9f2e8c6e30df47269c3da751d485ad5a38d0db6e4d89997b691e5b6d9ad",
+      "current_sha256": "89bacc0efed188643ca87808cdac6c2a060402b3e779e5fb169a8f72ca7c4415",
+      "declaring_record": "research/continuation_20261026/archive_preparation/tests_initial_historical.json",
+      "locator": "/sources_before/1",
+      "status": "not_found_in_current_file_previous_verified_archive_or_bounded_git_search"
+    },
+    {
+      "original_path": "research/sector_main_gate.py",
+      "expected_sha256": "f16756758a22e16fd6125ff34d05d659afd1cd5e65fe03b212b742feafc79df2",
+      "current_sha256": "f55e68ac24dc5feb340324f5e2f419632917105aabf1a4457a890c7b48853fcf",
+      "declaring_record": "research/continuation_20261026/main_implementation/test_attempt02_pass.json",
+      "locator": "/source_hashes/research/sector_main_gate.py",
+      "status": "not_found_in_current_file_previous_verified_archive_or_bounded_git_search"
+    },
+    {
+      "original_path": "research/sector_main_runtime.py",
+      "expected_sha256": "3ff55be9f31120438eead4ed477bc1b94ef0f07075b8c3c8250ed5aab56cf60a",
+      "current_sha256": "ba0a11b99a2886f0485b8fe903115d19d3b2fec87eda3a28ec14b7e3e66c3113",
+      "declaring_record": "research/continuation_20261026/main_implementation/test_attempt02_pass.json",
+      "locator": "/source_hashes/research/sector_main_runtime.py",
+      "status": "not_found_in_current_file_previous_verified_archive_or_bounded_git_search"
+    },
+    {
+      "original_path": "research/test_sector_main.py",
+      "expected_sha256": "b8220c72c3554b2f684bdaead9b66f89132aff8d65819258135c7b3b0043e9dd",
+      "current_sha256": "f84ad858a40a994a5b8f76a6c12ebc1fc81cbe7c5c86283ca3a9360979deddda",
+      "declaring_record": "research/continuation_20261026/main_implementation/test_attempt02_pass.json",
+      "locator": "/source_hashes/research/test_sector_main.py",
+      "status": "not_found_in_current_file_previous_verified_archive_or_bounded_git_search"
+    },
+    {
+      "original_path": "research/continuation_20261026/prepare_stage_semantic_audit.py",
+      "expected_sha256": "d27b61469e0becf4a53171a6fd6dc66f12c3e1bc885669b791f394d45c6a75ee",
+      "current_sha256": "efb82936ee541f187d8b352a1a28afa8ecea3d83401439a6e92a82df9731fb04",
+      "declaring_record": "research/continuation_20261026/semantic_audit_plan.json",
+      "locator": "/code_ref",
+      "status": "not_found_in_current_file_previous_verified_archive_or_bounded_git_search"
+    },
+    {
+      "original_path": "research/continuation_20261026/test_prepare_stage_semantic_audit.py",
+      "expected_sha256": "cdd2544e6fb42017c53391ef76884a9cfb35112d8caf782c276a413477a91b73",
+      "current_sha256": "2b9fbb5c6805398aa6abbfb6f756c66b430b5159ecd04f0a10001386204d7c71",
+      "declaring_record": "research/continuation_20261026/semantic_audit_plan.json",
+      "locator": "/test_ref",
+      "status": "not_found_in_current_file_previous_verified_archive_or_bounded_git_search"
+    },
+    {
+      "original_path": "research/archive_v494_recovery.py",
+      "expected_sha256": "a6ce082d82f1b765917d25405be9969bd58eb3f4b922d17b94e232dfa9f22767",
+      "current_sha256": "eecd3561eac5baf9da23840a2790283b2bf9054e78e2e1faf597d759a860bd81",
+      "declaring_record": "research/recovery_20261025/runtime/archive_preflight_review.json",
+      "locator": "/input_refs/0",
+      "status": "not_found_in_current_file_previous_verified_archive_or_bounded_git_search"
+    },
+    {
+      "original_path": "research/review_sector_v494_stage.py",
+      "expected_sha256": "8ea79e6c68192283feea1f7ef66ee2fe528c2d3f4ba08b346fee54fb4d5fc1dc",
+      "current_sha256": "81195353a74f00fde66e1915e068e9167966ccc3cb774b65ad929867bf44b3e6",
+      "declaring_record": "research/recovery_20261025/implementation_tests_r2.json",
+      "locator": "/initial_combined_run/source_refs_before/3",
+      "status": "not_found_in_current_file_previous_verified_archive_or_bounded_git_search"
+    },
+    {
+      "original_path": "plan/LIBERA_공통상황포함_실험계획_v4.9.1_20261019.html",
+      "expected_sha256": "63f45450d987bbcd26474119955bad2ba661a1ce4c31aa207e35c64ae8de44f5",
+      "current_sha256": "81fb8579ac0da25f052075075176305904134cec1e9de44221db43bacd848da3",
+      "declaring_record": "research/artifacts/v491_review_history_20261019/v491_validation_round1_20261019.json",
+      "locator": "/reviewed_files/1",
+      "status": "not_found_in_current_file_previous_verified_archive_or_bounded_git_search"
+    },
+    {
+      "original_path": "paper/LIBERA_텀페이퍼_초안_v4.9.1_20261019.html",
+      "expected_sha256": "f546e3f627c7125f56c11d8bf0a4e32182d8da5f4c59e4174f5f4cc6d23e2b76",
+      "current_sha256": "6082188d2469feaf221b54845e5462681709a59e776307234c9705b3be79f6a6",
+      "declaring_record": "research/artifacts/v491_review_history_20261019/v491_validation_round1_20261019.json",
+      "locator": "/reviewed_files/3",
+      "status": "not_found_in_current_file_previous_verified_archive_or_bounded_git_search"
+    },
+    {
+      "original_path": "research/build_v491_context_plan.py",
+      "expected_sha256": "9641baa6e77f906f8df92105659bd2e68791d900fed907e3d35ab4e4f71e058e",
+      "current_sha256": "6c41d2696f80de7ff16f3c3994077faebf035ae85e3de1505c79f142cada251d",
+      "declaring_record": "research/artifacts/v491_review_history_20261019/v491_validation_round1_20261019.json",
+      "locator": "/reviewed_files/14",
+      "status": "not_found_in_current_file_previous_verified_archive_or_bounded_git_search"
+    },
+    {
+      "original_path": "research/verify_v491_round1.py",
+      "expected_sha256": "0d73e596e6eb7bb61a6e85a9937be4fae39140a86a02ff6418e6f2fcbe8f79eb",
+      "current_sha256": "531672242a3959a976ec07a7342241c59700118b0de726592fa34af560e4f875",
+      "declaring_record": "research/artifacts/v491_review_history_20261019/v491_validation_round1_20261019.json",
+      "locator": "/reviewed_files/19",
+      "status": "not_found_in_current_file_previous_verified_archive_or_bounded_git_search"
+    },
+    {
+      "original_path": "research/verify_v491_round1.py",
+      "expected_sha256": "7e3e55143eae50f9c2724a703d5a59163d92ab1e2dd625a16a42db0480bbbd7a",
+      "current_sha256": "531672242a3959a976ec07a7342241c59700118b0de726592fa34af560e4f875",
+      "declaring_record": "research/v491_validation_round1_initial_20261019.json",
+      "locator": "/reviewed_files/19",
+      "status": "not_found_in_current_file_previous_verified_archive_or_bounded_git_search"
+    },
+    {
+      "original_path": "research/build_v491_runtimeprep_report.py",
+      "expected_sha256": "61f578d5d643e4ee28bd95589c08f1f7b892caca89f50b1074608a1139cf34b5",
+      "current_sha256": "c947805180b9d6c395d75ee680758fe5f0edf9763fe61da92c910a54288fe0b7",
+      "declaring_record": "research/artifacts/v491_runtime_review_history_20261019/r1/v491_runtime_methods_review_initial_reference_locations.json",
+      "locator": "/implementation_refs/4",
+      "status": "not_found_in_current_file_previous_verified_archive_or_bounded_git_search"
+    },
+    {
+      "original_path": "research/verify_v491_runtimeprep_round3.py",
+      "expected_sha256": "6222654f903bd77560bb83ad39c87a541e87cafa62ca72fca197fff19e3093b4",
+      "current_sha256": "7dd7661116c11a632d95b175a5da59c1d146bc35d0499a61896e12219fd3819e",
+      "declaring_record": "research/artifacts/v491_runtime_review_history_20261019/r1/v491_runtime_methods_review_initial_reference_locations.json",
+      "locator": "/implementation_refs/5",
+      "status": "not_found_in_current_file_previous_verified_archive_or_bounded_git_search"
+    },
+    {
+      "original_path": "research/sector_v491_runtime.py",
+      "expected_sha256": "64e229148ffe1cf9c361db39a9ffa2e703e530d3638da1e245b6ec8492166538",
+      "current_sha256": "a542a53ef7a9a035a3641e1e9637d3eb5bd442677318a82434e245bb1e5dc649",
+      "declaring_record": "research/artifacts/v491_runtime_review_history_20261019/r1/v491_runtime_round1_20261019.json",
+      "locator": "/implementation_refs/0",
+      "status": "not_found_in_current_file_previous_verified_archive_or_bounded_git_search"
+    },
+    {
+      "original_path": "research/test_sector_v491_runtime.py",
+      "expected_sha256": "376f18c680d3d5f04009efa116172466ff659fd5f1687ab1ff91bc7e2ada7e4c",
+      "current_sha256": "da2d08c67ad2d30804cbf7255516b1be86cf93c8eaef5b69da6dd579210868b4",
+      "declaring_record": "research/artifacts/v491_runtime_review_history_20261019/r1/v491_runtime_round1_20261019.json",
+      "locator": "/implementation_refs/2",
+      "status": "not_found_in_current_file_previous_verified_archive_or_bounded_git_search"
+    },
+    {
+      "original_path": "research/test_sector_v491_human_gate.py",
+      "expected_sha256": "72a3d6c7b7a1f3673a6fcc783d9857de8ce240f96e461d61ffcf4b3a9156cc0a",
+      "current_sha256": "f48bcec03efaaf2225cca816bcca838aa52a15739b3baf8730172e444aef7b18",
+      "declaring_record": "research/artifacts/v491_runtimeprep_20261019/human_gate_independent_review.json",
+      "locator": "/files/1",
+      "status": "not_found_in_current_file_previous_verified_archive_or_bounded_git_search"
+    },
+    {
+      "original_path": "research/v491_token_capacity_audit.py",
+      "expected_sha256": "d0b76e0539f0150e32a314e1277fb807a611104237e52719b2572b2ec1b81012",
+      "current_sha256": "1d1c80079715a54b85ab0cd9b4a7628358027e18c80433b5da9f51fd7afd4f30",
+      "declaring_record": "research/v491_token_review_20261019.json",
+      "locator": "/code/2",
+      "status": "not_found_in_current_file_previous_verified_archive_or_bounded_git_search"
+    },
+    {
+      "original_path": "research/v491_token_review_finalize.py",
+      "expected_sha256": "9f78211769851dbc98b669e83f351cc81607c6446525d6a5824a057c8928cc67",
+      "current_sha256": "64116ad4127f056c67515aebe773fcc4cadc0a0c90cf0ed2f5319b0a38ef0cc0",
+      "declaring_record": "research/v491_token_review_20261019.json",
+      "locator": "/code/3",
+      "status": "not_found_in_current_file_previous_verified_archive_or_bounded_git_search"
+    },
+    {
+      "original_path": "research/benchmark_sector_real_input.py",
+      "expected_sha256": "2a64adcae546d74702c4b9ba5e60e2c81308389b5b6f2c7c663571bc5b0ac88e",
+      "current_sha256": "f8f299ed156435791287d57c83e03ea9992a4a56ce3d77500667146cffda1cb6",
+      "declaring_record": "plan/LIBERA_실험설정_20261018.json",
+      "locator": "/local_engineering_addendum/observations/2/invocation/file_hashes/research\\benchmark_sector_real_input.py",
+      "status": "not_found_in_current_file_previous_verified_archive_or_bounded_git_search"
+    },
+    {
+      "original_path": "research/benchmark_sector_latency.py",
+      "expected_sha256": "4c6c751891964250b71b221073e3ce4e2407b8548ec62ccb9bf514945da7ae45",
+      "current_sha256": "0686444e608033be931922a26886ed4a4b5b0789385215b7b75bfacc4050458b",
+      "declaring_record": "research/local_sector_latency_20261018.json",
+      "locator": "/runs/5/invocation/file_hashes/research/benchmark_sector_latency.py",
+      "status": "not_found_in_current_file_previous_verified_archive_or_bounded_git_search"
+    },
+    {
+      "original_path": "research/register_plan_execute_diagnostic.py",
+      "expected_sha256": "d4a643e62825ec9c740796c101624ebad6066c39ff36706c7b2954a7b9283d70",
+      "current_sha256": "a70436f7e49fa72541eb0deacc40e421f875b41141a264e23cd93dcdee0361ce",
+      "declaring_record": "research/v47_plan_execute_preflight_implementation_review_20261018.json",
+      "locator": "/source_files/36",
+      "status": "not_found_in_current_file_previous_verified_archive_or_bounded_git_search"
+    }
+  ]
+}
