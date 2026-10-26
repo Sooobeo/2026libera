@@ -1,0 +1,89 @@
+{
+  "version": "sector_campaign_archive_plan_1",
+  "status": "prepared_candidate_not_executed",
+  "created_at_utc": "2026-10-26T00:21:56.513Z",
+  "archive_stem": "continuation-evidence-20261026",
+  "output_directory": "research/artifacts",
+  "raw_campaign_parent": "data/local_sector_runtime",
+  "report_roots": [
+    "research/continuation_20261026"
+  ],
+  "campaigns": [
+    {
+      "purpose": "pilot_continuation",
+      "run_directory": "data/local_sector_runtime/v494_continuation_20261026",
+      "reports_directory": "research/continuation_20261026/run_reports",
+      "service_receipt": "research/continuation_20261026/runtime/service_ready/service_receipt.json",
+      "shutdown_receipt": "research/continuation_20261026/runtime/service_ready/service_shutdown_receipt.json"
+    }
+  ],
+  "main_state": {
+    "status": "pending_not_run",
+    "reason": "This candidate contains no executed main campaign. It must not be used unchanged after a main campaign is created; a new versioned plan must include its raw/report roots, terminal and cleanup records, and frozen helpers."
+  },
+  "previous_archives": [
+    {
+      "manifest_ref": {
+        "path": "research/artifacts/recovery-evidence-20261025.manifest.json",
+        "sha256": "db4bff7ca169dc2303ab6dcb4e5cdc1da61817e1452c506b0b3fad0ce5790626"
+      },
+      "verification_ref": {
+        "path": "research/artifacts/recovery-evidence-20261025.verification.json",
+        "sha256": "44b85b1230cf7191a2d66f64091135a5d9823947f6558a377da2cbe9f88a3a8c"
+      }
+    }
+  ],
+  "extra_roots": [
+    "research/analyze_v492_pilot.py",
+    "research/archive_sector_continuation.py",
+    "research/benchmark_sector_latency.py",
+    "research/build_v492_masked_review.py",
+    "research/build_v494_masked_review.py",
+    "research/finalize_sector_allocation.py",
+    "research/finalize_sector_campaign.py",
+    "research/freeze_sector_continuation.py",
+    "research/freeze_sector_v494.py",
+    "research/local_sector_single_case.py",
+    "research/prepare_sector_v491.py",
+    "research/prepare_sector_v492.py",
+    "research/prepare_sector_v494.py",
+    "research/probe_ollama_runtime.py",
+    "research/recovery_20261025/method_build_audit.py",
+    "research/recovery_20261025/runtime/start_isolated_cpu.ps1",
+    "research/recovery_20261025/runtime/stop_isolated_cpu.ps1",
+    "research/remote_sector_runtime.py",
+    "research/restore_research_artifacts.py",
+    "research/review_sector_v494_stage.py",
+    "research/run_sector_continuation.py",
+    "research/run_v494_recovery.py",
+    "research/sector_continuation_awake.py",
+    "research/sector_continuation_gate.py",
+    "research/sector_continuation_runtime.py",
+    "research/sector_engine.py",
+    "research/sector_v48_main_awake.py",
+    "research/sector_v48_transport.py",
+    "research/sector_v491_contract.py",
+    "research/sector_v491_runtime.py",
+    "research/sector_v491_tokenizer.py",
+    "research/sector_v492_contract.py",
+    "research/sector_v492_review_gate.py",
+    "research/sector_v492_runtime.py",
+    "research/sector_v494_review_gate.py",
+    "research/sector_v494_runtime.py",
+    "research/test_archive_sector_continuation.py",
+    "research/test_finalize_sector_campaign.py",
+    "research/test_sector_continuation.py"
+  ],
+  "preconditions": [
+    "Do not execute while continuation or any related coordinator/worker/owned service is active.",
+    "Require terminal accounting, explicit coordinator release and model-free verified owned-service shutdown.",
+    "This plan does not assert that any continuation call completed, any final allocation exists, or main is ready.",
+    "Any later main campaign requires an explicitly revised new plan and archive name if an archive attempt already exists."
+  ],
+  "excluded_by_design": [
+    "portable binaries/model weights",
+    "previous ZIP payloads, preserved instead as independently verified immutable dependencies"
+  ],
+  "model_calls_by_preparation": 0,
+  "archive_executed_by_preparation": false
+}

@@ -1,0 +1,88 @@
+{
+  "receipt_version": "sector_main_offline_tests_1",
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T00:31:02.105Z",
+  "command": "python -B -X utf8 -m unittest discover -s research -p test_sector_main.py -v",
+  "tests_run": 33,
+  "failures": 0,
+  "errors": 0,
+  "exit_code": 0,
+  "runner_reported_elapsed_seconds": 76.121,
+  "source_refs": [
+    {
+      "path": "research/sector_main_gate.py",
+      "sha256": "f55e68ac24dc5feb340324f5e2f419632917105aabf1a4457a890c7b48853fcf"
+    },
+    {
+      "path": "research/sector_main_runtime.py",
+      "sha256": "ba0a11b99a2886f0485b8fe903115d19d3b2fec87eda3a28ec14b7e3e66c3113"
+    },
+    {
+      "path": "research/sector_main_awake.py",
+      "sha256": "167ecdc9e9af71b35ffc608247dff7f122733b3c20011fb0b0716327ade83370"
+    },
+    {
+      "path": "research/run_sector_main.py",
+      "sha256": "bed338d7815dcd3db1c056ffa5d1b1921ec0c95a7c811e473f8b244a04fef125"
+    },
+    {
+      "path": "research/test_sector_main.py",
+      "sha256": "f84ad858a40a994a5b8f76a6c12ebc1fc81cbe7c5c86283ca3a9360979deddda"
+    }
+  ],
+  "source_hashes_equal_before_and_after": true,
+  "tests": [
+    "test_five_cases_ten_stages_keep_raw_errors_and_only_own_new_draft",
+    "test_model_structure_failure_skips_own_final_but_runs_remaining_cases",
+    "test_system_interruption_halts_and_retains_four_missing_cases",
+    "test_instrument_failure_halts_even_with_completed_transport",
+    "test_cancel_before_first_stage_issues_no_request",
+    "test_changed_case_inventory_fails_before_request",
+    "test_reusing_stage_directory_fails_without_second_request",
+    "test_same_thread_acquire_pulse_and_release_are_explicit",
+    "test_missing_ac_refuses_acquisition_without_api_request",
+    "test_cross_thread_cannot_clear_owner_request",
+    "test_ac_loss_at_boundary_requires_stop_and_still_allows_cleanup",
+    "test_acquisition_exception_is_accounted_and_cleanup_runs",
+    "test_existing_workspace_output_is_never_reused",
+    "test_real_offline_main_inputs_reconstruct_without_model_calls",
+    "test_new_main_runtime_keeps_scientific_request_exact",
+    "test_scientific_seed_change_fails_closed",
+    "test_main_awake_uses_ten_stage_operational_expiry",
+    "test_ordinary_structure_failures_do_not_require_four_valid_finals",
+    "test_raw_arithmetic_citation_semantic_errors_are_not_an_operational_veto",
+    "test_unresolved_infrastructure_incident_blocks_main",
+    "test_global_stop_or_unattempted_independent_cell_blocks_main",
+    "test_missing_f0_after_completed_d0_blocks_coverage_claim",
+    "test_release_not_verified_blocks_main",
+    "test_review_must_bind_real_terminal_and_follow_its_timestamp",
+    "test_main_candidate_and_continuation_scope_cannot_authorize_main",
+    "test_actual_frozen_continuation_gate_is_rejected_as_main_authority",
+    "test_distinct_reviews_cover_exact_current_main_sources",
+    "test_duplicate_review_reference_cannot_supply_three_reviews",
+    "test_same_review_content_at_another_path_is_not_independent",
+    "test_unrelated_reviews_cannot_authorize_main_scope",
+    "test_missing_test_source_coverage_is_rejected",
+    "test_stale_nested_code_hash_is_rejected",
+    "test_future_freeze_builder_must_be_in_main_code_inventory"
+  ],
+  "scope": "Synthetic sequence/ownership/cleanup/gate tests and read-only actual main-input/runtime reconstruction; no live API calls.",
+  "model_generation_calls": 0,
+  "service_calls": 0,
+  "power_api_calls": 0,
+  "real_campaign_executions": 0,
+  "frozen_continuation_code_checks": {
+    "count": 38,
+    "all_unchanged": true
+  },
+  "superseded_attempt_refs": [
+    {
+      "path": "research/continuation_20261026/main_implementation/test_attempt01_failure.json",
+      "sha256": "6b0ec9d31ec9585c8aab79c90990b00a0463ff711e9c1bc1890b837a65f47c8a"
+    },
+    {
+      "path": "research/continuation_20261026/main_implementation/test_attempt02_pass.json",
+      "sha256": "c13aa4257a583d11f5a5b309c01f7f62c55837aa5abd70281ca8e87e9e39ec46"
+    }
+  ]
+}

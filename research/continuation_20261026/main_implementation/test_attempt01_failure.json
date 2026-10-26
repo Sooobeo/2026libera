@@ -1,0 +1,12 @@
+{
+  "version": "main_implementation_first_test_attempt",
+  "recorded_at_utc": "2026-10-26T00:24:20.429Z",
+  "status": "FAILED_BEFORE_ANY_MAIN_EXECUTION",
+  "test_count": 25,
+  "errors": 4,
+  "model_calls": 0,
+  "cause": "The new coordinator source adaptation accidentally renamed the preserved transport field continuation_eligible to main_eligible. Four orchestration tests raised KeyError. Restored continuation_eligible in the new coordinator only.",
+  "source_stability_limit": "Additional gate-only hardening and its fixture reason were written while the native first test launch was pending; this first run is not a stable-source acceptance even for passing tests.",
+  "old_frozen_or_live_files_changed": false,
+  "correction": "New run_sector_main.py field restored; fresh stable-hash full synthetic run follows."
+}

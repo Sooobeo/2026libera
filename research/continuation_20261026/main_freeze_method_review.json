@@ -1,0 +1,174 @@
+{
+  "version": "main_freeze_method_review_1",
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T00:31:40.394Z",
+  "scope": "Read-only static main freeze/gate/coordinator workflow and method-boundary review; not execution approval or actual continuation operating/semantic review",
+  "reviewer": "Codex AI assistance /root/method_audit; collaborator review, not independent human or statistical validation",
+  "main_execution_approved_by_this_review": false,
+  "actual_main_freeze_executed": false,
+  "model_generation_calls": 0,
+  "service_calls": 0,
+  "actual_continuation_output_reads": 0,
+  "code_refs": [
+    {
+      "path": "research/run_sector_main.py",
+      "sha256": "bed338d7815dcd3db1c056ffa5d1b1921ec0c95a7c811e473f8b244a04fef125"
+    },
+    {
+      "path": "research/sector_main_runtime.py",
+      "sha256": "ba0a11b99a2886f0485b8fe903115d19d3b2fec87eda3a28ec14b7e3e66c3113"
+    },
+    {
+      "path": "research/sector_main_gate.py",
+      "sha256": "f55e68ac24dc5feb340324f5e2f419632917105aabf1a4457a890c7b48853fcf"
+    },
+    {
+      "path": "research/sector_main_awake.py",
+      "sha256": "167ecdc9e9af71b35ffc608247dff7f122733b3c20011fb0b0716327ade83370"
+    },
+    {
+      "path": "research/test_sector_main.py",
+      "sha256": "f84ad858a40a994a5b8f76a6c12ebc1fc81cbe7c5c86283ca3a9360979deddda"
+    },
+    {
+      "path": "research/freeze_sector_main.py",
+      "sha256": "1cc382924483ef99d26109f130b7f59e88d26bdc2a84fbbe53d21b799599d2e6"
+    },
+    {
+      "path": "research/finalize_sector_campaign.py",
+      "sha256": "5036ddc1d856adf196fd1d2818ffeb8b3d9b3c98e65be5b6910cef59a9173a8e"
+    },
+    {
+      "path": "research/finalize_sector_allocation.py",
+      "sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3"
+    }
+  ],
+  "candidate_ref": {
+    "path": "research/continuation_20261026/main_protocol_candidate.json",
+    "sha256": "052c92f4867ce07265ff37bf05c72ab1eacf0ab2dc8324493d060702c3544440"
+  },
+  "prepared_manifest_ref": {
+    "path": "data/sector_protocol/v495_main_candidate_20261025/prepared/preparation_manifest.json",
+    "sha256": "feb0b889331bf20fc04595ee1395b1c61f41b2663b9ba4c0207397d023ba06b1"
+  },
+  "main_D0_preflight_ref": {
+    "path": "research/continuation_20261026/main_preflight/d0_capacity_r1/summary.json",
+    "sha256": "4acc84bcdec1ce3d80d057a80373c59803dba6efe7edd91bb1f03c1ef9befdb2"
+  },
+  "campaign_finalizer_review_ref": {
+    "path": "research/continuation_20261026/campaign_finalizer_review.json",
+    "sha256": "068d683ccaa298aeece0ad1bcccfca11bb8323adda1b730fdfba750e55c2a5cc"
+  },
+  "exact_math_acceptance_ref": {
+    "path": "research/recovery_20261025/allocation_finalization_acceptance_r2.json",
+    "sha256": "0232232baeb7e251aa0dee42bc9a1969f66615a1df4d303bccb67dd938b47d9e"
+  },
+  "evaluation_protocol_ref": {
+    "path": "research/v492_evaluation_protocol_20261019_r2.json",
+    "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+  },
+  "checks": [
+    {
+      "id": "distinct_prospective_reviews",
+      "pass": true,
+      "reason": "Freeze helper requires at least three distinct paths and content hashes, completed PASS status and all three reasoned axes before writing; nested references bind current main/freeze/test/finalizer source bytes. The execution gate rechecks distinct review hashes and main-module/test coverage."
+    },
+    {
+      "id": "operating_boundary",
+      "pass": true,
+      "reason": "Actual bound continuation terminal/summary must be cleanly terminal with all four independent cells addressed, same actual request accounting, verified awake release and an explicit evidence-based feasibility judgment. Ordinary structure/arithmetic/citation/semantic output failure is retained and is not a required success threshold."
+    },
+    {
+      "id": "prospective_design_and_endpoint",
+      "pass": true,
+      "reason": "Final main protocol must bind the unchanged candidate and prepared manifest, own operating review, original r2 evaluation, adopted exact-math acceptance, derived F0 primary endpoint and raw diagnostics. New main gate/freeze is required after the operating review and before execution. Candidate main_allowed=false remains unchanged."
+    },
+    {
+      "id": "fresh_namespace_and_immutability",
+      "pass": true,
+      "reason": "Fresh distinct raw/report trees and exclusive freeze/gate writes prevent implicit resume or replacement. Main gate rejects overlap with pilot/continuation raw/report trees. A failed postwrite gate validation leaves an invalid preserved attempt; a status label alone cannot authorize execution because coordinator/worker revalidate the gate."
+    },
+    {
+      "id": "five_cells_own_history_no_retry",
+      "pass": true,
+      "reason": "Coordinator requires the exact five main cases and at most ten generation attempts, each stage once. F0 is built from its own exact completed D0 and deterministic raw feedback. Normal unusable D0 skips dependent F0 but proceeds to other cells; system/instrument/cancellation stops retain missing cells. No pilot C or old D0 reuse."
+    },
+    {
+      "id": "raw_math_separation",
+      "pass": true,
+      "reason": "Unchanged pure finalizer54bf is invoked as a new sidecar after raw transport review; raw data and model instructions remain unchanged. F0 feedback still uses raw D0. Unavailable/malformed/ineligible vectors remain unavailable; no invented final and no semantic success conclusion from100%."
+    },
+    {
+      "id": "worker_transport_equivalence",
+      "pass": true,
+      "reason": "Ten shared top-level functions are text-identical to the reviewed continuation runtime. Worker differs only by assigning observed generation request count to main_model_calls in final accounting. validate_spec changes namespace/input/gate selection; actual body retains pinned scientific controls and exact rebuilt messages."
+    },
+    {
+      "id": "temporary_awake_ownership",
+      "pass": true,
+      "reason": "Main adapter changes only operational expiry to ten4500-second stages plus1800 seconds. Same-thread acquire/pulse/release is inherited, coordinator releases in finally and reports cleanup failure rather than certifying release."
+    },
+    {
+      "id": "main_D0_preflight_binding",
+      "pass": true,
+      "reason": "Read existing completed render-only native D0 preflight and independently rehashed58 unique nested references: all match. Five prompt counts plus8192 reserve are within65536; L/L/C prepared inputs identical. This review performed no service request and does not infer dynamic F0 capacity."
+    }
+  ],
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "Static control flow is fail-closed for stale scope/refs, prospective order, current implementation review and unaccounted system failures. Ordinary raw output errors remain outcomes. Duplicate review contents are rejected before freeze writes, and postwrite gate failure cannot launch the coordinator."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Exact current eight code refs, candidate, main manifest, native D0 capacity and accepted finalizers are bound. Source timing, actual own D0/full history, request cap/zero retries, same scientific controls and pilot/main separation remain explicit."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "Institution evidence, stated interpretation/reasons and actual raw allocation remain separately reviewable under E/L/C. Derived F0 is the declared operational pipeline endpoint; exact100% does not establish institutional fidelity, inference quality, causation, optimal allocation or realized performance."
+    }
+  },
+  "validation_scope": {
+    "static_reading_completed": true,
+    "main_runtime_tests_executed_by_this_reviewer": false,
+    "main_runtime_test_result": "Owner is executing the final synthetic suite separately; its exact test receipt is required independently. This PASS is static method/workflow review only.",
+    "test_source_reviewed": "Reviewed synthetic orchestration, source reconstruction/scientific controls, operational eligibility, cleanup and review-reference rejection cases; code hash bound.",
+    "preflight_refs_checked": 58,
+    "preflight_hash_failures": [],
+    "preflight_prompt_tokens": [
+      {
+        "case_id": "fidelity_q3_2026__E",
+        "prompt_tokens": 13277,
+        "total_with_output_reserve": 21469
+      },
+      {
+        "case_id": "fidelity_q3_2026__L",
+        "prompt_tokens": 12282,
+        "total_with_output_reserve": 20474
+      },
+      {
+        "case_id": "ubs_july_2026__E",
+        "prompt_tokens": 13288,
+        "total_with_output_reserve": 21480
+      },
+      {
+        "case_id": "ubs_july_2026__L",
+        "prompt_tokens": 12282,
+        "total_with_output_reserve": 20474
+      },
+      {
+        "case_id": "common_market_only__C",
+        "prompt_tokens": 12282,
+        "total_with_output_reserve": 20474
+      }
+    ],
+    "actual_F0_capacity": "Pending each future exact own raw D0; no synthetic capacity claim."
+  },
+  "remaining_before_execution": [
+    "Actual continuation completion/accounting and required stagewise reviews, with substantive operating_feasibility reason and preserved historical interruption.",
+    "Final main runtime test receipt and the other distinct completed code reviews.",
+    "New final protocol main_execution/protocol.json, reviewed runtime binding, explicit main freeze/gate and successful freeze_validation for exact current bytes.",
+    "Root-owned service/idle/path/AC launch checks; no launch from this static PASS alone."
+  ],
+  "reference_scope": "Preflight and accepted math reviews are corroborating records; this reviewer did not rerun their service calls or mathematical test suites. Bound pure finalizer and campaign adapter hashes match those previously reviewed receipts."
+}

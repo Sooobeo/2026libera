@@ -1,0 +1,69 @@
+{
+  "status": "historical_tests_passed_sources_changed_not_final_certification",
+  "started_at_utc": "2026-10-26T00:20:08.340Z",
+  "completed_at_utc": "2026-10-26T00:27:58.963Z",
+  "command": "python -m unittest discover -s research -p test_archive_sector_continuation.py -v",
+  "exit_code": 0,
+  "tests_run": 13,
+  "elapsed_test_seconds": 338.799,
+  "sources_before": [
+    {
+      "path": "research/archive_sector_continuation.py",
+      "sha256": "bec6926ff33eedfb7c7ae414f942827406f6d2985f61ea3928c30d2823e1166e",
+      "bytes": 22028
+    },
+    {
+      "path": "research/test_archive_sector_continuation.py",
+      "sha256": "ef34e9f2e8c6e30df47269c3da751d485ad5a38d0db6e4d89997b691e5b6d9ad",
+      "bytes": 15920
+    },
+    {
+      "path": "research/finalize_sector_campaign.py",
+      "sha256": "5036ddc1d856adf196fd1d2818ffeb8b3d9b3c98e65be5b6910cef59a9173a8e",
+      "bytes": 18803
+    },
+    {
+      "path": "research/finalize_sector_allocation.py",
+      "sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3",
+      "bytes": 21704
+    },
+    {
+      "path": "research/restore_research_artifacts.py",
+      "sha256": "080d93bb41a01a0625084f6b335795b0a3a11736234eda2abaed8bd14889beff",
+      "bytes": 3042
+    }
+  ],
+  "sources_after": [
+    {
+      "path": "research/archive_sector_continuation.py",
+      "sha256": "ef4ec5463d4ea57acd1895823e6e478800c24b0a2657cf75ae57b18599fc7439",
+      "bytes": 24000
+    },
+    {
+      "path": "research/test_archive_sector_continuation.py",
+      "sha256": "89bacc0efed188643ca87808cdac6c2a060402b3e779e5fb169a8f72ca7c4415",
+      "bytes": 20842
+    },
+    {
+      "path": "research/finalize_sector_campaign.py",
+      "sha256": "5036ddc1d856adf196fd1d2818ffeb8b3d9b3c98e65be5b6910cef59a9173a8e",
+      "bytes": 18803
+    },
+    {
+      "path": "research/finalize_sector_allocation.py",
+      "sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3",
+      "bytes": 21704
+    },
+    {
+      "path": "research/restore_research_artifacts.py",
+      "sha256": "080d93bb41a01a0625084f6b335795b0a3a11736234eda2abaed8bd14889beff",
+      "bytes": 3042
+    }
+  ],
+  "source_stable": false,
+  "reason": "Archive helper and test source were strengthened after parent and independent static review during the initial running test process. This initial loaded-code test result does not certify final on-disk bytes.",
+  "test_output": "test_CLI_without_explicit_execute_cannot_archive (test_archive_sector_continuation.ArchiveTests.test_CLI_without_explicit_execute_cannot_archive) ... ok\r\ntest_active_process_service_or_port_blocks_before_response_accounting (test_archive_sector_continuation.ArchiveTests.test_active_process_service_or_port_blocks_before_response_accounting) ... ok\r\ntest_byte_mutation_with_restored_size_mtime_leaves_failed_unverified_zip (test_archive_sector_continuation.ArchiveTests.test_byte_mutation_with_restored_size_mtime_leaves_failed_unverified_zip) ... ok\r\ntest_duplicate_overlap_external_root_and_archive_self_cycle_rejected (test_archive_sector_continuation.ArchiveTests.test_duplicate_overlap_external_root_and_archive_self_cycle_rejected) ... ok\r\ntest_existing_archive_and_corrupt_prior_archive_cannot_be_overwritten (test_archive_sector_continuation.ArchiveTests.test_existing_archive_and_corrupt_prior_archive_cannot_be_overwritten) ... ok\r\ntest_future_terminal_main_has_five_ten_and_explicit_main_state (test_archive_sector_continuation.ArchiveTests.test_future_terminal_main_has_five_ten_and_explicit_main_state) ... ok\r\ntest_main_pending_cannot_hide_new_main_declaration (test_archive_sector_continuation.ArchiveTests.test_main_pending_cannot_hide_new_main_declaration) ... ok\r\ntest_missing_release_loaded_model_or_incomplete_shutdown_fail_closed (test_archive_sector_continuation.ArchiveTests.test_missing_release_loaded_model_or_incomplete_shutdown_fail_closed) ... ok\r\ntest_new_file_appearing_during_snapshot_is_rejected (test_archive_sector_continuation.ArchiveTests.test_new_file_appearing_during_snapshot_is_rejected) ... ok\r\ntest_quiet_archive_verifies_exact_members_and_preserves_old_archive (test_archive_sector_continuation.ArchiveTests.test_quiet_archive_verifies_exact_members_and_preserves_old_archive) ... ok\r\ntest_second_quiet_probe_detects_new_writer_and_never_reports_success (test_archive_sector_continuation.ArchiveTests.test_second_quiet_probe_detects_new_writer_and_never_reports_success) ... ok\r\ntest_terminal_binding_and_accounting_mismatch_rejected (test_archive_sector_continuation.ArchiveTests.test_terminal_binding_and_accounting_mismatch_rejected) ... ok\r\ntest_unknown_main_status_or_missing_probe_data_is_not_quiet_success (test_archive_sector_continuation.ArchiveTests.test_unknown_main_status_or_missing_probe_data_is_not_quiet_success) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 13 tests in 338.799s\r\n\r\nOK\r\n",
+  "real_archive_created": false,
+  "real_model_calls": 0,
+  "real_service_or_process_calls": 0
+}

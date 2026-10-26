@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T00:30:15.983Z",
+  "review_scope": "Read-only static compatibility review; no archive execution and no live-state query.",
+  "source_refs": [
+    {
+      "path": "research/archive_sector_continuation.py",
+      "sha256": "ef4ec5463d4ea57acd1895823e6e478800c24b0a2657cf75ae57b18599fc7439"
+    },
+    {
+      "path": "research/run_sector_main.py",
+      "sha256": "bed338d7815dcd3db1c056ffa5d1b1921ec0c95a7c811e473f8b244a04fef125"
+    },
+    {
+      "path": "research/sector_main_awake.py",
+      "sha256": "167ecdc9e9af71b35ffc608247dff7f122733b3c20011fb0b0716327ade83370"
+    },
+    {
+      "path": "research/sector_continuation_awake.py",
+      "sha256": "2318c6acafc72d38c68109e7f1abcc45bc5e8cec428f90c0a63da88c5382825c"
+    }
+  ],
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "Canonical workspace/data/local_sector_runtime and each declared run.parent are checked before accounting or quiet probes; previously identified alternate-empty-parent bypass is closed."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Current main coordinator inherits exact acquisition PID/thread/flags 0x80000003 and release PID/thread/clear_flags 0x80000000 schema. The archive requires acquisition/release identity, no detached helper, and no permanent power settings change; no-acquire is restricted to zero attempts with no acquire event."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "This storage guard does not change source conditions, prompts, model controls, raw observations, denominators or main-versus-pilot separation."
+    }
+  },
+  "limitations": [
+    "No real main terminal or release exists yet. Compatibility was assessed from current source only.",
+    "Archive execution and restoration verification remain separate root-owned steps."
+  ],
+  "model_calls": 0,
+  "service_calls": 0,
+  "archive_executions": 0
+}

@@ -1,0 +1,114 @@
+{
+  "version": "continuation_archive_preparation_review_1",
+  "scope": "New archive helper and tempfile-only synthetic tests; actual continuation/main evidence has not been archived by this review.",
+  "independent_static_review": {
+    "reviewer": "/root/runtime_recovery",
+    "reviewed_helper_sha256": "ef4ec5463d4ea57acd1895823e6e478800c24b0a2657cf75ae57b18599fc7439",
+    "findings": [
+      "Canonical workspace/data/local_sector_runtime and every declared run.parent are bound before quiet/accounting, closing the independently found namespace bypass.",
+      "The separately prepared main runtime inherits the frozen CoordinatorAwake acquisition/release contract; PID, owner thread, 0x80000003 acquire flags, helper=false, 0x80000000 clear flags and permanent=false match.",
+      "No-request release is restricted to zero generation attempts and no acquisition event."
+    ],
+    "review_kind": "read_only_static_contract_review",
+    "actual_archive_execution": false,
+    "artifact_ref": {
+      "path": "research/continuation_20261026/main_implementation/archive_main_contract_review.json",
+      "sha256": "096fedc293d1dc9666b8be8ea9387b4e37ac61407120de38f5324f91e00efcfe",
+      "bytes": 1929
+    }
+  },
+  "guard_changes_after_initial_run": [
+    "Allow genuine Win32_Process PID 0 but reject bool/non-integer observations.",
+    "Bind successful release to exactly one matching acquisition PID/thread/flags event; no-request release requires zero requests and no acquisition.",
+    "Require canonical campaign namespace and every declared run parent; reject unlisted new main/continuation declarations.",
+    "Reserve ZIP exclusively before entering failure handling so a losing competing writer cannot write another attempt's failure receipt.",
+    "Record final ZIP byte size after member checksum verification."
+  ],
+  "guarantees_checked": [
+    "Terminal declaration/summary/hash and attempt-count binding before response accounting.",
+    "Verified owned-service shutdown reports zero resident models before stop, port closed, executable/PID/creation identity and existing unrelated listener unchanged.",
+    "Related process/listener quiescence before and after snapshot; no process or service mutations.",
+    "Path traversal, symlink/reparse, duplicate and overlapping roots, self-archive cycles and omitted source references fail closed.",
+    "Frozen executable hashes, all bound artifacts and previous archive dependencies are preserved and rechecked.",
+    "Exact ZIP inventory, source byte hashes and size/mtime inventory are checked before/after; changed or new evidence leaves an unverified preserved failure artifact.",
+    "Main pending versus explicitly included terminal main remains distinct; continuation4/8 and future main5/10 denominators come from the unchanged frozen campaign adapter.",
+    "Exclusive outputs, no deletion, no restoration and no success claim for partial/failed archives."
+  ],
+  "actual_archive_created": false,
+  "real_model_calls": 0,
+  "real_service_calls": 0,
+  "real_process_probe_calls": 0,
+  "frozen_source_edits": 0,
+  "ignore_changes": 0,
+  "git_operations": 0,
+  "limitations": [
+    "The prepared plan is an immutable continuation-only candidate with main pending. If main is later executed, create a new reviewed plan with terminal main roots, service/shutdown records and helper roots; this candidate will reject an unlisted new main.",
+    "No actual raw-evidence archive has yet been verified. Narrow duplicate ignores are eligible only after a later successful byte-verified archive, and only for exact archived duplicate members.",
+    "The archive is provenance preservation; it does not repair allocation/source/citation semantics or declare experimental success or main readiness."
+  ],
+  "future_command": "python research/archive_sector_continuation.py --plan research/continuation_20261026/archive_preparation/archive_plan_candidate.json --execute",
+  "execution_preconditions": "Only after all included campaigns are terminal, coordinator acquire/release receipts match, owned service is unloaded/stopped and all report writers are quiet. Use a new plan/stem for changed scope or a previous failed attempt.",
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T00:35:49.103Z",
+  "status_scope": "Implementation and synthetic guards accepted; actual archive execution and verification remain pending.",
+  "sources": [
+    {
+      "path": "research/archive_sector_continuation.py",
+      "sha256": "ef4ec5463d4ea57acd1895823e6e478800c24b0a2657cf75ae57b18599fc7439",
+      "bytes": 24000
+    },
+    {
+      "path": "research/test_archive_sector_continuation.py",
+      "sha256": "89bacc0efed188643ca87808cdac6c2a060402b3e779e5fb169a8f72ca7c4415",
+      "bytes": 20842
+    },
+    {
+      "path": "research/finalize_sector_campaign.py",
+      "sha256": "5036ddc1d856adf196fd1d2818ffeb8b3d9b3c98e65be5b6910cef59a9173a8e",
+      "bytes": 18803
+    },
+    {
+      "path": "research/finalize_sector_allocation.py",
+      "sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3",
+      "bytes": 21704
+    },
+    {
+      "path": "research/restore_research_artifacts.py",
+      "sha256": "080d93bb41a01a0625084f6b335795b0a3a11736234eda2abaed8bd14889beff",
+      "bytes": 3042
+    }
+  ],
+  "tests": {
+    "count": 18,
+    "exit_code": 0,
+    "elapsed_test_seconds": 442.326,
+    "source_stable": true,
+    "receipt_ref": {
+      "path": "research/continuation_20261026/archive_preparation/tests_final.json",
+      "sha256": "696b911683a01ef4de2ed7df76e08850ec8f2ea6dd301e9878e59e0775ae5a38"
+    }
+  },
+  "historical_initial_test_ref": {
+    "path": "research/continuation_20261026/archive_preparation/tests_initial_historical.json",
+    "sha256": "5f7c5733230c3842467e8ef4f6fb7814b5d39c5da07083d57a5f6e811e2e4461",
+    "note": "Initial 13 tests passed, but source changed during run; not final certification."
+  },
+  "candidate_plan_ref": {
+    "path": "research/continuation_20261026/archive_preparation/archive_plan_candidate.json",
+    "sha256": "fdd4b1cd2b1c950f68d752bdf966f2d2a2c48fd3c5762071aea797f58d2b375e"
+  },
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "18 meaningful tempfile-only tests pass on unchanged final source bytes, including active process/port, missing release, loaded-model shutdown, corrupted references, altered source bytes, unexpected files/campaigns, invalid raw namespace and exclusive-output races. Real archive not run."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Acquisition/release identity and no-acquire zero-attempt boundaries match the current frozen awake implementation and independently reviewed future main contract. Frozen finalizer hashes and reused fixture hashes remain unchanged; old archives are dependencies, never overwritten."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "The helper preserves raw failed/missing observations, planned continuation4/8 and future main5/10 denominators, and exact source/evidence/code provenance. It does not alter source conditions, prompts, mathematical rules or semantic evaluation, and keeps main-pending status separate from research readiness or success."
+    }
+  }
+}

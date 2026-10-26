@@ -1,0 +1,23 @@
+{
+  "status": "PASS_SUPERSEDED_BY_REVIEW_GUARD_HARDENING",
+  "observed_at_utc": "2026-10-26T00:27:48.980Z",
+  "command": "python -B -X utf8 -m unittest discover -s research -p test_sector_main.py -v",
+  "tests_run": 26,
+  "failures": 0,
+  "errors": 0,
+  "runner_reported_elapsed_seconds": 93.264,
+  "source_hashes": {
+    "research/sector_main_gate.py": "f16756758a22e16fd6125ff34d05d659afd1cd5e65fe03b212b742feafc79df2",
+    "research/sector_main_runtime.py": "3ff55be9f31120438eead4ed477bc1b94ef0f07075b8c3c8250ed5aab56cf60a",
+    "research/sector_main_awake.py": "167ecdc9e9af71b35ffc608247dff7f122733b3c20011fb0b0716327ade83370",
+    "research/run_sector_main.py": "bed338d7815dcd3db1c056ffa5d1b1921ec0c95a7c811e473f8b244a04fef125",
+    "research/test_sector_main.py": "b8220c72c3554b2f684bdaead9b66f89132aff8d65819258135c7b3b0043e9dd"
+  },
+  "source_hashes_equal_before_and_after": true,
+  "model_calls": 0,
+  "service_calls": 0,
+  "notes": [
+    "Synthetic tests and read-only local bundle reconstruction only.",
+    "This stable source revision passed; additional review coverage hardening is still pending."
+  ]
+}

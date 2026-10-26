@@ -1,0 +1,64 @@
+{
+  "version": "semantic_audit_preparer_test_review_2",
+  "status": "PASS_OFFLINE_FIXTURE_TESTS_NOT_SEMANTIC_OUTPUT_REVIEW",
+  "completed_at_utc": "2026-10-26T00:32:24.397Z",
+  "command": "python research/continuation_20261026/test_prepare_stage_semantic_audit.py",
+  "tests_run": 16,
+  "tests_passed": 16,
+  "test_seconds": 51.216,
+  "exit_code": 0,
+  "source_ref": {
+    "path": "research/continuation_20261026/prepare_stage_semantic_audit.py",
+    "sha256": "efb82936ee541f187d8b352a1a28afa8ecea3d83401439a6e92a82df9731fb04"
+  },
+  "test_ref": {
+    "path": "research/continuation_20261026/test_prepare_stage_semantic_audit.py",
+    "sha256": "2b9fbb5c6805398aa6abbfb6f756c66b430b5159ecd04f0a10001386204d7c71"
+  },
+  "plan_ref": {
+    "path": "research/continuation_20261026/semantic_audit_plan_r2.json",
+    "sha256": "b4510450b2639f6d1f27814f6932c81ef14ced2eae2758a05be827ed1bc3b4f8"
+  },
+  "model_calls": 0,
+  "service_calls": 0,
+  "live_pilot_outputs_read": 0,
+  "input_artifacts_modified": false,
+  "checks": [
+    "Failed or instrument-invalid stage does not open saved model response.",
+    "Missing stage review is not accepted.",
+    "Completed malformed/structure-failed output remains raw text with null numeric diagnostics.",
+    "Source-free stage keeps source fidelity not applicable; no invented rating.",
+    "Frozen response hash mismatch is refused.",
+    "F0 preserves exact own D0 text and raw deltas; another run prior response is refused.",
+    "Visible source packet must match frozen compact packet.",
+    "Citation membership does not become semantic support.",
+    "Duplicate keys, nonfinite constants and boolean weights are not silently accepted.",
+    "Negative raw values remain diagnostics rather than being normalized/clipped.",
+    "Decimal sums preserve digits beyond default Decimal context.",
+    "A normally stopped model_structure_failure with numeric literal1e400 in an unexpected field retains exact raw text, pending semantic review and null numeric diagnostic, and JSON serialization with allow_nan=False succeeds."
+  ],
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "Sixteen final-byte targeted boundary fixtures pass, including the root-identified binary-float overflow. No actual model output is graded and no inference/service request is made."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Helper writes only a new audit bundle; bound source/prepared inputs and raw output remain unchanged. All semantic categories remain pending until actual reading."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "The bundle exposes source meaning, stated reasons, actual raw weights, shared context and own-stage changes. Structural string/ID matches are explicitly not a source-use success score."
+    }
+  },
+  "limitations": [
+    "Sixteen synthetic tests are software checks, not evidence that any pending continuation output is correct.",
+    "No actual running stage was opened or graded in these tests.",
+    "Bound actual complete response integration remains to be used only once durable stage receipts exist."
+  ],
+  "supersedes_ref": {
+    "path": "research/continuation_20261026/semantic_audit_preparer_test_review.json",
+    "sha256": "fb7fe3fe1e8aafdad333a88678c2bcfefed124ac584a7d4a3513b559138ca8bd"
+  },
+  "quiet_after_final_tests": true
+}

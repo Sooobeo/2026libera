@@ -1,0 +1,107 @@
+{
+  "version": "main_root_static_review_1",
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T00:32:17.410Z",
+  "scope": "Independent root inspection of the separate main implementation and freeze workflow. Offline implementation review only, before any main model call; not an operating approval.",
+  "code_refs": [
+    {
+      "path": "research/run_sector_main.py",
+      "sha256": "bed338d7815dcd3db1c056ffa5d1b1921ec0c95a7c811e473f8b244a04fef125"
+    },
+    {
+      "path": "research/sector_main_runtime.py",
+      "sha256": "ba0a11b99a2886f0485b8fe903115d19d3b2fec87eda3a28ec14b7e3e66c3113"
+    },
+    {
+      "path": "research/sector_main_gate.py",
+      "sha256": "f55e68ac24dc5feb340324f5e2f419632917105aabf1a4457a890c7b48853fcf"
+    },
+    {
+      "path": "research/sector_main_awake.py",
+      "sha256": "167ecdc9e9af71b35ffc608247dff7f122733b3c20011fb0b0716327ade83370"
+    },
+    {
+      "path": "research/test_sector_main.py",
+      "sha256": "f84ad858a40a994a5b8f76a6c12ebc1fc81cbe7c5c86283ca3a9360979deddda"
+    },
+    {
+      "path": "research/freeze_sector_main.py",
+      "sha256": "1cc382924483ef99d26109f130b7f59e88d26bdc2a84fbbe53d21b799599d2e6"
+    },
+    {
+      "path": "research/finalize_sector_campaign.py",
+      "sha256": "5036ddc1d856adf196fd1d2818ffeb8b3d9b3c98e65be5b6910cef59a9173a8e"
+    },
+    {
+      "path": "research/finalize_sector_allocation.py",
+      "sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3"
+    }
+  ],
+  "supporting_refs": [
+    {
+      "path": "research/continuation_20261026/main_implementation/implementation_review.json",
+      "sha256": "0dfe741959245d2a88f07b2b6b0fd7935ca3cf245324445566378eed58afa086"
+    },
+    {
+      "path": "research/continuation_20261026/main_implementation/test_result.json",
+      "sha256": "e5f288845ddf1d65d7f73ef58ed205bf1500fed205382b9fd91f60507590aa19"
+    },
+    {
+      "path": "research/continuation_20261026/main_freeze_method_review.json",
+      "sha256": "01d91632fae19563e44a91cc8c04488e842ffc2369447244363df3aab60e1f5c"
+    },
+    {
+      "path": "research/continuation_20261026/main_protocol_candidate.json",
+      "sha256": "052c92f4867ce07265ff37bf05c72ab1eacf0ab2dc8324493d060702c3544440"
+    },
+    {
+      "path": "research/continuation_20261026/main_preflight/d0_capacity_r1/summary.json",
+      "sha256": "4acc84bcdec1ce3d80d057a80373c59803dba6efe7edd91bb1f03c1ef9befdb2"
+    },
+    {
+      "path": "research/continuation_20261026/campaign_finalizer_review.json",
+      "sha256": "068d683ccaa298aeece0ad1bcccfca11bb8323adda1b730fdfba750e55c2a5cc"
+    },
+    {
+      "path": "research/recovery_20261025/allocation_finalization_acceptance_r2.json",
+      "sha256": "0232232baeb7e251aa0dee42bc9a1969f66615a1df4d303bccb67dd938b47d9e"
+    }
+  ],
+  "findings_resolved": [
+    {
+      "finding": "Review count could be satisfied by repeated or unrelated PASS records.",
+      "resolution": "Require unique normalized paths and content hashes, current recursive code references for four main modules and test source; seven additional tests included in final33."
+    },
+    {
+      "finding": "Freeze helper initially could place freeze artifacts into its intended fresh execution-report folder.",
+      "resolution": "Reject freeze folder at or below raw/execution-report directories while allowing execution reports below the separate freeze/input folder."
+    },
+    {
+      "finding": "Freeze helper initially did not reject duplicate review content until the final gate validator.",
+      "resolution": "Check content-hash uniqueness before writing a freeze attempt."
+    }
+  ],
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "Inspected full main runtime, coordinator, awake adapter and gate, plus stage-review integration. Stable33-test record and distinct method review are bound. Own-response identity, structural failure accounting, hard-stop boundaries, current code refs and exclusive artifact writes are explicit. No actual main generation or completed operating gate is inferred from synthetic tests."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "All main controls are transformed back to and compared canonically with the original scientific runtime; only main scope metadata and owned service evidence may differ. Five fresh cases retain own exact D0/F0 history and ten-request maximum. Freeze creation requires actual continuation accounting/cleanup and separately reviewed protocol. Source/base finalizers and historical freezes remain unchanged."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "Early/late institution timing and common source-free control are retained. Raw source/claim/explanation errors and raw budget diagnostics remain visible, while the same deterministic10000-unit final allocation is prospectively declared as pipeline endpoint. No hidden institution target, success filtering, private cognition, population effect or independent sector-row sample is introduced."
+    }
+  },
+  "limits": [
+    "Full actual main gate validation occurs only after real continuation operating/semantic review and final main protocol exist.",
+    "The review does not certify unknown future F0 context capacity, which the unchanged exact tokenizer checks after each own actual D0.",
+    "Per-stage semantic support remains pending until actual full outputs and supplied evidence are read.",
+    "Code/source reviews are AI assisted; no independent-human or statistical reliability claim."
+  ],
+  "model_generation_calls": 0,
+  "main_allowed": false,
+  "frozen_continuation_sources_modified": false
+}

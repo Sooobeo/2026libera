@@ -1,0 +1,257 @@
+{
+  "version": "continuation_stage_semantic_audit_plan_2",
+  "status": "PLAN_AND_OFFLINE_PREPARER_NOT_ACTUAL_OUTPUT_REVIEW",
+  "created_at_utc": "2026-10-26T00:32:23.973Z",
+  "purpose": "One durable stage at a time, source-to-stated-reason-to-raw-allocation audit for the four continuation cells",
+  "model_generation_calls": 0,
+  "live_partial_outputs_read_as_final": false,
+  "scope": {
+    "case_order": [
+      "fidelity_q2_2026__L",
+      "ubs_june_2026__E",
+      "ubs_june_2026__L",
+      "common_market_only__C"
+    ],
+    "planned_stage_slots": 8,
+    "planned_new_F0_cells": 4,
+    "planned_new_F0_sector_rows": 44,
+    "source_conditioned_new_F0_sector_rows": 33,
+    "no_source_new_F0_sector_rows": 11,
+    "carried_Fidelity_E": "Previously completed E D0/F0 and original audits are referenced, not regenerated or silently re-audited as new observations.",
+    "attempt_accounting": "Original first-attempt dataset planned5cells/10slots/actual3 remains unchanged. New segment planned4cells/8slots/at most8attempts; combined campaign has at most11 attempts. Fidelity L D0 is the specifically authorized infrastructure retry. Its new F0 is its first F0, and may use only new own D0.",
+    "independence": "Sector rows and D0/F0 are not independent observations. Shared C, source family and market dependence remain."
+  },
+  "visibility": [
+    {
+      "case_id": "fidelity_q2_2026__L",
+      "D0": "common context+market only",
+      "F0": "same common context+market, own actual D0, deterministic raw feedback, fidelity_q2_2026 packet"
+    },
+    {
+      "case_id": "ubs_june_2026__E",
+      "D0": "common context+market and ubs_june_2026 packet",
+      "F0": "same common context+market, own actual D0, deterministic raw feedback, same UBS packet"
+    },
+    {
+      "case_id": "ubs_june_2026__L",
+      "D0": "common context+market only",
+      "F0": "same common context+market, own actual D0, deterministic raw feedback, ubs_june_2026 packet"
+    },
+    {
+      "case_id": "common_market_only__C",
+      "D0": "common context+market only",
+      "F0": "same common context+market, own actual D0, deterministic raw feedback, no institution packet"
+    }
+  ],
+  "rubric_ref": {
+    "path": "research/v492_evaluation_protocol_20261019_r2.json",
+    "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+  },
+  "readiness_boundary": {
+    "required": [
+      "Durable worker_spec.json, transport_result.json and stage_review.json for that one stage; identity/path/hash binding and instrument_integrity_pass true.",
+      "For text extraction: status completed or model_structure_failure, exactly one request, bound saved response equal to transport envelope, done=true and done_reason=stop. Structure failure text remains a measured result and may be manually reviewed.",
+      "Exact initial messages equal bound frozen preparation. Actual visible institutional packet equals frozen compact packet; no external packet is silently substituted.",
+      "For F0: bound own D0 response in this segment, exact prior text equality with raw_draft and assistant history; declared stage review remains the wider frozen-runtime lineage check."
+    ],
+    "failure_scope": "Missing receipts are pending, failed instrument binding is an integrity issue, timeout/output-limit/missing response is an explicitly unavailable completed-output review. Do not turn readable partial generation into a final or repair text. Terminal failures still get error/consistency/topic accounting from metadata.",
+    "semantic_pending": "Bundle creation and string/ID matches never constitute semantic review. Human-independent, statistical-independent or model-success claims cannot be inferred."
+  },
+  "workflow": [
+    {
+      "step": 1,
+      "name": "Bind and prepare the one durable stage",
+      "action": "Run prepare_stage_semantic_audit.py only after receipts exist. Exclusive output path must be under continuation_20261026 and its parent must exist. Preserve returned pending status or explicit unavailable reason."
+    },
+    {
+      "step": 2,
+      "name": "Read all actual source and decision fields",
+      "action": "Read the visible packet, operating brief/macro context, actual aligned market metrics, all actual sector source_reading and decision_reason fields, plus context_assessment, alternatives, risk_discussion, unresolved, constraints and any additional submitted claims. Do not skip supported material or choose only errors."
+    },
+    {
+      "step": 3,
+      "name": "Check source identity, meaning and citation entailment",
+      "action": "Separate issuer/source_id, original rating vocabulary, source passage meaning/scope and cited-ID membership. A label copied verbatim can coexist with an unsupported rationale; visible ID membership alone is insufficient. A reasonable inferential departure can be supported without verbatim copying or mandatory tilt."
+    },
+    {
+      "step": 4,
+      "name": "Check numerical claims and factual chronology",
+      "action": "Extract claim occurrences with exact output quote and pointer. Align sector by sector_code and market.sector_codes index; baseline_weights is a dictionary keyed by sector code. Record values, units, periods, subject/metric/version/formula, comparator and explicit computation. Do not use daily volatility as annualized without the supplied sqrt(252) conversion, conflate percent with decimal or a realized macro observation with a forecast."
+    },
+    {
+      "step": 5,
+      "name": "Check source-to-choice linkage and actual changes",
+      "action": "Use raw weights first, raw benchmark normalized weights and separately reported benchmark percent when relevant. Verify claimed above/below/neutral and raw own-D0 deltas without implying required institutional target weights. Preserve ambiguous benchmark-average/strongest wording as unresolved when multiple plausible interpretations remain."
+    },
+    {
+      "step": 6,
+      "name": "Review externally derived math separately",
+      "action": "Only after the manifest-bound deterministic finalizer sidecar exists: verify exact math refs, raw response binding, exact10000 units and same policy. Record scaling versus rounding, sign changes relative to comparator, concentration, zero/tie artifacts and unchanged versus changed own-D0/F0 vectors. Do not rewrite raw explanations or let derived100% validate a false raw sum/change claim."
+    },
+    {
+      "step": 7,
+      "name": "Persist bounded semantic record and three axes",
+      "action": "Write a NEW record with references, coverage, claim occurrences and unresolved/unaudited scope. Retain source-free applicability and failed-stage status. No global quality/pass score, condition winner or accuracy percentage. Read each output before any condition comparison."
+    },
+    {
+      "step": 8,
+      "name": "Independent review/reconciliation where used",
+      "action": "Provide a separate opaque one-output bundle plus necessary supplied evidence/rubric, without condition mapping, desired hypothesis or earlier audit. Source presence can reveal condition; disclose incomplete masking and AI assistance. Retain genuine disagreements with exact evidence instead of forced consensus."
+    }
+  ],
+  "review_record_requirements": {
+    "identity": [
+      "case_id",
+      "stage",
+      "review_completed_at_utc",
+      "reviewer_identity_and_AI_assistance",
+      "masking_scope",
+      "exact_bundle_and_artifact_refs"
+    ],
+    "coverage": [
+      "planned_rows",
+      "actual_rows",
+      "source_reading_rows_read",
+      "decision_reason_rows_read",
+      "top_level_fields_read",
+      "extracted_numeric_claim_occurrences",
+      "distinct_fact_families_if_used",
+      "unresolved_items",
+      "unaudited_scope_and_reason"
+    ],
+    "source_rows": [
+      "sector_code",
+      "output_JSON_pointer",
+      "exact_source_reading_quote",
+      "exact_decision_reason_quote",
+      "source_evidence_ID_and_source_pointer",
+      "original_published_label_or_null",
+      "source_metadata_issue_separate_from_meaning",
+      "supporting_and_competing_visible_evidence",
+      "raw_weight_and_claimed_comparator",
+      "category_and_reason"
+    ],
+    "numeric_claims": [
+      "occurrence_id",
+      "output_pointer",
+      "exact_quote",
+      "subject",
+      "metric",
+      "claimed_value_or_range",
+      "unit",
+      "period",
+      "source_ref",
+      "source_JSON_pointer",
+      "aligned_input_value",
+      "formula_and_conversion",
+      "outcome",
+      "reason"
+    ],
+    "numeric_outcomes": [
+      "supported_at_stated_precision",
+      "contradicted_by_supplied_input",
+      "small_display_precision_discrepancy",
+      "unresolved",
+      "missing_or_not_assessable"
+    ],
+    "evidence_decision_and_context_categories": [
+      "supported_link",
+      "unsupported_or_contradictory_link",
+      "unresolved",
+      "missing_or_not_assessable"
+    ],
+    "three_axes": {
+      "errors": "Record model numerical/source/citation/structure issues separately from audit/extraction/infrastructure errors. Review completeness does not mean no model errors.",
+      "consistency": "Actual supplied context/source/stage and immutable raw values agree with references; claims versus calculations assessed and ambiguities retained.",
+      "paper_topic": "Assess the institution evidence -> interpretation -> stated reasoning -> actual allocation chain. Code topic drift only from actual claims, not from arithmetic failure alone."
+    }
+  },
+  "counting_policy": {
+    "unit": "An extracted numeric claim occurrence is a quoted occurrence within an output field, not an independent fact or observation. Repeated quantities in multiple fields count as occurrences; list IDs so alternative family-grouped summaries can be reconciled.",
+    "exclude": "Do not count citation-ID digits, sector identifiers, JSON formatting or bare structural weight values as free-text factual claims. Structural raw vector and change diagnostics are separate tables.",
+    "rounding": "State the implied displayed precision and rounding rule. Keep a small display-precision discrepancy distinct from wrong sector, sign, value, metric, unit or date.",
+    "no_fraction_score": "Claim counts and coverage are descriptive; fewer claims or words must not mechanically count as stronger source preservation."
+  },
+  "source_free_rule": "For L D0 and C, institutional fidelity is not applicable. Do not impose a missing-source penalty or required citation count. Fabricated institutional attribution remains an assessable claim. Context and evidence-choice consistency still apply.",
+  "temporal_rule": "Use the same supplied July cutoff and distinguish document dates, view dates, macro release dates and observation periods. Older pilot documents do not imply their authors observed June updates. Local October retrieval does not establish exact historical availability.",
+  "tool_limits": [
+    "The helper prepares provenance, exact text, visible-ID occurrences and raw Decimal diagnostics. It does not perform entailment, select errors, score a decision or create normalized allocation.",
+    "Helper may extract explicit published rating sentences only; no inferred rating or common ordinal mapping.",
+    "The helper independently rebinds saved receipts, response, preparation and visible source packet; it relies on frozen stage review for full request/options/worker lineage checks beyond the exact refs it reopens.",
+    "Malformed normally stopped output remains text for manual review; missing/incomplete vectors get null diagnostics, never invented values.",
+    "No runtime/model imports, service calls, retries, code/prompt/settings changes or mutations of input artifacts.",
+    "Finite numeric literals beyond binary-float range are explicitly recorded as a parser-range diagnostic with original text preserved; this is not a claim that the literal is syntactically invalid JSON."
+  ],
+  "prepared_D0_refs": [
+    {
+      "case_id": "fidelity_q2_2026__L",
+      "path": "data/sector_protocol/v494_design_20261025/prepared/fidelity_q2_2026__L__D0_messages.json",
+      "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15"
+    },
+    {
+      "case_id": "ubs_june_2026__E",
+      "path": "data/sector_protocol/v494_design_20261025/prepared/ubs_june_2026__E__D0_messages.json",
+      "sha256": "a79a17fef00fc082860a4fde05c5ae41111dc2d4dc2bf96073f973bd5ae4ae27"
+    },
+    {
+      "case_id": "ubs_june_2026__L",
+      "path": "data/sector_protocol/v494_design_20261025/prepared/ubs_june_2026__L__D0_messages.json",
+      "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15"
+    },
+    {
+      "case_id": "common_market_only__C",
+      "path": "data/sector_protocol/v494_design_20261025/prepared/common_market_only__C__D0_messages.json",
+      "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15"
+    }
+  ],
+  "source_reference_precedence": "The actual bound worker messages govern what the model saw. Original packet/common-context files and the frozen compact aggregate are provenance references; reviewer-visible unsupplied extra information is not credited as model evidence.",
+  "references": [
+    {
+      "path": "data/sector_context/v491_20261019/common_context.json",
+      "sha256": "67d94bdee3d38854097970cdfb74f40e2557a11e22b016e9a68374e6f13cb96f"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/public_compact_candidate.json",
+      "sha256": "afe810b2bfb69ae4bfa372e65fa587bc6253eecf8028d5fde39cf3ec395bcb8d"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/response_schema.json",
+      "sha256": "944a232de9f4a1e9ae672b172196aa906077ee03c3f6bf2ab06ad032d6d0b147"
+    },
+    {
+      "path": "data/sector_documents/packets/pilot/fidelity_q2_2026.json",
+      "sha256": "2f506f346ebfc1be0f327163eb016dcec649e6301e4494d6a9230ab86c28d406"
+    },
+    {
+      "path": "data/sector_documents/packets/pilot/ubs_june_2026.json",
+      "sha256": "a5cadf72d68cafe46244c9bf8e500da04e1c58aef12eaf493e76408654e6148a"
+    },
+    {
+      "path": "data/sector_protocol/v494_design_20261025/prepared/preparation_manifest.json",
+      "sha256": "8023f8b11ec9b1d43bf1b5b08ac37ccbab4ac5ab7ad7de28a9e93d8e67a4ef29"
+    },
+    {
+      "path": "research/v492_evaluation_protocol_20261019_r2.json",
+      "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+    }
+  ],
+  "code_ref": {
+    "path": "research/continuation_20261026/prepare_stage_semantic_audit.py",
+    "sha256": "efb82936ee541f187d8b352a1a28afa8ecea3d83401439a6e92a82df9731fb04"
+  },
+  "test_ref": {
+    "path": "research/continuation_20261026/test_prepare_stage_semantic_audit.py",
+    "sha256": "2b9fbb5c6805398aa6abbfb6f756c66b430b5159ecd04f0a10001386204d7c71"
+  },
+  "example_command": "python research/continuation_20261026/prepare_stage_semantic_audit.py --stage-dir data/local_sector_runtime/<continuation-run>/<case>__<D0-or-F0> --output research/continuation_20261026/<new-stage-bundle>.json",
+  "supersedes_ref": {
+    "path": "research/continuation_20261026/semantic_audit_plan.json",
+    "sha256": "43d883afa3fadaf8a4e8d31fef58f34c845e66e711c10a724e93aa01d36db09f"
+  },
+  "revision": {
+    "trigger": "Root independent review found that a finite JSON literal such as1e400 can overflow Python float to infinity outside parse_constant checks.",
+    "change": "Default float parsing now explicitly rejects overflow with a parser-range diagnostic. The exact raw completed response remains in a serializable pending-semantic bundle; no weight or source field is invented, changed or normalized.",
+    "not_a_live_instrument_change": true,
+    "historical_plan_and_15test_receipt_preserved": true
+  }
+}

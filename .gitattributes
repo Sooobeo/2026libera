@@ -171,3 +171,10 @@
 /research/*continuation*.py -text
 # Override inherited PDF text-conversion attributes for these exact originals.
 /research/recovery_20261025/*.pdf binary
+
+# Preserve reviewed main execution code and terminal evidence archive bytes.
+/research/sector_main_*.py -text
+/research/run_sector_main.py -text
+/research/test_sector_main.py -text
+/research/freeze_sector_main.py -text
+/research/artifacts/continuation-evidence-20261026* -text
