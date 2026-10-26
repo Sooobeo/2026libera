@@ -1,0 +1,95 @@
+{
+  "version": "main_stage_semantic_preparer_review_1",
+  "status": "PASS",
+  "scope": "Offline postprocessing helper and synthetic fixture validation only; no main approval, actual bundle construction or semantic score.",
+  "reviewer": "Codex AI assistance /root/method_audit. Root separately read the completed helper and reported no blocking finding. This is not independent-human or statistical-rater validation.",
+  "model_generation_calls": 0,
+  "service_calls": 0,
+  "actual_experiment_responses_read_for_this_task": 0,
+  "actual_main_bundle_created": false,
+  "main_execution_allowed": false,
+  "code_refs": [
+    {
+      "path": "research/prepare_main_stage_semantic_audit.py",
+      "sha256": "1b0ddab86009b0865d3c80f5e8fe1e821f24851a377e8415e4aa6b68cd774156"
+    },
+    {
+      "path": "research/test_prepare_main_stage_semantic_audit.py",
+      "sha256": "86dbced4814ed5f621a9a79bad035a91372241be1fa306176110647557a1c225"
+    },
+    {
+      "path": "research/continuation_20261026/prepare_stage_semantic_audit.py",
+      "sha256": "efb82936ee541f187d8b352a1a28afa8ecea3d83401439a6e92a82df9731fb04"
+    },
+    {
+      "path": "research/sector_main_runtime.py",
+      "sha256": "ba0a11b99a2886f0485b8fe903115d19d3b2fec87eda3a28ec14b7e3e66c3113"
+    },
+    {
+      "path": "research/sector_main_gate.py",
+      "sha256": "f55e68ac24dc5feb340324f5e2f419632917105aabf1a4457a890c7b48853fcf"
+    },
+    {
+      "path": "research/test_build_campaign_masked_review.py",
+      "sha256": "1c9ecaafec005b1df49b53d135e406297a8d44b453801cd42c43f70b0b662302"
+    },
+    {
+      "path": "research/test_finalize_sector_campaign.py",
+      "sha256": "97fb3102ebce269889d087a4fb1c66ad736ba536fbedf2f3710975d4baf0810d"
+    }
+  ],
+  "original_evaluation_ref": {
+    "path": "research/v492_evaluation_protocol_20261019_r2.json",
+    "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+  },
+  "immutable_sources_unchanged": true,
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "Pending and failed transport or failed instrument integrity return unavailable without worker/response extraction; completed malformed text and finite JSON literals outside binary-float range remain exact raw text with parse diagnostics. Wrong case/run/source, substituted own history, missing durable review, wrong authority or math-sidecar lineage are rejected. The one initial test expectation failure was corrected only in the fixture test and passed a targeted rerun; the initial failure remains recorded."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Explicit main5 declaration and approved main gate are required. The unchanged real sector_main_runtime.validate_spec and validate_worker_location are invoked before evidence preparation; own prepared history, source timing, exact saved response and stage-review bindings are checked. Stable parser is imported with a pinned hash without changing old globals. Input hashes are checked again before returning."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "The bundle preserves actual institution/common evidence, exact raw response, own D0 and actual feedback so later reading can trace evidence to interpretation, stated reasons and allocation. It assigns no semantic score or invented rating. Separate deterministic allocation is optional read-only context and cannot establish raw claim truth."
+    }
+  },
+  "coverage": [
+    "Explicit main5 inventory; continuation-only helper remains byte-identical and in use.",
+    "Completed transport and durable stage-review authority precede worker/saved-response extraction. Noncompleted stages remain unavailable.",
+    "Exact own raw D0 and final feedback retained; cross-run/case substitutions rejected.",
+    "Malformed complete output remains reviewable; 1e400 cannot become a nonserializable Infinity in the bundle.",
+    "Source-free late D0/control evidence stays source-free. Main source identity/timing is checked against the case/stage.",
+    "Optional math sidecar is outside raw run, binds current spec/transport and finalized response, and remains read-only without recomputation or certification.",
+    "Semantic review remains pending until actual AI/human reading; semantic_rows_read is zero and numeric_claims_checked is null."
+  ],
+  "usage": {
+    "CLI": "python research/prepare_main_stage_semantic_audit.py --stage-dir <main-run>/<case>__D0_or_F0 --output research/continuation_20261026/<new-review>.json [--math-sidecar <separate-derived-sidecar>]",
+    "constraints": [
+      "Use only after completed transport and durable stage_review exist; no partial response inspection as final.",
+      "Output must be a new exclusive path under research/continuation_20261026; parent directory must exist.",
+      "Main gate approval and frozen source validation are required for actual use; this helper or review cannot approve execution.",
+      "Read all source/decision rows and top-level factual/change claims using original r2 dimensions; preserve unsupported, contradictory, unresolved and missing distinctions."
+    ]
+  },
+  "limitations": [
+    "Synthetic tests mock only the new helper validation boundary for fixture settings. They verify the call is mandatory and failures propagate; they do not substitute for actual future frozen main validation.",
+    "This preparer performs evidence binding and preservation, not semantic entailment, math recomputation or validated scoring.",
+    "No actual main-stage bundle has been built; there have been zero generation/service calls for this task.",
+    "Optional observed math sidecar is not treated as grounds for source fidelity or factual accuracy.",
+    "The future stage audit is unmasked and AI assisted; no balanced sample, independent human reliability, causal or investment-performance claim."
+  ],
+  "git_attributes_requested": [
+    "research/prepare_main_stage_semantic_audit.py -text",
+    "research/test_prepare_main_stage_semantic_audit.py -text"
+  ],
+  "completed_at_utc": "2026-10-26T01:12:39.334Z",
+  "test_result_ref": {
+    "path": "research/continuation_20261026/main_stage_semantic_preparer_test_result.json",
+    "sha256": "24561250b1f6b2a51bd1ce9ea0acb68ee66c544866a33b0b73d953bf465080f9"
+  },
+  "test_resolution": "All 17 distinct synthetic methods are verified: 16 unchanged methods passed in the initial 17-test run and the sole corrected fixture method passed separately. Initial assertion failure and exact correction remain in the test receipt. Production helper bytes were unchanged; no final-byte full-suite rerun is claimed."
+}

@@ -1,0 +1,118 @@
+{
+  "version": "main_stage_semantic_preparer_tests_1",
+  "status": "PASS_WITH_RETAINED_INITIAL_TEST_ASSERTION_FAILURE",
+  "completed_at_utc": "2026-10-26T01:12:39.161Z",
+  "scope": "Seventeen distinct synthetic test methods verified across one initial full invocation and one corrected targeted invocation. No full-suite rerun against the final test bytes is claimed.",
+  "model_generation_calls": 0,
+  "service_calls": 0,
+  "actual_experiment_responses_read": 0,
+  "final_code_refs": [
+    {
+      "path": "research/prepare_main_stage_semantic_audit.py",
+      "sha256": "1b0ddab86009b0865d3c80f5e8fe1e821f24851a377e8415e4aa6b68cd774156"
+    },
+    {
+      "path": "research/test_prepare_main_stage_semantic_audit.py",
+      "sha256": "86dbced4814ed5f621a9a79bad035a91372241be1fa306176110647557a1c225"
+    },
+    {
+      "path": "research/continuation_20261026/prepare_stage_semantic_audit.py",
+      "sha256": "efb82936ee541f187d8b352a1a28afa8ecea3d83401439a6e92a82df9731fb04"
+    },
+    {
+      "path": "research/sector_main_runtime.py",
+      "sha256": "ba0a11b99a2886f0485b8fe903115d19d3b2fec87eda3a28ec14b7e3e66c3113"
+    },
+    {
+      "path": "research/sector_main_gate.py",
+      "sha256": "f55e68ac24dc5feb340324f5e2f419632917105aabf1a4457a890c7b48853fcf"
+    },
+    {
+      "path": "research/test_build_campaign_masked_review.py",
+      "sha256": "1c9ecaafec005b1df49b53d135e406297a8d44b453801cd42c43f70b0b662302"
+    },
+    {
+      "path": "research/test_finalize_sector_campaign.py",
+      "sha256": "97fb3102ebce269889d087a4fb1c66ad736ba536fbedf2f3710975d4baf0810d"
+    }
+  ],
+  "initial_full_invocation": {
+    "command": "python -m unittest discover -s research -p test_prepare_main_stage_semantic_audit.py -v",
+    "working_directory": "C:/Users/Insun/2026libera",
+    "exit_code": 1,
+    "tests_run": 17,
+    "passed": 16,
+    "failures": 1,
+    "elapsed_seconds": 867.733,
+    "loaded_source_refs": [
+      {
+        "path": "research/prepare_main_stage_semantic_audit.py",
+        "sha256": "1b0ddab86009b0865d3c80f5e8fe1e821f24851a377e8415e4aa6b68cd774156"
+      },
+      {
+        "path": "research/test_prepare_main_stage_semantic_audit.py",
+        "sha256": "d4e440723241a79ede0277645e646caba65110aed60b5206e5b4fd87a3a9a576"
+      },
+      {
+        "path": "research/continuation_20261026/prepare_stage_semantic_audit.py",
+        "sha256": "efb82936ee541f187d8b352a1a28afa8ecea3d83401439a6e92a82df9731fb04"
+      },
+      {
+        "path": "research/sector_main_runtime.py",
+        "sha256": "ba0a11b99a2886f0485b8fe903115d19d3b2fec87eda3a28ec14b7e3e66c3113"
+      },
+      {
+        "path": "research/sector_main_gate.py",
+        "sha256": "f55e68ac24dc5feb340324f5e2f419632917105aabf1a4457a890c7b48853fcf"
+      }
+    ],
+    "stdout_and_stderr": "test_candidate_authority_is_rejected_before_runtime_validation (test_prepare_main_stage_semantic_audit.MainStageTests.test_candidate_authority_is_rejected_before_runtime_validation) ... ok\r\ntest_complete_raw_evidence_bundle_is_pending_and_read_only (test_prepare_main_stage_semantic_audit.MainStageTests.test_complete_raw_evidence_bundle_is_pending_and_read_only) ... ok\r\ntest_cross_case_worker_identity_is_rejected (test_prepare_main_stage_semantic_audit.MainStageTests.test_cross_case_worker_identity_is_rejected) ... FAIL\r\ntest_cross_run_response_ref_is_rejected (test_prepare_main_stage_semantic_audit.MainStageTests.test_cross_run_response_ref_is_rejected) ... ok\r\ntest_instrument_failure_does_not_extract_saved_text (test_prepare_main_stage_semantic_audit.MainStageTests.test_instrument_failure_does_not_extract_saved_text) ... ok\r\ntest_large_finite_literal_remains_exact_raw_and_serializable (test_prepare_main_stage_semantic_audit.MainStageTests.test_large_finite_literal_remains_exact_raw_and_serializable) ... ok\r\ntest_math_sidecar_is_bound_read_only_without_certification (test_prepare_main_stage_semantic_audit.MainStageTests.test_math_sidecar_is_bound_read_only_without_certification) ... ok\r\ntest_missing_durable_review_refuses_stage (test_prepare_main_stage_semantic_audit.MainStageTests.test_missing_durable_review_refuses_stage) ... ok\r\ntest_noncomplete_guard_does_not_open_worker_or_saved_response (test_prepare_main_stage_semantic_audit.MainStageTests.test_noncomplete_guard_does_not_open_worker_or_saved_response) ... ok\r\ntest_original_helper_bytes_and_global_root_unchanged (test_prepare_main_stage_semantic_audit.MainStageTests.test_original_helper_bytes_and_global_root_unchanged) ... ok\r\ntest_other_case_math_sidecar_refused (test_prepare_main_stage_semantic_audit.MainStageTests.test_other_case_math_sidecar_refused) ... ok\r\ntest_own_actual_D0_and_feedback_are_retained (test_prepare_main_stage_semantic_audit.MainStageTests.test_own_actual_D0_and_feedback_are_retained) ... ok\r\ntest_prior_response_from_other_case_is_rejected (test_prepare_main_stage_semantic_audit.MainStageTests.test_prior_response_from_other_case_is_rejected) ... ok\r\ntest_runtime_validation_failure_cannot_be_bypassed (test_prepare_main_stage_semantic_audit.MainStageTests.test_runtime_validation_failure_cannot_be_bypassed) ... ok\r\ntest_source_free_L_and_C_have_no_invented_source (test_prepare_main_stage_semantic_audit.MainStageTests.test_source_free_L_and_C_have_no_invented_source) ... ok\r\ntest_structure_failure_preserves_malformed_text (test_prepare_main_stage_semantic_audit.MainStageTests.test_structure_failure_preserves_malformed_text) ... ok\r\ntest_wrong_final_source_identity_is_rejected (test_prepare_main_stage_semantic_audit.MainStageTests.test_wrong_final_source_identity_is_rejected) ... ok\r\n\r\n======================================================================\r\nFAIL: test_cross_case_worker_identity_is_rejected (test_prepare_main_stage_semantic_audit.MainStageTests.test_cross_case_worker_identity_is_rejected)\r\n----------------------------------------------------------------------\r\nValueError: Stage review identity mismatch\r\n\r\nDuring handling of the above exception, another exception occurred:\r\n\r\nTraceback (most recent call last):\r\n  File \"C:\\Users\\Insun\\2026libera\\research\\test_prepare_main_stage_semantic_audit.py\", line 132, in test_cross_case_worker_identity_is_rejected\r\n    with self.assertRaisesRegex(ValueError, \"case/stage/run\"):\r\n         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError: \"case/stage/run\" does not match \"Stage review identity mismatch\"\r\n\r\n----------------------------------------------------------------------\r\nRan 17 tests in 867.733s\r\n\r\nFAILED (failures=1)\r\n",
+    "failure_classification": "Synthetic test expected the worker identity guard message, but its fixture update also changed stage_review identity and correctly triggered that earlier guard. No production helper defect was identified."
+  },
+  "fixture_correction": {
+    "file": "research/test_prepare_main_stage_semantic_audit.py",
+    "before_sha256": "d4e440723241a79ede0277645e646caba65110aed60b5206e5b4fd87a3a9a576",
+    "after_sha256": "86dbced4814ed5f621a9a79bad035a91372241be1fa306176110647557a1c225",
+    "before_text": "        with self.assertRaisesRegex(ValueError, \"case/stage/run\"):\n            audit.prepare(directory)",
+    "after_text": "        with self.assertRaisesRegex(ValueError, \"Stage review identity mismatch\"):\n            audit.prepare(directory)\n        review_path = directory / \"stage_review.json\"\n        review = read_json(review_path)\n        review[\"case_id\"] = self.case\n        write_json(review_path, review)\n        with self.assertRaisesRegex(ValueError, \"case/stage/run\"):\n            audit.prepare(directory)",
+    "initial_source_hash_reproduced_by_reverse_patch": "d4e440723241a79ede0277645e646caba65110aed60b5206e5b4fd87a3a9a576",
+    "change": "Assert the early stage-review identity mismatch, then restore correct stage-review identity and assert the separate worker case/stage/run guard.",
+    "changed_while_initial_process_used_previously_imported_test_code": true,
+    "production_helper_changed": false,
+    "other_test_methods_changed": false
+  },
+  "corrected_targeted_invocation": {
+    "command": "python -m unittest test_prepare_main_stage_semantic_audit.MainStageTests.test_cross_case_worker_identity_is_rejected -v",
+    "working_directory": "C:/Users/Insun/2026libera/research",
+    "exit_code": 0,
+    "tests_run": 1,
+    "passed": 1,
+    "failures": 0,
+    "elapsed_seconds": 47.987,
+    "loaded_code_refs": [
+      {
+        "path": "research/prepare_main_stage_semantic_audit.py",
+        "sha256": "1b0ddab86009b0865d3c80f5e8fe1e821f24851a377e8415e4aa6b68cd774156"
+      },
+      {
+        "path": "research/test_prepare_main_stage_semantic_audit.py",
+        "sha256": "86dbced4814ed5f621a9a79bad035a91372241be1fa306176110647557a1c225"
+      }
+    ],
+    "stdout_and_stderr": "test_cross_case_worker_identity_is_rejected (test_prepare_main_stage_semantic_audit.MainStageTests.test_cross_case_worker_identity_is_rejected) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 1 test in 47.987s\r\n\r\nOK\r\n"
+  },
+  "coverage_resolution": {
+    "unique_test_methods_verified": 17,
+    "unchanged_method_passes_from_initial_invocation": 16,
+    "corrected_method_passes_from_targeted_invocation": 1,
+    "full_suite_rerun_on_final_test_bytes": false,
+    "unresolved_test_failures": [],
+    "production_helper_sha_identical_across_invocations": true,
+    "final_source_hashes_rechecked_after_targeted_completion": true
+  },
+  "limits": [
+    "Tests use only synthetic temporary artifacts and mock the new helper validate_main_spec boundary for fixture settings. Actual production invokes the unchanged real main runtime validation; a specific test verifies validation exceptions cannot be bypassed.",
+    "The helper only binds and preserves evidence for future reading; no actual semantic ratings, normalization, model calls or main approval occurred.",
+    "The initial failed assertion remains in this receipt and is not rewritten as a successful initial run."
+  ]
+}
