@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T02:25:19Z",
+  "command": "python -m unittest discover -s research/completion_20261026 -p test_audit_stage_numerics.py -v",
+  "tests_run": 26,
+  "failures": 0,
+  "errors": 0,
+  "unittest_seconds": 4.984,
+  "exit_code": 0,
+  "source_ref": {
+    "path": "research/completion_20261026/audit_stage_numerics.py",
+    "sha256": "be17b72066bfabcf84bae6ff29a3bd1c0bbba45b83bbe34a0d8180c31c15b5a5"
+  },
+  "test_source_at_execution": {
+    "path": "research/completion_20261026/test_audit_stage_numerics.py",
+    "sha256": "f0814f75b5e8f6ce585bc9716788a34c9e3351a4c6ef9c4115cbc5371bd897fd",
+    "historical_execution_hash": true
+  },
+  "scope": "Synthetic arithmetic and adapter tests. Frozen guard re-execution is mocked in adapter unit fixtures; no live-stage integration or semantic grading claim.",
+  "model_calls": 0,
+  "service_calls": 0,
+  "actual_model_outputs_read": 0,
+  "subsequent_work": "Add explicit F0-to-own-D0 sidecar binding coverage before final review. Preserve this first execution receipt."
+}

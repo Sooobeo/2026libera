@@ -1,0 +1,162 @@
+{
+  "observation_version": "remaining_masked_validator_static_and_process_1",
+  "status": "slow_cpu_activity_observed_cause_not_fully_attributed",
+  "recorded_at_utc": "2026-10-26T06:47:48.989Z",
+  "target": {
+    "pid": 42572,
+    "start_time_utc": "2026-10-26T06:32:36.2809152Z",
+    "task": "Existing immutable remaining masked-review validation",
+    "new_duplicate_validation_started": false
+  },
+  "process_observations": [
+    {
+      "observed_at_utc": "2026-10-26T06:45:54.8256783Z",
+      "pid": 42572,
+      "start_time_utc": "2026-10-26T06:32:36.2809152Z",
+      "cpu_seconds": 80.328125,
+      "working_set_bytes": 49553408,
+      "private_bytes": 306532352,
+      "thread_count": 8,
+      "executable": "C:\\Users\\Insun\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+      "command_line": "\"C:\\Users\\Insun\\AppData\\Local\\Programs\\Python\\Python313\\python.exe\" -B -X utf8 research/build_remaining_masked_review.py --run-dir data/local_sector_runtime/v494_remaining_20261026 --terminal-receipt research/remaining_20261026/run_reports/terminal_receipt.json --output-dir research/remaining_20261026/masked_judge --mapping-dir research/remaining_20261026/masked_private",
+      "read_transfer_count": 659134374,
+      "write_transfer_count": 0,
+      "read_operation_count": 58493,
+      "write_operation_count": 0
+    },
+    {
+      "observed_at_utc": "2026-10-26T06:47:00.3339461Z",
+      "pid": 42572,
+      "start_time_utc": "2026-10-26T06:32:36.2809152Z",
+      "cpu_seconds": 81.59375,
+      "working_set_bytes": 49713152,
+      "private_bytes": 306569216,
+      "thread_count": 9
+    }
+  ],
+  "delta": {
+    "elapsed_observation_seconds": 65.508,
+    "cpu_seconds": 1.265625,
+    "exact_start_identity_unchanged": true
+  },
+  "probe_limits": {
+    "first_query_started_at": "2026-10-26T06:43:41.789Z",
+    "first_query_returned_at": "2026-10-26T06:46:33.792Z",
+    "first_query": "One exact PID Get-Process plus filtered Win32_Process CPU/I/O metadata",
+    "second_query_started_at": "2026-10-26T06:46:52.268Z",
+    "second_query_returned_at": "2026-10-26T06:47:02.788Z",
+    "second_query": "One exact PID Get-Process CPU-only metadata",
+    "io_is_cumulative_process_transfer_counters_not_physical_disk_rate": true
+  },
+  "code_refs": [
+    {
+      "path": "research/build_remaining_masked_review.py",
+      "sha256": "4ce9421049e83bc6e70b18095603bf05f2c36d8bb47a077875b8fbcdacd86a86"
+    },
+    {
+      "path": "research/finalize_sector_remaining.py",
+      "sha256": "8fa60d795bc5ea75226a97761a406468f824d004b18fe7ff3ba897ceda54fe12"
+    },
+    {
+      "path": "research/finalize_sector_completion.py",
+      "sha256": "7dab1d17a801e1d0beee5a669afa9c84adc2914d15715f0c82cfa97cfa45b253"
+    },
+    {
+      "path": "research/finalize_sector_campaign.py",
+      "sha256": "5036ddc1d856adf196fd1d2818ffeb8b3d9b3c98e65be5b6910cef59a9173a8e"
+    },
+    {
+      "path": "research/finalize_sector_allocation.py",
+      "sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3"
+    },
+    {
+      "path": "research/sector_remaining_runtime.py",
+      "sha256": "6f54562c29a2d26c4061c9d1a902609ce504346ccb82631ff0b5ec84764a3233"
+    },
+    {
+      "path": "research/sector_remaining_gate.py",
+      "sha256": "8b6cf29dfd103197ba8553da5265b5c121457f145205ff4ed0757102523fa54d"
+    },
+    {
+      "path": "research/sector_completion_runtime.py",
+      "sha256": "99395173cb3c030c06c456b4b4ae41a0f2cd157ce05b76e4b42b9696ed6e1ec2"
+    },
+    {
+      "path": "research/sector_completion_gate.py",
+      "sha256": "39c6cd80196bfdc25040f2cbf239cdfd9d562dab17ce3070fc38559ae41917b7"
+    },
+    {
+      "path": "research/sector_continuation_gate.py",
+      "sha256": "176d43c79da92299716a2509172741248ec2764bcd4869e1927cff70bd14dcb5"
+    },
+    {
+      "path": "research/sector_v494_runtime.py",
+      "sha256": "c9521000aa3a1497775c83fa83a1b9bac9f5443edbcb707f131d313f7cd8bed1"
+    },
+    {
+      "path": "research/sector_v494_review_gate.py",
+      "sha256": "07cac8a0606eff3dfeb1bc1e0b3786ff373ca49bb424edb20674033e28d7e194"
+    },
+    {
+      "path": "research/sector_v492_review_gate.py",
+      "sha256": "a93b575104509e9810663ec4feca3e6bbb6963ca03dd988b451e06744e23a092"
+    },
+    {
+      "path": "research/sector_v491_runtime.py",
+      "sha256": "a542a53ef7a9a035a3641e1e9637d3eb5bd442677318a82434e245bb1e5dc649"
+    },
+    {
+      "path": "research/prepare_sector_v491.py",
+      "sha256": "0e8188630a8b3a36da08671519b2bfeba7d3d2ca412568f789bfeca2ea4192e7"
+    },
+    {
+      "path": "research/remote_sector_runtime.py",
+      "sha256": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5"
+    }
+  ],
+  "preoutput_source_reference_metadata": {
+    "source_review_ref": {
+      "path": "research/v492_source_review_20261019.json",
+      "sha256": "3f6e4bd952b0bbf1d4e3487bb00a5e839a9f907038e43e895807425c21747718"
+    },
+    "files": 33,
+    "total_bytes": 4669049,
+    "content_inspected": false
+  },
+  "static_findings": [
+    "build_remaining_masked_review.build validates the whole run once, then remaining.finalize_remaining repeats authority and historical finalizers, then inspect_stage revalidates individual completed stages before output.mkdir.",
+    "remaining.validate_gate validates carried completion D0, including a second D0 validate_spec through validate_prior_draft, then revalidates the previous completion gate. Each lower gate leads through continuation, v494 and v492 historical gates.",
+    "F0 own-D0 validation recurses only to its D0; historical gate direction is to earlier segments. No same-stage unbounded validation cycle was found.",
+    "remote.sha reads entire referenced files each time; checked_ref may hash and then read/hash the same JSON again. No memoization or intermediate progress receipt exists in this call chain.",
+    "The v492 source review input list has33files totaling4669049bytes per source-reference sweep, including PDF/PNG evidence. Other code, prepared messages and completed prior evidence add repeated work.",
+    "In inspected offline validator functions, no NativeTokenizer construction, GGUF loading/hash, render request, generation request, service poll or subprocess wait is invoked. Native generation implementations are imported but not called by the masking path.",
+    "Output directories are intentionally created only after all validation and final unchanged-reference passes. Their absence alone cannot distinguish an early or late validation phase."
+  ],
+  "assessment": {
+    "current_cpu_activity_observed": true,
+    "deadlock_proven": false,
+    "completion_progress_percentage_known": false,
+    "finish_time_estimated": false,
+    "plausible_explanation": "Repeated inherited file hashing/JSON reconstruction, running slowly while another CPU workload exists; CPU/I/O snapshot is consistent with this but does not attribute wall time to scheduler, filesystem, security scanning or paging.",
+    "recommendation": "Keep the single existing task; use rare exact-PID CPU/I/O deltas or terminal/output existence as read-only progress observations. Do not duplicate, interrupt, weaken or patch frozen validators during generation."
+  },
+  "review_axes": {
+    "errors": {
+      "reviewed": true,
+      "reason": "No unbounded recursion or hidden model/service call found on the offline validation path; actual completion remains unverified."
+    },
+    "consistency": {
+      "reviewed": true,
+      "reason": "Both metadata observations bind the same PID creation identity, cumulative read659134374bytes and positive CPU delta; no root-owned process mutation."
+    },
+    "paper_topic": {
+      "reviewed": true,
+      "reason": "Investigation concerns reproducibility checks only; model options, scientific inputs, prior raw results and active C F0 output remain untouched."
+    }
+  },
+  "actual_current_partial_output_reads": 0,
+  "model_calls": 0,
+  "service_calls": 0,
+  "processes_interrupted": 0,
+  "frozen_files_modified": false
+}

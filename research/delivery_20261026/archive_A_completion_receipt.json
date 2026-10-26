@@ -1,0 +1,110 @@
+{
+  "status": "archive_A_created_and_independently_verified",
+  "completed_at_utc": "2026-10-26T07:10:52.507Z",
+  "plan_ref": {
+    "path": "research/completion_20261026/archive_preparation/archive_plan.json",
+    "sha256": "ad973a59f4cb2e8c408ed0ec45e62dd0723060e9bd07c0472e04dc18040ab954"
+  },
+  "archive_ref": {
+    "path": "research/artifacts/completion-evidence-20261026/completion-evidence-20261026.zip",
+    "sha256": "e58da63d4a6d18fe2c1f5780ab1918c659f19b903e79e47eccdeedf72b48467d"
+  },
+  "manifest_ref": {
+    "path": "research/artifacts/completion-evidence-20261026/completion-evidence-20261026.manifest.json",
+    "sha256": "2d5af9e39af65833c327c2e771ff72cfab2d6ccc82a8ce9b3af31f0e4d64bdcd"
+  },
+  "verification_ref": {
+    "path": "research/artifacts/completion-evidence-20261026/completion-evidence-20261026.verification.json",
+    "sha256": "bf26bbf89863774cbafc9a86a8e2d0251df76d60bcb68a550faf561928528c52"
+  },
+  "archive_command": {
+    "command": "python -B -X utf8 research/archive_sector_completion.py --plan research/completion_20261026/archive_preparation/archive_plan.json --execute",
+    "exit_code": 0,
+    "result": {
+      "status": "byte_verified_quiet_terminal_archive",
+      "verified_at_utc": "2026-10-26T07:10:06.425727+00:00",
+      "verified_files": 153,
+      "restored_files": 0,
+      "archive_sha256": "e58da63d4a6d18fe2c1f5780ab1918c659f19b903e79e47eccdeedf72b48467d",
+      "archive_bytes": 5564313,
+      "manifest": "research/artifacts/completion-evidence-20261026/completion-evidence-20261026.manifest.json",
+      "manifest_sha256": "2d5af9e39af65833c327c2e771ff72cfab2d6ccc82a8ce9b3af31f0e4d64bdcd",
+      "restore_performed": false,
+      "source_files_deleted": false,
+      "narrow_duplicate_ignore_eligible_only_for_exact_verified_members": true
+    }
+  },
+  "verifier_command": {
+    "command": "python -B -X utf8 research/restore_research_artifacts.py research/artifacts/completion-evidence-20261026/completion-evidence-20261026.manifest.json",
+    "exit_code": 0,
+    "result": {
+      "verified_files": 153,
+      "restored_files": 0,
+      "archive_sha256": "e58da63d4a6d18fe2c1f5780ab1918c659f19b903e79e47eccdeedf72b48467d"
+    }
+  },
+  "previous_dependency_count": 2,
+  "current_source_count": 153,
+  "prior_metadata_checks": [
+    {
+      "manifest_ref": {
+        "path": "research/artifacts/continuation-evidence-20261026/continuation-evidence-20261026.manifest.json",
+        "sha256": "2fb6a936eb90e1e2d8ddf574792e753c6bcda47adf153a703f4c8ce8251e5dbb"
+      },
+      "manifest_hash_matches": true,
+      "verification_ref": {
+        "path": "research/artifacts/continuation-evidence-20261026/continuation-evidence-20261026.verification.json",
+        "sha256": "b2ed9b53907fa4c0ca7d6e3778beb428d9b77d343f8dedf65e0d786b7b07eee4"
+      },
+      "verification_hash_matches": true,
+      "archive_path": "C:\\Users\\Insun\\2026libera\\research\\artifacts\\continuation-evidence-20261026\\continuation-evidence-20261026.zip",
+      "archive_bytes": 62374968,
+      "expected_archive_sha256": "c965185c723e28ed208c371a33766104303f04238d8621754649cddd4b894acc",
+      "declared_archive_hash_matches": true,
+      "member_count": 1365,
+      "verification_count_matches": true
+    },
+    {
+      "manifest_ref": {
+        "path": "C:\\Users\\Insun\\2026libera\\research\\artifacts\\recovery-evidence-20261025.manifest.json",
+        "sha256": "db4bff7ca169dc2303ab6dcb4e5cdc1da61817e1452c506b0b3fad0ce5790626"
+      },
+      "manifest_hash_matches": true,
+      "verification_ref": {
+        "path": "C:\\Users\\Insun\\2026libera\\research\\artifacts\\recovery-evidence-20261025.verification.json",
+        "sha256": "44b85b1230cf7191a2d66f64091135a5d9823947f6558a377da2cbe9f88a3a8c"
+      },
+      "verification_hash_matches": true,
+      "archive_path": "C:\\Users\\Insun\\2026libera\\research\\artifacts\\recovery-evidence-20261025.zip",
+      "archive_bytes": 42660143,
+      "expected_archive_sha256": "65ed7dfd16a66a9f4339150dc5b7884a04addbe34c43e3c60beb505754cec380",
+      "declared_archive_hash_matches": true,
+      "member_count": 565,
+      "verification_count_matches": true
+    }
+  ],
+  "prearchive_roots": {
+    "first_observed_at": "2026-10-26T07:09:27.128Z",
+    "second_observed_at": "2026-10-26T07:09:40.405Z",
+    "metadata_changes": [],
+    "count": 153,
+    "bytes": 5527491,
+    "overlapping_roots": [],
+    "missing_completion_sources": []
+  },
+  "new_B_plan_ref": {
+    "path": "research/remaining_20261026/archive_preparation/archive_plan.json",
+    "sha256": "b3a322679f17cfcc302fb4a2d03c9585ea0f9357328c1e800c1219d5929e3dd8"
+  },
+  "new_B_template_unchanged_ref": {
+    "path": "research/remaining_20261026/archive_preparation/archive_plan_template.json",
+    "sha256": "b5f0231e01d8d1fff08c5a907687544fe5cc4b865a67b9892f8e11caf0aa26ab"
+  },
+  "B_execution_waiting_for_root_writers_quiet": true,
+  "workspace_restore_writes": 0,
+  "source_files_modified": false,
+  "stage_or_commit_actions": 0,
+  "secret_scan_actions": 0,
+  "model_calls": 0,
+  "service_calls": 0
+}

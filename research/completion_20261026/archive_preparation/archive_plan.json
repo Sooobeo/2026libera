@@ -1,0 +1,52 @@
+{
+  "version": "sector_completion_archive_plan_1",
+  "archive_stem": "completion-evidence-20261026",
+  "output_directory": "research/artifacts/completion-evidence-20261026",
+  "campaigns": [
+    {
+      "purpose": "pilot_completion",
+      "run_directory": "data/local_sector_runtime/v494_completion_20261026",
+      "reports_directory": "research/completion_20261026/run_reports",
+      "service_receipt": "research/completion_20261026/runtime/service_ready/service_receipt.json",
+      "shutdown_receipt": "research/completion_20261026/runtime/service_ready/service_shutdown_receipt.json"
+    }
+  ],
+  "raw_campaign_parent": "data/local_sector_runtime",
+  "analysis_role": "primary_exploratory",
+  "new_main_state": {
+    "status": "excluded_not_run",
+    "reason": "User requested completion of the original five pilot conditions for a primary exploratory analysis; the separately prepared new-source main experiment remains excluded."
+  },
+  "previous_archives": [
+    {
+      "manifest_ref": {
+        "path": "research/artifacts/continuation-evidence-20261026/continuation-evidence-20261026.manifest.json",
+        "sha256": "2fb6a936eb90e1e2d8ddf574792e753c6bcda47adf153a703f4c8ce8251e5dbb"
+      },
+      "verification_ref": {
+        "path": "research/artifacts/continuation-evidence-20261026/continuation-evidence-20261026.verification.json",
+        "sha256": "b2ed9b53907fa4c0ca7d6e3778beb428d9b77d343f8dedf65e0d786b7b07eee4"
+      }
+    }
+  ],
+  "report_roots": [
+    "research/completion_20261026"
+  ],
+  "extra_roots": [
+    "research/archive_sector_completion.py",
+    "research/build_completion_masked_review.py",
+    "research/finalize_sector_completion.py",
+    "research/freeze_sector_completion.py",
+    "research/publish_completion_review_ack.py",
+    "research/run_sector_completion.py",
+    "research/sector_completion_awake.py",
+    "research/sector_completion_gate.py",
+    "research/sector_completion_runtime.py",
+    "research/test_archive_sector_completion.py",
+    "research/test_build_completion_masked_review.py",
+    "research/test_finalize_sector_completion.py",
+    "research/test_sector_completion.py",
+    "research/restore_research_artifacts.py"
+  ],
+  "execution_note": "Prepared only. Execute after the later remaining segment and its owned service are also quiet; this intermediate archive covers exactly the terminal one-call completion segment and its two available combined final cells."
+}

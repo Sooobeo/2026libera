@@ -1,0 +1,627 @@
+{
+  "version": "sector_remaining_archive_plan_template_1",
+  "status": "incomplete_not_executable",
+  "created_at_utc": "2026-10-26T03:06:45.344Z",
+  "actual_archive_execution_performed": false,
+  "model_calls": 0,
+  "service_calls": 0,
+  "actual_model_response_files_read": 0,
+  "frozen_files_modified": false,
+  "final_plan_path": "research/remaining_20261026/archive_preparation/archive_plan.json",
+  "template_not_an_executable_plan": true,
+  "draft_plan": {
+    "version": "sector_remaining_archive_plan_1",
+    "archive_stem": "remaining-evidence-20261026",
+    "output_directory": "research/artifacts/remaining-evidence-20261026",
+    "campaigns": [
+      {
+        "purpose": "pilot_completion_resume",
+        "run_directory": "data/local_sector_runtime/v494_remaining_20261026",
+        "reports_directory": "research/remaining_20261026/run_reports",
+        "service_receipt": "research/remaining_20261026/runtime/service_ready/service_receipt.json",
+        "shutdown_receipt": "research/remaining_20261026/runtime/service_ready/service_shutdown_receipt.json"
+      }
+    ],
+    "raw_campaign_parent": "data/local_sector_runtime",
+    "analysis_role": "primary_exploratory",
+    "new_main_state": {
+      "status": "excluded_not_run",
+      "reason": "The original five conditions constitute the amended primary exploratory analysis. Q3/July new-source main execution is excluded; the remaining segment only fills five never-attempted slots and preserves the completed external UBS E D0."
+    },
+    "previous_archives": [
+      {
+        "manifest_ref": {
+          "path": "research/artifacts/completion-evidence-20261026/completion-evidence-20261026.manifest.json",
+          "sha256": null
+        },
+        "verification_ref": {
+          "path": "research/artifacts/completion-evidence-20261026/completion-evidence-20261026.verification.json",
+          "sha256": null
+        },
+        "archive_ref": {
+          "path": "research/artifacts/completion-evidence-20261026/completion-evidence-20261026.zip",
+          "sha256": null
+        }
+      }
+    ],
+    "report_roots": [
+      "research/remaining_20261026"
+    ],
+    "extra_roots": [
+      "research/archive_sector_remaining.py",
+      "research/build_remaining_masked_review.py",
+      "research/finalize_sector_remaining.py",
+      "research/freeze_sector_remaining.py",
+      "research/publish_remaining_review_ack.py",
+      "research/run_sector_remaining.py",
+      "research/sector_remaining_awake.py",
+      "research/sector_remaining_gate.py",
+      "research/sector_remaining_runtime.py",
+      "research/test_archive_sector_remaining.py",
+      "research/test_build_remaining_masked_review.py",
+      "research/test_finalize_sector_remaining.py",
+      "research/test_sector_remaining.py",
+      "research/restore_research_artifacts.py"
+    ],
+    "execution_note": "ROOT ONLY after all remaining stages are terminal, audits and postprocessing writers quiet, same-thread awake release and owned-service model-free shutdown verified, and the completion archive plus its recursive dependency chain has been created and verified. This draft contains null hashes and cannot be executed."
+  },
+  "schema_source_ref": {
+    "path": "research/archive_sector_remaining.py",
+    "sha256": "572f77b81fc23c7b1c1b23d51bfab2cd63a1aaf65d2c1ebc7cc786943c1ca780"
+  },
+  "inherited_archive_source_ref": {
+    "path": "research/archive_sector_continuation.py",
+    "sha256": "ef4ec5463d4ea57acd1895823e6e478800c24b0a2657cf75ae57b18599fc7439"
+  },
+  "completion_plan_ref": {
+    "path": "research/completion_20261026/archive_preparation/archive_plan.json",
+    "sha256": "ad973a59f4cb2e8c408ed0ec45e62dd0723060e9bd07c0472e04dc18040ab954"
+  },
+  "pending_bindings": [
+    {
+      "json_pointer": "/draft_plan/previous_archives/0/manifest_ref/sha256",
+      "path": "research/artifacts/completion-evidence-20261026/completion-evidence-20261026.manifest.json",
+      "current_file_exists": false,
+      "value": null,
+      "requirement": "Compute SHA256 from the newly completed immutable metadata file after verifying its stated archive and member accounting."
+    },
+    {
+      "json_pointer": "/draft_plan/previous_archives/0/verification_ref/sha256",
+      "path": "research/artifacts/completion-evidence-20261026/completion-evidence-20261026.verification.json",
+      "current_file_exists": false,
+      "value": null,
+      "requirement": "Compute SHA256 from the newly completed immutable metadata file after verifying its stated archive and member accounting."
+    },
+    {
+      "json_pointer": "/draft_plan/previous_archives/0/archive_ref/sha256",
+      "path": "research/artifacts/completion-evidence-20261026/completion-evidence-20261026.zip",
+      "current_file_exists": false,
+      "value": null,
+      "requirement": "Use byte-verified completion ZIP SHA from the successful manifest and verification, both equal to actual ZIP bytes."
+    }
+  ],
+  "binding_and_execution_order": [
+    "Finish remaining campaign and all stage audits; retain any failures, missing stages and exact six historical plus at most five new attempts.",
+    "Verify coordinator release and root-owned service idle/shutdown; keep all raw/report writers quiet.",
+    "Root executes existing completion archive plan first and obtains its .zip, .manifest.json and .verification.json.",
+    "Check completion manifest previous_archive_dependencies preserves continuation and recovery dependencies; do not replace the chain with an invented verification claim.",
+    "Fill the three null SHA256 fields only from completed verified artifacts and save a NEW executable archive_plan.json containing draft_plan. Remove the draft-only execution note or replace it with final actual checks.",
+    "Re-enumerate remaining top-level source/test files and final reports; if new files exist, add only missing disjoint roots. Keep this template and final plan inside report_roots.",
+    "Root executes remaining archiver, which recursively re-verifies every dependency ZIP, quiet terminal ownership and all current member bytes."
+  ],
+  "expected_completion_outputs": [
+    {
+      "path": "research/artifacts/completion-evidence-20261026/completion-evidence-20261026.zip",
+      "exists_at_template_time": false
+    },
+    {
+      "path": "research/artifacts/completion-evidence-20261026/completion-evidence-20261026.manifest.json",
+      "exists_at_template_time": false
+    },
+    {
+      "path": "research/artifacts/completion-evidence-20261026/completion-evidence-20261026.verification.json",
+      "exists_at_template_time": false
+    }
+  ],
+  "recursive_dependency_chain": {
+    "status": "head_pending_existing_metadata_matches_previously_verified_chain",
+    "chain": [
+      "pending completion archive",
+      "existing continuation archive",
+      "existing recovery archive"
+    ],
+    "completion_declares": [
+      {
+        "manifest_ref": {
+          "path": "research/artifacts/continuation-evidence-20261026/continuation-evidence-20261026.manifest.json",
+          "sha256": "2fb6a936eb90e1e2d8ddf574792e753c6bcda47adf153a703f4c8ce8251e5dbb"
+        },
+        "verification_ref": {
+          "path": "research/artifacts/continuation-evidence-20261026/continuation-evidence-20261026.verification.json",
+          "sha256": "b2ed9b53907fa4c0ca7d6e3778beb428d9b77d343f8dedf65e0d786b7b07eee4"
+        }
+      }
+    ],
+    "continuation_declares": [
+      {
+        "manifest_ref": {
+          "path": "C:\\Users\\Insun\\2026libera\\research\\artifacts\\recovery-evidence-20261025.manifest.json",
+          "sha256": "db4bff7ca169dc2303ab6dcb4e5cdc1da61817e1452c506b0b3fad0ce5790626"
+        },
+        "verification_ref": {
+          "path": "C:\\Users\\Insun\\2026libera\\research\\artifacts\\recovery-evidence-20261025.verification.json",
+          "sha256": "44b85b1230cf7191a2d66f64091135a5d9823947f6558a377da2cbe9f88a3a8c"
+        },
+        "archive_ref": {
+          "path": "C:\\Users\\Insun\\2026libera\\research\\artifacts\\recovery-evidence-20261025.zip",
+          "sha256": "65ed7dfd16a66a9f4339150dc5b7884a04addbe34c43e3c60beb505754cec380"
+        }
+      }
+    ],
+    "metadata_hashes_checked": true,
+    "ZIP_bytes_reverified_by_this_task": false,
+    "required_on_actual_execution": "archive_sector_remaining.verified_dependencies recursively invokes restore(write=False); each chain manifest/verification/archive identity must agree. Existing ZIPs are separate dependencies, never new ZIP payload roots."
+  },
+  "scope_checks": {
+    "current_roots": [
+      "data/local_sector_runtime/v494_remaining_20261026",
+      "research/remaining_20261026",
+      "research/archive_sector_remaining.py",
+      "research/build_remaining_masked_review.py",
+      "research/finalize_sector_remaining.py",
+      "research/freeze_sector_remaining.py",
+      "research/publish_remaining_review_ack.py",
+      "research/run_sector_remaining.py",
+      "research/sector_remaining_awake.py",
+      "research/sector_remaining_gate.py",
+      "research/sector_remaining_runtime.py",
+      "research/test_archive_sector_remaining.py",
+      "research/test_build_remaining_masked_review.py",
+      "research/test_finalize_sector_remaining.py",
+      "research/test_sector_remaining.py",
+      "research/restore_research_artifacts.py"
+    ],
+    "duplicate_or_overlapping_roots": [],
+    "raw_run_included_once_by_campaigns": true,
+    "raw_parent_not_collected_as_payload": true,
+    "previous_zip_paths_excluded_from_roots": true,
+    "output_directory_disjoint_from_all_roots": true,
+    "top_level_remaining_sources_found": [
+      "research/archive_sector_remaining.py",
+      "research/build_remaining_masked_review.py",
+      "research/finalize_sector_remaining.py",
+      "research/freeze_sector_remaining.py",
+      "research/publish_remaining_review_ack.py",
+      "research/run_sector_remaining.py",
+      "research/sector_remaining_awake.py",
+      "research/sector_remaining_gate.py",
+      "research/sector_remaining_runtime.py",
+      "research/test_archive_sector_remaining.py",
+      "research/test_build_remaining_masked_review.py",
+      "research/test_finalize_sector_remaining.py",
+      "research/test_sector_remaining.py"
+    ],
+    "restore_helper_explicitly_included": true,
+    "prior_completion_raw_and_reports_covered_only_by_pending_dependency": true
+  },
+  "frozen_code_coverage": {
+    "freeze_ref": {
+      "path": "research/remaining_20261026/freeze.json",
+      "sha256": "3023c41e8832259d226dae5015b8b9e50370725436e096054d400c4d69e19461"
+    },
+    "count": 65,
+    "uncovered": [],
+    "hash_mismatches": [],
+    "entries": [
+      {
+        "path": "research/analyze_v492_pilot.py",
+        "sha256": "841c1f941e2c39165f84f51f5df283ca7a3c5727de285d4ad56edfa50166529f",
+        "current_sha256": "841c1f941e2c39165f84f51f5df283ca7a3c5727de285d4ad56edfa50166529f",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/benchmark_sector_latency.py",
+        "sha256": "0686444e608033be931922a26886ed4a4b5b0789385215b7b75bfacc4050458b",
+        "current_sha256": "0686444e608033be931922a26886ed4a4b5b0789385215b7b75bfacc4050458b",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/build_v492_masked_review.py",
+        "sha256": "f4f9295a657892431d76b79310b3af229dc5bc7d972b098adb10ff5dd29a1f77",
+        "current_sha256": "f4f9295a657892431d76b79310b3af229dc5bc7d972b098adb10ff5dd29a1f77",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/build_v494_masked_review.py",
+        "sha256": "8ed40877f82414678d5808181712813ad474ddf089a08a5ba06a7b7bcaa6d148",
+        "current_sha256": "8ed40877f82414678d5808181712813ad474ddf089a08a5ba06a7b7bcaa6d148",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/completion_20261026/prepare_stage_semantic_audit.py",
+        "sha256": "3d9c36405ad7b86e212d99480976af154397096491a36b1e365ee8f355799a90",
+        "current_sha256": "3d9c36405ad7b86e212d99480976af154397096491a36b1e365ee8f355799a90",
+        "coverage": "pending_completion_archive"
+      },
+      {
+        "path": "research/completion_20261026/runtime/start_isolated_cpu.ps1",
+        "sha256": "70671c42dfb16b1e3c434f80ef658d9f900393fc0894710b497e3fe28ba328a1",
+        "current_sha256": "70671c42dfb16b1e3c434f80ef658d9f900393fc0894710b497e3fe28ba328a1",
+        "coverage": "pending_completion_archive"
+      },
+      {
+        "path": "research/completion_20261026/runtime/stop_isolated_cpu.ps1",
+        "sha256": "c2c8cca784ab45c370ae8b89971dc45961675a72fdaf0e5fe9c120052f6c0ffb",
+        "current_sha256": "c2c8cca784ab45c370ae8b89971dc45961675a72fdaf0e5fe9c120052f6c0ffb",
+        "coverage": "pending_completion_archive"
+      },
+      {
+        "path": "research/completion_20261026/test_prepare_stage_semantic_audit.py",
+        "sha256": "0a5c58feb8b172adc70c02f59143276f09cb50fc135d8a96cde28a6b033b3ac3",
+        "current_sha256": "0a5c58feb8b172adc70c02f59143276f09cb50fc135d8a96cde28a6b033b3ac3",
+        "coverage": "pending_completion_archive"
+      },
+      {
+        "path": "research/continuation_20261026/prepare_stage_semantic_audit.py",
+        "sha256": "efb82936ee541f187d8b352a1a28afa8ecea3d83401439a6e92a82df9731fb04",
+        "current_sha256": "efb82936ee541f187d8b352a1a28afa8ecea3d83401439a6e92a82df9731fb04",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/continuation_20261026/runtime/start_isolated_cpu.ps1",
+        "sha256": "a141ff34d5ecf1f4325a9ef91275c57b785c2778db5d041e35acfcc1b8c6e1d3",
+        "current_sha256": "a141ff34d5ecf1f4325a9ef91275c57b785c2778db5d041e35acfcc1b8c6e1d3",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/continuation_20261026/runtime/stop_isolated_cpu.ps1",
+        "sha256": "218f0d5bba603e02f06d3a4f041b35d40d61b67015b5cc41dd6f2998c6294d55",
+        "current_sha256": "218f0d5bba603e02f06d3a4f041b35d40d61b67015b5cc41dd6f2998c6294d55",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/finalize_sector_allocation.py",
+        "sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3",
+        "current_sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/finalize_sector_campaign.py",
+        "sha256": "5036ddc1d856adf196fd1d2818ffeb8b3d9b3c98e65be5b6910cef59a9173a8e",
+        "current_sha256": "5036ddc1d856adf196fd1d2818ffeb8b3d9b3c98e65be5b6910cef59a9173a8e",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/finalize_sector_completion.py",
+        "sha256": "7dab1d17a801e1d0beee5a669afa9c84adc2914d15715f0c82cfa97cfa45b253",
+        "current_sha256": "7dab1d17a801e1d0beee5a669afa9c84adc2914d15715f0c82cfa97cfa45b253",
+        "coverage": "pending_completion_archive"
+      },
+      {
+        "path": "research/finalize_sector_remaining.py",
+        "sha256": "8fa60d795bc5ea75226a97761a406468f824d004b18fe7ff3ba897ceda54fe12",
+        "current_sha256": "8fa60d795bc5ea75226a97761a406468f824d004b18fe7ff3ba897ceda54fe12",
+        "coverage": "new_remaining_archive"
+      },
+      {
+        "path": "research/freeze_sector_completion.py",
+        "sha256": "d20b03493b219273bfdce83eb932f1115a7c3a14c8e36bc3f64fce1b6601c55f",
+        "current_sha256": "d20b03493b219273bfdce83eb932f1115a7c3a14c8e36bc3f64fce1b6601c55f",
+        "coverage": "pending_completion_archive"
+      },
+      {
+        "path": "research/freeze_sector_continuation.py",
+        "sha256": "ae6ee798da1ea538c7e8ed251d1802ef887e671b7ade5578ff33aaa4332978a7",
+        "current_sha256": "ae6ee798da1ea538c7e8ed251d1802ef887e671b7ade5578ff33aaa4332978a7",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/freeze_sector_remaining.py",
+        "sha256": "ad58a16fa3b33fd960cbe9d7ac64dc917d538240e9c660dc84540e6d315ed09f",
+        "current_sha256": "ad58a16fa3b33fd960cbe9d7ac64dc917d538240e9c660dc84540e6d315ed09f",
+        "coverage": "new_remaining_archive"
+      },
+      {
+        "path": "research/freeze_sector_v494.py",
+        "sha256": "2e40a2f9b646ad547987ac6ce9679e989792bd0b16e7525af2f22276c1801856",
+        "current_sha256": "2e40a2f9b646ad547987ac6ce9679e989792bd0b16e7525af2f22276c1801856",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/local_sector_single_case.py",
+        "sha256": "0b2596a223167136bb37578e86469d50c26e7883305d4db31f43b9ddd10d28d0",
+        "current_sha256": "0b2596a223167136bb37578e86469d50c26e7883305d4db31f43b9ddd10d28d0",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/prepare_sector_v491.py",
+        "sha256": "0e8188630a8b3a36da08671519b2bfeba7d3d2ca412568f789bfeca2ea4192e7",
+        "current_sha256": "0e8188630a8b3a36da08671519b2bfeba7d3d2ca412568f789bfeca2ea4192e7",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/prepare_sector_v492.py",
+        "sha256": "bc60c7ecb972ad2ce0d9df3f3e41f715264dbeb6a4b3a3838a13216a5c56b098",
+        "current_sha256": "bc60c7ecb972ad2ce0d9df3f3e41f715264dbeb6a4b3a3838a13216a5c56b098",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/prepare_sector_v494.py",
+        "sha256": "80d293ab0df0a209c234e3ab1136ac845fe6a5e81b1b68d543660cc19108e855",
+        "current_sha256": "80d293ab0df0a209c234e3ab1136ac845fe6a5e81b1b68d543660cc19108e855",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/probe_ollama_runtime.py",
+        "sha256": "2dd48936bbaf8fd090a26f92fd356fec3a11ac81e5b01b39d661ffe72552fddb",
+        "current_sha256": "2dd48936bbaf8fd090a26f92fd356fec3a11ac81e5b01b39d661ffe72552fddb",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/publish_completion_review_ack.py",
+        "sha256": "bf8708bb62a348c6dab3ace3c9a017fddc5302830b62f53deedfa98c36703603",
+        "current_sha256": "bf8708bb62a348c6dab3ace3c9a017fddc5302830b62f53deedfa98c36703603",
+        "coverage": "pending_completion_archive"
+      },
+      {
+        "path": "research/publish_remaining_review_ack.py",
+        "sha256": "f1ca48574ebb1a800eff55ef1af2fbae902db8e74d7825be22991183b90909f0",
+        "current_sha256": "f1ca48574ebb1a800eff55ef1af2fbae902db8e74d7825be22991183b90909f0",
+        "coverage": "new_remaining_archive"
+      },
+      {
+        "path": "research/recovery_20261025/method_build_audit.py",
+        "sha256": "b6254ac3f8a607b7a9602eb4bef89953ba7e6188cbf6227982106294c839b488",
+        "current_sha256": "b6254ac3f8a607b7a9602eb4bef89953ba7e6188cbf6227982106294c839b488",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/recovery_20261025/runtime/start_isolated_cpu.ps1",
+        "sha256": "ae44ac080a877e84b596b59894917f0226f6493660552428ac03c10c4187cfd8",
+        "current_sha256": "ae44ac080a877e84b596b59894917f0226f6493660552428ac03c10c4187cfd8",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/recovery_20261025/runtime/stop_isolated_cpu.ps1",
+        "sha256": "78eb6eeb3d8de0c2e7fbb21bc682d2af5ee5bb1db9a56b1f6eb42f54ecd5b732",
+        "current_sha256": "78eb6eeb3d8de0c2e7fbb21bc682d2af5ee5bb1db9a56b1f6eb42f54ecd5b732",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/remaining_20261026/prepare_stage_semantic_audit.py",
+        "sha256": "c4049ff6ed474200c5c358cb3448e5353096606acee27e0033b88e5a2410d21b",
+        "current_sha256": "c4049ff6ed474200c5c358cb3448e5353096606acee27e0033b88e5a2410d21b",
+        "coverage": "new_remaining_archive"
+      },
+      {
+        "path": "research/remaining_20261026/runtime/start_isolated_cpu.ps1",
+        "sha256": "3000833951aa21f5f0815f12b57212dcc810ffb1c14d61a1f7c7ab467f5e5f98",
+        "current_sha256": "3000833951aa21f5f0815f12b57212dcc810ffb1c14d61a1f7c7ab467f5e5f98",
+        "coverage": "new_remaining_archive"
+      },
+      {
+        "path": "research/remaining_20261026/runtime/stop_isolated_cpu.ps1",
+        "sha256": "4af1cba8e008406ee4431dad39cd1df47355f410132afb7c53b2329070f9131e",
+        "current_sha256": "4af1cba8e008406ee4431dad39cd1df47355f410132afb7c53b2329070f9131e",
+        "coverage": "new_remaining_archive"
+      },
+      {
+        "path": "research/remaining_20261026/test_prepare_stage_semantic_audit.py",
+        "sha256": "a4f7e2c4dd9c2e6e3449e03ae3f6cc02f5e678ab1e322c447c21065e8ec07a9b",
+        "current_sha256": "a4f7e2c4dd9c2e6e3449e03ae3f6cc02f5e678ab1e322c447c21065e8ec07a9b",
+        "coverage": "new_remaining_archive"
+      },
+      {
+        "path": "research/remote_sector_runtime.py",
+        "sha256": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5",
+        "current_sha256": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/review_sector_v494_stage.py",
+        "sha256": "81195353a74f00fde66e1915e068e9167966ccc3cb774b65ad929867bf44b3e6",
+        "current_sha256": "81195353a74f00fde66e1915e068e9167966ccc3cb774b65ad929867bf44b3e6",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/run_sector_completion.py",
+        "sha256": "53d795493e747eadb72c097cb98b0efe0649725187fe750e447e8d41fe3d7f65",
+        "current_sha256": "53d795493e747eadb72c097cb98b0efe0649725187fe750e447e8d41fe3d7f65",
+        "coverage": "pending_completion_archive"
+      },
+      {
+        "path": "research/run_sector_continuation.py",
+        "sha256": "15c74157f0169fca721671fe5219673f7c3296d42ebd984b2c326e0ab493b2cb",
+        "current_sha256": "15c74157f0169fca721671fe5219673f7c3296d42ebd984b2c326e0ab493b2cb",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/run_sector_remaining.py",
+        "sha256": "bd80d010815607ab0889be33a048adbe7defdab22420967aafc128791bbb40bd",
+        "current_sha256": "bd80d010815607ab0889be33a048adbe7defdab22420967aafc128791bbb40bd",
+        "coverage": "new_remaining_archive"
+      },
+      {
+        "path": "research/run_v494_recovery.py",
+        "sha256": "56fdb077c375ca4b99a110a93d81210a74812257cae3b0967b613f0b5de27576",
+        "current_sha256": "56fdb077c375ca4b99a110a93d81210a74812257cae3b0967b613f0b5de27576",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/sector_completion_awake.py",
+        "sha256": "f38bafe9bacdd87c3a4642193a9752c0c68552533528393b9b8b242a3b87996f",
+        "current_sha256": "f38bafe9bacdd87c3a4642193a9752c0c68552533528393b9b8b242a3b87996f",
+        "coverage": "pending_completion_archive"
+      },
+      {
+        "path": "research/sector_completion_gate.py",
+        "sha256": "39c6cd80196bfdc25040f2cbf239cdfd9d562dab17ce3070fc38559ae41917b7",
+        "current_sha256": "39c6cd80196bfdc25040f2cbf239cdfd9d562dab17ce3070fc38559ae41917b7",
+        "coverage": "pending_completion_archive"
+      },
+      {
+        "path": "research/sector_completion_runtime.py",
+        "sha256": "99395173cb3c030c06c456b4b4ae41a0f2cd157ce05b76e4b42b9696ed6e1ec2",
+        "current_sha256": "99395173cb3c030c06c456b4b4ae41a0f2cd157ce05b76e4b42b9696ed6e1ec2",
+        "coverage": "pending_completion_archive"
+      },
+      {
+        "path": "research/sector_continuation_awake.py",
+        "sha256": "2318c6acafc72d38c68109e7f1abcc45bc5e8cec428f90c0a63da88c5382825c",
+        "current_sha256": "2318c6acafc72d38c68109e7f1abcc45bc5e8cec428f90c0a63da88c5382825c",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/sector_continuation_gate.py",
+        "sha256": "176d43c79da92299716a2509172741248ec2764bcd4869e1927cff70bd14dcb5",
+        "current_sha256": "176d43c79da92299716a2509172741248ec2764bcd4869e1927cff70bd14dcb5",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/sector_continuation_runtime.py",
+        "sha256": "6ec09d1f524bda53c9cc80505ea4d47d13c211f159ff7c7702b6c3ba645d83f1",
+        "current_sha256": "6ec09d1f524bda53c9cc80505ea4d47d13c211f159ff7c7702b6c3ba645d83f1",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/sector_engine.py",
+        "sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c",
+        "current_sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/sector_remaining_awake.py",
+        "sha256": "2ef37fea357f69d78b267f3aa195c9ba7d9dde8bdecb931f59c49bab2a529307",
+        "current_sha256": "2ef37fea357f69d78b267f3aa195c9ba7d9dde8bdecb931f59c49bab2a529307",
+        "coverage": "new_remaining_archive"
+      },
+      {
+        "path": "research/sector_remaining_gate.py",
+        "sha256": "8b6cf29dfd103197ba8553da5265b5c121457f145205ff4ed0757102523fa54d",
+        "current_sha256": "8b6cf29dfd103197ba8553da5265b5c121457f145205ff4ed0757102523fa54d",
+        "coverage": "new_remaining_archive"
+      },
+      {
+        "path": "research/sector_remaining_runtime.py",
+        "sha256": "6f54562c29a2d26c4061c9d1a902609ce504346ccb82631ff0b5ec84764a3233",
+        "current_sha256": "6f54562c29a2d26c4061c9d1a902609ce504346ccb82631ff0b5ec84764a3233",
+        "coverage": "new_remaining_archive"
+      },
+      {
+        "path": "research/sector_v48_main_awake.py",
+        "sha256": "185a9f6be9471ff7808730153227682f0f0eae25f72ee1474602106a950fa98a",
+        "current_sha256": "185a9f6be9471ff7808730153227682f0f0eae25f72ee1474602106a950fa98a",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/sector_v48_transport.py",
+        "sha256": "db395eb3d54ebec93aa67556e1f2424aba1d591ba8b9fcfce7fbd3332db0379c",
+        "current_sha256": "db395eb3d54ebec93aa67556e1f2424aba1d591ba8b9fcfce7fbd3332db0379c",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/sector_v491_contract.py",
+        "sha256": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397",
+        "current_sha256": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/sector_v491_runtime.py",
+        "sha256": "a542a53ef7a9a035a3641e1e9637d3eb5bd442677318a82434e245bb1e5dc649",
+        "current_sha256": "a542a53ef7a9a035a3641e1e9637d3eb5bd442677318a82434e245bb1e5dc649",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/sector_v491_tokenizer.py",
+        "sha256": "1e25d31d18e659e90186d2a598d0bcad77824d0dbc5a0e76beed692a8373e440",
+        "current_sha256": "1e25d31d18e659e90186d2a598d0bcad77824d0dbc5a0e76beed692a8373e440",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/sector_v492_contract.py",
+        "sha256": "f77d1ddec9630a4c7edbf3928d298b7b05094345996ece1cf53d91fc40171a21",
+        "current_sha256": "f77d1ddec9630a4c7edbf3928d298b7b05094345996ece1cf53d91fc40171a21",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/sector_v492_review_gate.py",
+        "sha256": "a93b575104509e9810663ec4feca3e6bbb6963ca03dd988b451e06744e23a092",
+        "current_sha256": "a93b575104509e9810663ec4feca3e6bbb6963ca03dd988b451e06744e23a092",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/sector_v492_runtime.py",
+        "sha256": "cc8285db4d561aea10878db336771752965f4517405a93a1574b18f2fa300e04",
+        "current_sha256": "cc8285db4d561aea10878db336771752965f4517405a93a1574b18f2fa300e04",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/sector_v494_review_gate.py",
+        "sha256": "07cac8a0606eff3dfeb1bc1e0b3786ff373ca49bb424edb20674033e28d7e194",
+        "current_sha256": "07cac8a0606eff3dfeb1bc1e0b3786ff373ca49bb424edb20674033e28d7e194",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/sector_v494_runtime.py",
+        "sha256": "c9521000aa3a1497775c83fa83a1b9bac9f5443edbcb707f131d313f7cd8bed1",
+        "current_sha256": "c9521000aa3a1497775c83fa83a1b9bac9f5443edbcb707f131d313f7cd8bed1",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/test_finalize_sector_campaign.py",
+        "sha256": "97fb3102ebce269889d087a4fb1c66ad736ba536fbedf2f3710975d4baf0810d",
+        "current_sha256": "97fb3102ebce269889d087a4fb1c66ad736ba536fbedf2f3710975d4baf0810d",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/test_finalize_sector_completion.py",
+        "sha256": "1b3f7391ba93e8bebe8ea60118ef5056fcd77aaf490bdd09d80f8e636129e9fd",
+        "current_sha256": "1b3f7391ba93e8bebe8ea60118ef5056fcd77aaf490bdd09d80f8e636129e9fd",
+        "coverage": "pending_completion_archive"
+      },
+      {
+        "path": "research/test_finalize_sector_remaining.py",
+        "sha256": "07f919b028c820cc85cfb720968356bf5445f295f5b6b5013f697d7306f52300",
+        "current_sha256": "07f919b028c820cc85cfb720968356bf5445f295f5b6b5013f697d7306f52300",
+        "coverage": "new_remaining_archive"
+      },
+      {
+        "path": "research/test_sector_completion.py",
+        "sha256": "40ba9fccf9f1f4a425410f0df9e6e7baa139e483ca7ce0ea9ff03336f3595284",
+        "current_sha256": "40ba9fccf9f1f4a425410f0df9e6e7baa139e483ca7ce0ea9ff03336f3595284",
+        "coverage": "pending_completion_archive"
+      },
+      {
+        "path": "research/test_sector_continuation.py",
+        "sha256": "27f9ff3e827decda54bd37e45aa028cda25e5f2b71918c598a2994061d28e024",
+        "current_sha256": "27f9ff3e827decda54bd37e45aa028cda25e5f2b71918c598a2994061d28e024",
+        "coverage": "existing_verified_dependency_manifest"
+      },
+      {
+        "path": "research/test_sector_remaining.py",
+        "sha256": "4ec483f979ebfb51e0b60988b6de920b2babd0c4b2ed5dac8b53152a0aa8a820",
+        "current_sha256": "4ec483f979ebfb51e0b60988b6de920b2babd0c4b2ed5dac8b53152a0aa8a820",
+        "coverage": "new_remaining_archive"
+      }
+    ]
+  },
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "No invented hashes: three pending completion artifact SHA fields remain null, and the outer template version is deliberately not accepted by the archiver. The raw run appears only once; ZIP dependencies and archive output cannot be recursively collected."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "All 65 frozen code refs match current bytes and are covered by this remaining plan13, the planned completion archive13, or existing verified dependency manifests39. Existing continuation/recovery metadata hashes match their declared chain; ZIP bytes were not reverified here."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "The exact five remaining stage slots, external completed UBS E draft, six prior attempts, five-condition exploratory denominator and excluded new main remain recorded. Archive completion is not semantic or statistical success."
+    }
+  },
+  "limits": [
+    "Read-only code and metadata planning only; no raw response body, model, service, process or ZIP verification call.",
+    "The completion archive does not yet exist; current coverage through it is prospective and cannot be claimed as a completed backup.",
+    "Current remaining terminal/release/shutdown must be verified by root after the run; this template does not establish them."
+  ]
+}

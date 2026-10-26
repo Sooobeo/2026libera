@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T02:47:40.446Z",
+  "command": "python -m unittest discover -s research/remaining_20261026 -p test_audit_stage_numerics.py -v",
+  "tests_run": 12,
+  "failures": 0,
+  "errors": 0,
+  "unittest_seconds": 1.974,
+  "exit_code": 0,
+  "source_ref": {
+    "path": "research/remaining_20261026/audit_stage_numerics.py",
+    "sha256": "6d7d7a76448571da9a0bdf381da4ff7a0b4855992723534f9b4acbf326afe4a4"
+  },
+  "test_source_ref": {
+    "path": "research/remaining_20261026/test_audit_stage_numerics.py",
+    "sha256": "4f72a70e86b11db04825d3d1558b525dd466e02f7e9621795fb899cec12f41cd"
+  },
+  "guard_ref": {
+    "path": "research/remaining_20261026/prepare_stage_semantic_audit.py",
+    "sha256": "c4049ff6ed474200c5c358cb3448e5353096606acee27e0033b88e5a2410d21b"
+  },
+  "unchanged_numeric_source_ref": {
+    "path": "research/completion_20261026/audit_stage_numerics.py",
+    "sha256": "10ee4d79fdcdebd1adbdf3bba2278464e044bad6b19248aa601b4ed60daaa8b9"
+  },
+  "existing_arithmetic_29_test_ref": {
+    "path": "research/completion_20261026/independent_numeric_test_result_r3.json",
+    "sha256": "f374e5084feaabf91e49d81358c0707cc5a995d97cdec1c4fbf818db0d97fc4c"
+  },
+  "scope": "12 synthetic remaining-wrapper tests. New guard is mocked at the public re-execution boundary; exact numeric and artifact-role comparison functions are real. No actual remaining output exists or was read. Existing arithmetic source and29-test receipt remain unchanged.",
+  "model_calls": 0,
+  "service_calls": 0
+}

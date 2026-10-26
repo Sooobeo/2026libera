@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T02:19:27.429Z",
+  "command": [
+    "python",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "research",
+    "-p",
+    "test_archive_sector_completion.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "tests_run": 24,
+  "elapsed_test_seconds": 131.617,
+  "source_refs": [
+    {
+      "path": "research/archive_sector_completion.py",
+      "sha256": "7420abe9ec3a1e9822482be0c374c44b71df682e6f139c728ef4008ee94f7436"
+    },
+    {
+      "path": "research/test_archive_sector_completion.py",
+      "sha256": "ddf399db7785b572de9904ba679396a151409d385e96967dece59898d9924030"
+    }
+  ],
+  "source_hashes_match_tested_bytes": true,
+  "stdout_and_stderr": "test_CLI_without_explicit_execute_cannot_archive (test_archive_sector_completion.ArchiveTests.test_CLI_without_explicit_execute_cannot_archive) ... ok\r\ntest_active_process_service_or_port_blocks_before_response_accounting (test_archive_sector_completion.ArchiveTests.test_active_process_service_or_port_blocks_before_response_accounting) ... ok\r\ntest_archive_service_must_be_exact_runtime_bound_service (test_archive_sector_completion.ArchiveTests.test_archive_service_must_be_exact_runtime_bound_service) ... ok\r\ntest_byte_mutation_with_restored_size_mtime_leaves_failed_unverified_zip (test_archive_sector_completion.ArchiveTests.test_byte_mutation_with_restored_size_mtime_leaves_failed_unverified_zip) ... ok\r\ntest_completion_scope_cannot_include_previously_completed_Fidelity (test_archive_sector_completion.ArchiveTests.test_completion_scope_cannot_include_previously_completed_Fidelity) ... ok\r\ntest_duplicate_dependency_cannot_hide_a_conflicting_archive_ref (test_archive_sector_completion.ArchiveTests.test_duplicate_dependency_cannot_hide_a_conflicting_archive_ref) ... ok\r\ntest_duplicate_overlap_external_root_and_archive_self_cycle_rejected (test_archive_sector_completion.ArchiveTests.test_duplicate_overlap_external_root_and_archive_self_cycle_rejected) ... ok\r\ntest_exclusive_archive_race_cannot_write_competitors_failure_receipt (test_archive_sector_completion.ArchiveTests.test_exclusive_archive_race_cannot_write_competitors_failure_receipt) ... ok\r\ntest_existing_archive_and_corrupt_prior_archive_cannot_be_overwritten (test_archive_sector_completion.ArchiveTests.test_existing_archive_and_corrupt_prior_archive_cannot_be_overwritten) ... ok\r\ntest_finalizer_ack_or_accounting_failure_prevents_zip_creation (test_archive_sector_completion.ArchiveTests.test_finalizer_ack_or_accounting_failure_prevents_zip_creation) ... ok\r\ntest_main_pending_cannot_hide_new_main_declaration (test_archive_sector_completion.ArchiveTests.test_main_pending_cannot_hide_new_main_declaration) ... ok\r\ntest_missing_release_loaded_model_or_incomplete_shutdown_fail_closed (test_archive_sector_completion.ArchiveTests.test_missing_release_loaded_model_or_incomplete_shutdown_fail_closed) ... ok\r\ntest_nested_archive_reference_hash_must_match_verified_payload (test_archive_sector_completion.ArchiveTests.test_nested_archive_reference_hash_must_match_verified_payload) ... ok\r\ntest_nested_previous_zip_dependencies_are_verified_and_not_nested_as_payloads (test_archive_sector_completion.ArchiveTests.test_nested_previous_zip_dependencies_are_verified_and_not_nested_as_payloads) ... ok\r\ntest_new_file_appearing_during_snapshot_is_rejected (test_archive_sector_completion.ArchiveTests.test_new_file_appearing_during_snapshot_is_rejected) ... ok\r\ntest_no_request_release_requires_zero_attempts_and_no_acquisition_event (test_archive_sector_completion.ArchiveTests.test_no_request_release_requires_zero_attempts_and_no_acquisition_event) ... ok\r\ntest_quiet_archive_verifies_exact_members_and_preserves_old_archive (test_archive_sector_completion.ArchiveTests.test_quiet_archive_verifies_exact_members_and_preserves_old_archive) ... ok\r\ntest_raw_parent_cannot_be_redirected_to_hide_new_campaigns (test_archive_sector_completion.ArchiveTests.test_raw_parent_cannot_be_redirected_to_hide_new_campaigns) ... ok\r\ntest_release_binds_the_actual_acquisition_thread_and_unique_event (test_archive_sector_completion.ArchiveTests.test_release_binds_the_actual_acquisition_thread_and_unique_event) ... ok\r\ntest_second_quiet_probe_detects_new_writer_and_never_reports_success (test_archive_sector_completion.ArchiveTests.test_second_quiet_probe_detects_new_writer_and_never_reports_success) ... ok\r\ntest_terminal_binding_and_accounting_mismatch_rejected (test_archive_sector_completion.ArchiveTests.test_terminal_binding_and_accounting_mismatch_rejected) ... ok\r\ntest_unknown_main_status_or_missing_probe_data_is_not_quiet_success (test_archive_sector_completion.ArchiveTests.test_unknown_main_status_or_missing_probe_data_is_not_quiet_success) ... ok\r\ntest_unlisted_new_completion_cannot_be_hidden (test_archive_sector_completion.ArchiveTests.test_unlisted_new_completion_cannot_be_hidden) ... ok\r\ntest_windows_idle_pid_zero_is_valid_but_boolean_pid_is_not (test_archive_sector_completion.ArchiveTests.test_windows_idle_pid_zero_is_valid_but_boolean_pid_is_not) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 24 tests in 131.617s\r\n\r\nOK\r\n",
+  "frozen_code_ref": {
+    "path": "research/completion_20261026/freeze.json",
+    "sha256": "a9d6477dd7e776c5822c906654ee355f545f40c8a2fb43803d9ded7e7fe8334c"
+  },
+  "frozen_code_hashes_checked": 52,
+  "frozen_code_mismatches": [],
+  "scope": "Tempfile archives and synthetic process/listener observations. Only completion.finalize_completion integration boundary and source-path identities are mocked; real terminal/awake/runtime-service/path/snapshot/dependencyZIP/restore guards execute.",
+  "actual_raw_reads": false,
+  "model_calls": 0,
+  "service_calls": 0,
+  "real_windows_power_calls": 0,
+  "real_archive_created": false
+}

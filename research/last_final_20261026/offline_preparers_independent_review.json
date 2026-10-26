@@ -1,0 +1,137 @@
+{
+  "version": "last_final_offline_preparers_independent_review_1",
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T06:24:19.615Z",
+  "reviewer": "interruption_audit",
+  "scope": "Read-only independent full source/test review and recorded synthetic evidence verification. No active C F0 stage data, transport, stream, partial response, service or model accessed.",
+  "source_refs": [
+    {
+      "path": "research/last_final_20261026/prepare_stage_semantic_audit.py",
+      "sha256": "77e4509ef7f504825ea735eff4f0a8644631c4f8853566daa8e18ea77d5e57a3"
+    },
+    {
+      "path": "research/last_final_20261026/audit_stage_numerics.py",
+      "sha256": "916ae641d4e178b88d0b913e9a24a7ddcebe60efc178bf84ea0d3f73b95d0ae5"
+    },
+    {
+      "path": "research/last_final_20261026/test_prepare_stage_semantic_audit.py",
+      "sha256": "d652ac806103b6775a777a3932a175d38cb3daa5372d36ad9847dd45d8f39c7a"
+    },
+    {
+      "path": "research/last_final_20261026/test_audit_stage_numerics.py",
+      "sha256": "100c9761a136b4c6ddb58b163db85d73e949726ba62a16d82ed61e0b7747de59"
+    }
+  ],
+  "test_evidence_refs": [
+    {
+      "path": "research/last_final_20261026/implementation/semantic_preparer_tests.json",
+      "sha256": "9ab3d902f680ef2369f4182ca26de16614f48f454aae02a6168f3faaeddf44ca"
+    },
+    {
+      "path": "research/last_final_20261026/implementation/numeric_wrapper_tests.json",
+      "sha256": "763502d01382c35dc3c6715d5560ebd7b7f995f2abc45316c8179f20e0ea21b2"
+    }
+  ],
+  "pinned_inherited_and_authority_refs": [
+    {
+      "path": "research/continuation_20261026/prepare_stage_semantic_audit.py",
+      "sha256": "efb82936ee541f187d8b352a1a28afa8ecea3d83401439a6e92a82df9731fb04"
+    },
+    {
+      "path": "research/remaining_20261026/prepare_stage_semantic_audit.py",
+      "sha256": "c4049ff6ed474200c5c358cb3448e5353096606acee27e0033b88e5a2410d21b"
+    },
+    {
+      "path": "research/completion_20261026/audit_stage_numerics.py",
+      "sha256": "10ee4d79fdcdebd1adbdf3bba2278464e044bad6b19248aa601b4ed60daaa8b9"
+    },
+    {
+      "path": "research/last_final_20261026/runtime_adapter.py",
+      "sha256": "3af1ba401fd37d1afb17a866295b87131d5aeaff3234f78235eba96e48a5cfb6"
+    },
+    {
+      "path": "research/last_final_20261026/freeze.json",
+      "sha256": "d8de9ed89e07f277b3702474df44e9b327f74c3cec1d1683abad0e605dbaaa6e"
+    },
+    {
+      "path": "research/last_final_20261026/review_gate.json",
+      "sha256": "1d8b9354d623ba92a4b371f8893bde0e2c230071c77d2249e21029c06704c46b"
+    }
+  ],
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "The current-stage completed/model_structure_failure transport and instrument guard precedes separate response extraction. It requires nonempty true checks, current response/spec/transport refs, typed single attempt, exact worker/supervisor outcome and one generation directory. Missing/partial/bad-instrument data is unavailable without extracting response text; stale/foreign refs fail closed. Full current gate, external draft and worker validation remain mandatory. Exclusive safe serialization cannot overwrite raw or an existing report."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Only current common_market_only__C__F0 is accepted. The external D0 is the exact fixed previous remaining C D0 with five artifacts, late semantic/validation/root evidence, original declaration/math and preserved absent old ACK. Initial prepared messages, exact raw assistant history, no institutional packet, visible IDs and all hashes are rechecked. Numeric wrapper requires a freshly regenerated identical guarded bundle and separately bound current/old declarations and sidecars; it never substitutes same-run or another-case D0."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "Parser extracts all sector/source-reading/reason/citation fields and raw changes as pending actual semantic review, with source-free institutional fidelity N/A. It does not turn visible IDs or text matches into entailment or scores. Fixed exact numerical helpers independently separate raw/derived weights, normalization and quantization, own-D0 deltas and benchmark directions; no prose grading, model reasoning repair, causal/performance or independent-human claims are introduced."
+    }
+  },
+  "independent_static_checks": {
+    "prior_guard_functions_exact": [
+      "workspace_path",
+      "read_stable",
+      "read_bound",
+      "same_ref",
+      "require",
+      "guard"
+    ],
+    "accepted_parser_sha256": "efb82936ee541f187d8b352a1a28afa8ecea3d83401439a6e92a82df9731fb04",
+    "accepted_numeric_sha256": "10ee4d79fdcdebd1adbdf3bba2278464e044bad6b19248aa601b4ed60daaa8b9",
+    "new_guard_pin_matches": true,
+    "tested_source_reference_checks": 7,
+    "tested_source_mismatches": 0,
+    "no_global_monkeypatch_in_production": true,
+    "actual_future_stage_integration_performed": false
+  },
+  "test_evidence": {
+    "semantic": {
+      "owner_tests": 11,
+      "failures": 0,
+      "errors": 0,
+      "exit_code": 0,
+      "seconds": 4.143,
+      "independently_rerun": false,
+      "mocked_boundaries": [
+        "adapter.validate_gate",
+        "adapter.validated_external_draft",
+        "adapter.validate_prior_draft",
+        "adapter.verify_nested_refs",
+        "validate_worker_spec"
+      ],
+      "scope": "Tempfile synthetic current C F0 and external old C D0; real completed/instrument/hash/history/source-free/scope/parse/exclusive-write checks. Full runtime authority delegates mocked explicitly."
+    },
+    "numeric": {
+      "owner_tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "exit_code": 0,
+      "seconds": 3.088,
+      "independently_rerun": false,
+      "scope": "Synthetic wrapper boundaries with guarded-bundle rebuilding mocked; unchanged accepted numeric implementation. Actual new C F0 integration remains pending."
+    }
+  },
+  "findings": [],
+  "limits": [
+    "Actual new F0 bundle preparation must wait for durable stage_review and terminal transport; this review does not certify an unseen future output.",
+    "Synthetic semantic tests mock the full runtime authority delegates, while exercising their mandatory rejection propagation and real local hash/history/guard checks. Numeric tests mock guarded-bundle rebuilding; real completed-stage integration remains pending.",
+    "A model_structure_failure may be read only as a finished instrument-bound observation; it is not a valid accepted final allocation.",
+    "Numerical facts and visible citation availability are aids to subsequent full prose/entailment audit; no automatic semantic judgment or composite score is produced.",
+    "The offline preparers are separately versioned postprocessing, outside the generation freeze, and are explicitly hashed in produced artifacts."
+  ],
+  "operations": {
+    "model_calls": 0,
+    "service_calls": 0,
+    "actual_current_C_F0_output_reads": 0,
+    "native_power_calls": 0,
+    "frozen_source_changes": 0,
+    "old_artifact_changes": 0,
+    "ACK_publications": 0
+  },
+  "writer_quiet": true
+}

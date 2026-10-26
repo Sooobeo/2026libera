@@ -1,0 +1,47 @@
+{
+  "version": "completion_offline_test_run_1",
+  "started_at_utc": "2026-10-26T02:02:30.291Z",
+  "completed_at_utc": "2026-10-26T02:02:49.723Z",
+  "status": "process_exit_zero_output_capture_incomplete",
+  "command": [
+    "python",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "research",
+    "-p",
+    "test_sector_completion.py",
+    "-v"
+  ],
+  "source_refs": [
+    {
+      "path": "research/sector_completion_gate.py",
+      "sha256": "39c6cd80196bfdc25040f2cbf239cdfd9d562dab17ce3070fc38559ae41917b7"
+    },
+    {
+      "path": "research/sector_completion_runtime.py",
+      "sha256": "99395173cb3c030c06c456b4b4ae41a0f2cd157ce05b76e4b42b9696ed6e1ec2"
+    },
+    {
+      "path": "research/sector_completion_awake.py",
+      "sha256": "f38bafe9bacdd87c3a4642193a9752c0c68552533528393b9b8b242a3b87996f"
+    },
+    {
+      "path": "research/run_sector_completion.py",
+      "sha256": "dd3aded467dedaef012ee9b6dcefa9af80a59412aa9de800b4927b79273eca7b"
+    },
+    {
+      "path": "research/test_sector_completion.py",
+      "sha256": "4c139eef79c9c235e5eeeb2b393a367ff3390380ce7bfd8c687b74eb773a6c5d"
+    }
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "unittest normally writes to stderr; capture via subprocess needed for evidence",
+  "model_calls": 0,
+  "limitation": "execFileSync returned stdout only on success; stderr containing count was not retained. Next bounded rerun captures both streams."
+}

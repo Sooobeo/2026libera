@@ -1,0 +1,128 @@
+{
+  "schema_version": "last_final_root_semantic_review_1",
+  "review_status": "completed",
+  "completed_at_utc": "2026-10-26T07:09:23.308Z",
+  "case_id": "common_market_only__C",
+  "stage": "F0",
+  "reviewer": "root Codex, unmasked AI-assisted second reading",
+  "source_refs": [
+    {
+      "path": "research/last_final_20261026/semantic/common_market_only__C__F0_review.json",
+      "sha256": "eea3f3f8ce10f4d3e20625716cf69571b23a9790d74d3e22684ee19dc1e42344"
+    },
+    {
+      "path": "research/last_final_20261026/semantic/common_market_only__C__F0_review_validation.json",
+      "sha256": "63635dbbcc94a4a06b5da96dd89ddbfe68d9e1e99fb373711406e1571cc0d590"
+    },
+    {
+      "path": "research/last_final_20261026/semantic/common_market_only__C__F0_numeric_review.json",
+      "sha256": "36d309e25816b209378b294b5d535d745597a7b3d9905478db707c79b93ab1ab"
+    },
+    {
+      "path": "research/last_final_20261026/semantic/common_market_only__C__F0_bundle.json",
+      "sha256": "601b895fd4d29a0a1a018ce842b0be5654d8372e4c6efd64f8aa810af2e48ea2"
+    },
+    {
+      "path": "research/last_final_20261026/run_reports/allocation_math/common_market_only__C__F0.json",
+      "sha256": "7e3463f3223194d877ed5cc1b58bc60cc1e253b35452b0bf1c7c888e7527e570"
+    }
+  ],
+  "raw_response_content_sha256": "6ec0d416c80c2dad78b706093080f647484f3f396f00c2adc2b700204efc6882",
+  "review_axes": {
+    "errors": {
+      "reviewed": true,
+      "reason": "Read actual completed raw all11sectors and alltop text, plus all61numeric judgments and11row/9top semantic reasons. Incorrect signs,units,rankings,horizon and two explicit achieved-sum claims retained; all cited IDs visible does not imply claim support."
+    },
+    "consistency": {
+      "reviewed": true,
+      "reason": "Exact current/prior raw weights:3 cuts of0.002,1.02 to1.014;8 unchanged. Independent derived math10000units and ownTV0.55%; denominator effects separated. Direct review refs and61numeric spans,22rowquotes,9topquotes match. Prior missing ACK and interruption history remain."
+    },
+    "paper_topic": {
+      "reviewed": true,
+      "reason": "Control institution fidelity N/A. Evidence→stated reason→raw allocation remains focus. External math repairs sum only. Primary exploratory five cases, no causal timing attribution, independent replication, human reliability or future return claim."
+    }
+  },
+  "direct_reference_checks": [
+    {
+      "field": "transport_ref",
+      "match": true
+    },
+    {
+      "field": "worker_spec_ref",
+      "match": true
+    },
+    {
+      "field": "response_ref",
+      "match": true
+    },
+    {
+      "field": "stage_review_ref",
+      "match": true
+    },
+    {
+      "field": "bundle_ref",
+      "match": true
+    },
+    {
+      "field": "allocation_math_ref",
+      "match": true
+    },
+    {
+      "field": "numeric_facts_ref",
+      "match": true
+    },
+    {
+      "field": "numeric_review_ref",
+      "match": true
+    },
+    {
+      "field": "rubric_ref",
+      "match": true
+    },
+    {
+      "field": "validator_ref",
+      "match": true
+    }
+  ],
+  "scope": {
+    "actual_sector_rows": 11,
+    "all_top_fields_read": true,
+    "numeric_claims_reread": 61,
+    "numeric_quote_spans_checked": 61,
+    "sector_quotes_checked": 22,
+    "top_quotes_checked": 9
+  },
+  "findings": [
+    {
+      "category": "incomplete_observed_budget_correction",
+      "finding": "Energy,Materials,Utilities each decrease0.002. Total reduction0.006 leaves1.014,not1.0. Risk lists onlyEnergy/Utilities and omitsMaterials. Allocation implication calls1.02a residual thoughitistheoldsum."
+    },
+    {
+      "category": "persistent_wrong_historical_values",
+      "finding": "All11row historical return statements checked:3correctatprecision(15,20,30),8wrong. Nine explicit row dailymeans areallwrong; Financials citesmeanbutdoesnotstateameanliteral. Three explicit rowvolatility literals areallwrong. Additional ITmagnitudes in alternatives/risk arewrong. ActualIT relativehistoricalreturn/mean rank and maximumrawweight remaintrue."
+    },
+    {
+      "category": "unsupported_context_inference",
+      "finding": "Twelve-month horizon islongerthan~3monthlookback; strongpredictor claim isunsupported. Financialshighestreturn/highestvolatility ranking isfalse (Financials haslowestvolatility). Risk4.2 isunemployment,notemployment/stabilityproof; macrofacts donotprescribeweights."
+    },
+    {
+      "category": "source_free_and_citation_distinction",
+      "finding": "No institution is supplied; all11null/not_available/empty sourceID fields areconsistent. All77citationoccurrences(53unique) arevisibleamong79IDs, but many citedvalues do not support the nearby numericclaims."
+    },
+    {
+      "category": "external_math_not_model_repair",
+      "finding": "Accepted derived10000units use500/507normalization plus largestremainder. All8rawunchangedsectors rise inderivedweights relativeD0 due denominatorchange. Rawprose isjudgedagainst1.014weights; mathematical100%doesnotmakeitsbudgetclaimtrue."
+    }
+  ],
+  "qualifiers": [
+    "Retains4/2/2 followed by explicit reductions describes original starting weights imprecisely; do not count as three unequivocal unchanged assertions.",
+    "Energy exactly1.0 describes target; explicit false achieved-sum claims in risk and allocation implication are distinct.",
+    "Financials no literal dailymean; only9rowmeans present.",
+    "Near-baseline and defensive language have no predeclared numeric threshold or unique target weight.",
+    "No independent human evaluation or cross-condition claim accuracy rate."
+  ],
+  "raw_modified": false,
+  "model_calls": 0,
+  "service_calls": 0,
+  "ACK_written": false
+}

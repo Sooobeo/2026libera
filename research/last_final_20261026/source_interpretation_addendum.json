@@ -1,0 +1,37 @@
+{
+  "version": "last_final_source_interpretation_addendum_1",
+  "completed_at_utc": "2026-10-26T06:26:48.370Z",
+  "scope": "Restatement of preserved pilot source review for report notes; no new original-PDF audit, new model output read or source correction.",
+  "source_refs": [
+    {
+      "path": "research/v492_source_review_20261019.json",
+      "sha256": "3f6e4bd952b0bbf1d4e3487bb00a5e839a9f907038e43e895807425c21747718"
+    },
+    {
+      "path": "research/remaining_20261026/protocol_and_review.json",
+      "sha256": "e442d3f37083f17893c54e3d1af3eaa4d5e3394ae977d8843f3044357d1d02c7"
+    }
+  ],
+  "findings": [
+    {
+      "locator": "/source_scope_review/0",
+      "text_ko": "Fidelity 자료는 미국 대형3000종목 범위의 전략가 견해이며 회사 전체의 실제 보유비중이 아니다. Overweight/Underweight는 가상의 상대적 기울기이고 목표 비중을 제시하지 않는다. 4월17일은 landing page 갱신일이며 최초공개일로 입증된 날짜가 아니다."
+    },
+    {
+      "locator": "/source_scope_review/1; /unresolved/1",
+      "text_ko": "UBS의 Neutral6업종(Energy, Materials, Consumer Staples, IT, Communication Services, Real Estate)은 선택된 업종 문단에 별도 이유가 없다. 공통시장 자료로 AI가 스스로 이유를 제시하는 것은 가능하지만, 그 이유를 UBS가 직접 말했다고 귀속하면 별도 근거가 필요하다. Attractive와 Overweight, Neutral과 정확한 벤치마크 비중을 동일시하지 않는다."
+    },
+    {
+      "locator": "/source_scope_review/0/uncertainty",
+      "text_ko": "Fidelity p2 성과표 머리말의 날짜 불일치는 이미 제외된 표의 문제다. 모델에게 제공된 p3 전략가 표 또는 공통시장 입력의 오류로 확대하지 않는다."
+    },
+    {
+      "locator": "/source_scope_review/1/date",
+      "text_ko": "UBS 업종표 기준일5월21일·출판일5월22일·6월호와 과제의7월결정일을 구분한다. 자료의 약12개월 시야를7월부터 다시 시작한 전망으로 바꾸지 않는다."
+    }
+  ],
+  "interpretation": "These are existing scope/attribution limitations, not newly discovered blocking source defects or semantic findings about the unfinished final.",
+  "model_calls": 0,
+  "service_calls": 0,
+  "frozen_files_modified": false
+}

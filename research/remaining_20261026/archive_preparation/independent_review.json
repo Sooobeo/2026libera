@@ -1,0 +1,138 @@
+{
+  "version": "remaining_archive_independent_review_1",
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T02:47:55.529Z",
+  "review_mode": "Independent delegated AI static source review with existing synthetic test evidence; no live operation",
+  "input_refs": [
+    {
+      "path": "research/archive_sector_remaining.py",
+      "sha256": "572f77b81fc23c7b1c1b23d51bfab2cd63a1aaf65d2c1ebc7cc786943c1ca780"
+    },
+    {
+      "path": "research/test_archive_sector_remaining.py",
+      "sha256": "0602b75b34a34d198a778f8214f7a9606becbcafc53d568a70bef9a70fbe685e"
+    },
+    {
+      "path": "research/archive_sector_completion.py",
+      "sha256": "7420abe9ec3a1e9822482be0c374c44b71df682e6f139c728ef4008ee94f7436"
+    },
+    {
+      "path": "research/archive_sector_continuation.py",
+      "sha256": "ef4ec5463d4ea57acd1895823e6e478800c24b0a2657cf75ae57b18599fc7439"
+    },
+    {
+      "path": "research/restore_research_artifacts.py",
+      "sha256": "080d93bb41a01a0625084f6b335795b0a3a11736234eda2abaed8bd14889beff"
+    },
+    {
+      "path": "research/finalize_sector_remaining.py",
+      "sha256": "8fa60d795bc5ea75226a97761a406468f824d004b18fe7ff3ba897ceda54fe12"
+    },
+    {
+      "path": "research/remaining_20261026/archive_preparation/tests_run02.json",
+      "sha256": "66f569e3754dde6a7d8a2de027619ed2ba58cc4e01c89b33d1dd38ac50a6e942"
+    }
+  ],
+  "tests": {
+    "count": 26,
+    "exit_code": 0,
+    "unittest_seconds": 55.912,
+    "parent_elapsed_seconds": 56.842245500010904,
+    "receipt_source_hashes_match_current": true,
+    "run_by": "root agent; independently read receipt and test source here",
+    "scope": "Tempfile archive guards; finalizer and process observations mocked. Actual remaining finalizer binding remains mandatory in production.",
+    "historical_failure_ref": {
+      "path": "research/remaining_20261026/archive_preparation/tests_run01.json",
+      "sha256": "43d8ad2044b6ea4ea0503e0187506e84b09e5f56b85797ec9c74f09eee9ec692"
+    },
+    "initial_failure": "Fixture assumed a nonexistent remaining.gate attribute. Current fixture imports sector_remaining_gate directly; production archive source unchanged."
+  },
+  "findings": [],
+  "checks": [
+    {
+      "id": "terminal_and_denominator",
+      "pass": true,
+      "locators": [
+        "terminal_evidence",
+        "archive"
+      ],
+      "reason": "Only pilot_completion_resume, exact three cases and strict0..5 request count accepted. Production remaining finalizer runs after quiet check and supplies fixed5logical cases/10stages plus all6historical and at most5new attempts. Failed/missing/ordinary adverse results are not filtered."
+    },
+    {
+      "id": "release_and_runtime_owned_service",
+      "pass": true,
+      "locators": [
+        "terminal_evidence"
+      ],
+      "reason": "Terminal binds declaration/summary, coordinator PID, exact acquired/released thread and flags; no-request release requires0 attempts and no acquisition. Service receipt must match unique runtime cpu_service entry and shutdown PID/executable/hash/create-time, empty-model/closed-port/unchanged unrelated listener predicates."
+    },
+    {
+      "id": "quiet_before_and_after",
+      "pass": true,
+      "locators": [
+        "archive",
+        "archive_sector_continuation.quiet"
+      ],
+      "reason": "Process/PID/executable/raw-run markers and owned listening port must be absent before accounting and after source snapshot. PID0 is valid Windows inventory; booleans and malformed inventories fail."
+    },
+    {
+      "id": "historical_dependency_closure",
+      "pass": true,
+      "locators": [
+        "verified_dependencies",
+        "archive"
+      ],
+      "reason": "Recursively verifies ZIP manifests and all exact payload hashes without restore; duplicate/conflicting dependencies rejected. Current canonical data/local_sector_runtime scan requires every unlisted prior continuation/completion/remaining declaration to be present with exact bytes in verified dependencies. Any main declaration contradicts excluded-new-main state."
+    },
+    {
+      "id": "explicit_path_and_byte_preservation",
+      "pass": true,
+      "locators": [
+        "contained",
+        "inventory",
+        "archive",
+        "verify_bundle"
+      ],
+      "reason": "Rejects traversal/reparse/duplicate/overlap/self-cycle and unpreserved implementations. Bound accounting refs and every frozen source must be included now or hash-identical in prior archive. All source bytes, inventory, authority refs and dependency bytes rechecked, then ZIP names/lengths/hashes verified."
+    },
+    {
+      "id": "immutable_failure_and_success",
+      "pass": true,
+      "locators": [
+        "archive"
+      ],
+      "reason": "Exclusive archive reservation prevents replacement and competing failure receipts. Source changes or new process cause failed-unverified receipt; partial ZIP retained. No deletion, source edits or success until exact member verification."
+    }
+  ],
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "No blocking defect found in the current source. Read all26 tests and confirmed their passing receipt binds current archive/test bytes; checks cover missing release/loaded model, active process, altered source, duplicate/path boundaries, bad prior ZIP, old completion omission and6new-attempt rejection."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "The new archive keeps separate immutable previous ZIP dependencies and the remaining namespace, preserves exact external UBS E D0 through cumulative finalizer refs, and requires terminal, ACK/accounting, owned service cleanup and quiet state before output. No old archive or frozen source rewrite."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "Evidence preservation keeps the fixed5-condition exploratory denominators and raw/derived/semantic diagnostics. Archive verification is byte-level and operational only; it does not certify citation entailment, source interpretation, investment quality, causal effects, human reliability or authorize a new main experiment."
+    }
+  },
+  "limits": [
+    "Static implementation review does not certify the not-yet-terminal remaining run or actual future service release.",
+    "Production finalizer/gate must independently validate frozen authority and stage ACKs; focused archive tests mock this dependency.",
+    "No actual ZIP, process probe, service/model request, raw response read or restore performed in this review.",
+    "All report writers must be quiet before the eventual archive; code checks cannot eliminate deliberate post-check filesystem races.",
+    "Narrow duplicate-ignore is eligible only for actual verified member paths after successful final archive verification; this review does not approve hiding unique data, papers or audit JSON."
+  ],
+  "operations": {
+    "model_calls": 0,
+    "service_calls": 0,
+    "activity_probe_calls": 0,
+    "actual_archive_calls": 0,
+    "restore_calls": 0,
+    "actual_remaining_response_reads": 0,
+    "frozen_files_modified": 0
+  },
+  "sources_quiet_at_review": true
+}

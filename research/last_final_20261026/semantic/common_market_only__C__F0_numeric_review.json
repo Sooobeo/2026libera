@@ -1,0 +1,1116 @@
+{
+  "review_status": "completed",
+  "completed_at_utc": "2026-10-26T07:04:12.909Z",
+  "case_id": "common_market_only__C",
+  "stage": "F0",
+  "review_kind": "Unmasked Codex AI-assisted independent numerical implementation/reference check; not an independent human review or semantic score.",
+  "transport_ref": {
+    "path": "data/local_sector_runtime/v494_last_final_20261026/common_market_only__C__F0/transport_result.json",
+    "sha256": "b502c8887b8f2ead2bea82791aab4b0974bb6d52ed554bdb9f9a79c65597658d"
+  },
+  "scope": "Only the durable completed current C F0 and its exact fixed previous remaining C D0, bound visible inputs, existing sidecars and implementation evidence were read. No other partial output was accessed.",
+  "source_refs": [
+    {
+      "path": "research/last_final_20261026/semantic/common_market_only__C__F0_bundle.json",
+      "sha256": "601b895fd4d29a0a1a018ce842b0be5654d8372e4c6efd64f8aa810af2e48ea2"
+    },
+    {
+      "path": "research/last_final_20261026/semantic/common_market_only__C__F0_numeric_facts.json",
+      "sha256": "f8e36fe7d9941a6158d5a138b88df7d4e94c6ec78e904a4b88f87ff68c636fb9"
+    },
+    {
+      "path": "research/last_final_20261026/run_reports/allocation_math/common_market_only__C__F0.json",
+      "sha256": "7e3463f3223194d877ed5cc1b58bc60cc1e253b35452b0bf1c7c888e7527e570"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_last_final_20261026/common_market_only__C__F0/worker_spec.json",
+      "sha256": "6556f022eee528220f169e4e84d7211c182e1e2888c2c4d306d0792125ed49e3"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_last_final_20261026/common_market_only__C__F0/transport_result.json",
+      "sha256": "b502c8887b8f2ead2bea82791aab4b0974bb6d52ed554bdb9f9a79c65597658d"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_last_final_20261026/common_market_only__C__F0/stage_review.json",
+      "sha256": "5e3630dc06d52272a4f2e8533e80afd742f6e70792c5f12e235862105b3391af"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_last_final_20261026/common_market_only__C__F0/http_0001_generation/response.json",
+      "sha256": "f61af2c67c77c458f46e6f8a1d4aba41bb682d5f8960f9d9156f9a020da59777"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_remaining_20261026/common_market_only__C__D0/transport_result.json",
+      "sha256": "4ebbaf6f458b885cff17d281dedcbe137a9f1344d0cabf00fe6309ec062076d5"
+    },
+    {
+      "path": "research/remaining_20261026/run_reports/allocation_math/common_market_only__C__D0.json",
+      "sha256": "4cf97ce404e4dbbbeef70c8c1fbcde8875bf5a0f95c405b35b469dac0d2d70a4"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/common_market_only__C__D0_numeric_facts.json",
+      "sha256": "77bd419aec890ccc934837809ab5891dfd09688c04e92da7364f0d14a47ff0b9"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/common_market_only__C__D0_numeric_review.json",
+      "sha256": "1c6ec4944587f25db8eb1b88c9e54113d7c976cf5d9dc9826bfde36d7f2ab768"
+    },
+    {
+      "path": "research/last_final_20261026/prepared_final_construction.json",
+      "sha256": "b60e54269bbed3a517de654b09dede8ca3f8c0bb937cb78f162847a4d33cd2bb"
+    },
+    {
+      "path": "research/last_final_20261026/implementation/numeric_wrapper_tests.json",
+      "sha256": "763502d01382c35dc3c6715d5560ebd7b7f995f2abc45316c8179f20e0ea21b2"
+    },
+    {
+      "path": "research/last_final_20261026/offline_preparers_independent_review.json",
+      "sha256": "5f43e1cfd7d12eb78166acaf4a6c4701b850c2f00fc4868e278fccb78c352077"
+    }
+  ],
+  "implementation_refs": [
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\audit_stage_numerics.py",
+      "sha256": "916ae641d4e178b88d0b913e9a24a7ddcebe60efc178bf84ea0d3f73b95d0ae5"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\completion_20261026\\audit_stage_numerics.py",
+      "sha256": "10ee4d79fdcdebd1adbdf3bba2278464e044bad6b19248aa601b4ed60daaa8b9"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\prepare_stage_semantic_audit.py",
+      "sha256": "77e4509ef7f504825ea735eff4f0a8644631c4f8853566daa8e18ea77d5e57a3"
+    }
+  ],
+  "actual_integration": {
+    "status": "verified_actual_completed_guarded_bundle_and_numeric_facts",
+    "cli_execution_owner": "root",
+    "reviewer_executed_generation_or_service": false,
+    "numeric_helper_actual_output_status": "numeric_facts_prepared_not_semantic_grade",
+    "worker_validation_status": "validated",
+    "transport_status": "completed",
+    "done_reason": "stop",
+    "generation_requests_attempted": 1,
+    "instrument_integrity_pass": true,
+    "all_ten_instrument_checks_true": true,
+    "raw_content_utf8_sha256": "6ec0d416c80c2dad78b706093080f647484f3f396f00c2adc2b700204efc6882",
+    "own_D0_raw_content_utf8_sha256": "c1e32e386d8a75967c5f7590dabf5c92466a0327511b8a1a19e9b0b475221ec9",
+    "exact_original_assistant_history": true,
+    "exact_initial_D0_messages": true,
+    "exact_prepared_final_four_messages": true,
+    "exact_actual_feedback": true,
+    "own_D0_origin": "fixed_previous_remaining_segment",
+    "own_D0_stage_directory": "data/local_sector_runtime/v494_remaining_20261026/common_market_only__C__D0",
+    "previous_missing_ACK_not_created": true,
+    "numeric_wrapper_synthetic_tests": {
+      "count": 12,
+      "status": "PASS",
+      "seconds": 3.088,
+      "scope": "Recorded owner-run synthetic tests; this review verifies actual completed output integration without rerunning tests."
+    },
+    "reference_occurrences_checked": 355,
+    "unique_input_and_implementation_ref_hashes_checked": 144,
+    "reference_mismatches": 0,
+    "mechanical_checks_completed": 1261,
+    "mechanical_checks_failed": 0
+  },
+  "allocation": {
+    "method": "Separate Node.js BigInt rational implementation using JSON number source tokens; reduce fractions; exact proportional shares; floor10000shares; distribute residual units by descending exact remainder with sector-code order for ties. No accepted finalizer function was used to compute the independent vectors.",
+    "sector_order": [
+      "10",
+      "15",
+      "20",
+      "25",
+      "30",
+      "35",
+      "40",
+      "45",
+      "50",
+      "55",
+      "60"
+    ],
+    "raw_literals": [
+      "0.038",
+      "0.018",
+      "0.09",
+      "0.09",
+      "0.05",
+      "0.09",
+      "0.12",
+      "0.38",
+      "0.10",
+      "0.018",
+      "0.02"
+    ],
+    "own_D0_raw_literals": [
+      "0.04",
+      "0.02",
+      "0.09",
+      "0.09",
+      "0.05",
+      "0.09",
+      "0.12",
+      "0.38",
+      "0.10",
+      "0.02",
+      "0.02"
+    ],
+    "raw_sum_exact": {
+      "numerator": "507",
+      "denominator": "500"
+    },
+    "raw_sum_decimal": "1.014",
+    "raw_sum_percent": "101.4",
+    "raw_residual_exact": {
+      "numerator": "7",
+      "denominator": "500"
+    },
+    "raw_residual_percentage_points": "1.4",
+    "raw_budget_valid": false,
+    "own_D0_raw_sum_decimal": "1.02",
+    "own_D0_raw_sum_percent": "102",
+    "normalization_multiplier_exact": {
+      "numerator": "500",
+      "denominator": "507"
+    },
+    "prior_normalization_multiplier_exact": {
+      "numerator": "50",
+      "denominator": "51"
+    },
+    "final_units": [
+      375,
+      177,
+      888,
+      888,
+      493,
+      888,
+      1183,
+      3748,
+      986,
+      177,
+      197
+    ],
+    "own_D0_final_units": [
+      392,
+      196,
+      882,
+      882,
+      490,
+      882,
+      1177,
+      3726,
+      981,
+      196,
+      196
+    ],
+    "final_percent": [
+      "3.75",
+      "1.77",
+      "8.88",
+      "8.88",
+      "4.93",
+      "8.88",
+      "11.83",
+      "37.48",
+      "9.86",
+      "1.77",
+      "1.97"
+    ],
+    "final_total_units": 10000,
+    "final_total_percent": "100.00",
+    "remainder_recipients": [
+      "10",
+      "20",
+      "25",
+      "35",
+      "45"
+    ],
+    "current_sidecar_matches": true,
+    "own_D0_sidecar_matches": true,
+    "raw_changed_codes": [
+      "10",
+      "15",
+      "55"
+    ],
+    "raw_change_per_changed_sector_exact": {
+      "numerator": "-1",
+      "denominator": "500"
+    },
+    "raw_total_change_exact": {
+      "numerator": "-3",
+      "denominator": "500"
+    },
+    "raw_total_change_percentage_points": "-0.6",
+    "raw_unchanged_codes": [
+      "20",
+      "25",
+      "30",
+      "35",
+      "40",
+      "45",
+      "50",
+      "60"
+    ],
+    "own_derived_delta_units": [
+      -17,
+      -19,
+      6,
+      6,
+      3,
+      6,
+      6,
+      22,
+      5,
+      -19,
+      1
+    ],
+    "own_derived_total_variation_exact": {
+      "numerator": "11",
+      "denominator": "2000"
+    },
+    "own_derived_total_variation_percent": "0.55",
+    "own_raw_half_L1_exact": {
+      "numerator": "3",
+      "denominator": "1000"
+    },
+    "raw_half_L1_interpretation": "Descriptive half-L1 of unequal-sum raw exposures, not fully-invested portfolio total variation.",
+    "normalization_effect": "All eight raw-unchanged sectors increase slightly in derived allocation because the denominator falls from1.02 to1.014, followed by fixed integer quantization. These are not eight additional model weight changes."
+  },
+  "benchmark_rows": [
+    {
+      "sector_code": "10",
+      "reported_percent": 3,
+      "raw_direction": "above",
+      "derived_direction": "above",
+      "own_D0_derived_direction": "above",
+      "raw_unchanged": false
+    },
+    {
+      "sector_code": "15",
+      "reported_percent": 1.8,
+      "raw_direction": "below",
+      "derived_direction": "below",
+      "own_D0_derived_direction": "above",
+      "raw_unchanged": false
+    },
+    {
+      "sector_code": "20",
+      "reported_percent": 8.8,
+      "raw_direction": "above",
+      "derived_direction": "above",
+      "own_D0_derived_direction": "above",
+      "raw_unchanged": true
+    },
+    {
+      "sector_code": "25",
+      "reported_percent": 9.3,
+      "raw_direction": "below",
+      "derived_direction": "below",
+      "own_D0_derived_direction": "below",
+      "raw_unchanged": true
+    },
+    {
+      "sector_code": "30",
+      "reported_percent": 4.6,
+      "raw_direction": "above",
+      "derived_direction": "above",
+      "own_D0_derived_direction": "above",
+      "raw_unchanged": true
+    },
+    {
+      "sector_code": "35",
+      "reported_percent": 8.9,
+      "raw_direction": "above",
+      "derived_direction": "below",
+      "own_D0_derived_direction": "below",
+      "raw_unchanged": true
+    },
+    {
+      "sector_code": "40",
+      "reported_percent": 11.8,
+      "raw_direction": "above",
+      "derived_direction": "above",
+      "own_D0_derived_direction": "below",
+      "raw_unchanged": true
+    },
+    {
+      "sector_code": "45",
+      "reported_percent": 38,
+      "raw_direction": "below",
+      "derived_direction": "below",
+      "own_D0_derived_direction": "below",
+      "raw_unchanged": true
+    },
+    {
+      "sector_code": "50",
+      "reported_percent": 9.7,
+      "raw_direction": "above",
+      "derived_direction": "above",
+      "own_D0_derived_direction": "above",
+      "raw_unchanged": true
+    },
+    {
+      "sector_code": "55",
+      "reported_percent": 2.2,
+      "raw_direction": "below",
+      "derived_direction": "below",
+      "own_D0_derived_direction": "below",
+      "raw_unchanged": false
+    },
+    {
+      "sector_code": "60",
+      "reported_percent": 1.8,
+      "raw_direction": "above",
+      "derived_direction": "above",
+      "own_D0_derived_direction": "above",
+      "raw_unchanged": true
+    }
+  ],
+  "benchmark_interpretation": [
+    "Three comparators were independently checked for all11 sectors: serialized normalized baseline, reported percentage/100, and exact normalization of reported percentages totaling99.9.",
+    "Health Care raw9% is above the reported8.9% and normalized8.9089089%; derived8.88% is below both. This is an external-math direction change.",
+    "Financials raw12% is unchanged. Its derived weight rises11.77%→11.83%, crossing the exact normalized benchmark11.8118118%; the raw explanation did not newly increase this weight.",
+    "Materials raw1.8% equals its reported benchmark1.8% but is below the normalized1.8018018%; derived1.77% is below both. Its derived D0→F0 crossing also includes an actual raw reduction.",
+    "Information Technology raw38% equals the reported38% yet is below the normalized38.038038%; derived37.48% is below both. No economic near-neutral category is inferred from these exact numerical directions."
+  ],
+  "visible_market_validation": {
+    "scalar_fact_count": 58,
+    "sector_diagonal_checks": 11,
+    "matrix_entries_checked": 121,
+    "benchmark_comparisons": 33,
+    "portfolio_weight_representations_checked": 4,
+    "exact_input_number_source_tokens_used": true,
+    "sector_order_matches_arrays_names_tickers": true,
+    "all_scalar_pointer_values_and_percent_conversions_match": true,
+    "all_covariance_entries_and_symmetry_match": true,
+    "exact_portfolio_mean_and_covariance_quadratic_forms_match": true,
+    "square_root_approximation_absolute_tolerance": 1e-15,
+    "observed_Number_recompute_residuals_against_visible": {
+      "daily_sd_max_abs": 0,
+      "annual_sd_max_abs": 5.551115123125783e-17,
+      "correlation_max_abs": 2.220446049250313e-16
+    },
+    "same_static_numeric_facts_as_own_completed_D0": true,
+    "source_period": {
+      "first": "2026-04-21",
+      "last": "2026-07-16",
+      "daily_return_observations": 60,
+      "covariance_ddof": 1,
+      "annualization_trading_days": 252,
+      "cutoff_exclusive": "2026-07-17"
+    },
+    "portfolio_diagnostics": [
+      {
+        "representation": "raw_submitted_exposures",
+        "weighted_daily_mean_exact": {
+          "numerator": "2651150948783747059",
+          "denominator": "2000000000000000000000"
+        },
+        "daily_variance_exact": {
+          "numerator": "18883742431407670222477",
+          "denominator": "250000000000000000000000000"
+        },
+        "annualized_sd_approx": 0.13796670747270492
+      },
+      {
+        "representation": "proportionally_normalized_diagnostic",
+        "weighted_daily_mean_exact": {
+          "numerator": "203934688367980543",
+          "denominator": "156000000000000000000"
+        },
+        "daily_variance_exact": {
+          "numerator": "18883742431407670222477",
+          "denominator": "257049000000000000000000000"
+        },
+        "annualized_sd_approx": 0.1360618416890581
+      },
+      {
+        "representation": "independent_integer_weight_diagnostic",
+        "weighted_daily_mean_exact": {
+          "numerator": "261490515896301809471",
+          "denominator": "200000000000000000000000"
+        },
+        "daily_variance_exact": {
+          "numerator": "36740560271440934084383831",
+          "denominator": "500000000000000000000000000000"
+        },
+        "annualized_sd_approx": 0.13607807456312068
+      },
+      {
+        "representation": "supplied_serialized_comparison_benchmark",
+        "weighted_daily_mean_exact": {
+          "numerator": "13120082692357015868461181856797279",
+          "denominator": "10000000000000000000000000000000000000"
+        },
+        "daily_variance_exact": {
+          "numerator": "3834821824355427691024733192175764819230281870578953",
+          "denominator": "50000000000000000000000000000000000000000000000000000000"
+        },
+        "annualized_sd_approx": 0.13902338650295984
+      }
+    ],
+    "limitations": [
+      "The visible payload has no 60 by 11 daily return observations. Daily means, sample covariance and 60-day compounded returns cannot be recomputed from raw time series here.",
+      "The 60-day compounded return is not inferred from mean*60 or (1+mean)^60.",
+      "No portfolio 60-day compounded return is inferred without a rebalancing/holdings path."
+    ],
+    "raw_exposure_volatility_is_not_fully_invested_portfolio": true,
+    "performance_prediction_made": false
+  },
+  "selected_numeric_claim_diagnostics": [
+    {
+      "id": "budget_top_1",
+      "locator": "/risk_discussion",
+      "quote": "The budget residual of +0.02 from the draft was corrected by reducing Energy and Utilities by 0.002 each, ensuring the final sum is exactly 1.0.",
+      "finding": "contradicted_by_exact_raw_weights",
+      "reason": "Two named reductions total 0.004; the actual three reductions total 0.006. Neither removes the 0.02 D0 excess. The raw F0 sum is 1.014."
+    },
+    {
+      "id": "budget_top_2",
+      "locator": "/context_assessment/allocation_implication",
+      "quote": "The sum of weights is exactly 1.0, corrected from the D0 draft's 1.02 residual.",
+      "finding": "contradicted_by_exact_raw_weights",
+      "reason": "The D0 sum was 1.02 and its residual 0.02. The F0 sum is 1.014 and residual 0.014."
+    },
+    {
+      "id": "IT_return",
+      "locator": "/sectors/7/decision_reason",
+      "quote": "exceptional returns (149.92%)",
+      "finding": "contradicted_by_visible_numeric_fact",
+      "fact_id": "M:lookback_compound_return:45",
+      "correct_visible_percent": "14.992022077727252",
+      "reason": "The exact supplied decimal 0.14992022077727252 corresponds to about14.99%, not149.92%; no daily-series recomputation is claimed."
+    },
+    {
+      "id": "IT_daily_mean",
+      "locator": "/sectors/7/decision_reason",
+      "quote": "a positive daily mean (2.55%)",
+      "finding": "contradicted_by_visible_numeric_fact",
+      "fact_id": "M:daily_mean_return:45",
+      "correct_visible_percent": "0.2553795883943505",
+      "reason": "The supplied daily decimal mean is0.002553795883943505."
+    },
+    {
+      "id": "IT_annual_volatility",
+      "locator": "/risk_discussion",
+      "quote": "high volatility (21.2% annualized)",
+      "finding": "contradicted_by_visible_numeric_fact",
+      "fact_id": "M:annualized_volatility_diagnostic:45",
+      "correct_visible_percent": "33.685107914419216",
+      "reason": "The supplied annualized standard deviation is0.33685107914419216; daily standard deviation is0.021219623435220682. Neither supports21.2% annualized."
+    }
+  ],
+  "review_axes": {
+    "errors": {
+      "reviewed": true,
+      "reason": "No numerical-helper or reference-integrity mismatch was found. Raw model arithmetic remains invalid at101.4%, with a false claim of exact correction; selected visible-market unit errors remain recorded separately."
+    },
+    "consistency": {
+      "reviewed": true,
+      "reason": "The accepted math sidecar, independent BigInt calculation, exact original external C D0 history and current four-message construction agree. Historical interruption and absent old ACK remain unchanged; eight derived increases are distinguished from actual raw changes."
+    },
+    "paper_topic": {
+      "reviewed": true,
+      "reason": "The source-free control provides no institution-reading target, so institution fidelity is N/A. Its explanations still connect visible market diagnostics and calculation feedback to allocation; false numeric readings and an incorrect correction claim are relevant to the paper’s evidence→stated reasoning→allocation question. Normalizing to100% does not validate that reasoning."
+    }
+  },
+  "coverage": {
+    "all_raw_sector_weights": 11,
+    "own_D0_weights": 11,
+    "derived_weights_each_stage": 11,
+    "all_numeric_fact_values_verified": 58,
+    "source_fidelity": "not_applicable_no_institution_packet",
+    "selected_prose_claim_diagnostics": 5,
+    "all_prose_claims_graded": false,
+    "full_semantic_review": "Separate assigned semantic audit; this report does not replace it.",
+    "no_overall_score": true,
+    "mechanical_checks_are_not_independent_research_observations": true,
+    "reviewer_not_blinded": true,
+    "AI_assistance": true,
+    "not_independent_human_reliability": true
+  },
+  "numeric_integration_findings": [],
+  "model_arithmetic_errors_retained": true,
+  "verified_ref_inventory": [
+    {
+      "path": "data/local_sector_runtime/v494_last_final_20261026/campaign_declaration.json",
+      "sha256": "4ff69d668a7a80ed69699d59370d7b002c6f233363b6582062b4a4df81676d06"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_last_final_20261026/common_market_only__C__F0/worker_spec.json",
+      "sha256": "6556f022eee528220f169e4e84d7211c182e1e2888c2c4d306d0792125ed49e3"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_last_final_20261026/common_market_only__C__F0/transport_result.json",
+      "sha256": "b502c8887b8f2ead2bea82791aab4b0974bb6d52ed554bdb9f9a79c65597658d"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_last_final_20261026/common_market_only__C__F0/stage_review.json",
+      "sha256": "5e3630dc06d52272a4f2e8533e80afd742f6e70792c5f12e235862105b3391af"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_last_final_20261026/common_market_only__C__F0/http_0001_generation/response.json",
+      "sha256": "f61af2c67c77c458f46e6f8a1d4aba41bb682d5f8960f9d9156f9a020da59777"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_last_final_20261026/common_market_only__C__F0/response_contract_validation.json",
+      "sha256": "192dadb32a8a4ac08870f59f2cde4502b2c095e1aea7c79fdb5ee7d3230739ff"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_last_final_20261026/common_market_only__C__F0/worker_summary.json",
+      "sha256": "cf1d42259b662d7da86a549d5acd379faa4793da3b449982f7127730d1f5607c"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_last_final_20261026/common_market_only__C__F0/supervisor_result.json",
+      "sha256": "da49191d07250e6fcc2142502c5168109710739e33f29e6d236935543a899546"
+    },
+    {
+      "path": "research/last_final_20261026/review_gate.json",
+      "sha256": "1d8b9354d623ba92a4b371f8893bde0e2c230071c77d2249e21029c06704c46b"
+    },
+    {
+      "path": "research/last_final_20261026/freeze.json",
+      "sha256": "d8de9ed89e07f277b3702474df44e9b327f74c3cec1d1683abad0e605dbaaa6e"
+    },
+    {
+      "path": "research/last_final_20261026/orchestration_test_review.json",
+      "sha256": "0cc19c1551fa4b67b4aaa862a370c9678a0b583bf1c5e6c939b92abddc764d8c"
+    },
+    {
+      "path": "research/last_final_20261026/last_finalizer_review.json",
+      "sha256": "1283db930164f706274a5560dd7b0141ebaf1bbe088a7c87e78086ec33ffe06c"
+    },
+    {
+      "path": "research/last_final_20261026/independent_prelaunch_review.json",
+      "sha256": "d6d195b249965581b5cacb3e8bfd5399245900ed38f8144f0dde98e6e8e93116"
+    },
+    {
+      "path": "research/last_final_20261026/root_prelaunch_review.json",
+      "sha256": "76664bb89d1802ef5ce1f89576fa5448ceee7d3edf436f2836ebfe575325b154"
+    },
+    {
+      "path": "research/last_final_20261026/freeze_publisher_review.json",
+      "sha256": "1f9d3bb5d2e85c9f4df16957d66ac82f41ccf0fd1f53b81e646d653f9c2b9162"
+    },
+    {
+      "path": "research/recovery_20261025/review_gate.json",
+      "sha256": "04745b0b358d54234b888a3acdb281a10b35d8b570264c4027007e530cc5f552"
+    },
+    {
+      "path": "research/recovery_20261025/new_pilot/terminal_receipt.json",
+      "sha256": "bc872eb8326233e274629d8ea16f5d841e098b6e45aa26f31a9588d760289d15"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_pilot_20261025/pilot_summary.json",
+      "sha256": "ad5b11da9677d3cb091738d0b0427240842f2ca541bb0f7e72f3747400b599a4"
+    },
+    {
+      "path": "research/continuation_20261026/review_gate.json",
+      "sha256": "e7e2c88b26d1e3181c8c7811b49a8a318b1c0a2f71817ec610a225813032d6f8"
+    },
+    {
+      "path": "research/continuation_20261026/run_reports/terminal_receipt.json",
+      "sha256": "77bd98f4172e78eb2890d21b41bf128012ad02cd36d474ca2d5e77b5ae415f47"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_continuation_20261026/campaign_summary.json",
+      "sha256": "88f6c466914ad1eea593e99d2582ca64df06d3f6c2ddea7075100d1e51edac3d"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_continuation_20261026/campaign_declaration.json",
+      "sha256": "a7e260774dc52295f53bc950c594f825145838660eb115213baec87e835603ea"
+    },
+    {
+      "path": "data/sector_protocol/v494_design_20261025/prepared/preparation_manifest.json",
+      "sha256": "8023f8b11ec9b1d43bf1b5b08ac37ccbab4ac5ab7ad7de28a9e93d8e67a4ef29"
+    },
+    {
+      "path": "research/recovery_20261025/allocation_finalization_acceptance_r2.json",
+      "sha256": "0232232baeb7e251aa0dee42bc9a1969f66615a1df4d303bccb67dd938b47d9e"
+    },
+    {
+      "path": "research/completion_20261026/completion_finalizer_review.json",
+      "sha256": "fec44eccb3a9edfb68b717fcaa2750f714b6f9b175a635b4b4ea111112df3f60"
+    },
+    {
+      "path": "research/completion_20261026/review_gate.json",
+      "sha256": "4a50c95def3e6278e846e475f07fb6a1a7fd8a00b4f1dac723f509dafa71f851"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/terminal_receipt.json",
+      "sha256": "1bd0e740b9d30be46f3186d1fdc7d6fd5fbb8129ced078f477da82c89bcc838a"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_completion_20261026/campaign_summary.json",
+      "sha256": "ac87bd037264bcc1c954985cc904648c0cc55cd59e9ac6f6d00352a1c06fb1f4"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_completion_20261026/campaign_declaration.json",
+      "sha256": "10482e168e82c54a4484f73a736e99c53daa9330b11c40c561fa2ed3277cb787"
+    },
+    {
+      "path": "research/remaining_20261026/remaining_finalizer_review.json",
+      "sha256": "ec7ccd751ce9ffcd6aa586502001ea7f9a1144aca97c54fe069bb70187baa509"
+    },
+    {
+      "path": "research/remaining_20261026/review_gate.json",
+      "sha256": "fddeb5bcb30e2b94ca741783323ff370d7d5ddb87595ed1fab2d535da36e2012"
+    },
+    {
+      "path": "research/remaining_20261026/run_reports/terminal_receipt.json",
+      "sha256": "e618dbc51eaadd54b572df83d5bf4c1a097f8dba12bd0db9c6024e6c4ff44c4d"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_remaining_20261026/campaign_summary.json",
+      "sha256": "7747b2e69d82cd09e637d9b8852eff053383a6ec9b5dae4a89de1c5655e612bf"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_remaining_20261026/campaign_declaration.json",
+      "sha256": "fafaa9c0e0022211017847fd9d4205b960146721f14616b0f16ec1f728ff050d"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_remaining_20261026/CANCEL",
+      "sha256": "8b00af1b8b8ea8635be60e7fe77d887aa745a876a5f426c0c2464a4ffbdcf5e3"
+    },
+    {
+      "path": "research/remaining_20261026/pause_checkpoint_20261026T0513.json",
+      "sha256": "ee4057f6bd8c20a7c8202cd2972beba90a1732171fa55af32535f4647e74a5ee"
+    },
+    {
+      "path": "research/last_final_20261026/resumption_design.json",
+      "sha256": "26b42d9a56257a948f29749f997a4f8553e41bf55fe896f36ca32eadaac3aaf4"
+    },
+    {
+      "path": "research/last_final_20261026/runtime_candidate.json",
+      "sha256": "8b7b6fedf617b719df7c8e3406857fb42689a84f40e21502d3be63fe3ff93de1"
+    },
+    {
+      "path": "research/last_final_20261026/protocol_and_review.json",
+      "sha256": "daa4e50ed662fafadf1f2eb88928f3a3a6504d1e1a3272a864afe7cc157154d5"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_remaining_20261026/common_market_only__C__D0/http_0001_generation/response.json",
+      "sha256": "46c20fcbdac9b1cfaf864834f76a9e73b90438e8713a58971384cd5b170f9fe9"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_remaining_20261026/common_market_only__C__D0/worker_spec.json",
+      "sha256": "e0014ec2f5139574b9c97251d796e8a5d9ab019795b283a6e7264b69fbd5b665"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_remaining_20261026/common_market_only__C__D0/worker_summary.json",
+      "sha256": "be138bdb46078b54cfeb6d6a19dcc9ccecbd4857705e5546c4681878ef170ca2"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_remaining_20261026/common_market_only__C__D0/supervisor_result.json",
+      "sha256": "d6498658b22f5a5e9ca0065df2d4a58060d502b6fe9ede2e30d7c7d69f2f1156"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_remaining_20261026/common_market_only__C__D0/transport_result.json",
+      "sha256": "4ebbaf6f458b885cff17d281dedcbe137a9f1344d0cabf00fe6309ec062076d5"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_remaining_20261026/common_market_only__C__D0/stage_review.json",
+      "sha256": "086b717209f9bda539a80422f7e6c6020ced6f3669e2c0766207dadf1ce571a5"
+    },
+    {
+      "path": "research/remaining_20261026/run_reports/allocation_math/common_market_only__C__D0.json",
+      "sha256": "4cf97ce404e4dbbbeef70c8c1fbcde8875bf5a0f95c405b35b469dac0d2d70a4"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/common_market_only__C__D0_review.json",
+      "sha256": "a339d3e7968bd2f4fb11cdde7c2985ec9a4c53954ee48c24748e4e060e78c09f"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/common_market_only__C__D0_review_validation.json",
+      "sha256": "679d7be27810f42b0c28fefb478f0324d0c0edfdb3ec12702c3858ffababa5f4"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/common_market_only__C__D0_root_review.json",
+      "sha256": "e11b5a8d128416f4d74ac1a4a0bbeed736b74d46596ad4fdf9dd6168d1ecb296"
+    },
+    {
+      "path": "research/last_final_20261026/prepared_final_construction.json",
+      "sha256": "b60e54269bbed3a517de654b09dede8ca3f8c0bb937cb78f162847a4d33cd2bb"
+    },
+    {
+      "path": "research/analyze_v492_pilot.py",
+      "sha256": "841c1f941e2c39165f84f51f5df283ca7a3c5727de285d4ad56edfa50166529f"
+    },
+    {
+      "path": "research/benchmark_sector_latency.py",
+      "sha256": "0686444e608033be931922a26886ed4a4b5b0789385215b7b75bfacc4050458b"
+    },
+    {
+      "path": "research/build_v492_masked_review.py",
+      "sha256": "f4f9295a657892431d76b79310b3af229dc5bc7d972b098adb10ff5dd29a1f77"
+    },
+    {
+      "path": "research/build_v494_masked_review.py",
+      "sha256": "8ed40877f82414678d5808181712813ad474ddf089a08a5ba06a7b7bcaa6d148"
+    },
+    {
+      "path": "research/completion_20261026/prepare_stage_semantic_audit.py",
+      "sha256": "3d9c36405ad7b86e212d99480976af154397096491a36b1e365ee8f355799a90"
+    },
+    {
+      "path": "research/completion_20261026/runtime/start_isolated_cpu.ps1",
+      "sha256": "70671c42dfb16b1e3c434f80ef658d9f900393fc0894710b497e3fe28ba328a1"
+    },
+    {
+      "path": "research/completion_20261026/runtime/stop_isolated_cpu.ps1",
+      "sha256": "c2c8cca784ab45c370ae8b89971dc45961675a72fdaf0e5fe9c120052f6c0ffb"
+    },
+    {
+      "path": "research/completion_20261026/test_prepare_stage_semantic_audit.py",
+      "sha256": "0a5c58feb8b172adc70c02f59143276f09cb50fc135d8a96cde28a6b033b3ac3"
+    },
+    {
+      "path": "research/continuation_20261026/prepare_stage_semantic_audit.py",
+      "sha256": "efb82936ee541f187d8b352a1a28afa8ecea3d83401439a6e92a82df9731fb04"
+    },
+    {
+      "path": "research/continuation_20261026/runtime/start_isolated_cpu.ps1",
+      "sha256": "a141ff34d5ecf1f4325a9ef91275c57b785c2778db5d041e35acfcc1b8c6e1d3"
+    },
+    {
+      "path": "research/continuation_20261026/runtime/stop_isolated_cpu.ps1",
+      "sha256": "218f0d5bba603e02f06d3a4f041b35d40d61b67015b5cc41dd6f2998c6294d55"
+    },
+    {
+      "path": "research/finalize_sector_allocation.py",
+      "sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3"
+    },
+    {
+      "path": "research/finalize_sector_campaign.py",
+      "sha256": "5036ddc1d856adf196fd1d2818ffeb8b3d9b3c98e65be5b6910cef59a9173a8e"
+    },
+    {
+      "path": "research/finalize_sector_completion.py",
+      "sha256": "7dab1d17a801e1d0beee5a669afa9c84adc2914d15715f0c82cfa97cfa45b253"
+    },
+    {
+      "path": "research/finalize_sector_last_final.py",
+      "sha256": "3840624a7b611132b7920ee728c03729a760846ff61e25688715cafa28a75cff"
+    },
+    {
+      "path": "research/finalize_sector_remaining.py",
+      "sha256": "8fa60d795bc5ea75226a97761a406468f824d004b18fe7ff3ba897ceda54fe12"
+    },
+    {
+      "path": "research/freeze_sector_completion.py",
+      "sha256": "d20b03493b219273bfdce83eb932f1115a7c3a14c8e36bc3f64fce1b6601c55f"
+    },
+    {
+      "path": "research/freeze_sector_continuation.py",
+      "sha256": "ae6ee798da1ea538c7e8ed251d1802ef887e671b7ade5578ff33aaa4332978a7"
+    },
+    {
+      "path": "research/freeze_sector_last_final.py",
+      "sha256": "58bfd4469ae254f0825b3c3f3df4fd20c02cff63cec0f5b3f24e4967314e9eae"
+    },
+    {
+      "path": "research/freeze_sector_remaining.py",
+      "sha256": "ad58a16fa3b33fd960cbe9d7ac64dc917d538240e9c660dc84540e6d315ed09f"
+    },
+    {
+      "path": "research/freeze_sector_v494.py",
+      "sha256": "2e40a2f9b646ad547987ac6ce9679e989792bd0b16e7525af2f22276c1801856"
+    },
+    {
+      "path": "research/last_final_20261026/prepare_external_binding.py",
+      "sha256": "480809e31f1bdf5590fb1eafe5d8cfbf607976c85c51977a82b88fadfface59e"
+    },
+    {
+      "path": "research/last_final_20261026/prepare_protocol.py",
+      "sha256": "b29401a1610c97fc016528e4e4a3793813330af357ee2e37c3404270d6ba2879"
+    },
+    {
+      "path": "research/last_final_20261026/runtime/prepare_runtime.py",
+      "sha256": "471d9ff16375dfe780d9c7951a8d5507eb69fed254fb683713ec21182040a0e1"
+    },
+    {
+      "path": "research/last_final_20261026/runtime/start_isolated_cpu.ps1",
+      "sha256": "d0e52d7a4fa51137ae0f05ef6d59babd5f71ed9a7fa02af3472d530c3874563a"
+    },
+    {
+      "path": "research/last_final_20261026/runtime/stop_isolated_cpu.ps1",
+      "sha256": "501af57734e851f8082267f7a1e7900d5ac0ddd8bb513d82d555e19b801d5a90"
+    },
+    {
+      "path": "research/last_final_20261026/runtime_adapter.py",
+      "sha256": "3af1ba401fd37d1afb17a866295b87131d5aeaff3234f78235eba96e48a5cfb6"
+    },
+    {
+      "path": "research/last_final_20261026/test_freeze_publish.py",
+      "sha256": "c3ff6b9474f36fa762322dd9fb74a3dcf6575665a557d2edd56a5e460ee9e440"
+    },
+    {
+      "path": "research/local_sector_single_case.py",
+      "sha256": "0b2596a223167136bb37578e86469d50c26e7883305d4db31f43b9ddd10d28d0"
+    },
+    {
+      "path": "research/prepare_sector_v491.py",
+      "sha256": "0e8188630a8b3a36da08671519b2bfeba7d3d2ca412568f789bfeca2ea4192e7"
+    },
+    {
+      "path": "research/prepare_sector_v492.py",
+      "sha256": "bc60c7ecb972ad2ce0d9df3f3e41f715264dbeb6a4b3a3838a13216a5c56b098"
+    },
+    {
+      "path": "research/prepare_sector_v494.py",
+      "sha256": "80d293ab0df0a209c234e3ab1136ac845fe6a5e81b1b68d543660cc19108e855"
+    },
+    {
+      "path": "research/probe_ollama_runtime.py",
+      "sha256": "2dd48936bbaf8fd090a26f92fd356fec3a11ac81e5b01b39d661ffe72552fddb"
+    },
+    {
+      "path": "research/publish_completion_review_ack.py",
+      "sha256": "bf8708bb62a348c6dab3ace3c9a017fddc5302830b62f53deedfa98c36703603"
+    },
+    {
+      "path": "research/publish_last_final_review_ack.py",
+      "sha256": "c940cb73a59fd254769cc3357b9029b9375660c4c5851d7421c208a55b851e09"
+    },
+    {
+      "path": "research/publish_remaining_review_ack.py",
+      "sha256": "f1ca48574ebb1a800eff55ef1af2fbae902db8e74d7825be22991183b90909f0"
+    },
+    {
+      "path": "research/recovery_20261025/method_build_audit.py",
+      "sha256": "b6254ac3f8a607b7a9602eb4bef89953ba7e6188cbf6227982106294c839b488"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/start_isolated_cpu.ps1",
+      "sha256": "ae44ac080a877e84b596b59894917f0226f6493660552428ac03c10c4187cfd8"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/stop_isolated_cpu.ps1",
+      "sha256": "78eb6eeb3d8de0c2e7fbb21bc682d2af5ee5bb1db9a56b1f6eb42f54ecd5b732"
+    },
+    {
+      "path": "research/remaining_20261026/prepare_stage_semantic_audit.py",
+      "sha256": "c4049ff6ed474200c5c358cb3448e5353096606acee27e0033b88e5a2410d21b"
+    },
+    {
+      "path": "research/remaining_20261026/runtime/start_isolated_cpu.ps1",
+      "sha256": "3000833951aa21f5f0815f12b57212dcc810ffb1c14d61a1f7c7ab467f5e5f98"
+    },
+    {
+      "path": "research/remaining_20261026/runtime/stop_isolated_cpu.ps1",
+      "sha256": "4af1cba8e008406ee4431dad39cd1df47355f410132afb7c53b2329070f9131e"
+    },
+    {
+      "path": "research/remaining_20261026/test_prepare_stage_semantic_audit.py",
+      "sha256": "a4f7e2c4dd9c2e6e3449e03ae3f6cc02f5e678ab1e322c447c21065e8ec07a9b"
+    },
+    {
+      "path": "research/remote_sector_runtime.py",
+      "sha256": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5"
+    },
+    {
+      "path": "research/review_sector_v494_stage.py",
+      "sha256": "81195353a74f00fde66e1915e068e9167966ccc3cb774b65ad929867bf44b3e6"
+    },
+    {
+      "path": "research/run_sector_completion.py",
+      "sha256": "53d795493e747eadb72c097cb98b0efe0649725187fe750e447e8d41fe3d7f65"
+    },
+    {
+      "path": "research/run_sector_continuation.py",
+      "sha256": "15c74157f0169fca721671fe5219673f7c3296d42ebd984b2c326e0ab493b2cb"
+    },
+    {
+      "path": "research/run_sector_last_final.py",
+      "sha256": "f833cbff402e3008c1c8295f46f546bf2896fb92f8d4847d42cc592ce8698eaa"
+    },
+    {
+      "path": "research/run_sector_remaining.py",
+      "sha256": "bd80d010815607ab0889be33a048adbe7defdab22420967aafc128791bbb40bd"
+    },
+    {
+      "path": "research/run_v494_recovery.py",
+      "sha256": "56fdb077c375ca4b99a110a93d81210a74812257cae3b0967b613f0b5de27576"
+    },
+    {
+      "path": "research/sector_completion_awake.py",
+      "sha256": "f38bafe9bacdd87c3a4642193a9752c0c68552533528393b9b8b242a3b87996f"
+    },
+    {
+      "path": "research/sector_completion_gate.py",
+      "sha256": "39c6cd80196bfdc25040f2cbf239cdfd9d562dab17ce3070fc38559ae41917b7"
+    },
+    {
+      "path": "research/sector_completion_runtime.py",
+      "sha256": "99395173cb3c030c06c456b4b4ae41a0f2cd157ce05b76e4b42b9696ed6e1ec2"
+    },
+    {
+      "path": "research/sector_continuation_awake.py",
+      "sha256": "2318c6acafc72d38c68109e7f1abcc45bc5e8cec428f90c0a63da88c5382825c"
+    },
+    {
+      "path": "research/sector_continuation_gate.py",
+      "sha256": "176d43c79da92299716a2509172741248ec2764bcd4869e1927cff70bd14dcb5"
+    },
+    {
+      "path": "research/sector_continuation_runtime.py",
+      "sha256": "6ec09d1f524bda53c9cc80505ea4d47d13c211f159ff7c7702b6c3ba645d83f1"
+    },
+    {
+      "path": "research/sector_engine.py",
+      "sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c"
+    },
+    {
+      "path": "research/sector_remaining_awake.py",
+      "sha256": "2ef37fea357f69d78b267f3aa195c9ba7d9dde8bdecb931f59c49bab2a529307"
+    },
+    {
+      "path": "research/sector_remaining_gate.py",
+      "sha256": "8b6cf29dfd103197ba8553da5265b5c121457f145205ff4ed0757102523fa54d"
+    },
+    {
+      "path": "research/sector_remaining_runtime.py",
+      "sha256": "6f54562c29a2d26c4061c9d1a902609ce504346ccb82631ff0b5ec84764a3233"
+    },
+    {
+      "path": "research/sector_v48_main_awake.py",
+      "sha256": "185a9f6be9471ff7808730153227682f0f0eae25f72ee1474602106a950fa98a"
+    },
+    {
+      "path": "research/sector_v48_transport.py",
+      "sha256": "db395eb3d54ebec93aa67556e1f2424aba1d591ba8b9fcfce7fbd3332db0379c"
+    },
+    {
+      "path": "research/sector_v491_contract.py",
+      "sha256": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397"
+    },
+    {
+      "path": "research/sector_v491_runtime.py",
+      "sha256": "a542a53ef7a9a035a3641e1e9637d3eb5bd442677318a82434e245bb1e5dc649"
+    },
+    {
+      "path": "research/sector_v491_tokenizer.py",
+      "sha256": "1e25d31d18e659e90186d2a598d0bcad77824d0dbc5a0e76beed692a8373e440"
+    },
+    {
+      "path": "research/sector_v492_contract.py",
+      "sha256": "f77d1ddec9630a4c7edbf3928d298b7b05094345996ece1cf53d91fc40171a21"
+    },
+    {
+      "path": "research/sector_v492_review_gate.py",
+      "sha256": "a93b575104509e9810663ec4feca3e6bbb6963ca03dd988b451e06744e23a092"
+    },
+    {
+      "path": "research/sector_v492_runtime.py",
+      "sha256": "cc8285db4d561aea10878db336771752965f4517405a93a1574b18f2fa300e04"
+    },
+    {
+      "path": "research/sector_v494_review_gate.py",
+      "sha256": "07cac8a0606eff3dfeb1bc1e0b3786ff373ca49bb424edb20674033e28d7e194"
+    },
+    {
+      "path": "research/sector_v494_runtime.py",
+      "sha256": "c9521000aa3a1497775c83fa83a1b9bac9f5443edbcb707f131d313f7cd8bed1"
+    },
+    {
+      "path": "research/test_finalize_sector_campaign.py",
+      "sha256": "97fb3102ebce269889d087a4fb1c66ad736ba536fbedf2f3710975d4baf0810d"
+    },
+    {
+      "path": "research/test_finalize_sector_completion.py",
+      "sha256": "1b3f7391ba93e8bebe8ea60118ef5056fcd77aaf490bdd09d80f8e636129e9fd"
+    },
+    {
+      "path": "research/test_finalize_sector_last_final.py",
+      "sha256": "60152bf1abe9bca1131a749ca4f0c9de056b6cb8cf10180437ac87687d8cf1ef"
+    },
+    {
+      "path": "research/test_finalize_sector_remaining.py",
+      "sha256": "07f919b028c820cc85cfb720968356bf5445f295f5b6b5013f697d7306f52300"
+    },
+    {
+      "path": "research/test_sector_completion.py",
+      "sha256": "40ba9fccf9f1f4a425410f0df9e6e7baa139e483ca7ce0ea9ff03336f3595284"
+    },
+    {
+      "path": "research/test_sector_continuation.py",
+      "sha256": "27f9ff3e827decda54bd37e45aa028cda25e5f2b71918c598a2994061d28e024"
+    },
+    {
+      "path": "research/test_sector_last_final.py",
+      "sha256": "4475d88ad73af41f4ad5d7fdf76ce6daa7978c07baec13af9aaad23be11d869c"
+    },
+    {
+      "path": "research/test_sector_remaining.py",
+      "sha256": "4ec483f979ebfb51e0b60988b6de920b2babd0c4b2ed5dac8b53152a0aa8a820"
+    },
+    {
+      "path": "research/last_final_20261026/runtime/service_ready/service_receipt.json",
+      "sha256": "55c15eb8060feca828a75ee2bda2b91c338ea3df44f27db1cd42d687e5769f7f"
+    },
+    {
+      "path": "data/local_sector_runtime/v491_cpu_preflight_20261019/synthetic_large_input_threads8/spec.json",
+      "sha256": "04949d22d890a8a481aae4703d7d99970f8b9f32394a240c41651d823380be54"
+    },
+    {
+      "path": "data/local_sector_runtime/v491_cpu_preflight_20261019/synthetic_large_input_threads8/worker_summary.json",
+      "sha256": "1364160259f8e15ff7ad8053bfa117d8bc10a903f9b93541efe5f262fc1dc626"
+    },
+    {
+      "path": "research/last_final_20261026/prepare_stage_semantic_audit.py",
+      "sha256": "77e4509ef7f504825ea735eff4f0a8644631c4f8853566daa8e18ea77d5e57a3"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_remaining_20261026/common_market_only__C__D0/response_contract_validation.json",
+      "sha256": "5d7f821180d61bfbb689515796e2f38ec6f411b4a9939e56f752753016b0f7df"
+    },
+    {
+      "path": "data/sector_protocol/v494_design_20261025/prepared/common_market_only__C__D0_messages.json",
+      "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/public_compact_candidate.json",
+      "sha256": "afe810b2bfb69ae4bfa372e65fa587bc6253eecf8028d5fde39cf3ec395bcb8d"
+    },
+    {
+      "path": "research/v492_evaluation_protocol_20261019_r2.json",
+      "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+    },
+    {
+      "path": "research/last_final_20261026/semantic/common_market_only__C__F0_bundle.json",
+      "sha256": "601b895fd4d29a0a1a018ce842b0be5654d8372e4c6efd64f8aa810af2e48ea2"
+    },
+    {
+      "path": "research/last_final_20261026/run_reports/allocation_math/common_market_only__C__F0.json",
+      "sha256": "7e3463f3223194d877ed5cc1b58bc60cc1e253b35452b0bf1c7c888e7527e570"
+    },
+    {
+      "path": "research/last_final_20261026/audit_stage_numerics.py",
+      "sha256": "916ae641d4e178b88d0b913e9a24a7ddcebe60efc178bf84ea0d3f73b95d0ae5"
+    },
+    {
+      "path": "research/completion_20261026/audit_stage_numerics.py",
+      "sha256": "10ee4d79fdcdebd1adbdf3bba2278464e044bad6b19248aa601b4ed60daaa8b9"
+    },
+    {
+      "path": "research/last_final_20261026/test_audit_stage_numerics.py",
+      "sha256": "100c9761a136b4c6ddb58b163db85d73e949726ba62a16d82ed61e0b7747de59"
+    },
+    {
+      "path": "research/last_final_20261026/test_prepare_stage_semantic_audit.py",
+      "sha256": "d652ac806103b6775a777a3932a175d38cb3daa5372d36ad9847dd45d8f39c7a"
+    },
+    {
+      "path": "research/last_final_20261026/implementation/semantic_preparer_tests.json",
+      "sha256": "9ab3d902f680ef2369f4182ca26de16614f48f454aae02a6168f3faaeddf44ca"
+    },
+    {
+      "path": "research/last_final_20261026/implementation/numeric_wrapper_tests.json",
+      "sha256": "763502d01382c35dc3c6715d5560ebd7b7f995f2abc45316c8179f20e0ea21b2"
+    }
+  ],
+  "model_calls": 0,
+  "service_calls": 0,
+  "raw_artifacts_modified": false,
+  "frozen_sources_modified": false,
+  "ACK_publications": 0
+}

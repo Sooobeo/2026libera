@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T06:23:28.807462+00:00",
+  "review_scope": "Offline postprocessing implementation only; no actual future bundle/archive execution",
+  "code_refs": [
+    {
+      "path": "research/build_last_final_masked_review.py",
+      "sha256": "d7c9d2677a676b49a0d98d36143ff0a77214972129fcaa837511231addef1e97"
+    },
+    {
+      "path": "research/test_build_last_final_masked_review.py",
+      "sha256": "36ece56cd1dddaa63ed891db27b0ba2305e0cab36e0446d2f3cfc70a67c47b59"
+    }
+  ],
+  "test_result_ref": {
+    "path": "research/last_final_20261026/implementation/masked_tests_run02.json",
+    "sha256": "7e3c826144557015d12484aae311e4b9aedbc67e9f059ca2e1ddedc6004589eb"
+  },
+  "independent_review_ref": {
+    "path": "research/last_final_20261026/implementation/postprocessing_independent_review.json",
+    "sha256": "7bbcf7bffc1e40cb244d76d0af137b3ceb8c3bb14a087808eb4d2b7fd8256514"
+  },
+  "finalizer_review_ref": {
+    "path": "research/last_final_20261026/last_finalizer_review.json",
+    "sha256": "1283db930164f706274a5560dd7b0141ebaf1bbe088a7c87e78086ec33ffe06c"
+  },
+  "additional_finalizer_review_ref": {
+    "path": "research/last_final_20261026/implementation/finalizer_independent_review.json",
+    "sha256": "4d52855f7710d44112c0693432c092f691069b136a6c21568aebca0b20c769b8"
+  },
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "Current source passes meaningful synthetic tests; earlier fixture/assertion failures remain in immutable receipts. Terminal, exact references and authority are checked; missing/failed model outputs are not invented."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "One raw C F0 item/11 sector rows uses the exact external C D0 under its prior validator; full five-case/55row accounting and prior reviews/math remain private."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "Five logical conditions remain exploratory evidence; late prior review, operational interruptions and post-output endpoint amendment remain explicit. Packaging or archival success is not semantic, causal or performance success."
+    }
+  },
+  "actual_output_created": false,
+  "model_calls": 0,
+  "service_calls": 0,
+  "frozen_files_modified": false
+}

@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T02:26:52Z",
+  "command": "python -m unittest discover -s research/completion_20261026 -p test_audit_stage_numerics.py -v",
+  "tests_run": 29,
+  "failures": 0,
+  "errors": 0,
+  "unittest_seconds": 6.382,
+  "exit_code": 0,
+  "source_ref": {
+    "path": "research/completion_20261026/audit_stage_numerics.py",
+    "sha256": "10ee4d79fdcdebd1adbdf3bba2278464e044bad6b19248aa601b4ed60daaa8b9"
+  },
+  "test_source_ref": {
+    "path": "research/completion_20261026/test_audit_stage_numerics.py",
+    "sha256": "8fa9edf2a6f82661825a76853eb2c9922c000a5670e6c02a8256faa7b36963b7"
+  },
+  "static_input_cli": {
+    "command": "python research/completion_20261026/audit_stage_numerics.py --prepared-input data/sector_protocol/v494_design_20261025/prepared/ubs_june_2026__E__D0_messages.json --output research/completion_20261026/independent_numeric_static_common_market_r2.json",
+    "exit_code": 0,
+    "status": "static_input_facts_only",
+    "report_ref": {
+      "path": "research/completion_20261026/independent_numeric_static_common_market_r2.json",
+      "sha256": "1d02cfcb9e175fc574ca933d7d1a013fd18e998b655fef63a523a6c13f04234c"
+    },
+    "visible_scalar_fact_rows": 58,
+    "sector_covariance_diagonal_checks": 11,
+    "matrix_covariance_correlation_pairs": 121
+  },
+  "scope": "Synthetic arithmetic and adapter tests plus actual frozen static-input CLI. Frozen semantic guard is mocked in adapter unit fixtures; this is not a live completed-stage integration test or semantic grading claim.",
+  "model_calls": 0,
+  "service_calls": 0,
+  "actual_model_outputs_read": 0,
+  "previous_runs": ["independent_numeric_test_result_r1.json", "independent_numeric_test_result_r2.json"],
+  "source_quiet_after_this_run": true
+}

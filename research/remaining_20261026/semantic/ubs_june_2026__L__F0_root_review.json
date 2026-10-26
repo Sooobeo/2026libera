@@ -1,0 +1,79 @@
+{
+  "version": "remaining_stage_root_review_1",
+  "review_status": "completed",
+  "completed_at_utc": "2026-10-26T04:41:22.001Z",
+  "case_id": "ubs_june_2026__L",
+  "stage": "F0",
+  "transport_ref": {
+    "path": "data/local_sector_runtime/v494_remaining_20261026/ubs_june_2026__L__F0/transport_result.json",
+    "sha256": "36de203c671d13c6b4fe3656a402e8a46b90c0baad3a09b181a1d2c203c1f3c7"
+  },
+  "source_refs": [
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__L__F0_bundle.json",
+      "sha256": "67777d48f99659fcd91bfb6b78894a13d5cacc34d8260ba282b7184db399212b"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__L__F0_review.json",
+      "sha256": "5a7e3527ad71005d0dcf7df009fdf8f3b7f18b96d980a45bb9075f89b183b5bd"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__L__F0_review_validation.json",
+      "sha256": "57bbe9d26bfb8f4528c8b9fc8dda0792bcfd0c9f4f182f5e506256ff96149762"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__L__F0_numeric_facts.json",
+      "sha256": "adabbe431530f26637ce714dbf52f8227de740cfe2e5615e3e27cac254fb8b0d"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__L__F0_numeric_review.json",
+      "sha256": "a26d592cf5d981be5eb3369501f8de473829b251bbe61843f7a06e292acab5bf"
+    }
+  ],
+  "checks": {
+    "all_eleven_rows_and_all_top_level_fields_read": true,
+    "independent_numeric_review_read": true,
+    "semantic_summary_all_top_findings_and_sector_reasons_read": true,
+    "bundle_refs_rehashed": 91,
+    "bundle_reference_mismatches": 0,
+    "mechanical_checks": 744,
+    "mechanical_failures": 0,
+    "source_labels_correct": 11,
+    "source_readings_exact": 11,
+    "raw_sum": "1.01",
+    "own_D0_raw_sum": "1.02",
+    "derived_units_total": 10000,
+    "own_D0_F0_derived_TV_percent": "4.49",
+    "own_D0_actual_assistant_message_exact": true,
+    "actual_UBS_packet_matches_E": true
+  },
+  "findings": [
+    "Raw budget decreased 102% to 101%, leaving +1 percentage point despite two exactly1.0 correction claims; accepted independent units sum10000.",
+    "Six raw weights changed: Industrials/CD/HC/Utilities +1pp, IT -3pp, Communications -2pp. Five raw unchanged sectors increase only after denominator adjustment; do not call these model revisions.",
+    "All11 source readings match supplied packet, yet alternatives wrongly calls CD Neutral and allocation_implication groups Utilities under Neutral.",
+    "IT raw38% to35% contradicts increasing language; 35% is below both benchmark variants. Its149.92% return claim is roughly tenfold actual14.992%.",
+    "Visible citation IDs do not entail associated claims. Financials return/highest/high-risk claims, CD and Energy signs, Utilities negative performance and several other market claims remain wrong.",
+    "Current short12month wording does not repeat prior D0 shorter-than-lookback contradiction. May publication and June issue are compatible. Claim that all intervening news is unknown is overbroad given provided June/July observations."
+  ],
+  "review_axes": {
+    "errors": {
+      "reviewed": true,
+      "reason": "Actual full raw output, numeric audit and all semantic sector/top findings read; raw arithmetic and unsupported assertions retained."
+    },
+    "consistency": {
+      "reviewed": true,
+      "reason": "91bundle references rehashed; current transport, exact own draft, feedback and UBS packet identities verified; raw versus derived changes separated."
+    },
+    "paper_topic": {
+      "reviewed": true,
+      "reason": "Source reading, reasoning and observable allocation changes stay distinct; no institutional numeric gold, causal timing claim or performance outcome inferred."
+    }
+  },
+  "stage_progression_appropriate": true,
+  "semantic_success_required": false,
+  "model_calls": 0,
+  "service_calls": 0,
+  "raw_artifacts_modified": false,
+  "frozen_files_modified": false,
+  "limits": "Known-condition AI review. Mechanical checks validate bindings and locators, not semantic truth or human interrater reliability."
+}

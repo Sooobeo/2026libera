@@ -1,0 +1,61 @@
+{
+  "version": "completion_finalizer_tests_1",
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T02:04:52.487Z",
+  "command": "python -m unittest discover -s research -p test_finalize_sector_completion.py -v",
+  "working_directory": "C:/Users/Insun/2026libera",
+  "exit_code": 0,
+  "tests_run": 24,
+  "elapsed_seconds": 21.662,
+  "source_refs": [
+    {
+      "path": "research/finalize_sector_completion.py",
+      "sha256": "7dab1d17a801e1d0beee5a669afa9c84adc2914d15715f0c82cfa97cfa45b253"
+    },
+    {
+      "path": "research/test_finalize_sector_completion.py",
+      "sha256": "1b3f7391ba93e8bebe8ea60118ef5056fcd77aaf490bdd09d80f8e636129e9fd"
+    },
+    {
+      "path": "research/finalize_sector_allocation.py",
+      "sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3"
+    },
+    {
+      "path": "research/finalize_sector_campaign.py",
+      "sha256": "5036ddc1d856adf196fd1d2818ffeb8b3d9b3c98e65be5b6910cef59a9173a8e"
+    },
+    {
+      "path": "research/test_finalize_sector_campaign.py",
+      "sha256": "97fb3102ebce269889d087a4fb1c66ad736ba536fbedf2f3710975d4baf0810d"
+    },
+    {
+      "path": "research/run_sector_completion.py",
+      "sha256": "53d795493e747eadb72c097cb98b0efe0649725187fe750e447e8d41fe3d7f65"
+    }
+  ],
+  "stdout_and_stderr": "test_ack_math_cannot_claim_a_different_finalization (test_finalize_sector_completion.CompletionTests.test_ack_math_cannot_claim_a_different_finalization) ... ok\r\ntest_ack_validator_failure_cannot_authorize_progression (test_finalize_sector_completion.CompletionTests.test_ack_validator_failure_cannot_authorize_progression) ... ok\r\ntest_actual_pure_ack_validator_accepts_adverse_findings (test_finalize_sector_completion.CompletionTests.test_actual_pure_ack_validator_accepts_adverse_findings) ... ok\r\ntest_candidate_authority_is_rejected (test_finalize_sector_completion.CompletionTests.test_candidate_authority_is_rejected) ... ok\r\ntest_cross_case_prior_D0_cannot_be_substituted (test_finalize_sector_completion.CompletionTests.test_cross_case_prior_D0_cannot_be_substituted) ... ok\r\ntest_cumulative_total_cannot_drop_historical_failure (test_finalize_sector_completion.CompletionTests.test_cumulative_total_cannot_drop_historical_failure) ... ok\r\ntest_fidelity_rerun_or_new_main_scope_is_rejected (test_finalize_sector_completion.CompletionTests.test_fidelity_rerun_or_new_main_scope_is_rejected) ... ok\r\ntest_finalizer_source_must_be_frozen (test_finalize_sector_completion.CompletionTests.test_finalizer_source_must_be_frozen) ... ok\r\ntest_full_three_segments_keep_five_cells_eleven_attempts_and_raw_bytes (test_finalize_sector_completion.CompletionTests.test_full_three_segments_keep_five_cells_eleven_attempts_and_raw_bytes) ... ok\r\ntest_hidden_request_directory_is_rejected (test_finalize_sector_completion.CompletionTests.test_hidden_request_directory_is_rejected) ... ok\r\ntest_last_missing_ack_after_stop_is_preserved_without_future_authorization (test_finalize_sector_completion.CompletionTests.test_last_missing_ack_after_stop_is_preserved_without_future_authorization) ... ok\r\ntest_live_summary_is_rejected_before_any_math_or_history (test_finalize_sector_completion.CompletionTests.test_live_summary_is_rejected_before_any_math_or_history) ... ok\r\ntest_math_policy_and_original_diagnostics_cannot_silently_change (test_finalize_sector_completion.CompletionTests.test_math_policy_and_original_diagnostics_cannot_silently_change) ... ok\r\ntest_missing_new_finals_keep_full_denominator_and_null_pairs (test_finalize_sector_completion.CompletionTests.test_missing_new_finals_keep_full_denominator_and_null_pairs) ... ok\r\ntest_missing_terminal_is_rejected_before_history (test_finalize_sector_completion.CompletionTests.test_missing_terminal_is_rejected_before_history) ... ok\r\ntest_model_structure_failure_and_zero_request_preflight_are_preserved (test_finalize_sector_completion.CompletionTests.test_model_structure_failure_and_zero_request_preflight_are_preserved) ... ok\r\ntest_normal_completion_requires_last_ack_too (test_finalize_sector_completion.CompletionTests.test_normal_completion_requires_last_ack_too) ... ok\r\ntest_post_final_extra_request_is_rejected (test_finalize_sector_completion.CompletionTests.test_post_final_extra_request_is_rejected) ... ok\r\ntest_progression_without_prior_ack_is_rejected (test_finalize_sector_completion.CompletionTests.test_progression_without_prior_ack_is_rejected) ... ok\r\ntest_raw_sum_errors_are_finalized_without_becoming_semantic_success (test_finalize_sector_completion.CompletionTests.test_raw_sum_errors_are_finalized_without_becoming_semantic_success) ... ok\r\ntest_runtime_validation_errors_propagate (test_finalize_sector_completion.CompletionTests.test_runtime_validation_errors_propagate) ... ok\r\ntest_stage_validation_errors_propagate (test_finalize_sector_completion.CompletionTests.test_stage_validation_errors_propagate) ... ok\r\ntest_summary_cannot_hide_request (test_finalize_sector_completion.CompletionTests.test_summary_cannot_hide_request) ... ok\r\ntest_terminal_cross_run_binding_rejected (test_finalize_sector_completion.CompletionTests.test_terminal_cross_run_binding_rejected) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 24 tests in 21.662s\r\n\r\nOK\r\n",
+  "model_generation_calls": 0,
+  "service_calls": 0,
+  "actual_experiment_model_outputs_read": 0,
+  "production_adapter_unchanged_during_final_tests": true,
+  "scope": "Synthetic temporary three-segment artifacts; unchanged finalizers operate on synthetic outputs. New adapter validate_run/validate_stage boundaries are mocked for synthetic gate/settings; mandatory invocation and error propagation are tested. Most ACK tests mock its new thin boundary; one integration test uses the real pure coordinator validator with adverse findings.",
+  "prior_development_test_runs": [
+    {
+      "tests_run": 18,
+      "elapsed_seconds": 12.716,
+      "status": "PASS",
+      "scope": "Before added ACK integration; not the final byte suite."
+    },
+    {
+      "tests_run": 23,
+      "elapsed_seconds": 19.699,
+      "status": "PASS",
+      "scope": "ACK adapter checks before adding real pure-validator integration test."
+    }
+  ],
+  "no_actual_completion_dataset_created": true,
+  "limits": [
+    "The tests do not approve launch or certify a future actual output.",
+    "External semantic review completion is distinct from correct source reasoning or valid raw weights."
+  ]
+}

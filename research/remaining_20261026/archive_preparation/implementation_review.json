@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T02:49:05.794Z",
+  "scope": "Offline terminal five-stage archive adapter; actual archive not yet executed.",
+  "input_refs": [
+    {
+      "path": "research/archive_sector_remaining.py",
+      "sha256": "572f77b81fc23c7b1c1b23d51bfab2cd63a1aaf65d2c1ebc7cc786943c1ca780"
+    },
+    {
+      "path": "research/test_archive_sector_remaining.py",
+      "sha256": "0602b75b34a34d198a778f8214f7a9606becbcafc53d568a70bef9a70fbe685e"
+    },
+    {
+      "path": "research/remaining_20261026/archive_preparation/tests_run02.json",
+      "sha256": "66f569e3754dde6a7d8a2de027619ed2ba58cc4e01c89b33d1dd38ac50a6e942"
+    },
+    {
+      "path": "research/remaining_20261026/archive_preparation/independent_review.json",
+      "sha256": "24890889bb29e651a1e4f5f20fba23914aa17d4004079693df1845f6d2d275f6"
+    }
+  ],
+  "tests": {
+    "count": 26,
+    "failures": 0,
+    "elapsed_seconds": 55.912,
+    "real_model_service_process_operations": 0
+  },
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "Twenty-six synthetic tests passed after correcting a test-fixture import assumption; the initial failure receipt remains preserved. New guards reject six new requests and an unlisted prior completion campaign."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Only a terminal remaining segment with explicit awake release, exact runtime-bound owned-service shutdown and before/after process quiet can be archived; prior completion and older ZIP dependencies remain recursively verified."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "Archives retain raw outputs, all attempts and missing denominators for the same exploratory five conditions. Verified storage makes no semantic-success, performance or new-main claim."
+    }
+  },
+  "actual_archive_created": false,
+  "model_calls": 0,
+  "source_files_deleted": false
+}

@@ -1,0 +1,135 @@
+{
+  "version": "last_final_root_prelaunch_review_1",
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T06:21:37.889Z",
+  "reviewer": "root actual source/record reading",
+  "code_refs": [
+    {
+      "path": "research/run_sector_last_final.py",
+      "sha256": "f833cbff402e3008c1c8295f46f546bf2896fb92f8d4847d42cc592ce8698eaa"
+    },
+    {
+      "path": "research/last_final_20261026/runtime_adapter.py",
+      "sha256": "3af1ba401fd37d1afb17a866295b87131d5aeaff3234f78235eba96e48a5cfb6"
+    },
+    {
+      "path": "research/test_sector_last_final.py",
+      "sha256": "4475d88ad73af41f4ad5d7fdf76ce6daa7978c07baec13af9aaad23be11d869c"
+    },
+    {
+      "path": "research/freeze_sector_last_final.py",
+      "sha256": "58bfd4469ae254f0825b3c3f3df4fd20c02cff63cec0f5b3f24e4967314e9eae"
+    },
+    {
+      "path": "research/publish_last_final_review_ack.py",
+      "sha256": "c940cb73a59fd254769cc3357b9029b9375660c4c5851d7421c208a55b851e09"
+    },
+    {
+      "path": "research/last_final_20261026/test_freeze_publish.py",
+      "sha256": "c3ff6b9474f36fa762322dd9fb74a3dcf6575665a557d2edd56a5e460ee9e440"
+    },
+    {
+      "path": "research/finalize_sector_last_final.py",
+      "sha256": "3840624a7b611132b7920ee728c03729a760846ff61e25688715cafa28a75cff"
+    },
+    {
+      "path": "research/test_finalize_sector_last_final.py",
+      "sha256": "60152bf1abe9bca1131a749ca4f0c9de056b6cb8cf10180437ac87687d8cf1ef"
+    },
+    {
+      "path": "research/last_final_20261026/runtime/prepare_runtime.py",
+      "sha256": "471d9ff16375dfe780d9c7951a8d5507eb69fed254fb683713ec21182040a0e1"
+    },
+    {
+      "path": "research/last_final_20261026/runtime/start_isolated_cpu.ps1",
+      "sha256": "d0e52d7a4fa51137ae0f05ef6d59babd5f71ed9a7fa02af3472d530c3874563a"
+    },
+    {
+      "path": "research/last_final_20261026/runtime/stop_isolated_cpu.ps1",
+      "sha256": "501af57734e851f8082267f7a1e7900d5ac0ddd8bb513d82d555e19b801d5a90"
+    },
+    {
+      "path": "research/last_final_20261026/prepare_external_binding.py",
+      "sha256": "480809e31f1bdf5590fb1eafe5d8cfbf607976c85c51977a82b88fadfface59e"
+    },
+    {
+      "path": "research/last_final_20261026/prepare_protocol.py",
+      "sha256": "b29401a1610c97fc016528e4e4a3793813330af357ee2e37c3404270d6ba2879"
+    }
+  ],
+  "input_refs": [
+    {
+      "path": "research/last_final_20261026/protocol_and_review.json",
+      "sha256": "daa4e50ed662fafadf1f2eb88928f3a3a6504d1e1a3272a864afe7cc157154d5"
+    },
+    {
+      "path": "research/last_final_20261026/runtime_candidate.json",
+      "sha256": "8b7b6fedf617b719df7c8e3406857fb42689a84f40e21502d3be63fe3ff93de1"
+    },
+    {
+      "path": "research/last_final_20261026/runtime/readonly_prelaunch.json",
+      "sha256": "e8972c87fa49d29201b6a0e357e004075e234970746d7944b7d0bb440ec207d7"
+    },
+    {
+      "path": "research/last_final_20261026/resumption_design.json",
+      "sha256": "26b42d9a56257a948f29749f997a4f8553e41bf55fe896f36ca32eadaac3aaf4"
+    },
+    {
+      "path": "research/last_final_20261026/external_draft_binding.json",
+      "sha256": "47715d277ad527975d611295f000bcaff9e13334978292b8f52fa74845120dda"
+    },
+    {
+      "path": "research/last_final_20261026/prepared_final_construction.json",
+      "sha256": "b60e54269bbed3a517de654b09dede8ca3f8c0bb937cb78f162847a4d33cd2bb"
+    },
+    {
+      "path": "research/last_final_20261026/orchestration_test_review.json",
+      "sha256": "0cc19c1551fa4b67b4aaa862a370c9678a0b583bf1c5e6c939b92abddc764d8c"
+    },
+    {
+      "path": "research/last_final_20261026/freeze_publisher_review.json",
+      "sha256": "1f9d3bb5d2e85c9f4df16957d66ac82f41ccf0fd1f53b81e646d653f9c2b9162"
+    },
+    {
+      "path": "research/last_final_20261026/last_finalizer_review.json",
+      "sha256": "1283db930164f706274a5560dd7b0141ebaf1bbe088a7c87e78086ec33ffe06c"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/common_market_only__C__D0_root_review.json",
+      "sha256": "e11b5a8d128416f4d74ac1a4a0bbeed736b74d46596ad4fdf9dd6168d1ecb296"
+    }
+  ],
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "Read coordinator, authority adapter, freezer and atomic publisher in full; current synthetic results are 19 orchestration, 19 finalizer and 7 freeze/publish passes. Exact own completed C D0 and four-message F0 history verified; current runtime differs only by owned service evidence. Raw errors and negative semantic findings remain reportable."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Only fresh final namespace, at most one C F0, ten preserved attempts plus one, no retries/post-final/main calls. Previous CANCEL, terminal, completed raw outputs and absent old C D0 ACK remain unchanged. 65 prior frozen source hashes and all 84 C D0 bundle ref occurrences were verified before preparation. Late D0 semantic/validation/root review chronology precedes new protocol. Existing start/stop helper policies and scientific settings preserved."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "Completes the five-condition source timing exploratory comparison with its missing source-free final control. Original research question, model, inputs, response schema, exact-math endpoint and raw diagnostics retained. No independent confirmation or source-timing causal claim; prepared new-main conditions remain unexecuted."
+    }
+  },
+  "power_observation": {
+    "at_utc": "2026-10-26T06:21:15.943397+00:00",
+    "ac_line_status": 1,
+    "battery_percent": 98,
+    "battery_saver": 0,
+    "stage_start_decision": "allowed_known_AC"
+  },
+  "operational_observation": {
+    "owned_service_pid": 20716,
+    "original_user_service_untouched": true,
+    "new_raw_namespace_uncreated": true,
+    "new_run_reports_uncreated": true
+  },
+  "actual_generation_calls": 0,
+  "limitations": [
+    "This review authorizes only the prospective unchanged exploratory last final within the delegated user scope; final freeze validation and real execution remain separate.",
+    "Synthetic tests are not a claim of successful future generation or correct future output.",
+    "The offline semantic/numeric preparers are separate post-generation tools and are not the execution authority."
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "schema_version": "last_final_plain_report_QA_1",
+  "status": "PASS",
+  "at_utc": "2026-10-26T07:13:55.519Z",
+  "refs": [
+    {
+      "path": "research/last_final_20261026/results_explained_ko.html",
+      "sha256": "c3a08c74634d755cef9f164d434795ef2ab93173b9be29a435377cc74782e4fb"
+    },
+    {
+      "path": "research/last_final_20261026/reader_notes.json",
+      "sha256": "86f8c9bb446d22e4da0fda12c5ba37b32b98cbf8c61cb921c11e34028a73dc06"
+    },
+    {
+      "path": "research/last_final_20261026/derived_allocation/completed_five_condition_dataset.json",
+      "sha256": "6dcf903f6c607c7c717ff28d0832983f21b04011594fa9a9c469b7e68bd7367f"
+    },
+    {
+      "path": "research/last_final_20261026/report_qa/top.png",
+      "sha256": "d37b677ab1581f924e323cab1eb7aa6a6fd94c01b06f91f5922c76ce5ab7d731"
+    },
+    {
+      "path": "research/last_final_20261026/report_qa/full.png",
+      "sha256": "6f6047c7b5eb22f90908194d1d60388acff00901d64584820ce4068a7c7e04f6"
+    }
+  ],
+  "checks": {
+    "final_sector_cells": 55,
+    "all_cells_match": true,
+    "all_five_final_columns_sum_units": 10000,
+    "comparison_pairs": [
+      {
+        "group": "within_source",
+        "left": "fidelity_q2_2026__E:F0",
+        "right": "fidelity_q2_2026__L:F0",
+        "match": true,
+        "percent": "6.21"
+      },
+      {
+        "group": "within_source",
+        "left": "ubs_june_2026__E:F0",
+        "right": "ubs_june_2026__L:F0",
+        "match": true,
+        "percent": "6.66"
+      },
+      {
+        "group": "between_source",
+        "left": "fidelity_q2_2026__E:F0",
+        "right": "ubs_june_2026__E:F0",
+        "match": true,
+        "percent": "3.86"
+      },
+      {
+        "group": "between_source",
+        "left": "fidelity_q2_2026__L:F0",
+        "right": "ubs_june_2026__L:F0",
+        "match": true,
+        "percent": "13.49"
+      },
+      {
+        "group": "shared_control",
+        "left": "fidelity_q2_2026__E:F0",
+        "right": "common_market_only__C:F0",
+        "match": true,
+        "percent": "9.63"
+      },
+      {
+        "group": "shared_control",
+        "left": "fidelity_q2_2026__L:F0",
+        "right": "common_market_only__C:F0",
+        "match": true,
+        "percent": "12.98"
+      },
+      {
+        "group": "shared_control",
+        "left": "ubs_june_2026__E:F0",
+        "right": "common_market_only__C:F0",
+        "match": true,
+        "percent": "6.24"
+      },
+      {
+        "group": "shared_control",
+        "left": "ubs_june_2026__L:F0",
+        "right": "common_market_only__C:F0",
+        "match": true,
+        "percent": "4.76"
+      },
+      {
+        "group": "own_D0_F0",
+        "left": "fidelity_q2_2026__E:F0",
+        "right": "fidelity_q2_2026__E:D0",
+        "match": true,
+        "percent": "0.00"
+      },
+      {
+        "group": "own_D0_F0",
+        "left": "fidelity_q2_2026__L:F0",
+        "right": "fidelity_q2_2026__L:D0",
+        "match": true,
+        "percent": "13.45"
+      },
+      {
+        "group": "own_D0_F0",
+        "left": "ubs_june_2026__E:F0",
+        "right": "ubs_june_2026__E:D0",
+        "match": true,
+        "percent": "0.00"
+      },
+      {
+        "group": "own_D0_F0",
+        "left": "ubs_june_2026__L:F0",
+        "right": "ubs_june_2026__L:D0",
+        "match": true,
+        "percent": "4.49"
+      },
+      {
+        "group": "own_D0_F0",
+        "left": "common_market_only__C:F0",
+        "right": "common_market_only__C:D0",
+        "match": true,
+        "percent": "0.55"
+      }
+    ],
+    "all_relative_links_resolve": 9,
+    "missing_final": 0,
+    "all_attempts": 11,
+    "original_raw_modified": false,
+    "link_attribute_quote_styles_supported": [
+      "single",
+      "double"
+    ]
+  },
+  "visual_review": {
+    "reviewer": "root",
+    "surface": "isolated headless Chrome1440x1500top and1440x8500full-page screenshot",
+    "findings": "Korean text legible, five columns/11rows and totals visible, sections and bottom evidence links do not overlap or clip. Full-page screenshot used after anchor-only captures produced blank previews; those two failed generated previews removed. No scientific output changed.",
+    "scope": "Entire expanded normal page; optional closed extra comparison details verified from HTML/data, not expanded visually."
+  },
+  "limitations": [
+    "Presentation and numerical consistency verification, not additional model success grading."
+  ],
+  "model_calls": 0,
+  "service_calls": 0
+}

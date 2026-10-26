@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T06:23:36.853Z",
+  "command": "python -B -X utf8 -m unittest discover -s research/last_final_20261026 -p test_prepare_stage_semantic_audit.py -v",
+  "tests_run": 11,
+  "failures": 0,
+  "errors": 0,
+  "exit_code": 0,
+  "unittest_elapsed_seconds": 4.143,
+  "source_refs": [
+    {
+      "path": "research/last_final_20261026/prepare_stage_semantic_audit.py",
+      "sha256": "77e4509ef7f504825ea735eff4f0a8644631c4f8853566daa8e18ea77d5e57a3"
+    },
+    {
+      "path": "research/last_final_20261026/test_prepare_stage_semantic_audit.py",
+      "sha256": "d652ac806103b6775a777a3932a175d38cb3daa5372d36ad9847dd45d8f39c7a"
+    },
+    {
+      "path": "research/continuation_20261026/prepare_stage_semantic_audit.py",
+      "sha256": "efb82936ee541f187d8b352a1a28afa8ecea3d83401439a6e92a82df9731fb04"
+    },
+    {
+      "path": "research/last_final_20261026/runtime_adapter.py",
+      "sha256": "3af1ba401fd37d1afb17a866295b87131d5aeaff3234f78235eba96e48a5cfb6"
+    }
+  ],
+  "helper_hash_before": "77e4509ef7f504825ea735eff4f0a8644631c4f8853566daa8e18ea77d5e57a3",
+  "helper_hash_after": "77e4509ef7f504825ea735eff4f0a8644631c4f8853566daa8e18ea77d5e57a3",
+  "scope": "Tempfile synthetic current C F0 and external old C D0; real completed/instrument/hash/history/source-free/scope/parse/exclusive-write checks. Full runtime authority delegates mocked explicitly.",
+  "mocked_boundaries": [
+    "adapter.validate_gate",
+    "adapter.validated_external_draft",
+    "adapter.validate_prior_draft",
+    "adapter.verify_nested_refs",
+    "validate_worker_spec"
+  ],
+  "coverage": [
+    "Failed or bad-instrument current transport returns unavailable without read_bound response access or authority call.",
+    "Missing stage review fails before response and authority.",
+    "Normally completed current stage requires passing instrument refs, one worker/supervisor attempt and bound response.",
+    "Fixed external C D0 provenance is preserved with no new D0 and no old ACK backfill; stale external/current refs rejected.",
+    "Current gate/spec mismatch and mandatory validator rejection propagate.",
+    "Exact own D0 raw/history and five artifact paths required; same response bytes at wrong path rejected.",
+    "Source-free control refuses an institution packet; 0.88 raw sum is preserved, source fidelity N/A and semantic reading pending.",
+    "Malformed normally finished output is retained as an observation without semantic score.",
+    "Only C F0 and typed one-request scope allowed; reports exclusive and source trees byte-unchanged."
+  ],
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "All11 guard tests passed; partial/incomplete/stale/foreign references and rejected authority fail closed."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "New F0 uses immutable previous remaining C D0 and all input hashes; no old ACK or raw artifact is rewritten."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "No institutional source is introduced for control; raw allocation and citations remain audit observations, separate from derived math and scoring."
+    }
+  },
+  "limitations": [
+    "This is not an actual future-gate integration or actual output audit. Delegated production runtime validators remain mandatory and their rejection paths were exercised by injected errors.",
+    "Actual model output, service, power APIs and archives were not accessed."
+  ],
+  "model_calls": 0,
+  "service_calls": 0,
+  "actual_output_reads": 0,
+  "production_helper_modified": false,
+  "frozen_files_modified": false
+}

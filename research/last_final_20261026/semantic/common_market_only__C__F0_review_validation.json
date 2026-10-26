@@ -1,0 +1,3566 @@
+{
+  "version": "last_final_semantic_review_mechanical_validation_1",
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T07:07:38.592096+00:00",
+  "case_id": "common_market_only__C",
+  "stage": "F0",
+  "review_ref": {
+    "path": "research/last_final_20261026/semantic/common_market_only__C__F0_review.json",
+    "sha256": "eea3f3f8ce10f4d3e20625716cf69571b23a9790d74d3e22684ee19dc1e42344"
+  },
+  "transport_ref": {
+    "path": "data/local_sector_runtime/v494_last_final_20261026/common_market_only__C__F0/transport_result.json",
+    "sha256": "b502c8887b8f2ead2bea82791aab4b0974bb6d52ed554bdb9f9a79c65597658d"
+  },
+  "validator_ref": {
+    "path": "research/last_final_20261026/semantic/validate_common_market_only__C__F0_review.py",
+    "sha256": "4e0ceef11909be02e29068767f56a2cda12c514dbd8f4420a89fdc6abb93444b"
+  },
+  "checks_count": 707,
+  "failed_checks_count": 0,
+  "unique_reference_hashes_checked": 144,
+  "checks": [
+    {
+      "check": "review_identity",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "transport_completed",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "stage_instrument",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "response_text_bound",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "raw_sha",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "exact_own_D0_history",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source_free_inputs",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "current_market_equality",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "actual_feedback",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review_axis_errors",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review_axis_consistency",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "review_axis_paper_topic",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_last_final_20261026\\common_market_only__C__F0\\transport_result.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_last_final_20261026\\common_market_only__C__F0\\worker_spec.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_last_final_20261026\\common_market_only__C__F0\\http_0001_generation\\response.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_last_final_20261026\\common_market_only__C__F0\\stage_review.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:research/last_final_20261026/semantic/common_market_only__C__F0_bundle.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:research/last_final_20261026/run_reports/allocation_math/common_market_only__C__F0.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:research/last_final_20261026/semantic/common_market_only__C__F0_numeric_facts.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:research/last_final_20261026/semantic/common_market_only__C__F0_numeric_review.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:research/v492_evaluation_protocol_20261019_r2.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_last_final_20261026\\campaign_declaration.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_last_final_20261026\\common_market_only__C__F0\\response_contract_validation.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_last_final_20261026\\common_market_only__C__F0\\worker_summary.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_last_final_20261026\\common_market_only__C__F0\\supervisor_result.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\review_gate.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\freeze.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\orchestration_test_review.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\last_finalizer_review.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\independent_prelaunch_review.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\root_prelaunch_review.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\freeze_publisher_review.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\review_gate.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\new_pilot\\terminal_receipt.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\pilot_summary.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\continuation_20261026\\review_gate.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\continuation_20261026\\run_reports\\terminal_receipt.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_continuation_20261026\\campaign_summary.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_continuation_20261026\\campaign_declaration.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v494_design_20261025\\prepared\\preparation_manifest.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\allocation_finalization_acceptance_r2.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\completion_20261026\\completion_finalizer_review.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\completion_20261026\\review_gate.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\completion_20261026\\run_reports\\terminal_receipt.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_completion_20261026\\campaign_summary.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_completion_20261026\\campaign_declaration.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\remaining_finalizer_review.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\review_gate.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\run_reports\\terminal_receipt.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026\\campaign_summary.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026\\campaign_declaration.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026\\CANCEL",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\pause_checkpoint_20261026T0513.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\resumption_design.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\runtime_candidate.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\protocol_and_review.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026\\common_market_only__C__D0\\http_0001_generation\\response.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026\\common_market_only__C__D0\\worker_spec.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026\\common_market_only__C__D0\\worker_summary.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026\\common_market_only__C__D0\\supervisor_result.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026\\common_market_only__C__D0\\transport_result.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026\\common_market_only__C__D0\\stage_review.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\run_reports\\allocation_math\\common_market_only__C__D0.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:research/remaining_20261026/semantic/common_market_only__C__D0_review.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\semantic\\common_market_only__C__D0_review_validation.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\semantic\\common_market_only__C__D0_root_review.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\prepared_final_construction.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\analyze_v492_pilot.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\benchmark_sector_latency.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\build_v492_masked_review.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\build_v494_masked_review.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\completion_20261026\\prepare_stage_semantic_audit.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\completion_20261026\\runtime\\start_isolated_cpu.ps1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\completion_20261026\\runtime\\stop_isolated_cpu.ps1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\completion_20261026\\test_prepare_stage_semantic_audit.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\continuation_20261026\\prepare_stage_semantic_audit.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\continuation_20261026\\runtime\\start_isolated_cpu.ps1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\continuation_20261026\\runtime\\stop_isolated_cpu.ps1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\finalize_sector_allocation.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\finalize_sector_campaign.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\finalize_sector_completion.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\finalize_sector_last_final.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\finalize_sector_remaining.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\freeze_sector_completion.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\freeze_sector_continuation.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\freeze_sector_last_final.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\freeze_sector_remaining.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\freeze_sector_v494.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\prepare_external_binding.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\prepare_protocol.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\runtime\\prepare_runtime.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\runtime\\start_isolated_cpu.ps1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\runtime\\stop_isolated_cpu.ps1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\runtime_adapter.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\test_freeze_publish.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\local_sector_single_case.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\prepare_sector_v491.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\prepare_sector_v492.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\prepare_sector_v494.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\probe_ollama_runtime.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\publish_completion_review_ack.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\publish_last_final_review_ack.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\publish_remaining_review_ack.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\method_build_audit.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\start_isolated_cpu.ps1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\stop_isolated_cpu.ps1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\prepare_stage_semantic_audit.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\runtime\\start_isolated_cpu.ps1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\runtime\\stop_isolated_cpu.ps1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\test_prepare_stage_semantic_audit.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\remote_sector_runtime.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\review_sector_v494_stage.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\run_sector_completion.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\run_sector_continuation.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\run_sector_last_final.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\run_sector_remaining.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\run_v494_recovery.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\sector_completion_awake.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\sector_completion_gate.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\sector_completion_runtime.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\sector_continuation_awake.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\sector_continuation_gate.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\sector_continuation_runtime.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\sector_engine.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\sector_remaining_awake.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\sector_remaining_gate.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\sector_remaining_runtime.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\sector_v48_main_awake.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\sector_v48_transport.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\sector_v491_contract.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\sector_v491_runtime.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\sector_v491_tokenizer.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\sector_v492_contract.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\sector_v492_review_gate.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\sector_v492_runtime.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\sector_v494_review_gate.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\sector_v494_runtime.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\test_finalize_sector_campaign.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\test_finalize_sector_completion.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\test_finalize_sector_last_final.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\test_finalize_sector_remaining.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\test_sector_completion.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\test_sector_continuation.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\test_sector_last_final.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\test_sector_remaining.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\runtime\\service_ready\\service_receipt.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v491_cpu_preflight_20261019\\synthetic_large_input_threads8\\spec.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v491_cpu_preflight_20261019\\synthetic_large_input_threads8\\worker_summary.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\prepare_stage_semantic_audit.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026\\common_market_only__C__D0\\response_contract_validation.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v494_design_20261025\\prepared\\common_market_only__C__D0_messages.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v491_design_20261019\\public_compact_candidate.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\audit_stage_numerics.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:C:\\Users\\Insun\\2026libera\\research\\completion_20261026\\audit_stage_numerics.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:research/last_final_20261026/offline_preparers_independent_review.json",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sha:research/last_final_20261026/semantic/validate_common_market_only__C__F0_review.py",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "eleven_canonical_rows",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "raw_sum",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "old_sum",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "raw_delta",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "residual",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "derived_units",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "D0_units",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "integer_total",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "derived_delta",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "derived_TV",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "sidecars_independent",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "row_quote:0:source_reading_quote",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "row_quote:0:decision_reason_quote",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source_NA:0",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "raw_row:0",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "row_quote:1:source_reading_quote",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "row_quote:1:decision_reason_quote",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source_NA:1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "raw_row:1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "row_quote:2:source_reading_quote",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "row_quote:2:decision_reason_quote",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source_NA:2",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "raw_row:2",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "row_quote:3:source_reading_quote",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "row_quote:3:decision_reason_quote",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source_NA:3",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "raw_row:3",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "row_quote:4:source_reading_quote",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "row_quote:4:decision_reason_quote",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source_NA:4",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "raw_row:4",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "row_quote:5:source_reading_quote",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "row_quote:5:decision_reason_quote",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source_NA:5",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "raw_row:5",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "row_quote:6:source_reading_quote",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "row_quote:6:decision_reason_quote",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source_NA:6",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "raw_row:6",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "row_quote:7:source_reading_quote",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "row_quote:7:decision_reason_quote",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source_NA:7",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "raw_row:7",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "row_quote:8:source_reading_quote",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "row_quote:8:decision_reason_quote",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source_NA:8",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "raw_row:8",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "row_quote:9:source_reading_quote",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "row_quote:9:decision_reason_quote",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source_NA:9",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "raw_row:9",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "row_quote:10:source_reading_quote",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "row_quote:10:decision_reason_quote",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "source_NA:10",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "raw_row:10",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "top_quote:0",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "top_quote:1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "top_quote:2",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "top_quote:3",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "top_quote:4",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "top_quote:5",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "top_quote:6",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "top_quote:7",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "top_quote:8",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N001",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_prior:N001",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_current:N001",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N002",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_prior:N002",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_current:N002",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N003",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N003/common_market/lookback_compound_return/0",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_metric_status:N003",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N004",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N004/common_market/daily_mean_return/0",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_metric_status:N004",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N005",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_prior:N005",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_current:N005",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N006",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_prior:N006",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_current:N006",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N007",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N007/common_market/lookback_compound_return/1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_metric_status:N007",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N008",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_prior:N008",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_current:N008",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N009",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N009/common_market/lookback_compound_return/2",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_metric_status:N009",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N010",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N010/common_market/daily_mean_return/2",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_metric_status:N010",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N011",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_prior:N011",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_current:N011",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N012",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N012/common_market/lookback_compound_return/3",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_metric_status:N012",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N013",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N013/common_market/daily_mean_return/3",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_metric_status:N013",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N014",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_prior:N014",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_current:N014",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N015",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N015/common_market/lookback_compound_return/4",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_metric_status:N015",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N016",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N016/common_market/daily_mean_return/4",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_metric_status:N016",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N017",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N017/common_market/daily_volatility/4",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N017/common_market/annualized_volatility_diagnostic/4",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_volatility_status:N017",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N018",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_prior:N018",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_current:N018",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N019",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N019/common_market/lookback_compound_return/5",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_metric_status:N019",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N020",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N020/common_market/daily_mean_return/5",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_metric_status:N020",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N021",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N021/common_market/daily_volatility/5",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N021/common_market/annualized_volatility_diagnostic/5",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_volatility_status:N021",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N022",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_prior:N022",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_current:N022",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N023",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N023/common_market/lookback_compound_return/6",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_metric_status:N023",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N024",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N024/common_market/daily_volatility/6",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N024/common_market/annualized_volatility_diagnostic/6",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_volatility_status:N024",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N025",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_prior:N025",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_current:N025",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N026",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N026/common_market/lookback_compound_return/7",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_metric_status:N026",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N027",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N027/common_market/daily_mean_return/7",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_metric_status:N027",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N028",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_prior:N028",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_current:N028",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N029",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N029/common_market/lookback_compound_return/8",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_metric_status:N029",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N030",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N030/common_market/daily_mean_return/8",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_metric_status:N030",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N031",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_prior:N031",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_current:N031",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N032",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_prior:N032",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_current:N032",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N033",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N033/common_market/lookback_compound_return/9",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_metric_status:N033",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N034",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N034/common_market/daily_mean_return/9",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_metric_status:N034",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N035",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_prior:N035",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_current:N035",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N036",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N036/common_market/lookback_compound_return/10",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_metric_status:N036",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N037",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N037/common_market/daily_mean_return/10",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_metric_status:N037",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N038",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N038/common_context/operating_brief/evidence_items/6/statement",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N039",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N039/common_market/annualized_volatility_diagnostic/7",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_metric_status:N039",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N040",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N040/common_market/daily_mean_return/7",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_metric_status:N040",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N041",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N041/common_market/lookback_compound_return/7",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_metric_status:N041",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N042",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N042/common_context/market_context/fact_table/rows/0/2",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N043",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N043/common_context/market_context/fact_table/rows/2/2",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N044",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_current:N044",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N045",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N045/common_market/annualized_volatility_diagnostic/7",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_metric_status:N045",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N046",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N046/common_context/market_context/fact_table/rows/2/2",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N047",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N047/common_context/market_context/fact_table/rows/4/1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N047/common_context/market_context/fact_table/rows/4/2",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N048",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N048/actual_draft_feedback/allocation/raw_budget_residual",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N049",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N050",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N051",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N051/common_context/operating_brief/judgment_horizon_months",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N052",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N052/common_context/market_context/decision_information_date",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N052/common_context/market_context/fact_table/rows/0/6",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N052/common_context/market_context/fact_table/rows/2/6",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N052/common_context/market_context/fact_table/rows/4/6",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N053",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N053/common_context/operating_brief/judgment_horizon_months",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N054",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N054/common_context/operating_brief/decision_reference_date",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N055",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N055/common_context/market_context/fact_table/rows/0/2",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N056",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N056/common_context/market_context/fact_table/rows/2/2",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N057",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N057/common_context/market_context/fact_table/rows/4/2",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N058",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N058/common_market/lookback_return_dates",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N058/common_market/return_observations",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N059",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N060",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N060/actual_draft_feedback/allocation/raw_sum",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N060/actual_draft_feedback/allocation/raw_budget_residual",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_quote:N061",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N061/common_context/market_context/decision_information_date",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N061/common_context/market_context/fact_table/rows/0/6",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N061/common_context/market_context/fact_table/rows/2/6",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_evidence:N061/common_context/market_context/fact_table/rows/4/6",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "numeric_count",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "visible_ID_set",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_count",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_occurrence_exact",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:0",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:1",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:2",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:3",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:4",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:5",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:6",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:7",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:8",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:9",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:10",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:11",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:12",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:13",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:14",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:15",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:16",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:17",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:18",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:19",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:20",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:21",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:22",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:23",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:24",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:25",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:26",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:27",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:28",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:29",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:30",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:31",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:32",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:33",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:34",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:35",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:36",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:37",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:38",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:39",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:40",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:41",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:42",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:43",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:44",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:45",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:46",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:47",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:48",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:49",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:50",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:51",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:52",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:53",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:54",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:55",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:56",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:57",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:58",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:59",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:60",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:61",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:62",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:63",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:64",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:65",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:66",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:67",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:68",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:69",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:70",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:71",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:72",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:73",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:74",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:75",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "citation_visible:76",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:473",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:474",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:475",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:476",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N001",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:478",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:479",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N002",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:481",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:482",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N003",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:484",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:485",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N004",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:487",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:488",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N038",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:490",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:491",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:492",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:493",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N005",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:495",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:496",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N006",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:498",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:499",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N007",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:501",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:502",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:503",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:504",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N008",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:506",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:507",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N009",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:509",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:510",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N010",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:512",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:513",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:514",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:515",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N011",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:517",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:518",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N012",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:520",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:521",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N013",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:523",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:524",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:525",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:526",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N014",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:528",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:529",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N016",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:531",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:532",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N015",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:534",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:535",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N017",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:537",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:538",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:539",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:540",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N018",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:542",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:543",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N019",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:545",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:546",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N020",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:548",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:549",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N021",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:551",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:552",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:553",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:554",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N022",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:556",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:557",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N023",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:559",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:560",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N024",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:562",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:563",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:564",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:565",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N025",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:567",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:568",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N026",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:570",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:571",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N027",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:573",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:574",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:575",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:576",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N028",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:578",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:579",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N029",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:581",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:582",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N030",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:584",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:585",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:586",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:587",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N031",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:589",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:590",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N032",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:592",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:593",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N033",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:595",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:596",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N034",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:598",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:599",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:600",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:601",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N035",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:603",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:604",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N036",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:606",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:607",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N037",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:609",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:610",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:611",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:612",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N039",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:614",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:615",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N040",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:617",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:618",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N041",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:620",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:621",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:622",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:623",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:624",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:625",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N042",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:627",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:628",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N043",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:630",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:631",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:632",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:633",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N044",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:635",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:636",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N045",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:638",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:639",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:640",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:641",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:642",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:643",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N046",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:645",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:646",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N047",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:648",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:649",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N048",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:651",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:652",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N049",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:654",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:655",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N050",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:657",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:658",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N051",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:660",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:661",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N052",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:663",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:664",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:665",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:666",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N053",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:668",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:669",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N054",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:671",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:672",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N054",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:674",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:675",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N054",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:677",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:678",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N055",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:680",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:681",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N055",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:683",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:684",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N056",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:686",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:687",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N057",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:689",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:690",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N058",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:692",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:693",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N059",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:695",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:696",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N060",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:698",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:699",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N060",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:701",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:702",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_in_claim:N061",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_exact:704",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "token_covered:705",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "check": "complete_coverage",
+      "pass": true,
+      "detail": null
+    }
+  ],
+  "limits": [
+    "Mechanical quote/path/hash/numeric/coverage verification; qualitative entailment judgments remain the explicitly unmasked AI review.",
+    "No model/service/raw writes or ACK publication."
+  ],
+  "model_calls": 0,
+  "service_calls": 0,
+  "raw_modified": false
+}

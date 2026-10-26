@@ -1,0 +1,86 @@
+{
+  "status": "PASS",
+  "recorded_at_utc": "2026-10-26T02:03:11.866298+00:00",
+  "purpose": "read_only_prelaunch_infrastructure_check",
+  "runtime_ref": {
+    "path": "research/completion_20261026/runtime_candidate.json",
+    "sha256": "24528f9af9385814fbec3d8d1953322dcf86ccd259178edf32bd79edea6f9902"
+  },
+  "service_ref": {
+    "path": "research/completion_20261026/runtime/service_ready/service_receipt.json",
+    "sha256": "ebbea3eecbcc4c1e0337f47915f1db30a8f135fea0bea6ee86ff2689e4b390e9"
+  },
+  "same_scientific_controls": true,
+  "power": {
+    "at_utc": "2026-10-26T02:03:11.865010+00:00",
+    "ac_line_status": 1,
+    "battery_flag": 9,
+    "battery_percent": 98,
+    "battery_saver": 0
+  },
+  "read_only_api_observations": {
+    "version": {
+      "version": "0.35.1"
+    },
+    "ps": {
+      "models": []
+    },
+    "selected_model_tag": {
+      "name": "qwen3.5:4b-q4_K_M",
+      "model": "qwen3.5:4b-q4_K_M",
+      "modified_at": "2026-10-18T15:34:09.5591487+09:00",
+      "size": 3324173934,
+      "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+      "details": {
+        "parent_model": "model.gguf",
+        "format": "gguf",
+        "family": "qwen35",
+        "families": [
+          "qwen35"
+        ],
+        "parameter_size": "4.2B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 262144,
+        "embedding_length": 2560
+      },
+      "capabilities": [
+        "completion",
+        "vision",
+        "tools",
+        "thinking"
+      ]
+    }
+  },
+  "helper_checks": [
+    {
+      "source_ref": {
+        "path": "research/continuation_20261026/runtime/start_isolated_cpu.ps1",
+        "sha256": "a141ff34d5ecf1f4325a9ef91275c57b785c2778db5d041e35acfcc1b8c6e1d3"
+      },
+      "current_ref": {
+        "path": "research/completion_20261026/runtime/start_isolated_cpu.ps1",
+        "sha256": "70671c42dfb16b1e3c434f80ef658d9f900393fc0894710b497e3fe28ba328a1"
+      },
+      "only_scope_error_message_changed": true
+    },
+    {
+      "source_ref": {
+        "path": "research/continuation_20261026/runtime/stop_isolated_cpu.ps1",
+        "sha256": "218f0d5bba603e02f06d3a4f041b35d40d61b67015b5cc41dd6f2998c6294d55"
+      },
+      "current_ref": {
+        "path": "research/completion_20261026/runtime/stop_isolated_cpu.ps1",
+        "sha256": "c2c8cca784ab45c370ae8b89971dc45961675a72fdaf0e5fe9c120052f6c0ffb"
+      },
+      "only_scope_error_message_changed": true
+    }
+  ],
+  "model_generation_calls": 0,
+  "new_main_model_calls": 0,
+  "persistent_power_or_environment_changes": false,
+  "pre_freeze_correction": {
+    "field": "backend_evidence[0].role",
+    "initial_issue": "Required cpu_service role was omitted while copying path/hash; caught by original.validate_runtime before freeze or generation",
+    "resolution": "Restored exact inherited role; current validation passes; no scientific option changed"
+  }
+}

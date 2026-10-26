@@ -1,0 +1,58 @@
+{
+  "version": "completion_offline_test_run_2",
+  "started_at_utc": "2026-10-26T02:02:49.736Z",
+  "completed_at_utc": "2026-10-26T02:02:51.533Z",
+  "exit_code": 0,
+  "signal": null,
+  "stdout": "",
+  "stderr": "test_awake_expiry_is_six_fixed_stage_and_review_ceilings_plus_cleanup (test_sector_completion.CompletionPreservationTests.test_awake_expiry_is_six_fixed_stage_and_review_ceilings_plus_cleanup) ... ok\r\ntest_exact_token_reserve_boundary_and_overflow_without_generation (test_sector_completion.CompletionPreservationTests.test_exact_token_reserve_boundary_and_overflow_without_generation) ... ok\r\ntest_stop_after_complete_pair_preserves_cell_completion_and_unattempted_denominator (test_sector_completion.CompletionPreservationTests.test_stop_after_complete_pair_preserves_cell_completion_and_unattempted_denominator) ... ok\r\ntest_summary_budget_rejects_seventh_completion_request (test_sector_completion.CompletionPreservationTests.test_summary_budget_rejects_seventh_completion_request) ... ok\r\ntest_worker_render_token_generation_and_cleanup_AST_unchanged (test_sector_completion.CompletionPreservationTests.test_worker_render_token_generation_and_cleanup_AST_unchanged) ... ok\r\ntest_completed_fidelity_or_new_main_cannot_enter_scope (test_sector_completion.CompletionScopeAndHistoryTests.test_completed_fidelity_or_new_main_cannot_enter_scope) ... ok\r\ntest_duplicate_review_and_missing_current_code_coverage_rejected (test_sector_completion.CompletionScopeAndHistoryTests.test_duplicate_review_and_missing_current_code_coverage_rejected) ... ok\r\ntest_exact_three_first_attempts_primary_exploratory_scope (test_sector_completion.CompletionScopeAndHistoryTests.test_exact_three_first_attempts_primary_exploratory_scope) ... ok\r\ntest_gate_requires_new_approved_receipt_before_any_other_work (test_sector_completion.CompletionScopeAndHistoryTests.test_gate_requires_new_approved_receipt_before_any_other_work) ... ok\r\ntest_history_preserves_completed_L_despite_old_generic_stopped_row_label (test_sector_completion.CompletionScopeAndHistoryTests.test_history_preserves_completed_L_despite_old_generic_stopped_row_label) ... ok\r\ntest_history_rejects_cross_segment_ref_cleanup_or_count (test_sector_completion.CompletionScopeAndHistoryTests.test_history_rejects_cross_segment_ref_cleanup_or_count) ... ok\r\ntest_history_rejects_missing_L_final_or_already_attempted_UBS (test_sector_completion.CompletionScopeAndHistoryTests.test_history_rejects_missing_L_final_or_already_attempted_UBS) ... ok\r\ntest_scope_rejects_wrong_count_bool_retry_and_main (test_sector_completion.CompletionScopeAndHistoryTests.test_scope_rejects_wrong_count_bool_retry_and_main) ... ok\r\ntest_acquisition_exception_is_accounted_and_cleanup_runs (test_sector_completion.CoordinatorCleanupTests.test_acquisition_exception_is_accounted_and_cleanup_runs) ... ok\r\ntest_existing_workspace_output_is_never_reused (test_sector_completion.CoordinatorCleanupTests.test_existing_workspace_output_is_never_reused) ... ok\r\ntest_cancel_during_wait_honored_before_ack (test_sector_completion.ExternalReviewBarrierTests.test_cancel_during_wait_honored_before_ack) ... ok\r\ntest_malformed_existing_ack_fails_closed (test_sector_completion.ExternalReviewBarrierTests.test_malformed_existing_ack_fails_closed) ... ok\r\ntest_missing_ack_times_out_without_model_or_retry (test_sector_completion.ExternalReviewBarrierTests.test_missing_ack_times_out_without_model_or_retry) ... ok\r\ntest_stale_math_hash_is_rejected (test_sector_completion.ExternalReviewBarrierTests.test_stale_math_hash_is_rejected) ... ok\r\ntest_valid_negative_findings_ack_permits_progress_without_success_score (test_sector_completion.ExternalReviewBarrierTests.test_valid_negative_findings_ack_permits_progress_without_success_score) ... ok\r\ntest_wait_timeout_cannot_exceed_frozen_operational_ceiling (test_sector_completion.ExternalReviewBarrierTests.test_wait_timeout_cannot_exceed_frozen_operational_ceiling) ... ok\r\ntest_wrong_case_unreviewed_axis_or_semantic_stage_is_rejected (test_sector_completion.ExternalReviewBarrierTests.test_wrong_case_unreviewed_axis_or_semantic_stage_is_rejected) ... ok\r\ntest_ac_loss_at_boundary_requires_stop_and_still_allows_cleanup (test_sector_completion.OwnershipTests.test_ac_loss_at_boundary_requires_stop_and_still_allows_cleanup) ... ok\r\ntest_cross_thread_cannot_clear_owner_request (test_sector_completion.OwnershipTests.test_cross_thread_cannot_clear_owner_request) ... ok\r\ntest_missing_ac_refuses_acquisition_without_api_request (test_sector_completion.OwnershipTests.test_missing_ac_refuses_acquisition_without_api_request) ... ok\r\ntest_same_thread_acquire_pulse_and_release_are_explicit (test_sector_completion.OwnershipTests.test_same_thread_acquire_pulse_and_release_are_explicit) ... ok\r\ntest_final_F0_also_requires_external_review (test_sector_completion.SequenceReviewBarrierTests.test_final_F0_also_requires_external_review) ... ok\r\ntest_no_next_generation_without_valid_ack (test_sector_completion.SequenceReviewBarrierTests.test_no_next_generation_without_valid_ack) ... ok\r\ntest_cancel_before_first_stage_issues_no_request (test_sector_completion.SequenceTests.test_cancel_before_first_stage_issues_no_request) ... ok\r\ntest_changed_case_inventory_fails_before_request (test_sector_completion.SequenceTests.test_changed_case_inventory_fails_before_request) ... ok\r\ntest_instrument_failure_halts_even_with_completed_transport (test_sector_completion.SequenceTests.test_instrument_failure_halts_even_with_completed_transport) ... ok\r\ntest_model_structure_failure_skips_own_final_but_runs_remaining_cases (test_sector_completion.SequenceTests.test_model_structure_failure_skips_own_final_but_runs_remaining_cases) ... ok\r\ntest_reusing_stage_directory_fails_without_second_request (test_sector_completion.SequenceTests.test_reusing_stage_directory_fails_without_second_request) ... ok\r\ntest_system_interruption_halts_and_retains_two_missing_cases (test_sector_completion.SequenceTests.test_system_interruption_halts_and_retains_two_missing_cases) ... ok\r\ntest_three_cases_six_stages_keep_raw_errors_and_only_own_new_draft (test_sector_completion.SequenceTests.test_three_cases_six_stages_keep_raw_errors_and_only_own_new_draft) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 35 tests in 1.331s\r\n\r\nOK\r\n",
+  "error": null,
+  "source_refs_before": [
+    {
+      "path": "research/sector_completion_gate.py",
+      "sha256": "39c6cd80196bfdc25040f2cbf239cdfd9d562dab17ce3070fc38559ae41917b7"
+    },
+    {
+      "path": "research/sector_completion_runtime.py",
+      "sha256": "99395173cb3c030c06c456b4b4ae41a0f2cd157ce05b76e4b42b9696ed6e1ec2"
+    },
+    {
+      "path": "research/sector_completion_awake.py",
+      "sha256": "f38bafe9bacdd87c3a4642193a9752c0c68552533528393b9b8b242a3b87996f"
+    },
+    {
+      "path": "research/run_sector_completion.py",
+      "sha256": "dd3aded467dedaef012ee9b6dcefa9af80a59412aa9de800b4927b79273eca7b"
+    },
+    {
+      "path": "research/test_sector_completion.py",
+      "sha256": "4c139eef79c9c235e5eeeb2b393a367ff3390380ce7bfd8c687b74eb773a6c5d"
+    }
+  ],
+  "source_refs_after": [
+    {
+      "path": "research/sector_completion_gate.py",
+      "sha256": "39c6cd80196bfdc25040f2cbf239cdfd9d562dab17ce3070fc38559ae41917b7"
+    },
+    {
+      "path": "research/sector_completion_runtime.py",
+      "sha256": "99395173cb3c030c06c456b4b4ae41a0f2cd157ce05b76e4b42b9696ed6e1ec2"
+    },
+    {
+      "path": "research/sector_completion_awake.py",
+      "sha256": "f38bafe9bacdd87c3a4642193a9752c0c68552533528393b9b8b242a3b87996f"
+    },
+    {
+      "path": "research/run_sector_completion.py",
+      "sha256": "dd3aded467dedaef012ee9b6dcefa9af80a59412aa9de800b4927b79273eca7b"
+    },
+    {
+      "path": "research/test_sector_completion.py",
+      "sha256": "4c139eef79c9c235e5eeeb2b393a367ff3390380ce7bfd8c687b74eb773a6c5d"
+    }
+  ],
+  "model_calls": 0,
+  "service_calls": 0,
+  "windows_power_api_calls": 0,
+  "synthetic_only": true
+}

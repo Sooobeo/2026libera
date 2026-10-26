@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Plain Korean exploratory result notes",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "observations",
+    "caveats",
+    "related_files"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "plain_results_notes_1"
+    },
+    "title": {
+      "type": "string",
+      "maxLength": 20000
+    },
+    "observations": {
+      "type": "array",
+      "maxItems": 50,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "text"
+        ],
+        "properties": {
+          "title": {
+            "type": "string",
+            "maxLength": 20000
+          },
+          "text": {
+            "type": "string",
+            "maxLength": 20000
+          }
+        }
+      }
+    },
+    "caveats": {
+      "type": "array",
+      "maxItems": 50,
+      "items": {
+        "type": "string",
+        "maxLength": 20000
+      }
+    },
+    "related_files": {
+      "type": "array",
+      "maxItems": 50,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "path"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "maxLength": 20000
+          },
+          "path": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 20000,
+            "description": "Workspace-relative existing file path. Renderer rejects absolute/outside-workspace paths, URL schemes and script URLs."
+          }
+        }
+      }
+    }
+  },
+  "description": "All strings are plain text, never HTML. Root writes evidence-backed observations only after terminal audit completion. Optional title defaults to the paper title. Actual report generation is root-owned and does not normalize data again."
+}

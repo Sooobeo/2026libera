@@ -1,0 +1,92 @@
+{
+  "version": "completion_masked_adapter_review_1",
+  "status": "PASS",
+  "scope": "New post-freeze offline packaging code only; no effect on frozen generation inputs, runtime or stage review. No actual campaign bundle built.",
+  "code_refs": [
+    {
+      "path": "research/build_completion_masked_review.py",
+      "sha256": "543be54722f1c02cf8a86223079548de3384f80cbc8bfab4ca388abb337d8c9b"
+    },
+    {
+      "path": "research/test_build_completion_masked_review.py",
+      "sha256": "a77e6df841279ffbb1d4f66ded204335444c29a0cc13b959a18518e9016cb1a7"
+    },
+    {
+      "path": "research/finalize_sector_completion.py",
+      "sha256": "7dab1d17a801e1d0beee5a669afa9c84adc2914d15715f0c82cfa97cfa45b253"
+    },
+    {
+      "path": "research/build_v494_masked_review.py",
+      "sha256": "8ed40877f82414678d5808181712813ad474ddf089a08a5ba06a7b7bcaa6d148"
+    },
+    {
+      "path": "research/build_campaign_masked_review.py",
+      "sha256": "7be256e47168a3c51f30081af1273b4c607fd0fcb58e77974fde76339c83ca97"
+    }
+  ],
+  "model_generation_calls": 0,
+  "service_calls": 0,
+  "actual_experiment_responses_read": 0,
+  "actual_bundle_created": false,
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "All20 synthetic tests pass. Terminal metadata is required before text/accounting; malformed, missing, partial and unrequested finals keep explicit availability. Exact own-D0 provenance, source assignment, request counts, prepared input hashes, immutable-tree boundaries and post-read hashes prevent substituted or hidden evidence."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Production explicitly calls the frozen three-segment completion finalizer and explicit completion runtime validation. Its five-cell/all-attempt accounting remains private while exactly three newly planned final submissions and33 sector rows are packaged. Original helpers and evaluation bytes are reused without global mutation."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "One-output raw-claim review uses actual final-visible source/common evidence plus exact raw own D0. Derived weights, historical Fidelity outcomes, previous semantic audits, condition/case/order labels and the post-output study-role amendment are private. Arithmetic100% is never supplied as evidence for raw source fidelity."
+    }
+  },
+  "limitations": [
+    "Synthetic masking tests mock only the new adapter run/stage/accounting boundaries for fixture authorization; actual production invokes the frozen completion validators. Separate frozen finalizer tests cover full gate/history/ACK/math accounting.",
+    "Opaque IDs and randomized presentation order cannot conceal source/content clues within verbatim text; masking remains partial.",
+    "AI-assisted descriptive review only; no independent-human, balanced independent sample, reliability score, causal or performance claim.",
+    "A partial or unbound response is diagnostic, never a normally completed replacement final.",
+    "No actual model text was read and no actual bundle was created for these tests."
+  ],
+  "usage": {
+    "CLI": "python research/build_completion_masked_review.py --run-dir data/local_sector_runtime/v494_completion_20261026 --terminal-receipt research/completion_20261026/run_reports/terminal_receipt.json --output-dir research/completion_20261026/masked_completion_judge --mapping-dir research/completion_20261026/masked_completion_private",
+    "requirements": [
+      "Run only after the entire completion campaign has a durable terminal receipt and summary.",
+      "Use new separate judge/private trees outside every old/current raw tree and historical report tree; judge output also stays outside current private reports.",
+      "Give a fresh reviewer one opaque item, its exact text/evidence and rubric only; never send private mapping, existing audits or derived math.",
+      "All three planned final items remain in the denominator; historical Fidelity finals are reviewed separately and never injected here.",
+      "COMPLETE.json is last; failed packaging does not produce a completed bundle and is never overwritten."
+    ]
+  },
+  "git_attributes_requested": [
+    "research/build_completion_masked_review.py -text",
+    "research/test_build_completion_masked_review.py -text"
+  ],
+  "completed_at_utc": "2026-10-26T02:17:51.374Z",
+  "test_result_ref": {
+    "path": "research/completion_20261026/completion_masked_adapter_test_result.json",
+    "sha256": "13d62b9d73e2c816659ab51b0f0526ea0da4e71dbd83c8c9f488f68d7466dd49"
+  },
+  "independent_static_review_ref": {
+    "path": "research/completion_20261026/implementation/completion_masked_independent_review.json",
+    "sha256": "4492664381477ff03cbce1a50775319206db42865b55850207b737f56e3465ec"
+  },
+  "frozen_completion_validator_review_ref": {
+    "path": "research/completion_20261026/completion_finalizer_review.json",
+    "sha256": "fec44eccb3a9edfb68b717fcaa2750f714b6f9b175a635b4b4ea111112df3f60"
+  },
+  "original_evaluation_ref": {
+    "path": "research/v492_evaluation_protocol_20261019_r2.json",
+    "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+  },
+  "post_freeze_postprocessing_addition": true,
+  "frozen_generation_instrument_changed": false,
+  "tests": {
+    "count": 20,
+    "all_pass": true,
+    "elapsed_seconds": 335.928,
+    "source_bytes_unchanged": true
+  },
+  "reviewer": "Codex AI assistance /root/method_audit; separate read-only static review by /root/runtime_recovery, not independent-human validation."
+}

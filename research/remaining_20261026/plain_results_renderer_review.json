@@ -1,0 +1,104 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T03:13:06.707Z",
+  "review_scope": "Generator implementation and one minimal synthetic fixture; actual research results and rendered actual report not inspected.",
+  "source_refs": [
+    {
+      "path": "research/remaining_20261026/render_plain_results.py",
+      "sha256": "77b50b82a17ded37178f48daeda6fd76b8c24e6776a27579200c9a1996bc2128"
+    },
+    {
+      "path": "research/remaining_20261026/plain_results_notes.schema.json",
+      "sha256": "f64f0f956a3288d77c2266d80b8b2fa585d375910ebf2983b8adb133b8bac3ce"
+    },
+    {
+      "path": "research/finalize_sector_remaining.py",
+      "sha256": "8fa60d795bc5ea75226a97761a406468f824d004b18fe7ff3ba897ceda54fe12"
+    },
+    {
+      "path": "research/finalize_sector_campaign.py",
+      "sha256": "5036ddc1d856adf196fd1d2818ffeb8b3d9b3c98e65be5b6910cef59a9173a8e"
+    },
+    {
+      "path": "research/finalize_sector_allocation.py",
+      "sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3"
+    }
+  ],
+  "test": {
+    "command": "python -B -X utf8 research/remaining_20261026/render_plain_results.py --self-test",
+    "tool_result": {
+      "chunk_id": "c255a2",
+      "wall_time_seconds": 3.8562836000000003,
+      "exit_code": 0,
+      "original_token_count": 84,
+      "output": "{\"status\": \"PASS\", \"synthetic_fixtures\": 1, \"displayed_final_cells\": 55, \"five_column_sums_units\": [10000, 10000, 10000, 10000, 10000], \"escaping_verified\": true, \"unsafe_link_rejected\": true, \"exclusive_output_verified\": true, \"nonzero_TV_percent_verified\": true, \"actual_results_read\": false, \"model_calls\": 0, \"service_calls\": 0}\r\n"
+    },
+    "synthetic_fixtures": 1,
+    "displayed_final_cells": 55,
+    "five_column_sums_units": [
+      10000,
+      10000,
+      10000,
+      10000,
+      10000
+    ],
+    "nonzero_TV_percent_verified": true,
+    "html_escaping_verified": true,
+    "unsafe_link_rejected": true,
+    "exclusive_output_verified": true
+  },
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "Renderer accepts only the remaining finalizer result schema, all ten unique logical slots, accepted finalized integer vectors with exactly11 canonical sectors and10000 total units, and comparison ratios/differences consistent with those units. It neither reads raw responses nor recalculates allocation normalization. Plain notes and link labels are escaped; workspace-relative links and exclusive HTML creation are enforced."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Five fixed conditions and all55 planned final rows are shown. D0/F0 raw totals and derived totals remain separate. F0-F0 timing-condition comparisons are distinguished from each condition own F0-D0 comparison. TV is checked against accepted integers and rendered as TV×100, the share of all funds that must be moved between sectors."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "Uses the supplied paper title/subtitle, same AI/common market/11 sectors, and explains institution as a supplied-public-document condition rather than actual institutional decisions or correct weights. It explicitly disclaims pure timing causality, future-return validation and judging source reflection from allocation distance alone. Proportional normalization plus0.01percent largest-remainder allocation is explained without calling95/88percent budget deficits mere rounding."
+    }
+  },
+  "notes_schema": {
+    "schema_version": "plain_results_notes_1",
+    "required": [
+      "observations",
+      "caveats",
+      "related_files"
+    ],
+    "optional": [
+      "title"
+    ],
+    "observation_fields": [
+      "title",
+      "text"
+    ],
+    "related_file_fields": [
+      "label",
+      "path"
+    ],
+    "all_prose_plain_text": true
+  },
+  "expected_input_filename": "combined_primary_exploratory_results.json",
+  "generation_instruction": "Root only after terminal finalization and stagewise audits: python -B -X utf8 research/remaining_20261026/render_plain_results.py --results <combined_primary_exploratory_results.json> --notes <plain_results_notes.json> --output <new .html under research/remaining_20261026>",
+  "files_changed": "Only new generator, notes schema and this review receipt under remaining report root.",
+  "actual_result_files_read": 0,
+  "actual_response_files_read": 0,
+  "model_calls": 0,
+  "service_calls": 0,
+  "actual_report_generated": false,
+  "synthetic_preview_files_retained": false,
+  "raw_or_frozen_files_modified": false,
+  "pending": [
+    "Root reviews the content and presentation before generating actual report.",
+    "Root supplies evidence-backed Korean observations, caveats and existing related-file paths.",
+    "Actual HTML must be generated after terminal combined finalization; source result and notes bytes are hashed and rechecked during rendering."
+  ],
+  "limits": [
+    "No browser visual QA on actual results was performed.",
+    "The renderer verifies the finalized-data contract and table consistency; authority and raw evidence validation belong to the existing terminal finalizer and stage audits.",
+    "Changing notes to unsupported conclusions would not be caught by numerical/schema checks; root content review remains required."
+  ]
+}

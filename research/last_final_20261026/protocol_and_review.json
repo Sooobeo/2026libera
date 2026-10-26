@@ -1,0 +1,360 @@
+{
+  "version": "last_final_operational_amendment_1",
+  "recorded_at_utc": "2026-10-26T06:19:06.007460+00:00",
+  "status": "approved_design_for_prospective_last_final_freeze",
+  "purpose": "pilot_last_final",
+  "case_order": [
+    "common_market_only__C"
+  ],
+  "stage_order": [
+    "common_market_only__C__F0"
+  ],
+  "max_generation_requests": 1,
+  "historical_generation_requests": 10,
+  "campaign_max_generation_requests": 11,
+  "automatic_retries": 0,
+  "post_final_calls": 0,
+  "main_model_calls": 0,
+  "main_allowed": false,
+  "old_outputs_observed": true,
+  "explicit_retry_slots": [],
+  "historical_explicit_retry_slots": [
+    "fidelity_q2_2026__L__D0"
+  ],
+  "analysis_role": "primary_exploratory",
+  "excluded_new_main_execution": true,
+  "historical_first_attempt_results_unchanged": true,
+  "raw_diagnostics_required": true,
+  "primary_final_allocation_endpoint": "F0_derived_integer_allocation",
+  "power_policy": {
+    "version": "battery_aware_stage_boundary_1",
+    "stage_start_minimum_battery_percent": 70,
+    "in_stage_stop_at_or_below_battery_percent": 20,
+    "allow_ac_online_without_battery": true,
+    "allow_sufficient_battery_without_ac": true,
+    "unknown_ac_rejected": true,
+    "on_battery_unknown_or_critical_or_saver_rejected": true,
+    "critical_or_saver_rejected_on_ac": true,
+    "unknown_battery_rejected_except_ac_no_battery": true,
+    "poll_interval_seconds": 60,
+    "permanent_power_settings_changed": false
+  },
+  "runtime_ref": {
+    "path": "C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\runtime_candidate.json",
+    "sha256": "8b7b6fedf617b719df7c8e3406857fb42689a84f40e21502d3be63fe3ff93de1"
+  },
+  "historical_gate_ref": {
+    "path": "research/recovery_20261025/review_gate.json",
+    "sha256": "04745b0b358d54234b888a3acdb281a10b35d8b570264c4027007e530cc5f552"
+  },
+  "historical_terminal_ref": {
+    "path": "research/recovery_20261025/new_pilot/terminal_receipt.json",
+    "sha256": "bc872eb8326233e274629d8ea16f5d841e098b6e45aa26f31a9588d760289d15"
+  },
+  "historical_summary_ref": {
+    "path": "data/local_sector_runtime/v494_pilot_20261025/pilot_summary.json",
+    "sha256": "ad5b11da9677d3cb091738d0b0427240842f2ca541bb0f7e72f3747400b599a4"
+  },
+  "prior_continuation_gate_ref": {
+    "path": "research/continuation_20261026/review_gate.json",
+    "sha256": "e7e2c88b26d1e3181c8c7811b49a8a318b1c0a2f71817ec610a225813032d6f8"
+  },
+  "prior_continuation_terminal_ref": {
+    "path": "research/continuation_20261026/run_reports/terminal_receipt.json",
+    "sha256": "77bd98f4172e78eb2890d21b41bf128012ad02cd36d474ca2d5e77b5ae415f47"
+  },
+  "prior_continuation_summary_ref": {
+    "path": "data/local_sector_runtime/v494_continuation_20261026/campaign_summary.json",
+    "sha256": "88f6c466914ad1eea593e99d2582ca64df06d3f6c2ddea7075100d1e51edac3d"
+  },
+  "prior_continuation_declaration_ref": {
+    "path": "data/local_sector_runtime/v494_continuation_20261026/campaign_declaration.json",
+    "sha256": "a7e260774dc52295f53bc950c594f825145838660eb115213baec87e835603ea"
+  },
+  "prepared_manifest_ref": {
+    "path": "data/sector_protocol/v494_design_20261025/prepared/preparation_manifest.json",
+    "sha256": "8023f8b11ec9b1d43bf1b5b08ac37ccbab4ac5ab7ad7de28a9e93d8e67a4ef29"
+  },
+  "finalizer_acceptance_ref": {
+    "path": "research/recovery_20261025/allocation_finalization_acceptance_r2.json",
+    "sha256": "0232232baeb7e251aa0dee42bc9a1969f66615a1df4d303bccb67dd938b47d9e"
+  },
+  "completion_finalizer_review_ref": {
+    "path": "research/completion_20261026/completion_finalizer_review.json",
+    "sha256": "fec44eccb3a9edfb68b717fcaa2750f714b6f9b175a635b4b4ea111112df3f60"
+  },
+  "prior_completion_gate_ref": {
+    "path": "research/completion_20261026/review_gate.json",
+    "sha256": "4a50c95def3e6278e846e475f07fb6a1a7fd8a00b4f1dac723f509dafa71f851"
+  },
+  "prior_completion_terminal_ref": {
+    "path": "research/completion_20261026/run_reports/terminal_receipt.json",
+    "sha256": "1bd0e740b9d30be46f3186d1fdc7d6fd5fbb8129ced078f477da82c89bcc838a"
+  },
+  "prior_completion_summary_ref": {
+    "path": "data/local_sector_runtime/v494_completion_20261026/campaign_summary.json",
+    "sha256": "ac87bd037264bcc1c954985cc904648c0cc55cd59e9ac6f6d00352a1c06fb1f4"
+  },
+  "prior_completion_declaration_ref": {
+    "path": "data/local_sector_runtime/v494_completion_20261026/campaign_declaration.json",
+    "sha256": "10482e168e82c54a4484f73a736e99c53daa9330b11c40c561fa2ed3277cb787"
+  },
+  "remaining_finalizer_review_ref": {
+    "path": "research/remaining_20261026/remaining_finalizer_review.json",
+    "sha256": "ec7ccd751ce9ffcd6aa586502001ea7f9a1144aca97c54fe069bb70187baa509"
+  },
+  "prior_remaining_gate_ref": {
+    "path": "research/remaining_20261026/review_gate.json",
+    "sha256": "fddeb5bcb30e2b94ca741783323ff370d7d5ddb87595ed1fab2d535da36e2012"
+  },
+  "prior_remaining_terminal_ref": {
+    "path": "research/remaining_20261026/run_reports/terminal_receipt.json",
+    "sha256": "e618dbc51eaadd54b572df83d5bf4c1a097f8dba12bd0db9c6024e6c4ff44c4d"
+  },
+  "prior_remaining_summary_ref": {
+    "path": "data/local_sector_runtime/v494_remaining_20261026/campaign_summary.json",
+    "sha256": "7747b2e69d82cd09e637d9b8852eff053383a6ec9b5dae4a89de1c5655e612bf"
+  },
+  "prior_remaining_declaration_ref": {
+    "path": "data/local_sector_runtime/v494_remaining_20261026/campaign_declaration.json",
+    "sha256": "fafaa9c0e0022211017847fd9d4205b960146721f14616b0f16ec1f728ff050d"
+  },
+  "prior_remaining_cancel_ref": {
+    "path": "data/local_sector_runtime/v494_remaining_20261026/CANCEL",
+    "sha256": "8b00af1b8b8ea8635be60e7fe77d887aa745a876a5f426c0c2464a4ffbdcf5e3"
+  },
+  "prior_pause_checkpoint_ref": {
+    "path": "research/remaining_20261026/pause_checkpoint_20261026T0513.json",
+    "sha256": "ee4057f6bd8c20a7c8202cd2972beba90a1732171fa55af32535f4647e74a5ee"
+  },
+  "resumption_design_ref": {
+    "path": "C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\resumption_design.json",
+    "sha256": "26b42d9a56257a948f29749f997a4f8553e41bf55fe896f36ca32eadaac3aaf4"
+  },
+  "last_finalizer_review_ref": {
+    "path": "C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\last_finalizer_review.json",
+    "sha256": "1283db930164f706274a5560dd7b0141ebaf1bbe088a7c87e78086ec33ffe06c"
+  },
+  "exact_math_policy_ref": {
+    "path": "research/recovery_20261025/allocation_finalization_acceptance_r2.json",
+    "sha256": "0232232baeb7e251aa0dee42bc9a1969f66615a1df4d303bccb67dd938b47d9e"
+  },
+  "external_draft_refs": {
+    "response": {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026\\common_market_only__C__D0\\http_0001_generation\\response.json",
+      "sha256": "46c20fcbdac9b1cfaf864834f76a9e73b90438e8713a58971384cd5b170f9fe9"
+    },
+    "worker_spec": {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026\\common_market_only__C__D0\\worker_spec.json",
+      "sha256": "e0014ec2f5139574b9c97251d796e8a5d9ab019795b283a6e7264b69fbd5b665"
+    },
+    "worker_summary": {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026\\common_market_only__C__D0\\worker_summary.json",
+      "sha256": "be138bdb46078b54cfeb6d6a19dcc9ccecbd4857705e5546c4681878ef170ca2"
+    },
+    "supervisor_result": {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026\\common_market_only__C__D0\\supervisor_result.json",
+      "sha256": "d6498658b22f5a5e9ca0065df2d4a58060d502b6fe9ede2e30d7c7d69f2f1156"
+    },
+    "transport_result": {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026\\common_market_only__C__D0\\transport_result.json",
+      "sha256": "4ebbaf6f458b885cff17d281dedcbe137a9f1344d0cabf00fe6309ec062076d5"
+    }
+  },
+  "external_draft_evidence_refs": {
+    "stage_review": {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026\\common_market_only__C__D0\\stage_review.json",
+      "sha256": "086b717209f9bda539a80422f7e6c6020ced6f3669e2c0766207dadf1ce571a5"
+    },
+    "allocation_math": {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\run_reports\\allocation_math\\common_market_only__C__D0.json",
+      "sha256": "4cf97ce404e4dbbbeef70c8c1fbcde8875bf5a0f95c405b35b469dac0d2d70a4"
+    },
+    "semantic_review": {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\semantic\\common_market_only__C__D0_review.json",
+      "sha256": "a339d3e7968bd2f4fb11cdde7c2985ec9a4c53954ee48c24748e4e060e78c09f"
+    },
+    "semantic_validation": {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\semantic\\common_market_only__C__D0_review_validation.json",
+      "sha256": "679d7be27810f42b0c28fefb478f0324d0c0edfdb3ec12702c3858ffababa5f4"
+    },
+    "root_review": {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\semantic\\common_market_only__C__D0_root_review.json",
+      "sha256": "e11b5a8d128416f4d74ac1a4a0bbeed736b74d46596ad4fdf9dd6168d1ecb296"
+    },
+    "terminal": {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\run_reports\\terminal_receipt.json",
+      "sha256": "e618dbc51eaadd54b572df83d5bf4c1a097f8dba12bd0db9c6024e6c4ff44c4d"
+    },
+    "summary": {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026\\campaign_summary.json",
+      "sha256": "7747b2e69d82cd09e637d9b8852eff053383a6ec9b5dae4a89de1c5655e612bf"
+    },
+    "declaration": {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026\\campaign_declaration.json",
+      "sha256": "fafaa9c0e0022211017847fd9d4205b960146721f14616b0f16ec1f728ff050d"
+    },
+    "final_construction": {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\prepared_final_construction.json",
+      "sha256": "b60e54269bbed3a517de654b09dede8ca3f8c0bb937cb78f162847a4d33cd2bb"
+    }
+  },
+  "research_question": "Describe how institution evidence is represented in source readings, connected to stated reasons, and reflected in raw model and mechanically finalized sector allocations under early/late/no institution evidence timing.",
+  "data_timing": {
+    "common_cutoff_exclusive": "2026-07-17",
+    "last_price_date": "2026-07-16",
+    "retrieval_and_development": "Existing October research artifacts; retrospective document-conditioned example, not point-in-time trading replay.",
+    "source_limitations": "Original pilot packets, researcher paraphrases, rating labels, IDs, dates and locators remain unchanged; source transcription or metadata issues remain disclosed. The two Q3/July candidate wording fixes are not imported into this cohort."
+  },
+  "endpoint_contract": {
+    "primary": "Eligible F0 derived integer allocations totaling10000 units (100.00%) using unchanged accepted exact arithmetic; retain missing/unfinalizable F0 as missing with explicit reason.",
+    "raw_companion": "Report original D0/F0 weight vectors, exact sums, bounds/schema errors, citation availability, factual/source interpretation and explanation consistency separately. Raw artifacts and original r2 analysis never change.",
+    "math": "Positive finite complete11 nonnegative vector -> proportional normalization with exact rational arithmetic -> largest-remainder10000 integer units and fixed GICS order tie break. Reject missing/nonfinite/negative/all-zero vectors. Disclose material rescaling versus displayed rounding.",
+    "semantic": "Assess claimed values and claimed changes against the raw submitted vector first; separately identify normalization/quantization changes to comparator direction, concentration and ties. Mechanical100% does not demonstrate model feedback use or semantic correctness.",
+    "precedence": "The original frozen phrase never normalized remains true of saved raw model artifacts. A distinct user-directed amended endpoint applies external math uniformly to eligible vectors; do not call it prespecified raw accuracy.",
+    "evaluation": "Original v4.9.2 r2 semantic dimensions and descriptive raw diagnostics remain; no composite success score."
+  },
+  "claims_and_limits": [
+    "Five logical conditions across sequential segments are descriptive cases, not independent replicated trials. Sector rows, turns and repeated AI reviews do not increase independent sample size.",
+    "Evidence timing, source, order, service session, elapsed time and operational standby/AC mitigation are not separately identified; do not claim causal effects.",
+    "No investment recommendation, future-return prediction or portfolio-performance claim.",
+    "Masking is partial; use fresh AI readers with only actual opaque item when available and disclose source clues, AI assistance and lack of independent human validation.",
+    "Existing observed output/audit exposure and later protocol amendment prevent a fully preregistered confirmatory framing."
+  ],
+  "unchanged_instrument": {
+    "model": "qwen3.5:4b-q4_K_M",
+    "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+    "template_sha256": "b507b9c2f6ca642bffcd06665ea7c91f235fd32daeefdf875a0f938db05fb315",
+    "engine_version": "0.35.1",
+    "backend": "cpu",
+    "options": {
+      "temperature": 0,
+      "num_ctx": 65536,
+      "num_predict": 8192,
+      "num_thread": 8,
+      "num_batch": 512,
+      "repeat_penalty": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "seed": 3407,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0.0,
+      "num_gpu": 0
+    },
+    "think": false,
+    "truncate": false,
+    "shift": false,
+    "stream": true,
+    "keep_alive": 0,
+    "deadline_seconds": 4500,
+    "renderer_policy": "http_verbatim_json_outer_ascii_whitespace_only_v1",
+    "prompt_contract_sha256": "7d75828866825af1f7051a528defc92c88f2beac3f42a66f5d5223c4fb714362",
+    "evaluation_protocol_sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1",
+    "source_and_market_inputs": "The frozen pilot packets and common snapshot; no v495 main packet edits, prompt clarification, source amendment, weight target or reviewer feedback enters this continuation.",
+    "prepared_D0_refs": [
+      {
+        "case_id": "ubs_june_2026__E",
+        "path": "data/sector_protocol/v494_design_20261025/prepared/ubs_june_2026__E__D0_messages.json",
+        "sha256": "a79a17fef00fc082860a4fde05c5ae41111dc2d4dc2bf96073f973bd5ae4ae27",
+        "matches_actual": true
+      },
+      {
+        "case_id": "ubs_june_2026__L",
+        "path": "data/sector_protocol/v494_design_20261025/prepared/ubs_june_2026__L__D0_messages.json",
+        "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15",
+        "matches_actual": true
+      },
+      {
+        "case_id": "common_market_only__C",
+        "path": "data/sector_protocol/v494_design_20261025/prepared/common_market_only__C__D0_messages.json",
+        "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15",
+        "matches_actual": true
+      }
+    ],
+    "frozen_code_checks": [
+      {
+        "path": "research/sector_v494_runtime.py",
+        "sha256": "c9521000aa3a1497775c83fa83a1b9bac9f5443edbcb707f131d313f7cd8bed1",
+        "frozen_sha256": "c9521000aa3a1497775c83fa83a1b9bac9f5443edbcb707f131d313f7cd8bed1",
+        "matches_frozen": true
+      },
+      {
+        "path": "research/sector_v492_contract.py",
+        "sha256": "f77d1ddec9630a4c7edbf3928d298b7b05094345996ece1cf53d91fc40171a21",
+        "frozen_sha256": "f77d1ddec9630a4c7edbf3928d298b7b05094345996ece1cf53d91fc40171a21",
+        "matches_frozen": true
+      },
+      {
+        "path": "research/sector_v491_contract.py",
+        "sha256": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397",
+        "frozen_sha256": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397",
+        "matches_frozen": true
+      },
+      {
+        "path": "research/sector_engine.py",
+        "sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c",
+        "frozen_sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c",
+        "matches_frozen": true
+      },
+      {
+        "path": "research/sector_v48_transport.py",
+        "sha256": "db395eb3d54ebec93aa67556e1f2424aba1d591ba8b9fcfce7fbd3332db0379c",
+        "frozen_sha256": "db395eb3d54ebec93aa67556e1f2424aba1d591ba8b9fcfce7fbd3332db0379c",
+        "matches_frozen": true
+      },
+      {
+        "path": "research/sector_v48_main_awake.py",
+        "sha256": "185a9f6be9471ff7808730153227682f0f0eae25f72ee1474602106a950fa98a",
+        "frozen_sha256": "185a9f6be9471ff7808730153227682f0f0eae25f72ee1474602106a950fa98a",
+        "matches_frozen": true
+      },
+      {
+        "path": "research/review_sector_v494_stage.py",
+        "sha256": "81195353a74f00fde66e1915e068e9167966ccc3cb774b65ad929867bf44b3e6",
+        "frozen_sha256": "81195353a74f00fde66e1915e068e9167966ccc3cb774b65ad929867bf44b3e6",
+        "matches_frozen": true
+      }
+    ]
+  },
+  "operational_runtime_exception": {
+    "allowed_runtime_value_change": "backend_evidence[0] only for the new verified owned CPU service; all other typed values unchanged",
+    "new_code_scope": "One-final orchestration/provenance/gate and offline audit adapters; original generation functions and scientific contract unchanged",
+    "awake_expiry_seconds": 8100,
+    "permanent_power_settings_changed": false
+  },
+  "user_authorization": {
+    "exact_user_instruction": "마저 다 끝내봐",
+    "scope": "Resume only the saved last control final, then full reporting, archive and local commit."
+  },
+  "chronology_and_disclosure": {
+    "previous_stop": "2026-10-26T05:13:33.571533+00:00",
+    "reason": "Explicit user pause during C D0 external semantic review; no C F0 generation was attempted.",
+    "historical_requests": {
+      "original": 3,
+      "continuation": 2,
+      "completion": 1,
+      "remaining": 4
+    },
+    "review_completed_after_terminal": [
+      "C D0 semantic review",
+      "C D0 root review"
+    ],
+    "old_ACK_published": false,
+    "old_CANCEL_or_terminal_changed": false,
+    "final_construction": "New provenance file is rebuilt with the unchanged contract from exact saved own D0; all4messages checked before generation.",
+    "study_role_and_math_amendment": "Original five cases are primary exploratory evidence; derived100% endpoint and role amended after early outputs. No new Q3/July main is run."
+  },
+  "review_requirements": {
+    "stage_review_axes": [
+      "errors",
+      "consistency",
+      "paper_topic"
+    ],
+    "full_current_semantic_review_before_terminal_ack": true,
+    "semantic_success_required": false,
+    "raw_errors_retained": true,
+    "review_timeout_seconds": 1800,
+    "no_retry_or_repair_after_F0": true
+  }
+}

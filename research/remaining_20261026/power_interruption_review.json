@@ -1,0 +1,276 @@
+{
+  "status": "completed_read_only_operational_investigation",
+  "recorded_at_utc": "2026-10-26T02:41:22.836Z",
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "The stopped new segment retained exactly one completed UBS E D0 and its full audit/ACK; F0 stage_started event and F0 directory absent. Fresh NativeAPI power and independent WMI/events corroborate the ACoffline input that triggered the declared boundary rule."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Forced boundary pulse obtains a fresh status and compares ACLineStatus to1, matching the recorded exception; awake clear succeeded on the same owner PID/thread. No stale-heartbeat or incorrect flag decoding defect found."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "This is an operating interruption after a completed reviewed draft, not a failed semantic outcome or justification to regenerate that draft. A separately frozen remaining5stage namespace can preserve exact evidence timing and the11request ceiling."
+    }
+  },
+  "cause": {
+    "classification": "declared_AC_required_boundary_policy_stop_on_corroborated_OS_DC_status",
+    "last_AC_online": "2026-10-26T02:32:49.045768+00:00",
+    "kernel_power_105_offline": "2026-10-26T02:33:04.2098462Z",
+    "first_offline_heartbeat": "2026-10-26T02:33:49.213269+00:00",
+    "blocking_heartbeat": "2026-10-26T02:36:26.395284+00:00",
+    "battery_at_stop_percent": 100,
+    "battery_saver_at_stop": 0,
+    "rapid_hardware_flap_established": false,
+    "physical_cause": "Undetermined: records establish OS online/offline state, not whether a cable, charger, dock, charge management or user action caused it.",
+    "suspend_during_current_run": "No506/507 event in observed run interval;32 power observations, maximum adjacent gap61.817seconds. This differs from earlier long suspension.",
+    "same_as_prior": "Previous continuation also began onAC and stopped at a stage boundary onDC after two completed requests. Previous switch at00:49:47Z and stop01:18:54Z at90%; current switch02:33:04Z and stop02:36:26Z at100%."
+  },
+  "current_api_read_only": {
+    "at_utc": "2026-10-26T02:37:01.207638+00:00",
+    "ac_line_status": 0,
+    "battery_flag": 1,
+    "battery_percent": 100,
+    "battery_saver": 0
+  },
+  "independent_wmi": {
+    "at_utc": "2026-10-26T02:37:55.9222223Z",
+    "PowerOnline": false,
+    "Charging": false,
+    "Discharging": true,
+    "RemainingCapacity": 61760,
+    "ChargeRate": 0,
+    "DischargeRate": 6676,
+    "Voltage": 17161,
+    "Critical": false,
+    "full_charged_capacity": 61760,
+    "limit": "Instantaneous idle discharge rate is not a measured model-load battery runtime forecast."
+  },
+  "observed_step_order": {
+    "D0_started": "2026-10-26T02:06:41.571692+00:00",
+    "instrument_math_reviewed": "2026-10-26T02:28:46.485818+00:00",
+    "external_review_ACK": "2026-10-26T02:36:26.280245+00:00",
+    "F0_started": false
+  },
+  "recommendation": {
+    "state": "Root-authorized new operating segment design; current frozen segment remains unchanged",
+    "remaining_stage_order": [
+      "ubs_june_2026__E__F0",
+      "ubs_june_2026__L__D0",
+      "ubs_june_2026__L__F0",
+      "common_market_only__C__D0",
+      "common_market_only__C__F0"
+    ],
+    "historical_requests": 6,
+    "new_maximum_requests": 5,
+    "total_maximum_requests": 11,
+    "completed_D0_regeneration": 0,
+    "model_threads_context_seed_output_allowance_changed": false,
+    "policy": "At stage start permit known AC or known battery>=70; require noncritical/saver-off telemetry, allow no-system-battery only on knownAC. During battery operation stop at<=20/critical/saver/unknown. Record source transitions; no persistent power plan changes; manual sleep/lid remains effective.",
+    "limits": "Battery sufficiency is an operational allowance, not an uninterrupted execution guarantee. No extra smoke or retry is allowed."
+  },
+  "input_refs": [
+    {
+      "path": "research/completion_20261026/run_reports/terminal_receipt.json",
+      "sha256": "1bd0e740b9d30be46f3186d1fdc7d6fd5fbb8129ced078f477da82c89bcc838a"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/coordinator_awake_release.json",
+      "sha256": "39c7f1e84519415a34e49a5a3b90e3041e0ce591200bf288b28c4d2eff7c73d4"
+    },
+    {
+      "path": "research/continuation_20261026/run_reports/terminal_receipt.json",
+      "sha256": "77bd98f4172e78eb2890d21b41bf128012ad02cd36d474ca2d5e77b5ae415f47"
+    },
+    {
+      "path": "research/run_sector_completion.py",
+      "sha256": "53d795493e747eadb72c097cb98b0efe0649725187fe750e447e8d41fe3d7f65"
+    },
+    {
+      "path": "research/sector_completion_awake.py",
+      "sha256": "f38bafe9bacdd87c3a4642193a9752c0c68552533528393b9b8b242a3b87996f"
+    },
+    {
+      "path": "research/sector_continuation_awake.py",
+      "sha256": "2318c6acafc72d38c68109e7f1abcc45bc5e8cec428f90c0a63da88c5382825c"
+    },
+    {
+      "path": "research/remaining_20261026/power_observation_20261026.json",
+      "sha256": "8a6bac8c3e111e0f420877211c70bf3b748573ccefdb9e62517b94f5dad79c27"
+    }
+  ],
+  "event_refs": [
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T020641206685Z_9e388102f0c44a889ba2e049f8396b5b.json",
+      "sha256": "901fdd4ee17e7fcdd3fd74896baf10e5f6fd32390676ece072d579f248984e44"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T020641308562Z_f1251def09a14515956ca7d4fce7ba09.json",
+      "sha256": "c5b291df17bc7d1f3c6d1d29bf1fad2ca9a5aaed0e948ef28bc0c9525f83a9ea"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T020641571658Z_28b47d46c623485bb8f67128681f880c.json",
+      "sha256": "f5192118c43f9741b7b0e5cacdcf7fec99c5717575b95301914ab6235f95afa1"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T020741400737Z_8f5ea938746b4c8293a61ddb347227a5.json",
+      "sha256": "8557fdd05062714743e3e147ada0a0761acaf84512cf2da58d1a273566ef0594"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T020841627458Z_0cc058f2d2f44b7cad47b07fbf77b034.json",
+      "sha256": "7e849918ba0dfdf80a731852ee9db035c0d004a929eacc37910195d37e758c95"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T020942597173Z_fc4321d7ba704043b2caa240015be870.json",
+      "sha256": "e797e3e4d9d3c09b74203cdeb26f958387c59e8e41c2a8b1d80e6d59b6b8dac5"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T021042749644Z_9ffaa246de8e4795b73403788c719471.json",
+      "sha256": "1dace7ab5b4808e52cfd4b2f2d445f035572237ffad5ea33c244df4ce6b7b08b"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T021144566739Z_6ec1a3d53de64c1aa394c3e91ce973d2.json",
+      "sha256": "cf03ed66526f5c5711dba023f045925359e414d6799540618994e42b1469cc0b"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T021245744098Z_98d04a4d8fb2480d9400dfc79a228caa.json",
+      "sha256": "c93cc5c79c075ce0925841b56648fbe35ef2e4d5a44aefca887c1c79a181accb"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T021346256307Z_074a6a1857774244b5f3a3c0e0906cb2.json",
+      "sha256": "cbc53ce8de1a8f09ef4a2efb0bba75942a9a8bb51ab7189b37d327ea58dcd3d9"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T021446358770Z_7783bd3730f144849ef5f91211703845.json",
+      "sha256": "6e8af3d138db40a8af80eae3b36348d2e83c4eb192815ae5aeb9745521b8fae5"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T021546439092Z_25478b38e35e4fce881978a30db437f9.json",
+      "sha256": "83cb86f6d961e5249fefb879571d7bf3408e450a4ce5b9e4fe1c0824c30a0994"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T021646564767Z_b855f85793ab46a8a33b32842e5933ac.json",
+      "sha256": "93398a84063e5d5916da94e4d846cc0232e9d9216fd218b0a58ab5540703d922"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T021746711257Z_30c66e65bb454d35aea2b98110b23a72.json",
+      "sha256": "d039bb185252bbf10a16234484ca8094463ca71a78bbf5949f73b3ff0bdb6405"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T021846802978Z_7e15f12950a64cc89d4da15f18666e28.json",
+      "sha256": "7f2666d1543b026cbe91d76c8cfebc3b71920ac30f397f086eb37f02be35584b"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T021946880857Z_c157c8f96bc84ad4aba8f0b146bfb37a.json",
+      "sha256": "38286d63dcd19eef1724ad831a3e484482babdd8fdaef92eab34236c4ce89f91"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T022046994159Z_f8e680339454428a9d87808a0eacd6a8.json",
+      "sha256": "175fbad5eca42346b326316576411b17afa6cc0ca93231f28b0a448e444c8236"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T022147054019Z_23661f5837da48d3b19102109e77bd49.json",
+      "sha256": "8e71433c0016c639d01ab924506845707e7a4a262d422991d114470ee59ed097"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T022247150040Z_559babd158574915836f3f58c6956939.json",
+      "sha256": "cef77311995595f1bb7f84beb00af53039da3b4014c72d2a87189f246cab98d0"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T022347311885Z_4aaefa00c01b4751aa7fcd8f60f4ae05.json",
+      "sha256": "049b4f93133244208777dd354255a7f49674a495511d8e851d8036007eea4adf"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T022447403177Z_6ef358ec5e9648d29711db840d55e3f6.json",
+      "sha256": "900841a64c43217b218a2bc097e87ee290ab4b0065b624e485bd22b1128067d8"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T022547505580Z_7c4c22c04e4a4a67a69a4d137d6d9caa.json",
+      "sha256": "b48156a8dda160c0511a082c82439c5b1a13b6d5565a2944b7ba4bde4b0ef5b8"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T022647624094Z_cea84f0bf55e431994ed70cdb8d4e82f.json",
+      "sha256": "19ecfe70293656b251dde93e373a5823b054496672567225191e32b8760c9c26"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T022747751464Z_ee5085a670094824a771ef3dc4ddb01b.json",
+      "sha256": "c8e88e2ebeb86754181e25372f23d002d6dc6a4897eb397e61e9b0f112b5d39e"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T022846485688Z_3a9180ca52dc4c0d9c6b1429425e1afa.json",
+      "sha256": "25b3c9fc1d7ddbc6a2ff2b2e3e2001d5b9dba2a3ed4e15ecf88a36b549c02e6b"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T022848010687Z_cc3ff070d9a648f193ad4930cff039f5.json",
+      "sha256": "5c31336b5269630d10122811f5c6f3ef38ef353ce6b9c82945399ae313099241"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T022948217867Z_60e9ce6886bc4d7c81240a7b67ea0e46.json",
+      "sha256": "e4c82d3bb24d2f79995dd821701ccf367e7a14103245073e96e10cae34ddd243"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T023048564261Z_33a5ab9e393146b895cc26b1c146b5f4.json",
+      "sha256": "35aac1825549c93b695abc04afa017a79e86c5275c8b0ed667b194968d6162cc"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T023148791728Z_b8a8e39da7544c54a644ac0c8d37b630.json",
+      "sha256": "4db340cedccaf57c266f4ae68e3c61f57b154ec8899422c752ea3b0cde0c66d7"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T023249045839Z_849d7799aae14709a349854e0e9b605a.json",
+      "sha256": "f7fd1e09e02af1e2cb765290abf12ff829242fe4b8e51ec3384447d96405b6b2"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T023349213342Z_1c11f4add6e7444a89bbc9fc17f48da7.json",
+      "sha256": "0bfe0b27b43228b86dbdc6a9f503a4e0f87348f9ceb29513870028b52b149be5"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T023449509890Z_6d40b0f37fcc43c58faba31ef714cec5.json",
+      "sha256": "3a46ffcfd2608ce8b8006ffd9740e2baa9824b9fc0d941ebeb6dace0fb28a8e6"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T023549593179Z_8a907aac08c341549f793efa9e6db826.json",
+      "sha256": "d3d035e2686647ab023c2b5e424e171fd6f6615d96f52036bfc5c93d63a097e6"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T023626279396Z_a983e4885cfb406fb3282b27d633f9df.json",
+      "sha256": "75e67e5130f4f6b20ad3dadca3e3aba29386195b09304813501ffc79b213d7b9"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T023626395325Z_4a2db3c2b1ac44448a15de0693200b97.json",
+      "sha256": "90ece275263d2e03137550905606a993b68c755ab0b6b66ef09392c02de334c9"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T023626413815Z_124a04fdda68411abd10846de73048e2.json",
+      "sha256": "1a2b5ed47709bc3f527cd92a24346d3d548640dc0eee2b8a171bcceca493dec6"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T023626463899Z_53b98319f1864e3f8e2f54591070bb34.json",
+      "sha256": "1f7550ab33603e193a159870c3f96402c48f8b2b5a1e32d72705501a78266f57"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/events/20261026T023626516376Z_72915b981ce840c88682906b1418140e.json",
+      "sha256": "fe707c2d61ac02b68ce19cb1ade6250bad335948929fa5c3073e8358bc309f4c"
+    }
+  ],
+  "official_sources": [
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winbase/ns-winbase-system_power_status",
+      "supports": "AC0offline/1online/255unknown; battery flag4critical,128absent,255unknown; percent255unknown; saver flag."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-getsystempowerstatus",
+      "supports": "Read-only status API and BOOL success."
+    },
+    {
+      "url": "https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-setthreadexecutionstate",
+      "supports": "Same-thread continued execution request, clear flag and respect manual sleep/lid."
+    }
+  ],
+  "actual_model_content_read": false,
+  "service_calls": 0,
+  "model_calls": 0,
+  "frozen_files_modified": false
+}

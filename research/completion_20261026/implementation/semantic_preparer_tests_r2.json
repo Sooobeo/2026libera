@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T02:03:45.875Z",
+  "command": "python -B research/completion_20261026/test_prepare_stage_semantic_audit.py",
+  "test_count": 28,
+  "exit_code": 0,
+  "elapsed_test_seconds": 4.697,
+  "source_refs_before": [
+    {
+      "path": "research/completion_20261026/prepare_stage_semantic_audit.py",
+      "sha256": "3d9c36405ad7b86e212d99480976af154397096491a36b1e365ee8f355799a90"
+    },
+    {
+      "path": "research/completion_20261026/test_prepare_stage_semantic_audit.py",
+      "sha256": "0a5c58feb8b172adc70c02f59143276f09cb50fc135d8a96cde28a6b033b3ac3"
+    },
+    {
+      "path": "research/continuation_20261026/prepare_stage_semantic_audit.py",
+      "sha256": "efb82936ee541f187d8b352a1a28afa8ecea3d83401439a6e92a82df9731fb04"
+    }
+  ],
+  "source_refs_after": [
+    {
+      "path": "research/completion_20261026/prepare_stage_semantic_audit.py",
+      "sha256": "3d9c36405ad7b86e212d99480976af154397096491a36b1e365ee8f355799a90"
+    },
+    {
+      "path": "research/completion_20261026/test_prepare_stage_semantic_audit.py",
+      "sha256": "0a5c58feb8b172adc70c02f59143276f09cb50fc135d8a96cde28a6b033b3ac3"
+    },
+    {
+      "path": "research/continuation_20261026/prepare_stage_semantic_audit.py",
+      "sha256": "efb82936ee541f187d8b352a1a28afa8ecea3d83401439a6e92a82df9731fb04"
+    }
+  ],
+  "source_bytes_stable": true,
+  "model_calls": 0,
+  "service_calls": 0,
+  "real_stage_responses_read": 0,
+  "fixture_scope": "tempfile synthetic artifacts; production offline worker validator replaced by local fixture validator, with propagation failure tested. Production delegate independently source-reviewed separately.",
+  "stdout": "............................\nRan 28 tests in 4.697s\nOK",
+  "previous_historical_receipt": {
+    "path": "research/completion_20261026/implementation/semantic_preparer_tests.json",
+    "sha256": "d54382e5e0c52a0224d5fcfb3df5cc3b27f52f79245879be732d555a5edd1b2e"
+  },
+  "revision": "Catch DecimalException in new adapter for extremely small finite literals beyond platform exponent range; retain original text without modifying accepted parser."
+}

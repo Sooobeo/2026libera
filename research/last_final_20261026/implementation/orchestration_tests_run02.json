@@ -1,0 +1,31 @@
+{
+  "version": "last_final_orchestration_tests_1",
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T06:16:19.565Z",
+  "command": "python -B -X utf8 -m unittest discover -s research -p test_sector_last_final.py -v",
+  "exit_code": 0,
+  "tests_run": 19,
+  "failures": 0,
+  "errors": 0,
+  "unittest_seconds": 0.409,
+  "code_refs": [
+    {
+      "path": "research/run_sector_last_final.py",
+      "sha256": "f833cbff402e3008c1c8295f46f546bf2896fb92f8d4847d42cc592ce8698eaa"
+    },
+    {
+      "path": "research/last_final_20261026/runtime_adapter.py",
+      "sha256": "3af1ba401fd37d1afb17a866295b87131d5aeaff3234f78235eba96e48a5cfb6"
+    },
+    {
+      "path": "research/test_sector_last_final.py",
+      "sha256": "4475d88ad73af41f4ad5d7fdf76ce6daa7978c07baec13af9aaad23be11d869c"
+    }
+  ],
+  "scope": "Synthetic temp fixtures and source AST inspection; full actual bootstrap is separately root-owned.",
+  "generation_calls": 0,
+  "service_calls": 0,
+  "actual_power_API_calls": 0,
+  "actual_model_response_reads": 0,
+  "frozen_source_changes": 0
+}

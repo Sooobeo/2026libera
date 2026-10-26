@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T02:02:03.613Z",
+  "command": "python -B research/completion_20261026/test_prepare_stage_semantic_audit.py",
+  "test_count": 27,
+  "exit_code": 0,
+  "elapsed_test_seconds": 4.756,
+  "source_refs_before": [
+    {
+      "path": "research/completion_20261026/prepare_stage_semantic_audit.py",
+      "sha256": "24a74c95581ea4ee44e680e68fc934860539db8f957c954f4c1841790627d405"
+    },
+    {
+      "path": "research/completion_20261026/test_prepare_stage_semantic_audit.py",
+      "sha256": "b3be38bb2fd1a8198385e0d54b5ed9f59d06bfeb2e08ec424f7af0834e51b9d1"
+    },
+    {
+      "path": "research/continuation_20261026/prepare_stage_semantic_audit.py",
+      "sha256": "efb82936ee541f187d8b352a1a28afa8ecea3d83401439a6e92a82df9731fb04"
+    }
+  ],
+  "source_refs_after": [
+    {
+      "path": "research/completion_20261026/prepare_stage_semantic_audit.py",
+      "sha256": "24a74c95581ea4ee44e680e68fc934860539db8f957c954f4c1841790627d405"
+    },
+    {
+      "path": "research/completion_20261026/test_prepare_stage_semantic_audit.py",
+      "sha256": "b3be38bb2fd1a8198385e0d54b5ed9f59d06bfeb2e08ec424f7af0834e51b9d1"
+    },
+    {
+      "path": "research/continuation_20261026/prepare_stage_semantic_audit.py",
+      "sha256": "efb82936ee541f187d8b352a1a28afa8ecea3d83401439a6e92a82df9731fb04"
+    }
+  ],
+  "source_bytes_stable": true,
+  "model_calls": 0,
+  "service_calls": 0,
+  "real_stage_responses_read": 0,
+  "fixture_scope": "tempfile synthetic artifacts; production offline worker validator replaced by local fixture validator, with propagation failure tested. Production delegate independently source-reviewed separately.",
+  "stdout": "...........................\nRan 27 tests in 4.756s\nOK",
+  "earlier_development_run": {
+    "test_count": 25,
+    "exit_code": 0,
+    "elapsed_test_seconds": 6.436,
+    "scope": "preceded added foreign-reference and completed-contract checks; final 27-test receipt governs"
+  }
+}

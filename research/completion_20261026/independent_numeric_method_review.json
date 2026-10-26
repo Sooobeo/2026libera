@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "review_kind": "offline_numeric_audit_helper_acceptance_not_model_outcome_score",
+  "completed_at_utc": "2026-10-26T02:28:09Z",
+  "reviewer": "Codex AI assistance, implementation author; separate AI static review is linked and is not independent-human reliability evidence",
+  "source_refs": [
+    {"path": "research/completion_20261026/audit_stage_numerics.py", "sha256": "10ee4d79fdcdebd1adbdf3bba2278464e044bad6b19248aa601b4ed60daaa8b9"},
+    {"path": "research/completion_20261026/test_audit_stage_numerics.py", "sha256": "8fa9edf2a6f82661825a76853eb2c9922c000a5670e6c02a8256faa7b36963b7"},
+    {"path": "research/completion_20261026/prepare_stage_semantic_audit.py", "sha256": "3d9c36405ad7b86e212d99480976af154397096491a36b1e365ee8f355799a90"}
+  ],
+  "test_result_ref": {"path": "research/completion_20261026/independent_numeric_test_result_r3.json", "sha256": "f374e5084feaabf91e49d81358c0707cc5a995d97cdec1c4fbf818db0d97fc4c"},
+  "separate_static_review_ref": {"path": "research/completion_20261026/implementation/independent_numeric_static_review.json", "sha256": "55a0820f7fbfcd2fea6686021e80a843944a3ba6c1b1903b2188e3c67870adb0"},
+  "static_fact_report_ref": {"path": "research/completion_20261026/independent_numeric_static_common_market_r2.json", "sha256": "1d02cfcb9e175fc574ca933d7d1a013fd18e998b655fef63a523a6c13f04234c"},
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "29 final synthetic tests pass. Exact raw sums, Fraction proportional shares and canonical-order largest remainder allocation are computed without calling the accepted finalizer's mathematics. Missing, negative, nonfinite, duplicate or zero-sum vectors remain unavailable. Transport/structure eligibility is separate from mathematical scalability. A valid derived sum beyond the input-only digit cap was identified during separate static review, fixed using a bounded derived-field parser, and regression tested."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "The completed frozen semantic guard is rerun before numerical use of actual model text; complete bundle equivalence, current hashes, exact stage paths and own D0 identity are required. Current and own D0 sidecars are separately bound and compared. Ordered sector arrays, matrix order and sector-specific fact pointers are checked. Raw, normalized ratios, quantized allocations, reported benchmark percentages and normalized benchmark weights remain distinct."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "Outputs are numerical reference facts for reading evidence, interpretation, stated reasons and allocations. Source support and prose claims still require actual semantic reading. The helper introduces no extra model calls, feedback, retries, automatic prose grades, ranking, causal inference or future-return claim."
+    }
+  },
+  "verified_scope": {
+    "synthetic_tests_passed": 29,
+    "static_prepared_input_cli_exit_code": 0,
+    "scalar_fact_rows": 58,
+    "sector_scalar_fact_rows": 55,
+    "shared_scalar_fact_rows": 3,
+    "sector_internal_checks": 11,
+    "ordered_matrix_pair_checks": 121,
+    "counts_are_reference_entries_not_independent_observations": true,
+    "actual_completed_stage_integration_performed": false,
+    "actual_model_outputs_read": 0,
+    "semantic_claim_occurrences_graded": 0
+  },
+  "static_numeric_observation": {
+    "supplied_baseline_annualized_standard_deviation": "0.13902338650295984",
+    "fraction_covariance_decimal_sqrt_diagnostic": "0.139023386502959837670030770864342746774096815133637049090859",
+    "interpretation": "Difference is at serialized display precision. The baseline vector is comparison context, not actual holdings. Its serialized decimal sum differs from one by only -2.2e-17; this is separate from material model-vector budget errors."
+  },
+  "limits": [
+    "Prepared input contains 11 summary values per metric and 11 by 11 matrices, not 60 by 11 daily observations. Daily means, covariance and compounded returns cannot be recomputed from raw time series here.",
+    "Mean times 60, compounded mean or weighted sector compounded returns are not substitutes for a realized portfolio return path.",
+    "Quadratic forms are exact rational functions of serialized inputs; 60-digit square roots and correlations add computational precision, not source information.",
+    "Bundle adapter unit tests mock frozen guard re-execution. Future actual completed-stage use must run the real guard, and its result must be recorded separately.",
+    "A sidecar numerical match does not validate original source interpretations, citations, explanations or raw arithmetic. Availability-only comparisons are explicitly labelled."
+  ],
+  "allowed_use": "Run only after root supplies a durable guarded completed-stage semantic bundle and its declared allocation-math sidecar. Attach this review and final test receipt to the resulting stage numeric audit receipt.",
+  "example_cli": "python research/completion_20261026/audit_stage_numerics.py --bundle <completed semantic bundle> --math-sidecar <declared allocation_math case-stage path> --output <new completion report path>",
+  "model_calls": 0,
+  "service_calls": 0,
+  "frozen_files_modified": false,
+  "raw_artifacts_modified": false,
+  "new_generation_permission_created": false
+}

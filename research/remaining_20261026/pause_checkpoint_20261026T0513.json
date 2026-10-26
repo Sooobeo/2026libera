@@ -1,0 +1,68 @@
+{
+  "version": "user_requested_pause_checkpoint_1",
+  "recorded_at_utc": "2026-10-26T05:14:07.726Z",
+  "status": "paused_at_user_request",
+  "completed_final_conditions": [
+    "fidelity_q2_2026__E",
+    "fidelity_q2_2026__L",
+    "ubs_june_2026__E",
+    "ubs_june_2026__L"
+  ],
+  "saved_control_draft": "common_market_only__C__D0",
+  "control_numeric_review": "completed",
+  "control_semantic_review": "interrupted_before_root_review_and_ack",
+  "remaining_generation": "common_market_only__C__F0_not_started",
+  "new_segment_calls": 4,
+  "total_historical_and_new_calls": 10,
+  "coordinator_session_closed": true,
+  "owned_service_pid4868_stopped": true,
+  "awake_request_released": true,
+  "user_existing_service_11434_unchanged": true,
+  "durable_records_preserved": true,
+  "in_memory_model_KV_cache_not_preserved": true,
+  "remaining_work": [
+    "finish current saved control D0 semantic review and root checks",
+    "prepare a separately recorded continuation that binds this actual D0 and original controls; current terminal namespace is immutable",
+    "generate only remaining control F0, then audit it",
+    "final combined explanation, masked reviews, archives, exact duplicate ignore rules and commit"
+  ],
+  "resume_notes": "Do not restart the stopped namespace or delete CANCEL. Existing remaining runner only supports its frozen five-slot schedule and external UBS E D0; resuming the final control requires a new reviewed continuation path. Do not regenerate completed conditions or claim zero model reload/input-prefill cost.",
+  "git_commit_completed_this_turn": false,
+  "source_refs": [
+    {
+      "path": "data/local_sector_runtime/v494_remaining_20261026/campaign_summary.json",
+      "sha256": "7747b2e69d82cd09e637d9b8852eff053383a6ec9b5dae4a89de1c5655e612bf"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_remaining_20261026/CANCEL",
+      "sha256": "8b00af1b8b8ea8635be60e7fe77d887aa745a876a5f426c0c2464a4ffbdcf5e3"
+    },
+    {
+      "path": "research/remaining_20261026/run_reports/terminal_receipt.json",
+      "sha256": "e618dbc51eaadd54b572df83d5bf4c1a097f8dba12bd0db9c6024e6c4ff44c4d"
+    },
+    {
+      "path": "research/remaining_20261026/run_reports/coordinator_awake_release.json",
+      "sha256": "41aff058d79b83fa601a1dfcf15984d156276c29c3e3503d78b67c88adea1e6c"
+    },
+    {
+      "path": "research/remaining_20261026/runtime/service_ready/service_shutdown_receipt.json",
+      "sha256": "fae393b1ba6820c35b0e5037ef0f6d79689ac8e768d1e6a15473e5a1f1156996"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/common_market_only__C__D0_bundle.json",
+      "sha256": "dc44f49e844f3c705a70ea9d01c67ba3519de4d4cbb0647a698b536cd29a2c7c"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/common_market_only__C__D0_numeric_facts.json",
+      "sha256": "77bd419aec890ccc934837809ab5891dfd09688c04e92da7364f0d14a47ff0b9"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/common_market_only__C__D0_numeric_review.json",
+      "sha256": "1c6ec4944587f25db8eb1b88c9e54113d7c976cf5d9dc9826bfde36d7f2ab768"
+    }
+  ],
+  "model_calls": 0,
+  "service_calls": 0,
+  "raw_artifacts_modified": false
+}

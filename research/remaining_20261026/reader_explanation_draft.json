@@ -1,0 +1,177 @@
+{
+  "version": "reader_explanation_draft_1",
+  "status": "draft_for_root_content_review_not_final_results",
+  "created_at_utc": "2026-10-26T04:49:03.597Z",
+  "intended_reader": "소논문과 결과표를 처음 읽는 비전문 독자",
+  "language": "ko",
+  "source_refs": [
+    {
+      "id": "protocol",
+      "path": "research/remaining_20261026/protocol_and_review.json",
+      "sha256": "e442d3f37083f17893c54e3d1af3eaa4d5e3394ae977d8843f3044357d1d02c7"
+    },
+    {
+      "id": "evaluation",
+      "path": "research/v492_evaluation_protocol_20261019_r2.json",
+      "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+    },
+    {
+      "id": "prepared_inputs",
+      "path": "data/sector_protocol/v494_design_20261025/prepared/preparation_manifest.json",
+      "sha256": "8023f8b11ec9b1d43bf1b5b08ac37ccbab4ac5ab7ad7de28a9e93d8e67a4ef29"
+    },
+    {
+      "id": "math_policy",
+      "path": "research/recovery_20261025/allocation_finalization_acceptance_r2.json",
+      "sha256": "0232232baeb7e251aa0dee42bc9a1969f66615a1df4d303bccb67dd938b47d9e"
+    },
+    {
+      "id": "original_summary",
+      "path": "data/local_sector_runtime/v494_pilot_20261025/pilot_summary.json",
+      "sha256": "ad5b11da9677d3cb091738d0b0427240842f2ca541bb0f7e72f3747400b599a4"
+    },
+    {
+      "id": "continuation_summary",
+      "path": "data/local_sector_runtime/v494_continuation_20261026/campaign_summary.json",
+      "sha256": "88f6c466914ad1eea593e99d2582ca64df06d3f6c2ddea7075100d1e51edac3d"
+    },
+    {
+      "id": "completion_terminal",
+      "path": "research/completion_20261026/run_reports/terminal_receipt.json",
+      "sha256": "1bd0e740b9d30be46f3186d1fdc7d6fd5fbb8129ced078f477da82c89bcc838a"
+    },
+    {
+      "id": "ubs_E_final_numeric",
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__E__F0_numeric_review.json",
+      "sha256": "33fc714bc01ddbbd5f755f529c7f1817b46be909934789770bc653fef11d5d52"
+    },
+    {
+      "id": "ubs_L_final_numeric",
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__L__F0_numeric_review.json",
+      "sha256": "a26d592cf5d981be5eb3369501f8de473829b251bbe61843f7a06e292acab5bf"
+    },
+    {
+      "id": "ubs_E_final_semantic",
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__E__F0_review.json",
+      "sha256": "0b5edea1857617f1da9a6c29f15e503b53458ba63bae795e86e7bf13239b70f0"
+    },
+    {
+      "id": "ubs_L_final_semantic",
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__L__F0_review.json",
+      "sha256": "5a7e3527ad71005d0dcf7df009fdf8f3b7f18b96d980a45bb9075f89b183b5bd"
+    }
+  ],
+  "proposed_paragraphs": [
+    {
+      "id": "question",
+      "text": "이 소논문은 같은 생성형 AI가 기관의 공개 투자자료를 받아, 그 내용을 어떻게 읽고 배분 이유와 업종별 비중으로 연결하는지 살펴본다. 여기서 기관별 판단이란 Fidelity와 UBS의 공개 문서에 담긴 견해를 뜻한다. 실제 기관이 보유한 포트폴리오를 재현하는 실험은 아니다.",
+      "sources": [
+        "protocol",
+        "prepared_inputs"
+      ]
+    },
+    {
+      "id": "five_conditions",
+      "text": "조건은 다섯 개다. Fidelity와 UBS 자료를 각각 초안부터 주는 경우(E), 공통 시장자료로 초안을 쓴 뒤 최종 답변 전에 추가하는 경우(L)를 두고, 기관자료를 전혀 주지 않는 공통 비교 조건(C)을 하나 둔다. 모든 조건은 같은 모델·설정·시장자료와 11개 업종을 사용한다. 먼저 초안(D0)을 만들고, 자신의 실제 초안과 계산 피드백을 검토해 최종 답변(F0)을 작성한다.",
+      "sources": [
+        "protocol",
+        "prepared_inputs"
+      ]
+    },
+    {
+      "id": "two_questions",
+      "text": "비교는 두 가지로 나눈다. 한 조건의 초안과 최종 답변을 비교하면 AI가 자기 비중을 실제로 어떻게 고쳤는지 알 수 있다. 서로 다른 조건의 최종 답변을 비교하면 자료 제공 방식에 따라 어떤 배분 차이가 나타났는지 볼 수 있다. 결과표의 배분 거리는 두 보정 배분을 같게 만들기 위해 전체 자금 중 최소 몇 %를 업종 사이에 옮겨야 하는지를 뜻한다. 설명의 정확도나 자료 반영 성공률을 나타내는 값은 아니다.",
+      "sources": [
+        "protocol",
+        "ubs_E_final_numeric",
+        "ubs_L_final_numeric"
+      ]
+    },
+    {
+      "id": "raw_and_derived",
+      "text": "AI가 제출한 원시 비중과 합계 100%로 만든 배분은 따로 보관한다. 11개 비중이 모두 있고 음수가 없으며 총합이 양수이면, 각 비중을 총합으로 나눈 뒤 0.01% 단위로 맞춘다. 따라서 최종표의 합계는 정확히 100%가 되지만, 원래 합계가 95%나 101%였다는 사실은 그대로 남는다. 보정 때문에 생긴 업종별 증감이나 벤치마크 대비 방향 변화도 AI가 직접 바꾼 비중과 구분한다.",
+      "sources": [
+        "protocol",
+        "math_policy",
+        "ubs_E_final_numeric",
+        "ubs_L_final_numeric"
+      ]
+    },
+    {
+      "id": "what_to_check",
+      "text": "자료를 제대로 반영했는지는 배분표만으로 판단하지 않는다. 기관 문서의 등급을 정확히 옮겼는지, 인용한 문장이 설명을 실제로 뒷받침하는지, 시장 수치의 업종·단위·기간을 맞게 읽었는지, 설명한 증감이 제출 비중과 일치하는지를 함께 확인한다. 등급 표기가 맞아도 해석과 배분 이유가 틀릴 수 있으므로 각각 기록한다. 기관자료가 없는 초안과 C에는 기관 문서 해석 평가를 적용하지 않는다.",
+      "sources": [
+        "protocol",
+        "evaluation",
+        "ubs_E_final_semantic",
+        "ubs_L_final_semantic"
+      ]
+    },
+    {
+      "id": "why_primary_exploratory",
+      "text": "이 다섯 조건은 소논문의 주된 탐색적 근거로 사용할 수 있다. 공통 입력, 제공한 기관자료, 실제 초안과 최종 답변이 보존되어 있어 자료의 해석에서 이유와 배분까지 이어지는 과정과 오류를 구체적으로 추적할 수 있기 때문이다. 분석 단위는 다섯 사례이며, 업종별 55행이 55개의 독립 실험이 되는 것은 아니다. 초안이 달라지면 대화 이력과 자료 노출도 함께 달라지므로, 관찰된 차이는 사례 차이로 설명한다.",
+      "sources": [
+        "protocol",
+        "evaluation",
+        "original_summary",
+        "continuation_summary"
+      ]
+    },
+    {
+      "id": "history_and_scope",
+      "text": "실행 중 시간제한과 전원 문제로 중단·재개가 있었고, 실패한 시도도 기록에 남겼다. 파일럿 결과 일부를 본 뒤 이 다섯 조건을 주된 탐색적 분석으로 삼고 100% 배분 후처리를 추가했으므로, 그 변경 시점을 방법절에 공개한다. 시장자료는 2026년 7월 16일까지의 자료를 사용한 사후 사례 분석이다. 별도로 준비했던 Fidelity 3분기·UBS 7월 자료의 새 본실험은 실행하지 않고, 이번 다섯 조건을 완성하는 범위로 진행한다.",
+      "sources": [
+        "protocol",
+        "original_summary",
+        "continuation_summary",
+        "completion_terminal"
+      ]
+    }
+  ],
+  "optional_completed_UBS_example": {
+    "text": "현재 완료된 UBS 두 조건에서, 처음부터 자료를 받은 조건(E)은 원시합이 초안과 최종 모두 95%였고 11개 원시 비중도 같았다. 초안 뒤에 자료를 받은 조건(L)은 6개 업종의 원시 비중이 바뀌었지만 합계가 102%에서 101%로 줄어드는 데 그쳤다. 각 단계에 같은 보정을 적용하면 E의 초안·최종 배분 거리는 0%, L은 4.49%다. 이 차이는 실제로 관찰된 배분 변화이며, 그 이유가 타당했는지는 별도의 설명·인용 감사와 함께 읽는다.",
+    "sources": [
+      "ubs_E_final_numeric",
+      "ubs_L_final_numeric",
+      "ubs_E_final_semantic",
+      "ubs_L_final_semantic"
+    ],
+    "status": "completed_pairs_only_not_all_condition_conclusion",
+    "exclusion": "C 결과나 전체실험 성공 여부는 이 문단에 포함하지 않는다."
+  },
+  "coverage_at_draft": {
+    "verified_completed_final_cases": [
+      "fidelity_q2_2026__E",
+      "fidelity_q2_2026__L",
+      "ubs_june_2026__E",
+      "ubs_june_2026__L"
+    ],
+    "control_status": "not_assessed_in_this_draft",
+    "new_or_partial_C_outputs_read": 0,
+    "all_five_final_completion_claimed": false,
+    "no_new_main_scope": "Approved protocol excludes new Q3/July main and records main_model_calls0."
+  },
+  "review_axes": {
+    "errors": {
+      "reviewed": true,
+      "reason": "완료된 기록만 근거로 삼았으며 UBS 원시합·변화·보정거리는 이미 검증된 수치 감사와 일치한다. C의 수치·판정은 작성하지 않았다."
+    },
+    "consistency": {
+      "reviewed": true,
+      "reason": "E/L/C와 own D0→F0·조건 간 F0 비교,원시·파생 배분,5사례·55행 구분이 승인 프로토콜과 일치한다. 운영 중단과 사후 변경을 보존한다."
+    },
+    "paper_topic": {
+      "reviewed": true,
+      "reason": "기관 공개 근거의 해석→이유→배분 연결과 그 오류에 초점을 두며,등급일치 자체를 타당한추론으로 간주하지 않는다. 탐색적 사례 근거로 쓰는 이유와 범위를 평이한 문장으로 설명한다."
+    }
+  },
+  "final_use_requirements": [
+    "C가 끝난 뒤 실제 최종 커버리지와 누적 요청 수를 결과표에 맞춰 갱신한다.",
+    "최종 관찰 요약은 완료된 전체 감사에 근거해 작성하며,이 초안의 UBS 예시를 전체실험 결론으로 확대하지 않는다.",
+    "인과효과,독립 반복의 평균,미래 수익률이나 실제 기관 포트폴리오에 관한 결론을 덧붙이지 않는다."
+  ],
+  "model_calls": 0,
+  "service_calls": 0,
+  "raw_artifacts_modified": false,
+  "frozen_sources_modified": false
+}

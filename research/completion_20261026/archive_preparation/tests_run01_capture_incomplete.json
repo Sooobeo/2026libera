@@ -1,0 +1,33 @@
+{
+  "status": "test_result_unavailable_capture_timeout_no_pass_claim",
+  "recorded_at_utc": "2026-10-26T02:13:25.977Z",
+  "command": [
+    "python",
+    "-B",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "research",
+    "-p",
+    "test_archive_sector_completion.py",
+    "-v"
+  ],
+  "invocation": "Node child_process.spawnSync with timeout60000; node tool kernel timed out and reset; no exit code or full output retained",
+  "followup_observation": "A bounded read-only CIM query for python.exe command lines containing test_archive_sector_completion.py completed exit0 without a matching process before the next invocation.",
+  "source_refs_observed_after_timeout": [
+    {
+      "path": "research/archive_sector_completion.py",
+      "sha256": "87b8ce6ac4efe356375166a0a447fe098f2f20c2d502e8d0800d43508d796214"
+    },
+    {
+      "path": "research/test_archive_sector_completion.py",
+      "sha256": "9f10b456387b211626ab4358b678e8b59e179daa340df2a83eb2ff38851d4aa8"
+    }
+  ],
+  "model_calls": 0,
+  "service_calls": 0,
+  "actual_archive_created": false
+}

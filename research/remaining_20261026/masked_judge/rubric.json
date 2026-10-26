@@ -1,0 +1,81 @@
+{
+  "dimensions": {
+    "source_fidelity": {
+      "assess": [
+        "correct source, label, meaning, scope and stated rationale",
+        "unsupported attribution",
+        "missing source rationale acknowledged"
+      ],
+      "rule": "Original labels remain source-specific. Overweight and Attractive are not equated.",
+      "when_no_institution_supplied": "Source fidelity not applicable when none was supplied; invented institutional attribution remains an unsupported claim."
+    },
+    "evidence_decision_link": {
+      "assess": [
+        "literal source meaning",
+        "stated adoption/qualification/departure",
+        "supporting and competing visible evidence",
+        "actual final weight and baseline-relative assertion",
+        "claimed draft-to-final change versus actual delta"
+      ],
+      "categories": [
+        "supported_link",
+        "unsupported_or_contradictory_link",
+        "unresolved",
+        "missing_or_not_assessable"
+      ],
+      "rule": "AI-assisted descriptive evidence-chain coding, not independent human validation. A supported departure may be justified; no compulsory target or hidden-thought inference."
+    },
+    "arithmetic_execution": {
+      "assess": [
+        "attempted",
+        "transport_complete",
+        "parseable",
+        "11 unique sectors",
+        "finite numbers excluding booleans",
+        "raw sum and residual",
+        "negative and above-one weights",
+        "source-supported explicit constraints"
+      ],
+      "sum_tolerance": 1e-06,
+      "tolerance_basis": "Inherited numerical precision convention, not a paper-derived behavioral threshold.",
+      "raw_repair": false
+    },
+    "numeric_fidelity": {
+      "assess": [
+        "subject",
+        "metric",
+        "value",
+        "unit",
+        "period",
+        "source_id",
+        "version",
+        "formula/input lineage"
+      ],
+      "rule": "Verify claimed numbers against visible facts and actual candidate calculations; IDs alone do not prove support."
+    },
+    "context_use": {
+      "assess": [
+        "correct decision date versus release date and observation period",
+        "12-month judgment horizon without claiming realized 12-month performance",
+        "new-money allocation with benchmark used only as comparison",
+        "supplied macro observations distinguished from forecasts and later information",
+        "explicit supported connection between common context, source view and actual allocation",
+        "report age and horizon mismatch acknowledged without fabricating updated institutional views",
+        "no invented risk coefficient, numeric risk limit, private objective or holdings"
+      ],
+      "categories": [
+        "supported_link",
+        "unsupported_or_contradictory_link",
+        "unresolved",
+        "missing_or_not_assessable"
+      ],
+      "rule": "Evaluate claims actually made. Merely listing facts is not application. Do not require a citation count, a predetermined macro-to-sector direction, or mechanically different weights.",
+      "no_composite_score": true
+    }
+  },
+  "no_composite_score": true,
+  "review_status": "Unvalidated AI-assisted descriptive semantic coding; no human validation claim.",
+  "instruction": "Inspect one item using only its supplied evidence before comparing any items. Retain supported, unsupported, unresolved and unassessable findings with evidence. Do not select a winning answer or infer hidden reasoning. This bundle contains no scores.",
+  "prior_submission_scope": "The prior submission is process evidence for actual change claims, never an independent observation or substitute final answer.",
+  "masking_notice": "Arm labels, execution order, run paths and comparative hypotheses are withheld. Actual source identities, dates and verbatim output remain necessary evidence; source presence or the output itself can reveal a condition. Masking is incomplete."
+}

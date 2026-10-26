@@ -1,0 +1,500 @@
+{
+  "version": "remaining_operational_amendment_candidate_1",
+  "recorded_at_utc": "2026-10-26T02:43:01.314Z",
+  "status": "approved_design_for_prospective_remaining_freeze",
+  "purpose": "pilot_completion_resume",
+  "case_order": [
+    "ubs_june_2026__E",
+    "ubs_june_2026__L",
+    "common_market_only__C"
+  ],
+  "stage_order": [
+    "ubs_june_2026__E__F0",
+    "ubs_june_2026__L__D0",
+    "ubs_june_2026__L__F0",
+    "common_market_only__C__D0",
+    "common_market_only__C__F0"
+  ],
+  "max_generation_requests": 5,
+  "historical_generation_requests": 6,
+  "campaign_max_generation_requests": 11,
+  "automatic_retries": 0,
+  "post_final_calls": 0,
+  "main_model_calls": 0,
+  "main_allowed": false,
+  "old_outputs_observed": true,
+  "historical_first_attempt_results_unchanged": true,
+  "explicit_retry_slots": [],
+  "historical_explicit_retry_slots": [
+    "fidelity_q2_2026__L__D0"
+  ],
+  "analysis_role": "primary_exploratory",
+  "excluded_new_main_execution": true,
+  "raw_diagnostics_required": true,
+  "primary_final_allocation_endpoint": "F0_derived_integer_allocation",
+  "historical_gate_ref": {
+    "path": "research/recovery_20261025/review_gate.json",
+    "sha256": "04745b0b358d54234b888a3acdb281a10b35d8b570264c4027007e530cc5f552"
+  },
+  "historical_terminal_ref": {
+    "path": "research/recovery_20261025/new_pilot/terminal_receipt.json",
+    "sha256": "bc872eb8326233e274629d8ea16f5d841e098b6e45aa26f31a9588d760289d15"
+  },
+  "historical_summary_ref": {
+    "path": "data/local_sector_runtime/v494_pilot_20261025/pilot_summary.json",
+    "sha256": "ad5b11da9677d3cb091738d0b0427240842f2ca541bb0f7e72f3747400b599a4"
+  },
+  "prior_continuation_gate_ref": {
+    "path": "research/continuation_20261026/review_gate.json",
+    "sha256": "e7e2c88b26d1e3181c8c7811b49a8a318b1c0a2f71817ec610a225813032d6f8"
+  },
+  "prior_continuation_terminal_ref": {
+    "path": "research/continuation_20261026/run_reports/terminal_receipt.json",
+    "sha256": "77bd98f4172e78eb2890d21b41bf128012ad02cd36d474ca2d5e77b5ae415f47"
+  },
+  "prior_continuation_summary_ref": {
+    "path": "data/local_sector_runtime/v494_continuation_20261026/campaign_summary.json",
+    "sha256": "88f6c466914ad1eea593e99d2582ca64df06d3f6c2ddea7075100d1e51edac3d"
+  },
+  "prior_continuation_declaration_ref": {
+    "path": "data/local_sector_runtime/v494_continuation_20261026/campaign_declaration.json",
+    "sha256": "a7e260774dc52295f53bc950c594f825145838660eb115213baec87e835603ea"
+  },
+  "prepared_manifest_ref": {
+    "path": "data/sector_protocol/v494_design_20261025/prepared/preparation_manifest.json",
+    "sha256": "8023f8b11ec9b1d43bf1b5b08ac37ccbab4ac5ab7ad7de28a9e93d8e67a4ef29"
+  },
+  "finalizer_acceptance_ref": {
+    "path": "research/recovery_20261025/allocation_finalization_acceptance_r2.json",
+    "sha256": "0232232baeb7e251aa0dee42bc9a1969f66615a1df4d303bccb67dd938b47d9e"
+  },
+  "completion_finalizer_review_ref": {
+    "path": "research/completion_20261026/completion_finalizer_review.json",
+    "sha256": "fec44eccb3a9edfb68b717fcaa2750f714b6f9b175a635b4b4ea111112df3f60"
+  },
+  "prior_completion_gate_ref": {
+    "path": "research/completion_20261026/review_gate.json",
+    "sha256": "4a50c95def3e6278e846e475f07fb6a1a7fd8a00b4f1dac723f509dafa71f851"
+  },
+  "prior_completion_terminal_ref": {
+    "path": "research/completion_20261026/run_reports/terminal_receipt.json",
+    "sha256": "1bd0e740b9d30be46f3186d1fdc7d6fd5fbb8129ced078f477da82c89bcc838a"
+  },
+  "prior_completion_summary_ref": {
+    "path": "data/local_sector_runtime/v494_completion_20261026/campaign_summary.json",
+    "sha256": "ac87bd037264bcc1c954985cc904648c0cc55cd59e9ac6f6d00352a1c06fb1f4"
+  },
+  "prior_completion_declaration_ref": {
+    "path": "data/local_sector_runtime/v494_completion_20261026/campaign_declaration.json",
+    "sha256": "10482e168e82c54a4484f73a736e99c53daa9330b11c40c561fa2ed3277cb787"
+  },
+  "prior_completion_freeze_ref": {
+    "path": "research/completion_20261026/freeze.json",
+    "sha256": "a9d6477dd7e776c5822c906654ee355f545f40c8a2fb43803d9ded7e7fe8334c"
+  },
+  "prior_completion_protocol_ref": {
+    "path": "research/completion_20261026/protocol_and_review.json",
+    "sha256": "c8b8a87310e5ffae35dcb940984a5a019a3b064e7c1da39886dce862ef16030f"
+  },
+  "prior_completion_runtime_ref": {
+    "path": "research/completion_20261026/runtime_candidate.json",
+    "sha256": "24528f9af9385814fbec3d8d1953322dcf86ccd259178edf32bd79edea6f9902"
+  },
+  "exact_math_policy_ref": {
+    "path": "research/recovery_20261025/allocation_finalization_acceptance_r2.json",
+    "sha256": "0232232baeb7e251aa0dee42bc9a1969f66615a1df4d303bccb67dd938b47d9e"
+  },
+  "evaluation_protocol_ref": {
+    "path": "research/v492_evaluation_protocol_20261019_r2.json",
+    "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+  },
+  "prompt_contract_ref": {
+    "path": "data/sector_protocol/v494_design_20261025/prompt_contract.json",
+    "sha256": "7d75828866825af1f7051a528defc92c88f2beac3f42a66f5d5223c4fb714362"
+  },
+  "post_start_math_amendment_ref": {
+    "path": "research/recovery_20261025/allocation_finalization_amendment.json",
+    "sha256": "009f90b89a6185f1af9c63fd6be47d01f9662d959fd13b9938295f5943156031"
+  },
+  "fixed_math_implementation_ref": {
+    "path": "research/finalize_sector_allocation.py",
+    "sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3"
+  },
+  "external_draft_refs": {
+    "response": {
+      "path": "data/local_sector_runtime/v494_completion_20261026/ubs_june_2026__E__D0/http_0001_generation/response.json",
+      "sha256": "03950907ba9784ede1c7f12e6511900a3d1548005a053e190a1a759d60348a41"
+    },
+    "worker_spec": {
+      "path": "data/local_sector_runtime/v494_completion_20261026/ubs_june_2026__E__D0/worker_spec.json",
+      "sha256": "c8e07ebb792ff2753ac873fcd1cc9343ca348836c08e4538fd8febc6a8d1bbb1"
+    },
+    "worker_summary": {
+      "path": "data/local_sector_runtime/v494_completion_20261026/ubs_june_2026__E__D0/worker_summary.json",
+      "sha256": "7cbf27c100bee046201922be276c664284209eae3ca0507498d6b3412f7bc36f"
+    },
+    "supervisor_result": {
+      "path": "data/local_sector_runtime/v494_completion_20261026/ubs_june_2026__E__D0/supervisor_result.json",
+      "sha256": "73e2b2b14e94053132367afb3d26a8511007b2c6a2d3cabd5595bab5cb9b907f"
+    },
+    "transport_result": {
+      "path": "data/local_sector_runtime/v494_completion_20261026/ubs_june_2026__E__D0/transport_result.json",
+      "sha256": "bb642d0f876591db10c8b214752b7be5c493a0b2dffad1bcbf504e31d725148d"
+    }
+  },
+  "external_draft_evidence_refs": {
+    "stage_review": {
+      "path": "data/local_sector_runtime/v494_completion_20261026/ubs_june_2026__E__D0/stage_review.json",
+      "sha256": "3dab8104b86e5125ca21bbe3aa6f563a0ed3babc7be896af7b0e4561fc5e7044"
+    },
+    "allocation_math": {
+      "path": "research/completion_20261026/run_reports/allocation_math/ubs_june_2026__E__D0.json",
+      "sha256": "f9f249f6f5f03ce94f0e64715b6b2463c350a5c72d53ec8eba63fea6f29e8492"
+    },
+    "semantic_review": {
+      "path": "research/completion_20261026/semantic/ubs_june_2026__E__D0_review.json",
+      "sha256": "55abb787b8966c59b71cc910a299a756d5b9c69db87e36711c77385ebaf4736d"
+    },
+    "external_review_ack": {
+      "path": "data/local_sector_runtime/v494_completion_20261026/ubs_june_2026__E__D0/external_review_ack.json",
+      "sha256": "258afbb054099de190f0fdf087758f0972c59f8dc85fdac6531ab23adab27131"
+    },
+    "terminal": {
+      "path": "research/completion_20261026/run_reports/terminal_receipt.json",
+      "sha256": "1bd0e740b9d30be46f3186d1fdc7d6fd5fbb8129ced078f477da82c89bcc838a"
+    },
+    "summary": {
+      "path": "data/local_sector_runtime/v494_completion_20261026/campaign_summary.json",
+      "sha256": "ac87bd037264bcc1c954985cc904648c0cc55cd59e9ac6f6d00352a1c06fb1f4"
+    },
+    "declaration": {
+      "path": "data/local_sector_runtime/v494_completion_20261026/campaign_declaration.json",
+      "sha256": "10482e168e82c54a4484f73a736e99c53daa9330b11c40c561fa2ed3277cb787"
+    },
+    "final_construction": {
+      "path": "data/local_sector_runtime/v494_completion_20261026/ubs_june_2026__E__final_construction.json",
+      "sha256": "dad307d5bfd865894f3a0d51823952c54c33cd432cd7be7402dfcdf348c420d0"
+    }
+  },
+  "research_question": "Describe how institution evidence is represented in source readings, connected to stated reasons, and reflected in raw model and mechanically finalized sector allocations under early/late/no institution evidence timing.",
+  "data_timing": {
+    "common_cutoff_exclusive": "2026-07-17",
+    "last_price_date": "2026-07-16",
+    "retrieval_and_development": "Existing October research artifacts; retrospective document-conditioned example, not point-in-time trading replay.",
+    "source_limitations": "Original pilot packets, researcher paraphrases, rating labels, IDs, dates and locators remain unchanged; source transcription or metadata issues remain disclosed. The two Q3/July candidate wording fixes are not imported into this cohort."
+  },
+  "endpoint_contract": {
+    "primary": "Eligible F0 derived integer allocations totaling10000 units (100.00%) using unchanged accepted exact arithmetic; retain missing/unfinalizable F0 as missing with explicit reason.",
+    "raw_companion": "Report original D0/F0 weight vectors, exact sums, bounds/schema errors, citation availability, factual/source interpretation and explanation consistency separately. Raw artifacts and original r2 analysis never change.",
+    "math": "Positive finite complete11 nonnegative vector -> proportional normalization with exact rational arithmetic -> largest-remainder10000 integer units and fixed GICS order tie break. Reject missing/nonfinite/negative/all-zero vectors. Disclose material rescaling versus displayed rounding.",
+    "semantic": "Assess claimed values and claimed changes against the raw submitted vector first; separately identify normalization/quantization changes to comparator direction, concentration and ties. Mechanical100% does not demonstrate model feedback use or semantic correctness.",
+    "precedence": "The original frozen phrase never normalized remains true of saved raw model artifacts. A distinct user-directed amended endpoint applies external math uniformly to eligible vectors; do not call it prespecified raw accuracy.",
+    "evaluation": "Original v4.9.2 r2 semantic dimensions and descriptive raw diagnostics remain; no composite success score."
+  },
+  "claims_and_limits": [
+    "Five logical conditions across sequential segments are descriptive cases, not independent replicated trials. Sector rows, turns and repeated AI reviews do not increase independent sample size.",
+    "Evidence timing, source, order, service session, elapsed time and operational standby/AC mitigation are not separately identified; do not claim causal effects.",
+    "No investment recommendation, future-return prediction or portfolio-performance claim.",
+    "Masking is partial; use fresh AI readers with only actual opaque item when available and disclose source clues, AI assistance and lack of independent human validation.",
+    "Existing observed output/audit exposure and later protocol amendment prevent a fully preregistered confirmatory framing."
+  ],
+  "user_authorization": {
+    "basis": "Existing user direction to finish all remaining conditions; no new user confirmation requested.",
+    "scope": "Finish only the five never-attempted remaining slots. No new Q3/July main execution, no replacement D0, no automatic retry.",
+    "exact_user_instruction": "그니까 파일럿 남은거 3갠지 4갠지 다 하면 본실험이랑 별 차이없다는거지? 다 마저 하고 결과는 처음 보는 사람도 알아들을 수 있게 설명해봐"
+  },
+  "chronology_and_disclosure": {
+    "prior_completion_stop_utc": "2026-10-26T02:36:26.482089+00:00",
+    "stopped_after": "UBS E D0 completed, deterministic review, unchanged external math, full semantic review and external ACK; before any UBS E F0 request.",
+    "observed_reason": "AC unavailable before stage; no new generation started",
+    "historical_request_partition": [
+      {
+        "segment": "original_v494",
+        "actual_requests": 3
+      },
+      {
+        "segment": "prior_continuation",
+        "actual_requests": 2
+      },
+      {
+        "segment": "completion",
+        "actual_requests": 1
+      }
+    ],
+    "remaining_request_ceiling": 5,
+    "prior_outputs_observed": true,
+    "development": "New operating namespace, exact external own-D0 handoff and battery-aware policy are adopted after the prior interruption and after seeing its output. No scientific request content is changed.",
+    "endpoint_and_study_role": "The 100% derived allocation endpoint and primary exploratory role were amended during the pilot after outputs existed; report this chronology together with raw diagnostics. This continuation is not a prospectively untouched confirmatory experiment.",
+    "generic_terminal_semantic_pending": "The preserved terminal uses a generic pending label. The exact completed ACK and its semantic review binding establish actual D0 audit completion; do not rewrite the terminal."
+  },
+  "unchanged_instrument": {
+    "model": "qwen3.5:4b-q4_K_M",
+    "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+    "template_sha256": "b507b9c2f6ca642bffcd06665ea7c91f235fd32daeefdf875a0f938db05fb315",
+    "engine_version": "0.35.1",
+    "backend": "cpu",
+    "options": {
+      "temperature": 0,
+      "num_ctx": 65536,
+      "num_predict": 8192,
+      "num_thread": 8,
+      "num_batch": 512,
+      "repeat_penalty": 1.0,
+      "presence_penalty": 0.0,
+      "frequency_penalty": 0.0,
+      "seed": 3407,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0.0,
+      "num_gpu": 0
+    },
+    "think": false,
+    "truncate": false,
+    "shift": false,
+    "stream": true,
+    "keep_alive": 0,
+    "deadline_seconds": 4500,
+    "renderer_policy": "http_verbatim_json_outer_ascii_whitespace_only_v1",
+    "prompt_contract_sha256": "7d75828866825af1f7051a528defc92c88f2beac3f42a66f5d5223c4fb714362",
+    "evaluation_protocol_sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1",
+    "source_and_market_inputs": "The frozen pilot packets and common snapshot; no v495 main packet edits, prompt clarification, source amendment, weight target or reviewer feedback enters this continuation.",
+    "prepared_D0_refs": [
+      {
+        "case_id": "ubs_june_2026__E",
+        "path": "data/sector_protocol/v494_design_20261025/prepared/ubs_june_2026__E__D0_messages.json",
+        "sha256": "a79a17fef00fc082860a4fde05c5ae41111dc2d4dc2bf96073f973bd5ae4ae27",
+        "matches_actual": true
+      },
+      {
+        "case_id": "ubs_june_2026__L",
+        "path": "data/sector_protocol/v494_design_20261025/prepared/ubs_june_2026__L__D0_messages.json",
+        "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15",
+        "matches_actual": true
+      },
+      {
+        "case_id": "common_market_only__C",
+        "path": "data/sector_protocol/v494_design_20261025/prepared/common_market_only__C__D0_messages.json",
+        "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15",
+        "matches_actual": true
+      }
+    ],
+    "frozen_code_checks": [
+      {
+        "path": "research/sector_v494_runtime.py",
+        "sha256": "c9521000aa3a1497775c83fa83a1b9bac9f5443edbcb707f131d313f7cd8bed1",
+        "frozen_sha256": "c9521000aa3a1497775c83fa83a1b9bac9f5443edbcb707f131d313f7cd8bed1",
+        "matches_frozen": true
+      },
+      {
+        "path": "research/sector_v492_contract.py",
+        "sha256": "f77d1ddec9630a4c7edbf3928d298b7b05094345996ece1cf53d91fc40171a21",
+        "frozen_sha256": "f77d1ddec9630a4c7edbf3928d298b7b05094345996ece1cf53d91fc40171a21",
+        "matches_frozen": true
+      },
+      {
+        "path": "research/sector_v491_contract.py",
+        "sha256": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397",
+        "frozen_sha256": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397",
+        "matches_frozen": true
+      },
+      {
+        "path": "research/sector_engine.py",
+        "sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c",
+        "frozen_sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c",
+        "matches_frozen": true
+      },
+      {
+        "path": "research/sector_v48_transport.py",
+        "sha256": "db395eb3d54ebec93aa67556e1f2424aba1d591ba8b9fcfce7fbd3332db0379c",
+        "frozen_sha256": "db395eb3d54ebec93aa67556e1f2424aba1d591ba8b9fcfce7fbd3332db0379c",
+        "matches_frozen": true
+      },
+      {
+        "path": "research/sector_v48_main_awake.py",
+        "sha256": "185a9f6be9471ff7808730153227682f0f0eae25f72ee1474602106a950fa98a",
+        "frozen_sha256": "185a9f6be9471ff7808730153227682f0f0eae25f72ee1474602106a950fa98a",
+        "matches_frozen": true
+      },
+      {
+        "path": "research/review_sector_v494_stage.py",
+        "sha256": "81195353a74f00fde66e1915e068e9167966ccc3cb774b65ad929867bf44b3e6",
+        "frozen_sha256": "81195353a74f00fde66e1915e068e9167966ccc3cb774b65ad929867bf44b3e6",
+        "matches_frozen": true
+      }
+    ],
+    "allowed_new_code_scope": "New five-slot orchestration, gate/freeze, one approved cross-segment own-D0 provenance branch, battery-aware operating policy, and read-only cumulative/audit adapters. Frozen generation, rendering, native tokenization, prompt, schema, source, common input and math stay unchanged.",
+    "dynamic_F0_rule": "UBS E F0 uses the exact old completed D0 raw text and saved ready four-message final_construction; all four message contents must equal that saved history. UBS L and C F0 each use only their actual completed own new D0. Native capacity checks apply to exact full histories; no trimming, substituted draft, external audit or derived allocation enters a model request."
+  },
+  "operational_runtime_exception": {
+    "allowed_runtime_value_change": "backend_evidence[0] only, for a new verified owned isolated service receipt. All other runtime values must equal the prior completion runtime under existing typed canonical comparison.",
+    "metadata_changes": [
+      "new run_directory",
+      "new cancel_path",
+      "new approved review_gate",
+      "new service ownership/receipt"
+    ],
+    "external_history_validation": "Old D0 worker_spec is validated under its original frozen completion runtime/gate. The new gate binds that history; do not make its run/gate identity impersonate the new segment.",
+    "prohibited": [
+      "rewriting or copying old D0 into a fake new generation folder",
+      "new UBS E D0 request",
+      "manual repaired assistant history",
+      "normalized weights in model feedback",
+      "any new source/prompt/model/options/seed choice"
+    ]
+  },
+  "external_own_D0_handoff": {
+    "case_id": "ubs_june_2026__E",
+    "stage": "D0",
+    "raw_draft_utf8_sha256": "da8d7b1dbb45076d3d609dbe33c58abc2d7f361e5e1fd954fda98464dadbc7ca",
+    "artifact_location_policy": "Read original completed artifacts in place using the five exact external_draft_refs. Keep these refs in new F0 draft_artifacts. No copied or rewritten historical worker spec/response.",
+    "required_checks": [
+      "old completion terminal and summary bind exactly one completed D0 and zero F0 attempts",
+      "old gate/declaration/runtime/freeze valid under their original scope",
+      "response done=true/done_reason=stop with no thinking/tool calls and one actual request",
+      "worker/supervisor/transport agree and retain completed continuation eligibility",
+      "instrument review, unchanged math sidecar, full semantic review and ACK hashes all validate; negative findings remain allowed",
+      "saved final_construction ready=true and first two messages equal frozen prepared D0; assistant message exactly equals raw D0; all four new F0 messages equal saved final history",
+      "new F0 controls equal prior scientific settings except explicitly allowed new backend receipt",
+      "no other case may use external draft references"
+    ],
+    "endpoint": "Historical D0 counted once in the completion segment; current remaining segment counts only its F0 generation."
+  },
+  "remaining_stage_rules": {
+    "stage_order": [
+      "ubs_june_2026__E__F0",
+      "ubs_june_2026__L__D0",
+      "ubs_june_2026__L__F0",
+      "common_market_only__C__D0",
+      "common_market_only__C__F0"
+    ],
+    "first_case": "Only F0 for UBS E; external D0 reuse is an input reference, not a generated new stage.",
+    "next_cases": "For UBS L and C, generate D0 once, retain the result, and generate F0 once only if the frozen contract declares it continuation-eligible. A normal structurally unusable D0 prevents its own F0 but does not invent or retry it.",
+    "stops": "Cancellation, instrument integrity failure, unsafe/unknown power state, stale or missing review acknowledgement and transport-system failure stop progression. Completed, failed and unattempted slots remain visible.",
+    "ordinary_model_errors": "Raw sum/bounds/citation/source interpretation/explanation failures are observations. They are not success gates, retry triggers or grounds to omit results.",
+    "generation_budget": "At most five new requests; at most eleven across all four segments, including the original failed Fidelity L D0."
+  },
+  "external_semantic_review_barrier": {
+    "required": true,
+    "max_wait_seconds_per_stage": 1800,
+    "acknowledgement_path": "<stage>/external_review_ack.json",
+    "schema_version": "sector_remaining_stage_external_review_ack_1",
+    "before": "Before the next model request and before normal final attempt-sequence completion; no generation while awaiting acknowledgement.",
+    "bound_evidence": [
+      "worker_spec_ref",
+      "transport_ref",
+      "stage_review_ref",
+      "allocation_math_ref",
+      "semantic_review_ref"
+    ],
+    "completion": "Acknowledgement status completed, exact case/stage and input hashes, semantic review_status completed with same transport_ref; all errors/consistency/paper_topic axes reviewed with nonempty reasons. Failed or unavailable output is reviewed as failed/unavailable, never invented.",
+    "no_quality_threshold": "Negative arithmetic/citation/factual/semantic findings and unresolved interpretations are allowed. Audit completion is required; a finding-free result, semantic PASS, hypothesis confirmation or normalized-vector existence is not.",
+    "model_feedback": "The external audit, math sidecar and reviewer observations never enter model messages or calculator feedback; original frozen own-D0 feedback remains the only feedback.",
+    "failure": "Missing acknowledgement for1800 seconds, cancellation, stale/malformed refs or system-integrity issue stops progression and preserves all completed/failed/unattempted stages. No retry or extra generation.",
+    "operational_change": "The same reviewed per-stage completion barrier continues for only the five remaining slots. The completed inherited D0 ACK is bound and validated without issuing a replacement audit-dependent prompt."
+  },
+  "fixed_selection_and_accounting": {
+    "planned_logical_cases": 5,
+    "planned_logical_stages": 10,
+    "planned_final_sector_rows": 55,
+    "selected_stages": [
+      {
+        "case": "fidelity_q2_2026__E",
+        "D0": "original_v494",
+        "F0": "original_v494"
+      },
+      {
+        "case": "fidelity_q2_2026__L",
+        "D0": "prior_continuation",
+        "F0": "prior_continuation"
+      },
+      {
+        "case": "ubs_june_2026__E",
+        "D0": "completion",
+        "F0": "remaining"
+      },
+      {
+        "case": "ubs_june_2026__L",
+        "D0": "remaining",
+        "F0": "remaining"
+      },
+      {
+        "case": "common_market_only__C",
+        "D0": "remaining",
+        "F0": "remaining"
+      }
+    ],
+    "attempt_ledger": "All original3 + prior2 + completion1 + actual remaining<=5, in chronological segment order. Only the already-disclosed historical Fidelity L D0 has logical attempt2. New slots all retain logical stage attempt1.",
+    "no_selection_on_quality": true,
+    "no_missing_result_imputation": true,
+    "raw_and_derived_both_reported": true,
+    "comparison": "Descriptive E/L/C and source comparisons only, retaining unavailable pairs and planned denominators. Operational segment differences are not identified causal factors."
+  },
+  "required_before_generation": [
+    "root final design review in a separate approved protocol",
+    "exact new code/test and inherited scientific-source hashes frozen",
+    "independent orchestration, finalizer, methods and semantic adapter reviews",
+    "offline fake-transport tests including external-D0 substitutions and both ordinary failure and system-stop accounting",
+    "new verified service receipt; power policy known and accepted at each boundary",
+    "no model/service generation by protocol or adapter development"
+  ],
+  "review_axes": {
+    "errors": {
+      "reviewed": true,
+      "reason": "Keep the 0.95 old raw D0 failure and every prior failed attempt; accept only exact completed provenance for external F0 input and allow no extra attempt."
+    },
+    "consistency": {
+      "reviewed": true,
+      "reason": "Only operating namespace/provenance and power policy change. Saved final history, controls, fixed stages and cumulative six-plus-at-most-five accounting remain explicit."
+    },
+    "paper_topic": {
+      "reviewed": true,
+      "reason": "The same institution evidence, stated interpretation and reasons, and observed raw/derived eleven-sector allocations remain the study objects. No new data, prediction/performance ranking, causal or independent-replication claim."
+    }
+  },
+  "masked_adapter_minimal_design": {
+    "status": "design_only_not_generated",
+    "when": "After all remaining transports and terminal receipt are durable",
+    "scope": "Three actual UBS E/UBS L/C F0 items, with original own D0 for UBS E and new own D0 for the other two; inherited Fidelity reviews remain separate.",
+    "boundary": "New wrapper validates remaining terminal and cumulative adapter before any model text extraction. Judge copy contains opaque ID, raw own D0, actual F0-visible evidence and raw F0 only; no prior audits, derived math, condition/order labels or case paths.",
+    "incomplete": "Failed/missing F0 remains explicit private diagnostic and in full planned denominator; never packaged as completed final."
+  },
+  "model_generation_calls_by_this_task": 0,
+  "service_calls_by_this_task": 0,
+  "power_policy": {
+    "version": "battery_aware_stage_boundary_1",
+    "stage_start_minimum_battery_percent": 70,
+    "in_stage_stop_at_or_below_battery_percent": 20,
+    "allow_ac_online_without_battery": true,
+    "allow_sufficient_battery_without_ac": true,
+    "unknown_ac_rejected": true,
+    "on_battery_unknown_or_critical_or_saver_rejected": true,
+    "critical_or_saver_rejected_on_ac": true,
+    "unknown_battery_rejected_except_ac_no_battery": true,
+    "poll_interval_seconds": 60,
+    "permanent_power_settings_changed": false
+  },
+  "power_policy_interpretation": {
+    "before_stage": "Known AC online, or known battery at least70% while AC offline; battery saver/critical/unknown flags are rejected in both modes. A known AC-online no-system-battery flag128 is the sole exception to known percentage.",
+    "during_stage": "Known AC online, or AC offline with known battery above20%; critical flags, saver and unknown status stop owned work. A transition to AC offline alone does not erase a completed output or create a retry.",
+    "why_changed": "The prior fixed AC-only guard stopped before F0 despite completed reviewed D0. This prospective operating amendment permits bounded battery operation without altering a model request.",
+    "disclosure": "Record power readings, transitions and stops by segment. Do not attribute cross-segment differences solely to source timing; retain all interrupted and unattempted slots.",
+    "reviewed_policy_source_at_candidate": {
+      "path": "research/sector_remaining_awake.py",
+      "sha256": "2ef37fea357f69d78b267f3aa195c9ba7d9dde8bdecb931f59c49bab2a529307"
+    }
+  },
+  "approved_at_utc": "2026-10-26T02:48:47.655383+00:00",
+  "candidate_ref": {
+    "path": "research/remaining_20261026/protocol_candidate.json",
+    "sha256": "d592ed8e67bb96e4519d2f51d5759eded218ba45c1c580518fb385addb186646"
+  },
+  "root_design_review": {
+    "status": "PASS",
+    "completed_at_utc": "2026-10-26T02:48:47.655383+00:00",
+    "authorization": "Existing task authorizes all remaining work. This is the agent design review, not a new user approval or a claim of prospective confirmatory design.",
+    "errors": "Preserve the exact completed raw D0 and all prior failed attempts; no output-quality gate or retry. New operating guard permits known sufficient battery while preserving observed interruption history.",
+    "consistency": "Five fixed unattempted slots; prior six plus at most five requests. Exact old D0 and saved four-message F0 construction bound in place; original runtime except new service receipt.",
+    "paper_topic": "Same original institution-evidence timing, interpretation, reasons and eleven-sector allocations; primary exploratory role and derived-math amendment chronology disclosed.",
+    "limits": "Battery policy reduces AC-only boundary interruptions but does not guarantee uninterrupted operation; no future investment performance or general causal effect is measured."
+  }
+}

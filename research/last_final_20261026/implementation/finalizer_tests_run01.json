@@ -1,0 +1,22 @@
+{
+  "status": "FAIL",
+  "completed_at_utc": "2026-10-26T06:14:06.934580+00:00",
+  "command": "python -B -X utf8 -m unittest discover -s research -p test_finalize_sector_last_final.py -v",
+  "tests_run": 18,
+  "errors": 15,
+  "failures": 0,
+  "elapsed_seconds": 34.17,
+  "exit_code": 1,
+  "source_refs": [
+    {
+      "path": "research/finalize_sector_last_final.py",
+      "sha256": "1bc170b63d5f74400d09ef3e790b98ea3e01a3b7794b6cd80c968d7eb637230c"
+    },
+    {
+      "path": "research/test_finalize_sector_last_final.py",
+      "sha256": "4c438777f656e3200d2a595694ec6bf2a69ae2987fe2475a601204fae5350505"
+    }
+  ],
+  "finding": "Production authority omitted explicit protocol_ref and runtime_ref loading because prior finalizer BOUND excludes them; 15 tests stopped with KeyError protocol_ref. Three early-rejection tests passed. No live artifacts or model calls.",
+  "model_calls": 0
+}

@@ -1,0 +1,29 @@
+{
+  "status": "FAILED_SYNTHETIC_TEST",
+  "completed_at_utc": "2026-10-26T02:51:42.870Z",
+  "tests_run": 20,
+  "passed": 19,
+  "failed": 1,
+  "unittest_elapsed_seconds": 39.922,
+  "result": {
+    "chunk_id": "a0352e",
+    "wall_time_seconds": 10.0028888,
+    "original_token_count": 208,
+    "output": "test_all_raw_and_historical_trees_are_protected (test_build_remaining_masked_review.RemainingMaskTests.test_all_raw_and_historical_trees_are_protected) ... ok\r\ntest_changed_prepared_input_hash_is_rejected (test_build_remaining_masked_review.RemainingMaskTests.test_changed_prepared_input_hash_is_rejected) ... ok\r\ntest_extra_generation_evidence_is_rejected (test_build_remaining_masked_review.RemainingMaskTests.test_extra_generation_evidence_is_rejected) ... ok\r\ntest_fidelity_or_main_scope_cannot_enter_new_bundle (test_build_remaining_masked_review.RemainingMaskTests.test_fidelity_or_main_scope_cannot_enter_new_bundle) ... ok\r\ntest_judge_copies_hide_case_paths_hypothesis_audits_and_derived_math (test_build_remaining_masked_review.RemainingMaskTests.test_judge_copies_hide_case_paths_hypothesis_audits_and_derived_math) ... ok\r\ntest_live_summary_stops_before_accounting_or_text (test_build_remaining_masked_review.RemainingMaskTests.test_live_summary_stops_before_accounting_or_text) ... ok\r\ntest_missing_finals_stay_missing_and_three_planned_items_remain (test_build_remaining_masked_review.RemainingMaskTests.test_missing_finals_stay_missing_and_three_planned_items_remain) ... ok\r\ntest_missing_terminal_stops_before_accounting_or_text (test_build_remaining_masked_review.RemainingMaskTests.test_missing_terminal_stops_before_accounting_or_text) ... ok\r\ntest_mutation_after_accounting_is_detected_before_output_creation (test_build_remaining_masked_review.RemainingMaskTests.test_mutation_after_accounting_is_detected_before_output_creation) ... ok\r\ntest_only_three_new_finals_keep_exact_raw_and_own_history (test_build_remaining_masked_review.RemainingMaskTests.test_only_three_new_finals_keep_exact_raw_and_own_history) ... ok\r\ntest_original_rubric_and_old_module_globals_unchanged (test_build_remaining_masked_review.RemainingMaskTests.test_original_rubric_and_old_module_globals_unchanged) ... FAIL\r\ntest_partial_final_is_exact_prefix_and_diagnostic_only (test_build_remaining_masked_review.RemainingMaskTests.test_partial_final_is_exact_prefix_and_diagnostic_only) ... ok\r\ntest_runtime_and_stage_validation_errors_propagate (test_build_remaining_masked_review.RemainingMaskTests.test_runtime_and_stage_validation_errors_propagate) ... ok\r\ntest_substituted_own_draft_is_rejected (test_build_remaining_masked_review.RemainingMaskTests.test_substituted_own_draft_is_rejected) ... ok\r\ntest_summary_and_terminal_cannot_hide_request (test_build_remaining_masked_review.RemainingMaskTests.test_summary_and_terminal_cannot_hide_request) ... ok\r\ntest_terminal_must_bind_exact_current_summary (test_build_remaining_masked_review.RemainingMaskTests.test_terminal_must_bind_exact_current_summary) ... ok\r\ntest_unattempted_final_payload_is_not_presented_as_supplied (test_build_remaining_masked_review.RemainingMaskTests.test_unattempted_final_payload_is_not_presented_as_supplied) ... ok\r\ntest_validated_accounting_failure_cannot_be_bypassed (test_build_remaining_masked_review.RemainingMaskTests.test_validated_accounting_failure_cannot_be_bypassed) ... ok\r\ntest_validated_accounting_must_be_three_of_fixed_five_and_five_plus_new (test_build_remaining_masked_review.RemainingMaskTests.test_validated_accounting_must_be_three_of_fixed_five_and_five_plus_new) ... ok\r\ntest_wrong_assigned_source_is_rejected (test_build_remaining_masked_review.RemainingMaskTests.test_wrong_assigned_source_is_rejected) ... ok\r\n\r\n======================================================================\r\nFAIL: test_original_rubric_and_old_module_globals_unchanged (test_build_remaining_masked_review.RemainingMaskTests.test_original_rubric_and_old_module_globals_unchanged)\r\n----------------------------------------------------------------------\r\nTraceback (most recent call last):\r\n  File \"C:\\Users\\Insun\\2026libera\\research\\test_build_remaining_masked_review.py\", line 316, in test_original_rubric_and_old_module_globals_unchanged\r\n    self.assertEqual(helper_refs, [ref(Path(module.__file__)) for module in (masked.original, masked.completion, masked.campaign)])\r\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\r\nAssertionError: Lists differ: [{'pa[468 chars]a8e'}, {'path': 'C:\\\\Users\\\\Insun\\\\2026libera\\[280 chars]9b'}] != [{'pa[468 chars]a8e'}]\r\n\r\nFirst list contains 2 additional elements.\r\nFirst extra element 3:\r\n{'path': 'C:\\\\Users\\\\Insun\\\\2026libera\\\\research\\\\finalize_sector_remaining.py', 'sha256': '8fa60d795bc5ea75226a97761a406468f824d004b18fe7ff3ba897ceda54fe12'}\r\n\r\nDiff is 1090 characters long. Set self.maxDiff to None to see it.\r\n\r\n----------------------------------------------------------------------\r\nRan 20 tests in 39.922s\r\n\r\nFAILED (failures=1)\r\n",
+    "total_wall_time_seconds": 20.022265099999995,
+    "exit_code": 1
+  },
+  "source_refs": [
+    {
+      "path": "research/build_remaining_masked_review.py",
+      "sha256": "4ce9421049e83bc6e70b18095603bf05f2c36d8bb47a077875b8fbcdacd86a86"
+    },
+    {
+      "path": "research/test_build_remaining_masked_review.py",
+      "sha256": "52203147ed2477f9d13960ce50f75e7be7633f59624f02828e44803ec1eec7fb"
+    }
+  ],
+  "failure_explanation": "The test compared five module refs captured before build against a three-module list after build. Production builder was unchanged and no actual bundle was generated.",
+  "model_calls": 0,
+  "service_calls": 0
+}

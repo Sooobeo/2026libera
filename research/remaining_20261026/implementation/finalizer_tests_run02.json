@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T02:45:57.958Z",
+  "command": "python -m unittest discover -s research -p test_finalize_sector_remaining.py -v",
+  "tests_run": 21,
+  "failures": 0,
+  "errors": 0,
+  "unittest_seconds": 37.346,
+  "exit_code": 0,
+  "source_ref": {
+    "path": "research/finalize_sector_remaining.py",
+    "sha256": "8fa60d795bc5ea75226a97761a406468f824d004b18fe7ff3ba897ceda54fe12"
+  },
+  "test_source_ref": {
+    "path": "research/test_finalize_sector_remaining.py",
+    "sha256": "07f919b028c820cc85cfb720968356bf5445f295f5b6b5013f697d7306f52300"
+  },
+  "prior_run_ref": {
+    "path": "research/remaining_20261026/implementation/finalizer_tests_run01.json",
+    "sha256": "d8a3cecc55fa839867bcea06d182592515358d323a2d4d19248257c194b010b6"
+  },
+  "resolved_test_fixture_issue": "New test fixture supplies pathlib.Path to inherited read_json at all three sites. Production source unchanged across the failed fixture run and this passing run.",
+  "scope": "Synthetic four-segment artifacts, terminal and authority checks, exact cross-segment own history, real unchanged arithmetic, full ledger/denominators, negative model outcomes, missing or failed ACK progression. Runtime/gate and acknowledgement delegates are mocked at their public boundary, not claimed as live integration.",
+  "model_calls": 0,
+  "service_calls": 0,
+  "actual_remaining_outputs_read": 0
+}

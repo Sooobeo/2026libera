@@ -1,0 +1,52 @@
+{
+  "version": "completion_root_stage_spotcheck_1",
+  "recorded_at_utc": "2026-10-26T02:36:25.099Z",
+  "case_id": "ubs_june_2026__E",
+  "stage": "D0",
+  "status": "completed_before_next_generation",
+  "review_scope": "Root read all eleven output rows, source packet and top-level prose; spot-checked full semantic review and independent numerical review. This is AI-assisted review, not independent-human validation.",
+  "refs": [
+    {
+      "path": "research/completion_20261026/semantic/ubs_june_2026__E__D0_review.json",
+      "sha256": "55abb787b8966c59b71cc910a299a756d5b9c69db87e36711c77385ebaf4736d"
+    },
+    {
+      "path": "research/completion_20261026/semantic/ubs_june_2026__E__D0_review_validation.json",
+      "sha256": "52611bf3d26cf5f78db852f613e8d3c1032b22991480fd3aaf4fbbbd6528cdcc"
+    },
+    {
+      "path": "research/completion_20261026/semantic/ubs_june_2026__E__D0_numeric_review.json",
+      "sha256": "a78e91d59bc46d592555188bb043224eabdfa627fc3c5edd1ca8dff2f2ff89a2"
+    }
+  ],
+  "checks": {
+    "all_eleven_source_labels_match": true,
+    "raw_sum_is_095_not_one": true,
+    "independent_10000_unit_result_matches": true,
+    "industrial_return_claim_15_percent_conflicts_with_3_848895_percent": true,
+    "communications_and_utilities_return_values_misassigned": true,
+    "it_positive_source_rating_claim_conflicts_with_neutral": true,
+    "raw_and_derived_benchmark_directions_kept_separate": true,
+    "may_publication_and_june_issue_distinguished": true,
+    "twelve_month_horizon_longer_than_three_month_lookback": true,
+    "visible_ids_not_treated_as_semantic_support": true
+  },
+  "review_axes": {
+    "errors": {
+      "reviewed": true,
+      "reason": "Original budget, numeric and attribution errors retained; helper integration and reference/quote validations succeeded."
+    },
+    "consistency": {
+      "reviewed": true,
+      "reason": "Read source-to-interpretation-to-reason-to-raw-weight chain and distinguished reported benchmark display, normalized benchmark and externally normalized weights."
+    },
+    "paper_topic": {
+      "reviewed": true,
+      "reason": "Observed errors directly concern the intended institution-evidence-to-sector-allocation topic. No performance, causal or replicated effect claim is inferred."
+    }
+  },
+  "operational_note": "Initial preparer invocation failed because the new semantic output directory did not yet exist; created that directory and ran once successfully. No stage input/output or frozen code was modified.",
+  "allow_next_stage_reason": "Required audits are complete; model quality is not a success gate.",
+  "model_calls": 0,
+  "raw_model_content_modified": false
+}

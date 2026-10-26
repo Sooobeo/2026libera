@@ -1,0 +1,5926 @@
+{
+  "version": "remaining_semantic_review_mechanical_validation_1",
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T06:07:29.907Z",
+  "case_id": "common_market_only__C",
+  "stage": "D0",
+  "review_ref": {
+    "path": "research/remaining_20261026/semantic/common_market_only__C__D0_review.json",
+    "sha256": "a339d3e7968bd2f4fb11cdde7c2985ec9a4c53954ee48c24748e4e060e78c09f"
+  },
+  "transport_ref": {
+    "path": "data/local_sector_runtime/v494_remaining_20261026/common_market_only__C__D0/transport_result.json",
+    "sha256": "4ebbaf6f458b885cff17d281dedcbe137a9f1344d0cabf00fe6309ec062076d5"
+  },
+  "raw_response_content_sha256": "c1e32e386d8a75967c5f7590dabf5c92466a0327511b8a1a19e9b0b475221ec9",
+  "checks_count": 1083,
+  "failed_checks_count": 0,
+  "checks": [
+    {
+      "id": "reference_before:data/local_sector_runtime/v494_remaining_20261026/campaign_declaration.json",
+      "pass": true
+    },
+    {
+      "id": "reference_before:data/local_sector_runtime/v494_remaining_20261026/common_market_only__C__D0/worker_spec.json",
+      "pass": true
+    },
+    {
+      "id": "reference_before:data/local_sector_runtime/v494_remaining_20261026/common_market_only__C__D0/transport_result.json",
+      "pass": true
+    },
+    {
+      "id": "reference_before:data/local_sector_runtime/v494_remaining_20261026/common_market_only__C__D0/stage_review.json",
+      "pass": true
+    },
+    {
+      "id": "reference_before:data/local_sector_runtime/v494_remaining_20261026/common_market_only__C__D0/http_0001_generation/response.json",
+      "pass": true
+    },
+    {
+      "id": "reference_before:data/local_sector_runtime/v494_remaining_20261026/common_market_only__C__D0/response_contract_validation.json",
+      "pass": true
+    },
+    {
+      "id": "reference_before:data/local_sector_runtime/v494_remaining_20261026/common_market_only__C__D0/worker_summary.json",
+      "pass": true
+    },
+    {
+      "id": "reference_before:data/local_sector_runtime/v494_remaining_20261026/common_market_only__C__D0/supervisor_result.json",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/remaining_20261026/runtime_candidate.json",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/remaining_20261026/protocol_and_review.json",
+      "pass": true
+    },
+    {
+      "id": "reference_before:data/sector_protocol/v494_design_20261025/prepared/preparation_manifest.json",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/completion_20261026/review_gate.json",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/completion_20261026/run_reports/terminal_receipt.json",
+      "pass": true
+    },
+    {
+      "id": "reference_before:data/local_sector_runtime/v494_completion_20261026/campaign_summary.json",
+      "pass": true
+    },
+    {
+      "id": "reference_before:data/local_sector_runtime/v494_completion_20261026/campaign_declaration.json",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/analyze_v492_pilot.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/benchmark_sector_latency.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/build_v492_masked_review.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/build_v494_masked_review.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/completion_20261026/prepare_stage_semantic_audit.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/completion_20261026/runtime/start_isolated_cpu.ps1",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/completion_20261026/runtime/stop_isolated_cpu.ps1",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/completion_20261026/test_prepare_stage_semantic_audit.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/continuation_20261026/prepare_stage_semantic_audit.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/continuation_20261026/runtime/start_isolated_cpu.ps1",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/continuation_20261026/runtime/stop_isolated_cpu.ps1",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/finalize_sector_allocation.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/finalize_sector_campaign.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/finalize_sector_completion.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/finalize_sector_remaining.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/freeze_sector_completion.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/freeze_sector_continuation.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/freeze_sector_remaining.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/freeze_sector_v494.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/local_sector_single_case.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/prepare_sector_v491.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/prepare_sector_v492.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/prepare_sector_v494.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/probe_ollama_runtime.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/publish_completion_review_ack.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/publish_remaining_review_ack.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/recovery_20261025/method_build_audit.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/recovery_20261025/runtime/start_isolated_cpu.ps1",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/recovery_20261025/runtime/stop_isolated_cpu.ps1",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/remaining_20261026/prepare_stage_semantic_audit.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/remaining_20261026/runtime/start_isolated_cpu.ps1",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/remaining_20261026/runtime/stop_isolated_cpu.ps1",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/remaining_20261026/test_prepare_stage_semantic_audit.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/remote_sector_runtime.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/review_sector_v494_stage.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/run_sector_completion.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/run_sector_continuation.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/run_sector_remaining.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/run_v494_recovery.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/sector_completion_awake.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/sector_completion_gate.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/sector_completion_runtime.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/sector_continuation_awake.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/sector_continuation_gate.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/sector_continuation_runtime.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/sector_engine.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/sector_remaining_awake.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/sector_remaining_gate.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/sector_remaining_runtime.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/sector_v48_main_awake.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/sector_v48_transport.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/sector_v491_contract.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/sector_v491_runtime.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/sector_v491_tokenizer.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/sector_v492_contract.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/sector_v492_review_gate.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/sector_v492_runtime.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/sector_v494_review_gate.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/sector_v494_runtime.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/test_finalize_sector_campaign.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/test_finalize_sector_completion.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/test_finalize_sector_remaining.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/test_sector_completion.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/test_sector_continuation.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/test_sector_remaining.py",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/remaining_20261026/review_gate.json",
+      "pass": true
+    },
+    {
+      "id": "reference_before:research/remaining_20261026/freeze.json",
+      "pass": true
+    },
+    {
+      "id": "reference_before:data/sector_protocol/v494_design_20261025/prepared/common_market_only__C__D0_messages.json",
+      "pass": true
+    },
+    {
+      "id": "reference_before:data/sector_protocol/v491_design_20261019/public_compact_candidate.json",
+      "pass": true
+    },
+    {
+      "id": "actual_C_case",
+      "pass": true
+    },
+    {
+      "id": "expected_transport_hash",
+      "pass": true
+    },
+    {
+      "id": "expected_stage_review_hash",
+      "pass": true
+    },
+    {
+      "id": "durable_complete_and_instrument",
+      "pass": true
+    },
+    {
+      "id": "actual_raw_hash",
+      "pass": true
+    },
+    {
+      "id": "raw_response_and_transport_binding",
+      "pass": true
+    },
+    {
+      "id": "source_absent",
+      "pass": true
+    },
+    {
+      "id": "no_prior_D0",
+      "pass": true
+    },
+    {
+      "id": "input_context_binding",
+      "pass": true
+    },
+    {
+      "id": "input_market_binding",
+      "pass": true
+    },
+    {
+      "id": "input_fact_index_binding",
+      "pass": true
+    },
+    {
+      "id": "verified_identity:exact_raw_content_equal",
+      "pass": true
+    },
+    {
+      "id": "verified_identity:actual_message_arrays_equal",
+      "pass": true
+    },
+    {
+      "id": "verified_identity:actual_model_equal",
+      "pass": true
+    },
+    {
+      "id": "verified_identity:actual_options_equal",
+      "pass": true
+    },
+    {
+      "id": "verified_identity:common_context_equal",
+      "pass": true
+    },
+    {
+      "id": "verified_identity:common_market_equal",
+      "pass": true
+    },
+    {
+      "id": "verified_identity:public_numeric_fact_index_equal",
+      "pass": true
+    },
+    {
+      "id": "canonical_11_order",
+      "pass": true
+    },
+    {
+      "id": "source_metadata:0",
+      "pass": true
+    },
+    {
+      "id": "source_reading_quote:0",
+      "pass": true
+    },
+    {
+      "id": "reason_quote:0",
+      "pass": true
+    },
+    {
+      "id": "weight_literal:0",
+      "pass": true
+    },
+    {
+      "id": "math_row:0",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:0:/common_market/lookback_compound_return/0",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:0:/common_market/daily_mean_return/0",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:0:/common_market/daily_volatility/0",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:0:/common_market/annualized_volatility_diagnostic/0",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:0:/common_market/baseline_weights/10",
+      "pass": true
+    },
+    {
+      "id": "source_metadata:1",
+      "pass": true
+    },
+    {
+      "id": "source_reading_quote:1",
+      "pass": true
+    },
+    {
+      "id": "reason_quote:1",
+      "pass": true
+    },
+    {
+      "id": "weight_literal:1",
+      "pass": true
+    },
+    {
+      "id": "math_row:1",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:1:/common_market/lookback_compound_return/1",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:1:/common_market/daily_mean_return/1",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:1:/common_market/daily_volatility/1",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:1:/common_market/annualized_volatility_diagnostic/1",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:1:/common_market/baseline_weights/15",
+      "pass": true
+    },
+    {
+      "id": "source_metadata:2",
+      "pass": true
+    },
+    {
+      "id": "source_reading_quote:2",
+      "pass": true
+    },
+    {
+      "id": "reason_quote:2",
+      "pass": true
+    },
+    {
+      "id": "weight_literal:2",
+      "pass": true
+    },
+    {
+      "id": "math_row:2",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:2:/common_market/lookback_compound_return/2",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:2:/common_market/daily_mean_return/2",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:2:/common_market/daily_volatility/2",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:2:/common_market/annualized_volatility_diagnostic/2",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:2:/common_market/baseline_weights/20",
+      "pass": true
+    },
+    {
+      "id": "source_metadata:3",
+      "pass": true
+    },
+    {
+      "id": "source_reading_quote:3",
+      "pass": true
+    },
+    {
+      "id": "reason_quote:3",
+      "pass": true
+    },
+    {
+      "id": "weight_literal:3",
+      "pass": true
+    },
+    {
+      "id": "math_row:3",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:3:/common_market/lookback_compound_return/3",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:3:/common_market/daily_mean_return/3",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:3:/common_market/daily_volatility/3",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:3:/common_market/annualized_volatility_diagnostic/3",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:3:/common_market/baseline_weights/25",
+      "pass": true
+    },
+    {
+      "id": "source_metadata:4",
+      "pass": true
+    },
+    {
+      "id": "source_reading_quote:4",
+      "pass": true
+    },
+    {
+      "id": "reason_quote:4",
+      "pass": true
+    },
+    {
+      "id": "weight_literal:4",
+      "pass": true
+    },
+    {
+      "id": "math_row:4",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:4:/common_market/lookback_compound_return/4",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:4:/common_market/daily_mean_return/4",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:4:/common_market/daily_volatility/4",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:4:/common_market/annualized_volatility_diagnostic/4",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:4:/common_market/baseline_weights/30",
+      "pass": true
+    },
+    {
+      "id": "source_metadata:5",
+      "pass": true
+    },
+    {
+      "id": "source_reading_quote:5",
+      "pass": true
+    },
+    {
+      "id": "reason_quote:5",
+      "pass": true
+    },
+    {
+      "id": "weight_literal:5",
+      "pass": true
+    },
+    {
+      "id": "math_row:5",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:5:/common_market/lookback_compound_return/5",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:5:/common_market/daily_mean_return/5",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:5:/common_market/daily_volatility/5",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:5:/common_market/annualized_volatility_diagnostic/5",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:5:/common_market/baseline_weights/35",
+      "pass": true
+    },
+    {
+      "id": "source_metadata:6",
+      "pass": true
+    },
+    {
+      "id": "source_reading_quote:6",
+      "pass": true
+    },
+    {
+      "id": "reason_quote:6",
+      "pass": true
+    },
+    {
+      "id": "weight_literal:6",
+      "pass": true
+    },
+    {
+      "id": "math_row:6",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:6:/common_market/lookback_compound_return/6",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:6:/common_market/daily_mean_return/6",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:6:/common_market/daily_volatility/6",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:6:/common_market/annualized_volatility_diagnostic/6",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:6:/common_market/baseline_weights/40",
+      "pass": true
+    },
+    {
+      "id": "source_metadata:7",
+      "pass": true
+    },
+    {
+      "id": "source_reading_quote:7",
+      "pass": true
+    },
+    {
+      "id": "reason_quote:7",
+      "pass": true
+    },
+    {
+      "id": "weight_literal:7",
+      "pass": true
+    },
+    {
+      "id": "math_row:7",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:7:/common_market/lookback_compound_return/7",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:7:/common_market/daily_mean_return/7",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:7:/common_market/daily_volatility/7",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:7:/common_market/annualized_volatility_diagnostic/7",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:7:/common_market/baseline_weights/45",
+      "pass": true
+    },
+    {
+      "id": "source_metadata:8",
+      "pass": true
+    },
+    {
+      "id": "source_reading_quote:8",
+      "pass": true
+    },
+    {
+      "id": "reason_quote:8",
+      "pass": true
+    },
+    {
+      "id": "weight_literal:8",
+      "pass": true
+    },
+    {
+      "id": "math_row:8",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:8:/common_market/lookback_compound_return/8",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:8:/common_market/daily_mean_return/8",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:8:/common_market/daily_volatility/8",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:8:/common_market/annualized_volatility_diagnostic/8",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:8:/common_market/baseline_weights/50",
+      "pass": true
+    },
+    {
+      "id": "source_metadata:9",
+      "pass": true
+    },
+    {
+      "id": "source_reading_quote:9",
+      "pass": true
+    },
+    {
+      "id": "reason_quote:9",
+      "pass": true
+    },
+    {
+      "id": "weight_literal:9",
+      "pass": true
+    },
+    {
+      "id": "math_row:9",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:9:/common_market/lookback_compound_return/9",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:9:/common_market/daily_mean_return/9",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:9:/common_market/daily_volatility/9",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:9:/common_market/annualized_volatility_diagnostic/9",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:9:/common_market/baseline_weights/55",
+      "pass": true
+    },
+    {
+      "id": "source_metadata:10",
+      "pass": true
+    },
+    {
+      "id": "source_reading_quote:10",
+      "pass": true
+    },
+    {
+      "id": "reason_quote:10",
+      "pass": true
+    },
+    {
+      "id": "weight_literal:10",
+      "pass": true
+    },
+    {
+      "id": "math_row:10",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:10:/common_market/lookback_compound_return/10",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:10:/common_market/daily_mean_return/10",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:10:/common_market/daily_volatility/10",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:10:/common_market/annualized_volatility_diagnostic/10",
+      "pass": true
+    },
+    {
+      "id": "row_anchor:10:/common_market/baseline_weights/60",
+      "pass": true
+    },
+    {
+      "id": "exact_sum102",
+      "pass": true
+    },
+    {
+      "id": "exact_final10000",
+      "pass": true
+    },
+    {
+      "id": "scale50over51",
+      "pass": true
+    },
+    {
+      "id": "numeric_quote:N001",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N001",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N001",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N001",
+        "actual_aligned_input": 0.04287667814038709,
+        "computed_comparable_value": 4.287667814038709,
+        "claimed_value_or_range": "-4.29",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N002",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N002",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N002",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N002",
+        "actual_aligned_input": 0.000818731323068254,
+        "computed_comparable_value": 0.0818731323068254,
+        "claimed_value_or_range": "-0.03",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N003",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N003",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N003",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N003",
+        "actual_aligned_input": 0.24627687526240125,
+        "computed_comparable_value": 24.627687526240123,
+        "claimed_value_or_range": "15.5",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "ambiguous_vol_daily_also_not_match:N003",
+      "pass": true,
+      "detail": {
+        "daily_percent": 1.5513984895485446
+      }
+    },
+    {
+      "id": "numeric_quote:N004",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N004",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N004",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N004",
+        "actual_aligned_input": 0.13902338650295984,
+        "computed_comparable_value": 13.902338650295984,
+        "claimed_value_or_range": "13.9",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N005",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N005",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N005",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N005",
+        "actual_aligned_input": 0.04,
+        "computed_comparable_value": 4,
+        "claimed_value_or_range": "4",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N006",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N006",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N006",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N006",
+        "actual_aligned_input": -0.022012639294049507,
+        "computed_comparable_value": -2.2012639294049507,
+        "claimed_value_or_range": "-2.2",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N007",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N007",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N007",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N007",
+        "actual_aligned_input": -0.0002971167790446594,
+        "computed_comparable_value": -0.02971167790446594,
+        "claimed_value_or_range": "-0.3",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N008",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N008",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N008",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N008",
+        "actual_aligned_input": 0.19436460180258697,
+        "computed_comparable_value": 19.436460180258695,
+        "claimed_value_or_range": "12.2",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "ambiguous_vol_daily_also_not_match:N008",
+      "pass": true,
+      "detail": {
+        "daily_percent": 1.2243819048660514
+      }
+    },
+    {
+      "id": "numeric_quote:N009",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N009",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N009",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N009",
+        "actual_aligned_input": 0.02,
+        "computed_comparable_value": 2,
+        "claimed_value_or_range": "2",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N010",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N010",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N010",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N010",
+        "actual_aligned_input": 0.03848895413108133,
+        "computed_comparable_value": 3.848895413108133,
+        "claimed_value_or_range": "3.85",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N011",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N011",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N011",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N011",
+        "actual_aligned_input": 0.000705407660168093,
+        "computed_comparable_value": 0.0705407660168093,
+        "claimed_value_or_range": "0.71",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N012",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N012",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N012",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N012",
+        "actual_aligned_input": 0.19718215642263498,
+        "computed_comparable_value": 19.718215642263498,
+        "claimed_value_or_range": "12.4",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "ambiguous_vol_daily_also_not_match:N012",
+      "pass": true,
+      "detail": {
+        "daily_percent": 1.2421308306517373
+      }
+    },
+    {
+      "id": "numeric_quote:N013",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N013",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N013",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N013",
+        "actual_aligned_input": 0.09,
+        "computed_comparable_value": 9,
+        "claimed_value_or_range": "9",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N014",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N014",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N014",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N014",
+        "actual_aligned_input": 8.8,
+        "computed_comparable_value": 8.8,
+        "claimed_value_or_range": "8.8",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N015",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N015",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N015",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N015",
+        "actual_aligned_input": -0.019155630332708284,
+        "computed_comparable_value": -1.9155630332708284,
+        "claimed_value_or_range": "10.24",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N016",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N016",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N016",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N016",
+        "actual_aligned_input": -0.0002551436565336444,
+        "computed_comparable_value": -0.02551436565336444,
+        "claimed_value_or_range": "1.69",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N017",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N017",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N017",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N017",
+        "actual_aligned_input": 0.18553788110332176,
+        "computed_comparable_value": 18.553788110332174,
+        "claimed_value_or_range": "11.6",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "ambiguous_vol_daily_also_not_match:N017",
+      "pass": true,
+      "detail": {
+        "daily_percent": 1.168778790907761
+      }
+    },
+    {
+      "id": "numeric_quote:N018",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N018",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N018",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N018",
+        "actual_aligned_input": 0.09,
+        "computed_comparable_value": 9,
+        "claimed_value_or_range": "9",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N019",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N019",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N019",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N019",
+        "actual_aligned_input": 9.3,
+        "computed_comparable_value": 9.3,
+        "claimed_value_or_range": "9.3",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N020",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N020",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N020",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N020",
+        "actual_aligned_input": 0.04873642549989987,
+        "computed_comparable_value": 4.873642549989987,
+        "claimed_value_or_range": "4.87",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N021",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N021",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N021",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N021",
+        "actual_aligned_input": 0.0008473073009094685,
+        "computed_comparable_value": 0.08473073009094685,
+        "claimed_value_or_range": "-0.26",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N022",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N022",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N022",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N022",
+        "actual_aligned_input": 0.16640375256648995,
+        "computed_comparable_value": 16.640375256648994,
+        "claimed_value_or_range": "10.5",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "ambiguous_vol_daily_also_not_match:N022",
+      "pass": true,
+      "detail": {
+        "daily_percent": 1.0482451107591872
+      }
+    },
+    {
+      "id": "numeric_quote:N023",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N023",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N023",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N023",
+        "actual_aligned_input": 0.05,
+        "computed_comparable_value": 5,
+        "claimed_value_or_range": "5",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N024",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N024",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N024",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N024",
+        "actual_aligned_input": 4.6,
+        "computed_comparable_value": 4.6,
+        "claimed_value_or_range": "4.6",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N025",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N025",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N025",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N025",
+        "actual_aligned_input": 0.10238502092729651,
+        "computed_comparable_value": 10.23850209272965,
+        "claimed_value_or_range": "8.21",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N026",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N026",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N026",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N026",
+        "actual_aligned_input": 0.0016911255792328938,
+        "computed_comparable_value": 0.16911255792328939,
+        "claimed_value_or_range": "1.35",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N027",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N027",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N027",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N027",
+        "actual_aligned_input": 0.18338371693726102,
+        "computed_comparable_value": 18.338371693726103,
+        "claimed_value_or_range": "8.4",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "ambiguous_vol_daily_also_not_match:N027",
+      "pass": true,
+      "detail": {
+        "daily_percent": 1.1552088321777527
+      }
+    },
+    {
+      "id": "numeric_quote:N028",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N028",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N028",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N028",
+        "actual_aligned_input": 0.09,
+        "computed_comparable_value": 9,
+        "claimed_value_or_range": "9",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N029",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N029",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N029",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N029",
+        "actual_aligned_input": 8.9,
+        "computed_comparable_value": 8.9,
+        "claimed_value_or_range": "8.9",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N030",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N030",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N030",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N030",
+        "actual_aligned_input": 0.08205961595157252,
+        "computed_comparable_value": 8.205961595157252,
+        "claimed_value_or_range": "14.99",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N031",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N031",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N031",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N031",
+        "actual_aligned_input": 0.00134955413291194,
+        "computed_comparable_value": 0.13495541329119398,
+        "claimed_value_or_range": "2.55",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N032",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N032",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N032",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N032",
+        "actual_aligned_input": 0.132724604028941,
+        "computed_comparable_value": 13.272460402894101,
+        "claimed_value_or_range": "21.2",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "ambiguous_vol_daily_also_not_match:N032",
+      "pass": true,
+      "detail": {
+        "daily_percent": 0.8360864169526175
+      }
+    },
+    {
+      "id": "numeric_quote:N033",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N033",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N033",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N033",
+        "actual_aligned_input": 0.12,
+        "computed_comparable_value": 12,
+        "claimed_value_or_range": "12",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N034",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N034",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N034",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N034",
+        "actual_aligned_input": 11.8,
+        "computed_comparable_value": 11.8,
+        "claimed_value_or_range": "11.8",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N035",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N035",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N035",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N035",
+        "actual_aligned_input": 0.14992022077727252,
+        "computed_comparable_value": 14.992022077727253,
+        "claimed_value_or_range": "149.92",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N036",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N036",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N036",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N036",
+        "actual_aligned_input": 0.002553795883943505,
+        "computed_comparable_value": 0.2553795883943505,
+        "claimed_value_or_range": "2.55",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N037",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N037",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N037",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N037",
+        "actual_aligned_input": 0.33685107914419216,
+        "computed_comparable_value": 33.68510791441921,
+        "claimed_value_or_range": "21.2",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "ambiguous_vol_daily_also_not_match:N037",
+      "pass": true,
+      "detail": {
+        "daily_percent": 2.121962343522068
+      }
+    },
+    {
+      "id": "numeric_quote:N038",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N038",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N038",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N038",
+        "actual_aligned_input": 0.38,
+        "computed_comparable_value": 38,
+        "claimed_value_or_range": "38",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N039",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N039",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N039",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N039",
+        "actual_aligned_input": 38,
+        "computed_comparable_value": 38,
+        "claimed_value_or_range": "38",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N040",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N040",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N040",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N040",
+        "actual_aligned_input": -0.04890051427558073,
+        "computed_comparable_value": -4.890051427558073,
+        "claimed_value_or_range": "0.02",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N041",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N041",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N041",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N041",
+        "actual_aligned_input": -0.0007892623852291706,
+        "computed_comparable_value": -0.07892623852291707,
+        "claimed_value_or_range": "0",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N042",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N042",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N042",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N042",
+        "actual_aligned_input": 0.15339610421634242,
+        "computed_comparable_value": 15.339610421634243,
+        "claimed_value_or_range": "11.3",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "ambiguous_vol_daily_also_not_match:N042",
+      "pass": true,
+      "detail": {
+        "daily_percent": 0.9663046281966393
+      }
+    },
+    {
+      "id": "numeric_quote:N043",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N043",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N043",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N043",
+        "actual_aligned_input": 0.1,
+        "computed_comparable_value": 10,
+        "claimed_value_or_range": "10",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N044",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N044",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N044",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N044",
+        "actual_aligned_input": 9.7,
+        "computed_comparable_value": 9.7,
+        "claimed_value_or_range": "9.7",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N045",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N045",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N045",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N045",
+        "actual_aligned_input": 0.0002261198808994891,
+        "computed_comparable_value": 0.02261198808994891,
+        "claimed_value_or_range": "-4.89",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N046",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N046",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N046",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N046",
+        "actual_aligned_input": 0.00006628032293669965,
+        "computed_comparable_value": 0.006628032293669965,
+        "claimed_value_or_range": "-0.79",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N047",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N047",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N047",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N047",
+        "actual_aligned_input": 0.17893057942789112,
+        "computed_comparable_value": 17.893057942789113,
+        "claimed_value_or_range": "9.7",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "ambiguous_vol_daily_also_not_match:N047",
+      "pass": true,
+      "detail": {
+        "daily_percent": 1.1271567026449758
+      }
+    },
+    {
+      "id": "numeric_quote:N048",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N048",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N048",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N048",
+        "actual_aligned_input": 0.02,
+        "computed_comparable_value": 2,
+        "claimed_value_or_range": "2",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N049",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N049",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N049",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N049",
+        "actual_aligned_input": 2.2,
+        "computed_comparable_value": 2.2,
+        "claimed_value_or_range": "2.2",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N050",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N050",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N050",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N050",
+        "actual_aligned_input": 0.02729295962855538,
+        "computed_comparable_value": 2.729295962855538,
+        "claimed_value_or_range": "0.02",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N051",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N051",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N051",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N051",
+        "actual_aligned_input": 0.0005032809748320636,
+        "computed_comparable_value": 0.050328097483206366,
+        "claimed_value_or_range": "0",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N052",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N052",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N052",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N052",
+        "actual_aligned_input": 0.16693062035900388,
+        "computed_comparable_value": 16.69306203590039,
+        "claimed_value_or_range": "10.5",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "ambiguous_vol_daily_also_not_match:N052",
+      "pass": true,
+      "detail": {
+        "daily_percent": 1.0515640658849046
+      }
+    },
+    {
+      "id": "numeric_quote:N053",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N053",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N053",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N053",
+        "actual_aligned_input": 0.02,
+        "computed_comparable_value": 2,
+        "claimed_value_or_range": "2",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N054",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N054",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N054",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N054",
+        "actual_aligned_input": 1.8,
+        "computed_comparable_value": 1.8,
+        "claimed_value_or_range": "1.8",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N055",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N055",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N055",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N055",
+        "actual_aligned_input": [
+          "2026-04-21",
+          "2026-07-16"
+        ],
+        "computed_comparable_value": null,
+        "claimed_value_or_range": [
+          "2026-04-21",
+          "2026-07-16"
+        ],
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N056",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N056",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N056",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N056",
+        "actual_aligned_input": 12,
+        "computed_comparable_value": 12,
+        "claimed_value_or_range": 12,
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N057",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N057",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N057",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N057",
+        "actual_aligned_input": {
+          "lower": 3.5,
+          "upper": 3.75
+        },
+        "computed_comparable_value": null,
+        "claimed_value_or_range": [
+          "3.5",
+          "3.75"
+        ],
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N058",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N058",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N058",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N058",
+        "actual_aligned_input": 3.5,
+        "computed_comparable_value": 3.5,
+        "claimed_value_or_range": "3.5",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N059",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N059",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N059",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N059",
+        "actual_aligned_input": [
+          "2026-04-21",
+          "2026-07-16"
+        ],
+        "computed_comparable_value": null,
+        "claimed_value_or_range": [
+          "2026-04-21",
+          "2026-07-16"
+        ],
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N060",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N060",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N060",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N060",
+        "actual_aligned_input": 12,
+        "computed_comparable_value": 12,
+        "claimed_value_or_range": 12,
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N061",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N061",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N061",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N061",
+        "actual_aligned_input": 0.38,
+        "computed_comparable_value": 38,
+        "claimed_value_or_range": "38",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N062",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N062",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N062",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N062",
+        "actual_aligned_input": 0.33685107914419216,
+        "computed_comparable_value": 33.68510791441921,
+        "claimed_value_or_range": "21.2",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N063",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N063",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N063",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N063",
+        "actual_aligned_input": 3.5,
+        "computed_comparable_value": 3.5,
+        "claimed_value_or_range": "3.5",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N064",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N064",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N064",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N064",
+        "actual_aligned_input": 4.2,
+        "computed_comparable_value": 4.2,
+        "claimed_value_or_range": "4.2",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N065",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N065",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N065",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N065",
+        "actual_aligned_input": 12,
+        "computed_comparable_value": 12,
+        "claimed_value_or_range": 12,
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N066",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N066",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N066",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N066",
+        "actual_aligned_input": "2026-07-16",
+        "computed_comparable_value": null,
+        "claimed_value_or_range": "2026-07",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N067",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N067",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N067",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N067",
+        "actual_aligned_input": 12,
+        "computed_comparable_value": 12,
+        "claimed_value_or_range": 12,
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N068",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N068",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N068",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N068",
+        "actual_aligned_input": "2026-07-17",
+        "computed_comparable_value": null,
+        "claimed_value_or_range": "2026-07-17",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N069",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N069",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N069",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N069",
+        "actual_aligned_input": {
+          "lower": 3.5,
+          "upper": 3.75
+        },
+        "computed_comparable_value": null,
+        "claimed_value_or_range": [
+          "3.5",
+          "3.75"
+        ],
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N070",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N070",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N070",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N070",
+        "actual_aligned_input": 3.5,
+        "computed_comparable_value": 3.5,
+        "claimed_value_or_range": "3.5",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N071",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N071",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N071",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N071",
+        "actual_aligned_input": 4.2,
+        "computed_comparable_value": 4.2,
+        "claimed_value_or_range": "4.2",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N072",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N072",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N072",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N072",
+        "actual_aligned_input": [
+          "2026-04-21",
+          "2026-07-16"
+        ],
+        "computed_comparable_value": null,
+        "claimed_value_or_range": [
+          "2026-04",
+          "2026-07"
+        ],
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N073",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N073",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N073",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N073",
+        "actual_aligned_input": "1.02",
+        "computed_comparable_value": 1.02,
+        "claimed_value_or_range": "1.0",
+        "outcome_recomputed": "contradicted_by_supplied_input",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "numeric_quote:N074",
+      "pass": true
+    },
+    {
+      "id": "numeric_context:N074",
+      "pass": true
+    },
+    {
+      "id": "numeric_recomputed:N074",
+      "pass": true,
+      "detail": {
+        "occurrence_id": "N074",
+        "actual_aligned_input": "2026-07-16",
+        "computed_comparable_value": null,
+        "claimed_value_or_range": "2026-07",
+        "outcome_recomputed": "supported_at_stated_precision",
+        "matches_record": true
+      }
+    },
+    {
+      "id": "top_quote:0",
+      "pass": true
+    },
+    {
+      "id": "top_quote:1",
+      "pass": true
+    },
+    {
+      "id": "top_quote:2",
+      "pass": true
+    },
+    {
+      "id": "top_quote:3",
+      "pass": true
+    },
+    {
+      "id": "top_quote:4",
+      "pass": true
+    },
+    {
+      "id": "top_quote:5",
+      "pass": true
+    },
+    {
+      "id": "top_quote:6",
+      "pass": true
+    },
+    {
+      "id": "top_quote:7",
+      "pass": true
+    },
+    {
+      "id": "top_quote:8",
+      "pass": true
+    },
+    {
+      "id": "top_value:9",
+      "pass": true
+    },
+    {
+      "id": "top_value:10",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C001",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C001",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C001",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C001",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C002",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C002",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C002",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C002",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C003",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C003",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C003",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C003",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C004",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C004",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C004",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C004",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C005",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C005",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C005",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C005",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C006",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C006",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C006",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C006",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C007",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C007",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C007",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C007",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C008",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C008",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C008",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C008",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C009",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C009",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C009",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C009",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C010",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C010",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C010",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C010",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C011",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C011",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C011",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C011",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C012",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C012",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C012",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C012",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C013",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C013",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C013",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C013",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C014",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C014",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C014",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C014",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C015",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C015",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C015",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C015",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C016",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C016",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C016",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C016",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C017",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C017",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C017",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C017",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C018",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C018",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C018",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C018",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C019",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C019",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C019",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C019",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C020",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C020",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C020",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C020",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C021",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C021",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C021",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C021",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C022",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C022",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C022",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C022",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C023",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C023",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C023",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C023",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C024",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C024",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C024",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C024",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C025",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C025",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C025",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C025",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C026",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C026",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C026",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C026",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C027",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C027",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C027",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C027",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C028",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C028",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C028",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C028",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C029",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C029",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C029",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C029",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C030",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C030",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C030",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C030",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C031",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C031",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C031",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C031",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C032",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C032",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C032",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C032",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C033",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C033",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C033",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C033",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C034",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C034",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C034",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C034",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C035",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C035",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C035",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C035",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C036",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C036",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C036",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C036",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C037",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C037",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C037",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C037",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C038",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C038",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C038",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C038",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C039",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C039",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C039",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C039",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C040",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C040",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C040",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C040",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C041",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C041",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C041",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C041",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C042",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C042",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C042",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C042",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C043",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C043",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C043",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C043",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C044",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C044",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C044",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C044",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C045",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C045",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C045",
+      "pass": true
+    },
+    {
+      "id": "citation_source_quote:C045",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C046",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C046",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C046",
+      "pass": true
+    },
+    {
+      "id": "citation_source_quote:C046",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C047",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C047",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C047",
+      "pass": true
+    },
+    {
+      "id": "citation_source_quote:C047",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C048",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C048",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C048",
+      "pass": true
+    },
+    {
+      "id": "citation_source_quote:C048",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C049",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C049",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C049",
+      "pass": true
+    },
+    {
+      "id": "citation_source_quote:C049",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C050",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C050",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C050",
+      "pass": true
+    },
+    {
+      "id": "citation_source_quote:C050",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C051",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C051",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C051",
+      "pass": true
+    },
+    {
+      "id": "citation_source_quote:C051",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C052",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C052",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C052",
+      "pass": true
+    },
+    {
+      "id": "citation_source_quote:C052",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C053",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C053",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C053",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C053",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C054",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C054",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C054",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C054",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C055",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C055",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C055",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C055",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C056",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C056",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C056",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C056",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C057",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C057",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C057",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C057",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C058",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C058",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C058",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C058",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C059",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C059",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C059",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C059",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C060",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C060",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C060",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C060",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C061",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C061",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C061",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C061",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C062",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C062",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C062",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C062",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C063",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C063",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C063",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C063",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C064",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C064",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C064",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C064",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C065",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C065",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C065",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C065",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C066",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C066",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C066",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C066",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C067",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C067",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C067",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C067",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C068",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C068",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C068",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C068",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C069",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C069",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C069",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C069",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C070",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C070",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C070",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C070",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C071",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C071",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C071",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C071",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C072",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C072",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C072",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C072",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C073",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C073",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C073",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C073",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C074",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C074",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C074",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C074",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C075",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C075",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C075",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C075",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C076",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C076",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C076",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C076",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C077",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C077",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C077",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C077",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C078",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C078",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C078",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C078",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C079",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C079",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C079",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C079",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C080",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C080",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C080",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C080",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C081",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C081",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C081",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C081",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C082",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C082",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C082",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C082",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C083",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C083",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C083",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C083",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C084",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C084",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C084",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C084",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C085",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C085",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C085",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C085",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C086",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C086",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C086",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C086",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C087",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C087",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C087",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C087",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C088",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C088",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C088",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C088",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C089",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C089",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C089",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C089",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C090",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C090",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C090",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C090",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C091",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C091",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C091",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C091",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C092",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C092",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C092",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C092",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C093",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C093",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C093",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C093",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C094",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C094",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C094",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C094",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C095",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C095",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C095",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C095",
+      "pass": true
+    },
+    {
+      "id": "citation_id:C096",
+      "pass": true
+    },
+    {
+      "id": "citation_context:C096",
+      "pass": true
+    },
+    {
+      "id": "citation_anchor_id:C096",
+      "pass": true
+    },
+    {
+      "id": "citation_actual_value:C096",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:0",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:1",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:2",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:3",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:4",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:5",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:6",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:7",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:8",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:9",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:10",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:11",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:12",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:13",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:14",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:15",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:16",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:17",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:18",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:19",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:20",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:21",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:22",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:23",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:24",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:25",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:26",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:27",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:28",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:29",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:30",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:31",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:32",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:33",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:34",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:35",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:36",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:37",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:38",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:39",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:40",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:41",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:42",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:43",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:44",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:45",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:46",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:47",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:48",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:49",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:50",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:51",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:52",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:53",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:54",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:55",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:56",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:57",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:58",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:59",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:60",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:61",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:62",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:63",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:64",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:65",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:66",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:67",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:68",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:69",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:70",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:71",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:72",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:73",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:74",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:75",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:76",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:77",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:78",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:79",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:80",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:81",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:82",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:83",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:84",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:85",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:86",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:87",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:88",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:89",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:90",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:91",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:92",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:93",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:94",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:95",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:96",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:97",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:98",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:99",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:100",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:101",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:102",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:103",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:104",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:105",
+      "pass": true
+    },
+    {
+      "id": "numeric_token:106",
+      "pass": true
+    },
+    {
+      "id": "volatility_relation_quote:10",
+      "pass": true
+    },
+    {
+      "id": "volatility_relation_quote:15",
+      "pass": true
+    },
+    {
+      "id": "volatility_relation_quote:20",
+      "pass": true
+    },
+    {
+      "id": "volatility_relation_quote:25",
+      "pass": true
+    },
+    {
+      "id": "volatility_relation_quote:30",
+      "pass": true
+    },
+    {
+      "id": "volatility_relation_quote:35",
+      "pass": true
+    },
+    {
+      "id": "volatility_relation_quote:40",
+      "pass": true
+    },
+    {
+      "id": "volatility_relation_quote:45",
+      "pass": true
+    },
+    {
+      "id": "volatility_relation_quote:50",
+      "pass": true
+    },
+    {
+      "id": "volatility_relation_quote:55",
+      "pass": true
+    },
+    {
+      "id": "volatility_relation_quote:60",
+      "pass": true
+    },
+    {
+      "id": "specificity_quote:N014",
+      "pass": true
+    },
+    {
+      "id": "reported_normalized_separation:N014",
+      "pass": true
+    },
+    {
+      "id": "specificity_quote:N019",
+      "pass": true
+    },
+    {
+      "id": "reported_normalized_separation:N019",
+      "pass": true
+    },
+    {
+      "id": "specificity_quote:N024",
+      "pass": true
+    },
+    {
+      "id": "reported_normalized_separation:N024",
+      "pass": true
+    },
+    {
+      "id": "specificity_quote:N029",
+      "pass": true
+    },
+    {
+      "id": "reported_normalized_separation:N029",
+      "pass": true
+    },
+    {
+      "id": "specificity_quote:N034",
+      "pass": true
+    },
+    {
+      "id": "reported_normalized_separation:N034",
+      "pass": true
+    },
+    {
+      "id": "specificity_quote:N039",
+      "pass": true
+    },
+    {
+      "id": "reported_normalized_separation:N039",
+      "pass": true
+    },
+    {
+      "id": "specificity_quote:N044",
+      "pass": true
+    },
+    {
+      "id": "reported_normalized_separation:N044",
+      "pass": true
+    },
+    {
+      "id": "specificity_quote:N049",
+      "pass": true
+    },
+    {
+      "id": "reported_normalized_separation:N049",
+      "pass": true
+    },
+    {
+      "id": "specificity_quote:N054",
+      "pass": true
+    },
+    {
+      "id": "reported_normalized_separation:N054",
+      "pass": true
+    },
+    {
+      "id": "specificity_quote:N004",
+      "pass": true
+    },
+    {
+      "id": "numeric_occurrence_count74",
+      "pass": true
+    },
+    {
+      "id": "numeric_outcome_counts",
+      "pass": true
+    },
+    {
+      "id": "citation_counts",
+      "pass": true
+    },
+    {
+      "id": "visible_ids77",
+      "pass": true
+    },
+    {
+      "id": "no_unrebased_fields",
+      "pass": true
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026\\common_market_only__C__D0\\transport_result.json",
+      "pass": true,
+      "detail": {
+        "sha256": "4ebbaf6f458b885cff17d281dedcbe137a9f1344d0cabf00fe6309ec062076d5"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026\\common_market_only__C__D0\\worker_spec.json",
+      "pass": true,
+      "detail": {
+        "sha256": "e0014ec2f5139574b9c97251d796e8a5d9ab019795b283a6e7264b69fbd5b665"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026\\common_market_only__C__D0\\http_0001_generation\\response.json",
+      "pass": true,
+      "detail": {
+        "sha256": "46c20fcbdac9b1cfaf864834f76a9e73b90438e8713a58971384cd5b170f9fe9"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026\\common_market_only__C__D0\\stage_review.json",
+      "pass": true,
+      "detail": {
+        "sha256": "086b717209f9bda539a80422f7e6c6020ced6f3669e2c0766207dadf1ce571a5"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\semantic\\common_market_only__C__D0_bundle.json",
+      "pass": true,
+      "detail": {
+        "sha256": "dc44f49e844f3c705a70ea9d01c67ba3519de4d4cbb0647a698b536cd29a2c7c"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\run_reports\\allocation_math\\common_market_only__C__D0.json",
+      "pass": true,
+      "detail": {
+        "sha256": "4cf97ce404e4dbbbeef70c8c1fbcde8875bf5a0f95c405b35b469dac0d2d70a4"
+      }
+    },
+    {
+      "id": "resume_reference_after:research/remaining_20261026/semantic/common_market_only__C__D0_numeric_facts.json",
+      "pass": true,
+      "detail": {
+        "sha256": "77bd419aec890ccc934837809ab5891dfd09688c04e92da7364f0d14a47ff0b9"
+      }
+    },
+    {
+      "id": "resume_reference_after:research/remaining_20261026/semantic/common_market_only__C__D0_numeric_review.json",
+      "pass": true,
+      "detail": {
+        "sha256": "1c6ec4944587f25db8eb1b88c9e54113d7c976cf5d9dc9826bfde36d7f2ab768"
+      }
+    },
+    {
+      "id": "resume_reference_after:research/v492_evaluation_protocol_20261019_r2.json",
+      "pass": true,
+      "detail": {
+        "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+      }
+    },
+    {
+      "id": "resume_reference_after:research/remaining_20261026/semantic/ubs_june_2026__L__D0_bundle.json",
+      "pass": true,
+      "detail": {
+        "sha256": "c3706d68456b7a6dbe4e5f98bcb875b1f81ee4544f4c2272780cc6fa910e2db7"
+      }
+    },
+    {
+      "id": "resume_reference_after:research/remaining_20261026/semantic/ubs_june_2026__L__D0_review.json",
+      "pass": true,
+      "detail": {
+        "sha256": "b7b81c2515db027c67ae1c220428bb30c5df851fc774fd78077698e897696043"
+      }
+    },
+    {
+      "id": "resume_reference_after:data/local_sector_runtime/v494_remaining_20261026/ubs_june_2026__L__D0/worker_spec.json",
+      "pass": true,
+      "detail": {
+        "sha256": "13dbfc807219d85f016ef8274c1178a71631072f1d487d319562b21fce8c76dc"
+      }
+    },
+    {
+      "id": "resume_reference_after:data/local_sector_runtime/v494_remaining_20261026/ubs_june_2026__L__D0/http_0001_generation/response.json",
+      "pass": true,
+      "detail": {
+        "sha256": "4a71d849955da6def320b3600b302e246fd777363a45860c87eebfcc5611043a"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026\\campaign_declaration.json",
+      "pass": true,
+      "detail": {
+        "sha256": "fafaa9c0e0022211017847fd9d4205b960146721f14616b0f16ec1f728ff050d"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026\\common_market_only__C__D0\\response_contract_validation.json",
+      "pass": true,
+      "detail": {
+        "sha256": "5d7f821180d61bfbb689515796e2f38ec6f411b4a9939e56f752753016b0f7df"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026\\common_market_only__C__D0\\worker_summary.json",
+      "pass": true,
+      "detail": {
+        "sha256": "be138bdb46078b54cfeb6d6a19dcc9ccecbd4857705e5546c4681878ef170ca2"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026\\common_market_only__C__D0\\supervisor_result.json",
+      "pass": true,
+      "detail": {
+        "sha256": "d6498658b22f5a5e9ca0065df2d4a58060d502b6fe9ede2e30d7c7d69f2f1156"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\runtime_candidate.json",
+      "pass": true,
+      "detail": {
+        "sha256": "addc3f9cfcaebce2f2829f2b015e5b90f51b0bdff5f7d4be657864f1f87abcc6"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\protocol_and_review.json",
+      "pass": true,
+      "detail": {
+        "sha256": "e442d3f37083f17893c54e3d1af3eaa4d5e3394ae977d8843f3044357d1d02c7"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v494_design_20261025\\prepared\\preparation_manifest.json",
+      "pass": true,
+      "detail": {
+        "sha256": "8023f8b11ec9b1d43bf1b5b08ac37ccbab4ac5ab7ad7de28a9e93d8e67a4ef29"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\completion_20261026\\review_gate.json",
+      "pass": true,
+      "detail": {
+        "sha256": "4a50c95def3e6278e846e475f07fb6a1a7fd8a00b4f1dac723f509dafa71f851"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\completion_20261026\\run_reports\\terminal_receipt.json",
+      "pass": true,
+      "detail": {
+        "sha256": "1bd0e740b9d30be46f3186d1fdc7d6fd5fbb8129ced078f477da82c89bcc838a"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_completion_20261026\\campaign_summary.json",
+      "pass": true,
+      "detail": {
+        "sha256": "ac87bd037264bcc1c954985cc904648c0cc55cd59e9ac6f6d00352a1c06fb1f4"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_completion_20261026\\campaign_declaration.json",
+      "pass": true,
+      "detail": {
+        "sha256": "10482e168e82c54a4484f73a736e99c53daa9330b11c40c561fa2ed3277cb787"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\analyze_v492_pilot.py",
+      "pass": true,
+      "detail": {
+        "sha256": "841c1f941e2c39165f84f51f5df283ca7a3c5727de285d4ad56edfa50166529f"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\benchmark_sector_latency.py",
+      "pass": true,
+      "detail": {
+        "sha256": "0686444e608033be931922a26886ed4a4b5b0789385215b7b75bfacc4050458b"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\build_v492_masked_review.py",
+      "pass": true,
+      "detail": {
+        "sha256": "f4f9295a657892431d76b79310b3af229dc5bc7d972b098adb10ff5dd29a1f77"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\build_v494_masked_review.py",
+      "pass": true,
+      "detail": {
+        "sha256": "8ed40877f82414678d5808181712813ad474ddf089a08a5ba06a7b7bcaa6d148"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\completion_20261026\\prepare_stage_semantic_audit.py",
+      "pass": true,
+      "detail": {
+        "sha256": "3d9c36405ad7b86e212d99480976af154397096491a36b1e365ee8f355799a90"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\completion_20261026\\runtime\\start_isolated_cpu.ps1",
+      "pass": true,
+      "detail": {
+        "sha256": "70671c42dfb16b1e3c434f80ef658d9f900393fc0894710b497e3fe28ba328a1"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\completion_20261026\\runtime\\stop_isolated_cpu.ps1",
+      "pass": true,
+      "detail": {
+        "sha256": "c2c8cca784ab45c370ae8b89971dc45961675a72fdaf0e5fe9c120052f6c0ffb"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\completion_20261026\\test_prepare_stage_semantic_audit.py",
+      "pass": true,
+      "detail": {
+        "sha256": "0a5c58feb8b172adc70c02f59143276f09cb50fc135d8a96cde28a6b033b3ac3"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\continuation_20261026\\prepare_stage_semantic_audit.py",
+      "pass": true,
+      "detail": {
+        "sha256": "efb82936ee541f187d8b352a1a28afa8ecea3d83401439a6e92a82df9731fb04"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\continuation_20261026\\runtime\\start_isolated_cpu.ps1",
+      "pass": true,
+      "detail": {
+        "sha256": "a141ff34d5ecf1f4325a9ef91275c57b785c2778db5d041e35acfcc1b8c6e1d3"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\continuation_20261026\\runtime\\stop_isolated_cpu.ps1",
+      "pass": true,
+      "detail": {
+        "sha256": "218f0d5bba603e02f06d3a4f041b35d40d61b67015b5cc41dd6f2998c6294d55"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\finalize_sector_allocation.py",
+      "pass": true,
+      "detail": {
+        "sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\finalize_sector_campaign.py",
+      "pass": true,
+      "detail": {
+        "sha256": "5036ddc1d856adf196fd1d2818ffeb8b3d9b3c98e65be5b6910cef59a9173a8e"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\finalize_sector_completion.py",
+      "pass": true,
+      "detail": {
+        "sha256": "7dab1d17a801e1d0beee5a669afa9c84adc2914d15715f0c82cfa97cfa45b253"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\finalize_sector_remaining.py",
+      "pass": true,
+      "detail": {
+        "sha256": "8fa60d795bc5ea75226a97761a406468f824d004b18fe7ff3ba897ceda54fe12"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\freeze_sector_completion.py",
+      "pass": true,
+      "detail": {
+        "sha256": "d20b03493b219273bfdce83eb932f1115a7c3a14c8e36bc3f64fce1b6601c55f"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\freeze_sector_continuation.py",
+      "pass": true,
+      "detail": {
+        "sha256": "ae6ee798da1ea538c7e8ed251d1802ef887e671b7ade5578ff33aaa4332978a7"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\freeze_sector_remaining.py",
+      "pass": true,
+      "detail": {
+        "sha256": "ad58a16fa3b33fd960cbe9d7ac64dc917d538240e9c660dc84540e6d315ed09f"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\freeze_sector_v494.py",
+      "pass": true,
+      "detail": {
+        "sha256": "2e40a2f9b646ad547987ac6ce9679e989792bd0b16e7525af2f22276c1801856"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\local_sector_single_case.py",
+      "pass": true,
+      "detail": {
+        "sha256": "0b2596a223167136bb37578e86469d50c26e7883305d4db31f43b9ddd10d28d0"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\prepare_sector_v491.py",
+      "pass": true,
+      "detail": {
+        "sha256": "0e8188630a8b3a36da08671519b2bfeba7d3d2ca412568f789bfeca2ea4192e7"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\prepare_sector_v492.py",
+      "pass": true,
+      "detail": {
+        "sha256": "bc60c7ecb972ad2ce0d9df3f3e41f715264dbeb6a4b3a3838a13216a5c56b098"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\prepare_sector_v494.py",
+      "pass": true,
+      "detail": {
+        "sha256": "80d293ab0df0a209c234e3ab1136ac845fe6a5e81b1b68d543660cc19108e855"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\probe_ollama_runtime.py",
+      "pass": true,
+      "detail": {
+        "sha256": "2dd48936bbaf8fd090a26f92fd356fec3a11ac81e5b01b39d661ffe72552fddb"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\publish_completion_review_ack.py",
+      "pass": true,
+      "detail": {
+        "sha256": "bf8708bb62a348c6dab3ace3c9a017fddc5302830b62f53deedfa98c36703603"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\publish_remaining_review_ack.py",
+      "pass": true,
+      "detail": {
+        "sha256": "f1ca48574ebb1a800eff55ef1af2fbae902db8e74d7825be22991183b90909f0"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\method_build_audit.py",
+      "pass": true,
+      "detail": {
+        "sha256": "b6254ac3f8a607b7a9602eb4bef89953ba7e6188cbf6227982106294c839b488"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\start_isolated_cpu.ps1",
+      "pass": true,
+      "detail": {
+        "sha256": "ae44ac080a877e84b596b59894917f0226f6493660552428ac03c10c4187cfd8"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\stop_isolated_cpu.ps1",
+      "pass": true,
+      "detail": {
+        "sha256": "78eb6eeb3d8de0c2e7fbb21bc682d2af5ee5bb1db9a56b1f6eb42f54ecd5b732"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\prepare_stage_semantic_audit.py",
+      "pass": true,
+      "detail": {
+        "sha256": "c4049ff6ed474200c5c358cb3448e5353096606acee27e0033b88e5a2410d21b"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\runtime\\start_isolated_cpu.ps1",
+      "pass": true,
+      "detail": {
+        "sha256": "3000833951aa21f5f0815f12b57212dcc810ffb1c14d61a1f7c7ab467f5e5f98"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\runtime\\stop_isolated_cpu.ps1",
+      "pass": true,
+      "detail": {
+        "sha256": "4af1cba8e008406ee4431dad39cd1df47355f410132afb7c53b2329070f9131e"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\test_prepare_stage_semantic_audit.py",
+      "pass": true,
+      "detail": {
+        "sha256": "a4f7e2c4dd9c2e6e3449e03ae3f6cc02f5e678ab1e322c447c21065e8ec07a9b"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\remote_sector_runtime.py",
+      "pass": true,
+      "detail": {
+        "sha256": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\review_sector_v494_stage.py",
+      "pass": true,
+      "detail": {
+        "sha256": "81195353a74f00fde66e1915e068e9167966ccc3cb774b65ad929867bf44b3e6"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\run_sector_completion.py",
+      "pass": true,
+      "detail": {
+        "sha256": "53d795493e747eadb72c097cb98b0efe0649725187fe750e447e8d41fe3d7f65"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\run_sector_continuation.py",
+      "pass": true,
+      "detail": {
+        "sha256": "15c74157f0169fca721671fe5219673f7c3296d42ebd984b2c326e0ab493b2cb"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\run_sector_remaining.py",
+      "pass": true,
+      "detail": {
+        "sha256": "bd80d010815607ab0889be33a048adbe7defdab22420967aafc128791bbb40bd"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\run_v494_recovery.py",
+      "pass": true,
+      "detail": {
+        "sha256": "56fdb077c375ca4b99a110a93d81210a74812257cae3b0967b613f0b5de27576"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\sector_completion_awake.py",
+      "pass": true,
+      "detail": {
+        "sha256": "f38bafe9bacdd87c3a4642193a9752c0c68552533528393b9b8b242a3b87996f"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\sector_completion_gate.py",
+      "pass": true,
+      "detail": {
+        "sha256": "39c6cd80196bfdc25040f2cbf239cdfd9d562dab17ce3070fc38559ae41917b7"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\sector_completion_runtime.py",
+      "pass": true,
+      "detail": {
+        "sha256": "99395173cb3c030c06c456b4b4ae41a0f2cd157ce05b76e4b42b9696ed6e1ec2"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\sector_continuation_awake.py",
+      "pass": true,
+      "detail": {
+        "sha256": "2318c6acafc72d38c68109e7f1abcc45bc5e8cec428f90c0a63da88c5382825c"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\sector_continuation_gate.py",
+      "pass": true,
+      "detail": {
+        "sha256": "176d43c79da92299716a2509172741248ec2764bcd4869e1927cff70bd14dcb5"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\sector_continuation_runtime.py",
+      "pass": true,
+      "detail": {
+        "sha256": "6ec09d1f524bda53c9cc80505ea4d47d13c211f159ff7c7702b6c3ba645d83f1"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\sector_engine.py",
+      "pass": true,
+      "detail": {
+        "sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\sector_remaining_awake.py",
+      "pass": true,
+      "detail": {
+        "sha256": "2ef37fea357f69d78b267f3aa195c9ba7d9dde8bdecb931f59c49bab2a529307"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\sector_remaining_gate.py",
+      "pass": true,
+      "detail": {
+        "sha256": "8b6cf29dfd103197ba8553da5265b5c121457f145205ff4ed0757102523fa54d"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\sector_remaining_runtime.py",
+      "pass": true,
+      "detail": {
+        "sha256": "6f54562c29a2d26c4061c9d1a902609ce504346ccb82631ff0b5ec84764a3233"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\sector_v48_main_awake.py",
+      "pass": true,
+      "detail": {
+        "sha256": "185a9f6be9471ff7808730153227682f0f0eae25f72ee1474602106a950fa98a"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\sector_v48_transport.py",
+      "pass": true,
+      "detail": {
+        "sha256": "db395eb3d54ebec93aa67556e1f2424aba1d591ba8b9fcfce7fbd3332db0379c"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\sector_v491_contract.py",
+      "pass": true,
+      "detail": {
+        "sha256": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\sector_v491_runtime.py",
+      "pass": true,
+      "detail": {
+        "sha256": "a542a53ef7a9a035a3641e1e9637d3eb5bd442677318a82434e245bb1e5dc649"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\sector_v491_tokenizer.py",
+      "pass": true,
+      "detail": {
+        "sha256": "1e25d31d18e659e90186d2a598d0bcad77824d0dbc5a0e76beed692a8373e440"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\sector_v492_contract.py",
+      "pass": true,
+      "detail": {
+        "sha256": "f77d1ddec9630a4c7edbf3928d298b7b05094345996ece1cf53d91fc40171a21"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\sector_v492_review_gate.py",
+      "pass": true,
+      "detail": {
+        "sha256": "a93b575104509e9810663ec4feca3e6bbb6963ca03dd988b451e06744e23a092"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\sector_v492_runtime.py",
+      "pass": true,
+      "detail": {
+        "sha256": "cc8285db4d561aea10878db336771752965f4517405a93a1574b18f2fa300e04"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\sector_v494_review_gate.py",
+      "pass": true,
+      "detail": {
+        "sha256": "07cac8a0606eff3dfeb1bc1e0b3786ff373ca49bb424edb20674033e28d7e194"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\sector_v494_runtime.py",
+      "pass": true,
+      "detail": {
+        "sha256": "c9521000aa3a1497775c83fa83a1b9bac9f5443edbcb707f131d313f7cd8bed1"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\test_finalize_sector_campaign.py",
+      "pass": true,
+      "detail": {
+        "sha256": "97fb3102ebce269889d087a4fb1c66ad736ba536fbedf2f3710975d4baf0810d"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\test_finalize_sector_completion.py",
+      "pass": true,
+      "detail": {
+        "sha256": "1b3f7391ba93e8bebe8ea60118ef5056fcd77aaf490bdd09d80f8e636129e9fd"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\test_finalize_sector_remaining.py",
+      "pass": true,
+      "detail": {
+        "sha256": "07f919b028c820cc85cfb720968356bf5445f295f5b6b5013f697d7306f52300"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\test_sector_completion.py",
+      "pass": true,
+      "detail": {
+        "sha256": "40ba9fccf9f1f4a425410f0df9e6e7baa139e483ca7ce0ea9ff03336f3595284"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\test_sector_continuation.py",
+      "pass": true,
+      "detail": {
+        "sha256": "27f9ff3e827decda54bd37e45aa028cda25e5f2b71918c598a2994061d28e024"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\test_sector_remaining.py",
+      "pass": true,
+      "detail": {
+        "sha256": "4ec483f979ebfb51e0b60988b6de920b2babd0c4b2ed5dac8b53152a0aa8a820"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\review_gate.json",
+      "pass": true,
+      "detail": {
+        "sha256": "fddeb5bcb30e2b94ca741783323ff370d7d5ddb87595ed1fab2d535da36e2012"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\freeze.json",
+      "pass": true,
+      "detail": {
+        "sha256": "3023c41e8832259d226dae5015b8b9e50370725436e096054d400c4d69e19461"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v494_design_20261025\\prepared\\common_market_only__C__D0_messages.json",
+      "pass": true,
+      "detail": {
+        "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v491_design_20261019\\public_compact_candidate.json",
+      "pass": true,
+      "detail": {
+        "sha256": "afe810b2bfb69ae4bfa372e65fa587bc6253eecf8028d5fde39cf3ec395bcb8d"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\audit_stage_numerics.py",
+      "pass": true,
+      "detail": {
+        "sha256": "6d7d7a76448571da9a0bdf381da4ff7a0b4855992723534f9b4acbf326afe4a4"
+      }
+    },
+    {
+      "id": "resume_reference_after:C:\\Users\\Insun\\2026libera\\research\\completion_20261026\\audit_stage_numerics.py",
+      "pass": true,
+      "detail": {
+        "sha256": "10ee4d79fdcdebd1adbdf3bba2278464e044bad6b19248aa601b4ed60daaa8b9"
+      }
+    },
+    {
+      "id": "resume_raw_content_unchanged",
+      "pass": true
+    },
+    {
+      "id": "resume_current_source_free",
+      "pass": true
+    }
+  ],
+  "numeric_claim_occurrences": 74,
+  "numeric_current_recomputation": [
+    {
+      "occurrence_id": "N001",
+      "actual_aligned_input": 0.04287667814038709,
+      "computed_comparable_value": 4.287667814038709,
+      "claimed_value_or_range": "-4.29",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N002",
+      "actual_aligned_input": 0.000818731323068254,
+      "computed_comparable_value": 0.0818731323068254,
+      "claimed_value_or_range": "-0.03",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N003",
+      "actual_aligned_input": 0.24627687526240125,
+      "computed_comparable_value": 24.627687526240123,
+      "claimed_value_or_range": "15.5",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N004",
+      "actual_aligned_input": 0.13902338650295984,
+      "computed_comparable_value": 13.902338650295984,
+      "claimed_value_or_range": "13.9",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N005",
+      "actual_aligned_input": 0.04,
+      "computed_comparable_value": 4,
+      "claimed_value_or_range": "4",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N006",
+      "actual_aligned_input": -0.022012639294049507,
+      "computed_comparable_value": -2.2012639294049507,
+      "claimed_value_or_range": "-2.2",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N007",
+      "actual_aligned_input": -0.0002971167790446594,
+      "computed_comparable_value": -0.02971167790446594,
+      "claimed_value_or_range": "-0.3",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N008",
+      "actual_aligned_input": 0.19436460180258697,
+      "computed_comparable_value": 19.436460180258695,
+      "claimed_value_or_range": "12.2",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N009",
+      "actual_aligned_input": 0.02,
+      "computed_comparable_value": 2,
+      "claimed_value_or_range": "2",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N010",
+      "actual_aligned_input": 0.03848895413108133,
+      "computed_comparable_value": 3.848895413108133,
+      "claimed_value_or_range": "3.85",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N011",
+      "actual_aligned_input": 0.000705407660168093,
+      "computed_comparable_value": 0.0705407660168093,
+      "claimed_value_or_range": "0.71",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N012",
+      "actual_aligned_input": 0.19718215642263498,
+      "computed_comparable_value": 19.718215642263498,
+      "claimed_value_or_range": "12.4",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N013",
+      "actual_aligned_input": 0.09,
+      "computed_comparable_value": 9,
+      "claimed_value_or_range": "9",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N014",
+      "actual_aligned_input": 8.8,
+      "computed_comparable_value": 8.8,
+      "claimed_value_or_range": "8.8",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N015",
+      "actual_aligned_input": -0.019155630332708284,
+      "computed_comparable_value": -1.9155630332708284,
+      "claimed_value_or_range": "10.24",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N016",
+      "actual_aligned_input": -0.0002551436565336444,
+      "computed_comparable_value": -0.02551436565336444,
+      "claimed_value_or_range": "1.69",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N017",
+      "actual_aligned_input": 0.18553788110332176,
+      "computed_comparable_value": 18.553788110332174,
+      "claimed_value_or_range": "11.6",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N018",
+      "actual_aligned_input": 0.09,
+      "computed_comparable_value": 9,
+      "claimed_value_or_range": "9",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N019",
+      "actual_aligned_input": 9.3,
+      "computed_comparable_value": 9.3,
+      "claimed_value_or_range": "9.3",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N020",
+      "actual_aligned_input": 0.04873642549989987,
+      "computed_comparable_value": 4.873642549989987,
+      "claimed_value_or_range": "4.87",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N021",
+      "actual_aligned_input": 0.0008473073009094685,
+      "computed_comparable_value": 0.08473073009094685,
+      "claimed_value_or_range": "-0.26",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N022",
+      "actual_aligned_input": 0.16640375256648995,
+      "computed_comparable_value": 16.640375256648994,
+      "claimed_value_or_range": "10.5",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N023",
+      "actual_aligned_input": 0.05,
+      "computed_comparable_value": 5,
+      "claimed_value_or_range": "5",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N024",
+      "actual_aligned_input": 4.6,
+      "computed_comparable_value": 4.6,
+      "claimed_value_or_range": "4.6",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N025",
+      "actual_aligned_input": 0.10238502092729651,
+      "computed_comparable_value": 10.23850209272965,
+      "claimed_value_or_range": "8.21",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N026",
+      "actual_aligned_input": 0.0016911255792328938,
+      "computed_comparable_value": 0.16911255792328939,
+      "claimed_value_or_range": "1.35",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N027",
+      "actual_aligned_input": 0.18338371693726102,
+      "computed_comparable_value": 18.338371693726103,
+      "claimed_value_or_range": "8.4",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N028",
+      "actual_aligned_input": 0.09,
+      "computed_comparable_value": 9,
+      "claimed_value_or_range": "9",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N029",
+      "actual_aligned_input": 8.9,
+      "computed_comparable_value": 8.9,
+      "claimed_value_or_range": "8.9",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N030",
+      "actual_aligned_input": 0.08205961595157252,
+      "computed_comparable_value": 8.205961595157252,
+      "claimed_value_or_range": "14.99",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N031",
+      "actual_aligned_input": 0.00134955413291194,
+      "computed_comparable_value": 0.13495541329119398,
+      "claimed_value_or_range": "2.55",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N032",
+      "actual_aligned_input": 0.132724604028941,
+      "computed_comparable_value": 13.272460402894101,
+      "claimed_value_or_range": "21.2",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N033",
+      "actual_aligned_input": 0.12,
+      "computed_comparable_value": 12,
+      "claimed_value_or_range": "12",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N034",
+      "actual_aligned_input": 11.8,
+      "computed_comparable_value": 11.8,
+      "claimed_value_or_range": "11.8",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N035",
+      "actual_aligned_input": 0.14992022077727252,
+      "computed_comparable_value": 14.992022077727253,
+      "claimed_value_or_range": "149.92",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N036",
+      "actual_aligned_input": 0.002553795883943505,
+      "computed_comparable_value": 0.2553795883943505,
+      "claimed_value_or_range": "2.55",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N037",
+      "actual_aligned_input": 0.33685107914419216,
+      "computed_comparable_value": 33.68510791441921,
+      "claimed_value_or_range": "21.2",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N038",
+      "actual_aligned_input": 0.38,
+      "computed_comparable_value": 38,
+      "claimed_value_or_range": "38",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N039",
+      "actual_aligned_input": 38,
+      "computed_comparable_value": 38,
+      "claimed_value_or_range": "38",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N040",
+      "actual_aligned_input": -0.04890051427558073,
+      "computed_comparable_value": -4.890051427558073,
+      "claimed_value_or_range": "0.02",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N041",
+      "actual_aligned_input": -0.0007892623852291706,
+      "computed_comparable_value": -0.07892623852291707,
+      "claimed_value_or_range": "0",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N042",
+      "actual_aligned_input": 0.15339610421634242,
+      "computed_comparable_value": 15.339610421634243,
+      "claimed_value_or_range": "11.3",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N043",
+      "actual_aligned_input": 0.1,
+      "computed_comparable_value": 10,
+      "claimed_value_or_range": "10",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N044",
+      "actual_aligned_input": 9.7,
+      "computed_comparable_value": 9.7,
+      "claimed_value_or_range": "9.7",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N045",
+      "actual_aligned_input": 0.0002261198808994891,
+      "computed_comparable_value": 0.02261198808994891,
+      "claimed_value_or_range": "-4.89",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N046",
+      "actual_aligned_input": 0.00006628032293669965,
+      "computed_comparable_value": 0.006628032293669965,
+      "claimed_value_or_range": "-0.79",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N047",
+      "actual_aligned_input": 0.17893057942789112,
+      "computed_comparable_value": 17.893057942789113,
+      "claimed_value_or_range": "9.7",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N048",
+      "actual_aligned_input": 0.02,
+      "computed_comparable_value": 2,
+      "claimed_value_or_range": "2",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N049",
+      "actual_aligned_input": 2.2,
+      "computed_comparable_value": 2.2,
+      "claimed_value_or_range": "2.2",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N050",
+      "actual_aligned_input": 0.02729295962855538,
+      "computed_comparable_value": 2.729295962855538,
+      "claimed_value_or_range": "0.02",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N051",
+      "actual_aligned_input": 0.0005032809748320636,
+      "computed_comparable_value": 0.050328097483206366,
+      "claimed_value_or_range": "0",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N052",
+      "actual_aligned_input": 0.16693062035900388,
+      "computed_comparable_value": 16.69306203590039,
+      "claimed_value_or_range": "10.5",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N053",
+      "actual_aligned_input": 0.02,
+      "computed_comparable_value": 2,
+      "claimed_value_or_range": "2",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N054",
+      "actual_aligned_input": 1.8,
+      "computed_comparable_value": 1.8,
+      "claimed_value_or_range": "1.8",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N055",
+      "actual_aligned_input": [
+        "2026-04-21",
+        "2026-07-16"
+      ],
+      "computed_comparable_value": null,
+      "claimed_value_or_range": [
+        "2026-04-21",
+        "2026-07-16"
+      ],
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N056",
+      "actual_aligned_input": 12,
+      "computed_comparable_value": 12,
+      "claimed_value_or_range": 12,
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N057",
+      "actual_aligned_input": {
+        "lower": 3.5,
+        "upper": 3.75
+      },
+      "computed_comparable_value": null,
+      "claimed_value_or_range": [
+        "3.5",
+        "3.75"
+      ],
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N058",
+      "actual_aligned_input": 3.5,
+      "computed_comparable_value": 3.5,
+      "claimed_value_or_range": "3.5",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N059",
+      "actual_aligned_input": [
+        "2026-04-21",
+        "2026-07-16"
+      ],
+      "computed_comparable_value": null,
+      "claimed_value_or_range": [
+        "2026-04-21",
+        "2026-07-16"
+      ],
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N060",
+      "actual_aligned_input": 12,
+      "computed_comparable_value": 12,
+      "claimed_value_or_range": 12,
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N061",
+      "actual_aligned_input": 0.38,
+      "computed_comparable_value": 38,
+      "claimed_value_or_range": "38",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N062",
+      "actual_aligned_input": 0.33685107914419216,
+      "computed_comparable_value": 33.68510791441921,
+      "claimed_value_or_range": "21.2",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N063",
+      "actual_aligned_input": 3.5,
+      "computed_comparable_value": 3.5,
+      "claimed_value_or_range": "3.5",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N064",
+      "actual_aligned_input": 4.2,
+      "computed_comparable_value": 4.2,
+      "claimed_value_or_range": "4.2",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N065",
+      "actual_aligned_input": 12,
+      "computed_comparable_value": 12,
+      "claimed_value_or_range": 12,
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N066",
+      "actual_aligned_input": "2026-07-16",
+      "computed_comparable_value": null,
+      "claimed_value_or_range": "2026-07",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N067",
+      "actual_aligned_input": 12,
+      "computed_comparable_value": 12,
+      "claimed_value_or_range": 12,
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N068",
+      "actual_aligned_input": "2026-07-17",
+      "computed_comparable_value": null,
+      "claimed_value_or_range": "2026-07-17",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N069",
+      "actual_aligned_input": {
+        "lower": 3.5,
+        "upper": 3.75
+      },
+      "computed_comparable_value": null,
+      "claimed_value_or_range": [
+        "3.5",
+        "3.75"
+      ],
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N070",
+      "actual_aligned_input": 3.5,
+      "computed_comparable_value": 3.5,
+      "claimed_value_or_range": "3.5",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N071",
+      "actual_aligned_input": 4.2,
+      "computed_comparable_value": 4.2,
+      "claimed_value_or_range": "4.2",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N072",
+      "actual_aligned_input": [
+        "2026-04-21",
+        "2026-07-16"
+      ],
+      "computed_comparable_value": null,
+      "claimed_value_or_range": [
+        "2026-04",
+        "2026-07"
+      ],
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N073",
+      "actual_aligned_input": "1.02",
+      "computed_comparable_value": 1.02,
+      "claimed_value_or_range": "1.0",
+      "outcome_recomputed": "contradicted_by_supplied_input",
+      "matches_record": true
+    },
+    {
+      "occurrence_id": "N074",
+      "actual_aligned_input": "2026-07-16",
+      "computed_comparable_value": null,
+      "claimed_value_or_range": "2026-07",
+      "outcome_recomputed": "supported_at_stated_precision",
+      "matches_record": true
+    }
+  ],
+  "source_fidelity_NA_rows": 11,
+  "current_unique_refs": 95,
+  "ACK_published": false,
+  "terminal_or_CANCEL_files_modified": false,
+  "model_calls": 0,
+  "service_calls": 0,
+  "frozen_files_modified": false,
+  "raw_artifacts_modified": false,
+  "limits": "Traceable exact quote/reference/accounting/math checks. Semantic coding is unvalidated AI assistance and unmasked. No semantic quality threshold or source-free failure penalty. Saved after user resumption; stopped run is not resumed or acknowledged by this reviewer."
+}

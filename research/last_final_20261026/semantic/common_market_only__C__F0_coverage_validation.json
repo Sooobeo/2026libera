@@ -1,0 +1,698 @@
+{
+  "version": "last_final_exhaustive_narrative_number_recheck_1",
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T07:08:58.679Z",
+  "review_ref": {
+    "path": "research/last_final_20261026/semantic/common_market_only__C__F0_review.json",
+    "sha256": "eea3f3f8ce10f4d3e20625716cf69571b23a9790d74d3e22684ee19dc1e42344"
+  },
+  "bundle_ref": {
+    "path": "research/last_final_20261026/semantic/common_market_only__C__F0_bundle.json",
+    "sha256": "601b895fd4d29a0a1a018ce842b0be5654d8372e4c6efd64f8aa810af2e48ea2"
+  },
+  "validator_ref": {
+    "path": "research/last_final_20261026/semantic/validate_common_market_only__C__F0_coverage.mjs",
+    "sha256": "90367caa95d48b5a21a57ba7eea0363b3917129b8f031c1186e293706fcc4084"
+  },
+  "scope": "Independently walks every current raw-output narrative string, excluding metadata/citation IDs, and checks exact numeric occurrence positions against the reviewed inventory. Not an automatic prose entailment grade.",
+  "actual_numeric_tokens": 84,
+  "reviewed_inventory_tokens": 84,
+  "uncovered_tokens": 0,
+  "checks": [
+    {
+      "output_pointer": "/sectors/0/decision_reason",
+      "literal": "10",
+      "start": 8,
+      "end": 10,
+      "covered_by_claim": false,
+      "identifier_exclusion": "official_sector_identifier"
+    },
+    {
+      "output_pointer": "/sectors/0/decision_reason",
+      "literal": "4.0",
+      "start": 24,
+      "end": 27,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/0/decision_reason",
+      "literal": "0.002",
+      "start": 54,
+      "end": 59,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/0/decision_reason",
+      "literal": "-4.29",
+      "start": 138,
+      "end": 143,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/0/decision_reason",
+      "literal": "-0.03",
+      "start": 171,
+      "end": 176,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/0/decision_reason",
+      "literal": "1.0",
+      "start": 300,
+      "end": 303,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/1/decision_reason",
+      "literal": "15",
+      "start": 11,
+      "end": 13,
+      "covered_by_claim": false,
+      "identifier_exclusion": "official_sector_identifier"
+    },
+    {
+      "output_pointer": "/sectors/1/decision_reason",
+      "literal": "2.0",
+      "start": 27,
+      "end": 30,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/1/decision_reason",
+      "literal": "0.002",
+      "start": 57,
+      "end": 62,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/1/decision_reason",
+      "literal": "-2.20",
+      "start": 141,
+      "end": 146,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/2/decision_reason",
+      "literal": "20",
+      "start": 13,
+      "end": 15,
+      "covered_by_claim": false,
+      "identifier_exclusion": "official_sector_identifier"
+    },
+    {
+      "output_pointer": "/sectors/2/decision_reason",
+      "literal": "9.0",
+      "start": 29,
+      "end": 32,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/2/decision_reason",
+      "literal": "3.85",
+      "start": 78,
+      "end": 82,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/2/decision_reason",
+      "literal": "0.71",
+      "start": 103,
+      "end": 107,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/3/decision_reason",
+      "literal": "25",
+      "start": 24,
+      "end": 26,
+      "covered_by_claim": false,
+      "identifier_exclusion": "official_sector_identifier"
+    },
+    {
+      "output_pointer": "/sectors/3/decision_reason",
+      "literal": "9.0",
+      "start": 40,
+      "end": 43,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/3/decision_reason",
+      "literal": "10.24",
+      "start": 126,
+      "end": 131,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/3/decision_reason",
+      "literal": "1.69",
+      "start": 152,
+      "end": 156,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/4/decision_reason",
+      "literal": "30",
+      "start": 18,
+      "end": 20,
+      "covered_by_claim": false,
+      "identifier_exclusion": "official_sector_identifier"
+    },
+    {
+      "output_pointer": "/sectors/4/decision_reason",
+      "literal": "5.0",
+      "start": 34,
+      "end": 37,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/4/decision_reason",
+      "literal": "-0.26",
+      "start": 78,
+      "end": 83,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/4/decision_reason",
+      "literal": "4.87",
+      "start": 128,
+      "end": 132,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/4/decision_reason",
+      "literal": "10.5",
+      "start": 155,
+      "end": 159,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/5/decision_reason",
+      "literal": "35",
+      "start": 13,
+      "end": 15,
+      "covered_by_claim": false,
+      "identifier_exclusion": "official_sector_identifier"
+    },
+    {
+      "output_pointer": "/sectors/5/decision_reason",
+      "literal": "9.0",
+      "start": 29,
+      "end": 32,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/5/decision_reason",
+      "literal": "8.21",
+      "start": 116,
+      "end": 120,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/5/decision_reason",
+      "literal": "1.35",
+      "start": 141,
+      "end": 145,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/5/decision_reason",
+      "literal": "8.4",
+      "start": 179,
+      "end": 182,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/6/decision_reason",
+      "literal": "40",
+      "start": 12,
+      "end": 14,
+      "covered_by_claim": false,
+      "identifier_exclusion": "official_sector_identifier"
+    },
+    {
+      "output_pointer": "/sectors/6/decision_reason",
+      "literal": "12.0",
+      "start": 28,
+      "end": 32,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/6/decision_reason",
+      "literal": "14.99",
+      "start": 91,
+      "end": 96,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/6/decision_reason",
+      "literal": "21.2",
+      "start": 132,
+      "end": 136,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/7/decision_reason",
+      "literal": "45",
+      "start": 24,
+      "end": 26,
+      "covered_by_claim": false,
+      "identifier_exclusion": "official_sector_identifier"
+    },
+    {
+      "output_pointer": "/sectors/7/decision_reason",
+      "literal": "38.0",
+      "start": 40,
+      "end": 44,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/7/decision_reason",
+      "literal": "149.92",
+      "start": 122,
+      "end": 128,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/7/decision_reason",
+      "literal": "2.55",
+      "start": 158,
+      "end": 162,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/8/decision_reason",
+      "literal": "50",
+      "start": 24,
+      "end": 26,
+      "covered_by_claim": false,
+      "identifier_exclusion": "official_sector_identifier"
+    },
+    {
+      "output_pointer": "/sectors/8/decision_reason",
+      "literal": "10.0",
+      "start": 40,
+      "end": 44,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/8/decision_reason",
+      "literal": "0.02",
+      "start": 95,
+      "end": 99,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/8/decision_reason",
+      "literal": "0.00",
+      "start": 128,
+      "end": 132,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/9/decision_reason",
+      "literal": "55",
+      "start": 11,
+      "end": 13,
+      "covered_by_claim": false,
+      "identifier_exclusion": "official_sector_identifier"
+    },
+    {
+      "output_pointer": "/sectors/9/decision_reason",
+      "literal": "2.0",
+      "start": 27,
+      "end": 30,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/9/decision_reason",
+      "literal": "0.002",
+      "start": 57,
+      "end": 62,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/9/decision_reason",
+      "literal": "-4.89",
+      "start": 141,
+      "end": 146,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/9/decision_reason",
+      "literal": "-0.79",
+      "start": 174,
+      "end": 179,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/10/decision_reason",
+      "literal": "60",
+      "start": 13,
+      "end": 15,
+      "covered_by_claim": false,
+      "identifier_exclusion": "official_sector_identifier"
+    },
+    {
+      "output_pointer": "/sectors/10/decision_reason",
+      "literal": "2.0",
+      "start": 29,
+      "end": 32,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/10/decision_reason",
+      "literal": "0.02",
+      "start": 83,
+      "end": 87,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/sectors/10/decision_reason",
+      "literal": "0.00",
+      "start": 116,
+      "end": 120,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/alternatives",
+      "literal": "45",
+      "start": 95,
+      "end": 97,
+      "covered_by_claim": false,
+      "identifier_exclusion": "official_sector_identifier"
+    },
+    {
+      "output_pointer": "/alternatives",
+      "literal": "21.2",
+      "start": 129,
+      "end": 133,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/alternatives",
+      "literal": "2.55",
+      "start": 216,
+      "end": 220,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/alternatives",
+      "literal": "149.92",
+      "start": 259,
+      "end": 265,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/alternatives",
+      "literal": "55",
+      "start": 351,
+      "end": 353,
+      "covered_by_claim": false,
+      "identifier_exclusion": "official_sector_identifier"
+    },
+    {
+      "output_pointer": "/alternatives",
+      "literal": "60",
+      "start": 372,
+      "end": 374,
+      "covered_by_claim": false,
+      "identifier_exclusion": "official_sector_identifier"
+    },
+    {
+      "output_pointer": "/alternatives",
+      "literal": "3.5",
+      "start": 410,
+      "end": 413,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/alternatives",
+      "literal": "3.5",
+      "start": 428,
+      "end": 431,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/risk_discussion",
+      "literal": "45",
+      "start": 65,
+      "end": 67,
+      "covered_by_claim": false,
+      "identifier_exclusion": "official_sector_identifier"
+    },
+    {
+      "output_pointer": "/risk_discussion",
+      "literal": "38",
+      "start": 72,
+      "end": 74,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/risk_discussion",
+      "literal": "21.2",
+      "start": 108,
+      "end": 112,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/risk_discussion",
+      "literal": "10",
+      "start": 233,
+      "end": 235,
+      "covered_by_claim": false,
+      "identifier_exclusion": "official_sector_identifier"
+    },
+    {
+      "output_pointer": "/risk_discussion",
+      "literal": "55",
+      "start": 252,
+      "end": 254,
+      "covered_by_claim": false,
+      "identifier_exclusion": "official_sector_identifier"
+    },
+    {
+      "output_pointer": "/risk_discussion",
+      "literal": "3.5",
+      "start": 356,
+      "end": 359,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/risk_discussion",
+      "literal": "4.2",
+      "start": 389,
+      "end": 392,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/risk_discussion",
+      "literal": "+0.02",
+      "start": 498,
+      "end": 503,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/risk_discussion",
+      "literal": "0.002",
+      "start": 569,
+      "end": 574,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/risk_discussion",
+      "literal": "1.0",
+      "start": 615,
+      "end": 618,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/unresolved/1",
+      "literal": "12",
+      "start": 4,
+      "end": 6,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/unresolved/2",
+      "literal": "2026",
+      "start": 48,
+      "end": 52,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/unresolved/3",
+      "literal": "45",
+      "start": 51,
+      "end": 53,
+      "covered_by_claim": false,
+      "identifier_exclusion": "official_sector_identifier"
+    },
+    {
+      "output_pointer": "/context_assessment/market_and_mandate_reading",
+      "literal": "12",
+      "start": 54,
+      "end": 56,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/context_assessment/market_and_mandate_reading",
+      "literal": "2026",
+      "start": 89,
+      "end": 93,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/context_assessment/market_and_mandate_reading",
+      "literal": "-07",
+      "start": 93,
+      "end": 96,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/context_assessment/market_and_mandate_reading",
+      "literal": "-17",
+      "start": 96,
+      "end": 99,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/context_assessment/market_and_mandate_reading",
+      "literal": "3.5",
+      "start": 164,
+      "end": 167,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/context_assessment/market_and_mandate_reading",
+      "literal": "-3.75",
+      "start": 167,
+      "end": 172,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/context_assessment/market_and_mandate_reading",
+      "literal": "3.5",
+      "start": 179,
+      "end": 182,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/context_assessment/market_and_mandate_reading",
+      "literal": "4.2",
+      "start": 202,
+      "end": 205,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/context_assessment/market_and_mandate_reading",
+      "literal": "2026",
+      "start": 258,
+      "end": 262,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/context_assessment/allocation_implication",
+      "literal": "1.0",
+      "start": 361,
+      "end": 364,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/context_assessment/allocation_implication",
+      "literal": "0",
+      "start": 386,
+      "end": 387,
+      "covered_by_claim": true,
+      "identifier_exclusion": "endpoint_identifier"
+    },
+    {
+      "output_pointer": "/context_assessment/allocation_implication",
+      "literal": "1.02",
+      "start": 396,
+      "end": 400,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/context_assessment/limitations",
+      "literal": "2026",
+      "start": 176,
+      "end": 180,
+      "covered_by_claim": true,
+      "identifier_exclusion": null
+    },
+    {
+      "output_pointer": "/context_assessment/limitations",
+      "literal": "45",
+      "start": 326,
+      "end": 328,
+      "covered_by_claim": false,
+      "identifier_exclusion": "official_sector_identifier"
+    }
+  ],
+  "model_calls": 0,
+  "service_calls": 0,
+  "raw_modified": false
+}

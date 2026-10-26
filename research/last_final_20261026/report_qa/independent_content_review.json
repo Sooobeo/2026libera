@@ -1,0 +1,287 @@
+{
+  "version": "last_final_independent_report_content_review_1",
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T07:17:33.046Z",
+  "reviewer": {
+    "agent": "method_audit",
+    "type": "Codex AI-assisted independent content review relative to report author",
+    "independent_human": false,
+    "blind": false
+  },
+  "scope": "Read final reader_notes.json and complete visible HTML prose/tables, combined five-condition data, approved protocol and completed C/Fidelity/UBS supporting reviews. Verified the seven observations and their numerical examples. This is report-content consistency review, not new generation, repeated blind semantic scoring, visual re-rendering or a new scientific experiment.",
+  "source_refs": [
+    {
+      "path": "research/last_final_20261026/reader_notes.json",
+      "sha256": "86f8c9bb446d22e4da0fda12c5ba37b32b98cbf8c61cb921c11e34028a73dc06"
+    },
+    {
+      "path": "research/last_final_20261026/results_explained_ko.html",
+      "sha256": "c3a08c74634d755cef9f164d434795ef2ab93173b9be29a435377cc74782e4fb"
+    },
+    {
+      "path": "research/last_final_20261026/derived_allocation/completed_five_condition_dataset.json",
+      "sha256": "6dcf903f6c607c7c717ff28d0832983f21b04011594fa9a9c469b7e68bd7367f"
+    },
+    {
+      "path": "research/last_final_20261026/protocol_and_review.json",
+      "sha256": "daa4e50ed662fafadf1f2eb88928f3a3a6504d1e1a3272a864afe7cc157154d5"
+    },
+    {
+      "path": "research/last_final_20261026/source_interpretation_addendum.json",
+      "sha256": "3f6801841c92709fa235b98f953f5cc63b9060f0d77a203120929749f1ce8d80"
+    },
+    {
+      "path": "research/last_final_20261026/report_qa/verification.json",
+      "sha256": "e21bcaff601a446664547d5c2c933a613f69c29a764f09606128882fd9f1a834"
+    },
+    {
+      "path": "research/last_final_20261026/semantic/common_market_only__C__F0_bundle.json",
+      "sha256": "601b895fd4d29a0a1a018ce842b0be5654d8372e4c6efd64f8aa810af2e48ea2"
+    },
+    {
+      "path": "research/last_final_20261026/semantic/common_market_only__C__F0_review.json",
+      "sha256": "eea3f3f8ce10f4d3e20625716cf69571b23a9790d74d3e22684ee19dc1e42344"
+    },
+    {
+      "path": "research/last_final_20261026/semantic/common_market_only__C__F0_numeric_review.json",
+      "sha256": "36d309e25816b209378b294b5d535d745597a7b3d9905478db707c79b93ab1ab"
+    },
+    {
+      "path": "research/continuation_20261026/semantic/fidelity_q2_2026__L__F0_bundle.json",
+      "sha256": "0a4150cb02f8721d1143e6bcffd67a2448c94add170b18afb2930a582d8f1aeb"
+    },
+    {
+      "path": "research/recovery_20261025/new_semantic/fidelity_E_F0_semantic_r2.json",
+      "sha256": "f900dbc818ec3a488184b245f697cdd0ef01c033054467bf673ace2b6e0679dc"
+    },
+    {
+      "path": "research/continuation_20261026/semantic/fidelity_q2_2026__L__F0_review.json",
+      "sha256": "03462024514d4dfe61df318b149a5cb78e6c264c09f4137cc8d92238d557d58c"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__E__F0_review.json",
+      "sha256": "0b5edea1857617f1da9a6c29f15e503b53458ba63bae795e86e7bf13239b70f0"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__L__F0_review.json",
+      "sha256": "5a7e3527ad71005d0dcf7df009fdf8f3b7f18b96d980a45bb9075f89b183b5bd"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__L__F0_bundle.json",
+      "sha256": "67777d48f99659fcd91bfb6b78894a13d5cacc34d8260ba282b7184db399212b"
+    }
+  ],
+  "observations": [
+    {
+      "index": 1,
+      "title": "소논문이 묻는 것은 자료가 판단으로 이어지는 과정입니다",
+      "status": "PASS",
+      "reason": "Accurately states the approved question: institution evidence→stated interpretation/reasons→observed sector weights. Explicitly distinguishes public-document conditions from actual issuer holdings or return-performance testing.",
+      "evidence": [
+        "protocol_and_review.json#/research_question",
+        "reader_notes.json#/observations/0"
+      ]
+    },
+    {
+      "index": 2,
+      "title": "초안 뒤에 자료를 받은 두 조건에서는 배분이 달라졌습니다",
+      "status": "PASS",
+      "reason": "Both early-source raw D0/F0 vectors are unchanged; the late-source vectors change. Independent integer-unit comparison gives Fidelity13.45% and UBS4.49% own-D0/F0 TV×100. Wording properly labels these observed differences and says zero revision does not demonstrate ignoring early evidence.",
+      "evidence": [
+        "completed_five_condition_dataset.json#/stage_records",
+        "completed_five_condition_dataset.json#/derived_comparisons/own_D0_F0"
+      ]
+    },
+    {
+      "index": 3,
+      "title": "기관자료가 없어도 다시 계산하며 비중을 조금 바꿨습니다",
+      "status": "PASS",
+      "reason": "C raw Energy/Materials/Utilities each fall0.002(0.2percentage points), net−0.006;1.02 becomes1.014. Own derived TV×100 is0.55%. Eight raw-unchanged derived increases are denominator effects. The closing sentence is read as the observed possibility of changes without new institution evidence; the report does not identify a causal mechanism or isolate feedback from other conversation differences.",
+      "evidence": [
+        "common_market_only__C__F0_numeric_review.json#/allocation",
+        "common_market_only__C__F0_review.json#/summary_findings",
+        "completed_five_condition_dataset.json#/derived_comparisons/own_D0_F0/4"
+      ]
+    },
+    {
+      "index": 4,
+      "title": "등급을 옮기는 것과 근거에 맞게 판단하는 것은 달랐습니다",
+      "status": "PASS",
+      "reason": "UBS L raw IT38%→35% is a reduction while the source response says increasing. Correct rating copying/ID visibility is separated from explanatory support. Additional reasons are not automatically attributed to UBS when only a rating is supplied; the passage does not demand a unique weight for any rating.",
+      "evidence": [
+        "ubs_june_2026__L__F0_review.json#/findings",
+        "ubs_june_2026__L__F0_review.json#/summary_findings",
+        "source_interpretation_addendum.json"
+      ]
+    },
+    {
+      "index": 5,
+      "title": "100% 보정은 산술을 완성하지만 설명을 고쳐 주지는 않습니다",
+      "status": "PASS",
+      "reason": "Explains proportional normalization followed by largest-remainder10000-unit quantization; one unit is0.01% of the sleeve. Raw88% and95% are material scaling examples, not merely rounding. Raw model artifacts and semantic errors remain separate from the derived100% endpoint.",
+      "evidence": [
+        "protocol_and_review.json#/endpoint_contract",
+        "completed_five_condition_dataset.json#/stage_records"
+      ]
+    },
+    {
+      "index": 6,
+      "title": "수치 인용에서도 단위와 업종을 잘못 읽은 사례가 남았습니다",
+      "status": "PASS",
+      "reason": "Directly checked completed Fidelity L, UBS L and C raw finals: all state IT149.92% and IT21.2% annualized in the cited explanation/risk fields. Each actual input has IT compound return0.14992022077727252=14.992022077727252% and annualized volatility0.33685107914419216=33.685107914419216%, for60return observations dated2026-04-21 through2026-07-16. Approximate report values14.99%/33.69% are correct.",
+      "evidence": [
+        "fidelity_q2_2026__L__F0_review.json#/numeric_claims/23",
+        "fidelity_q2_2026__L__F0_review.json#/numeric_claims/39",
+        "ubs_june_2026__L__F0_bundle.json",
+        "common_market_only__C__F0_bundle.json",
+        "common_market_only__C__F0_numeric_review.json#/selected_numeric_claim_diagnostics"
+      ]
+    },
+    {
+      "index": 7,
+      "title": "이 결과는 자료 전달과 검토 절차를 살피는 탐색적 사례입니다",
+      "status": "PASS",
+      "reason": "Frames five cases as exploratory descriptive evidence. Acknowledges changed drafts/history and excludes pure timing causality and general performance rankings. The claimed contribution stays the evidence→reason→allocation linkage and its failures.",
+      "evidence": [
+        "protocol_and_review.json#/claims_and_limits",
+        "protocol_and_review.json#/chronology_and_disclosure",
+        "reader_notes.json#/caveats"
+      ]
+    }
+  ],
+  "numeric_examples": {
+    "case_summary": [
+      {
+        "case_id": "fidelity_q2_2026__E",
+        "D0_raw_sum": "0.92",
+        "F0_raw_sum": "0.92",
+        "own_derived_TV_percent": "0.00",
+        "raw_changed_sector_count": 0
+      },
+      {
+        "case_id": "fidelity_q2_2026__L",
+        "D0_raw_sum": "1.02",
+        "F0_raw_sum": "0.88",
+        "own_derived_TV_percent": "13.45",
+        "raw_changed_sector_count": 10
+      },
+      {
+        "case_id": "ubs_june_2026__E",
+        "D0_raw_sum": "0.95",
+        "F0_raw_sum": "0.95",
+        "own_derived_TV_percent": "0.00",
+        "raw_changed_sector_count": 0
+      },
+      {
+        "case_id": "ubs_june_2026__L",
+        "D0_raw_sum": "1.02",
+        "F0_raw_sum": "1.01",
+        "own_derived_TV_percent": "4.49",
+        "raw_changed_sector_count": 6
+      },
+      {
+        "case_id": "common_market_only__C",
+        "D0_raw_sum": "1.02",
+        "F0_raw_sum": "1.014",
+        "own_derived_TV_percent": "0.55",
+        "raw_changed_sector_count": 3
+      }
+    ],
+    "checks_performed": 48,
+    "checks_failed": 0,
+    "independent_computation": "Node BigInt rational raw deltas and half-L1 over saved integer10000-unit vectors; all five own-D0/F0 comparisons independently matched the combined dataset.",
+    "current_C_final_units": [
+      375,
+      177,
+      888,
+      888,
+      493,
+      888,
+      1183,
+      3748,
+      986,
+      177,
+      197
+    ],
+    "C_raw_changed_codes": [
+      "10",
+      "15",
+      "55"
+    ],
+    "C_each_raw_delta": "-0.002",
+    "C_other_raw_unchanged": 8,
+    "all_five_final_derived_column_totals": 10000,
+    "planned_conditions": 5,
+    "logical_stages": 10,
+    "sector_rows": 55,
+    "cumulative_attempts": 11,
+    "attempts_by_segment": [
+      3,
+      2,
+      1,
+      4,
+      1
+    ],
+    "new_main_model_calls": 0
+  },
+  "HTML_content_checks": {
+    "all_seven_observation_titles_and_text_present": true,
+    "all_eight_caveats_present": true,
+    "notes_and_data_footer_hashes_current": true,
+    "own_D0_vs_cross_condition_comparison_distinction_clear": true,
+    "TV_defined_as_reallocation_distance_times100": true,
+    "TV_not_success_or_return_rate": true,
+    "raw_D0_F0_sum_table_matches_cases": true,
+    "complete_five_case_interpretation": true,
+    "related_QA_evidence": "Root verification.json separately verifies55HTMLcells,13comparison rows and9link targets; this reviewer did not repeat browser rendering or claim root visual work as its own."
+  },
+  "method_and_topic_boundaries": {
+    "primary_exploratory_after_observed_outputs_disclosed": true,
+    "not_prespecified_confirmatory_main": true,
+    "new_Q3_July_main_not_run": true,
+    "no_causal_effect_claim": true,
+    "no_independent_replications_claim": true,
+    "no55_independent_samples_claim": true,
+    "no_unique_rating_to_weight_target": true,
+    "no_source_free_institution_penalty": true,
+    "raw_derived_and_material_scaling_distinguished": true,
+    "actual_issuer_portfolio_not_claimed": true,
+    "no_future_performance_claim": true,
+    "no_raw_daily_series_recomputation_claim": true,
+    "AI_assistance_and_partial_masking_disclosed": true,
+    "source_paraphrase_and_date_limitations_disclosed": true,
+    "interruption_and_all_attempts_preserved": true
+  },
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "All seven narrative observations and selected numeric examples agree with completed raw/derived records. C101.4%, three0.2pp cuts,0.55%TV and the three IT scaling/annualization examples are correctly reported. No content correction required."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Five-case labels,11attempt accounting, own-D0/F0 versus final/final distances and raw versus normalized values remain distinct. Current notes/HTML/data hashes match the recorded presentation QA."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "The report explains institution evidence→interpretation→stated reason→allocation as the research question, with source/number/citation errors central. Descriptive post-output exploratory status and no new main execution are explicit; neither clean100% arithmetic nor correct source labels are equated with valid reasoning."
+    }
+  },
+  "issues": [],
+  "required_changes": [],
+  "limitations": [
+    "This is content and reference consistency review of observed records, not a new blinded semantic audit or independent human evaluation.",
+    "No visual re-render was performed; screenshot legibility is covered by the separate root presentation QA.",
+    "The report’s descriptive observations do not identify timing causality or make source ratings numerical investment targets."
+  ],
+  "operations": {
+    "model_calls": 0,
+    "service_calls": 0,
+    "new_experiments": 0,
+    "reader_notes_modified": false,
+    "HTML_modified": false,
+    "combined_data_modified": false,
+    "archived_roots_modified": false,
+    "new_review_only": true
+  },
+  "writer_quiet": true
+}

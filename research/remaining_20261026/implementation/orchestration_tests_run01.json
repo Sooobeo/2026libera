@@ -1,0 +1,71 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T02:47:14.920Z",
+  "command": "python -B -X utf8 -m unittest research/test_sector_remaining.py -v",
+  "tests_run": 43,
+  "unittest_elapsed_seconds": 2.133,
+  "tool_result": {
+    "chunk_id": "b96798",
+    "wall_time_seconds": 3.2992759,
+    "exit_code": 0,
+    "original_token_count": 1948,
+    "output": "test_AC_transition_with_full_battery_is_recorded_and_continues (research.test_sector_remaining.BatteryPolicyTests.test_AC_transition_with_full_battery_is_recorded_and_continues) ... ok\r\ntest_in_stage_low_battery_aborts_but_release_clears_same_thread (research.test_sector_remaining.BatteryPolicyTests.test_in_stage_low_battery_aborts_but_release_clears_same_thread) ... ok\r\ntest_no_system_battery_is_only_allowed_on_known_AC (research.test_sector_remaining.BatteryPolicyTests.test_no_system_battery_is_only_allowed_on_known_AC) ... ok\r\ntest_stage_start_70_boundary_and_running_20_boundary (research.test_sector_remaining.BatteryPolicyTests.test_stage_start_70_boundary_and_running_20_boundary) ... ok\r\ntest_unknown_critical_saver_or_invalid_types_reject_on_either_power (research.test_sector_remaining.BatteryPolicyTests.test_unknown_critical_saver_or_invalid_types_reject_on_either_power) ... ok\r\ntest_awake_expiry_is_five_fixed_stage_and_review_ceilings_plus_cleanup (research.test_sector_remaining.CompletionPreservationTests.test_awake_expiry_is_five_fixed_stage_and_review_ceilings_plus_cleanup) ... ok\r\ntest_exact_token_reserve_boundary_and_overflow_without_generation (research.test_sector_remaining.CompletionPreservationTests.test_exact_token_reserve_boundary_and_overflow_without_generation) ... ok\r\ntest_stop_after_external_E_final_preserves_cell_completion_and_unattempted_denominator (research.test_sector_remaining.CompletionPreservationTests.test_stop_after_external_E_final_preserves_cell_completion_and_unattempted_denominator) ... ok\r\ntest_summary_budget_rejects_sixth_remaining_request (research.test_sector_remaining.CompletionPreservationTests.test_summary_budget_rejects_sixth_remaining_request) ... ok\r\ntest_worker_render_token_generation_and_cleanup_AST_unchanged (research.test_sector_remaining.CompletionPreservationTests.test_worker_render_token_generation_and_cleanup_AST_unchanged) ... ok\r\ntest_acquisition_exception_is_accounted_and_cleanup_runs (research.test_sector_remaining.CoordinatorCleanupTests.test_acquisition_exception_is_accounted_and_cleanup_runs) ... ok\r\ntest_existing_workspace_output_is_never_reused (research.test_sector_remaining.CoordinatorCleanupTests.test_existing_workspace_output_is_never_reused) ... ok\r\ntest_exact_external_draft_and_owned_backend_difference_allowed (research.test_sector_remaining.ExternalDraftBoundaryTests.test_exact_external_draft_and_owned_backend_difference_allowed) ... ok\r\ntest_external_changed_ref_raw_messages_or_scientific_type_reject (research.test_sector_remaining.ExternalDraftBoundaryTests.test_external_changed_ref_raw_messages_or_scientific_type_reject) ... ok\r\ntest_other_cases_do_not_use_external_draft_exception (research.test_sector_remaining.ExternalDraftBoundaryTests.test_other_cases_do_not_use_external_draft_exception) ... ok\r\ntest_cancel_during_wait_honored_before_ack (research.test_sector_remaining.ExternalReviewBarrierTests.test_cancel_during_wait_honored_before_ack) ... ok\r\ntest_malformed_existing_ack_fails_closed (research.test_sector_remaining.ExternalReviewBarrierTests.test_malformed_existing_ack_fails_closed) ... ok\r\ntest_missing_ack_times_out_without_model_or_retry (research.test_sector_remaining.ExternalReviewBarrierTests.test_missing_ack_times_out_without_model_or_retry) ... ok\r\ntest_rebound_but_changed_worker_spec_is_rejected (research.test_sector_remaining.ExternalReviewBarrierTests.test_rebound_but_changed_worker_spec_is_rejected) ... ok\r\ntest_stale_math_hash_is_rejected (research.test_sector_remaining.ExternalReviewBarrierTests.test_stale_math_hash_is_rejected) ... ok\r\ntest_valid_negative_findings_ack_permits_progress_without_success_score (research.test_sector_remaining.ExternalReviewBarrierTests.test_valid_negative_findings_ack_permits_progress_without_success_score) ... ok\r\ntest_wait_timeout_cannot_exceed_frozen_operational_ceiling (research.test_sector_remaining.ExternalReviewBarrierTests.test_wait_timeout_cannot_exceed_frozen_operational_ceiling) ... ok\r\ntest_wrong_case_unreviewed_axis_or_semantic_stage_is_rejected (research.test_sector_remaining.ExternalReviewBarrierTests.test_wrong_case_unreviewed_axis_or_semantic_stage_is_rejected) ... ok\r\ntest_cross_thread_cannot_clear_owner_request (research.test_sector_remaining.OwnershipTests.test_cross_thread_cannot_clear_owner_request) ... ok\r\ntest_insufficient_battery_at_boundary_stops_and_allows_cleanup (research.test_sector_remaining.OwnershipTests.test_insufficient_battery_at_boundary_stops_and_allows_cleanup) ... ok\r\ntest_insufficient_battery_refuses_acquisition_without_api_request (research.test_sector_remaining.OwnershipTests.test_insufficient_battery_refuses_acquisition_without_api_request) ... ok\r\ntest_same_thread_acquire_pulse_and_release_are_explicit (research.test_sector_remaining.OwnershipTests.test_same_thread_acquire_pulse_and_release_are_explicit) ... ok\r\ntest_completed_F0_publishes_once_and_E_D0_is_rejected (research.test_sector_remaining.PublisherIntegrationTests.test_completed_F0_publishes_once_and_E_D0_is_rejected) ... ok\r\ntest_duplicate_reviews_and_missing_current_source_coverage_reject (research.test_sector_remaining.RemainingScopeTests.test_duplicate_reviews_and_missing_current_source_coverage_reject) ... ok\r\ntest_five_exact_unattempted_stages_with_six_history (research.test_sector_remaining.RemainingScopeTests.test_five_exact_unattempted_stages_with_six_history) ... ok\r\ntest_history_retains_exact_one_previous_UBS_D0_and_no_later_stages (research.test_sector_remaining.RemainingScopeTests.test_history_retains_exact_one_previous_UBS_D0_and_no_later_stages) ... ok\r\ntest_reexecution_wrong_counts_boolean_main_retry_and_power_changes_rejected (research.test_sector_remaining.RemainingScopeTests.test_reexecution_wrong_counts_boolean_main_retry_and_power_changes_rejected) ... ok\r\ntest_ack_rejects_repeated_E_D0_before_reading_artifacts (research.test_sector_remaining.RuntimeStageScopeTests.test_ack_rejects_repeated_E_D0_before_reading_artifacts) ... ok\r\ntest_external_E_D0_cannot_be_generated_in_new_namespace (research.test_sector_remaining.RuntimeStageScopeTests.test_external_E_D0_cannot_be_generated_in_new_namespace) ... ok\r\ntest_final_F0_also_requires_external_review (research.test_sector_remaining.SequenceReviewBarrierTests.test_final_F0_also_requires_external_review) ... ok\r\ntest_no_next_generation_without_valid_ack (research.test_sector_remaining.SequenceReviewBarrierTests.test_no_next_generation_without_valid_ack) ... ok\r\ntest_cancel_before_first_stage_issues_no_request (research.test_sector_remaining.SequenceTests.test_cancel_before_first_stage_issues_no_request) ... ok\r\ntest_changed_case_inventory_fails_before_request (research.test_sector_remaining.SequenceTests.test_changed_case_inventory_fails_before_request) ... ok\r\ntest_exact_five_stages_carry_external_D0_and_keep_new_case_histories (research.test_sector_remaining.SequenceTests.test_exact_five_stages_carry_external_D0_and_keep_new_case_histories) ... ok\r\ntest_instrument_failure_halts_even_with_completed_transport (research.test_sector_remaining.SequenceTests.test_instrument_failure_halts_even_with_completed_transport) ... ok\r\ntest_model_structure_failure_skips_own_final_but_runs_remaining_cases (research.test_sector_remaining.SequenceTests.test_model_structure_failure_skips_own_final_but_runs_remaining_cases) ... ok\r\ntest_reusing_stage_directory_fails_without_second_request (research.test_sector_remaining.SequenceTests.test_reusing_stage_directory_fails_without_second_request) ... ok\r\ntest_system_interruption_halts_and_retains_two_missing_cases (research.test_sector_remaining.SequenceTests.test_system_interruption_halts_and_retains_two_missing_cases) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 43 tests in 2.133s\r\n\r\nOK\r\n"
+  },
+  "source_refs": [
+    {
+      "path": "research/sector_remaining_gate.py",
+      "sha256": "8b6cf29dfd103197ba8553da5265b5c121457f145205ff4ed0757102523fa54d"
+    },
+    {
+      "path": "research/sector_remaining_runtime.py",
+      "sha256": "6f54562c29a2d26c4061c9d1a902609ce504346ccb82631ff0b5ec84764a3233"
+    },
+    {
+      "path": "research/sector_remaining_awake.py",
+      "sha256": "2ef37fea357f69d78b267f3aa195c9ba7d9dde8bdecb931f59c49bab2a529307"
+    },
+    {
+      "path": "research/run_sector_remaining.py",
+      "sha256": "bd80d010815607ab0889be33a048adbe7defdab22420967aafc128791bbb40bd"
+    },
+    {
+      "path": "research/test_sector_remaining.py",
+      "sha256": "4ec483f979ebfb51e0b60988b6de920b2babd0c4b2ed5dac8b53152a0aa8a820"
+    },
+    {
+      "path": "research/publish_remaining_review_ack.py",
+      "sha256": "f1ca48574ebb1a800eff55ef1af2fbae902db8e74d7825be22991183b90909f0"
+    }
+  ],
+  "actual_external_binding_probe": {
+    "command": "python -B -X utf8 -c <read protocol_candidate; gate.validated_external_draft; print metadata only>",
+    "result": {
+      "chunk_id": "09482b",
+      "wall_time_seconds": 3.5571028,
+      "exit_code": 0,
+      "original_token_count": 63,
+      "output": "{\"status\": \"PASS\", \"external_D0_old_validator_and_ACK_verified\": true, \"saved_F0_construction_exact\": true, \"draft_roles\": [\"response\", \"supervisor_result\", \"transport_result\", \"worker_spec\", \"worker_summary\"], \"model_calls\": 0, \"service_calls\": 0}\r\n"
+    },
+    "protocol_candidate_ref": {
+      "path": "research/remaining_20261026/protocol_candidate.json",
+      "sha256": "d592ed8e67bb96e4519d2f51d5759eded218ba45c1c580518fb385addb186646"
+    },
+    "scope": "Read-only original completion D0 spec, raw-byte identity, worker/supervisor/transport, full audit ACK and saved F0 construction; no semantic rescoring or data mutation."
+  },
+  "historical_frozen_verification": {
+    "count": 52,
+    "mismatches": [],
+    "freeze_ref": {
+      "path": "research/completion_20261026/freeze.json",
+      "sha256": "a9d6477dd7e776c5822c906654ee355f545f40c8a2fb43803d9ded7e7fe8334c"
+    }
+  },
+  "model_calls": 0,
+  "service_calls": 0,
+  "windows_power_state_calls": 0,
+  "limits": [
+    "Synthetic sequence transport/reviewer/finalizer are injected; no new inference is tested.",
+    "External-draft unit boundary delegates are mocked; separate actual offline provenance probe uses unchanged prior validators.",
+    "New full prospective gate cannot run until root finishes all reviews and freezes it."
+  ]
+}

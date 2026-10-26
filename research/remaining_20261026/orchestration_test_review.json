@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T02:47:14.922Z",
+  "review_kind": "offline_implementation_and_synthetic_tests",
+  "source_refs": [
+    {
+      "path": "research/sector_remaining_gate.py",
+      "sha256": "8b6cf29dfd103197ba8553da5265b5c121457f145205ff4ed0757102523fa54d"
+    },
+    {
+      "path": "research/sector_remaining_runtime.py",
+      "sha256": "6f54562c29a2d26c4061c9d1a902609ce504346ccb82631ff0b5ec84764a3233"
+    },
+    {
+      "path": "research/sector_remaining_awake.py",
+      "sha256": "2ef37fea357f69d78b267f3aa195c9ba7d9dde8bdecb931f59c49bab2a529307"
+    },
+    {
+      "path": "research/run_sector_remaining.py",
+      "sha256": "bd80d010815607ab0889be33a048adbe7defdab22420967aafc128791bbb40bd"
+    },
+    {
+      "path": "research/test_sector_remaining.py",
+      "sha256": "4ec483f979ebfb51e0b60988b6de920b2babd0c4b2ed5dac8b53152a0aa8a820"
+    },
+    {
+      "path": "research/publish_remaining_review_ack.py",
+      "sha256": "f1ca48574ebb1a800eff55ef1af2fbae902db8e74d7825be22991183b90909f0"
+    }
+  ],
+  "test_result_ref": {
+    "path": "research/remaining_20261026/implementation/orchestration_tests_run01.json",
+    "sha256": "67c2e9c8583cbe0f8978ead3bd55e2de35073fc666cf865c1c107e107bd829d0"
+  },
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "43 synthetic checks passed: exact five-stage order, forbidden repeated E D0, external draft substitution and float type changes, power thresholds, unknown/critical/saver telemetry, ACK missing/stale/malformed/cancel barriers, exclusive publisher and cleanup."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Actual prior D0 revalidated through unchanged completion spec/transport/ACK validators; saved F0 construction exactly reproduced. Historical 52 code refs match. Worker/render/token/generation/cleanup ASTs unchanged; only scope, external draft provenance, accounting and operational power behavior differ."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "Original E/L evidence timing, source-free C, same scientific runtime controls and five-condition exploratory denominator remain. Six historical attempts plus at most five unattempted requests; full audit completion is required without requiring successful semantic or arithmetic outcomes."
+    }
+  },
+  "design": {
+    "purpose": "pilot_completion_resume",
+    "stage_order": [
+      "ubs_june_2026__E__F0",
+      "ubs_june_2026__L__D0",
+      "ubs_june_2026__L__F0",
+      "common_market_only__C__D0",
+      "common_market_only__C__F0"
+    ],
+    "historical_generation_requests": 6,
+    "max_generation_requests": 5,
+    "campaign_max_generation_requests": 11,
+    "automatic_retries": 0,
+    "post_final_calls": 0,
+    "main_model_calls": 0,
+    "awake_expiry_seconds": 33300,
+    "review_timeout_seconds": 1800
+  },
+  "finding_resolutions": [
+    {
+      "finding": "Old completion prior-draft validator compares absolute artifact-reference dicts.",
+      "resolution": "Only its internal read-only probe normalizes the candidate relative refs to original absolute paths after verifying resolved path and exact SHA equivalence; new declaration/spec retain candidate refs."
+    },
+    {
+      "finding": "Root publisher initially allowed E D0 by generic case/stage membership.",
+      "resolution": "Publisher and ACK validator now require exact five-slot membership; actual tempfile publication test rejects E D0 and prevents replacing ACK."
+    },
+    {
+      "finding": "New aggregate finalizer requires explicit post_final_calls zero.",
+      "resolution": "Gate scope and coordinator declaration now bind exact integer zero; synthetic scope/execute tests passed."
+    }
+  ],
+  "model_calls": 0,
+  "service_calls": 0,
+  "raw_modified": false,
+  "frozen_code_modified": false,
+  "limitations": [
+    "Synthetic sequence transport/reviewer/finalizer are injected; no new inference is tested.",
+    "External-draft unit boundary delegates are mocked; separate actual offline provenance probe uses unchanged prior validators.",
+    "New full prospective gate cannot run until root finishes all reviews and freezes it."
+  ]
+}

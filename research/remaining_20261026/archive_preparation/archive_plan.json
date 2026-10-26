@@ -1,0 +1,67 @@
+{
+  "version": "sector_remaining_archive_plan_1",
+  "archive_stem": "remaining-evidence-20261026",
+  "output_directory": "research/artifacts/remaining-evidence-20261026",
+  "campaigns": [
+    {
+      "purpose": "pilot_completion_resume",
+      "run_directory": "data/local_sector_runtime/v494_remaining_20261026",
+      "reports_directory": "research/remaining_20261026/run_reports",
+      "service_receipt": "research/remaining_20261026/runtime/service_ready/service_receipt.json",
+      "shutdown_receipt": "research/remaining_20261026/runtime/service_ready/service_shutdown_receipt.json"
+    }
+  ],
+  "raw_campaign_parent": "data/local_sector_runtime",
+  "analysis_role": "primary_exploratory",
+  "new_main_state": {
+    "status": "excluded_not_run",
+    "reason": "The original five conditions constitute the amended primary exploratory analysis. Q3/July new-source main execution is excluded; the remaining segment only fills five never-attempted slots and preserves the completed external UBS E D0."
+  },
+  "previous_archives": [
+    {
+      "manifest_ref": {
+        "path": "research/artifacts/completion-evidence-20261026/completion-evidence-20261026.manifest.json",
+        "sha256": "2d5af9e39af65833c327c2e771ff72cfab2d6ccc82a8ce9b3af31f0e4d64bdcd"
+      },
+      "verification_ref": {
+        "path": "research/artifacts/completion-evidence-20261026/completion-evidence-20261026.verification.json",
+        "sha256": "bf26bbf89863774cbafc9a86a8e2d0251df76d60bcb68a550faf561928528c52"
+      },
+      "archive_ref": {
+        "path": "research/artifacts/completion-evidence-20261026/completion-evidence-20261026.zip",
+        "sha256": "e58da63d4a6d18fe2c1f5780ab1918c659f19b903e79e47eccdeedf72b48467d"
+      }
+    }
+  ],
+  "report_roots": [
+    "research/remaining_20261026"
+  ],
+  "extra_roots": [
+    "research/archive_sector_remaining.py",
+    "research/build_remaining_masked_review.py",
+    "research/finalize_sector_remaining.py",
+    "research/freeze_sector_remaining.py",
+    "research/publish_remaining_review_ack.py",
+    "research/run_sector_remaining.py",
+    "research/sector_remaining_awake.py",
+    "research/sector_remaining_gate.py",
+    "research/sector_remaining_runtime.py",
+    "research/test_archive_sector_remaining.py",
+    "research/test_build_remaining_masked_review.py",
+    "research/test_finalize_sector_remaining.py",
+    "research/test_sector_remaining.py",
+    "research/restore_research_artifacts.py"
+  ],
+  "execution_note": "New executable plan bound to the byte-verified completion archive A. The earlier remaining segment is terminal after four requests; its user-cancelled C F0 absence and late D0 review remain preserved. The separately declared last-final segment is outside this intermediate archive. Execute only after root confirms remaining report writers quiet; all subsequent receipts are written outside archived roots.",
+  "plan_preparation": {
+    "prepared_at_utc": "2026-10-26T07:10:52.506Z",
+    "source_template_ref": {
+      "path": "research/remaining_20261026/archive_preparation/archive_plan_template.json",
+      "sha256": "b5f0231e01d8d1fff08c5a907687544fe5cc4b865a67b9892f8e11caf0aa26ab"
+    },
+    "archive_A_member_verifier_completed": true,
+    "archive_A_verified_files": 153,
+    "archive_A_verified_restore_writes": 0,
+    "remaining_writer_quiet_confirmation_pending": true
+  }
+}

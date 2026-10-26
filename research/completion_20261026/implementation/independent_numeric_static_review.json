@@ -1,0 +1,113 @@
+{
+  "status": "PASS",
+  "review_kind": "independent_static_implementation_and_static_input_review",
+  "completed_at_utc": "2026-10-26T02:27:57.497Z",
+  "source_refs": [
+    {
+      "path": "research/completion_20261026/audit_stage_numerics.py",
+      "sha256": "10ee4d79fdcdebd1adbdf3bba2278464e044bad6b19248aa601b4ed60daaa8b9"
+    },
+    {
+      "path": "research/completion_20261026/test_audit_stage_numerics.py",
+      "sha256": "8fa9edf2a6f82661825a76853eb2c9922c000a5670e6c02a8256faa7b36963b7"
+    },
+    {
+      "path": "research/completion_20261026/independent_numeric_test_result_r3.json",
+      "sha256": "f374e5084feaabf91e49d81358c0707cc5a995d97cdec1c4fbf818db0d97fc4c"
+    },
+    {
+      "path": "research/completion_20261026/independent_numeric_static_common_market_r2.json",
+      "sha256": "1d02cfcb9e175fc574ca933d7d1a013fd18e998b655fef63a523a6c13f04234c"
+    },
+    {
+      "path": "research/completion_20261026/prepare_stage_semantic_audit.py",
+      "sha256": "3d9c36405ad7b86e212d99480976af154397096491a36b1e365ee8f355799a90"
+    },
+    {
+      "path": "data/sector_protocol/v494_design_20261025/prepared/preparation_manifest.json",
+      "sha256": "8023f8b11ec9b1d43bf1b5b08ac37ccbab4ac5ab7ad7de28a9e93d8e67a4ef29"
+    },
+    {
+      "path": "data/sector_protocol/v494_design_20261025/prepared/ubs_june_2026__L__D0_messages.json",
+      "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15"
+    },
+    {
+      "path": "data/sector_protocol/v494_design_20261025/prepared/ubs_june_2026__E__D0_messages.json",
+      "sha256": "a79a17fef00fc082860a4fde05c5ae41111dc2d4dc2bf96073f973bd5ae4ae27"
+    }
+  ],
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "Exact Fraction shares/floors/remainders and canonical sector tie ordering preserve10000 units. The identified valid derived-sum overflow of input-only parser policy is resolved by separate bounded2048 parsing for sidecar derived sums/expanded raw values; extreme9e512x11 test is present. Completed guard regeneration, own-D0 identity and current sidecar reference checks reject stale/wrong artifacts."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Code-keyed weights are explicitly aligned with sector_codes and fact-pointer array positions. Matrices use the same order. Covariance units are daily decimal-squared, ddof1, annualization252; full quadratic forms include both offdiagonal terms. Raw, proportionally normalized and quantized vectors are separately labeled; unavailable sidecar comparisons explicitly check availability only."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "Reports numerical reference facts for source-to-reason-to-allocation review. It does not grade prose, source entailment, macro interpretation or overall success, and does not treat historical statistics as expected returns. Missing daily paths prevent invented60day portfolio compound performance."
+    }
+  },
+  "resolved_finding": {
+    "id": "derived_sum_input_cap_collision",
+    "before": "Valid individual9e512 inputs yield a total above the512 input bound; the original compare_sidecar parser could falsely label an accepted sidecar mismatch.",
+    "after": "Input fraction bound512 unchanged; only derived sum and expanded serialized raw-weight sidecar fields allow bounded2048. Regression test covers11*9e512 and exact multiplier/row values.",
+    "status": "resolved_in_reviewed_bytes"
+  },
+  "static_input_checks": {
+    "source_only_model_outputs_read": 0,
+    "UBS_E_and_L_common_market_and_index_equal": true,
+    "sector_codes": [
+      "10",
+      "15",
+      "20",
+      "25",
+      "30",
+      "35",
+      "40",
+      "45",
+      "50",
+      "55",
+      "60"
+    ],
+    "matrix_shape": [
+      11,
+      11
+    ],
+    "return_observations": 60,
+    "lookback_return_dates": [
+      "2026-04-21",
+      "2026-07-16"
+    ],
+    "covariance_ddof": 1,
+    "annualization_trading_days": 252,
+    "no_risk_free_subtraction": true,
+    "independent_Node_float_check": {
+      "daily_volatility_vs_sqrt_cov_diag_max_abs_difference": 0,
+      "annualized_volatility_max_abs_difference": 5.551115123125783e-17,
+      "baseline_sqrt_252_bCovb": 0.13902338650295984,
+      "supplied_baseline_value": 0.13902338650295984
+    },
+    "limit": "Node check is floating arithmetic on visible serialized values, not recomputation from raw return observations."
+  },
+  "test_evidence": {
+    "performed_by_this_reviewer": false,
+    "receipt_ref": {
+      "path": "research/completion_20261026/independent_numeric_test_result_r3.json",
+      "sha256": "f374e5084feaabf91e49d81358c0707cc5a995d97cdec1c4fbf818db0d97fc4c"
+    },
+    "observed": "29 synthetic tests PASS; static-input CLI exit0 and58 scalar/11 diagonal/121 matrix reference checks. Completion guard is mocked in adapter fixtures; actual completed-stage integration remains future."
+  },
+  "limits": [
+    "No real model response, partial stream, service endpoint or model generation was accessed.",
+    "No60x11 daily return series is visible. Source means/covariance/compound return are compared as supplied rather than reconstructed from prices.",
+    "Square roots/correlations use60digit Decimal approximation to serialized inputs, not extra source precision.",
+    "Raw sums, normalizations and benchmark distinctions are descriptive diagnostics; no economic-significance threshold or independent-human reliability claim."
+  ],
+  "model_calls": 0,
+  "service_calls": 0,
+  "frozen_files_modified": false,
+  "actual_stage_bundle_reviewed": false
+}

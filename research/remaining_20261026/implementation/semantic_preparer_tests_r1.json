@@ -1,0 +1,14 @@
+{
+  "status": "FAIL",
+  "completed_at_utc": "2026-10-26T02:44:26.250Z",
+  "command": "python -B research/remaining_20261026/test_prepare_stage_semantic_audit.py",
+  "exit_code": 1,
+  "tests": 18,
+  "failures": 1,
+  "duration_seconds": 12.95,
+  "model_calls": 0,
+  "source_sha256": "c4049ff6ed474200c5c358cb3448e5353096606acee27e0033b88e5a2410d21b",
+  "test_sha256": "5965311b2ba3f77a74905c3c3b42b97282ef8fcbd068d6215e80e3560b54a614",
+  "failure": "Fixture changed semantic review without updating the ACK semantic reference; earlier exact-binding guard correctly rejected it before the intended review-axis assertion.",
+  "production_defect": false
+}

@@ -1,0 +1,42 @@
+{
+  "version": "sector_completion_coordinator_1",
+  "at_utc": "2026-10-26T02:36:26.482089+00:00",
+  "purpose": "pilot_completion",
+  "status": "stopped_semantic_review_pending",
+  "run_directory": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_completion_20261026",
+  "output_root": "C:\\Users\\Insun\\2026libera\\research\\completion_20261026\\run_reports",
+  "declaration_ref": {
+    "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_completion_20261026\\campaign_declaration.json",
+    "sha256": "10482e168e82c54a4484f73a736e99c53daa9330b11c40c561fa2ed3277cb787"
+  },
+  "summary_ref": {
+    "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_completion_20261026\\campaign_summary.json",
+    "sha256": "ac87bd037264bcc1c954985cc904648c0cc55cd59e9ac6f6d00352a1c06fb1f4"
+  },
+  "generation_requests_attempted": 1,
+  "errors": [
+    {
+      "type": "RuntimeError",
+      "message": "AC unavailable before stage; no new generation started"
+    }
+  ],
+  "awake_release": {
+    "coordinator_pid": 17564,
+    "owner_thread_id": 46880,
+    "clear_flags": 2147483648,
+    "permanent_power_settings_changed": false,
+    "status": "released",
+    "api_previous_state": 2147483651
+  },
+  "automatic_retries": 0,
+  "main_model_calls": 0,
+  "semantic_review": "pending_separate_AI_reading",
+  "historical_first_attempt_results_unchanged": true,
+  "service_cleanup": "pending_root_verified_idle_owned_shutdown",
+  "model_content_modified": false,
+  "review_axes": {
+    "errors": "Transport, instrument and raw-allocation diagnostics retained after every stage.",
+    "consistency": "New namespace, bound same-run D0/F0, exact frozen controls and explicit historical attempt counts.",
+    "paper_topic": "E/L evidence timing and source-free C remain unchanged; numeric normalization is a sidecar and cannot establish semantic success."
+  }
+}

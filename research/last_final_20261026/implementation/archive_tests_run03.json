@@ -1,0 +1,41 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T06:21:20.033116+00:00",
+  "tests_run": 30,
+  "failures": 0,
+  "errors": 0,
+  "elapsed_seconds": 22.391,
+  "source_refs": [
+    {
+      "path": "research/archive_sector_last_final.py",
+      "sha256": "9069a29afa3a58b35b98d838412dcdd310501eb0585840b46f3674e6db595be5"
+    },
+    {
+      "path": "research/test_archive_sector_last_final.py",
+      "sha256": "9b6b5d7b704c7a8502ccf9afbde7aa68c6b882e13c6208720ade008c3088b41c"
+    }
+  ],
+  "earlier_run_refs": [
+    {
+      "path": "research/last_final_20261026/implementation/archive_tests_run01.json",
+      "sha256": "afef10821edfbca156cca47dc0dd79cace01c107df104b11612e280795c7af4e"
+    },
+    {
+      "path": "research/last_final_20261026/implementation/archive_tests_run02.json",
+      "sha256": "23fb1da2b4fa57c15dd6e324c063e19b77da04001d05c523467d9a8267fe169f"
+    }
+  ],
+  "scope": "Synthetic temporary archives; finalizer delegated boundary and OS activity mocked. Real terminal/ref/PID/quiet guards, recursive earlier ZIP verification, snapshot and rehash, ZIP bytes and restore verification execute. No actual evidence archive created.",
+  "coverage": [
+    "Sole C F0 terminal, one stage and zero/one attempts; finalizer cumulative10+n cross-check.",
+    "Old late-review provenance preserved byte-for-byte; unlisted earlier remaining or main campaigns cannot be hidden.",
+    "Owned service shutdown and same-thread awake release, process/listener idle before response finalizer and after snapshot.",
+    "Exact raw/code/report refs must exist in current or hash-verified earlier archives; recursive previous dependencies not nested as ZIP payload.",
+    "Exclusive immutable attempts; source mutation/newfile/restoredtimestamp/second-probe/race failure preserves unverified artifacts without success claim."
+  ],
+  "test_history": "26 inherited/adapted tests passed; four last-final-specific tests added. Run02 retained one misplaced test assertion NameError (production unchanged). Assertion restored; all30 now PASS.",
+  "model_calls": 0,
+  "service_calls": 0,
+  "actual_archive_created": false,
+  "frozen_files_modified": false
+}

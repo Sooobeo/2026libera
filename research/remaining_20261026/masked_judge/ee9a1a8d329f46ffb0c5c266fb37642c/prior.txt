@@ -1,0 +1,186 @@
+{
+  "source_id": "ubs_june_2026",
+  "sectors": [
+    {
+      "sector_code": "10",
+      "source_label": "Neutral",
+      "source_reading": "UBS CIO rates Energy as Neutral, citing no specific growth drivers in the May 2026 report.",
+      "source_evidence_ids": [
+        "ubs_june_2026:p21:sector:10"
+      ],
+      "source_stance": "adopt",
+      "weight": 0.03,
+      "decision_reason": "Adopting the Neutral rating aligns with the lack of compelling cyclical or structural upside in the 12-month horizon. Historical volatility (16.7% annualized) is moderate, but without a clear earnings expansion thesis, a baseline weight avoids over-exposure to commodity price volatility.","decision_evidence_ids": [
+        "M:annualized_volatility_diagnostic:10",
+        "ubs_june_2026:p21:sector:10"
+      ]
+    },
+    {
+      "sector_code": "15",
+      "source_label": "Neutral",
+      "source_reading": "UBS CIO rates Materials as Neutral, with no explicit growth catalysts mentioned.",
+      "source_evidence_ids": [
+        "ubs_june_2026:p21:sector:15"
+      ],
+      "source_stance": "adopt",
+      "weight": 0.02,
+      "decision_reason": "Materials faces headwinds from soft industrial demand and potential inventory corrections. The Neutral rating reflects the balance between cyclical recovery hopes and near-term stagnation. Low historical returns (-2.2% lookback) support a minimal allocation.","decision_evidence_ids": [
+        "M:lookback_compound_return:15",
+        "ubs_june_2026:p21:sector:15"
+      ]
+    },
+    {
+      "sector_code": "20",
+      "source_label": "Attractive",
+      "source_reading": "UBS CIO rates Industrials as Attractive, citing aerospace growth and transportation cyclical potential.",
+      "source_evidence_ids": [
+        "ubs_june_2026:p21:sector:20"
+      ],
+      "source_stance": "adopt",
+      "weight": 0.09,
+      "decision_reason": "The Attractive rating is justified by the specific mention of aerospace and transportation tailwinds. Industrials have shown strong historical performance (15.0% lookback) and moderate volatility (12.4%), suggesting a favorable risk-adjusted profile for the 12-month horizon.","decision_evidence_ids": [
+        "M:lookback_compound_return:20",
+        "M:annualized_volatility_diagnostic:20",
+        "ubs_june_2026:p21:sector:20"
+      ]
+    },
+    {
+      "sector_code": "25",
+      "source_label": "Attractive",
+      "source_reading": "UBS CIO rates Consumer Discretionary as Attractive, driven by AI adoption and fiscal support for spending.",
+      "source_evidence_ids": [
+        "ubs_june_2026:p21:sector:25"
+      ],
+      "source_stance": "adopt",
+      "weight": 0.09,
+      "decision_reason": "The Attractive rating is supported by the dual thesis of AI-driven demand and fiscal stimulus. While historical returns are mixed (-1.9% lookback), the forward-looking rationale provides a basis for overweighting relative to the neutral sectors.","decision_evidence_ids": [
+        "ubs_june_2026:p21:sector:25"
+      ]
+    },
+    {
+      "sector_code": "30",
+      "source_label": "Neutral",
+      "source_reading": "UBS CIO rates Consumer Staples as Neutral, with no specific growth drivers identified.",
+      "source_evidence_ids": [
+        "ubs_june_2026:p21:sector:30"
+      ],
+      "source_stance": "adopt",
+      "weight": 0.05,
+      "decision_reason": "Staples offer stability but limited upside in a growth-focused 12-month horizon. The Neutral rating reflects the trade-off between defensive characteristics and the absence of compelling inflation-beating growth narratives.","decision_evidence_ids": [
+        "ubs_june_2026:p21:sector:30"
+      ]
+    },
+    {
+      "sector_code": "35",
+      "source_label": "Attractive",
+      "source_reading": "UBS CIO rates Health Care as Attractive, emphasizing resilience if economic growth disappoints.",
+      "source_evidence_ids": [
+        "ubs_june_2026:p21:sector:35"
+      ],
+      "source_stance": "adopt",
+      "weight": 0.09,
+      "decision_reason": "The Attractive rating is grounded in the sector's defensive nature against potential economic slowdowns. With strong historical returns (10.2% lookback) and low volatility (11.6%), Health Care offers a balanced risk-return profile.","decision_evidence_ids": [
+        "M:lookback_compound_return:35",
+        "M:annualized_volatility_diagnostic:35",
+        "ubs_june_2026:p21:sector:35"
+      ]
+    },
+    {
+      "sector_code": "40",
+      "source_label": "Attractive",
+      "source_reading": "UBS CIO rates Financials as Attractive, citing regulatory easing and capital markets activity.",
+      "source_evidence_ids": [
+        "ubs_june_2026:p21:sector:40"
+      ],
+      "source_stance": "adopt",
+      "weight": 0.12,
+      "decision_reason": "The Attractive rating is supported by the macro environment of rate cuts (FOMC target 3.5-3.75%) boosting net interest margins. Financials have historically outperformed (8.2% lookback) and benefit from the easing cycle.","decision_evidence_ids": [
+        "MACRO_FED_TARGET_20260617",
+        "M:lookback_compound_return:40",
+        "ubs_june_2026:p21:sector:40"
+      ]
+    },
+    {
+      "sector_code": "45",
+      "source_label": "Neutral",
+      "source_reading": "UBS CIO rates Information Technology as Neutral, with no specific growth drivers highlighted.",
+      "source_evidence_ids": [
+        "ubs_june_2026:p21:sector:45"
+      ],
+      "source_stance": "qualify",
+      "weight": 0.38,
+      "decision_reason": "Despite the Neutral rating, IT receives the highest weight due to its historical dominance (14.99% lookback) and correlation with the broader market. The sector's high volatility (21.2%) is offset by its proven ability to drive portfolio returns. The Neutral rating is qualified by the sector's structural importance in the US economy.","decision_evidence_ids": [
+        "M:lookback_compound_return:45",
+        "M:annualized_volatility_diagnostic:45",
+        "ubs_june_2026:p21:sector:45"
+      ]
+    },
+    {
+      "sector_code": "50",
+      "source_label": "Neutral",
+      "source_reading": "UBS CIO rates Communication Services as Neutral, with no specific growth drivers identified.",
+      "source_evidence_ids": [
+        "ubs_june_2026:p21:sector:50"
+      ],
+      "source_stance": "adopt",
+      "weight": 0.04,
+      "decision_reason": "Communication Services faces competition from IT and faces regulatory uncertainty. The Neutral rating reflects the lack of a clear alpha generator. Low historical returns (0.02% lookback) justify a minimal allocation.","decision_evidence_ids": [
+        "M:lookback_compound_return:50",
+        "ubs_june_2026:p21:sector:50"
+      ]
+    },
+    {
+      "sector_code": "55",
+      "source_label": "Attractive",
+      "source_reading": "UBS CIO rates Utilities as Attractive, citing defensive resilience and AI-related exposure.",
+      "source_evidence_ids": [
+        "ubs_june_2026:p21:sector:55"
+      ],
+      "source_stance": "adopt",
+      "weight": 0.02,
+      "decision_reason": "The Attractive rating is tempered by the sector's low historical returns (-4.9% lookback) and low volatility (9.7%). While defensive, the lack of significant earnings growth potential limits the weight to a small defensive position.","decision_evidence_ids": [
+        "M:lookback_compound_return:55",
+        "M:annualized_volatility_diagnostic:55",
+        "ubs_june_2026:p21:sector:55"
+      ]
+    },
+    {
+      "sector_code": "60",
+      "source_label": "Neutral",
+      "source_reading": "UBS CIO rates Real Estate as Neutral, with no specific growth drivers identified.",
+      "source_evidence_ids": [
+        "ubs_june_2026:p21:sector:60"
+      ],
+      "source_stance": "adopt",
+      "weight": 0.02,
+      "decision_reason": "Real Estate faces headwinds from interest rate sensitivity and potential vacancy risks. The Neutral rating reflects the sector's struggle to find a clear growth path in the current rate environment. Low historical returns (2.7% lookback) support a minimal allocation.","decision_evidence_ids": [
+        "M:lookback_compound_return:60",
+        "ubs_june_2026:p21:sector:60"
+      ]
+    }
+  ],
+  "alternatives": "A higher weight on Financials could be justified if the Fed maintains a prolonged easing cycle, but the current data suggests a balanced approach. Alternatively, increasing IT weight further would increase portfolio volatility significantly.",
+  "risk_discussion": "The allocation prioritizes sectors with strong historical performance (IT, Industrials, Financials) while maintaining exposure to defensive sectors (Health Care, Utilities) for downside protection. The portfolio is exposed to equity market risk, with no guarantee of returns. Sector concentration in IT (38%) introduces idiosyncratic risk, while the overall volatility is managed through diversification across 11 sectors.",
+  "unresolved": [
+    "Future inflation data could alter the attractiveness of Financials and Consumer Staples.",
+    "Geopolitical events could impact Energy and Materials more than anticipated.",
+    "The 12-month horizon is short relative to the historical lookback period, making historical performance a less reliable predictor."
+  ],
+  "submitted_constraints": [],
+  "context_assessment": {
+    "market_and_mandate_reading": "The task is a hypothetical new-money allocation for a 12-month US equity sleeve, using a July 2026 decision date and a May 2026 UBS report as the primary institutional evidence. The macro context shows a soft landing scenario with CPI at 3.5% YoY and unemployment at 4.2%, while the Fed targets 3.5-3.75%. The S&P 500 sector benchmark serves only as a comparison anchor.",
+    "allocation_implication": "The allocation reflects a growth-biased approach, overweighting sectors with positive institutional ratings (Industrials, Consumer Discretionary, Health Care, Financials, IT, Utilities) and underweighting those with neutral ratings and poor historical performance (Materials, Consumer Staples, Communication Services, Real Estate). Energy is weighted neutrally due to lack of specific drivers.",
+    "evidence_ids": [
+      "CTX:horizon",
+      "CTX:objective",
+      "MACRO_FED_TARGET_20260617",
+      "MACRO_CPI_HEADLINE_YOY_202606",
+      "MACRO_UNEMPLOYMENT_202606",
+      "ubs_june_2026:p21:scope",
+      "ubs_june_2026:p27:scale",
+      "M:lookback_compound_return:45",
+      "M:annualized_volatility_diagnostic:45"
+    ],
+    "limitations": "The UBS report is dated May 2026, while the decision is made in July 2026. This creates a horizon mismatch where the report's outlook may not capture events occurring between May and July. Historical return data is limited to a 3-month lookback (April-July 2026), which may not be representative of longer-term trends. The allocation assumes no client-specific constraints or liquidity requirements."
+  }
+}

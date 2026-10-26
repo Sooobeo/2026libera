@@ -1,0 +1,78 @@
+{
+  "version": "remaining_stage_root_review_1",
+  "review_status": "completed",
+  "completed_at_utc": "2026-10-26T03:30:16.224Z",
+  "case_id": "ubs_june_2026__E",
+  "stage": "F0",
+  "transport_ref": {
+    "path": "data/local_sector_runtime/v494_remaining_20261026/ubs_june_2026__E__F0/transport_result.json",
+    "sha256": "8f7e4f0304d4fe6ce314bf9186885c37ddfc111dbbac66a492b88f78b5733cd0"
+  },
+  "source_refs": [
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__E__F0_bundle.json",
+      "sha256": "bbedc1083d3c87ca1e2af234d3b82393981f692c51b9f4a7175896bfd5bb8ee4"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__E__F0_review.json",
+      "sha256": "0b5edea1857617f1da9a6c29f15e503b53458ba63bae795e86e7bf13239b70f0"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__E__F0_review_validation.json",
+      "sha256": "a99fa46c63d04374654548a7b03b5fd658f84556880179c4fd539fda26fa1578"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__E__F0_numeric_facts.json",
+      "sha256": "be9ba5283783883ea72eeddb5e0a288ee3ffb21efdc0d13d1c618dc47f45ef32"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__E__F0_numeric_review.json",
+      "sha256": "33fc714bc01ddbbd5f755f529c7f1817b46be909934789770bc653fef11d5d52"
+    }
+  ],
+  "checks": {
+    "full_current_raw_text_read": true,
+    "all_eleven_rows_and_all_top_level_fields_read": true,
+    "exact_source_packet_and_feedback_read": true,
+    "independent_numeric_review_read": true,
+    "semantic_findings_and_all_sector_reviews_read": true,
+    "bundle_refs_rehashed": 95,
+    "bundle_reference_mismatches": 0,
+    "mechanical_quote_and_reference_checks": 399,
+    "mechanical_failures": 0,
+    "source_labels_match": 11,
+    "raw_and_derived_own_D0_changes": 0,
+    "all_non_reason_sector_fields_unchanged": true,
+    "all_top_level_fields_unchanged": true,
+    "raw_sum": "0.95",
+    "derived_units_total": 10000
+  },
+  "findings": [
+    "Eight erroneous metric literals persist; correct source labels do not certify correct numerical explanation.",
+    "Six explicit top-level raw over/underweight claims conflict with normalized benchmark; reported benchmark precision is separately disclosed.",
+    "Raw .95 budget failure persists despite explicit feedback; no inferred internal mechanism.",
+    "May publication versus June issue is consistent; the twelve-month-versus-three-month comparison is reversed.",
+    "External 20/19 rescaling and integer rounding create100% without modifying the model output; raw directional claims are assessed on raw weights."
+  ],
+  "review_axes": {
+    "errors": {
+      "reviewed": true,
+      "reason": "Instrument binding, exact arithmetic, whole raw text, all semantic sector/top findings and numeric audit checked; substantive model errors retained."
+    },
+    "consistency": {
+      "reviewed": true,
+      "reason": "Current response, exact external own D0, feedback, visible evidence and both math sidecars agree with their bound records."
+    },
+    "paper_topic": {
+      "reviewed": true,
+      "reason": "Institution evidence→stated reason→actual sector weights and own revision remain the comparison; no causal or performance claim."
+    }
+  },
+  "stage_progression_appropriate": true,
+  "semantic_success_required": false,
+  "model_calls": 0,
+  "service_calls": 0,
+  "raw_artifacts_modified": false,
+  "frozen_files_modified": false,
+  "limits": "Known-condition AI review.399mechanical checks bind evidence locations and counts, not semantic truth certification."
+}

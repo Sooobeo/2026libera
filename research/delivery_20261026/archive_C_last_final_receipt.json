@@ -1,0 +1,76 @@
+{
+  "status": "archive_C_created_and_independently_verified",
+  "completed_at_utc": "2026-10-26T07:28:20.840Z",
+  "root_writer_quiet_confirmation": {
+    "root_closeout_ref": {
+      "path": "research/last_final_20261026/root_closeout_review.json",
+      "sha256": "86620ef98e34a0455a73cc08ec1aa8268a84a1b6e435c4787ed67f9a3dce1cf3"
+    },
+    "authorization": "Root explicitly authorized C archive after all last_final/completion/remaining writers were quiet; root committed to no further writes inside those trees."
+  },
+  "plan_ref": {
+    "path": "research/last_final_20261026/archive_preparation/archive_plan.json",
+    "sha256": "639c04388745ee521df1200cf1917555afa73bb4103f793bb2e09debc6165185"
+  },
+  "archive_ref": {
+    "path": "research/artifacts/last-final-evidence-20261026/last-final-evidence-20261026.zip",
+    "sha256": "1ac0edfb59ee1b9c6a8a4620c9459982f0cc064fa5f7d83dcea3de88b357f8cd"
+  },
+  "manifest_ref": {
+    "path": "research/artifacts/last-final-evidence-20261026/last-final-evidence-20261026.manifest.json",
+    "sha256": "baa04a2447b57e318223204ab363220366c626888be702f0dae878c8378d53e3"
+  },
+  "verification_ref": {
+    "path": "research/artifacts/last-final-evidence-20261026/last-final-evidence-20261026.verification.json",
+    "sha256": "f1bd37fd949fd5bbad28624310d63c937e63593175418c9b20facff733d8676b"
+  },
+  "archive_command": {
+    "command": "python -B -X utf8 research/archive_sector_last_final.py --plan research/last_final_20261026/archive_preparation/archive_plan.json --execute",
+    "exit_code": 0,
+    "result": {
+      "status": "byte_verified_quiet_terminal_archive",
+      "verified_at_utc": "2026-10-26T07:27:33.473586+00:00",
+      "verified_files": 194,
+      "restored_files": 0,
+      "archive_sha256": "1ac0edfb59ee1b9c6a8a4620c9459982f0cc064fa5f7d83dcea3de88b357f8cd",
+      "archive_bytes": 10233757,
+      "manifest": "research/artifacts/last-final-evidence-20261026/last-final-evidence-20261026.manifest.json",
+      "manifest_sha256": "baa04a2447b57e318223204ab363220366c626888be702f0dae878c8378d53e3",
+      "restore_performed": false,
+      "source_files_deleted": false,
+      "narrow_duplicate_ignore_eligible_only_for_exact_verified_members": true
+    }
+  },
+  "verifier_command": {
+    "command": "python -B -X utf8 research/restore_research_artifacts.py research/artifacts/last-final-evidence-20261026/last-final-evidence-20261026.manifest.json",
+    "exit_code": 0,
+    "result": {
+      "verified_files": 194,
+      "restored_files": 0,
+      "archive_sha256": "1ac0edfb59ee1b9c6a8a4620c9459982f0cc064fa5f7d83dcea3de88b357f8cd"
+    }
+  },
+  "previous_dependency_count": 4,
+  "campaign_accounting": [
+    {
+      "purpose": "pilot_last_final",
+      "case_order": [
+        "common_market_only__C"
+      ],
+      "segment_planned_final_allocations": 1,
+      "segment_planned_stage_slots": 1,
+      "generation_requests_attempted": 1,
+      "all_generation_requests_including_interrupted_attempt": 11,
+      "original_planned_final_allocations": 5,
+      "logical_stage_slots": 10,
+      "finalized_finals": 5
+    }
+  ],
+  "workspace_restore_writes": 0,
+  "source_files_modified": false,
+  "archived_roots_modified_after_snapshot": false,
+  "stage_or_commit_actions": 0,
+  "secret_scan_actions": 0,
+  "model_calls": 0,
+  "service_calls": 0
+}

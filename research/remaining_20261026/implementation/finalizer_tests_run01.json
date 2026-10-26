@@ -1,0 +1,22 @@
+{
+  "status": "FAILED_TEST_FIXTURE",
+  "completed_at_utc": "2026-10-26T02:45:05.329Z",
+  "command": "python -m unittest discover -s research -p test_finalize_sector_remaining.py -v",
+  "tests_run": 21,
+  "failures": 0,
+  "errors": 10,
+  "unittest_seconds": 28.362,
+  "exit_code": 1,
+  "source_ref": {
+    "path": "research/finalize_sector_remaining.py",
+    "sha256": "8fa60d795bc5ea75226a97761a406468f824d004b18fe7ff3ba897ceda54fe12"
+  },
+  "test_source_at_execution": {
+    "path": "research/test_finalize_sector_remaining.py",
+    "sha256": "72bd4d073444d29161ace6d3f26c5157ad45966ccab0d00a55e300178e14d37a"
+  },
+  "finding": "Ten cases stopped in the new synthetic fixture before production assertions: inherited read_json expects pathlib.Path but three new fixture call sites supplied str paths. Correct only the new test fixture and rerun the full suite.",
+  "model_calls": 0,
+  "service_calls": 0,
+  "actual_remaining_outputs_read": 0
+}

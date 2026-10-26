@@ -1,0 +1,199 @@
+{
+  "purpose": "pilot_completion_resume",
+  "case_order": [
+    "ubs_june_2026__E",
+    "ubs_june_2026__L",
+    "common_market_only__C"
+  ],
+  "stage_order": [
+    "ubs_june_2026__E__F0",
+    "ubs_june_2026__L__D0",
+    "ubs_june_2026__L__F0",
+    "common_market_only__C__D0",
+    "common_market_only__C__F0"
+  ],
+  "power_policy": {
+    "version": "battery_aware_stage_boundary_1",
+    "stage_start_minimum_battery_percent": 70,
+    "in_stage_stop_at_or_below_battery_percent": 20,
+    "allow_ac_online_without_battery": true,
+    "allow_sufficient_battery_without_ac": true,
+    "unknown_ac_rejected": true,
+    "on_battery_unknown_or_critical_or_saver_rejected": true,
+    "critical_or_saver_rejected_on_ac": true,
+    "unknown_battery_rejected_except_ac_no_battery": true,
+    "poll_interval_seconds": 60,
+    "permanent_power_settings_changed": false
+  },
+  "max_generation_requests": 5,
+  "historical_generation_requests": 6,
+  "campaign_max_generation_requests": 11,
+  "automatic_retries": 0,
+  "main_model_calls": 0,
+  "post_final_calls": 0,
+  "main_allowed": false,
+  "old_outputs_observed": true,
+  "explicit_retry_slots": [],
+  "historical_explicit_retry_slots": [
+    "fidelity_q2_2026__L__D0"
+  ],
+  "analysis_role": "primary_exploratory",
+  "excluded_new_main_execution": true,
+  "historical_first_attempt_results_unchanged": true,
+  "run_directory": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026",
+  "output_root": "C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\run_reports",
+  "review_refs": [
+    {
+      "path": "research/remaining_20261026/implementation_method_review.json",
+      "sha256": "6240d3563eea9ad233944954127bc5bd0ce5ac4e51086733648f004b14f85d4e"
+    },
+    {
+      "path": "research/remaining_20261026/orchestration_test_review.json",
+      "sha256": "e1bbc934379d25e15d5611c859b8acb0e42f37e1381fc1e825d274164b093704"
+    },
+    {
+      "path": "research/remaining_20261026/remaining_finalizer_review.json",
+      "sha256": "ec7ccd751ce9ffcd6aa586502001ea7f9a1144aca97c54fe069bb70187baa509"
+    },
+    {
+      "path": "research/remaining_20261026/semantic_preparer_review.json",
+      "sha256": "e5f627023efc919ee0befc85eec19eadab85004d4817ed3bda1d8245440395a1"
+    },
+    {
+      "path": "research/remaining_20261026/root_prelaunch_review.json",
+      "sha256": "25aada815e3ef65c5ff016484e4b6cd5a7761deb2e39de3f29c9094aa101c7f3"
+    }
+  ],
+  "historical_gate_ref": {
+    "path": "research/recovery_20261025/review_gate.json",
+    "sha256": "04745b0b358d54234b888a3acdb281a10b35d8b570264c4027007e530cc5f552"
+  },
+  "historical_terminal_ref": {
+    "path": "research/recovery_20261025/new_pilot/terminal_receipt.json",
+    "sha256": "bc872eb8326233e274629d8ea16f5d841e098b6e45aa26f31a9588d760289d15"
+  },
+  "historical_summary_ref": {
+    "path": "data/local_sector_runtime/v494_pilot_20261025/pilot_summary.json",
+    "sha256": "ad5b11da9677d3cb091738d0b0427240842f2ca541bb0f7e72f3747400b599a4"
+  },
+  "prior_continuation_gate_ref": {
+    "path": "research/continuation_20261026/review_gate.json",
+    "sha256": "e7e2c88b26d1e3181c8c7811b49a8a318b1c0a2f71817ec610a225813032d6f8"
+  },
+  "prior_continuation_terminal_ref": {
+    "path": "research/continuation_20261026/run_reports/terminal_receipt.json",
+    "sha256": "77bd98f4172e78eb2890d21b41bf128012ad02cd36d474ca2d5e77b5ae415f47"
+  },
+  "prior_continuation_summary_ref": {
+    "path": "data/local_sector_runtime/v494_continuation_20261026/campaign_summary.json",
+    "sha256": "88f6c466914ad1eea593e99d2582ca64df06d3f6c2ddea7075100d1e51edac3d"
+  },
+  "prior_continuation_declaration_ref": {
+    "path": "data/local_sector_runtime/v494_continuation_20261026/campaign_declaration.json",
+    "sha256": "a7e260774dc52295f53bc950c594f825145838660eb115213baec87e835603ea"
+  },
+  "prepared_manifest_ref": {
+    "path": "data/sector_protocol/v494_design_20261025/prepared/preparation_manifest.json",
+    "sha256": "8023f8b11ec9b1d43bf1b5b08ac37ccbab4ac5ab7ad7de28a9e93d8e67a4ef29"
+  },
+  "completion_finalizer_review_ref": {
+    "path": "research/completion_20261026/completion_finalizer_review.json",
+    "sha256": "fec44eccb3a9edfb68b717fcaa2750f714b6f9b175a635b4b4ea111112df3f60"
+  },
+  "prior_completion_gate_ref": {
+    "path": "research/completion_20261026/review_gate.json",
+    "sha256": "4a50c95def3e6278e846e475f07fb6a1a7fd8a00b4f1dac723f509dafa71f851"
+  },
+  "prior_completion_terminal_ref": {
+    "path": "research/completion_20261026/run_reports/terminal_receipt.json",
+    "sha256": "1bd0e740b9d30be46f3186d1fdc7d6fd5fbb8129ced078f477da82c89bcc838a"
+  },
+  "prior_completion_summary_ref": {
+    "path": "data/local_sector_runtime/v494_completion_20261026/campaign_summary.json",
+    "sha256": "ac87bd037264bcc1c954985cc904648c0cc55cd59e9ac6f6d00352a1c06fb1f4"
+  },
+  "prior_completion_declaration_ref": {
+    "path": "data/local_sector_runtime/v494_completion_20261026/campaign_declaration.json",
+    "sha256": "10482e168e82c54a4484f73a736e99c53daa9330b11c40c561fa2ed3277cb787"
+  },
+  "runtime_ref": {
+    "path": "research/remaining_20261026/runtime_candidate.json",
+    "sha256": "addc3f9cfcaebce2f2829f2b015e5b90f51b0bdff5f7d4be657864f1f87abcc6"
+  },
+  "protocol_ref": {
+    "path": "research/remaining_20261026/protocol_and_review.json",
+    "sha256": "e442d3f37083f17893c54e3d1af3eaa4d5e3394ae977d8843f3044357d1d02c7"
+  },
+  "finalizer_acceptance_ref": {
+    "path": "research/recovery_20261025/allocation_finalization_acceptance_r2.json",
+    "sha256": "0232232baeb7e251aa0dee42bc9a1969f66615a1df4d303bccb67dd938b47d9e"
+  },
+  "remaining_finalizer_review_ref": {
+    "path": "research/remaining_20261026/remaining_finalizer_review.json",
+    "sha256": "ec7ccd751ce9ffcd6aa586502001ea7f9a1144aca97c54fe069bb70187baa509"
+  },
+  "external_draft_refs": {
+    "response": {
+      "path": "data/local_sector_runtime/v494_completion_20261026/ubs_june_2026__E__D0/http_0001_generation/response.json",
+      "sha256": "03950907ba9784ede1c7f12e6511900a3d1548005a053e190a1a759d60348a41"
+    },
+    "worker_spec": {
+      "path": "data/local_sector_runtime/v494_completion_20261026/ubs_june_2026__E__D0/worker_spec.json",
+      "sha256": "c8e07ebb792ff2753ac873fcd1cc9343ca348836c08e4538fd8febc6a8d1bbb1"
+    },
+    "worker_summary": {
+      "path": "data/local_sector_runtime/v494_completion_20261026/ubs_june_2026__E__D0/worker_summary.json",
+      "sha256": "7cbf27c100bee046201922be276c664284209eae3ca0507498d6b3412f7bc36f"
+    },
+    "supervisor_result": {
+      "path": "data/local_sector_runtime/v494_completion_20261026/ubs_june_2026__E__D0/supervisor_result.json",
+      "sha256": "73e2b2b14e94053132367afb3d26a8511007b2c6a2d3cabd5595bab5cb9b907f"
+    },
+    "transport_result": {
+      "path": "data/local_sector_runtime/v494_completion_20261026/ubs_june_2026__E__D0/transport_result.json",
+      "sha256": "bb642d0f876591db10c8b214752b7be5c493a0b2dffad1bcbf504e31d725148d"
+    }
+  },
+  "external_draft_evidence_refs": {
+    "stage_review": {
+      "path": "data/local_sector_runtime/v494_completion_20261026/ubs_june_2026__E__D0/stage_review.json",
+      "sha256": "3dab8104b86e5125ca21bbe3aa6f563a0ed3babc7be896af7b0e4561fc5e7044"
+    },
+    "allocation_math": {
+      "path": "research/completion_20261026/run_reports/allocation_math/ubs_june_2026__E__D0.json",
+      "sha256": "f9f249f6f5f03ce94f0e64715b6b2463c350a5c72d53ec8eba63fea6f29e8492"
+    },
+    "semantic_review": {
+      "path": "research/completion_20261026/semantic/ubs_june_2026__E__D0_review.json",
+      "sha256": "55abb787b8966c59b71cc910a299a756d5b9c69db87e36711c77385ebaf4736d"
+    },
+    "external_review_ack": {
+      "path": "data/local_sector_runtime/v494_completion_20261026/ubs_june_2026__E__D0/external_review_ack.json",
+      "sha256": "258afbb054099de190f0fdf087758f0972c59f8dc85fdac6531ab23adab27131"
+    },
+    "terminal": {
+      "path": "research/completion_20261026/run_reports/terminal_receipt.json",
+      "sha256": "1bd0e740b9d30be46f3186d1fdc7d6fd5fbb8129ced078f477da82c89bcc838a"
+    },
+    "summary": {
+      "path": "data/local_sector_runtime/v494_completion_20261026/campaign_summary.json",
+      "sha256": "ac87bd037264bcc1c954985cc904648c0cc55cd59e9ac6f6d00352a1c06fb1f4"
+    },
+    "declaration": {
+      "path": "data/local_sector_runtime/v494_completion_20261026/campaign_declaration.json",
+      "sha256": "10482e168e82c54a4484f73a736e99c53daa9330b11c40c561fa2ed3277cb787"
+    },
+    "final_construction": {
+      "path": "data/local_sector_runtime/v494_completion_20261026/ubs_june_2026__E__final_construction.json",
+      "sha256": "dad307d5bfd865894f3a0d51823952c54c33cd432cd7be7402dfcdf348c420d0"
+    }
+  },
+  "receipt_version": "sector_remaining_gate_1",
+  "status": "approved_for_remaining_before_generation",
+  "review_mode": "AI_delegated_by_user",
+  "recorded_at_utc": "2026-10-26T02:51:35.225010+00:00",
+  "freeze_ref": {
+    "path": "research/remaining_20261026/freeze.json",
+    "sha256": "3023c41e8832259d226dae5015b8b9e50370725436e096054d400c4d69e19461"
+  }
+}

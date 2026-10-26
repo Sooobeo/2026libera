@@ -1,0 +1,379 @@
+{
+  "version": "pilot_completion_primary_exploratory_protocol_1",
+  "recorded_at_utc": "2026-10-26T02:03:44.058349+00:00",
+  "status": "approved_design_for_prospective_completion_freeze",
+  "purpose": "pilot_completion",
+  "case_order": [
+    "ubs_june_2026__E",
+    "ubs_june_2026__L",
+    "common_market_only__C"
+  ],
+  "max_generation_requests": 6,
+  "historical_generation_requests": 5,
+  "campaign_max_generation_requests": 11,
+  "automatic_retries": 0,
+  "post_final_calls": 0,
+  "main_model_calls": 0,
+  "main_allowed": false,
+  "old_outputs_observed": true,
+  "historical_first_attempt_results_unchanged": true,
+  "explicit_retry_slots": [],
+  "historical_explicit_retry_slots": [
+    "fidelity_q2_2026__L__D0"
+  ],
+  "analysis_role": "primary_exploratory",
+  "excluded_new_main_execution": true,
+  "raw_diagnostics_required": true,
+  "primary_final_allocation_endpoint": "F0_derived_integer_allocation",
+  "historical_gate_ref": {
+    "path": "research/recovery_20261025/review_gate.json",
+    "sha256": "04745b0b358d54234b888a3acdb281a10b35d8b570264c4027007e530cc5f552"
+  },
+  "historical_terminal_ref": {
+    "path": "research/recovery_20261025/new_pilot/terminal_receipt.json",
+    "sha256": "bc872eb8326233e274629d8ea16f5d841e098b6e45aa26f31a9588d760289d15"
+  },
+  "historical_summary_ref": {
+    "path": "data/local_sector_runtime/v494_pilot_20261025/pilot_summary.json",
+    "sha256": "ad5b11da9677d3cb091738d0b0427240842f2ca541bb0f7e72f3747400b599a4"
+  },
+  "prior_continuation_gate_ref": {
+    "path": "research/continuation_20261026/review_gate.json",
+    "sha256": "e7e2c88b26d1e3181c8c7811b49a8a318b1c0a2f71817ec610a225813032d6f8"
+  },
+  "prior_continuation_terminal_ref": {
+    "path": "research/continuation_20261026/run_reports/terminal_receipt.json",
+    "sha256": "77bd98f4172e78eb2890d21b41bf128012ad02cd36d474ca2d5e77b5ae415f47"
+  },
+  "prior_continuation_summary_ref": {
+    "path": "data/local_sector_runtime/v494_continuation_20261026/campaign_summary.json",
+    "sha256": "88f6c466914ad1eea593e99d2582ca64df06d3f6c2ddea7075100d1e51edac3d"
+  },
+  "prior_continuation_declaration_ref": {
+    "path": "data/local_sector_runtime/v494_continuation_20261026/campaign_declaration.json",
+    "sha256": "a7e260774dc52295f53bc950c594f825145838660eb115213baec87e835603ea"
+  },
+  "prepared_manifest_ref": {
+    "path": "data/sector_protocol/v494_design_20261025/prepared/preparation_manifest.json",
+    "sha256": "8023f8b11ec9b1d43bf1b5b08ac37ccbab4ac5ab7ad7de28a9e93d8e67a4ef29"
+  },
+  "exact_math_policy_ref": {
+    "path": "research/recovery_20261025/allocation_finalization_acceptance_r2.json",
+    "sha256": "0232232baeb7e251aa0dee42bc9a1969f66615a1df4d303bccb67dd938b47d9e"
+  },
+  "evaluation_protocol_ref": {
+    "path": "research/v492_evaluation_protocol_20261019_r2.json",
+    "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+  },
+  "prompt_contract_ref": {
+    "path": "data/sector_protocol/v494_design_20261025/prompt_contract.json",
+    "sha256": "7d75828866825af1f7051a528defc92c88f2beac3f42a66f5d5223c4fb714362"
+  },
+  "post_start_math_amendment_ref": {
+    "path": "research/recovery_20261025/allocation_finalization_amendment.json",
+    "sha256": "009f90b89a6185f1af9c63fd6be47d01f9662d959fd13b9938295f5943156031"
+  },
+  "original_freeze_ref": {
+    "path": "research/recovery_20261025/pilot_freeze.json",
+    "sha256": "8f8f95c4b90583e5bd97f2b80168c51aa9efec92a958b8235a9baecdfb7001cf"
+  },
+  "prior_continuation_freeze_ref": {
+    "path": "research/continuation_20261026/freeze.json",
+    "sha256": "4d57e48afd904b86513ec247cd9e68a2c43f52f82a8c1d84f6152f0cf0ec742f"
+  },
+  "prior_continuation_protocol_ref": {
+    "path": "research/continuation_20261026/protocol_and_review.json",
+    "sha256": "bdecefe6f459dbc0c1eafda8011148b0972dd38d0d38d6311ca1add151a542ed"
+  },
+  "fixed_math_implementation_ref": {
+    "path": "research/finalize_sector_allocation.py",
+    "sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3"
+  },
+  "fixed_campaign_finalizer_ref": {
+    "path": "research/finalize_sector_campaign.py",
+    "sha256": "5036ddc1d856adf196fd1d2818ffeb8b3d9b3c98e65be5b6910cef59a9173a8e"
+  },
+  "user_direction": {
+    "received_via": "Root delegation of new user instruction in current conversation; no invented verbatim message or receipt timestamp.",
+    "meaning": "Complete the three unattempted UBS June E/L and common-only C conditions, and use the current five conditions as the paper primary exploratory experiment. Do not execute a separate Fidelity Q3/UBS July main cohort.",
+    "current_user_text": "??? ??? ??? 3?? 4?? ? ?? ????? ? ???????? ? ?? ??\n??? ?? ?? ??? ???? ? ?? ????",
+    "interpretation": "Finish the remaining original pilot conditions and report the five-condition experiment as primary exploratory evidence. Preserve all prior attempts and do not execute the unused Q3/July cohort."
+  },
+  "chronology_and_disclosure": {
+    "not_prespecified_original_experiment": true,
+    "outputs_observed_before_this_candidate": true,
+    "prior_prompt_development": "v4.9.4 clarification followed inspection of v4.9.2 development outputs; original development evidence is preserved.",
+    "post_start_endpoint_change": "Exact 100% deterministic postprocessing was added during the running v4.9.4 pilot at user direction after observing raw budget errors. It is a separately recorded evaluator amendment, not an original prespecified model capability or prompt instruction.",
+    "analysis_role_change": "The decision to use the current five cells as the paper primary exploratory experiment was made after Fidelity E/L outputs and audits existed. The future three cells are declared before their requests; the entire five-cell analysis must not be called fully prospective or confirmatory.",
+    "new_main_candidate": "Previously prepared Q3/July main protocol, source and runtime candidates remain historical offline artifacts, unexecuted and outside this authorization."
+  },
+  "research_question": "Describe how institution evidence is represented in source readings, connected to stated reasons, and reflected in raw model and mechanically finalized sector allocations under early/late/no institution evidence timing.",
+  "immutable_history": {
+    "original": {
+      "run": "data/local_sector_runtime/v494_pilot_20261025",
+      "planned_cases": 5,
+      "planned_stage_slots": 10,
+      "original_request_ceiling": 10,
+      "actual_requests": 3,
+      "completed_stages": [
+        "fidelity_q2_2026__E__D0",
+        "fidelity_q2_2026__E__F0"
+      ],
+      "failed_attempt": "fidelity_q2_2026__L__D0",
+      "failed_status": "hard_deadline",
+      "other_stages": "not attempted; retain all original raw/status/archive artifacts"
+    },
+    "prior_continuation": {
+      "run": "data/local_sector_runtime/v494_continuation_20261026",
+      "planned_cases": 4,
+      "planned_stage_slots": 8,
+      "request_ceiling": 8,
+      "actual_requests": 2,
+      "completed_stages": [
+        "fidelity_q2_2026__L__D0",
+        "fidelity_q2_2026__L__F0"
+      ],
+      "terminal_status": "stopped",
+      "stop_reason": {
+        "type": "RuntimeError",
+        "message": "AC unavailable before stage; no new generation started"
+      },
+      "remaining_cases": "UBS June E/L and C have zero attempted stages; AC preflight stop was before any new request"
+    },
+    "preservation": "Do not mutate either old run, terminal/summary/gate/freeze, raw model text, review, derived sidecar, archive or original attempt ceiling. Old declarations and unfinished planned slots retain their historical meaning."
+  },
+  "new_segment": {
+    "planned_case_count": 3,
+    "planned_final_sector_rows": 33,
+    "stages": [
+      "D0",
+      "F0"
+    ],
+    "new_namespace": "Exclusive absent run and report paths bound in final protocol/freeze/gate before first request; no resume/in-place append of a stopped segment.",
+    "case_attempts": "All three new cells and their D0/F0 stages are first actual attempts. The prior Fidelity L infrastructure retry remains history only.",
+    "stages_per_case": "D0 followed by own exact newly completed D0 -> actual feedback -> F0 with full original history, source and schema. No old response substitution.",
+    "source_timing": {
+      "ubs_june_2026__E": "Assigned original UBS June packet in D0 and F0.",
+      "ubs_june_2026__L": "No institution information in D0; assigned same UBS June packet first appears in F0.",
+      "common_market_only__C": "No institution issuer, rating or packet in either stage."
+    },
+    "independent_calls": "Identical L/C D0 message bytes still receive separate actual calls and retain separate own histories; do not share/cache outputs."
+  },
+  "unchanged_instrument": {
+    "model": "qwen3.5:4b-q4_K_M",
+    "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+    "template_sha256": "b507b9c2f6ca642bffcd06665ea7c91f235fd32daeefdf875a0f938db05fb315",
+    "engine_version": "0.35.1",
+    "backend": "cpu",
+    "options": {
+      "temperature": 0,
+      "num_ctx": 65536,
+      "num_predict": 8192,
+      "num_thread": 8,
+      "num_batch": 512,
+      "repeat_penalty": 1,
+      "presence_penalty": 0,
+      "frequency_penalty": 0,
+      "seed": 3407,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0,
+      "num_gpu": 0
+    },
+    "think": false,
+    "truncate": false,
+    "shift": false,
+    "stream": true,
+    "keep_alive": 0,
+    "deadline_seconds": 4500,
+    "renderer_policy": "http_verbatim_json_outer_ascii_whitespace_only_v1",
+    "prompt_contract_sha256": "7d75828866825af1f7051a528defc92c88f2beac3f42a66f5d5223c4fb714362",
+    "evaluation_protocol_sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1",
+    "source_and_market_inputs": "The frozen pilot packets and common snapshot; no v495 main packet edits, prompt clarification, source amendment, weight target or reviewer feedback enters this continuation.",
+    "prepared_D0_refs": [
+      {
+        "case_id": "ubs_june_2026__E",
+        "path": "data/sector_protocol/v494_design_20261025/prepared/ubs_june_2026__E__D0_messages.json",
+        "sha256": "a79a17fef00fc082860a4fde05c5ae41111dc2d4dc2bf96073f973bd5ae4ae27",
+        "matches_actual": true
+      },
+      {
+        "case_id": "ubs_june_2026__L",
+        "path": "data/sector_protocol/v494_design_20261025/prepared/ubs_june_2026__L__D0_messages.json",
+        "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15",
+        "matches_actual": true
+      },
+      {
+        "case_id": "common_market_only__C",
+        "path": "data/sector_protocol/v494_design_20261025/prepared/common_market_only__C__D0_messages.json",
+        "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15",
+        "matches_actual": true
+      }
+    ],
+    "frozen_code_checks": [
+      {
+        "path": "research/sector_v494_runtime.py",
+        "sha256": "c9521000aa3a1497775c83fa83a1b9bac9f5443edbcb707f131d313f7cd8bed1",
+        "frozen_sha256": "c9521000aa3a1497775c83fa83a1b9bac9f5443edbcb707f131d313f7cd8bed1",
+        "matches_frozen": true
+      },
+      {
+        "path": "research/sector_v492_contract.py",
+        "sha256": "f77d1ddec9630a4c7edbf3928d298b7b05094345996ece1cf53d91fc40171a21",
+        "frozen_sha256": "f77d1ddec9630a4c7edbf3928d298b7b05094345996ece1cf53d91fc40171a21",
+        "matches_frozen": true
+      },
+      {
+        "path": "research/sector_v491_contract.py",
+        "sha256": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397",
+        "frozen_sha256": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397",
+        "matches_frozen": true
+      },
+      {
+        "path": "research/sector_engine.py",
+        "sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c",
+        "frozen_sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c",
+        "matches_frozen": true
+      },
+      {
+        "path": "research/sector_v48_transport.py",
+        "sha256": "db395eb3d54ebec93aa67556e1f2424aba1d591ba8b9fcfce7fbd3332db0379c",
+        "frozen_sha256": "db395eb3d54ebec93aa67556e1f2424aba1d591ba8b9fcfce7fbd3332db0379c",
+        "matches_frozen": true
+      },
+      {
+        "path": "research/sector_v48_main_awake.py",
+        "sha256": "185a9f6be9471ff7808730153227682f0f0eae25f72ee1474602106a950fa98a",
+        "frozen_sha256": "185a9f6be9471ff7808730153227682f0f0eae25f72ee1474602106a950fa98a",
+        "matches_frozen": true
+      },
+      {
+        "path": "research/review_sector_v494_stage.py",
+        "sha256": "81195353a74f00fde66e1915e068e9167966ccc3cb774b65ad929867bf44b3e6",
+        "frozen_sha256": "81195353a74f00fde66e1915e068e9167966ccc3cb774b65ad929867bf44b3e6",
+        "matches_frozen": true
+      }
+    ],
+    "allowed_new_code_scope": "New three-case orchestration, manifest/gate, immutable accounting and completion-result adapters only. Freeze exact hashes before new generation. Reuse unchanged worker, transport, contract, renderer/tokenizer, arithmetic and stage review. Do not edit old validators to impersonate the original five-case or prior four-case authority.",
+    "dynamic_F0_rule": "Full F0 requests cannot be precomputed using synthetic or old failed drafts. Build only from each exact saved own new D0 and frozen final template/source. Tokenize that actual full request under the original capacity rule; never trim or substitute."
+  },
+  "data_timing": {
+    "common_cutoff_exclusive": "2026-07-17",
+    "last_price_date": "2026-07-16",
+    "retrieval_and_development": "Existing October research artifacts; retrospective document-conditioned example, not point-in-time trading replay.",
+    "source_limitations": "Original pilot packets, researcher paraphrases, rating labels, IDs, dates and locators remain unchanged; source transcription or metadata issues remain disclosed. The two Q3/July candidate wording fixes are not imported into this cohort."
+  },
+  "request_and_failure_rules": {
+    "budget": "At most one generation request in each of six new slots; every saved generation request counts, including interruption or failed inference. Historical3 + prior2 + observed new <=6 = total <=11; do not declare eleven calls before they occur.",
+    "automatic_retries": 0,
+    "repair_turns": 0,
+    "post_final_calls": 0,
+    "extra_generation_preflight": 0,
+    "dependency": "F0 only from its own bound, normally completed, structurally eligible new D0 under unchanged runtime rules; malformed/missing D0 leaves dependent F0 absent with reason. Raw sum, citation or semantic errors alone are outcomes, not quality-based retry/repair/main-entry gates.",
+    "global_stop": "Existing integrity, transport cancellation, frozen hash mismatch, AC/awake or ownership rules halt as implemented. Record stopped/unattempted slots honestly. This candidate grants no automatic fourth segment.",
+    "normal_failure": "Preserve ordinary completed structure/arithmetic/source errors. Where frozen runtime allows, continue later independent cells after a non-system model failure. Never choose based on answer quality."
+  },
+  "endpoint_contract": {
+    "primary": "Eligible F0 derived integer allocations totaling10000 units (100.00%) using unchanged accepted exact arithmetic; retain missing/unfinalizable F0 as missing with explicit reason.",
+    "raw_companion": "Report original D0/F0 weight vectors, exact sums, bounds/schema errors, citation availability, factual/source interpretation and explanation consistency separately. Raw artifacts and original r2 analysis never change.",
+    "math": "Positive finite complete11 nonnegative vector -> proportional normalization with exact rational arithmetic -> largest-remainder10000 integer units and fixed GICS order tie break. Reject missing/nonfinite/negative/all-zero vectors. Disclose material rescaling versus displayed rounding.",
+    "semantic": "Assess claimed values and claimed changes against the raw submitted vector first; separately identify normalization/quantization changes to comparator direction, concentration and ties. Mechanical100% does not demonstrate model feedback use or semantic correctness.",
+    "precedence": "The original frozen phrase never normalized remains true of saved raw model artifacts. A distinct user-directed amended endpoint applies external math uniformly to eligible vectors; do not call it prespecified raw accuracy.",
+    "evaluation": "Original v4.9.2 r2 semantic dimensions and descriptive raw diagnostics remain; no composite success score."
+  },
+  "fixed_selection_and_accounting": {
+    "logical_case_order": [
+      "fidelity_q2_2026__E",
+      "fidelity_q2_2026__L",
+      "ubs_june_2026__E",
+      "ubs_june_2026__L",
+      "common_market_only__C"
+    ],
+    "selected_stage_provenance": {
+      "fidelity_q2_2026__E": "original v494 D0/F0 exactly once",
+      "fidelity_q2_2026__L": "prior continuation D0/F0 exactly once; preserve original failed D0 separately",
+      "ubs_june_2026__E": "new completion designated D0/F0 only",
+      "ubs_june_2026__L": "new completion designated D0/F0 only",
+      "common_market_only__C": "new completion designated D0/F0 only"
+    },
+    "planned_finals": 5,
+    "logical_stage_slots": 10,
+    "planned_final_rows": 55,
+    "institution_conditioned_final_rows": 44,
+    "shared_control_rows": 11,
+    "all_attempt_ledger": "Preserve original3, prior2, new0..6 separately. At full coverage eleven request attempts map to ten logical stage slots due the one historical Fidelity L D0 retry; they are not eleven independent observations.",
+    "missing": "Keep all planned five finals/55 rows in denominators. No absent final is substituted by draft, benchmark, normalized fabricated vector or preferred alternate attempt.",
+    "comparison": "Report eligible within-source E/L, between-source and each institutional condition against the one shared C descriptively; missing/invalid pair -> null plus reason. Report raw and derived eligibility distinctly and own D0/F0 changes with lineage."
+  },
+  "review_and_freeze_requirements": {
+    "before_generation": [
+      "Root final protocol approval in a separate file with status approved_design_for_prospective_completion_freeze; candidate itself does not authorize generation.",
+      "New runtime/gate/coordinator and completion finalizer implementation, meaningful offline tests and three-axis review are hash-bound before the six-call segment.",
+      "Frozen original/source/schema/settings refs match; prior terminal metadata and exact3+2 request accounting match; neither Fidelity cell can be regenerated.",
+      "AC/owned awake/isolated service/idle and exact pinned model-template-backend checks; no new model rehearsal calls.",
+      "New freeze/gate/declaration with purpose pilot_completion, main_allowed false, analysis_role primary_exploratory and excluded_new_main_execution true; exact paths and hashes.",
+      "Freeze the1800-second external-review acknowledgement barrier and its exact schema/validation code; test negative findings accepted, stale/missing acknowledgements stop without retry, and no reviewer text enters model feedback."
+    ],
+    "per_stage": "Save original deterministic stage review, then complete the external evidence-bound semantic audit acknowledgement barrier before any next request and before normal final completion. Review actual supplied evidence with original r2 rubric; retain adverse findings and unresolved scope. Never feed reviewer corrections or derived weights into model messages.",
+    "terminal_analysis": "Require durable terminal receipt and full planned summary before completion adapter reads model evidence; verify each actual new stage via unchanged finalize_stage, exact own D0 and all request counts. Preserve failed/partial statuses.",
+    "no_good_output_gate": "Freeze and later reporting readiness depend on authorization, immutable inputs, infrastructure integrity and honestly reviewed coverage. Do not require sum100 raw, correct citations, semantic PASS, favorable hypothesis direction or complete derived finals to report the exploratory results."
+  },
+  "claims_and_limits": [
+    "Five logical conditions across sequential segments are descriptive cases, not independent replicated trials. Sector rows, turns and repeated AI reviews do not increase independent sample size.",
+    "Evidence timing, source, order, service session, elapsed time and operational standby/AC mitigation are not separately identified; do not claim causal effects.",
+    "No investment recommendation, future-return prediction or portfolio-performance claim.",
+    "Masking is partial; use fresh AI readers with only actual opaque item when available and disclose source clues, AI assistance and lack of independent human validation.",
+    "Existing observed output/audit exposure and later protocol amendment prevent a fully preregistered confirmatory framing."
+  ],
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "Metadata confirms3 original plus2 prior requests and zero new requests; all three remaining cells were unattempted. The candidate preserves model failures and forbids outcome-driven replacement."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Fixed old E, prior L and new UBS E/L/C mapping keeps five logical cells and up to eleven total attempts without mutating either historical ceiling or raw output. A new three-cell authority cannot impersonate original pilot or Q3/July main."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "The endpoint remains institution evidence -> interpretation -> stated reason -> allocation; exact math is a disclosed separate endpoint and cannot stand in for source fidelity."
+    }
+  },
+  "review_scope": "Root design approval before the remaining requests. Execution still requires passing current implementation reviews, exact prospective freeze/gate and live owned-service/AC validation.",
+  "model_generation_calls_by_this_task": 0,
+  "service_calls_by_this_task": 0,
+  "previous_candidate_ref": {
+    "path": "research/completion_20261026/protocol_candidate.json",
+    "sha256": "bcebe78d1d48775d73170b9d35d8c7b429d68381fc58e196cf191b2a7e4b5ad9"
+  },
+  "external_semantic_review_barrier": {
+    "required": true,
+    "max_wait_seconds_per_stage": 1800,
+    "acknowledgement_path": "<stage>/external_review_ack.json",
+    "schema_version": "sector_completion_stage_external_review_ack_1",
+    "before": "Before the next model request and before normal final attempt-sequence completion; no generation while awaiting acknowledgement.",
+    "bound_evidence": [
+      "worker_spec_ref",
+      "transport_ref",
+      "stage_review_ref",
+      "allocation_math_ref",
+      "semantic_review_ref"
+    ],
+    "completion": "Acknowledgement status completed, exact case/stage and input hashes, semantic review_status completed with same transport_ref; all errors/consistency/paper_topic axes reviewed with nonempty reasons. Failed or unavailable output is reviewed as failed/unavailable, never invented.",
+    "no_quality_threshold": "Negative arithmetic/citation/factual/semantic findings and unresolved interpretations are allowed. Audit completion is required; a finding-free result, semantic PASS, hypothesis confirmation or normalized-vector existence is not.",
+    "model_feedback": "The external audit, math sidecar and reviewer observations never enter model messages or calculator feedback; original frozen own-D0 feedback remains the only feedback.",
+    "failure": "Missing acknowledgement for1800 seconds, cancellation, stale/malformed refs or system-integrity issue stops progression and preserves all completed/failed/unattempted stages. No retry or extra generation.",
+    "operational_change": "This is an added prospective coordination barrier for the remaining6 slots, not a change to frozen model inputs/settings or a claim that prior segments had this barrier."
+  },
+  "approved_candidate_ref": {
+    "path": "research/completion_20261026/protocol_candidate_r2.json",
+    "sha256": "04b868c3026888e02fb42ec000696fdb10c1d0337387ac78c29de26de25ce5cc"
+  },
+  "root_design_review": {
+    "reviewer": "Root Codex AI assistant; historical outputs already observed",
+    "errors": "Verified original3 plus prior2 requests and exact prior completed Fidelity L stages; UBS E/L/C all unattempted.",
+    "consistency": "Original runtime is identical except a fresh owned-service evidence reference; both historical records remain immutable. Stagewise audit acknowledgement is prospective for this new segment only.",
+    "paper_topic": "Maintain supplied institution evidence -> meaning and stated reasons -> raw and derived allocation. No numeric ratings-to-target conversion or performance optimization introduced.",
+    "final_report": "Korean explanation for a newcomer with conditions, exact100% calculation, raw errors, supported interpretations and limits. Do not silently rename the original prospective design."
+  }
+}

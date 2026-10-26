@@ -1,0 +1,102 @@
+{
+  "schema_version": "last_final_root_closeout_1",
+  "status": "analysis_complete_with_model_errors_retained_ready_for_archive",
+  "at_utc": "2026-10-26T07:26:38.242Z",
+  "refs": [
+    {
+      "path": "research/last_final_20261026/five_condition_audit_index.json",
+      "sha256": "6c7a1208134f47ba763ad8086c7e8b9296e3a50d1a8468459aa99dee4fc8043d"
+    },
+    {
+      "path": "research/last_final_20261026/derived_allocation/completed_five_condition_dataset.json",
+      "sha256": "6dcf903f6c607c7c717ff28d0832983f21b04011594fa9a9c469b7e68bd7367f"
+    },
+    {
+      "path": "research/last_final_20261026/masked_reviews/reconciliation.json",
+      "sha256": "a830a3c4dc9f2bb1fcc99ed0904fe2933e159d8ebc8aaefef4d2a30d5b30e63b"
+    },
+    {
+      "path": "research/remaining_20261026/masked_reviews/root_reconciliation.json",
+      "sha256": "ba223016d7db71183a0ca5bacbad3b99ffca39345f6ced0b84d8dafab4c66afd"
+    },
+    {
+      "path": "research/last_final_20261026/semantic/common_market_only__C__F0_root_review.json",
+      "sha256": "05380369be8d541b0ec99f85d8e91c59ecbdbb312ac70e5930d019817e10afb4"
+    },
+    {
+      "path": "research/last_final_20261026/report_qa/verification.json",
+      "sha256": "e21bcaff601a446664547d5c2c933a613f69c29a764f09606128882fd9f1a834"
+    },
+    {
+      "path": "research/last_final_20261026/report_qa/independent_content_review.json",
+      "sha256": "13ac017a3c6e2b64d98b4790125dd91165f79394ddd4541eb0756cfc883cb678"
+    },
+    {
+      "path": "research/last_final_20261026/run_reports/terminal_receipt.json",
+      "sha256": "b52be75530f0611cd480d6ac845d4a0dc5009ce159c02454acd03dc2cce14c6f"
+    },
+    {
+      "path": "research/last_final_20261026/runtime/service_ready/service_shutdown_receipt.json",
+      "sha256": "d05cc9ec297c25d639f3d35b4d67741ed1e94718cd853d7fb579d4080edcb259"
+    },
+    {
+      "path": "research/last_final_20261026/archive_preparation/archive_plan.json",
+      "sha256": "639c04388745ee521df1200cf1917555afa73bb4103f793bb2e09debc6165185"
+    }
+  ],
+  "review_axes": {
+    "errors": {
+      "reviewed": true,
+      "reason": "Five completed final raw outputs were fully audited; source interpretations, claim/citation support and numeric/period/allocation errors remain visible. Last C independent BigInt and semantic checks plus fresh partially masked review reconciled without altering any output."
+    },
+    "consistency": {
+      "reviewed": true,
+      "reason": "Exactly10completed logical stages in5cases,11actual attempts including the earlier failed attempt;1new C F0. All5derived totals10000units;55HTMLcells and13TVpairs agree. Own prior handoffs and absent old ACK chronology preserved. Final owned service stopped and awake released."
+    },
+    "paper_topic": {
+      "reviewed": true,
+      "reason": "Final Korean report independently checked. Focus remains commonAI supplied institutional evidence→stated reasons→observed allocation. Five-case exploratory primary role and after-output changes disclosed; no pure timing causality, human reliability, unique institution weights or realized-return claim."
+    }
+  },
+  "final_C_reconciliation": {
+    "sha256": "a830a3c4dc9f2bb1fcc99ed0904fe2933e159d8ebc8aaefef4d2a30d5b30e63b",
+    "root_read": "Scope, count units, all5major findings, all7qualification groups and binding checks reviewed. Original categories retained."
+  },
+  "report_validation": {
+    "independent_content_status": "PASS",
+    "issues": [],
+    "root_cell_checks": 55,
+    "columns_total_units": 10000,
+    "TV_pairs": 13,
+    "relative_links": 9,
+    "visual_top_and_full_page_reviewed": true
+  },
+  "execution_status": {
+    "new_generation_requests": 1,
+    "total_generation_requests": 11,
+    "automatic_retries": 0,
+    "new_main_requests": 0,
+    "coordinator_exit_code": 0,
+    "awake_released": true,
+    "owned_20716_service_stopped": true,
+    "user_11434_listener_29500_unchanged": true
+  },
+  "historical_status_fields": {
+    "terminal": "completed_semantic_review_pending is the coordinator template label; exact stage ACK and completed offline audits provide actual review completion.",
+    "finalizer": "not_performed_by_finalizer correctly limits that program; it does not negate the separate completed semantic reviews."
+  },
+  "archive_readiness": {
+    "all_report_writers_quiet": true,
+    "actual_last_final_top_level_sources": 10,
+    "all_ten_in_plan": true,
+    "raw_files_quiet": true,
+    "root_will_not_modify_this_report_tree_after_archive": true
+  },
+  "scope_limits": [
+    "Final archive and Git index checks are recorded separately under research/delivery_20261026 after snapshot.",
+    "Legacy records/templates retain their original status and byte hashes. This is not a claim that every historical code version was recovered.",
+    "Model raw arithmetic and explanation quality are not promoted to success by completing this workflow."
+  ],
+  "model_calls": 0,
+  "raw_modified": false
+}

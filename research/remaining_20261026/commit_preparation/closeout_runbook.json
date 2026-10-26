@@ -1,0 +1,207 @@
+{
+  "schema_version": "remaining_terminal_closeout_runbook_1",
+  "status": "read_only_preterminal_plan_not_execution_evidence",
+  "created_at_utc": "2026-10-26T04:40:56.681Z",
+  "workspace": "C:/Users/Insun/2026libera",
+  "actual_actions": {
+    "code_and_plan_reads_only": true,
+    "new_file_count": 1,
+    "raw_or_partial_response_reads": 0,
+    "service_calls": 0,
+    "process_probes": 0,
+    "archive_or_restore_executions": 0,
+    "git_mutations": 0,
+    "frozen_source_changes": 0
+  },
+  "source_refs": [
+    {
+      "path": "research/finalize_sector_remaining.py",
+      "sha256": "8fa60d795bc5ea75226a97761a406468f824d004b18fe7ff3ba897ceda54fe12"
+    },
+    {
+      "path": "research/archive_sector_completion.py",
+      "sha256": "7420abe9ec3a1e9822482be0c374c44b71df682e6f139c728ef4008ee94f7436"
+    },
+    {
+      "path": "research/archive_sector_remaining.py",
+      "sha256": "572f77b81fc23c7b1c1b23d51bfab2cd63a1aaf65d2c1ebc7cc786943c1ca780"
+    },
+    {
+      "path": "research/archive_sector_continuation.py",
+      "sha256": "ef4ec5463d4ea57acd1895823e6e478800c24b0a2657cf75ae57b18599fc7439"
+    },
+    {
+      "path": "research/restore_research_artifacts.py",
+      "sha256": "080d93bb41a01a0625084f6b335795b0a3a11736234eda2abaed8bd14889beff"
+    },
+    {
+      "path": "research/remaining_20261026/runtime/stop_isolated_cpu.ps1",
+      "sha256": "4af1cba8e008406ee4431dad39cd1df47355f410132afb7c53b2329070f9131e"
+    },
+    {
+      "path": "research/remaining_20261026/runtime/service_ready/service_receipt.json",
+      "sha256": "b033a4525ec3d31ceafdd004407d1d39e9785c3748f23dfe1639cd6c0b6c2da4"
+    },
+    {
+      "path": "research/completion_20261026/archive_preparation/archive_plan.json",
+      "sha256": "ad973a59f4cb2e8c408ed0ec45e62dd0723060e9bd07c0472e04dc18040ab954"
+    },
+    {
+      "path": "research/remaining_20261026/archive_preparation/archive_plan_template.json",
+      "sha256": "b5f0231e01d8d1fff08c5a907687544fe5cc4b865a67b9892f8e11caf0aa26ab"
+    },
+    {
+      "path": "research/remaining_20261026/commit_preparation/preliminary_secret_review.json",
+      "sha256": "1b879b684696127a96e7c9f2cb8d86e0ce296a483905b19d329b8aadba953e06"
+    },
+    {
+      "path": ".gitattributes",
+      "sha256": "3deb521a5e8bb1096d0564dac5434e9cba945274ad982889877c0f2fafa8f011"
+    }
+  ],
+  "owned_service_identity_from_start_receipt": {
+    "pid": 4868,
+    "process_created_at_utc": "2026-10-26T02:39:01.3882944Z",
+    "origin": "http://127.0.0.1:11435",
+    "executable": "C:\\Users\\Insun\\2026libera\\tmp\\libera_ollama0351_20261025\\portable\\ollama.exe",
+    "executable_sha256": "3cc17c238b081adf2bd3a206e52a063b637af1bf283d95b4ffd73a2bdec8b027",
+    "identity_is_historical_start_receipt_not_fresh_live_observation": true
+  },
+  "steps": [
+    {
+      "order": 1,
+      "name": "Require durable terminal and writer quiescence",
+      "checks": [
+        "Wait for the final stage full review and valid external_review_ack; then coordinator exit, campaign_summary.json and terminal_receipt.json. A stopped run is reportable but must not be called a five-condition complete dataset.",
+        "Bind terminal summary/declaration refs, exact 5 remaining slots, historical6 + attempted remaining<=5, campaign<=11, auto retries0 and main0. Preserve every unavailable result.",
+        "Verify coordinator_awake_release.json equals terminal.awake_release, acquired/released PID and thread identity, clear_flags2147483648 and no persistent power settings change.",
+        "Finish all postprocessing/review writers before the archive snapshot. Do not archive an active coordinator, worker, service or mutable report tree."
+      ]
+    },
+    {
+      "order": 2,
+      "name": "Stop only the owned idle service",
+      "command": "powershell.exe -NoProfile -NonInteractive -File \"research/remaining_20261026/runtime/stop_isolated_cpu.ps1\" -EvidenceDirectory \"C:\\Users\\Insun\\2026libera\\research\\remaining_20261026\\runtime\\service_ready\"",
+      "guards": [
+        "Requires new shutdown receipt path and ready service receipt for http://127.0.0.1:11435.",
+        "Checks PID4868, exact executable and SHA, serve command, receipt creation time within1second, single loopback listener owned by that PID, and GET /api/ps has zero resident models before stopping.",
+        "Records closed11435 and unchanged11434 listeners; it never targets11434. Any identity or nonempty-model failure must stop closeout; do not bypass or substitute a different PID.",
+        "Archive code separately requires receipt/shutdown creation timestamps equal after Python datetime microsecond parsing. The prior two observed receipts only lost sub-microsecond digits; current shutdown must be checked from its actual receipt. Do not fabricate/rewrite a mismatching receipt."
+      ],
+      "expected_output": "research/remaining_20261026/runtime/service_ready/service_shutdown_receipt.json"
+    },
+    {
+      "order": 3,
+      "name": "Finalize the terminal dataset and finish reviews",
+      "command": "python -B -X utf8 research/finalize_sector_remaining.py --run-dir data/local_sector_runtime/v494_remaining_20261026 --terminal-receipt research/remaining_20261026/run_reports/terminal_receipt.json --output research/remaining_20261026/combined_primary_exploratory_results.json",
+      "guards": [
+        "The output must be a new file outside all four immutable raw runs. This command creates derived results only and makes no model call.",
+        "Finalizer revalidates prior three segment histories, exact external UBS E D0, same-run other D0/F0 pairs, current gate/spec/transport/review, ACK chronology and request accounting.",
+        "Assess actual finalized_finals and stage availability; expected denominator remains5 final allocations/10 logical stages, even if a result is unavailable.",
+        "Complete masked independent review and readable report before archiving if they are intended members; their generator output directories/files must be new."
+      ],
+      "optional_postprocessing_commands": [
+        "python -B -X utf8 research/build_remaining_masked_review.py --run-dir data/local_sector_runtime/v494_remaining_20261026 --terminal-receipt research/remaining_20261026/run_reports/terminal_receipt.json --output-dir research/remaining_20261026/masked_final_judge --mapping-dir research/remaining_20261026/masked_final_private",
+        "python -B -X utf8 research/remaining_20261026/render_plain_results.py --results research/remaining_20261026/combined_primary_exploratory_results.json --notes research/remaining_20261026/plain_results_notes.json --output research/remaining_20261026/plain_results.html"
+      ],
+      "optional_output_paths_are_proposed_not_claimed_existing": true
+    },
+    {
+      "order": 4,
+      "name": "Archive A: terminal completion segment",
+      "command": "python -B -X utf8 research/archive_sector_completion.py --plan research/completion_20261026/archive_preparation/archive_plan.json --execute",
+      "guards": [
+        "All later remaining service/coordinator processes must also be quiet before invoking A; the common executable/worker markers and11435 make active later work fail the quiet check.",
+        "A preserves the terminal one-call completion segment plus its reports/code and verifies its continuation/recovery dependency chain. It does not claim to archive the later resume segment.",
+        "All source roots must remain stable; output stems are exclusive. If any .zip/.manifest.json/.verification.json/.failure.json exists, preserve the attempt and use a newly reviewed stem/plan instead of overwriting."
+      ],
+      "outputs": [
+        "research/artifacts/completion-evidence-20261026/completion-evidence-20261026.zip",
+        "research/artifacts/completion-evidence-20261026/completion-evidence-20261026.manifest.json",
+        "research/artifacts/completion-evidence-20261026/completion-evidence-20261026.verification.json"
+      ],
+      "verify_command": "python -B -X utf8 research/restore_research_artifacts.py research/artifacts/completion-evidence-20261026/completion-evidence-20261026.manifest.json"
+    },
+    {
+      "order": 5,
+      "name": "Bind A into a new executable B plan",
+      "input_template": "research/remaining_20261026/archive_preparation/archive_plan_template.json",
+      "new_output": "research/remaining_20261026/archive_preparation/archive_plan.json",
+      "instructions": [
+        "Use a copy of template.draft_plan, not the outer template object. Required version is sector_remaining_archive_plan_1.",
+        "Fill previous_archives[0].manifest_ref.sha256 and verification_ref.sha256 from actual metadata bytes; fill archive_ref.sha256 from actual ZIP bytes and require agreement with A manifest/verification archive_sha256.",
+        "Require A verification.status byte_verified_quiet_terminal_archive, actual manifest SHA equals verification.manifest_sha256, verified_files equals manifest.files length, and successful member verification.",
+        "Keep report root remaining_20261026, raw campaign only once via campaigns, all13 current top-level remaining Python files plus restore helper, and no nested prior ZIP/root overlap or output self-cycle. Re-enumerate any newly added sources before final plan creation.",
+        "B previous_archive_dependencies must preserve A -> continuation -> recovery. Do not invent SHA values or flatten away verified dependencies.",
+        "A source/report snapshot must stay immutable after A; finish any A-scoped report edits before step4."
+      ]
+    },
+    {
+      "order": 6,
+      "name": "Archive B and verify transferable bytes",
+      "command": "python -B -X utf8 research/archive_sector_remaining.py --plan research/remaining_20261026/archive_preparation/archive_plan.json --execute",
+      "outputs": [
+        "research/artifacts/remaining-evidence-20261026/remaining-evidence-20261026.zip",
+        "research/artifacts/remaining-evidence-20261026/remaining-evidence-20261026.manifest.json",
+        "research/artifacts/remaining-evidence-20261026/remaining-evidence-20261026.verification.json"
+      ],
+      "verify_command": "python -B -X utf8 research/restore_research_artifacts.py research/artifacts/remaining-evidence-20261026/remaining-evidence-20261026.manifest.json",
+      "guards": [
+        "B verifies terminal accounting, same-thread awake release, runtime-bound idle service shutdown, no related process/listener, exact frozen code and all bound artifact coverage.",
+        "It recursively verifies prior ZIPs; rejects hidden unlisted campaigns, duplicated/overlapping roots, symlinks/junctions and output cycles; uses exclusive ZIP creation, inventory checks, source rehash and exact member rehash.",
+        "Standalone restore verification checks ZIP/member bytes only; without --restore it does not compare workspace or index files.",
+        "If an optional restore smoke test is desired, use a new empty scratch destination and restore each manifest oldest to newest; never repair the workspace silently."
+      ]
+    }
+  ],
+  "optional_restore_smoke": {
+    "execute_only_if_root_selects": true,
+    "new_empty_destination": "tmp/remaining_restore_verify_20261026",
+    "commands": [
+      "python -B -X utf8 research/restore_research_artifacts.py research/artifacts/recovery-evidence-20261025.manifest.json --restore --destination tmp/remaining_restore_verify_20261026",
+      "python -B -X utf8 research/restore_research_artifacts.py research/artifacts/continuation-evidence-20261026/continuation-evidence-20261026.manifest.json --restore --destination tmp/remaining_restore_verify_20261026",
+      "python -B -X utf8 research/restore_research_artifacts.py research/artifacts/completion-evidence-20261026/completion-evidence-20261026.manifest.json --restore --destination tmp/remaining_restore_verify_20261026",
+      "python -B -X utf8 research/restore_research_artifacts.py research/artifacts/remaining-evidence-20261026/remaining-evidence-20261026.manifest.json --restore --destination tmp/remaining_restore_verify_20261026"
+    ],
+    "limits": "Restore only missing files, reject existing conflicts, preserve path safety; no restore was run by this review."
+  },
+  "final_git_checks_required": {
+    "preliminary_scan_is_not_final": true,
+    "preliminary_scan_covered_files": 223,
+    "preliminary_scan_skipped_files": 5,
+    "preliminary_scan_new_event_paths_at_close": 5,
+    "secret_scan": [
+      "After writers are quiet, derive actual intended files and compare SHA256 against preliminary_secret_review.json; scan new/changed files and previously skipped logs/events only within the final authorized commit scope.",
+      "Include late semantic/numeric/masked/report/terminal/shutdown/plan/manifest/verification files and this runbook. Archive payloads are not covered by the earlier source scan; inspect declared text members under bounded safe scanning or explicitly record the gap.",
+      "Keep candidate values redacted. Record file/line/kind/disposition, actual covered byte hashes and any unresolved candidates; do not call a partial scan final."
+    ],
+    "index_checks": [
+      "Root alone stages explicit intended paths. Then obtain NUL-delimited git diff --cached --name-status -z and git ls-files --stage -z; review deletions and non-stage0 entries as well as additions.",
+      "Use git cat-file --batch or git cat-file blob <object-id> captured as binary buffers to SHA256 every intended staged blob; compare with working-file SHA and all frozen/evidence/manifest expected SHA. Do not pass blob bytes through a PowerShell text pipeline.",
+      "Use git check-attr --cached -z text filter working-tree-encoding -- <paths> to inspect effective index attributes. Current completion/remaining reports, top-level names and archive subfolders have -text, but staged-byte equality remains the decisive check.",
+      "Run git diff --cached --check as a separate whitespace/conflict-marker check; do not treat it as byte verification or secret scanning.",
+      "For exact archived duplicate exclusions, match path+SHA to a verified manifest; do not ignore unverified data or broadly exclude unrelated files.",
+      "Recheck actual staged path set/blob hashes after adding the final audit receipt. Record intentional self/exclusion scope rather than creating a recursive self-hash claim."
+    ],
+    "archive_snapshot_boundary": "Final Git/verification receipts created after B cannot already be members of B. Save them outside frozen archived report roots or explicitly mark them as post-archive delivery evidence; do not claim full snapshot inclusion or overwrite B to include itself."
+  },
+  "review_axes": {
+    "errors": {
+      "reviewed": true,
+      "conclusion": "No blocking CLI/schema mismatch found in read-only inspected code. All execution and availability assertions remain pending actual terminal evidence."
+    },
+    "consistency": {
+      "reviewed": true,
+      "conclusion": "A then B preserves exact historical6 plus new<=5 accounting, current service ownership, predecessor SHA chain and immutable output attempts. ZIP verification and index-byte verification are distinct."
+    },
+    "paper_topic": {
+      "reviewed": true,
+      "conclusion": "Closeout preserves the five original conditions as amended primary exploratory analysis, raw diagnostics and exact derived100% allocations. New-source main remains excluded; archival success is not evidence of semantic accuracy, causal effect or investment performance."
+    }
+  },
+  "limitations": [
+    "No live terminal, partial/raw response, service, process, archive, restore, staging or commit was inspected/executed in this task.",
+    "Commands use the workspace root as current directory. The proposed derived/report outputs must be checked absent before root executes them.",
+    "Current frozen bytes are only hash-bound source references here; no generation settings or policy was changed."
+  ]
+}

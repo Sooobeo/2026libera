@@ -1,0 +1,21 @@
+{
+  "status": "FAIL",
+  "completed_at_utc": "2026-10-26T06:20:23.586246+00:00",
+  "tests_run": 30,
+  "failures": 0,
+  "errors": 1,
+  "elapsed_seconds": 28.823,
+  "source_refs": [
+    {
+      "path": "research/archive_sector_last_final.py",
+      "sha256": "9069a29afa3a58b35b98d838412dcdd310501eb0585840b46f3674e6db595be5"
+    },
+    {
+      "path": "research/test_archive_sector_last_final.py",
+      "sha256": "fbdf272b6dc272469f74a2e6d2f4094fbf1088f1bd542e9f01e52434a8c65214"
+    }
+  ],
+  "finding": "During addition of four last-final-specific tests, an existing archive-size assertion was moved into the new late-review test, where result was not bound. Production code unchanged. Preserve the misplaced-assertion NameError, restore assertion to original test, and repeat full suite.",
+  "model_calls": 0,
+  "service_calls": 0
+}

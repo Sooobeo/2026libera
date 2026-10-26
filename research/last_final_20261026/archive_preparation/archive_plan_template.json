@@ -1,0 +1,99 @@
+{
+  "version": "sector_last_final_archive_plan_template_1",
+  "status": "incomplete_not_executable",
+  "created_at_utc": "2026-10-26T06:23:28.807462+00:00",
+  "template_not_an_executable_plan": true,
+  "draft_plan": {
+    "version": "sector_last_final_archive_plan_1",
+    "archive_stem": "last-final-evidence-20261026",
+    "output_directory": "research/artifacts/last-final-evidence-20261026",
+    "campaigns": [
+      {
+        "purpose": "pilot_last_final",
+        "run_directory": "data/local_sector_runtime/v494_last_final_20261026",
+        "reports_directory": "research/last_final_20261026/run_reports",
+        "service_receipt": "research/last_final_20261026/runtime/service_ready/service_receipt.json",
+        "shutdown_receipt": "research/last_final_20261026/runtime/service_ready/service_shutdown_receipt.json"
+      }
+    ],
+    "raw_campaign_parent": "data/local_sector_runtime",
+    "analysis_role": "primary_exploratory",
+    "new_main_state": {
+      "status": "excluded_not_run",
+      "reason": "Original five logical conditions are primary exploratory evidence. This last segment attempts only previously unattempted C F0 from the exact preserved C D0; no Q3/July main."
+    },
+    "previous_archives": [
+      {
+        "manifest_ref": {
+          "path": "research/artifacts/remaining-evidence-20261026/remaining-evidence-20261026.manifest.json",
+          "sha256": null
+        },
+        "verification_ref": {
+          "path": "research/artifacts/remaining-evidence-20261026/remaining-evidence-20261026.verification.json",
+          "sha256": null
+        },
+        "archive_ref": {
+          "path": "research/artifacts/remaining-evidence-20261026/remaining-evidence-20261026.zip",
+          "sha256": null
+        }
+      }
+    ],
+    "report_roots": [
+      "research/last_final_20261026"
+    ],
+    "extra_roots": [
+      "research/archive_sector_last_final.py",
+      "research/build_last_final_masked_review.py",
+      "research/finalize_sector_last_final.py",
+      "research/freeze_sector_last_final.py",
+      "research/publish_last_final_review_ack.py",
+      "research/run_sector_last_final.py",
+      "research/test_archive_sector_last_final.py",
+      "research/test_build_last_final_masked_review.py",
+      "research/test_finalize_sector_last_final.py",
+      "research/test_sector_last_final.py",
+      "research/restore_research_artifacts.py"
+    ]
+  },
+  "schema_source_ref": {
+    "path": "research/archive_sector_last_final.py",
+    "sha256": "9069a29afa3a58b35b98d838412dcdd310501eb0585840b46f3674e6db595be5"
+  },
+  "independent_review_ref": {
+    "path": "research/last_final_20261026/implementation/postprocessing_independent_review.json",
+    "sha256": "7bbcf7bffc1e40cb244d76d0af137b3ceb8c3bb14a087808eb4d2b7fd8256514"
+  },
+  "previous_plan_template_ref": {
+    "path": "research/remaining_20261026/archive_preparation/archive_plan_template.json",
+    "sha256": "b5f0231e01d8d1fff08c5a907687544fe5cc4b865a67b9892f8e11caf0aa26ab"
+  },
+  "binding_and_execution_order": [
+    "Finish sole current C F0 and all audits/report/masked writers; retain failure/missing outcomes if any.",
+    "Require exact final terminal, same-thread awake release, model-free owned-service shutdown and quiet raw/report trees.",
+    "Execute and byte-verify completion archive A, then remaining archive B, preserving after-terminal C D0 review without rewriting the old terminal or adding old ACK.",
+    "Replace all three null prior SHA values only from verified remaining archive B and its metadata; confirm actual paths and root-owned shutdown receipt path.",
+    "Re-enumerate top-level last-final sources and current report roots; add missing disjoint files, preserve this template plus new final executable plan under report_roots.",
+    "Save NEW archive_plan.json containing the completed draft_plan, then root executes archive C. Its dependency verifier rechecks B recursively through A, continuation and original recovery."
+  ],
+  "pending_bindings": [
+    "Remaining archive B manifest, verification and ZIP hashes are intentionally null until actual verified artifacts exist.",
+    "Owned shutdown receipt and final terminal do not yet establish quiescence.",
+    "Future reports and additional top-level source/test files must be included before final plan."
+  ],
+  "planned_request_accounting": {
+    "historical_requests": 10,
+    "last_final_requests_maximum": 1,
+    "logical_stage_slots": 10,
+    "planned_final_cells": 5,
+    "planned_sector_rows": 55,
+    "old_C_D0_ACK_created": false
+  },
+  "model_calls": 0,
+  "service_calls": 0,
+  "actual_archive_execution_performed": false,
+  "actual_response_files_read": 0,
+  "limits": [
+    "Planning only, not a completed backup or a semantic success finding.",
+    "Null hashes and outer template version deliberately prevent executable plan use."
+  ]
+}

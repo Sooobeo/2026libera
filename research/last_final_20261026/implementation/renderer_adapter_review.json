@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T06:25:52.249Z",
+  "review_scope": "Offline thin presentation adapter only; actual final report not rendered",
+  "code_refs": [
+    {
+      "path": "research/last_final_20261026/render_plain_results.py",
+      "sha256": "561c274fa0f423b7929c2b90f9d8e2228a740100305df8cbd5539ea1552a6e61"
+    },
+    {
+      "path": "research/last_final_20261026/test_render_plain_results.py",
+      "sha256": "75b185b4185d49c52632ebe897a8e9d897ebb50d0cb90d899b16d10a88e2b8c7"
+    },
+    {
+      "path": "research/remaining_20261026/render_plain_results.py",
+      "sha256": "77b50b82a17ded37178f48daeda6fd76b8c24e6776a27579200c9a1996bc2128"
+    }
+  ],
+  "test_result_ref": {
+    "path": "research/last_final_20261026/implementation/renderer_tests.json",
+    "sha256": "c4d44733cb5a6e20053987f18b893230a9163211eadf1cac50770311331b457b"
+  },
+  "independent_review_ref": {
+    "path": "research/last_final_20261026/implementation/renderer_independent_review.json",
+    "sha256": "7318cd4320ced4b41180a874fdac395692efe3e3163d01d8b9c87f1c1902a283"
+  },
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "Five synthetic tests pass: malformed accounting/schema/vector/distance rejected, escaped text and safe links, exclusive output and unchanged inputs."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Pinned original renderer code remains unchanged. Only in-memory schema tags are projected after the last-final count/scope check; all accepted vectors, raw totals and exact TV display remain unchanged. Original source JSON retains last-final schema."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "The Korean report retains five-case exploratory framing, source timing, own-D0 versus cross-case distinctions, raw and derived100% separation, and no causal/performance inference."
+    }
+  },
+  "tests_run": 5,
+  "actual_report_visual_QA_completed": false,
+  "actual_results_read": false,
+  "model_calls": 0,
+  "service_calls": 0,
+  "frozen_files_modified": false
+}

@@ -1,0 +1,102 @@
+{
+  "purpose": "pilot_completion",
+  "case_order": [
+    "ubs_june_2026__E",
+    "ubs_june_2026__L",
+    "common_market_only__C"
+  ],
+  "max_generation_requests": 6,
+  "historical_generation_requests": 5,
+  "campaign_max_generation_requests": 11,
+  "automatic_retries": 0,
+  "main_model_calls": 0,
+  "main_allowed": false,
+  "old_outputs_observed": true,
+  "explicit_retry_slots": [],
+  "historical_explicit_retry_slots": [
+    "fidelity_q2_2026__L__D0"
+  ],
+  "analysis_role": "primary_exploratory",
+  "excluded_new_main_execution": true,
+  "historical_first_attempt_results_unchanged": true,
+  "run_directory": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_completion_20261026",
+  "output_root": "C:\\Users\\Insun\\2026libera\\research\\completion_20261026\\run_reports",
+  "review_refs": [
+    {
+      "path": "research/completion_20261026/implementation_method_review.json",
+      "sha256": "24f41e20c6400d29b801693f4475be206ebab7f4b0e73d00d2d858dc8ad155a3"
+    },
+    {
+      "path": "research/completion_20261026/orchestration_test_review.json",
+      "sha256": "36eccda11fb2727b38177b28969a5b4659a1636509e79c3957dcef2d57626845"
+    },
+    {
+      "path": "research/completion_20261026/completion_finalizer_review.json",
+      "sha256": "fec44eccb3a9edfb68b717fcaa2750f714b6f9b175a635b4b4ea111112df3f60"
+    },
+    {
+      "path": "research/completion_20261026/semantic_preparer_review.json",
+      "sha256": "d21bbe87c218e9f4eccc2e87927e5409ef06865e81043fb0acb82bae77e19cff"
+    },
+    {
+      "path": "research/completion_20261026/root_prelaunch_review.json",
+      "sha256": "5f4b17f85813bb71a8b42ba18e3491fa1964ca64d56e0d146a3e2893ce9b80ac"
+    }
+  ],
+  "historical_gate_ref": {
+    "path": "research/recovery_20261025/review_gate.json",
+    "sha256": "04745b0b358d54234b888a3acdb281a10b35d8b570264c4027007e530cc5f552"
+  },
+  "historical_terminal_ref": {
+    "path": "research/recovery_20261025/new_pilot/terminal_receipt.json",
+    "sha256": "bc872eb8326233e274629d8ea16f5d841e098b6e45aa26f31a9588d760289d15"
+  },
+  "historical_summary_ref": {
+    "path": "data/local_sector_runtime/v494_pilot_20261025/pilot_summary.json",
+    "sha256": "ad5b11da9677d3cb091738d0b0427240842f2ca541bb0f7e72f3747400b599a4"
+  },
+  "prior_continuation_gate_ref": {
+    "path": "research/continuation_20261026/review_gate.json",
+    "sha256": "e7e2c88b26d1e3181c8c7811b49a8a318b1c0a2f71817ec610a225813032d6f8"
+  },
+  "prior_continuation_terminal_ref": {
+    "path": "research/continuation_20261026/run_reports/terminal_receipt.json",
+    "sha256": "77bd98f4172e78eb2890d21b41bf128012ad02cd36d474ca2d5e77b5ae415f47"
+  },
+  "prior_continuation_summary_ref": {
+    "path": "data/local_sector_runtime/v494_continuation_20261026/campaign_summary.json",
+    "sha256": "88f6c466914ad1eea593e99d2582ca64df06d3f6c2ddea7075100d1e51edac3d"
+  },
+  "prior_continuation_declaration_ref": {
+    "path": "data/local_sector_runtime/v494_continuation_20261026/campaign_declaration.json",
+    "sha256": "a7e260774dc52295f53bc950c594f825145838660eb115213baec87e835603ea"
+  },
+  "prepared_manifest_ref": {
+    "path": "data/sector_protocol/v494_design_20261025/prepared/preparation_manifest.json",
+    "sha256": "8023f8b11ec9b1d43bf1b5b08ac37ccbab4ac5ab7ad7de28a9e93d8e67a4ef29"
+  },
+  "runtime_ref": {
+    "path": "research/completion_20261026/runtime_candidate.json",
+    "sha256": "24528f9af9385814fbec3d8d1953322dcf86ccd259178edf32bd79edea6f9902"
+  },
+  "protocol_ref": {
+    "path": "research/completion_20261026/protocol_and_review.json",
+    "sha256": "c8b8a87310e5ffae35dcb940984a5a019a3b064e7c1da39886dce862ef16030f"
+  },
+  "finalizer_acceptance_ref": {
+    "path": "research/recovery_20261025/allocation_finalization_acceptance_r2.json",
+    "sha256": "0232232baeb7e251aa0dee42bc9a1969f66615a1df4d303bccb67dd938b47d9e"
+  },
+  "completion_finalizer_review_ref": {
+    "path": "research/completion_20261026/completion_finalizer_review.json",
+    "sha256": "fec44eccb3a9edfb68b717fcaa2750f714b6f9b175a635b4b4ea111112df3f60"
+  },
+  "receipt_version": "sector_completion_gate_1",
+  "status": "approved_for_completion_before_generation",
+  "review_mode": "AI_delegated_by_user",
+  "recorded_at_utc": "2026-10-26T02:06:27.004898+00:00",
+  "freeze_ref": {
+    "path": "research/completion_20261026/freeze.json",
+    "sha256": "a9d6477dd7e776c5822c906654ee355f545f40c8a2fb43803d9ded7e7fe8334c"
+  }
+}

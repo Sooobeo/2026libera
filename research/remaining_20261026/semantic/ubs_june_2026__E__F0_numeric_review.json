@@ -1,0 +1,373 @@
+{
+  "review_status": "completed",
+  "completed_at_utc": "2026-10-26T03:26:52.883Z",
+  "case_id": "ubs_june_2026__E",
+  "stage": "F0",
+  "review_kind": "actual_completed_stage_independent_numeric_facts_and_cross_segment_lineage_audit",
+  "transport_ref": {
+    "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_remaining_20261026\\ubs_june_2026__E__F0\\transport_result.json",
+    "sha256": "8f7e4f0304d4fe6ce314bf9186885c37ddfc111dbbac66a492b88f78b5733cd0"
+  },
+  "scope": "Current completed UBS E F0 and its exact carried completed own D0 only. This is a numerical/integrity audit, not a source-reading semantic grade.",
+  "source_refs": [
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__E__F0_bundle.json",
+      "sha256": "bbedc1083d3c87ca1e2af234d3b82393981f692c51b9f4a7175896bfd5bb8ee4"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__E__F0_numeric_facts.json",
+      "sha256": "be9ba5283783883ea72eeddb5e0a288ee3ffb21efdc0d13d1c618dc47f45ef32"
+    },
+    {
+      "path": "research/remaining_20261026/run_reports/allocation_math/ubs_june_2026__E__F0.json",
+      "sha256": "15df83f2a8e8d424b9de1399b5a56c4a2edcf299524b83a8a99c26f3c0295ee0"
+    },
+    {
+      "path": "research/completion_20261026/run_reports/allocation_math/ubs_june_2026__E__D0.json",
+      "sha256": "f9f249f6f5f03ce94f0e64715b6b2463c350a5c72d53ec8eba63fea6f29e8492"
+    },
+    {
+      "path": "research/completion_20261026/semantic/ubs_june_2026__E__D0_numeric_facts.json",
+      "sha256": "a021065f9152503bd0fd23aea1f016566769c89e24dd0d300fe22af40de6e819"
+    },
+    {
+      "path": "research/completion_20261026/independent_numeric_static_common_market_r2.json",
+      "sha256": "1d02cfcb9e175fc574ca933d7d1a013fd18e998b655fef63a523a6c13f04234c"
+    },
+    {
+      "path": "research/remaining_20261026/audit_stage_numerics.py",
+      "sha256": "6d7d7a76448571da9a0bdf381da4ff7a0b4855992723534f9b4acbf326afe4a4"
+    },
+    {
+      "path": "research/remaining_20261026/test_audit_stage_numerics.py",
+      "sha256": "4f72a70e86b11db04825d3d1558b525dd466e02f7e9621795fb899cec12f41cd"
+    },
+    {
+      "path": "research/remaining_20261026/implementation/numeric_wrapper_test_result.json",
+      "sha256": "61c5aa0ed6a65a13ea8db90433d24d502550d3a675efba9fc14c916370718698"
+    },
+    {
+      "path": "research/remaining_20261026/implementation/numeric_independent_review.json",
+      "sha256": "91eef31d995fdf2938ccd473f18b974d1c66832857e398ce7d87085cf9a38478"
+    },
+    {
+      "path": "research/completion_20261026/audit_stage_numerics.py",
+      "sha256": "10ee4d79fdcdebd1adbdf3bba2278464e044bad6b19248aa601b4ed60daaa8b9"
+    },
+    {
+      "path": "research/completion_20261026/independent_numeric_test_result_r3.json",
+      "sha256": "f374e5084feaabf91e49d81358c0707cc5a995d97cdec1c4fbf818db0d97fc4c"
+    },
+    {
+      "path": "research/remaining_20261026/prepare_stage_semantic_audit.py",
+      "sha256": "c4049ff6ed474200c5c358cb3448e5353096606acee27e0033b88e5a2410d21b"
+    }
+  ],
+  "actual_integration": {
+    "command": "python -B -X utf8 research/remaining_20261026/audit_stage_numerics.py --bundle research/remaining_20261026/semantic/ubs_june_2026__E__F0_bundle.json --math-sidecar research/remaining_20261026/run_reports/allocation_math/ubs_june_2026__E__F0.json --output research/remaining_20261026/semantic/ubs_june_2026__E__F0_numeric_facts.json",
+    "exit_code": 0,
+    "tool_chunk_id": "7d6f54",
+    "elapsed_seconds": 1.9365685,
+    "status": "numeric_facts_prepared_not_semantic_grade",
+    "actual_remaining_guard_reexecuted": true,
+    "mocked_boundaries": false,
+    "own_D0_origin": "fixed_previous_completion_segment",
+    "own_D0_stage_directory": "data/local_sector_runtime/v494_completion_20261026/ubs_june_2026__E__D0",
+    "own_D0_declaration_ref": {
+      "path": "data/local_sector_runtime/v494_completion_20261026/campaign_declaration.json",
+      "sha256": "10482e168e82c54a4484f73a736e99c53daa9330b11c40c561fa2ed3277cb787"
+    },
+    "current_raw_content_sha256": "b3ed996eefa939f2d793e021b2b05fbf86b11151751eec6f74c38d4181c26757",
+    "all_reference_occurrences_rehashed": 117,
+    "unique_paths_rehashed": 99,
+    "reference_rehash_status": "PASS",
+    "current_and_prior_accepted_sidecars_match": true,
+    "common_market_matches_previous_D0_and_static_prepared_numeric_report": true
+  },
+  "allocation": {
+    "sector_order": [
+      "10",
+      "15",
+      "20",
+      "25",
+      "30",
+      "35",
+      "40",
+      "45",
+      "50",
+      "55",
+      "60"
+    ],
+    "raw_weights_decimal": [
+      "0.03",
+      "0.02",
+      "0.09",
+      "0.09",
+      "0.05",
+      "0.09",
+      "0.12",
+      "0.38",
+      "0.04",
+      "0.02",
+      "0.02"
+    ],
+    "raw_sum_exact": "0.95",
+    "raw_budget_residual_exact": "-0.05",
+    "raw_sum_percent": "95%",
+    "all11_weights_finite_nonnegative": true,
+    "no_missing_duplicate_or_unknown_sectors": true,
+    "raw_allocation_arithmetic_valid": false,
+    "normalization_multiplier_exact": "20/19",
+    "independent_integer_units": [
+      316,
+      211,
+      947,
+      947,
+      526,
+      947,
+      1263,
+      4000,
+      421,
+      211,
+      211
+    ],
+    "independent_total_units": 10000,
+    "derived_percentages": [
+      "3.16",
+      "2.11",
+      "9.47",
+      "9.47",
+      "5.26",
+      "9.47",
+      "12.63",
+      "40.00",
+      "4.21",
+      "2.11",
+      "2.11"
+    ],
+    "rounding_remainder_recipients": [
+      "10",
+      "15",
+      "55",
+      "60"
+    ],
+    "independent_F0_matches_current_accepted_math": true,
+    "independent_D0_matches_original_accepted_math": true,
+    "all11_raw_own_D0_F0_deltas_exact_zero": true,
+    "all11_derived_own_D0_F0_deltas_exact_zero": true,
+    "derived_own_D0_F0_TV_exact": "0",
+    "interpretation": "The5-percentage-point raw budget deficit is retained. Scaling by20/19 is material proportional normalization, distinct from the final0.01%-unit rounding. No model weight revision occurred; postprocessing changes are not model reasoning changes."
+  },
+  "feedback_consistency": {
+    "supplied_C_D0_sum": 0.95,
+    "supplied_C_D0_valid": false,
+    "supplied_C_D0_budget_residual": -0.050000000000000044,
+    "independent_D0_residual_exact": "-0.05",
+    "residual_difference": "The supplied -0.050000000000000044 is floating serialization around exact -0.05; it does not explain away the5% budget deficit.",
+    "feedback_was_normalized_or_repaired": false,
+    "final_same_raw_vector_despite_valid_false_feedback": true,
+    "semantic_inference": "This only establishes numerical continuity and feedback content. Reasoning/source fidelity and whether prose represents the feedback correctly are checked separately."
+  },
+  "benchmark_relations": [
+    {
+      "sector_code": "10",
+      "sector_name": "Energy",
+      "raw_vs_supplied_normalized_baseline": "below",
+      "derived_vs_supplied_normalized_baseline": "above",
+      "raw_vs_reported_percent": "equal",
+      "derived_vs_reported_percent": "above"
+    },
+    {
+      "sector_code": "15",
+      "sector_name": "Materials",
+      "raw_vs_supplied_normalized_baseline": "above",
+      "derived_vs_supplied_normalized_baseline": "above",
+      "raw_vs_reported_percent": "above",
+      "derived_vs_reported_percent": "above"
+    },
+    {
+      "sector_code": "20",
+      "sector_name": "Industrials",
+      "raw_vs_supplied_normalized_baseline": "above",
+      "derived_vs_supplied_normalized_baseline": "above",
+      "raw_vs_reported_percent": "above",
+      "derived_vs_reported_percent": "above"
+    },
+    {
+      "sector_code": "25",
+      "sector_name": "Consumer Discretionary",
+      "raw_vs_supplied_normalized_baseline": "below",
+      "derived_vs_supplied_normalized_baseline": "above",
+      "raw_vs_reported_percent": "below",
+      "derived_vs_reported_percent": "above"
+    },
+    {
+      "sector_code": "30",
+      "sector_name": "Consumer Staples",
+      "raw_vs_supplied_normalized_baseline": "above",
+      "derived_vs_supplied_normalized_baseline": "above",
+      "raw_vs_reported_percent": "above",
+      "derived_vs_reported_percent": "above"
+    },
+    {
+      "sector_code": "35",
+      "sector_name": "Health Care",
+      "raw_vs_supplied_normalized_baseline": "above",
+      "derived_vs_supplied_normalized_baseline": "above",
+      "raw_vs_reported_percent": "above",
+      "derived_vs_reported_percent": "above"
+    },
+    {
+      "sector_code": "40",
+      "sector_name": "Financials",
+      "raw_vs_supplied_normalized_baseline": "above",
+      "derived_vs_supplied_normalized_baseline": "above",
+      "raw_vs_reported_percent": "above",
+      "derived_vs_reported_percent": "above"
+    },
+    {
+      "sector_code": "45",
+      "sector_name": "Information Technology",
+      "raw_vs_supplied_normalized_baseline": "below",
+      "derived_vs_supplied_normalized_baseline": "above",
+      "raw_vs_reported_percent": "equal",
+      "derived_vs_reported_percent": "above"
+    },
+    {
+      "sector_code": "50",
+      "sector_name": "Communication Services",
+      "raw_vs_supplied_normalized_baseline": "below",
+      "derived_vs_supplied_normalized_baseline": "below",
+      "raw_vs_reported_percent": "below",
+      "derived_vs_reported_percent": "below"
+    },
+    {
+      "sector_code": "55",
+      "sector_name": "Utilities",
+      "raw_vs_supplied_normalized_baseline": "below",
+      "derived_vs_supplied_normalized_baseline": "below",
+      "raw_vs_reported_percent": "below",
+      "derived_vs_reported_percent": "below"
+    },
+    {
+      "sector_code": "60",
+      "sector_name": "Real Estate",
+      "raw_vs_supplied_normalized_baseline": "above",
+      "derived_vs_supplied_normalized_baseline": "above",
+      "raw_vs_reported_percent": "above",
+      "derived_vs_reported_percent": "above"
+    }
+  ],
+  "benchmark_interpretation": {
+    "reported_benchmark_total_percent": "99.9",
+    "normalized_baseline_reversals": [
+      "10",
+      "25",
+      "45"
+    ],
+    "reported_percent_reversals": [
+      "25"
+    ],
+    "reported_percent_equal_to_above": [
+      "10",
+      "45"
+    ],
+    "raw_normalized_baseline_below_codes": [
+      "10",
+      "25",
+      "45",
+      "50",
+      "55"
+    ],
+    "derived_normalized_baseline_below_codes": [
+      "50",
+      "55"
+    ],
+    "note": "Use raw submitted weights to test model over/underweight statements. Energy and IT equal reported3%/38% but are slightly below normalized3.003003%/38.038038%; preserve reference definition and near-neutral ambiguity. External math makes them above, and flips Consumer Discretionary from below to above; this cannot repair an inaccurate original rationale."
+  },
+  "visible_market_validation": {
+    "source_metadata": {
+      "return_observations": "60",
+      "lookback_return_dates": [
+        "2026-04-21",
+        "2026-07-16"
+      ],
+      "covariance_ddof": "1",
+      "units": "Daily decimal vendor-adjusted-close returns and daily decimal-squared sample covariance; no RF subtraction.",
+      "covariance_unit": "daily_decimal_return_squared",
+      "annualization_trading_days": "252",
+      "cutoff_exclusive": "2026-07-17"
+    },
+    "visible_scalar_fact_rows": 58,
+    "sector_internal_diagnostics": 11,
+    "ordered_covariance_correlation_checks": 121,
+    "covariance_symmetry_max_abs_exact": "0",
+    "max_abs_daily_sd_serialization_residual_approx": 8.74020710357958e-19,
+    "max_abs_annual_sd_serialization_residual_approx": 3.4467052027841027e-17,
+    "max_abs_correlation_serialization_residual_approx": 2e-16,
+    "baseline_annualized_sd_approx": "0.139023386502959837670030770864342746774096815133637049090859",
+    "raw_exposure_annualized_sd_approx": "0.136172232421715637959799031201015014606458003284177364995620",
+    "normalized_annualized_sd_approx": "0.143339192022858566273472664422121068006797898193870910521706",
+    "accepted_integer_annualized_sd_approx": "0.143334531765583954106968059099240450002775221390348263104472",
+    "raw_exposure_not_fully_invested": true,
+    "interpretation": "The raw exposure quadratic diagnostic is below the normalized benchmark while normalized and integer diagnostics are above. This reflects the explicit .95 exposure scale; do not characterize raw .95 exposures as a fully-invested lower-risk portfolio or a future-performance result.",
+    "common_metric_direction_facts": {
+      "negative_60day_sector_compound_returns": [
+        "15",
+        "25",
+        "50"
+      ],
+      "highest_60day_compound_return_code": "45",
+      "highest_60day_compound_return_percent": "14.992022077727252",
+      "lowest_60day_compound_return_code": "50",
+      "lowest_60day_compound_return_percent": "-4.890051427558073",
+      "minimum_daily_volatility_code": "40",
+      "minimum_daily_volatility_percent": "0.8360864169526175",
+      "maximum_daily_volatility_code": "45",
+      "maximum_daily_volatility_percent": "2.1219623435220682"
+    },
+    "raw_daily_recomputation_performed": false,
+    "limitations": [
+      "The visible payload has no 60 by 11 daily return observations. Daily means, sample covariance and 60-day compounded returns cannot be recomputed from raw time series here.",
+      "The 60-day compounded return is not inferred from mean*60 or (1+mean)^60.",
+      "No portfolio 60-day compounded return is inferred without a rebalancing/holdings path."
+    ],
+    "decimal_sqrt_precision_note": "60-digit diagnostic arithmetic does not add information or precision to the supplied floating summary inputs."
+  },
+  "review_axes": {
+    "errors": {
+      "reviewed": true,
+      "reason": "Exact independent arithmetic and both accepted sidecars agree; no numerical helper integration error found. The model raw sum remains0.95 after supplied feedback marked it invalid. Raw budget failure is a recorded model outcome, not a reason to retry or alter data."
+    },
+    "consistency": {
+      "reviewed": true,
+      "reason": "All117 input/implementation reference occurrences were rehashed across99 unique paths. Original completion D0 declaration/response/math are retained and matched; F0 uses exact carried history. All11 raw and derived own-D0 deltas are zero, and market fact/diagnostic tables match original prepared static data and prior D0."
+    },
+    "paper_topic": {
+      "reviewed": true,
+      "reason": "Numerical facts support evidence-to-reason-to-allocation review without substituting normalized weights for raw claims. Benchmark and risk representation changes are separated from model reasoning changes. This single completed pair does not establish citation accuracy, causal timing effect, independent replication or investment performance."
+    }
+  },
+  "coverage": {
+    "current_raw_weights": 11,
+    "own_D0_raw_weights": 11,
+    "current_derived_units": 11,
+    "own_D0_derived_units": 11,
+    "exact_own_raw_deltas": 11,
+    "exact_own_derived_deltas": 11,
+    "benchmark_reference_variants": 3,
+    "prose_claims_graded": 0,
+    "source_reading_claims_graded": 0,
+    "independent_semantic_review": "Separate full review by the semantic agent; no score inferred here.",
+    "other_new_stage_outputs_read": 0,
+    "all_campaign_completion_claimed": false
+  },
+  "model_calls": 0,
+  "service_calls": 0,
+  "raw_artifacts_modified": false,
+  "frozen_sources_modified": false,
+  "numeric_integration_findings": [],
+  "model_arithmetic_errors_retained": [
+    "Raw F0 sum0.95, same as actual own D0; exact residual-0.05."
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T02:57:57.628Z",
+  "source_refs": [
+    {
+      "path": "research/build_remaining_masked_review.py",
+      "sha256": "4ce9421049e83bc6e70b18095603bf05f2c36d8bb47a077875b8fbcdacd86a86"
+    },
+    {
+      "path": "research/test_build_remaining_masked_review.py",
+      "sha256": "cfb2f68284f8e71f0d2e7d5c2248e0e18ba06a18247325d25c3d06eac6b3515d"
+    }
+  ],
+  "test_result_ref": {
+    "path": "research/remaining_20261026/implementation/masked_tests_run02.json",
+    "sha256": "c8921c6d45251847121ed1f765ef2209a87989ab9c7b99a99f39237cf83ea794"
+  },
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "24 synthetic tests cover absent/live terminal, exact summary hashes, authority/accounting failures, substituted prior content, extra requests, partial/missing final handling, exclusive paths and concurrent input mutation. One initial test-only list-length error was retained and corrected before the passing full suite."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "The remaining terminal guard and four-segment finalizer run before stage extraction. Exactly three planned final judge items/33 rows are retained. E prior text is validated under original completion authority and contributes no new request; L/C priors use the new remaining authority. Six historical plus at most five new attempts remain private accounting."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "Original raw-claim rubric and final-visible evidence are preserved. Prior reviews, amended study role, external derived allocation vectors, case labels/order and raw path mappings remain private. Raw texts and supplied documents can reveal source/condition clues, so masking is explicitly partial; no composite score or independent human validation claim."
+    }
+  },
+  "judge_contract": {
+    "planned_final_submissions": 3,
+    "planned_sector_rows": 33,
+    "opaque_uuid_ids": true,
+    "index_order_shuffled": true,
+    "verbatim_raw_and_own_prior_text": true,
+    "no_historical_fidelity_final_items": true,
+    "derived_math_sidecar_private": true,
+    "supplied_original_calculator_feedback_retained": true,
+    "missing_or_partial_output_never_substitutes_completed_final": true
+  },
+  "generation_core_or_frozen_files_modified": false,
+  "model_calls": 0,
+  "service_calls": 0,
+  "actual_response_files_read": 0,
+  "actual_bundle_created": false,
+  "limitations": [
+    "Only root may package the actual remaining campaign after its terminal receipt; this work created synthetic tempfile bundles only.",
+    "Runtime/gate and aggregate accounting are mocked at this adapter test boundary, and separately validated; the real terminal guard, own-history identities, extraction, masking and packaging are exercised.",
+    "A partial-mask AI review does not establish independent human reliability, causal effects or balanced independent replications."
+  ],
+  "independent_review_ref": {
+    "path": "research/remaining_20261026/implementation/masked_independent_review.json",
+    "sha256": "58fd2dc1f2e2cbb821e270332162ebb7211de972b966636c9863872f8465d93c"
+  }
+}

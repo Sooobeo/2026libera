@@ -1,0 +1,78 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T02:53:10.197Z",
+  "command": "python -B -X utf8 -m unittest discover -s research -p test_build_remaining_masked_review.py -v",
+  "tests_run": 24,
+  "unittest_elapsed_seconds": 49.668,
+  "tool_result": {
+    "chunk_id": "604492",
+    "wall_time_seconds": 10.0076641,
+    "original_token_count": 205,
+    "output": "test_all_raw_and_historical_trees_are_protected (test_build_remaining_masked_review.RemainingMaskTests.test_all_raw_and_historical_trees_are_protected) ... ok\r\ntest_changed_prepared_input_hash_is_rejected (test_build_remaining_masked_review.RemainingMaskTests.test_changed_prepared_input_hash_is_rejected) ... ok\r\ntest_completed_external_D0_is_old_validator_and_not_new_attempt (test_build_remaining_masked_review.RemainingMaskTests.test_completed_external_D0_is_old_validator_and_not_new_attempt) ... ok\r\ntest_extra_generation_evidence_is_rejected (test_build_remaining_masked_review.RemainingMaskTests.test_extra_generation_evidence_is_rejected) ... ok\r\ntest_fidelity_or_main_scope_cannot_enter_new_bundle (test_build_remaining_masked_review.RemainingMaskTests.test_fidelity_or_main_scope_cannot_enter_new_bundle) ... ok\r\ntest_judge_copies_hide_case_paths_hypothesis_audits_and_derived_math (test_build_remaining_masked_review.RemainingMaskTests.test_judge_copies_hide_case_paths_hypothesis_audits_and_derived_math) ... ok\r\ntest_judge_order_is_shuffled_independently_of_private_mapping (test_build_remaining_masked_review.RemainingMaskTests.test_judge_order_is_shuffled_independently_of_private_mapping) ... ok\r\ntest_live_summary_stops_before_accounting_or_text (test_build_remaining_masked_review.RemainingMaskTests.test_live_summary_stops_before_accounting_or_text) ... ok\r\ntest_missing_finals_stay_missing_and_three_planned_items_remain (test_build_remaining_masked_review.RemainingMaskTests.test_missing_finals_stay_missing_and_three_planned_items_remain) ... ok\r\ntest_missing_terminal_stops_before_accounting_or_text (test_build_remaining_masked_review.RemainingMaskTests.test_missing_terminal_stops_before_accounting_or_text) ... ok\r\ntest_mutation_after_accounting_is_detected_before_output_creation (test_build_remaining_masked_review.RemainingMaskTests.test_mutation_after_accounting_is_detected_before_output_creation) ... ok\r\ntest_only_three_new_finals_keep_exact_raw_and_own_history (test_build_remaining_masked_review.RemainingMaskTests.test_only_three_new_finals_keep_exact_raw_and_own_history) ... ok\r\ntest_original_rubric_and_old_module_globals_unchanged (test_build_remaining_masked_review.RemainingMaskTests.test_original_rubric_and_old_module_globals_unchanged) ... ok\r\ntest_partial_final_is_exact_prefix_and_diagnostic_only (test_build_remaining_masked_review.RemainingMaskTests.test_partial_final_is_exact_prefix_and_diagnostic_only) ... ok\r\ntest_prior_completion_D0_text_mutation_cannot_be_packaged (test_build_remaining_masked_review.RemainingMaskTests.test_prior_completion_D0_text_mutation_cannot_be_packaged) ... ok\r\ntest_prior_completion_raw_and_report_trees_are_protected (test_build_remaining_masked_review.RemainingMaskTests.test_prior_completion_raw_and_report_trees_are_protected) ... ok\r\ntest_runtime_and_stage_validation_errors_propagate (test_build_remaining_masked_review.RemainingMaskTests.test_runtime_and_stage_validation_errors_propagate) ... ok\r\ntest_substituted_own_draft_is_rejected (test_build_remaining_masked_review.RemainingMaskTests.test_substituted_own_draft_is_rejected) ... ok\r\ntest_summary_and_terminal_cannot_hide_request (test_build_remaining_masked_review.RemainingMaskTests.test_summary_and_terminal_cannot_hide_request) ... ok\r\ntest_terminal_must_bind_exact_current_summary (test_build_remaining_masked_review.RemainingMaskTests.test_terminal_must_bind_exact_current_summary) ... ok\r\ntest_unattempted_final_payload_is_not_presented_as_supplied (test_build_remaining_masked_review.RemainingMaskTests.test_unattempted_final_payload_is_not_presented_as_supplied) ... ok\r\ntest_validated_accounting_failure_cannot_be_bypassed (test_build_remaining_masked_review.RemainingMaskTests.test_validated_accounting_failure_cannot_be_bypassed) ... ok\r\ntest_validated_accounting_must_be_three_of_fixed_five_and_six_plus_new (test_build_remaining_masked_review.RemainingMaskTests.test_validated_accounting_must_be_three_of_fixed_five_and_six_plus_new) ... ok\r\ntest_wrong_assigned_source_is_rejected (test_build_remaining_masked_review.RemainingMaskTests.test_wrong_assigned_source_is_rejected) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 24 tests in 49.668s\r\n\r\nOK\r\n",
+    "total_wall_time_seconds": 15.6319191,
+    "exit_code": 0
+  },
+  "source_refs": [
+    {
+      "path": "research/build_remaining_masked_review.py",
+      "sha256": "4ce9421049e83bc6e70b18095603bf05f2c36d8bb47a077875b8fbcdacd86a86"
+    },
+    {
+      "path": "research/test_build_remaining_masked_review.py",
+      "sha256": "cfb2f68284f8e71f0d2e7d5c2248e0e18ba06a18247325d25c3d06eac6b3515d"
+    },
+    {
+      "path": "research/build_completion_masked_review.py",
+      "sha256": "543be54722f1c02cf8a86223079548de3384f80cbc8bfab4ca388abb337d8c9b"
+    },
+    {
+      "path": "research/build_v494_masked_review.py",
+      "sha256": "8ed40877f82414678d5808181712813ad474ddf089a08a5ba06a7b7bcaa6d148"
+    },
+    {
+      "path": "research/finalize_sector_remaining.py",
+      "sha256": "8fa60d795bc5ea75226a97761a406468f824d004b18fe7ff3ba897ceda54fe12"
+    },
+    {
+      "path": "research/finalize_sector_completion.py",
+      "sha256": "7dab1d17a801e1d0beee5a669afa9c84adc2914d15715f0c82cfa97cfa45b253"
+    },
+    {
+      "path": "research/finalize_sector_campaign.py",
+      "sha256": "5036ddc1d856adf196fd1d2818ffeb8b3d9b3c98e65be5b6910cef59a9173a8e"
+    }
+  ],
+  "initial_test_attempt_ref": {
+    "path": "research/remaining_20261026/implementation/masked_tests_run01.json",
+    "sha256": "5ad50ec0979b9701d53d004c657596322e550030766e1bfad1e7a4bca12d0de7"
+  },
+  "fixture_correction": "Compared the same five helper-module refs before and after build; first attempt had five before versus three after. Production adapter bytes unchanged between both test runs. Added four external-history/order/protection tests.",
+  "historical_code_check": {
+    "count": 52,
+    "mismatches": []
+  },
+  "generation_core_check": {
+    "count": 6,
+    "mismatches": []
+  },
+  "boundaries_mocked": [
+    "New adapter validate_run/validate_stage/validate_external_stage",
+    "New adapter remaining_accounting"
+  ],
+  "actual_tested": [
+    "Real remaining terminal metadata guard",
+    "Exact synthetic external E D0, saved F0 history, old/new validator dispatch",
+    "Three opaque UUID items and randomized index, 33 planned final rows",
+    "Five new requests plus six historical accounting checks; external D0 not counted anew",
+    "Missing and partial output remains diagnostic, never substituted final",
+    "No case paths/labels/prior audits/derived math in judge JSON, assigned visible source retained",
+    "Raw and all historical run/report trees protected, exclusive files, final hash checks",
+    "Original rubric and frozen helper globals/source hashes unchanged"
+  ],
+  "model_calls": 0,
+  "service_calls": 0,
+  "actual_response_files_read": 0,
+  "actual_judge_bundle_created": false,
+  "frozen_files_modified": false,
+  "limitation": "Synthetic adapter-layer tests; production full finalizer/runtime authority is delegated and separately reviewed. Actual remaining campaign bundle may be built only by root after terminal."
+}

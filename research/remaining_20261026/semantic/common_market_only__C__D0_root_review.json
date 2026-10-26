@@ -1,0 +1,80 @@
+{
+  "version": "remaining_stage_root_review_1",
+  "review_status": "completed",
+  "completed_at_utc": "2026-10-26T06:08:14.310Z",
+  "case_id": "common_market_only__C",
+  "stage": "D0",
+  "transport_ref": {
+    "path": "data/local_sector_runtime/v494_remaining_20261026/common_market_only__C__D0/transport_result.json",
+    "sha256": "4ebbaf6f458b885cff17d281dedcbe137a9f1344d0cabf00fe6309ec062076d5"
+  },
+  "source_refs": [
+    {
+      "path": "research/remaining_20261026/semantic/common_market_only__C__D0_bundle.json",
+      "sha256": "dc44f49e844f3c705a70ea9d01c67ba3519de4d4cbb0647a698b536cd29a2c7c"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/common_market_only__C__D0_review.json",
+      "sha256": "a339d3e7968bd2f4fb11cdde7c2985ec9a4c53954ee48c24748e4e060e78c09f"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/common_market_only__C__D0_review_validation.json",
+      "sha256": "679d7be27810f42b0c28fefb478f0324d0c0edfdb3ec12702c3858ffababa5f4"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/common_market_only__C__D0_numeric_facts.json",
+      "sha256": "77bd419aec890ccc934837809ab5891dfd09688c04e92da7364f0d14a47ff0b9"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/common_market_only__C__D0_numeric_review.json",
+      "sha256": "1c6ec4944587f25db8eb1b88c9e54113d7c976cf5d9dc9826bfde36d7f2ab768"
+    }
+  ],
+  "checks": {
+    "all_eleven_rows_and_all_top_level_fields_read": true,
+    "independent_numeric_review_read": true,
+    "semantic_summary_all_top_findings_and_sector_reasons_read": true,
+    "bundle_refs_rehashed": 84,
+    "previous_frozen_code_refs_rehashed": 65,
+    "mismatches": 0,
+    "mechanical_checks": 1083,
+    "mechanical_failures": 0,
+    "source_fidelity_applicable": false,
+    "raw_sum": "1.02",
+    "derived_units_total": 10000,
+    "actual_raw_matches_completed_UBS_L_D0": true
+  },
+  "findings": [
+    "Raw102% contradicts exact1.0 prose; accepted exact50/51 normalization and largest remainder yields10000units.",
+    "Eight of eleven return values, all11dailymean literals and all11rowvolatility literals disagree with supplied aligned facts; institutional fidelityN/A does not exempt factual review.",
+    "Actual source-free request/model/options/raw text identity is recorded as provenance, not independent replication.",
+    "Current12month-shorter-than-lookback and strong-predictor claims unsupported; CD9% exceeding9.3 andIT38% significantlyabove38 are contradicted.",
+    "HC andFinancials rawabove→derivedbelow benchmark are external normalization effects, not model revisions."
+  ],
+  "review_axes": {
+    "errors": {
+      "reviewed": true,
+      "reason": "Complete actual raw output previously read and current byte identity confirmed; all current semantic and numeric review results checked; errors retained."
+    },
+    "consistency": {
+      "reviewed": true,
+      "reason": "84current bundle refs and65prior frozen code refs checked; current transport/schema/math/source-free input match."
+    },
+    "paper_topic": {
+      "reviewed": true,
+      "reason": "Control draft supplies common-market baseline for interpreting source-reading/reason/allocation links; no institution gold, causal or performance claim."
+    }
+  },
+  "resumption": {
+    "user_paused_after_D0_before_ack": true,
+    "review_completed_after_terminal": true,
+    "old_ACK_published": false,
+    "new_continuation_must_bind_this_review": true
+  },
+  "stage_progression_appropriate": true,
+  "semantic_success_required": false,
+  "model_calls": 0,
+  "service_calls": 0,
+  "raw_artifacts_modified": false,
+  "frozen_files_modified": false
+}

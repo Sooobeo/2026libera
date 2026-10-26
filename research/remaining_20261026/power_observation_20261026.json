@@ -1,0 +1,124 @@
+{
+  "status": "read_only_observation",
+  "query": "Get-CimInstance root/WMI BatteryStatus, BatteryFullChargedCapacity; Get-WinEvent Kernel-Power105/506/507 last2hours/max30; selected data only",
+  "process_exit_code": 0,
+  "kernel_power_events": [
+    {
+      "event_data": {
+        "RemainingCapacity": "61760",
+        "AcOnline": "false",
+        "FullChargeCapacity": "61760"
+      },
+      "message": "Power source change.",
+      "id": 105,
+      "at_utc": "2026-10-26T02:33:04.2098462Z"
+    },
+    {
+      "event_data": {
+        "PowerStateAc": "true",
+        "LidOpenState": "true",
+        "BatteryRemainingCapacityOnExit": "59907",
+        "Reason": "31",
+        "SleepEntered": "false"
+      },
+      "message": "The system is exiting Modern Standby \r\n\r\nReason: Input Keyboard.",
+      "id": 507,
+      "at_utc": "2026-10-26T02:01:41.4029282Z"
+    },
+    {
+      "event_data": {
+        "LidOpenState": "true",
+        "Reason": "12",
+        "BatteryRemainingCapacityOnEnter": "59907"
+      },
+      "message": "The system is entering Modern Standby \r\n\r\nReason: Idle Timeout.",
+      "id": 506,
+      "at_utc": "2026-10-26T02:01:21.1096388Z"
+    },
+    {
+      "event_data": {
+        "PowerStateAc": "true",
+        "LidOpenState": "true",
+        "BatteryRemainingCapacityOnExit": "58672",
+        "Reason": "32",
+        "SleepEntered": "false"
+      },
+      "message": "The system is exiting Modern Standby \r\n\r\nReason: Input Mouse.",
+      "id": 507,
+      "at_utc": "2026-10-26T01:53:59.7916795Z"
+    },
+    {
+      "event_data": {
+        "LidOpenState": "true",
+        "Reason": "12",
+        "BatteryRemainingCapacityOnEnter": "57437"
+      },
+      "message": "The system is entering Modern Standby \r\n\r\nReason: Idle Timeout.",
+      "id": 506,
+      "at_utc": "2026-10-26T01:50:20.9416928Z"
+    },
+    {
+      "event_data": {
+        "RemainingCapacity": "53731",
+        "AcOnline": "true",
+        "FullChargeCapacity": "61760"
+      },
+      "message": "Power source change.",
+      "id": 105,
+      "at_utc": "2026-10-26T01:39:21.4264498Z"
+    },
+    {
+      "event_data": {
+        "PowerStateAc": "false",
+        "LidOpenState": "true",
+        "BatteryRemainingCapacityOnExit": "54349",
+        "Reason": "15",
+        "SleepEntered": "true"
+      },
+      "message": "The system is exiting Modern Standby \r\n\r\nReason: Lid.",
+      "id": 507,
+      "at_utc": "2026-10-26T01:37:37.4273360Z"
+    },
+    {
+      "event_data": {
+        "LidOpenState": "false",
+        "Reason": "15",
+        "BatteryRemainingCapacityOnEnter": "54349"
+      },
+      "message": "The system is entering Modern Standby \r\n\r\nReason: Lid.",
+      "id": 506,
+      "at_utc": "2026-10-26T01:30:04.8962036Z"
+    },
+    {
+      "event_data": {
+        "RemainingCapacity": "61760",
+        "AcOnline": "false",
+        "FullChargeCapacity": "61760"
+      },
+      "message": "Power source change.",
+      "id": 105,
+      "at_utc": "2026-10-26T00:49:47.0111979Z"
+    }
+  ],
+  "battery_full_charge": [
+    {
+      "FullChargedCapacity": 61760
+    }
+  ],
+  "at_utc": "2026-10-26T02:37:55.9222223Z",
+  "battery_status": [
+    {
+      "PowerOnline": false,
+      "Charging": false,
+      "Discharging": true,
+      "RemainingCapacity": 61760,
+      "ChargeRate": 0,
+      "DischargeRate": 6676,
+      "Voltage": 17161,
+      "Critical": false
+    }
+  ],
+  "model_calls": 0,
+  "service_calls": 0,
+  "power_settings_modified": false
+}

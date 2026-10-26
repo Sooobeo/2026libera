@@ -1,0 +1,86 @@
+{
+  "version": "remaining_stage_root_review_1",
+  "review_status": "completed",
+  "completed_at_utc": "2026-10-26T04:00:51.637Z",
+  "case_id": "ubs_june_2026__L",
+  "stage": "D0",
+  "transport_ref": {
+    "path": "data/local_sector_runtime/v494_remaining_20261026/ubs_june_2026__L__D0/transport_result.json",
+    "sha256": "3c3474fea3d8987a87763a2c37a7e3c46f788e0ef7c3ddbd76283002ca6a63eb"
+  },
+  "source_refs": [
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__L__D0_bundle.json",
+      "sha256": "c3706d68456b7a6dbe4e5f98bcb875b1f81ee4544f4c2272780cc6fa910e2db7"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__L__D0_review.json",
+      "sha256": "b7b81c2515db027c67ae1c220428bb30c5df851fc774fd78077698e897696043"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__L__D0_review_validation.json",
+      "sha256": "e72fb8c8e03127ba110d0f9284af060c2b151aaec5e972d5af9e150f825e9033"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__L__D0_numeric_facts.json",
+      "sha256": "e021d16a5f7d3dc714f0f0f99337e969afe3f730266ec35d81ecd63ae60451cd"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__L__D0_numeric_review.json",
+      "sha256": "68dee814dbf0f484ecdf8158e87bcc85058745c67c645896b280c63e69a02732"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_continuation_20261026/fidelity_q2_2026__L__D0/worker_spec.json",
+      "sha256": "03b568b636ce4685b55b99c5ed3ef115e3c3ec31661a246b2ae9e8fbe4fb33e0"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_continuation_20261026/fidelity_q2_2026__L__D0/http_0001_generation/response.json",
+      "sha256": "fd5037666a6c3b6ba6d5e75b9e559b4bec43121c5dda07bb963330ad370e282d"
+    }
+  ],
+  "checks": {
+    "all_eleven_rows_and_all_top_level_fields_read": true,
+    "independent_numeric_review_read": true,
+    "semantic_summary_all_top_findings_and_sector_reasons_read": true,
+    "bundle_refs_rehashed": 84,
+    "bundle_reference_mismatches": 0,
+    "mechanical_checks": 806,
+    "mechanical_failures": 0,
+    "source_fidelity_applicable": false,
+    "source_free_fields_consistent": true,
+    "raw_sum": "1.02",
+    "derived_units_total": 10000,
+    "same_actual_messages_as_prior_Fidelity_L_D0": true,
+    "same_model_and_options": true,
+    "same_completed_raw_text_as_prior_Fidelity_L_D0": true
+  },
+  "findings": [
+    "Raw102% contradicts the exactly1.0 prose claim; accepted50/51scaling and 0.01%remainder allocation yield100%.",
+    "Eight of eleven return claims and all eleven row mean and volatility literals disagree with aligned supplied facts; no internal model-error mechanism inferred.",
+    "Industrials12.4% and Communications11.3% are below the response own13.9%baseline despite above wording; actual aligned annual volatilities have separately documented comparisons.",
+    "Consumer Discretionary9% does not exceed reported9.3%; IT38% equals reported38.0% and is slightly below the normalized benchmark.",
+    "The12month horizon is longer than the approximately3month lookback; strong predictor claim unsupported.",
+    "Identical current and prior source-free drafts do not establish independent replication or a population-level repeatability result. This actual UBS draft has its own provenance and is the sole ownD0 for subsequent UBSF0."
+  ],
+  "review_axes": {
+    "errors": {
+      "reviewed": true,
+      "reason": "Current raw text, arithmetic, market mappings, all top claims and reference integrity checked; model errors retained."
+    },
+    "consistency": {
+      "reviewed": true,
+      "reason": "Actual current input/output/sidecar bindings and source-free metadata verified; input/text identity recorded separately."
+    },
+    "paper_topic": {
+      "reviewed": true,
+      "reason": "Source-free initial choice is the starting point before UBS evidence; institutional fidelity isN/A. No institutional gold, causal or performance claim."
+    }
+  },
+  "stage_progression_appropriate": true,
+  "semantic_success_required": false,
+  "model_calls": 0,
+  "service_calls": 0,
+  "raw_artifacts_modified": false,
+  "frozen_files_modified": false,
+  "limits": "Known-condition AI review.806mechanical checks validate locations/counts/math/refs,not semantic truth. Initial root-note preparation used an incorrect filename suffix lookup and stopped before any write; corrected exact reference selection."
+}

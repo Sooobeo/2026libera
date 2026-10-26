@@ -1,0 +1,64 @@
+{
+  "version": "sector_last_final_archive_plan_1",
+  "archive_stem": "last-final-evidence-20261026",
+  "output_directory": "research/artifacts/last-final-evidence-20261026",
+  "campaigns": [
+    {
+      "purpose": "pilot_last_final",
+      "run_directory": "data/local_sector_runtime/v494_last_final_20261026",
+      "reports_directory": "research/last_final_20261026/run_reports",
+      "service_receipt": "research/last_final_20261026/runtime/service_ready/service_receipt.json",
+      "shutdown_receipt": "research/last_final_20261026/runtime/service_ready/service_shutdown_receipt.json"
+    }
+  ],
+  "raw_campaign_parent": "data/local_sector_runtime",
+  "analysis_role": "primary_exploratory",
+  "new_main_state": {
+    "status": "excluded_not_run",
+    "reason": "Original five logical conditions are primary exploratory evidence. This last segment attempts only previously unattempted C F0 from the exact preserved C D0; no Q3/July main."
+  },
+  "previous_archives": [
+    {
+      "manifest_ref": {
+        "path": "research/artifacts/remaining-evidence-20261026/remaining-evidence-20261026.manifest.json",
+        "sha256": "a71c529420da12b4b903c61de4444827685b9124ddb00f5c8b163797a7e0c2ea"
+      },
+      "verification_ref": {
+        "path": "research/artifacts/remaining-evidence-20261026/remaining-evidence-20261026.verification.json",
+        "sha256": "343fcc4a7ae720908426cdf55925c49ddf9e899b73aa28388610ec82b80e3ef5"
+      },
+      "archive_ref": {
+        "path": "research/artifacts/remaining-evidence-20261026/remaining-evidence-20261026.zip",
+        "sha256": "689913071670d70cb7b05feadcb10614f548dae4042743eeaa799c9433b429d4"
+      }
+    }
+  ],
+  "report_roots": [
+    "research/last_final_20261026"
+  ],
+  "extra_roots": [
+    "research/archive_sector_last_final.py",
+    "research/build_last_final_masked_review.py",
+    "research/finalize_sector_last_final.py",
+    "research/freeze_sector_last_final.py",
+    "research/publish_last_final_review_ack.py",
+    "research/run_sector_last_final.py",
+    "research/test_archive_sector_last_final.py",
+    "research/test_build_last_final_masked_review.py",
+    "research/test_finalize_sector_last_final.py",
+    "research/test_sector_last_final.py",
+    "research/restore_research_artifacts.py"
+  ],
+  "execution_note": "New plan bound to actual byte-verified remaining archive B and its recursive completion/continuation/recovery dependencies. Root must confirm all last-final writers quiet before execution. Terminal and owned shutdown are independently revalidated by the archiver; successful prior archives do not authorize live snapshotting. All final verification receipts are kept in research/delivery_20261026, outside archived report roots.",
+  "plan_preparation": {
+    "prepared_at_utc": "2026-10-26T07:15:32.244Z",
+    "source_template_ref": {
+      "path": "research/last_final_20261026/archive_preparation/archive_plan_template.json",
+      "sha256": "373857a8aa3f2966e527d08a14eb3358a8d19701504e110ec2722f6efc66edfe"
+    },
+    "archive_B_member_verifier_completed": true,
+    "archive_B_verified_files": 435,
+    "archive_B_verified_restore_writes": 0,
+    "last_final_writer_quiet_confirmation_pending": true
+  }
+}

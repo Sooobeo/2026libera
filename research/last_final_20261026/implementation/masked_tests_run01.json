@@ -1,0 +1,21 @@
+{
+  "status": "FAIL",
+  "completed_at_utc": "2026-10-26T06:17:34.293891+00:00",
+  "tests_run": 12,
+  "failures": 1,
+  "errors": 0,
+  "elapsed_seconds": 7.94,
+  "source_refs": [
+    {
+      "path": "research/build_last_final_masked_review.py",
+      "sha256": "d7c9d2677a676b49a0d98d36143ff0a77214972129fcaa837511231addef1e97"
+    },
+    {
+      "path": "research/test_build_last_final_masked_review.py",
+      "sha256": "ede36179f0b5cbf9f27582eda9149e427ab7bd67d1b8f8893e6e56dde1d990f6"
+    }
+  ],
+  "finding": "Fixture model_structure_failure from shared SyntheticRun has no saved response; test incorrectly expected final.txt. Production correctly represented missing text. Correct fixture must explicitly save and bind malformed normally stopped raw response before testing its preservation.",
+  "model_calls": 0,
+  "service_calls": 0
+}

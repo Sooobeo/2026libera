@@ -1,0 +1,48 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T06:21:12.815Z",
+  "source_refs": [
+    {
+      "path": "research/freeze_sector_last_final.py",
+      "sha256": "58bfd4469ae254f0825b3c3f3df4fd20c02cff63cec0f5b3f24e4967314e9eae"
+    },
+    {
+      "path": "research/publish_last_final_review_ack.py",
+      "sha256": "c940cb73a59fd254769cc3357b9029b9375660c4c5851d7421c208a55b851e09"
+    },
+    {
+      "path": "research/last_final_20261026/test_freeze_publish.py",
+      "sha256": "c3ff6b9474f36fa762322dd9fb74a3dcf6575665a557d2edd56a5e460ee9e440"
+    }
+  ],
+  "command": "python -B -X utf8 -m unittest discover -s research/last_final_20261026 -p test_freeze_publish.py -v",
+  "tests_run": 7,
+  "failures": 0,
+  "errors": 0,
+  "exit_code": 0,
+  "unittest_elapsed_seconds": 0.834,
+  "initial_invocation": {
+    "command": "python -B -X utf8 -m unittest discover -s research -p test_freeze_publish.py -v",
+    "exit_code": 1,
+    "tests_run": 0,
+    "classification": "Discovery path omitted namespace subdirectory; not a test pass. Corrected standalone import and explicit discovery directory."
+  },
+  "coverage": [
+    "Exclusive frozen files and refusal of existing raw/report namespace",
+    "Original frozen code hashes checked before any new freeze write",
+    "Plaintext CANCEL hash-only binding",
+    "Typed scientific option mismatch rejected before writing freeze",
+    "Missing review and candidate protocol rejected",
+    "Real production ACK validator accepts completed negative findings, atomic hard-link publication and overwrite refusal",
+    "Wrong D0 slot/outside semantic path/incomplete or stale review rejected without ACK"
+  ],
+  "limits": [
+    "Freezer authority/gate delegates use bounded synthetic fixtures; actual prospective gate validation is root-owned and still pending.",
+    "Publisher tests invoke the real ACK validator against temporary artifact files.",
+    "No live service, model, actual response or power API accessed."
+  ],
+  "model_calls": 0,
+  "service_calls": 0,
+  "actual_archive_calls": 0,
+  "frozen_scientific_files_modified": false
+}

@@ -1,0 +1,641 @@
+{
+  "version": "remaining_UBS_masked_primary_reconciliation_1",
+  "review_status": "completed",
+  "completed_at_utc": "2026-10-26T07:13:39.205Z",
+  "reviewer": {
+    "agent": "method_audit",
+    "role": "Delegated reconciliation reviewer; filename root_reconciliation is an integration path, not a claim that root personally performed this full review.",
+    "AI_assisted": true,
+    "independent_human": false,
+    "reconciliation_blinded": false,
+    "prior_exposure": "Reviewer has read the primary UBS audits and numeric reports and now both condition-mapped masked reviews. The fresh reviewers reported reading only their own opaque item/prior/final and rubric."
+  },
+  "source_refs": [
+    {
+      "path": "research/remaining_20261026/masked_reviews/ee9a1a8d329f46ffb0c5c266fb37642c_review.json",
+      "sha256": "420673a4de3369370b72604d2902937eb0f848667cd59daaa087e10e7ff9c58f"
+    },
+    {
+      "path": "research/remaining_20261026/masked_reviews/4013d47401b6437ab7fc73d18910a8e2_review.json",
+      "sha256": "b41c96d0342304fb902b8081b7b513284aae1b3bfed092c9673497d0efd4a174"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__E__F0_review.json",
+      "sha256": "0b5edea1857617f1da9a6c29f15e503b53458ba63bae795e86e7bf13239b70f0"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__E__F0_bundle.json",
+      "sha256": "bbedc1083d3c87ca1e2af234d3b82393981f692c51b9f4a7175896bfd5bb8ee4"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__E__F0_numeric_facts.json",
+      "sha256": "be9ba5283783883ea72eeddb5e0a288ee3ffb21efdc0d13d1c618dc47f45ef32"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__E__F0_numeric_review.json",
+      "sha256": "33fc714bc01ddbbd5f755f529c7f1817b46be909934789770bc653fef11d5d52"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__L__F0_review.json",
+      "sha256": "5a7e3527ad71005d0dcf7df009fdf8f3b7f18b96d980a45bb9075f89b183b5bd"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__L__F0_bundle.json",
+      "sha256": "67777d48f99659fcd91bfb6b78894a13d5cacc34d8260ba282b7184db399212b"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__L__F0_numeric_facts.json",
+      "sha256": "adabbe431530f26637ce714dbf52f8227de740cfe2e5615e3e27cac254fb8b0d"
+    },
+    {
+      "path": "research/remaining_20261026/semantic/ubs_june_2026__L__F0_numeric_review.json",
+      "sha256": "a26d592cf5d981be5eb3369501f8de473829b251bbe61843f7a06e292acab5bf"
+    },
+    {
+      "path": "research/remaining_20261026/masked_reviews/missing_final_availability_review.json",
+      "sha256": "4c79ee04a143a4167b16a79445558a69fbd7a4366289f884af6d7e19c5b03a71"
+    },
+    {
+      "path": "research/remaining_20261026/masked_judge/index.json",
+      "sha256": "8a1cd1af3bdada814d5faf83d1f13e84a82376776382b0eed109c49996565537"
+    },
+    {
+      "path": "research/remaining_20261026/masked_judge/COMPLETE.json",
+      "sha256": "4fe8cd2e24025074270a43bbbae990053fe9337ed75c790ad64a06830dbcd36c"
+    }
+  ],
+  "scope": "Reconciles two new completed UBS final masked reviews with their corresponding earlier complete semantic and numeric audits. Verifies all declared exact_quote/value bindings, labels, token locators, input bytes and hashes using extraction-specific rules. This does not replace or recode any original review, create an agreement rate, or grade the missing old C final.",
+  "cases": [
+    {
+      "item_id": "ee9a1a8d329f46ffb0c5c266fb37642c",
+      "case_id": "ubs_june_2026__E",
+      "stage": "F0",
+      "major_shared_findings": [
+        {
+          "finding": "The raw final remains0.95, unchanged from own D0 in every sector despite invalid-budget feedback.",
+          "masked_refs": [
+            "/raw_own_prior_final",
+            "/arithmetic_execution"
+          ],
+          "primary_refs": [
+            "/key_findings/0",
+            "/key_findings/1",
+            "/feedback_observation"
+          ]
+        },
+        {
+          "finding": "All11 source labels match. Five Attractive-sector source rationales are represented, but several rating-only Neutral statements acquire unsupported explanatory claims in the decision reasons.",
+          "masked_refs": [
+            "/source_fidelity_summary",
+            "/row_assessments"
+          ],
+          "primary_refs": [
+            "/key_findings/3",
+            "/sector_reviews"
+          ]
+        },
+        {
+          "finding": "The same eight historical metric errors remain: Energy annual volatility; Industrials return and volatility; Health Care volatility; IT volatility; Communication Services return; Utilities return and volatility.",
+          "masked_refs": [
+            "/numeric_temporal_allocation_claim_ledger"
+          ],
+          "primary_refs": [
+            "/key_findings/2",
+            "/numeric_date_period_claims"
+          ]
+        },
+        {
+          "finding": "Top-level allocation language incorrectly includes Neutral IT among positive institutional ratings and contradicts six of ten explicitly named raw benchmark directions. An Attractive rating does not require a fixed weight.",
+          "masked_refs": [
+            "/top_level_assessments/8",
+            "/numeric_temporal_allocation_claim_ledger"
+          ],
+          "primary_refs": [
+            "/key_findings/4",
+            "/explicit_top_level_weight_directions"
+          ]
+        },
+        {
+          "finding": "The12-month versus approximately3-month lookback comparison is reversed. May publication and June issue title are compatible.",
+          "masked_refs": [
+            "/top_level_assessments/5",
+            "/top_level_assessments/10"
+          ],
+          "primary_refs": [
+            "/key_findings/5"
+          ]
+        },
+        {
+          "finding": "All45 citation occurrences,31 distinct IDs, are visible; their presence does not establish factual or explanatory support.",
+          "masked_refs": [
+            "/citation_coverage"
+          ],
+          "primary_refs": [
+            "/citation_review",
+            "/coverage"
+          ]
+        }
+      ],
+      "raw_math": {
+        "prior_sum": {
+          "numerator": "19",
+          "denominator": "20"
+        },
+        "final_sum": {
+          "numerator": "19",
+          "denominator": "20"
+        },
+        "raw_deltas": [
+          {
+            "sector_code": "10",
+            "delta": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "sector_code": "15",
+            "delta": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "sector_code": "20",
+            "delta": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "sector_code": "25",
+            "delta": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "sector_code": "30",
+            "delta": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "sector_code": "35",
+            "delta": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "sector_code": "40",
+            "delta": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "sector_code": "45",
+            "delta": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "sector_code": "50",
+            "delta": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "sector_code": "55",
+            "delta": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "sector_code": "60",
+            "delta": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          }
+        ],
+        "raw_unchanged_count": 11,
+        "citation_occurrences": 45,
+        "citation_distinct": 31
+      },
+      "binding": {
+        "token_pass": 103,
+        "failures": [],
+        "raw_final_exact": true,
+        "raw_prior_exact": true,
+        "market_exact": true,
+        "context_exact": true,
+        "source_exact": true,
+        "feedback_exact": true,
+        "fact_index_exact": true
+      }
+    },
+    {
+      "item_id": "4013d47401b6437ab7fc73d18910a8e2",
+      "case_id": "ubs_june_2026__L",
+      "stage": "F0",
+      "major_shared_findings": [
+        {
+          "finding": "The raw budget falls from1.02 to1.01, leaving a1percentage-point excess. Two exact-sum/correction claims are false.",
+          "masked_refs": [
+            "/raw_own_prior_final_sums_and_change_evidence",
+            "/key_findings/0"
+          ],
+          "primary_refs": [
+            "/summary_findings",
+            "/findings"
+          ]
+        },
+        {
+          "finding": "All11 source labels and source_reading statements match the supplied packet. Correct copying coexists with wrong top-level labels: Consumer Discretionary is called Neutral in alternatives and Utilities is grouped with Neutral in the allocation summary.",
+          "masked_refs": [
+            "/row_assessments",
+            "/top_level_assessments/1",
+            "/top_level_assessments/9"
+          ],
+          "primary_refs": [
+            "/summary_findings",
+            "/sector_reviews",
+            "/findings"
+          ]
+        },
+        {
+          "finding": "Historical figures retain sector, sign and scaling errors. Examples include Energy return+4.2877% described as−4.29%, Consumer Discretionary−1.9156% as+10.24%, IT+14.9920% as149.92%, and IT annual volatility33.6851% as21.2%.",
+          "masked_refs": [
+            "/numeric_temporal_allocation_claim_ledger/numeric",
+            "/key_findings/2"
+          ],
+          "primary_refs": [
+            "/numeric_claims",
+            "/sector_reviews"
+          ]
+        },
+        {
+          "finding": "IT actually falls38%→35%, contrary to increasing language, and35% is below both reported38% and normalized38.0380% benchmark. Self-correcting below/above phrases elsewhere remain mixed statements rather than silently repaired prose.",
+          "masked_refs": [
+            "/numeric_temporal_allocation_claim_ledger/allocation",
+            "/key_findings/3"
+          ],
+          "primary_refs": [
+            "/findings",
+            "/sector_reviews"
+          ]
+        },
+        {
+          "finding": "Source age is real, but the blanket statement that intervening information is unknown overlooks common evidence actually supplied between May publication and July decision. Future or unprovided news remains unknown.",
+          "masked_refs": [
+            "/top_level_assessments/6",
+            "/top_level_assessments/10",
+            "/context_use_overall"
+          ],
+          "primary_refs": [
+            "/findings",
+            "/top_level_reviews"
+          ]
+        },
+        {
+          "finding": "All107 citation occurrences,63 distinct IDs, are visible. Misread values and speculative source rationales remain separate from that visibility.",
+          "masked_refs": [
+            "/citation_coverage",
+            "/key_findings/5"
+          ],
+          "primary_refs": [
+            "/citation_occurrence_audit",
+            "/coverage"
+          ]
+        }
+      ],
+      "raw_math": {
+        "prior_sum": {
+          "numerator": "51",
+          "denominator": "50"
+        },
+        "final_sum": {
+          "numerator": "101",
+          "denominator": "100"
+        },
+        "raw_deltas": [
+          {
+            "sector_code": "10",
+            "delta": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "sector_code": "15",
+            "delta": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "sector_code": "20",
+            "delta": {
+              "numerator": "1",
+              "denominator": "100"
+            }
+          },
+          {
+            "sector_code": "25",
+            "delta": {
+              "numerator": "1",
+              "denominator": "100"
+            }
+          },
+          {
+            "sector_code": "30",
+            "delta": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "sector_code": "35",
+            "delta": {
+              "numerator": "1",
+              "denominator": "100"
+            }
+          },
+          {
+            "sector_code": "40",
+            "delta": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          },
+          {
+            "sector_code": "45",
+            "delta": {
+              "numerator": "-3",
+              "denominator": "100"
+            }
+          },
+          {
+            "sector_code": "50",
+            "delta": {
+              "numerator": "-1",
+              "denominator": "50"
+            }
+          },
+          {
+            "sector_code": "55",
+            "delta": {
+              "numerator": "1",
+              "denominator": "100"
+            }
+          },
+          {
+            "sector_code": "60",
+            "delta": {
+              "numerator": "0",
+              "denominator": "1"
+            }
+          }
+        ],
+        "raw_unchanged_count": 5,
+        "citation_occurrences": 107,
+        "citation_distinct": 63
+      },
+      "binding": {
+        "token_pass": 68,
+        "failures": [],
+        "raw_final_exact": true,
+        "raw_prior_exact": true,
+        "market_exact": true,
+        "context_exact": true,
+        "source_exact": true,
+        "feedback_exact": true,
+        "fact_index_exact": true
+      }
+    }
+  ],
+  "judgment_differences_retained": [
+    {
+      "topic": "E Energy source_reading no specific drivers",
+      "primary": "supported_in_selected_packet_with_scope_caveat",
+      "masked": "ambiguous",
+      "reconciliation": "Both agree only Neutral is supplied. The phrase can acknowledge missing selected-packet rationale or overstate what the entire report says. Retain both labels and the common scope qualification; do not force consensus.",
+      "primary_pointer": "/sector_reviews/0/source_reading_review",
+      "masked_pointer": "/row_assessments/0/source_fidelity/reading"
+    },
+    {
+      "topic": "E baseline/neutral Energy wording",
+      "primary": "Approximate reported-display wording is accepted with exact-comparison qualification.",
+      "masked": "ambiguous because no neutrality tolerance is specified",
+      "reconciliation": "Raw3% equals the reported3% display but lies slightly below normalized3.003003%. Preserve the display-versus-normalized distinction; neither review licenses an exact weight from the Neutral label.",
+      "masked_claims": [
+        "L041",
+        "L072"
+      ]
+    },
+    {
+      "topic": "E Consumer Discretionary overweight relative to Neutral sectors",
+      "primary": "unresolved comparator",
+      "masked": "ambiguous comparator",
+      "reconciliation": "Raw9% exceeds several Neutral absolute weights but not IT and is below its own benchmark. No compulsory rating-to-weight map or uniquely intended comparator is inferred.",
+      "masked_claims": [
+        "L042"
+      ]
+    },
+    {
+      "topic": "E Utilities adopt versus tempered decision",
+      "primary": "Qualification is permissible; quantitative premises and unsupported growth claim assessed separately.",
+      "masked": "ambiguous stance wording with source_stance adopt",
+      "reconciliation": "Retain the stance-description ambiguity; a small weight alone is not a source-fidelity failure.",
+      "masked_pointer": "/row_assessments/9/source_fidelity/stance"
+    },
+    {
+      "topic": "L IT pricing/peak attribution",
+      "primary": "unresolved explicitly conjectural attribution",
+      "masked": "unsupported by supplied Neutral-only statement",
+      "reconciliation": "Both find no supplied UBS valuation/cyclical-peak rationale. Likely/may marks conjecture rather than evidence; preserve the distinction between missing source support and an asserted false fact.",
+      "primary_pointer": "/findings",
+      "masked_pointers": [
+        "/row_assessments/7/evidence_decision_link/atomic_assessments/1",
+        "/top_level_assessments/2/assessments/1"
+      ]
+    },
+    {
+      "topic": "L12-month horizon called short",
+      "primary": "unresolved subjective comparison",
+      "masked": "ambiguous qualitative comparison",
+      "reconciliation": "The final does not repeat the earlier explicit assertion that12months is shorter than the historical window. Do not carry the old D0 literal error into this F0.",
+      "masked_pointer": "/top_level_assessments/5"
+    },
+    {
+      "topic": "L missing intervening information",
+      "primary": "mixed: unprovided news unknown, supplied updates present",
+      "masked": "contradicted blanket claim",
+      "reconciliation": "The unqualified any-new-information wording is contradicted by supplied releases. The reasonable limited uncertainty about unprovided developments remains separate.",
+      "masked_pointers": [
+        "/top_level_assessments/6",
+        "/top_level_assessments/10"
+      ]
+    },
+    {
+      "topic": "Undefined low/modest/near-zero and conditional alternative weights",
+      "primary": "Unresolved or qualified interpretations retained at row/top level.",
+      "masked": "ambiguous where a comparator, threshold or alternative vector is absent",
+      "reconciliation": "No new threshold, expected-return claim, counterfactual portfolio or mandatory institutional target is added."
+    }
+  ],
+  "counting_units": {
+    "E": {
+      "primary_narrative_numeric_date_period_occurrences": 31,
+      "primary_raw_weight_fields_separate": 11,
+      "primary_retention_claims_separate": 11,
+      "primary_explicit_top_level_direction_items_separate": 10,
+      "masked_mixed_numeric_temporal_allocation_entries": 74,
+      "masked_definition": "Includes11 raw final weights,11 own-prior changes,14 historical metrics, relative-weight propositions, dates/horizons, macro values and qualitative/conditional allocation claims.",
+      "masked_historical_numeric_entries": 14,
+      "masked_historical_numeric_contradictions": 8
+    },
+    "L": {
+      "primary_explicit_prose_numeric_date_period_weight_occurrences": 56,
+      "primary_structural_weights_separate": 11,
+      "masked_numeric_entries": 56,
+      "masked_numeric_structural_weights_included": 11,
+      "masked_temporal_entries_separate": 11,
+      "masked_allocation_entries_separate": 27,
+      "warning": "The equal number56 does not establish matching denominators: masked numeric entries include11 raw JSON weights while primary prose entries include temporal claims and record structural weights separately. Allocation family entries overlap quoted propositions; they must not be added as independent observations."
+    },
+    "all": "No accuracy percentage, agreement percentage, interrater coefficient, reviewer reliability, independent sample-size or overall success score is calculated. Binding occurrence counts below include repeated use of the same quote/value in multiple ledgers and are not scientific claim counts."
+  },
+  "extraction_binding_verification": {
+    "method": "Traverse each review object. String exact_quote must be a literal substring at its pointer; numeric scalar quote must denote the actual scalar; raw array/property fragments must occur literally in raw text and parse to the identical pointed array. Each value must equal the whole node or the explicitly appropriate row[2]/fact.value/prose numerical extraction. Label quotes and token char_start pointers are separately checked.",
+    "E": {
+      "exact_quote_occurrences": 228,
+      "value_pointer_occurrences": 342,
+      "label_quote_occurrences": 0,
+      "other_token_bindings": 103,
+      "raw_array_quote_occurrences": 2,
+      "resolved_generic_mismatches": {
+        "fact_table_row_value_column_2": 22,
+        "prose_range_literals": 2,
+        "prose_numeric_literals": 2
+      },
+      "unresolved_binding_mismatches": 0
+    },
+    "L": {
+      "exact_quote_occurrences": 319,
+      "value_pointer_occurrences": 733,
+      "label_quote_occurrences": 11,
+      "other_token_bindings": 68,
+      "raw_array_quote_occurrences": 1,
+      "raw_property_array_fragment_occurrences": 1,
+      "resolved_generic_mismatches": {
+        "fact_table_row_value_column_2": 26,
+        "calculator_fact_value_member": 6,
+        "raw_property_array_fragment": 1
+      },
+      "unresolved_binding_mismatches": 0
+    },
+    "explicit_examples": [
+      {
+        "kind": "macro table",
+        "pointer": "/supplied_final_evidence/common_context/market_context/fact_table/rows/0",
+        "extraction": "row[2]",
+        "value": {
+          "lower": 3.5,
+          "upper": 3.75
+        }
+      },
+      {
+        "kind": "CPI and unemployment table rows",
+        "pointers": [
+          "/supplied_final_evidence/common_context/market_context/fact_table/rows/2",
+          "/supplied_final_evidence/common_context/market_context/fact_table/rows/4"
+        ],
+        "extraction": "row[2]",
+        "values": [
+          3.5,
+          4.2
+        ]
+      },
+      {
+        "kind": "L feedback",
+        "pointer": "/supplied_final_evidence/actual_draft_calculator_feedback/facts/1",
+        "extraction": "fact.value",
+        "value": 0.020000000000000018
+      },
+      {
+        "kind": "E prose range",
+        "pointer": "/sectors/6/decision_reason",
+        "literal": "FOMC target 3.5-3.75%",
+        "extraction": "Literal3.5-3.75% interval, not the entire reason string."
+      },
+      {
+        "kind": "L citation property fragment",
+        "review_pointer": "/top_level_assessments/11",
+        "input_pointer": "/context_assessment/evidence_ids",
+        "extraction": "The quote includes the evidence_ids property name and formatted array. It occurs in final.txt and parsing the fragment reproduces the identical array; compactJSON mismatch is not a quotation defect."
+      }
+    ],
+    "E_historical_percent_conversions_checked": 14,
+    "E_percent_conversion_mismatches": 0,
+    "percent_conversion_note": "Binary-float display tails may differ from the exact decimal fact table in the last digits; all14 conversions agree within1e-12 percentage points and no stated-precision classification changes.",
+    "reference_occurrences_rehashed": 514,
+    "unique_reference_paths_rehashed": 140,
+    "reference_hash_mismatches": [],
+    "relative_reference_resolution": "The four L input refs beginning masked_judge/ are relative to research/remaining_20261026. Absolute and workspace-relative refs use their declared workspace paths."
+  },
+  "raw_derived_separation": {
+    "masked_judges_received_derived_sidecar_as_grounds": false,
+    "primary_audits_report_raw_and_derived_separately": true,
+    "interpretation": "This reconciliation confirms the original raw claims and own-prior changes. External100% construction does not repair model explanations, source attribution or the raw budget. Existing primary derived comparisons remain a separate endpoint; no extra model revision is inferred from normalization."
+  },
+  "historical_missing_C": {
+    "item_id": "f7398ee94c2144abbbbf0b9c9281819f",
+    "availability_review_ref": {
+      "path": "research/remaining_20261026/masked_reviews/missing_final_availability_review.json",
+      "sha256": "4c79ee04a143a4167b16a79445558a69fbd7a4366289f884af6d7e19c5b03a71"
+    },
+    "status": "historical_segment_final_not_attempted",
+    "content_present": false,
+    "scored": false,
+    "substituted_with_D0": false,
+    "unchanged": true,
+    "scope": "The stopped remaining segment continues to contain two completed UBS finals and one unattempted C final. The separately authorized last-final C execution is a different segment and is not merged into or substituted for this historical missing item."
+  },
+  "review_axes": {
+    "errors": {
+      "reviewed": true,
+      "reason": "All specified quote/value bindings and current reference hashes resolve using their declared extraction scope. No actual transcription or pointer mismatch was found. Original model numeric, arithmetic and attribution errors remain recorded."
+    },
+    "consistency": {
+      "reviewed": true,
+      "reason": "Masked prior/final raw text and actual visible packet/context/market/fact-index/feedback match the primary completed-stage bundles exactly. Major factual findings align; interpretive category differences and incompatible counting units are explicitly preserved."
+    },
+    "paper_topic": {
+      "reviewed": true,
+      "reason": "Both reviews address source meaning→stated reasoning→observed allocation and distinguish copied labels or existing IDs from supported reasoning. This is descriptive AI-assisted checking of five exploratory conditions, not independent human validation, causal timing evidence, repeated independent trials or investment-performance evidence."
+    }
+  },
+  "limits": [
+    "The fresh reviewers were partially masked, not fully blinded; structural source timing and document content can reveal condition information.",
+    "This reconciliation had both reviews, mappings and prior findings available and is not an independent blind replication.",
+    "Supplied institution packets contain researcher paraphrases and selected excerpts; missing rationale in a packet does not prove absence from the full original document.",
+    "Only major semantic findings are reconciled; all original row/claim-level judgments and uncertainties remain authoritative as separate records. Literal binding validity does not establish entailment.",
+    "The filename is not evidence that the parent/root personally performed all detailed reading."
+  ],
+  "operations": {
+    "model_calls": 0,
+    "service_calls": 0,
+    "original_reviews_modified": false,
+    "raw_or_frozen_files_modified": false,
+    "missing_availability_review_modified": false,
+    "new_outputs_written": 1
+  },
+  "writer_quiet": true
+}

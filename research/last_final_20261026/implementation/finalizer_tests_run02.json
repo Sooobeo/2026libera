@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T06:15:11.906485+00:00",
+  "command": "python -B -X utf8 -m unittest discover -s research -p test_finalize_sector_last_final.py -v",
+  "tests_run": 19,
+  "errors": 0,
+  "failures": 0,
+  "elapsed_seconds": 37.122,
+  "exit_code": 0,
+  "source_refs": [
+    {
+      "path": "research/finalize_sector_last_final.py",
+      "sha256": "3840624a7b611132b7920ee728c03729a760846ff61e25688715cafa28a75cff"
+    },
+    {
+      "path": "research/test_finalize_sector_last_final.py",
+      "sha256": "60152bf1abe9bca1131a749ca4f0c9de056b6cb8cf10180437ac87687d8cf1ef"
+    }
+  ],
+  "previous_failed_run_ref": {
+    "path": "research/last_final_20261026/implementation/finalizer_tests_run01.json",
+    "sha256": "c6358006c97147b3b25ef825d99c82214716829a7a261a223fe2b0291c282c16"
+  },
+  "targeted_recheck": {
+    "tests": 2,
+    "elapsed_seconds": 2.662,
+    "status": "PASS"
+  },
+  "scope": "Synthetic five-segment end-to-end artifact/math/history accounting. Real gate/spec/ACK authority delegates mocked at public boundaries only; no claim of actual future-run integration. Prior finalizers, raw parsing, exact math, reference checks and immutable-byte checks execute.",
+  "fixes": [
+    "Explicit protocol_ref/runtime_ref load and cross-authority comparisons.",
+    "Plaintext CANCEL remains hash-bound without JSON requirement.",
+    "Resumption design ref bound."
+  ],
+  "coverage": [
+    "Ten historical requests plus zero/one new control final; five cases/55rows/10logical slots retained.",
+    "Old C D0 ACK absent, late semantic review correctly dated and transport-bound.",
+    "Exact external own-D0 text; no repeated D0 or previous C F0.",
+    "Negative/structurally failed model output remains outcome, normal completion requires review ACK; stopped final ACK gap retained.",
+    "Fresh terminal/approved authority/code hashes required before output extraction."
+  ],
+  "model_calls": 0,
+  "service_calls": 0,
+  "actual_new_response_read": false,
+  "frozen_files_modified": false
+}

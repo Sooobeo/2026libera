@@ -1,0 +1,272 @@
+{
+  "version": "last_final_masked_reconciliation_1",
+  "status": "PASS",
+  "review_status": "completed",
+  "completed_at_utc": "2026-10-26T07:25:36.059Z",
+  "reviewer": {
+    "agent": "/root/method_audit",
+    "role": "unmasked AI-assisted reconciliation reviewer",
+    "scope": "Verified the fixed fresh review and its input bindings; compared its major findings with the existing primary and numeric audits. This is not a second blind audit, independent human reliability validation, or a claim that parent root personally performed this full check.",
+    "fresh_review_quiet_signal_received": true,
+    "fresh_review_sha256_at_signal": "df7d038736ceaf9042ac3f4a332c9b808146beacd3526cddfa16bdad4f44d069",
+    "prior_output_and_review_exposure": true
+  },
+  "item_id": "79a5003e43bd4932a39e7ad684ab42f6",
+  "case_id": "common_market_only__C",
+  "stage": "F0",
+  "status_meaning": "PASS means the checked references, extracted claims and reconciliation record are consistent; it does not mean the model output is correct.",
+  "input_refs": [
+    {
+      "path": "research/last_final_20261026/masked_reviews/79a5003e43bd4932a39e7ad684ab42f6_review.json",
+      "sha256": "df7d038736ceaf9042ac3f4a332c9b808146beacd3526cddfa16bdad4f44d069"
+    },
+    {
+      "path": "research/last_final_20261026/masked_judge/79a5003e43bd4932a39e7ad684ab42f6/item.json",
+      "sha256": "ecedfdb56798f9459f0ea0c34640f4d3388c312a6378e2c3e66c920a07303611"
+    },
+    {
+      "path": "research/last_final_20261026/masked_judge/79a5003e43bd4932a39e7ad684ab42f6/prior.txt",
+      "sha256": "c1e32e386d8a75967c5f7590dabf5c92466a0327511b8a1a19e9b0b475221ec9"
+    },
+    {
+      "path": "research/last_final_20261026/masked_judge/79a5003e43bd4932a39e7ad684ab42f6/final.txt",
+      "sha256": "6ec0d416c80c2dad78b706093080f647484f3f396f00c2adc2b700204efc6882"
+    },
+    {
+      "path": "research/last_final_20261026/masked_judge/rubric.json",
+      "sha256": "afbdcc51e1a41a9bb7c21e0120e22458c48ab29322cfec817e7434fbe6f1233f"
+    },
+    {
+      "path": "research/last_final_20261026/semantic/common_market_only__C__F0_bundle.json",
+      "sha256": "601b895fd4d29a0a1a018ce842b0be5654d8372e4c6efd64f8aa810af2e48ea2"
+    },
+    {
+      "path": "research/last_final_20261026/semantic/common_market_only__C__F0_review.json",
+      "sha256": "eea3f3f8ce10f4d3e20625716cf69571b23a9790d74d3e22684ee19dc1e42344"
+    },
+    {
+      "path": "research/last_final_20261026/semantic/common_market_only__C__F0_review_validation.json",
+      "sha256": "63635dbbcc94a4a06b5da96dd89ddbfe68d9e1e99fb373711406e1571cc0d590"
+    },
+    {
+      "path": "research/last_final_20261026/semantic/common_market_only__C__F0_numeric_review.json",
+      "sha256": "36d309e25816b209378b294b5d535d745597a7b3d9905478db707c79b93ab1ab"
+    },
+    {
+      "path": "research/last_final_20261026/semantic/common_market_only__C__F0_numeric_facts.json",
+      "sha256": "f8e36fe7d9941a6158d5a138b88df7d4e94c6ec78e904a4b88f87ff68c636fb9"
+    },
+    {
+      "path": "research/last_final_20261026/run_reports/allocation_math/common_market_only__C__F0.json",
+      "sha256": "7e3463f3223194d877ed5cc1b58bc60cc1e253b35452b0bf1c7c888e7527e570"
+    }
+  ],
+  "input_verification": {
+    "four_fresh_reviewer_inputs_sha256_and_byte_lengths_match": true,
+    "fresh_review_sha256_unchanged_after_quiet": true,
+    "masked_final_text_equals_current_guarded_final_text": true,
+    "masked_prior_text_equals_exact_own_D0_text": true,
+    "common_market_common_context_numeric_fact_index_actual_D0_feedback_match_current_bundle": true,
+    "source_packet_absent_in_both": true
+  },
+  "binding_verification": {
+    "method": "Resolve each declared file and JSON Pointer in the four allowed inputs. Match exact quote spans/substrings, typed scalar/object/array values and numeric/identifier character spans. Decode compact fact tables using shared metadata plus row columns. Structured citation scopes may be their containing context object rather than a string. Parsed JSON numeric spelling differences (1e-06 versus 0.000001) are equivalent values, not quote corruption.",
+    "counts_are_overlapping_check_occurrences_not_independent_observations": true,
+    "exact_quote_bindings": 669,
+    "typed_value_pointer_bindings": 698,
+    "serialized_json_value_bindings": 698,
+    "numeric_or_identifier_character_span_bindings": 179,
+    "relative_claim_substrings": 38,
+    "fact_table_lineage_bindings": 317,
+    "decoded_macro_row_bindings": 23,
+    "decimal_to_percent_conversions": 44,
+    "sector_raw_changes_and_benchmark_differences": 11,
+    "numeric_ledger_expected_values": 162,
+    "citation_scope_bindings": 173,
+    "additional_top_level_exact_quotes": 2,
+    "mismatches": [],
+    "checker_granularity_corrections": {
+      "fact_table_shared_pointers": "Fourteen preliminary mismatches arose because the generic checker looked for common_market_json_pointer only in row columns. Singleton tables store it in shared metadata; decoding the merged table resolves all fourteen.",
+      "structured_claim_scopes": "One hundred five preliminary mismatches arose from requiring citation scope to be a string. The declared context/other container objects are valid scopes enclosing the citation array; all 173 declared scopes resolve. These were checker assumptions, not review corrections."
+    },
+    "limits": "Expected numeric values and conversion fields were checked against the supplied evidence or declared task/raw vector. This verifies extraction and arithmetic, not public-data authenticity or all subjective semantic classifications."
+  },
+  "coverage_units": {
+    "fresh_review": {
+      "stages": [
+        "own prior D0",
+        "final F0"
+      ],
+      "sector_rows_per_stage": 11,
+      "numeric_ledger_records": 162,
+      "raw_weight_fields": 22,
+      "prose_numeric_token_occurrences": 140,
+      "prior_numeric_records": 89,
+      "final_numeric_records": 73,
+      "relative_or_spelled_out_propositions": 38,
+      "prior_relative_propositions": 28,
+      "final_relative_propositions": 10,
+      "citation_occurrences": 173,
+      "prior_citation_occurrences": 96,
+      "final_citation_occurrences": 77,
+      "unique_cited_ids": 53,
+      "nonvisible_citations": 0,
+      "identifier_occurrences_excluded": 234
+    },
+    "primary_review": {
+      "stage": "final F0",
+      "numeric_statement_range_date_period_occurrences": 61,
+      "raw_weight_fields_separate": 11,
+      "final_narrative_numeric_regex_tokens": 84,
+      "covered_claim_tokens": 65,
+      "excluded_identifier_tokens": 19,
+      "final_citation_occurrences": 77,
+      "unique_final_cited_ids": 53
+    },
+    "interpretation": "The fresh 162 includes two stages and 22 raw weights; primary 61 counts final narrative assertions, ranges and dates at a different granularity. The final fresh 62 prose tokens also need not equal primary 65 claim-covered tokens because enumeration of ranges/date tokens differs. None of these counts is a sample size, error rate, agreement percentage or composite score."
+  },
+  "major_findings_reconciled": [
+    {
+      "topic": "raw budget and actual revision",
+      "masked_locator": "/arithmetic_execution",
+      "primary_locator": "/summary_findings/0",
+      "finding": "Own D0 sum is exactly 1.02. Energy, Materials and Utilities each decline by 0.002; total change is -0.006 and final sum is 1.014, leaving 0.014. Risk names only Energy and Utilities; implication misnames the prior sum 1.02 as a residual. Both reviews distinguish a required target of 1.0 from the false achieved-sum claims in risk and allocation implication.",
+      "resolution": "Consistent concrete facts; no raw repair or forced recoding."
+    },
+    {
+      "topic": "historical metrics and ranking",
+      "masked_locator": "/key_findings/2",
+      "primary_locator": "/summary_findings/1",
+      "finding": "Both identify repeated wrong scales, signs or sector values. IT claims 149.92% versus supplied 14.9920%, daily mean 2.55% versus 0.25538%, and annual volatility 21.2% versus 33.6851%. Financials highest-return/highest-volatility claims conflict with visible ordering; IT has the highest compound return and Financials the lowest volatility.",
+      "resolution": "Substantive errors persist despite visible citation IDs. No performance inference."
+    },
+    {
+      "topic": "time horizon and context",
+      "masked_locator": "/key_findings/4",
+      "primary_locator": "/summary_findings/2",
+      "finding": "Twelve months exceeds the roughly three-month lookback. The stated reverse comparison and strong-predictor inference are unsupported. Macro values do not uniquely prescribe sector weights.",
+      "resolution": "Consistent; conditional economic interpretation is separated from contradicted facts."
+    },
+    {
+      "topic": "source absence and citations",
+      "masked_locator": "/source_fidelity",
+      "primary_locator": "/summary_findings/3",
+      "finding": "All eleven institutional-source fields consistently indicate no supplied institution. Source fidelity is N/A. All 77 final citations are visible; the fresh 173 also includes the 96 prior citations. Visibility alone does not support the nearby claim.",
+      "resolution": "No source-absence penalty or inference of valid reasoning from labels/IDs."
+    },
+    {
+      "topic": "derived endpoint kept separate",
+      "masked_locator": "/scope_and_method",
+      "primary_locator": "/summary_findings/4",
+      "finding": "The fresh judge received raw evidence, not the external math sidecar. In the separately bound numeric audit, final 10000 units are [375,177,888,888,493,888,1183,3748,986,177,197]; own-D0 derived TV is 11/2000 (0.55%). All eight raw-unchanged sectors rise after normalization because the denominator changes from 1.02 to 1.014.",
+      "resolution": "A derived 100% allocation does not make the raw sum-one assertion correct and does not supply new evidence to the masked judge."
+    }
+  ],
+  "preserved_qualifications": [
+    {
+      "subject": "retains prior weight while cutting it",
+      "primary_ids": [
+        "N001",
+        "N005",
+        "N031"
+      ],
+      "masked_ids": [
+        "N0090",
+        "N0095",
+        "N0121"
+      ],
+      "primary": "supported_numeric_value for the actual prior bases, with imprecise retention wording separately noted",
+      "masked": "ambiguous_qualified for the surrounding sentence",
+      "reconciliation": "Same prior/final numbers and actual cuts. Different coding unit; retain both labels."
+    },
+    {
+      "subject": "exactly 1.0 in the Energy reason",
+      "primary_ids": [
+        "N038"
+      ],
+      "masked_ids": [
+        "N0094"
+      ],
+      "primary": "supported_task_target",
+      "masked": "supported_target_constraint",
+      "reconciliation": "Both treat this occurrence as the task requirement, not a separate explicit achieved-sum statement."
+    },
+    {
+      "subject": "single 3.5% Fed rate",
+      "primary_ids": [
+        "N042"
+      ],
+      "masked_ids": [
+        "N0131"
+      ],
+      "primary": "incomplete_range_description",
+      "masked": "ambiguous_incomplete",
+      "reconciliation": "Lower endpoint is supported; the supplied 3.5–3.75 target range is truncated. No effective single-rate value is invented."
+    },
+    {
+      "subject": "stable employment 4.2%",
+      "primary_ids": [
+        "N047"
+      ],
+      "masked_ids": [
+        "N0136"
+      ],
+      "primary": "value_matches_but_label_and_stability_unsupported",
+      "masked": "ambiguous_mislabeled_context",
+      "reconciliation": "4.2 is the unemployment rate; employment labeling and stability do not follow from one observation."
+    },
+    {
+      "subject": "Energy and Utilities each -0.002",
+      "primary_ids": [
+        "N049"
+      ],
+      "masked_ids": [
+        "N0138"
+      ],
+      "primary": "incomplete_change_description",
+      "masked": "supported_value_in_incomplete_explanation",
+      "reconciliation": "The two named changes are true but Materials also falls. Their truth does not establish full budget correction."
+    },
+    {
+      "subject": "macro snapshot dated July 2026",
+      "primary_ids": [
+        "N052",
+        "N061"
+      ],
+      "masked_location": "/top_level_prose_reviews",
+      "primary": "coarse_date_requires_release_period_distinction",
+      "masked": "support for the contextual limitation with explicit date qualifications",
+      "reconciliation": "Retain the distinction between June observations/policy and July releases; unknown subsequent revisions are not asserted as facts."
+    },
+    {
+      "subject": "near/matching/low and relative interpretations",
+      "primary_location": "/sector_reviews",
+      "masked_location": "/sector_reviews",
+      "reconciliation": "Health Care raw 9% is close to the normalized reference about 8.9089%, not exact equality. Industrial volatility near baseline has no declared threshold (about 19.7182% versus 13.9023%). Interpretive labels, conditional alternatives and growth/defensive characterizations retain their qualifications; no optimal or unique weight follows. Any derived benchmark crossing is a separate math endpoint."
+    }
+  ],
+  "review_axes": {
+    "errors": {
+      "reviewed": true,
+      "pass": true,
+      "reason": "No discrepancy found in checked hashes, quote/value/pointer bindings or actual raw changes. Model arithmetic and factual errors remain explicit results."
+    },
+    "consistency": {
+      "reviewed": true,
+      "pass": true,
+      "reason": "Exact own history and supplied inputs match. Stage/count units and ambiguous coding labels are preserved without a consensus accuracy claim."
+    },
+    "paper_topic": {
+      "reviewed": true,
+      "pass": true,
+      "reason": "The review traces visible evidence to stated interpretation, reasons and allocation. The source-free control provides a descriptive contrast; citation visibility or a derived sum of 100% does not demonstrate sound evidence-to-choice reasoning."
+    }
+  },
+  "unresolved": "Interpretive categories remain qualified as stated above. This reconciliation does not independently authenticate the source data, assign weights to error severity, rank conditions, estimate causal effects or validate future returns.",
+  "changes_to_original_reviews": [],
+  "original_artifacts_modified": false,
+  "archived_prior_roots_accessed": false,
+  "model_calls": 0,
+  "service_calls": 0,
+  "ACK_publications": 0
+}
