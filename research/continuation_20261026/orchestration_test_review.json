@@ -1,0 +1,54 @@
+{
+  "version": "continuation_orchestration_tests_1",
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T00:08:19.905739+00:00",
+  "tests_passed": 13,
+  "exit_code": 0,
+  "refs": [
+    {
+      "path": "research/run_sector_continuation.py",
+      "sha256": "15c74157f0169fca721671fe5219673f7c3296d42ebd984b2c326e0ab493b2cb"
+    },
+    {
+      "path": "research/sector_continuation_runtime.py",
+      "sha256": "6ec09d1f524bda53c9cc80505ea4d47d13c211f159ff7c7702b6c3ba645d83f1"
+    },
+    {
+      "path": "research/sector_continuation_gate.py",
+      "sha256": "176d43c79da92299716a2509172741248ec2764bcd4869e1927cff70bd14dcb5"
+    },
+    {
+      "path": "research/sector_continuation_awake.py",
+      "sha256": "2318c6acafc72d38c68109e7f1abcc45bc5e8cec428f90c0a63da88c5382825c"
+    },
+    {
+      "path": "research/test_sector_continuation.py",
+      "sha256": "27f9ff3e827decda54bd37e45aa028cda25e5f2b71918c598a2994061d28e024"
+    }
+  ],
+  "test_scope": [
+    "four cases/eight stages/eleven inclusive requests",
+    "new own D0 lineage",
+    "ordinary structure failure skips dependent F0 and continues other cells",
+    "instrument and infrastructure failures halt without retries",
+    "prestage cancellation and no output-directory reuse",
+    "same-main-thread power request/explicit clear, AC loss and cross-thread refusal",
+    "coordinator acquisition exception always accounts missing slots and performs cleanup"
+  ],
+  "initial_test_note": "The first11-test run observed a concurrent reviewed ledger clarification: overall_cell_attempt2 for L D0 and F0, overall_stage_attempt2 only for L D0. The test now asserts both meanings explicitly; no model request occurred.",
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "13 synthetic orchestration and ownership tests pass; no HTTP/model calls."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Historical case not rerun; new own draft bound, request counts and missing cells retained. Ordinary arithmetic/citation errors do not stop continuation."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "Only original E/L/C sequence and separate math sidecars are exercised; no semantic success or causal conclusion is inferred."
+    }
+  },
+  "model_calls": 0
+}

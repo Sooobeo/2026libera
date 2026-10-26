@@ -1,0 +1,208 @@
+{
+  "version": "continuation_implementation_method_review_20261026_1",
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T00:07:13.165Z",
+  "reviewer": "Codex method_audit agent; read-only implementation-to-protocol review, unvalidated AI assistance, not independent human validation",
+  "scope": "Four new continuation sources and their use of frozen v494 dependencies. Read-only source/AST/syntax review; no model, HTTP, awake-API or experimental execution. Root synthetic orchestration and separate finalizer-adapter tests are additional gate inputs, not claimed as performed here.",
+  "protocol_ref": {
+    "path": "research/continuation_20261026/protocol_and_review.json",
+    "sha256": "bdecefe6f459dbc0c1eafda8011148b0972dd38d0d38d6311ca1add151a542ed"
+  },
+  "reviewed_code_refs": [
+    {
+      "path": "research/run_sector_continuation.py",
+      "sha256": "15c74157f0169fca721671fe5219673f7c3296d42ebd984b2c326e0ab493b2cb"
+    },
+    {
+      "path": "research/sector_continuation_runtime.py",
+      "sha256": "6ec09d1f524bda53c9cc80505ea4d47d13c211f159ff7c7702b6c3ba645d83f1"
+    },
+    {
+      "path": "research/sector_continuation_gate.py",
+      "sha256": "176d43c79da92299716a2509172741248ec2764bcd4869e1927cff70bd14dcb5"
+    },
+    {
+      "path": "research/sector_continuation_awake.py",
+      "sha256": "2318c6acafc72d38c68109e7f1abcc45bc5e8cec428f90c0a63da88c5382825c"
+    }
+  ],
+  "frozen_dependency_refs": [
+    {
+      "path": "research/sector_v494_runtime.py",
+      "sha256": "c9521000aa3a1497775c83fa83a1b9bac9f5443edbcb707f131d313f7cd8bed1"
+    },
+    {
+      "path": "research/sector_v492_contract.py",
+      "sha256": "f77d1ddec9630a4c7edbf3928d298b7b05094345996ece1cf53d91fc40171a21"
+    },
+    {
+      "path": "research/sector_v491_contract.py",
+      "sha256": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397"
+    },
+    {
+      "path": "research/review_sector_v494_stage.py",
+      "sha256": "81195353a74f00fde66e1915e068e9167966ccc3cb774b65ad929867bf44b3e6"
+    },
+    {
+      "path": "research/finalize_sector_allocation.py",
+      "sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3"
+    }
+  ],
+  "checks": [
+    {
+      "id": "case_scope",
+      "pass": true,
+      "evidence": [
+        "sector_continuation_gate.CASES/scope",
+        "run_sector_continuation.sequence",
+        "sector_continuation_runtime.validate_spec"
+      ],
+      "reason": "Exactly Fidelity L, UBS E, UBS L and C are admitted, in the declared order. Both coordinator inventory and worker case validation exclude completed Fidelity E. Each case loops D0/F0 once; no main entrypoint or old run resume path is present."
+    },
+    {
+      "id": "exclusive_namespace",
+      "pass": true,
+      "evidence": [
+        "run_sector_continuation.locations/execute/write_json/event",
+        "sector_continuation_runtime.expected_stage_directory/validate_worker_location/run_transport"
+      ],
+      "reason": "New separate run/report trees must not exist, remain within the workspace and use exclusive directory/file creation. Worker stage paths and cancel path are bound to this exact run/case/stage. Historical artifacts are read references, not write targets; unique event files avoid mutable watcher replacement."
+    },
+    {
+      "id": "exact_own_D0",
+      "pass": true,
+      "evidence": [
+        "sector_continuation_runtime.validate_prior_draft/validate_spec",
+        "run_sector_continuation.sequence"
+      ],
+      "reason": "F0 uses saved response, worker spec/summary, supervisor and transport references from the same new run/case D0. Exact raw content, one request, completion, origin, runtime, gate and worker identity are checked. The final body is reconstructed from that raw draft and frozen template/source; old failed L partial text cannot satisfy the run/case binding."
+    },
+    {
+      "id": "same_instrument",
+      "pass": true,
+      "evidence": [
+        "sector_continuation_gate.validate_gate",
+        "sector_continuation_runtime.validate_spec/check_token_capacity/worker"
+      ],
+      "reason": "New gate validates original historical gate/dependencies and exact prepared manifest. Runtime equality permits only the new owned CPU-service receipt, retaining model/digest/template/options/seed/deadline/tokenizer. Actual API body must equal frozen source-timing construction and exact schema. No prompt shortening, normalization feedback or semantic correction is inserted."
+    },
+    {
+      "id": "failure_boundary",
+      "pass": true,
+      "evidence": [
+        "run_sector_continuation.sequence",
+        "sector_continuation_runtime.worker/run_transport"
+      ],
+      "reason": "Instrument-review failure, system incident or cancellation stops subsequent requests. A non-system model structural failure prevents its own dependent F0 while later independent cases can proceed. Raw sum, label/citation validity and semantic support are recorded outcomes rather than output-quality retry or stopping gates. Missing/failed outcomes remain explicit."
+    },
+    {
+      "id": "request_accounting",
+      "pass": true,
+      "evidence": [
+        "sector_continuation_gate.scope/validate_gate",
+        "run_sector_continuation.make_summary/recover_summary/sequence"
+      ],
+      "reason": "New maximum8, historical3 and campaign maximum11 are separate from original maximum10. Historical completed FE and one hard_deadline L D0 plus unattempted cases are checked. Automatic retries remain0; explicit historical retry slot is L D0. Corrected event fields distinguish whole L case attempt2, L D0 overall stage attempt2, L F0 stage attempt1 and segment stage attempt1."
+    },
+    {
+      "id": "frozen_refs_and_chronology",
+      "pass": true,
+      "evidence": [
+        "sector_continuation_gate.checked/validate_gate",
+        "run_sector_continuation.execute"
+      ],
+      "reason": "Exact path/hash references bind protocol, runtime, historical gate/terminal/summary, original prepared inputs, finalizer acceptance, new code and pre-freeze PASS reviews. Freeze precedes gate; gate precedes declaration/start. gate_ref is normalized to path/sha256 before comparison. Required code refs include the new runner/gate/runtime/awake files and accepted math/stage-review code."
+    },
+    {
+      "id": "raw_and_math_separation",
+      "pass": true,
+      "evidence": [
+        "run_sector_continuation.sequence",
+        "finalize_sector_allocation.finalize_stage"
+      ],
+      "reason": "The finalizer runs as a separate bound sidecar per durable stage. The next request still receives exact raw D0 and original arithmetic feedback; it never consumes normalized weights. Accepted finalizer yields10000 units for eligible complete positive-sum nonnegative vectors, while missing/invalid vectors remain unavailable and raw errors remain observable. Campaign integration is a separately reviewed adapter."
+    },
+    {
+      "id": "review_and_recovery",
+      "pass": true,
+      "evidence": [
+        "run_sector_continuation.sequence/recover_summary/execute"
+      ],
+      "reason": "Each stage records deterministic review and math receipt, while semantic support remains pending actual separate reading. Exception recovery uses preserved envelopes/transport and never invents a response or completed binding. Completed raw artifacts survive later coordinator errors. Unconfirmed cleanup remains explicit."
+    },
+    {
+      "id": "bounded_awake_and_ownership",
+      "pass": true,
+      "evidence": [
+        "sector_continuation_awake.CoordinatorAwake",
+        "sector_continuation_runtime.supervise",
+        "run_sector_continuation.execute"
+      ],
+      "reason": "Same coordinator main thread owns temporary SYSTEM/DISPLAY state with observed AC at acquisition and before each stage, bounded total expiry and minute receipts. No detached helper or persistent power-policy edit is introduced. The synchronous supervisor pulses this owner and kills/waits only its owned worker on unexpected exception. Finally attempts explicit release; service shutdown remains a separate verified-owned-idle action."
+    },
+    {
+      "id": "paper_topic",
+      "pass": true,
+      "evidence": [
+        "run_sector_continuation.sequence/terminal review_axes",
+        "protocol_and_review.stagewise_review/accounting_and_analysis"
+      ],
+      "reason": "The four remaining institutional timing/control cells retain the evidence-to-stated-reason-to-allocation design. Raw arithmetic, external math and unresolved semantic coding remain distinct. The implementation does not select favorable answers, rank performance, claim causal effects or infer source fidelity from100% totals."
+    }
+  ],
+  "findings_resolved_before_this_review": [
+    {
+      "id": "M01",
+      "initial": "scope(protocol) required a top-level old_outputs_observed field absent from the original method protocol; this would fail closed before execution.",
+      "resolution": "scope(value, require_observed=True) retains the observed-output requirement for gate/freeze/declaration. Only protocol uses require_observed=False; that protocol already discloses post-output continuation, historical3 requests and explicit retry lineage. Main prohibition/case order/budgets/retry slot remain required.",
+      "verified_in": "sector_continuation_gate.scope and validate_gate",
+      "original_protocol_modified": false
+    },
+    {
+      "id": "M02",
+      "initial": "stage_started overall_cell_attempt labeled new Fidelity L F0 as1 rather than the second case attempt.",
+      "resolution": "overall_cell_attempt is2 for both new Fidelity L stages; separate overall_stage_attempt is2 only for L D0 and1 elsewhere; segment_stage_attempt remains1.",
+      "verified_in": "run_sector_continuation.sequence stage_started event"
+    }
+  ],
+  "read_only_validation": {
+    "four_sources_compile_in_memory": true,
+    "python_bytecode_written": false,
+    "shared_function_AST_identical": [
+      "artifact_ref",
+      "expected_stage_directory",
+      "validate_worker_location",
+      "prior_draft_refs",
+      "validate_prior_draft",
+      "value_sha",
+      "check_token_capacity",
+      "worker"
+    ],
+    "changed_shared_functions": {
+      "validate_spec": "New continuation gate and same-run cancellation path check.",
+      "supervise": "Optional coordinator heartbeat callback; existing owned-worker deadline/exception cleanup retained.",
+      "run_transport": "Pass heartbeat callback through to supervisor; original one-request/cleanup/accounting logic retained.",
+      "main": "Worker-only CLI; new coordinator owns declared sequence."
+    },
+    "models_called": 0,
+    "network_requests": 0,
+    "source_edits_by_this_reviewer": 0
+  },
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "Four current sources parse/compile in memory, eight critical shared functions have identical AST to frozen runtime, and two discovered prelaunch mismatches were corrected by the implementation owner and re-read. No unresolved method-blocking defect remains in the reviewed bytes; synthetic/runtime tests remain separate evidence."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Implementation matches the unchanged protocol scope: four cells, one declared infrastructure reattempt, exact new own-D0 lineage, original failed history preserved, maximum8new/11cumulative accounting, unchanged scientific settings and separate math sidecars. No old565-file archive or run is rewritten."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "The remaining E/L/C comparisons retain the institutional evidence-to-interpretation-to-observable-allocation focus. Neither feasible math output nor completing requests is treated as semantic success; missing outcomes and partial AI masking limits remain visible."
+    }
+  },
+  "approval_limit": "PASS covers this static method/implementation consistency review of the exact referenced bytes. It does not authorize a launch by itself, certify operational uptime, replace root synthetic tests, or certify future output semantics. The new freeze/gate and live preflight must bind these same bytes; later changes require explicit review.",
+  "main_allowed": false,
+  "historical_files_modified": false
+}

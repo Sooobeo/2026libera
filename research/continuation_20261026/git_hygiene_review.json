@@ -1,0 +1,490 @@
+{
+  "version": "git_hygiene_independent_review_20261026_1",
+  "status": "PASS_READ_ONLY_AUDIT_WITH_ARCHIVE_BOUND_NARROW_IGNORE_RECOMMENDATIONS",
+  "started_at_utc": "2026-10-26T00:02:06.525Z",
+  "recorded_at_utc": "2026-10-26T00:04:29.145Z",
+  "scope": "Read-only Git tracking, recovery archive integrity, duplicate expanded artifacts, bounded credential-pattern and local-process metadata review. Parent owns .gitignore edits, staging and commit.",
+  "scope_exclusions": [
+    "The new continuation segment is being prepared concurrently. No claim is made that its planned8 calls started, completed, passed or were archived.",
+    "No research response semantics or continuation outcomes were reviewed. Archive content was hashed and text scanned programmatically without emitting credential values or interpreting generated outcomes.",
+    "No source artifact, .gitignore, index or commit was changed by this review."
+  ],
+  "git_snapshot": {
+    "head_observed": "5885326de08b1ace7ca42ea0d9f138eca10e7df7",
+    "tracked_paths": 1526,
+    "initial_status_entries": 235,
+    "initial_untracked_paths": 234,
+    "initial_untracked_bytes": 49404019,
+    "initial_tracked_modifications": [
+      {
+        "state": " M",
+        "path": ".gitignore"
+      }
+    ],
+    "staged_entries_at_last_read": 0,
+    "commit_performed": false,
+    "commit_success_observed": false,
+    "concurrent_new_paths_observed": [
+      "research/continuation_20261026/runtime/service_ready/server.stderr.log",
+      "research/continuation_20261026/runtime/service_ready/server.stdout.log",
+      "research/continuation_20261026/runtime/service_ready/service_receipt.json",
+      "research/continuation_20261026/runtime/start_isolated_cpu.ps1",
+      "research/continuation_20261026/runtime/stop_isolated_cpu.ps1",
+      "research/continuation_20261026/runtime_candidate.json",
+      "research/sector_continuation_awake.py",
+      "research/sector_continuation_gate.py"
+    ],
+    "concurrent_paths_evaluated_for_outcomes": false
+  },
+  "gitignore": {
+    "path": ".gitignore",
+    "sha256_observed": "4d326e9d74bf949c815063d88314276ca24a48e9350d54e238245c2614f919e4",
+    "current_uncommitted_change": "Add only /tmp/libera_ollama0351_20261025/ with provenance-preservation comment.",
+    "assessment": "Appropriate narrow exclusion of downloaded runtime cache, with source/hash/extraction/verification receipts retained under research.",
+    "portable_runtime_cache": {
+      "path": "tmp/libera_ollama0351_20261025",
+      "files": 83,
+      "bytes": 3414435768
+    },
+    "existing_broad_raw_rule": "/data/local_sector_runtime/**",
+    "existing_raw_rule_caution": "This rule automatically ignores future raw run directories, including continuation outputs not covered by the existing565-file archive. A later commit must preserve each new run through a separately verified archive/manifest or explicitly tracked raw artifacts. The existing ZIP cannot stand in for future evidence.",
+    "do_not_add": [
+      "/research/recovery_20261025/",
+      "/research/continuation_20261026/",
+      "/data/sector_protocol/",
+      "/data/sector_documents/",
+      "/paper/",
+      "*.json",
+      "*.log",
+      "*.bin",
+      "*.jsonl",
+      "*.zip",
+      "*.pdf",
+      "*.png"
+    ]
+  },
+  "archive_verification": {
+    "archive_ref": {
+      "path": "research/artifacts/recovery-evidence-20261025.zip",
+      "sha256": "65ed7dfd16a66a9f4339150dc5b7884a04addbe34c43e3c60beb505754cec380",
+      "bytes": 42660143
+    },
+    "manifest_ref": {
+      "path": "research/artifacts/recovery-evidence-20261025.manifest.json",
+      "sha256": "db4bff7ca169dc2303ab6dcb4e5cdc1da61817e1452c506b0b3fad0ce5790626",
+      "bytes": 124352
+    },
+    "verification_ref": {
+      "path": "research/artifacts/recovery-evidence-20261025.verification.json",
+      "sha256": "44b85b1230cf7191a2d66f64091135a5d9823947f6558a377da2cbe9f88a3a8c",
+      "bytes": 336
+    },
+    "independent_result": {
+      "archive_bytes": 42660143,
+      "actual_sha256": "65ed7dfd16a66a9f4339150dc5b7884a04addbe34c43e3c60beb505754cec380",
+      "manifest_sha256_match": true,
+      "verification_sha256_match": true,
+      "expected_count": 565,
+      "actual_count": 565,
+      "unique_paths": 565,
+      "all_member_sha256_size_match": true,
+      "all_paths_safe": true,
+      "central_end_matches": true,
+      "uncompressed_bytes": 42523721,
+      "method_counts": {
+        "0": 565
+      }
+    },
+    "method": "Parse ZIP central/local records in memory; recompute every stored member SHA256 and byte count against the manifest; validate unique relative safe paths and whole ZIP SHA. No extraction or overwrite.",
+    "expanded_untracked_files_checked": 231,
+    "expanded_untracked_files_matching_archive": 231,
+    "expanded_untracked_bytes": 6619188,
+    "expanded_mismatches": [],
+    "restore_performed": false,
+    "duplicates": {
+      "same_content_groups": 22,
+      "extra_bytes_within_archive": 1453521,
+      "interpretation": "Repeated pins, per-condition inputs and raw transport snapshots carry distinct provenance despite equal bytes. Do not deduplicate or rewrite the immutable archive; its existing verified hash is the preservation boundary."
+    }
+  },
+  "commit_recommendations": [
+    {
+      "category": "Code and meaningful tests",
+      "action": "Track individually",
+      "paths": [
+        "research/archive_v494_recovery.py",
+        "research/build_v494_masked_review.py",
+        "research/finalize_sector_allocation.py",
+        "research/freeze_sector_v494.py",
+        "research/prepare_sector_v494.py",
+        "research/prepare_sector_v495_main.py",
+        "research/read_v494_status.py",
+        "research/recovery_20261025/finalizer_history/finalize_sector_allocation_r1.py",
+        "research/recovery_20261025/method_build_audit.py",
+        "research/recovery_20261025/old_run_audit.py",
+        "research/recovery_20261025/runtime/launch_review_record.py",
+        "research/recovery_20261025/runtime/postwork_display_awake.py",
+        "research/recovery_20261025/runtime/preflight_d0_capacity.py",
+        "research/recovery_20261025/runtime/start_isolated_cpu.ps1",
+        "research/recovery_20261025/runtime/stop_isolated_cpu.ps1",
+        "research/recovery_20261025/runtime/temporary_display_awake.py",
+        "research/recovery_20261025/runtime/verify_recovered_runtime.py",
+        "research/review_sector_v494_stage.py",
+        "research/run_v494_recovery.py",
+        "research/sector_v494_review_gate.py",
+        "research/sector_v494_runtime.py",
+        "research/start_v494_pilot.ps1",
+        "research/test_finalize_sector_allocation.py",
+        "research/test_finalize_sector_allocation_artifacts.py",
+        "research/test_run_v494_recovery.py",
+        "research/test_sector_v494_recovery.py"
+      ],
+      "reason": "Reproducible offline preparation, runtime controls, archive/restore procedures, arithmetic policy and tests need readable reviewable source, including historical frozen-version helpers."
+    },
+    {
+      "category": "Prepared v494 and v495 input candidates",
+      "action": "Track all17 initial files individually",
+      "prefixes": [
+        "data/sector_protocol/v494_design_20261025/",
+        "data/sector_protocol/v495_main_candidate_20261025/"
+      ],
+      "reason": "Exact per-case prompts, schema/common inputs, precision-repaired packet copies and manifests are experimental inputs. Equal source-free files must remain separately named; v495 remains an offline candidate, not main-ready."
+    },
+    {
+      "category": "Primary research evidence and audit records",
+      "action": "Track individually; do not blanket-ignore recovery",
+      "prefixes": [
+        "research/recovery_20261025/"
+      ],
+      "reason": "Retain interruptions/failures, frozen gates, approvals and amendments, source/citation reviews, test receipts, semantic/arithmetic audits, terminal/cleanup records, prepared-main independent review, source PDF/PNG citations and historical corrections. Major JSON records must remain directly visible."
+    },
+    {
+      "category": "Verified lossless recovery archive",
+      "action": "Track ZIP, manifest and verification together",
+      "paths": [
+        "research/artifacts/recovery-evidence-20261025.zip",
+        "research/artifacts/recovery-evidence-20261025.manifest.json",
+        "research/artifacts/recovery-evidence-20261025.verification.json"
+      ],
+      "reason": "Preserves565 original evidence files including raw observations that existing ignore rules hide. Keep original bytes and recorded hashes."
+    },
+    {
+      "category": "Original data/manuscript/evaluation protocol",
+      "action": "Keep existing tracking unchanged",
+      "checks": [
+        {
+          "path": "data/sector_documents/packets/main/fidelity_q3_2026.json",
+          "tracked": true,
+          "present_in_initial_status": false
+        },
+        {
+          "path": "data/sector_documents/packets/main/ubs_july_2026.json",
+          "tracked": true,
+          "present_in_initial_status": false
+        },
+        {
+          "path": "paper/v493_manuscript_20261019.json",
+          "tracked": true,
+          "present_in_initial_status": false
+        },
+        {
+          "path": "research/v492_evaluation_protocol_20261019_r2.json",
+          "tracked": true,
+          "present_in_initial_status": false
+        },
+        {
+          "path": "research/restore_research_artifacts.py",
+          "tracked": true,
+          "present_in_initial_status": false
+        }
+      ],
+      "reason": "Existing originals are tracked and unchanged in the initial Git snapshot. New audits must not hide, substitute for, or silently rewrite them."
+    },
+    {
+      "category": "This audit and subsequent continuation preparation",
+      "action": "Track new audit; review continuation artifacts only after their actual state is known",
+      "paths": [
+        "research/continuation_20261026/git_hygiene_review.json"
+      ],
+      "reason": "Current report is not in the older archive. Continuation code, preparation, frozen inputs, failure/terminal receipts and new raw evidence need their own later accounting; no result is prejudged."
+    }
+  ],
+  "narrow_ignore_proposal": {
+    "status": "RECOMMENDED_ONLY_NOT_APPLIED",
+    "precondition": "Every matched file is an untracked expanded duplicate already byte/hash verified in the committed-together565-file recovery archive. Keep expanded files on disk; ignore only affects Git tracking.",
+    "patterns": [
+      "/research/recovery_20261025/runtime/preflight_d0_r2/*/render_only/rendered_prompt.txt",
+      "/research/recovery_20261025/runtime/preflight_d0_r2/*/render_only/request_body.bin",
+      "/research/recovery_20261025/runtime/preflight_d0_r2/*/render_only/response_body.bin",
+      "/research/recovery_20261025/launch/coordinator.stderr.log",
+      "/research/recovery_20261025/launch/coordinator.stdout.log",
+      "/research/recovery_20261025/runtime/service_01/server.stderr.log",
+      "/research/recovery_20261025/runtime/service_01/server.stdout.log",
+      "/research/recovery_20261025/runtime/service_ready/server.stderr.log",
+      "/research/recovery_20261025/runtime/service_ready/server.stdout.log",
+      "/research/recovery_20261025/runtime/preflight_stderr.log",
+      "/research/recovery_20261025/runtime/preflight_stdout.log",
+      "/research/recovery_20261025/runtime/preflight_r2_stderr.log",
+      "/research/recovery_20261025/runtime/preflight_r2_stdout.log",
+      "/research/recovery_20261025/runtime/temporary_awake_01/heartbeat.jsonl",
+      "/research/recovery_20261025/runtime/postwork_awake_01/heartbeat.jsonl"
+    ],
+    "matched_files": [
+      {
+        "path": "research/recovery_20261025/launch/coordinator.stderr.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "archive_match": true,
+        "already_tracked": false
+      },
+      {
+        "path": "research/recovery_20261025/launch/coordinator.stdout.log",
+        "bytes": 182,
+        "sha256": "4cb452c4de78eb75b67acb6d093483bb413dc2bd91d6e0b958353c9614396951",
+        "archive_match": true,
+        "already_tracked": false
+      },
+      {
+        "path": "research/recovery_20261025/runtime/postwork_awake_01/heartbeat.jsonl",
+        "bytes": 812,
+        "sha256": "4b0f7d1a5b80228778fd54d59a5459e35b406717775a40db0745a2f91793e01f",
+        "archive_match": true,
+        "already_tracked": false
+      },
+      {
+        "path": "research/recovery_20261025/runtime/preflight_d0_r2/common_market_only__C/render_only/rendered_prompt.txt",
+        "bytes": 29480,
+        "sha256": "22fca6921e67fca2446b4965f1a5fbebfd32e8fbc7ebdbecb90858ecda48e6e9",
+        "archive_match": true,
+        "already_tracked": false
+      },
+      {
+        "path": "research/recovery_20261025/runtime/preflight_d0_r2/common_market_only__C/render_only/request_body.bin",
+        "bytes": 33816,
+        "sha256": "02129e072d40d45c84505cb5d17a475096ae93a58a840d71e3fbec8a7024d9d8",
+        "archive_match": true,
+        "already_tracked": false
+      },
+      {
+        "path": "research/recovery_20261025/runtime/preflight_d0_r2/common_market_only__C/render_only/response_body.bin",
+        "bytes": 31373,
+        "sha256": "a30b89add83cc4157ba69b6baa4b8333aa46840f110c5871e3c20ee4bc3bf668",
+        "archive_match": true,
+        "already_tracked": false
+      },
+      {
+        "path": "research/recovery_20261025/runtime/preflight_d0_r2/fidelity_q2_2026__E/render_only/rendered_prompt.txt",
+        "bytes": 33268,
+        "sha256": "5363b2bbcc02708ad2954f1b64d68e5742bdafe62057c50dd6b35821a705acb3",
+        "archive_match": true,
+        "already_tracked": false
+      },
+      {
+        "path": "research/recovery_20261025/runtime/preflight_d0_r2/fidelity_q2_2026__E/render_only/request_body.bin",
+        "bytes": 37828,
+        "sha256": "b13d15b928ccf91e83750528d2c7bd1269f5566f30474b4b166fa123849bdeb5",
+        "archive_match": true,
+        "already_tracked": false
+      },
+      {
+        "path": "research/recovery_20261025/runtime/preflight_d0_r2/fidelity_q2_2026__E/render_only/response_body.bin",
+        "bytes": 35385,
+        "sha256": "89953a557884ada0bff2f1690fa2594fe6d7cb93cab2d06cada92bad38b8844d",
+        "archive_match": true,
+        "already_tracked": false
+      },
+      {
+        "path": "research/recovery_20261025/runtime/preflight_d0_r2/fidelity_q2_2026__L/render_only/rendered_prompt.txt",
+        "bytes": 29480,
+        "sha256": "22fca6921e67fca2446b4965f1a5fbebfd32e8fbc7ebdbecb90858ecda48e6e9",
+        "archive_match": true,
+        "already_tracked": false
+      },
+      {
+        "path": "research/recovery_20261025/runtime/preflight_d0_r2/fidelity_q2_2026__L/render_only/request_body.bin",
+        "bytes": 33816,
+        "sha256": "02129e072d40d45c84505cb5d17a475096ae93a58a840d71e3fbec8a7024d9d8",
+        "archive_match": true,
+        "already_tracked": false
+      },
+      {
+        "path": "research/recovery_20261025/runtime/preflight_d0_r2/fidelity_q2_2026__L/render_only/response_body.bin",
+        "bytes": 31373,
+        "sha256": "23591214f5dfae70e2c3c39cd7b8ce5200da28debf12418581b8b009d0046e9b",
+        "archive_match": true,
+        "already_tracked": false
+      },
+      {
+        "path": "research/recovery_20261025/runtime/preflight_d0_r2/ubs_june_2026__E/render_only/rendered_prompt.txt",
+        "bytes": 33156,
+        "sha256": "295e1d2a6f57a74265a2671d287e429fad1b457b713a120b68a502295ffbe0a8",
+        "archive_match": true,
+        "already_tracked": false
+      },
+      {
+        "path": "research/recovery_20261025/runtime/preflight_d0_r2/ubs_june_2026__E/render_only/request_body.bin",
+        "bytes": 37720,
+        "sha256": "1bc84b28901094a52c2d321b18294231e7d01f20ae0a127bae95ea8c9bbe5157",
+        "archive_match": true,
+        "already_tracked": false
+      },
+      {
+        "path": "research/recovery_20261025/runtime/preflight_d0_r2/ubs_june_2026__E/render_only/response_body.bin",
+        "bytes": 35281,
+        "sha256": "e0a21202e078206f47957a1ec1d2cfec45d1171a93ed8f44256f8b2d730cf494",
+        "archive_match": true,
+        "already_tracked": false
+      },
+      {
+        "path": "research/recovery_20261025/runtime/preflight_d0_r2/ubs_june_2026__L/render_only/rendered_prompt.txt",
+        "bytes": 29480,
+        "sha256": "22fca6921e67fca2446b4965f1a5fbebfd32e8fbc7ebdbecb90858ecda48e6e9",
+        "archive_match": true,
+        "already_tracked": false
+      },
+      {
+        "path": "research/recovery_20261025/runtime/preflight_d0_r2/ubs_june_2026__L/render_only/request_body.bin",
+        "bytes": 33816,
+        "sha256": "02129e072d40d45c84505cb5d17a475096ae93a58a840d71e3fbec8a7024d9d8",
+        "archive_match": true,
+        "already_tracked": false
+      },
+      {
+        "path": "research/recovery_20261025/runtime/preflight_d0_r2/ubs_june_2026__L/render_only/response_body.bin",
+        "bytes": 31373,
+        "sha256": "9d175ef7ddbc38a54a0b69922292eb3fa52cc3b0f8a6faef655427c776b2b175",
+        "archive_match": true,
+        "already_tracked": false
+      },
+      {
+        "path": "research/recovery_20261025/runtime/preflight_r2_stderr.log",
+        "bytes": 16788,
+        "sha256": "b120e51cd8a700863857a3cd6e93048ceae1a545e8e5590f05d739cca40c04e5",
+        "archive_match": true,
+        "already_tracked": false
+      },
+      {
+        "path": "research/recovery_20261025/runtime/preflight_r2_stdout.log",
+        "bytes": 678,
+        "sha256": "e39f4b2b45702b814063e0b971886fa66bd5fb117ee841c51555c7dd543f520f",
+        "archive_match": true,
+        "already_tracked": false
+      },
+      {
+        "path": "research/recovery_20261025/runtime/preflight_stderr.log",
+        "bytes": 2180,
+        "sha256": "3ac621fc2a9d9d38454e2cba4c21f39cd794f68e16aeb7216f5b960c3a8ba536",
+        "archive_match": true,
+        "already_tracked": false
+      },
+      {
+        "path": "research/recovery_20261025/runtime/preflight_stdout.log",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "archive_match": true,
+        "already_tracked": false
+      },
+      {
+        "path": "research/recovery_20261025/runtime/service_01/server.stderr.log",
+        "bytes": 2481,
+        "sha256": "6bc83d1cbe9e150a33cdff38c3feaf96b4b67a361cdeb1f47c572e3766e21cb0",
+        "archive_match": true,
+        "already_tracked": false
+      },
+      {
+        "path": "research/recovery_20261025/runtime/service_01/server.stdout.log",
+        "bytes": 736,
+        "sha256": "03b1aee4517799bbffb2fabf8c260923bb7c0ae7958ba1a3642436ac5379a2c0",
+        "archive_match": true,
+        "already_tracked": false
+      },
+      {
+        "path": "research/recovery_20261025/runtime/service_ready/server.stderr.log",
+        "bytes": 310568,
+        "sha256": "e695ee125a4ba5f9860904b92e563f7b0a5111cac10d6e09c61c33f839e88c81",
+        "archive_match": true,
+        "already_tracked": false
+      },
+      {
+        "path": "research/recovery_20261025/runtime/service_ready/server.stdout.log",
+        "bytes": 190927,
+        "sha256": "193331bc05e4fbbe94de60c206cdc610c020fc2041b94fd73c64b5952e029922",
+        "archive_match": true,
+        "already_tracked": false
+      },
+      {
+        "path": "research/recovery_20261025/runtime/temporary_awake_01/heartbeat.jsonl",
+        "bytes": 12380,
+        "sha256": "0a69d0baaacb09d21543fff9cb1a28fe7e541e958ed6528def671eddcd5a6f54",
+        "archive_match": true,
+        "already_tracked": false
+      }
+    ],
+    "matched_count": 27,
+    "matched_bytes": 1034377,
+    "all_archive_matches": true,
+    "no_tracked_removal_required": true,
+    "retained_visible_records": [
+      "All context_capacity.json/input_boundary.json/tokenizer_receipt.json and preflight summaries",
+      "Render-only request.json/response.json/result.json/validation.json",
+      "Service launch/shutdown receipts and awake acquire/release/process-exit records",
+      "All source documents, citation screenshots, review JSON, code and tests"
+    ],
+    "caution": "Date-specific patterns deliberately exclude no new continuation log or raw artifact. A newer path needs independent archive verification before any analogous ignore rule."
+  },
+  "credential_and_ephemeral_check": {
+    "scope": "Textual archive members and remaining initial untracked text, .gitignore and local Git configuration;505 scanned files. Credential values were never emitted.",
+    "scanned_text_files": 505,
+    "scanned_text_bytes": 30082629,
+    "rules": [
+      "private_key_header",
+      "aws_access_key_id",
+      "github_personal_token",
+      "openai_style_api_key",
+      "credential_in_url",
+      "jwt_shaped_credential"
+    ],
+    "credential_pattern_findings": [],
+    "values_emitted": false,
+    "limitations": "Bounded pattern scan, not exhaustive proof that no secret exists; binary documents/images, model blobs and external environment stores were not searched.",
+    "ephemeral_file_counts": {
+      "windows_user_path_files": 115,
+      "local_address_files": 33,
+      "process_identifier_files": 28
+    },
+    "handling": "Absolute machine paths, process IDs and loopback addresses appear in provenance records. Preserve immutable evidence bytes and use current runtime configuration for replay; do not interpret historical PIDs as live processes. Narrow archived-log ignores avoid unnecessary expanded copies without destroying evidence.",
+    "masked_review_note": "Keep evaluator-private mapping and masked-review provenance as research evidence, but their presence in the repository does not make a reviewer who has opened them blind. No independence claim is created by this Git audit."
+  },
+  "reproducibility_requirements": [
+    "Preserve original raw and failed/incomplete observations, exact inputs and versioned code; derived allocations and later conclusions do not replace raw evidence.",
+    "Keep565-entry archive, manifest and verified restore utility available together. No restore was needed or performed here.",
+    "Portable runtime binaries/model weights are cache, not the primary research record; retain official release, download/extraction/verification receipts and hashes.",
+    "Do not count input preparation, archive verification or a Git commit as experimental success or main readiness.",
+    "Before the actual commit, root must inspect the final staged diff/status and run a scoped credential check on any files created after this snapshot. Record a commit hash only from a successful Git commit and post-commit verification."
+  ],
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "All565 ZIP members and231 current expanded untracked archived files match recorded hashes and sizes. No credential-pattern hit appeared in the bounded505-file text scan. No source/index mutation was performed."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Only27 archive-backed duplicate log/render-body/heartbeat files are proposed for narrow ignore.26 code/test/helper files,17 prepared inputs,147 recovery JSON records and original tracked data/manuscript remain visible. Concurrent continuation files are explicitly outside the completed-snapshot conclusion."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "The commit proposal preserves allocation validity failures, citation/source interpretation audits, temporal input design and raw-versus-derived distinctions. It does not select successful outputs, erase missing cases, claim semantic validation from arithmetic, or promote the main candidate to a completed experiment."
+    }
+  },
+  "actions_performed": {
+    "git_read_commands": 6,
+    "git_writes": 0,
+    "source_edits": 0,
+    "ignored_files_deleted": 0,
+    "zip_extractions": 0,
+    "model_calls": 0,
+    "server_calls": 0,
+    "continuation_outcomes_read": false,
+    "output_created": "research/continuation_20261026/git_hygiene_review.json"
+  }
+}

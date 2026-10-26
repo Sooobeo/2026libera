@@ -1,0 +1,548 @@
+{
+  "version": "main_dual_endpoint_protocol_candidate_20261026_1",
+  "status": "CANDIDATE_ONLY_NOT_MAIN_READY_NOT_APPROVED",
+  "created_at_utc": "2026-10-26T00:11:32.349Z",
+  "purpose": "prospective_main_candidate",
+  "protocol_wrapper_version": "4.9.5-main-dual-endpoint-candidate",
+  "main_allowed": false,
+  "main_execution_allowed": false,
+  "model_generation_calls": 0,
+  "experiment_execution_started": false,
+  "author": "Codex method_audit agent; prospective method wrapper from reviewed artifacts, not independent human validation",
+  "authorization_and_development": {
+    "user_direction": "Complete remaining work; final allocation should mathematically total100%, including rounding.",
+    "math_user_direction_ref": {
+      "path": "research/recovery_20261025/allocation_finalization_amendment.json",
+      "sha256": "009f90b89a6185f1af9c63fd6be47d01f9662d959fd13b9938295f5943156031"
+    },
+    "candidate_timing": "After pilot outputs and the explicit mathematical-finalization amendment, but before any main model generation. Preparation/source review is not a claim of unseen source documents.",
+    "disclosure": "Source families/main months were preselected; main packets were researcher-prepared and reviewed. The v494 prompt and exact finalization policy were developed using earlier pilot experience. This main design is prospective after development, not an untouched replication of the original r2 endpoint."
+  },
+  "research_question": {
+    "chain": [
+      "supplied institutional evidence",
+      "stated interpretation of source meaning",
+      "stated adoption/qualification/departure and decision reason",
+      "raw submitted sector weights",
+      "deterministically finalized operational allocation"
+    ],
+    "question": "How do assigned public institutional judgments connect to the model stated interpretation and reasons, and to observable allocation, under early versus late source provision and a common no-institution control?",
+    "no_hidden_target": "Neither source supplies a full numeric institutional target portfolio; no private holdings, required institution-optimal weights or fixed rating-to-weight map is invented.",
+    "C": "Source fidelity is not applicable when no source is supplied; invented institutional attribution is assessable. Common-context reasoning, execution and factuality remain assessable."
+  },
+  "design": {
+    "case_order": [
+      "fidelity_q3_2026__E",
+      "fidelity_q3_2026__L",
+      "ubs_july_2026__E",
+      "ubs_july_2026__L",
+      "common_market_only__C"
+    ],
+    "case_count": 5,
+    "stages": [
+      "D0",
+      "F0"
+    ],
+    "planned_stage_slots": 10,
+    "maximum_generation_requests": 10,
+    "automatic_retries": 0,
+    "post_final_model_calls": 0,
+    "planned_final_sector_rows": 55,
+    "planned_source_conditioned_rows": 44,
+    "planned_control_rows": 11,
+    "shared_control_count": 1,
+    "sector_order": [
+      "10",
+      "15",
+      "20",
+      "25",
+      "30",
+      "35",
+      "40",
+      "45",
+      "50",
+      "55",
+      "60"
+    ],
+    "cases": [
+      {
+        "case_id": "fidelity_q3_2026__E",
+        "arm": "E",
+        "source_id": "fidelity_q3_2026",
+        "split": "main",
+        "D0_message_ref": {
+          "path": "data/sector_protocol/v495_main_candidate_20261025/prepared/fidelity_q3_2026__E__D0_messages.json",
+          "sha256": "5789a0183f02db19db372b7b05b8edd5a3f99c31717c90b492bcea163543f570"
+        },
+        "generation_attempt_per_stage": 1
+      },
+      {
+        "case_id": "fidelity_q3_2026__L",
+        "arm": "L",
+        "source_id": "fidelity_q3_2026",
+        "split": "main",
+        "D0_message_ref": {
+          "path": "data/sector_protocol/v495_main_candidate_20261025/prepared/fidelity_q3_2026__L__D0_messages.json",
+          "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15"
+        },
+        "generation_attempt_per_stage": 1
+      },
+      {
+        "case_id": "ubs_july_2026__E",
+        "arm": "E",
+        "source_id": "ubs_july_2026",
+        "split": "main",
+        "D0_message_ref": {
+          "path": "data/sector_protocol/v495_main_candidate_20261025/prepared/ubs_july_2026__E__D0_messages.json",
+          "sha256": "e49d4e9f5e2fdfd122b913ea51b5b002d4aea38de25aef1c2ef1b6d9ef0fb27e"
+        },
+        "generation_attempt_per_stage": 1
+      },
+      {
+        "case_id": "ubs_july_2026__L",
+        "arm": "L",
+        "source_id": "ubs_july_2026",
+        "split": "main",
+        "D0_message_ref": {
+          "path": "data/sector_protocol/v495_main_candidate_20261025/prepared/ubs_july_2026__L__D0_messages.json",
+          "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15"
+        },
+        "generation_attempt_per_stage": 1
+      },
+      {
+        "case_id": "common_market_only__C",
+        "arm": "C",
+        "source_id": null,
+        "split": "main",
+        "D0_message_ref": {
+          "path": "data/sector_protocol/v495_main_candidate_20261025/prepared/common_market_only__C__D0_messages.json",
+          "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15"
+        },
+        "generation_attempt_per_stage": 1
+      }
+    ],
+    "early": "E receives its assigned main packet at D0 and again F0.",
+    "late": "L receives no institutional packet at D0 and first receives its assigned packet at F0.",
+    "control": "C never receives an institution name, packet, date, rating, rationale or source IDs. It follows the same two-turn process and retains its own raw D0 plus actual arithmetic feedback.",
+    "history": "Every F0 retains exact system/common D0 request and exact full own D0 response, then the frozen conditional F0 instruction and actual draft arithmetic feedback. No cross-case response, pilot output, synthetic draft or semantic correction substitutes for the actual main D0.",
+    "separate_calls": "Identical source-free L/L/C D0 messages require three separate main calls. Main C is a new response in a new main namespace even though its logical case ID and inputs match prior pilot C. Neither deduplicate nor reuse pilot response.",
+    "confounding": "E/L changes timing, repeated source exposure and retained history together. C comparisons change source availability and prompt length. One market snapshot, fixed case order and one observed final per cell do not identify pure anchoring, a semantic-information-only effect or a population causal effect."
+  },
+  "input_binding": {
+    "prepared_manifest_ref": {
+      "path": "data/sector_protocol/v495_main_candidate_20261025/prepared/preparation_manifest.json",
+      "sha256": "feb0b889331bf20fc04595ee1395b1c61f41b2663b9ba4c0207397d023ba06b1"
+    },
+    "artifact_refs": [
+      {
+        "path": "data/sector_protocol/v495_main_candidate_20261025/packets/main/fidelity_q3_2026.json",
+        "sha256": "2159bd2bc26ca9fea3315738a69b7994796cbc232f1e6efe1a2e4bfa12497cba"
+      },
+      {
+        "path": "data/sector_protocol/v495_main_candidate_20261025/packets/main/ubs_july_2026.json",
+        "sha256": "aeca97cc0a2eca7eeb02e79c6efe8015d4d47f93ce9b37b2108e5141ab6027ed"
+      },
+      {
+        "path": "data/sector_protocol/v495_main_candidate_20261025/public_inputs.json",
+        "sha256": "6871f1852984de81a7b21c52f7856f4ebe2ef41daaac5a3d26706169bbd54fb9"
+      },
+      {
+        "path": "data/sector_protocol/v495_main_candidate_20261025/prompt_contract.json",
+        "sha256": "7d75828866825af1f7051a528defc92c88f2beac3f42a66f5d5223c4fb714362"
+      },
+      {
+        "path": "data/sector_protocol/v495_main_candidate_20261025/prepared/fidelity_q3_2026__E__D0_messages.json",
+        "sha256": "5789a0183f02db19db372b7b05b8edd5a3f99c31717c90b492bcea163543f570"
+      },
+      {
+        "path": "data/sector_protocol/v495_main_candidate_20261025/prepared/fidelity_q3_2026__L__D0_messages.json",
+        "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15"
+      },
+      {
+        "path": "data/sector_protocol/v495_main_candidate_20261025/prepared/ubs_july_2026__E__D0_messages.json",
+        "sha256": "e49d4e9f5e2fdfd122b913ea51b5b002d4aea38de25aef1c2ef1b6d9ef0fb27e"
+      },
+      {
+        "path": "data/sector_protocol/v495_main_candidate_20261025/prepared/ubs_july_2026__L__D0_messages.json",
+        "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15"
+      },
+      {
+        "path": "data/sector_protocol/v495_main_candidate_20261025/prepared/common_market_only__C__D0_messages.json",
+        "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15"
+      }
+    ],
+    "checked_artifact_hashes": 9,
+    "all_checked_hashes_match": true,
+    "prompt_bytes_identical_to_v494": true,
+    "prompt_contract_sha256": "7d75828866825af1f7051a528defc92c88f2beac3f42a66f5d5223c4fb714362",
+    "common_block_hashes": {
+      "common_context": "21299044035ac8ec4af7b4504fc0e5034789a0d25e45be17bd5554f3c61d8353",
+      "common_market": "dd4bca6d0765089a384d7ac4311126b4a545f0eed6aefb283167a6722d3cad6c",
+      "public_numeric_fact_index": "b70827e631b97ddda398823f884c9b4de7fc2bc7d947056255b29d3cab4b6664",
+      "response_schema": "b90d4f7a545d6fc62f98ca95b30fbccf8750205bd5bd51bf7874b0f97713d8f9"
+    },
+    "same_schema_and_common_context": true,
+    "exact_stage_source_visibility_required": true,
+    "aggregate_public_inputs_not_sent": "Only the assigned packet may enter E/L calls; the aggregate preparation corpus and controller metadata are not a model message.",
+    "original_packets_and_freezes_preserved": true
+  },
+  "reviewed_source_amendments": {
+    "source_review_ref": {
+      "path": "research/recovery_20261025/main_readiness_source_review_20261025.json",
+      "sha256": "50572a99534574693a8e87180e3f0f158fa80f79a3aa0d11ad1f7b963c781605"
+    },
+    "precision_addendum_ref": {
+      "path": "research/recovery_20261025/main_packet_precision_candidate.json",
+      "sha256": "d4fc6a832dfe3abd4a9e29ae696783e5f85e4d5395fefeffe1b9bd2858258422"
+    },
+    "build_review_ref": {
+      "path": "research/recovery_20261025/main_candidate_preparation/build_review.json",
+      "sha256": "16f7d04aaa15539b2cb9ac28a886b86a0ebb32e0409403cfeec531998492caba"
+    },
+    "independent_candidate_review_ref": {
+      "path": "research/recovery_20261025/main_candidate_preparation/independent_review.json",
+      "sha256": "7f973484bf2edee7d7353d9d3bce2f6306f0ce178aa4a6f89c6011cd1b6f3bae"
+    },
+    "independent_candidate_review_status": "PASS_OFFLINE_CANDIDATE_REVIEW_NOT_MAIN_READY",
+    "changed_text_fields": 2,
+    "changes": [
+      {
+        "source_id": "fidelity_q3_2026",
+        "original_ref": {
+          "path": "data/sector_documents/packets/main/fidelity_q3_2026.json",
+          "sha256": "3f84c5d1e1302238fd270b41f1b9bcf86e3ae5c8c44a74f7a49a19941407d297",
+          "bytes": 6643
+        },
+        "evidence_id": "fidelity_q3_2026:p3:sector:40",
+        "changed_paths": [
+          "/evidence_passages/7/text"
+        ],
+        "before": "Financials receives Overweight. Relative valuations offer downside support.",
+        "after": "Financials receives Overweight. Relative valuation may limit downside.",
+        "all_other_values_preserved": true
+      },
+      {
+        "source_id": "ubs_july_2026",
+        "original_ref": {
+          "path": "data/sector_documents/packets/main/ubs_july_2026.json",
+          "sha256": "49f47f8c628b53231cdfb09fa90eabfa0a5d271fb6a439e75360bdb97db29d30",
+          "bytes": 6757
+        },
+        "evidence_id": "ubs_july_2026:p21:sector:55",
+        "changed_paths": [
+          "/evidence_passages/11/text"
+        ],
+        "before": "Utilities receives Attractive. Defensive resilience and AI-related exposure.",
+        "after": "Utilities receives Attractive. Expected greater resilience if economic growth disappoints; also some exposure to AI trends.",
+        "all_other_values_preserved": true
+      }
+    ],
+    "meaning": "Fidelity Financials restores may limit downside. UBS Utilities restores if growth disappoints and some exposure to AI trends. The UBS degree qualifier does not identify a company subset; the addendum corrects that prior AI inference.",
+    "unchanged": "All22 source labels, evidence IDs, vocabulary, selected sources, source dates/scopes, numeric inputs and absence of numeric institution targets.",
+    "review_scope": "This wrapper binds existing source/PDF review and build artifacts; it does not claim a new original-PDF verification."
+  },
+  "temporal_scope": {
+    "task_cutoff_exclusive": "2026-07-17",
+    "last_price_observation": "2026-07-16",
+    "judgment_horizon_months": 12,
+    "task": "Hypothetical new-money US equity sleeve; comparator is not existing holdings and no realized twelve-month outcome is supplied.",
+    "source_dates": [
+      {
+        "source_id": "fidelity_q3_2026",
+        "dates": {
+          "publisher_document_date": "2026-07-16",
+          "publisher_date_kind": "official landing page updated date",
+          "publisher_html_datePublished": "2026-07-15T23:00:00-05:00",
+          "sector_view_as_of_raw": "6/31/26",
+          "sector_view_as_of_normalized": null,
+          "sector_view_date_status": "invalid_calendar_date_printed_6/31/26_unresolved",
+          "market_statistics_as_of": "2026-06-30",
+          "snapshot_cutoff": "2026-07-17",
+          "cutoff_interpretation": "retrospective document-snapshot availability cutoff; not contemporaneous information or historical replay"
+        }
+      },
+      {
+        "source_id": "ubs_july_2026",
+        "dates": {
+          "publisher_document_date": "2026-06-22",
+          "publisher_date_kind": "PDF p2 publication statement",
+          "publisher_html_datePublished": null,
+          "sector_view_as_of_raw": "18 June 2026",
+          "sector_view_as_of_normalized": "2026-06-18",
+          "sector_view_date_status": "valid_reported_date",
+          "market_statistics_as_of": null,
+          "snapshot_cutoff": "2026-07-17",
+          "cutoff_interpretation": "retrospective document-snapshot availability cutoff; not contemporaneous information or historical replay"
+        }
+      }
+    ],
+    "fidelity_invalid_date": "Keep printed6/31/26 and normalized null; do not silently change it toJune30. Distinguish June30 market statistics from the unresolved printed sector-view date.",
+    "availability": "Retrospective documentary task. October retrieval and pinned caches do not independently establish that identical source bytes or vendor adjusted-price vintages were available in July. The July cutoff defines the fixed task snapshot, not a point-in-time trading replay.",
+    "mutable_source": "Use the hash-pinned Q3 Fidelity cache reviewed for this candidate; mutable live Q4 metadata is not a replacement.",
+    "macro": "Retain supplied publication dates, observation periods, metric units and release vintages; observed GDP is not a forecast. No current web facts or later data enter generation or claim assessment."
+  },
+  "scientific_controls": {
+    "reference_runtime_ref": {
+      "path": "research/recovery_20261025/runtime_candidate.json",
+      "sha256": "e331ea026c04537a15fba83eb538ac3b6cb6022ee1ad14160d18bb292d99870c"
+    },
+    "model": "qwen3.5:4b-q4_K_M",
+    "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+    "template_sha256": "b507b9c2f6ca642bffcd06665ea7c91f235fd32daeefdf875a0f938db05fb315",
+    "engine_version": "0.35.1",
+    "backend": "cpu",
+    "options": {
+      "temperature": 0,
+      "num_ctx": 65536,
+      "num_predict": 8192,
+      "num_thread": 8,
+      "num_batch": 512,
+      "repeat_penalty": 1,
+      "presence_penalty": 0,
+      "frequency_penalty": 0,
+      "seed": 3407,
+      "top_p": 0.95,
+      "top_k": 20,
+      "min_p": 0,
+      "num_gpu": 0
+    },
+    "think": false,
+    "truncate": false,
+    "shift": false,
+    "stream": true,
+    "keep_alive": 0,
+    "deadline_seconds": 4500,
+    "renderer_policy": "http_verbatim_json_outer_ascii_whitespace_only_v1",
+    "main_runtime_status": "Main runtime/service identity, adapter and exact code hashes require a separate prospective freeze; this historical runtime reference pins intended scientific controls, not a currently authorized main service.",
+    "native_capacity": "Root is separately preparing exact D0 render/native-token checks. No completed result is claimed here. Actual F0 capacity is checked only after each actual full D0 exists, under the unchanged context/output ceiling; no truncation or synthetic-history substitute."
+  },
+  "endpoint_contract": {
+    "primary_final_allocation": {
+      "id": "F0_derived_integer_allocation",
+      "definition": "For each designated first normally completed F0 with eligible bound whole response, apply the same pinned deterministic finalizer. The canonical10000-unit vector is the primary operational final allocation for main allocation comparisons.",
+      "unit": "integer units over10000; one unit=0.0001 weight=0.01 percentage point",
+      "sum": "Eligible vectors total exactly10000units, displayed100.00%.",
+      "interpretation": "Endpoint of the model-plus-fixed-mathematical-finalizer pipeline. It is not a claim that the model itself submitted a valid budget or reasoned about the derived numbers."
+    },
+    "raw_model_diagnostics": {
+      "id": "F0_raw_submission_and_stated_evidence",
+      "definition": "The first F0 message remains immutable. Preserve JSON/schema status, raw eleven weights, sum/residual, source identity/labels/readings, all cited IDs and claims, explanations and submitted constraints.",
+      "evaluation": "Original v492 r2 descriptive source/numeric/context/evidence-decision rubric and frozen raw arithmetic eligibility continue to apply to this raw endpoint.",
+      "raw_distance": "Compute raw-vector distances only when both satisfy the original complete finite nonnegative/raw-budget rule; otherwise null with reason. Do not apply derived normalization while labeling a number a raw distance."
+    },
+    "draft_process": {
+      "id": "D0_process",
+      "definition": "Each own D0 and feedback document process and claimed revisions. D0 is not another final or independent observation. Derived D0 may be retained only as a labeled process diagnostic; it never becomes a missing final."
+    },
+    "explanation_binding": "Judge quotations, source reading and claimed own-D0 changes against the raw values actually submitted first. Separately assess whether normalization/quantization alters baseline-relative direction, concentration, equality or interpretation of the operational allocation. Do not rewrite prose/citations or retroactively certify an incorrect raw claim from a corrected total.",
+    "precedence_over_original_r2": {
+      "original_ref": {
+        "path": "research/v492_evaluation_protocol_20261019_r2.json",
+        "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+      },
+      "explicit_change": "Original r2 describes first F0 raw submission as primary. For this prospective main only, this wrapper makes derived F0 the primary allocation endpoint, while retaining raw F0 as the full model-behavior/semantic/arithmetic diagnostic endpoint. This is an explicit endpoint amendment, not a claim that r2 is wholly unchanged.",
+      "unchanged": [
+        "Source and context coding categories, numeric claim lineage and no composite score.",
+        "Raw immutability and raw arithmetic eligibility/tolerance.",
+        "Cell/source/control contrasts, one-output-at-a-time review and missing-outcome accounting.",
+        "No causal/population/performance interpretation or compulsory target."
+      ],
+      "historical_freezes": "No old pilot freeze, raw evaluator, prepared prompt or original result is rewritten. Original wording never normalized continues to govern the raw model artifacts; the separately labeled deterministic output is a new prospectively declared main endpoint.",
+      "prompt_boundary": "Prompt bytes still ask the model to submit a full-budget vector and preserve raw output. This wrapper is evaluator/pipeline metadata; it adds no new model instruction, target weights or finalized feedback."
+    },
+    "tradeoffs": [
+      "Proportional normalization removes total-scale differences; different raw vectors with the same ratios can map to the same derived allocation. Raw residual/scale must remain visible.",
+      "External scaling can change above/below-comparator signs, so derived direction cannot be attributed to a model-chosen revision.",
+      "Largest-remainder quantization can split ties or reduce tiny positive components tozero; these changes are mathematical policy, not evidence of institutional preference.",
+      "A full-budget derived vector can still have wrong source reasoning, unsupported numerical claims or violated submitted bounds. Mathematical eligibility does not become a semantic pass gate."
+    ]
+  },
+  "finalization_policy": {
+    "implementation_ref": {
+      "path": "research/finalize_sector_allocation.py",
+      "sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3"
+    },
+    "accepted_policy_ref": {
+      "path": "research/recovery_20261025/allocation_finalization_acceptance_r2.json",
+      "sha256": "0232232baeb7e251aa0dee42bc9a1969f66615a1df4d303bccb67dd938b47d9e"
+    },
+    "entrypoint": "finalize_content through a separately reviewed manifest-bound main artifact adapter; never route main IDs through a pilot-only whole-run adapter.",
+    "eligibility": "Normally completed, exact-bound whole JSON output with exactly11 unique required sectors, finite numeric weights excluding booleans, nonnegative values and positive sum, within pinned engineering resource bounds. No response-selection by source fidelity or raw budget success.",
+    "numeric_resource_bounds": {
+      "coefficient_digits_max": 512,
+      "absolute_exponent_max": 512,
+      "absolute_adjusted_exponent_max": 512,
+      "basis": "Engineering limits from pinned implementation; not financial thresholds."
+    },
+    "exact_normalization": "p_i=Fraction(raw_i)/sum_j Fraction(raw_j)",
+    "quantization": "q_i=10000*p_i; floor allq_i; give remaining units in descending fractional-remainder order.",
+    "tie_order": [
+      "10",
+      "15",
+      "20",
+      "25",
+      "30",
+      "35",
+      "40",
+      "45",
+      "50",
+      "55",
+      "60"
+    ],
+    "raw_above_one": "Record raw violation but allow scaling under accepted policy; do not clip.",
+    "unavailable": "Malformed/duplicate/missing/negative/nonfinite/allzero/unbound/incomplete outcomes stay unavailable. No replacement, partial extraction, equal-weight/cash/benchmark fill or invented target.",
+    "constraint_scope": "Budget-only operation: diagnose model-submitted min/max bounds before/after but do not optimize, enforce or assume source support. Report violations alongside any budget-feasible final vector.",
+    "mandatory_lineage": [
+      "Raw artifact/ref and content SHA256.",
+      "Exact raw sum/residual, normalization factor and normalized rational ratios.",
+      "Integer final units, final total10000, per-row scaling and rounding deltas, tie recipients.",
+      "Case/stage/run identity, first-request count, source/market/prompt/version bindings and adapter/policy hashes."
+    ],
+    "same_policy_for_all_conditions": true,
+    "derived_values_fed_to_generator": false
+  },
+  "analysis_plan": {
+    "primary_space": "Derived F0 integer vectors only, labeled pipeline-allocation comparisons.",
+    "derived_distance": "d(U,V)=sum_i abs(U_i-V_i)/20000, where each vector sums10000. Store exact numerator/denominator plus descriptive decimal.",
+    "within_source": [
+      [
+        "fidelity_q3_2026__E",
+        "fidelity_q3_2026__L"
+      ],
+      [
+        "ubs_july_2026__E",
+        "ubs_july_2026__L"
+      ]
+    ],
+    "between_source": [
+      [
+        "fidelity_q3_2026__E",
+        "ubs_july_2026__E"
+      ],
+      [
+        "fidelity_q3_2026__L",
+        "ubs_july_2026__L"
+      ]
+    ],
+    "shared_control": "Compare each of four source-conditioned derived F0 vectors with the one newly generated main C F0. C is not multiplied into four independent controls.",
+    "difference_of_distances": "d(F_E,U_E)-d(F_L,U_L), only if allfour derived source-conditioned finals are eligible. A finite descriptive contrast, not difference-in-differences or a causal estimator.",
+    "benchmark": "Describe derived deviation from the fixed S&P sector reference alongside raw diagnostic signs. The benchmark reported99.9% normalization is a pre-existing comparator construction, distinct from model-output finalization. No transaction turnover or institutional correctness interpretation.",
+    "process": "Report actual own raw D0/F0 deltas and claimed-change consistency; separately report derived D0/F0 deltas if both exist. Do not mix raw and derived spaces in one distance.",
+    "missing": "Any missing/ineligible member produces null plus explicit reason. Preserve planned5final/55row denominator; never replace it or count invalid raw data as zero distance.",
+    "reading_order": "Read one final and its own input/history before across-condition comparison; source meanings and reasons can remain different despite equal weights. Different weights alone do not establish source fidelity.",
+    "no_selection": "No preferred source separation, divergence from C, low risk or budget success selects which result is reported. No repeated calls until a desired contrast appears.",
+    "no_inference": [
+      "No significance tests or bootstrap intervals from five cells.",
+      "No sector-row, D0/F0 or reviewer pseudo-replication.",
+      "No equivalence or stability claim from one observation per cell.",
+      "No market-wide homogenization, realized profit, suitability, institution-optimal target or hidden cognition claim."
+    ]
+  },
+  "execution_and_failure_policy": {
+    "namespace": "Fresh main run/report directories with exclusive writes; old pilot and continuation directories/archives remain unchanged. Bind exact main manifest/code/gate before first call.",
+    "no_retries": "One request per declared stage, maximum10. No automatic retry, repair turn, alternate seed, timeout extension or post-final generation. Any later infrastructure reattempt would require a separate prospective amendment and explicit cumulative ledger.",
+    "D0_dependency": "Only exactly bound normally completed structural D0 eligibility permits own F0. A malformed/incomplete/nonfinite draft prevents its dependent final. Ordinary raw sum, source citation/label or semantic errors are measured outcomes and do not alone prohibit F0.",
+    "system_stop": "Request/response identity failure, pin mismatch, failed required instrument review, cancellation or unconfirmed owned-service integrity stops later calls. Preserve exact termination reason and unattempted slots.",
+    "model_failure": "Record completed malformed/model failures and prevent only dependent F0 under reviewed rules; do not label them infrastructure failures or silently remove planned cells.",
+    "terminal": "Count durable request envelopes including interrupted attempts; separately record renders/token checks. Recover honest terminal accounting without invented completion or normalized substitute.",
+    "postprocessing": "Finalize eligible completed stages as separate sidecars; no sidecar result changes the generation body or raw outcome status."
+  },
+  "evaluation_and_reviews": {
+    "rubric_ref": {
+      "path": "research/v492_evaluation_protocol_20261019_r2.json",
+      "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+    },
+    "per_stage": "Before progression, preserve actual request/response/source timing/settings and deterministic error/consistency/topic checks. A valid ID is not entailment. Record semantic review pending until actual reading.",
+    "per_final": "AI-assisted source meaning, explanation-to-weight, values/units/periods/dates, alternatives, limitations and own-stage deltas using exact quotes, locators and hashes; all11rows plus explicit numeric/change claims, with occurrence counts and unassessed scope.",
+    "C_scoring": "No missing-source penalty in C; fabricated institutional attribution is still assessed. No required citation count or mandatory numerical tilt.",
+    "masking": "Opaque item labels may hide condition/order/hypothesis while preserving needed source evidence and dates. Source presence can reveal the condition; masking is incomplete.",
+    "disagreement": "Preserve distinct codings and ambiguity. Same-family AI agents are not independent human/statistical raters. No vote-derived truth, agreement accuracy or validated semantic score is claimed.",
+    "three_axes": "At each implementation/execution/evaluation step record errors, consistency and connection to the institutional evidence-to-allocation question."
+  },
+  "main_gate_pending": {
+    "candidate_is_not_gate": true,
+    "main_ready": false,
+    "required": [
+      "Complete continuation coverage accounting for allremaining cells and all available-output stagewise audits; retain infrastructure/model failures and all missing outcomes. A global stop leaving later cells unattempted requires review before declaring coverage addressed.",
+      "Bind final continuation method/instrument review and any documented operational corrections; ordinary model arithmetic/semantic failure is not a veto and not permission for retries.",
+      "Finish exact native D0 capacity receipts and bind them without claiming unknown dynamic F0 capacity is pre-proved.",
+      "Complete independent method/code tests for a separately manifest-bound main runner, review gate, stage artifacts and main finalizer adapter.",
+      "Review this explicit derived-primary/raw-diagnostic endpoint amendment and source wording bindings; freeze final main protocol, runtime, code, inputs, contrasts and failure rules before anymaingeneration.",
+      "Verify fresh owned isolated service/pinned environment, AC/awake acquisition and cleanup policy in live preflight.",
+      "Save a separate main approval gate within existing user authorization; neither this candidate nor a pilot/continuation gate can authorize main implicitly."
+    ],
+    "not_required": [
+      "Correctness of all pilot model claims.",
+      "Raw unit sums or successful source adherence in everypilotcell.",
+      "A preferred nonzero difference, investment-performance rank, or favorable AI consensus."
+    ]
+  },
+  "candidate_review_axes": {
+    "errors": {
+      "status": "candidate_contract_prepared_not_runtime_certified",
+      "reason": "Nine candidate artifact hashes match and main prompt bytes equal v494. Existing source corrections and accepted exact math are bound; actual main adapter/runtime and dynamic capacity validation remain pending."
+    },
+    "consistency": {
+      "status": "explicit_prospective_endpoint_amendment",
+      "reason": "Derived F0 is designated primary for allocation while original r2 raw diagnostics and immutable prompts/outputs remain distinct. Exactly two reviewed source text edits are carried in new main packet copies; no hidden rewrite of prior studies."
+    },
+    "paper_topic": {
+      "status": "scope_preserved_candidate_only",
+      "reason": "The design studies supplied institutional meaning through stated interpretation/reasons and observable allocation across E/L/C. Mathematical finalization is part of the operational pipeline and is not equated with semantic fidelity or causal research success."
+    }
+  },
+  "references": [
+    {
+      "path": "research/recovery_20261025/main_packet_precision_candidate.json",
+      "sha256": "d4fc6a832dfe3abd4a9e29ae696783e5f85e4d5395fefeffe1b9bd2858258422"
+    },
+    {
+      "path": "research/recovery_20261025/main_candidate_preparation/build_review.json",
+      "sha256": "16f7d04aaa15539b2cb9ac28a886b86a0ebb32e0409403cfeec531998492caba"
+    },
+    {
+      "path": "research/recovery_20261025/main_candidate_preparation/independent_review.json",
+      "sha256": "7f973484bf2edee7d7353d9d3bce2f6306f0ce178aa4a6f89c6011cd1b6f3bae"
+    },
+    {
+      "path": "data/sector_protocol/v495_main_candidate_20261025/prepared/preparation_manifest.json",
+      "sha256": "feb0b889331bf20fc04595ee1395b1c61f41b2663b9ba4c0207397d023ba06b1"
+    },
+    {
+      "path": "research/recovery_20261025/allocation_finalization_acceptance_r2.json",
+      "sha256": "0232232baeb7e251aa0dee42bc9a1969f66615a1df4d303bccb67dd938b47d9e"
+    },
+    {
+      "path": "research/recovery_20261025/allocation_finalization_amendment.json",
+      "sha256": "009f90b89a6185f1af9c63fd6be47d01f9662d959fd13b9938295f5943156031"
+    },
+    {
+      "path": "research/recovery_20261025/main_readiness_source_review_20261025.json",
+      "sha256": "50572a99534574693a8e87180e3f0f158fa80f79a3aa0d11ad1f7b963c781605"
+    },
+    {
+      "path": "research/v492_evaluation_protocol_20261019_r2.json",
+      "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+    },
+    {
+      "path": "research/recovery_20261025/runtime_candidate.json",
+      "sha256": "e331ea026c04537a15fba83eb538ac3b6cb6022ee1ad14160d18bb292d99870c"
+    },
+    {
+      "path": "research/continuation_20261026/protocol_and_review.json",
+      "sha256": "bdecefe6f459dbc0c1eafda8011148b0972dd38d0d38d6311ca1add151a542ed"
+    },
+    {
+      "path": "research/finalize_sector_allocation.py",
+      "sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/common_context.json",
+      "sha256": "67d94bdee3d38854097970cdfb74f40e2557a11e22b016e9a68374e6f13cb96f"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/response_schema.json",
+      "sha256": "944a232de9f4a1e9ae672b172196aa906077ee03c3f6bf2ab06ad032d6d0b147"
+    }
+  ]
+}

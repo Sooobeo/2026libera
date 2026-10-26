@@ -1,0 +1,128 @@
+{
+  "version": "main_render_only_execution_review_1",
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T00:11:09.685Z",
+  "scope": "Executed only authorized main-candidate D0 render-only and vocabulary-native token verification; no main inference.",
+  "script_ref": {
+    "path": "research/continuation_20261026/main_preflight/preflight_main_d0.py",
+    "sha256": "517e856e9de2a5100be875f61fb3e8794f3e246a78f60eb36b5e82b71d3bf60f"
+  },
+  "summary_ref": {
+    "path": "research/continuation_20261026/main_preflight/d0_capacity_r1/summary.json",
+    "sha256": "4acc84bcdec1ce3d80d057a80373c59803dba6efe7edd91bb1f03c1ef9befdb2"
+  },
+  "execution": {
+    "command": "python -B -X utf8 research/continuation_20261026/main_preflight/preflight_main_d0.py",
+    "tool": "exec_command then write_stdin session25020",
+    "exit_code": 0,
+    "foreground_session_completed": true,
+    "detached_helper_created": false,
+    "model_generation_requests_sent": 0,
+    "render_requests": 5
+  },
+  "case_checks": [
+    {
+      "case_id": "fidelity_q3_2026__E",
+      "render_status": "validated",
+      "unexpected_generation": false,
+      "eval_count": 0,
+      "prompt_eval_count": 0,
+      "content_empty": true,
+      "token_count": 13277,
+      "vocab_only": true,
+      "inference_context_created": false,
+      "tokenizer_generation_calls": 0,
+      "remaining_after_reserve": 44067,
+      "no_generation_directory": true
+    },
+    {
+      "case_id": "fidelity_q3_2026__L",
+      "render_status": "validated",
+      "unexpected_generation": false,
+      "eval_count": 0,
+      "prompt_eval_count": 0,
+      "content_empty": true,
+      "token_count": 12282,
+      "vocab_only": true,
+      "inference_context_created": false,
+      "tokenizer_generation_calls": 0,
+      "remaining_after_reserve": 45062,
+      "no_generation_directory": true
+    },
+    {
+      "case_id": "ubs_july_2026__E",
+      "render_status": "validated",
+      "unexpected_generation": false,
+      "eval_count": 0,
+      "prompt_eval_count": 0,
+      "content_empty": true,
+      "token_count": 13288,
+      "vocab_only": true,
+      "inference_context_created": false,
+      "tokenizer_generation_calls": 0,
+      "remaining_after_reserve": 44056,
+      "no_generation_directory": true
+    },
+    {
+      "case_id": "ubs_july_2026__L",
+      "render_status": "validated",
+      "unexpected_generation": false,
+      "eval_count": 0,
+      "prompt_eval_count": 0,
+      "content_empty": true,
+      "token_count": 12282,
+      "vocab_only": true,
+      "inference_context_created": false,
+      "tokenizer_generation_calls": 0,
+      "remaining_after_reserve": 45062,
+      "no_generation_directory": true
+    },
+    {
+      "case_id": "common_market_only__C",
+      "render_status": "validated",
+      "unexpected_generation": false,
+      "eval_count": 0,
+      "prompt_eval_count": 0,
+      "content_empty": true,
+      "token_count": 12282,
+      "vocab_only": true,
+      "inference_context_created": false,
+      "tokenizer_generation_calls": 0,
+      "remaining_after_reserve": 45062,
+      "no_generation_directory": true
+    }
+  ],
+  "after": {
+    "at_utc": "2026-10-26T00:10:53.988780+00:00",
+    "pid": 10920,
+    "resident_models": [],
+    "engine": "0.35.1",
+    "model_digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+    "template_sha256": "b507b9c2f6ca642bffcd06665ea7c91f235fd32daeefdf875a0f938db05fb315"
+  },
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "Five existing render validators report zero evaluation/content; exact native tokens plus8192 reserve fit65536. No generation request or response repair."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Main manifest and prepared bytes, reconstructed E packets, common schema/market, L/L/C identity, pinned model/template/engine and before/after owned idle service all match."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "Prospective main E/L/C source timing and sector-allocation task are preserved. Two declared wording repairs remain bound, dates/availability caveats retained; no outcome or semantic-success claim."
+    }
+  },
+  "F0_status": "Pending actual own D0 and exact full-history runtime render/token validation; no F0 created.",
+  "limitations": [
+    "This is input/render capacity verification, not main execution authorization, generation feasibility or semantic validation.",
+    "F0 capacity depends on each actual future D0 and remains pending.",
+    "October retrieval does not prove identical source bytes were available at the July task cutoff."
+  ],
+  "main_execution_allowed_by_this_receipt": false,
+  "power_settings_changed": false,
+  "service_stop_or_restart": false,
+  "input_or_frozen_files_modified": false,
+  "writer_status": "QUIET_AFTER_THIS_RECEIPT"
+}

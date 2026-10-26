@@ -1,0 +1,219 @@
+{
+  "freeze_version": "sector_continuation_freeze_1",
+  "status": "frozen_for_pilot_continuation_only",
+  "purpose": "pilot_continuation",
+  "recorded_at_utc": "2026-10-26T00:09:48.921971+00:00",
+  "run_directory": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_continuation_20261026",
+  "output_root": "C:\\Users\\Insun\\2026libera\\research\\continuation_20261026\\run_reports",
+  "case_order": [
+    "fidelity_q2_2026__L",
+    "ubs_june_2026__E",
+    "ubs_june_2026__L",
+    "common_market_only__C"
+  ],
+  "max_generation_requests": 8,
+  "historical_generation_requests": 3,
+  "campaign_max_generation_requests": 11,
+  "automatic_retries": 0,
+  "main_allowed": false,
+  "old_outputs_observed": true,
+  "explicit_retry_slots": [
+    "fidelity_q2_2026__L__D0"
+  ],
+  "runtime_ref": {
+    "path": "research/continuation_20261026/runtime_candidate.json",
+    "sha256": "edc1e69331e9340c16d2c8995690da70e82de7f280ef11518878052d528f705f"
+  },
+  "protocol_ref": {
+    "path": "research/continuation_20261026/protocol_and_review.json",
+    "sha256": "bdecefe6f459dbc0c1eafda8011148b0972dd38d0d38d6311ca1add151a542ed"
+  },
+  "historical_gate_ref": {
+    "path": "research/recovery_20261025/review_gate.json",
+    "sha256": "04745b0b358d54234b888a3acdb281a10b35d8b570264c4027007e530cc5f552"
+  },
+  "historical_terminal_ref": {
+    "path": "research/recovery_20261025/new_pilot/terminal_receipt.json",
+    "sha256": "bc872eb8326233e274629d8ea16f5d841e098b6e45aa26f31a9588d760289d15"
+  },
+  "historical_summary_ref": {
+    "path": "data/local_sector_runtime/v494_pilot_20261025/pilot_summary.json",
+    "sha256": "ad5b11da9677d3cb091738d0b0427240842f2ca541bb0f7e72f3747400b599a4"
+  },
+  "prepared_manifest_ref": {
+    "path": "data/sector_protocol/v494_design_20261025/prepared/preparation_manifest.json",
+    "sha256": "8023f8b11ec9b1d43bf1b5b08ac37ccbab4ac5ab7ad7de28a9e93d8e67a4ef29"
+  },
+  "finalizer_acceptance_ref": {
+    "path": "research/recovery_20261025/allocation_finalization_acceptance_r2.json",
+    "sha256": "0232232baeb7e251aa0dee42bc9a1969f66615a1df4d303bccb67dd938b47d9e"
+  },
+  "code_refs": [
+    {
+      "path": "research/analyze_v492_pilot.py",
+      "sha256": "841c1f941e2c39165f84f51f5df283ca7a3c5727de285d4ad56edfa50166529f"
+    },
+    {
+      "path": "research/benchmark_sector_latency.py",
+      "sha256": "0686444e608033be931922a26886ed4a4b5b0789385215b7b75bfacc4050458b"
+    },
+    {
+      "path": "research/build_v492_masked_review.py",
+      "sha256": "f4f9295a657892431d76b79310b3af229dc5bc7d972b098adb10ff5dd29a1f77"
+    },
+    {
+      "path": "research/build_v494_masked_review.py",
+      "sha256": "8ed40877f82414678d5808181712813ad474ddf089a08a5ba06a7b7bcaa6d148"
+    },
+    {
+      "path": "research/continuation_20261026/runtime/start_isolated_cpu.ps1",
+      "sha256": "a141ff34d5ecf1f4325a9ef91275c57b785c2778db5d041e35acfcc1b8c6e1d3"
+    },
+    {
+      "path": "research/continuation_20261026/runtime/stop_isolated_cpu.ps1",
+      "sha256": "218f0d5bba603e02f06d3a4f041b35d40d61b67015b5cc41dd6f2998c6294d55"
+    },
+    {
+      "path": "research/finalize_sector_allocation.py",
+      "sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3"
+    },
+    {
+      "path": "research/finalize_sector_campaign.py",
+      "sha256": "5036ddc1d856adf196fd1d2818ffeb8b3d9b3c98e65be5b6910cef59a9173a8e"
+    },
+    {
+      "path": "research/freeze_sector_continuation.py",
+      "sha256": "ae6ee798da1ea538c7e8ed251d1802ef887e671b7ade5578ff33aaa4332978a7"
+    },
+    {
+      "path": "research/freeze_sector_v494.py",
+      "sha256": "2e40a2f9b646ad547987ac6ce9679e989792bd0b16e7525af2f22276c1801856"
+    },
+    {
+      "path": "research/local_sector_single_case.py",
+      "sha256": "0b2596a223167136bb37578e86469d50c26e7883305d4db31f43b9ddd10d28d0"
+    },
+    {
+      "path": "research/prepare_sector_v491.py",
+      "sha256": "0e8188630a8b3a36da08671519b2bfeba7d3d2ca412568f789bfeca2ea4192e7"
+    },
+    {
+      "path": "research/prepare_sector_v492.py",
+      "sha256": "bc60c7ecb972ad2ce0d9df3f3e41f715264dbeb6a4b3a3838a13216a5c56b098"
+    },
+    {
+      "path": "research/prepare_sector_v494.py",
+      "sha256": "80d293ab0df0a209c234e3ab1136ac845fe6a5e81b1b68d543660cc19108e855"
+    },
+    {
+      "path": "research/probe_ollama_runtime.py",
+      "sha256": "2dd48936bbaf8fd090a26f92fd356fec3a11ac81e5b01b39d661ffe72552fddb"
+    },
+    {
+      "path": "research/recovery_20261025/method_build_audit.py",
+      "sha256": "b6254ac3f8a607b7a9602eb4bef89953ba7e6188cbf6227982106294c839b488"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/start_isolated_cpu.ps1",
+      "sha256": "ae44ac080a877e84b596b59894917f0226f6493660552428ac03c10c4187cfd8"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/stop_isolated_cpu.ps1",
+      "sha256": "78eb6eeb3d8de0c2e7fbb21bc682d2af5ee5bb1db9a56b1f6eb42f54ecd5b732"
+    },
+    {
+      "path": "research/remote_sector_runtime.py",
+      "sha256": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5"
+    },
+    {
+      "path": "research/review_sector_v494_stage.py",
+      "sha256": "81195353a74f00fde66e1915e068e9167966ccc3cb774b65ad929867bf44b3e6"
+    },
+    {
+      "path": "research/run_sector_continuation.py",
+      "sha256": "15c74157f0169fca721671fe5219673f7c3296d42ebd984b2c326e0ab493b2cb"
+    },
+    {
+      "path": "research/run_v494_recovery.py",
+      "sha256": "56fdb077c375ca4b99a110a93d81210a74812257cae3b0967b613f0b5de27576"
+    },
+    {
+      "path": "research/sector_continuation_awake.py",
+      "sha256": "2318c6acafc72d38c68109e7f1abcc45bc5e8cec428f90c0a63da88c5382825c"
+    },
+    {
+      "path": "research/sector_continuation_gate.py",
+      "sha256": "176d43c79da92299716a2509172741248ec2764bcd4869e1927cff70bd14dcb5"
+    },
+    {
+      "path": "research/sector_continuation_runtime.py",
+      "sha256": "6ec09d1f524bda53c9cc80505ea4d47d13c211f159ff7c7702b6c3ba645d83f1"
+    },
+    {
+      "path": "research/sector_engine.py",
+      "sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c"
+    },
+    {
+      "path": "research/sector_v48_main_awake.py",
+      "sha256": "185a9f6be9471ff7808730153227682f0f0eae25f72ee1474602106a950fa98a"
+    },
+    {
+      "path": "research/sector_v48_transport.py",
+      "sha256": "db395eb3d54ebec93aa67556e1f2424aba1d591ba8b9fcfce7fbd3332db0379c"
+    },
+    {
+      "path": "research/sector_v491_contract.py",
+      "sha256": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397"
+    },
+    {
+      "path": "research/sector_v491_runtime.py",
+      "sha256": "a542a53ef7a9a035a3641e1e9637d3eb5bd442677318a82434e245bb1e5dc649"
+    },
+    {
+      "path": "research/sector_v491_tokenizer.py",
+      "sha256": "1e25d31d18e659e90186d2a598d0bcad77824d0dbc5a0e76beed692a8373e440"
+    },
+    {
+      "path": "research/sector_v492_contract.py",
+      "sha256": "f77d1ddec9630a4c7edbf3928d298b7b05094345996ece1cf53d91fc40171a21"
+    },
+    {
+      "path": "research/sector_v492_review_gate.py",
+      "sha256": "a93b575104509e9810663ec4feca3e6bbb6963ca03dd988b451e06744e23a092"
+    },
+    {
+      "path": "research/sector_v492_runtime.py",
+      "sha256": "cc8285db4d561aea10878db336771752965f4517405a93a1574b18f2fa300e04"
+    },
+    {
+      "path": "research/sector_v494_review_gate.py",
+      "sha256": "07cac8a0606eff3dfeb1bc1e0b3786ff373ca49bb424edb20674033e28d7e194"
+    },
+    {
+      "path": "research/sector_v494_runtime.py",
+      "sha256": "c9521000aa3a1497775c83fa83a1b9bac9f5443edbcb707f131d313f7cd8bed1"
+    },
+    {
+      "path": "research/test_finalize_sector_campaign.py",
+      "sha256": "97fb3102ebce269889d087a4fb1c66ad736ba536fbedf2f3710975d4baf0810d"
+    },
+    {
+      "path": "research/test_sector_continuation.py",
+      "sha256": "27f9ff3e827decda54bd37e45aa028cda25e5f2b71918c598a2994061d28e024"
+    }
+  ],
+  "review_refs": [
+    {
+      "path": "research/continuation_20261026/implementation_method_review.json",
+      "sha256": "330057e3b133759120e416eaf309232aa66f14a1b2c93e772ad6edcb3435a288"
+    },
+    {
+      "path": "research/continuation_20261026/orchestration_test_review.json",
+      "sha256": "869ad5a335cdd7fbe825364b56d2da28fead55a4bedbf01198a7925b3c6c52a8"
+    },
+    {
+      "path": "research/continuation_20261026/campaign_finalizer_review.json",
+      "sha256": "068d683ccaa298aeece0ad1bcccfca11bb8323adda1b730fdfba750e55c2a5cc"
+    }
+  ]
+}

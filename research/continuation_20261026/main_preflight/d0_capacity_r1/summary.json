@@ -1,0 +1,434 @@
+{
+  "version": "v495_main_D0_render_only_preflight_1",
+  "status": "PASS",
+  "started_at_utc": "2026-10-26T00:10:25.763689+00:00",
+  "generation_requests_sent": 0,
+  "main_model_generation_calls": 0,
+  "render_requests_attempted": 5,
+  "render_requests_completed": 5,
+  "case_reviews": [
+    {
+      "case_id": "fidelity_q3_2026__E",
+      "status": "PASS",
+      "input_boundary_checks": {
+        "prepared_message_hash_matches": true,
+        "exact_reconstruction_matches": true,
+        "canonical_message_hash_matches": true,
+        "all_common_blocks_and_schema_preserved": true,
+        "source_timing_matches": true,
+        "assigned_source_exact": true,
+        "unassigned_source_ids_absent": true,
+        "controller_metadata_absent": true,
+        "visible_evidence_ids_match_manifest": true,
+        "main_D0_identity": true
+      },
+      "prepared_messages_ref": {
+        "path": "data/sector_protocol/v495_main_candidate_20261025/prepared/fidelity_q3_2026__E__D0_messages.json",
+        "sha256": "5789a0183f02db19db372b7b05b8edd5a3f99c31717c90b492bcea163543f570"
+      },
+      "capacity": {
+        "status": "exact_request_fits_declared_context",
+        "prompt_tokens": 13277,
+        "allowed_output_tokens": 8192,
+        "total_required_tokens": 21469,
+        "context_tokens": 65536,
+        "scope": "This actual request only; not a worst-case bound for an unknown future response."
+      },
+      "headroom_after_full_output_allowance": 44067,
+      "request_ref": {
+        "path": "research/continuation_20261026/main_preflight/d0_capacity_r1/fidelity_q3_2026__E/render_only/request_body.bin",
+        "sha256": "5f8f798c1eea4b860ac2e5e922e582c906b6870b93d61edab491dd097988486e"
+      },
+      "response_ref": {
+        "path": "research/continuation_20261026/main_preflight/d0_capacity_r1/fidelity_q3_2026__E/render_only/response_body.bin",
+        "sha256": "62832240b8028e5945fa5d4c2197eee62f63db1cf51f1e3d4bb0c248520d0480"
+      },
+      "render_validation_ref": {
+        "path": "research/continuation_20261026/main_preflight/d0_capacity_r1/fidelity_q3_2026__E/render_only/validation.json",
+        "sha256": "d322be6794a7022d89d605b083b0bc8e32b59c2606a7d877c6cc60c9629dd6b3"
+      },
+      "tokenizer_ref": {
+        "path": "research/continuation_20261026/main_preflight/d0_capacity_r1/fidelity_q3_2026__E/tokenizer_receipt.json",
+        "sha256": "183df5fbda044752b3b7bf4647a7d1c080a081552e74785ce6f2611aa9426cea"
+      }
+    },
+    {
+      "case_id": "fidelity_q3_2026__L",
+      "status": "PASS",
+      "input_boundary_checks": {
+        "prepared_message_hash_matches": true,
+        "exact_reconstruction_matches": true,
+        "canonical_message_hash_matches": true,
+        "all_common_blocks_and_schema_preserved": true,
+        "source_timing_matches": true,
+        "assigned_source_exact": true,
+        "unassigned_source_ids_absent": true,
+        "controller_metadata_absent": true,
+        "visible_evidence_ids_match_manifest": true,
+        "main_D0_identity": true
+      },
+      "prepared_messages_ref": {
+        "path": "data/sector_protocol/v495_main_candidate_20261025/prepared/fidelity_q3_2026__L__D0_messages.json",
+        "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15"
+      },
+      "capacity": {
+        "status": "exact_request_fits_declared_context",
+        "prompt_tokens": 12282,
+        "allowed_output_tokens": 8192,
+        "total_required_tokens": 20474,
+        "context_tokens": 65536,
+        "scope": "This actual request only; not a worst-case bound for an unknown future response."
+      },
+      "headroom_after_full_output_allowance": 45062,
+      "request_ref": {
+        "path": "research/continuation_20261026/main_preflight/d0_capacity_r1/fidelity_q3_2026__L/render_only/request_body.bin",
+        "sha256": "02129e072d40d45c84505cb5d17a475096ae93a58a840d71e3fbec8a7024d9d8"
+      },
+      "response_ref": {
+        "path": "research/continuation_20261026/main_preflight/d0_capacity_r1/fidelity_q3_2026__L/render_only/response_body.bin",
+        "sha256": "524894d71f3c41372e13a3de675f5e09f6f8d1cfc61adc9a74b607bddd6090eb"
+      },
+      "render_validation_ref": {
+        "path": "research/continuation_20261026/main_preflight/d0_capacity_r1/fidelity_q3_2026__L/render_only/validation.json",
+        "sha256": "ed499f3f257495f4551d69231bd285e70ae69e01f0e8bd20b8495837cf4943f9"
+      },
+      "tokenizer_ref": {
+        "path": "research/continuation_20261026/main_preflight/d0_capacity_r1/fidelity_q3_2026__L/tokenizer_receipt.json",
+        "sha256": "993650920c565d94ddc242a52a74f577660340a9d5b6efcf40bdb1704ab1e185"
+      }
+    },
+    {
+      "case_id": "ubs_july_2026__E",
+      "status": "PASS",
+      "input_boundary_checks": {
+        "prepared_message_hash_matches": true,
+        "exact_reconstruction_matches": true,
+        "canonical_message_hash_matches": true,
+        "all_common_blocks_and_schema_preserved": true,
+        "source_timing_matches": true,
+        "assigned_source_exact": true,
+        "unassigned_source_ids_absent": true,
+        "controller_metadata_absent": true,
+        "visible_evidence_ids_match_manifest": true,
+        "main_D0_identity": true
+      },
+      "prepared_messages_ref": {
+        "path": "data/sector_protocol/v495_main_candidate_20261025/prepared/ubs_july_2026__E__D0_messages.json",
+        "sha256": "e49d4e9f5e2fdfd122b913ea51b5b002d4aea38de25aef1c2ef1b6d9ef0fb27e"
+      },
+      "capacity": {
+        "status": "exact_request_fits_declared_context",
+        "prompt_tokens": 13288,
+        "allowed_output_tokens": 8192,
+        "total_required_tokens": 21480,
+        "context_tokens": 65536,
+        "scope": "This actual request only; not a worst-case bound for an unknown future response."
+      },
+      "headroom_after_full_output_allowance": 44056,
+      "request_ref": {
+        "path": "research/continuation_20261026/main_preflight/d0_capacity_r1/ubs_july_2026__E/render_only/request_body.bin",
+        "sha256": "607217118b6529c9a0998cbe68f6905f66310e54d75b63d797df5262df2c600c"
+      },
+      "response_ref": {
+        "path": "research/continuation_20261026/main_preflight/d0_capacity_r1/ubs_july_2026__E/render_only/response_body.bin",
+        "sha256": "9bc75e4804314e77e3b7df1e9d088ea8f5cf08ffb2755afa0a959034b5ff1170"
+      },
+      "render_validation_ref": {
+        "path": "research/continuation_20261026/main_preflight/d0_capacity_r1/ubs_july_2026__E/render_only/validation.json",
+        "sha256": "ba1faff3a5df4e638ae65d18d36e7888f370a90cae5287b98eb550c18231ec03"
+      },
+      "tokenizer_ref": {
+        "path": "research/continuation_20261026/main_preflight/d0_capacity_r1/ubs_july_2026__E/tokenizer_receipt.json",
+        "sha256": "3125e3a592392c8f42c7f646864f27c27dec4c0bdd84e260b4abde3f24c46952"
+      }
+    },
+    {
+      "case_id": "ubs_july_2026__L",
+      "status": "PASS",
+      "input_boundary_checks": {
+        "prepared_message_hash_matches": true,
+        "exact_reconstruction_matches": true,
+        "canonical_message_hash_matches": true,
+        "all_common_blocks_and_schema_preserved": true,
+        "source_timing_matches": true,
+        "assigned_source_exact": true,
+        "unassigned_source_ids_absent": true,
+        "controller_metadata_absent": true,
+        "visible_evidence_ids_match_manifest": true,
+        "main_D0_identity": true
+      },
+      "prepared_messages_ref": {
+        "path": "data/sector_protocol/v495_main_candidate_20261025/prepared/ubs_july_2026__L__D0_messages.json",
+        "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15"
+      },
+      "capacity": {
+        "status": "exact_request_fits_declared_context",
+        "prompt_tokens": 12282,
+        "allowed_output_tokens": 8192,
+        "total_required_tokens": 20474,
+        "context_tokens": 65536,
+        "scope": "This actual request only; not a worst-case bound for an unknown future response."
+      },
+      "headroom_after_full_output_allowance": 45062,
+      "request_ref": {
+        "path": "research/continuation_20261026/main_preflight/d0_capacity_r1/ubs_july_2026__L/render_only/request_body.bin",
+        "sha256": "02129e072d40d45c84505cb5d17a475096ae93a58a840d71e3fbec8a7024d9d8"
+      },
+      "response_ref": {
+        "path": "research/continuation_20261026/main_preflight/d0_capacity_r1/ubs_july_2026__L/render_only/response_body.bin",
+        "sha256": "8449609e36657ce4a933b5f4c04f97e1246b788b21dd3c6cd369b2dd44d1dff3"
+      },
+      "render_validation_ref": {
+        "path": "research/continuation_20261026/main_preflight/d0_capacity_r1/ubs_july_2026__L/render_only/validation.json",
+        "sha256": "ed499f3f257495f4551d69231bd285e70ae69e01f0e8bd20b8495837cf4943f9"
+      },
+      "tokenizer_ref": {
+        "path": "research/continuation_20261026/main_preflight/d0_capacity_r1/ubs_july_2026__L/tokenizer_receipt.json",
+        "sha256": "993650920c565d94ddc242a52a74f577660340a9d5b6efcf40bdb1704ab1e185"
+      }
+    },
+    {
+      "case_id": "common_market_only__C",
+      "status": "PASS",
+      "input_boundary_checks": {
+        "prepared_message_hash_matches": true,
+        "exact_reconstruction_matches": true,
+        "canonical_message_hash_matches": true,
+        "all_common_blocks_and_schema_preserved": true,
+        "source_timing_matches": true,
+        "assigned_source_exact": true,
+        "unassigned_source_ids_absent": true,
+        "controller_metadata_absent": true,
+        "visible_evidence_ids_match_manifest": true,
+        "main_D0_identity": true
+      },
+      "prepared_messages_ref": {
+        "path": "data/sector_protocol/v495_main_candidate_20261025/prepared/common_market_only__C__D0_messages.json",
+        "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15"
+      },
+      "capacity": {
+        "status": "exact_request_fits_declared_context",
+        "prompt_tokens": 12282,
+        "allowed_output_tokens": 8192,
+        "total_required_tokens": 20474,
+        "context_tokens": 65536,
+        "scope": "This actual request only; not a worst-case bound for an unknown future response."
+      },
+      "headroom_after_full_output_allowance": 45062,
+      "request_ref": {
+        "path": "research/continuation_20261026/main_preflight/d0_capacity_r1/common_market_only__C/render_only/request_body.bin",
+        "sha256": "02129e072d40d45c84505cb5d17a475096ae93a58a840d71e3fbec8a7024d9d8"
+      },
+      "response_ref": {
+        "path": "research/continuation_20261026/main_preflight/d0_capacity_r1/common_market_only__C/render_only/response_body.bin",
+        "sha256": "0000aef892d6ebe492120c379e7235afb6fbf13156d16c741b71975dcb9be392"
+      },
+      "render_validation_ref": {
+        "path": "research/continuation_20261026/main_preflight/d0_capacity_r1/common_market_only__C/render_only/validation.json",
+        "sha256": "ed499f3f257495f4551d69231bd285e70ae69e01f0e8bd20b8495837cf4943f9"
+      },
+      "tokenizer_ref": {
+        "path": "research/continuation_20261026/main_preflight/d0_capacity_r1/common_market_only__C/tokenizer_receipt.json",
+        "sha256": "993650920c565d94ddc242a52a74f577660340a9d5b6efcf40bdb1704ab1e185"
+      }
+    }
+  ],
+  "main_execution_authorized_by_preflight": false,
+  "completed_at_utc": "2026-10-26T00:10:54.002466+00:00",
+  "input_refs": [
+    {
+      "path": "data/sector_protocol/v495_main_candidate_20261025/prepared/preparation_manifest.json",
+      "sha256": "feb0b889331bf20fc04595ee1395b1c61f41b2663b9ba4c0207397d023ba06b1"
+    },
+    {
+      "path": "research/continuation_20261026/runtime_candidate.json",
+      "sha256": "edc1e69331e9340c16d2c8995690da70e82de7f280ef11518878052d528f705f"
+    },
+    {
+      "path": "research/continuation_20261026/runtime/service_ready/service_receipt.json",
+      "sha256": "2281c98497893789e9e3e3f5e80876e05578918c2ca4cef2f4ec7298d945adab"
+    },
+    {
+      "path": "research/continuation_20261026/main_preflight/preflight_main_d0.py",
+      "sha256": "517e856e9de2a5100be875f61fb3e8794f3e246a78f60eb36b5e82b71d3bf60f"
+    },
+    {
+      "path": "data/sector_protocol/v495_main_candidate_20261025/packets/main/fidelity_q3_2026.json",
+      "sha256": "2159bd2bc26ca9fea3315738a69b7994796cbc232f1e6efe1a2e4bfa12497cba"
+    },
+    {
+      "path": "data/sector_protocol/v495_main_candidate_20261025/packets/main/ubs_july_2026.json",
+      "sha256": "aeca97cc0a2eca7eeb02e79c6efe8015d4d47f93ce9b37b2108e5141ab6027ed"
+    },
+    {
+      "path": "data/sector_protocol/v495_main_candidate_20261025/public_inputs.json",
+      "sha256": "6871f1852984de81a7b21c52f7856f4ebe2ef41daaac5a3d26706169bbd54fb9"
+    },
+    {
+      "path": "data/sector_protocol/v495_main_candidate_20261025/prompt_contract.json",
+      "sha256": "7d75828866825af1f7051a528defc92c88f2beac3f42a66f5d5223c4fb714362"
+    },
+    {
+      "path": "data/sector_protocol/v495_main_candidate_20261025/prepared/fidelity_q3_2026__E__D0_messages.json",
+      "sha256": "5789a0183f02db19db372b7b05b8edd5a3f99c31717c90b492bcea163543f570"
+    },
+    {
+      "path": "data/sector_protocol/v495_main_candidate_20261025/prepared/fidelity_q3_2026__L__D0_messages.json",
+      "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15"
+    },
+    {
+      "path": "data/sector_protocol/v495_main_candidate_20261025/prepared/ubs_july_2026__E__D0_messages.json",
+      "sha256": "e49d4e9f5e2fdfd122b913ea51b5b002d4aea38de25aef1c2ef1b6d9ef0fb27e"
+    },
+    {
+      "path": "data/sector_protocol/v495_main_candidate_20261025/prepared/ubs_july_2026__L__D0_messages.json",
+      "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15"
+    },
+    {
+      "path": "data/sector_protocol/v495_main_candidate_20261025/prepared/common_market_only__C__D0_messages.json",
+      "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15"
+    },
+    {
+      "path": "data/sector_documents/packets/main/fidelity_q3_2026.json",
+      "sha256": "3f84c5d1e1302238fd270b41f1b9bcf86e3ae5c8c44a74f7a49a19941407d297"
+    },
+    {
+      "path": "data/sector_documents/packets/main/ubs_july_2026.json",
+      "sha256": "49f47f8c628b53231cdfb09fa90eabfa0a5d271fb6a439e75360bdb97db29d30"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/public_compact_candidate.json",
+      "sha256": "afe810b2bfb69ae4bfa372e65fa587bc6253eecf8028d5fde39cf3ec395bcb8d"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/common_context.json",
+      "sha256": "67d94bdee3d38854097970cdfb74f40e2557a11e22b016e9a68374e6f13cb96f"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/response_schema.json",
+      "sha256": "944a232de9f4a1e9ae672b172196aa906077ee03c3f6bf2ab06ad032d6d0b147"
+    },
+    {
+      "path": "data/sector_protocol/v494_design_20261025/prompt_contract.json",
+      "sha256": "7d75828866825af1f7051a528defc92c88f2beac3f42a66f5d5223c4fb714362"
+    },
+    {
+      "path": "research/v492_evaluation_protocol_20261019_r2.json",
+      "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+    },
+    {
+      "path": "research/recovery_20261025/main_readiness_source_review_20261025.json",
+      "sha256": "50572a99534574693a8e87180e3f0f158fa80f79a3aa0d11ad1f7b963c781605"
+    },
+    {
+      "path": "research/recovery_20261025/main_packet_precision_candidate.json",
+      "sha256": "d4fc6a832dfe3abd4a9e29ae696783e5f85e4d5395fefeffe1b9bd2858258422"
+    },
+    {
+      "path": "research/recovery_20261025/stage02_method_preparation_review.json",
+      "sha256": "f78183fd2bc0177f23713fd7bdd7d8174a84c96dfa2fb71bce23d98fdb495d3a"
+    },
+    {
+      "path": "research/recovery_20261025/allocation_finalization_amendment.json",
+      "sha256": "009f90b89a6185f1af9c63fd6be47d01f9662d959fd13b9938295f5943156031"
+    },
+    {
+      "path": "research/recovery_20261025/allocation_finalization_acceptance.json",
+      "sha256": "402ad49fc81c3732d1266a0449859c1a0ca2fe26150efc96c2d5900733c7066a"
+    },
+    {
+      "path": "research/recovery_20261025/allocation_finalization_acceptance_r2.json",
+      "sha256": "0232232baeb7e251aa0dee42bc9a1969f66615a1df4d303bccb67dd938b47d9e"
+    },
+    {
+      "path": "research/recovery_20261025/derived_final_allocation_policy_review_20261025.json",
+      "sha256": "7355b0de7466edac93187133ca2156a3cd31f2c852a0e0351193320ee0687c3d"
+    },
+    {
+      "path": "research/recovery_20261025/pilot_freeze.json",
+      "sha256": "8f8f95c4b90583e5bd97f2b80168c51aa9efec92a958b8235a9baecdfb7001cf"
+    },
+    {
+      "path": "research/finalize_sector_allocation.py",
+      "sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3"
+    },
+    {
+      "path": "research/v49_compaction_review_20261019.py",
+      "sha256": "5e9f41215f2e96b13b8241e03be3cd8bd1b409b12712b5541e08e59917405850"
+    },
+    {
+      "path": "research/sector_v492_contract.py",
+      "sha256": "f77d1ddec9630a4c7edbf3928d298b7b05094345996ece1cf53d91fc40171a21"
+    },
+    {
+      "path": "research/sector_v491_contract.py",
+      "sha256": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397"
+    },
+    {
+      "path": "research/sector_engine.py",
+      "sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c"
+    },
+    {
+      "path": "research/sector_v494_runtime.py",
+      "sha256": "c9521000aa3a1497775c83fa83a1b9bac9f5443edbcb707f131d313f7cd8bed1"
+    },
+    {
+      "path": "research/sector_v48_transport.py",
+      "sha256": "db395eb3d54ebec93aa67556e1f2424aba1d591ba8b9fcfce7fbd3332db0379c"
+    },
+    {
+      "path": "research/sector_v491_tokenizer.py",
+      "sha256": "1e25d31d18e659e90186d2a598d0bcad77824d0dbc5a0e76beed692a8373e440"
+    },
+    {
+      "path": "research/sector_v492_contract.py",
+      "sha256": "f77d1ddec9630a4c7edbf3928d298b7b05094345996ece1cf53d91fc40171a21"
+    },
+    {
+      "path": "research/sector_v491_contract.py",
+      "sha256": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397"
+    }
+  ],
+  "before_ref": {
+    "path": "research/continuation_20261026/main_preflight/d0_capacity_r1/before.json",
+    "sha256": "bde8eea625b86452bf89344df8c6e50367bc18a346da3d2c1e555e66fbf5d76f"
+  },
+  "after_ref": {
+    "path": "research/continuation_20261026/main_preflight/d0_capacity_r1/after.json",
+    "sha256": "7ae1e85f3b2ff350e467dc570900b5a08dcbe22d2d6d53553d9f9d9b7c501b3a"
+  },
+  "source_free_L_L_C_identical": true,
+  "common_schema_source_boundaries_preserved": true,
+  "output_reserve_tokens": 8192,
+  "context_tokens": 65536,
+  "F0_capacity": "PENDING: exact own actual completed D0 history must be rendered and counted before each future F0; no guessed F0 used here.",
+  "source_limits": {
+    "task_market_cutoff_exclusive": "2026-07-17",
+    "price_last_observation": "2026-07-16",
+    "task_scope": "Retrospective documentary task, not a point-in-time trading replay.",
+    "source_availability": "Publication/view metadata is retained as reviewed. October retrieval and pinned caches do not independently prove historical July availability of identical bytes or vendor vintages.",
+    "fidelity": "Use the pinned Q3 cache, not refreshed mutable Q4 URL metadata; invalid printed 6/31/26 stays raw with null normalized date.",
+    "ubs": "The review addendum supersedes any earlier company-subset inference: some AI exposure is a degree qualifier, not an identified company subset.",
+    "common_benchmark": "Comparison-only reported99.9% benchmark normalization is unchanged and separate from model-output finalization."
+  },
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "Five existing render validators report zero evaluation/content; exact native tokens plus8192 reserve fit65536. No generation request or response repair."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Main manifest and prepared bytes, reconstructed E packets, common schema/market, L/L/C identity, pinned model/template/engine and before/after owned idle service all match."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "Prospective main E/L/C source timing and sector-allocation task are preserved. Two declared wording repairs remain bound, dates/availability caveats retained; no outcome or semantic-success claim."
+    }
+  },
+  "limitations": [
+    "This is input/render capacity verification, not main execution authorization, generation feasibility or semantic validation.",
+    "F0 capacity depends on each actual future D0 and remains pending.",
+    "October retrieval does not prove identical source bytes were available at the July task cutoff."
+  ],
+  "unexpected_generation_evidence_observed": false
+}

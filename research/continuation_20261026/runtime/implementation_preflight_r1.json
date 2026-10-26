@@ -1,0 +1,84 @@
+{
+  "version": "continuation_implementation_preflight_1",
+  "completed_at_utc": "2026-10-26T00:06:27.759Z",
+  "status": "PASS",
+  "scope": "Implementation static/import/provenance review only; root synthetic tests, independent method review, prospective freeze/gate and actual launch checks remain separate.",
+  "input_refs": [
+    {
+      "path": "research/sector_continuation_gate.py",
+      "sha256": "176d43c79da92299716a2509172741248ec2764bcd4869e1927cff70bd14dcb5"
+    },
+    {
+      "path": "research/sector_continuation_runtime.py",
+      "sha256": "6ec09d1f524bda53c9cc80505ea4d47d13c211f159ff7c7702b6c3ba645d83f1"
+    },
+    {
+      "path": "research/sector_continuation_awake.py",
+      "sha256": "2318c6acafc72d38c68109e7f1abcc45bc5e8cec428f90c0a63da88c5382825c"
+    },
+    {
+      "path": "research/run_sector_continuation.py",
+      "sha256": "15c74157f0169fca721671fe5219673f7c3296d42ebd984b2c326e0ab493b2cb"
+    },
+    {
+      "path": "research/continuation_20261026/runtime/service_ready/service_receipt.json",
+      "sha256": "2281c98497893789e9e3e3f5e80876e05578918c2ca4cef2f4ec7298d945adab"
+    }
+  ],
+  "checks": {
+    "new_module_AST_parse": "4 PASS",
+    "new_coordinator_import": "PASS without execution",
+    "protocol_scope": "PASS after correcting protocol-only old_outputs flag requirement",
+    "unchanged_function_AST_comparison": {
+      "pass": true,
+      "functions": [
+        "artifact_ref",
+        "expected_stage_directory",
+        "validate_worker_location",
+        "prior_draft_refs",
+        "validate_prior_draft",
+        "value_sha",
+        "check_token_capacity",
+        "worker"
+      ]
+    },
+    "new_supervisor_changes": "Only optional main-thread coordinator pulse hook; stage4500second deadline and subprocess cleanup retained.",
+    "new_transport_changes": "Only optional tick parameter forwarded to supervisor; render/generation accounting and cleanup retained.",
+    "new_spec_changes": "New continuation gate, four-cell scope and exact same-run CANCEL path. Scientific request reconstruction and own-D0 validation retained.",
+    "main_thread_wake": "SYSTEM|DISPLAY on main coordinator thread, separate process not created, same-thread pulses, finally ES_CONTINUOUS clear with durable receipt; initial and stage-boundary AC check; fixed total8*4500+1800second expiry.",
+    "sidecar_math": "Accepted finalize_stage called after saved stage review; derived result written only under reports/allocation_math; no raw content normalization or F0 prompt modification.",
+    "history": "Completed Fidelity E referenced through immutable historical gate/summary; L D0 explicit historical stage attempt2; Fidelity L cell attempt2 for both stages while its newF0 stage attempt1. Segment4cases≤8requests, historical3+segment≤11."
+  },
+  "resolved_pre_execution_findings": [
+    {
+      "finding": "Protocol top-level lacks old_outputs_observed though its observed-history scope is explicit.",
+      "resolution": "Require observed flag for gate/freeze/declaration; protocol still requires exact3/8/11 accounting, allowed historical retry and immutable first attempts. Protocol existing bytes unchanged."
+    },
+    {
+      "finding": "overall_cell_attempt incorrectly treated Fidelity L F0 as cell attempt1.",
+      "resolution": "Separate overall_cell_attempt2 across L D0/F0 and overall_stage_attempt2 for L D0 only; stage attempt1 for L F0."
+    }
+  ],
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "Four new modules parse/import without inference. Copied eight transport/token/worker functions are AST-identical. Pre-execution scope/lineage defects were corrected; full synthetic tests are independently pending."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "New gate binds unchanged scientific runtime except new service receipt, original five-case freeze remains historical, four-case segment has unique immutable declarations/events and separate accounting."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "E/L evidence timing, source-free C, own actual D0 histories and retained citation/semantic failures remain fixed. Math is a sidecar and never repairs the model text or implies semantic validity."
+    }
+  },
+  "limitations": [
+    "This record does not claim synthetic tests, live gate acceptance, native token preflight or generation have run.",
+    "Root must freeze current source hashes only after independent tests/review and recheck exact owned service before a root-owned session launch.",
+    "Manual sleep/lid actions remain effective; temporary wakefulness is not a continuity guarantee."
+  ],
+  "model_calls": 0,
+  "historical_or_frozen_source_modified": false,
+  "new_source_revision_after_this_receipt_requires_new_review": true
+}

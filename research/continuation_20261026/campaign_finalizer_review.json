@@ -1,0 +1,154 @@
+{
+  "version": "sector_campaign_finalizer_review_1",
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T00:09:33.838Z",
+  "scope": "Independent initial-code review, bounded fixes to the new campaign adapter only, and21 synthetic tempfile artifact tests. No actual pilot/continuation response was read and no model/server call occurred.",
+  "reviewer": "Codex subagent /root/interruption_audit; initial adapter authored by root; this reviewer authored guard fixes and tests, so this is AI-assisted engineering review rather than blinded human validation.",
+  "implementation_refs": [
+    {
+      "path": "research/finalize_sector_campaign.py",
+      "sha256": "5036ddc1d856adf196fd1d2818ffeb8b3d9b3c98e65be5b6910cef59a9173a8e",
+      "bytes": 18803
+    },
+    {
+      "path": "research/test_finalize_sector_campaign.py",
+      "sha256": "97fb3102ebce269889d087a4fb1c66ad736ba536fbedf2f3710975d4baf0810d",
+      "bytes": 25907
+    },
+    {
+      "path": "research/finalize_sector_allocation.py",
+      "sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3",
+      "bytes": 21704
+    },
+    {
+      "path": "research/test_finalize_sector_allocation_artifacts.py",
+      "sha256": "f15a9b681135fd2e5e843e9d134780673372df4522627e3dfe82dfed26432baa",
+      "bytes": 15810
+    }
+  ],
+  "initial_adapter_sha256": "b2864c4f6386f7ed5674b20252e5147360f5a890340e26403208d9bbb1668f96",
+  "initial_adapter_bytes": 11806,
+  "changes": [
+    {
+      "issue": "Hash-consistent references alone did not enforce approved gate/protocol purpose and scope, exact counts, declaration runtime/run or prospective chronology.",
+      "resolution": "Require exact purpose/cases/counts/retry permissions on declaration/freeze/gate/protocol; approved scope-specific gate status; freeze<=gate<=declaration<=execution timestamps; matched run/report paths, separate output tree, runtime and history-reference binding. Protocol alone may omit old_outputs_observed because actual protocol records chronology in prose; explicit false still fails, and executable records require true."
+    },
+    {
+      "issue": "F0 artifacts could be present after a failed D0 or point to a different historical draft despite matching transport summaries.",
+      "resolution": "Require completed own new D0 plus exact5 artifact refs (response, worker_spec, worker_summary, supervisor_result, transport_result), continuation eligibility, raw_draft equality and verbatim two-message D0 prefix/assistant content in F0 history."
+    },
+    {
+      "issue": "Continuation aggregate metadata could hide the parent3 calls or change planned4/5 denominators.",
+      "resolution": "Require segment0..8 attempts, parent3, combined3+segment<=11, original planned5 and segment planned4; retain all stage slots and unavailable observations."
+    },
+    {
+      "issue": "Combined report did not recheck all historical stage input refs after arithmetic processing.",
+      "resolution": "Recheck original summary and every historical stage input along with segment refs; enforce the exact historical completed-E plus interrupted-L pattern without erasing the interrupted attempt."
+    }
+  ],
+  "unchanged": {
+    "base_finalizer_sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3",
+    "base_numeric_rule_modified": false,
+    "frozen_v494_code_modified": false,
+    "original_raw_artifacts_modified": false,
+    "original_test_source_modified": false
+  },
+  "validation": {
+    "command": "python -m unittest discover -s research -p test_finalize_sector_campaign.py -v",
+    "working_directory": "C:/Users/Insun/2026libera",
+    "started_at_utc": "2026-10-26T00:08:54.828Z",
+    "exit_code": 0,
+    "tests_passed": 21,
+    "test_count_meaning": "21 distinct methods with multiple adversarial subcases; the earlier pass is not added to this denominator.",
+    "unittest_elapsed_seconds": 8.357,
+    "tool_wall_seconds": 8.6016407,
+    "source_hashes_before": [
+      {
+        "path": "research/finalize_sector_campaign.py",
+        "sha256": "5036ddc1d856adf196fd1d2818ffeb8b3d9b3c98e65be5b6910cef59a9173a8e",
+        "bytes": 18803
+      },
+      {
+        "path": "research/test_finalize_sector_campaign.py",
+        "sha256": "97fb3102ebce269889d087a4fb1c66ad736ba536fbedf2f3710975d4baf0810d",
+        "bytes": 25907
+      },
+      {
+        "path": "research/finalize_sector_allocation.py",
+        "sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3",
+        "bytes": 21704
+      },
+      {
+        "path": "research/test_finalize_sector_allocation_artifacts.py",
+        "sha256": "f15a9b681135fd2e5e843e9d134780673372df4522627e3dfe82dfed26432baa",
+        "bytes": 15810
+      }
+    ],
+    "source_hashes_after": [
+      {
+        "path": "research/finalize_sector_campaign.py",
+        "sha256": "5036ddc1d856adf196fd1d2818ffeb8b3d9b3c98e65be5b6910cef59a9173a8e",
+        "bytes": 18803
+      },
+      {
+        "path": "research/test_finalize_sector_campaign.py",
+        "sha256": "97fb3102ebce269889d087a4fb1c66ad736ba536fbedf2f3710975d4baf0810d",
+        "bytes": 25907
+      },
+      {
+        "path": "research/finalize_sector_allocation.py",
+        "sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3",
+        "bytes": 21704
+      },
+      {
+        "path": "research/test_finalize_sector_allocation_artifacts.py",
+        "sha256": "f15a9b681135fd2e5e843e9d134780673372df4522627e3dfe82dfed26432baa",
+        "bytes": 15810
+      }
+    ],
+    "source_hashes_stable": true,
+    "stdout_stderr": "test_CLI_external_output_is_exclusive_and_never_writes_raw (test_finalize_sector_campaign.CampaignTests.test_CLI_external_output_is_exclusive_and_never_writes_raw) ... ok\r\ntest_F0_after_failed_D0_is_rejected_even_with_summary_sequence (test_finalize_sector_campaign.CampaignTests.test_F0_after_failed_D0_is_rejected_even_with_summary_sequence) ... ok\r\ntest_F0_requires_actual_new_D0_history_and_exact_five_references (test_finalize_sector_campaign.CampaignTests.test_F0_requires_actual_new_D0_history_and_exact_five_references) ... ok\r\ntest_both_implementations_and_unique_code_refs_must_be_frozen (test_finalize_sector_campaign.CampaignTests.test_both_implementations_and_unique_code_refs_must_be_frozen) ... ok\r\ntest_combined_completion_retains_original_one_of_five_and_eleven_attempts (test_finalize_sector_campaign.CampaignTests.test_combined_completion_retains_original_one_of_five_and_eleven_attempts) ... ok\r\ntest_completed_but_ineligible_is_binding_failure_not_ordinary_model_failure (test_finalize_sector_campaign.CampaignTests.test_completed_but_ineligible_is_binding_failure_not_ordinary_model_failure) ... ok\r\ntest_continuation_complete_keeps_four_finals_eight_slots_and_raw_bytes (test_finalize_sector_campaign.CampaignTests.test_continuation_complete_keeps_four_finals_eight_slots_and_raw_bytes) ... ok\r\ntest_declaration_runtime_and_run_path_cannot_be_substituted (test_finalize_sector_campaign.CampaignTests.test_declaration_runtime_and_run_path_cannot_be_substituted) ... ok\r\ntest_declared_missing_artifacts_and_status_mismatch_rejected (test_finalize_sector_campaign.CampaignTests.test_declared_missing_artifacts_and_status_mismatch_rejected) ... ok\r\ntest_gate_protocol_freeze_scope_and_prospective_times_are_not_hash_only (test_finalize_sector_campaign.CampaignTests.test_gate_protocol_freeze_scope_and_prospective_times_are_not_hash_only) ... ok\r\ntest_historical_stage_changed_after_read_is_detected (test_finalize_sector_campaign.CampaignTests.test_historical_stage_changed_after_read_is_detected) ... ok\r\ntest_historical_wrong_run_or_interruption_pattern_rejected (test_finalize_sector_campaign.CampaignTests.test_historical_wrong_run_or_interruption_pattern_rejected) ... ok\r\ntest_main_cannot_select_historical_pilot_rows (test_finalize_sector_campaign.CampaignTests.test_main_cannot_select_historical_pilot_rows) ... ok\r\ntest_main_five_ten_exact_comparisons_and_orientation (test_finalize_sector_campaign.CampaignTests.test_main_five_ten_exact_comparisons_and_orientation) ... ok\r\ntest_main_missing_finals_do_not_become_zero_distance (test_finalize_sector_campaign.CampaignTests.test_main_missing_finals_do_not_become_zero_distance) ... ok\r\ntest_ordinary_negative_D0_retained_without_blocking_bound_F0 (test_finalize_sector_campaign.CampaignTests.test_ordinary_negative_D0_retained_without_blocking_bound_F0) ... ok\r\ntest_reference_hash_and_historical_binding_corruption_rejected (test_finalize_sector_campaign.CampaignTests.test_reference_hash_and_historical_binding_corruption_rejected) ... ok\r\ntest_stage_runtime_and_response_binding_corruption_rejected (test_finalize_sector_campaign.CampaignTests.test_stage_runtime_and_response_binding_corruption_rejected) ... ok\r\ntest_structure_failure_preflight_and_missing_keep_full_denominators (test_finalize_sector_campaign.CampaignTests.test_structure_failure_preflight_and_missing_keep_full_denominators) ... ok\r\ntest_summary_denominator_counts_and_retry_metadata_fail_closed (test_finalize_sector_campaign.CampaignTests.test_summary_denominator_counts_and_retry_metadata_fail_closed) ... ok\r\ntest_unaccounted_stage_or_extra_generation_folder_rejected (test_finalize_sector_campaign.CampaignTests.test_unaccounted_stage_or_extra_generation_folder_rejected) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 21 tests in 8.357s\r\n\r\nOK\r\n",
+    "earlier_attempt": {
+      "tests_passed": 21,
+      "exit_code": 0,
+      "unittest_elapsed_seconds": 8.373,
+      "adapter_sha256": "166b06eebf43f1c24e4f018ba7ee3f39958caee8e1a42ffc7c351cec3918ade8",
+      "test_sha256": "4e70e56d57cb7e5217fdf3ea00a3646408ca4a95a71639bceb051c28ad23f365",
+      "superseded_reason": "Align protocol-only observed-output flag handling with actual root protocol while preserving stricter executable records."
+    }
+  },
+  "coverage": [
+    "Continuation4 planned finals/8 slots, original1-of5 and explicit completion5-of5 remain separate; parent3+segment8=11 proven on synthetic completed fixture.",
+    "Main5 planned finals/10 slots and exact pair-distance direction checked only as offline synthetic capability.",
+    "model_structure_failure/preflight/missing vectors retained as unavailable without zero distances; ordinary negative D0 remains diagnostic while a properly bound F0 can exist.",
+    "Artificial completed+continuation_eligible:false remains a binding failure; legitimate worker model-structure failure uses its separate status and is not bypassed.",
+    "Reject stale reference hashes, changed runtime/run path, unauthorized scope/status/chronology, missing/duplicate frozen finalizer refs, missing declared artifacts, extra stage/F1/HTTP attempt folders, altered summary counts/retries and substituted new-D0 history.",
+    "Detect historical stage mutation after read; reject wrong historical run/pattern and main-plus-pilot selection.",
+    "CLI output must be outside both raw trees and created exclusively; inputs and an existing output remain unchanged."
+  ],
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "21 final-byte synthetic tests pass with stable adapter/base/test hashes. Reference, attempt, path, D0-history and historical-mutation failures now fail closed. Arithmetic policy/base54bf is unchanged."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Actual continuation protocol fields were checked without response reads. Declaration/freeze/gate/protocol scope and chronology bind4/8 to parent3/campaign11; raw original1/5 and explicit cross-segment completion denominators are independently retained. Future-main branch uses a separate5/10 main-specific gate contract."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "Reports remain labeled derived arithmetic. Raw allocation/citation/semantic errors are not repaired or overwritten; no missing portfolio is invented. A cross-segment completion dataset is descriptive and is not relabeled as original first-attempt replication or causal evidence."
+    }
+  },
+  "limitations": [
+    "Synthetic tests do not establish actual continuation completion, performance, power-management reliability, token capacity or semantic correctness.",
+    "The future-main branch requires its own main-specific protocol/freeze/approved gate, exact inputs and runtime validation; it does not authorize or certify current main execution.",
+    "Adapter integrity checks detect inconsistent or changed records; they do not establish authenticity against an operator deliberately fabricating all artifacts.",
+    "Actual completed-but-ineligible worker status is not a normal model-failure combination under the runtime contract; it remains rejected."
+  ],
+  "model_calls": 0,
+  "server_calls": 0,
+  "actual_experiment_response_reads": 0,
+  "tests_use_tempfile_only": true,
+  "output": "research/continuation_20261026/campaign_finalizer_review.json"
+}
