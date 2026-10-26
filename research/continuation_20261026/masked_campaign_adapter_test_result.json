@@ -1,0 +1,39 @@
+{
+  "version": "campaign_masked_adapter_test_result_1",
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T00:42:46.074Z",
+  "command": "python -m unittest discover -s research -p test_build_campaign_masked_review.py -v",
+  "tests_run": 20,
+  "tests_passed": 20,
+  "exit_code": 0,
+  "unittest_elapsed_seconds": 113.999,
+  "source_refs": [
+    {
+      "path": "research/build_campaign_masked_review.py",
+      "sha256": "7be256e47168a3c51f30081af1273b4c607fd0fcb58e77974fde76339c83ca97"
+    },
+    {
+      "path": "research/test_build_campaign_masked_review.py",
+      "sha256": "1c9ecaafec005b1df49b53d135e406297a8d44b453801cd42c43f70b0b662302"
+    },
+    {
+      "path": "research/build_v494_masked_review.py",
+      "sha256": "8ed40877f82414678d5808181712813ad474ddf089a08a5ba06a7b7bcaa6d148"
+    },
+    {
+      "path": "research/finalize_sector_campaign.py",
+      "sha256": "5036ddc1d856adf196fd1d2818ffeb8b3d9b3c98e65be5b6910cef59a9173a8e"
+    },
+    {
+      "path": "research/finalize_sector_allocation.py",
+      "sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3"
+    }
+  ],
+  "source_hashes_stable_during_observed_test_window": true,
+  "model_generation_calls": 0,
+  "service_calls": 0,
+  "actual_experiment_responses_read": 0,
+  "actual_campaign_bundle_created": false,
+  "fixture_scope": "Synthetic tempfile main5 and continuation4 campaign records. Real finalize_sector_campaign and frozen text/rubric/evidence helpers execute unchanged. Only new adapter validate_run/validate_stage boundaries are mocked for synthetic scientific settings; explicit runtime dispatch is separately tested. No old module global is patched.",
+  "stdout_stderr": "test_accounting_artifact_mutation_during_packaging_is_detected (test_build_campaign_masked_review.MaskTests.test_accounting_artifact_mutation_during_packaging_is_detected) ... ok\r\ntest_continuation_four_finals_preserve_errors_text_evidence_and_raw (test_build_campaign_masked_review.MaskTests.test_continuation_four_finals_preserve_errors_text_evidence_and_raw) ... ok\r\ntest_explicit_wrong_purpose_rejected (test_build_campaign_masked_review.MaskTests.test_explicit_wrong_purpose_rejected) ... ok\r\ntest_extra_generation_is_rejected (test_build_campaign_masked_review.MaskTests.test_extra_generation_is_rejected) ... ok\r\ntest_frozen_helper_globals_are_not_changed (test_build_campaign_masked_review.MaskTests.test_frozen_helper_globals_are_not_changed) ... ok\r\ntest_live_summary_blocks_even_if_a_receipt_is_present (test_build_campaign_masked_review.MaskTests.test_live_summary_blocks_even_if_a_receipt_is_present) ... ok\r\ntest_main_five_items_and_ten_slots_never_select_pilot (test_build_campaign_masked_review.MaskTests.test_main_five_items_and_ten_slots_never_select_pilot) ... ok\r\ntest_missing_finals_keep_full_denominator_without_draft_substitution (test_build_campaign_masked_review.MaskTests.test_missing_finals_keep_full_denominator_without_draft_substitution) ... ok\r\ntest_no_terminal_receipt_blocks_before_any_model_text_or_accounting (test_build_campaign_masked_review.MaskTests.test_no_terminal_receipt_blocks_before_any_model_text_or_accounting) ... ok\r\ntest_partial_final_is_explicit_diagnostic_and_exact_prefix (test_build_campaign_masked_review.MaskTests.test_partial_final_is_explicit_diagnostic_and_exact_prefix) ... ok\r\ntest_paths_are_exclusive_and_judge_private_trees_disjoint (test_build_campaign_masked_review.MaskTests.test_paths_are_exclusive_and_judge_private_trees_disjoint) ... ok\r\ntest_prepared_input_hash_change_fails (test_build_campaign_masked_review.MaskTests.test_prepared_input_hash_change_fails) ... ok\r\ntest_rubric_dimensions_are_the_existing_raw_semantic_rubric (test_build_campaign_masked_review.MaskTests.test_rubric_dimensions_are_the_existing_raw_semantic_rubric) ... ok\r\ntest_summary_and_terminal_cannot_jointly_hide_an_attempt (test_build_campaign_masked_review.MaskTests.test_summary_and_terminal_cannot_jointly_hide_an_attempt) ... ok\r\ntest_terminal_must_bind_exact_summary (test_build_campaign_masked_review.MaskTests.test_terminal_must_bind_exact_summary) ... ok\r\ntest_unrequested_final_payload_not_presented_as_supplied_evidence (test_build_campaign_masked_review.MaskTests.test_unrequested_final_payload_not_presented_as_supplied_evidence) ... ok\r\ntest_wrong_final_source_is_not_injected_as_judge_evidence (test_build_campaign_masked_review.MaskTests.test_wrong_final_source_is_not_injected_as_judge_evidence) ... ok\r\ntest_wrong_own_draft_is_rejected_by_real_campaign_validator (test_build_campaign_masked_review.MaskTests.test_wrong_own_draft_is_rejected_by_real_campaign_validator) ... ok\r\ntest_explicit_runtime_module_names_and_rejection (test_build_campaign_masked_review.RuntimeDispatchTests.test_explicit_runtime_module_names_and_rejection) ... ok\r\ntest_run_and_stage_validation_call_explicit_selected_runtime (test_build_campaign_masked_review.RuntimeDispatchTests.test_run_and_stage_validation_call_explicit_selected_runtime) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 20 tests in 113.999s\r\n\r\nOK\r\n"
+}

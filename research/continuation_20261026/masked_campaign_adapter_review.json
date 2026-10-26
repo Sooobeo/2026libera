@@ -1,0 +1,110 @@
+{
+  "version": "campaign_masked_adapter_review_1",
+  "status": "PASS",
+  "completed_at_utc": "2026-10-26T00:42:48.698Z",
+  "scope": "Offline adapter implementation and20 synthetic tests; not actual bundle construction, experiment execution, semantic scoring or main authorization",
+  "reviewer": "Codex AI assistance /root/method_audit; root separately read the completed adapter and reported no blocking finding. This is engineering/method review, not independent-human or statistical-rater validation.",
+  "model_generation_calls": 0,
+  "service_calls": 0,
+  "actual_experiment_responses_read": 0,
+  "actual_campaign_bundle_created": false,
+  "main_execution_allowed": false,
+  "code_refs": [
+    {
+      "path": "research/build_campaign_masked_review.py",
+      "sha256": "7be256e47168a3c51f30081af1273b4c607fd0fcb58e77974fde76339c83ca97"
+    },
+    {
+      "path": "research/test_build_campaign_masked_review.py",
+      "sha256": "1c9ecaafec005b1df49b53d135e406297a8d44b453801cd42c43f70b0b662302"
+    },
+    {
+      "path": "research/build_v494_masked_review.py",
+      "sha256": "8ed40877f82414678d5808181712813ad474ddf089a08a5ba06a7b7bcaa6d148"
+    },
+    {
+      "path": "research/finalize_sector_campaign.py",
+      "sha256": "5036ddc1d856adf196fd1d2818ffeb8b3d9b3c98e65be5b6910cef59a9173a8e"
+    },
+    {
+      "path": "research/finalize_sector_allocation.py",
+      "sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3"
+    }
+  ],
+  "test_result_ref": {
+    "path": "research/continuation_20261026/masked_campaign_adapter_test_result.json",
+    "sha256": "c337e89e0a4ac0b2e34b1d2b2e322feb404a60501c000e25690d681c87fbdff3"
+  },
+  "original_evaluation_ref": {
+    "path": "research/v492_evaluation_protocol_20261019_r2.json",
+    "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+  },
+  "immutable_candidates_unchanged": true,
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "Twenty synthetic tests pass. Missing/live/unbound terminal metadata, hidden request count, changed prepared input, substituted own D0, unassigned source, extra generation, overlapping/existing output paths and during-packaging mutation are rejected. Raw budget errors are retained and partial/missing finals remain explicit diagnostics or unavailable items."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "The adapter requires terminal receipt+summary before model-text traversal, explicit continuation/main runtime gate validation, real campaign accounting, exact frozen initial messages and actual own D0. It uses old rubric/text/final-visible-evidence helpers without global mutation. All planned4/5 items and8/10 slots remain in private accounting; judge denominators remain44/55 sector rows."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "Each judge item contains exact raw final/prior text and only evidence actually present in its attempted final. Institution meaning, stated reasons, numeric claims and raw choices remain reviewable one output at a time. Derived allocations, endpoint amendment, condition mapping, run paths and execution-order metadata remain private; arithmetic100% cannot supply grounds for raw prose truth."
+    }
+  },
+  "coverage": [
+    "Entire terminal campaign prerequisite is exercised before accounting or text extraction, including an already-present but live summary.",
+    "Continuation4 and main5 inventories remain distinct; main cannot acquire historical pilot rows. Missing finals stay in planned denominators and are not replaced by prior responses.",
+    "Raw sum1.2 examples remain exact in judge text while deterministic derived diagnostics exist only in private mapping.",
+    "Recorded partial event prefix remains exact and explicitly not normally completed; a final preflight with zero generation attempts contributes no final-visible evidence even if a request payload was prepared.",
+    "Only actual final evidence is selected. Initial institution exposure metadata and source-order/condition labels are omitted from review structure; prior response itself is retained verbatim and can reveal a condition.",
+    "Raw/source/input hashes, own-history correspondence, citation-visible evidence boundaries and original r2 semantic rubric reuse are checked.",
+    "Synthetic runtime settings use mocks only at the new adapter boundary; real runtime validation is lazy and explicitly dispatched to sector_continuation_runtime or sector_main_runtime for actual later use."
+  ],
+  "privacy_contract": {
+    "judge_contents": [
+      "Opaque randomized item identifiers",
+      "Original r2 review dimensions with source-free applicability wording and no composite score",
+      "Exact final.txt and prior.txt when observed",
+      "Recorded final-visible common context/market/schema, assigned institution packet or null, common system instruction, final instruction and actual draft feedback",
+      "Explicit normal/partial/unbound/missing availability and full planned final/row denominators"
+    ],
+    "private_contents": [
+      "Case/condition mapping and original case order",
+      "Run, terminal, gate/protocol, stage and source paths/hashes",
+      "Full campaign accounting and deterministic math diagnostics",
+      "Derived-primary evaluator amendment provenance"
+    ],
+    "no_injected_metadata": "No prior exposure metadata, case ID, run path, hypothesis or derived-math ground is injected into judge item/index/rubric. Verbatim model/source text is not redacted if it reveals identity or condition.",
+    "masking_limit": "Masking is incomplete; evidence presence, source identity or raw prior/final text can reveal the condition. No independent-human, balanced independent sample, validated agreement or winning-answer claim."
+  },
+  "usage": {
+    "required_CLI": [
+      "--purpose pilot_continuation|main",
+      "--run-dir <terminal campaign raw directory>",
+      "--terminal-receipt <declared output_root>/terminal_receipt.json",
+      "--output-dir <new judge-only tree>",
+      "--mapping-dir <new separate private tree>"
+    ],
+    "continuation_example": "python research/build_campaign_masked_review.py --purpose pilot_continuation --run-dir data/local_sector_runtime/v494_continuation_20261026 --terminal-receipt research/continuation_20261026/run_reports/terminal_receipt.json --output-dir research/continuation_20261026/masked_campaign_judge --mapping-dir research/continuation_20261026/masked_campaign_private",
+    "constraints": [
+      "Do not invoke before full campaign terminal. A stopped terminal campaign may be packaged with honest missing/partial diagnostics.",
+      "Judge tree must be disjoint from raw, private mapping and declared campaign report trees. Existing output paths are never overwritten.",
+      "COMPLETE.json is written last; validation/writing failure does not produce a complete bundle. Preserve any failed packaging attempt.",
+      "Dispatch a fresh reviewer using only one opaque item plus rubric/evidence; keep mapping and prior audits outside that reviewer context.",
+      "Actual semantic review remains pending until the reviewer reads the item."
+    ]
+  },
+  "limitations": [
+    "Synthetic tests do not certify a future actual campaign terminal, actual output semantics or gate approval.",
+    "Artifact checks detect inconsistency/mutation, not deliberate fabrication of every record by an operator.",
+    "The accepted campaign finalizer computes arithmetic in memory to validate lineage/accounting; those derived results are deliberately private and are not semantic evidence.",
+    "No frozen old builder/runtime/main source or candidate gate was changed."
+  ],
+  "git_attributes_requested": [
+    "research/build_campaign_masked_review.py -text",
+    "research/test_build_campaign_masked_review.py -text"
+  ]
+}

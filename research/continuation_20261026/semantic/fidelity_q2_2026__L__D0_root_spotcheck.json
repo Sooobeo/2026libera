@@ -1,0 +1,85 @@
+{
+  "version": "root_D0_source_spotcheck_1",
+  "recorded_at_utc": "2026-10-26T00:45:30.033Z",
+  "case_id": "fidelity_q2_2026__L",
+  "stage": "D0",
+  "scope": "Independent root reading of three selected sector explanations, not a replacement for the full74-claim review.",
+  "input_refs": [
+    {
+      "path": "research/continuation_20261026/semantic/fidelity_q2_2026__L__D0_bundle.json",
+      "sha256": "0fbaf8294e58c1d5d757ea62850b180f33bf9bdd957060c16923899b4fe0a22c"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_continuation_20261026/fidelity_q2_2026__L__D0/worker_spec.json",
+      "sha256": "03b568b636ce4685b55b99c5ed3ef115e3c3ec31661a246b2ae9e8fbe4fb33e0"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_continuation_20261026/fidelity_q2_2026__L__D0/http_0001_generation/response.json",
+      "sha256": "fd5037666a6c3b6ba6d5e75b9e559b4bec43121c5dda07bb963330ad370e282d"
+    },
+    {
+      "path": "research/continuation_20261026/run_reports/allocation_math/fidelity_q2_2026__L__D0.json",
+      "sha256": "0204354c41d50c2a9b0963d6061e67ac0255d42b71909472e28105dd88397114"
+    }
+  ],
+  "findings": [
+    {
+      "sector_code": "10",
+      "output_quote": "negative historical compound return (-4.29%)",
+      "supplied_decimal": 0.04287667814038709,
+      "supplied_locator": "/common_market/lookback_compound_return/0",
+      "finding": "Unsupported sign reversal: supplied return is positive, approximately4.29%."
+    },
+    {
+      "sector_code": "45",
+      "output_quote": "massive positive compound return (149.92%)",
+      "supplied_decimal": 0.14992022077727252,
+      "supplied_locator": "/common_market/lookback_compound_return/7",
+      "finding": "Unsupported tenfold percent value: supplied return is approximately14.99%."
+    },
+    {
+      "sector_code": "25",
+      "output_quote": "9%, exceeding the historical benchmark (9.3%) slightly",
+      "raw_weight": 0.09,
+      "supplied_baseline_weight": 0.09309309309309309,
+      "reported_baseline_percent": 9.3,
+      "supplied_locator": "/common_market/baseline_weights/25",
+      "finding": "Claimed direction contradicts both displayed9.3% and normalized operational baseline."
+    },
+    {
+      "sector_code": "45",
+      "output_quote": "38%, significantly above the historical benchmark (38.0%)",
+      "raw_weight": 0.38,
+      "supplied_baseline_weight": 0.38038038038038036,
+      "reported_baseline_percent": 38,
+      "supplied_locator": "/common_market/baseline_weights/45",
+      "finding": "Equal to reported display and slightly below normalized baseline, not significantly above."
+    }
+  ],
+  "root_lookup_correction": "Reported benchmark weights are a sector-ordered array; initial exploratory code-index lookup was discarded and corrected to sector-order indexing before findings were written.",
+  "arithmetic": {
+    "raw_total_percent": "102",
+    "derived_total_percent": "100.00",
+    "raw_error_preserved": true
+  },
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "Selected numeric and comparison claims were checked directly against supplied input and raw submitted weights; support failures are recorded as model outcomes."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Positive-sign/decimal units and sector-indexed benchmark values were kept distinct from source IDs and normalized weights. Full raw artifact hashes are bound."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "This source-free late-arm draft tests common-evidence reading before institution provision. It cannot be assigned institution-fidelity failure. Numeric correction does not validate its explanation or establish a source effect."
+    }
+  },
+  "limitations": [
+    "Only the specified claims were independently spot-checked here; see separate full-stage audit for all rows and claim coverage.",
+    "No semantic success score, independent-human validation or main-readiness approval."
+  ],
+  "model_calls": 0,
+  "raw_outputs_modified": false
+}

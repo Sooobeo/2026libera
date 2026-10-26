@@ -1,0 +1,23 @@
+{
+  "status": "no_matching_offline_math_python_process_observed",
+  "observation_timestamp": "2026-10-26T00:53:18.8047424Z",
+  "observation_method": "One read-only Get-CimInstance Win32_Process query, filtered Name=python.exe and command line containing fidelity_q2_2026__L__D0_independent_math.json",
+  "matching_offline_math_processes": [],
+  "first_python_math_attempt_receipt_present": false,
+  "first_attempt_status": "Tool timed out; no computation result accepted. Cause not established.",
+  "accepted_math_ref": {
+    "path": "research/continuation_20261026/semantic/fidelity_q2_2026__L__D0_independent_math_r2.json",
+    "sha256": "7961300276cd04e3bce411fbe866b57dadb7a6718f59360c85ac75e4d885def8"
+  },
+  "accepted_review_ref": {
+    "path": "research/continuation_20261026/semantic/fidelity_q2_2026__L__D0_review_r2.json",
+    "sha256": "6c976c606c1f962ec93bd0c9e5a33f4ccca7541a100cf6bd6a0ee250e837e4d9"
+  },
+  "process_changes_made": false,
+  "model_calls": 0,
+  "service_calls": 0,
+  "limitations": [
+    "This is an absence observation for the specifically attempted offline calculator command, not a general process inventory or live pilot health check.",
+    "No claim that a timed-out process completed normally."
+  ]
+}
