@@ -1,0 +1,112 @@
+{
+  "audit_type": "v5.4_read_only_content_numeric_and_concept_audit",
+  "runtime": "C:\\Users\\Insun\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "overall_pass": true,
+  "checks": {
+    "v530_source_unchanged": {
+      "pass": true,
+      "sha256": "7017a85744fdde9c209be68c021347bc6715b8c61bd288730e4b9f8959f77922"
+    },
+    "pdf_title_subtitle_exact": {
+      "pass": true,
+      "title": "공통 GenAI는 기관투자자의 전략적 이질성을 축소하는가?",
+      "subtitle": "-액티브 주식형 펀드의 자산배분 프로세스 내 Workflow RAG 배치와 완화효과를 중심으로-",
+      "comparison": "Exact character substring after PDF text extraction; no paraphrasing or whitespace normalization."
+    },
+    "first_two_abstract_paragraphs_exact_pdf": {
+      "pass": true,
+      "paragraphs_checked": 2,
+      "comparison": "Both complete source paragraph strings occur verbatim in user PDF text extraction and delivered Markdown."
+    },
+    "v530_all_11_tables_preserved": {
+      "pass": true,
+      "table_count": 11,
+      "fields": "Full table dictionaries equal, including captions, headers, rows, widths and notes."
+    },
+    "41_references_preserved_plus_3": {
+      "pass": true,
+      "old_count": 41,
+      "new_count": 44,
+      "added_ids": [
+        "boe_fca2024",
+        "morgan2024",
+        "lewis2020"
+      ]
+    },
+    "source_markdown_prose_reference_sync": {
+      "pass": true,
+      "missing": []
+    },
+    "source_markdown_table_sync": {
+      "pass": true,
+      "table_count": 11
+    },
+    "F0_55_allocation_cells_dataset_match": {
+      "pass": true,
+      "cells_checked": 55
+    },
+    "table5_raw_derived_sums_and_D0_F0_distances": {
+      "pass": true,
+      "cells_checked": 20
+    },
+    "table7_eight_comparison_distances": {
+      "pass": true,
+      "comparisons_checked": 8
+    },
+    "five_conditions_designated_main_experiment": {
+      "pass": true,
+      "authorization": "User explicitly instructed that current five-condition study is the main experiment; no recommendation to relabel it preliminary."
+    },
+    "no_preliminary_or_P1_P3_relabeling": {
+      "pass": true
+    },
+    "RQ1_RQ3_answers_match_design_and_results": {
+      "pass": true,
+      "review": "RQ1 checks source/explanation/weight correspondence; RQ2 states differences only; RQ3 reports modification patterns without procedure ranking."
+    },
+    "future_fund_reference_RAG_not_reported_as_current_results": {
+      "pass": true,
+      "guards": {
+        "direct_two_stage_current": true,
+        "three_stage_RAG_future": true,
+        "four_funds_reference_not_completed": true,
+        "explicit_not_executed": true,
+        "no_oversameness_or_model_loss_claim": true,
+        "causal_timing_limited": true,
+        "future_evidence_intervention": true,
+        "proposal_benefit_not_established": true
+      },
+      "manual_review": "Sections 8-9 consistently introduce a proposal and extension; Section 6 reports only direct-document five-condition findings. General research aims in preserved PDF opening remain aims, not reported execution."
+    },
+    "shared_D0_non_independence_preserved": {
+      "pass": true
+    }
+  },
+  "observations": [],
+  "files": {
+    "source": "C:\\Users\\Insun\\2026libera\\paper\\v540_manuscript_20261026.json",
+    "markdown": "C:\\Users\\Insun\\2026libera\\paper\\LIBERA_소논문_원초록반영_v5.4_20261026.md",
+    "user_pdf": "C:\\Users\\Insun\\Downloads\\greengreen (1).pdf",
+    "baseline_v530": "C:\\Users\\Insun\\2026libera\\paper\\v530_manuscript_20261026.json",
+    "dataset": "C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\derived_allocation\\completed_five_condition_dataset.json"
+  },
+  "sha256": {
+    "source": "ebc46cea42bfb8bc528576d50aea77572ee157e77fb8cbb68710077db755a74a",
+    "markdown": "432ff701af3bf8a44de256622e3fc5d16e62ffd84cdb71f88965b2d4fdb11d00",
+    "user_pdf": "75a70c60a2fdf8db6e17576a829e0960c8c48afb70422c85ee2515a5efe9ece0",
+    "baseline_v530": "7017a85744fdde9c209be68c021347bc6715b8c61bd288730e4b9f8959f77922",
+    "dataset": "6dcf903f6c607c7c717ff28d0832983f21b04011594fa9a9c469b7e68bd7367f"
+  },
+  "constraints": {
+    "manuscript_or_markdown_modified": false,
+    "rendering_performed": false,
+    "desktop_libreoffice_used": false,
+    "bundled_libreoffice": null,
+    "user_main_experiment_terminology_respected": true
+  },
+  "limitations": [
+    "No Word artifact was available or inspected during this content-stage audit.",
+    "Existing external sources were not re-researched; three added references were checked for identity/preservation only."
+  ],
+  "file_mutations": "Only this content_audit.json report was written."
+}

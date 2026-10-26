@@ -1,0 +1,130 @@
+{
+  "audit_type": "v5.3_read_only_structure_data_scope_audit",
+  "runtime": "C:\\Users\\Insun\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "rendering": false,
+  "desktop_libreoffice_used": false,
+  "bundled_libreoffice": null,
+  "overall_structural_data_pass": true,
+  "checks": {
+    "original_source_unchanged": {
+      "pass": true
+    },
+    "v520_all_original_tables_preserved_in_v530": {
+      "pass": true,
+      "tables_checked": 11
+    },
+    "v520_outline_preserved": {
+      "pass": true,
+      "headings_checked": 46
+    },
+    "v520_references_preserved": {
+      "pass": true,
+      "references_checked": 41
+    },
+    "counts": {
+      "pass": true,
+      "tables": 16,
+      "figures": 5,
+      "native_equations": 2
+    },
+    "captions": {
+      "pass": true,
+      "table_numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8"
+      ]
+    },
+    "docx_table_cells_match_source": {
+      "pass": true
+    },
+    "appendix_weights": {
+      "pass": true,
+      "cells_checked": 220
+    },
+    "appendix_totals": {
+      "pass": true,
+      "cells_checked": 20
+    },
+    "five_pngs_unchanged_and_match_manifest": {
+      "pass": true,
+      "images_checked": 5
+    },
+    "equations_unchanged": {
+      "pass": true
+    },
+    "all_prose_and_references_present_in_docx": {
+      "pass": true,
+      "missing": []
+    },
+    "crossrefs": {
+      "pass": true,
+      "required": {
+        "figure1_appendixA1": true,
+        "figure2_appendixA2": true,
+        "figure3_appendixA3": true,
+        "figure4": true,
+        "table6": true,
+        "table7": true,
+        "table8": true,
+        "equation1": true,
+        "equation2": true
+      },
+      "obsolete_9_11": []
+    },
+    "experimental_scope_and_interpretation_guards": {
+      "pass": true,
+      "facts": {
+        "five_conditions": true,
+        "ten_completed_eleven_requests": true,
+        "D0_F0": true,
+        "same_D0": true,
+        "not_three_independent_errors": true,
+        "55_rows": true,
+        "not_RAG": true,
+        "not_oversameness_proof": true,
+        "not_causal_timing": true,
+        "no_subtracted_control_effect": true,
+        "proposed_effect_unverified": true,
+        "posthoc_changes_disclosed": true
+      }
+    },
+    "receipt_hashes": {
+      "pass": true
+    }
+  },
+  "scope_review": "No direct proof of over-convergence, market homogenization, or implemented RAG effect is claimed. Five-condition exploratory scope, shared D0 non-independence, confounding and unverified proposal effects are retained.",
+  "observations": [
+    {
+      "severity": "wording_observation",
+      "location": "6.5 research-question answer",
+      "text": "기관자료를 제공하면 배분이 달라질 수 있음을 보여주는 동시에",
+      "reason": "Could be read as causal attribution to providing data. Other passages explicitly retain confounding and no-causal-effect limits.",
+      "suggestion": "기관자료 제공 조건에서 배분 차이가 관찰되었음을 보여주는 동시에"
+    }
+  ],
+  "sha256": {
+    "v520_source": "fa8ac61e87e9d559b7fc937a94f5dd51853f496f60412b488642d52b0e9cd3d7",
+    "v530_source": "0ab0c4d91967cf75a667260fd60bcb694440c8b1884311eb2e3b0853c59badeb",
+    "v530_illustrated": "15f06f913b7701c9dd2604ccb0e5812ea5cc596c50245856a811e26848ccbe3c",
+    "v530_docx": "a191145d19790a86efdf2459333e4e24e460d78fa4ce97a8b87d5ab5e876290d"
+  },
+  "limitations": [
+    "Structural and numeric audit only; no visual rendering.",
+    "Existing reference/source veracity was not re-researched."
+  ],
+  "file_mutations": "Only this structural_audit.json report was written. No manuscript, DOCX, image or dataset was modified."
+}

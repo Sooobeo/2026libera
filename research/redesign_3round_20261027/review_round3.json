@@ -1,0 +1,45 @@
+{
+  "round": 3,
+  "review_type": "independent_AI_review_plus_primary_agent_revision_not_human_source_audit",
+  "criteria": [
+    "실험 정합성",
+    "논리성",
+    "제목과 원초록의 검증력",
+    "완결성"
+  ],
+  "input": "plan\\LIBERA_실험설정_v6.2_20261027.json",
+  "input_sha256": "9dbe2507471c7c567b8d41256852ac6eb2846f2ba25f9e8cbf2570a8ba0e3647",
+  "findings": [
+    {
+      "criterion": "실험 정합성",
+      "problem": "v6.1의두지표 필드와 v6.2의네성분 검정, 근접최적집합 정의가 중복",
+      "fix": "유일한 평가 계약으로 통일"
+    },
+    {
+      "criterion": "논리성",
+      "problem": "H1과H2를 같은 오류의 교정으로 연결하거나 시점 쌍 우위를 전체 최적으로 확대할 위험",
+      "fix": "결과별 허용 결론·금지 결론과 FULL R1 보조진단을 사전 규정"
+    },
+    {
+      "criterion": "제목과 원초록의 검증력",
+      "problem": "정보교체·동일정보 대조는 예산만 있고 생성 계약이 미완성",
+      "fix": "무엇을 고정·교체·복제하는지와 oracle·검색 재실행을 확정"
+    },
+    {
+      "criterion": "완결성",
+      "problem": "재시도 소진, 앞단계 실패와 미요청 슬롯의 경계가 모호",
+      "fix": "완료 단위를 업무 궤적으로 정의하고 terminal status별 집계 확정"
+    }
+  ],
+  "applied_changes": [
+    "지표·근접최적집합·검정 계약의 잔존 이중정의 해소",
+    "개별 전망 교체와 완전 동일정보 음성대조의 구체 실행 계약 완성",
+    "인프라 실패·모델 실패·미실행·프로토콜 오류의 구분과 완료 단위 확정",
+    "H1 H2 H3별 결과 해석과 제한된 권고 규칙 확정",
+    "원초록의 모든 실험 요소에 대한 대응표 작성",
+    "처음 읽는 사람을 위한 bullet 설명과 설계 완료·실행 전 상태 분리"
+  ],
+  "output": "plan\\LIBERA_실험설정_v6.3_20261027.json",
+  "output_sha256": "a884b1242217cfed37a52444a541968eb680739c649e85c2b8d3bf9b0de383dc",
+  "new_experimental_model_calls": 0
+}

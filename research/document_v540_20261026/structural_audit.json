@@ -1,0 +1,130 @@
+{
+  "audit_type": "v5.4_final_DOCX_structure_data_content_audit",
+  "runtime": "C:\\Users\\Insun\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "overall_pass": true,
+  "checks": {
+    "expected_final_hashes_and_receipt": {
+      "pass": true
+    },
+    "baseline_and_pdf_preserved": {
+      "pass": true
+    },
+    "original_11_table_dictionaries_preserved": {
+      "pass": true
+    },
+    "old_41_references_plus_3_preserved": {
+      "pass": true,
+      "old_count": 41,
+      "new_count": 44
+    },
+    "counts": {
+      "pass": true,
+      "tables": 16,
+      "drawings": 6,
+      "OMML": 2
+    },
+    "captions_and_numbers": {
+      "pass": true,
+      "figure_ids": [
+        "fig01_allocations",
+        "fig02_distances",
+        "fig03_evidence",
+        "fig04_normalization",
+        "fig05_workflow_design",
+        "figA01_control_difference"
+      ]
+    },
+    "all_docx_table_cells_match_illustrated": {
+      "pass": true
+    },
+    "appendix_220_weights": {
+      "pass": true,
+      "cells_checked": 220
+    },
+    "appendix_20_sums": {
+      "pass": true,
+      "cells_checked": 20
+    },
+    "all_6_inserted_pngs_match_sources": {
+      "pass": true,
+      "images_checked": 6
+    },
+    "five_existing_pngs_byte_unchanged": {
+      "pass": true,
+      "images_checked": 5
+    },
+    "new_workflow_figure_manifest_and_scope": {
+      "pass": true,
+      "note": "R1·R2·R3는 펀드별 적격 문서에서 미리 고정한 같은 검색 근거의 최초 제공 단계만 달리하는 대안 조건이며, 한 번 제공한 근거는 이후 단계에서도 유지한다. R0는 추가 근거 없음, FULL은 전체 적격 원문 최초 제공 조건이다. 본실험의 관측을 반영한 대응 설계이며, RAG 조건의 검색·완화효과 비교는 후속 검증 대상이다. 현재 본실험의 E·L·C와 R0·R1·R2·R3·FULL은 구분한다."
+    },
+    "equations_OMML_unchanged": {
+      "pass": true
+    },
+    "all_illustrated_prose_refs_present": {
+      "pass": true,
+      "missing": []
+    },
+    "pdf_title_subtitle_and_first_two_abstract_paragraphs_in_Word": {
+      "pass": true,
+      "comparison": "PDF text extraction characters, source strings and DOCX text; no paraphrasing."
+    },
+    "main_experiment_not_preliminary": {
+      "pass": true,
+      "authorization": "User-directed main experiment label retained."
+    },
+    "crossrefs": {
+      "pass": true,
+      "required": {
+        "(그림 1; 부록 표 A1)": true,
+        "(그림 2; 부록 표 A2)": true,
+        "그림 3과 부록 표 A3": true,
+        "그림 4는 이 사후 진단": true,
+        "(표 6)": true,
+        "(표 7)": true,
+        "(표 8)": true,
+        "식 (1)": true,
+        "식 (2)": true
+      }
+    },
+    "version_labels": {
+      "pass": true
+    },
+    "requested_figure_positions": {
+      "pass": true,
+      "figure1_block": 78,
+      "figure4_block": 103,
+      "figure5_block": 113
+    },
+    "proposal_and_current_results_scope_separated": {
+      "pass": true,
+      "guards": {
+        "본실험은 기관 전망을 직접 제공한 초안·최종안의 두 단계로 수행하였다": true,
+        "검색기를 사용하는 3단계 배치 비교와 완화효과는 후속 검증 대상이다": true,
+        "네 펀드의 실행과 수리 기준배분 계산은 이번 완료 결과에 포함되지 않는다": true,
+        "3단계 검색 RAG, 네 실제 펀드의 보유조건을 반영한 배분은 실행하지 않았다": true,
+        "현재의 다섯 사례에서는 이 검사를 실행하지 않았다": true,
+        "필요한 정답 배분, 모형상 판단 손실 또는 과잉수렴을 직접 판정하지 않는다": true
+      }
+    }
+  },
+  "observations": [],
+  "sha256": {
+    "source": "8d90b534bab9fea1439ed6822315ac06870a3546bdbd17ccb2b44b8772ac6858",
+    "illustrated": "2717b709e6d3309180304958655ae9708a61a840d07b081cd7cf5e58b30a54dc",
+    "docx": "7225aaa5622926fbc845eff48a12ff927bf55f0aa740a070ecd65311a7cb778b",
+    "baseline_v530": "7017a85744fdde9c209be68c021347bc6715b8c61bd288730e4b9f8959f77922",
+    "user_pdf": "75a70c60a2fdf8db6e17576a829e0960c8c48afb70422c85ee2515a5efe9ece0",
+    "dataset": "6dcf903f6c607c7c717ff28d0832983f21b04011594fa9a9c469b7e68bd7367f"
+  },
+  "constraints": {
+    "rendering_performed": false,
+    "desktop_libreoffice_used": false,
+    "bundled_libreoffice": null,
+    "source_or_docx_modified": false
+  },
+  "limitations": [
+    "Visual pagination and layout were not rendered or assessed.",
+    "External source claims were not re-researched."
+  ],
+  "file_mutations": "Only structural_audit.json report written."
+}

@@ -1,0 +1,138 @@
+{
+  "audit_type": "v5.3_read_only_structure_data_scope_audit",
+  "runtime": "C:\\Users\\Insun\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "rendering": false,
+  "desktop_libreoffice_used": false,
+  "bundled_libreoffice": null,
+  "overall_structural_data_pass": true,
+  "checks": {
+    "original_source_unchanged": {
+      "pass": true
+    },
+    "v520_all_original_tables_preserved_in_v530": {
+      "pass": true,
+      "items_checked": 11
+    },
+    "v520_outline_preserved": {
+      "pass": true,
+      "items_checked": 46
+    },
+    "v520_references_preserved": {
+      "pass": true,
+      "items_checked": 41
+    },
+    "counts": {
+      "pass": true,
+      "tables": 16,
+      "figures": 5,
+      "native_equations": 2
+    },
+    "captions": {
+      "pass": true
+    },
+    "docx_table_cells_match_source": {
+      "pass": true
+    },
+    "appendix_weights": {
+      "pass": true,
+      "cells_checked": 220
+    },
+    "appendix_totals": {
+      "pass": true,
+      "cells_checked": 20
+    },
+    "five_pngs_unchanged_and_match_manifest": {
+      "pass": true,
+      "images_checked": 5
+    },
+    "equations_unchanged": {
+      "pass": true
+    },
+    "all_prose_and_references_present_in_docx": {
+      "pass": true,
+      "missing": []
+    },
+    "crossrefs": {
+      "pass": true,
+      "required": {
+        "figure1_appendixA1": true,
+        "figure2_appendixA2": true,
+        "figure3_appendixA3": true,
+        "figure4": true,
+        "table6": true,
+        "table7": true,
+        "table8": true,
+        "equation1": true,
+        "equation2": true
+      }
+    },
+    "experimental_scope_and_interpretation_guards": {
+      "pass": true,
+      "facts": {
+        "five_conditions": true,
+        "ten_completed_eleven_requests": true,
+        "D0_F0": true,
+        "same_D0": true,
+        "not_three_independent_errors": true,
+        "55_rows": true,
+        "not_RAG": true,
+        "not_oversameness_proof": true,
+        "not_causal_timing": true,
+        "no_subtracted_control_effect": true,
+        "proposed_effect_unverified": true,
+        "posthoc_changes_disclosed": true
+      }
+    },
+    "receipt_hashes": {
+      "pass": true
+    },
+    "expected_final_version_hashes": {
+      "pass": true
+    },
+    "prior_6_5_causal_wording_resolved": {
+      "pass": true,
+      "replacement": "기관자료 조건과 대조군 사이의 배분 차이는 관찰되었지만, 이를 자료 제공의 순수 효과나 기관별 판단의 보존으로 평가하려면 추가 검증이 필요하다."
+    },
+    "final_v53_version_labels": {
+      "pass": true,
+      "docx_xml_with_v52": []
+    },
+    "normalization_paragraph_split_preserves_text_and_figure_order": {
+      "pass": true,
+      "source_join_matches_v520_paragraph": true,
+      "figure_illustrated_block_index": 93
+    },
+    "table5_keep_together_word_properties": {
+      "pass": true,
+      "paragraphs_with_keepNext": 30,
+      "paragraphs": 30,
+      "non_split_rows": 6,
+      "note": "Word properties verified. Pagination itself is outside this non-rendering audit."
+    }
+  },
+  "scope_review": "No direct proof of over-convergence, market homogenization, or implemented RAG effect is claimed. Five-condition exploratory scope, shared D0 non-independence, confounding and unverified proposal effects are retained.",
+  "observations": [],
+  "sha256": {
+    "v520_source": "fa8ac61e87e9d559b7fc937a94f5dd51853f496f60412b488642d52b0e9cd3d7",
+    "v530_source": "7017a85744fdde9c209be68c021347bc6715b8c61bd288730e4b9f8959f77922",
+    "v530_illustrated": "76e0f4e5bbb582bf94736da4c675cc0b03504d7c7bd4ab126981d49ca3a899db",
+    "v530_docx": "3a59086dccdde232215bf932917ea20ac4c1146313239827de2d5120c1312245"
+  },
+  "limitations": [
+    "Structural and numeric audit only; no visual rendering.",
+    "Existing reference/source veracity was not re-researched."
+  ],
+  "file_mutations": "Prior audit preserved as structural_audit_r2.json; structural_audit.json updated. No manuscript, DOCX, figure or dataset modified.",
+  "audit_revision": "r3_final_layout",
+  "resolved_observations": [
+    {
+      "location": "6.5",
+      "status": "resolved",
+      "replacement": "기관자료 조건과 대조군 사이의 배분 차이는 관찰되었지만, 이를 자료 제공의 순수 효과나 기관별 판단의 보존으로 평가하려면 추가 검증이 필요하다."
+    }
+  ],
+  "prior_audit": {
+    "path": "C:\\Users\\Insun\\2026libera\\research\\document_v530_20261026\\structural_audit_r2.json",
+    "sha256": "6aad8c0c14d1c06607a58993bbe438704f7a562b2adfa54354a7669e399952c9"
+  }
+}

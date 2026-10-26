@@ -1,0 +1,132 @@
+{
+  "sources": [
+    {
+      "path": "C:\\Users\\Insun\\Downloads\\greengreen (1).pdf",
+      "role": "원제목과 원초록 전체 2쪽 기준",
+      "exists": true,
+      "sha256": "75a70c60a2fdf8db6e17576a829e0960c8c48afb70422c85ee2515a5efe9ece0"
+    },
+    {
+      "path": "plan\\LIBERA_실험설계서0925.html",
+      "role": "A B C 구조와 4펀드 12산업 3단계 5조건 원설계",
+      "exists": true,
+      "sha256": "dd7ddd202e6e0fcafb93082c5f558b919bce30b87424eea8fb6792f78a1dc002"
+    },
+    {
+      "path": "plan\\문규리 제안서 상세_최종.html",
+      "role": "공통 GenAI와 부정적 동질화의 원래 연구 논리",
+      "exists": true,
+      "sha256": "3af00703a0e0246275f25e4ab4395610cee9d773a2d327e47905fe499d9e2db9"
+    },
+    {
+      "path": "plan\\LIBERA_실험설정_20261017.json",
+      "role": "후속 축소 및 서로 다른 데이터 계열의 구분",
+      "exists": true,
+      "sha256": "01518e95278b8f2e50cb786bcf6553ace74a1eebbc2f9110b250c6b509c73b6a"
+    },
+    {
+      "path": "plan\\LIBERA_실험설정_v4.9.1_20261019.json",
+      "role": "직접 제공 E L 실험의 경계와 오류 보존",
+      "exists": true,
+      "sha256": "0d7ad14eb7f07fb9a7e7607a1cdb1ff148794d88878d6706b7b6a66bbc319110"
+    },
+    {
+      "path": "data\\documentary\\source_inventory.json",
+      "role": "실제 4펀드의 신원과 공식 자료 후보",
+      "exists": true,
+      "sha256": "62deedc9771c2fa69af88c6816bfc77dddcb1653a2290320f46a6a6c03d81509"
+    },
+    {
+      "path": "data\\french\\manifest.json",
+      "role": "FF12 수익률 및 SIC 원본과 취득 해시",
+      "exists": true,
+      "sha256": "75ac2cf7042882f1f936acecfb17d70ce43fdb4edea5c37b5a1f00d993175a66"
+    },
+    {
+      "path": "data\\institutional_recent\\summary.json",
+      "role": "기존 24시장창 72가상위임의 정량 보조자료",
+      "exists": true,
+      "sha256": "ee4a3e6a7a4b6b7116d422c4817dc128d8937ef392a7bd34ecf050f6945c1964"
+    },
+    {
+      "path": "research\\prepare_institutional_benchmark.py",
+      "role": "거리 반응오차 및 수치 검산 코드 재사용 후보",
+      "exists": true,
+      "sha256": "6a6cf0ec1118286eee3f92b4136e5723e3ffa75269e5e3bce75560c7a72fd648"
+    },
+    {
+      "path": "data\\sector_documents\\corpus_card.json",
+      "role": "별도 GICS11 공개 전망 자료의 범위",
+      "exists": true,
+      "sha256": "6f526764044fe0f1ebd855b8500b2954a812c522cb9f73f252096b671194a134"
+    },
+    {
+      "path": "paper\\LIBERA_소논문_원초록반영_v5.4_20261026.docx",
+      "role": "기존 원고와 완료자료 보존 대상",
+      "exists": true,
+      "sha256": "7225aaa5622926fbc845eff48a12ff927bf55f0aa740a070ecd65311a7cb778b"
+    }
+  ],
+  "changes": [
+    [
+      "원초록과 0925",
+      "4개 실제 펀드와 FF12 12산업",
+      "복원",
+      "GICS11 자료와 결합하지 않음"
+    ],
+    [
+      "원초록과 0925",
+      "계획 배분안 구성 점검과 수정",
+      "복원",
+      "모든 조건에서 같은 세 단계와 도구"
+    ],
+    [
+      "0925 §6",
+      "실제 BM25 검색과 5조건",
+      "복원",
+      "검색 후 동일 패킷을 R1 R2 R3에 재생"
+    ],
+    [
+      "0925 §7",
+      "사후전망 기대수익 최대화와 보유 분산 상한",
+      "복원",
+      "gamma 목적함수와 구분하고 새 평가기 검증"
+    ],
+    [
+      "0925 §8 및 기존 코드",
+      "G 손실 정보반응 제약위반",
+      "유지 보강",
+      "기존 쌍별 반응오차를 함께 보고"
+    ],
+    [
+      "0925 전체 및 제공정보 기준",
+      "R0 G에 정보 부재 기여 포함",
+      "기준 보강",
+      "H1은 Gavailable로 검정하고 Gfull과의 차이는 정보집합 효과로 분리"
+    ],
+    [
+      "0925 §11",
+      "R0 비교가 보조분석",
+      "수정",
+      "완화효과를 직접 검정하도록 R1 대 R0를 주분석으로 승격"
+    ],
+    [
+      "0925 §11",
+      "시점 6개 검정 Holm",
+      "수정",
+      "기준 G 및 R1 R0를 포함한 9개 검정 단일 Holm 계열"
+    ],
+    [
+      "0925 §10",
+      "60상황 2반복 및 전체9816단계",
+      "계획 목표 유지",
+      "15→60→720 개발 단계로 실행 가능성부터 확인"
+    ],
+    [
+      "완료 E L C 실험",
+      "원합계 오류와 정규화 방향 반전",
+      "실험기 반영",
+      "일차 결과에 자동 정규화 금지 원비중 제약과 증감 검사"
+    ]
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "cycles": [
+    {
+      "round": 1,
+      "review_type": "independent_AI_review_plus_primary_agent_revision_not_human_source_audit",
+      "criteria": [
+        "실험 정합성",
+        "논리성",
+        "제목과 원초록의 검증력",
+        "완결성"
+      ],
+      "input": "plan\\LIBERA_실험설정_v6.0_20261027.json",
+      "input_sha256": "13c132f490cd5262312b967cefb6fa88799af0a01d6173dc474dd6c2e7719000",
+      "findings": [
+        {
+          "criterion": "제목과 원초록의 검증력",
+          "problem": "R0는 기관별 추가정보가 없고 h는 위험상한으로만 반영돼 H1 식별 기회가 작을 수 있음",
+          "fix": "기관별 정보가 모두 있는 FULL을 H1의 주 검사로 지정하고 원래 수리과제의 의미를 명시"
+        },
+        {
+          "criterion": "논리성",
+          "problem": "G 감소가0을 넘어 과도하게 달라지는 것도 개선으로 보일 수 있음",
+          "fix": "배분 차이 벡터의 오차와 모형상 손실의 공동 개선으로 검정"
+        },
+        {
+          "criterion": "실험 정합성",
+          "problem": "세 단계 모두 비중 제출이면 계획·구성·검토 역할이 사라짐",
+          "fix": "단계별 산출물과 오류 전달 기록 구체화"
+        },
+        {
+          "criterion": "완결성",
+          "problem": "코퍼스·gold 단위 및 해의 거리 불확실성 처리 부족",
+          "fix": "검색 코퍼스 계약과 입력 동일성 진단, 기준거리 범위 검사 추가"
+        }
+      ],
+      "applied_changes": [
+        "원초록의 전략적 이질성을 수리 과제의 관측 가능한 차이로 명확히 정의",
+        "FULL에서 충분한 정보를 줘도 필요한 차이를 잃는지 H1 검사",
+        "G 감소 대신 방향·크기를 포함한 쌍별 반응오차와 손실의 공동 개선 검사",
+        "다섯 주장별 IUT 및 Holm 구조로 변경",
+        "계획·최초배분·점검 산출물과 오류 전달 기록 구분",
+        "검색 자료와 기준거리의 식별 가능성 점검 추가"
+      ],
+      "output": "plan\\LIBERA_실험설정_v6.1_20261027.json",
+      "output_sha256": "88952d4d835bc2512cb96b41b8ffebe3350e0aa209954006dce6d12eeee8b9a9",
+      "new_experimental_model_calls": 0
+    },
+    {
+      "round": 2,
+      "review_type": "independent_AI_review_plus_primary_agent_revision_not_human_source_audit",
+      "criteria": [
+        "실험 정합성",
+        "논리성",
+        "제목과 원초록의 검증력",
+        "완결성"
+      ],
+      "input": "plan\\LIBERA_실험설정_v6.1_20261027.json",
+      "input_sha256": "88952d4d835bc2512cb96b41b8ffebe3350e0aa209954006dce6d12eeee8b9a9",
+      "findings": [
+        {
+          "criterion": "완결성",
+          "problem": "유효 원출력만 남기는 주분석은 실패가 많은 정책을 유리하게 만들 수 있음",
+          "fix": "유효하면 원비중, 무효면 h 유지라는 전체 시도 정책과 raw 실패 진단 분리"
+        },
+        {
+          "criterion": "논리성",
+          "problem": "기준해 폭과 |G| 경고만으로 완화 판정이 닫히지 않음",
+          "fix": "G E |G|와 정책 차이의 보수적 범위, 네 성분 결합검정, 검정불능 p=1 규칙"
+        },
+        {
+          "criterion": "실험 정합성",
+          "problem": "90% 분모·주식범위·제약·부적격 h와 A/C 도구가 미정",
+          "fix": "보유 회계식과 제약3분류, B 전용 사후분포와 A/C 실제문서 도구 분리"
+        },
+        {
+          "criterion": "제목과 원초록의 검증력",
+          "problem": "오류 탈락·새문서 중복·불완전 실행이 주제를 검증한 것처럼 보일 위험",
+          "fix": "계획 표본 전체정책·진짜 신규 전망 분할·미완료시 확증 유보·세부 실행 계약"
+        }
+      ],
+      "applied_changes": [
+        "실행 불가 시 기존 보유 유지 정책으로 전체 시도를 주분석에 포함하고 원출력과 구분",
+        "기준배분의 불확실성을 G E |G| 및 정책 차이까지 전파",
+        "과잉수렴 완화에 필요한 네 조건을 결합검정으로 닫음",
+        "검정불능·입력/평가기 오류·실행 미완료의 처리 확정",
+        "보유 분류율과 h q 분모, 공식 제약의 검사 가능 범위 명시",
+        "B 코퍼스3문서 구조와 A/C의 실제문서 도구·시간분할 확정",
+        "원설계의 인프라 재시도와 실행버전·도구 계약 복원",
+        "파일럿 기반 표본 정밀도·시간·비용 점검과 사전 동결 규칙 추가"
+      ],
+      "output": "plan\\LIBERA_실험설정_v6.2_20261027.json",
+      "output_sha256": "9dbe2507471c7c567b8d41256852ac6eb2846f2ba25f9e8cbf2570a8ba0e3647",
+      "new_experimental_model_calls": 0
+    },
+    {
+      "round": 3,
+      "review_type": "independent_AI_review_plus_primary_agent_revision_not_human_source_audit",
+      "criteria": [
+        "실험 정합성",
+        "논리성",
+        "제목과 원초록의 검증력",
+        "완결성"
+      ],
+      "input": "plan\\LIBERA_실험설정_v6.2_20261027.json",
+      "input_sha256": "9dbe2507471c7c567b8d41256852ac6eb2846f2ba25f9e8cbf2570a8ba0e3647",
+      "findings": [
+        {
+          "criterion": "실험 정합성",
+          "problem": "v6.1의두지표 필드와 v6.2의네성분 검정, 근접최적집합 정의가 중복",
+          "fix": "유일한 평가 계약으로 통일"
+        },
+        {
+          "criterion": "논리성",
+          "problem": "H1과H2를 같은 오류의 교정으로 연결하거나 시점 쌍 우위를 전체 최적으로 확대할 위험",
+          "fix": "결과별 허용 결론·금지 결론과 FULL R1 보조진단을 사전 규정"
+        },
+        {
+          "criterion": "제목과 원초록의 검증력",
+          "problem": "정보교체·동일정보 대조는 예산만 있고 생성 계약이 미완성",
+          "fix": "무엇을 고정·교체·복제하는지와 oracle·검색 재실행을 확정"
+        },
+        {
+          "criterion": "완결성",
+          "problem": "재시도 소진, 앞단계 실패와 미요청 슬롯의 경계가 모호",
+          "fix": "완료 단위를 업무 궤적으로 정의하고 terminal status별 집계 확정"
+        }
+      ],
+      "applied_changes": [
+        "지표·근접최적집합·검정 계약의 잔존 이중정의 해소",
+        "개별 전망 교체와 완전 동일정보 음성대조의 구체 실행 계약 완성",
+        "인프라 실패·모델 실패·미실행·프로토콜 오류의 구분과 완료 단위 확정",
+        "H1 H2 H3별 결과 해석과 제한된 권고 규칙 확정",
+        "원초록의 모든 실험 요소에 대한 대응표 작성",
+        "처음 읽는 사람을 위한 bullet 설명과 설계 완료·실행 전 상태 분리"
+      ],
+      "output": "plan\\LIBERA_실험설정_v6.3_20261027.json",
+      "output_sha256": "a884b1242217cfed37a52444a541968eb680739c649e85c2b8d3bf9b0de383dc",
+      "new_experimental_model_calls": 0
+    }
+  ],
+  "original_abstract_crosswalk": [
+    {
+      "abstract_element": "공통 AI와 전략적 이질성·판단품질",
+      "design": "FULL H1, 전체정책과 원출력 진단, E G regret 제약 실패"
+    },
+    {
+      "abstract_element": "실제4펀드·12산업·기존보유 대비 변경",
+      "design": "감사된 h와 q, FF12, 원비중과 w-h"
+    },
+    {
+      "abstract_element": "공통 시장과 펀드별 추가 전망·수리 기준",
+      "design": "B의 y xi 정규 생성, full/available 분산상한 최적화"
+    },
+    {
+      "abstract_element": "계획·배분구성·점검의 검색 근거 배치",
+      "design": "세 stage contract, 실제 BM25와 동일 패킷의 R1 R2 R3 재생"
+    },
+    {
+      "abstract_element": "추가근거 없음과 전체적격 원문 대조",
+      "design": "R0 및 FULL, H2와 FULL R1 보조 연결"
+    },
+    {
+      "abstract_element": "개별 정보변화 반응",
+      "design": "x교체 계약과 원래 예산1080단계"
+    },
+    {
+      "abstract_element": "실제문서 정확성·공동오류·새문서 검색",
+      "design": "A 실제문서, 보류한 C의 신규 전망과 실제 재검색"
+    },
+    {
+      "abstract_element": "검색·실행 비용과 설계 원칙",
+      "design": "호출·토큰·시간·실패·근거 전달 기록과 비교별 제한된 권고"
+    }
+  ],
+  "execution_state": {
+    "design_review": "정합성·논리성·원주제 검증력·완결성에 대해 검토 뒤 개선을 세 차례 수행",
+    "implementation_pending": [
+      "실제4펀드 공식 원문과 전체 보유 추출",
+      "SIC 매핑·분류율·제약 사람 감사",
+      "B 생성기와 기준평가기 구현·검산",
+      "검색 색인·로그·정보경계",
+      "세단계 실행기와 파일럿",
+      "모델·문맥·예산·표본의 실행 전 동결"
+    ],
+    "unknown_until_run": [
+      "과잉수렴 존재",
+      "RAG 완화 여부",
+      "좋은 제공 시점",
+      "실패율",
+      "실제 토큰·시간·비용"
+    ],
+    "no_new_experimental_model_calls": 0
+  }
+}

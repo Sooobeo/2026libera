@@ -1,0 +1,45 @@
+{
+  "round": 1,
+  "review_type": "independent_AI_review_plus_primary_agent_revision_not_human_source_audit",
+  "criteria": [
+    "실험 정합성",
+    "논리성",
+    "제목과 원초록의 검증력",
+    "완결성"
+  ],
+  "input": "plan\\LIBERA_실험설정_v6.0_20261027.json",
+  "input_sha256": "13c132f490cd5262312b967cefb6fa88799af0a01d6173dc474dd6c2e7719000",
+  "findings": [
+    {
+      "criterion": "제목과 원초록의 검증력",
+      "problem": "R0는 기관별 추가정보가 없고 h는 위험상한으로만 반영돼 H1 식별 기회가 작을 수 있음",
+      "fix": "기관별 정보가 모두 있는 FULL을 H1의 주 검사로 지정하고 원래 수리과제의 의미를 명시"
+    },
+    {
+      "criterion": "논리성",
+      "problem": "G 감소가0을 넘어 과도하게 달라지는 것도 개선으로 보일 수 있음",
+      "fix": "배분 차이 벡터의 오차와 모형상 손실의 공동 개선으로 검정"
+    },
+    {
+      "criterion": "실험 정합성",
+      "problem": "세 단계 모두 비중 제출이면 계획·구성·검토 역할이 사라짐",
+      "fix": "단계별 산출물과 오류 전달 기록 구체화"
+    },
+    {
+      "criterion": "완결성",
+      "problem": "코퍼스·gold 단위 및 해의 거리 불확실성 처리 부족",
+      "fix": "검색 코퍼스 계약과 입력 동일성 진단, 기준거리 범위 검사 추가"
+    }
+  ],
+  "applied_changes": [
+    "원초록의 전략적 이질성을 수리 과제의 관측 가능한 차이로 명확히 정의",
+    "FULL에서 충분한 정보를 줘도 필요한 차이를 잃는지 H1 검사",
+    "G 감소 대신 방향·크기를 포함한 쌍별 반응오차와 손실의 공동 개선 검사",
+    "다섯 주장별 IUT 및 Holm 구조로 변경",
+    "계획·최초배분·점검 산출물과 오류 전달 기록 구분",
+    "검색 자료와 기준거리의 식별 가능성 점검 추가"
+  ],
+  "output": "plan\\LIBERA_실험설정_v6.1_20261027.json",
+  "output_sha256": "88952d4d835bc2512cb96b41b8ffebe3350e0aa209954006dce6d12eeee8b9a9",
+  "new_experimental_model_calls": 0
+}

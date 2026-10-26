@@ -1,0 +1,996 @@
+{
+  "protocol_version": "6.2-design",
+  "as_of_date": "2026-10-27",
+  "status": "prospective_reviewed_design_not_executed",
+  "execution_enabled": false,
+  "title": "공통 GenAI는 기관투자자의 전략적 이질성을 축소하는가?",
+  "subtitle": "-액티브 주식형 펀드의 자산배분 프로세스 내 Workflow RAG 배치와 완화효과를 중심으로-",
+  "user_constraints": [
+    "제목과 원초록의 연구 목적을 기준으로 본문과 실험을 맞춘다.",
+    "기존 실험 설계와 준비된 데이터에서 출발한다.",
+    "기존 원고 원응답 실행기록 수치와 과거 분석 역할을 덮어쓰지 않는다."
+  ],
+  "design_basis": "0925 A B C 원설계 복원과 완료된 직접제공 실험의 실패 반영",
+  "lineage": [
+    {
+      "path": "C:\\Users\\Insun\\Downloads\\greengreen (1).pdf",
+      "role": "원제목과 원초록 전체 2쪽 기준",
+      "exists": true,
+      "sha256": "75a70c60a2fdf8db6e17576a829e0960c8c48afb70422c85ee2515a5efe9ece0"
+    },
+    {
+      "path": "plan\\LIBERA_실험설계서0925.html",
+      "role": "A B C 구조와 4펀드 12산업 3단계 5조건 원설계",
+      "exists": true,
+      "sha256": "dd7ddd202e6e0fcafb93082c5f558b919bce30b87424eea8fb6792f78a1dc002"
+    },
+    {
+      "path": "plan\\문규리 제안서 상세_최종.html",
+      "role": "공통 GenAI와 부정적 동질화의 원래 연구 논리",
+      "exists": true,
+      "sha256": "3af00703a0e0246275f25e4ab4395610cee9d773a2d327e47905fe499d9e2db9"
+    },
+    {
+      "path": "plan\\LIBERA_실험설정_20261017.json",
+      "role": "후속 축소 및 서로 다른 데이터 계열의 구분",
+      "exists": true,
+      "sha256": "01518e95278b8f2e50cb786bcf6553ace74a1eebbc2f9110b250c6b509c73b6a"
+    },
+    {
+      "path": "plan\\LIBERA_실험설정_v4.9.1_20261019.json",
+      "role": "직접 제공 E L 실험의 경계와 오류 보존",
+      "exists": true,
+      "sha256": "0d7ad14eb7f07fb9a7e7607a1cdb1ff148794d88878d6706b7b6a66bbc319110"
+    },
+    {
+      "path": "data\\documentary\\source_inventory.json",
+      "role": "실제 4펀드의 신원과 공식 자료 후보",
+      "exists": true,
+      "sha256": "62deedc9771c2fa69af88c6816bfc77dddcb1653a2290320f46a6a6c03d81509"
+    },
+    {
+      "path": "data\\french\\manifest.json",
+      "role": "FF12 수익률 및 SIC 원본과 취득 해시",
+      "exists": true,
+      "sha256": "75ac2cf7042882f1f936acecfb17d70ce43fdb4edea5c37b5a1f00d993175a66"
+    },
+    {
+      "path": "data\\institutional_recent\\summary.json",
+      "role": "기존 24시장창 72가상위임의 정량 보조자료",
+      "exists": true,
+      "sha256": "ee4a3e6a7a4b6b7116d422c4817dc128d8937ef392a7bd34ecf050f6945c1964"
+    },
+    {
+      "path": "research\\prepare_institutional_benchmark.py",
+      "role": "거리 반응오차 및 수치 검산 코드 재사용 후보",
+      "exists": true,
+      "sha256": "6a6cf0ec1118286eee3f92b4136e5723e3ffa75269e5e3bce75560c7a72fd648"
+    },
+    {
+      "path": "data\\sector_documents\\corpus_card.json",
+      "role": "별도 GICS11 공개 전망 자료의 범위",
+      "exists": true,
+      "sha256": "6f526764044fe0f1ebd855b8500b2954a812c522cb9f73f252096b671194a134"
+    },
+    {
+      "path": "paper\\LIBERA_소논문_원초록반영_v5.4_20261026.docx",
+      "role": "기존 원고와 완료자료 보존 대상",
+      "exists": true,
+      "sha256": "7225aaa5622926fbc845eff48a12ff927bf55f0aa740a070ecd65311a7cb778b"
+    }
+  ],
+  "research_questions": [
+    "RQ1 공통 LLM 사용 조건에서 기준상 필요한 펀드 간 차이가 줄며 판단 손실 또는 제약 위반을 동반하는가?",
+    "RQ2 실제 검색한 펀드별 근거 제공이 필요한 차이와 판단 품질을 함께 개선하는가?",
+    "RQ3 계획 배분안 구성 점검 중 근거의 도입 및 유지 정책에 따라 효과가 어떻게 달라지는가?"
+  ],
+  "modules": {
+    "B": {
+      "role": "primary_controlled_experiment",
+      "funds": 4,
+      "taxonomy": "French12",
+      "industries": 12,
+      "base_holdings": "실제 공시에서 구성할 h이며 현재 미구축",
+      "additional_outlook": "가상임을 명시한 정규 생성 x이며 실제 펀드의 내부 전망이 아님",
+      "oracle": "posterior_expected_return_max_under_holdings_variance_cap"
+    },
+    "A": {
+      "role": "actual_document_application",
+      "holdings_as_of": "2025-12-31",
+      "publication_cutoff": "2026-03-31",
+      "exact_weight_gold": false,
+      "outcomes": [
+        "source_facts",
+        "applicable_constraints",
+        "evidence_to_decision",
+        "allocation_changes"
+      ],
+      "tools": [
+        "합계·분산·검사 가능한 제약 계산기",
+        "문서 사실과 출처 추적"
+      ],
+      "forbidden": [
+        "정성 전망을 xi·r로 임의 변환",
+        "B의 사후분포 도구로 실제 전망의 수치 정답 생성",
+        "최적비중 오차나 후회손실의 실제기관 정답 주장"
+      ],
+      "evaluation": [
+        "사실·단위·날짜·귀속",
+        "검사 가능한 명시 제약",
+        "설명과 원비중 일치",
+        "실패 전파와 공동오류",
+        "검색 회수와 비용"
+      ]
+    },
+    "C": {
+      "role": "held_out_document_retrieval",
+      "holdings_as_of": "2026-03-31",
+      "publication_cutoff": "2026-06-30",
+      "rebuild_index_and_rerun_retrieval": true,
+      "tuning_on_C_forbidden": true,
+      "exact_weight_gold": false,
+      "tools": [
+        "합계·분산·검사 가능한 제약 계산기",
+        "문서 사실과 출처 추적"
+      ],
+      "forbidden": [
+        "정성 전망을 xi·r로 임의 변환",
+        "B의 사후분포 도구로 실제 전망의 수치 정답 생성",
+        "최적비중 오차나 후회손실의 실제기관 정답 주장"
+      ],
+      "evaluation": [
+        "사실·단위·날짜·귀속",
+        "검사 가능한 명시 제약",
+        "설명과 원비중 일치",
+        "실패 전파와 공동오류",
+        "검색 회수와 비용"
+      ],
+      "new_document_rule": "추가 전망은 A의2026-03-31 상한 이후 처음 공개되고 C의2026-06-30 상한 안에 공개된 문서. 계속 유효한 기존 의무 규칙은 기본정보로 유지하되 새 전망 회수 성과로 세지 않음"
+    }
+  },
+  "data_contract": {
+    "funds": [
+      {
+        "fund_id": "F01",
+        "ticker": "FCNTX",
+        "name": "Fidelity Contrafund",
+        "series": "S000006037"
+      },
+      {
+        "fund_id": "F02",
+        "ticker": "VPMCX",
+        "name": "Vanguard PRIMECAP",
+        "series": "S000002568"
+      },
+      {
+        "fund_id": "F03",
+        "ticker": "DODGX",
+        "name": "Dodge & Cox Stock",
+        "series": "S000011202"
+      },
+      {
+        "fund_id": "F04",
+        "ticker": "TRBCX",
+        "name": "T. Rowe Price Blue Chip Growth",
+        "series": "S000002069"
+      }
+    ],
+    "development_holdings_as_of": "2025-09-30",
+    "development_publication_cutoff": "2025-12-31",
+    "numeric_reference_period": [
+      "2016-01",
+      "2025-12"
+    ],
+    "numeric_observations": 120,
+    "returns": "기존 French12 월간자료를 소수 수익률 단위로 통일",
+    "taxonomy_boundary": "FF12 본실험과 GICS11 기존 공개전망 실험을 결합하지 않음",
+    "holdings": "complete holdings; issuer SIC mapping; classifiable equity sleeve h; sleeve share q; fixed and unclassified assets retained",
+    "classification_coverage_threshold": 0.9,
+    "classification_threshold_basis": "0925의 연구 설정. LLM 출력 전에 분모와 제외 규칙을 고정",
+    "constraint_policy": "공식 원문의 분모 예외 적용조건을 유지. 12산업 배분에서 평가 불가능한 규칙은 의미검사로 분리하며 숨은 산업상한을 만들지 않음",
+    "vintage": "cached revised French data; retrospective controlled task, not authenticated historical-vintage trading replay",
+    "return_definition": "French12 value-weighted monthly total returns, percentage divided by100. Do not mix the existing auxiliary excess-return series or subtract risk-free returns silently.",
+    "holdings_accounting": {
+      "eligible_equity": "공식 보유표의 양의 평가액 보통주·상장 REIT·보통주 ADR·외국 보통주. 동일 발행인·동일 경제권리 중복 및 통화를 감사",
+      "fixed_outside_scope": "현금·채권·우선주·펀드지분·파생상품·매핑 불가 주식 및 그 밖의 자산과 부채를 원래 항목대로 보존",
+      "coverage": "V_FF12_mapped_eligible_equity / V_all_eligible_equity; SIC 누락 주식도 분모에 유지",
+      "h": "각 FF12 산업의 매핑 주식 평가액 / 전체 매핑 주식 평가액",
+      "q_NAV": "전체 매핑 주식 평가액 / 동일 보유표의 공식 순자산 NAV; 산업의 NAV 대비 노출은 q_NAV*w",
+      "source_constraint_denominator": "각 규칙의 원문 분모 D_j를 별도 보존. NAV를 총자산·순자산+차입 등과 바꾸지 않음",
+      "reconciliation": "보유표 가치·현금·기타자산·부채를 NAV에 대조하고 평가일·통화·분모 불일치를 해결. 주식 비중 q를 임의로0~1에 자르지 않음",
+      "SIC_source_priority": [
+        "해당 시점 공식 공시의 발행인 SIC",
+        "동일 발행인 식별자를 연결한 SEC 공식 자료",
+        "사전 지정 공식 보완자료"
+      ],
+      "unresolved_policy": "누락 SIC와 지분 중복을 기록. 분류율90% 미달, 불완전 보유표, 분모 불일치 또는 부적격 h이면 네 펀드 본실험 시작을 보류. AI 결과를 보고 펀드·날짜를 대체하지 않음",
+      "risk_scope": "h.T@Sigma@h는 재배분하는 주식 부문의 FF12 대리 위험. 고정자산·해외·환율과의 공분산을 포함한 전체 펀드 위험이 아님"
+    },
+    "constraint_translation": [
+      {
+        "class": 1,
+        "rule": "FF12 비중만으로 정확히 계산 가능한 명시 규칙",
+        "handling": "수리 제약으로 사용하고 근거·분모·계수를 저장"
+      },
+      {
+        "class": 2,
+        "rule": "고정 보유분과 원문 분모를 합치면 정확히 계산 가능한 규칙",
+        "handling": "각 D_j로 q_Dj*w와 고정 분자를 결합. 산업 바구니별 소속·계수가 확인될 때만 검사"
+      },
+      {
+        "class": 3,
+        "rule": "blue-chip·발행인·유동성·통화 등 FF12로 판정 불가한 규칙",
+        "handling": "의미 해석과 수치검증 불가를 기록. 원문을 잘 읽었다는 이유로 실제 준수 판정 금지"
+      }
+    ],
+    "starting_holdings_gate": "B의 모든 h는 사전 명시된 수리 제약을 만족해야 한다. 불일치는 예외·분모·시점·매핑부터 감사하며 위험상한 확대나 비중 수선으로 해결하지 않는다. 해결 전 요청하지 않는다."
+  },
+  "scenario_generator": {
+    "status": "required_not_implemented_in_this_redesign",
+    "historical_mean": "m0",
+    "historical_covariance": "Sigma from 120 months with Ledoit-Wolf",
+    "prior_covariance": "V0=Sigma/12",
+    "common_error_covariance": "Omega0=V0",
+    "private_error_covariance": "Omegai=V0/r",
+    "precision_levels": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "generation": [
+      "theta~N(m0,V0)",
+      "y=theta+epsilon0",
+      "xi=theta+epsiloni",
+      "errors conditionally independent given theta"
+    ],
+    "full_posterior": "Vi=(inv(V0)+inv(Omega0)+inv(Omegai))^-1; mui=Vi@(inv(V0)@m0+inv(Omega0)@y+inv(Omegai)@xi)",
+    "visible_information_posterior": "Use only delivered observations and their disclosed precision. Partial x requires selection-matrix Gaussian update; missing precision cannot be filled from hidden metadata.",
+    "atomic_document_fields": [
+      "signal values",
+      "industry codes",
+      "unit",
+      "date",
+      "precision or covariance rule",
+      "evidence IDs"
+    ],
+    "rnd": {
+      "algorithm": "PCG64 SeedSequence",
+      "development": 1001,
+      "main": 2001,
+      "x_replacement": 3001,
+      "negative_control": 4001,
+      "execution_order": 5001,
+      "human_audit": 6001,
+      "bootstrap": 7001
+    },
+    "return_display_decimals": 10,
+    "covariance_significant_digits": 12,
+    "score_from_roundtripped_displayed_values": true,
+    "no_future_theta_in_reference_or_tools": true
+  },
+  "workflow": {
+    "stages": [
+      "계획",
+      "배분안 구성",
+      "점검과 수정"
+    ],
+    "arms": [
+      {
+        "id": "R0",
+        "onset": null,
+        "evidence": "no_additional_outlook",
+        "stage_view": [
+          "추가 근거 없음",
+          "추가 근거 없음",
+          "추가 근거 없음"
+        ]
+      },
+      {
+        "id": "R1",
+        "onset": 1,
+        "evidence": "frozen_retrieved_packet",
+        "stage_view": [
+          "검색 근거 최초 제공",
+          "같은 근거 유지",
+          "같은 근거 유지"
+        ]
+      },
+      {
+        "id": "R2",
+        "onset": 2,
+        "evidence": "frozen_retrieved_packet",
+        "stage_view": [
+          "추가 근거 없음",
+          "검색 근거 최초 제공",
+          "같은 근거 유지"
+        ]
+      },
+      {
+        "id": "R3",
+        "onset": 3,
+        "evidence": "frozen_retrieved_packet",
+        "stage_view": [
+          "추가 근거 없음",
+          "추가 근거 없음",
+          "검색 근거 최초 제공"
+        ]
+      },
+      {
+        "id": "C-context",
+        "alias": "FULL",
+        "onset": 1,
+        "evidence": "all_eligible_original_text",
+        "stage_view": [
+          "전체 적격 원문",
+          "같은 원문 유지",
+          "같은 원문 유지"
+        ]
+      }
+    ],
+    "common_to_every_arm_from_stage1": [
+      "fund objective",
+      "mandatory constraints",
+      "holdings h",
+      "risk cap h.T@Sigma@h",
+      "common signal y",
+      "Sigma",
+      "m0",
+      "V0",
+      "Omega0",
+      "industry universe",
+      "same tools and output schema"
+    ],
+    "treatment": "additional private-outlook evidence availability, onset and retention; never withhold mandatory mandates from R0",
+    "estimand": "workflow adoption-and-retention policy, including cumulative exposure and self-generated history; not pure token-position or isolated timing effect",
+    "independent_initial_state": true,
+    "full_own_history_retained": true,
+    "tools": [
+      "posterior(exposed_evidence_ids)",
+      "check_portfolio(raw_weights,exposed_evidence_ids)"
+    ],
+    "tool_roundtrips_per_stage_max": 2,
+    "calculator_cannot_return": [
+      "reference weights",
+      "optimal trades",
+      "hidden xi",
+      "theta",
+      "other fund information",
+      "semantic answer key"
+    ],
+    "max_output_tokens_candidate_from_original": 2048,
+    "output": "stage_contracts에 따라 계획은 근거와 조건을, 구성과 점검은 12산업 비중을 제출",
+    "direction_statement_check": "declarations of increase or decrease against h and previous valid submission; distinguish invalid predecessor",
+    "post_final_repair": false,
+    "automatic_normalization": false,
+    "stage_contracts": [
+      {
+        "stage": 1,
+        "name": "계획",
+        "required": [
+          "기본 운용조건과 위험예산",
+          "제공된 근거 ID와 값·시점",
+          "채택·보류 근거",
+          "산업별 검토 계획"
+        ],
+        "weights_required": false,
+        "forbidden": [
+          "미제공 전망 추정",
+          "의무 제약 창작",
+          "최적비중 조회"
+        ]
+      },
+      {
+        "stage": 2,
+        "name": "배분안 구성",
+        "required": [
+          "12산업 최초 원비중",
+          "h 대비 변경분",
+          "변경을 지지한 근거 ID",
+          "수익과 위험의 상충"
+        ],
+        "weights_required": true
+      },
+      {
+        "stage": 3,
+        "name": "점검과 수정",
+        "required": [
+          "최종 12산업 원비중",
+          "계산검사 결과",
+          "전 단계 오류의 유지·교정",
+          "실제 증감과 일치하는 설명"
+        ],
+        "weights_required": true
+      }
+    ],
+    "propagation_log": [
+      "최초 오류 단계",
+      "근거 ID",
+      "누락·오독·계산·설명 모순 구분",
+      "후속 단계에서 유지 또는 교정",
+      "관련 비중 변화"
+    ],
+    "tools_by_module": {
+      "B": [
+        "posterior(exposed_evidence_ids)",
+        "check_portfolio(raw_weights,exposed_evidence_ids)"
+      ],
+      "A_C": [
+        "합계·분산·검사 가능한 제약 계산기",
+        "문서 사실과 출처 추적"
+      ]
+    }
+  },
+  "retrieval": {
+    "status": "required_not_executed",
+    "engine_from_original": "BM25Okapi",
+    "package_from_original": "rank-bm25==0.2.2",
+    "k1": 1.5,
+    "b": 0.75,
+    "epsilon": 0.25,
+    "chunk_max_tokens": 400,
+    "chunk_overlap_tokens": 50,
+    "top_k": 4,
+    "tokenizer": "lowercase English letter-number tokens; chunk token counts use frozen model tokenizer",
+    "query": "investment outlook expected return forecast uncertainty risk portfolio industry + fixed French12 industry names",
+    "scope": "common corpus plus own fund eligible corpus; source-date and fund filters applied before ranking",
+    "forbidden_corpus": [
+      "theta",
+      "reference allocation",
+      "evaluator annotations",
+      "other funds private outlook",
+      "held-out documents before C"
+    ],
+    "ties": "document ID then paragraph order",
+    "dedup": "source hash and merged overlapping evidence",
+    "preserve_atomic_numeric_rows_units_footnotes": true,
+    "timing_comparison": "Run actual retrieval once per fund-scenario; freeze returned text order hashes scores and length; replay identical bytes to R1 R2 R3",
+    "records": [
+      "query",
+      "corpus manifest",
+      "eligible IDs",
+      "scores",
+      "ranked chunk IDs",
+      "text hashes",
+      "gold recall@4",
+      "final packet token count"
+    ],
+    "full_context": "all prespecified eligible original text; never silently truncate; flag identity with retrieved packet",
+    "C_policy": "index unseen eligible documents and rerun the same retrieval policy; do not reuse old packets",
+    "corpus_contract_required": {
+      "B": "사전 고정한 문서 양식의 가상 펀드별 전망과 관련 설명; 문서 종류·개수·필드·길이와 실제문서의 보조 역할을 명시",
+      "A_C": "해당 펀드 공식 원문의 적격 업무 절; 날짜와 펀드 필터",
+      "gold_unit": "근거 ID별 값·단위·날짜·관측 정밀도 묶음",
+      "diagnostics": [
+        "검색과 FULL의 동일 입력 비율",
+        "gold recall@4",
+        "단위·정밀도 동시 회수율",
+        "문서 길이·순서 분포"
+      ],
+      "no_artificial_advantage": "검색이 어렵도록 결과를 본 뒤 불필요한 문서를 추가하거나 FULL을 불리하게 자르지 않음"
+    },
+    "B_fixed_corpus": {
+      "per_fund_scenario_documents": [
+        {
+          "id": "forecast_memo",
+          "content": "가상임을 표시한 현재 펀드 전망. 12개 산업별 x값·단위·기준일과 r 및 Omega 규칙, 근거 ID"
+        },
+        {
+          "id": "method_note",
+          "content": "관측 오차와 정밀도의 뜻 및 공통 y와의 관계. 전망 수치의 새 복사본을 만들지 않음"
+        },
+        {
+          "id": "fund_facts",
+          "content": "감사된 h·의무 과제·적용 제약의 원문 근거. 의무 조건은 검색과 무관하게 모든 군이 이미 받음"
+        }
+      ],
+      "current_forecast_count": 1,
+      "no_invented_distractors": true,
+      "number_placement": "forecast_memo에12행을 고정 산업순서로 둔다. 단위·날짜·관측정밀도를 숫자와 함께 유지하고 청크 경계가 행을 자르지 않음",
+      "large_atomic_block": "필수 표가400모델토큰을 넘으면 머리글·정밀도를 반복한 산업행 블록으로 분할. 길이·중복 gold를 기록하며 개발 후 규칙 고정",
+      "gold_units": "12개 산업 관측 각각 및 그 해석에 필요한 단위·날짜·정밀도. 동일 사실 중복은 회수율 분모에서 한 번만 계산",
+      "query_stays_fixed": true,
+      "FULL": "같은 세 문서의 적격 원문 전체. 모델 입력에 실제·가상 문서의 역할을 명시",
+      "nonidentification": "R1 검색 결과가 FULL과 실질적으로 같은 경우 검색 대 전체원문 차이는 식별되지 않음. 시점 비교와 근거 없음 비교는 유지"
+    }
+  },
+  "reference_solver": {
+    "status": "new_evaluator_required; old gamma-QP is not equivalent",
+    "objective": "maximize mui.T@w",
+    "constraints": [
+      "w>=0",
+      "sum(w)=1",
+      "w.T@Sigma@w<=h.T@Sigma@h",
+      "applicable prespecified explicit constraints"
+    ],
+    "candidate": "CVXPY + Clarabel SOCP from 0925; runtime installation and lock pending",
+    "independent_crosscheck": "separate constrained solve and feasibility/objective residual checks; do not reuse old quadratic KKT certificate as proof",
+    "solver_gap_tolerance": 1e-09,
+    "solver_feasibility_tolerance": 1e-09,
+    "solver_max_iterations": 500,
+    "output_sum_and_lower_tolerance": 1e-06,
+    "risk_residual_tolerance": "max(1e-10,1e-6*h.T@Sigma@h)",
+    "near_optimal_set": "mui.T@w>=fstar-1e-9; min/max each component",
+    "near_optimal_component_width_max_for_distance_metrics": null,
+    "nonunique_policy": "산업별1%p는 원설계 진단값으로만 기록. 사례를 조용히 삭제하지 않고 근접최적집합의 거리 범위를 보존하며 주결론에는 보수적 경계를 사용",
+    "references": [
+      "full allowed fund information",
+      "actually delivered information"
+    ],
+    "meaning": "conditional solution to declared research task, not the fund manager's hidden optimum or future realized return",
+    "distance_uncertainty": "uncertainty_bounds에 따라 G뿐 아니라 E와 |G| 및 정책 차이의 가능한 범위를 평가. 승자가 경계에 따라 바뀌면 확증 판정 유보",
+    "uncertainty_bounds": {
+      "representative": "각펀드 full/available의 동일한 대표해 v를 모든 정책에 재사용",
+      "coordinate_ranges": "mu.T@w>=f_primal-epsilon의 근접최적집합에서 각좌표 l,u. epsilon과 검증된 primal-dual gap을 기록",
+      "eta": "eta_i=0.5*sum_k(max(v_ik-l_ik,u_ik-v_ik)); any admissible reference is within eta_i in TV",
+      "Dstar_interval": "[max(0,Dstar_point-eta_i-eta_j),min(1,Dstar_point+eta_i+eta_j)]",
+      "G_interval": "Dstar_interval minus observed policy distance D",
+      "E_interval": "[max(0,Epoint-eta_i-eta_j),min(2,Epoint+eta_i+eta_j)]",
+      "A_interval": "A=|G|; lower is distance of G interval from zero, upper is max absolute endpoint",
+      "policy_difference_upper": "U(E_A)-L(E_B) and U(A_A)-L(A_B) upper-bound the true A-minus-B difference. Use these conservative scenario differences in decrease tests",
+      "regret_difference": "same full objective gives R_A-R_B=mu_full.T@(w_B-w_A); independently verify without subtracting two approximate fstar values",
+      "absolute_regret_bounds": "use independently verified primal feasible objective and dual bound to bound absolute regret; do not call float noise positive loss",
+      "H1_test_inputs": "scenario averages of lower G and lower absolute regret; positive inference must survive reference uncertainty",
+      "failure": "solver/coordinate-range failure is evaluator failure, not model failure; resolve before first main request. Post-output evaluator defect requires declared global reanalysis, never replacing unfavorable scenarios"
+    }
+  },
+  "evaluation": {
+    "D": "0.5*L1(wi-wj)",
+    "D_star": "0.5*L1(wstar_i-wstar_j)",
+    "G_full": "D_star_full-D",
+    "G_available": "D_star_available-D",
+    "information_set_distance_component": "G_full-G_available=D_star_full-D_star_available; signed, not necessarily positive",
+    "full_regret": "mui_full.T@(wstar_full-w)",
+    "available_regret": "mui_available.T@(wstar_available-w)",
+    "individual_reference_error": "0.5*L1(w-wstar)",
+    "pair_response_error": "0.5*L1((wi-wj)-(wstar_i-wstar_j))",
+    "individual_information_response_error": "0.5*L1((wb-wa)-(wstar_b-wstar_a))",
+    "always_report": [
+      "raw budget residual",
+      "risk and constraint failures",
+      "transport/schema failures",
+      "source errors and shared errors",
+      "retrieval recall",
+      "calls tokens latency"
+    ],
+    "invalid_policy": "무효 원응답을 성공으로 바꾸지 않으며 raw 지표는 NA. 사전 정의된 h 유지 정책의 지표를 별도 계산하고 전체 시도에서 평가",
+    "improvement_rule": "R0의 양의 수축, E_full 감소, R_full 감소, mean|G_full| 감소를 모두 H2 결합검정에 포함. 기준 불확실성 경계와 전체 시도 정책으로 판정",
+    "no_inferiority_equivalence_from_nonsignificance": true,
+    "R0_interpretation": "full regret includes absent additional information; available regret separates implementation error from information loss",
+    "H1_rule": "FULL 전체 업무정책의 lower G_available와 lower R_available가 양수인지 결합검정. 유효 원출력과 fallback 기여를 분리하여 원출력 없는 정책수축을 모델 전략으로 해석하지 않음",
+    "identifiability": "report D_star_available=0 or numerically unresolved pairs as having no identified positive contraction opportunity; do not select cases by model outcomes",
+    "oracle_diagnostic": "using available oracle as model output must yield G_available=0 and R_available=0 even if G_full and R_full are positive",
+    "primary_mitigation_endpoints": [
+      "pair_response_error_full",
+      "full_regret"
+    ],
+    "pair_response_error_full": "0.5*L1((wi-wj)-(wstar_full_i-wstar_full_j))",
+    "allocation_for_primary_metrics": "모든 시나리오·펀드·두 반복의 w_policy. 원출력 무효 답도 h 유지로 전체 정책 평가에 포함",
+    "A_full": "mean over scenario-replicate-pairs of |G_full|; never abs(mean signed G)"
+  },
+  "analysis": {
+    "main_scenarios": 60,
+    "precision_strata": 3,
+    "scenarios_per_stratum": 20,
+    "funds": 4,
+    "replicates": 2,
+    "sample_size_role": "0925 original planning target retained; not a measured power guarantee; revise before main only if resource feasibility requires",
+    "independent_unit": "generated scenario, conditional on fixed calibrated market and fund profiles",
+    "six_fund_pairs_not_independent": true,
+    "replicates_not_independent_market_samples": true,
+    "aggregate": "compute metrics per replicate first, then scenario averages; do not average weights before nonlinear metrics",
+    "confirmatory_family_change_from_original": "H1, RAG 공동개선, 시점 세 쌍의 공동개선이라는 다섯 주장에 맞춰 결합검정과 Holm 적용",
+    "confirmatory_tests": [
+      {
+        "id": "H1",
+        "contrast": "FULL policy versus full/available reference",
+        "components": [
+          "lower G_available > 0",
+          "lower R_available > 0"
+        ],
+        "p": "max of component one-sided p values",
+        "label": "충분한 정보 아래 공통 AI 업무정책의 수축과 손실"
+      },
+      {
+        "id": "H2",
+        "contrast": "R1 policy minus R0 policy",
+        "components": [
+          "R0 lower G_full > 0",
+          "upper delta E_full < 0",
+          "exact delta R_full < 0",
+          "upper delta mean|G_full| < 0"
+        ],
+        "p": "max of component one-sided p values",
+        "label": "추가정보 제공을 포함한 RAG 정책의 과잉수렴 완화"
+      },
+      {
+        "id": "H3_R1_R2",
+        "contrast": "R1 policy versus R2 policy",
+        "components_per_direction": [
+          "comparison baseline lower G_full > 0",
+          "upper delta E_full < 0",
+          "exact delta R_full < 0",
+          "upper delta mean|G_full| < 0"
+        ],
+        "p": "directional IUT p=max(components); two-direction claim p=min(1,2*min(p_a_better,p_b_better))",
+        "label": "시점 정책의 완화 우위"
+      },
+      {
+        "id": "H3_R1_R3",
+        "contrast": "R1 policy versus R3 policy",
+        "components_per_direction": [
+          "comparison baseline lower G_full > 0",
+          "upper delta E_full < 0",
+          "exact delta R_full < 0",
+          "upper delta mean|G_full| < 0"
+        ],
+        "p": "directional IUT p=max(components); two-direction claim p=min(1,2*min(p_a_better,p_b_better))",
+        "label": "시점 정책의 완화 우위"
+      },
+      {
+        "id": "H3_R2_R3",
+        "contrast": "R2 policy versus R3 policy",
+        "components_per_direction": [
+          "comparison baseline lower G_full > 0",
+          "upper delta E_full < 0",
+          "exact delta R_full < 0",
+          "upper delta mean|G_full| < 0"
+        ],
+        "p": "directional IUT p=max(components); two-direction claim p=min(1,2*min(p_a_better,p_b_better))",
+        "label": "시점 정책의 완화 우위"
+      }
+    ],
+    "test": "시나리오 단위 평균. H1 각 성분은 단일표본 단측검정, 정책 차이는 대응 단측검정. 시점의 양방향 선택은 2배 보정. 영분산·표본 부족은 p를 강제로 만들지 않음",
+    "mitigation_estimand": "R1-R0 is total information-provision workflow effect, not retrieval-engine superiority or sharedness causation",
+    "multiplicity": {
+      "method": "Holm on joint claims",
+      "family_size": 5,
+      "alpha": 0.05
+    },
+    "bootstrap": {
+      "resamples": 10000,
+      "unit": "whole scenario",
+      "stratify_by": "r",
+      "interval": "individual 95% percentile, not simultaneous"
+    },
+    "matched_validity": "H1 H2 H3의 전체 정책 분석은 네 펀드와 두 반복의 모든 사전 시나리오를 포함. 유효 원출력만의 하위 분석을 주효과로 대체하지 않음",
+    "valid_only_estimand": "별도 진단만. 유효 원출력에 조건부인 결과이며 전체 정책 또는 모든 모델 시도에 대한 효과가 아님",
+    "additional": [
+      "R0 full versus available benchmark decomposition",
+      "R2/R3 vs R0",
+      "C-context contrasts",
+      "pair response error",
+      "x replacement",
+      "negative controls",
+      "actual-document A C",
+      "resource costs",
+      "R0/R1 G_available diagnostics",
+      "FULL versus R1 error and regret",
+      "stage-level error propagation"
+    ],
+    "shared_model_claim_boundary": "common-model workflow evaluated against task-specific reference; independent causal effect of sharing a model versus heterogeneous models is not identified",
+    "signed_G_role": "수축과 과도한 차이를 해석하는 방향 지표. 감소 자체가 개선이라는 주검정으로 쓰지 않음",
+    "H1_attribution": "주검정은 FULL 업무정책 전체의 기준 대비 수축과 손실. 유효 원출력 쌍과 fallback이 개입한 쌍의 비중·수축·손실 기여를 함께 보여 주고 직접 모델 판단의 증거와 구분",
+    "non_testable_policy": {
+      "reasons": [
+        "식별 가능한 기준 차이가 없음",
+        "검증된 기준 경계를 계산 못함",
+        "영분산 등으로 표본검정 불가",
+        "예정 시나리오 또는 r층 누락",
+        "미완료 실행으로 계획 표본 불충족"
+      ],
+      "Holm": "not_testable 표시와 함께 구현상 p=1을 넣어 최초 다섯 claim family 유지. 검사 가능한 주장만 남겨 보정 수를 줄이지 않음",
+      "incomplete_main": "원래 목표60시나리오와 세r층 및 두반복 완결 전 확증 분석으로 종료하지 않음. 자원 문제로 미완료이면 기술 결과만 보고",
+      "reduced_N": "본실험 시작 전 개발자료·자원 근거로만 개정하고 민감도·비용·분석을 재동결. 결과의 유의성을 보고 증원·감축 금지"
+    },
+    "aggregation_order": "각 scenario×replicate에서 네펀드의 E,G,|G|,regret을 먼저 계산해 집계한 후 두 반복 평균. mean|G|는 절댓값 후 집계",
+    "sample_precision_plan": {
+      "target": "원안60개의 독립 생성 시나리오, r별20, 두반복 유지",
+      "pilot_report": "개발12상황의 시나리오 대응차이 분산과 원출력 유효율, 참조 경계 폭, 토큰·지연으로 여러 효과크기의 검출가능성과 CI폭·비용을 계산",
+      "no_guarantee": "파일럿 효과 방향은 목표 효과나 모델 선택 기준이 아님. 60이라는 숫자만으로 검정력을 보장하지 않음",
+      "replanning": "새 결합검정·보정계열에 맞게 민감도를 갱신한 뒤 본실험 전에 N과 실행환경을 동결"
+    }
+  },
+  "workload": {
+    "original_blocks": [
+      {
+        "block": "B 본실험",
+        "factors": [
+          60,
+          4,
+          5,
+          2,
+          3
+        ],
+        "purpose": "주 통제실험",
+        "logical_stages": 7200
+      },
+      {
+        "block": "개별 전망 x 교체",
+        "factors": [
+          60,
+          1,
+          3,
+          2,
+          3
+        ],
+        "purpose": "R1 R3 C-context 정보반응",
+        "logical_stages": 1080
+      },
+      {
+        "block": "B 개발 파일럿",
+        "factors": [
+          12,
+          4,
+          5,
+          1,
+          3
+        ],
+        "purpose": "본분석 제외",
+        "logical_stages": 720
+      },
+      {
+        "block": "동일정보 음성대조",
+        "factors": [
+          8,
+          4,
+          3,
+          2,
+          3
+        ],
+        "purpose": "R1 R3 C-context 인위적 차이 점검",
+        "logical_stages": 576
+      },
+      {
+        "block": "A C 실제문서 적용",
+        "factors": [
+          2,
+          4,
+          5,
+          2,
+          3
+        ],
+        "purpose": "현실자료 및 새 문서 검색 확인",
+        "logical_stages": 240
+      }
+    ],
+    "logical_stages_total": 9816,
+    "model_responses_before_infrastructure_retries": [
+      9816,
+      29448
+    ],
+    "pilot_staging": [
+      {
+        "step": "offline",
+        "model_calls": 0,
+        "task": "data integrity, generator, posterior, oracle, retrieval and visibility checks"
+      },
+      {
+        "step": "technical smoke",
+        "logical_stages": 15,
+        "task": "one development scenario one fund five arms; subset of pilot, not additional sample"
+      },
+      {
+        "step": "paired feasibility",
+        "logical_stages": 60,
+        "task": "same development scenario all four funds five arms; same-hash completed technical-smoke trajectories may be reused"
+      },
+      {
+        "step": "development pilot",
+        "logical_stages": 720,
+        "task": "12 development scenarios; same-version and same-hash earlier completed trajectories may be reused, all excluded from main"
+      }
+    ],
+    "pilot_accounting": "720 planned logical slots is not a lifetime call ceiling; every failed, abandoned or superseded attempt counts separately. A changed model/protocol/input cannot reuse old trajectories as the new pilot.",
+    "execution_rule": "do not auto-launch 9816 stages; measure full-history token and latency on prospective development inputs before selecting frozen main runtime and budget"
+  },
+  "current_readiness": {
+    "source_inventory_exists": true,
+    "source_inventory_raw_documents_saved": false,
+    "source_inventory_frozen_gold_ready": false,
+    "french_raw_cached": true,
+    "fund_holdings_and_mapping_complete": false,
+    "signal_generator_complete": false,
+    "variance_cap_oracle_complete": false,
+    "actual_BM25_index_and_run_complete": false,
+    "three_stage_five_arm_runner_complete": false,
+    "new_model_runs": 0,
+    "recent_auxiliary_cases": 72,
+    "recent_auxiliary_AI_calls_recorded": 0
+  },
+  "reuse": [
+    {
+      "asset": "data/french",
+      "use": "본실험 FF12 시장자료 보정과 SIC 분류의 출발점",
+      "not_use": "과거 시점의 미개정 공표값으로 단정하지 않음"
+    },
+    {
+      "asset": "data/documentary/source_inventory.json",
+      "use": "4펀드 식별자와 공식 원문 수집 경로",
+      "not_use": "이미 구축된 완전 코퍼스나 확정 gold로 취급하지 않음"
+    },
+    {
+      "asset": "data/institutional_recent",
+      "use": "별도 72개 명시 목적 통제과제와 평가 함수 검산",
+      "not_use": "실제4펀드 또는 0925 분산상한 본실험으로 대체하지 않음"
+    },
+    {
+      "asset": "research/prepare_institutional_benchmark.py",
+      "use": "TV pair response error failure preservation and testing patterns",
+      "not_use": "gamma quadratic optimum or KKT certificate as new risk-cap optimum"
+    },
+    {
+      "asset": "data/sector_documents and data/sector_market",
+      "use": "기존 GICS11 공개전망 예비진단과 사실·단위 오류 재현",
+      "not_use": "FF12와 변환 없이 혼합하지 않음"
+    },
+    {
+      "asset": "v5 completed E L C responses",
+      "use": "합계 오류 수치오독 설명 모순 정규화 반전의 회귀 사례",
+      "not_use": "새 본실험 표본이나 RAG 성과로 합산하지 않음"
+    }
+  ],
+  "build_order": [
+    "Freeze four funds, complete official source bytes, dates, identifiers and eligibility audit",
+    "Construct complete holdings, SIC-to-FF12 map, h, q, fixed assets, and applicable constraints",
+    "Construct 120-month FF12 calibration, independent signal generator, document templates and gold facts",
+    "Implement posterior and variance-cap oracle with independent verification and near-optimal-set checks",
+    "Build actual BM25 corpus, fixed retrieval logs, FULL set and exposed-information guards",
+    "Implement three-stage five-arm runner using raw portfolios and common calculator feedback",
+    "Run staged development-only feasibility and freeze model, tokenizer, context, tools, hashes and budget",
+    "Freeze generation/retrieval/analysis code, seeds, model, sample plan and execution rules using development-only evidence",
+    "Mechanically generate main scenarios, oracle and retrieval packets without model outcomes; freeze input manifest hashes before the first main model request",
+    "Execute main, counterfactual and negative controls, then A and held-out C; report all failures"
+  ],
+  "human_review": {
+    "fund_eligibility_and_constraints": "two independent humans for all funds",
+    "actual_facts": "per fund random 10%, minimum20 fields or all if fewer; preserve units dates locators and pre-adjudication agreement",
+    "generated_B_facts": "automatic exhaustive roundtrip verification",
+    "AI_review_not_human_substitute": true
+  },
+  "main_freeze_requirements": {
+    "method_freeze_after_development": [
+      "complete source corpus and eligibility dates",
+      "holdings coverage and constraint audit",
+      "verified generator and risk-cap oracle",
+      "development retrieval logs and packet validation",
+      "no hidden-information leakage",
+      "three-stage full-history fit without truncation",
+      "fixed model and sampler",
+      "pilot tokens latency and executable budget",
+      "fixed code seeds sample plan analysis and failure policy"
+    ],
+    "input_manifest_freeze_before_first_main_request": [
+      "mechanically generated main inputs",
+      "reference-only numerical validation",
+      "actual main retrieval logs and packet hashes",
+      "balanced execution order",
+      "model-visible and evaluator-only separation"
+    ]
+  },
+  "not_performed_by_this_redesign": [
+    "fund data download",
+    "new signal corpus generation",
+    "BM25 retrieval",
+    "oracle calculation",
+    "model invocation",
+    "manuscript rewrite"
+  ],
+  "task_definition": {
+    "construct": "같은 시장에서 펀드별 보유상태로 정한 위험예산과 허용 정보가 요구하는 산업배분 차이",
+    "research_objective_not_actual_fund_private_objective": "기존 주식 부문의 분산을 넘지 않으며 주어진 기대수익을 최대화하는 동일 연구 과제",
+    "holdings_role": "기본 모형에서 h는 위험상한 h.T@Sigma@h와 변경분 계산에 사용. 보유 구성 자체를 보존하는 최적화는 아님",
+    "do_not_infer": [
+      "기관 전략 전체 복제",
+      "실제 펀드의 비공개 목적함수",
+      "동일 모델 공유 자체의 독립 인과효과",
+      "실제 미래 수익"
+    ],
+    "reallocation_scope": "분류 가능한 주식 부문만 재배분; 전체 펀드 자산배분이나 전체 펀드 위험최적화가 아님",
+    "holdings_sensitivity": "보유 구성 보존 또는 turnover 제한을 추가할 때는 연구상 별도 민감도 조건으로 표시하고 실제 펀드 규칙으로 귀속하지 않음"
+  },
+  "pre_model_identification_audit": {
+    "compute_before_any_main_model_output": [
+      "네 펀드 h와 위험상한",
+      "full 및 available 기준배분",
+      "기준 펀드 간 거리 분포",
+      "필요한 차이0 또는 불확실한 쌍의 비율"
+    ],
+    "no_outcome_selection": "기준 차이가 큰 사례만 골라 AI를 실행하지 않으며 모든 사전 생성 사례와 식별 불가 비율을 보존",
+    "H1_primary_arm": "C-context/FULL; 모든 기관별 허용정보를 준 상태에서 필요한 차이가 유지되는지 검사",
+    "R0_role": "정보 부족 대조와 G_available 진단; R0에서 필요한 기준 차이가 없으면 과잉수렴 부재가 아니라 식별 기회 부족"
+  },
+  "review_cycles_completed": 2,
+  "revision_history": [
+    {
+      "round": 1,
+      "input": "plan\\LIBERA_실험설정_v6.0_20261027.json",
+      "input_sha256": "13c132f490cd5262312b967cefb6fa88799af0a01d6173dc474dd6c2e7719000",
+      "changes": [
+        "원초록의 전략적 이질성을 수리 과제의 관측 가능한 차이로 명확히 정의",
+        "FULL에서 충분한 정보를 줘도 필요한 차이를 잃는지 H1 검사",
+        "G 감소 대신 방향·크기를 포함한 쌍별 반응오차와 손실의 공동 개선 검사",
+        "다섯 주장별 IUT 및 Holm 구조로 변경",
+        "계획·최초배분·점검 산출물과 오류 전달 기록 구분",
+        "검색 자료와 기준거리의 식별 가능성 점검 추가"
+      ]
+    },
+    {
+      "round": 2,
+      "input": "plan\\LIBERA_실험설정_v6.1_20261027.json",
+      "input_sha256": "88952d4d835bc2512cb96b41b8ffebe3350e0aa209954006dce6d12eeee8b9a9",
+      "changes": [
+        "실행 불가 시 기존 보유 유지 정책으로 전체 시도를 주분석에 포함하고 원출력과 구분",
+        "기준배분의 불확실성을 G E |G| 및 정책 차이까지 전파",
+        "과잉수렴 완화에 필요한 네 조건을 결합검정으로 닫음",
+        "검정불능·입력/평가기 오류·실행 미완료의 처리 확정",
+        "보유 분류율과 h q 분모, 공식 제약의 검사 가능 범위 명시",
+        "B 코퍼스3문서 구조와 A/C의 실제문서 도구·시간분할 확정",
+        "원설계의 인프라 재시도와 실행버전·도구 계약 복원",
+        "파일럿 기반 표본 정밀도·시간·비용 점검과 사전 동결 규칙 추가"
+      ]
+    }
+  ],
+  "execution_policy": {
+    "all_attempts_primary": true,
+    "effective_allocation": "w_policy = final_raw_w if finite complete vector passes all prespecified allocation constraints, otherwise h",
+    "fallback_meaning": "제안이 실행 불가능하면 거래하지 않고 기존 보유를 유지. 원응답 정규화·수선·최적해 대체가 아님",
+    "fallback_feasible_before_model": true,
+    "stages": {
+      "planning_schema_failure": "원응답과 오류를 보존하고 해당 궤적은 중단해 h 유지",
+      "stage2_schema_or_incomplete_vector_failure": "보존 후 해당 궤적 중단해 h 유지",
+      "stage2_complete_vector_math_failure": "원비중과 실제 계산 피드백을 그대로3단계에 전달; 원래 허용된 최종 점검에서만 수정 기회",
+      "final_failure": "원응답 보존, 실패로 계상, h 유지; 최종 뒤 추가 수정 호출 없음",
+      "source_or_explanation_error": "비중이 기계적 제약을 만족하면 원비중은 보존하되 별도 사실·설명 오류로 기록. 투자판단의 경제적 진실을 자동 통과시키지 않음"
+    },
+    "report_separately": [
+      "모델 최종 원비중",
+      "유효 여부와 실패 유형",
+      "h 유지 여부",
+      "정책 실행 비중",
+      "유효 원출력에 조건부인 진단"
+    ],
+    "H1_attribution": "FULL의 전체 업무정책 수축·손실과 유효 원출력 진단을 분리. fallback에서 생긴 수축을 모델이 제안한 전략 수축으로 부르지 않음",
+    "failure_recommendation_rule": "공동 개선 검정과 별도로 관측 원출력 실패율·h유지율이 비교군보다 높아진 정책은 권고 보류. 비유의성으로 실패율 동등성을 선언하지 않음"
+  },
+  "runtime_and_failure_contract": {
+    "model_selection": "개발자료의 전체 이력 수용·구조화/도구 지원·시간·자원으로 선택. RAG 승리나 수렴 방향으로 선택하지 않음",
+    "freeze_fields": [
+      "실제 model snapshot/hash",
+      "양자화와 chat template",
+      "모듈별 도구 schema",
+      "tokenizer/context",
+      "temperature and supported seed or unsupported marker",
+      "output cap",
+      "two tool roundtrips per stage",
+      "request timeout",
+      "engine and API revision"
+    ],
+    "infra_retries": {
+      "eligible": [
+        "429",
+        "5xx",
+        "connection timeout before any content response"
+      ],
+      "max_retries": 2,
+      "same_request_bytes": true,
+      "client_auto_retry": false,
+      "backoff_seconds": [
+        2,
+        4
+      ],
+      "respect_retry_after": true
+    },
+    "non_retry_failures": [
+      "output truncation",
+      "JSON/schema error",
+      "weight/constraint failure",
+      "refusal",
+      "tool limit failure",
+      "citation or semantic error"
+    ],
+    "partial_stream": "내용이 일부 도착한 응답은 보존하고 incomplete 출력으로 계상; 유리한 재생성으로 교체하지 않음",
+    "version_drift": "다른 반환모델·template·도구 버전이면 실행 중단. 이미 완료한 비교와 새 버전을 혼합하지 않고 재개 가능한 동일 snapshot 여부부터 확인",
+    "balanced_order": "시나리오 안에서 펀드·조건·반복의 순서를 고정 seed로 균형화. 각 궤적 내부1→2→3 의존은 유지",
+    "actual_calls": "각 시도·재시도·tool call·잘림과 elapsed usage를 기록. 논리 슬롯과 실제 요청 수를 구분"
+  }
+}

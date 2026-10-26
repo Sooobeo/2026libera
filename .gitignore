@@ -23,11 +23,23 @@ Thumbs.db
 Desktop.ini
 *.swp
 *.swo
-# Disposable headless-browser profiles; screenshots and QA receipts stay tracked.
+~$*.docx
+~$*.xlsx
+~$*.pptx
+# Disposable headless-browser profiles; QA receipts stay tracked.
 /tmp/browser_profiles/
 /tmp/v491_visual/
+/tmp/*_browser_qa/
 # Verified portable runtime cache; provenance receipts remain under research/.
 /tmp/libera_ollama0351_20261025/
+
+# Regenerable document/browser QA previews, not manuscript figures or source PDFs.
+# Keep render scripts, receipts, hashes, and written visual reviews in Git.
+# Regenerate Word PDF/page files before rerunning checks that inspect those files.
+/research/document_v*/qa/word_*/*.png
+/research/document_v*/qa/word_*/page-*.txt
+/research/document_v*/qa/word_*/manuscript.pdf
+/research/manuscript_v*/qa/*.png
 
 # Downloaded installers and local model weights, not research evidence
 /tmp/**/OllamaSetup*.exe

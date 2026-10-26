@@ -1,0 +1,131 @@
+{
+  "audit_type": "final_read_only_structural_and_data_audit",
+  "auditor": "doc_data_check subagent",
+  "runtime": "C:\\Users\\Insun\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "scope": "DOCX ZIP/XML, illustrated source, original manuscript, dataset and figure manifest. No rendering. No desktop LibreOffice. Manuscript/data/figures/DOCX not modified. Only this audit report written.",
+  "overall_pass": true,
+  "checks": {
+    "counts": {
+      "pass": true,
+      "tables": 16,
+      "drawings": 5,
+      "native_equations": 2
+    },
+    "captions": {
+      "pass": true,
+      "table_numbers": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5",
+        "A6",
+        "A7",
+        "A8"
+      ],
+      "figure_ids": [
+        "fig01_allocations",
+        "fig02_distances",
+        "fig03_evidence",
+        "fig04_normalization",
+        "figA01_control_difference"
+      ]
+    },
+    "all_docx_table_cells_match_illustrated_source": {
+      "pass": true,
+      "table_count": 16
+    },
+    "appendix_A4_A8_weights": {
+      "pass": true,
+      "cells_checked": 220
+    },
+    "appendix_A4_A8_totals": {
+      "pass": true,
+      "cells_checked": 20
+    },
+    "moved_original_tables_6_8": {
+      "pass": true,
+      "mapping": {
+        "old6": "A1",
+        "old7": "A2",
+        "old8": "A3"
+      }
+    },
+    "original_tables_9_11_renumbered": {
+      "pass": true,
+      "mapping": {
+        "old9": "6",
+        "old10": "7",
+        "old11": "8"
+      }
+    },
+    "embedded_pngs_match_manifest": {
+      "pass": true,
+      "images_checked": 5,
+      "sha256": {
+        "fig01_allocations": "81d1a16d9a17f82a06815d1b44fdc3e904814452293bd6e878514e26a5144743",
+        "fig02_distances": "0e0c78c720ea98d377d1b8ed95db033a9b02e989f42be79f92fc5ca79f4192e0",
+        "fig03_evidence": "a76ca04a6c46ab98b2d2d1a1d3af32ea367d40e6f612a2dad97f6c84175cbb12",
+        "fig04_normalization": "e53508ffc2a8eaaf9f703a156827357dc27716282c75dc45a999fa82e9a1092f",
+        "figA01_control_difference": "fa472342fa53381822bf4172f4d707d19ecda2621edac8b9c35bb41cff87a9f8"
+      }
+    },
+    "receipts": {
+      "pass": true
+    },
+    "original_v520_sha_unchanged": {
+      "pass": true,
+      "sha256": "fa8ac61e87e9d559b7fc937a94f5dd51853f496f60412b488642d52b0e9cd3d7",
+      "baseline": "initial document audit and original build receipt"
+    },
+    "crossrefs": {
+      "pass": true,
+      "required_refs": {
+        "figure1_A1": true,
+        "figure2_A2": true,
+        "figure3_A3": true,
+        "figure4": true,
+        "table6": true,
+        "table7": true,
+        "table8": true,
+        "equation1": true,
+        "equation2": true
+      },
+      "obsolete_table_9_11_refs": [],
+      "prior_two_issues_fixed": true
+    },
+    "illustrated_paragraph_reference_prose_in_docx": {
+      "pass": true,
+      "missing": []
+    },
+    "equation_content": {
+      "pass": true,
+      "equations": [
+        "sigma_ann(w)=sqrt(252*w^T*Sigma*w)",
+        "TV(p,q)=1/2*sum(i=1..11,abs(p_i-q_i))"
+      ],
+      "native_structure": [
+        "radical and superscript",
+        "fraction, summation, subscripts and absolute delimiters"
+      ]
+    }
+  },
+  "limitations": [
+    "Visual pagination and layout are outside this structural audit.",
+    "Existing research claims and source veracity were not re-researched."
+  ],
+  "files": {
+    "docx": "C:\\Users\\Insun\\2026libera\\paper\\LIBERA_소논문_시각화포함_v5.2_20261026.docx",
+    "illustrated_source": "C:\\Users\\Insun\\2026libera\\research\\document_v520_20261026\\illustrated_manuscript.json",
+    "original_source": "C:\\Users\\Insun\\2026libera\\paper\\v520_manuscript_20261026.json",
+    "dataset": "C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\derived_allocation\\completed_five_condition_dataset.json"
+  }
+}
