@@ -1,0 +1,120 @@
+{
+  "schema": "final_literature_claim_review_1",
+  "reviewed_on": "2026-10-26",
+  "reviewer_role": "Independent finance and literature claim review; no manuscript content edits by this reviewer",
+  "status": "PASS",
+  "source": {
+    "path": "paper/v510_manuscript_20261026.json",
+    "sha256": "5060b054d8001f79b055867172a3b462f21658d00a2bf412e002acadc9c37613",
+    "block_count": 194,
+    "scope": "All ten newly added reference entries, their corresponding claims in sections2 and7-9, and related finance/RARR qualification claims"
+  },
+  "source_integrity_rule": "This review applies to the stated source hash. Any subsequent source change requires checking whether the reviewed passages or references changed; it is not an approval of an unobserved later version.",
+  "checks": [
+    {
+      "id": "finance_private_signal_scope",
+      "result": "PASS",
+      "finding": "원고는 ECB 펀드 환매 게임의 사적 신호와 본 연구의 공개 전망을 동일한 처치로 취급하지 않는다. 공통 임계 전략·믿음 틀로의 수렴을 서술하며 모든 개별 행동이 항상 같다고 확장하지 않는다.",
+      "primary_evidence": "ECB Working Paper3225 printed pp.9,28 / physical PDF pp.10,29, sectionIV.C and Figures11-12",
+      "url": "https://www.ecb.europa.eu/pub/pdf/scpwps/ecb.wp3225~52d8adae99.en.pdf"
+    },
+    {
+      "id": "finance_herding_scope",
+      "result": "PASS",
+      "finding": "Hansen·Lee 결과는 이론상 최적행동 지시를 준 순차 거래 게임의 합리적 군집행동으로 한정한다. 현실 시장에서의 현재 군집행동이나 일반 최적투자 효과를 주장하지 않는다.",
+      "primary_evidence": "FEDS2025-090 section6.5, printed p.22; Tables4-5",
+      "url": "https://www.federalreserve.gov/econres/feds/files/2025090pap.pdf"
+    },
+    {
+      "id": "finance_information_quality_scope",
+      "result": "PASS",
+      "finding": "Hornuf 등의 역사적 성과·위험 노출과 평균분산 효율 구분을 정확히 유지한다. 제안의 투자성과 개선이 입증되었다고 쓰지 않는다. 실제기관의 위험예산은 별도 확보할 자료로 다룬다.",
+      "primary_evidence": "CESifo11862 Results7-9 and conclusion, printed pp.23-27",
+      "url": "https://www.ifo.de/DocDL/cesifo1_wp11862.pdf"
+    },
+    {
+      "id": "explanations_are_testable_hypotheses",
+      "result": "PASS",
+      "finding": "Matton의 근거 개입과 Mayne의 행동 예측을 구별하고 상반된 시사점을 함께 반영한다. 공개 최종설명을 내부 사고과정의 직접 측정으로 취급하지 않으며 제안한 금융 반사실 검증을 완료했다고 하지 않는다.",
+      "primary_evidence": "ICLR2025 Matton abstract and source paper; PMLR306 Mayne abstract",
+      "urls": [
+        "https://proceedings.iclr.cc/paper_files/paper/2025/hash/b5ec50eb177908f21f78ed0d76ed525c-Abstract-Conference.html",
+        "https://proceedings.mlr.press/v306/mayne26a.html"
+      ]
+    },
+    {
+      "id": "aws_case_evidence_level",
+      "result": "PASS",
+      "finding": "물류 사례는 AWS·고객의 도입 보고로 표시하고 독립 대조평가 및 잔존 오류율의 부재를 명시한다. 문서 추출과 규칙의 분리 구조를 전용하며 투자전망의 경제적 진실을 형식적으로 증명할 수 있다고 하지 않는다.",
+      "primary_evidence": "Official case study Opportunity/Solution/Outcome; April16 blog Operational engineering: Amazon Logistics",
+      "urls": [
+        "https://aws.amazon.com/solutions/case-studies/amazon-logistics-case-study/",
+        "https://aws.amazon.com/blogs/machine-learning/how-automated-reasoning-checks-in-amazon-bedrock-transform-generative-ai-compliance/"
+      ]
+    },
+    {
+      "id": "aws_refinement_scope",
+      "result": "PASS",
+      "finding": "규칙 문제와 변수 의미·번역 모호성의 구분, 변경 승인 후 다른 시험까지 재확인하는 구조가 공식 기술 문서에 근거한다. 공급업체의 최대99% 주장을 본 실험의 예상 성능으로 이전하지 않는다.",
+      "primary_evidence": "August3 blog two-step validation pipeline and five-step loop",
+      "url": "https://aws.amazon.com/blogs/machine-learning/automated-reasoning-policy-refinement-in-amazon-bedrock/"
+    },
+    {
+      "id": "travel_planner_scope",
+      "result": "PASS",
+      "finding": "93.9%는 Claude-3를 사용한 방법의 TravelPlanner 테스트1000과제 최종 통과율로 한정한다. 실서비스 효과나 투자판단 성능으로 일반화하지 않고 제약 충돌을 드러내는 구조만 참고한다.",
+      "primary_evidence": "NAACL2025 Hao etal., Table1 and sections3.2-3.4",
+      "url": "https://aclanthology.org/2025.naacl-long.176/"
+    },
+    {
+      "id": "airline_preprint_scope",
+      "result": "PASS",
+      "finding": "Reddy 연구는 사전공개본과 가상 항공 업무로 표시한다. 같은50과제의 seed 반복과 새 과제 검증을 구별하고, 부정확한 검사와 같은 과제에서 규칙 작성·평가한 한계를 명시한다. 실제 항공사 도입이나 보편적 성공을 주장하지 않는다.",
+      "primary_evidence": "arXiv2607.07405v2 sections4.2,5.1,5.5,7; abstract/version metadata",
+      "url": "https://arxiv.org/html/2607.07405v2"
+    },
+    {
+      "id": "repair_dependency_claim",
+      "result": "PASS",
+      "finding": "RARR의 사실 수정 후 후속 추론 미갱신 사례를 의존 판단의 재검토 동기로 사용한다. 원고의 참조 관계를 모델 내부 인과 그래프의 완전한 복원이라고 주장하지 않는다.",
+      "primary_evidence": "RARR section6.1 and Figure7e, printed p.16484; section6.3, printed p.16485",
+      "url": "https://aclanthology.org/2023.acl-long.910.pdf"
+    },
+    {
+      "id": "proposal_not_validated_remedy",
+      "result": "PASS",
+      "finding": "문헌 벤치마크의 성과 수치를 금융 개선 효과로 전용하지 않는다. 공통 기본안·변경안·근거 개입·선택 상태 검사·공유 오류 복구는 반증 가능한 제안이고 실제 개선 효과는 새 자료 검증 대상으로 남는다."
+    },
+    {
+      "id": "reference_coverage",
+      "result": "PASS",
+      "finding": "새로 추가한10개 참고문헌은 모두 관련 본문이나 표에 사용된다. 사용하지 않는 이전 PAL/ALCE/Huang 참고문헌은 제거되었고, 남은 RARR는 본문과 서지에서 Gao2023으로 통일되었다."
+    }
+  ],
+  "new_reference_metadata": [
+    {"id":"hansen2025","status":"PASS","verified":"Hansen A.L.; Lee S.J.;2025; FEDS2025-090; DOI10.17016/FEDS.2025.090"},
+    {"id":"anand2026a","status":"PASS","verified":"Anand/Kazinnik/Leonello/Panetti; ECBWP3225;2026; DOI10.2866/4103076. Primary PDF final-page copyright2026 and codeQB-01-26-112-EN-N override the inconsistent2025 citation in the author bulletin."},
+    {"id":"anand2026b","status":"PASS","verified":"Same four authors; May21,2026; ECB Research Bulletin143; title and primaryURL match."},
+    {"id":"matton2025","status":"PASS","verified":"Matton/Ness/Guttag/Kıcıman; Walk the Talk?; ICLR2025; official proceedingsURL matches."},
+    {"id":"mayne2026","status":"PASS","verified":"Mayne/Kang/Gould/Ramchandran/Mahdi/Siegel; ICML2026; PMLR306;87135-87185; official BibTeX matches."},
+    {"id":"diallo2026a","status":"PASS","verified":"Nafi Diallo/Adewale Akinfaderin/Aishwarya Natarajan; April16,2026; title and primaryURL match."},
+    {"id":"diallo2026b","status":"PASS","verified":"Nafi Diallo/Fernando Galves/Ferhat Erata; August3,2026; title and primaryURL match."},
+    {"id":"aws_logistics","status":"PASS","verified":"Corporate authorAmazon Web Services; no fixed publication date asserted; title and October26,2026 retrieval date retained."},
+    {"id":"hao2025","status":"PASS","verified":"Hao/Chen/Zhang/Fan; NAACL2025 Volume1;3434-3483; DOI10.18653/v1/2025.naacl-long.176."},
+    {"id":"reddy2026","status":"PASS","verified":"Vikas Reddy/Sumanth Reddy Challaram/Abhishek Basu; arXiv2607.07405v2; July11,2026; preprint status explicit."}
+  ],
+  "fix_history": [
+    {
+      "issue": "ECB Working Paper3225 cited2025 following an inconsistent author-bulletin reference",
+      "resolution": "Root updated paper citation to2026a with DOI10.2866/4103076, author-bulletin citation to2026b, and all corresponding body references. Reviewer corrected finance_evidence version note.",
+      "resolved": true
+    },
+    {
+      "issue": "Three retained but unused generic v5.0 references and remaining RARR year suffix",
+      "resolution": "Root removed PAL2023,ALCE2023,Huang2024 and changed Gao2023c toGao2023 in both body and RARR reference.",
+      "resolved": true
+    }
+  ],
+  "remaining_required_fixes": [],
+  "review_limits": "Targeted primary-source literature and claim review, not a systematic literature review, external peer review, validation of the proposed workflow's efficacy, or a new experiment. Existing frozen financial data and experiment archives were not edited."
+}

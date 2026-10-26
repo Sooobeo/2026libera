@@ -1,0 +1,35 @@
+{
+  "schema": "explanation_behavior_literature_1",
+  "checked_at": "2026-10-26",
+  "sources": [
+    {
+      "id": "matton2025",
+      "authors": ["Katie Matton", "Robert Osazuwa Ness", "John Guttag", "Emre Kıcıman"],
+      "year": 2025,
+      "title": "Walk the Talk? Measuring the Faithfulness of Large Language Model Explanations",
+      "venue": "The Thirteenth International Conference on Learning Representations",
+      "url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/b5ec50eb177908f21f78ed0d76ed525c-Abstract-Conference.html",
+      "fulltext_url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/b5ec50eb177908f21f78ed0d76ed525c-Paper-Conference.pdf",
+      "locators": ["Sections 2 and 3 causal concept faithfulness and counterfactual estimation", "Section 4 medical QA and social-bias experiments"],
+      "verified_claim_ko": "설명에서 중요하다고 한 입력 개념을 바꿨을 때의 응답 분포와 설명의 대응을 반사실 입력과 계층 베이지안 추정으로 조사하였다. 의료 QA에서도 설명이 근거의 영향을 잘못 나타내는 사례를 발견하였다.",
+      "application_ko": "기관 근거를 따랐다는 서술을 입력 근거의 제거·교체에 대한 관찰 가능한 반응으로 검토한다. 모델의 자기보고만으로 근거 사용을 확정하지 않는다.",
+      "limits_ko": "선택형 문맥 QA에서 개념 개입의 영향을 추정한 방법이다. 11개 산업의 연속 배분이나 본 연구의 내부 추론을 검증한 것이 아니다. 현재 실험에는 새 반사실 호출이 없으며 대응 검증은 제안 단계이다."
+    },
+    {
+      "id": "mayne2026",
+      "authors": ["Harry Mayne", "Justin Singh Kang", "Dewi Sid William Gould", "Kannan Ramchandran", "Adam Mahdi", "Noah Y. Siegel"],
+      "year": 2026,
+      "title": "A Positive Case for Faithfulness: LLM Self-Explanations Help Predict Model Behavior",
+      "venue": "Proceedings of the 43rd International Conference on Machine Learning",
+      "volume": 306,
+      "pages": "87135–87185",
+      "url": "https://proceedings.mlr.press/v306/mayne26a.html",
+      "supporting_author_page": "https://oxrml.com/research/faithfulness/",
+      "locators": ["PMLR abstract and publication metadata"],
+      "verified_claim_ko": "18개 모델과 약 7,000개 반사실에서 자기설명이 관련 입력에 대한 모델 행동 예측을 개선했지만 심각하게 오도하는 설명도 남았다. 설명을 모두 폐기하기보다 검증 가능한 행동 예측에 활용할 근거이다.",
+      "limits_ko": "행동 예측의 유용성은 사실적 정확성, 투자 적합성 또는 내부 추론의 완전한 관측을 뜻하지 않는다. 본문은 연구의 상세 비율을 이전하거나 본 과제 효과크기로 사용하지 않는다."
+    }
+  ],
+  "design_inference_ko": "자료 요약의 정확성과 실제 선택의 연결을 분리해, 근거의 유무·내용 변화에는 설명에 맞게 반응하고 의미 없는 이름·배치 변화에는 안정적인지를 함께 검사한다. 변화가 없더라도 포화·제약·대체 근거를 설명할 수 있으므로 자동 실패로 정하지 않는다.",
+  "experiment_scope": "No new experiment calls. Existing public final explanations are observable reports, not internal chains of thought."
+}

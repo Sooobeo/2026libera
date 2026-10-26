@@ -1,0 +1,96 @@
+{
+  "schema_version": "paper_evidence_to_solution_review_1",
+  "review_scope": "Read-only review of completed frozen experiment and repository outline; recommendations are new design, not evaluated interventions.",
+  "canonical_inputs": [
+    "paper/v493_manuscript_20261019.json",
+    "paper/LIBERA_텀페이퍼_초안_20261017.html",
+    "plan/문규리 제안서 상세_최종.html",
+    "research/last_final_20261026/five_condition_audit_index.json",
+    "research/last_final_20261026/derived_allocation/completed_five_condition_dataset.json",
+    "research/last_final_20261026/reader_notes.json",
+    "research/last_final_20261026/protocol_and_review.json"
+  ],
+  "outline_review": {
+    "current_manuscript": ["6 현재까지의 구현과 검증", "7 논의와 한계", "8 결론"],
+    "prior_term_paper": ["5 반론과 대안적 설명", "6 조직의 대응 방향", "7 한계와 후속 연구", "8 결론"],
+    "proposal_logic": "결과에 따라 달라지는 해결방안: 차이·품질 동시 회복 시 효과 단계 채택, 혼합 결과 시 전달경로 보완, 무효·악화 시 개선 또는 제외.",
+    "recommendation": "현행 1~5장 연구질문·설계를 유지하고 6장을 실험 결과로 교체한다. 결과 뒤에 연구질문별 해석·반론, 조직의 대응 방향, 한계·후속검증, 결론을 배치한다. 기존 초안의 대응 방향 목차 의도를 복원하되 초기·후기 제공의 우월성을 선언하지 않는다."
+  },
+  "evidence_to_solution": [
+    {
+      "id": "arithmetic_boundary",
+      "observation": "Fidelity E/L, UBS E/L, C 최종 원시합은 각각 92%, 88%, 95%, 101%, 101.4%이다. 모든 조건에서 외부 파생배분은 10,000단위로 확정된다.",
+      "supported_claim": "이 사례에서는 계산 피드백 뒤에도 AI의 원시 비중 합계가 완전투자 조건을 충족하지 않았고, 결정론적 후처리가 산술적 완결성을 별도로 제공했다.",
+      "design": "11개 산업의 유한·비음수·양의 총합 자격검사 후 정확한 비례 정규화와 최대잔여 배분을 적용한다. raw, raw_sum, derived_units, algorithm_version을 함께 저장한다. 결측·음수·비유한·영총합은 자동으로 메우지 않고 보류한다.",
+      "acceptance_check": "자격 있는 모든 벡터는 정확히 10,000단위; 원시값과 설명 보존; 부적격 벡터는 계산 불가 이유 기록.",
+      "boundary": "88%에서 100%로의 변화는 단순 반올림이 아니며, 이 성공은 의미적 정확성 또는 투자품질을 검증하지 않는다."
+    },
+    {
+      "id": "numeric_facts",
+      "observation": "Fidelity L, UBS L, C 최종안은 IT 과거 누적수익률 약 14.99%를 149.92%, 연율 변동성 약 33.69%를 21.2%로 제시했다.",
+      "supported_claim": "인용 ID가 유효해도 값·단위·기간이 맞는 수치 설명을 보장하지 않는다.",
+      "design": "숫자를 fact_id, sector, metric, decimal_value, display_unit, observation_window, release_date, source_locator, formula로 저장한다. 검증된 숫자만 계산기가 표시용 문장에 삽입하고 일간·연율, 소수·퍼센트 전환을 검사한다.",
+      "acceptance_check": "최종안에 등장하는 모든 검사 가능한 숫자를 같은 사실레코드와 대조하고 오류·미해결·누락을 분리한다.",
+      "boundary": "현재 자료의 역사 수익률을 미래 수익률로 바꾸거나 12개월 실현성과를 검증했다고 서술하지 않는다."
+    },
+    {
+      "id": "source_attribution",
+      "observation": "네 기관 조건의 각 11개 source_reading 및 등급 표기는 제공패킷과 대응했지만, UBS L IT에서는 Neutral의 이유를 가격 반영·순환 정점으로 추정했다. 해당 이유는 제공패킷에 없다.",
+      "supported_claim": "제공자료 재현과 해당 자료에 근거한 선택 설명은 다른 검토 대상이다.",
+      "design": "기관이 실제 밝힌 등급·이유·적용범위와 모델의 추가 추론을 별도 열로 둔다. 각 선택 이유에 문서 위치, 원문 짧은 구절, 채택·조정·비채택, 별도 시장근거를 연결한다. 원문에 없는 이유는 미확인으로 표시한다.",
+      "acceptance_check": "모든 기관귀속 주장은 해당 구절로 뒷받침되거나 추정임이 명시된다. 등급만 있는 자료에는 이유를 임의로 채우지 않는다.",
+      "boundary": "원문에 없는 이유라는 말은 연구자가 공급한 패킷 범위다. UBS L의 likely/may는 명시적 추측이며 확정적 허위 기관발언과 구분한다."
+    },
+    {
+      "id": "decision_consistency",
+      "observation": "UBS L IT는 원시 38%에서 35%로 감소했지만 increasing이라 서술했고, 35%가 보고 비교비중 38% 및 정규화 비교비중 약 38.04%보다 낮은데도 significantly above the benchmark라고 썼다.",
+      "supported_claim": "문서 등급이 맞아도 수정량·비교대상과 실제 제안의 연결이 어긋날 수 있다.",
+      "design": "설명의 증가·감소·유지 및 초과·미달 주장을 대상 업종과 비교기준에 연결한다. 계산된 raw_delta와 benchmark_gap을 대조하며 보정 뒤 값은 별도 열로 검사한다. 상충 주장은 수정되기 전 최종 승인 대기 상태로 둔다.",
+      "acceptance_check": "자체 초안 대비 방향과 명시된 비교기준 방향에 모순이 없고, 기준이 명시되지 않은 주장은 미해결로 남긴다.",
+      "boundary": "Neutral을 정확한 기준비중 명령으로 바꾸지 않는다. 수학적 보정으로 설명 오류가 사라졌다고 간주하지 않는다."
+    },
+    {
+      "id": "procedural_timing",
+      "observation": "자기 초안→최종 TV는 Fidelity E 0%, L 13.45%, UBS E 0%, L 4.49%, C 0.55%이다.",
+      "supported_claim": "기관자료를 늦게 받은 사례에서 더 큰 변화가 있었고 기관자료가 없는 재검토에서도 변화가 있었다.",
+      "design": "근거는 초안부터 접근 가능하게 유지하는 후보 절차를 설계하되, 최종 단계에는 신규 자료와 이전안의 변경·유지 이유를 반드시 대조하는 검토표를 둔다. 어느 시점이 우월한지는 고정된 초안·동일 노출량·무작위 순서의 별도 검증 대상으로 남긴다.",
+      "acceptance_check": "제공시점 효과를 평가할 후속검증은 이력·노출·입력 길이와 결과규칙을 사전에 정하고 새 자료에서 시행한다.",
+      "boundary": "E의 0은 자료 무시 증거가 아니다. L의 큰 변화도 품질 향상 증거가 아니다. C의 TV를 빼서 순수 인과효과를 계산하지 않는다."
+    },
+    {
+      "id": "difference_and_quality",
+      "observation": "최종 파생배분의 기관간 TV는 초기 3.86%, 후기 13.49%; 같은기관 E-L은 6.21%, 6.66%; C 대비 네조건은 9.63%, 12.98%, 6.24%, 4.76%이다.",
+      "supported_claim": "공통 AI의 산출물이 모두 같지는 않았지만, 산출물 차이만으로 근거 반영이 잘되었다고 판단할 수 없다.",
+      "design": "관리지표는 근거 연결, 수치·방향 모순, 누락·미해결, 산술 자격, 처리시간·비용, 배분 거리를 분리해서 기록한다. 서로 다른 조건의 차이를 늘리는 것을 목표함수로 삼지 않는다.",
+      "acceptance_check": "거리와 오류를 별도로 보고하고 검토단위가 다른 코딩 수를 통합 정확도나 합의율로 만들지 않는다.",
+      "boundary": "시장 전체 동질화, 실제 기관의 전략 차이, 수익성 우열을 입증하지 않는다."
+    },
+    {
+      "id": "review_responsibility",
+      "observation": "다섯 최종안의 의미 검토와 새 가림 검토는 AI 보조이며, 일부 쟁점의 코딩 단위와 분류가 다르고 완전한 맹검 및 사람 타당화는 없다.",
+      "supported_claim": "재검토 기록은 추적 가능성을 높이지만 정답이나 독립 신뢰도의 증거는 아니다.",
+      "design": "자동 검사는 계산·식별자·구조에 한정하고, 기관 의미와 설명의 정합성은 출처를 볼 수 있는 검토자에게 배정한다. 해결되지 않은 쟁점은 승인권자가 원문·숫자·대안을 보고 수용 또는 보류 이유를 기록한다.",
+      "acceptance_check": "검토 결과, 근거 위치, 수정자, 승인자, 미해결 사유와 버전 이력을 남긴다. 후속 연구에서 독립 인간 코딩을 별도로 확보한다.",
+      "boundary": "새 업무절차의 오류감소·검토시간 절감 효과는 아직 측정되지 않았다."
+    }
+  ],
+  "mandatory_manuscript_updates": [
+    "초록·결론의 실증결과 없음/실행중 문장을 완료 결과로 변경",
+    "4.3의 사후정규화 하지 않음 문장을 원응답 불변+별도 파생배분으로 수정",
+    "5.1 및 5.4의 원시 유효벡터 거리만 사용 규칙에 공개된 사후 endpoint 변경 이력을 반영",
+    "완료5조건10논리단계, 실제11요청(중단실패1), 별도 Q3/July 본실험0호출 명시",
+    "자료 출처의 본실험용 표현을 미실행 후보자료로 한정; Q3 보고서의 공통 비교비중 출처 역할은 유지",
+    "계산 참고안의 동일비중·최소분산을 AI 실험결과와 구분",
+    "부록 시점과 보관경로를 완료 색인에 연결하되 원래 frozen files는 수정하지 않음"
+  ],
+  "overclaim_checks": [
+    "기관별 실제 운용 목표·최적비중은 주어지지 않았음",
+    "5조건, 한 모델, 한 시장상황; 55산업행·13비교쌍을 독립 표본으로 계산하지 않음",
+    "처음 출력 확인 뒤 분석역할·산술 endpoint가 수정된 탐색적 연구임",
+    "직접 제공한 패킷을 사용했으므로 실제 검색 RAG 성능검증이 아님",
+    "원자료 등급의 재현을 종합 설명·의사결정의 정확한 해석으로 확대하지 않음",
+    "TV는 배분 차이이며 실제 매매회전율·수익률·정확도 지표가 아님",
+    "해결 방향성은 관찰된 실패를 겨냥한 설계 제안이며 입증된 효과가 아님"
+  ],
+  "frozen_files_modified": false
+}

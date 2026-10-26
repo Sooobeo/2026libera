@@ -1,0 +1,253 @@
+{
+  "schema": "paper_v500_render_review_1",
+  "status": "pass",
+  "source_sha256": "c998e8709d0c652fa6f342f045962d9033567f635e887b05cf98dc19450e136f",
+  "docx_sha256": "8734f88c7d472ef991d4c241d69ea80ea1a42fe38a9a5e5a4f69ce48edcc72bc",
+  "html_sha256": "6b95644c143c5ec65365aaf7a70807cece3955d12e134a419a26c5b0126a4a09",
+  "docx_bytes": 66474,
+  "html_bytes": 76335,
+  "docx_pages": 26,
+  "word_render_receipt": "qa/word_final/receipt.json",
+  "word_render_receipt_sha256": "d6d0676edc6e34d4f03dde8c624ea04dfc3e4d5b1fe173c922f2e19e00e742f0",
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26
+  ],
+  "review_method": "Every final page PNG opened and visually inspected at full image size at 120 DPI; root additionally inspected pages 1, 10, 14, 18, 21, 26.",
+  "findings": {
+    "clipped_text": false,
+    "overlap": false,
+    "missing_korean_glyphs": false,
+    "orphan_table_header": false,
+    "broken_table_rows": false,
+    "incorrect_page_number": false,
+    "unresolved_layout_defects": []
+  },
+  "layout_change": "Keep repeating table header paragraphs with the first data row; fixed orphan table 1 header from initial render. Formal A4 Malgun Gothic body 11pt retained.",
+  "structural_verification": "qa/structural_verification.json",
+  "structural_verification_sha256": "c7af9af7adc4267d07bd72a4dbe61e5d9df6341b96d81d7947c8c374be49837c",
+  "source_text_nodes_verified": 474,
+  "table_count": 10,
+  "html_checks": {
+    "desktop_width": 1440,
+    "mobile_width": 390,
+    "horizontal_page_overflow": false,
+    "missing_toc_targets": [],
+    "text_overflow_elements": [],
+    "representative_screens_opened": [
+      "top.png",
+      "section-7.png",
+      "section-9.png",
+      "mobile-top.png"
+    ],
+    "duplicate_toc_numbering_removed": true
+  },
+  "local_reference_links": [
+    {
+      "target": "../research/last_final_20261026/derived_allocation/completed_five_condition_dataset.json",
+      "exists_relative_to_document_folder": true
+    },
+    {
+      "target": "../research/last_final_20261026/five_condition_audit_index.json",
+      "exists_relative_to_document_folder": true
+    },
+    {
+      "target": "../research/delivery_20261026/completion_index.json",
+      "exists_relative_to_document_folder": true
+    },
+    {
+      "target": "../research/last_final_20261026/results_explained_ko.html",
+      "exists_relative_to_document_folder": true
+    },
+    {
+      "target": "../research/last_final_20261026/protocol_and_review.json",
+      "exists_relative_to_document_folder": true
+    }
+  ],
+  "renderer_limitation": "Packaged render_docx.py was attempted and logged; selected Windows managed runtime has libreOfficeVersion null and no bundled LibreOffice. No user desktop or unbundled portable LibreOffice was used. Final rendering instead used an independently created own Microsoft Word COM instance opened read-only and exported without saving, then managed Poppler rasterization.",
+  "runtime_python": "C:/Users/Insun/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+  "bundled_libreoffice_path": null,
+  "qa_intermediates_are_not_deliverables": true,
+  "pages": [
+    {
+      "page": 1,
+      "png": "qa/word_final/page-1.png",
+      "sha256": "7f6c7c68558105cee356cf1673ecee14e31a0e7c07687fa25cede8ab1595561c",
+      "review": "pass"
+    },
+    {
+      "page": 2,
+      "png": "qa/word_final/page-2.png",
+      "sha256": "3cc09485211f419f385c0979a1e2f59e0a18976d7732b118d9feb180a253bf55",
+      "review": "pass"
+    },
+    {
+      "page": 3,
+      "png": "qa/word_final/page-3.png",
+      "sha256": "acbc88d1cd835e92f18b001fc0fe8ee1b6ac3e6213a84925ed274f1ce015e258",
+      "review": "pass"
+    },
+    {
+      "page": 4,
+      "png": "qa/word_final/page-4.png",
+      "sha256": "ddd699ddcd58c92e9e8743040e73c941cf32b0a610cae6c6d517aa5cbacbd146",
+      "review": "pass"
+    },
+    {
+      "page": 5,
+      "png": "qa/word_final/page-5.png",
+      "sha256": "ccbd4767f895776c5ca5ca75246505ee0144b753718542ac3cd21bc805082028",
+      "review": "pass"
+    },
+    {
+      "page": 6,
+      "png": "qa/word_final/page-6.png",
+      "sha256": "b843ef387bd43b6cbae67ca08cd3bde5c59ebae2ec6262d7eb7d629297dbe683",
+      "review": "pass"
+    },
+    {
+      "page": 7,
+      "png": "qa/word_final/page-7.png",
+      "sha256": "3b50ca891146d5941039c1f38a79cfb58ef099bd351afd36b6bb8a20aef00c32",
+      "review": "pass"
+    },
+    {
+      "page": 8,
+      "png": "qa/word_final/page-8.png",
+      "sha256": "84c30b74d2a30d7675f2fec20b3bcdbbd7fccdf1f4da0c99981404e2cfe36d71",
+      "review": "pass"
+    },
+    {
+      "page": 9,
+      "png": "qa/word_final/page-9.png",
+      "sha256": "70c4463de5e4cd5d8aa824fade4e74c34a2c7fc260b733919db92dae8ac093f1",
+      "review": "pass"
+    },
+    {
+      "page": 10,
+      "png": "qa/word_final/page-10.png",
+      "sha256": "807ffafdcbe758254572b354d537b524c8ef762cb65c5752cad1db1236bab624",
+      "review": "pass"
+    },
+    {
+      "page": 11,
+      "png": "qa/word_final/page-11.png",
+      "sha256": "21271b84f3f5d7092c4e83c66bab4072cedcea2d09a5fe2d9f65f3bf69158a2a",
+      "review": "pass"
+    },
+    {
+      "page": 12,
+      "png": "qa/word_final/page-12.png",
+      "sha256": "7f74a969b2800ceeb08ac31eb81b65045b4408bfe0942fd3912a9bb6180c7999",
+      "review": "pass"
+    },
+    {
+      "page": 13,
+      "png": "qa/word_final/page-13.png",
+      "sha256": "b2a54320eb0b4a5cccbbcd054ded91ffa8f651725a652c5c31479ecb9f05e312",
+      "review": "pass"
+    },
+    {
+      "page": 14,
+      "png": "qa/word_final/page-14.png",
+      "sha256": "32d66e5fc969fbff359e996639f77f62dad0b745d8e0a4f9eb0fdeb160d65ecc",
+      "review": "pass"
+    },
+    {
+      "page": 15,
+      "png": "qa/word_final/page-15.png",
+      "sha256": "3fa11b8b865eeb8f31b7472e42012f30c519e95c872be8c1022db1a6c21c3a64",
+      "review": "pass"
+    },
+    {
+      "page": 16,
+      "png": "qa/word_final/page-16.png",
+      "sha256": "47c789c7654d309bce42ab4bf96a69067c9d4dbf4d54d1b0a432f4e2764ca105",
+      "review": "pass"
+    },
+    {
+      "page": 17,
+      "png": "qa/word_final/page-17.png",
+      "sha256": "c1ce1f9064cb90413159f76ee49259b9fe5177e41a9fcb3022320571c218ff25",
+      "review": "pass"
+    },
+    {
+      "page": 18,
+      "png": "qa/word_final/page-18.png",
+      "sha256": "0fcb8f6dd27fb05d1e0016a7016488a3e3ad060acd7bc7c4e9e8f99dff1f85b4",
+      "review": "pass"
+    },
+    {
+      "page": 19,
+      "png": "qa/word_final/page-19.png",
+      "sha256": "9b2016c22c5871ddb27bea605a3ec7e0bda5fc6b489ca5df8893dc10f85480c6",
+      "review": "pass"
+    },
+    {
+      "page": 20,
+      "png": "qa/word_final/page-20.png",
+      "sha256": "fe4ebb23008f4eb9cd2149b6fd9864043547721d0b0a60e5da8b7a5dd80868d3",
+      "review": "pass"
+    },
+    {
+      "page": 21,
+      "png": "qa/word_final/page-21.png",
+      "sha256": "58791049a432c37026061023797f59b597ba02c41ed0d64cf2141148c9705e3a",
+      "review": "pass"
+    },
+    {
+      "page": 22,
+      "png": "qa/word_final/page-22.png",
+      "sha256": "72701d881702ac31185754c2cb99c1f515fec69a33ee9eac5fa42278b9c89331",
+      "review": "pass"
+    },
+    {
+      "page": 23,
+      "png": "qa/word_final/page-23.png",
+      "sha256": "fa3ae34b7198b6d74ac726ecb847c86fe8895013e386046f818b0b8565fbe5b0",
+      "review": "pass"
+    },
+    {
+      "page": 24,
+      "png": "qa/word_final/page-24.png",
+      "sha256": "9502222a569558f7966843ea2b84117877a8387fcd430e61cc7c476f4cc45672",
+      "review": "pass"
+    },
+    {
+      "page": 25,
+      "png": "qa/word_final/page-25.png",
+      "sha256": "8719eaaa2e4a64e4f2c27519a2758bacac5224bc8c627662d0eacbf044947acb",
+      "review": "pass"
+    },
+    {
+      "page": 26,
+      "png": "qa/word_final/page-26.png",
+      "sha256": "78a45bf0d70197d91344de2841683d0b553d0fdfd03bd6544236c4aae6af80fc",
+      "review": "pass"
+    }
+  ]
+}

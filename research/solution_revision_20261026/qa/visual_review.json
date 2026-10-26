@@ -1,0 +1,387 @@
+{
+  "schema": "paper_v510_render_review_1",
+  "status": "pass",
+  "completed_at_utc": "2026-10-26T10:54:33.156886+00:00",
+  "source_sha256": "5060b054d8001f79b055867172a3b462f21658d00a2bf412e002acadc9c37613",
+  "docx_sha256": "dcf2ef1c9c004949e9e85a76087598a7c1bb8858517871239a42bfdb1a1124d0",
+  "html_sha256": "4f03e68d88a323afcb786b1c2b58a446da45d2a41b47cab1aac29495a28862e5",
+  "docx_bytes": 71248,
+  "html_bytes": 89810,
+  "docx_pages": 30,
+  "table_count": 11,
+  "source_text_nodes_verified": 508,
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30
+  ],
+  "reviewers": [
+    {
+      "reviewer": "root",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "basis": "Root explicitly confirmed opening every FINAL word_final PNG page 1 through 15 at original 120 DPI size and finding no clipping, overlap, missing glyphs, or orphan table headers; tables 1 through 8 readable."
+    },
+    {
+      "reviewer": "cross_industry_benchmark",
+      "pages": [
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "basis": "Opened every FINAL word_final PNG page 16 through 30 at original dimensions; all passed."
+    }
+  ],
+  "findings": {
+    "clipped_text": false,
+    "overlap": false,
+    "missing_korean_glyphs": false,
+    "orphan_table_header": false,
+    "broken_table_rows": false,
+    "incorrect_page_number": false,
+    "unresolved_layout_defects": []
+  },
+  "word_render_receipt": "qa/word_final/receipt.json",
+  "word_render_receipt_sha256": "e05b30270d09c9a61c2085e64b99714e5a33ffe2fe63cffe8d8d7deabeb98d87",
+  "pdf_sha256": "40ab8d9566ac5865b3c29e8281da676f3de0edfc680929f55419c29e3bfa8b6c",
+  "raster_receipt": "qa/word_final/raster_receipt.json",
+  "raster_receipt_sha256": "ca2bf86edc8713835e9e43129f73ccbb1fb4f21aa238cff77a6613a12378cedd",
+  "structural_verification": "qa/structural_verification.json",
+  "structural_verification_sha256": "3dcd168777f5124b83a940e30f6e7ce572db649ed74159a98501a860c4333cea",
+  "html_checks": {
+    "receipt": "qa/html/receipt.json",
+    "receipt_sha256": "ce0fc1ad586a96b918a025e7ec2e809f3026975d6cf228ed2bcfb370b32b391f",
+    "desktop_width": 1440,
+    "mobile_width": 390,
+    "horizontal_page_overflow": false,
+    "missing_toc_targets": [],
+    "text_overflow_elements": [],
+    "representative_screens_opened": [
+      "top.png",
+      "section-8.png",
+      "section-9.png",
+      "mobile-top.png"
+    ],
+    "local_reference_targets": [
+      {
+        "url": "../research/last_final_20261026/derived_allocation/completed_five_condition_dataset.json",
+        "target": "C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\derived_allocation\\completed_five_condition_dataset.json",
+        "exists": true,
+        "kind": "file"
+      },
+      {
+        "url": "../research/last_final_20261026/five_condition_audit_index.json",
+        "target": "C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\five_condition_audit_index.json",
+        "exists": true,
+        "kind": "file"
+      },
+      {
+        "url": "../research/delivery_20261026/completion_index.json",
+        "target": "C:\\Users\\Insun\\2026libera\\research\\delivery_20261026\\completion_index.json",
+        "exists": true,
+        "kind": "file"
+      },
+      {
+        "url": "../research/last_final_20261026/results_explained_ko.html",
+        "target": "C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\results_explained_ko.html",
+        "exists": true,
+        "kind": "file"
+      },
+      {
+        "url": "../research/last_final_20261026/protocol_and_review.json",
+        "target": "C:\\Users\\Insun\\2026libera\\research\\last_final_20261026\\protocol_and_review.json",
+        "exists": true,
+        "kind": "file"
+      },
+      {
+        "url": "../research/solution_revision_20261026/",
+        "target": "C:\\Users\\Insun\\2026libera\\research\\solution_revision_20261026",
+        "exists": true,
+        "kind": "directory"
+      }
+    ]
+  },
+  "renderer_limitation": "The packaged render_docx.py was attempted once on the initial v5.1 authoring pass and logged. The managed Windows runtime has libreOfficeVersion null and no bundled LibreOffice. No desktop or unbundled LibreOffice was used. Final rendering used a newly created and ownership-verified Microsoft Word COM instance, opened the final DOCX read-only, exported PDF without saving, closed and quit only the owned instance; managed Poppler rasterized every page.",
+  "bundled_libreoffice_path": null,
+  "packaged_initial_attempt_receipt": "qa/packaged_render_receipt.json",
+  "packaged_initial_attempt_receipt_sha256": "11b3c16abed2b776e5c710a17fac524894c6b8490aa0ce2d7175f6830a671ab8",
+  "final_word_cleanup": {
+    "input_docx_hash_unchanged": true,
+    "owned_process_exited": true,
+    "existing_word_processes_preserved": true,
+    "cleanup_errors": []
+  },
+  "previous_v50_files_preserved": {
+    "docx_sha256": "8734f88c7d472ef991d4c241d69ea80ea1a42fe38a9a5e5a4f69ce48edcc72bc",
+    "html_sha256": "6b95644c143c5ec65365aaf7a70807cece3955d12e134a419a26c5b0126a4a09"
+  },
+  "runtime_python": "C:\\Users\\Insun\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "artifact_operation_marker_success_count": 1,
+  "qa_intermediates_are_not_deliverables": true,
+  "pages": [
+    {
+      "page": 1,
+      "png": "qa/word_final/page-1.png",
+      "sha256": "08feabd7c9d5d31da3baa49b0e883b0c0b96717daa66cc00500896baf6548e88",
+      "reviewer": "root",
+      "review": "pass"
+    },
+    {
+      "page": 2,
+      "png": "qa/word_final/page-2.png",
+      "sha256": "7d09e01cc3a1c97aa36d9a8e41b1c66f7613fa59d39f326a427c6b33fee730ee",
+      "reviewer": "root",
+      "review": "pass"
+    },
+    {
+      "page": 3,
+      "png": "qa/word_final/page-3.png",
+      "sha256": "4853ae71c26d260693a79c3bf41395e459b275d4a8699738c0922911a1986629",
+      "reviewer": "root",
+      "review": "pass"
+    },
+    {
+      "page": 4,
+      "png": "qa/word_final/page-4.png",
+      "sha256": "691198d52d2110ccbeb161ebd6cf020ae079b63efb522872f17259c8a9f27f24",
+      "reviewer": "root",
+      "review": "pass"
+    },
+    {
+      "page": 5,
+      "png": "qa/word_final/page-5.png",
+      "sha256": "329f653cb43f928d64ae401412bbf0111e28356b72b9e738c1b19736e6ff6f77",
+      "reviewer": "root",
+      "review": "pass"
+    },
+    {
+      "page": 6,
+      "png": "qa/word_final/page-6.png",
+      "sha256": "b9de3df34461c62e94f41c566b85e4b19e511cdead5dc0e227673ba5372e3bff",
+      "reviewer": "root",
+      "review": "pass"
+    },
+    {
+      "page": 7,
+      "png": "qa/word_final/page-7.png",
+      "sha256": "5bef4a0cdf099a3307648e74f5bbdb49726c035120f3b4114e3120e82c289508",
+      "reviewer": "root",
+      "review": "pass"
+    },
+    {
+      "page": 8,
+      "png": "qa/word_final/page-8.png",
+      "sha256": "f3135c90266aa67f5079c41603bac10dba8041deebcf97cade2a9e6f5577c7bf",
+      "reviewer": "root",
+      "review": "pass"
+    },
+    {
+      "page": 9,
+      "png": "qa/word_final/page-9.png",
+      "sha256": "99872b1ea856cfc49f8c4e3c2fb079ea7b9d7548a9e6a1dece99f5d5e76650b4",
+      "reviewer": "root",
+      "review": "pass"
+    },
+    {
+      "page": 10,
+      "png": "qa/word_final/page-10.png",
+      "sha256": "419e35867b501b578fcfe29cd542a8002ad48731ee555f214a72b8f50f3aca63",
+      "reviewer": "root",
+      "review": "pass"
+    },
+    {
+      "page": 11,
+      "png": "qa/word_final/page-11.png",
+      "sha256": "1d0a525b32a03942e571fcca11746e0b436cf8febbd80370f18ddc1cea566893",
+      "reviewer": "root",
+      "review": "pass"
+    },
+    {
+      "page": 12,
+      "png": "qa/word_final/page-12.png",
+      "sha256": "f766fdab453e6158a1dac216cc70db7f1ef16cb01a5ae014a9e7296864c49292",
+      "reviewer": "root",
+      "review": "pass"
+    },
+    {
+      "page": 13,
+      "png": "qa/word_final/page-13.png",
+      "sha256": "2ebe6e5d3f8f76d00816c35d689b9c21683022361d1653cf4c85516586aaf7a8",
+      "reviewer": "root",
+      "review": "pass"
+    },
+    {
+      "page": 14,
+      "png": "qa/word_final/page-14.png",
+      "sha256": "15d7ab23d912989b3b372b0e6a1dccf6faca68f392fa7792d79b104b7c8271b3",
+      "reviewer": "root",
+      "review": "pass"
+    },
+    {
+      "page": 15,
+      "png": "qa/word_final/page-15.png",
+      "sha256": "7d8091a2d6efa134bc84c1beb59c4b81bfe8209fd0e113b7dd1f7f456f70d259",
+      "reviewer": "root",
+      "review": "pass"
+    },
+    {
+      "page": 16,
+      "png": "qa/word_final/page-16.png",
+      "sha256": "2db431c0960b0e609fa32b8d319ddd4c6fcbf059bc9df9a30e4f38e1534c3bd1",
+      "reviewer": "cross_industry_benchmark",
+      "review": "pass"
+    },
+    {
+      "page": 17,
+      "png": "qa/word_final/page-17.png",
+      "sha256": "807d37d6962ffb2a40131e1547dfb41e574c07fdc7b3903f802bbba8f610fcd4",
+      "reviewer": "cross_industry_benchmark",
+      "review": "pass"
+    },
+    {
+      "page": 18,
+      "png": "qa/word_final/page-18.png",
+      "sha256": "63c03f7a80ac0289246a63258a08a7f1d99e38f8696ee0bf1ca4a5366aae9302",
+      "reviewer": "cross_industry_benchmark",
+      "review": "pass"
+    },
+    {
+      "page": 19,
+      "png": "qa/word_final/page-19.png",
+      "sha256": "ba2d25766b7fd5400b2727d58ee835bc0577a84239dcf8b520d6d458feb20dab",
+      "reviewer": "cross_industry_benchmark",
+      "review": "pass"
+    },
+    {
+      "page": 20,
+      "png": "qa/word_final/page-20.png",
+      "sha256": "3cf5ead5f55259433dd23be61a3cb0f52b78f9dd558ccba6055b43d75ba6d568",
+      "reviewer": "cross_industry_benchmark",
+      "review": "pass"
+    },
+    {
+      "page": 21,
+      "png": "qa/word_final/page-21.png",
+      "sha256": "ef014461fdfa22a00c00e254ae27a02890979eb0dffa57d5b0ee91a76889e926",
+      "reviewer": "cross_industry_benchmark",
+      "review": "pass"
+    },
+    {
+      "page": 22,
+      "png": "qa/word_final/page-22.png",
+      "sha256": "115872fce95e9588e38add1188f55dc2e5554da6c355144bbf1cbb71a9c12769",
+      "reviewer": "cross_industry_benchmark",
+      "review": "pass"
+    },
+    {
+      "page": 23,
+      "png": "qa/word_final/page-23.png",
+      "sha256": "18e94193611144c7b224e97ac99e66d46039425758ed871be17cb0121934ad1c",
+      "reviewer": "cross_industry_benchmark",
+      "review": "pass"
+    },
+    {
+      "page": 24,
+      "png": "qa/word_final/page-24.png",
+      "sha256": "8578b5db05693689b13fcd75eb21256d0eccbac35df84adeeba76c86ab905cf8",
+      "reviewer": "cross_industry_benchmark",
+      "review": "pass"
+    },
+    {
+      "page": 25,
+      "png": "qa/word_final/page-25.png",
+      "sha256": "0ff0739170255ef9590e780c799545e8c5d254c448a07bec0a6962bd1d943ff3",
+      "reviewer": "cross_industry_benchmark",
+      "review": "pass"
+    },
+    {
+      "page": 26,
+      "png": "qa/word_final/page-26.png",
+      "sha256": "c2fc47153a88b79ba6de5dea3d228575c970badb52c77572b6246516d9ab3122",
+      "reviewer": "cross_industry_benchmark",
+      "review": "pass"
+    },
+    {
+      "page": 27,
+      "png": "qa/word_final/page-27.png",
+      "sha256": "3678bb06f70e427344eb5aed9f24ac4d645abab33de649cc76f4799a05085574",
+      "reviewer": "cross_industry_benchmark",
+      "review": "pass"
+    },
+    {
+      "page": 28,
+      "png": "qa/word_final/page-28.png",
+      "sha256": "81eebd38489ed766630e12303c4273b9372de7d272ad6137cca12a32edc61d8c",
+      "reviewer": "cross_industry_benchmark",
+      "review": "pass"
+    },
+    {
+      "page": 29,
+      "png": "qa/word_final/page-29.png",
+      "sha256": "66e77faafa4f225f627d31318060bddea630278b93f5ed2ed7aebaa921c960e7",
+      "reviewer": "cross_industry_benchmark",
+      "review": "pass"
+    },
+    {
+      "page": 30,
+      "png": "qa/word_final/page-30.png",
+      "sha256": "d01c0140b0adf28ed310f673bf6982d585fa61749016eb180bd8e5bd152f6a8d",
+      "reviewer": "cross_industry_benchmark",
+      "review": "pass"
+    }
+  ]
+}

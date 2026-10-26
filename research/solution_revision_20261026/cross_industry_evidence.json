@@ -1,0 +1,236 @@
+{
+  "schema": "cross_industry_benchmark_evidence_v1",
+  "checked_on": "2026-10-26",
+  "scope": "Primary-source research for interpretation-driven recommendations; no changes to frozen experiment evidence.",
+  "core_inference": "기관자료의 표면적 재현이 실제 선택의 정합성을 보장하지 않은 본 결과는, 더 많은 자료나 더 긴 설명보다 기관자료를 운용판단으로 바꾸는 권한과 절차를 설계해야 한다는 가설을 뒷받침한다. 아래 전용은 연구자의 설계 제안이며 본 실험에서 개선 효과를 검증하지 않았다.",
+  "cases": [
+    {
+      "id": "amazon_logistics_ev_design_review",
+      "industry": "물류·전기설비 엔지니어링",
+      "evidence_type": "실제 조직 도입에 관한 공급업체·고객 자체보고; 독립 실증평가 아님",
+      "sources": [
+        {
+          "title": "Amazon Logistics Automates Electric Vehicle Design Reviews on AWS",
+          "url": "https://aws.amazon.com/solutions/case-studies/amazon-logistics-case-study/",
+          "publication_date": null,
+          "primary": true,
+          "locations": "Opportunity/Solution/Outcome; web lines 221–241"
+        },
+        {
+          "title": "How Automated Reasoning checks in Amazon Bedrock transform generative AI compliance",
+          "authors": ["Nafi Diallo", "Adewale Akinfaderin", "Aishwarya Natarajan"],
+          "publication_date": "2026-04-16",
+          "url": "https://aws.amazon.com/blogs/machine-learning/how-automated-reasoning-checks-in-amazon-bedrock-transform-generative-ai-compliance/",
+          "primary": true,
+          "locations": "Operational engineering: Amazon Logistics"
+        }
+      ],
+      "problem": "설비 제안서 형식이 제각각이어서 지역별 규정과 내부 전기설비 사양을 적용하는 과정이 느리고 추적하기 어려웠다.",
+      "mechanism": [
+        "언어모델은 비정형 제안서에서 공학 변수와 근거를 추출하고 사양을 정책 영역으로 분해한다.",
+        "규정은 변수·타입·조건이 명시된 정책으로 표현하고 별도 논리검증이 제안값의 적합성을 판단한다.",
+        "변수 수정이나 사양 변경 후 기존 검토를 처음부터 다시 하지 않고 재평가한다.",
+        "전문가가 예외와 현장별 판단을 맡고 최종 결정권을 유지한다."
+      ],
+      "reported_outcomes": ["AWS 사례는 약 8시간의 수작업 대조를 수분으로 줄였다고 보고한다. 표본 수, 독립 대조군, 잔존 오류율은 공개하지 않는다."],
+      "limits": [
+        "공급업체가 설명한 효율·도입 사례이며 모든 판단의 현실적 정확성이 증명됐다는 뜻이 아니다.",
+        "규정으로 명시할 수 있는 설비 적합성은 미래 불확실성을 포함한 투자전망과 다르다.",
+        "형식검증은 잘못 추출된 입력이나 불완전하게 부호화한 규칙의 진실성을 보증하지 않는다."
+      ],
+      "local_finding": "기관 등급을 맞게 읽어도 자료에 없는 이유와 수치에 맞지 않는 결론이 만들어졌다.",
+      "proposed_transfer": "기관별 등급을 기계적으로 비중으로 치환하지 않고, 기관이 명시한 근거·적용범위·미제시 항목을 먼저 승인한다. 이 정보와 별도의 운용위임 규칙이 허용하는 판단만 배분에 사용한다. AI가 추가한 전망은 기관 판단이 아니라 내부 추가판단으로 명명하고 책임자가 승인한다.",
+      "specific_example": "UBS IT Neutral에는 선택 자료상 개별 이유가 없다. '경기 고점 우려 때문에 비중 축소'를 UBS의 의도로 확정하지 않는다. 그 해석을 사용하려면 별도의 내부 가설·근거·승인이 필요하다.",
+      "validation_target": "자료에 없는 기관 이유가 승인 없이 최종 배분에 들어간 건수, 자료·규칙 수정 후 미갱신 결론 건수, 전문가 검토시간을 함께 측정한다."
+    },
+    {
+      "id": "bedrock_automated_reasoning_scope",
+      "industry": "보험·정책 기반 서비스 등 범용 규칙 검증",
+      "evidence_type": "2025년 출시된 제품 기능에 대한 공식 문서; 독립 효과평가 아님",
+      "sources": [
+        {
+          "title": "Automated Reasoning checks is now available in Amazon Bedrock Guardrails",
+          "publication_date": "2025-08-06",
+          "url": "https://aws.amazon.com/about-aws/whats-new/2025/08/automated-reasoning-checks-amazon-bedrock-guardrails/",
+          "primary": true
+        },
+        {
+          "title": "Integrate Automated Reasoning checks in your application",
+          "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/integrate-automated-reasoning-checks.html",
+          "primary": true
+        },
+        {
+          "title": "What are Automated Reasoning checks in Amazon Bedrock Guardrails?",
+          "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails-automated-reasoning-checks.html",
+          "primary": true
+        }
+      ],
+      "mechanism": [
+        "정책 문서의 규칙을 논리로 표현하고 생성문장의 명제를 검증한다.",
+        "항상 성립하는 valid, 규칙과 충돌하는 invalid, 일부 조건에서만 성립하는 satisfiable 등을 구분한다.",
+        "검사기는 탐지 결과를 돌려주며 응답 제공·재작성·추가질문·중단은 응용프로그램이 결정한다."
+      ],
+      "limits": [
+        "VALID는 정책 변수로 포착한 명제에 한정된다. 정책 범위 밖 문장까지 보증하지 않는다.",
+        "2026-10-26 열람 공식 문서는 English(US)만 지원한다고 명시한다. 한국어 논문의 직접 제품 도입을 제안하는 근거로 쓰지 않는다.",
+        "모델이 자연어를 논리로 번역하는 단계의 오해 가능성이 남는다.",
+        "AWS가 홍보한 최대 99% 수치는 적용조건이 있는 공급업체 지표이므로 우리 기대효과나 보편적 검증 정확도로 인용하지 않는다."
+      ],
+      "proposed_transfer": "자료만으로 결정할 수 없는 경우를 '합격' 또는 '오류'로 억지 분류하지 않고 조건부·근거부족·범위외 상태로 남긴다. 기관이 전망을 제시하지 않은 항목도 배분은 가능하나, 그 판단의 소유자를 운용자에게 명시적으로 돌린다."
+    },
+    {
+      "id": "medagentbench_v2",
+      "industry": "임상 EHR 업무",
+      "evidence_type": "PSB 2026 동료심사 학술대회 연구; 가상 EHR 벤치마크 평가",
+      "sources": [
+        {
+          "title": "MedAgentBench v2: Improving Medical LLM Agent Design",
+          "authors": ["Eric Chen", "Sam Postelnik", "Kameron Black", "Yixing Jiang", "Jonathan H. Chen"],
+          "publication_year": 2026,
+          "venue": "Pacific Symposium on Biocomputing 31:354–371",
+          "doi": "10.1142/9789819824755_0025",
+          "url": "https://psb.stanford.edu/psb-online/proceedings/psb26/chen_eric.pdf",
+          "primary": true,
+          "locations": "Sections 2.1–2.4, 3.1–3.5, 4; PDF pp. 1–11"
+        }
+      ],
+      "problem": "의학 질의응답 능력과 실제 EHR에서 올바른 조건에 맞춰 처방·검사 요청을 수행하는 능력은 같지 않다. 조건문을 읽고도 불필요한 주문을 실행하거나 필요한 주문을 빠뜨린다.",
+      "mechanism": [
+        "자유로운 HTTP 요청 생성을 FHIR 작업별 구조화 도구로 바꾼다.",
+        "조건과 선행요건을 행동 전에 명시하고 별도 완료 도구로 출력 구조를 통제한다.",
+        "실패한 지시·잘못된 행동·정답을 근거로 기억을 만들되 임상 책임자가 이를 확인해야 한다.",
+        "평가는 말로 설명한 계획뿐 아니라 실제로 생성된 FHIR 자원의 필드·상태와 조건부 행동까지 검사한다."
+      ],
+      "reported_outcomes": [
+        "GPT-4.1 기반 개선 agent는 기존 과제에서 기억 없이 91.0%, 기억 포함 98.0%의 성공률을 보고했다.",
+        "저자들이 별도로 구성한 새 300과제에서는 266/300, 88.67%를 보고했다."
+      ],
+      "limits": [
+        "실제 환자 결과나 임상 배포의 효과를 검증한 연구가 아니다.",
+        "여러 프롬프트·도구 변경이 결합돼 있어 모든 개선을 한 요소의 인과효과로 볼 수 없다.",
+        "원래 연구 최고 모델 69.67%와 비교할 때는 모델·구현이 달라 동일 모델 내 순수 설계효과처럼 쓰지 않는다.",
+        "연구자는 임상 메모리가 잘못된 휴리스틱을 증폭할 수 있어 감사·버전관리·전문가 감독이 필요하다고 명시한다."
+      ],
+      "local_finding": "UBS L에서 실제 IT 비중을 38%→35%로 줄였지만 늘렸다고 설명했다. 설명의 품질과 실제 결정의 상태를 별도로 검증할 필요가 있다.",
+      "proposed_transfer": "AI가 자유문장과 최종 비중을 각각 생성하게 하지 않고, 먼저 근거·선택·초안/최종 비중을 포함한 의사결정 객체를 확정한다. 증감·기준 대비 방향 문장은 이 객체에서 산출하고 최종 보고서는 확인된 객체를 설명한다. 최종 상태와 설명이 같은 버전을 가리켜야 완료할 수 있다.",
+      "validation_target": "서술상 선택 방향과 최종 비중의 불일치 건수, 올바른 설명에도 잘못된 결정을 승인한 건수, 과도한 차단 건수를 평가한다."
+    },
+    {
+      "id": "travel_planning_constraint_solver",
+      "industry": "여행·일정 계획",
+      "evidence_type": "NAACL 2025 동료심사 연구; TravelPlanner와 추가 데이터셋 평가",
+      "sources": [
+        {
+          "title": "Large Language Models Can Solve Real-World Planning Rigorously with Formal Verification Tools",
+          "authors": ["Yilun Hao", "Yongchao Chen", "Yang Zhang", "Chuchu Fan"],
+          "publication_date": "2025-04",
+          "doi": "10.18653/v1/2025.naacl-long.176",
+          "url": "https://aclanthology.org/2025.naacl-long.176/",
+          "primary": true,
+          "full_text": "https://aclanthology.org/2025.naacl-long.176.pdf",
+          "locations": "Sections 3.2–3.4, 5.1, 5.3, 7; Table 1 (PDF p. 7), Tables 3–4 (PDF p. 7)"
+        }
+      ],
+      "problem": "시간·예산·지리 등 복수 제약을 만족해야 하는 일정은 자연스러운 문장이나 자기검토만으로 실행 가능성을 보장하기 어렵다.",
+      "mechanism": [
+        "자연어 요구를 제약 충족 문제로 번역하고 별도 solver가 실행 가능한 계획을 만든다.",
+        "요구를 동시에 충족할 수 없을 때는 모순을 만드는 제약 집합을 찾아 실패 이유와 수정 선택지를 제시한다."
+      ],
+      "reported_outcomes": [
+        "Table 1의 Ours(Claude-3) 조건은 TravelPlanner 테스트 1,000개 과제에서 final pass rate 93.9%를 보고한다. GPT-4 조건은 90.2%다. 93.9%는 모든 모델의 공통 성과가 아니다.",
+        "제약이 불가능한 경우의 수정은 UnsatChristmas 39개·수정한 TravelPlanner 12개 요청과 모의 사용자 반응으로 평가했다. Ours 기본 반복한도 설정의 평균 성공률은 각각 78.6%·85.0%, 20회 설정은 81.6%·91.7%다.",
+        "이 숫자는 해당 벤치마크의 실행가능성 지표이며 실제 여행 서비스 운영효과가 아니다."
+      ],
+      "limits": [
+        "잘못 번역되거나 누락된 제약은 solver가 알아서 복원하지 못한다.",
+        "요구를 어떻게 부호화할지 사전 설계가 필요하고, 문제 규모가 커지면 solver 시간·비용이 늘어난다.",
+        "투자전망은 여행 예산·시간처럼 객관적 허용조건으로 모두 표현할 수 없다.",
+        "Neutral·Attractive 등급에 유일한 비중이 있다는 근거가 되지 않는다."
+      ],
+      "local_finding": "자료를 충실히 옮긴 조건에서도 기관 근거·시장 수치·배분 선택이 연결되지 않았고 100% 합계는 그 연결을 회복하지 못했다.",
+      "proposed_transfer": "수학적으로 확인 가능한 운용위임 조건과 기관 자료의 해석 조건을 분리한다. 둘을 동시에 충족하는 근거가 부족하면 문장을 매끄럽게 완성해 덮지 않고, 어떤 추가 내부판단 또는 제약 완화가 필요한지 선택지로 제시한다. 기관 전망의 등급을 임의의 고정 가중치로 만드는 방식은 채택하지 않는다.",
+      "specific_example": "기관의 긍정 평가를 채택하면서 기준비중보다 낮게 배분할 수는 있다. 다만 그 차이를 설명하는 위험한도·기존 익스포저 등 별도 이유가 있어야 하며, 이것을 기관 원문의 결론과 혼합하지 않는다."
+    },
+    {
+      "id": "airline_silent_state_gates",
+      "industry": "항공 예약·고객서비스",
+      "evidence_type": "2026년 KDD-ETAAI 워크숍 논문으로 표시된 arXiv v2; 가상 업무 벤치마크 평가",
+      "sources": [
+        {
+          "title": "Reason Less, Verify More: Deterministic Gates Recover a Silent Policy-Violation Failure Mode in Tool-Using LLM Agents",
+          "authors": ["Vikas Reddy", "Sumanth Reddy Challaram", "Abhishek Basu"],
+          "publication_date": "2026-07-11",
+          "version": "arXiv:2607.07405v2",
+          "url": "https://arxiv.org/html/2607.07405v2",
+          "primary": true,
+          "locations": "Abstract; Sections 3, 5, 6, 7"
+        }
+      ],
+      "problem": "예약 변경 도구가 구문상 올바른 요청을 받아들이면 정책 위반 행동도 성공으로 응답할 수 있다. agent의 완료 보고와 실제 예약 상태가 어긋난다.",
+      "mechanism": ["도구 실행 전에 요청 종류·인자·현재 상태를 읽어 결정적인 정책 검사를 수행하고, 위반 시 상태 변경 전에 거절한다. 검사는 다시 같은 모델에게 스스로 맞는지 묻는 과정과 구분된다."],
+      "reported_outcomes": [
+        "50개 항공 과제의 gpt-4o-mini 성공률은 29.6%→42.0%, +12.4%p로 보고됐고 별도 15-seed 세트에서 +12.3%p가 재현됐다.",
+        "효과는 gate가 실제 작동한 과제에 집중됐다. 자체 정책을 강제하는 소매 도구와 BFCL 음성 대조에서는 추가 이득이 작거나 없었다.",
+        "핵심 gate 하나의 precision은 161회 작동에서 100%였으나 다른 baggage gate는 5%에 불과했다."
+      ],
+      "limits": [
+        "벤치마크의 도구·정책 구성에 의존한다. 일반 업무 전체 또는 실제 항공사 운영에서 검증된 효과가 아니다.",
+        "50과제×5회가 본 평가이며 별도 15 seed의 750회는 같은 과제 집합의 재평가다. 새 과제에서 효과를 재현했다는 뜻이 아니다.",
+        "저자들은 gate를 같은 과제에서 작성·평가한 데 따른 과제 과적합과, 차단 자체의 효과를 거절 이유 피드백의 효과에서 분리하지 못한 점을 명시한다.",
+        "차단 규칙도 틀리거나 과도할 수 있어 false block·실제 오류 누락을 별도 감사해야 한다.",
+        "확정 가능한 선행조건 검사와 투자전망의 옳고 그름을 판정하는 문제는 다르다."
+      ],
+      "local_finding": "문장상의 완료·100% 주장과 실제 숫자 상태가 달랐다. 실패를 노출하는 별도 종료 조건이 없었다.",
+      "proposed_transfer": "배분을 승인하는 시점에 근거 연결과 숫자-문장 일치를 검사하는 실행 경계를 둔다. 실패하면 전체 보고서의 무제한 재작성을 반복하지 않고 관련 결정만 미승인으로 남긴다. gate 수를 늘리는 것보다 실제 오류를 차단했는지와 정당한 판단을 불필요하게 막았는지가 중요하다."
+    },
+    {
+      "id": "grasp_regression_aware_memory",
+      "industry": "임상 EHR·데이터베이스·웹 업무 등 구조화된 agent 환경",
+      "evidence_type": "2026-05 arXiv 원논문; 저자 저장소에는 EMNLP 2026 Main 채택 표기가 있으나 본 정리는 arXiv v1을 근거로 함",
+      "sources": [
+        {
+          "title": "GRASP: Gated Regression-Aware Skill Proposer for Self-Improving LLM Agents",
+          "authors": ["Johannes Moll", "Jean-Philippe Corbeil", "Jiazhen Pan", "Martin Hadamitzky", "Daniel Rueckert", "Lisa Adams", "Keno Bressem"],
+          "publication_date": "2026-05-28",
+          "version": "arXiv:2605.29668v1",
+          "url": "https://arxiv.org/html/2605.29668v1",
+          "primary": true,
+          "locations": "Abstract; Sections 2.2–2.3, 4.5, Table 4"
+        }
+      ],
+      "problem": "실패 경험을 자연어 지침으로 계속 더하면 그 실패는 고쳐도 이미 올바르던 행동을 망가뜨릴 수 있다.",
+      "mechanism": [
+        "실패 원인을 묶어 한정된 크기의 지침 라이브러리에 추가·수정·삭제 후보를 낸다.",
+        "이전 실패와 이전 성공을 함께 포함하는 별도 probe에서 실패 수정 수와 새 퇴행 수를 비교한다.",
+        "새 오류의 허용 범위를 넘지 않고 순개선이 있을 때만 후보 지침을 채택하며, 그렇지 않으면 변경하지 않는다."
+      ],
+      "reported_outcomes": [
+        "MedAgentBench gpt-oss-120b에서 전체 방법은 테스트 88.8%, acceptance gate를 제거한 K=4 설정은 63.5%, K=1은 40.1%였다(Table 4).",
+        "다섯 모델과 임상 벤치마크들을 평가하고 추가 비의료 환경 네 개 중 세 개에서 개선을 보고했다."
+      ],
+      "limits": [
+        "벤치마크 연구이며 실제 조직 운영효과나 시장 동조화 감소를 보인 연구가 아니다.",
+        "결과는 검증 probe의 대표성과 범위에 의존한다.",
+        "기관별 해석 차이를 모두 공통 규칙으로 지워야 한다는 근거가 아니다."
+      ],
+      "local_finding": "공통 수익률 오독이 여러 조건에 반복되는 동시에, 기관별 배분 차이도 관찰됐다. 공통 오류를 줄이는 규칙이 기관 고유의 정당한 차이까지 지우지 않아야 한다.",
+      "proposed_transfer": "공통 수치 오류 수정 규칙은 기관과 무관한 공통 계층에 두고, 기관 고유 해석은 기관별 버전에 둔다. 예컨대 'IT 수익률은 항상 이 값'을 외우는 대신 입력 단위·배수·기간을 확인하는 절차를 학습한다. 모든 수정 후보는 이미 맞았던 기관 해석과 별도 자료에서도 검사한 뒤 채택한다.",
+      "validation_target": "기존 오류 감소와 함께 새 수치 오류·올바른 기관 해석 손실·무근거한 기관 간 비중 수렴을 병렬 평가한다. 수렴 자체를 성공 또는 실패로 일괄 판정하지 않는다."
+    }
+  ],
+  "auxiliary_source_caution": {
+    "title": "LLM-Driven Cost-Effective Requirements Change Impact Analysis",
+    "url": "https://arxiv.org/html/2511.00262v1",
+    "authors": ["Romina Etezadi", "Sallam Abualhaija", "Chetan Arora", "Lionel Briand"],
+    "publication_date": "2025-10-31",
+    "useful_mechanism": "SAT-DLink 위성산업 요구사항에서 요구 변경의 직·간접 영향을 찾아 검토 범위를 좁히는 change impact analysis. 우리 수익률 오류 수정 후 그 수치에 의존한 판단·비중을 함께 재검토하는 구조와 연결할 수 있다.",
+    "metric_caution": "본문의 요약 effectiveness 수치와 원시 TP/FN 비율, 평균 방식 설명이 직관적으로 일치하지 않고 본문 일부에 SAT-DLink 87.1%와 표 95.8%가 혼재한다. 논문에 성과 숫자를 인용하지 말고 개념상 보조 근거로만 사용하거나 제외한다."
+  },
+  "recommended_paper_logic": [
+    "관찰: 등급·자료 요약은 맞지만 자료에 없는 인과 설명과 배분의 방향 모순이 발생했다.",
+    "해석: 문제는 자료 확보만이 아니라 기관의 공개 판단을 특정 선택으로 번역하는 단계의 재량과 책임 경계에 있다.",
+    "벤치마크: 공학은 문서 해석과 규칙 검증을 분리하고, 임상은 계획 문장과 실제 EHR 상태를 별도로 검증하며, 여행계획은 충족 불가 조건을 드러내고, 최신 agent 학습은 수정 규칙의 부작용을 검증한다.",
+    "제안: 기관근거·추가 운용판단의 권한 분리, 행동 객체에서 설명 생성, 판단 수정의 의존 관계 추적, 공통 오류 수정의 기관별 회귀 검증을 한 운영구조로 결합한다.",
+    "반증 가능성: 절차가 설명만 더 길게 만들거나 오류를 숨기거나 기관 차이를 기계적으로 없앤다면 제안은 실패다. 새 자료·반복 조건에서 미지원 판단의 승인 감소와 정당한 판단 보존이 함께 나타나는지 확인한다."
+  ]
+}

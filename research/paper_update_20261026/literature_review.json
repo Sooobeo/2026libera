@@ -1,0 +1,300 @@
+{
+  "schema": "paper_solution_literature_review_1",
+  "review_date": "2026-10-26",
+  "scope": "소논문의 실험 이후 해결 방향성 설계를 위한 원출처 확인. 효과 검증 결과가 아닌 문헌에 근거한 제안.",
+  "manuscript_reviewed": "paper/v493_manuscript_20261019.json",
+  "sources": [
+    {
+      "id": "gao_alce2023",
+      "short": "Gao et al. (2023, ALCE)",
+      "authors": [
+        "Tianyu Gao",
+        "Howard Yen",
+        "Jiatong Yu",
+        "Danqi Chen"
+      ],
+      "year": 2023,
+      "title": "Enabling Large Language Models to Generate Text with Citations",
+      "venue": "Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing",
+      "pages": "6465–6488",
+      "doi": "10.18653/v1/2023.emnlp-main.398",
+      "url": "https://aclanthology.org/2023.emnlp-main.398/",
+      "fulltext_url": "https://aclanthology.org/2023.emnlp-main.398.pdf",
+      "verified_sections": [
+        "Abstract",
+        "§3.3 Citation Quality",
+        "§6 Human Evaluation"
+      ],
+      "supported_claim_ko": "ALCE는 문장의 정확성과 인용의 품질을 나누어 평가하며, 인용된 구절이 문장을 충분히 지지하는지와 불필요한 인용인지를 구별한다.",
+      "study_connection_ko": "이번 실험에서는 인용 식별자가 입력에 존재해도 수익률·변동성의 단위나 기관의 판단 이유가 잘못 연결됐다. 출처 존재 확인과 주장 지지 확인을 별도 항목으로 설계할 근거가 된다.",
+      "proposed_application_ko": "각 산업행에서 원문 위치→원자료의 주장→AI의 해석→채택/조정 이유→배분을 기록한다. 기관의 사실과 AI의 추론을 구분하고, 제공된 자료에 근거가 없는 경우 '자료에서 확인되지 않음'으로 남긴다.",
+      "limit_ko": "일반 정보질의의 텍스트·인용 평가 연구이며 금융 산업배분 충실성의 검증 연구가 아니다. 자동 지지 판정도 오류가 있으므로 본 연구에 맞게 사람의 표본 검토가 필요하다.",
+      "citation_ready": "Tianyu Gao, Howard Yen, Jiatong Yu, Danqi Chen (2023). Enabling Large Language Models to Generate Text with Citations. Proceedings of EMNLP 2023, 6465–6488. https://doi.org/10.18653/v1/2023.emnlp-main.398"
+    },
+    {
+      "id": "gao_pal2023",
+      "short": "Gao et al. (2023, PAL)",
+      "authors": [
+        "Luyu Gao",
+        "Aman Madaan",
+        "Shuyan Zhou",
+        "Uri Alon",
+        "Pengfei Liu",
+        "Yiming Yang",
+        "Jamie Callan",
+        "Graham Neubig"
+      ],
+      "year": 2023,
+      "title": "PAL: Program-aided Language Models",
+      "venue": "Proceedings of the 40th International Conference on Machine Learning; Proceedings of Machine Learning Research",
+      "volume": 202,
+      "pages": "10764–10799",
+      "doi": null,
+      "url": "https://proceedings.mlr.press/v202/gao23f.html",
+      "fulltext_url": "https://proceedings.mlr.press/v202/gao23f/gao23f.pdf",
+      "verified_sections": [
+        "Abstract",
+        "Publication metadata"
+      ],
+      "supported_claim_ko": "PAL은 언어모델이 문제를 프로그램 형태로 분해하고 계산은 Python 실행기에 맡기는 방식을 제시하고, 수학·기호·알고리즘 과제에서 평가했다.",
+      "study_connection_ko": "배분 합계 및 소수↔퍼센트 변환은 명확한 수학 연산이다. 현재 실험의 외부 최종화는 5조건 모두 합계를 정확히 100%로 만들었지만 설명 오류는 별도로 남았다.",
+      "proposed_application_ko": "검증된 결정적 계산기가 수익률 단위·연율화·합계·기준비중 차이·초안 대비 변화량을 계산하고, 설명의 수치와 증가/감소 표현을 그 결과에 대조한다.",
+      "limit_ko": "PAL의 성능은 연구된 계산 과제의 결과이다. 올바른 프로그램 생성, 입력의 적절성 또는 금융적 판단을 보장하지 않는다. 이 논문은 AI가 임의로 만든 계산 코드를 실행하는 대신 사전에 검증한 계산식을 사용하는 설계를 제안한다.",
+      "citation_ready": "Luyu Gao, Aman Madaan, Shuyan Zhou, Uri Alon, Pengfei Liu, Yiming Yang, Jamie Callan, Graham Neubig (2023). PAL: Program-aided Language Models. Proceedings of the 40th International Conference on Machine Learning, PMLR 202, 10764–10799. https://proceedings.mlr.press/v202/gao23f.html"
+    },
+    {
+      "id": "gao_rarr2023",
+      "short": "Gao et al. (2023, RARR)",
+      "authors": [
+        "Luyu Gao",
+        "Zhuyun Dai",
+        "Panupong Pasupat",
+        "Anthony Chen",
+        "Arun Tejasvi Chaganty",
+        "Yicheng Fan",
+        "Vincent Zhao",
+        "Ni Lao",
+        "Hongrae Lee",
+        "Da-Cheng Juan",
+        "Kelvin Guu"
+      ],
+      "year": 2023,
+      "title": "RARR: Researching and Revising What Language Models Say, Using Language Models",
+      "venue": "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+      "pages": "16477–16508",
+      "doi": "10.18653/v1/2023.acl-long.910",
+      "url": "https://aclanthology.org/2023.acl-long.910/",
+      "fulltext_url": "https://aclanthology.org/2023.acl-long.910.pdf",
+      "verified_sections": [
+        "Abstract",
+        "§6 Downstream Applications",
+        "§8 Limitations",
+        "§9 Ethical considerations"
+      ],
+      "supported_claim_ko": "RARR는 생성된 문장의 근거를 조사하고 근거 없는 내용을 수정하면서 원문을 가능한 보존한다. 원문은 사실 수정 후의 후속 추론을 자동으로 수정하지 않는 한계도 밝힌다.",
+      "study_connection_ko": "수익률 숫자만 고쳐도 이미 잘못된 수치에 의존해 작성된 비중과 위험 설명이 자동으로 타당해지지 않는다.",
+      "proposed_application_ko": "오류가 발견되면 해당 주장과 그 주장을 이용한 비중 판단을 함께 검토한다. 수정 이유·수정 전후 값·영향받는 산업을 남기고, 근거표와 배분 및 설명을 다시 대조한다.",
+      "limit_ko": "근거 귀속 개선이 후속 의사결정 개선을 뜻하지 않는다. 원문에 따르면 일부 후속 과제의 정확도는 낮아졌고, 검색 오류와 부분적으로만 뒷받침된 수정문도 남는다. 본 연구에서는 실험의 고정 시점 이후 자료를 사후 검색해 원래 조건을 바꾸지 않는다.",
+      "citation_ready": "Luyu Gao, Zhuyun Dai, Panupong Pasupat, Anthony Chen, Arun Tejasvi Chaganty, Yicheng Fan, Vincent Zhao, Ni Lao, Hongrae Lee, Da-Cheng Juan, Kelvin Guu (2023). RARR: Researching and Revising What Language Models Say, Using Language Models. Proceedings of ACL 2023 (Volume 1: Long Papers), 16477–16508. https://doi.org/10.18653/v1/2023.acl-long.910"
+    },
+    {
+      "id": "huang2024",
+      "short": "Huang et al. (2024)",
+      "authors": [
+        "Jie Huang",
+        "Xinyun Chen",
+        "Swaroop Mishra",
+        "Huaixiu Steven Zheng",
+        "Adams Wei Yu",
+        "Xinying Song",
+        "Denny Zhou"
+      ],
+      "year": 2024,
+      "title": "Large Language Models Cannot Self-Correct Reasoning Yet",
+      "venue": "International Conference on Learning Representations (ICLR 2024)",
+      "pages": null,
+      "doi": "10.48550/arXiv.2310.01798",
+      "doi_type": "arXiv-issued DOI, not conference DOI",
+      "url": "https://openreview.net/forum?id=IkmD3fKBPQ",
+      "fulltext_url": "https://arxiv.org/html/2310.01798v2",
+      "version_url": "https://arxiv.org/abs/2310.01798v2",
+      "version_date": "2024-03-14",
+      "verified_sections": [
+        "arXiv metadata and abstract",
+        "§3 intrinsic self-correction",
+        "§4 Multi-Agent Debate",
+        "§6–7 discussion and limitations"
+      ],
+      "verification_note": "OpenReview search result supplied publication metadata; direct forum open presented browser challenge. Authors, ICLR 2024 comment, v2 date, substantive claims independently checked on arXiv original.",
+      "supported_claim_ko": "연구된 추론 과제에서는 외부 피드백 없이 같은 모델이 자기 답변을 고치도록 요구하는 내재적 자기수정이 안정적인 개선을 보이지 않았고 성능 저하도 관찰됐다.",
+      "study_connection_ko": "이번 최종 검토에서도 배분·숫자·설명 오류가 남았다. '한 번 더 확인하라'는 지시의 반복만으로 통과를 선언할 수 없다.",
+      "proposed_application_ko": "수정 피드백에는 오류 위치·원자료 값·계산 결과를 함께 준다. 별도 검토자가 독립된 체크 항목으로 재검토하고 미해결 항목은 사람에게 남긴다.",
+      "limit_ko": "2023–2024년 연구된 모델·과제·프롬프트의 결과이며 모든 현재 모델이나 모든 자기수정이 불가능하다는 보편 명제가 아니다. 이번 실험의 F0는 외부 자료와 피드백을 포함하므로 이 논문의 내재적 자기수정과 동일 조건이 아니다.",
+      "citation_ready": "Jie Huang, Xinyun Chen, Swaroop Mishra, Huaixiu Steven Zheng, Adams Wei Yu, Xinying Song, Denny Zhou (2024). Large Language Models Cannot Self-Correct Reasoning Yet. ICLR 2024. https://openreview.net/forum?id=IkmD3fKBPQ"
+    },
+    {
+      "id": "nist2023",
+      "short": "Tabassi (2023), NIST AI RMF 1.0",
+      "authors": [
+        "Elham Tabassi"
+      ],
+      "year": 2023,
+      "title": "Artificial Intelligence Risk Management Framework (AI RMF 1.0)",
+      "venue": "National Institute of Standards and Technology",
+      "report_number": "NIST AI 100-1",
+      "date": "2023-01-26",
+      "doi": "10.6028/NIST.AI.100-1",
+      "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10",
+      "fulltext_url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf",
+      "core_url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/",
+      "verified_sections": [
+        "GOVERN 3.2",
+        "MEASURE 1.3",
+        "MEASURE 2.1",
+        "MANAGE 4.1–4.3"
+      ],
+      "supported_claim_ko": "AI RMF 1.0은 사람과 AI의 역할·책임 구분, 개발 담당자와 분리된 평가 참여, 평가 데이터·지표·도구의 문서화, 오류 대응 및 변경 기록을 제시한다.",
+      "study_connection_ko": "부분 가림의 AI 보조 검토와 원응답·수정 이력 보존은 검토 가능성을 높이지만 사람의 타당화 또는 평가자 간 신뢰도를 대신하지 않는다.",
+      "proposed_application_ko": "자료 준비자·생성 모델·수치 검증기·의미 검토자·최종 승인자의 역할을 구분하고, 자동 통과·수정 필요·사람 확인의 결정을 기록한다.",
+      "limit_ko": "자발적·비부문별 위험관리 프레임워크이며 이 설계의 금융 성능이나 정확성에 대한 실험 증거가 아니다. 공식 AIRC는 1.0 개정이 진행 중이라고 표시하므로 2023년 1.0을 명시해 인용한다.",
+      "citation_ready": "Elham Tabassi (2023). Artificial Intelligence Risk Management Framework (AI RMF 1.0). NIST AI 100-1. National Institute of Standards and Technology. https://doi.org/10.6028/NIST.AI.100-1"
+    }
+  ],
+  "existing_2026_reference_checks": [
+    {
+      "id": "portbench2026",
+      "url": "https://arxiv.org/abs/2605.27887v6",
+      "status": "title_authors_version_date_match",
+      "title": "PortBench: A Correlation-Aware, Full-Pipeline Benchmark for LLM-Driven Portfolio Management",
+      "authors": [
+        "Yuxuan Zhao",
+        "Sijia Chen",
+        "Ningxin Su"
+      ],
+      "version": "v6",
+      "date": "2026-10-09",
+      "supported_scope_ko": "금융 QA 점수와 포트폴리오 성과가 일치하지 않을 수 있으므로 단계별 오류를 평가할 필요가 있다는 배경. 현 연구의 자료 충실성과 수익성은 별개임을 설명할 때 사용.",
+      "limit_ko": "참조 점수·시장성과를 포함하는 벤치마크이며 이 소논문의 기관자료 충실성 점수를 직접 제공하지 않는다. arXiv v6로 표기."
+    },
+    {
+      "id": "e2a2026",
+      "url": "https://arxiv.org/abs/2609.14302v1",
+      "status": "title_authors_version_date_match",
+      "title": "E2A-Bench: Benchmarking Evidence-to-Action Reliability in Financial Chart Reasoning",
+      "authors": [
+        "Xiaoya Wang",
+        "Yutong Xu",
+        "Junjie Wang"
+      ],
+      "version": "v1",
+      "date": "2026-09-13",
+      "supported_scope_ko": "금융 차트에서 근거·추론·확신·행동 연결과 응답 범위를 함께 평가한다. 오류 감소만으로 평가하면 답변 회피가 좋은 점수로 보일 수 있다는 문제와 연결.",
+      "limit_ko": "금융 차트 VLM의 연구이며 기관별 공개 문서 기반 11개 산업배분과 동일 과제가 아니다. arXiv v1로 인용; 초록에 EMNLP Findings라고 적혔지만 별도 학회 서지 검증 없이 학회 판본으로 바꾸지 않는다."
+    },
+    {
+      "id": "pombal2026",
+      "url": "https://arxiv.org/abs/2604.06996v3",
+      "status": "title_authors_version_date_match",
+      "title": "Self-Preference Bias in Rubric-Based Evaluation of Large Language Models",
+      "authors": [
+        "José Pombal",
+        "Ricardo Rei",
+        "André F. T. Martins"
+      ],
+      "version": "v3",
+      "date": "2026-08-03",
+      "supported_scope_ko": "명시적 평가 기준이 있어도 AI 평가자가 자신 또는 같은 계열 모델의 답을 선호하는 편향이 남을 수 있고 여러 평가자 결합도 이를 완전히 없애지 못한다.",
+      "limit_ko": "다른 모델로 평가하거나 작성자 정보를 가리는 것이 본 소논문에서 객관성을 확보했다는 증거는 아니다. AI 보조 검토의 한계로 사용."
+    }
+  ],
+  "design_claim_map": [
+    {
+      "id": "D1",
+      "suggested_subsection": "해결 방향 1: 기관자료를 확인 가능한 판단표로 바꾸기",
+      "observed_problem": "기관의 등급은 정확히 읽으면서 선택된 자료에 없는 Neutral의 이유를 덧붙임.",
+      "design": "산업마다 원문 위치, 관찰 시점, 전망 기간, 대상 범위, 원등급, 명시된 이유, 이유의 누락 여부를 고정한다. AI가 덧붙인 해석은 별도 열에 둔다.",
+      "acceptance_rule": "기관 판단으로 표시된 모든 주장에 실제 지지 구절 또는 '제공 자료에 없음' 상태가 있어야 한다. 기관 자료를 따르지 않는 선택은 이유를 설명할 수 있으므로 등급과 비중을 강제 일대일 매핑하지 않는다.",
+      "literature": [
+        "gao_alce2023"
+      ],
+      "paper_connection": "공개 자료의 의미가 배분 판단에 전달되는 경로를 확인한다."
+    },
+    {
+      "id": "D2",
+      "suggested_subsection": "해결 방향 2: 계산과 단위 처리를 검증된 프로그램에 맡기기",
+      "observed_problem": "비중 합계가 100%가 아니며 14.99%를 149.92%로, 연변동성을 21.2%로 잘못 씀.",
+      "design": "값·단위·빈도·관측 구간을 함께 저장하고 비중 합계, 퍼센트 변환, 연율화, 초안 대비 증감 및 기준비중 차이를 계산기로 산출한다.",
+      "acceptance_rule": "11개 유한·비음수 비중과 양의 합계를 확인한 뒤 10,000단위로 비례 정규화한다. 잘못된 값은 빈칸/오류로 남기고 원비중·원합계·정규화 배율·최종비중을 모두 보존한다. 합계100%가 설명 통과를 뜻하지 않는다.",
+      "literature": [
+        "gao_pal2023"
+      ],
+      "paper_connection": "배분의 계산 가능성과 기관 판단의 충실성을 분리한다."
+    },
+    {
+      "id": "D3",
+      "suggested_subsection": "해결 방향 3: 근거·설명·배분을 같은 행에서 검토하기",
+      "observed_problem": "IT 비중을 38→35로 줄였는데 늘렸다고 설명하고, 기준비중보다 낮은데 높다고 설명함.",
+      "design": "최종 비중에서 초안 비중과 기준비중을 빼 방향을 계산한다. AI의 채택/조정/불채택 이유와 수치 방향을 대조한다. 원비중 설명과 정규화 결과 설명을 따로 관리한다.",
+      "acceptance_rule": "계산으로 판정 가능한 증가/감소·상회/하회 불일치는 자동으로 수정 필요 처리한다. 기관자료와 선택의 경제적 관계처럼 정답이 하나가 아닌 항목은 근거를 붙여 검토한다.",
+      "literature": [
+        "gao_alce2023",
+        "gao_pal2023",
+        "e2a2026"
+      ],
+      "paper_connection": "정확한 요약을 넘어 실제 선택까지의 연결성을 평가한다."
+    },
+    {
+      "id": "D4",
+      "suggested_subsection": "해결 방향 4: 오류를 근거와 함께 수정하고 후속 판단 재검토하기",
+      "observed_problem": "최종 검토를 거친 출력에도 같은 수치 오류와 잘못된 설명이 남음.",
+      "design": "오류 문장·정확한 원값·계산 결과를 제시하고 그 오류에 의존한 이유와 비중을 함께 재검토한다. 수정전후를 저장하며 해결되지 않은 항목은 검토 대상에 남긴다.",
+      "acceptance_rule": "수정한 주장만 재검사하지 말고 같은 주장을 근거로 한 나머지 산업행과 전체 설명도 검사한다. 제한된 수정 횟수 후 미해결은 사람 확인으로 전환한다.",
+      "literature": [
+        "gao_rarr2023",
+        "huang2024"
+      ],
+      "paper_connection": "오류가 근거에서 선택으로 전파되는 과정을 차단하기 위한 제안."
+    },
+    {
+      "id": "D5",
+      "suggested_subsection": "해결 방향 5: 사람의 책임과 후속 검증 설계",
+      "observed_problem": "현재 결과는 5개 탐색 사례이며 검토는 AI 보조·부분 가림이고 인간 평가자 간 신뢰도는 없음.",
+      "design": "역할·검토 기준·미해결 사유를 기록하고 애매한 근거 해석은 사람이 확인한다. 후속 연구에서 동일 신규자료를 이용한 기존 방식과 제안 방식의 비교, 충분한 독립 반복, 인간 기준 코딩을 사전 확정한다.",
+      "acceptance_rule": "전체 예정 산업행을 분모로 정보 충실성, 수치 정확성, 설명과 비중의 일치, 누락/보류, 검토 시간과 비용을 따로 보고한다. 배분 거리 또는 오류 건수 하나를 종합성공으로 쓰지 않는다.",
+      "literature": [
+        "nist2023",
+        "pombal2026",
+        "e2a2026"
+      ],
+      "paper_connection": "기관자료를 충실하게 반영한다는 주장을 검증 가능하게 만들며 수익성·동질화 효과와 구별한다."
+    }
+  ],
+  "followup_validation_design": {
+    "status": "proposal_not_run",
+    "comparison": "같은 신규 자료 묶음·공통 시장 입력·모델·예산으로 기존 생성 절차와 제안 검증 절차를 비교한다. 산술 검증만 더한 조건을 중간 비교군으로 두면 계산 보정과 의미 검토의 기여를 분리할 수 있다.",
+    "freeze_before_run": [
+      "자료와 모델 버전",
+      "평가 규칙·오류 허용 범위",
+      "산업별 필수 주장 슬롯",
+      "반복 수와 배정/순서",
+      "수정 횟수 한도",
+      "사람 평가자와 불일치 해결 절차"
+    ],
+    "measurements": [
+      "기관 판단의 정확한 재현",
+      "지지되지 않는 이유의 추가",
+      "수치와 단위의 정확성",
+      "설명·비중의 방향 일치",
+      "예정 산업행의 완성/보류/누락",
+      "오류 수정과 새 오류 도입",
+      "시간·비용"
+    ],
+    "denominator_note": "독립 실험 단위는 조건별 실행 또는 독립 자료 묶음이다. 11산업행을 독립 실험 11개로 세지 않는다. 설명을 생략해 오류가 줄어드는 경우를 막기 위해 예정된 판단 슬롯과 누락을 함께 보고한다.",
+    "effectiveness_boundary": "이 소논문의 완료된 5조건 결과는 해결 절차를 설계할 근거이다. 제안 절차의 오류 감소 효과, 투자수익 개선, 시장 전체 다양성 증가는 아직 검증하지 않았다."
+  },
+  "terminology_notes": [
+    "다섯 완료 사례는 '주 분석에 사용한 탐색 실험'으로 표현하고 사전 확정된 독립 본실험으로 재명명하지 않는다.",
+    "세 Gao 연구는 저자가 일부 또는 전부 다르므로 본문에서 (Gao et al., 2023, ALCE/PAL/RARR)처럼 제목 약칭으로 구별하거나 일관된 2023a/b/c 키를 사용한다.",
+    "이번 배분 100% 처리와 공개시장 요약 수치의 오류검사, 새로 제안한 전체 운영 절차의 효과 검증은 다른 수준이다."
+  ]
+}

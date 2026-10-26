@@ -1,0 +1,96 @@
+{
+  "schema": "finance_solution_evidence_1",
+  "as_of": "2026-10-26",
+  "purpose": "Substantive solution design grounded in the completed exploratory study; literature findings and our proposed extensions are explicitly distinguished.",
+  "reviewed_local_context": [
+    "paper/v500_manuscript_20261026.json, sections 7-9",
+    "plan/문규리 제안서 상세_최종.html, original motivation, workflow and solutions"
+  ],
+  "sources": [
+    {
+      "id": "FIN_HANSEN_LEE_2025",
+      "authors": ["Anne Lundgaard Hansen", "Seung Jung Lee"],
+      "title": "Financial Stability Implications of Generative AI: Taming the Animal Spirits",
+      "publication": "Finance and Economics Discussion Series 2025-090",
+      "paper_date": "2025-09-25",
+      "doi": "10.17016/FEDS.2025.090",
+      "primary_url": "https://www.federalreserve.gov/econres/feds/files/2025090pap.pdf",
+      "landing_url": "https://www.federalreserve.gov/econres/feds/financial-stability-implications-of-generative-ai-taming-the-animal-spirits.htm",
+      "version_note": "Official PDF still dated September 25, 2025. Landing-page Last Update August 21, 2026 is not a paper revision date.",
+      "verified_locators": ["PDF printed p.22, section 6.5", "PDF printed pp.23-24, section 7.1", "Table 4, printed pp.47-48", "Table 5, printed p.49", "Table 6, printed pp.50-51"],
+      "source_summary_en": "Laboratory-style sequential asset-trading experiments compare four LLMs with earlier human experiments. Baseline agents often overweight their own signal and overlook information in trading history. Explicitly supplying theoretically optimal behavior encourages optimal herding and raises expected payoffs in the studied treatments, while some suboptimal decisions remain. Reversing the conventional red/green meaning of signals produces errors despite explicit instructions. In Table 6 Treatment I, error frequency changes from zero with conventional labels to 25.20% with reversed labels. This is a controlled game, not evidence that current real portfolios herd or that a general prompt guarantees optimal investing.",
+      "transfer_to_our_case": "등급을 맞게 복사했다는 사실만으로 실제 선택이 기관 정의를 따른다고 볼 수 없다. UBS Neutral에서 없는 경기정점 논거를 보충한 현상과 연결해, 등급·기관명 표면의 통상적 연상이 기관별 정의를 덮어쓰는지 후속 검증할 수 있다. 이번 자료만으로 그 원인을 확정하지 않는다.",
+      "proposal_from_our_interpretation": "기관이 정의한 등급의 의미와 허용되는 추론을 명시하고, 동일 내용을 익명 코드로 바꾸거나 기관명만 바꾼 대조를 둔다. 의미가 동일한 재표현에는 선택 근거가 유지되고 실질 근거가 바뀐 경우에만 관련 선택이 변하는지 확인한다. 단순히 모델을 '독립적으로 판단하라'고 지시하거나 배분 차이를 키우는 것은 목표가 아니다."
+    },
+    {
+      "id": "FIN_ANAND_ETAL_2025_2026",
+      "authors": ["Kartik Anand", "Sophia Kazinnik", "Agnese Leonello", "Ettore Panetti"],
+      "title": "Ex Machina: financial stability in the age of artificial intelligence",
+      "publication": "ECB Working Paper Series No. 3225 (2026); authors' Research Bulletin No.143, May 21, 2026",
+      "primary_url": "https://www.ecb.europa.eu/pub/pdf/scpwps/ecb.wp3225~52d8adae99.en.pdf",
+      "author_summary_title": "Financial stability in the age of artificial intelligence: the role of algorithmic architecture",
+      "author_summary_url": "https://www.ecb.europa.eu/press/research-publications/resbull/2026/html/ecb.rb260521~4d8b12940b.en.html",
+      "version_note": "Final primary-PDF metadata audit corrected the initial 2025 inference based on the bulletin reference: linked ECB Working Paper No.3225 ends with copyright2026, DOI10.2866/4103076 and documentcodeQB-01-26-112-EN-N. Cite the linked ECB edition2026. The May21,2026 author bulletin inconsistently lists this reference as2025; it does not override the linked edition's own publication metadata.",
+      "verified_locators": ["Working paper PDF physical p.7, introduction results", "Working paper printed p.9 / PDF physical p.10, beliefs and information structure", "Working paper printed p.28 / PDF physical p.29, section IV.C Fundamental Uncertainty, Figures11-12", "Research Bulletin sections How does AI architecture help explain redemptions? and Chart 3"],
+      "source_summary_en": "In a stylised mutual-fund redemption game, Q-learning and LLM investors behave differently. With intermediate fundamentals allowing multiple equilibria, identically prompted LLMs form heterogeneous beliefs about other investors and coordinate imperfectly. Adding noisy private signals about fundamentals can instead align LLM beliefs and actions with the global-games equilibrium. Q-learning's payoff-based learning produces a different default-risk response. These simulated mechanisms do not establish that institutional reports in our single-model sector exercise act like private signals or that convergence is intrinsically undesirable.",
+      "transfer_to_our_case": "기관자료를 다르게 주면 자동으로 유효한 차별화가 회복된다는 가정을 약화한다. 우리 초기 기관 간 거리 3.86%, 후기 13.49%는 서로 다른 절차에서 관찰한 거리이며, 작은 거리를 실패 또는 큰 거리를 성공으로 정할 수 없다.",
+      "proposal_from_our_interpretation": "기관별 배분의 최대 차이가 아니라 '근거가 바뀌면 그 근거에 의존한 선택이 어떻게 바뀌는가'를 평가한다. 다른 기관 자료를 교환하거나 핵심 근거만 제거한 조건과 무관한 문구만 바꾼 조건을 함께 둬, 유효한 근거 반응과 단순 불안정성을 분리한다. 근거 제거가 언제나 비중 하락을 뜻하지는 않으므로, 사전에 승인한 판단 규칙 또는 독립 검토로 기대 반응 범위를 정한다."
+    },
+    {
+      "id": "FIN_HORNUF_ETAL_2025",
+      "authors": ["Lars Hornuf", "David J. Streich", "Niklas Töllich"],
+      "title": "Making GenAI Smarter: Evidence from a Portfolio Allocation Experiment",
+      "publication": "CESifo Working Paper No.11862",
+      "paper_date": "2025-04-30",
+      "doi": "10.2139/ssrn.5251004",
+      "primary_url": "https://www.ifo.de/DocDL/cesifo1_wp11862.pdf",
+      "landing_url": "https://www.ifo.de/en/cesifo/publications/2025/working-paper/making-genai-smarter-evidence-portfolio-allocation-experiment",
+      "version_note": "Use CESifo April 30 version, 95 PDF pages. Related SSRN5212516 April10 version has 93 pages; do not mix pagination or dates.",
+      "verified_locators": ["Printed pp.23-25, results 7-9 and section 5.4.2", "Printed pp.26-27, conclusion and proposed limits on LLM autonomy", "Table 17, printed p.52"],
+      "source_summary_en": "Seven LLMs recommend portfolios for hypothetical investor profiles under several information treatments, benchmarked against professional advisers. Added firm information improves historical performance mainly by raising market-risk exposure, not by improving mean-variance efficiency within the risky share; risk rises especially for risk-averse profiles. In the short out-of-sample period November 4, 2024-March 21, 2025, broad performance gains do not generally replicate, though qualitative information raises returns. The authors discuss limiting weight-setting autonomy according to risk preferences. This is neither a test of our institution documents nor proof that a particular restriction improves our outputs.",
+      "transfer_to_our_case": "우리 자료에서도 더 큰 수정량이나 더 큰 기관 차이는 좋은 판단과 동일하지 않다. 모든 원비중의 합계가 어긋났고, 출처 의미를 읽고도 실제 선택 설명이 틀렸으므로, 정보 제공만으로 정당화되지 않는 배분 재량을 별도로 다뤄야 한다.",
+      "proposal_from_our_interpretation": "기관의 목표·금지 사항·허용 위험·예외 승인 조건을 공통모델 외부의 기관 승인 정책으로 보존한다. AI는 출처가 있는 전망과 상충 이유·불확실성을 제출하고, 정책과 계산기가 허용하는 범위에서만 배분을 실행한다. Neutral을 고정 비중으로 바꾸지 않으며, 원문에 없는 수치 전망이나 신뢰도를 임의로 생성해 최적화기에 넣지 않는다. 미해결 판단은 현재 승인안 유지 또는 사람의 결정으로 넘기는 등 기관이 정한 보류 정책에 따른다."
+    },
+    {
+      "id": "FIN_ZHANG_XIA_2026_PREVIEW",
+      "authors": ["Jianxiang Zhang", "Xinzi Xia"],
+      "title": "Generative AI and the homogenization of analyst forecasts",
+      "publication": "Finance Research Letters 111, article110767",
+      "doi": "10.1016/j.frl.2026.110767",
+      "primary_url": "https://www.sciencedirect.com/science/article/pii/S154461232601295X",
+      "metadata_url": "https://api.crossref.org/works/10.1016%2Fj.frl.2026.110767",
+      "date_scope": "Publisher preview accessible to search on review date2026-10-26. Publisher/Crossref issue date November2026; Crossref DOI created2026-09-11. No precise online-publication date verified. DOI creation is not publication date.",
+      "access_limit": "Only primary publisher abstract, highlights and introduction preview verified. Full methods, sample dates, magnitudes, robustness and identification assumptions not inspected. Treat as a bounded recent trend reference, not a core validated benchmark.",
+      "verified_locators": ["Publisher abstract", "Publisher highlights", "Publisher introduction preview", "Crossref created/issued/published-print metadata"],
+      "source_summary_en": "The publisher abstract reports a difference-in-differences study of Chinese A-share analyst forecasts. Higher exposure to AI-adopting analysts is associated with lower dispersion, greater report-text similarity and larger absolute forecast errors; convergence is concentrated in herding-type analysts. This motivates evaluating collective error alongside agreement. The accessible preview does not justify asserting individual measured AI usage, a specific causal mechanism, effect sizes, or generality across markets. Its November issue date should not be presented as an already completed calendar month.",
+      "transfer_to_our_case": "기관별 최종 비중이 서로 달라도 공통 시장 수치를 같은 방식으로 틀릴 수 있다. 우리 후기·대조 조건의 동일 초안과 반복된 IT 수치 오류는 독립된 여러 견해가 아니라 공통 계보의 반복일 수 있다는 진단을 요구한다.",
+      "proposal_from_our_interpretation": "출력 간 거리와 별개로 같은 원천·같은 초안·같은 계산에서 유래한 오류를 묶어 기록한다. 여러 모델이나 여러 검토자가 동의하더라도 근거 계보가 같으면 독립 검증의 수로 세지 않는다. 새 검증에서는 서로 다른 정보·검증 경로를 갖는 후보와 동일 경로의 복제 후보를 구분해, 공유 오류가 줄면서도 유효 근거 반응이 유지되는지 확인한다."
+    }
+  ],
+  "synthesis": {
+    "key_reinterpretation": "이번 실험의 문제는 기관자료가 전혀 읽히지 않았다는 것이 아니라, 공통 모델 안에서 기관의 명시적 판단이 실제 선택을 제한하는 효력을 갖지 못할 수 있다는 것이다. 따라서 해결 대상은 단순 정보 부족이나 산술 오류뿐 아니라 '기관별 판단의 실행 권한'이다.",
+    "three_nontrivial_design_axes": [
+      "기관별 정책과 판단 재량을 모델 외부에 보존: 기관 정체성을 이름이나 자료량이 아니라 승인된 목적·제약·예외 규칙으로 구현한다.",
+      "근거의 행동 기여를 반사실 비교로 확인: 출처가 달려 있다는 표면적 충실성에 그치지 않고, 근거 교환·제거·동의 재표현에서 선택이 타당하게 반응하는지 확인한다.",
+      "배분 차이와 오류 계보를 함께 관리: 상이한 포트폴리오라도 공유 오류를 가질 수 있고, 유사한 포트폴리오도 근거상 정당할 수 있다. 독립적 근거 경로와 미해결 판단을 별도 평가한다."
+    ],
+    "proposed_identification_checks": [
+      "같은 시장·같은 기관자료·같은 자원에서 D0 제시 여부만 달리한 fresh-start/continue 비교로 초안 영향 가설을 검증한다. 현재 E/L은 이 요인만 분리하지 못한다.",
+      "기관자료 내용은 유지하고 기관명과 통상 등급 표현만 익명화한 대조로 표면적 연상 가설을 검증한다. 기관 고유 의미나 원문 정보까지 삭제하면 다른 처치가 된다.",
+      "핵심 근거를 제거한 조건과 무관한 표현을 바꾼 조건을 함께 평가하여 근거 민감성과 일반 불안정성을 구분한다. 자산배분 전체는 합계 제약 때문에 연동되므로 다른 산업의 변화를 모두 오류로 취급하지 않는다.",
+      "자료 추가·정책 제약·검증 모듈을 묶은 일괄 처치만 비교하면 어느 부분이 작동했는지 알 수 없으므로, 예산 안에서 기능을 제거한 대조를 미리 선정한다."
+    ],
+    "claims_not_supported": [
+      "초기자료가 앵커링을 일으켰다 또는 후기자료가 더 정확하다는 인과 결론",
+      "기관 사이의 큰 TV 거리가 필요한 전략 다양성의 회복이라는 결론",
+      "Neutral 등급의 올바른 유일 비중이 존재한다는 가정",
+      "제안한 정책·권한 분리나 반사실 평가가 이 데이터에서 이미 오류를 줄였다는 주장",
+      "본 5사례가 실제 금융시장의 공통행동·담합·수익률이나 시스템위험을 측정했다는 주장"
+    ]
+  },
+  "screened_but_not_core": [
+    {"title":"AI-Powered Trading, Algorithmic Collusion, and Price Efficiency", "doi":"10.3386/w34054", "reason":"Primary NBER abstract found, full paper not independently inspected here. Reinforcement-learning repeated trading is remote from single LLM source-to-allocation fidelity, so do not use as direct explanation."},
+    {"title":"Artificial Intelligence and Financial Tail Risks", "url":"https://www.bankofcanada.ca/2026/10/staff-working-paper-2026-40/", "reason":"Current2026 paper but market-perceived AI exposure and return tails are not a benchmark remedy for this study's source-action gap."},
+    {"title":"Supervisory Guidance on Model Risk Management, SR26-2", "url":"https://www.federalreserve.gov/frrs/guidance/supervisory-guidance-on-model-risk-management.htm", "reason":"2026 guidance expressly excludes generative and agentic AI from scope. Do not cite as a directly applicable GenAI legal requirement; generic governance would add little to the substantive mechanism."}
+  ]
+}

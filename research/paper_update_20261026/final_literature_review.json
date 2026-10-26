@@ -1,0 +1,248 @@
+{
+  "schema": "manuscript_literature_review_1",
+  "review_date": "2026-10-26",
+  "manuscript": "paper/v500_manuscript_20261026.json",
+  "reviewed_sha256": "c998e8709d0c652fa6f342f045962d9033567f635e887b05cf98dc19450e136f",
+  "review_scope": "문헌을 인용한 본문 주장의 범위, 신규 참고문헌 5건과 기존 핵심 참고문헌의 서지, 8장 제안과 9장 후속 검증의 정합성. 원자료 수치 재계산이나 문서 시각 QA는 별도 검토.",
+  "result": "pass_after_verified_clarifications",
+  "material_citation_errors": 0,
+  "overclaim_or_fabricated_effects_found": 0,
+  "manuscript_modified": false,
+  "new_reference_checks": [
+    {
+      "id": "pal2023",
+      "status": "pass",
+      "blocks": [
+        102,
+        143
+      ],
+      "note": "8명 저자, 2023 ICML/PMLR 202, 10764–10799와 공식 URL 일치. 계산을 실행기에 맡기는 원리를 참고한다는 주장과 금융 과제 효과를 이식하지 않는 한계가 적절함.",
+      "url": "https://proceedings.mlr.press/v202/gao23f.html"
+    },
+    {
+      "id": "alce2023",
+      "status": "pass",
+      "blocks": [
+        105,
+        144
+      ],
+      "note": "Tianyu Gao 등 4명, 2023 EMNLP, 6465–6488 일치. 인용 존재와 실제 지지 구분은 §3.3 근거. 일반 질의응답 평가 원리로 한정됨.",
+      "url": "https://aclanthology.org/2023.emnlp-main.398/"
+    },
+    {
+      "id": "rarr2023",
+      "status": "pass",
+      "blocks": [
+        106,
+        145
+      ],
+      "note": "Zhao, V. Y.는 원문 PDF의 Vincent Y. Zhao와 일치하므로 수정 불필요. ACL 2023 Vol.1, 16477–16508 일치. 사실 수정만으로 후속 추론을 고치지 못하는 한계를 원문 §6·§8에서 직접 확인함.",
+      "url": "https://aclanthology.org/2023.acl-long.910.pdf"
+    },
+    {
+      "id": "huang2024",
+      "status": "pass",
+      "blocks": [
+        112,
+        146
+      ],
+      "note": "7명 저자와 ICLR 2024 및 제목 일치. 내재적 자기수정에 관한 연구로 제한하며 모든 자기수정 불가능으로 확대하지 않음. 별도 근거를 제공하는 본 제안의 효과가 증명됐다고 쓰지 않음.",
+      "url": "https://arxiv.org/html/2310.01798v2"
+    },
+    {
+      "id": "nist2023",
+      "status": "pass_after_verified_author_correction",
+      "blocks": [
+        111,
+        147
+      ],
+      "note": "최신 원고 block111/147의 본문과 참고문헌이 Tabassi(2023) 및 Tabassi,E.(2023)로 일치함. 공식 NIST 서지와 일치. 역할·평가·기록 주장은 GOVERN3.2/MEASURE1.3/2.1/MANAGE4.1–4.3에 근거함.",
+      "url": "https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10"
+    }
+  ],
+  "prior_reference_checks": [
+    {
+      "id": "kleinberg2021",
+      "status": "pass",
+      "blocks": [
+        5,
+        88
+      ],
+      "primary_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8179131/",
+      "finding": "제한된 선택·경쟁 이론 모형에서 공통의 더 정확한 알고리즘이 집단 후생을 낮출 수 있다는 조건부 주장. 금융시장의 실증 결과로 확대하지 않음. 서지 일치."
+    },
+    {
+      "id": "bommasani2022",
+      "status": "pass",
+      "blocks": [
+        5,
+        88
+      ],
+      "primary_url": "https://papers.neurips.cc/paper_files/paper/2022/hash/17a234c91f746d9625a75cf8a8731ee2-Abstract-Conference.html",
+      "finding": "공유 모델의 적응 방식에 따라 동질화 정도가 달라지는 혼합 결과와 일치. 서지 일치."
+    },
+    {
+      "id": "doshi2024",
+      "status": "pass",
+      "blocks": [
+        10
+      ],
+      "primary_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11244532/",
+      "finding": "온라인 창작 과제의 개별 품질과 집단 다양성 차이로 한정한 서술이 적절. 금융 배분으로 직접 일반화하지 않음. 서지 일치."
+    },
+    {
+      "id": "hornuf2025",
+      "status": "pass",
+      "blocks": [
+        12,
+        93
+      ],
+      "primary_url": "https://www.ifo.de/DocDL/cesifo1_wp11862.pdf",
+      "finding": "CESifo11862, 저자·2025년 일치. 초록은 추가 도메인 정보가 추천 품질을 일률적으로 높이지 않으며 정보 종류별 영향이 다름을 명시. 원고는 해당 범위를 넘어 수익·위험 효과를 인용하지 않음."
+    },
+    {
+      "id": "quek2025",
+      "status": "pass",
+      "blocks": [
+        12,
+        35
+      ],
+      "primary_url": "https://arxiv.org/html/2503.09647v5",
+      "finding": "v5 2025-04-10 및 저자 일치. 본문 §3은 금리·물가·고용·성장 범주와 발표 지연을 고려한 입력 사용을 명시. 원고는 과제 구성만 참고하며 거래 성과를 재현했다고 주장하지 않음."
+    },
+    {
+      "id": "laban2025",
+      "status": "pass",
+      "blocks": [
+        13,
+        91
+      ],
+      "primary_url": "https://arxiv.org/abs/2505.06120v1",
+      "finding": "v1 2025-05-09 및 저자 일치. 초기 가정과 성급한 답변, 다중 턴의 불안정성을 다루며 원고는 현재 실험의 앵커링 인과증거로 확대하지 않음."
+    },
+    {
+      "id": "portbench2026",
+      "status": "pass",
+      "blocks": [
+        15
+      ],
+      "primary_url": "https://arxiv.org/html/2605.27887v6",
+      "finding": "v6 2026-10-09 및 저자 일치. §2.2·§3.1·C.4에서 단계별 평가와 동일비중·최소분산 비교안을 확인. 원고는 정답 비중·성능 기준을 그대로 이전하지 않음."
+    },
+    {
+      "id": "e2a2026",
+      "status": "pass",
+      "blocks": [
+        15
+      ],
+      "primary_url": "https://arxiv.org/abs/2609.14302v1",
+      "finding": "v1 2026-09-13 및 저자 일치. 근거와 행동의 연결 및 응답 범위를 함께 평가하는 관점을 지지. 금융 차트 VLM 과제를 본 실험과 동일시하지 않음."
+    },
+    {
+      "id": "pombal2026",
+      "status": "pass",
+      "blocks": [
+        65
+      ],
+      "primary_url": "https://arxiv.org/abs/2604.06996v3",
+      "finding": "v3 2026-08-03 및 저자 일치. 루브릭 기반 평가에서도 자기 선호 편향이 남는다는 주장과 부합."
+    },
+    {
+      "id": "shi2025",
+      "status": "pass",
+      "blocks": [
+        65
+      ],
+      "primary_url": "https://aclanthology.org/2025.ijcnlp-long.18/",
+      "finding": "6명 저자, 2025 IJCNLP/AACL, 292–314 일치. 위치 편향을 주의사항으로 인용하며 현 검토에서 편향이 측정됐다고 주장하지 않음."
+    },
+    {
+      "id": "fsb2024",
+      "status": "pass",
+      "blocks": [
+        5,
+        88
+      ],
+      "primary_url": "https://www.fsb.org/2024/11/the-financial-stability-implications-of-artificial-intelligence/",
+      "finding": "2024-11-14 보고서는 공급자 집중·시장 상관관계·모델과 자료 관리의 잠재적 취약성을 명시. 실제 위기 발생이나 본 연구의 시스템 위험 감소 효과로 확대하지 않음."
+    },
+    {
+      "id": "markowitz1952",
+      "status": "bibliography_pass_claim_scope_no_overextension",
+      "blocks": [
+        59
+      ],
+      "primary_url": "https://doi.org/10.1111/j.1540-6261.1952.tb01525.x",
+      "finding": "Harry Markowitz, 1952, Journal of Finance7(1),77–91 서지 일치. 원고는 공분산 기반 분산 진단의 고전적 배경으로 쓰며 연율화 계수 자체의 원출처라고 명시하지 않음. 이번 재검토에서 출판사 본문은 열리지 않아 본문 수식의 새 검증은 하지 않음."
+    }
+  ],
+  "design_review": {
+    "status": "specific_and_research_aligned",
+    "checks": [
+      "8.1은 시행 완료된 합계 보정·사후 검토와 미검증 통합 절차를 명확히 구분함.",
+      "8.2는 원문에서 없는 이유를 AI 추론으로 분리하며 Neutral을 고정 비중으로 변환하지 않음.",
+      "8.2의 초기 제공 선택은 우월성 증거가 아닌 설계 선택으로 설명됨.",
+      "8.3은 원비중과 파생비중 보존 및 누락·음수·비유한/0합 거부를 포함함.",
+      "8.4는 인용 수나 식별자 존재를 충실성으로 오인하지 않으며 수치 수정 이후의 판단도 검토함.",
+      "8.5는 원비중 변화와 파생비중/비교기준을 구분하며 직접 점검 가능한 사례를 제시함.",
+      "8.5의 한 번 수정은 연구팀의 비용 관리 선택임을 밝혀 문헌상 최적값으로 포장하지 않음.",
+      "8.6은 다른 AI 검토를 인간 독립 타당화로 오인하지 않음.",
+      "8.7은 기관의 유효한 근거 차이를 보존하는 목표를 원 연구질문과 연결하고 배분 차이 자체를 최대화하지 않음.",
+      "표10은 각 단계 산출물과 보류 기준을 제공하여 제안이 추상적 구호에 그치지 않음."
+    ],
+    "minor_clarification": {
+      "id": "C1",
+      "location": "§9.2 block121",
+      "issue": "제안8.3의 계산기 기반 수치 산출·대조가 후속 비교군 C에 들어가는지 현재 문구에서는 암묵적이다.",
+      "recommended_text": "C는 B에 검증된 계산기로 수치·단위를 산출·대조하는 기능, 주장별 근거 대조, 설명·비중 검사 및 제한된 수정을 더한 구성이다.",
+      "reason": "핵심 제안의 구성요소와 실제 비교할 처리 조건을 일치시킨다.",
+      "severity": "minor",
+      "blocks_adoption": false,
+      "status": "resolved_in_latest_manuscript"
+    }
+  },
+  "followup_evaluation_review": {
+    "status": "pass_no_tautological_success_claim",
+    "checks": [
+      "새 자료시점·입력 묶음을 사용하며 현재 개발 사례를 새 검증 표본으로 재사용하지 않음.",
+      "W0/W1/W2 모든 구성은 외부 합계 보정을 포함하여 W2만 수학적으로100%가 되도록 만드는 자명한 비교를 피함.",
+      "구조화 입력과 계산·근거 검토 추가를 순차적으로 비교하고 추가 호출·지연·사람 부담을 따로 보고함. W2 개별 기능의 효과가 각각 분리되지는 않는다고 명시함.",
+      "검사자 자신의 통과율만 결과로 삼지 않고 독립적인 사람 검토를 추가함.",
+      "합계 준수와 의미 정확성을 분리하고 누락·미해결·보류를 같이 측정함.",
+      "실험 단위를 산업행이나 비교쌍으로 부풀리지 않음.",
+      "미유의성을 동등성 증거로 취급하지 않고 허용 오류·비용 범위를 검증 전 정하도록 함.",
+      "배분 거리 확대를 성공 기준으로 삼지 않고 개선 없는 결과도 보고하도록 함.",
+      "W0/W1/W2 업무 구성과 각 구성 내의 자료미제공 C조건을 구별하여 조건명 혼동을 방지함."
+    ],
+    "implementation_note": "후속 실험의 사전계획에는 전체 자원 한도의 실제 배분, 사람 평가 범위와 표본추출, 각 오류의 분모·허용범위, 수정의 기준 및 종료 규칙을 숫자로 확정해야 한다. 현재 원고는 이를 완료된 실험처럼 주장하지 않으므로 설계 제안으로 적절하다."
+  },
+  "requested_root_actions": [],
+  "initial_reviewed_sha256": "78b8e7d500427a031dd7390490bdcaff1478ebbd5a1fddeb5229feff3d996e7b",
+  "verified_root_fixes": [
+    {
+      "blocks": [
+        111,
+        147
+      ],
+      "finding": "Tabassi 저자·본문 인용 통일 확인"
+    },
+    {
+      "blocks": [
+        121
+      ],
+      "finding": "W2에8.3검증 수치산출·대조가 명시되고 묶음효과이며 개별기능효과를 분리하지 않음을 확인"
+    },
+    {
+      "blocks": [
+        112
+      ],
+      "finding": "Huang 연구의 내재적 자기수정과 외부자료·계산피드백이 있는 현재 F0조건의 차이 명시"
+    },
+    {
+      "blocks": [
+        145
+      ],
+      "finding": "RARR의 Zhao,V.Y.원문표기 유지 확인"
+    }
+  ]
+}
