@@ -1,0 +1,37 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-25T10:03:35.457050+00:00",
+  "scope": "Recovery accounting verified, not successful or complete old pilot.",
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "Six attempted requests, five completed stages, two finals and all failures independently reconciled. Watcher incident is not asserted as root cause of later interruption."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Original run unchanged; Decimal sums, citation membership and response bindings agree with frozen functions. Five planned cases remain denominator."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "Separate infrastructure missingness from model arithmetic/meaning failures; institutional evidence to stated reasoning to raw allocation remains the question."
+    }
+  },
+  "input_refs": [
+    {
+      "path": "research/recovery_20261025/old_run_interruption_audit.json",
+      "sha256": "55e336338b2a7d9b6cb63dd0d38ae7d5caa540dd94cc2ba4eed63a5a1dd1d5d1"
+    },
+    {
+      "path": "research/recovery_20261025/old_run_reconciled_summary.json",
+      "sha256": "2e5828229a15179c248a4df468a0497a0962564f4be93b01f09987a9dc800f67"
+    },
+    {
+      "path": "research/recovery_20261025/old_run_recovered_arithmetic.json",
+      "sha256": "9122d12203fde66da702a8c813a1701724bdbe6b871666a1105c66a81b1d8cb8"
+    },
+    {
+      "path": "research/recovery_20261025/old_run_audit.py",
+      "sha256": "10f1e351be6fdff6912eb15d3002b500dc0d56c6f3bc1c648b24368c3d6d5cbe"
+    }
+  ]
+}

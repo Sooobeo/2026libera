@@ -1,0 +1,130 @@
+{
+  "schema_version": 1,
+  "receipt_id": "allocation_finalization_tests_20261025",
+  "recorded_at": "2026-10-25T11:44:42.634Z",
+  "status": "PASS",
+  "command": "python -m unittest research.test_finalize_sector_allocation -v",
+  "working_directory": "C:/Users/Insun/2026libera",
+  "scope": "Synthetic standard-library tests of finalize_content only; no experiment raw responses read, model calls, real-stage finalization, frozen code changes or live-runtime interaction.",
+  "historical_initial_run": {
+    "tests": 23,
+    "exit_code": 0,
+    "unittest_elapsed_seconds": 0.271,
+    "summary": "Ran 23 tests; OK",
+    "source_before_sha256": "3e237e6dc01a1a2d93f5d16fcb0bb846ac6afa90b60c77853fa4fa692def8878",
+    "test_source_sha256": "b974389fbefaeea338096f3a9407715ffc1fee2708cb916496056a1673e04e84",
+    "source_changed_during_pending_execution": true,
+    "loaded_source_version_known": false,
+    "interpretation": "Historical pass evidence only. Root changed the module during delayed native startup; this run does not certify one stable implementation hash."
+  },
+  "final_run": {
+    "tests": 32,
+    "exit_code": 0,
+    "unittest_elapsed_seconds": 0.415,
+    "summary": "Ran 32 tests; OK",
+    "module": {
+      "path": "research/finalize_sector_allocation.py",
+      "sha256_before": "117301ec9cb0ee6fb09cd5a4d3388005cf4c2cd94f565e06a4a5d36c2851ff64",
+      "sha256_after": "117301ec9cb0ee6fb09cd5a4d3388005cf4c2cd94f565e06a4a5d36c2851ff64",
+      "unchanged": true
+    },
+    "test_source": {
+      "path": "research/test_finalize_sector_allocation.py",
+      "sha256_before": "1bf92287c3b29079b2935c94e79885e3d47f59b5503eca61249943b8b0535501",
+      "sha256_after": "1bf92287c3b29079b2935c94e79885e3d47f59b5503eca61249943b8b0535501",
+      "unchanged": true
+    },
+    "test_methods": [
+      "test_official_sector_order_is_explicit",
+      "test_point92_vector_scales_and_distributes_exact_remainder",
+      "test_eleven_equal_weights_use_official_order_for_exact_tie",
+      "test_three_equal_weights_retain_nonterminating_exact_rationals",
+      "test_near_tie_beyond_default_decimal_precision_is_not_a_tie",
+      "test_permutation_does_not_change_sector_mapping_or_tie_result",
+      "test_positive_rescaling_preserves_normalized_and_display_vectors",
+      "test_already_unit_sum_on_basis_point_grid_is_identity",
+      "test_single_positive_component_and_signed_zero",
+      "test_zero_preservation_and_small_positive_rounding_to_zero",
+      "test_finite_tiny_decimal_does_not_underflow_before_normalization",
+      "test_finite_large_decimal_does_not_overflow_to_infinity",
+      "test_display_finalization_is_idempotent",
+      "test_largest_remainders_are_selected_not_just_first_sectors",
+      "test_negative_weight_including_underflow_sized_negative_is_unavailable",
+      "test_nonfinite_json_constants_are_unavailable",
+      "test_boolean_and_string_weights_are_not_coerced",
+      "test_all_zero_vector_has_no_arbitrary_fallback",
+      "test_missing_sector_or_missing_weight_is_unavailable",
+      "test_duplicate_unknown_or_noncanonical_sector_code_is_unavailable",
+      "test_extra_row_is_not_silently_dropped",
+      "test_duplicate_json_object_keys_are_not_last_value_wins",
+      "test_malformed_or_partial_input_is_not_salvaged",
+      "test_scaling_can_newly_violate_submitted_bound_without_clipping",
+      "test_rounding_can_newly_violate_submitted_bound_without_second_repair",
+      "test_malformed_constraint_ids_remain_serializable_and_unassessable",
+      "test_duplicate_constraint_ids_are_not_silently_combined",
+      "test_invalid_constraint_bounds_are_unassessable_not_portfolio_constraints",
+      "test_malformed_constraint_container_does_not_invent_validated_constraints",
+      "test_bounded_resource_guard_rejects_huge_compact_numeric_tokens",
+      "test_huge_constraint_number_is_bounded_and_result_stays_serializable",
+      "test_exponent_beyond_decimal_platform_limit_is_reported_not_raised"
+    ],
+    "duration_limit": "The unittest-reported duration excludes native command startup delay. It is not a model-performance or service-latency benchmark."
+  },
+  "coverage": [
+    "Exact 10000-unit and 100.00-percent totals, canonical code mapping and 2-decimal percent formatting",
+    "Exact normalization/rounding delta conservation and per-component rounding error below one unit",
+    "0.92 total, eleven-way ties, thirds, precision-sensitive 1e-40 near tie",
+    "Permutation invariance, positive scaling invariance, already-grid identity, idempotence and zero preservation",
+    "Finite 1e-400 and 1e400 without float underflow/overflow",
+    "Strict rejection of negative, nonfinite, boolean/string/null, missing, duplicate and malformed vectors/JSON",
+    "Pre-Fraction digit/exponent resource guard and Decimal-platform-overflow exception handling",
+    "Submitted constraint changes caused separately by scaling/rounding without clipping",
+    "Malformed/duplicate constraint IDs, invalid bounds, malformed containers and JSON-serializable results"
+  ],
+  "protected_original_files": [
+    {
+      "path": "data/sector_protocol/v491_design_20261019/response_schema.json",
+      "sha256_before": "944a232de9f4a1e9ae672b172196aa906077ee03c3f6bf2ab06ad032d6d0b147",
+      "sha256_after": "944a232de9f4a1e9ae672b172196aa906077ee03c3f6bf2ab06ad032d6d0b147"
+    },
+    {
+      "path": "research/sector_engine.py",
+      "sha256_before": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c",
+      "sha256_after": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c"
+    },
+    {
+      "path": "research/analyze_v492_pilot.py",
+      "sha256_before": "841c1f941e2c39165f84f51f5df283ca7a3c5727de285d4ad56edfa50166529f",
+      "sha256_after": "841c1f941e2c39165f84f51f5df283ca7a3c5727de285d4ad56edfa50166529f"
+    },
+    {
+      "path": "research/sector_v491_contract.py",
+      "sha256_before": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397",
+      "sha256_after": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397"
+    }
+  ],
+  "interpretation_limits": [
+    "These are 32 software test methods, not 32 financial observations or independent semantic judgments.",
+    "Raw model validity and the frozen planned-case denominator remain unchanged.",
+    "raw_budget_within_1e_6 is an exact-rational derived diagnostic, not replacement for the frozen float-based eligibility rule.",
+    "Full CLI artifact binding, terminal accounting, active-stage safety and actual-stage application are outside this pure-function test receipt."
+  ],
+  "review_axes": {
+    "errors": {
+      "status": "pass",
+      "reason": "All 32 synthetic mathematical, parsing, precision, bounds and serialization tests passed on stable module/test bytes."
+    },
+    "consistency": {
+      "status": "pass",
+      "reason": "Final source and test hashes are unchanged across the run; four original schema/calculator/analyzer/contract files remain unchanged. The earlier unstable-source test history is retained separately."
+    },
+    "paper_topic": {
+      "status": "pass_with_limits",
+      "reason": "Tests establish deterministic 100% finalization and transparent adjustments, not source interpretation, semantic repair, institutional correctness or investment performance."
+    }
+  },
+  "policy_review_ref": {
+    "path": "research/recovery_20261025/derived_final_allocation_policy_review_20261025.json",
+    "sha256": "7355b0de7466edac93187133ca2156a3cd31f2c852a0e0351193320ee0687c3d"
+  }
+}

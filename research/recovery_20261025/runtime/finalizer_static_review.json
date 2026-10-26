@@ -1,0 +1,109 @@
+{
+  "review_version": "v494_allocation_finalizer_static_review_1",
+  "status": "PASS_STATIC_INSPECTION",
+  "recorded_at_utc": "2026-10-25T11:43:09.836Z",
+  "scope": "Read-only review of new offline derived-allocation finalizer. No execution of finalizer, no model calls, no stage semantics review, and no edits to implementation by this reviewer.",
+  "source_refs": [
+    {
+      "path": "research/finalize_sector_allocation.py",
+      "sha256": "117301ec9cb0ee6fb09cd5a4d3388005cf4c2cd94f565e06a4a5d36c2851ff64"
+    },
+    {
+      "path": "research/sector_engine.py",
+      "sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c"
+    },
+    {
+      "path": "research/sector_v494_runtime.py",
+      "sha256": "c9521000aa3a1497775c83fa83a1b9bac9f5443edbcb707f131d313f7cd8bed1"
+    },
+    {
+      "path": "research/run_v494_recovery.py",
+      "sha256": "56fdb077c375ca4b99a110a93d81210a74812257cae3b0967b613f0b5de27576"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_pilot_20261025/fidelity_q2_2026__E__D0/worker_spec.json",
+      "sha256": "2ff6196a044f491b1054143940001f00d1134815e346e422efcffa300c3c2251"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_pilot_20261025/fidelity_q2_2026__E__D0/stage_review.json",
+      "sha256": "d186049244124343f5b71e89571db03b53143b73259a7c7876b6915b8bde72e6"
+    }
+  ],
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "Exact decimal-to-Fraction arithmetic, largest-remainder integer invariant and deterministic ties are coherent. Malformed vectors remain unavailable; malformed bounds remain unassessable diagnostics. Numeric resource caps precede input Fraction conversions. Decimal/Unicode parse failures become unavailable, and full ASCII-safe JSON serialization plus UTF-8 encoding precedes exclusive output creation."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Completed stages bind directory/spec run identity, exact response hash/content, one integer attempt, transport integrity/continuation/preservation/accounting, model/assistant envelope and independently reviewed stage artifact refs. All read inputs are rehashed after finalization. Terminal run binds five declared cases, ten slots, exact stage directories/status/count and aggregate first attempts; summary is rehashed. Derived output is prohibited throughout the raw run tree and created exclusively elsewhere."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "User-requested exact100% arithmetic is a separately labeled post-start derived supplement. Raw frozen endpoints/errors, allocation explanations, evidence claims and missing-case denominators remain unchanged. Diagnostics expose normalization/rounding effects on submitted bounds and derived comparisons; evidence visibility/support is explicitly unverified. No claim of main-experiment readiness or semantic repair is added."
+    }
+  },
+  "math_review": {
+    "input": "Exactly11 unique canonical sectors, finite nonnegative JSON numeric weights and positive exact sum.",
+    "normalization": "Fractions w_i/sum(w) retain exact relative ratios before rounding.",
+    "rounding": "Exact quotas sum10000. Floors sum at most10000; their integer deficit is nonnegative and less than11. Adding1 to the largest fractional remainders in fixed sector-code tie order yields exactly10000 nonnegative integer units.",
+    "representation": "Integer units over10000 are authoritative; formatted weights have4decimal places and percentages2decimal places. The final integer sum therefore equals100.00% exactly.",
+    "bound_diagnostics": "Compare raw, exact normalized and integer final weights to valid submitted min/max bounds without enforcement. Do not treat finalization as a constrained optimizer or source validation.",
+    "resource_policy": "Coefficient digits, absolute exponent and adjusted exponent bounded at512; input length bounded at2M characters. Out-of-range weights are unavailable and are never clipped."
+  },
+  "resolved_findings": [
+    {
+      "id": "unvalidated_constraint_id_serialization",
+      "resolution": "Constraint ID must be nonempty unique string; malformed identity/bound/evidence becomes unassessable; only typed safe fields copied."
+    },
+    {
+      "id": "out_of_range_constraint_bounds",
+      "resolution": "Bounds require finite bounded Decimal in[0,1], with explicit source-support unchecked statement."
+    },
+    {
+      "id": "weak_completed_stage_binding",
+      "resolution": "Integer attempt type, integrity/continuation/preservation/accounting and exact reviewed response envelope/refs required."
+    },
+    {
+      "id": "sibling_raw_stage_output_path",
+      "resolution": "Stage mode rejects output throughout containing raw run tree."
+    },
+    {
+      "id": "terminal_summary_accounting",
+      "resolution": "Exact case/stage order, stage status/count and observed directories, aggregate attempts and postread summary hash required."
+    },
+    {
+      "id": "compact_huge_decimal_resource",
+      "resolution": "Decimal resource limits checked before every input Fraction conversion; DecimalException explicitly handled."
+    },
+    {
+      "id": "partial_serialization_output",
+      "resolution": "Full JSON ensure_ascii=True serialization and UTF-8 encode complete before exclusive binary file open."
+    }
+  ],
+  "failure_state_policy": {
+    "invalid_model_vector": "Return unavailable with reason; no missing/negative sectors are invented or clipped.",
+    "invalid_submitted_constraint": "Preserve valid arithmetic result and report constraint unassessable; no semantic enforcement or repair.",
+    "ordinary_declared_failed_or_unattempted_stage": "Retain unavailable slot in valid terminal report; five planned finals and ten slots remain denominators.",
+    "corrupt_or_missing_declared_artifact": "Fail closed by raising before CLI output creation; no misleading finalized report or reduced denominator is emitted. Existing raw terminal summary remains the independent denominator evidence.",
+    "unexpected_internal_arithmetic_invariant_failure": "Raises; does not silently substitute a result."
+  },
+  "actual_stage_metadata_review": {
+    "case_id": "fidelity_q2_2026__E",
+    "stage": "D0",
+    "spec_run_directory_present": true,
+    "stage_review_instrument_integrity_pass": true,
+    "review_has_response_spec_transport_refs": true,
+    "response_semantics_inspected": false
+  },
+  "tests_run_by_this_reviewer": [],
+  "model_calls": 0,
+  "source_files_modified": false,
+  "limitations": [
+    "Static inspection only; pure tests and actual completed-stage CLI integration belong to other agents/root and are not claimed here.",
+    "A derived arithmetic result does not validate original citations, constraints interpretation, explanations or raw model budget correctness.",
+    "Corrupt/missing declared artifacts intentionally produce no derived report; downstream automation must surface nonzero failure and retain raw denominator evidence.",
+    "This review binds the exact source hash above and must be revisited if implementation changes.",
+    "Earlier archive static review09 predates later finalizer/test source inclusion; root is aware that its archive target hash is stale."
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "receipt_version": "v494_archive_static_review_2",
+  "status": "PASS_STATIC_INSPECTION",
+  "completed_at_utc": "2026-10-25T11:28:06.532Z",
+  "supersedes_static_target": "research/recovery_20261025/runtime/live_observation_03_archive_review.json",
+  "input_refs": [
+    {
+      "path": "research/archive_v494_recovery.py",
+      "sha256": "1bf66804d5613f69e2b102c25df864acbfbbb3770bf004cb828a400495fed74f"
+    },
+    {
+      "path": "research/restore_research_artifacts.py",
+      "sha256": "080d93bb41a01a0625084f6b335795b0a3a11736234eda2abaed8bd14889beff"
+    }
+  ],
+  "review_type": "static_inspection_only",
+  "tests_run": [],
+  "archiver_executed": false,
+  "generation_calls": 0,
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "Recognized terminal receipt, owned service stopped and port closed remain required. If temporary helper acquired, released status, matching helper PID and clear flags 0x80000000 are required. Roots may be explicit files or directories; each must exist, be nonempty, resolve within workspace and have no duplicate member. Size/mtime inventory checks every file before/after read and whole inventory after ZIP close."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Frozen code refs are independently SHA256-checked and their actual source files included, plus launch/archive/restore helpers. Original files remain read-only; new archive/manifest/verification are exclusive. Existing restore verifier called with write=False. All report and pending helper/probe log writers must finish before invocation."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "Archives historical interrupted and new development pilot evidence with operational amendment records. Does not change input, allocation design, citations, model conditions or missing outcomes, and explicitly does not equate archival completion with semantic or research success."
+    }
+  },
+  "resolved_findings": [
+    "Earlier live review target was superseded by awake-release guard and frozen-source inclusion; this new receipt binds current source bytes.",
+    "Individual frozen code files are preserved rather than only recording their hashes."
+  ],
+  "limitations": [
+    "Static inspection only; no archive execution or automated tests performed.",
+    "Root must ensure no active report writers, including delayed read-only startup probes, before archive.",
+    "Guard verifies acquired helper release only when acquire.json exists; a pending bootstrap must be settled before archive as part of writer-quiescence coordination.",
+    "Size/mtime stability does not protect against deliberate edits preserving both length and timestamps.",
+    "Any partially written failed archive remains failed evidence and must not be silently overwritten."
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "version": "allocation_finalization_acceptance_1",
+  "recorded_at_utc": "2026-10-25T11:45:19.056Z",
+  "status": "PASS_FOR_DECLARED_DERIVED_ALLOCATION_SCOPE",
+  "refs": [
+    {
+      "path": "research/finalize_sector_allocation.py",
+      "sha256": "117301ec9cb0ee6fb09cd5a4d3388005cf4c2cd94f565e06a4a5d36c2851ff64"
+    },
+    {
+      "path": "research/test_finalize_sector_allocation.py",
+      "sha256": "1bf92287c3b29079b2935c94e79885e3d47f59b5503eca61249943b8b0535501"
+    },
+    {
+      "path": "research/recovery_20261025/allocation_finalization_amendment.json",
+      "sha256": "009f90b89a6185f1af9c63fd6be47d01f9662d959fd13b9938295f5943156031"
+    },
+    {
+      "path": "research/recovery_20261025/allocation_finalization_tests_20261025.json",
+      "sha256": "d7b0c890fad53899b676a957651e873d216899517acd6317549f84498904fb67"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/finalizer_static_review.json",
+      "sha256": "ce43852a732006aef2cfab3e31a98daf9f68079dad6e892ac9953f642db4328e"
+    },
+    {
+      "path": "research/recovery_20261025/derived_allocation/fidelity_E_D0_math.json",
+      "sha256": "dd4f331691cddd2c0953587e5df36b39676311773b98491c66f82c567b81ea24"
+    }
+  ],
+  "validation": {
+    "unit_tests": 32,
+    "unit_test_exit_code": 0,
+    "source_hash_stable_during_final_suite": true,
+    "completed_D0_CLI_exit_code": 0,
+    "known_actual_raw_sum": "0.92",
+    "known_actual_final_units": [
+      218,
+      217,
+      1087,
+      978,
+      435,
+      978,
+      1304,
+      4131,
+      326,
+      217,
+      109
+    ],
+    "independently_checked_expected_units": [
+      218,
+      217,
+      1087,
+      978,
+      435,
+      978,
+      1304,
+      4131,
+      326,
+      217,
+      109
+    ],
+    "integer_unit_sum": 10000,
+    "exact_percent_total": "100.00",
+    "input_refs_unchanged": [
+      {
+        "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__E__D0\\transport_result.json",
+        "match": true
+      },
+      {
+        "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__E__D0\\worker_spec.json",
+        "match": true
+      },
+      {
+        "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__E__D0\\http_0001_generation\\response.json",
+        "match": true
+      },
+      {
+        "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__E__D0\\stage_review.json",
+        "match": true
+      }
+    ],
+    "actual_source_content_preserved": true,
+    "live_frozen_generation_untouched": true,
+    "model_calls": 0
+  },
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "scope": "Exactly10000 integer units for eligible complete nonnegative positive-sum vectors; strict errors retained for unavailable input; budget correction separate from semantic correctness."
+    },
+    "consistency": {
+      "pass": true,
+      "scope": "Actual completed D0 source binding and raw hash remain unchanged; uniform canonical sector order, proportional scaling, deterministic largest-remainder ties and exact provenance."
+    },
+    "paper_topic": {
+      "pass": true,
+      "scope": "Final mathematical allocation now enforces the budget as requested. Institutional interpretation, original claims and raw-vs-derived explanation linkage stay separately auditable."
+    }
+  },
+  "field_interpretations": {
+    "raw_budget_within_1e_6": "Exact Fraction diagnostic only; does not overwrite frozen binary-float eligibility at tolerance boundaries.",
+    "final_weight_decimal": "Exact terminating rendering of canonical integer units over10000.",
+    "normalized_weight_exact": "Intermediate exact rational ratio, not necessarily a finite decimal.",
+    "D0_role": "This concrete integration example is a draft diagnostic, not a substitute for F0 or an additional planned final."
+  },
+  "limitations": [
+    "No full five-case run finalization yet; run remains live.",
+    "No semantic/source support validation is implied by total100.00%.",
+    "Submitted min/max constraints are diagnosed, not solved as an optimization problem.",
+    "Corrupt or mismatched declared stage artifacts fail closed without emitting a derived run report.",
+    "Formal raw endpoint remains available; derived endpoint is the documented post-start user-requested amendment."
+  ]
+}

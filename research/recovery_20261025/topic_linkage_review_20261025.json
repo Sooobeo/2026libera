@@ -1,0 +1,429 @@
+{
+  "schema_version": 1,
+  "review_id": "topic_linkage_review_20261025",
+  "recorded_at": "2026-10-25T11:31:02.074Z",
+  "status": "PASS_design_topic_linkage_with_reporting_issues_and_unverified_outcomes",
+  "reviewer": {
+    "identity": "Codex AI assistant subagent",
+    "role": "Independent pass over design documents and prepared inputs; not independent human review or an independent statistical rater",
+    "prior_exposure": "Reviewer previously audited old-run failures and source material. No new v494 pilot responses were read for this review."
+  },
+  "scope": {
+    "reviewed": "Current frozen v4.9.4 pilot design, five prepared D0 input files, latest available v4.9.3 manuscript file, fixed v4.9.2 r2 evaluation and related preparation provenance.",
+    "not_reviewed": "No new pilot output, semantic coding result, current run completion or performance was inspected. No claim is made that F0 execution followed its intended design merely because its contract is consistent.",
+    "new_model_calls": 0,
+    "main_experiments": 0,
+    "protected_file_changes": 0,
+    "cpu_scope": "Lightweight Node filesystem reads, JSON comparisons and small-file hashes only; no tests, rendering or native shell commands."
+  },
+  "research_question": {
+    "manuscript_title": "공통 생성형 AI의 기관별 공개 투자판단 반영",
+    "question": "공통 운용 과제와 동일한 시장상황에서 AI는 기관별 공개 산업판단을 근거 있는 배분 제안에 어떻게 반영하며, 자료의 초안 전후 제공에 따라 그 연결이 어떻게 달라지는가?",
+    "observable_chain": "Public source meaning -> stated adoption/qualification/departure -> supporting/competing visible evidence -> actual allocation or own draft-to-final change",
+    "topic_connection": "The design examines institutional public-evidence use in a common AI allocation workflow. Arithmetic and citation checks are prerequisites and diagnostics within that question; they must not replace it with a JSON-compliance benchmark or a trading-performance study.",
+    "evidence": [
+      "paper/v493_manuscript_20261019.json#/blocks/17",
+      "paper/v493_manuscript_20261019.json#/blocks/19",
+      "research/v492_evaluation_protocol_20261019_r2.json#/dimensions"
+    ]
+  },
+  "authority_and_versions": {
+    "current_control": "research/recovery_20261025/pilot_freeze.json binds the current prompt, runtime, preparation and r2 evaluation for pilot only.",
+    "inherited_design": "The v4.9.1 plan supplies the original E/L question and common task; explicitly superseded counts, control design and reviewer policy must be read through r2 and the current freeze.",
+    "manuscript_asof": "The v493 filename contains a manuscript whose version field says protocol 4.9.2 and whose status table is dated October 19. It is a historical snapshot, not current run evidence.",
+    "verified_freeze_refs": [
+      {
+        "freeze_field": "/input_protocol_ref",
+        "path": "plan/LIBERA_실험설정_v4.9.1_20261019.json",
+        "expected_sha256": "0d7ad14eb7f07fb9a7e7607a1cdb1ff148794d88878d6706b7b6a66bbc319110",
+        "actual_sha256": "0d7ad14eb7f07fb9a7e7607a1cdb1ff148794d88878d6706b7b6a66bbc319110",
+        "matches": true
+      },
+      {
+        "freeze_field": "/evaluation_protocol_ref",
+        "path": "research/v492_evaluation_protocol_20261019_r2.json",
+        "expected_sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1",
+        "actual_sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1",
+        "matches": true
+      },
+      {
+        "freeze_field": "/prompt_contract_ref",
+        "path": "data/sector_protocol/v494_design_20261025/prompt_contract.json",
+        "expected_sha256": "7d75828866825af1f7051a528defc92c88f2beac3f42a66f5d5223c4fb714362",
+        "actual_sha256": "7d75828866825af1f7051a528defc92c88f2beac3f42a66f5d5223c4fb714362",
+        "matches": true
+      },
+      {
+        "freeze_field": "/prepared_manifest_ref",
+        "path": "data/sector_protocol/v494_design_20261025/prepared/preparation_manifest.json",
+        "expected_sha256": "8023f8b11ec9b1d43bf1b5b08ac37ccbab4ac5ab7ad7de28a9e93d8e67a4ef29",
+        "actual_sha256": "8023f8b11ec9b1d43bf1b5b08ac37ccbab4ac5ab7ad7de28a9e93d8e67a4ef29",
+        "matches": true
+      },
+      {
+        "freeze_field": "/runtime_ref",
+        "path": "research/recovery_20261025/runtime_candidate.json",
+        "expected_sha256": "e331ea026c04537a15fba83eb538ac3b6cb6022ee1ad14160d18bb292d99870c",
+        "actual_sha256": "e331ea026c04537a15fba83eb538ac3b6cb6022ee1ad14160d18bb292d99870c",
+        "matches": true
+      },
+      {
+        "freeze_field": "/method_review_ref",
+        "path": "research/recovery_20261025/stage02_method_preparation_review.json",
+        "expected_sha256": "f78183fd2bc0177f23713fd7bdd7d8174a84c96dfa2fb71bce23d98fdb495d3a",
+        "actual_sha256": "f78183fd2bc0177f23713fd7bdd7d8174a84c96dfa2fb71bce23d98fdb495d3a",
+        "matches": true
+      }
+    ]
+  },
+  "estimand_and_denominators": {
+    "status": "pass",
+    "unit": "One prespecified document/workflow case under one market snapshot; first F0 raw response is the primary endpoint. D0 and sector rows are dependent components.",
+    "case_order": [
+      "fidelity_q2_2026__E",
+      "fidelity_q2_2026__L",
+      "ubs_june_2026__E",
+      "ubs_june_2026__L",
+      "common_market_only__C"
+    ],
+    "planned_cases": 5,
+    "maximum_generation_requests": 10,
+    "planned_final_sector_rows": 55,
+    "source_conditioned_final_rows": 44,
+    "no_source_control_rows": 11,
+    "shared_control_count": 1,
+    "source_count": 2,
+    "model_count": 1,
+    "market_snapshot_count": 1,
+    "estimand": "Early source exposure plus the resulting own draft/history versus first source exposure during final review, conditional on the same final source refresh and common evidence. This is a descriptive workflow contrast, not a separately identified timing, memory, exposure-count or psychological anchoring effect.",
+    "preservation": "Retain failed, incomplete and unattempted planned cells in the five-case denominator. Also report actual attempts, completion, readability, full vectors, valid raw vectors, assessable claims and eligible comparisons separately.",
+    "evidence": [
+      "research/recovery_20261025/pilot_freeze.json#/case_order",
+      "research/v492_evaluation_protocol_20261019_r2.json#/denominators",
+      "research/v492_evaluation_protocol_20261019_r2.json#/design",
+      "paper/v493_manuscript_20261019.json#/blocks/41"
+    ]
+  },
+  "conditions_and_contrasts": {
+    "status": "pass_as_specified_and_D0_bound",
+    "conditions": [
+      {
+        "arm": "E",
+        "D0": "Assigned institutional packet plus common inputs",
+        "F0": "Same assigned packet refreshed, full own D0 and actual calculator feedback retained"
+      },
+      {
+        "arm": "L",
+        "D0": "Common inputs only; no institutional identity, ratings or packet",
+        "F0": "Assigned institutional packet first supplied, full own D0 and actual calculator feedback retained"
+      },
+      {
+        "arm": "C",
+        "D0": "Common inputs only",
+        "F0": "Still common inputs only, with full own D0 and actual feedback; a separate generated trajectory"
+      }
+    ],
+    "input_checks": {
+      "five_planned_cases": true,
+      "all_prepared_hashes_match": true,
+      "L_C_messages_equal": true,
+      "same_common_context": true,
+      "same_common_market": true,
+      "same_numeric_index": true,
+      "same_response_schema": true,
+      "same_system_prompt": true,
+      "source_visibility": [
+        {
+          "case_id": "fidelity_q2_2026__E",
+          "institution_document_present": true,
+          "actual_source_id": "fidelity_q2_2026",
+          "expected_source_id": "fidelity_q2_2026"
+        },
+        {
+          "case_id": "fidelity_q2_2026__L",
+          "institution_document_present": false,
+          "actual_source_id": null,
+          "expected_source_id": null
+        },
+        {
+          "case_id": "ubs_june_2026__E",
+          "institution_document_present": true,
+          "actual_source_id": "ubs_june_2026",
+          "expected_source_id": "ubs_june_2026"
+        },
+        {
+          "case_id": "ubs_june_2026__L",
+          "institution_document_present": false,
+          "actual_source_id": null,
+          "expected_source_id": null
+        },
+        {
+          "case_id": "common_market_only__C",
+          "institution_document_present": false,
+          "actual_source_id": null,
+          "expected_source_id": null
+        }
+      ]
+    },
+    "within_case": "Use each case’s own D0/F0; compare stated revision with its actual delta. Do not substitute another case’s draft or an L draft for the matched-stage C final.",
+    "between_cases": [
+      "Within-source E versus L, conditional on the procedural confounding described above.",
+      "Between-source comparison under the same arm, interpreted with original source-contrast evidence.",
+      "Each source-conditioned F0 versus the single matched-stage C F0, with common task and stage count held fixed.",
+      "Difference between the E and L between-source distances requires four valid source-conditioned finals; it is descriptive, not causal difference-in-differences."
+    ],
+    "limitations": [
+      "Equal F0 block order does not mean equal absolute token positions or equal histories.",
+      "L and C have identical initial messages but separate generation requirements. Repetition of the same input/seed is not an independent-rater or population-replication design.",
+      "Fixed nonrandomized case order leaves possible time/environment effects; runtime metadata can describe them but cannot randomize them away.",
+      "C lacks an institutional outlook packet, not all institution-origin numerical data or model pretraining knowledge."
+    ],
+    "evidence": [
+      "data/sector_protocol/v494_design_20261025/prompt_contract.json#/source_selection",
+      "data/sector_protocol/v494_design_20261025/prompt_contract.json#/history",
+      "data/sector_protocol/v494_design_20261025/prepared/preparation_manifest.json#/prepared_cases",
+      "research/v492_evaluation_protocol_20261019_r2.json#/descriptive_comparisons"
+    ]
+  },
+  "allocation_error_and_infrastructure_handling": {
+    "status": "pass_design",
+    "ordinary_output_error": "A readable draft that otherwise clears the declared progression gate is not censored merely for a budget error or unsupported citation/label. Preserve these as observed model failures; no retry, silent normalization, clipping, imputation, benchmark replacement or success-driven case selection.",
+    "progression_gate": "Transport/termination, full JSON/schema and complete finite-vector failures can prevent dependent F0. A token-limit termination is distinct from a normal completion. Instrument-integrity failures are separately reported and can halt further execution.",
+    "analysis_eligibility": "Valid-portfolio distances require complete finite nonnegative raw vectors satisfying the frozen numerical budget check. Preserve sums and residuals. A full JSON vector can be arithmetically analysable even if response termination or explanation structure was problematic, without relabeling the response as successful.",
+    "invalid_vector_diagnostics": "Explicit raw component differences may diagnose a false increase/decrease claim even when a valid-portfolio distance is unavailable. Label them as raw-number diagnostics, not repaired feasible portfolios.",
+    "missingness": "Null plus reason for an invalid/missing comparison; never zero distance. Infrastructure interruption does not establish that the model ignored institutional evidence.",
+    "tolerance": "The 1e-6 budget tolerance is an inherited engineering convention, not an investment or semantic threshold. Preserve the frozen eligibility implementation and separately label exact-decimal diagnostics; do not silently switch criteria after results.",
+    "evidence": [
+      "research/v492_evaluation_protocol_20261019_r2.json#/outcome_preservation",
+      "research/v492_evaluation_protocol_20261019_r2.json#/descriptive_comparisons",
+      "paper/v493_manuscript_20261019.json#/blocks/45",
+      "paper/v493_manuscript_20261019.json#/blocks/48"
+    ]
+  },
+  "source_citation_and_weight_mapping": {
+    "status": "pass_design",
+    "citation": "Allowed-ID membership and correct sector/source labels are separate from substantive claim support. A correct ID alone does not establish entailment; unsupported attribution remains assessable in C and L D0 although source fidelity is otherwise not applicable.",
+    "interpretation": "Retain original rating vocabulary, universe, date, missing reasons and uncertainty. Fidelity Overweight is not identical to UBS Attractive. No source publishes the required full eleven-sector target allocation.",
+    "mapping": "Compare explicit baseline-relative claims with w_i minus the stated reference, and explicit revision claims with the same case’s F0 minus D0. Do not invent a benchmark the response never specified or assume Fidelity’s broad-market universe exactly equals the task’s S&P 500 anchor.",
+    "meaningful_departure": "A supported explicit departure can preserve accurate interpretation. Similar weights can have different supported reasons; different weights can have unsupported reasons.",
+    "visibility": "Judge output using evidence supplied to that stage. Evaluator-only original-source facts belong to a separate packet-fidelity audit and cannot become hidden requirements for the model.",
+    "topic_priority": "Report at least one traceable evidence-to-choice account for every assessed sector/claim where available; missing or unassessable links remain explicit. Do not reduce the final report to weight sums and citation-ID counts.",
+    "evidence": [
+      "research/v492_evaluation_protocol_20261019_r2.json#/operational_evaluation_layers/2",
+      "research/v492_evaluation_protocol_20261019_r2.json#/operational_evaluation_layers/4",
+      "paper/v493_manuscript_20261019.json#/blocks/51",
+      "paper/v493_manuscript_20261019.json#/blocks/53"
+    ]
+  },
+  "AI_review_limits": {
+    "status": "pass_with_explicit_limits",
+    "individual_first": true,
+    "masking": "Planned review copies remove arm labels, execution order and preferred hypothesis, while retaining required evidence. Content/source absence can reveal condition; this is incomplete masking, not full blinding.",
+    "actual_reviewer_disclosure": "Record the actual reviewer/model identity and exposed version, role, evidence/input hashes and prior exposure. Codex and same-family subagents are not independent humans or independent statistical raters.",
+    "three_checks": "Repeated error/consistency/topic checks are process checks. They do not yield three independent measurements or a majority-vote truth.",
+    "semantic_status": "Task-specific AI coding is unvalidated; arithmetic tests do not validate semantics. Preserve disagreements, unresolved cases and assessable-claim coverage; no composite score or post-hoc success threshold.",
+    "bias_claim": "Evidence locators and individual-first review support auditability. Their local bias-reduction effectiveness has not been measured.",
+    "not_certified_here": "This design-only review does not certify that outcome review bundles are masked or that future reviewers adhered to the planned procedure.",
+    "evidence": [
+      "research/v492_evaluation_protocol_20261019_r2.json#/ai_review_protocol",
+      "paper/v493_manuscript_20261019.json#/blocks/62",
+      "paper/v493_manuscript_20261019.json#/blocks/63",
+      "paper/v493_manuscript_20261019.json#/blocks/64"
+    ]
+  },
+  "issues": [
+    {
+      "id": "legacy_counts_and_reviewer_policy",
+      "severity": "nonblocking_document_precedence",
+      "locators": [
+        "plan/LIBERA_실험설정_v4.9.1_20261019.json#/budget",
+        "plan/LIBERA_실험설정_v4.9.1_20261019.json#/pre_main_requirements"
+      ],
+      "finding": "The inherited plan still states four cases/eight calls and older human-review prerequisites. Current r2 and the v494 freeze specify five cases/ten calls and user-delegated AI review; main remains disabled.",
+      "constraint": "Cite current controlling references and disclose supersession. Do not combine the old counts with current C, fabricate human approval, or treat this discrepancy as permission to launch main."
+    },
+    {
+      "id": "candidate_status_inside_frozen_payload",
+      "severity": "nonblocking_metadata_ambiguity",
+      "locators": [
+        "data/sector_protocol/v494_design_20261025/prompt_contract.json#/status",
+        "research/recovery_20261025/runtime_candidate.json#/frozen",
+        "research/recovery_20261025/pilot_freeze.json#/status"
+      ],
+      "finding": "The hash-bound prompt/runtime retain candidate-stage status fields, while the later enclosing freeze declares the pilot frozen.",
+      "constraint": "Identify freeze authority by path/hash and timestamp. Do not mutate frozen payloads to cosmetically change status, and do not infer current readiness from those fields alone."
+    },
+    {
+      "id": "historical_manuscript_state",
+      "severity": "required_final_report_update",
+      "locators": [
+        "paper/v493_manuscript_20261019.json#/version",
+        "paper/v493_manuscript_20261019.json#/blocks/72",
+        "paper/v493_manuscript_20261019.json#/blocks/75"
+      ],
+      "finding": "The manuscript’s October 19 progress statements and output-unread declaration describe the older run/time. The October 25 development freeze explicitly acknowledges old outputs were inspected.",
+      "constraint": "Keep the historical manuscript unchanged here. A later report must distinguish old-run interruption, post-output v494 prompt clarification and the new run; do not pool them as identical prespecified replications or claim outcome-blind prompt design."
+    },
+    {
+      "id": "unobserved_primary_contrasts",
+      "severity": "claim_boundary_not_a_detected_failure",
+      "locators": [
+        "research/v492_evaluation_protocol_20261019_r2.json#/interpretation/no_valid_pairs",
+        "paper/v493_manuscript_20261019.json#/blocks/83"
+      ],
+      "finding": "A valid instrument does not imply available valid final-vector comparisons. This review deliberately has no outcome information.",
+      "constraint": "After terminal evidence exists, report actual eligible contrasts. If they are unavailable, leave the allocation-comparison question unresolved and report feasibility, arithmetic and assessable interpretation diagnostics only."
+    }
+  ],
+  "final_report_wording_constraints": {
+    "required_ko": [
+      "분석 단위는 사전 지정한 다섯 사례의 첫 최종안이며, 산업행과 초안은 독립 표본으로 계산하지 않았다.",
+      "v4.9.4는 이전 파일럿 오류를 관찰한 뒤 지시문을 명확히 한 개발 실행이다. 이전 실행을 대체하거나 동일한 사전계획 반복으로 합산하지 않았다.",
+      "비중 합계와 인용 식별자 점검은 형식·산술 확인이며, 출처가 실제 주장을 뒷받침하는지와 설명이 비중에 연결되는지는 별도로 검토했다.",
+      "E와 L의 차이는 자료 제공 시점·노출 횟수·자체 초안과 대화 이력이 함께 달라지는 절차 비교이며, 순수한 앵커링 효과를 식별하지 않는다.",
+      "실패와 미시도 사례는 예정된 다섯 사례의 분모에 남겼으며, 계산 가능한 비교와 누락 사유를 따로 보고했다.",
+      "의미 평가는 불완전하게 조건을 가린 AI 보조 서술 코딩이며, 사람에 의한 타당화나 독립 평가자 신뢰도 검증을 의미하지 않는다."
+    ],
+    "conditional_ko": {
+      "if_no_valid_pairs": "유효한 최종 배분 비교가 확보되지 않아 배분 차이에 관한 연구질문은 미해결로 남았다.",
+      "if_observed_similarity": "이 사례에서 배분이 유사했다는 사실만으로 기관 근거가 소실되었다고 판단하지 않았다.",
+      "if_observed_difference": "비중 차이만으로 자료 반영의 적절성을 판단하지 않고 출처 의미·명시된 이유·실제 숫자의 연결을 함께 확인했다.",
+      "if_infrastructure_missing": "해당 비교는 실행 중단으로 관측되지 않았으며, 이를 모델의 자료 해석 실패로 분류하지 않았다."
+    },
+    "prohibited_claims": [
+      "Market-wide harmful homogenization or a causal shared-AI-adoption effect",
+      "Actual Fidelity/UBS private mandates, holdings or optimal numeric weights",
+      "Pure anchoring/memory, semantic-content or macro-context addition effects",
+      "Population effect, p-values, bootstrap confidence intervals, equivalence or repeated-run stability",
+      "Future/realized investment performance, profitability or causal investment losses",
+      "Full blinding, independent human validation or demonstrated bias reduction",
+      "A better workflow solely because it differs more from C, has larger between-source distance, or has fewer detectable claims",
+      "Current main readiness or current pilot success inferred from this design review"
+    ]
+  },
+  "review_axes": {
+    "errors": {
+      "status": "pass_with_reporting_issues",
+      "reason": "The design separates ordinary arithmetic/citation errors from input/instrument failure and preserves planned denominators. Legacy metadata and historical-state ambiguities are explicitly identified."
+    },
+    "consistency": {
+      "status": "pass_for_reviewed_design_and_D0_bindings",
+      "reason": "Six controlling freeze refs and five prepared D0 hashes match; common inputs and intended D0 visibility agree. No output-dependent behavior or F0 completion is certified."
+    },
+    "paper_topic": {
+      "status": "pass",
+      "reason": "The central observable chain remains source meaning, stated interpretation, supported choice and actual weight/change. Reporting constraints prevent drift toward format-only success, institution gold weights or investment-performance claims."
+    }
+  },
+  "evidence_files": [
+    {
+      "path": "plan/LIBERA_실험설정_v4.9.1_20261019.json",
+      "sha256": "0d7ad14eb7f07fb9a7e7607a1cdb1ff148794d88878d6706b7b6a66bbc319110",
+      "bytes": 14054,
+      "role": "inherited_design_superseded_where_explicit",
+      "unchanged_during_review": true
+    },
+    {
+      "path": "paper/v493_manuscript_20261019.json",
+      "sha256": "c14e5627035da92f1e28e4e50d5b3b81fd5432b4e67e8ac6cda9854c564a1018",
+      "bytes": 60312,
+      "role": "historical_manuscript",
+      "unchanged_during_review": true
+    },
+    {
+      "path": "research/v492_evaluation_protocol_20261019_r2.json",
+      "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1",
+      "bytes": 28550,
+      "role": "design_evidence",
+      "unchanged_during_review": true
+    },
+    {
+      "path": "data/sector_protocol/v494_design_20261025/prompt_contract.json",
+      "sha256": "7d75828866825af1f7051a528defc92c88f2beac3f42a66f5d5223c4fb714362",
+      "bytes": 7188,
+      "role": "design_evidence",
+      "unchanged_during_review": true
+    },
+    {
+      "path": "data/sector_protocol/v494_design_20261025/prepared/preparation_manifest.json",
+      "sha256": "8023f8b11ec9b1d43bf1b5b08ac37ccbab4ac5ab7ad7de28a9e93d8e67a4ef29",
+      "bytes": 4488,
+      "role": "design_evidence",
+      "unchanged_during_review": true
+    },
+    {
+      "path": "research/recovery_20261025/runtime_candidate.json",
+      "sha256": "e331ea026c04537a15fba83eb538ac3b6cb6022ee1ad14160d18bb292d99870c",
+      "bytes": 2529,
+      "role": "design_evidence",
+      "unchanged_during_review": true
+    },
+    {
+      "path": "research/recovery_20261025/method_prompt_candidate.json",
+      "sha256": "360f596700f877c7c36101fa7fe58d75289b06ecae39761124f6d3b62ef8a1a3",
+      "bytes": 7225,
+      "role": "design_evidence",
+      "unchanged_during_review": true
+    },
+    {
+      "path": "research/recovery_20261025/stage02_method_preparation_review.json",
+      "sha256": "f78183fd2bc0177f23713fd7bdd7d8174a84c96dfa2fb71bce23d98fdb495d3a",
+      "bytes": 1801,
+      "role": "design_evidence",
+      "unchanged_during_review": true
+    },
+    {
+      "path": "research/recovery_20261025/pilot_freeze.json",
+      "sha256": "8f8f95c4b90583e5bd97f2b80168c51aa9efec92a958b8235a9baecdfb7001cf",
+      "bytes": 7557,
+      "role": "controlling_current_pilot_freeze",
+      "unchanged_during_review": true
+    },
+    {
+      "path": "data/sector_protocol/v494_design_20261025/prepared/fidelity_q2_2026__E__D0_messages.json",
+      "sha256": "854d60a4c8eab4cf1b1642907b225fd593e338586a543554af2b9e1a4d86dc82",
+      "bytes": 35136,
+      "role": "prepared_D0_input_only",
+      "unchanged_during_review": true
+    },
+    {
+      "path": "data/sector_protocol/v494_design_20261025/prepared/fidelity_q2_2026__L__D0_messages.json",
+      "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15",
+      "bytes": 31124,
+      "role": "prepared_D0_input_only",
+      "unchanged_during_review": true
+    },
+    {
+      "path": "data/sector_protocol/v494_design_20261025/prepared/ubs_june_2026__E__D0_messages.json",
+      "sha256": "a79a17fef00fc082860a4fde05c5ae41111dc2d4dc2bf96073f973bd5ae4ae27",
+      "bytes": 35028,
+      "role": "prepared_D0_input_only",
+      "unchanged_during_review": true
+    },
+    {
+      "path": "data/sector_protocol/v494_design_20261025/prepared/ubs_june_2026__L__D0_messages.json",
+      "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15",
+      "bytes": 31124,
+      "role": "prepared_D0_input_only",
+      "unchanged_during_review": true
+    },
+    {
+      "path": "data/sector_protocol/v494_design_20261025/prepared/common_market_only__C__D0_messages.json",
+      "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15",
+      "bytes": 31124,
+      "role": "prepared_D0_input_only",
+      "unchanged_during_review": true
+    }
+  ],
+  "summary": {
+    "design_topic_linkage_pass": true,
+    "blocking_topic_defects_found": 0,
+    "nonblocking_or_reporting_issues": 4,
+    "prepared_inputs_checked": 5,
+    "controlling_freeze_refs_checked": 6,
+    "reviewed_files": 14,
+    "reviewed_files_changed": 0,
+    "new_pilot_outputs_read": 0,
+    "outcome_conclusions": 0
+  }
+}

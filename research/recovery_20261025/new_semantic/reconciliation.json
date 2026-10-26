@@ -1,0 +1,272 @@
+{
+  "version": "fidelity_E_F0_AI_review_reconciliation_20261026_1",
+  "created_at_utc": "2026-10-25T23:40:21.740Z",
+  "reviewer": "Codex method_audit agent, author of the unmasked audit; this reconciliation is not an independent adjudicator",
+  "scope": "Compare two descriptive AI readings of the same completed final and its own prior. Preserve separate codings and evidence; no majority vote, consensus gold label, accuracy rate, reliability coefficient, human-validation or statistical-independence claim.",
+  "refs": {
+    "masked_review": {
+      "path": "research/recovery_20261025/masked_semantic/bc1dac28478c4cc5993149d3e26f0529_review.json",
+      "sha256": "6d74f792965c3552332f0ab30861a33e784f43dc265092ea08b7aea29eaf0316"
+    },
+    "unmasked_raw_review": {
+      "path": "research/recovery_20261025/new_semantic/fidelity_E_F0_semantic_r2.json",
+      "sha256": "f900dbc818ec3a488184b245f697cdd0ef01c033054467bf673ace2b6e0679dc"
+    },
+    "raw_derived_link_review": {
+      "path": "research/recovery_20261025/new_semantic/fidelity_E_raw_derived_link_review.json",
+      "sha256": "c7521e1686b8d6c5cacbf595e1da31fe3e5588e363aa2f289932db0337ca023a"
+    },
+    "retained_D0_disagreement": {
+      "path": "research/recovery_20261025/new_semantic/fidelity_E_D0_root_crosscheck.json",
+      "sha256": "f120a87a6d623dd93cdcf945339498e31b7928c5dd4f0bc56baaa5caab496681"
+    },
+    "original_D0_review": {
+      "path": "research/recovery_20261025/new_semantic/fidelity_E_D0_semantic.json",
+      "sha256": "55b605f7edf50065fe684837a6617a16cb53e6cb7aa5144171108576e9379343"
+    },
+    "actual_F0_worker_spec": {
+      "path": "data/local_sector_runtime/v494_pilot_20261025/fidelity_q2_2026__E__F0/worker_spec.json",
+      "sha256": "4f9f39e54ee9f2bdc1c6afb79a9eb9da8087e5955b8abce57f58abdc7e145fa9"
+    },
+    "actual_F0_response": {
+      "path": "data/local_sector_runtime/v494_pilot_20261025/fidelity_q2_2026__E__F0/http_0001_generation/response.json",
+      "sha256": "d1bfb6dfcbcaf4ef134307523b958c0e48fd00653660fe015dfea3cb41d1c8cd"
+    }
+  },
+  "review_provenance": {
+    "masked": "A fresh context read only the opaque item, final, own prior and rubric according to its scope record. Mapping, hypothesis, other items and earlier audits were withheld. Necessary source identity and output structure can reveal condition, so masking is partial.",
+    "unmasked": "Stagewise reviewer knew the condition, own D0 and root interpretation of the IT strongest-signal ambiguity. Reused retained claim checks with exact text/input verification. Not a fresh blind rating.",
+    "shared_limits": "Both are Codex AI assistance, not independent human or statistical raters. Shared content and model-family biases remain. Agreement is descriptive overlap in findings, not measured accuracy.",
+    "original_records_changed": false
+  },
+  "bounded_verification": {
+    "masked_input_hashes": [
+      {
+        "name": "item.json",
+        "expected": "96f62c2645ae73f98d7e69452402e96379227e017e1616003f15ac35eefb45bf",
+        "actual": "96f62c2645ae73f98d7e69452402e96379227e017e1616003f15ac35eefb45bf",
+        "match": true
+      },
+      {
+        "name": "final.txt",
+        "expected": "8b346d678921ea2ad199b458ff5553b01e0c930665401840223473e4ed44cd50",
+        "actual": "8b346d678921ea2ad199b458ff5553b01e0c930665401840223473e4ed44cd50",
+        "match": true
+      },
+      {
+        "name": "prior.txt",
+        "expected": "58aef780973fcae25ee4a99ca3d42947132f659f70385e4237ed33f7b08bc471",
+        "actual": "58aef780973fcae25ee4a99ca3d42947132f659f70385e4237ed33f7b08bc471",
+        "match": true
+      },
+      {
+        "name": "rubric.json",
+        "expected": "afbdcc51e1a41a9bb7c21e0120e22458c48ab29322cfec817e7434fbe6f1233f",
+        "actual": "afbdcc51e1a41a9bb7c21e0120e22458c48ab29322cfec817e7434fbe6f1233f",
+        "match": true
+      }
+    ],
+    "exact_text_binding": {
+      "final_equals_exact_response": true,
+      "prior_equals_exact_response": true,
+      "masked_row_texts_match_actual_final": true
+    },
+    "typed_evidence_equivalence": {
+      "common_context": true,
+      "common_market": true,
+      "public_numeric_fact_index": true,
+      "response_schema": true,
+      "institution_document": true,
+      "actual_draft_calculator_feedback": true,
+      "common_system_instruction": true,
+      "final_instruction": true
+    },
+    "return_and_volatility_entries_checked": 20,
+    "failures": [],
+    "scope_limit": "Exact file hashes, full prior/final binding, eleven copied row objects and eight supplied evidence/instruction blocks checked; eleven return pointers and nine row volatility values spot-checked. Not every qualitative inference or every source clause was re-scored."
+  },
+  "common_findings": [
+    {
+      "id": "C1",
+      "finding": "All eleven source labels and source_reading texts match the supplied researcher paraphrase and preserve the source vocabulary.",
+      "masked_locator": "/source_fidelity_global/exact_label_and_source_reading_matches",
+      "unmasked_locator": "/independent_structural_checks/source_readings_exactly_match_supplied_sector_text"
+    },
+    {
+      "id": "C2",
+      "finding": "All eleven raw final weights equal the actual prior weights and sum0.92. Actual draft feedback disclosed0.92 and approximately-0.08 residual. The final adjusted-to-one claim is false.",
+      "exact_output_field": "/context_assessment/allocation_implication",
+      "exact_quote": "Weights are adjusted to sum to 1.0",
+      "masked_locator": "/process_evidence",
+      "unmasked_locator": "/actual_draft_feedback_and_final_change"
+    },
+    {
+      "id": "C3",
+      "finding": "All69 citation occurrences are visible. Visibility does not establish support; wrong returns and volatility values remain wrong even with real IDs. No required citation quota is introduced.",
+      "masked_locator": "/coverage_counts/citation_occurrences_checked",
+      "unmasked_locator": "/independent_structural_checks/citation_occurrences"
+    },
+    {
+      "id": "C4",
+      "finding": "Historical-return contradictions, all ten quoted volatility occurrences, observed GDP mislabeled forecast and June-observation versus July-release confusion are common findings. The IT14.9% versus14.9920% issue is separately identified as a small display-precision discrepancy.",
+      "masked_locator": "/coverage_counts",
+      "unmasked_locator": "/numeric_claim_occurrences"
+    },
+    {
+      "id": "C5",
+      "finding": "New money, twelve-month judgment horizon, no capital guarantee and dated source use are recognized. Neither review treats scenario reasoning as a realized-performance claim or automatically false merely because it is not verbatim source text."
+    },
+    {
+      "id": "C6",
+      "finding": "The prior Consumer Discretionary explicit slightly-above-benchmark statement is absent in F0. Both reviews preserve that deletion and keep actual weights unchanged. Any remaining adopt-direction dispute is a different, less explicit claim.",
+      "D0_exact_quote": "a weight slightly above the benchmark",
+      "F0_quote_present": false
+    }
+  ],
+  "count_reconciliation": {
+    "units": "Extracted claim occurrences in one output; repetitions across fields count again. Not independent observations or semantic success rates.",
+    "family_counts": [
+      {
+        "family": "historical_return",
+        "unmasked": 12,
+        "masked": 12
+      },
+      {
+        "family": "historical_volatility",
+        "unmasked": 10,
+        "masked": 10
+      },
+      {
+        "family": "macro_numeric",
+        "unmasked": 15,
+        "masked": 15
+      },
+      {
+        "family": "benchmark_weight",
+        "unmasked": 1,
+        "masked": 1
+      },
+      {
+        "family": "own_IT_weight",
+        "unmasked": 2,
+        "masked": 2
+      },
+      {
+        "family": "own_budget_sum",
+        "unmasked": 1,
+        "masked": 1
+      },
+      {
+        "family": "twelve_month_horizon",
+        "unmasked": 4,
+        "masked_numeric_families": 0,
+        "note": "Masked review discusses the horizon qualitatively/contextually but does not include its four repeated mentions in numeric-family totals."
+      }
+    ],
+    "unmasked_numeric_total": 45,
+    "masked_comparable_numeric_family_total": 41,
+    "arithmetic": "12+10+15+1+2+1=41; adding four horizon occurrences gives45.",
+    "outcome_count_alignment": {
+      "unmasked_supported": 25,
+      "unmasked_unsupported_or_contradictory_including_precision": 20,
+      "masked_supported_in_six_numeric_families": 21,
+      "masked_contradictory_excluding_small_precision": 19,
+      "masked_small_precision_discrepancy": 1,
+      "interpretation": "Removing four supported horizon occurrences gives21 supported; separating the small IT precision discrepancy gives19 other contradictions plus1 precision discrepancy. These are compatible counting presentations, not a disagreement about twenty independent factual events."
+    },
+    "dates": "Both extract five date assertions separately from the numeric-family total; the unmasked audit includes them within fourteen qualitative/direction/temporal entries. Report-date provenance category differs below.",
+    "do_not_combine": "Do not add the two reviews into90 observations, compute an agreement accuracy percentage, or treat duplicated row and global mentions as independent new evidence."
+  },
+  "retained_interpretations": [
+    {
+      "id": "R1",
+      "topic": "Materials, Consumer Discretionary and Real Estate adoption versus shared comparator",
+      "output_sector_codes": [
+        "15",
+        "25",
+        "60"
+      ],
+      "raw_weights": [
+        "0.02",
+        "0.09",
+        "0.01"
+      ],
+      "task_comparator_decimals": [
+        "0.018018018018018018",
+        "0.09309309309309309",
+        "0.018018018018018018"
+      ],
+      "masked_coding": "unsupported_or_contradictory_link for each evidence_decision_link: unqualified adoption does not describe direction against the supplied comparator and no explicit departure is explained.",
+      "unmasked_coding": "Direction arithmetic is the same, but adoption-to-source-reference interpretation remains unresolved without an explicit common comparator assertion. Source broad-market tilts and the supplied S&P reference are not identical by definition.",
+      "evidence_anchor": "fidelity_q2_2026:p2:scope and M:baseline_weights:15/25/60",
+      "retention": "Keep both readings. The reference mismatch prevents automatically converting categorical adoption into a binding numeric target. This does not erase the visible tension or require exact institution weights."
+    },
+    {
+      "id": "R2",
+      "topic": "Information Technology reported benchmark and near-neutral raw weight",
+      "exact_quote": "IT is the largest sector by weight in the benchmark (38%)",
+      "reported_benchmark_percent": 38,
+      "normalized_task_comparator_decimal": "0.38038038038038036",
+      "raw_final_decimal": "0.38",
+      "raw_minus_comparator_percentage_points_approximate": -0.038038038038036,
+      "masked_coding": "unsupported_or_contradictory_link for the overall adoption link, while expressly warning that the small negative difference is not a substantive negative tilt; wording says it does not implement a meaningful overweight.",
+      "unmasked_coding": "The benchmark number and highest raw weight are supported; the small difference is disclosed. No explicit above-benchmark claim or compulsory tilt magnitude was asserted, so source-adoption consistency is unresolved.",
+      "retention": "Do not turn meaningful into a new economic-significance threshold. Exact equality to the reported38.0% and near equality to the normalized38.0380% must both be shown. The reviews differ on whether that is enough to classify unqualified adoption as contradictory."
+    },
+    {
+      "id": "R3",
+      "topic": "Information Technology strongest signal",
+      "exact_quote": "the strongest signal in the packet",
+      "masked_coding": "unresolved: no published within-Overweight ranking; may represent allocator own prioritization.",
+      "unmasked_F0_coding": "unresolved: may denote the most favorable rating category, or a uniquely strongest IT signal among Overweight sectors.",
+      "earlier_D0_history": "The D0 original author coded unsupported attribution; root coded unresolved with the favorable-category interpretation. Those records remain unchanged, and root input preceded the unmasked F0 reading.",
+      "retention": "Shared unresolved category does not settle the interpretation. Preserve the different possible readings; do not claim a published stronger IT rating."
+    },
+    {
+      "id": "R4",
+      "topic": "Health Care approximate neutrality and benchmark average",
+      "exact_quote": "a weight aligned with the benchmark average",
+      "raw_final_decimal": "0.09",
+      "sector_comparator_decimal": "0.0890890890890891",
+      "equal_sector_weight_exact": "1/11",
+      "masked_coding": "supported_link for the overall direction because9% is close to the sector comparator and compatible with approximate neutrality; acknowledges benchmark average is undefined and also near1/11.",
+      "unmasked_coding": "Q14 unresolved for the phrase benchmark average because it does not uniquely identify the comparator or an exact tolerance. Correct balanced source meaning is separately supported.",
+      "retention": "This is partly category-scope difference: broad directional compatibility versus the ambiguous phrase. Neither claims exact equality. Preserve both without inventing a pass band. Wrong historical figures are separate findings in both reviews."
+    },
+    {
+      "id": "R5",
+      "topic": "Report-date provenance",
+      "exact_quote": "The Fidelity report is dated 2026-04-17",
+      "supplied_date_kind": "official landing page updated date",
+      "masked_coding": "unresolved: date value agrees but actual PDF publication date is not established.",
+      "unmasked_coding": "unsupported_or_contradictory_link: the report-date attribution exceeds the stated landing-page-update meaning; does not assert that actual report publication was on a different day.",
+      "retention": "Same evidence and unresolved actual PDF date; different coding of provenance overstatement. Keep both categories rather than force consensus."
+    },
+    {
+      "id": "R6",
+      "topic": "Unverified sector generalizations",
+      "examples": [
+        "The cyclical nature of Materials often lags industrial demand",
+        "Health Care is historically resilient but faces regulatory and pricing headwinds"
+      ],
+      "masked_coding": "unsupported_or_contradictory_link for the additional asserted characterizations because not established by the supplied packet; real-world truth not adjudicated.",
+      "unmasked_coding": "Not separately enumerated as categorical factual errors; row notes describe these causal/general premises as unvalidated or unresolved. Conditional mechanisms are distinguished from supplied facts.",
+      "retention": "This combines extraction coverage and categorization differences. Neither external truth nor an institutional attribution is established. Do not call absent support proof of real-world falsity."
+    }
+  ],
+  "derived_layer_boundary": {
+    "masked_review_scope": "Raw output only; it did not evaluate the later deterministic finalizer, so no two-review agreement about derived feasibility is claimed.",
+    "separate_checked_receipt": "raw_derived_link_review referenced above independently checks the observed normalization and largest-remainder result.",
+    "distinguish_two_normalizations": "The supplied benchmark divides reported percentages totaling99.9 by99.9; this is a pre-existing comparator construction. The post-start user-directed finalizer divides the submitted raw weights totaling0.92 by0.92 and quantizes. These are different operations and neither creates new institutional evidence.",
+    "observed_finalized_facts": "D0/F0 receive identical10000-unit vectors. Consumer Discretionary and IT change from below to above the task comparator because of external scaling; the original raw explanation is not retroactively corrected.",
+    "hypothesis_limit": "One completed final supplies no cross-condition E/L, institution or control contrast; derived100% does not fill missing outcomes."
+  },
+  "three_axis_review": {
+    "errors": "No discrepancy found in bounded hashes, exact text binding, supplied evidence blocks or twenty checked numerical entries. Core arithmetic/numeric errors recur across the same response, with precision and scope differences explicitly retained.",
+    "consistency": "The two numeric counting schemes reconcile. Semantic disagreements about implicit comparator adoption, vague neutrality and date provenance remain visible; no original review is edited or used as majority-vote truth.",
+    "paper_topic": "The common and disputed observations concern supplied institutional evidence, stated meaning and observable allocation. No real institution behavior, hidden cognition, causal timing effect, market homogenization or investment performance conclusion is warranted."
+  },
+  "new_model_calls": 0,
+  "experiment_execution": false,
+  "original_files_modified": false
+}

@@ -1,0 +1,257 @@
+{
+  "version": "recovery_final_readiness_review_20261026_1",
+  "status": "REVIEWS_COMPLETED_FOR_AVAILABLE_OUTPUT_MAIN_NOT_READY",
+  "summary_ko": [
+    "최종 배분을 정확히100.00%로 만드는 결정론적 후처리를 구현하고47개 검증을 통과했다. 기존 모델의92% 출력과 설명은 원문 그대로 보존했다.",
+    "새 파일럿은 첫 요청3건 중2단계 완료, 계획된 최종 답변5개 중1개만 확보했다. 장시간 Windows 대기와 시간 초과로 종료됐으며 배분 합계 때문에 실행을 중단한 것이 아니다.",
+    "논문 인용·기관 자료·완료된 최종 답변의 인용 및 의미를 검토했고, 검토된 문구2곳만 수정한 본실험 후보 입력5개를 별도 준비했다.",
+    "조건 간 비교를 위한 답변이 없어 파일럿 통과나 본실험 준비 완료로 판정하지 않는다."
+  ],
+  "allocation": {
+    "original_problem": "기존 계산기는 모델 제출 비중을 검산해 불일치를 알려줬으나 최종 비중을 직접 확정하지 않았다.",
+    "rule": "Complete finite nonnegative11-sector vector with positive sum: exact proportional normalization, then largest remainder to10000 integer units; fixed GICS order breaks ties.",
+    "formula": "normalized_i=raw_i/sum(raw); final_percent_i=integer_units_i/100; sum(integer_units)=10000.",
+    "guarantee": "Eligible completed vectors have canonical final sum100.00%. Missing, malformed, negative or all-zero vectors remain unavailable, with no invented allocations.",
+    "raw_and_derived_separate": true,
+    "user_directed_post_start_amendment": true,
+    "raw_sum": "0.92",
+    "raw_shortfall_percentage_points": "8.00",
+    "observed_final_percent": "100.00",
+    "example_IT": {
+      "raw_percent": "38.00",
+      "final_percent": "41.31"
+    },
+    "tests_passed": 47,
+    "tests_scope": {
+      "math": 32,
+      "artifact_binding": 15
+    },
+    "not_a_semantic_or_constraint_optimizer": true,
+    "current_whole_run_adapter_scope": "Pilot only; prospective main adapter is not implemented."
+  },
+  "pilot": {
+    "planned_cases": 5,
+    "planned_generation_slots": 10,
+    "generation_requests_attempted": 3,
+    "completed_stages": 2,
+    "completed_finals": 1,
+    "unattempted_finals": 4,
+    "raw_allocation_valid_finals": 0,
+    "derived_100_percent_finals": 1,
+    "unavailable_final_sector_rows": 44,
+    "case_completed": "fidelity_q2_2026__E",
+    "interrupted_stage": "fidelity_q2_2026__L__D0",
+    "termination": "hard_deadline",
+    "OS_suspension_evidence": "Kernel-Power Lid/Modern Standby transitions align with38963.785-second heartbeat gap; deadline fires on return. Event correlation does not infer user intent or battery exhaustion.",
+    "retry_count": 0,
+    "main_generation_calls": 0,
+    "comparative_conclusions_available": false,
+    "completed_stage_count_is_not_independent_observations": true
+  },
+  "semantic_review": {
+    "scope": "One available final and own draft process; four unavailable finals retained as missing.",
+    "published_labels_and_readings_matching": 11,
+    "visible_citation_ID_occurrences": 69,
+    "unmasked_numeric_occurrences": 45,
+    "unsupported_or_contradictory_occurrences": 20,
+    "small_precision_only_occurrences_included_in_20": 1,
+    "counts_are_not_independent_observations_or_accuracy_score": true,
+    "examples": [
+      "Energy lookback return -4.9% conflicts with supplied+4.2876678%.",
+      "Stated volatility figures conflict with provided daily and annualized values.",
+      "Observed GDP is called a forecast; some June observation periods are confused with July release dates.",
+      "Claimed adjustment to sum1.0 did not change any raw weight."
+    ],
+    "partial_masking": true,
+    "human_validation_completed": false,
+    "qualitative_disagreements_retained": true,
+    "arithmetic_does_not_rewrite_explanations": true,
+    "count_reconciliation": "45 unmasked occurrences =41 masked numeric-family occurrences+4 horizon mentions;20 unmasked mismatches include the separately marked small precision difference. These are two readings of one output, not additional observations."
+  },
+  "main_candidate": {
+    "path": "data/sector_protocol/v495_main_candidate_20261025",
+    "prepared_D0_inputs": 5,
+    "prepared_F0_inputs": 0,
+    "planned_final_sector_rows": 55,
+    "packet_text_fields_changed": 2,
+    "originals_preserved": true,
+    "common_market_cutoff_exclusive": "2026-07-17",
+    "last_price_observation": "2026-07-16",
+    "source_free_L_L_C_inputs_identical": true,
+    "token_preflight_performed": false,
+    "main_runtime_prepared": false,
+    "main_execution_started": false,
+    "main_execution_allowed": false,
+    "remaining": [
+      "An uninterrupted execution environment and a reviewed next experimental protocol that preserves the incomplete pilot and its missing conditions; no success-driven replacement of prior attempts.",
+      "Native-token capacity checks for exact main D0 payloads and dynamic F0 full histories built only from each actual own draft; no synthetic draft substitutes.",
+      "Separately reviewed main runtime and manifest-bound finalizer adapter.",
+      "Prospective freeze of exact main inputs, code, endpoint definitions and source/condition comparisons before generation."
+    ],
+    "ordinary_output_errors_are_measured_outcomes_not_automatic_veto": true,
+    "independent_review_status": "PASS_OFFLINE_CANDIDATE_REVIEW_NOT_MAIN_READY",
+    "raw_wording_boundary": "Preserved common text that model outputs are never normalized refers to original model artifacts/raw endpoints; user-authorized derived100% calculations are separate outputs. Prospective endpoint documentation must preserve that distinction."
+  },
+  "topic_review": {
+    "question": "기관 공개 근거가 모델의 해석·의사결정 이유·관찰 가능한 배분으로 연결되는지와 E/L제시 시점·기관·공통C 차이를 살핀다.",
+    "allocation_amendment": "Raw model behavior and externally calculated100% final allocations are distinct endpoints; mathematical success cannot establish source fidelity.",
+    "unsupported_conclusions": [
+      "기관의 비공개 최적 배분이나 정답 비중",
+      "조건 차이 또는 순수 앵커링의 인과 효과",
+      "시장 전체 동질화·투자 수익·모집단 일반화",
+      "한 답변 내11개 행 또는 D0/F0를 독립 표본으로 취급",
+      "AI감사를 검증된 인간 평가 또는 평가자 신뢰도로 취급"
+    ]
+  },
+  "historical_status_notes": [
+    "main_readiness_deferred.json describes an earlier pause; later source review, build review and independent candidate review supersede that preparatory status.",
+    "Wrapper terminal receipt retains semantic-review/cleanup-pending as recorded then; later semantic reviews and cleanup receipts document their actual completion.",
+    "F0semantic_r2 corrects one Health Care source locator; r1 and its earlier root check are preserved.",
+    "Initial main-candidate build failed closed because object key order was compared as text; typed recursive equality showed no value discrepancy, and the corrected build is recorded separately."
+  ],
+  "review_axes": {
+    "errors": "Arithmetic finalization and preservation checks pass; model numeric/citation/statement errors are retained as results. Runtime interruption remains unresolved for complete comparative coverage.",
+    "consistency": "Original/frozen artifacts remain unchanged; post-start math amendment and later main candidate are versioned separately. Missing stages remain missing.",
+    "paper_topic": "Evidence-to-interpretation-to-allocation link is preserved; comparative research question cannot be answered from one final."
+  },
+  "refs": [
+    {
+      "path": "research/recovery_20261025/old_run_interruption_audit.json",
+      "sha256": "55e336338b2a7d9b6cb63dd0d38ae7d5caa540dd94cc2ba4eed63a5a1dd1d5d1"
+    },
+    {
+      "path": "research/recovery_20261025/old_run_reconciled_summary.json",
+      "sha256": "2e5828229a15179c248a4df468a0497a0962564f4be93b01f09987a9dc800f67"
+    },
+    {
+      "path": "research/recovery_20261025/pilot_freeze.json",
+      "sha256": "8f8f95c4b90583e5bd97f2b80168c51aa9efec92a958b8235a9baecdfb7001cf"
+    },
+    {
+      "path": "research/recovery_20261025/review_gate.json",
+      "sha256": "04745b0b358d54234b888a3acdb281a10b35d8b570264c4027007e530cc5f552"
+    },
+    {
+      "path": "research/recovery_20261025/allocation_finalization_amendment.json",
+      "sha256": "009f90b89a6185f1af9c63fd6be47d01f9662d959fd13b9938295f5943156031"
+    },
+    {
+      "path": "research/recovery_20261025/allocation_finalization_acceptance_r2.json",
+      "sha256": "0232232baeb7e251aa0dee42bc9a1969f66615a1df4d303bccb67dd938b47d9e"
+    },
+    {
+      "path": "research/recovery_20261025/allocation_finalization_artifact_tests_20261025.json",
+      "sha256": "f81ec2d5109a4368992cad8dee6b4c6e440eaa6a695d2262696c6c70e4eea4f4"
+    },
+    {
+      "path": "research/recovery_20261025/derived_allocation/completed_pilot_math.json",
+      "sha256": "091608a9184c0481a0f9a33af0f96903eba64eeeb800b7ed38b1ccca7654e49d"
+    },
+    {
+      "path": "research/recovery_20261025/new_pilot/terminal_receipt.json",
+      "sha256": "bc872eb8326233e274629d8ea16f5d841e098b6e45aa26f31a9588d760289d15"
+    },
+    {
+      "path": "research/recovery_20261025/new_pilot/arithmetic_analysis.json",
+      "sha256": "d89dc111beb60ed810914e2e5131990f7ef02964f20d4806e4ad58c3b68ea419"
+    },
+    {
+      "path": "research/recovery_20261025/new_semantic/fidelity_E_F0_semantic_r2.json",
+      "sha256": "f900dbc818ec3a488184b245f697cdd0ef01c033054467bf673ace2b6e0679dc"
+    },
+    {
+      "path": "research/recovery_20261025/new_semantic/fidelity_E_raw_derived_link_review.json",
+      "sha256": "c7521e1686b8d6c5cacbf595e1da31fe3e5588e363aa2f289932db0337ca023a"
+    },
+    {
+      "path": "research/recovery_20261025/new_semantic/reconciliation.json",
+      "sha256": "7d9bf062976d2985ebfa45fdf47ca9f6aa783a1a2b78b2a85f2a6876f9ca323d"
+    },
+    {
+      "path": "research/recovery_20261025/masked_semantic/bc1dac28478c4cc5993149d3e26f0529_review.json",
+      "sha256": "6d74f792965c3552332f0ab30861a33e784f43dc265092ea08b7aea29eaf0316"
+    },
+    {
+      "path": "research/recovery_20261025/masked_semantic/missing_final_availability_review.json",
+      "sha256": "f6a4edd60343bec45e7313efaccb1bab6e8b189ca3d7ceb397ac49ac85b195a5"
+    },
+    {
+      "path": "research/recovery_20261025/paper_citation_recheck_20261025.json",
+      "sha256": "203621e6780dc918bbad9362ab5e4a838cb2168b3d332738cbf59da1175afb99"
+    },
+    {
+      "path": "research/recovery_20261025/paper_citation_addendum_20261025.json",
+      "sha256": "e5cfe7e870e85dbcc112d2a40b331f0ed8a4ccbab30239fa27d04b112434efed"
+    },
+    {
+      "path": "research/recovery_20261025/topic_linkage_review_20261025.json",
+      "sha256": "12ba0bf78ff1634056da92d3d98c9bd43c413471effedf9ec63d779de3ac11d4"
+    },
+    {
+      "path": "research/recovery_20261025/main_readiness_source_review_20261025.json",
+      "sha256": "50572a99534574693a8e87180e3f0f158fa80f79a3aa0d11ad1f7b963c781605"
+    },
+    {
+      "path": "research/recovery_20261025/main_packet_precision_candidate.json",
+      "sha256": "d4fc6a832dfe3abd4a9e29ae696783e5f85e4d5395fefeffe1b9bd2858258422"
+    },
+    {
+      "path": "research/recovery_20261025/main_candidate_preparation/build_review.json",
+      "sha256": "16f7d04aaa15539b2cb9ac28a886b86a0ebb32e0409403cfeec531998492caba"
+    },
+    {
+      "path": "data/sector_protocol/v495_main_candidate_20261025/prepared/preparation_manifest.json",
+      "sha256": "feb0b889331bf20fc04595ee1395b1c61f41b2663b9ba4c0207397d023ba06b1"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/live_observation_12_terminal_audit.json",
+      "sha256": "048cfec0c3710959fac73beacd51757323a40e6f85dce0a8aa15c37d648ed7d2"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/service_ready/service_shutdown_receipt.json",
+      "sha256": "7e4b3318af91727e11b2135cad04a03ddda9df82a3aaf781eaf49a664c0d9dff"
+    },
+    {
+      "path": "research/recovery_20261025/root_integrity_crosscheck_20261026.json",
+      "sha256": "fa4a5cca82bdc519c5d96236d09e2b2b81081d0de9fc0b53cac3b8e843a2e432"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/archive_preflight_review.json",
+      "sha256": "45a0b69f4d8d5bb083e4dde930d0f08b1c3c5f2832c542de173159f43831eb93"
+    },
+    {
+      "path": "research/recovery_20261025/main_candidate_preparation/independent_review.json",
+      "sha256": "7f973484bf2edee7d7353d9d3bce2f6306f0ce178aa4a6f89c6011cd1b6f3bae"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/postwork_awake_01/acquire.json",
+      "sha256": "0de8fe68e8aa1c3491dfa3861f79637baa601de8e20531c851f00d1c9c60cebb"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/postwork_awake_01/process_exit_observation.json",
+      "sha256": "39d63a34b6bcb768263e0d0623112cd19d78fa40cb69f006431ab3dcf669e3ce"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/archive_preflight_review_r2.json",
+      "sha256": "855b9a02ceb406e50481359e41757bbdc2f9a3cab09d947f202fd10cc212a245"
+    }
+  ],
+  "archive_plan": {
+    "archive": "research/artifacts/recovery-evidence-20261025.zip",
+    "verification": "research/artifacts/recovery-evidence-20261025.verification.json",
+    "execution_status": "Separate final verification receipt must establish actual success; this report does not predeclare it."
+  },
+  "cleanup": {
+    "isolated_service": "owned_service_stopped",
+    "owned_port_11435_closed": true,
+    "existing_user_service_11434_untouched": true,
+    "experiment_awake_helper": "explicit_release_verified",
+    "postwork_awake_helper": "helper_process_absent_no_explicit_release_receipt",
+    "postwork_explicit_api_clear_verified": false,
+    "postwork_process_absence_observed": true,
+    "postwork_stop_marker_written": true,
+    "postwork_exit_cause": "unknown; no inferred orderly shutdown",
+    "persistent_power_settings_changed": false
+  },
+  "recorded_at_utc": "2026-10-25T23:45:13.959Z"
+}

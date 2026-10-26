@@ -1,0 +1,372 @@
+{
+  "version": "fidelity_E_raw_derived_link_review_20261026_1",
+  "created_at_utc": "2026-10-25T23:37:39.571Z",
+  "reviewer": "Codex method_audit agent; unmasked AI assistance, not an independent human or statistical rater",
+  "scope": "Observed completed Fidelity E D0/F0 raw outputs and the separately authorized post-start deterministic finalizer sidecar. No other condition output read or ranked.",
+  "refs": [
+    {
+      "path": "research/recovery_20261025/derived_allocation/completed_pilot_math.json",
+      "sha256": "091608a9184c0481a0f9a33af0f96903eba64eeeb800b7ed38b1ccca7654e49d"
+    },
+    {
+      "path": "research/finalize_sector_allocation.py",
+      "sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3"
+    },
+    {
+      "path": "research/recovery_20261025/new_semantic/fidelity_E_D0_semantic.json",
+      "sha256": "55b605f7edf50065fe684837a6617a16cb53e6cb7aa5144171108576e9379343"
+    },
+    {
+      "path": "research/recovery_20261025/new_semantic/fidelity_E_D0_root_crosscheck.json",
+      "sha256": "f120a87a6d623dd93cdcf945339498e31b7928c5dd4f0bc56baaa5caab496681"
+    },
+    {
+      "path": "research/recovery_20261025/new_semantic/fidelity_E_F0_semantic_r2.json",
+      "sha256": "f900dbc818ec3a488184b245f697cdd0ef01c033054467bf673ace2b6e0679dc"
+    },
+    {
+      "path": "research/recovery_20261025/new_semantic/fidelity_E_finalization_method_note.json",
+      "sha256": "60721d645d529e6f1effc49de6edcb3c1ef1c1ca99c22bd0661b07bc7f095694"
+    }
+  ],
+  "raw_response_content_sha256": {
+    "D0": "58aef780973fcae25ee4a99ca3d42947132f659f70385e4237ed33f7b08bc471",
+    "F0": "8b346d678921ea2ad199b458ff5553b01e0c930665401840223473e4ed44cd50"
+  },
+  "derivation": {
+    "raw_sum_exact_decimal": "0.92",
+    "raw_shortfall_percentage_points": "8",
+    "normalization_multiplier_exact": {
+      "numerator": "25",
+      "denominator": "23"
+    },
+    "relative_increase_exact": {
+      "numerator": "2",
+      "denominator": "23"
+    },
+    "relative_increase_percent_approximate": 8.695652173913043,
+    "quantization": "Largest remainder, fixed source sector order on ties; 10000 integer units of0.01 percentage point.",
+    "rounding_floor_sum": 9995,
+    "rounding_units_assigned": 5,
+    "rounding_unit_recipients": [
+      "20",
+      "30",
+      "60",
+      "45",
+      "10"
+    ],
+    "final_units": [
+      218,
+      217,
+      1087,
+      978,
+      435,
+      978,
+      1304,
+      4131,
+      326,
+      217,
+      109
+    ],
+    "final_total_units": 10000,
+    "final_total_percent": "100.00",
+    "material_scaling_distinguished_from_rounding": "The eight-percentage-point budget shortfall requires proportional scaling; it is not a mere rounding residual. Final quantization then redistributes five0.01-percentage-point units over floors.",
+    "own_D0_F0_raw_component_deltas_all_zero": true,
+    "own_D0_F0_derived_component_deltas_all_zero": true,
+    "own_D0_F0_raw_valid_portfolio_distance": null,
+    "own_D0_F0_derived_total_variation_exact": "0",
+    "distance_interpretation": "Zero is descriptive only for this same completed pair after the same external finalizer. It does not establish E/L equivalence, absence of source influence, stability or causal effects."
+  },
+  "rows": [
+    {
+      "sector_code": "10",
+      "raw_weight_exact_decimal": "0.02",
+      "normalized_weight_exact": {
+        "numerator": "1",
+        "denominator": "46"
+      },
+      "final_units": 218,
+      "final_percent": "2.18",
+      "raw_to_final_increase_percentage_points": "0.18",
+      "comparator_exact_input_decimal": "0.03003003003003003",
+      "comparator_input_locator": "/common_market/baseline_weights/10",
+      "raw_comparator_direction": "below",
+      "normalized_comparator_direction": "below",
+      "final_comparator_direction": "below",
+      "D0_F0_raw_delta": "0",
+      "D0_F0_final_unit_delta": 0,
+      "rounding_floor_units": 217,
+      "rounding_remainder_numerator": 36
+    },
+    {
+      "sector_code": "15",
+      "raw_weight_exact_decimal": "0.02",
+      "normalized_weight_exact": {
+        "numerator": "1",
+        "denominator": "46"
+      },
+      "final_units": 217,
+      "final_percent": "2.17",
+      "raw_to_final_increase_percentage_points": "0.17",
+      "comparator_exact_input_decimal": "0.018018018018018018",
+      "comparator_input_locator": "/common_market/baseline_weights/15",
+      "raw_comparator_direction": "above",
+      "normalized_comparator_direction": "above",
+      "final_comparator_direction": "above",
+      "D0_F0_raw_delta": "0",
+      "D0_F0_final_unit_delta": 0,
+      "rounding_floor_units": 217,
+      "rounding_remainder_numerator": 36
+    },
+    {
+      "sector_code": "20",
+      "raw_weight_exact_decimal": "0.1",
+      "normalized_weight_exact": {
+        "numerator": "5",
+        "denominator": "46"
+      },
+      "final_units": 1087,
+      "final_percent": "10.87",
+      "raw_to_final_increase_percentage_points": "0.87",
+      "comparator_exact_input_decimal": "0.08808808808808809",
+      "comparator_input_locator": "/common_market/baseline_weights/20",
+      "raw_comparator_direction": "above",
+      "normalized_comparator_direction": "above",
+      "final_comparator_direction": "above",
+      "D0_F0_raw_delta": "0",
+      "D0_F0_final_unit_delta": 0,
+      "rounding_floor_units": 1086,
+      "rounding_remainder_numerator": 88
+    },
+    {
+      "sector_code": "25",
+      "raw_weight_exact_decimal": "0.09",
+      "normalized_weight_exact": {
+        "numerator": "9",
+        "denominator": "92"
+      },
+      "final_units": 978,
+      "final_percent": "9.78",
+      "raw_to_final_increase_percentage_points": "0.78",
+      "comparator_exact_input_decimal": "0.09309309309309309",
+      "comparator_input_locator": "/common_market/baseline_weights/25",
+      "raw_comparator_direction": "below",
+      "normalized_comparator_direction": "above",
+      "final_comparator_direction": "above",
+      "D0_F0_raw_delta": "0",
+      "D0_F0_final_unit_delta": 0,
+      "rounding_floor_units": 978,
+      "rounding_remainder_numerator": 24
+    },
+    {
+      "sector_code": "30",
+      "raw_weight_exact_decimal": "0.04",
+      "normalized_weight_exact": {
+        "numerator": "1",
+        "denominator": "23"
+      },
+      "final_units": 435,
+      "final_percent": "4.35",
+      "raw_to_final_increase_percentage_points": "0.35",
+      "comparator_exact_input_decimal": "0.04604604604604604",
+      "comparator_input_locator": "/common_market/baseline_weights/30",
+      "raw_comparator_direction": "below",
+      "normalized_comparator_direction": "below",
+      "final_comparator_direction": "below",
+      "D0_F0_raw_delta": "0",
+      "D0_F0_final_unit_delta": 0,
+      "rounding_floor_units": 434,
+      "rounding_remainder_numerator": 72
+    },
+    {
+      "sector_code": "35",
+      "raw_weight_exact_decimal": "0.09",
+      "normalized_weight_exact": {
+        "numerator": "9",
+        "denominator": "92"
+      },
+      "final_units": 978,
+      "final_percent": "9.78",
+      "raw_to_final_increase_percentage_points": "0.78",
+      "comparator_exact_input_decimal": "0.0890890890890891",
+      "comparator_input_locator": "/common_market/baseline_weights/35",
+      "raw_comparator_direction": "above",
+      "normalized_comparator_direction": "above",
+      "final_comparator_direction": "above",
+      "D0_F0_raw_delta": "0",
+      "D0_F0_final_unit_delta": 0,
+      "rounding_floor_units": 978,
+      "rounding_remainder_numerator": 24
+    },
+    {
+      "sector_code": "40",
+      "raw_weight_exact_decimal": "0.12",
+      "normalized_weight_exact": {
+        "numerator": "3",
+        "denominator": "23"
+      },
+      "final_units": 1304,
+      "final_percent": "13.04",
+      "raw_to_final_increase_percentage_points": "1.04",
+      "comparator_exact_input_decimal": "0.11811811811811812",
+      "comparator_input_locator": "/common_market/baseline_weights/40",
+      "raw_comparator_direction": "above",
+      "normalized_comparator_direction": "above",
+      "final_comparator_direction": "above",
+      "D0_F0_raw_delta": "0",
+      "D0_F0_final_unit_delta": 0,
+      "rounding_floor_units": 1304,
+      "rounding_remainder_numerator": 32
+    },
+    {
+      "sector_code": "45",
+      "raw_weight_exact_decimal": "0.38",
+      "normalized_weight_exact": {
+        "numerator": "19",
+        "denominator": "46"
+      },
+      "final_units": 4131,
+      "final_percent": "41.31",
+      "raw_to_final_increase_percentage_points": "3.31",
+      "comparator_exact_input_decimal": "0.38038038038038036",
+      "comparator_input_locator": "/common_market/baseline_weights/45",
+      "raw_comparator_direction": "below",
+      "normalized_comparator_direction": "above",
+      "final_comparator_direction": "above",
+      "D0_F0_raw_delta": "0",
+      "D0_F0_final_unit_delta": 0,
+      "rounding_floor_units": 4130,
+      "rounding_remainder_numerator": 40
+    },
+    {
+      "sector_code": "50",
+      "raw_weight_exact_decimal": "0.03",
+      "normalized_weight_exact": {
+        "numerator": "3",
+        "denominator": "92"
+      },
+      "final_units": 326,
+      "final_percent": "3.26",
+      "raw_to_final_increase_percentage_points": "0.26",
+      "comparator_exact_input_decimal": "0.09709709709709709",
+      "comparator_input_locator": "/common_market/baseline_weights/50",
+      "raw_comparator_direction": "below",
+      "normalized_comparator_direction": "below",
+      "final_comparator_direction": "below",
+      "D0_F0_raw_delta": "0",
+      "D0_F0_final_unit_delta": 0,
+      "rounding_floor_units": 326,
+      "rounding_remainder_numerator": 8
+    },
+    {
+      "sector_code": "55",
+      "raw_weight_exact_decimal": "0.02",
+      "normalized_weight_exact": {
+        "numerator": "1",
+        "denominator": "46"
+      },
+      "final_units": 217,
+      "final_percent": "2.17",
+      "raw_to_final_increase_percentage_points": "0.17",
+      "comparator_exact_input_decimal": "0.022022022022022022",
+      "comparator_input_locator": "/common_market/baseline_weights/55",
+      "raw_comparator_direction": "below",
+      "normalized_comparator_direction": "below",
+      "final_comparator_direction": "below",
+      "D0_F0_raw_delta": "0",
+      "D0_F0_final_unit_delta": 0,
+      "rounding_floor_units": 217,
+      "rounding_remainder_numerator": 36
+    },
+    {
+      "sector_code": "60",
+      "raw_weight_exact_decimal": "0.01",
+      "normalized_weight_exact": {
+        "numerator": "1",
+        "denominator": "92"
+      },
+      "final_units": 109,
+      "final_percent": "1.09",
+      "raw_to_final_increase_percentage_points": "0.09",
+      "comparator_exact_input_decimal": "0.018018018018018018",
+      "comparator_input_locator": "/common_market/baseline_weights/60",
+      "raw_comparator_direction": "below",
+      "normalized_comparator_direction": "below",
+      "final_comparator_direction": "below",
+      "D0_F0_raw_delta": "0",
+      "D0_F0_final_unit_delta": 0,
+      "rounding_floor_units": 108,
+      "rounding_remainder_numerator": 64
+    }
+  ],
+  "explanation_implications": [
+    {
+      "topic": "Budget assertion",
+      "F0_output_field": "/context_assessment/allocation_implication",
+      "exact_quote": "Weights are adjusted to sum to 1.0",
+      "finding": "False for the raw F0 vector; external deterministic finalization to100.00% does not turn the generator assertion into a correct raw statement or demonstrate the model used its arithmetic feedback."
+    },
+    {
+      "topic": "Actual Information Technology allocation",
+      "F0_output_field": "/risk_discussion",
+      "exact_quote": "Information Technology (38%)",
+      "finding": "Correct as a statement of raw submitted38%. Operational final allocation is41.31% after the external finalizer. Report both provenance labels; never attribute41.31% to a model-selected change. The supplied IT benchmark is38.038038%, so the raw component is below and the derived component is above it."
+    },
+    {
+      "topic": "Consumer Discretionary direction",
+      "D0_output_field": "/sectors/3/decision_reason",
+      "D0_exact_quote": "a weight slightly above the benchmark",
+      "F0_claim_present": false,
+      "finding": "Raw9% remains below task comparator9.309309%, while externally finalized9.78% is above it. The external scaling flips the direction and does not retroactively validate D0. F0 deleted this explicit above-benchmark assertion; do not invent it as a final-stage error."
+    },
+    {
+      "topic": "Neutral Health Care interpretation",
+      "F0_output_field": "/sectors/5/decision_reason",
+      "exact_quote": "a weight aligned with the benchmark average",
+      "finding": "Raw9% is near the supplied Health Care comparator8.908909%; derived9.78% increases the difference mechanically. The phrase benchmark average stays ambiguous, and no semantic tolerance or mandatory Neutral target is invented."
+    },
+    {
+      "topic": "Other task comparator directions",
+      "finding": "Exactly two raw-to-derived signs flip (Consumer Discretionary and IT). Materials stays above and Real Estate stays below the task comparator despite source_stance adopt Underweight/Overweight respectively. These are disclosed diagnostic directions; the source broad-market reference and task comparator differ, so label-sign matching is not a standalone semantic verdict."
+    },
+    {
+      "topic": "Rounding tie breaking",
+      "finding": "Energy, Materials and Utilities share raw2% and exact normalized1/46. Fixed-order largest-remainder allocation produces2.18%,2.17%,2.17%. This0.01-point Energy advantage is algorithmic tie breaking, not institutional preference or model reasoning."
+    },
+    {
+      "topic": "Numeric evidence and dates",
+      "finding": "Normalization changes weights only. Wrong sector returns, volatility metrics, GDP-as-forecast and date-type/release-date claims retain their raw semantic findings; no source or macro fact is repaired."
+    }
+  ],
+  "coverage": {
+    "completed_stage_vectors_checked": 2,
+    "final_vectors_checked": 1,
+    "source_rows_per_checked_stage": 11,
+    "all_finalizer_input_reference_hashes_checked": 9,
+    "independent_exact_rational_normalization_checked": true,
+    "independent_largest_remainder_checked": true,
+    "exact_input_decimal_baseline_directions_checked": true,
+    "raw_output_content_bindings_checked": true,
+    "checks_failed": [],
+    "not_claimed": [
+      "This is not a repeat of the full47-test code suite; it independently recomputes the two observed vectors.",
+      "No market covariance, realized return, profit or suitability assessment is added.",
+      "No read of an interrupted partial response or invented missing strategy."
+    ]
+  },
+  "denominator_limits": {
+    "planned_finals": 5,
+    "actually_finalized_finals": 1,
+    "missing_finals_replaced": false,
+    "cross_condition_allocation_contrasts": "Unavailable because only one final exists; no zero or benchmark replacement for missing comparisons."
+  },
+  "three_axis_review": {
+    "errors": "Both raw submissions remain0.92. The independently recomputed derived allocation sums exactly to10000units with no discrepancy; this corrects execution budget only.",
+    "consistency": "Exact raw response binding, unchanged own D0/F0 weights and deterministic scaling/rounding provenance checked. Explanations are interpreted against raw versus externally finalized weights separately; sign flips and tie breaks are documented.",
+    "paper_topic": "The derived vector represents the decision pipeline after a post-start user-requested mathematical amendment. Institutional evidence-to-stated-reason-to-raw-choice analysis remains distinct. Finalized feasibility is not proof of preservation of institutional judgment or an answer to unobserved E/L/source/control contrasts."
+  },
+  "frozen_raw_endpoint_replaced": false,
+  "prompt_or_settings_changed": false,
+  "model_generations": 0,
+  "historical_files_modified": false
+}

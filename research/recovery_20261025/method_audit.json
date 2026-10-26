@@ -1,0 +1,886 @@
+{
+  "audit_version": "method_v492_to_v494_20261025_1",
+  "review_date_Asia_Seoul": "2026-10-25",
+  "reviewer": "Codex method_audit subagent; external to Qwen generation but not an independent human/statistical rater",
+  "scope": "Read-only historical method diagnosis plus an unfrozen prospective prompt candidate. No model calls, historical edits, normalization, clipping, retry or repaired response.",
+  "semantic_review_limit": "Selected unmasked retrospective examples diagnose methods. This is not the protocol's masked complete output-by-output semantic evaluation or a winning-arm comparison.",
+  "research_question_preserved": "How supplied institution-specific public evidence connects to the model's stated source interpretation, decision rationale and observable allocation, with E/L timing and a source-free C trajectory.",
+  "historical_stage_checks": [
+    {
+      "case_id": "fidelity_q2_2026__E",
+      "stage": "D0",
+      "raw_response": {
+        "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__E__D0/http_0001_generation/response.json",
+        "sha256": "65e4663f327f819218ec30203ea918bba227a2ad982283a1194f23a15ea80317"
+      },
+      "raw_content_sha256": "2818a625b675a1e49e0de64b82c63d00425616fcab71c49de1824cdcf829bb3f",
+      "recorded_validation": {
+        "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__E__D0/response_contract_validation.json",
+        "sha256": "fb336aa8379d5ab5216405eb80e813c217c58bd94b350eeddd32baa3ff972610"
+      },
+      "raw_content_matches_recorded_parsed": true,
+      "validation_recomputation_matches": true,
+      "raw_weight_sum_decimal": "0.850",
+      "raw_budget_residual_decimal": "-0.150",
+      "schema_valid": true,
+      "complete_vector": true,
+      "arithmetic_valid": false,
+      "source_id": "fidelity_q2_2026",
+      "expected_source_id": "fidelity_q2_2026",
+      "visibility_errors": [
+        {
+          "kind": "unavailable_evidence",
+          "path": "/sectors/8/decision_evidence_ids",
+          "ids": [
+            "correlation"
+          ]
+        }
+      ],
+      "source_label_diagnostics": [
+        {
+          "sector_code": "10",
+          "label": "Fidelity Q2 2026 Sector Research",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "15",
+          "label": "Fidelity Q2 2026 Sector Research",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "20",
+          "label": "Fidelity Q2 2026 Sector Research",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "25",
+          "label": "Fidelity Q2 2026 Sector Research",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "30",
+          "label": "Fidelity Q2 2026 Sector Research",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "35",
+          "label": "Fidelity Q2 2026 Sector Research",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "40",
+          "label": "Fidelity Q2 2026 Sector Research",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "45",
+          "label": "Fidelity Q2 2026 Sector Research",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "50",
+          "label": "Fidelity Q2 2026 Sector Research",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "55",
+          "label": "Fidelity Q2 2026 Sector Research",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "60",
+          "label": "Fidelity Q2 2026 Sector Research",
+          "kind": "outside_source_vocabulary"
+        }
+      ],
+      "continuation_eligible": true,
+      "contract_valid_is_not_arithmetic_or_semantic_success": true
+    },
+    {
+      "case_id": "fidelity_q2_2026__E",
+      "stage": "F0",
+      "raw_response": {
+        "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__E__F0/http_0001_generation/response.json",
+        "sha256": "f2077e6e53ee56a4af26f598cdb1e604f57c949c8401787f71035d7c628c69aa"
+      },
+      "raw_content_sha256": "5c4a06afaefbcd327f4510bc60d31241438f6b2314cc4859a02ae68a5a5e4f1a",
+      "recorded_validation": {
+        "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__E__F0/response_contract_validation.json",
+        "sha256": "a4463382f907570c96fe272980999b70a44495be3ddb507c56508bfaea3e0887"
+      },
+      "raw_content_matches_recorded_parsed": true,
+      "validation_recomputation_matches": true,
+      "raw_weight_sum_decimal": "0.850",
+      "raw_budget_residual_decimal": "-0.150",
+      "schema_valid": true,
+      "complete_vector": true,
+      "arithmetic_valid": false,
+      "source_id": null,
+      "expected_source_id": "fidelity_q2_2026",
+      "visibility_errors": [
+        {
+          "kind": "source_identity",
+          "reported": null,
+          "expected": "fidelity_q2_2026"
+        }
+      ],
+      "source_label_diagnostics": [
+        {
+          "sector_code": "10",
+          "label": null,
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "15",
+          "label": null,
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "20",
+          "label": null,
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "25",
+          "label": null,
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "30",
+          "label": null,
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "35",
+          "label": null,
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "40",
+          "label": null,
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "45",
+          "label": null,
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "50",
+          "label": null,
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "55",
+          "label": null,
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "60",
+          "label": null,
+          "kind": "outside_source_vocabulary"
+        }
+      ],
+      "continuation_eligible": true,
+      "contract_valid_is_not_arithmetic_or_semantic_success": true
+    },
+    {
+      "case_id": "fidelity_q2_2026__L",
+      "stage": "D0",
+      "raw_response": {
+        "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__L__D0/http_0001_generation/response.json",
+        "sha256": "e2b150e07121927ca18eed944e71f17642ea78cbb7c067dc7f11986126f0269b"
+      },
+      "raw_content_sha256": "4fb5cde9c224f4946a639f63be2d519c12682eaf69d27eec5306f5d294157b55",
+      "recorded_validation": {
+        "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__L__D0/response_contract_validation.json",
+        "sha256": "3243196b8f95a0e6d19d70ccc0ee8713dd576a6762cd97cb61df25f77ec44566"
+      },
+      "raw_content_matches_recorded_parsed": true,
+      "validation_recomputation_matches": true,
+      "raw_weight_sum_decimal": "1.023",
+      "raw_budget_residual_decimal": "0.023",
+      "schema_valid": true,
+      "complete_vector": true,
+      "arithmetic_valid": false,
+      "source_id": null,
+      "expected_source_id": null,
+      "visibility_errors": [],
+      "source_label_diagnostics": [],
+      "continuation_eligible": true,
+      "contract_valid_is_not_arithmetic_or_semantic_success": true
+    },
+    {
+      "case_id": "fidelity_q2_2026__L",
+      "stage": "F0",
+      "raw_response": {
+        "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__L__F0/http_0001_generation/response.json",
+        "sha256": "b382cfdf20887d5e92539ca544e901cd56813ea9322332bde1372e59336c5001"
+      },
+      "raw_content_sha256": "390d9412f7cbf8926181f1a2f5e65573ec869607797c534304a3adbb7aa7c758",
+      "recorded_validation": {
+        "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__L__F0/response_contract_validation.json",
+        "sha256": "6d1869709a2e122a5fc01ce81e1f7ee99dbb0d7025d66aa9cac8fc5460f02cb5"
+      },
+      "raw_content_matches_recorded_parsed": true,
+      "validation_recomputation_matches": true,
+      "raw_weight_sum_decimal": "1.023",
+      "raw_budget_residual_decimal": "0.023",
+      "schema_valid": true,
+      "complete_vector": true,
+      "arithmetic_valid": false,
+      "source_id": "fidelity_q2_2026",
+      "expected_source_id": "fidelity_q2_2026",
+      "visibility_errors": [],
+      "source_label_diagnostics": [
+        {
+          "sector_code": "10",
+          "label": "Fidelity Investments / Denise Chisholm",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "15",
+          "label": "Fidelity Investments / Denise Chisholm",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "20",
+          "label": "Fidelity Investments / Denise Chisholm",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "25",
+          "label": "Fidelity Investments / Denise Chisholm",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "30",
+          "label": "Fidelity Investments / Denise Chisholm",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "35",
+          "label": "Fidelity Investments / Denise Chisholm",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "40",
+          "label": "Fidelity Investments / Denise Chisholm",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "45",
+          "label": "Fidelity Investments / Denise Chisholm",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "50",
+          "label": "Fidelity Investments / Denise Chisholm",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "55",
+          "label": "Fidelity Investments / Denise Chisholm",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "60",
+          "label": "Fidelity Investments / Denise Chisholm",
+          "kind": "outside_source_vocabulary"
+        }
+      ],
+      "continuation_eligible": true,
+      "contract_valid_is_not_arithmetic_or_semantic_success": true
+    },
+    {
+      "case_id": "ubs_june_2026__E",
+      "stage": "D0",
+      "raw_response": {
+        "path": "data/local_sector_runtime/v492_pilot_20261019/ubs_june_2026__E__D0/http_0001_generation/response.json",
+        "sha256": "a5490918c4c937fba19a4a43706d9826b8233744476a956e88c3c169888e1d7e"
+      },
+      "raw_content_sha256": "daf881ae3879ec980aeb808f2b634561c4414ebe9ec341aa01f4467c79918e37",
+      "recorded_validation": {
+        "path": "data/local_sector_runtime/v492_pilot_20261019/ubs_june_2026__E__D0/response_contract_validation.json",
+        "sha256": "0486895c8bceb027ca2e8487b1224d27360b361ee40dc9b7bd521dee1c7a1438"
+      },
+      "raw_content_matches_recorded_parsed": true,
+      "validation_recomputation_matches": true,
+      "raw_weight_sum_decimal": "1.07",
+      "raw_budget_residual_decimal": "0.07",
+      "schema_valid": true,
+      "complete_vector": true,
+      "arithmetic_valid": false,
+      "source_id": "ubs_june_2026",
+      "expected_source_id": "ubs_june_2026",
+      "visibility_errors": [],
+      "source_label_diagnostics": [
+        {
+          "sector_code": "10",
+          "label": "UBS House View Investment Strategy Guide June 2026",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "15",
+          "label": "UBS House View Investment Strategy Guide June 2026",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "20",
+          "label": "UBS House View Investment Strategy Guide June 2026",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "25",
+          "label": "UBS House View Investment Strategy Guide June 2026",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "30",
+          "label": "UBS House View Investment Strategy Guide June 2026",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "35",
+          "label": "UBS House View Investment Strategy Guide June 2026",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "40",
+          "label": "UBS House View Investment Strategy Guide June 2026",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "45",
+          "label": "UBS House View Investment Strategy Guide June 2026",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "50",
+          "label": "UBS House View Investment Strategy Guide June 2026",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "55",
+          "label": "UBS House View Investment Strategy Guide June 2026",
+          "kind": "outside_source_vocabulary"
+        },
+        {
+          "sector_code": "60",
+          "label": "UBS House View Investment Strategy Guide June 2026",
+          "kind": "outside_source_vocabulary"
+        }
+      ],
+      "continuation_eligible": true,
+      "contract_valid_is_not_arithmetic_or_semantic_success": true
+    }
+  ],
+  "historical_feedback_and_message_checks": [
+    {
+      "case_id": "fidelity_q2_2026__E",
+      "stored_final_construction": {
+        "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__E__final_construction.json",
+        "sha256": "c8a56915b77e240e255f82ca3b92498c8ca19a54c6d343a58fbbe594e0c0804c"
+      },
+      "reconstructed_final_messages_identical": true,
+      "reconstructed_draft_feedback_identical": true,
+      "feedback_sum_matches_decimal_recomputation": true,
+      "feedback_residual_matches_decimal_recomputation": true,
+      "D0_institution_visible": true,
+      "F0_institution_visible": true,
+      "F0_feedback_is_own_D0_only": true,
+      "D0_sent_messages_match_construction": true,
+      "F0_sent_messages_match_construction": true,
+      "raw_component_deltas_decimal": {
+        "10": "0.00",
+        "15": "0.000",
+        "20": "0.00",
+        "25": "0.00",
+        "30": "0.00",
+        "35": "0.000",
+        "40": "0.000",
+        "45": "0.00",
+        "50": "0.00",
+        "55": "0.000",
+        "60": "0.00"
+      },
+      "raw_net_delta_decimal": "0.000",
+      "all_weights_unchanged": true,
+      "valid_portfolio_distance_eligible": false,
+      "distance_exclusion_reason": "Both own D0 and F0 violate raw budget; report raw deltas only, never normalized distances."
+    },
+    {
+      "case_id": "fidelity_q2_2026__L",
+      "stored_final_construction": {
+        "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__L__final_construction.json",
+        "sha256": "24cdf891e18ee420486f371b47ac2827c91f9f332c112676b91ae7ad650a238b"
+      },
+      "reconstructed_final_messages_identical": true,
+      "reconstructed_draft_feedback_identical": true,
+      "feedback_sum_matches_decimal_recomputation": true,
+      "feedback_residual_matches_decimal_recomputation": true,
+      "D0_institution_visible": false,
+      "F0_institution_visible": true,
+      "F0_feedback_is_own_D0_only": true,
+      "D0_sent_messages_match_construction": true,
+      "F0_sent_messages_match_construction": true,
+      "raw_component_deltas_decimal": {
+        "10": "-0.010",
+        "15": "-0.002",
+        "20": "0.015",
+        "25": "0.005",
+        "30": "-0.01",
+        "35": "0.005",
+        "40": "0.01",
+        "45": "0.005",
+        "50": "-0.013",
+        "55": "-0.002",
+        "60": "-0.003"
+      },
+      "raw_net_delta_decimal": "0.000",
+      "all_weights_unchanged": false,
+      "valid_portfolio_distance_eligible": false,
+      "distance_exclusion_reason": "Both own D0 and F0 violate raw budget; report raw deltas only, never normalized distances."
+    },
+    {
+      "case_id": "ubs_june_2026__E",
+      "stored_final_construction": {
+        "path": "data/local_sector_runtime/v492_pilot_20261019/ubs_june_2026__E__final_construction.json",
+        "sha256": "b2df3cdd05ddf7402abda0acb82ceca3f8607f92f92145bebe52e37d264c0948"
+      },
+      "reconstructed_final_messages_identical": true,
+      "reconstructed_draft_feedback_identical": true,
+      "feedback_sum_matches_decimal_recomputation": true,
+      "feedback_residual_matches_decimal_recomputation": true,
+      "D0_institution_visible": true,
+      "F0_institution_visible": true,
+      "F0_feedback_is_own_D0_only": true,
+      "D0_sent_messages_match_construction": true,
+      "F0_sent_messages_match_construction": true
+    }
+  ],
+  "selected_semantic_examples": [
+    {
+      "output_artifact": {
+        "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__E__F0/http_0001_generation/response.json",
+        "sha256": "f2077e6e53ee56a4af26f598cdb1e604f57c949c8401787f71035d7c628c69aa"
+      },
+      "output_field": "/sectors/10/decision_reason",
+      "short_exact_quote": "completing the sum to 1.0",
+      "visible_evidence_anchors": [
+        {
+          "evidence_id": "C:D0:sum",
+          "value": 0.85
+        },
+        {
+          "locator": "F0 /sectors/*/weight",
+          "exact_decimal_sum": "0.850"
+        }
+      ],
+      "category": "unsupported_or_contradictory_link",
+      "reason": "All eleven weights are unchanged from own D0 and sum to 0.85; no budget correction occurred.",
+      "uncertainty": "No causal mechanism inferred; this is a directly observed output-field diagnosis.",
+      "reviewer": "Codex method_audit agent; unvalidated AI assistance"
+    },
+    {
+      "output_artifact": {
+        "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__E__F0/http_0001_generation/response.json",
+        "sha256": "f2077e6e53ee56a4af26f598cdb1e604f57c949c8401787f71035d7c628c69aa"
+      },
+      "output_field": "/source_id and /sectors/*/source_reading",
+      "short_exact_quote": "Not available",
+      "visible_evidence_anchors": [
+        {
+          "locator": "F0 payload /institution_document/source_id",
+          "value": "fidelity_q2_2026"
+        }
+      ],
+      "category": "unsupported_or_contradictory_link",
+      "reason": "Fidelity packet is present in both sent D0 and F0. Null source identity and unavailable fields contradict supplied evidence and Fidelity claims in decision_reason.",
+      "uncertainty": "The previous F0 no-source instruction is grammatically ambiguous. Prompt ambiguity is plausible, not an established causal explanation of the model output.",
+      "reviewer": "Codex method_audit agent; unvalidated AI assistance"
+    },
+    {
+      "output_artifact": {
+        "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__L__F0/http_0001_generation/response.json",
+        "sha256": "b382cfdf20887d5e92539ca544e901cd56813ea9322332bde1372e59336c5001"
+      },
+      "output_field": "/sectors/*/source_label",
+      "short_exact_quote": "Fidelity Investments / Denise Chisholm",
+      "visible_evidence_anchors": [
+        {
+          "locator": "F0 payload /institution_document/rating_vocabulary",
+          "value": [
+            "Underweight",
+            "Neutral",
+            "Overweight"
+          ]
+        }
+      ],
+      "category": "unsupported_or_contradictory_link",
+      "reason": "All eleven source_label fields contain issuer text instead of source-specific published rating. The schema gives no field description, and source_label is not explicitly defined in original instructions.",
+      "uncertainty": "No causal mechanism inferred; this is a directly observed output-field diagnosis.",
+      "reviewer": "Codex method_audit agent; unvalidated AI assistance"
+    },
+    {
+      "output_artifact": {
+        "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__E__D0/http_0001_generation/response.json",
+        "sha256": "65e4663f327f819218ec30203ea918bba227a2ad982283a1194f23a15ea80317"
+      },
+      "output_field": "/sectors/8/decision_evidence_ids",
+      "short_exact_quote": "correlation",
+      "visible_evidence_anchors": [
+        {
+          "evidence_id": "M:correlation",
+          "locator": "D0 /public_numeric_fact_index/matrix_reference_table"
+        }
+      ],
+      "category": "unsupported_or_contradictory_link",
+      "reason": "The cited bare ID is not visible; the actual matrix ID is M:correlation. This is a citation identifier error, not evidence that the supplied correlation matrix is absent.",
+      "uncertainty": "No causal mechanism inferred; this is a directly observed output-field diagnosis.",
+      "reviewer": "Codex method_audit agent; unvalidated AI assistance"
+    },
+    {
+      "output_artifact": {
+        "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__L__F0/http_0001_generation/response.json",
+        "sha256": "b382cfdf20887d5e92539ca544e901cd56813ea9322332bde1372e59336c5001"
+      },
+      "output_field": "/sectors/0/decision_reason",
+      "short_exact_quote": "historical underperformance (-4.3% annualized)",
+      "visible_evidence_anchors": [
+        {
+          "evidence_id": "M:lookback_compound_return:10",
+          "value": 0.04287667814038709,
+          "unit": "decimal_return_over_window",
+          "period": [
+            "2026-04-21",
+            "2026-07-16"
+          ]
+        }
+      ],
+      "category": "unsupported_or_contradictory_link",
+      "reason": "Visible Energy return is positive 4.2877% over the lookback window. The claim reverses sign and calls an unannualized window return annualized.",
+      "uncertainty": "No causal mechanism inferred; this is a directly observed output-field diagnosis.",
+      "reviewer": "Codex method_audit agent; unvalidated AI assistance"
+    },
+    {
+      "output_artifact": {
+        "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__L__F0/http_0001_generation/response.json",
+        "sha256": "b382cfdf20887d5e92539ca544e901cd56813ea9322332bde1372e59336c5001"
+      },
+      "output_field": "/sectors/6/decision_reason",
+      "short_exact_quote": "exceptional historical performance (149.9% annualized)",
+      "visible_evidence_anchors": [
+        {
+          "evidence_id": "M:lookback_compound_return:40",
+          "value": 0.08205961595157252,
+          "unit": "decimal_return_over_window",
+          "period": [
+            "2026-04-21",
+            "2026-07-16"
+          ]
+        }
+      ],
+      "category": "unsupported_or_contradictory_link",
+      "reason": "Visible Financials return is 8.20596% over the lookback window, not 149.9% annualized. A valid evidence ID does not validate the associated number, subject or period.",
+      "uncertainty": "No causal mechanism inferred; this is a directly observed output-field diagnosis.",
+      "reviewer": "Codex method_audit agent; unvalidated AI assistance"
+    },
+    {
+      "output_artifact": {
+        "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__L__F0/http_0001_generation/response.json",
+        "sha256": "b382cfdf20887d5e92539ca544e901cd56813ea9322332bde1372e59336c5001"
+      },
+      "output_field": "/sectors/10/source_stance and decision_reason",
+      "short_exact_quote": "a cautious 'Overweight' stance",
+      "visible_evidence_anchors": [
+        {
+          "evidence_id": "fidelity_q2_2026:p3:sector:60",
+          "text": "Real Estate receives Overweight. Valuation dispersion offers favorable risk-return."
+        },
+        {
+          "evidence_id": "M:baseline_weights:60",
+          "value": 0.018018018018018018
+        },
+        {
+          "locator": "F0 /sectors/10/weight",
+          "value": 0.015
+        }
+      ],
+      "category": "unsupported_or_contradictory_link",
+      "reason": "Final 0.015 is below the supplied comparator 0.018018018, and the text says it is below baseline but calls this adoption of Overweight. This is an internal explanation/weight inconsistency; no numeric weight is required solely by the source rating.",
+      "uncertainty": "Fidelity's broad-market universe is not exactly the task comparator. Do not invent a universal rating-to-weight rule; the diagnosis concerns the model's own explicit baseline/adoption claims.",
+      "reviewer": "Codex method_audit agent; unvalidated AI assistance"
+    },
+    {
+      "output_artifact": {
+        "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__L__F0/http_0001_generation/response.json",
+        "sha256": "b382cfdf20887d5e92539ca544e901cd56813ea9322332bde1372e59336c5001"
+      },
+      "output_field": "/risk_discussion",
+      "short_exact_quote": "The final allocation is long-only and sums to 1.0.",
+      "visible_evidence_anchors": [
+        {
+          "locator": "F0 /sectors/*/weight",
+          "exact_decimal_sum": "1.023"
+        }
+      ],
+      "category": "unsupported_or_contradictory_link",
+      "reason": "The long-only claim is supported, but the sum claim is false. Raw net change from own D0 is zero despite changes in all eleven sectors.",
+      "uncertainty": "No causal mechanism inferred; this is a directly observed output-field diagnosis.",
+      "reviewer": "Codex method_audit agent; unvalidated AI assistance"
+    }
+  ],
+  "causal_diagnosis": {
+    "budget_failure": "Actual submitted weights fail the budget, while exact sent feedback correctly reports own D0 sum and residual. No calculator arithmetic bug found in these completed cases.",
+    "budget_limits": "This does not identify why the model failed, or establish that proposed wording will fix it. Invalid-vector risk and active-weight feedback are null by existing design; absence of those fields is not a wrong sum.",
+    "source_fields": "Original F0 absence condition is followed by standalone null-field imperatives. A clearer explicit branch is warranted, but the single E failure cannot prove causation. Undefined source_label field meaning plausibly contributes to issuer/title substitutions across visible-source drafts and finals.",
+    "citations": "E D0 contains unknown ID correlation; completed E/L finals have no unknown IDs. Valid IDs coexist with incorrect numerical claims and contradictory attribution.",
+    "contract_flag_limit": "L F0 contract_valid=true despite invalid sum and all labels outside vocabulary because the flag checks structural completeness plus citation visibility. Report dimensions separately; do not reinterpret contract_valid as success."
+  },
+  "prospective_prompt": {
+    "path": "research/recovery_20261025/method_prompt_candidate.json",
+    "sha256": "360f596700f877c7c36101fa7fe58d75289b06ecae39761124f6d3b62ef8a1a3"
+  },
+  "exact_text_amendments": [
+    {
+      "field": "system",
+      "operation": "replace",
+      "old": "Choose long-only weights summing to one; raw numbers will be checked, never silently corrected.",
+      "new": "Each weight is a decimal fraction of the full allocation. Choose nonnegative weights whose eleven submitted values sum to one (100%); raw numbers will be checked, never silently corrected.",
+      "reason": "Clarify existing full-budget decimal-weight requirement; no new economic constraint."
+    },
+    {
+      "field": "system",
+      "operation": "append",
+      "new": " When an institution packet is visible, source_label means the sector's published rating in that packet's rating_vocabulary, not its issuer or title. Copy evidence IDs exactly as supplied.",
+      "reason": "Define ambiguous rating field and preserve exact visible citation IDs without supplying source-specific answers."
+    },
+    {
+      "field": "D0_instruction",
+      "operation": "replace",
+      "old": "If no institution packet is supplied, use source_id=null, source_label=null, source_stance=not_available, and empty source_evidence_ids. Explicitly say institutional evidence is unavailable; do not guess it.",
+      "new": "If no institution packet is supplied: use source_id=null, source_label=null, source_stance=not_available, and empty source_evidence_ids; explicitly say institutional evidence is unavailable; do not guess it.",
+      "reason": "Keep unavailable-evidence declaration inside the no-packet condition; no source timing or evidence-block changes."
+    },
+    {
+      "field": "F0_instruction",
+      "operation": "replace",
+      "old": "If no institution packet is supplied, institutional evidence remains unavailable. Use source_id=null, source_label=null, source_stance=not_available, and empty source_evidence_ids for every sector. Do not guess a source, issuer, rating or institutional rationale. Explain the allocation from the common evidence and actual draft feedback without attributing it to an institution.",
+      "new": "If an institution packet is supplied in this final message: use its exact source_id; give each sector's published source_label, source_reading and source_evidence_ids from that packet, and state your own adoption, qualification, departure or uncertainty in source_stance. If no institution packet is supplied in this final message: institutional evidence remains unavailable; use source_id=null and, for every sector, source_label=null, source_stance=not_available and empty source_evidence_ids; do not guess a source, issuer, rating or institutional rationale; explain the allocation from common evidence and actual draft feedback without institutional attribution.",
+      "reason": "Keep source-present and source-absent instructions explicitly conditional across all arms."
+    },
+    {
+      "field": "F0_instruction",
+      "operation": "append",
+      "new": " The feedback's raw_budget_residual equals sum(D0 weights)-1. A budget correction requires the net change across all eleven weights to offset that residual; verify the sum of the eleven numbers actually submitted as F0 before claiming the budget is satisfied.",
+      "reason": "Explain already supplied residual and aggregate correction; no target weights or altered calculator feedback."
+    }
+  ],
+  "not_recommended": [
+    "Do not normalize, clip, replace invalid vectors, retry until success, add hidden source truth or give per-sector target weights.",
+    "Do not add output-specific citation/label corrections to F0; that would introduce semantic coaching beyond the existing arithmetic intervention.",
+    "Do not change source documents, numeric market data, common context, response schema, source timing, number of turns, model, generation settings or completed historical evidence in this prompt amendment.",
+    "Do not change tables to a different input representation merely because some claims have wrong units; that is a separate intervention with broader confounds.",
+    "Do not treat schema/transport validity, arithmetic validity and semantic fidelity as interchangeable or require semantically successful output to enter main."
+  ],
+  "confounds_and_disclosure": [
+    "The new prompt is informed by old pilot outcomes; preserve and label those outcomes as development, freeze a new version before generation and do not pool versions as identical replications.",
+    "Wording, instruction length and exposure change. Any improvement cannot be attributed solely to correcting an ambiguous branch or to evidence timing.",
+    "E/L compare history, timing and exposure together; C lacks source content. None isolates a pure psychological mechanism or pure semantic information effect.",
+    "One run per five cells does not establish reproducibility, significance, population causality or equivalence. Eleven sector rows are not eleven independent experimental units.",
+    "An arithmetic-valid vector may still have unsupported reasoning. An arithmetic-invalid vector may preserve source meaning but is ineligible for valid-portfolio distance."
+  ],
+  "stagewise_checks": [
+    {
+      "step": "historical diagnosis",
+      "errors": "Raw sums, exact citations and declared labels independently checked against actual sent payloads.",
+      "consistency": "Verbatim raw outputs, construction and recalculated feedback compared; all failures retained.",
+      "topic": "Keep explanation-to-weight contradictions as relevant evidence-chain outcomes, not just an optimization task."
+    },
+    {
+      "step": "prospective prompt amendment",
+      "errors": "Explicit present/absent branches; exact rating field and aggregate weight identity.",
+      "consistency": "One common prompt across E/L/C; no hidden references, new targets or semantic feedback.",
+      "topic": "Repairs interpretation of the existing task without introducing an institution-specific ideal portfolio."
+    },
+    {
+      "step": "pre-output freeze",
+      "errors": "Verify rendered messages, tokens, no truncation, model/backend pins and exact schema.",
+      "consistency": "Bind input/code/prompt/evaluation hashes and all planned five cells before any generation.",
+      "topic": "Declare same evidence-to-allocation question and no successful-output threshold."
+    },
+    {
+      "step": "new pilot generation",
+      "errors": "Check transport, preserved raw stream, parseability and finite complete vector before dependent F0.",
+      "consistency": "One D0 and one conditional F0 per planned cell; no retry or post-final repair. Output citation/label/sum failures remain results.",
+      "topic": "Continue recording source reading, stated choice and actual weight, rather than replacing failures with a preferred allocation."
+    },
+    {
+      "step": "postpilot review and main decision",
+      "errors": "Evaluate arithmetic, source fidelity, numeric fidelity and evidence-choice links separately with coverage and missingness.",
+      "consistency": "Keep infrastructure incidents separate; preregister/freeze subsequent amendments before held-out main; ordinary output errors are not infrastructure failures.",
+      "topic": "Readiness concerns interpretable and auditable execution. Invalid vectors can make allocation contrasts unobserved without invalidating the research as a failure-diagnostic study."
+    }
+  ],
+  "main_readiness_interpretation": {
+    "allowed_basis": "Correct inputs, preserved E/L/C boundaries, frozen review/code/runtime, faithful request/output capture, declared missingness and no retries.",
+    "not_required": "Zero arithmetic errors, perfect citations, a desired institutional contrast or a favored semantic verdict.",
+    "if_no_valid_pairs": "Primary allocation contrast remains unobserved; report source-reading and feasibility/failure diagnostics and do not claim the allocation question was answered.",
+    "if_runtime_changed": "Do not call it an exact historical replication. Either restore pinned environment or explicitly version/freeze and qualify a new runtime before generation."
+  },
+  "evidence_refs": [
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__E__D0/authoritative_body.json",
+      "sha256": "9e283041140a86ee84af16e4e632263dcfb8084f0777c8efdf7053a93502692c"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__E__D0/http_0001_generation/response.json",
+      "sha256": "65e4663f327f819218ec30203ea918bba227a2ad982283a1194f23a15ea80317"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__E__D0/response_contract_validation.json",
+      "sha256": "fb336aa8379d5ab5216405eb80e813c217c58bd94b350eeddd32baa3ff972610"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__E__D0/submission_calculation.json",
+      "sha256": "b1caff134bde6448e9704533160e4fe69296de2419a9de537eb6ac9f4ee7311d"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__E__D0/worker_summary.json",
+      "sha256": "3672c1803bd8e13cca66d22e14e109da8dda392e4e06ba6977301845061b742c"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__E__F0/authoritative_body.json",
+      "sha256": "b8f77668e0a739ca4ca9370730791aaca57b58cf0583a04fd1d1f05a432fc151"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__E__F0/http_0001_generation/response.json",
+      "sha256": "f2077e6e53ee56a4af26f598cdb1e604f57c949c8401787f71035d7c628c69aa"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__E__F0/response_contract_validation.json",
+      "sha256": "a4463382f907570c96fe272980999b70a44495be3ddb507c56508bfaea3e0887"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__E__F0/submission_calculation.json",
+      "sha256": "c77131e3d8d8262c4b5a68efcbd265a2bf1f734215229e7e1124f288dca23f00"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__E__F0/worker_summary.json",
+      "sha256": "d63f26461cee434f6f9753dd3be62e20fea45bf7298327ddb8309a7c0648a901"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__E__final_construction.json",
+      "sha256": "c8a56915b77e240e255f82ca3b92498c8ca19a54c6d343a58fbbe594e0c0804c"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__L__D0/authoritative_body.json",
+      "sha256": "d8ebf940ddca3c76493d5f02fc7b9d994dc9d64dad65884d0d943bd8e866d888"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__L__D0/http_0001_generation/response.json",
+      "sha256": "e2b150e07121927ca18eed944e71f17642ea78cbb7c067dc7f11986126f0269b"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__L__D0/response_contract_validation.json",
+      "sha256": "3243196b8f95a0e6d19d70ccc0ee8713dd576a6762cd97cb61df25f77ec44566"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__L__D0/submission_calculation.json",
+      "sha256": "8575a9868503de3b5850a97cb6e5f426761bec3ad880121de6f6806b364c7f00"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__L__D0/worker_summary.json",
+      "sha256": "613eaa7506420d9a05049e9dea5577527f503a048aa5ac46f6082fe32191c20d"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__L__F0/authoritative_body.json",
+      "sha256": "36871f82c02556185594a5a9be67967c4c348ddfec6f939f058ebb1ce1e62129"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__L__F0/http_0001_generation/response.json",
+      "sha256": "b382cfdf20887d5e92539ca544e901cd56813ea9322332bde1372e59336c5001"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__L__F0/response_contract_validation.json",
+      "sha256": "6d1869709a2e122a5fc01ce81e1f7ee99dbb0d7025d66aa9cac8fc5460f02cb5"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__L__F0/submission_calculation.json",
+      "sha256": "8b00e1cfc2b8b63a72222f575ecec9022582176db04c182501059056e8d01964"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__L__F0/worker_summary.json",
+      "sha256": "1ad567355df9c6fe060748e4932b21fa017c28e1fc9be0557f3ee3b9fe5e034c"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__L__final_construction.json",
+      "sha256": "24cdf891e18ee420486f371b47ac2827c91f9f332c112676b91ae7ad650a238b"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/ubs_june_2026__E__D0/authoritative_body.json",
+      "sha256": "bea5c438bd067095d717f6e502ce9f0cd5f28f3b93037a78edda05dc3c4fa958"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/ubs_june_2026__E__D0/http_0001_generation/response.json",
+      "sha256": "a5490918c4c937fba19a4a43706d9826b8233744476a956e88c3c169888e1d7e"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/ubs_june_2026__E__D0/response_contract_validation.json",
+      "sha256": "0486895c8bceb027ca2e8487b1224d27360b361ee40dc9b7bd521dee1c7a1438"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/ubs_june_2026__E__D0/submission_calculation.json",
+      "sha256": "9204dd711a77d0726207f2349dddc276677bd7859d2073ce4a7f29448c1b13e5"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/ubs_june_2026__E__D0/worker_summary.json",
+      "sha256": "dea8cec031ed0d0e7168f3a1c64db9799ae51d3765cecd09500043cba3a5b0df"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/ubs_june_2026__E__final_construction.json",
+      "sha256": "b2df3cdd05ddf7402abda0acb82ceca3f8607f92f92145bebe52e37d264c0948"
+    },
+    {
+      "path": "data/sector_protocol/v492_design_20261019/prompt_contract.json",
+      "sha256": "b03af4efc18358ec23eaf86a25340666aa6409c4a8386eab11c713c65ac0b65d"
+    },
+    {
+      "path": "paper/v493_manuscript_20261019.json",
+      "sha256": "c14e5627035da92f1e28e4e50d5b3b81fd5432b4e67e8ac6cda9854c564a1018"
+    },
+    {
+      "path": "research/sector_engine.py",
+      "sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c"
+    },
+    {
+      "path": "research/sector_v491_contract.py",
+      "sha256": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397"
+    },
+    {
+      "path": "research/sector_v492_contract.py",
+      "sha256": "f77d1ddec9630a4c7edbf3928d298b7b05094345996ece1cf53d91fc40171a21"
+    },
+    {
+      "path": "research/v492_evaluation_protocol_20261019_r2.json",
+      "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+    },
+    {
+      "path": "research/v492_runtime_candidate_20261019.json",
+      "sha256": "3fc05ace24af7893e38ee5668acee977bec14f72809f236fb9401dcc597d5f0f"
+    }
+  ],
+  "offline_check_results": {
+    "every_recomputed_validation_matches_record": true,
+    "every_raw_response_matches_recorded_parsed": true,
+    "every_reconstructed_message_and_feedback_matches": true,
+    "all_feedback_sums_and_residuals_correct": true,
+    "all_sent_messages_match_construction": true,
+    "candidate_D0_only_no_packet_branch_delimiters_changed": true,
+    "candidate_has_no_experiment_specific_target_weights": true,
+    "selected_exact_quotes_verified_in_raw_output": true,
+    "historical_artifacts_written": 0,
+    "model_calls": 0
+  }
+}

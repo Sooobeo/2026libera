@@ -1,0 +1,168 @@
+{
+  "version": "v494_recovery_archive_preflight_static_review_1",
+  "recorded_at_utc": "2026-10-25T23:40:01.032Z",
+  "status": "PASS_STATIC_REVIEW_RUNTIME_RELEASE_GATE_PENDING",
+  "review_type": "static_source_and_existing_receipt_inspection_only",
+  "input_refs": [
+    {
+      "path": "research/archive_v494_recovery.py",
+      "sha256": "a6ce082d82f1b765917d25405be9969bd58eb3f4b922d17b94e232dfa9f22767"
+    },
+    {
+      "path": "research/restore_research_artifacts.py",
+      "sha256": "080d93bb41a01a0625084f6b335795b0a3a11736234eda2abaed8bd14889beff"
+    },
+    {
+      "path": "research/recovery_20261025/new_pilot/terminal_receipt.json",
+      "sha256": "bc872eb8326233e274629d8ea16f5d841e098b6e45aa26f31a9588d760289d15"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/service_ready/service_shutdown_receipt.json",
+      "sha256": "7e4b3318af91727e11b2135cad04a03ddda9df82a3aaf781eaf49a664c0d9dff"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/temporary_awake_01/acquire.json",
+      "sha256": "b73bbe1452712e186014ee361add627359906d69d844b663384ea7e66bacc139"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/temporary_awake_01/release.json",
+      "sha256": "01529b274ddff941e50ab6f957ce4d948a350a309577a9425f729dec69887740"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/postwork_awake_01/acquire.json",
+      "sha256": "0de8fe68e8aa1c3491dfa3861f79637baa601de8e20531c851f00d1c9c60cebb"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/postwork_display_awake.py",
+      "sha256": "04c5f3d1f9a517c98bd3f8fb801b1279aab864acb007228b08777c5ed174e8dd"
+    }
+  ],
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "Terminal status whitelist and owned-service stopped/portclosed fields match actual receipts. Both awake folders use acquire/release helper_pid, released status and clear_flags0x80000000; keys match original helper receipt and postwork implementation. Missing postwork release currently fails before ZIP creation, as required. Every required root/file must exist, be nonempty and remain within workspace; duplicate paths are rejected."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Originals are read only. Frozen source SHA256s verified; old/new runs, v494prep, v495maincandidate, recovery reports, new source/test/status helpers and two PDFs/two PNGs are included. Already-covered code paths are skipped before inventory. Archive/manifest/verification use exclusive creation, each read checks initial size/mtime and entire inventory is checked again after ZIP close. Restore verification uses write=False and validates archive/member SHA256, bytecounts and safe paths."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "Distinct historical interruption, current development pilot, prospective offline main inputs, arithmetic supplement and source evidence remain separately named. Failed/missing cases are unchanged; packaging explicitly does not certify semantic success, research conclusions or main readiness."
+    }
+  },
+  "actual_receipt_compatibility": {
+    "coordinator_terminal_status": "stopped_semantic_review_pending",
+    "owned_service": {
+      "status": "owned_service_stopped",
+      "stopped_pid": 35148,
+      "owned_port_closed": true,
+      "no_resident_models_before_stop": true,
+      "existing_11434_listener_unchanged": true
+    },
+    "original_awake": {
+      "helper_pid": 41708,
+      "status": "released",
+      "clear_flags": 2147483648,
+      "owner_thread_id": 31460,
+      "release_observed": true
+    },
+    "postwork_awake": {
+      "helper_pid": 43548,
+      "acquire_observed": true,
+      "release_observed": false,
+      "expected_release_keys": [
+        "status",
+        "helper_pid",
+        "clear_flags",
+        "owner_thread_id",
+        "api_previous_state"
+      ],
+      "expected_clear_flags": 2147483648,
+      "action_owner": "root will write STOP and verify release before archive"
+    }
+  },
+  "included_extra_file_checks": [
+    {
+      "path": "data/sector_protocol/v495_main_candidate_20261025/prepared/preparation_manifest.json",
+      "is_file": true,
+      "bytes": 33969
+    },
+    {
+      "path": "research/prepare_sector_v495_main.py",
+      "is_file": true,
+      "bytes": 23306
+    },
+    {
+      "path": "research/read_v494_status.py",
+      "is_file": true,
+      "bytes": 3001
+    },
+    {
+      "path": "research/test_finalize_sector_allocation.py",
+      "is_file": true,
+      "bytes": 17090
+    },
+    {
+      "path": "research/test_finalize_sector_allocation_artifacts.py",
+      "is_file": true,
+      "bytes": 15810
+    },
+    {
+      "path": "research/test_run_v494_recovery.py",
+      "is_file": true,
+      "bytes": 9950
+    },
+    {
+      "path": "research/test_sector_v494_recovery.py",
+      "is_file": true,
+      "bytes": 16760
+    },
+    {
+      "path": "tmp/pdfs/sector_documents/fidelity_q3_2026.pdf",
+      "is_file": true,
+      "bytes": 286906
+    },
+    {
+      "path": "tmp/pdfs/sector_documents/fidelity_q3_2026_3.png",
+      "is_file": true,
+      "bytes": 147184
+    },
+    {
+      "path": "tmp/pdfs/sector_documents/ubs_july_2026.pdf",
+      "is_file": true,
+      "bytes": 2110541
+    },
+    {
+      "path": "tmp/pdfs/sector_documents/ubs_july_2026_21.png",
+      "is_file": true,
+      "bytes": 212842
+    }
+  ],
+  "duplicate_root_review": "Five directory roots are distinct siblings; additional file paths already beneath an included root or already listed are skipped. inventory rejects any duplicate evidence member that remains.",
+  "execution_performed": {
+    "archive": false,
+    "restore": false,
+    "STOP_written": false,
+    "model_calls": 0,
+    "tests_run": []
+  },
+  "archive_execution_ready_now": false,
+  "remaining_runtime_conditions": [
+    "Root must stop postwork helper and verify matching durable release receipt.",
+    "All other report writers must complete before root invokes archive.",
+    "Actual archive byte verification remains separate and must pass before success is claimed."
+  ],
+  "limitations": [
+    "Static review binds this exact archive code hash; no archive was created or verified by this reviewer.",
+    "Size/mtime stability detects ordinary concurrent writes; it is not a defense against deliberate edits preserving both.",
+    "A failure can leave a partial exclusive archive, but no successful verification is claimed and existing artifacts must never be silently overwritten.",
+    "Release guard is consistency checking of owned receipts, not proof against deliberate receipt fabrication.",
+    "Earlier archive reviews09/03 bind superseded helper versions."
+  ],
+  "report_writer_handoff": {
+    "this_agent_report_and_preparation_writes_finished_after_this_file": true,
+    "no_additional_mutations_planned": true,
+    "known_background_writer": "Only postwork_awake_01 heartbeat remains active under explicit root STOP/expiry handoff; original experiment helper and isolated service are stopped."
+  }
+}

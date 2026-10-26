@@ -1,0 +1,211 @@
+{
+  "source_id": "fidelity_q2_2026",
+  "sectors": [
+    {
+      "sector_code": "10",
+      "source_label": "Underweight",
+      "source_reading": "Energy receives Underweight. Unfavorable risk-return indicators.",
+      "source_evidence_ids": [
+        "fidelity_q2_2026:p3:sector:10"
+      ],
+      "source_stance": "adopt",
+      "weight": 0.02,
+      "decision_reason": "Adopting the Underweight stance aligns with the Fidelity report's explicit assessment of unfavorable risk-return indicators. Historical volatility (16.7%) is elevated relative to the baseline, and the sector's negative lookback return (-4.9%) over the recent window suggests continued headwinds. The macro context of a 3.5-3.75% Fed rate target supports a neutral-to-negative view on high-yield, cyclical sectors unless earnings expansion is proven.","decision_evidence_ids": [
+        "fidelity_q2_2026:p3:sector:10",
+        "MACRO_FED_TARGET_20260617",
+        "M:lookback_compound_return:10",
+        "M:daily_volatility:10"
+      ]
+    },
+    {
+      "sector_code": "15",
+      "source_label": "Underweight",
+      "source_reading": "Materials receives Underweight. Higher capital spending may burden the sector.",
+      "source_evidence_ids": [
+        "fidelity_q2_2026:p3:sector:15"
+      ],
+      "source_stance": "adopt",
+      "weight": 0.02,
+      "decision_reason": "The Fidelity report explicitly cites capital spending burdens as a drag on risk-return. While macro data shows robust GDP growth (2.1% annualized), the cyclical nature of Materials often lags industrial demand. The sector's historical return (-2.2%) and moderate volatility (12.2%) suggest a cautious approach is warranted given the explicit 'burden' warning in the source.","decision_evidence_ids": [
+        "fidelity_q2_2026:p3:sector:15",
+        "MACRO_REAL_GDP_Q1_2026_THIRD",
+        "M:lookback_compound_return:15"
+      ]
+    },
+    {
+      "sector_code": "20",
+      "source_label": "Overweight",
+      "source_reading": "Industrials receives Overweight. Forward-looking valuation evidence is favorable.",
+      "source_evidence_ids": [
+        "fidelity_q2_2026:p3:sector:20"
+      ],
+      "source_stance": "adopt",
+      "weight": 0.10,
+      "decision_reason": "Adopting the Overweight stance is supported by the Fidelity report's favorable forward-looking valuation evidence. Industrials benefit from the macro context of 2.1% GDP growth and 57k jobs added, suggesting infrastructure and manufacturing demand. The sector's positive lookback return (3.8%) and reasonable volatility (12.4%) justify a weight above the neutral baseline, capturing cyclical upside without over-exposure.","decision_evidence_ids": [
+        "fidelity_q2_2026:p3:sector:20",
+        "MACRO_REAL_GDP_Q1_2026_THIRD",
+        "M:lookback_compound_return:20"
+      ]
+    },
+    {
+      "sector_code": "25",
+      "source_label": "Overweight",
+      "source_reading": "Consumer Discretionary receives Overweight. Forward valuations imply favorable risk-return.",
+      "source_evidence_ids": [
+        "fidelity_q2_2026:p3:sector:25"
+      ],
+      "source_stance": "adopt",
+      "weight": 0.09,
+      "decision_reason": "The Fidelity report's 'Overweight' rating is based on favorable forward valuations. With unemployment at 4.2% and GDP growth at 2.1%, consumer spending resilience is plausible. The sector's strong historical return (10.2%) and volatility (11.6%) indicate it has already performed well recently, but the forward-looking valuation thesis remains intact for a 12-month horizon, warranting a weight slightly above the benchmark.","decision_evidence_ids": [
+        "fidelity_q2_2026:p3:sector:25",
+        "MACRO_UNEMPLOYMENT_202606",
+        "M:lookback_compound_return:25"
+      ]
+    },
+    {
+      "sector_code": "30",
+      "source_label": "Underweight",
+      "source_reading": "Consumer Staples receives Underweight. Weak fundamentals raise value-trap concerns.",
+      "source_evidence_ids": [
+        "fidelity_q2_2026:p3:sector:30"
+      ],
+      "source_stance": "adopt",
+      "weight": 0.04,
+      "decision_reason": "Adopting the Underweight stance follows the Fidelity warning of 'weak fundamentals' and 'value-trap' risks. While the sector is defensive, the explicit concern suggests earnings or margins are under pressure. The sector's positive lookback return (4.9%) may be a mean-reversion signal rather than a continuation, and the macro environment of sticky core inflation (2.6%) could compress margins for staples.","decision_evidence_ids": [
+        "fidelity_q2_2026:p3:sector:30",
+        "MACRO_CPI_CORE_YOY_202606",
+        "M:lookback_compound_return:30"
+      ]
+    },
+    {
+      "sector_code": "35",
+      "source_label": "Neutral",
+      "source_reading": "Health Care receives Neutral. Risk-return evidence is balanced.",
+      "source_evidence_ids": [
+        "fidelity_q2_2026:p3:sector:35"
+      ],
+      "source_stance": "adopt",
+      "weight": 0.09,
+      "decision_reason": "The Fidelity report's 'Neutral' stance reflects balanced risk-return evidence. Health Care is historically resilient but faces regulatory and pricing headwinds. The sector's strong historical return (8.2%) and moderate volatility (8.4%) suggest stability, but the lack of a clear 'Overweight' or 'Underweight' driver in the source justifies a weight aligned with the benchmark average.","decision_evidence_ids": [
+        "fidelity_q2_2026:p3:sector:35",
+        "M:lookback_compound_return:35"
+      ]
+    },
+    {
+      "sector_code": "40",
+      "source_label": "Overweight",
+      "source_reading": "Financials receives Overweight. Relative valuations offer downside support.",
+      "source_evidence_ids": [
+        "fidelity_q2_2026:p3:sector:40"
+      ],
+      "source_stance": "adopt",
+      "weight": 0.12,
+      "decision_reason": "Adopting the Overweight stance is justified by the Fidelity report's assertion that relative valuations provide downside support. With the Fed rate target at 3.5-3.75%, interest rate-sensitive financials may benefit from a stable or slightly rising rate environment. The sector's positive lookback return (15.0%) and volatility (21.2%) indicate it has performed well, but the valuation support thesis remains valid for a 12-month horizon.","decision_evidence_ids": [
+        "fidelity_q2_2026:p3:sector:40",
+        "MACRO_FED_TARGET_20260617",
+        "M:lookback_compound_return:40"
+      ]
+    },
+    {
+      "sector_code": "45",
+      "source_label": "Overweight",
+      "source_reading": "Information Technology receives Overweight. Fundamentals and post-decline valuations support the view.",
+      "source_evidence_ids": [
+        "fidelity_q2_2026:p3:sector:45"
+      ],
+      "source_stance": "adopt",
+      "weight": 0.38,
+      "decision_reason": "The Fidelity report's 'Overweight' rating is the strongest signal in the packet, citing favorable fundamentals and post-decline valuations. IT is the largest sector by weight in the benchmark (38%), and the source's explicit support aligns with the macro context of GDP growth and labor market stability. The sector's positive lookback return (14.9%) and volatility (21.2%) suggest it is a primary growth driver. No reason to depart from the source's clear bullish thesis.","decision_evidence_ids": [
+        "fidelity_q2_2026:p3:sector:45",
+        "MACRO_REAL_GDP_Q1_2026_THIRD",
+        "M:lookback_compound_return:45"
+      ]
+    },
+    {
+      "sector_code": "50",
+      "source_label": "Underweight",
+      "source_reading": "Communication Services receives Underweight. Technology-related components fare better than defensive components.",
+      "source_evidence_ids": [
+        "fidelity_q2_2026:p3:sector:50"
+      ],
+      "source_stance": "adopt",
+      "weight": 0.03,
+      "decision_reason": "Adopting the Underweight stance is consistent with the Fidelity report's differentiation between tech-heavy and defensive components. The sector's negative lookback return (-4.9%) and moderate volatility (9.7%) suggest weakness relative to IT. The macro environment of stable growth may favor IT over the more cyclical or content-heavy exposure of Communication Services.","decision_evidence_ids": [
+        "fidelity_q2_2026:p3:sector:50",
+        "M:lookback_compound_return:50"
+      ]
+    },
+    {
+      "sector_code": "55",
+      "source_label": "Underweight",
+      "source_reading": "Utilities receives Underweight. Valuations are unfavorable.",
+      "source_evidence_ids": [
+        "fidelity_q2_2026:p3:sector:55"
+      ],
+      "source_stance": "adopt",
+      "weight": 0.02,
+      "decision_reason": "The Fidelity report explicitly states valuations are unfavorable. While Utilities are defensive, the source's 'Underweight' rating suggests the risk-adjusted return is not compelling. The sector's negative lookback return (-4.9%) and low volatility (9.7%) indicate it has underperformed recently, and the macro context of a 3.5%+ Fed rate target may limit yield attractiveness.","decision_evidence_ids": [
+        "fidelity_q2_2026:p3:sector:55",
+        "MACRO_FED_TARGET_20260617",
+        "M:lookback_compound_return:55"
+      ]
+    },
+    {
+      "sector_code": "60",
+      "source_label": "Overweight",
+      "source_reading": "Real Estate receives Overweight. Valuation dispersion offers favorable risk-return.",
+      "source_evidence_ids": [
+        "fidelity_q2_2026:p3:sector:60"
+      ],
+      "source_stance": "adopt",
+      "weight": 0.01,
+      "decision_reason": "Adopting the Overweight stance is based on the Fidelity report's claim of favorable risk-return due to valuation dispersion. The sector's positive lookback return (0.2%) and low volatility (10.5%) suggest stability, but the 'dispersion' argument implies potential for mean reversion. Given the macro context of stable GDP and moderate inflation, the sector may offer value, though the weight is kept low due to the sector's historical underperformance in the lookback window.","decision_evidence_ids": [
+        "fidelity_q2_2026:p3:sector:60",
+        "MACRO_REAL_GDP_Q1_2026_THIRD",
+        "M:lookback_compound_return:60"
+      ]
+    }
+  ],
+  "alternatives": "An alternative allocation could overweight Utilities and Consumer Staples to hedge against potential economic slowdown or rate hikes, despite the Fidelity report's negative views, given the defensive nature of these sectors in a 12-month horizon. However, the explicit 'value-trap' warning for Staples and 'unfavorable valuations' for Utilities in the source packet provide stronger evidence for the current allocation.",
+  "risk_discussion": "The allocation assumes a 12-month horizon with no capital guarantee. The primary risk is concentration in Information Technology (38%), which carries high volatility (21.2% annualized) and is sensitive to interest rates and geopolitical tensions. The macro context of a 3.5-3.75% Fed rate target and 2.6% core inflation suggests a neutral-to-tight monetary environment, which could pressure growth sectors like IT and Industrials. Defensive sectors like Utilities and Staples are underweighted, potentially exposing the portfolio to downside risk if the economic outlook deteriorates faster than the 2.1% GDP growth forecast implies.",
+  "unresolved": [
+    "The Fidelity report's 'Overweight' on Financials relies on 'relative valuations' which are not quantified; the impact of the 3.5-3.75% Fed rate on net interest margins remains a variable.",
+    "The 'valuation dispersion' argument for Real Estate is qualitative; the sector's recent underperformance (-4.9% lookback) suggests mean reversion may be limited.",
+    "The macro context does not provide a definitive signal on the trajectory of the Fed rate target, which could shift if inflation (3.5% YoY) proves sticky."
+  ],
+  "submitted_constraints": [],
+  "context_assessment": {
+    "market_and_mandate_reading": "The task is a hypothetical new-money allocation for a 12-month US equity sleeve, using a 2026-07-17 cutoff. The Fidelity Q2 2026 report provides explicit sector ratings (Underweight/Neutral/Overweight) based on risk-return and valuation analysis. The macro context includes a 3.5-3.75% Fed rate target, 2.1% GDP growth, and 4.2% unemployment.",
+    "allocation_implication": "The allocation adopts the Fidelity ratings directly, as they provide the only explicit sector stance. Weights are adjusted to sum to 1.0, with Information Technology receiving the highest weight (38%) due to the source's strong 'Overweight' thesis and favorable fundamentals. Defensive sectors are minimized due to explicit 'Underweight' warnings. The allocation is long-only and unlevered.",
+    "evidence_ids": [
+      "fidelity_q2_2026:p3:sector:10",
+      "fidelity_q2_2026:p3:sector:15",
+      "fidelity_q2_2026:p3:sector:20",
+      "fidelity_q2_2026:p3:sector:25",
+      "fidelity_q2_2026:p3:sector:30",
+      "fidelity_q2_2026:p3:sector:35",
+      "fidelity_q2_2026:p3:sector:40",
+      "fidelity_q2_2026:p3:sector:45",
+      "fidelity_q2_2026:p3:sector:50",
+      "fidelity_q2_2026:p3:sector:55",
+      "fidelity_q2_2026:p3:sector:60",
+      "MACRO_FED_TARGET_20260617",
+      "MACRO_REAL_GDP_Q1_2026_THIRD",
+      "MACRO_UNEMPLOYMENT_202606",
+      "MACRO_CPI_HEADLINE_YOY_202606",
+      "MACRO_CPI_CORE_YOY_202606",
+      "M:lookback_compound_return:10",
+      "M:lookback_compound_return:15",
+      "M:lookback_compound_return:20",
+      "M:lookback_compound_return:25",
+      "M:lookback_compound_return:30",
+      "M:lookback_compound_return:35",
+      "M:lookback_compound_return:40",
+      "M:lookback_compound_return:45",
+      "M:lookback_compound_return:50",
+      "M:lookback_compound_return:55",
+      "M:lookback_compound_return:60"
+    ],
+    "limitations": "The Fidelity report is dated 2026-04-17, while the decision reference is 2026-07-17. The report's sector views are based on data as of March 31, 2026. There is no evidence that the report's author observed the macro data released in June 2026 (GDP, CPI, Unemployment). The allocation assumes the Fidelity thesis remains valid despite the macro update, which is a limitation of the retrospective nature of the source. The report does not provide quantitative risk models, so the allocation relies on qualitative 'risk-return' assessments which are subjective."
+  }
+}

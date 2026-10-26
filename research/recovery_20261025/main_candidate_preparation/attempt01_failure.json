@@ -1,0 +1,22 @@
+{
+  "version": "main_candidate_initial_build_attempt_1",
+  "recorded_at_utc": "2026-10-25T23:37:19.065Z",
+  "status": "failed_closed_before_any_candidate_output",
+  "preparer_sha256": "014f4678e3bb6f16bc13aaaa2dce55b3fd5d43f1408d3140c512c1931f342f89",
+  "error": "old_compact_packet_not_lossless:fidelity_q3_2026",
+  "cause": "New preparer compared unsorted JSON serialization strings. Lossless packet restoration changes object key insertion order, so string equality was too strict even though typed values are identical.",
+  "diagnostic": {
+    "method": "Pure Python changed_paths recursive typed JSON comparison; dictionary key order ignored, list order and scalar types retained",
+    "process_exit_code": 0,
+    "source_differences": {
+      "fidelity_q3_2026": [],
+      "ubs_july_2026": []
+    },
+    "source_review_losslessness_supported": true
+  },
+  "resolution": "Replace two serialization-order comparisons with typed recursive equality; no source edits or additional intended changes.",
+  "candidate_directory_created": false,
+  "original_files_modified": false,
+  "model_calls": 0,
+  "network_calls": 0
+}

@@ -1,0 +1,50 @@
+{
+  "receipt_version": "v494_live_monitor_gap_observation_3",
+  "recorded_at_utc": "2026-10-25T11:12:21.637Z",
+  "status": "THIRD_GAP_ACTIVE_RUN_CONTINUES",
+  "case_id": "fidelity_q2_2026__E",
+  "stage": "D0",
+  "observed_gaps_over10seconds": [
+    {
+      "from": "2026-10-25T10:36:05.515423+00:00",
+      "to": "2026-10-25T10:50:12.234709+00:00",
+      "utc_gap_seconds": 846.719,
+      "elapsed_gap_seconds": 846.7193370000459
+    },
+    {
+      "from": "2026-10-25T10:55:34.999521+00:00",
+      "to": "2026-10-25T10:58:29.505632+00:00",
+      "utc_gap_seconds": 174.506,
+      "elapsed_gap_seconds": 174.50612440000987
+    },
+    {
+      "from": "2026-10-25T11:06:10.604543+00:00",
+      "to": "2026-10-25T11:09:39.533191+00:00",
+      "utc_gap_seconds": 208.929,
+      "elapsed_gap_seconds": 208.928652600036
+    }
+  ],
+  "new_gap_seconds": 208.929,
+  "total_observed_gap_seconds": 1230.154,
+  "observer_tool_event": "Read-only Node request requested timeout10seconds but outer tool returned after209.8seconds with kernel timeout/reset; no runtime process was changed.",
+  "latest_monitor_at": "2026-10-25T11:10:15.725295+00:00",
+  "latest_elapsed_seconds": 2933.2813209999586,
+  "latest_available_physical_bytes": 7572860928,
+  "latest_progress": [
+    "slot print_timing: id  0 | task 0 | n_gen =   3701, tg =   1.53 t/s, tg_3s =   2.93 t/s",
+    "slot print_timing: id  0 | task 0 | n_gen =   3711, tg =   1.54 t/s, tg_3s =   3.05 t/s"
+  ],
+  "awake_release_file_present": false,
+  "worker_summary_present": false,
+  "transport_present": false,
+  "interpretation": "Third matching UTC/monotonic monitor gap, decoding resumed. Cause remains undetermined; prior bounded power-event query found no matching entries. Aggregate generation throughput is not interpreted as clean runtime feasibility.",
+  "observer_actions": {
+    "generation_calls": 0,
+    "api_calls": 0,
+    "process_changes": false,
+    "settings_changes": false,
+    "deadline_changes": false,
+    "retry": false,
+    "semantic_output_read": false
+  }
+}

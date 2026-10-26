@@ -1,0 +1,73 @@
+{
+  "receipt_version": "v494_development_gate_1",
+  "status": "approved_for_pilot_before_generation",
+  "review_mode": "AI_delegated_by_user",
+  "recorded_at_utc": "2026-10-25T10:12:28.638657+00:00",
+  "user_instruction": {
+    "exact_text": "다 진행해봐.\n배분,인용 오류 점검 및 새 파일럿 검증하는건 한 단계 할 때마다 오류,정합성, 소논문 주제와의 연결성이 너무 멀어지지 않는지 다 확인하면서 진행해",
+    "timestamp_kind": "recorded_after_user_message",
+    "recorded_at_utc": "2026-10-25T10:12:28.619539+00:00",
+    "scope": "Recovery, post-output prompt clarification and one new pilot with stepwise error, consistency and paper-topic checks. No automatic success-driven retries or unreviewed main execution."
+  },
+  "input_protocol_ref": {
+    "path": "plan/LIBERA_실험설정_v4.9.1_20261019.json",
+    "sha256": "0d7ad14eb7f07fb9a7e7607a1cdb1ff148794d88878d6706b7b6a66bbc319110"
+  },
+  "evaluation_protocol_ref": {
+    "path": "research/v492_evaluation_protocol_20261019_r2.json",
+    "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+  },
+  "source_review_ref": {
+    "path": "research/v492_source_review_20261019.json",
+    "sha256": "3f6e4bd952b0bbf1d4e3487bb00a5e839a9f907038e43e895807425c21747718"
+  },
+  "method_review_ref": {
+    "path": "research/recovery_20261025/stage02_method_preparation_review.json",
+    "sha256": "f78183fd2bc0177f23713fd7bdd7d8174a84c96dfa2fb71bce23d98fdb495d3a"
+  },
+  "prompt_contract_ref": {
+    "path": "data/sector_protocol/v494_design_20261025/prompt_contract.json",
+    "sha256": "7d75828866825af1f7051a528defc92c88f2beac3f42a66f5d5223c4fb714362"
+  },
+  "prepared_manifest_ref": {
+    "path": "data/sector_protocol/v494_design_20261025/prepared/preparation_manifest.json",
+    "sha256": "8023f8b11ec9b1d43bf1b5b08ac37ccbab4ac5ab7ad7de28a9e93d8e67a4ef29"
+  },
+  "runtime_ref": {
+    "path": "research/recovery_20261025/runtime_candidate.json",
+    "sha256": "e331ea026c04537a15fba83eb538ac3b6cb6022ee1ad14160d18bb292d99870c"
+  },
+  "freeze_ref": {
+    "path": "research/recovery_20261025/pilot_freeze.json",
+    "sha256": "8f8f95c4b90583e5bd97f2b80168c51aa9efec92a958b8235a9baecdfb7001cf"
+  },
+  "historical_gate_ref": {
+    "path": "research/v492_ai_review_gate_20261019.json",
+    "sha256": "6aa66fed309393e519b62136f120be6a0b4a389fb2198468062b2d34e414cb91"
+  },
+  "stage_review_refs": [
+    {
+      "path": "research/recovery_20261025/stage01_interruption_review.json",
+      "sha256": "803db252c45d0b05ff5718502b296ae90ee58fe6a7a0217db512f09a6e95284d"
+    },
+    {
+      "path": "research/recovery_20261025/stage02_method_preparation_review.json",
+      "sha256": "f78183fd2bc0177f23713fd7bdd7d8174a84c96dfa2fb71bce23d98fdb495d3a"
+    },
+    {
+      "path": "research/recovery_20261025/stage03_implementation_review.json",
+      "sha256": "759d15b6e65f9b6df9ac37c6dd930b02ed4a33c22e3e0f3a0582e28f17d4a083"
+    }
+  ],
+  "pilot_cases": [
+    "fidelity_q2_2026__E",
+    "fidelity_q2_2026__L",
+    "ubs_june_2026__E",
+    "ubs_june_2026__L",
+    "common_market_only__C"
+  ],
+  "main_allowed": false,
+  "old_outputs_observed": true,
+  "new_run_research_calls_before_freeze": 0,
+  "independent_human_review_completed": false
+}

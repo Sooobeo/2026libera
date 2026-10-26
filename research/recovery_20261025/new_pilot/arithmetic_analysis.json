@@ -1,0 +1,1671 @@
+{
+  "analyzer_version": "analyze_v492_pilot_1",
+  "created_at_utc": "2026-10-25T22:45:13.610155+00:00",
+  "run_directory": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025",
+  "evaluation_protocol_ref": {
+    "path": "C:\\Users\\Insun\\2026libera\\research\\v492_evaluation_protocol_20261019_r2.json",
+    "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+  },
+  "response_schema_ref": {
+    "path": "C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v491_design_20261019\\response_schema.json",
+    "sha256": "944a232de9f4a1e9ae672b172196aa906077ee03c3f6bf2ab06ad032d6d0b147"
+  },
+  "computational_references_ref": {
+    "path": "C:\\Users\\Insun\\2026libera\\research\\v492_computational_references_20261019.json",
+    "sha256": "d65a7d302ed03f4fc430134b947f9f81f10b8b84fec1855511f258144a46bd11"
+  },
+  "analyzer_ref": {
+    "path": "C:\\Users\\Insun\\2026libera\\research\\analyze_v492_pilot.py",
+    "sha256": "841c1f941e2c39165f84f51f5df283ca7a3c5727de285d4ad56edfa50166529f"
+  },
+  "scope": "completed pilot first attempts only; prospective main remains separate",
+  "policy": {
+    "ko": "보존된 응답 전체가 단일 JSON 객체로 파싱되고 11개 원시 비중이 완전·유한·비음수이며 합계 허용오차를 통과하면 거리를 계산한다. 설명 필드 schema 오류와 length 종료는 별도 표시하며 의미적 성공이나 정상 완료로 승격하지 않는다. 불완전 텍스트에서 부분 벡터를 추출하거나 보정하지 않는다.",
+    "en": "Distance eligibility uses the entire preserved JSON object and complete finite nonnegative raw eleven-vector passing the budget tolerance. Explanatory schema failure and length stop are separate flags, not semantic or completion success. No partial-vector extraction from incomplete text and no repair.",
+    "raw_allocation_validity": "The existing calculator also flags weights above one as invalid. The frozen distance eligibility explicitly requires nonnegative weights and budget tolerance; above-one is reported separately, without silently adding a stricter distance exclusion.",
+    "numeric_arithmetic": "Budget eligibility uses math.fsum and the inherited 1e-6 tolerance. Distances and signed differences additionally retain exact decimal values from the serialized raw JSON numbers; they are never normalized.",
+    "limits": [
+      "No semantic score or composite score",
+      "No institutional numeric gold weights",
+      "No p-values, bootstrap intervals, population causal effects or equivalence claims",
+      "D0 and eleven sectors are not independent replications",
+      "One shared C is not four independent controls",
+      "Equal-weight, GMV and market reference are diagnostic comparators, not strategy winners"
+    ]
+  },
+  "generation_requests_made_by_analyzer": 0,
+  "input_artifacts": [
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\pilot_summary.json",
+      "sha256": "ad5b11da9677d3cb091738d0b0427240842f2ca541bb0f7e72f3747400b599a4"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__E__D0\\http_0001_generation\\assembled_text.json",
+      "sha256": "aac0ebc1657d423a2b1277ca6ce570f624d50b2353e00893f9444be713e39f00",
+      "bytes": 15020
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__E__D0\\http_0001_generation\\events.jsonl",
+      "sha256": "86ab29a38bdb16d51765eb872e13d811e9742ce93ba0fcebb56087804cb4581f",
+      "bytes": 699961
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__E__D0\\transport_result.json",
+      "sha256": "2056dd8e4332c5998ba67a0ef2725007a36b9d89ae1b902b8525419a6b4f6a84"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__E__D0\\http_0001_generation\\response.json",
+      "sha256": "fa16ca07df3a46d749ecb0f4fe7352b634a05957241b12b881961e1f509b5c49"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__E__D0\\worker_spec.json",
+      "sha256": "2ff6196a044f491b1054143940001f00d1134815e346e422efcffa300c3c2251"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__E__F0\\http_0001_generation\\assembled_text.json",
+      "sha256": "6d5b9627371fe054343662de2df46bcabec0613ee97ee294f252c168ae3e93f2",
+      "bytes": 14337
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__E__F0\\http_0001_generation\\events.jsonl",
+      "sha256": "ec0022e36f2e9a30da5608c32142221f126b9d429f547668521cf057d44433f6",
+      "bytes": 667495
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__E__F0\\transport_result.json",
+      "sha256": "3a89819e4b806f3147104010f2515d1024c64055b1f3415e9f858c57392a8468"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__E__F0\\http_0001_generation\\response.json",
+      "sha256": "d1bfb6dfcbcaf4ef134307523b958c0e48fd00653660fe015dfea3cb41d1c8cd"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__E__F0\\worker_spec.json",
+      "sha256": "4f9f39e54ee9f2bdc1c6afb79a9eb9da8087e5955b8abce57f58abdc7e145fa9"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__L__D0\\http_0001_generation\\events.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__L__D0\\transport_result.json",
+      "sha256": "1c5dca3715343f9750befff553616547aa6a23bd2694bb2a2b14c6af7518b3f7"
+    }
+  ],
+  "stage_records": [
+    {
+      "case_id": "fidelity_q2_2026__E",
+      "stage": "D0",
+      "source_conditioned": true,
+      "source_fidelity_applicability": "AI_review_pending",
+      "generation_requests_attempted": 1,
+      "attempted": true,
+      "recorded_status": "completed",
+      "transport_complete": true,
+      "response_done": true,
+      "done_reason": "stop",
+      "readable_partial": false,
+      "infrastructure_failure": false,
+      "artifact_integrity_failure": false,
+      "system_integrity_incident": false,
+      "response_artifact_bound": true,
+      "citation_visibility": {
+        "allowed_id_count": 89,
+        "citation_occurrences": 70,
+        "unavailable_citations": [],
+        "malformed_id_fields": [],
+        "semantic_support_verified": false
+      },
+      "parseable": true,
+      "schema_valid": true,
+      "schema_errors": [],
+      "raw_text_sha256": "58aef780973fcae25ee4a99ca3d42947132f659f70385e4237ed33f7b08bc471",
+      "vector": {
+        "complete_vector": true,
+        "missing_codes": [],
+        "duplicate_codes": [],
+        "unknown_codes": [],
+        "malformed_rows": 0,
+        "invalid_numeric_codes": [],
+        "negative_weight_codes": [],
+        "above_one_weight_codes": [],
+        "raw_weights": {
+          "10": 0.02,
+          "15": 0.02,
+          "20": 0.1,
+          "25": 0.09,
+          "30": 0.04,
+          "35": 0.09,
+          "40": 0.12,
+          "45": 0.38,
+          "50": 0.03,
+          "55": 0.02,
+          "60": 0.01
+        },
+        "raw_weights_exact_decimal": {
+          "10": "0.02",
+          "15": "0.02",
+          "20": "0.1",
+          "25": "0.09",
+          "30": "0.04",
+          "35": "0.09",
+          "40": "0.12",
+          "45": "0.38",
+          "50": "0.03",
+          "55": "0.02",
+          "60": "0.01"
+        },
+        "zero_weight_codes": [],
+        "positive_weight_codes": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "35",
+          "40",
+          "45",
+          "50",
+          "55",
+          "60"
+        ],
+        "raw_sum": 0.92,
+        "raw_budget_residual": -0.07999999999999996,
+        "raw_sum_exact_decimal": "0.92",
+        "raw_residual_exact_decimal": "-0.08",
+        "budget_check_passed": false,
+        "sum_tolerance": 1e-06,
+        "valid_raw_allocation": false,
+        "distance_eligible": false,
+        "distance_null_reasons": [
+          "budget_check_failed_or_unavailable"
+        ],
+        "normalized_or_repaired": false
+      },
+      "parse_error": "assistant_content_not_text",
+      "partial_artifacts": [
+        {
+          "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__E__D0\\http_0001_generation\\assembled_text.json",
+          "sha256": "aac0ebc1657d423a2b1277ca6ce570f624d50b2353e00893f9444be713e39f00",
+          "bytes": 15020
+        },
+        {
+          "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__E__D0\\http_0001_generation\\events.jsonl",
+          "sha256": "86ab29a38bdb16d51765eb872e13d811e9742ce93ba0fcebb56087804cb4581f",
+          "bytes": 699961
+        }
+      ],
+      "partial_text_available": true,
+      "partial_thinking_available": false,
+      "partial_event_complete_lines": 3580,
+      "partial_event_content_fragments": 3579,
+      "transport_status": "completed",
+      "supplied_source_ids": [
+        "fidelity_q2_2026"
+      ],
+      "C_source_free_input": null,
+      "reported_source_id": "fidelity_q2_2026"
+    },
+    {
+      "case_id": "fidelity_q2_2026__E",
+      "stage": "F0",
+      "source_conditioned": true,
+      "source_fidelity_applicability": "AI_review_pending",
+      "generation_requests_attempted": 1,
+      "attempted": true,
+      "recorded_status": "completed",
+      "transport_complete": true,
+      "response_done": true,
+      "done_reason": "stop",
+      "readable_partial": false,
+      "infrastructure_failure": false,
+      "artifact_integrity_failure": false,
+      "system_integrity_incident": false,
+      "response_artifact_bound": true,
+      "citation_visibility": {
+        "allowed_id_count": 91,
+        "citation_occurrences": 69,
+        "unavailable_citations": [],
+        "malformed_id_fields": [],
+        "semantic_support_verified": false
+      },
+      "parseable": true,
+      "schema_valid": true,
+      "schema_errors": [],
+      "raw_text_sha256": "8b346d678921ea2ad199b458ff5553b01e0c930665401840223473e4ed44cd50",
+      "vector": {
+        "complete_vector": true,
+        "missing_codes": [],
+        "duplicate_codes": [],
+        "unknown_codes": [],
+        "malformed_rows": 0,
+        "invalid_numeric_codes": [],
+        "negative_weight_codes": [],
+        "above_one_weight_codes": [],
+        "raw_weights": {
+          "10": 0.02,
+          "15": 0.02,
+          "20": 0.1,
+          "25": 0.09,
+          "30": 0.04,
+          "35": 0.09,
+          "40": 0.12,
+          "45": 0.38,
+          "50": 0.03,
+          "55": 0.02,
+          "60": 0.01
+        },
+        "raw_weights_exact_decimal": {
+          "10": "0.02",
+          "15": "0.02",
+          "20": "0.1",
+          "25": "0.09",
+          "30": "0.04",
+          "35": "0.09",
+          "40": "0.12",
+          "45": "0.38",
+          "50": "0.03",
+          "55": "0.02",
+          "60": "0.01"
+        },
+        "zero_weight_codes": [],
+        "positive_weight_codes": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "35",
+          "40",
+          "45",
+          "50",
+          "55",
+          "60"
+        ],
+        "raw_sum": 0.92,
+        "raw_budget_residual": -0.07999999999999996,
+        "raw_sum_exact_decimal": "0.92",
+        "raw_residual_exact_decimal": "-0.08",
+        "budget_check_passed": false,
+        "sum_tolerance": 1e-06,
+        "valid_raw_allocation": false,
+        "distance_eligible": false,
+        "distance_null_reasons": [
+          "budget_check_failed_or_unavailable"
+        ],
+        "normalized_or_repaired": false
+      },
+      "parse_error": "assistant_content_not_text",
+      "partial_artifacts": [
+        {
+          "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__E__F0\\http_0001_generation\\assembled_text.json",
+          "sha256": "6d5b9627371fe054343662de2df46bcabec0613ee97ee294f252c168ae3e93f2",
+          "bytes": 14337
+        },
+        {
+          "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__E__F0\\http_0001_generation\\events.jsonl",
+          "sha256": "ec0022e36f2e9a30da5608c32142221f126b9d429f547668521cf057d44433f6",
+          "bytes": 667495
+        }
+      ],
+      "partial_text_available": true,
+      "partial_thinking_available": false,
+      "partial_event_complete_lines": 3410,
+      "partial_event_content_fragments": 3409,
+      "transport_status": "completed",
+      "supplied_source_ids": [
+        "fidelity_q2_2026",
+        "fidelity_q2_2026"
+      ],
+      "C_source_free_input": null,
+      "reported_source_id": "fidelity_q2_2026"
+    },
+    {
+      "case_id": "fidelity_q2_2026__L",
+      "stage": "D0",
+      "source_conditioned": false,
+      "source_fidelity_applicability": "not_applicable",
+      "generation_requests_attempted": 1,
+      "attempted": true,
+      "recorded_status": "hard_deadline",
+      "transport_complete": false,
+      "response_done": null,
+      "done_reason": null,
+      "readable_partial": false,
+      "infrastructure_failure": true,
+      "artifact_integrity_failure": false,
+      "system_integrity_incident": true,
+      "response_artifact_bound": false,
+      "citation_visibility": null,
+      "parseable": false,
+      "schema_valid": false,
+      "schema_errors": [],
+      "raw_text_sha256": null,
+      "vector": {
+        "complete_vector": false,
+        "missing_codes": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "35",
+          "40",
+          "45",
+          "50",
+          "55",
+          "60"
+        ],
+        "duplicate_codes": [],
+        "unknown_codes": [],
+        "malformed_rows": 1,
+        "invalid_numeric_codes": [],
+        "negative_weight_codes": [],
+        "above_one_weight_codes": [],
+        "raw_weights": {},
+        "raw_weights_exact_decimal": {},
+        "zero_weight_codes": [],
+        "positive_weight_codes": [],
+        "raw_sum": null,
+        "raw_budget_residual": null,
+        "raw_sum_exact_decimal": null,
+        "raw_residual_exact_decimal": null,
+        "budget_check_passed": false,
+        "sum_tolerance": 1e-06,
+        "valid_raw_allocation": false,
+        "distance_eligible": false,
+        "distance_null_reasons": [
+          "entire_response_JSON_unavailable"
+        ],
+        "normalized_or_repaired": false
+      },
+      "parse_error": "assistant_content_not_text",
+      "partial_artifacts": [
+        {
+          "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__L__D0\\http_0001_generation\\events.jsonl",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ],
+      "partial_event_complete_lines": 0,
+      "partial_event_content_fragments": 0,
+      "transport_status": "hard_deadline",
+      "missing_reason": "no_preserved_whole_response_from_first_attempt"
+    },
+    {
+      "case_id": "fidelity_q2_2026__L",
+      "stage": "F0",
+      "source_conditioned": true,
+      "source_fidelity_applicability": "AI_review_pending",
+      "generation_requests_attempted": 0,
+      "attempted": false,
+      "recorded_status": "not_attempted",
+      "transport_complete": false,
+      "response_done": null,
+      "done_reason": null,
+      "readable_partial": false,
+      "infrastructure_failure": false,
+      "artifact_integrity_failure": false,
+      "system_integrity_incident": null,
+      "response_artifact_bound": false,
+      "citation_visibility": null,
+      "parseable": false,
+      "schema_valid": false,
+      "schema_errors": [],
+      "raw_text_sha256": null,
+      "vector": {
+        "complete_vector": false,
+        "missing_codes": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "35",
+          "40",
+          "45",
+          "50",
+          "55",
+          "60"
+        ],
+        "duplicate_codes": [],
+        "unknown_codes": [],
+        "malformed_rows": 1,
+        "invalid_numeric_codes": [],
+        "negative_weight_codes": [],
+        "above_one_weight_codes": [],
+        "raw_weights": {},
+        "raw_weights_exact_decimal": {},
+        "zero_weight_codes": [],
+        "positive_weight_codes": [],
+        "raw_sum": null,
+        "raw_budget_residual": null,
+        "raw_sum_exact_decimal": null,
+        "raw_residual_exact_decimal": null,
+        "budget_check_passed": false,
+        "sum_tolerance": 1e-06,
+        "valid_raw_allocation": false,
+        "distance_eligible": false,
+        "distance_null_reasons": [
+          "entire_response_JSON_unavailable"
+        ],
+        "normalized_or_repaired": false
+      },
+      "parse_error": "assistant_content_not_text",
+      "partial_artifacts": [],
+      "missing_reason": "generation_not_attempted",
+      "unexpected_response_without_attempt": false
+    },
+    {
+      "case_id": "ubs_june_2026__E",
+      "stage": "D0",
+      "source_conditioned": true,
+      "source_fidelity_applicability": "AI_review_pending",
+      "generation_requests_attempted": 0,
+      "attempted": false,
+      "recorded_status": "not_attempted",
+      "transport_complete": false,
+      "response_done": null,
+      "done_reason": null,
+      "readable_partial": false,
+      "infrastructure_failure": false,
+      "artifact_integrity_failure": false,
+      "system_integrity_incident": null,
+      "response_artifact_bound": false,
+      "citation_visibility": null,
+      "parseable": false,
+      "schema_valid": false,
+      "schema_errors": [],
+      "raw_text_sha256": null,
+      "vector": {
+        "complete_vector": false,
+        "missing_codes": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "35",
+          "40",
+          "45",
+          "50",
+          "55",
+          "60"
+        ],
+        "duplicate_codes": [],
+        "unknown_codes": [],
+        "malformed_rows": 1,
+        "invalid_numeric_codes": [],
+        "negative_weight_codes": [],
+        "above_one_weight_codes": [],
+        "raw_weights": {},
+        "raw_weights_exact_decimal": {},
+        "zero_weight_codes": [],
+        "positive_weight_codes": [],
+        "raw_sum": null,
+        "raw_budget_residual": null,
+        "raw_sum_exact_decimal": null,
+        "raw_residual_exact_decimal": null,
+        "budget_check_passed": false,
+        "sum_tolerance": 1e-06,
+        "valid_raw_allocation": false,
+        "distance_eligible": false,
+        "distance_null_reasons": [
+          "entire_response_JSON_unavailable"
+        ],
+        "normalized_or_repaired": false
+      },
+      "parse_error": "assistant_content_not_text",
+      "partial_artifacts": [],
+      "missing_reason": "generation_not_attempted",
+      "unexpected_response_without_attempt": false
+    },
+    {
+      "case_id": "ubs_june_2026__E",
+      "stage": "F0",
+      "source_conditioned": true,
+      "source_fidelity_applicability": "AI_review_pending",
+      "generation_requests_attempted": 0,
+      "attempted": false,
+      "recorded_status": "not_attempted",
+      "transport_complete": false,
+      "response_done": null,
+      "done_reason": null,
+      "readable_partial": false,
+      "infrastructure_failure": false,
+      "artifact_integrity_failure": false,
+      "system_integrity_incident": null,
+      "response_artifact_bound": false,
+      "citation_visibility": null,
+      "parseable": false,
+      "schema_valid": false,
+      "schema_errors": [],
+      "raw_text_sha256": null,
+      "vector": {
+        "complete_vector": false,
+        "missing_codes": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "35",
+          "40",
+          "45",
+          "50",
+          "55",
+          "60"
+        ],
+        "duplicate_codes": [],
+        "unknown_codes": [],
+        "malformed_rows": 1,
+        "invalid_numeric_codes": [],
+        "negative_weight_codes": [],
+        "above_one_weight_codes": [],
+        "raw_weights": {},
+        "raw_weights_exact_decimal": {},
+        "zero_weight_codes": [],
+        "positive_weight_codes": [],
+        "raw_sum": null,
+        "raw_budget_residual": null,
+        "raw_sum_exact_decimal": null,
+        "raw_residual_exact_decimal": null,
+        "budget_check_passed": false,
+        "sum_tolerance": 1e-06,
+        "valid_raw_allocation": false,
+        "distance_eligible": false,
+        "distance_null_reasons": [
+          "entire_response_JSON_unavailable"
+        ],
+        "normalized_or_repaired": false
+      },
+      "parse_error": "assistant_content_not_text",
+      "partial_artifacts": [],
+      "missing_reason": "generation_not_attempted",
+      "unexpected_response_without_attempt": false
+    },
+    {
+      "case_id": "ubs_june_2026__L",
+      "stage": "D0",
+      "source_conditioned": false,
+      "source_fidelity_applicability": "not_applicable",
+      "generation_requests_attempted": 0,
+      "attempted": false,
+      "recorded_status": "not_attempted",
+      "transport_complete": false,
+      "response_done": null,
+      "done_reason": null,
+      "readable_partial": false,
+      "infrastructure_failure": false,
+      "artifact_integrity_failure": false,
+      "system_integrity_incident": null,
+      "response_artifact_bound": false,
+      "citation_visibility": null,
+      "parseable": false,
+      "schema_valid": false,
+      "schema_errors": [],
+      "raw_text_sha256": null,
+      "vector": {
+        "complete_vector": false,
+        "missing_codes": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "35",
+          "40",
+          "45",
+          "50",
+          "55",
+          "60"
+        ],
+        "duplicate_codes": [],
+        "unknown_codes": [],
+        "malformed_rows": 1,
+        "invalid_numeric_codes": [],
+        "negative_weight_codes": [],
+        "above_one_weight_codes": [],
+        "raw_weights": {},
+        "raw_weights_exact_decimal": {},
+        "zero_weight_codes": [],
+        "positive_weight_codes": [],
+        "raw_sum": null,
+        "raw_budget_residual": null,
+        "raw_sum_exact_decimal": null,
+        "raw_residual_exact_decimal": null,
+        "budget_check_passed": false,
+        "sum_tolerance": 1e-06,
+        "valid_raw_allocation": false,
+        "distance_eligible": false,
+        "distance_null_reasons": [
+          "entire_response_JSON_unavailable"
+        ],
+        "normalized_or_repaired": false
+      },
+      "parse_error": "assistant_content_not_text",
+      "partial_artifacts": [],
+      "missing_reason": "generation_not_attempted",
+      "unexpected_response_without_attempt": false
+    },
+    {
+      "case_id": "ubs_june_2026__L",
+      "stage": "F0",
+      "source_conditioned": true,
+      "source_fidelity_applicability": "AI_review_pending",
+      "generation_requests_attempted": 0,
+      "attempted": false,
+      "recorded_status": "not_attempted",
+      "transport_complete": false,
+      "response_done": null,
+      "done_reason": null,
+      "readable_partial": false,
+      "infrastructure_failure": false,
+      "artifact_integrity_failure": false,
+      "system_integrity_incident": null,
+      "response_artifact_bound": false,
+      "citation_visibility": null,
+      "parseable": false,
+      "schema_valid": false,
+      "schema_errors": [],
+      "raw_text_sha256": null,
+      "vector": {
+        "complete_vector": false,
+        "missing_codes": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "35",
+          "40",
+          "45",
+          "50",
+          "55",
+          "60"
+        ],
+        "duplicate_codes": [],
+        "unknown_codes": [],
+        "malformed_rows": 1,
+        "invalid_numeric_codes": [],
+        "negative_weight_codes": [],
+        "above_one_weight_codes": [],
+        "raw_weights": {},
+        "raw_weights_exact_decimal": {},
+        "zero_weight_codes": [],
+        "positive_weight_codes": [],
+        "raw_sum": null,
+        "raw_budget_residual": null,
+        "raw_sum_exact_decimal": null,
+        "raw_residual_exact_decimal": null,
+        "budget_check_passed": false,
+        "sum_tolerance": 1e-06,
+        "valid_raw_allocation": false,
+        "distance_eligible": false,
+        "distance_null_reasons": [
+          "entire_response_JSON_unavailable"
+        ],
+        "normalized_or_repaired": false
+      },
+      "parse_error": "assistant_content_not_text",
+      "partial_artifacts": [],
+      "missing_reason": "generation_not_attempted",
+      "unexpected_response_without_attempt": false
+    },
+    {
+      "case_id": "common_market_only__C",
+      "stage": "D0",
+      "source_conditioned": false,
+      "source_fidelity_applicability": "not_applicable",
+      "generation_requests_attempted": 0,
+      "attempted": false,
+      "recorded_status": "not_attempted",
+      "transport_complete": false,
+      "response_done": null,
+      "done_reason": null,
+      "readable_partial": false,
+      "infrastructure_failure": false,
+      "artifact_integrity_failure": false,
+      "system_integrity_incident": null,
+      "response_artifact_bound": false,
+      "citation_visibility": null,
+      "parseable": false,
+      "schema_valid": false,
+      "schema_errors": [],
+      "raw_text_sha256": null,
+      "vector": {
+        "complete_vector": false,
+        "missing_codes": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "35",
+          "40",
+          "45",
+          "50",
+          "55",
+          "60"
+        ],
+        "duplicate_codes": [],
+        "unknown_codes": [],
+        "malformed_rows": 1,
+        "invalid_numeric_codes": [],
+        "negative_weight_codes": [],
+        "above_one_weight_codes": [],
+        "raw_weights": {},
+        "raw_weights_exact_decimal": {},
+        "zero_weight_codes": [],
+        "positive_weight_codes": [],
+        "raw_sum": null,
+        "raw_budget_residual": null,
+        "raw_sum_exact_decimal": null,
+        "raw_residual_exact_decimal": null,
+        "budget_check_passed": false,
+        "sum_tolerance": 1e-06,
+        "valid_raw_allocation": false,
+        "distance_eligible": false,
+        "distance_null_reasons": [
+          "entire_response_JSON_unavailable"
+        ],
+        "normalized_or_repaired": false
+      },
+      "parse_error": "assistant_content_not_text",
+      "partial_artifacts": [],
+      "missing_reason": "generation_not_attempted",
+      "unexpected_response_without_attempt": false
+    },
+    {
+      "case_id": "common_market_only__C",
+      "stage": "F0",
+      "source_conditioned": false,
+      "source_fidelity_applicability": "not_applicable",
+      "generation_requests_attempted": 0,
+      "attempted": false,
+      "recorded_status": "not_attempted",
+      "transport_complete": false,
+      "response_done": null,
+      "done_reason": null,
+      "readable_partial": false,
+      "infrastructure_failure": false,
+      "artifact_integrity_failure": false,
+      "system_integrity_incident": null,
+      "response_artifact_bound": false,
+      "citation_visibility": null,
+      "parseable": false,
+      "schema_valid": false,
+      "schema_errors": [],
+      "raw_text_sha256": null,
+      "vector": {
+        "complete_vector": false,
+        "missing_codes": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "35",
+          "40",
+          "45",
+          "50",
+          "55",
+          "60"
+        ],
+        "duplicate_codes": [],
+        "unknown_codes": [],
+        "malformed_rows": 1,
+        "invalid_numeric_codes": [],
+        "negative_weight_codes": [],
+        "above_one_weight_codes": [],
+        "raw_weights": {},
+        "raw_weights_exact_decimal": {},
+        "zero_weight_codes": [],
+        "positive_weight_codes": [],
+        "raw_sum": null,
+        "raw_budget_residual": null,
+        "raw_sum_exact_decimal": null,
+        "raw_residual_exact_decimal": null,
+        "budget_check_passed": false,
+        "sum_tolerance": 1e-06,
+        "valid_raw_allocation": false,
+        "distance_eligible": false,
+        "distance_null_reasons": [
+          "entire_response_JSON_unavailable"
+        ],
+        "normalized_or_repaired": false
+      },
+      "parse_error": "assistant_content_not_text",
+      "partial_artifacts": [],
+      "missing_reason": "generation_not_attempted",
+      "unexpected_response_without_attempt": false
+    }
+  ],
+  "denominators": {
+    "planned_cases": 5,
+    "planned_final_sector_rows": 55,
+    "planned_source_conditioned_rows": 44,
+    "planned_no_source_control_rows": 11,
+    "planned_stage_slots": 10,
+    "shared_C_count": 1
+  },
+  "final_coverage": {
+    "planned": 5,
+    "attempted": 1,
+    "not_attempted": 4,
+    "infrastructure_failure": 0,
+    "artifact_integrity_failure": 0,
+    "recorded_completed": 1,
+    "transport_complete": 1,
+    "readable_partial": 0,
+    "parseable": 1,
+    "schema_valid": 1,
+    "complete_vector": 1,
+    "valid_raw_allocation": 0,
+    "distance_eligible": 0
+  },
+  "all_stage_coverage": {
+    "planned": 10,
+    "attempted": 3,
+    "not_attempted": 7,
+    "infrastructure_failure": 1,
+    "artifact_integrity_failure": 0,
+    "recorded_completed": 2,
+    "transport_complete": 2,
+    "readable_partial": 0,
+    "parseable": 2,
+    "schema_valid": 2,
+    "complete_vector": 2,
+    "valid_raw_allocation": 0,
+    "distance_eligible": 0
+  },
+  "eligible_within_source_pairs": 0,
+  "eligible_between_source_pairs": 0,
+  "within_source": [
+    {
+      "left": "fidelity_q2_2026__E:F0",
+      "right": "fidelity_q2_2026__L:F0",
+      "distance": null,
+      "distance_exact_decimal": null,
+      "raw_difference": null,
+      "raw_difference_exact_decimal": null,
+      "null_reasons": [
+        {
+          "vector": "fidelity_q2_2026__E:F0",
+          "reasons": [
+            "budget_check_failed_or_unavailable"
+          ]
+        },
+        {
+          "vector": "fidelity_q2_2026__L:F0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        }
+      ],
+      "left_raw_sum": 0.92,
+      "right_raw_sum": null,
+      "normalized_or_repaired": false,
+      "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+    },
+    {
+      "left": "ubs_june_2026__E:F0",
+      "right": "ubs_june_2026__L:F0",
+      "distance": null,
+      "distance_exact_decimal": null,
+      "raw_difference": null,
+      "raw_difference_exact_decimal": null,
+      "null_reasons": [
+        {
+          "vector": "ubs_june_2026__E:F0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        },
+        {
+          "vector": "ubs_june_2026__L:F0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        }
+      ],
+      "left_raw_sum": null,
+      "right_raw_sum": null,
+      "normalized_or_repaired": false,
+      "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+    }
+  ],
+  "between_sources": [
+    {
+      "left": "fidelity_q2_2026__E:F0",
+      "right": "ubs_june_2026__E:F0",
+      "distance": null,
+      "distance_exact_decimal": null,
+      "raw_difference": null,
+      "raw_difference_exact_decimal": null,
+      "null_reasons": [
+        {
+          "vector": "fidelity_q2_2026__E:F0",
+          "reasons": [
+            "budget_check_failed_or_unavailable"
+          ]
+        },
+        {
+          "vector": "ubs_june_2026__E:F0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        }
+      ],
+      "left_raw_sum": 0.92,
+      "right_raw_sum": null,
+      "normalized_or_repaired": false,
+      "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+    },
+    {
+      "left": "fidelity_q2_2026__L:F0",
+      "right": "ubs_june_2026__L:F0",
+      "distance": null,
+      "distance_exact_decimal": null,
+      "raw_difference": null,
+      "raw_difference_exact_decimal": null,
+      "null_reasons": [
+        {
+          "vector": "fidelity_q2_2026__L:F0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        },
+        {
+          "vector": "ubs_june_2026__L:F0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        }
+      ],
+      "left_raw_sum": null,
+      "right_raw_sum": null,
+      "normalized_or_repaired": false,
+      "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+    }
+  ],
+  "difference_of_distances": {
+    "value": null,
+    "exact_decimal": null,
+    "null_reasons": [
+      {
+        "vector": "fidelity_q2_2026__E:F0",
+        "reasons": [
+          "budget_check_failed_or_unavailable"
+        ]
+      },
+      {
+        "vector": "ubs_june_2026__E:F0",
+        "reasons": [
+          "entire_response_JSON_unavailable"
+        ]
+      },
+      {
+        "vector": "fidelity_q2_2026__L:F0",
+        "reasons": [
+          "entire_response_JSON_unavailable"
+        ]
+      },
+      {
+        "vector": "ubs_june_2026__L:F0",
+        "reasons": [
+          "entire_response_JSON_unavailable"
+        ]
+      }
+    ],
+    "interpretation": "descriptive difference of two distances; not a causal difference-in-differences estimate"
+  },
+  "shared_control_comparisons": [
+    {
+      "left": "fidelity_q2_2026__E:F0",
+      "right": "common_market_only__C:F0",
+      "distance": null,
+      "distance_exact_decimal": null,
+      "raw_difference": null,
+      "raw_difference_exact_decimal": null,
+      "null_reasons": [
+        {
+          "vector": "fidelity_q2_2026__E:F0",
+          "reasons": [
+            "budget_check_failed_or_unavailable"
+          ]
+        },
+        {
+          "vector": "common_market_only__C:F0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        }
+      ],
+      "left_raw_sum": 0.92,
+      "right_raw_sum": null,
+      "normalized_or_repaired": false,
+      "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+    },
+    {
+      "left": "fidelity_q2_2026__L:F0",
+      "right": "common_market_only__C:F0",
+      "distance": null,
+      "distance_exact_decimal": null,
+      "raw_difference": null,
+      "raw_difference_exact_decimal": null,
+      "null_reasons": [
+        {
+          "vector": "fidelity_q2_2026__L:F0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        },
+        {
+          "vector": "common_market_only__C:F0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        }
+      ],
+      "left_raw_sum": null,
+      "right_raw_sum": null,
+      "normalized_or_repaired": false,
+      "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+    },
+    {
+      "left": "ubs_june_2026__E:F0",
+      "right": "common_market_only__C:F0",
+      "distance": null,
+      "distance_exact_decimal": null,
+      "raw_difference": null,
+      "raw_difference_exact_decimal": null,
+      "null_reasons": [
+        {
+          "vector": "ubs_june_2026__E:F0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        },
+        {
+          "vector": "common_market_only__C:F0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        }
+      ],
+      "left_raw_sum": null,
+      "right_raw_sum": null,
+      "normalized_or_repaired": false,
+      "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+    },
+    {
+      "left": "ubs_june_2026__L:F0",
+      "right": "common_market_only__C:F0",
+      "distance": null,
+      "distance_exact_decimal": null,
+      "raw_difference": null,
+      "raw_difference_exact_decimal": null,
+      "null_reasons": [
+        {
+          "vector": "ubs_june_2026__L:F0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        },
+        {
+          "vector": "common_market_only__C:F0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        }
+      ],
+      "left_raw_sum": null,
+      "right_raw_sum": null,
+      "normalized_or_repaired": false,
+      "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+    }
+  ],
+  "reference_comparisons": {
+    "fidelity_q2_2026__E": {
+      "equal_weight": {
+        "left": "fidelity_q2_2026__E:F0",
+        "right": "equal_weight",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": {
+          "10": -0.07090909090909091,
+          "15": -0.07090909090909091,
+          "20": 0.00909090909090909,
+          "25": -0.00090909090909091,
+          "30": -0.05090909090909091,
+          "35": -0.00090909090909091,
+          "40": 0.02909090909090909,
+          "45": 0.28909090909090907,
+          "50": -0.06090909090909091,
+          "55": -0.07090909090909091,
+          "60": -0.08090909090909092
+        },
+        "raw_difference_exact_decimal": {
+          "10": "-0.07090909090909091",
+          "15": "-0.07090909090909091",
+          "20": "0.00909090909090909",
+          "25": "-0.00090909090909091",
+          "30": "-0.05090909090909091",
+          "35": "-0.00090909090909091",
+          "40": "0.02909090909090909",
+          "45": "0.28909090909090909",
+          "50": "-0.06090909090909091",
+          "55": "-0.07090909090909091",
+          "60": "-0.08090909090909091"
+        },
+        "null_reasons": [
+          {
+            "vector": "fidelity_q2_2026__E:F0",
+            "reasons": [
+              "budget_check_failed_or_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": 0.92,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      },
+      "long_only_minimum_variance": {
+        "left": "fidelity_q2_2026__E:F0",
+        "right": "long_only_minimum_variance",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": {
+          "10": -0.11653777964449714,
+          "15": 0.02,
+          "20": 0.1,
+          "25": 0.09,
+          "30": -0.2293577551691947,
+          "35": 0.07431922708917008,
+          "40": -0.1754125940338565,
+          "45": 0.19411458153871805,
+          "50": -0.01759745443390786,
+          "55": -0.02952822534643188,
+          "60": 0.01
+        },
+        "raw_difference_exact_decimal": {
+          "10": "-0.11653777964449715",
+          "15": "0.02",
+          "20": "0.1",
+          "25": "0.09",
+          "30": "-0.2293577551691947",
+          "35": "0.074319227089170076",
+          "40": "-0.1754125940338565",
+          "45": "0.19411458153871805",
+          "50": "-0.01759745443390786",
+          "55": "-0.02952822534643188",
+          "60": "0.01"
+        },
+        "null_reasons": [
+          {
+            "vector": "fidelity_q2_2026__E:F0",
+            "reasons": [
+              "budget_check_failed_or_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": 0.92,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      },
+      "existing_market_benchmark": {
+        "left": "fidelity_q2_2026__E:F0",
+        "right": "existing_market_benchmark",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": {
+          "10": -0.01003003003003003,
+          "15": 0.001981981981981982,
+          "20": 0.01191191191191191,
+          "25": -0.00309309309309309,
+          "30": -0.00604604604604604,
+          "35": 0.0009109109109109,
+          "40": 0.00188188188188188,
+          "45": -0.00038038038038036,
+          "50": -0.06709709709709709,
+          "55": -0.002022022022022022,
+          "60": -0.008018018018018018
+        },
+        "raw_difference_exact_decimal": {
+          "10": "-0.01003003003003003",
+          "15": "0.001981981981981982",
+          "20": "0.01191191191191191",
+          "25": "-0.00309309309309309",
+          "30": "-0.00604604604604604",
+          "35": "0.0009109109109109",
+          "40": "0.00188188188188188",
+          "45": "-0.00038038038038036",
+          "50": "-0.06709709709709709",
+          "55": "-0.002022022022022022",
+          "60": "-0.008018018018018018"
+        },
+        "null_reasons": [
+          {
+            "vector": "fidelity_q2_2026__E:F0",
+            "reasons": [
+              "budget_check_failed_or_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": 0.92,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      }
+    },
+    "fidelity_q2_2026__L": {
+      "equal_weight": {
+        "left": "fidelity_q2_2026__L:F0",
+        "right": "equal_weight",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": null,
+        "raw_difference_exact_decimal": null,
+        "null_reasons": [
+          {
+            "vector": "fidelity_q2_2026__L:F0",
+            "reasons": [
+              "entire_response_JSON_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": null,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      },
+      "long_only_minimum_variance": {
+        "left": "fidelity_q2_2026__L:F0",
+        "right": "long_only_minimum_variance",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": null,
+        "raw_difference_exact_decimal": null,
+        "null_reasons": [
+          {
+            "vector": "fidelity_q2_2026__L:F0",
+            "reasons": [
+              "entire_response_JSON_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": null,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      },
+      "existing_market_benchmark": {
+        "left": "fidelity_q2_2026__L:F0",
+        "right": "existing_market_benchmark",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": null,
+        "raw_difference_exact_decimal": null,
+        "null_reasons": [
+          {
+            "vector": "fidelity_q2_2026__L:F0",
+            "reasons": [
+              "entire_response_JSON_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": null,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      }
+    },
+    "ubs_june_2026__E": {
+      "equal_weight": {
+        "left": "ubs_june_2026__E:F0",
+        "right": "equal_weight",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": null,
+        "raw_difference_exact_decimal": null,
+        "null_reasons": [
+          {
+            "vector": "ubs_june_2026__E:F0",
+            "reasons": [
+              "entire_response_JSON_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": null,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      },
+      "long_only_minimum_variance": {
+        "left": "ubs_june_2026__E:F0",
+        "right": "long_only_minimum_variance",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": null,
+        "raw_difference_exact_decimal": null,
+        "null_reasons": [
+          {
+            "vector": "ubs_june_2026__E:F0",
+            "reasons": [
+              "entire_response_JSON_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": null,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      },
+      "existing_market_benchmark": {
+        "left": "ubs_june_2026__E:F0",
+        "right": "existing_market_benchmark",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": null,
+        "raw_difference_exact_decimal": null,
+        "null_reasons": [
+          {
+            "vector": "ubs_june_2026__E:F0",
+            "reasons": [
+              "entire_response_JSON_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": null,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      }
+    },
+    "ubs_june_2026__L": {
+      "equal_weight": {
+        "left": "ubs_june_2026__L:F0",
+        "right": "equal_weight",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": null,
+        "raw_difference_exact_decimal": null,
+        "null_reasons": [
+          {
+            "vector": "ubs_june_2026__L:F0",
+            "reasons": [
+              "entire_response_JSON_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": null,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      },
+      "long_only_minimum_variance": {
+        "left": "ubs_june_2026__L:F0",
+        "right": "long_only_minimum_variance",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": null,
+        "raw_difference_exact_decimal": null,
+        "null_reasons": [
+          {
+            "vector": "ubs_june_2026__L:F0",
+            "reasons": [
+              "entire_response_JSON_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": null,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      },
+      "existing_market_benchmark": {
+        "left": "ubs_june_2026__L:F0",
+        "right": "existing_market_benchmark",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": null,
+        "raw_difference_exact_decimal": null,
+        "null_reasons": [
+          {
+            "vector": "ubs_june_2026__L:F0",
+            "reasons": [
+              "entire_response_JSON_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": null,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      }
+    },
+    "common_market_only__C": {
+      "equal_weight": {
+        "left": "common_market_only__C:F0",
+        "right": "equal_weight",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": null,
+        "raw_difference_exact_decimal": null,
+        "null_reasons": [
+          {
+            "vector": "common_market_only__C:F0",
+            "reasons": [
+              "entire_response_JSON_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": null,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      },
+      "long_only_minimum_variance": {
+        "left": "common_market_only__C:F0",
+        "right": "long_only_minimum_variance",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": null,
+        "raw_difference_exact_decimal": null,
+        "null_reasons": [
+          {
+            "vector": "common_market_only__C:F0",
+            "reasons": [
+              "entire_response_JSON_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": null,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      },
+      "existing_market_benchmark": {
+        "left": "common_market_only__C:F0",
+        "right": "existing_market_benchmark",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": null,
+        "raw_difference_exact_decimal": null,
+        "null_reasons": [
+          {
+            "vector": "common_market_only__C:F0",
+            "reasons": [
+              "entire_response_JSON_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": null,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      }
+    }
+  },
+  "own_D0_F0": [
+    {
+      "left": "fidelity_q2_2026__E:F0",
+      "right": "fidelity_q2_2026__E:D0",
+      "distance": null,
+      "distance_exact_decimal": null,
+      "raw_difference": {
+        "10": 0.0,
+        "15": 0.0,
+        "20": 0.0,
+        "25": 0.0,
+        "30": 0.0,
+        "35": 0.0,
+        "40": 0.0,
+        "45": 0.0,
+        "50": 0.0,
+        "55": 0.0,
+        "60": 0.0
+      },
+      "raw_difference_exact_decimal": {
+        "10": "0",
+        "15": "0",
+        "20": "0",
+        "25": "0",
+        "30": "0",
+        "35": "0",
+        "40": "0",
+        "45": "0",
+        "50": "0",
+        "55": "0",
+        "60": "0"
+      },
+      "null_reasons": [
+        {
+          "vector": "fidelity_q2_2026__E:F0",
+          "reasons": [
+            "budget_check_failed_or_unavailable"
+          ]
+        },
+        {
+          "vector": "fidelity_q2_2026__E:D0",
+          "reasons": [
+            "budget_check_failed_or_unavailable"
+          ]
+        }
+      ],
+      "left_raw_sum": 0.92,
+      "right_raw_sum": 0.92,
+      "normalized_or_repaired": false,
+      "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+    },
+    {
+      "left": "fidelity_q2_2026__L:F0",
+      "right": "fidelity_q2_2026__L:D0",
+      "distance": null,
+      "distance_exact_decimal": null,
+      "raw_difference": null,
+      "raw_difference_exact_decimal": null,
+      "null_reasons": [
+        {
+          "vector": "fidelity_q2_2026__L:F0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        },
+        {
+          "vector": "fidelity_q2_2026__L:D0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        }
+      ],
+      "left_raw_sum": null,
+      "right_raw_sum": null,
+      "normalized_or_repaired": false,
+      "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+    },
+    {
+      "left": "ubs_june_2026__E:F0",
+      "right": "ubs_june_2026__E:D0",
+      "distance": null,
+      "distance_exact_decimal": null,
+      "raw_difference": null,
+      "raw_difference_exact_decimal": null,
+      "null_reasons": [
+        {
+          "vector": "ubs_june_2026__E:F0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        },
+        {
+          "vector": "ubs_june_2026__E:D0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        }
+      ],
+      "left_raw_sum": null,
+      "right_raw_sum": null,
+      "normalized_or_repaired": false,
+      "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+    },
+    {
+      "left": "ubs_june_2026__L:F0",
+      "right": "ubs_june_2026__L:D0",
+      "distance": null,
+      "distance_exact_decimal": null,
+      "raw_difference": null,
+      "raw_difference_exact_decimal": null,
+      "null_reasons": [
+        {
+          "vector": "ubs_june_2026__L:F0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        },
+        {
+          "vector": "ubs_june_2026__L:D0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        }
+      ],
+      "left_raw_sum": null,
+      "right_raw_sum": null,
+      "normalized_or_repaired": false,
+      "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+    },
+    {
+      "left": "common_market_only__C:F0",
+      "right": "common_market_only__C:D0",
+      "distance": null,
+      "distance_exact_decimal": null,
+      "raw_difference": null,
+      "raw_difference_exact_decimal": null,
+      "null_reasons": [
+        {
+          "vector": "common_market_only__C:F0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        },
+        {
+          "vector": "common_market_only__C:D0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        }
+      ],
+      "left_raw_sum": null,
+      "right_raw_sum": null,
+      "normalized_or_repaired": false,
+      "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+    }
+  ],
+  "semantic_review": "Not performed by this arithmetic analyzer; no source tendency or claim-support score inferred."
+}

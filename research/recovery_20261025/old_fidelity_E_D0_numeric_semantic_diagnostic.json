@@ -1,0 +1,638 @@
+{
+  "schema_version": "v494_recovery_old_semantic_diagnostic_1",
+  "created_at_utc": "2026-10-25T10:32:08.568Z",
+  "case_id": "fidelity_q2_2026__E",
+  "stage": "D0",
+  "reviewer": "Codex root, unvalidated AI assistance; not an independent human rater",
+  "review_type": "Unmasked retrospective one-output diagnostic, not the blinded complete pilot evaluation",
+  "scope": "All eleven source-reading fields and twenty explicitly extracted sector numeric claims in decision_reason. Other prose is not exhaustively coded; no global success score or arm comparison.",
+  "output_ref": {
+    "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__E__D0/http_0001_generation/response.json",
+    "sha256": "65e4663f327f819218ec30203ea918bba227a2ad982283a1194f23a15ea80317"
+  },
+  "worker_input_ref": {
+    "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__E__D0/worker_spec.json",
+    "sha256": "675b9993d93571ccf8b66854a73026d8197ac6263cc2f90970b3097e380d85ee"
+  },
+  "rubric_ref": {
+    "path": "research/v492_evaluation_protocol_20261019_r2.json",
+    "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+  },
+  "source_reading_rows": [
+    {
+      "sector_code": "10",
+      "output_field": "/sectors/0/source_reading",
+      "exact_quote": "Energy receives Underweight due to unfavorable risk-return indicators.",
+      "evidence_id": "fidelity_q2_2026:p3:sector:10",
+      "supplied_text": "Energy receives Underweight. Unfavorable risk-return indicators.",
+      "category": "supported_link",
+      "reason": "The published rating and paraphrased rationale agree with the supplied packet; this does not validate the source_label field or allocation decision."
+    },
+    {
+      "sector_code": "15",
+      "output_field": "/sectors/1/source_reading",
+      "exact_quote": "Materials receives Underweight due to higher capital spending potentially burdening the sector.",
+      "evidence_id": "fidelity_q2_2026:p3:sector:15",
+      "supplied_text": "Materials receives Underweight. Higher capital spending may burden the sector.",
+      "category": "supported_link",
+      "reason": "The published rating and paraphrased rationale agree with the supplied packet; this does not validate the source_label field or allocation decision."
+    },
+    {
+      "sector_code": "20",
+      "output_field": "/sectors/2/source_reading",
+      "exact_quote": "Industrials receives Overweight due to favorable forward-looking valuation evidence.",
+      "evidence_id": "fidelity_q2_2026:p3:sector:20",
+      "supplied_text": "Industrials receives Overweight. Forward-looking valuation evidence is favorable.",
+      "category": "supported_link",
+      "reason": "The published rating and paraphrased rationale agree with the supplied packet; this does not validate the source_label field or allocation decision."
+    },
+    {
+      "sector_code": "25",
+      "output_field": "/sectors/3/source_reading",
+      "exact_quote": "Consumer Discretionary receives Overweight due to forward valuations implying favorable risk-return.",
+      "evidence_id": "fidelity_q2_2026:p3:sector:25",
+      "supplied_text": "Consumer Discretionary receives Overweight. Forward valuations imply favorable risk-return.",
+      "category": "supported_link",
+      "reason": "The published rating and paraphrased rationale agree with the supplied packet; this does not validate the source_label field or allocation decision."
+    },
+    {
+      "sector_code": "30",
+      "output_field": "/sectors/4/source_reading",
+      "exact_quote": "Consumer Staples receives Underweight due to weak fundamentals raising value-trap concerns.",
+      "evidence_id": "fidelity_q2_2026:p3:sector:30",
+      "supplied_text": "Consumer Staples receives Underweight. Weak fundamentals raise value-trap concerns.",
+      "category": "supported_link",
+      "reason": "The published rating and paraphrased rationale agree with the supplied packet; this does not validate the source_label field or allocation decision."
+    },
+    {
+      "sector_code": "35",
+      "output_field": "/sectors/5/source_reading",
+      "exact_quote": "Health Care receives Neutral as risk-return evidence is balanced.",
+      "evidence_id": "fidelity_q2_2026:p3:sector:35",
+      "supplied_text": "Health Care receives Neutral. Risk-return evidence is balanced.",
+      "category": "supported_link",
+      "reason": "The published rating and paraphrased rationale agree with the supplied packet; this does not validate the source_label field or allocation decision."
+    },
+    {
+      "sector_code": "40",
+      "output_field": "/sectors/6/source_reading",
+      "exact_quote": "Financials receives Overweight due to relative valuations offering downside support.",
+      "evidence_id": "fidelity_q2_2026:p3:sector:40",
+      "supplied_text": "Financials receives Overweight. Relative valuations offer downside support.",
+      "category": "supported_link",
+      "reason": "The published rating and paraphrased rationale agree with the supplied packet; this does not validate the source_label field or allocation decision."
+    },
+    {
+      "sector_code": "45",
+      "output_field": "/sectors/7/source_reading",
+      "exact_quote": "Information Technology receives Overweight due to fundamentals and post-decline valuations supporting the view.",
+      "evidence_id": "fidelity_q2_2026:p3:sector:45",
+      "supplied_text": "Information Technology receives Overweight. Fundamentals and post-decline valuations support the view.",
+      "category": "supported_link",
+      "reason": "The published rating and paraphrased rationale agree with the supplied packet; this does not validate the source_label field or allocation decision."
+    },
+    {
+      "sector_code": "50",
+      "output_field": "/sectors/8/source_reading",
+      "exact_quote": "Communication Services receives Underweight as technology-related components fare better than defensive ones.",
+      "evidence_id": "fidelity_q2_2026:p3:sector:50",
+      "supplied_text": "Communication Services receives Underweight. Technology-related components fare better than defensive components.",
+      "category": "supported_link",
+      "reason": "The published rating and paraphrased rationale agree with the supplied packet; this does not validate the source_label field or allocation decision."
+    },
+    {
+      "sector_code": "55",
+      "output_field": "/sectors/9/source_reading",
+      "exact_quote": "Utilities receives Underweight due to unfavorable valuations.",
+      "evidence_id": "fidelity_q2_2026:p3:sector:55",
+      "supplied_text": "Utilities receives Underweight. Valuations are unfavorable.",
+      "category": "supported_link",
+      "reason": "The published rating and paraphrased rationale agree with the supplied packet; this does not validate the source_label field or allocation decision."
+    },
+    {
+      "sector_code": "60",
+      "output_field": "/sectors/10/source_reading",
+      "exact_quote": "Real Estate receives Overweight due to valuation dispersion offering favorable risk-return.",
+      "evidence_id": "fidelity_q2_2026:p3:sector:60",
+      "supplied_text": "Real Estate receives Overweight. Valuation dispersion offers favorable risk-return.",
+      "category": "supported_link",
+      "reason": "The published rating and paraphrased rationale agree with the supplied packet; this does not validate the source_label field or allocation decision."
+    }
+  ],
+  "numeric_claims": [
+    {
+      "sector_code": "10",
+      "output_field": "/sectors/0/decision_reason",
+      "exact_quote": "0.246 annualized",
+      "evidence_id": "M:annualized_volatility_diagnostic:10",
+      "claimed_value": 0.246,
+      "supplied_value_in_claim_units": 0.24627687526240125,
+      "unit": "annualized decimal volatility diagnostic",
+      "period": [
+        "2026-04-21",
+        "2026-07-16"
+      ],
+      "displayed_decimal_places": 3,
+      "expected_rounded_at_display_precision": "0.246",
+      "raw_difference": -0.0002768752624012494,
+      "category": "supported_link",
+      "reason": "Compare the same sector annualized historical volatility at the precision actually printed.",
+      "uncertainty": "Manual claim extraction and AI semantic coding; rounding comparison is diagnostic, not an invented substantive pass threshold."
+    },
+    {
+      "sector_code": "15",
+      "output_field": "/sectors/1/decision_reason",
+      "exact_quote": "(-2.2%)",
+      "evidence_id": "M:lookback_compound_return:15",
+      "claimed_value": -2.2,
+      "supplied_value_in_claim_units": -2.2012639294049507,
+      "unit": "percent return over supplied lookback window",
+      "period": [
+        "2026-04-21",
+        "2026-07-16"
+      ],
+      "displayed_decimal_places": 1,
+      "expected_rounded_at_display_precision": "-2.2",
+      "raw_difference": 0.00126392940495057,
+      "category": "supported_link",
+      "reason": "Convert the same sector window decimal return to percent; do not annualize or change period.",
+      "uncertainty": "Manual claim extraction and AI semantic coding; rounding comparison is diagnostic, not an invented substantive pass threshold."
+    },
+    {
+      "sector_code": "20",
+      "output_field": "/sectors/2/decision_reason",
+      "exact_quote": "0.197 annualized",
+      "evidence_id": "M:annualized_volatility_diagnostic:20",
+      "claimed_value": 0.197,
+      "supplied_value_in_claim_units": 0.19718215642263498,
+      "unit": "annualized decimal volatility diagnostic",
+      "period": [
+        "2026-04-21",
+        "2026-07-16"
+      ],
+      "displayed_decimal_places": 3,
+      "expected_rounded_at_display_precision": "0.197",
+      "raw_difference": -0.00018215642263497145,
+      "category": "supported_link",
+      "reason": "Compare the same sector annualized historical volatility at the precision actually printed.",
+      "uncertainty": "Manual claim extraction and AI semantic coding; rounding comparison is diagnostic, not an invented substantive pass threshold."
+    },
+    {
+      "sector_code": "20",
+      "output_field": "/sectors/2/decision_reason",
+      "exact_quote": "(3.8%)",
+      "evidence_id": "M:lookback_compound_return:20",
+      "claimed_value": 3.8,
+      "supplied_value_in_claim_units": 3.848895413108133,
+      "unit": "percent return over supplied lookback window",
+      "period": [
+        "2026-04-21",
+        "2026-07-16"
+      ],
+      "displayed_decimal_places": 1,
+      "expected_rounded_at_display_precision": "3.8",
+      "raw_difference": -0.04889541310813339,
+      "category": "supported_link",
+      "reason": "Convert the same sector window decimal return to percent; do not annualize or change period.",
+      "uncertainty": "Manual claim extraction and AI semantic coding; rounding comparison is diagnostic, not an invented substantive pass threshold."
+    },
+    {
+      "sector_code": "25",
+      "output_field": "/sectors/3/decision_reason",
+      "exact_quote": "0.194 annualized",
+      "evidence_id": "M:annualized_volatility_diagnostic:25",
+      "claimed_value": 0.194,
+      "supplied_value_in_claim_units": 0.18553788110332176,
+      "unit": "annualized decimal volatility diagnostic",
+      "period": [
+        "2026-04-21",
+        "2026-07-16"
+      ],
+      "displayed_decimal_places": 3,
+      "expected_rounded_at_display_precision": "0.186",
+      "raw_difference": 0.00846211889667825,
+      "category": "unsupported_or_contradictory_link",
+      "reason": "Compare the same sector annualized historical volatility at the precision actually printed.",
+      "uncertainty": "Manual claim extraction and AI semantic coding; rounding comparison is diagnostic, not an invented substantive pass threshold."
+    },
+    {
+      "sector_code": "25",
+      "output_field": "/sectors/3/decision_reason",
+      "exact_quote": "(10.2% lookback return)",
+      "evidence_id": "M:lookback_compound_return:25",
+      "claimed_value": 10.2,
+      "supplied_value_in_claim_units": -1.9155630332708284,
+      "unit": "percent return over supplied lookback window",
+      "period": [
+        "2026-04-21",
+        "2026-07-16"
+      ],
+      "displayed_decimal_places": 1,
+      "expected_rounded_at_display_precision": "-1.9",
+      "raw_difference": 12.115563033270828,
+      "category": "unsupported_or_contradictory_link",
+      "reason": "Convert the same sector window decimal return to percent; do not annualize or change period.",
+      "uncertainty": "Manual claim extraction and AI semantic coding; rounding comparison is diagnostic, not an invented substantive pass threshold."
+    },
+    {
+      "sector_code": "30",
+      "output_field": "/sectors/4/decision_reason",
+      "exact_quote": "0.186 annualized",
+      "evidence_id": "M:annualized_volatility_diagnostic:30",
+      "claimed_value": 0.186,
+      "supplied_value_in_claim_units": 0.16640375256648995,
+      "unit": "annualized decimal volatility diagnostic",
+      "period": [
+        "2026-04-21",
+        "2026-07-16"
+      ],
+      "displayed_decimal_places": 3,
+      "expected_rounded_at_display_precision": "0.166",
+      "raw_difference": 0.019596247433510044,
+      "category": "unsupported_or_contradictory_link",
+      "reason": "Compare the same sector annualized historical volatility at the precision actually printed.",
+      "uncertainty": "Manual claim extraction and AI semantic coding; rounding comparison is diagnostic, not an invented substantive pass threshold."
+    },
+    {
+      "sector_code": "30",
+      "output_field": "/sectors/4/decision_reason",
+      "exact_quote": "(-1.9%)",
+      "evidence_id": "M:lookback_compound_return:30",
+      "claimed_value": -1.9,
+      "supplied_value_in_claim_units": 4.873642549989987,
+      "unit": "percent return over supplied lookback window",
+      "period": [
+        "2026-04-21",
+        "2026-07-16"
+      ],
+      "displayed_decimal_places": 1,
+      "expected_rounded_at_display_precision": "4.9",
+      "raw_difference": -6.773642549989987,
+      "category": "unsupported_or_contradictory_link",
+      "reason": "Convert the same sector window decimal return to percent; do not annualize or change period.",
+      "uncertainty": "Manual claim extraction and AI semantic coding; rounding comparison is diagnostic, not an invented substantive pass threshold."
+    },
+    {
+      "sector_code": "35",
+      "output_field": "/sectors/5/decision_reason",
+      "exact_quote": "0.133 annualized",
+      "evidence_id": "M:annualized_volatility_diagnostic:35",
+      "claimed_value": 0.133,
+      "supplied_value_in_claim_units": 0.18338371693726102,
+      "unit": "annualized decimal volatility diagnostic",
+      "period": [
+        "2026-04-21",
+        "2026-07-16"
+      ],
+      "displayed_decimal_places": 3,
+      "expected_rounded_at_display_precision": "0.183",
+      "raw_difference": -0.050383716937261014,
+      "category": "unsupported_or_contradictory_link",
+      "reason": "Compare the same sector annualized historical volatility at the precision actually printed.",
+      "uncertainty": "Manual claim extraction and AI semantic coding; rounding comparison is diagnostic, not an invented substantive pass threshold."
+    },
+    {
+      "sector_code": "35",
+      "output_field": "/sectors/5/decision_reason",
+      "exact_quote": "(10.2%)",
+      "evidence_id": "M:lookback_compound_return:35",
+      "claimed_value": 10.2,
+      "supplied_value_in_claim_units": 10.23850209272965,
+      "unit": "percent return over supplied lookback window",
+      "period": [
+        "2026-04-21",
+        "2026-07-16"
+      ],
+      "displayed_decimal_places": 1,
+      "expected_rounded_at_display_precision": "10.2",
+      "raw_difference": -0.03850209272965088,
+      "category": "supported_link",
+      "reason": "Convert the same sector window decimal return to percent; do not annualize or change period.",
+      "uncertainty": "Manual claim extraction and AI semantic coding; rounding comparison is diagnostic, not an invented substantive pass threshold."
+    },
+    {
+      "sector_code": "40",
+      "output_field": "/sectors/6/decision_reason",
+      "exact_quote": "0.084 annualized",
+      "evidence_id": "M:annualized_volatility_diagnostic:40",
+      "claimed_value": 0.084,
+      "supplied_value_in_claim_units": 0.132724604028941,
+      "unit": "annualized decimal volatility diagnostic",
+      "period": [
+        "2026-04-21",
+        "2026-07-16"
+      ],
+      "displayed_decimal_places": 3,
+      "expected_rounded_at_display_precision": "0.133",
+      "raw_difference": -0.04872460402894101,
+      "category": "unsupported_or_contradictory_link",
+      "reason": "Compare the same sector annualized historical volatility at the precision actually printed.",
+      "uncertainty": "Manual claim extraction and AI semantic coding; rounding comparison is diagnostic, not an invented substantive pass threshold."
+    },
+    {
+      "sector_code": "40",
+      "output_field": "/sectors/6/decision_reason",
+      "exact_quote": "(8.2%)",
+      "evidence_id": "M:lookback_compound_return:40",
+      "claimed_value": 8.2,
+      "supplied_value_in_claim_units": 8.205961595157252,
+      "unit": "percent return over supplied lookback window",
+      "period": [
+        "2026-04-21",
+        "2026-07-16"
+      ],
+      "displayed_decimal_places": 1,
+      "expected_rounded_at_display_precision": "8.2",
+      "raw_difference": -0.005961595157252475,
+      "category": "supported_link",
+      "reason": "Convert the same sector window decimal return to percent; do not annualize or change period.",
+      "uncertainty": "Manual claim extraction and AI semantic coding; rounding comparison is diagnostic, not an invented substantive pass threshold."
+    },
+    {
+      "sector_code": "45",
+      "output_field": "/sectors/7/decision_reason",
+      "exact_quote": "0.212 annualized",
+      "evidence_id": "M:annualized_volatility_diagnostic:45",
+      "claimed_value": 0.212,
+      "supplied_value_in_claim_units": 0.33685107914419216,
+      "unit": "annualized decimal volatility diagnostic",
+      "period": [
+        "2026-04-21",
+        "2026-07-16"
+      ],
+      "displayed_decimal_places": 3,
+      "expected_rounded_at_display_precision": "0.337",
+      "raw_difference": -0.12485107914419216,
+      "category": "unsupported_or_contradictory_link",
+      "reason": "Compare the same sector annualized historical volatility at the precision actually printed.",
+      "uncertainty": "Manual claim extraction and AI semantic coding; rounding comparison is diagnostic, not an invented substantive pass threshold."
+    },
+    {
+      "sector_code": "45",
+      "output_field": "/sectors/7/decision_reason",
+      "exact_quote": "(14.99%)",
+      "evidence_id": "M:lookback_compound_return:45",
+      "claimed_value": 14.99,
+      "supplied_value_in_claim_units": 14.992022077727253,
+      "unit": "percent return over supplied lookback window",
+      "period": [
+        "2026-04-21",
+        "2026-07-16"
+      ],
+      "displayed_decimal_places": 2,
+      "expected_rounded_at_display_precision": "14.99",
+      "raw_difference": -0.0020220777272523804,
+      "category": "supported_link",
+      "reason": "Convert the same sector window decimal return to percent; do not annualize or change period.",
+      "uncertainty": "Manual claim extraction and AI semantic coding; rounding comparison is diagnostic, not an invented substantive pass threshold."
+    },
+    {
+      "sector_code": "50",
+      "output_field": "/sectors/8/decision_reason",
+      "exact_quote": "0.097 annualized",
+      "evidence_id": "M:annualized_volatility_diagnostic:50",
+      "claimed_value": 0.097,
+      "supplied_value_in_claim_units": 0.15339610421634242,
+      "unit": "annualized decimal volatility diagnostic",
+      "period": [
+        "2026-04-21",
+        "2026-07-16"
+      ],
+      "displayed_decimal_places": 3,
+      "expected_rounded_at_display_precision": "0.153",
+      "raw_difference": -0.05639610421634242,
+      "category": "unsupported_or_contradictory_link",
+      "reason": "Compare the same sector annualized historical volatility at the precision actually printed.",
+      "uncertainty": "Manual claim extraction and AI semantic coding; rounding comparison is diagnostic, not an invented substantive pass threshold."
+    },
+    {
+      "sector_code": "50",
+      "output_field": "/sectors/8/decision_reason",
+      "exact_quote": "(-4.89%)",
+      "evidence_id": "M:lookback_compound_return:50",
+      "claimed_value": -4.89,
+      "supplied_value_in_claim_units": -4.890051427558073,
+      "unit": "percent return over supplied lookback window",
+      "period": [
+        "2026-04-21",
+        "2026-07-16"
+      ],
+      "displayed_decimal_places": 2,
+      "expected_rounded_at_display_precision": "-4.89",
+      "raw_difference": 0.00005142755807341359,
+      "category": "supported_link",
+      "reason": "Convert the same sector window decimal return to percent; do not annualize or change period.",
+      "uncertainty": "Manual claim extraction and AI semantic coding; rounding comparison is diagnostic, not an invented substantive pass threshold."
+    },
+    {
+      "sector_code": "55",
+      "output_field": "/sectors/9/decision_reason",
+      "exact_quote": "0.153 annualized",
+      "evidence_id": "M:annualized_volatility_diagnostic:55",
+      "claimed_value": 0.153,
+      "supplied_value_in_claim_units": 0.17893057942789112,
+      "unit": "annualized decimal volatility diagnostic",
+      "period": [
+        "2026-04-21",
+        "2026-07-16"
+      ],
+      "displayed_decimal_places": 3,
+      "expected_rounded_at_display_precision": "0.179",
+      "raw_difference": -0.02593057942789112,
+      "category": "unsupported_or_contradictory_link",
+      "reason": "Compare the same sector annualized historical volatility at the precision actually printed.",
+      "uncertainty": "Manual claim extraction and AI semantic coding; rounding comparison is diagnostic, not an invented substantive pass threshold."
+    },
+    {
+      "sector_code": "55",
+      "output_field": "/sectors/9/decision_reason",
+      "exact_quote": "(-4.89%)",
+      "evidence_id": "M:lookback_compound_return:55",
+      "claimed_value": -4.89,
+      "supplied_value_in_claim_units": 0.02261198808994891,
+      "unit": "percent return over supplied lookback window",
+      "period": [
+        "2026-04-21",
+        "2026-07-16"
+      ],
+      "displayed_decimal_places": 2,
+      "expected_rounded_at_display_precision": "0.02",
+      "raw_difference": -4.912611988089949,
+      "category": "unsupported_or_contradictory_link",
+      "reason": "Convert the same sector window decimal return to percent; do not annualize or change period.",
+      "uncertainty": "Manual claim extraction and AI semantic coding; rounding comparison is diagnostic, not an invented substantive pass threshold."
+    },
+    {
+      "sector_code": "60",
+      "output_field": "/sectors/10/decision_reason",
+      "exact_quote": "0.167 annualized",
+      "evidence_id": "M:annualized_volatility_diagnostic:60",
+      "claimed_value": 0.167,
+      "supplied_value_in_claim_units": 0.16693062035900388,
+      "unit": "annualized decimal volatility diagnostic",
+      "period": [
+        "2026-04-21",
+        "2026-07-16"
+      ],
+      "displayed_decimal_places": 3,
+      "expected_rounded_at_display_precision": "0.167",
+      "raw_difference": 0.00006937964099612559,
+      "category": "supported_link",
+      "reason": "Compare the same sector annualized historical volatility at the precision actually printed.",
+      "uncertainty": "Manual claim extraction and AI semantic coding; rounding comparison is diagnostic, not an invented substantive pass threshold."
+    },
+    {
+      "sector_code": "60",
+      "output_field": "/sectors/10/decision_reason",
+      "exact_quote": "(2.73%)",
+      "evidence_id": "M:lookback_compound_return:60",
+      "claimed_value": 2.73,
+      "supplied_value_in_claim_units": 2.729295962855538,
+      "unit": "percent return over supplied lookback window",
+      "period": [
+        "2026-04-21",
+        "2026-07-16"
+      ],
+      "displayed_decimal_places": 2,
+      "expected_rounded_at_display_precision": "2.73",
+      "raw_difference": 0.0007040371444619886,
+      "category": "supported_link",
+      "reason": "Convert the same sector window decimal return to percent; do not annualize or change period.",
+      "uncertainty": "Manual claim extraction and AI semantic coding; rounding comparison is diagnostic, not an invented substantive pass threshold."
+    }
+  ],
+  "additional_findings": [
+    {
+      "field": "/sectors/8/decision_reason",
+      "exact_quote": "correlation with Technology is high (0.34)",
+      "evidence_id": "M:correlation",
+      "actual_correlation_45_50": 0.021719290003936645,
+      "category": "unsupported_or_contradictory_link",
+      "reason": "Printed coefficient does not match supplied Technology/Communication Services cell; qualitative high is not assigned a new cutoff."
+    },
+    {
+      "field": "/sectors/5/decision_reason",
+      "exact_quote": "the lowest among all sectors",
+      "evidence_id": "M:annualized_volatility_diagnostic:35",
+      "actual_health_care": 0.18338371693726102,
+      "minimum_sector": "40",
+      "minimum_volatility": 0.132724604028941,
+      "category": "unsupported_or_contradictory_link",
+      "reason": "Health Care is not the minimum-volatility sector in the supplied vector."
+    },
+    {
+      "field": "/sectors/4/decision_reason",
+      "exact_quote": "lower than the market average",
+      "evidence_ids": [
+        "M:annualized_volatility_diagnostic:30",
+        "M:baseline_annualized_volatility_diagnostic"
+      ],
+      "actual_sector_vol": 0.16640375256648995,
+      "baseline_vol": 0.13902338650295984,
+      "category": "unresolved",
+      "reason": "Staples volatility exceeds the supplied benchmark volatility. The phrase market average is undefined; it cannot be treated as a supported benchmark comparison without an explicit definition."
+    },
+    {
+      "field": "/context_assessment/allocation_implication",
+      "exact_quote": "The weights sum to 1.0, ensuring full investment.",
+      "actual_exact_decimal_sum": "0.850",
+      "category": "unsupported_or_contradictory_link",
+      "reason": "Sum and exact residual are independently preserved in old_run_recovered_arithmetic.json; this claim contradicts the submitted weights."
+    }
+  ],
+  "component_diagnostics": [
+    {
+      "sector_code": "10",
+      "raw_weight": 0.02,
+      "common_comparator": 0.03003003003003003,
+      "raw_component_difference": -0.01003003003003003,
+      "claimed_source_stance": "qualify"
+    },
+    {
+      "sector_code": "15",
+      "raw_weight": 0.015,
+      "common_comparator": 0.018018018018018018,
+      "raw_component_difference": -0.0030180180180180184,
+      "claimed_source_stance": "adopt"
+    },
+    {
+      "sector_code": "20",
+      "raw_weight": 0.09,
+      "common_comparator": 0.08808808808808809,
+      "raw_component_difference": 0.0019119119119119093,
+      "claimed_source_stance": "adopt"
+    },
+    {
+      "sector_code": "25",
+      "raw_weight": 0.08,
+      "common_comparator": 0.09309309309309309,
+      "raw_component_difference": -0.013093093093093089,
+      "claimed_source_stance": "qualify"
+    },
+    {
+      "sector_code": "30",
+      "raw_weight": 0.04,
+      "common_comparator": 0.04604604604604604,
+      "raw_component_difference": -0.006046046046046041,
+      "claimed_source_stance": "depart"
+    },
+    {
+      "sector_code": "35",
+      "raw_weight": 0.045,
+      "common_comparator": 0.0890890890890891,
+      "raw_component_difference": -0.044089089089089095,
+      "claimed_source_stance": "adopt"
+    },
+    {
+      "sector_code": "40",
+      "raw_weight": 0.115,
+      "common_comparator": 0.11811811811811812,
+      "raw_component_difference": -0.0031181181181181156,
+      "claimed_source_stance": "adopt"
+    },
+    {
+      "sector_code": "45",
+      "raw_weight": 0.38,
+      "common_comparator": 0.38038038038038036,
+      "raw_component_difference": -0.0003803803803803518,
+      "claimed_source_stance": "adopt"
+    },
+    {
+      "sector_code": "50",
+      "raw_weight": 0.03,
+      "common_comparator": 0.09709709709709709,
+      "raw_component_difference": -0.06709709709709709,
+      "claimed_source_stance": "qualify"
+    },
+    {
+      "sector_code": "55",
+      "raw_weight": 0.025,
+      "common_comparator": 0.022022022022022022,
+      "raw_component_difference": 0.0029779779779779796,
+      "claimed_source_stance": "depart"
+    },
+    {
+      "sector_code": "60",
+      "raw_weight": 0.01,
+      "common_comparator": 0.018018018018018018,
+      "raw_component_difference": -0.008018018018018018,
+      "claimed_source_stance": "adopt"
+    }
+  ],
+  "component_interpretation": "The raw vector fails budget. Differences are component diagnostics only, not eligible portfolio distance. A source rating does not dictate exact weights, and the source broad-market universe differs from the task comparator. Apparent adopt/tilt mismatches require explicit stated-baseline interpretation; no compulsory rating-to-weight map is introduced.",
+  "coverage": {
+    "planned_sector_rows": 11,
+    "source_reading_fields_checked": 11,
+    "extracted_numeric_claims": 20,
+    "supported_numeric_claims": 10,
+    "contradictory_numeric_claims": 10,
+    "exhaustive_semantic_review": false
+  },
+  "three_axis_review": {
+    "errors": "Retain incorrect values, identifier and budget diagnoses as model outcomes. No repair or retry.",
+    "consistency": "Evidence IDs alone are insufficient: sector, metric, units, period and actual weights must be checked. All quotes and facts bound to raw artifacts.",
+    "topic_connection": "These diagnostics concern the observed public evidence-to-explanation-to-allocation chain. They do not establish market-wide monoculture, financial performance, private institutional objectives or an internal cognitive mechanism."
+  },
+  "changes_to_historical_files": false,
+  "new_model_calls": 0
+}

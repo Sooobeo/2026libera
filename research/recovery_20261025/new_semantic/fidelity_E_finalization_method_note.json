@@ -1,0 +1,60 @@
+{
+  "review_version": "fidelity_E_finalization_method_review_1",
+  "created_at_utc": "2026-10-25T11:37:59.683Z",
+  "reviewer": "Codex method_audit; unvalidated AI assistance",
+  "scope": "Prospective method critique of root-relayed user instruction to make mathematical final allocation total 100%; no running experiment edits or postprocessing performed by this note",
+  "raw_draft_ref": {
+    "path": "data/local_sector_runtime/v494_pilot_20261025/fidelity_q2_2026__E__D0/http_0001_generation/response.json",
+    "sha256": "fa16ca07df3a46d749ecb0f4fe7352b634a05957241b12b881961e1f509b5c49"
+  },
+  "raw_sum_exact": "0.92",
+  "budget_shortfall_percentage_points": 8,
+  "proportional_scaling": {
+    "exact_factor": "25/23",
+    "approximate_factor": 1.0869565217391304,
+    "relative_increase_percent": 8.695652173913038,
+    "interpretation": "8 percentage points of missing total budget is distinct from an 8.695652% relative increase in every positive raw weight."
+  },
+  "concrete_reasoning_risks": [
+    {
+      "sector_code": "25",
+      "raw_weight": 0.09,
+      "normalized_exact_weight": "9/92",
+      "normalized_approximate_weight": 0.09782608695652173,
+      "comparator": 0.09309309309309309,
+      "effect": "Raw weight is below the comparator; normalized weight is above it. The original model statement slightly above benchmark remains false about its submitted raw vector."
+    },
+    {
+      "sector_code": "45",
+      "raw_weight": 0.38,
+      "normalized_exact_weight": "19/46",
+      "normalized_approximate_weight": 0.41304347826086957,
+      "effect": "Model explains a 38% decision. A 41.304348% normalized weight is created by the mechanical rule, not that stated model choice."
+    }
+  ],
+  "recommended_contract": {
+    "eligibility": "Strict whole-response JSON; exactly 11 unique known sectors; finite real numeric weights excluding booleans; nonnegative; strictly positive sum. Preserve failures for absent, duplicate, negative, nonfinite, malformed or all-zero vectors. Never impute equal weights.",
+    "raw_above_one": "If accepted by the universal nonnegative-positive-sum rule, retain original above-one failure explicitly; normalization only makes a mathematical portfolio, not reliable source reasoning.",
+    "exact_arithmetic": "Use original serialized numeric tokens via Decimal/Fraction. Preserve raw values, residual and normalized rational values; do not claim an exact float sum.",
+    "display_rule": "Predeclare 10000 integer units for 0.01% resolution; floor each exact quota, allocate remaining units by largest fractional remainder, ties by fixed sector order.",
+    "canonical_final_choice": "Distinguish high-precision normalized proportions from displayed rounded integer units. Explicitly state which defines actual final allocation and use that same vector for derived arithmetic.",
+    "provenance": "Bind output hash, algorithm/version, eligibility, raw total/residual, scaling factor, normalized values, rounding units, row changes and exact final-unit total. No endpoint response overwrite.",
+    "failure_interpretation": "A derived vector must not upgrade an unbound or failed transport to a completed model response. Complete diagnostic vectors require explicit provenance/availability status."
+  },
+  "reporting_policy": [
+    "Retain original raw arithmetic/source/claim diagnostics and planned denominators.",
+    "Never use normalized weights to retroactively rescue a model statement about its raw weight, baseline tilt or D0-to-F0 change.",
+    "Report model-produced raw D0/F0 deltas separately from rule-produced deltas; do not attribute mechanical changes to source reasoning.",
+    "Apply the same frozen mathematical rule to all E/L/C cells and do not select a rule based on favorable semantic output.",
+    "Derived comparisons are a post-start user-directed amendment/secondary analysis, not the original prespecified raw endpoint or evidence that a semantic defect was repaired.",
+    "No valid-allocation distance should be assigned to an invalid raw vector; comparisons among eligible derived normalized vectors are separately labeled.",
+    "Do not infer that rounding caused the budget defect; distinguish proportional scaling from a final display-quantization step."
+  ],
+  "three_axes": {
+    "errors": "Arithmetic can be enforced exactly using integer allocation units; source, unit, date and rationale errors remain independently measured.",
+    "consistency": "Separate raw, normalized and display-quantized values; use one declared final vector and exact rounding tie policy across all cells.",
+    "paper_topic": "The unit of interpretation becomes model plus a deterministic budget rule for derived operational allocations. Preserve the model evidence-to-choice question by retaining raw choices and separate semantic evaluation."
+  },
+  "no_code_or_settings_changes": true,
+  "new_model_calls": 0
+}

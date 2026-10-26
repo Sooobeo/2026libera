@@ -1,0 +1,115 @@
+{
+  "schema_version": 1,
+  "audit_id": "paper_citation_addendum_20261025",
+  "recorded_at": "2026-10-25T11:03:00.620Z",
+  "reviewer": "AI assistant; original-document verification, not independent human validation",
+  "record_type": "immutable_addendum_to_prior_review",
+  "base_record": {
+    "path": "research/recovery_20261025/paper_citation_recheck_20261025.json",
+    "sha256": "203621e6780dc918bbad9362ab5e4a838cb2168b3d332738cbf59da1175afb99",
+    "unchanged": true
+  },
+  "scope": "Resolve the two exact original-document locators left unresolved by the base record. Do not replace its historical observations or broaden its bibliography coverage.",
+  "checks": [
+    {
+      "reference": "Markowitz (1952), Portfolio Selection, The Journal of Finance 7(1), 77–91",
+      "claim": "Portfolio variance has the covariance quadratic form w^T Sigma w.",
+      "status": "correct",
+      "original_publication_url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.1952.tb01525.x",
+      "original_article_scan_url": "https://traders.berkeley.edu/papers/Markowitz.pdf",
+      "locator": {
+        "download_variant": "Berkeley-hosted JSTOR scan; 16 physical PDF pages including cover",
+        "physical_pdf_page_one_based": 6,
+        "pdf_page_index_zero_based": 5,
+        "printed_page": "81",
+        "visible_evidence": "The page displays the double covariance sum and applies it to portfolio weights; it also specifies weights summing to one and no short selling."
+      },
+      "visual_artifact": "research/recovery_20261025/paper_citation_addendum_markowitz_p81.png",
+      "interpretation": "The double covariance sum is the matrix expression w^T Sigma w. This supports the risk-formula ancestry, not a claim that this project implements a Markowitz optimum.",
+      "limits": [
+        "The download is a scan mirror, not certification that its bytes match the current publisher PDF.",
+        "The 60-observation window, sample-covariance convention, annualization factor 252 and finite-sample reliability are not established by this original formula locator."
+      ],
+      "proposed_correction": "No formula correction required. Preserve the distinction between descriptive covariance-based risk and optimization/performance validation."
+    },
+    {
+      "reference": "Hornuf et al. (2025), Making GenAI Smarter: Evidence from a Portfolio Allocation Experiment, CESifo Working Paper 11862",
+      "claim": "A twelve-month horizon occurs among the original experiment’s investor-profile conditions.",
+      "status": "correct",
+      "official_identity_url": "https://www.ifo.de/en/cesifo/publications/2025/working-paper/making-genai-smarter-evidence-portfolio-allocation-experiment",
+      "official_pdf_url": "https://www.ifo.de/DocDL/cesifo1_wp11862.pdf",
+      "repository_download_url": "https://www.econstor.eu/bitstream/10419/319230/1/cesifo1_wp11862.pdf",
+      "repository_handle_url": "https://hdl.handle.net/10419/319230",
+      "locator": {
+        "download_variant": "EconStor copy with repository wrapper, 96 physical pages; paper dated April 30, 2025",
+        "physical_pdf_page_one_based": 57,
+        "pdf_page_index_zero_based": 56,
+        "printed_page": "A-1",
+        "table": "A1, Investor profiles",
+        "visible_evidence": "The table crosses 1-, 6- and 12-month horizons with high/low risk preferences and yes/no ESG; profiles 3, 6, 9 and 12 use twelve months."
+      },
+      "visual_artifact": "research/recovery_20261025/paper_citation_addendum_hornuf_A1.png",
+      "interpretation": "Twelve months is one experimental level. It provides a precedent for an explicit horizon, not an empirical proof that twelve months is optimal or an actual institution mandate.",
+      "limits": [
+        "The additional repository wrapper shifts this locator by one physical page relative to the earlier 95-page official-PDF observation.",
+        "The official PDF later returned an HTML challenge/timeout; no byte identity between official and repository variants is claimed."
+      ],
+      "proposed_correction": "Retain the limited precedent claim; cite Table A1 (printed A-1), with the PDF-variant-aware locator."
+    }
+  ],
+  "review_axes": {
+    "errors": {
+      "status": "pass",
+      "reason": "Both previously unresolved narrow claims now have inspected original-document page evidence; no contradiction found for these claims."
+    },
+    "consistency": {
+      "status": "pass",
+      "reason": "The historical base review remains unchanged; page variants and failed access are distinguished; no manuscript or protocol edits were made."
+    },
+    "paper_topic": {
+      "status": "pass",
+      "reason": "The checks support explicitly declared task horizon and descriptive allocation-risk foundations. They do not broaden the paper into investment-performance, institutional-mandate or optimizer validation."
+    }
+  },
+  "method": {
+    "experiment_model_calls": 0,
+    "new_pilot_response_reads": 0,
+    "protected_files_modified": 0,
+    "source_pdfs_downloaded": 2,
+    "local_single_page_renders": 3,
+    "intermediate_render": "paper_citation_addendum_hornuf_p53_intermediate.png was an initially off-by-one physical-page selection, correctly renamed; it is not the evidence for Table A1.",
+    "visual_verification": "Relevant page PNGs were inspected with the image viewer. Remote screenshot outputs were text-only, so they were not treated as viewed images."
+  },
+  "evidence_files": [
+    {
+      "path": "research/recovery_20261025/paper_citation_addendum_markowitz.pdf",
+      "bytes": 465824,
+      "sha256": "27d23c2700f5fd3d32341026bf7146c870d8926fe818c68ac653ff09af781e90"
+    },
+    {
+      "path": "research/recovery_20261025/paper_citation_addendum_markowitz_p81.png",
+      "bytes": 179301,
+      "sha256": "b4eb5d04d7099b640e3d29b9b0a4c0674b84b88c509bcb6b4cc403e7c569201d"
+    },
+    {
+      "path": "research/recovery_20261025/paper_citation_addendum_hornuf.pdf",
+      "bytes": 2202409,
+      "sha256": "5e85e2f13249ce2ef3b25f615c8a72e12492bbedfe7fc8a48e169daf58e882db"
+    },
+    {
+      "path": "research/recovery_20261025/paper_citation_addendum_hornuf_A1.png",
+      "bytes": 49803,
+      "sha256": "7056128ab36832558e6e3472e112e71ff7965812e13c989ec84836e9a9e6e151"
+    },
+    {
+      "path": "research/recovery_20261025/paper_citation_addendum_hornuf_p53_intermediate.png",
+      "bytes": 68790,
+      "sha256": "a6cb7b63fdbde6efaa24ba535908e59975ff74d529d2e1377f207f0fe96af173"
+    }
+  ],
+  "result": {
+    "previous_unresolved_details_closed": 2,
+    "remaining_unresolved_from_these_two_details": 0,
+    "universal_bibliography_certification": false
+  }
+}

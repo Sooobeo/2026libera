@@ -1,0 +1,73 @@
+{
+  "receipt_version": "v494_live_monitor_gap_observation_1",
+  "recorded_at_utc": "2026-10-25T10:51:16.462Z",
+  "status": "OBSERVED_GAP_ACTIVE_RUN_CONTINUES",
+  "case_id": "fidelity_q2_2026__E",
+  "stage": "D0",
+  "service_pid": 35148,
+  "monitor_row_count_at_read": 434,
+  "monitor_gaps_over10seconds": [
+    {
+      "previous_at": "2026-10-25T10:36:05.515423+00:00",
+      "next_at": "2026-10-25T10:50:12.234709+00:00",
+      "utc_gap_seconds": 846.719,
+      "elapsed_gap_seconds": 846.7193370000459,
+      "previous_available_physical_bytes": 5462843392,
+      "next_available_physical_bytes": 8055881728
+    }
+  ],
+  "latest_monitor_at": "2026-10-25T10:51:02.492686+00:00",
+  "latest_elapsed_seconds": 1780.0019988999702,
+  "latest_available_physical_bytes": 7743303680,
+  "latest_log_progress": [
+    "slot print_timing: id  0 | task 0 | n_gen =   1305, tg =   1.03 t/s, tg_3s =   3.92 t/s",
+    "slot print_timing: id  0 | task 0 | n_gen =   1317, tg =   1.04 t/s, tg_3s =   3.88 t/s",
+    "slot print_timing: id  0 | task 0 | n_gen =   1329, tg =   1.04 t/s, tg_3s =   3.95 t/s",
+    "slot print_timing: id  0 | task 0 | n_gen =   1342, tg =   1.05 t/s, tg_3s =   4.09 t/s"
+  ],
+  "awake_acquire": {
+    "version": "v48-temporary-windows-awake-1",
+    "status": "active",
+    "at_utc": "2026-10-25T10:21:22.598206+00:00",
+    "owner_thread_id": 10360,
+    "flags": 2147483649,
+    "previous_state": 2147483648,
+    "released": false,
+    "platform": "win32",
+    "permanent_power_configuration_changed": false,
+    "scope": "Thread execution-state request during an active operation; not proof of uninterrupted operation.",
+    "limits": "Does not prevent explicit user sleep/lid/power actions or guarantee deadline enforcement during suspend."
+  },
+  "awake_release_file_present": false,
+  "deadline_seconds_in_unchanged_worker_spec": 4500,
+  "observed_monitor_file": {
+    "path": "C:/Users/Insun/2026libera/data/local_sector_runtime/v494_pilot_20261025/fidelity_q2_2026__E__D0/monitor.jsonl",
+    "bytes": 1615218,
+    "sha256_at_read": "43788e8e9f53a3a61a324b31ecab84f55f128567d25272ac662c78added8086b",
+    "mutable_file_observation": true
+  },
+  "stable_input_refs": [
+    {
+      "path": "C:/Users/Insun/2026libera/data/local_sector_runtime/v494_pilot_20261025/fidelity_q2_2026__E__D0/worker_spec.json",
+      "sha256": "2ff6196a044f491b1054143940001f00d1134815e346e422efcffa300c3c2251"
+    },
+    {
+      "path": "C:/Users/Insun/2026libera/data/local_sector_runtime/v494_pilot_20261025/fidelity_q2_2026__E__D0/awake_acquire.json",
+      "sha256": "bccdee85be1b1d61dbe1a8914e709639efc1139a228f37c5fe96ea5eecf41b1c"
+    }
+  ],
+  "interpretation": {
+    "confirmed": "One 846.719-second gap appears in both UTC monitor timestamp and monotonic elapsed interval. Monitoring and decoding have resumed. Existing awake-acquire receipt remains active and unreleased.",
+    "unproven": "Cause is undetermined. These files do not establish whether host suspension, operating-system scheduling, tool-host interruption or another event caused the gap.",
+    "scope": "Recorded chronology deviation for later runtime/method review. No inference completion or uninterrupted operation claimed."
+  },
+  "observer_actions": {
+    "generation_calls": 0,
+    "api_calls": 0,
+    "process_changes": false,
+    "settings_changes": false,
+    "deadline_changes": false,
+    "retry": false,
+    "semantic_output_read": false
+  }
+}

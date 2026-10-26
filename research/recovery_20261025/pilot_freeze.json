@@ -1,0 +1,186 @@
+{
+  "freeze_version": "v494_development_freeze_1",
+  "protocol_version": "4.9.4",
+  "status": "frozen_for_pilot_only",
+  "purpose": "pilot_only",
+  "recorded_at_utc": "2026-10-25T10:12:28.621099+00:00",
+  "user_instruction": {
+    "exact_text": "다 진행해봐.\n배분,인용 오류 점검 및 새 파일럿 검증하는건 한 단계 할 때마다 오류,정합성, 소논문 주제와의 연결성이 너무 멀어지지 않는지 다 확인하면서 진행해",
+    "timestamp_kind": "recorded_after_user_message",
+    "recorded_at_utc": "2026-10-25T10:12:28.619539+00:00",
+    "scope": "Recovery, post-output prompt clarification and one new pilot with stepwise error, consistency and paper-topic checks. No automatic success-driven retries or unreviewed main execution."
+  },
+  "input_protocol_ref": {
+    "path": "plan/LIBERA_실험설정_v4.9.1_20261019.json",
+    "sha256": "0d7ad14eb7f07fb9a7e7607a1cdb1ff148794d88878d6706b7b6a66bbc319110"
+  },
+  "evaluation_protocol_ref": {
+    "path": "research/v492_evaluation_protocol_20261019_r2.json",
+    "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+  },
+  "source_review_ref": {
+    "path": "research/v492_source_review_20261019.json",
+    "sha256": "3f6e4bd952b0bbf1d4e3487bb00a5e839a9f907038e43e895807425c21747718"
+  },
+  "method_review_ref": {
+    "path": "research/recovery_20261025/stage02_method_preparation_review.json",
+    "sha256": "f78183fd2bc0177f23713fd7bdd7d8174a84c96dfa2fb71bce23d98fdb495d3a"
+  },
+  "prompt_contract_ref": {
+    "path": "data/sector_protocol/v494_design_20261025/prompt_contract.json",
+    "sha256": "7d75828866825af1f7051a528defc92c88f2beac3f42a66f5d5223c4fb714362"
+  },
+  "prepared_manifest_ref": {
+    "path": "data/sector_protocol/v494_design_20261025/prepared/preparation_manifest.json",
+    "sha256": "8023f8b11ec9b1d43bf1b5b08ac37ccbab4ac5ab7ad7de28a9e93d8e67a4ef29"
+  },
+  "runtime_ref": {
+    "path": "research/recovery_20261025/runtime_candidate.json",
+    "sha256": "e331ea026c04537a15fba83eb538ac3b6cb6022ee1ad14160d18bb292d99870c"
+  },
+  "case_order": [
+    "fidelity_q2_2026__E",
+    "fidelity_q2_2026__L",
+    "ubs_june_2026__E",
+    "ubs_june_2026__L",
+    "common_market_only__C"
+  ],
+  "controls": {
+    "backend": "cpu",
+    "num_thread": 8,
+    "num_ctx": 65536,
+    "num_predict": 8192,
+    "deadline_seconds": 4500,
+    "max_generation_requests": 10,
+    "main_allowed": false
+  },
+  "code_refs": [
+    {
+      "path": "research/analyze_v492_pilot.py",
+      "sha256": "841c1f941e2c39165f84f51f5df283ca7a3c5727de285d4ad56edfa50166529f"
+    },
+    {
+      "path": "research/benchmark_sector_latency.py",
+      "sha256": "0686444e608033be931922a26886ed4a4b5b0789385215b7b75bfacc4050458b"
+    },
+    {
+      "path": "research/build_v492_masked_review.py",
+      "sha256": "f4f9295a657892431d76b79310b3af229dc5bc7d972b098adb10ff5dd29a1f77"
+    },
+    {
+      "path": "research/build_v494_masked_review.py",
+      "sha256": "8ed40877f82414678d5808181712813ad474ddf089a08a5ba06a7b7bcaa6d148"
+    },
+    {
+      "path": "research/freeze_sector_v494.py",
+      "sha256": "2e40a2f9b646ad547987ac6ce9679e989792bd0b16e7525af2f22276c1801856"
+    },
+    {
+      "path": "research/local_sector_single_case.py",
+      "sha256": "0b2596a223167136bb37578e86469d50c26e7883305d4db31f43b9ddd10d28d0"
+    },
+    {
+      "path": "research/prepare_sector_v491.py",
+      "sha256": "0e8188630a8b3a36da08671519b2bfeba7d3d2ca412568f789bfeca2ea4192e7"
+    },
+    {
+      "path": "research/prepare_sector_v492.py",
+      "sha256": "bc60c7ecb972ad2ce0d9df3f3e41f715264dbeb6a4b3a3838a13216a5c56b098"
+    },
+    {
+      "path": "research/prepare_sector_v494.py",
+      "sha256": "80d293ab0df0a209c234e3ab1136ac845fe6a5e81b1b68d543660cc19108e855"
+    },
+    {
+      "path": "research/probe_ollama_runtime.py",
+      "sha256": "2dd48936bbaf8fd090a26f92fd356fec3a11ac81e5b01b39d661ffe72552fddb"
+    },
+    {
+      "path": "research/recovery_20261025/method_build_audit.py",
+      "sha256": "b6254ac3f8a607b7a9602eb4bef89953ba7e6188cbf6227982106294c839b488"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/start_isolated_cpu.ps1",
+      "sha256": "ae44ac080a877e84b596b59894917f0226f6493660552428ac03c10c4187cfd8"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/stop_isolated_cpu.ps1",
+      "sha256": "78eb6eeb3d8de0c2e7fbb21bc682d2af5ee5bb1db9a56b1f6eb42f54ecd5b732"
+    },
+    {
+      "path": "research/remote_sector_runtime.py",
+      "sha256": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5"
+    },
+    {
+      "path": "research/review_sector_v494_stage.py",
+      "sha256": "81195353a74f00fde66e1915e068e9167966ccc3cb774b65ad929867bf44b3e6"
+    },
+    {
+      "path": "research/run_v494_recovery.py",
+      "sha256": "56fdb077c375ca4b99a110a93d81210a74812257cae3b0967b613f0b5de27576"
+    },
+    {
+      "path": "research/sector_engine.py",
+      "sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c"
+    },
+    {
+      "path": "research/sector_v48_main_awake.py",
+      "sha256": "185a9f6be9471ff7808730153227682f0f0eae25f72ee1474602106a950fa98a"
+    },
+    {
+      "path": "research/sector_v48_transport.py",
+      "sha256": "db395eb3d54ebec93aa67556e1f2424aba1d591ba8b9fcfce7fbd3332db0379c"
+    },
+    {
+      "path": "research/sector_v491_contract.py",
+      "sha256": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397"
+    },
+    {
+      "path": "research/sector_v491_runtime.py",
+      "sha256": "a542a53ef7a9a035a3641e1e9637d3eb5bd442677318a82434e245bb1e5dc649"
+    },
+    {
+      "path": "research/sector_v491_tokenizer.py",
+      "sha256": "1e25d31d18e659e90186d2a598d0bcad77824d0dbc5a0e76beed692a8373e440"
+    },
+    {
+      "path": "research/sector_v492_contract.py",
+      "sha256": "f77d1ddec9630a4c7edbf3928d298b7b05094345996ece1cf53d91fc40171a21"
+    },
+    {
+      "path": "research/sector_v492_review_gate.py",
+      "sha256": "a93b575104509e9810663ec4feca3e6bbb6963ca03dd988b451e06744e23a092"
+    },
+    {
+      "path": "research/sector_v492_runtime.py",
+      "sha256": "cc8285db4d561aea10878db336771752965f4517405a93a1574b18f2fa300e04"
+    },
+    {
+      "path": "research/sector_v494_review_gate.py",
+      "sha256": "07cac8a0606eff3dfeb1bc1e0b3786ff373ca49bb424edb20674033e28d7e194"
+    },
+    {
+      "path": "research/sector_v494_runtime.py",
+      "sha256": "c9521000aa3a1497775c83fa83a1b9bac9f5443edbcb707f131d313f7cd8bed1"
+    }
+  ],
+  "stage_review_refs": [
+    {
+      "path": "research/recovery_20261025/stage01_interruption_review.json",
+      "sha256": "803db252c45d0b05ff5718502b296ae90ee58fe6a7a0217db512f09a6e95284d"
+    },
+    {
+      "path": "research/recovery_20261025/stage02_method_preparation_review.json",
+      "sha256": "f78183fd2bc0177f23713fd7bdd7d8174a84c96dfa2fb71bce23d98fdb495d3a"
+    },
+    {
+      "path": "research/recovery_20261025/stage03_implementation_review.json",
+      "sha256": "759d15b6e65f9b6df9ac37c6dd930b02ed4a33c22e3e0f3a0582e28f17d4a083"
+    }
+  ],
+  "main_allowed": false,
+  "old_outputs_observed": true,
+  "new_run_research_calls_before_freeze": 0,
+  "development_disclosure": "Old failures informed clarification. This run is not pooled with the old run as identical replications. All outcomes retained; no success threshold selects cases.",
+  "step_review_policy": "Each completed attempt gets exact artifact/arithmetic/citation/timing checks before the next stage. Interpretation of source support is separately recorded by AI; deterministic checks cannot certify semantic success."
+}

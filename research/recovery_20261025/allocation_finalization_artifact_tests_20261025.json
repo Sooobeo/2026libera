@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "receipt_id": "allocation_finalization_artifact_tests_20261025",
+  "recorded_at": "2026-10-25T23:32:52.061Z",
+  "status": "PASS",
+  "command": "python -m unittest research.test_finalize_sector_allocation research.test_finalize_sector_allocation_artifacts -v",
+  "working_directory": "C:/Users/Insun/2026libera",
+  "exit_code": 0,
+  "unittest_summary": "Ran 47 tests in 299.644s; OK",
+  "unittest_elapsed_seconds": 299.644,
+  "counts": {
+    "new_artifact_integration_methods": 15,
+    "unchanged_pure_math_regression_methods": 32,
+    "total_current_test_methods": 47,
+    "distinct_financial_observations": 0
+  },
+  "scope": {
+    "synthetic_tempfile_artifacts_only": true,
+    "actual_pilot_artifacts_read": 0,
+    "model_calls": 0,
+    "frozen_files_modified": 0,
+    "previously_bound_32_test_file_modified": false,
+    "real_D0_CLI_or_main_execution_certified_here": false
+  },
+  "artifact_coverage": [
+    "A bound complete five-case/ten-slot run produces five finalized finals with exact source references and no fixture file mutation.",
+    "Completed, generation-failed, preflight-failed and unattempted slots preserve all five planned finals and ten stage slots; missing comparisons stay null with reasons.",
+    "Exact derived distance and left-minus-right orientation are checked, including F0-minus-own-D0 and reversal symmetry.",
+    "Nonterminal, missing/reordered-case and invalid-stage-sequence summaries fail closed.",
+    "Summary status/count mismatches and boolean attempt counts fail closed.",
+    "Changed response bytes, bad response hash, mismatched embedded response and stage-review references/flags fail closed.",
+    "Wrong stage/run-directory identity, unsupported F1, declared missing stage/response artifacts fail closed.",
+    "Unexpected known/unknown populated stage directories and an unreported http_0002_generation directory fail closed."
+  ],
+  "defects_and_correction_provenance": {
+    "detection_method": "Source inspection before the final artifact run; no failure run on the old source is claimed.",
+    "prior_module_sha256": "117301ec9cb0ee6fb09cd5a4d3388005cf4c2cd94f565e06a4a5d36c2851ff64",
+    "findings": [
+      "The prior run-directory scan ignored unexpected populated directories not ending D0/F0.",
+      "A consistently bound unsupported standalone stage could be accepted as a draft diagnostic."
+    ],
+    "corrected_module_sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3",
+    "corrected_guards": "All run subdirectories must exactly match declared stages; stage domain is D0/F0; generation-directory count/name must agree with the 0/1 request count.",
+    "numeric_policy_change": false,
+    "root_preserved_prior_source": true
+  },
+  "source_stability": [
+    {
+      "path": "research/finalize_sector_allocation.py",
+      "sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3",
+      "bytes": 21704,
+      "sha256_after": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3",
+      "unchanged": true
+    },
+    {
+      "path": "research/test_finalize_sector_allocation.py",
+      "sha256": "1bf92287c3b29079b2935c94e79885e3d47f59b5503eca61249943b8b0535501",
+      "bytes": 17090,
+      "test_methods": [
+        "test_official_sector_order_is_explicit",
+        "test_point92_vector_scales_and_distributes_exact_remainder",
+        "test_eleven_equal_weights_use_official_order_for_exact_tie",
+        "test_three_equal_weights_retain_nonterminating_exact_rationals",
+        "test_near_tie_beyond_default_decimal_precision_is_not_a_tie",
+        "test_permutation_does_not_change_sector_mapping_or_tie_result",
+        "test_positive_rescaling_preserves_normalized_and_display_vectors",
+        "test_already_unit_sum_on_basis_point_grid_is_identity",
+        "test_single_positive_component_and_signed_zero",
+        "test_zero_preservation_and_small_positive_rounding_to_zero",
+        "test_finite_tiny_decimal_does_not_underflow_before_normalization",
+        "test_finite_large_decimal_does_not_overflow_to_infinity",
+        "test_display_finalization_is_idempotent",
+        "test_largest_remainders_are_selected_not_just_first_sectors",
+        "test_negative_weight_including_underflow_sized_negative_is_unavailable",
+        "test_nonfinite_json_constants_are_unavailable",
+        "test_boolean_and_string_weights_are_not_coerced",
+        "test_all_zero_vector_has_no_arbitrary_fallback",
+        "test_missing_sector_or_missing_weight_is_unavailable",
+        "test_duplicate_unknown_or_noncanonical_sector_code_is_unavailable",
+        "test_extra_row_is_not_silently_dropped",
+        "test_duplicate_json_object_keys_are_not_last_value_wins",
+        "test_malformed_or_partial_input_is_not_salvaged",
+        "test_scaling_can_newly_violate_submitted_bound_without_clipping",
+        "test_rounding_can_newly_violate_submitted_bound_without_second_repair",
+        "test_malformed_constraint_ids_remain_serializable_and_unassessable",
+        "test_duplicate_constraint_ids_are_not_silently_combined",
+        "test_invalid_constraint_bounds_are_unassessable_not_portfolio_constraints",
+        "test_malformed_constraint_container_does_not_invent_validated_constraints",
+        "test_bounded_resource_guard_rejects_huge_compact_numeric_tokens",
+        "test_huge_constraint_number_is_bounded_and_result_stays_serializable",
+        "test_exponent_beyond_decimal_platform_limit_is_reported_not_raised"
+      ],
+      "sha256_after": "1bf92287c3b29079b2935c94e79885e3d47f59b5503eca61249943b8b0535501",
+      "unchanged": true
+    },
+    {
+      "path": "research/test_finalize_sector_allocation_artifacts.py",
+      "sha256": "f15a9b681135fd2e5e843e9d134780673372df4522627e3dfe82dfed26432baa",
+      "bytes": 15810,
+      "test_methods": [
+        "test_complete_run_has_five_finals_ten_slots_and_no_input_mutation",
+        "test_failed_preflight_and_nonattempted_slots_keep_full_denominator",
+        "test_exact_distances_and_difference_orientation_match_declared_pairs",
+        "test_nonterminal_incomplete_or_reordered_summary_is_rejected",
+        "test_summary_transport_status_and_attempt_count_mismatches_fail_closed",
+        "test_response_hash_or_envelope_binding_corruption_is_rejected",
+        "test_review_binding_or_integrity_flag_corruption_is_rejected",
+        "test_wrong_stage_or_run_path_identity_is_rejected",
+        "test_consistently_bound_unsupported_stage_is_rejected",
+        "test_transport_request_boolean_is_not_an_integer_attempt",
+        "test_declared_missing_stage_or_completed_response_fails_closed",
+        "test_unexpected_declared_stage_sequence_is_rejected",
+        "test_unexpected_known_stage_directory_is_not_ignored",
+        "test_unexpected_populated_unknown_stage_directory_is_not_ignored",
+        "test_unreported_second_generation_directory_is_rejected"
+      ],
+      "sha256_after": "f15a9b681135fd2e5e843e9d134780673372df4522627e3dfe82dfed26432baa",
+      "unchanged": true
+    }
+  ],
+  "protected_original_files": [
+    {
+      "path": "data/sector_protocol/v491_design_20261019/response_schema.json",
+      "sha256_before": "944a232de9f4a1e9ae672b172196aa906077ee03c3f6bf2ab06ad032d6d0b147",
+      "sha256_after": "944a232de9f4a1e9ae672b172196aa906077ee03c3f6bf2ab06ad032d6d0b147"
+    },
+    {
+      "path": "research/sector_engine.py",
+      "sha256_before": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c",
+      "sha256_after": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c"
+    },
+    {
+      "path": "research/analyze_v492_pilot.py",
+      "sha256_before": "841c1f941e2c39165f84f51f5df283ca7a3c5727de285d4ad56edfa50166529f",
+      "sha256_after": "841c1f941e2c39165f84f51f5df283ca7a3c5727de285d4ad56edfa50166529f"
+    },
+    {
+      "path": "research/sector_v491_contract.py",
+      "sha256_before": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397",
+      "sha256_after": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397"
+    }
+  ],
+  "prior_pure_receipt": {
+    "path": "research/recovery_20261025/allocation_finalization_tests_20261025.json",
+    "expected_sha256": "d7b0c890fad53899b676a957651e873d216899517acd6317549f84498904fb67",
+    "actual_sha256": "d7b0c890fad53899b676a957651e873d216899517acd6317549f84498904fb67",
+    "retained_as_history": true
+  },
+  "interpretation_limits": [
+    "The 47 are software test methods, including the existing 32 rerun after an actual artifact-guard code change. Do not sum historical repeated tests into a financial sample size.",
+    "The longer wall duration reflects synthetic filesystem work and runtime scheduling; it is not a model-generation throughput benchmark.",
+    "Synthetic integration establishes the tested binding/denominator behavior, not the correctness, completion or semantic success of the real active pilot.",
+    "Derived allocation comparisons remain separate from frozen raw-vector eligibility and explanation-to-raw-weight claims."
+  ],
+  "review_axes": {
+    "errors": {
+      "status": "pass",
+      "reason": "All 47 current tests passed, including the newly added strict artifact accounting and unknown-stage regressions."
+    },
+    "consistency": {
+      "status": "pass",
+      "reason": "Corrected module, unchanged pure tests and new artifact tests have identical before/after hashes; the prior pure acceptance remains unchanged. Four original schema/calculation/analysis/contract files remain unchanged."
+    },
+    "paper_topic": {
+      "status": "pass",
+      "reason": "The derived 100% output preserves case denominators, missingness and separation from raw model behavior, so arithmetic usability does not erase observed model errors or imply institutional/semantic correctness."
+    }
+  }
+}

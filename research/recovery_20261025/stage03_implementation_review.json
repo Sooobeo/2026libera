@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "completed_at_utc": "2026-10-25T10:12:27.646543+00:00",
+  "reviewer": "Codex root integration of independent AI checks",
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "73 unique adversarial tests passed on certified code; five live render-only/token checks passed. Parser/schema/vector/roundoff/process-identity findings were resolved and recorded."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "All referenced evidence hashes checked at integration; 27 original frozen code/input refs unchanged. Engine/model/tokenizer and settings match historical pins. Independent launcher verifies ownership and unique new run; no new research generation yet."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "Same five E/L/C cases, common context, sources, schema, two-turn first-attempt policy and v4.9.2 r2 rubric retained. Post-output prompt development disclosed. Model errors remain observations; source support requires separate AI reading."
+    }
+  },
+  "input_refs": [
+    {
+      "path": "research/recovery_20261025/implementation_tests_r2.json",
+      "sha256": "38efb6b977c3bfb5ae3a5dcbf82224560bd200bf705dd5432a6b616e319c9a14"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/preflight_d0_r2/summary.json",
+      "sha256": "ddc1d248e046be5cd64109e381539ed91584e885f6edd3a30dffd5f1cdaafe92"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/preflight_code_review.json",
+      "sha256": "439860e869e2659ec0e911642eb9c34bf7e18fbf03c6093e36566ec161b8d00d"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/launch_review.json",
+      "sha256": "4842fac39ca4151d6869a1eecdb132bcda14fd314438be0b097f260c4f6d367c"
+    },
+    {
+      "path": "research/start_v494_pilot.ps1",
+      "sha256": "834144d68e563cb05990bf6977a00ce6246080e169974d48dcf2dfadc8ead9a3"
+    }
+  ],
+  "generation_calls": 0,
+  "limitations": [
+    "Tests and token capacity do not guarantee live completion or semantic accuracy.",
+    "Historical smoke metrics are reused for identical engine/model/settings, not reported as a new timing measurement.",
+    "No main experiment is started by this freeze."
+  ]
+}

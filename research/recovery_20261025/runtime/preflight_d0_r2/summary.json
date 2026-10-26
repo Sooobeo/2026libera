@@ -1,0 +1,302 @@
+{
+  "receipt_version": "v494_render_only_capacity_preflight_1",
+  "status": "PASS",
+  "started_at_utc": "2026-10-25T10:05:00.584839+00:00",
+  "generation_requests": 0,
+  "render_requests_attempted": 5,
+  "render_requests_completed": 5,
+  "case_reviews": [
+    {
+      "case_id": "fidelity_q2_2026__E",
+      "arm": "E",
+      "status": "PASS",
+      "input_boundary_checks": {
+        "case_order_matches_prepared_manifest": true,
+        "common_context_same_as_historical": true,
+        "market_same_as_historical": true,
+        "numeric_fact_index_same_as_historical": true,
+        "output_schema_same_as_historical": true,
+        "source_timing_matches_design": true,
+        "institution_packet_exact": true
+      },
+      "capacity": {
+        "status": "exact_request_fits_declared_context",
+        "prompt_tokens": 13267,
+        "allowed_output_tokens": 8192,
+        "total_required_tokens": 21459,
+        "context_tokens": 65536,
+        "scope": "This actual request only; not a worst-case bound for an unknown future response."
+      },
+      "headroom_after_full_output_allowance": 44077,
+      "render_ref": {
+        "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\preflight_d0_r2\\fidelity_q2_2026__E\\render_only\\validation.json",
+        "sha256": "b6266e5ff455c1da3b2ac4d5aa2c1ba8474bc4ea7cece6b8143b4d692c2f88c0"
+      },
+      "tokenizer_ref": {
+        "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\preflight_d0_r2\\fidelity_q2_2026__E\\tokenizer_receipt.json",
+        "sha256": "839fa8de602331e14133417139b66fa660b34b5b58c0159bfbed106578d56d78"
+      },
+      "request_ref": {
+        "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\preflight_d0_r2\\fidelity_q2_2026__E\\render_only\\request_body.bin",
+        "sha256": "b13d15b928ccf91e83750528d2c7bd1269f5566f30474b4b166fa123849bdeb5"
+      },
+      "response_ref": {
+        "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\preflight_d0_r2\\fidelity_q2_2026__E\\render_only\\response_body.bin",
+        "sha256": "89953a557884ada0bff2f1690fa2594fe6d7cb93cab2d06cada92bad38b8844d"
+      }
+    },
+    {
+      "case_id": "fidelity_q2_2026__L",
+      "arm": "L",
+      "status": "PASS",
+      "input_boundary_checks": {
+        "case_order_matches_prepared_manifest": true,
+        "common_context_same_as_historical": true,
+        "market_same_as_historical": true,
+        "numeric_fact_index_same_as_historical": true,
+        "output_schema_same_as_historical": true,
+        "source_timing_matches_design": true,
+        "institution_packet_exact": true
+      },
+      "capacity": {
+        "status": "exact_request_fits_declared_context",
+        "prompt_tokens": 12282,
+        "allowed_output_tokens": 8192,
+        "total_required_tokens": 20474,
+        "context_tokens": 65536,
+        "scope": "This actual request only; not a worst-case bound for an unknown future response."
+      },
+      "headroom_after_full_output_allowance": 45062,
+      "render_ref": {
+        "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\preflight_d0_r2\\fidelity_q2_2026__L\\render_only\\validation.json",
+        "sha256": "ed499f3f257495f4551d69231bd285e70ae69e01f0e8bd20b8495837cf4943f9"
+      },
+      "tokenizer_ref": {
+        "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\preflight_d0_r2\\fidelity_q2_2026__L\\tokenizer_receipt.json",
+        "sha256": "9d52cec76de9201338853c9122e37e7fc49ed83277971e2d59a0fa2988a35415"
+      },
+      "request_ref": {
+        "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\preflight_d0_r2\\fidelity_q2_2026__L\\render_only\\request_body.bin",
+        "sha256": "02129e072d40d45c84505cb5d17a475096ae93a58a840d71e3fbec8a7024d9d8"
+      },
+      "response_ref": {
+        "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\preflight_d0_r2\\fidelity_q2_2026__L\\render_only\\response_body.bin",
+        "sha256": "23591214f5dfae70e2c3c39cd7b8ce5200da28debf12418581b8b009d0046e9b"
+      }
+    },
+    {
+      "case_id": "ubs_june_2026__E",
+      "arm": "E",
+      "status": "PASS",
+      "input_boundary_checks": {
+        "case_order_matches_prepared_manifest": true,
+        "common_context_same_as_historical": true,
+        "market_same_as_historical": true,
+        "numeric_fact_index_same_as_historical": true,
+        "output_schema_same_as_historical": true,
+        "source_timing_matches_design": true,
+        "institution_packet_exact": true
+      },
+      "capacity": {
+        "status": "exact_request_fits_declared_context",
+        "prompt_tokens": 13275,
+        "allowed_output_tokens": 8192,
+        "total_required_tokens": 21467,
+        "context_tokens": 65536,
+        "scope": "This actual request only; not a worst-case bound for an unknown future response."
+      },
+      "headroom_after_full_output_allowance": 44069,
+      "render_ref": {
+        "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\preflight_d0_r2\\ubs_june_2026__E\\render_only\\validation.json",
+        "sha256": "c66e2665587b94708e1e9d800cd6eb93bb71c59937cf36243c087d55930bea69"
+      },
+      "tokenizer_ref": {
+        "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\preflight_d0_r2\\ubs_june_2026__E\\tokenizer_receipt.json",
+        "sha256": "fbaf146208443824d2caaa4d6531cd476fa8ca12e664fb911462f9c3f3a46630"
+      },
+      "request_ref": {
+        "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\preflight_d0_r2\\ubs_june_2026__E\\render_only\\request_body.bin",
+        "sha256": "1bc84b28901094a52c2d321b18294231e7d01f20ae0a127bae95ea8c9bbe5157"
+      },
+      "response_ref": {
+        "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\preflight_d0_r2\\ubs_june_2026__E\\render_only\\response_body.bin",
+        "sha256": "e0a21202e078206f47957a1ec1d2cfec45d1171a93ed8f44256f8b2d730cf494"
+      }
+    },
+    {
+      "case_id": "ubs_june_2026__L",
+      "arm": "L",
+      "status": "PASS",
+      "input_boundary_checks": {
+        "case_order_matches_prepared_manifest": true,
+        "common_context_same_as_historical": true,
+        "market_same_as_historical": true,
+        "numeric_fact_index_same_as_historical": true,
+        "output_schema_same_as_historical": true,
+        "source_timing_matches_design": true,
+        "institution_packet_exact": true
+      },
+      "capacity": {
+        "status": "exact_request_fits_declared_context",
+        "prompt_tokens": 12282,
+        "allowed_output_tokens": 8192,
+        "total_required_tokens": 20474,
+        "context_tokens": 65536,
+        "scope": "This actual request only; not a worst-case bound for an unknown future response."
+      },
+      "headroom_after_full_output_allowance": 45062,
+      "render_ref": {
+        "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\preflight_d0_r2\\ubs_june_2026__L\\render_only\\validation.json",
+        "sha256": "ed499f3f257495f4551d69231bd285e70ae69e01f0e8bd20b8495837cf4943f9"
+      },
+      "tokenizer_ref": {
+        "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\preflight_d0_r2\\ubs_june_2026__L\\tokenizer_receipt.json",
+        "sha256": "9d52cec76de9201338853c9122e37e7fc49ed83277971e2d59a0fa2988a35415"
+      },
+      "request_ref": {
+        "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\preflight_d0_r2\\ubs_june_2026__L\\render_only\\request_body.bin",
+        "sha256": "02129e072d40d45c84505cb5d17a475096ae93a58a840d71e3fbec8a7024d9d8"
+      },
+      "response_ref": {
+        "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\preflight_d0_r2\\ubs_june_2026__L\\render_only\\response_body.bin",
+        "sha256": "9d175ef7ddbc38a54a0b69922292eb3fa52cc3b0f8a6faef655427c776b2b175"
+      }
+    },
+    {
+      "case_id": "common_market_only__C",
+      "arm": "C",
+      "status": "PASS",
+      "input_boundary_checks": {
+        "case_order_matches_prepared_manifest": true,
+        "common_context_same_as_historical": true,
+        "market_same_as_historical": true,
+        "numeric_fact_index_same_as_historical": true,
+        "output_schema_same_as_historical": true,
+        "source_timing_matches_design": true,
+        "institution_packet_exact": true
+      },
+      "capacity": {
+        "status": "exact_request_fits_declared_context",
+        "prompt_tokens": 12282,
+        "allowed_output_tokens": 8192,
+        "total_required_tokens": 20474,
+        "context_tokens": 65536,
+        "scope": "This actual request only; not a worst-case bound for an unknown future response."
+      },
+      "headroom_after_full_output_allowance": 45062,
+      "render_ref": {
+        "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\preflight_d0_r2\\common_market_only__C\\render_only\\validation.json",
+        "sha256": "ed499f3f257495f4551d69231bd285e70ae69e01f0e8bd20b8495837cf4943f9"
+      },
+      "tokenizer_ref": {
+        "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\preflight_d0_r2\\common_market_only__C\\tokenizer_receipt.json",
+        "sha256": "9d52cec76de9201338853c9122e37e7fc49ed83277971e2d59a0fa2988a35415"
+      },
+      "request_ref": {
+        "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\preflight_d0_r2\\common_market_only__C\\render_only\\request_body.bin",
+        "sha256": "02129e072d40d45c84505cb5d17a475096ae93a58a840d71e3fbec8a7024d9d8"
+      },
+      "response_ref": {
+        "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\preflight_d0_r2\\common_market_only__C\\render_only\\response_body.bin",
+        "sha256": "a30b89add83cc4157ba69b6baa4b8333aa46840f110c5871e3c20ee4bc3bf668"
+      }
+    }
+  ],
+  "completed_at_utc": "2026-10-25T10:05:44.714478+00:00",
+  "input_refs": [
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\handoff.json",
+      "sha256": "60ce3956c4c2ad34781584d496af2ed6713ef04b591fc79f4538297af8a246a9"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\v492_runtime_candidate_20261019.json",
+      "sha256": "3fc05ace24af7893e38ee5668acee977bec14f72809f236fb9401dcc597d5f0f"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime_candidate.json",
+      "sha256": "e331ea026c04537a15fba83eb538ac3b6cb6022ee1ad14160d18bb292d99870c"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\service_ready\\service_receipt.json",
+      "sha256": "be9cb88616a78efe41175f45a57085952f249ac0314e1afcfc4e24b36eb19b3d"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v494_design_20261025\\prepared\\preparation_manifest.json",
+      "sha256": "8023f8b11ec9b1d43bf1b5b08ac37ccbab4ac5ab7ad7de28a9e93d8e67a4ef29"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\sector_v494_runtime.py",
+      "sha256": "c9521000aa3a1497775c83fa83a1b9bac9f5443edbcb707f131d313f7cd8bed1"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\preflight_d0_capacity.py",
+      "sha256": "f7ed085e9e30538fcd7924da93d3120cf59e9bf92a69ff957339af76fa6339e5"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v494_design_20261025\\prepared\\fidelity_q2_2026__E__D0_messages.json",
+      "sha256": "854d60a4c8eab4cf1b1642907b225fd593e338586a543554af2b9e1a4d86dc82"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v494_design_20261025\\prepared\\fidelity_q2_2026__L__D0_messages.json",
+      "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v494_design_20261025\\prepared\\ubs_june_2026__E__D0_messages.json",
+      "sha256": "a79a17fef00fc082860a4fde05c5ae41111dc2d4dc2bf96073f973bd5ae4ae27"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v494_design_20261025\\prepared\\ubs_june_2026__L__D0_messages.json",
+      "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v494_design_20261025\\prepared\\common_market_only__C__D0_messages.json",
+      "sha256": "0573beaa8039645f7f9ea9095e207668afbab7faf1aadf5c9df16b831cff7d15"
+    }
+  ],
+  "source_free_D0_inputs_identical": true,
+  "all_five_common_inputs_preserved": true,
+  "output_reserve_tokens": 8192,
+  "context_tokens": 65536,
+  "candidate_runtime_ref": {
+    "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\preflight_d0_r2\\candidate_runtime.json",
+    "sha256": "18c6e9782b9126b788e40819844dc0417ae78c499fe001d9684188788c325d1a"
+  },
+  "prior_preflight_attempt": {
+    "ref": {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\preflight_d0\\summary.json",
+      "sha256": "74305e5e056dcb4181dc4863b67e38148472551de0d3c91c2e1231a88752180b"
+    },
+    "render_requests": 0,
+    "generation_requests": 0,
+    "cause": "Local checker compared absolute and relative receipt path spelling; corrected to coordinator relative-path representation, hashes/options unchanged."
+  },
+  "smoke_evidence_scope": "Prior October 19 exact large-input CPU smoke reused under byte-identical engine and settings; no new inference smoke performed. Initial pilot D0 will provide actual current-host generation evidence.",
+  "before_ref": {
+    "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\preflight_d0_r2\\before.json",
+    "sha256": "fcd4dd36eb89e06a64e1b5735efddbb7d0333c408ef0c5e95e0f227e13dead76"
+  },
+  "after_ref": {
+    "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\preflight_d0_r2\\after.json",
+    "sha256": "cfdd13fac0a689385005dba0d4a6488e90f96edbc01d5c150b301e56ca497c78"
+  },
+  "F0_capacity": "Unknown until actual D0; runtime must render and count full actual D0 plus final instruction before F0 generation",
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "All five read-only responses passed exact render validation and byte-bound native token counting; every request retains all 8192 output tokens within context 65536. No model generation or repair occurred."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Input manifest reconstruction, unchanged common blocks/schema/model/request options, exact E institution packet, source-free L/C identity, pinned service ownership and idle state all passed."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "Only the common instruction clarification distinguishes the prospective pilot. Institutional evidence timing E/L, C control, sector allocation task and original evidence/rubric remain; preflight introduces no substantive institution labels or scoring changes."
+    }
+  },
+  "limitations": [
+    "Render-only and token counts do not prove generation completes under current memory/load.",
+    "No future F0 input was guessed, truncated or shortened.",
+    "Topic-boundary preservation is not an outcome-level semantic-support verdict."
+  ]
+}

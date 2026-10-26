@@ -1,0 +1,56 @@
+{
+  "version": "v494_E_D0_review_crosscheck_1",
+  "created_at_utc": "2026-10-25T11:20:40.171Z",
+  "reviewer": "Codex root; unmasked supplementary audit, not independent human/statistical rater",
+  "review_ref": {
+    "path": "research/recovery_20261025/new_semantic/fidelity_E_D0_semantic.json",
+    "sha256": "55b605f7edf50065fe684837a6617a16cb53e6cb7aa5144171108576e9379343"
+  },
+  "refs_checked": [
+    {
+      "path": "data/local_sector_runtime/v494_pilot_20261025/fidelity_q2_2026__E__D0/worker_spec.json",
+      "sha256": "2ff6196a044f491b1054143940001f00d1134815e346e422efcffa300c3c2251"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_pilot_20261025/fidelity_q2_2026__E__D0/transport_result.json",
+      "sha256": "2056dd8e4332c5998ba67a0ef2725007a36b9d89ae1b902b8525419a6b4f6a84"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_pilot_20261025/fidelity_q2_2026__E__D0/stage_review.json",
+      "sha256": "d186049244124343f5b71e89571db03b53143b73259a7c7876b6915b8bde72e6"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_pilot_20261025/fidelity_q2_2026__E__D0/http_0001_generation/response.json",
+      "sha256": "fa16ca07df3a46d749ecb0f4fe7352b634a05957241b12b881961e1f509b5c49"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_pilot_20261025/fidelity_q2_2026__E__D0/response_contract_validation.json",
+      "sha256": "8b6dc899c56f328dc63d86d9e8c9918f9faa91682090215aabfa67593b2590f4"
+    },
+    {
+      "path": "research/v492_evaluation_protocol_20261019_r2.json",
+      "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+    }
+  ],
+  "quote_occurrences_checked": 63,
+  "selected_deterministic_checks": "All referenced artifact hashes, all63 quoted output occurrences and numeric common-market anchor scalings checked. Full claim-extraction completeness and every qualitative coding not independently re-scored.",
+  "deterministic_failures": [],
+  "retained_coding_disagreements": [
+    {
+      "claim_id": "Q03",
+      "original_category": "unsupported_or_contradictory_link",
+      "root_category": "unresolved",
+      "exact_quote": "The Fidelity report's 'Overweight' rating is the strongest signal in the packet, citing favorable fundamentals and post-decline valuations",
+      "reason": "Strongest signal may refer to Overweight as the favorable category rather than a uniquely strongest IT view among all Overweight sectors. The wording is ambiguous; the packet contains no explicit within-category ranking. Retain both readings instead of declaring an unambiguous attribution error.",
+      "original_record_changed": false
+    }
+  ],
+  "precision_note": "N25 is explicitly a small display-rounding/truncation mismatch, distinct from sector/value/sign/metric/date errors; no financial-materiality threshold or pass score is introduced.",
+  "three_axis_review": {
+    "errors": "No quote/hash/common-market scaling discrepancy found in the checked fields if deterministic_failures is empty; the raw 0.92 sum is a model outcome.",
+    "consistency": "Source-label correctness and correct source-reading fields do not establish numeric or decision consistency. One qualitative ambiguity is retained as disagreement.",
+    "topic_connection": "The review concerns supplied evidence, stated interpretation and observable allocation. It does not measure real institution behavior, market-wide convergence or profitability."
+  },
+  "new_model_calls": 0,
+  "frozen_files_changed": false
+}

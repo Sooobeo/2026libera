@@ -1,0 +1,363 @@
+{
+  "version": "v494_terminal_runtime_interruption_audit_1",
+  "recorded_at_utc": "2026-10-25T23:35:11.310Z",
+  "status": "RUN_STOPPED_LONG_SUSPENSION_CORRELATED_CLEANUP_VERIFIED",
+  "input_refs": [
+    {
+      "path": "research/recovery_20261025/runtime/live_observation_11_power_terminal.json",
+      "sha256": "120da71a7783c0ef1e9385502ba2c52efe094a71ef4660b1e0b071efbef0c6b3"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/temporary_awake_01/heartbeat.jsonl",
+      "sha256": "0a69d0baaacb09d21543fff9cb1a28fe7e541e958ed6528def671eddcd5a6f54"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/temporary_awake_01/acquire.json",
+      "sha256": "b73bbe1452712e186014ee361add627359906d69d844b663384ea7e66bacc139"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/temporary_awake_01/release.json",
+      "sha256": "01529b274ddff941e50ab6f957ce4d948a350a309577a9425f729dec69887740"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/service_ready/service_receipt.json",
+      "sha256": "be9cb88616a78efe41175f45a57085952f249ac0314e1afcfc4e24b36eb19b3d"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/service_ready/service_shutdown_receipt.json",
+      "sha256": "7e4b3318af91727e11b2135cad04a03ddda9df82a3aaf781eaf49a664c0d9dff"
+    },
+    {
+      "path": "research/recovery_20261025/new_pilot/terminal_receipt.json",
+      "sha256": "bc872eb8326233e274629d8ea16f5d841e098b6e45aa26f31a9588d760289d15"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_pilot_20261025/pilot_summary.json",
+      "sha256": "ad5b11da9677d3cb091738d0b0427240842f2ca541bb0f7e72f3747400b599a4"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_pilot_20261025/fidelity_q2_2026__L__D0/transport_result.json",
+      "sha256": "1c5dca3715343f9750befff553616547aa6a23bd2694bb2a2b14c6af7518b3f7"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_pilot_20261025/fidelity_q2_2026__L__D0/monitor.jsonl",
+      "sha256": "55d7158609b374f4db4f3e46d3e754e80639141969da47b4451a2fc8cf98b8ab"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_pilot_20261025/fidelity_q2_2026__L__D0/worker_phases.jsonl",
+      "sha256": "2bee13216ad6fce4fd9d8c061a43e6d3d4314d8ca53f7b4764ffe83090e5340c"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_pilot_20261025/fidelity_q2_2026__E__F0/monitor.jsonl",
+      "sha256": "a7ea3d885a072162627923b5986f7420817365fac631a45021a40d9664079ae3"
+    }
+  ],
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "scope": "Runtime records preserve hard-deadline infrastructure failure, one interrupted generation and missing dependent/unattempted stages. No retry, restart, inferred response or replacement performed. Owned service stopped only after exact identity and idle checks; helper release verified."
+    },
+    "consistency": {
+      "pass": true,
+      "scope": "OS power transitions align with absent process/monitor observations and watchdog wake. Same helper/thread request survived until coordinator exit and was explicitly cleared. Existing user service11434 remained PID29500. Evidence distinguishes successful API request and earlier bounded continuity from guaranteed operation under later lid/power transitions."
+    },
+    "paper_topic": {
+      "pass": true,
+      "scope": "Five planned finals remain the denominator with one completedF0 and four unattempted finals. Interrupted L_D0 cannot become evidence about institution interpretation or model allocation. OS suspension prevents clean elapsed-throughput or feasibility claims; raw and derived arithmetic remain separate."
+    }
+  },
+  "run_accounting": {
+    "status": "stopped",
+    "generation_requests_attempted": 3,
+    "planned_finals": 5,
+    "completed_finals": 1,
+    "unattempted_finals": 4,
+    "maximum_generation_requests": 10,
+    "cases": [
+      {
+        "case_id": "fidelity_q2_2026__E",
+        "stages": [
+          {
+            "stage": "D0",
+            "status": "completed",
+            "generation_requests_attempted": 1,
+            "continuation_eligible": true
+          },
+          {
+            "stage": "F0",
+            "status": "completed",
+            "generation_requests_attempted": 1,
+            "continuation_eligible": true
+          }
+        ],
+        "status": "two_stages_completed_semantic_review_pending"
+      },
+      {
+        "case_id": "fidelity_q2_2026__L",
+        "stages": [
+          {
+            "stage": "D0",
+            "status": "hard_deadline",
+            "generation_requests_attempted": 1,
+            "continuation_eligible": false
+          }
+        ],
+        "status": "stopped_for_integrity_or_cancellation"
+      },
+      {
+        "case_id": "ubs_june_2026__E",
+        "status": "not_attempted_after_stop",
+        "stages": []
+      },
+      {
+        "case_id": "ubs_june_2026__L",
+        "status": "not_attempted_after_stop",
+        "stages": []
+      },
+      {
+        "case_id": "common_market_only__C",
+        "status": "not_attempted_after_stop",
+        "stages": []
+      }
+    ],
+    "main_model_calls": 0,
+    "automatic_retries": 0,
+    "post_final_calls": 0
+  },
+  "interrupted_stage": {
+    "case_id": "fidelity_q2_2026__L",
+    "stage": "D0",
+    "transport": {
+      "status": "hard_deadline",
+      "response": null,
+      "supervisor": {
+        "status": "hard_deadline",
+        "worker_exit_code": 1,
+        "elapsed_seconds": 39033.10496679996,
+        "deadline_seconds": 4500,
+        "deadline_scope": "Worker setup, rendering, tokenizer and generation; OS cleanup overhead excluded.",
+        "render_requests_attempted": 1,
+        "generation_requests_attempted": 1,
+        "http_streams_completed": 0,
+        "unexpected_generation_evidence_in_render": false,
+        "request_count_scope": "Durable request envelopes, including requests that may fail before provider inference.",
+        "raw_stream_present": true,
+        "accounting_artifact_errors": {}
+      },
+      "response_artifact": null,
+      "system_integrity_incident": true,
+      "continuation_eligible": false,
+      "artifact_preservation_error": null,
+      "render_requests_attempted": 1,
+      "generation_requests_attempted": 1,
+      "http_streams_completed": 0,
+      "unexpected_generation_evidence_in_render": false,
+      "request_count_scope": "Durable request envelopes, including requests that may fail before provider inference.",
+      "raw_stream_present": true,
+      "accounting_artifact_errors": {}
+    },
+    "monitor_first": "2026-10-25T11:55:23.446302+00:00",
+    "monitor_last": "2026-10-25T11:55:54.989243+00:00",
+    "worker_phase_records": [
+      {
+        "phase": "preflight",
+        "at_utc": "2026-10-25T11:55:22.491481+00:00"
+      },
+      {
+        "phase": "before_render",
+        "at_utc": "2026-10-25T11:55:23.435538+00:00"
+      },
+      {
+        "phase": "render",
+        "at_utc": "2026-10-25T11:55:23.612762+00:00"
+      },
+      {
+        "phase": "exact_token_count",
+        "at_utc": "2026-10-25T11:55:40.101916+00:00"
+      },
+      {
+        "phase": "before_generation",
+        "at_utc": "2026-10-25T11:55:52.605329+00:00"
+      },
+      {
+        "phase": "generation",
+        "at_utc": "2026-10-25T11:55:52.628690+00:00"
+      }
+    ],
+    "generated_content_inspected": false
+  },
+  "temporary_awake": {
+    "helper_pid": 41708,
+    "owner_thread_id": 31460,
+    "acquired_flags_hex": "0x80000003",
+    "heartbeat_count": 28,
+    "heartbeat_gaps_over90sec": [
+      {
+        "from": "2026-10-25T11:55:50.001224+00:00",
+        "to": "2026-10-25T22:45:13.786958+00:00",
+        "seconds": 38963.785,
+        "prior_power": {
+          "status": "observed",
+          "at_utc": "2026-10-25T11:55:50.001249+00:00",
+          "ac_line_status": 0,
+          "ac_interpretation": "offline",
+          "battery_flag": 0,
+          "battery_percent": 41,
+          "battery_saver": 0,
+          "battery_lifetime_seconds": 12733,
+          "battery_full_lifetime_seconds": null
+        },
+        "next_power": {
+          "status": "observed",
+          "at_utc": "2026-10-25T22:45:13.786998+00:00",
+          "ac_line_status": 0,
+          "ac_interpretation": "offline",
+          "battery_flag": 0,
+          "battery_percent": 37,
+          "battery_saver": 0,
+          "battery_lifetime_seconds": 386214,
+          "battery_full_lifetime_seconds": null
+        }
+      }
+    ],
+    "release_status": "released",
+    "release_reason": "bound_coordinator_exited",
+    "released_at_utc": "2026-10-25T22:45:16.821740+00:00",
+    "release_clear_flags": 2147483648,
+    "release_previous_state": 2147483651,
+    "release_power_status": {
+      "status": "observed",
+      "at_utc": "2026-10-25T22:45:16.821775+00:00",
+      "ac_line_status": 0,
+      "ac_interpretation": "offline",
+      "battery_flag": 0,
+      "battery_percent": 37,
+      "battery_saver": 0,
+      "battery_lifetime_seconds": 386214,
+      "battery_full_lifetime_seconds": null
+    },
+    "exact_owner_creation_filetime_100ns_decimal": "134373972807413088",
+    "interpretation": "Thread API request was accepted and renewed. It did not guarantee uninterrupted execution through later OS lid/ModernStandby transitions. No persistent power policy was changed."
+  },
+  "pre_interruption_continuity": {
+    "post_acquire_F0_samples": 750,
+    "last_F0_monitor": "2026-10-25T11:54:31.671472+00:00",
+    "max_gap_seconds": 6.007,
+    "scope": "Only actual F0 monitor observations after awake acquisition, before its terminal receipt; not a whole-run success claim."
+  },
+  "power_event_correlation": {
+    "event_count": 27,
+    "truncated_at_maximum": false,
+    "observed_events": [
+      {
+        "time_utc": "2026-10-25T23:31:53.0731811Z",
+        "provider": "Microsoft-Windows-Kernel-Power",
+        "id": 507,
+        "record_id": 61410,
+        "message": "The system is exiting Modern Standby \r\n\r\nReason: Lid."
+      },
+      {
+        "time_utc": "2026-10-25T23:31:53.0562642Z",
+        "provider": "Microsoft-Windows-Kernel-Power",
+        "id": 506,
+        "record_id": 61409,
+        "message": "The system is entering Modern Standby \r\n\r\nReason: Sleep, Hibernate, or Shutdown."
+      },
+      {
+        "time_utc": "2026-10-25T22:46:00.2743116Z",
+        "provider": "Microsoft-Windows-Kernel-Power",
+        "id": 107,
+        "record_id": 61389,
+        "message": "The system has resumed from sleep."
+      },
+      {
+        "time_utc": "2026-10-25T22:45:48.4337279Z",
+        "provider": "Microsoft-Windows-Kernel-Power",
+        "id": 42,
+        "record_id": 61387,
+        "message": "The system is entering sleep.\r\n\r\nSleep Reason: Hibernate from Sleep - Standby Battery Budget Exceeded"
+      },
+      {
+        "time_utc": "2026-10-25T22:45:12.0062631Z",
+        "provider": "Microsoft-Windows-Kernel-Power",
+        "id": 507,
+        "record_id": 61380,
+        "message": "The system is exiting Modern Standby \r\n\r\nReason: Sleep, Hibernate, or Shutdown."
+      },
+      {
+        "time_utc": "2026-10-25T11:55:49.8227976Z",
+        "provider": "Microsoft-Windows-Kernel-Power",
+        "id": 506,
+        "record_id": 61375,
+        "message": "The system is entering Modern Standby \r\n\r\nReason: Austerity Battery Drain Budget Exceeded."
+      },
+      {
+        "time_utc": "2026-10-25T11:55:49.8206639Z",
+        "provider": "Microsoft-Windows-Kernel-Power",
+        "id": 507,
+        "record_id": 61373,
+        "message": "The system is exiting Modern Standby \r\n\r\nReason: Austerity Battery Drain Budget Exceeded."
+      },
+      {
+        "time_utc": "2026-10-25T11:55:26.1983528Z",
+        "provider": "Microsoft-Windows-Kernel-Power",
+        "id": 506,
+        "record_id": 61367,
+        "message": "The system is entering Modern Standby \r\n\r\nReason: Lid."
+      },
+      {
+        "time_utc": "2026-10-25T11:23:57.8406268Z",
+        "provider": "Microsoft-Windows-Kernel-Power",
+        "id": 507,
+        "record_id": 61329,
+        "message": "The system is exiting Modern Standby \r\n\r\nReason: Input Keyboard."
+      },
+      {
+        "time_utc": "2026-10-25T11:21:08.2433685Z",
+        "provider": "Microsoft-Windows-Kernel-Power",
+        "id": 506,
+        "record_id": 61324,
+        "message": "The system is entering Modern Standby \r\n\r\nReason: Idle Timeout."
+      }
+    ],
+    "interpretation": "Kernel-Power reports Lid entry11:55:26Z, battery-drain-budget transitions11:55:49Z, and exit22:45:12Z. The long helper heartbeat gap11:55:50→22:45:13 and late watchdog hard_deadline are temporally consistent with OS suspension. Event labels describe OS-recorded reasons, not user intent or proof of battery exhaustion.",
+    "cause_limits": [
+      "Do not infer who acted on a lid, whether an action was deliberate, or exact user behavior.",
+      "Battery was observed41% before long gap and37% at return, ACoffline at both observations; these endpoints do not describe every moment in the gap.",
+      "No continuous CPU/wall-time measurement exists through suspension; do not convert elapsed39033seconds into clean model throughput.",
+      "Later hibernation/wake records are preserved and are not collapsed into a single guessed physical cause."
+    ]
+  },
+  "cleanup": {
+    "recorded_at_utc": "2026-10-25T23:34:01.5983530Z",
+    "status": "owned_service_stopped",
+    "stopped_pid": 35148,
+    "executable": "C:\\Users\\Insun\\2026libera\\tmp\\libera_ollama0351_20261025\\portable\\ollama.exe",
+    "executable_sha256": "3cc17c238b081adf2bd3a206e52a063b637af1bf283d95b4ffd73a2bdec8b027",
+    "process_created_at_utc": "2026-10-25T10:03:30.7525810Z",
+    "no_resident_models_before_stop": true,
+    "owned_port_closed": true,
+    "existing_11434_before": [
+      {
+        "LocalAddress": "127.0.0.1",
+        "LocalPort": 11434,
+        "OwningProcess": 29500
+      }
+    ],
+    "existing_11434_after": [
+      {
+        "LocalAddress": "127.0.0.1",
+        "LocalPort": 11434,
+        "OwningProcess": 29500
+      }
+    ],
+    "existing_11434_listener_unchanged": true,
+    "persistent_environment_changed": false
+  },
+  "tool_note": "The PowerShell console Select-Object projection of OrderedDictionary values displayed null fields; the saved JSON receipt itself contains27 complete event records and was read directly to verify them. No repeat event query was needed.",
+  "model_calls": 0,
+  "service_restarts": 0,
+  "experiment_retries": 0,
+  "permanent_power_settings_changed": false,
+  "main_preparation_state_at_cleanup": "New prepare_sector_v495_main.py written, not executed; candidate inputs absent. Offline preparation can resume after this audit."
+}

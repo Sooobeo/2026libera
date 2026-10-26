@@ -1,0 +1,2033 @@
+{
+  "review_schema_version": "masked_single_item_descriptive_v1",
+  "item_id": "bc1dac28478c4cc5993149d3e26f0529",
+  "review_status": "Unvalidated AI-assisted descriptive semantic coding; no human validation or independence claim.",
+  "no_composite_score": true,
+  "scope": {
+    "supplied_item_folder": "research/recovery_20261025/new_pilot/judge_bundle/bc1dac28478c4cc5993149d3e26f0529",
+    "inputs_read": [
+      "item.json",
+      "final.txt",
+      "prior.txt",
+      "../rubric.json"
+    ],
+    "other_items_private_mappings_run_metadata_other_reviews_plans_hypotheses_read": false,
+    "masking_notice": "Arm labels, execution order, run paths and comparative hypotheses are withheld. Actual source identities, dates and verbatim output remain necessary evidence; source presence or the output itself can reveal a condition. Masking is incomplete.",
+    "external_web_lookup_performed": false,
+    "experiment_models_called": false,
+    "input_files_modified": false,
+    "prior_use": "Process evidence only for actual revision, never an independent observation or substitute final.",
+    "raw_policy": "Original text and raw weights assessed without normalization, repair, compulsory target, hidden-thought inference, or winner selection."
+  },
+  "hashes": {
+    "item.json": {
+      "algorithm": "sha256",
+      "scope": "exact file bytes",
+      "value": "96f62c2645ae73f98d7e69452402e96379227e017e1616003f15ac35eefb45bf"
+    },
+    "final.txt": {
+      "algorithm": "sha256",
+      "scope": "exact file bytes",
+      "value": "8b346d678921ea2ad199b458ff5553b01e0c930665401840223473e4ed44cd50"
+    },
+    "prior.txt": {
+      "algorithm": "sha256",
+      "scope": "exact file bytes",
+      "value": "58aef780973fcae25ee4a99ca3d42947132f659f70385e4237ed33f7b08bc471"
+    },
+    "rubric.json": {
+      "algorithm": "sha256",
+      "scope": "exact file bytes",
+      "value": "afbdcc51e1a41a9bb7c21e0120e22458c48ab29322cfec817e7434fbe6f1233f"
+    }
+  },
+  "descriptive_findings": [
+    "All 11 published labels and source_reading texts match the supplied institutional paraphrase and preserve source vocabulary.",
+    "The final parses and passes the supplied JSON schema, but all 11 weights remain unchanged and total 0.92, despite a claim of adjustment to 1.0 and actual draft feedback identifying the shortfall.",
+    "Several cited historical returns and all stated volatility occurrences conflict with the corresponding evidence. IT return precision is a separate, small discrepancy.",
+    "Several unqualified adopt stances do not implement the claimed direction against the shared comparison benchmark; the IT raw difference is near-neutral and should not be exaggerated.",
+    "The final recognizes new money, a twelve-month horizon and source age, but calls observed GDP a forecast and confuses June observation periods with July CPI and labor release dates.",
+    "Conditional sector scenarios remain unresolved where the packet cannot establish them; they are not automatically false factual claims."
+  ],
+  "arithmetic_execution": {
+    "attempted": true,
+    "recorded_status": "completed",
+    "text_state": "saved_response_content",
+    "saved_response_is_bound": true,
+    "transport_complete_assessment": "Recorded completed status and complete parseable JSON; binding is not semantic certification.",
+    "parseable_json": true,
+    "response_schema_valid": true,
+    "schema_validation_method": "Python jsonschema.validate against supplied response_schema, read-only prior check.",
+    "row_count": 11,
+    "unique_sector_count": 11,
+    "finite_numeric_weights_excluding_booleans": true,
+    "missing_codes": [],
+    "duplicate_codes": [],
+    "unknown_codes": [],
+    "negative_weight_codes": [],
+    "above_one_weight_codes": [],
+    "raw_sum": 0.92,
+    "raw_sum_exact_decimal": "0.92",
+    "raw_budget_residual": -0.07999999999999996,
+    "raw_budget_residual_exact_decimal": "-0.08",
+    "exact_decimal_check": "Python Decimal sum of submitted JSON values previously verified 0.92; two-decimal integer arithmetic also gives 92/100.",
+    "sum_tolerance": 0.000001,
+    "sum_within_tolerance": false,
+    "raw_repair": false,
+    "explicit_constraints": {
+      "evidence_id": "CTX:universe",
+      "exactly_11_sectors_satisfied": true,
+      "long_only_satisfied": true,
+      "unlevered_satisfied": true,
+      "fully_invested_satisfied": false
+    },
+    "submitted_constraints_count": 0,
+    "institutional_numeric_targets_published": false,
+    "invented_numeric_risk_limit_or_sector_cap_detected": false,
+    "risk_recomputation": "No final portfolio-risk number is asserted; no repaired portfolio risk, residual cash position or missing asset is invented."
+  },
+  "source_fidelity_global": {
+    "source_id_matches": true,
+    "exact_label_and_source_reading_matches": 11,
+    "representation": "researcher paraphrase; original rating labels preserved",
+    "scope_evidence": {
+      "id": "fidelity_q2_2026:p2:scope",
+      "text": "A strategist's US GICS-sector judgments use the largest 3,000 US stocks. They need not represent Fidelity firm-wide. Overweight and Underweight describe hypothetical tilts against broad-market sector weights; portfolio choices depend on investor goals and risk tolerance."
+    },
+    "findings": [
+      {
+        "category": "supported_link",
+        "finding": "All 11 labels and rationales are correct, with no substitution of another rating vocabulary. Every supplied sector has a rationale, so no missing-rationale case arises."
+      },
+      {
+        "category": "unresolved",
+        "finding": "The final uses Fidelity report shorthand and omits strategist/largest-3,000-stock/need-not-be-firm-wide qualifications. It does not explicitly invent a firm-wide mandate."
+      },
+      {
+        "category": "unsupported_or_contradictory_link",
+        "finding": "The global claim that ratings are adopted directly is not consistently realized against the supplied comparison weights. A reasoned departure would be allowed, but no such departure is stated for those rows."
+      },
+      {
+        "category": "unresolved",
+        "finding": "IT as strongest signal is not a published ranking: five sectors share Overweight. It can express the allocator’s own prioritization but is not evidence of a stronger source rating."
+      }
+    ]
+  },
+  "sector_rows": [
+    {
+      "sector_code": "10",
+      "sector_name": "Energy",
+      "final_text": {
+        "sector_code": "10",
+        "source_label": "Underweight",
+        "source_reading": "Energy receives Underweight. Unfavorable risk-return indicators.",
+        "source_evidence_ids": [
+          "fidelity_q2_2026:p3:sector:10"
+        ],
+        "source_stance": "adopt",
+        "weight": 0.02,
+        "decision_reason": "Retain Underweight stance based on the Fidelity report's explicit 'unfavorable risk-return' assessment. The sector's historical volatility (16.7%) and negative lookback return (-4.9%) support a reduced exposure. The macro context of a 3.5-3.75% Fed rate target further justifies avoiding high-yield cyclical exposure unless earnings expansion is proven, which is not indicated in the source.",
+        "decision_evidence_ids": [
+          "fidelity_q2_2026:p3:sector:10",
+          "MACRO_FED_TARGET_20260617",
+          "M:lookback_compound_return:10",
+          "M:daily_volatility:10"
+        ]
+      },
+      "source_fidelity": {
+        "category": "supported_link",
+        "label_matches": true,
+        "source_reading_exactly_matches_supplied_paraphrase": true,
+        "evidence_id": "fidelity_q2_2026:p3:sector:10",
+        "evidence_text": "Energy receives Underweight. Unfavorable risk-return indicators."
+      },
+      "allocation_check": {
+        "raw_final_weight": 0.02,
+        "raw_prior_weight": 0.02,
+        "raw_final_minus_prior": 0,
+        "comparison_baseline": 0.03003003003003003,
+        "raw_active_weight": -0.01003003003003003,
+        "raw_active_percentage_points": -1.0030030030030028,
+        "source_stance": "adopt",
+        "normalized_or_repaired": false
+      },
+      "evidence_decision_link": {
+        "category": "supported_link",
+        "finding": "Source unfavorable risk-return and a raw 2% weight below the 3.0030% comparison weight support the Underweight direction. Exact size remains a proposed choice.",
+        "evidence_ids": [
+          "fidelity_q2_2026:p3:sector:10",
+          "M:baseline_weights:10"
+        ]
+      },
+      "numeric_claim_checks": [
+        {
+          "location": "$.sectors[0].decision_reason",
+          "claim_percent": -4.9,
+          "subject": "Energy",
+          "metric": "historical compound return",
+          "period": [
+            "2026-04-21",
+            "2026-07-16"
+          ],
+          "evidence_id": "M:lookback_compound_return:10",
+          "source_json_pointer": "/supplied_final_evidence/common_market/lookback_compound_return/0",
+          "actual_decimal": 0.04287667814038709,
+          "actual_percent": 4.287667814038709,
+          "category": "unsupported_or_contradictory_link",
+          "finding": "Does not match the sector value; mismatch exceeds rounding and can reverse the sign."
+        },
+        {
+          "location": "$.sectors[0].decision_reason",
+          "claim_percent": 16.7,
+          "subject": "Energy",
+          "metric_claimed": "volatility, annualization unspecified in row",
+          "period": [
+            "2026-04-21",
+            "2026-07-16"
+          ],
+          "evidence_ids": [
+            "M:daily_volatility:10",
+            "M:annualized_volatility_diagnostic:10"
+          ],
+          "actual_daily_percent": 1.5513984895485446,
+          "actual_annualized_percent": 24.627687526240123,
+          "formula": "annualized = daily * sqrt(252); percent = decimal * 100",
+          "category": "unsupported_or_contradictory_link",
+          "finding": "Matches neither supplied daily nor annualized percent. Several claims resemble a misplaced decimal or another sector value, but error provenance is not inferred."
+        }
+      ],
+      "context_use": {
+        "category": "unresolved",
+        "finding": "Fed 3.5–3.75% is correct. Treating it as justification for avoiding high-yield cyclical Energy is an own causal interpretation; no yield classification or earnings-expansion test is supplied. Absence of earnings evidence is not proof of absent expansion."
+      },
+      "additional_qualitative_findings": [],
+      "citation_support_note": "Source rationale is supported. The cited return ID contradicts the negative return claim, and the cited daily-volatility ID gives 1.5514% daily, not 16.7%.",
+      "process_check": {
+        "weight_retained": true,
+        "source_label_reading_stance_retained": true,
+        "changed_fields": [
+          "decision_reason"
+        ],
+        "claim_of_weight_change_in_row": false
+      }
+    },
+    {
+      "sector_code": "15",
+      "sector_name": "Materials",
+      "final_text": {
+        "sector_code": "15",
+        "source_label": "Underweight",
+        "source_reading": "Materials receives Underweight. Higher capital spending may burden the sector.",
+        "source_evidence_ids": [
+          "fidelity_q2_2026:p3:sector:15"
+        ],
+        "source_stance": "adopt",
+        "weight": 0.02,
+        "decision_reason": "Adopt Underweight due to the Fidelity report's warning of capital spending burdens. While GDP growth is positive (2.1%), the cyclical nature of Materials often lags industrial demand. The sector's negative lookback return (-2.2%) and the explicit 'burden' warning suggest a cautious approach is warranted.",
+        "decision_evidence_ids": [
+          "fidelity_q2_2026:p3:sector:15",
+          "MACRO_REAL_GDP_Q1_2026_THIRD",
+          "M:lookback_compound_return:15"
+        ]
+      },
+      "source_fidelity": {
+        "category": "supported_link",
+        "label_matches": true,
+        "source_reading_exactly_matches_supplied_paraphrase": true,
+        "evidence_id": "fidelity_q2_2026:p3:sector:15",
+        "evidence_text": "Materials receives Underweight. Higher capital spending may burden the sector."
+      },
+      "allocation_check": {
+        "raw_final_weight": 0.02,
+        "raw_prior_weight": 0.02,
+        "raw_final_minus_prior": 0,
+        "comparison_baseline": 0.018018018018018018,
+        "raw_active_weight": 0.0019819819819819826,
+        "raw_active_percentage_points": 0.19819819819819826,
+        "source_stance": "adopt",
+        "normalized_or_repaired": false
+      },
+      "evidence_decision_link": {
+        "category": "unsupported_or_contradictory_link",
+        "finding": "The capital-spending concern and negative return support caution, but 2% is 0.1982 percentage points above the 1.8018% comparison benchmark. Unqualified adopt Underweight does not describe that raw direction; coarse rounding may matter but is unexplained.",
+        "evidence_ids": [
+          "fidelity_q2_2026:p3:sector:15",
+          "M:baseline_weights:15"
+        ]
+      },
+      "numeric_claim_checks": [
+        {
+          "location": "$.sectors[1].decision_reason",
+          "claim_percent": -2.2,
+          "subject": "Materials",
+          "metric": "historical compound return",
+          "period": [
+            "2026-04-21",
+            "2026-07-16"
+          ],
+          "evidence_id": "M:lookback_compound_return:15",
+          "source_json_pointer": "/supplied_final_evidence/common_market/lookback_compound_return/1",
+          "actual_decimal": -0.022012639294049507,
+          "actual_percent": -2.2012639294049507,
+          "category": "supported_link",
+          "finding": "Correct conventional one-decimal-percent rounding."
+        }
+      ],
+      "context_use": {
+        "category": "unresolved",
+        "finding": "GDP 2.1% is correctly reported. Retaining caution despite positive aggregate growth is visible reasoning, but neither the observation nor the packet establishes a Materials timing mechanism."
+      },
+      "additional_qualitative_findings": [
+        {
+          "category": "unsupported_or_contradictory_link",
+          "claim": "The cyclical nature of Materials often lags industrial demand",
+          "finding": "Asserted regularity has no supplied evidence; its truth outside the packet is not adjudicated."
+        }
+      ],
+      "citation_support_note": "Source rationale and -2.2% return are supported. Valid citations do not reconcile the adopt label with the raw comparison direction.",
+      "process_check": {
+        "weight_retained": true,
+        "source_label_reading_stance_retained": true,
+        "changed_fields": [
+          "decision_reason"
+        ],
+        "claim_of_weight_change_in_row": false
+      }
+    },
+    {
+      "sector_code": "20",
+      "sector_name": "Industrials",
+      "final_text": {
+        "sector_code": "20",
+        "source_label": "Overweight",
+        "source_reading": "Industrials receives Overweight. Forward-looking valuation evidence is favorable.",
+        "source_evidence_ids": [
+          "fidelity_q2_2026:p3:sector:20"
+        ],
+        "source_stance": "adopt",
+        "weight": 0.1,
+        "decision_reason": "Retain Overweight stance supported by favorable forward-looking valuation evidence. The sector benefits from the macro context of 2.1% GDP growth and 57k jobs added, suggesting infrastructure and manufacturing demand. The positive lookback return (3.8%) and reasonable volatility (12.4%) justify a weight above the neutral baseline.",
+        "decision_evidence_ids": [
+          "fidelity_q2_2026:p3:sector:20",
+          "MACRO_REAL_GDP_Q1_2026_THIRD",
+          "M:lookback_compound_return:20"
+        ]
+      },
+      "source_fidelity": {
+        "category": "supported_link",
+        "label_matches": true,
+        "source_reading_exactly_matches_supplied_paraphrase": true,
+        "evidence_id": "fidelity_q2_2026:p3:sector:20",
+        "evidence_text": "Industrials receives Overweight. Forward-looking valuation evidence is favorable."
+      },
+      "allocation_check": {
+        "raw_final_weight": 0.1,
+        "raw_prior_weight": 0.1,
+        "raw_final_minus_prior": 0,
+        "comparison_baseline": 0.08808808808808809,
+        "raw_active_weight": 0.011911911911911918,
+        "raw_active_percentage_points": 1.1911911911911919,
+        "source_stance": "adopt",
+        "normalized_or_repaired": false
+      },
+      "evidence_decision_link": {
+        "category": "supported_link",
+        "finding": "Favorable forward valuations, correctly rounded 3.8% return and a 10% weight above the 8.8088% comparator support the stated overweight direction. The volatility premise is wrong.",
+        "evidence_ids": [
+          "fidelity_q2_2026:p3:sector:20",
+          "M:baseline_weights:20"
+        ]
+      },
+      "numeric_claim_checks": [
+        {
+          "location": "$.sectors[2].decision_reason",
+          "claim_percent": 3.8,
+          "subject": "Industrials",
+          "metric": "historical compound return",
+          "period": [
+            "2026-04-21",
+            "2026-07-16"
+          ],
+          "evidence_id": "M:lookback_compound_return:20",
+          "source_json_pointer": "/supplied_final_evidence/common_market/lookback_compound_return/2",
+          "actual_decimal": 0.03848895413108133,
+          "actual_percent": 3.848895413108133,
+          "category": "supported_link",
+          "finding": "Correct conventional one-decimal-percent rounding."
+        },
+        {
+          "location": "$.sectors[2].decision_reason",
+          "claim_percent": 12.4,
+          "subject": "Industrials",
+          "metric_claimed": "volatility, annualization unspecified in row",
+          "period": [
+            "2026-04-21",
+            "2026-07-16"
+          ],
+          "evidence_ids": [
+            "M:daily_volatility:20",
+            "M:annualized_volatility_diagnostic:20"
+          ],
+          "actual_daily_percent": 1.2421308306517373,
+          "actual_annualized_percent": 19.718215642263498,
+          "formula": "annualized = daily * sqrt(252); percent = decimal * 100",
+          "category": "unsupported_or_contradictory_link",
+          "finding": "Matches neither supplied daily nor annualized percent. Several claims resemble a misplaced decimal or another sector value, but error provenance is not inferred."
+        }
+      ],
+      "context_use": {
+        "category": "unresolved",
+        "finding": "GDP 2.1% and 57,000 total nonfarm jobs are visible and numerically correct. The latter ID is absent from final citations. Aggregate growth/jobs do not establish infrastructure or manufacturing demand; suggesting marks an inference whose specific channel remains unverified."
+      },
+      "additional_qualitative_findings": [],
+      "citation_support_note": "Source, GDP and return citations support those portions. Payroll is visible without a final citation; 12.4% volatility has no matching row citation.",
+      "process_check": {
+        "weight_retained": true,
+        "source_label_reading_stance_retained": true,
+        "changed_fields": [
+          "decision_reason"
+        ],
+        "claim_of_weight_change_in_row": false
+      }
+    },
+    {
+      "sector_code": "25",
+      "sector_name": "Consumer Discretionary",
+      "final_text": {
+        "sector_code": "25",
+        "source_label": "Overweight",
+        "source_reading": "Consumer Discretionary receives Overweight. Forward valuations imply favorable risk-return.",
+        "source_evidence_ids": [
+          "fidelity_q2_2026:p3:sector:25"
+        ],
+        "source_stance": "adopt",
+        "weight": 0.09,
+        "decision_reason": "Retain Overweight based on favorable forward valuations. With unemployment at 4.2% and GDP growth at 2.1%, consumer spending resilience is plausible. The sector's strong historical return (10.2%) and volatility (11.6%) indicate it has performed well, but the forward-looking valuation thesis remains intact for a 12-month horizon.",
+        "decision_evidence_ids": [
+          "fidelity_q2_2026:p3:sector:25",
+          "MACRO_UNEMPLOYMENT_202606",
+          "M:lookback_compound_return:25"
+        ]
+      },
+      "source_fidelity": {
+        "category": "supported_link",
+        "label_matches": true,
+        "source_reading_exactly_matches_supplied_paraphrase": true,
+        "evidence_id": "fidelity_q2_2026:p3:sector:25",
+        "evidence_text": "Consumer Discretionary receives Overweight. Forward valuations imply favorable risk-return."
+      },
+      "allocation_check": {
+        "raw_final_weight": 0.09,
+        "raw_prior_weight": 0.09,
+        "raw_final_minus_prior": 0,
+        "comparison_baseline": 0.09309309309309309,
+        "raw_active_weight": -0.003093093093093094,
+        "raw_active_percentage_points": -0.3093093093093094,
+        "source_stance": "adopt",
+        "normalized_or_repaired": false
+      },
+      "evidence_decision_link": {
+        "category": "unsupported_or_contradictory_link",
+        "finding": "The 9% raw weight is 0.3093 percentage points below the 9.3093% comparator while the final says retain Overweight. The prior explicit above-benchmark claim was removed, but unqualified adoption remains without a departure explanation.",
+        "evidence_ids": [
+          "fidelity_q2_2026:p3:sector:25",
+          "M:baseline_weights:25"
+        ]
+      },
+      "numeric_claim_checks": [
+        {
+          "location": "$.sectors[3].decision_reason",
+          "claim_percent": 10.2,
+          "subject": "Consumer Discretionary",
+          "metric": "historical compound return",
+          "period": [
+            "2026-04-21",
+            "2026-07-16"
+          ],
+          "evidence_id": "M:lookback_compound_return:25",
+          "source_json_pointer": "/supplied_final_evidence/common_market/lookback_compound_return/3",
+          "actual_decimal": -0.019155630332708284,
+          "actual_percent": -1.9155630332708284,
+          "category": "unsupported_or_contradictory_link",
+          "finding": "Does not match the sector value; mismatch exceeds rounding and can reverse the sign."
+        },
+        {
+          "location": "$.sectors[3].decision_reason",
+          "claim_percent": 11.6,
+          "subject": "Consumer Discretionary",
+          "metric_claimed": "volatility, annualization unspecified in row",
+          "period": [
+            "2026-04-21",
+            "2026-07-16"
+          ],
+          "evidence_ids": [
+            "M:daily_volatility:25",
+            "M:annualized_volatility_diagnostic:25"
+          ],
+          "actual_daily_percent": 1.168778790907761,
+          "actual_annualized_percent": 18.553788110332174,
+          "formula": "annualized = daily * sqrt(252); percent = decimal * 100",
+          "category": "unsupported_or_contradictory_link",
+          "finding": "Matches neither supplied daily nor annualized percent. Several claims resemble a misplaced decimal or another sector value, but error provenance is not inferred."
+        }
+      ],
+      "context_use": {
+        "category": "unresolved",
+        "finding": "Unemployment 4.2% and GDP 2.1% are correct. Consumer-spending resilience is explicitly described as plausible, an own inference rather than an official observation. Continued validity of the old thesis for twelve months is not established."
+      },
+      "additional_qualitative_findings": [],
+      "citation_support_note": "Source rationale is supported. M:lookback_compound_return:25 is negative and does not support a strong 10.2% historical return. Volatility also mismatches.",
+      "process_check": {
+        "weight_retained": true,
+        "source_label_reading_stance_retained": true,
+        "changed_fields": [
+          "decision_reason"
+        ],
+        "claim_of_weight_change_in_row": false
+      }
+    },
+    {
+      "sector_code": "30",
+      "sector_name": "Consumer Staples",
+      "final_text": {
+        "sector_code": "30",
+        "source_label": "Underweight",
+        "source_reading": "Consumer Staples receives Underweight. Weak fundamentals raise value-trap concerns.",
+        "source_evidence_ids": [
+          "fidelity_q2_2026:p3:sector:30"
+        ],
+        "source_stance": "adopt",
+        "weight": 0.04,
+        "decision_reason": "Retain Underweight following the Fidelity warning of 'weak fundamentals' and 'value-trap' risks. While the sector is defensive, the explicit concern suggests earnings or margins are under pressure. The sector's positive lookback return (4.9%) may be a mean-reversion signal rather than a continuation.",
+        "decision_evidence_ids": [
+          "fidelity_q2_2026:p3:sector:30",
+          "MACRO_CPI_CORE_YOY_202606",
+          "M:lookback_compound_return:30"
+        ]
+      },
+      "source_fidelity": {
+        "category": "supported_link",
+        "label_matches": true,
+        "source_reading_exactly_matches_supplied_paraphrase": true,
+        "evidence_id": "fidelity_q2_2026:p3:sector:30",
+        "evidence_text": "Consumer Staples receives Underweight. Weak fundamentals raise value-trap concerns."
+      },
+      "allocation_check": {
+        "raw_final_weight": 0.04,
+        "raw_prior_weight": 0.04,
+        "raw_final_minus_prior": 0,
+        "comparison_baseline": 0.04604604604604604,
+        "raw_active_weight": -0.006046046046046041,
+        "raw_active_percentage_points": -0.6046046046046041,
+        "source_stance": "adopt",
+        "normalized_or_repaired": false
+      },
+      "evidence_decision_link": {
+        "category": "supported_link",
+        "finding": "Weak fundamentals/value-trap concerns and a 4% raw weight below the 4.6046% comparator support Underweight. Correct +4.9% historical return is acknowledged as competing evidence, without a compulsory weight.",
+        "evidence_ids": [
+          "fidelity_q2_2026:p3:sector:30",
+          "M:baseline_weights:30"
+        ]
+      },
+      "numeric_claim_checks": [
+        {
+          "location": "$.sectors[4].decision_reason",
+          "claim_percent": 4.9,
+          "subject": "Consumer Staples",
+          "metric": "historical compound return",
+          "period": [
+            "2026-04-21",
+            "2026-07-16"
+          ],
+          "evidence_id": "M:lookback_compound_return:30",
+          "source_json_pointer": "/supplied_final_evidence/common_market/lookback_compound_return/4",
+          "actual_decimal": 0.04873642549989987,
+          "actual_percent": 4.873642549989987,
+          "category": "supported_link",
+          "finding": "Correct conventional one-decimal-percent rounding."
+        }
+      ],
+      "context_use": {
+        "category": "missing_or_not_assessable",
+        "finding": "The core-CPI ID remains after the prior inflation/margin sentence was deleted. The final row has no corresponding macro mechanism; listing an ID is not application. Core CPI is discussed elsewhere."
+      },
+      "additional_qualitative_findings": [
+        {
+          "category": "unresolved",
+          "claim": "Weak fundamentals suggest margin/earnings pressure; positive return may mean revert",
+          "finding": "Suggests and may mark own inferences. No earnings, margin or mean-reversion estimate is supplied."
+        }
+      ],
+      "citation_support_note": "Source rationale and rounded +4.9% return are supported; the remaining CPI citation has no matching row claim.",
+      "process_check": {
+        "weight_retained": true,
+        "source_label_reading_stance_retained": true,
+        "changed_fields": [
+          "decision_reason"
+        ],
+        "claim_of_weight_change_in_row": false
+      }
+    },
+    {
+      "sector_code": "35",
+      "sector_name": "Health Care",
+      "final_text": {
+        "sector_code": "35",
+        "source_label": "Neutral",
+        "source_reading": "Health Care receives Neutral. Risk-return evidence is balanced.",
+        "source_evidence_ids": [
+          "fidelity_q2_2026:p3:sector:35"
+        ],
+        "source_stance": "adopt",
+        "weight": 0.09,
+        "decision_reason": "Retain Neutral stance reflecting balanced risk-return evidence. Health Care is historically resilient but faces regulatory and pricing headwinds. The sector's strong historical return (8.2%) and moderate volatility (8.4%) suggest stability, but the lack of a clear 'Overweight' or 'Underweight' driver in the source justifies a weight aligned with the benchmark average.",
+        "decision_evidence_ids": [
+          "fidelity_q2_2026:p3:sector:35",
+          "M:lookback_compound_return:35"
+        ]
+      },
+      "source_fidelity": {
+        "category": "supported_link",
+        "label_matches": true,
+        "source_reading_exactly_matches_supplied_paraphrase": true,
+        "evidence_id": "fidelity_q2_2026:p3:sector:35",
+        "evidence_text": "Health Care receives Neutral. Risk-return evidence is balanced."
+      },
+      "allocation_check": {
+        "raw_final_weight": 0.09,
+        "raw_prior_weight": 0.09,
+        "raw_final_minus_prior": 0,
+        "comparison_baseline": 0.0890890890890891,
+        "raw_active_weight": 0.0009109109109109031,
+        "raw_active_percentage_points": 0.09109109109109031,
+        "source_stance": "adopt",
+        "normalized_or_repaired": false
+      },
+      "evidence_decision_link": {
+        "category": "supported_link",
+        "finding": "Neutral and balanced risk-return are supported. Nine percent is close to the 8.9089% sector comparator (+0.0911 percentage points), compatible with approximate neutrality. Benchmark average is undefined and not exact equality.",
+        "evidence_ids": [
+          "fidelity_q2_2026:p3:sector:35",
+          "M:baseline_weights:35"
+        ]
+      },
+      "numeric_claim_checks": [
+        {
+          "location": "$.sectors[5].decision_reason",
+          "claim_percent": 8.2,
+          "subject": "Health Care",
+          "metric": "historical compound return",
+          "period": [
+            "2026-04-21",
+            "2026-07-16"
+          ],
+          "evidence_id": "M:lookback_compound_return:35",
+          "source_json_pointer": "/supplied_final_evidence/common_market/lookback_compound_return/5",
+          "actual_decimal": 0.10238502092729651,
+          "actual_percent": 10.23850209272965,
+          "category": "unsupported_or_contradictory_link",
+          "finding": "Does not match the sector value; mismatch exceeds rounding and can reverse the sign."
+        },
+        {
+          "location": "$.sectors[5].decision_reason",
+          "claim_percent": 8.4,
+          "subject": "Health Care",
+          "metric_claimed": "volatility, annualization unspecified in row",
+          "period": [
+            "2026-04-21",
+            "2026-07-16"
+          ],
+          "evidence_ids": [
+            "M:daily_volatility:35",
+            "M:annualized_volatility_diagnostic:35"
+          ],
+          "actual_daily_percent": 1.1552088321777527,
+          "actual_annualized_percent": 18.338371693726103,
+          "formula": "annualized = daily * sqrt(252); percent = decimal * 100",
+          "category": "unsupported_or_contradictory_link",
+          "finding": "Matches neither supplied daily nor annualized percent. Several claims resemble a misplaced decimal or another sector value, but error provenance is not inferred."
+        }
+      ],
+      "context_use": {
+        "category": "missing_or_not_assessable",
+        "finding": "No explicit macro-to-sector connection is made in this row; no requirement to force one is imposed."
+      },
+      "additional_qualitative_findings": [
+        {
+          "category": "unsupported_or_contradictory_link",
+          "claim": "Historically resilient but faces regulatory/pricing headwinds",
+          "finding": "Those additional asserted characterizations are not established by the supplied balanced-risk-return rationale. The review does not determine their real-world truth."
+        }
+      ],
+      "citation_support_note": "Source rationale is supported. Return 8.2% and volatility 8.4% are not the supplied Health Care values.",
+      "process_check": {
+        "weight_retained": true,
+        "source_label_reading_stance_retained": true,
+        "changed_fields": [
+          "decision_reason"
+        ],
+        "claim_of_weight_change_in_row": false
+      }
+    },
+    {
+      "sector_code": "40",
+      "sector_name": "Financials",
+      "final_text": {
+        "sector_code": "40",
+        "source_label": "Overweight",
+        "source_reading": "Financials receives Overweight. Relative valuations offer downside support.",
+        "source_evidence_ids": [
+          "fidelity_q2_2026:p3:sector:40"
+        ],
+        "source_stance": "adopt",
+        "weight": 0.12,
+        "decision_reason": "Retain Overweight justified by the Fidelity report's assertion that relative valuations provide downside support. With the Fed rate target at 3.5-3.75%, interest rate-sensitive financials may benefit from a stable or slightly rising rate environment. The sector's positive lookback return (15.0%) and volatility (21.2%) indicate it has performed well, but the valuation support thesis remains valid.",
+        "decision_evidence_ids": [
+          "fidelity_q2_2026:p3:sector:40",
+          "MACRO_FED_TARGET_20260617",
+          "M:lookback_compound_return:40"
+        ]
+      },
+      "source_fidelity": {
+        "category": "supported_link",
+        "label_matches": true,
+        "source_reading_exactly_matches_supplied_paraphrase": true,
+        "evidence_id": "fidelity_q2_2026:p3:sector:40",
+        "evidence_text": "Financials receives Overweight. Relative valuations offer downside support."
+      },
+      "allocation_check": {
+        "raw_final_weight": 0.12,
+        "raw_prior_weight": 0.12,
+        "raw_final_minus_prior": 0,
+        "comparison_baseline": 0.11811811811811812,
+        "raw_active_weight": 0.001881881881881875,
+        "raw_active_percentage_points": 0.1881881881881875,
+        "source_stance": "adopt",
+        "normalized_or_repaired": false
+      },
+      "evidence_decision_link": {
+        "category": "supported_link",
+        "finding": "Relative-valuation downside support and 12% above the 11.8118% comparator support a modest overweight direction. The historical return and volatility premises are incorrect.",
+        "evidence_ids": [
+          "fidelity_q2_2026:p3:sector:40",
+          "M:baseline_weights:40"
+        ]
+      },
+      "numeric_claim_checks": [
+        {
+          "location": "$.sectors[6].decision_reason",
+          "claim_percent": 15,
+          "subject": "Financials",
+          "metric": "historical compound return",
+          "period": [
+            "2026-04-21",
+            "2026-07-16"
+          ],
+          "evidence_id": "M:lookback_compound_return:40",
+          "source_json_pointer": "/supplied_final_evidence/common_market/lookback_compound_return/6",
+          "actual_decimal": 0.08205961595157252,
+          "actual_percent": 8.205961595157252,
+          "category": "unsupported_or_contradictory_link",
+          "finding": "Does not match the sector value; mismatch exceeds rounding and can reverse the sign."
+        },
+        {
+          "location": "$.sectors[6].decision_reason",
+          "claim_percent": 21.2,
+          "subject": "Financials",
+          "metric_claimed": "volatility, annualization unspecified in row",
+          "period": [
+            "2026-04-21",
+            "2026-07-16"
+          ],
+          "evidence_ids": [
+            "M:daily_volatility:40",
+            "M:annualized_volatility_diagnostic:40"
+          ],
+          "actual_daily_percent": 0.8360864169526175,
+          "actual_annualized_percent": 13.272460402894101,
+          "formula": "annualized = daily * sqrt(252); percent = decimal * 100",
+          "category": "unsupported_or_contradictory_link",
+          "finding": "Matches neither supplied daily nor annualized percent. Several claims resemble a misplaced decimal or another sector value, but error provenance is not inferred."
+        }
+      ],
+      "context_use": {
+        "category": "unresolved",
+        "finding": "Fed target range is correct; may benefit from stable/slightly rising rates is a conditional scenario, not a supplied rate forecast. No trajectory or net-interest-margin mapping is supplied. The unresolved section appropriately acknowledges this uncertainty."
+      },
+      "additional_qualitative_findings": [],
+      "citation_support_note": "Source and Fed IDs support the source view/range. The return ID gives +8.2060%, not +15.0%; the stated volatility is unsupported.",
+      "process_check": {
+        "weight_retained": true,
+        "source_label_reading_stance_retained": true,
+        "changed_fields": [
+          "decision_reason"
+        ],
+        "claim_of_weight_change_in_row": false
+      }
+    },
+    {
+      "sector_code": "45",
+      "sector_name": "Information Technology",
+      "final_text": {
+        "sector_code": "45",
+        "source_label": "Overweight",
+        "source_reading": "Information Technology receives Overweight. Fundamentals and post-decline valuations support the view.",
+        "source_evidence_ids": [
+          "fidelity_q2_2026:p3:sector:45"
+        ],
+        "source_stance": "adopt",
+        "weight": 0.38,
+        "decision_reason": "Retain Overweight as the strongest signal in the packet, citing favorable fundamentals and post-decline valuations. IT is the largest sector by weight in the benchmark (38%), and the source's explicit support aligns with the macro context of GDP growth and labor market stability. The sector's positive lookback return (14.9%) and volatility (21.2%) suggest it is a primary growth driver.",
+        "decision_evidence_ids": [
+          "fidelity_q2_2026:p3:sector:45",
+          "MACRO_REAL_GDP_Q1_2026_THIRD",
+          "M:lookback_compound_return:45"
+        ]
+      },
+      "source_fidelity": {
+        "category": "supported_link",
+        "label_matches": true,
+        "source_reading_exactly_matches_supplied_paraphrase": true,
+        "evidence_id": "fidelity_q2_2026:p3:sector:45",
+        "evidence_text": "Information Technology receives Overweight. Fundamentals and post-decline valuations support the view."
+      },
+      "allocation_check": {
+        "raw_final_weight": 0.38,
+        "raw_prior_weight": 0.38,
+        "raw_final_minus_prior": 0,
+        "comparison_baseline": 0.38038038038038036,
+        "raw_active_weight": -0.0003803803803803518,
+        "raw_active_percentage_points": -0.03803803803803518,
+        "source_stance": "adopt",
+        "normalized_or_repaired": false
+      },
+      "evidence_decision_link": {
+        "category": "unsupported_or_contradictory_link",
+        "finding": "Thirty-eight percent is the largest proposed weight but matches the reported benchmark 38.0% and is nearly the normalized 38.0380%. It does not implement a meaningful overweight. The -0.0380 percentage-point raw difference is a precision/normalization issue, not a substantive negative tilt.",
+        "evidence_ids": [
+          "fidelity_q2_2026:p3:sector:45",
+          "M:baseline_weights:45"
+        ]
+      },
+      "numeric_claim_checks": [
+        {
+          "location": "$.sectors[7].decision_reason",
+          "claim_percent": 14.9,
+          "subject": "Information Technology",
+          "metric": "historical compound return",
+          "period": [
+            "2026-04-21",
+            "2026-07-16"
+          ],
+          "evidence_id": "M:lookback_compound_return:45",
+          "source_json_pointer": "/supplied_final_evidence/common_market/lookback_compound_return/7",
+          "actual_decimal": 0.14992022077727252,
+          "actual_percent": 14.992022077727253,
+          "category": "unresolved",
+          "finding": "14.9920% ordinarily rounds to 15.0%; 14.9% differs by only 0.0920 percentage point and may reflect truncation. Small precision discrepancy, not a large contradiction."
+        },
+        {
+          "location": "$.sectors[7].decision_reason",
+          "claim_percent": 21.2,
+          "subject": "Information Technology",
+          "metric_claimed": "volatility, annualization unspecified in row",
+          "period": [
+            "2026-04-21",
+            "2026-07-16"
+          ],
+          "evidence_ids": [
+            "M:daily_volatility:45",
+            "M:annualized_volatility_diagnostic:45"
+          ],
+          "actual_daily_percent": 2.121962343522068,
+          "actual_annualized_percent": 33.68510791441921,
+          "formula": "annualized = daily * sqrt(252); percent = decimal * 100",
+          "category": "unsupported_or_contradictory_link",
+          "finding": "Matches neither supplied daily nor annualized percent. Several claims resemble a misplaced decimal or another sector value, but error provenance is not inferred."
+        }
+      ],
+      "context_use": {
+        "category": "unresolved",
+        "finding": "Positive GDP and labor observations may inform a growth interpretation, but one observation set does not establish labor stability or a sector-specific IT effect. No updated institutional stance is supplied."
+      },
+      "additional_qualitative_findings": [
+        {
+          "category": "unresolved",
+          "claim": "Strongest signal in the packet",
+          "finding": "The source does not rank IT above the four other Overweight sectors. This may be own prioritization; it is not an independently supported published hierarchy."
+        }
+      ],
+      "citation_support_note": "The source fundamentals/valuations rationale and largest reported benchmark weight are supported. The 14.9% return is a small precision discrepancy from 14.9920%; 21.2% volatility is materially wrong.",
+      "process_check": {
+        "weight_retained": true,
+        "source_label_reading_stance_retained": true,
+        "changed_fields": [
+          "decision_reason"
+        ],
+        "claim_of_weight_change_in_row": false
+      }
+    },
+    {
+      "sector_code": "50",
+      "sector_name": "Communication Services",
+      "final_text": {
+        "sector_code": "50",
+        "source_label": "Underweight",
+        "source_reading": "Communication Services receives Underweight. Technology-related components fare better than defensive components.",
+        "source_evidence_ids": [
+          "fidelity_q2_2026:p3:sector:50"
+        ],
+        "source_stance": "adopt",
+        "weight": 0.03,
+        "decision_reason": "Retain Underweight consistent with the Fidelity report's differentiation between tech-heavy and defensive components. The sector's negative lookback return (-4.9%) and moderate volatility (9.7%) suggest weakness relative to IT. The macro environment of stable growth may favor IT over the more cyclical or content-heavy exposure of Communication Services.",
+        "decision_evidence_ids": [
+          "fidelity_q2_2026:p3:sector:50",
+          "M:lookback_compound_return:50"
+        ]
+      },
+      "source_fidelity": {
+        "category": "supported_link",
+        "label_matches": true,
+        "source_reading_exactly_matches_supplied_paraphrase": true,
+        "evidence_id": "fidelity_q2_2026:p3:sector:50",
+        "evidence_text": "Communication Services receives Underweight. Technology-related components fare better than defensive components."
+      },
+      "allocation_check": {
+        "raw_final_weight": 0.03,
+        "raw_prior_weight": 0.03,
+        "raw_final_minus_prior": 0,
+        "comparison_baseline": 0.09709709709709709,
+        "raw_active_weight": -0.06709709709709709,
+        "raw_active_percentage_points": -6.709709709709709,
+        "source_stance": "adopt",
+        "normalized_or_repaired": false
+      },
+      "evidence_decision_link": {
+        "category": "supported_link",
+        "finding": "The source component distinction is preserved and a 3% raw weight is below the 9.7097% comparator. Correct -4.9% return is weaker than IT’s positive return. Little explanation addresses why a mixed sector with stronger technology components receives so large a whole-sector reduction.",
+        "evidence_ids": [
+          "fidelity_q2_2026:p3:sector:50",
+          "M:baseline_weights:50"
+        ]
+      },
+      "numeric_claim_checks": [
+        {
+          "location": "$.sectors[8].decision_reason",
+          "claim_percent": -4.9,
+          "subject": "Communication Services",
+          "metric": "historical compound return",
+          "period": [
+            "2026-04-21",
+            "2026-07-16"
+          ],
+          "evidence_id": "M:lookback_compound_return:50",
+          "source_json_pointer": "/supplied_final_evidence/common_market/lookback_compound_return/8",
+          "actual_decimal": -0.04890051427558073,
+          "actual_percent": -4.890051427558073,
+          "category": "supported_link",
+          "finding": "Correct conventional one-decimal-percent rounding."
+        },
+        {
+          "location": "$.sectors[8].decision_reason",
+          "claim_percent": 9.7,
+          "subject": "Communication Services",
+          "metric_claimed": "volatility, annualization unspecified in row",
+          "period": [
+            "2026-04-21",
+            "2026-07-16"
+          ],
+          "evidence_ids": [
+            "M:daily_volatility:50",
+            "M:annualized_volatility_diagnostic:50"
+          ],
+          "actual_daily_percent": 0.9663046281966393,
+          "actual_annualized_percent": 15.339610421634243,
+          "formula": "annualized = daily * sqrt(252); percent = decimal * 100",
+          "category": "unsupported_or_contradictory_link",
+          "finding": "Matches neither supplied daily nor annualized percent. Several claims resemble a misplaced decimal or another sector value, but error provenance is not inferred."
+        }
+      ],
+      "context_use": {
+        "category": "unresolved",
+        "finding": "Stable growth may favor IT is conditional; stable growth and the specific cyclical/content-composition mechanism are not established by the supplied observations. No row macro ID is cited."
+      },
+      "additional_qualitative_findings": [],
+      "citation_support_note": "Source distinction and rounded negative return are supported. The 9.7% volatility matches neither daily nor annualized percent.",
+      "process_check": {
+        "weight_retained": true,
+        "source_label_reading_stance_retained": true,
+        "changed_fields": [
+          "decision_reason"
+        ],
+        "claim_of_weight_change_in_row": false
+      }
+    },
+    {
+      "sector_code": "55",
+      "sector_name": "Utilities",
+      "final_text": {
+        "sector_code": "55",
+        "source_label": "Underweight",
+        "source_reading": "Utilities receives Underweight. Valuations are unfavorable.",
+        "source_evidence_ids": [
+          "fidelity_q2_2026:p3:sector:55"
+        ],
+        "source_stance": "adopt",
+        "weight": 0.02,
+        "decision_reason": "Retain Underweight based on the Fidelity report's explicit statement that valuations are unfavorable. While Utilities are defensive, the source's 'Underweight' rating suggests the risk-adjusted return is not compelling. The sector's negative lookback return (-4.9%) and low volatility (9.7%) indicate it has underperformed recently.",
+        "decision_evidence_ids": [
+          "fidelity_q2_2026:p3:sector:55",
+          "M:lookback_compound_return:55"
+        ]
+      },
+      "source_fidelity": {
+        "category": "supported_link",
+        "label_matches": true,
+        "source_reading_exactly_matches_supplied_paraphrase": true,
+        "evidence_id": "fidelity_q2_2026:p3:sector:55",
+        "evidence_text": "Utilities receives Underweight. Valuations are unfavorable."
+      },
+      "allocation_check": {
+        "raw_final_weight": 0.02,
+        "raw_prior_weight": 0.02,
+        "raw_final_minus_prior": 0,
+        "comparison_baseline": 0.022022022022022022,
+        "raw_active_weight": -0.0020220220220220214,
+        "raw_active_percentage_points": -0.20220220220220214,
+        "source_stance": "adopt",
+        "normalized_or_repaired": false
+      },
+      "evidence_decision_link": {
+        "category": "supported_link",
+        "finding": "Unfavorable valuations and 2% below the 2.2022% comparator support Underweight. The historical negative-return justification is contradicted.",
+        "evidence_ids": [
+          "fidelity_q2_2026:p3:sector:55",
+          "M:baseline_weights:55"
+        ]
+      },
+      "numeric_claim_checks": [
+        {
+          "location": "$.sectors[9].decision_reason",
+          "claim_percent": -4.9,
+          "subject": "Utilities",
+          "metric": "historical compound return",
+          "period": [
+            "2026-04-21",
+            "2026-07-16"
+          ],
+          "evidence_id": "M:lookback_compound_return:55",
+          "source_json_pointer": "/supplied_final_evidence/common_market/lookback_compound_return/9",
+          "actual_decimal": 0.0002261198808994891,
+          "actual_percent": 0.02261198808994891,
+          "category": "unsupported_or_contradictory_link",
+          "finding": "Does not match the sector value; mismatch exceeds rounding and can reverse the sign."
+        },
+        {
+          "location": "$.sectors[9].decision_reason",
+          "claim_percent": 9.7,
+          "subject": "Utilities",
+          "metric_claimed": "volatility, annualization unspecified in row",
+          "period": [
+            "2026-04-21",
+            "2026-07-16"
+          ],
+          "evidence_ids": [
+            "M:daily_volatility:55",
+            "M:annualized_volatility_diagnostic:55"
+          ],
+          "actual_daily_percent": 1.1271567026449758,
+          "actual_annualized_percent": 17.893057942789113,
+          "formula": "annualized = daily * sqrt(252); percent = decimal * 100",
+          "category": "unsupported_or_contradictory_link",
+          "finding": "Matches neither supplied daily nor annualized percent. Several claims resemble a misplaced decimal or another sector value, but error provenance is not inferred."
+        }
+      ],
+      "context_use": {
+        "category": "missing_or_not_assessable",
+        "finding": "The prior Fed/yield argument and citation were removed together. No macro application is claimed in the final row."
+      },
+      "additional_qualitative_findings": [
+        {
+          "category": "unsupported_or_contradictory_link",
+          "claim": "Negative return and low volatility indicate recent underperformance",
+          "finding": "Actual absolute return is +0.022612%, not -4.9%. Relative underperformance may depend on a comparator, but no separate comparison calculation validates the wrong absolute-return premise."
+        }
+      ],
+      "citation_support_note": "Source valuation concern is supported. The return ID contradicts -4.9%, and volatility 9.7% is unsupported.",
+      "process_check": {
+        "weight_retained": true,
+        "source_label_reading_stance_retained": true,
+        "changed_fields": [
+          "decision_reason",
+          "decision_evidence_ids"
+        ],
+        "claim_of_weight_change_in_row": false
+      }
+    },
+    {
+      "sector_code": "60",
+      "sector_name": "Real Estate",
+      "final_text": {
+        "sector_code": "60",
+        "source_label": "Overweight",
+        "source_reading": "Real Estate receives Overweight. Valuation dispersion offers favorable risk-return.",
+        "source_evidence_ids": [
+          "fidelity_q2_2026:p3:sector:60"
+        ],
+        "source_stance": "adopt",
+        "weight": 0.01,
+        "decision_reason": "Retain Overweight based on the Fidelity report's claim of favorable risk-return due to valuation dispersion. The sector's positive lookback return (0.2%) and low volatility (10.5%) suggest stability, but the 'dispersion' argument implies potential for mean reversion. Given the macro context of stable GDP and moderate inflation, the sector may offer value.",
+        "decision_evidence_ids": [
+          "fidelity_q2_2026:p3:sector:60",
+          "MACRO_REAL_GDP_Q1_2026_THIRD",
+          "M:lookback_compound_return:60"
+        ]
+      },
+      "source_fidelity": {
+        "category": "supported_link",
+        "label_matches": true,
+        "source_reading_exactly_matches_supplied_paraphrase": true,
+        "evidence_id": "fidelity_q2_2026:p3:sector:60",
+        "evidence_text": "Real Estate receives Overweight. Valuation dispersion offers favorable risk-return."
+      },
+      "allocation_check": {
+        "raw_final_weight": 0.01,
+        "raw_prior_weight": 0.01,
+        "raw_final_minus_prior": 0,
+        "comparison_baseline": 0.018018018018018018,
+        "raw_active_weight": -0.008018018018018018,
+        "raw_active_percentage_points": -0.8018018018018017,
+        "source_stance": "adopt",
+        "normalized_or_repaired": false
+      },
+      "evidence_decision_link": {
+        "category": "unsupported_or_contradictory_link",
+        "finding": "One percent is 0.8018 percentage points below the 1.8018% comparator while the final says retain Overweight. The prior explanation for keeping weight low was deleted; no weight changed or departure was acknowledged.",
+        "evidence_ids": [
+          "fidelity_q2_2026:p3:sector:60",
+          "M:baseline_weights:60"
+        ]
+      },
+      "numeric_claim_checks": [
+        {
+          "location": "$.sectors[10].decision_reason",
+          "claim_percent": 0.2,
+          "subject": "Real Estate",
+          "metric": "historical compound return",
+          "period": [
+            "2026-04-21",
+            "2026-07-16"
+          ],
+          "evidence_id": "M:lookback_compound_return:60",
+          "source_json_pointer": "/supplied_final_evidence/common_market/lookback_compound_return/10",
+          "actual_decimal": 0.02729295962855538,
+          "actual_percent": 2.729295962855538,
+          "category": "unsupported_or_contradictory_link",
+          "finding": "Does not match the sector value; mismatch exceeds rounding and can reverse the sign."
+        },
+        {
+          "location": "$.sectors[10].decision_reason",
+          "claim_percent": 10.5,
+          "subject": "Real Estate",
+          "metric_claimed": "volatility, annualization unspecified in row",
+          "period": [
+            "2026-04-21",
+            "2026-07-16"
+          ],
+          "evidence_ids": [
+            "M:daily_volatility:60",
+            "M:annualized_volatility_diagnostic:60"
+          ],
+          "actual_daily_percent": 1.0515640658849046,
+          "actual_annualized_percent": 16.69306203590039,
+          "formula": "annualized = daily * sqrt(252); percent = decimal * 100",
+          "category": "unsupported_or_contradictory_link",
+          "finding": "Matches neither supplied daily nor annualized percent. Several claims resemble a misplaced decimal or another sector value, but error provenance is not inferred."
+        }
+      ],
+      "context_use": {
+        "category": "unresolved",
+        "finding": "Stable GDP/moderate inflation may offer value is conditional. GDP is cited, but stability, valuation and mean reversion from dispersion are not established. The source only says dispersion offers favorable risk-return."
+      },
+      "additional_qualitative_findings": [
+        {
+          "category": "unresolved",
+          "claim": "Dispersion implies potential mean reversion",
+          "finding": "An own interpretation, not a supplied quantified source forecast; incorrect and internally inconsistent returns further weaken the stated rationale."
+        }
+      ],
+      "citation_support_note": "Source rationale is supported. Actual return is +2.7293%, not +0.2%; unresolved[1] instead calls it -4.9%. Volatility 10.5% is also incorrect.",
+      "process_check": {
+        "weight_retained": true,
+        "source_label_reading_stance_retained": true,
+        "changed_fields": [
+          "decision_reason"
+        ],
+        "claim_of_weight_change_in_row": false
+      }
+    }
+  ],
+  "citation_visibility_and_support": {
+    "citation_occurrences": 69,
+    "distinct_visible_id_strings": 28,
+    "missing_id_occurrences": 0,
+    "source_reading_field_occurrences": 11,
+    "decision_field_occurrences": 31,
+    "context_field_occurrences": 27,
+    "method": "Exact membership in supplied evidence tables. Repeated IDs are citation occurrences, not independent facts or validation. Entailment is assessed separately.",
+    "occurrences": [
+      {
+        "location": "$.sectors[0].source_evidence_ids[0]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:10",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[0].decision_evidence_ids[0]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:10",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[0].decision_evidence_ids[1]",
+        "evidence_id": "MACRO_FED_TARGET_20260617",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[0].decision_evidence_ids[2]",
+        "evidence_id": "M:lookback_compound_return:10",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[0].decision_evidence_ids[3]",
+        "evidence_id": "M:daily_volatility:10",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[1].source_evidence_ids[0]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:15",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[1].decision_evidence_ids[0]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:15",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[1].decision_evidence_ids[1]",
+        "evidence_id": "MACRO_REAL_GDP_Q1_2026_THIRD",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[1].decision_evidence_ids[2]",
+        "evidence_id": "M:lookback_compound_return:15",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[2].source_evidence_ids[0]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:20",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[2].decision_evidence_ids[0]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:20",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[2].decision_evidence_ids[1]",
+        "evidence_id": "MACRO_REAL_GDP_Q1_2026_THIRD",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[2].decision_evidence_ids[2]",
+        "evidence_id": "M:lookback_compound_return:20",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[3].source_evidence_ids[0]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:25",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[3].decision_evidence_ids[0]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:25",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[3].decision_evidence_ids[1]",
+        "evidence_id": "MACRO_UNEMPLOYMENT_202606",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[3].decision_evidence_ids[2]",
+        "evidence_id": "M:lookback_compound_return:25",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[4].source_evidence_ids[0]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:30",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[4].decision_evidence_ids[0]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:30",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[4].decision_evidence_ids[1]",
+        "evidence_id": "MACRO_CPI_CORE_YOY_202606",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[4].decision_evidence_ids[2]",
+        "evidence_id": "M:lookback_compound_return:30",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[5].source_evidence_ids[0]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:35",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[5].decision_evidence_ids[0]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:35",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[5].decision_evidence_ids[1]",
+        "evidence_id": "M:lookback_compound_return:35",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[6].source_evidence_ids[0]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:40",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[6].decision_evidence_ids[0]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:40",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[6].decision_evidence_ids[1]",
+        "evidence_id": "MACRO_FED_TARGET_20260617",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[6].decision_evidence_ids[2]",
+        "evidence_id": "M:lookback_compound_return:40",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[7].source_evidence_ids[0]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:45",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[7].decision_evidence_ids[0]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:45",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[7].decision_evidence_ids[1]",
+        "evidence_id": "MACRO_REAL_GDP_Q1_2026_THIRD",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[7].decision_evidence_ids[2]",
+        "evidence_id": "M:lookback_compound_return:45",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[8].source_evidence_ids[0]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:50",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[8].decision_evidence_ids[0]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:50",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[8].decision_evidence_ids[1]",
+        "evidence_id": "M:lookback_compound_return:50",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[9].source_evidence_ids[0]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:55",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[9].decision_evidence_ids[0]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:55",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[9].decision_evidence_ids[1]",
+        "evidence_id": "M:lookback_compound_return:55",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[10].source_evidence_ids[0]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:60",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[10].decision_evidence_ids[0]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:60",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[10].decision_evidence_ids[1]",
+        "evidence_id": "MACRO_REAL_GDP_Q1_2026_THIRD",
+        "visible": true
+      },
+      {
+        "location": "$.sectors[10].decision_evidence_ids[2]",
+        "evidence_id": "M:lookback_compound_return:60",
+        "visible": true
+      },
+      {
+        "location": "$.context_assessment.evidence_ids[0]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:10",
+        "visible": true
+      },
+      {
+        "location": "$.context_assessment.evidence_ids[1]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:15",
+        "visible": true
+      },
+      {
+        "location": "$.context_assessment.evidence_ids[2]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:20",
+        "visible": true
+      },
+      {
+        "location": "$.context_assessment.evidence_ids[3]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:25",
+        "visible": true
+      },
+      {
+        "location": "$.context_assessment.evidence_ids[4]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:30",
+        "visible": true
+      },
+      {
+        "location": "$.context_assessment.evidence_ids[5]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:35",
+        "visible": true
+      },
+      {
+        "location": "$.context_assessment.evidence_ids[6]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:40",
+        "visible": true
+      },
+      {
+        "location": "$.context_assessment.evidence_ids[7]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:45",
+        "visible": true
+      },
+      {
+        "location": "$.context_assessment.evidence_ids[8]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:50",
+        "visible": true
+      },
+      {
+        "location": "$.context_assessment.evidence_ids[9]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:55",
+        "visible": true
+      },
+      {
+        "location": "$.context_assessment.evidence_ids[10]",
+        "evidence_id": "fidelity_q2_2026:p3:sector:60",
+        "visible": true
+      },
+      {
+        "location": "$.context_assessment.evidence_ids[11]",
+        "evidence_id": "MACRO_FED_TARGET_20260617",
+        "visible": true
+      },
+      {
+        "location": "$.context_assessment.evidence_ids[12]",
+        "evidence_id": "MACRO_REAL_GDP_Q1_2026_THIRD",
+        "visible": true
+      },
+      {
+        "location": "$.context_assessment.evidence_ids[13]",
+        "evidence_id": "MACRO_UNEMPLOYMENT_202606",
+        "visible": true
+      },
+      {
+        "location": "$.context_assessment.evidence_ids[14]",
+        "evidence_id": "MACRO_CPI_HEADLINE_YOY_202606",
+        "visible": true
+      },
+      {
+        "location": "$.context_assessment.evidence_ids[15]",
+        "evidence_id": "MACRO_CPI_CORE_YOY_202606",
+        "visible": true
+      },
+      {
+        "location": "$.context_assessment.evidence_ids[16]",
+        "evidence_id": "M:lookback_compound_return:10",
+        "visible": true
+      },
+      {
+        "location": "$.context_assessment.evidence_ids[17]",
+        "evidence_id": "M:lookback_compound_return:15",
+        "visible": true
+      },
+      {
+        "location": "$.context_assessment.evidence_ids[18]",
+        "evidence_id": "M:lookback_compound_return:20",
+        "visible": true
+      },
+      {
+        "location": "$.context_assessment.evidence_ids[19]",
+        "evidence_id": "M:lookback_compound_return:25",
+        "visible": true
+      },
+      {
+        "location": "$.context_assessment.evidence_ids[20]",
+        "evidence_id": "M:lookback_compound_return:30",
+        "visible": true
+      },
+      {
+        "location": "$.context_assessment.evidence_ids[21]",
+        "evidence_id": "M:lookback_compound_return:35",
+        "visible": true
+      },
+      {
+        "location": "$.context_assessment.evidence_ids[22]",
+        "evidence_id": "M:lookback_compound_return:40",
+        "visible": true
+      },
+      {
+        "location": "$.context_assessment.evidence_ids[23]",
+        "evidence_id": "M:lookback_compound_return:45",
+        "visible": true
+      },
+      {
+        "location": "$.context_assessment.evidence_ids[24]",
+        "evidence_id": "M:lookback_compound_return:50",
+        "visible": true
+      },
+      {
+        "location": "$.context_assessment.evidence_ids[25]",
+        "evidence_id": "M:lookback_compound_return:55",
+        "visible": true
+      },
+      {
+        "location": "$.context_assessment.evidence_ids[26]",
+        "evidence_id": "M:lookback_compound_return:60",
+        "visible": true
+      }
+    ],
+    "notable_support_gaps": [
+      "Payroll +57,000 is visible but its ID is absent from all final citations; omission does not make the value fabricated.",
+      "Only Energy cites a row volatility ID, and the cited daily figure does not match the claim. Other stated volatility values have no matching row citation.",
+      "Staples retains a core-CPI ID after deleting its row-level inflation argument.",
+      "Benchmark IT 38% is supported by supplied reported weights despite no explicit benchmark citation.",
+      "All 69 citation occurrences are visible, yet attached numbers and causal interpretations can remain unsupported."
+    ]
+  },
+  "numeric_fidelity_global": {
+    "macro_claim_occurrences": [
+      {
+        "location": "$.sectors[0].decision_reason",
+        "claim": "Fed range",
+        "evidence_id": "MACRO_FED_TARGET_20260617",
+        "supplied_value": {
+          "lower": 3.5,
+          "upper": 3.75
+        },
+        "unit": "percent per year",
+        "observation_period": "2026-06-17 policy decision",
+        "publication_date": "2026-06-17",
+        "release_vintage": "Dated policy announcement; not a later statistical time-series extraction",
+        "category": "supported_link",
+        "finding": "Numeric value matches. Some short descriptions omit period/annualization; associated causal mechanisms are assessed separately."
+      },
+      {
+        "location": "$.sectors[1].decision_reason",
+        "claim": "GDP 2.1%",
+        "evidence_id": "MACRO_REAL_GDP_Q1_2026_THIRD",
+        "supplied_value": 2.1,
+        "unit": "percent quarter over quarter at annual rate",
+        "observation_period": "2026-Q1",
+        "publication_date": "2026-06-25",
+        "release_vintage": "2026 Q1 third estimate released June 25; later annual updates are excluded",
+        "category": "supported_link",
+        "finding": "Numeric value matches. Some short descriptions omit period/annualization; associated causal mechanisms are assessed separately."
+      },
+      {
+        "location": "$.sectors[2].decision_reason",
+        "claim": "GDP 2.1%",
+        "evidence_id": "MACRO_REAL_GDP_Q1_2026_THIRD",
+        "supplied_value": 2.1,
+        "unit": "percent quarter over quarter at annual rate",
+        "observation_period": "2026-Q1",
+        "publication_date": "2026-06-25",
+        "release_vintage": "2026 Q1 third estimate released June 25; later annual updates are excluded",
+        "category": "supported_link",
+        "finding": "Numeric value matches. Some short descriptions omit period/annualization; associated causal mechanisms are assessed separately."
+      },
+      {
+        "location": "$.sectors[2].decision_reason",
+        "claim": "57k jobs added",
+        "evidence_id": "MACRO_NONFARM_CHANGE_202606",
+        "supplied_value": 57000,
+        "unit": "jobs from previous month",
+        "observation_period": "2026-06",
+        "publication_date": "2026-07-02",
+        "release_vintage": "June 2026 first-release estimates; subsequent payroll revisions are excluded",
+        "category": "supported_link",
+        "finding": "Numeric value matches. Some short descriptions omit period/annualization; associated causal mechanisms are assessed separately."
+      },
+      {
+        "location": "$.sectors[3].decision_reason",
+        "claim": "Unemployment 4.2%",
+        "evidence_id": "MACRO_UNEMPLOYMENT_202606",
+        "supplied_value": 4.2,
+        "unit": "percent of civilian labor force",
+        "observation_period": "2026-06",
+        "publication_date": "2026-07-02",
+        "release_vintage": "June 2026 first-release estimates; subsequent payroll revisions are excluded",
+        "category": "supported_link",
+        "finding": "Numeric value matches. Some short descriptions omit period/annualization; associated causal mechanisms are assessed separately."
+      },
+      {
+        "location": "$.sectors[3].decision_reason",
+        "claim": "GDP 2.1%",
+        "evidence_id": "MACRO_REAL_GDP_Q1_2026_THIRD",
+        "supplied_value": 2.1,
+        "unit": "percent quarter over quarter at annual rate",
+        "observation_period": "2026-Q1",
+        "publication_date": "2026-06-25",
+        "release_vintage": "2026 Q1 third estimate released June 25; later annual updates are excluded",
+        "category": "supported_link",
+        "finding": "Numeric value matches. Some short descriptions omit period/annualization; associated causal mechanisms are assessed separately."
+      },
+      {
+        "location": "$.sectors[6].decision_reason",
+        "claim": "Fed range",
+        "evidence_id": "MACRO_FED_TARGET_20260617",
+        "supplied_value": {
+          "lower": 3.5,
+          "upper": 3.75
+        },
+        "unit": "percent per year",
+        "observation_period": "2026-06-17 policy decision",
+        "publication_date": "2026-06-17",
+        "release_vintage": "Dated policy announcement; not a later statistical time-series extraction",
+        "category": "supported_link",
+        "finding": "Numeric value matches. Some short descriptions omit period/annualization; associated causal mechanisms are assessed separately."
+      },
+      {
+        "location": "$.risk_discussion",
+        "claim": "Fed range",
+        "evidence_id": "MACRO_FED_TARGET_20260617",
+        "supplied_value": {
+          "lower": 3.5,
+          "upper": 3.75
+        },
+        "unit": "percent per year",
+        "observation_period": "2026-06-17 policy decision",
+        "publication_date": "2026-06-17",
+        "release_vintage": "Dated policy announcement; not a later statistical time-series extraction",
+        "category": "supported_link",
+        "finding": "Numeric value matches. Some short descriptions omit period/annualization; associated causal mechanisms are assessed separately."
+      },
+      {
+        "location": "$.risk_discussion",
+        "claim": "Core inflation 2.6%",
+        "evidence_id": "MACRO_CPI_CORE_YOY_202606",
+        "supplied_value": 2.6,
+        "unit": "percent year over year",
+        "observation_period": "2025-06 to 2026-06",
+        "publication_date": "2026-07-14",
+        "release_vintage": "June 2026 figures as printed in the July 14 release, not a current BLS API series",
+        "category": "supported_link",
+        "finding": "Numeric value matches. Some short descriptions omit period/annualization; associated causal mechanisms are assessed separately."
+      },
+      {
+        "location": "$.risk_discussion",
+        "claim": "2.1% GDP growth forecast",
+        "evidence_id": "MACRO_REAL_GDP_Q1_2026_THIRD",
+        "supplied_value": 2.1,
+        "unit": "percent quarter over quarter at annual rate",
+        "observation_period": "2026-Q1",
+        "publication_date": "2026-06-25",
+        "release_vintage": "2026 Q1 third estimate released June 25; later annual updates are excluded",
+        "category": "unsupported_or_contradictory_link",
+        "finding": "Value matches, but Q1 quarterly annualized GDP is an observation, not a forecast."
+      },
+      {
+        "location": "$.unresolved[0]",
+        "claim": "Fed range",
+        "evidence_id": "MACRO_FED_TARGET_20260617",
+        "supplied_value": {
+          "lower": 3.5,
+          "upper": 3.75
+        },
+        "unit": "percent per year",
+        "observation_period": "2026-06-17 policy decision",
+        "publication_date": "2026-06-17",
+        "release_vintage": "Dated policy announcement; not a later statistical time-series extraction",
+        "category": "supported_link",
+        "finding": "Numeric value matches. Some short descriptions omit period/annualization; associated causal mechanisms are assessed separately."
+      },
+      {
+        "location": "$.unresolved[2]",
+        "claim": "Inflation 3.5% YoY",
+        "evidence_id": "MACRO_CPI_HEADLINE_YOY_202606",
+        "supplied_value": 3.5,
+        "unit": "percent year over year",
+        "observation_period": "2025-06 to 2026-06",
+        "publication_date": "2026-07-14",
+        "release_vintage": "June 2026 figures as printed in the July 14 release, not a current BLS API series",
+        "category": "supported_link",
+        "finding": "Numeric value matches. Some short descriptions omit period/annualization; associated causal mechanisms are assessed separately."
+      },
+      {
+        "location": "$.context_assessment.market_and_mandate_reading",
+        "claim": "Fed range",
+        "evidence_id": "MACRO_FED_TARGET_20260617",
+        "supplied_value": {
+          "lower": 3.5,
+          "upper": 3.75
+        },
+        "unit": "percent per year",
+        "observation_period": "2026-06-17 policy decision",
+        "publication_date": "2026-06-17",
+        "release_vintage": "Dated policy announcement; not a later statistical time-series extraction",
+        "category": "supported_link",
+        "finding": "Numeric value matches. Some short descriptions omit period/annualization; associated causal mechanisms are assessed separately."
+      },
+      {
+        "location": "$.context_assessment.market_and_mandate_reading",
+        "claim": "GDP 2.1%",
+        "evidence_id": "MACRO_REAL_GDP_Q1_2026_THIRD",
+        "supplied_value": 2.1,
+        "unit": "percent quarter over quarter at annual rate",
+        "observation_period": "2026-Q1",
+        "publication_date": "2026-06-25",
+        "release_vintage": "2026 Q1 third estimate released June 25; later annual updates are excluded",
+        "category": "supported_link",
+        "finding": "Numeric value matches. Some short descriptions omit period/annualization; associated causal mechanisms are assessed separately."
+      },
+      {
+        "location": "$.context_assessment.market_and_mandate_reading",
+        "claim": "Unemployment 4.2%",
+        "evidence_id": "MACRO_UNEMPLOYMENT_202606",
+        "supplied_value": 4.2,
+        "unit": "percent of civilian labor force",
+        "observation_period": "2026-06",
+        "publication_date": "2026-07-02",
+        "release_vintage": "June 2026 first-release estimates; subsequent payroll revisions are excluded",
+        "category": "supported_link",
+        "finding": "Numeric value matches. Some short descriptions omit period/annualization; associated causal mechanisms are assessed separately."
+      }
+    ],
+    "additional_occurrences": [
+      {
+        "location": "$.unresolved[1]",
+        "subject": "Real Estate",
+        "claim": "-4.9% lookback",
+        "evidence_id": "M:lookback_compound_return:60",
+        "actual_percent": 2.729295962855538,
+        "period": [
+          "2026-04-21",
+          "2026-07-16"
+        ],
+        "category": "unsupported_or_contradictory_link",
+        "finding": "Actual +2.7293%; internally conflicts with +0.2% in the sector row."
+      },
+      {
+        "location": "$.risk_discussion",
+        "subject": "Information Technology",
+        "claim": "21.2% annualized volatility",
+        "evidence_id": "M:annualized_volatility_diagnostic:45",
+        "actual_percent": 33.68510791441921,
+        "period": [
+          "2026-04-21",
+          "2026-07-16"
+        ],
+        "category": "unsupported_or_contradictory_link",
+        "finding": "Actual annualized 33.6851%; daily 2.1220%. Explicit annualization prevents resolving this through unit ambiguity."
+      },
+      {
+        "location": "$.sectors[7].decision_reason",
+        "claim": "IT largest benchmark sector, 38%",
+        "category": "supported_link",
+        "evidence": "common_market.benchmark_reported_weights_percent[7]=38.0",
+        "finding": "Correct reported precision. Normalized comparison value is 38.0380%; these are distinct representations."
+      },
+      {
+        "location": "$.risk_discussion",
+        "claim": "IT concentration 38%",
+        "category": "supported_link",
+        "evidence": "Actual raw final sector 45 weight=0.38",
+        "finding": "Correct share of intended full sleeve; no normalization within the submitted 92%."
+      },
+      {
+        "location": "$.context_assessment.allocation_implication",
+        "claim": "IT highest weight, 38%",
+        "category": "supported_link",
+        "evidence": "Actual raw vector",
+        "finding": "Correct raw weight and rank; highest absolute weight is not necessarily overweight."
+      },
+      {
+        "location": "$.context_assessment.allocation_implication",
+        "claim": "Weights are adjusted to sum to 1.0",
+        "category": "unsupported_or_contradictory_link",
+        "evidence": "Actual final sum=0.92, all prior-to-final changes=0",
+        "finding": "Neither the implied budget adjustment nor satisfaction of the budget is present."
+      }
+    ],
+    "lineage_notes": [
+      "Market diagnostics describe 60 daily-return observations from 2026-04-21 through 2026-07-16, not future twelve-month performance.",
+      "Return percent equals decimal return times 100. Annualized volatility equals daily volatility times sqrt(252). Values and sector order come directly from item.json.",
+      "Draft calculator facts are D0 only. The actual saved final was independently re-summed by read-only arithmetic; D0 was not treated as final verification.",
+      "The packet states current vendor adjusted-price vintage does not prove identical historical availability. No external vintage verification is claimed."
+    ]
+  },
+  "context_use_global": {
+    "findings": [
+      {
+        "category": "supported_link",
+        "claim": "Hypothetical new-money US equity sleeve, twelve-month horizon, no capital guarantee",
+        "evidence_ids": [
+          "CTX:task",
+          "CTX:starting_state",
+          "CTX:horizon",
+          "CTX:risk"
+        ],
+        "finding": "Explicitly preserved. Proposed target weights are not trades from existing holdings. The final does not claim realized twelve-month performance."
+      },
+      {
+        "category": "supported_link",
+        "claim": "Long-only and unlevered",
+        "evidence": "All raw weights nonnegative and below one",
+        "finding": "These properties hold. Fully invested is separately false. No numerical risk-aversion coefficient, required return, sector cap or private holding is invented."
+      },
+      {
+        "category": "supported_link",
+        "claim": "Older source did not necessarily observe later macro releases",
+        "evidence": "Source view 2026-03-31; landing-page updated date 2026-04-17; decision reference 2026-07-17",
+        "finding": "Age and the allocator’s assumption that the thesis remains applicable are acknowledged. No updated institutional rating is fabricated."
+      },
+      {
+        "category": "unresolved",
+        "claim": "Report dated 2026-04-17",
+        "evidence": "publisher_date_kind = official landing page updated date",
+        "finding": "Correct value but less precise provenance; it is not independently established as the PDF publication date."
+      },
+      {
+        "category": "unsupported_or_contradictory_link",
+        "claim": "Macro data released in June 2026 (GDP, CPI, Unemployment)",
+        "evidence": "GDP release 2026-06-25; CPI release 2026-07-14; labor release 2026-07-02",
+        "finding": "Only GDP among those named was released in June. CPI and labor observe June but were released in July. All still postdate the old source, preserving that narrower point."
+      },
+      {
+        "category": "unsupported_or_contradictory_link",
+        "claim": "2.1% GDP growth forecast",
+        "evidence_id": "MACRO_REAL_GDP_Q1_2026_THIRD",
+        "finding": "Q1 third estimate is quarter-over-quarter at annual rate, not a forecast or year-over-year rate. Elsewhere the final often omits period/annualization without explicitly mislabeling it."
+      },
+      {
+        "category": "unresolved",
+        "claim": "Neutral-to-tight monetary environment could pressure IT/Industrials",
+        "evidence_ids": [
+          "MACRO_FED_TARGET_20260617",
+          "MACRO_CPI_CORE_YOY_202606"
+        ],
+        "finding": "Values are correct and suggests/could mark an own conditional interpretation. No neutral-rate estimate or sector response model settles it."
+      },
+      {
+        "category": "unresolved",
+        "claim": "Older quarterly valuation thesis remains valid for twelve months",
+        "evidence": "Consumer Discretionary rationale and global limitations",
+        "finding": "The task horizon is twelve months; a source twelve-month forecast horizon or renewed valuation evidence is not supplied. Continuation is an allocator assumption, partly acknowledged globally."
+      },
+      {
+        "category": "supported_link",
+        "claim": "Defensive underweights expose downside if growth deteriorates",
+        "evidence": "Staples/Utilities below comparison weights and negative source views",
+        "finding": "Visible allocation-to-scenario risk trade-off. Its causal magnitude remains unquantified."
+      },
+      {
+        "category": "unresolved",
+        "claim": "The report does not provide quantitative risk models",
+        "evidence": "Selected/paraphrased institutional packet",
+        "finding": "No such model is supplied in the selected packet. A categorical claim about the entire external report is not verifiable here; the separate common-market packet does provide covariance diagnostics."
+      }
+    ],
+    "date_checks": [
+      {
+        "location": "$.context_assessment.market_and_mandate_reading",
+        "claim": "2026-07-17 cutoff",
+        "category": "supported_link",
+        "qualification": "Matches the reference cutoff, though the final does not repeat that it is exclusive."
+      },
+      {
+        "location": "$.context_assessment.limitations",
+        "claim": "2026-04-17 source date",
+        "category": "unresolved",
+        "qualification": "Value correct; provenance is landing-page update."
+      },
+      {
+        "location": "$.context_assessment.limitations",
+        "claim": "2026-07-17 decision reference",
+        "category": "supported_link"
+      },
+      {
+        "location": "$.context_assessment.limitations",
+        "claim": "March 31, 2026 sector views",
+        "category": "supported_link",
+        "qualification": "Matches sector_view_as_of, not necessarily every underlying report datum."
+      },
+      {
+        "location": "$.context_assessment.limitations",
+        "claim": "June 2026 releases for GDP/CPI/unemployment",
+        "category": "unsupported_or_contradictory_link",
+        "qualification": "One grouped assertion; GDP June 25, CPI July 14, labor July 2."
+      }
+    ]
+  },
+  "process_evidence": {
+    "prior_scope": "Own prior is process evidence only, not an independent observation.",
+    "actual_feedback": {
+      "endpoint_id": "D0",
+      "raw_sum": 0.92,
+      "raw_budget_residual": -0.07999999999999996,
+      "valid": false,
+      "normalized_or_repaired": false
+    },
+    "read_only_recomputation": {
+      "prior_raw_sum": 0.92,
+      "final_raw_sum": 0.92,
+      "net_change": 0,
+      "required_net_increase": 0.08,
+      "all_11_weights_unchanged": true
+    },
+    "changes": {
+      "decision_reasons_rewritten": 11,
+      "weights_changed": 0,
+      "source_labels_readings_stances_changed": 0,
+      "decision_evidence_lists_changed": [
+        "55"
+      ],
+      "top_level_fields_other_than_sectors_changed": []
+    },
+    "specific_changes": [
+      "All eleven decision reasons were edited, frequently adding Retain; no numeric weight changed.",
+      "Materials volatility 12.2% was removed and is not counted as a final claim.",
+      "Consumer Discretionary’s prior explicit slightly-above-benchmark claim was deleted, but unqualified Overweight adoption remained.",
+      "Staples’ inflation/margin sentence was deleted while the core-CPI citation remained.",
+      "Utilities’ Fed/yield sentence and corresponding citation were both deleted.",
+      "Real Estate’s low-weight/underperformance explanation was deleted while its 1% weight and Overweight adoption remained.",
+      "Context assessment, alternatives, risk discussion, unresolved list and submitted constraints remained unchanged."
+    ],
+    "findings": [
+      {
+        "category": "supported_link",
+        "claim": "Retention",
+        "finding": "Retention wording matches unchanged row weights and ratings; no hidden rebalance is inferred."
+      },
+      {
+        "category": "unsupported_or_contradictory_link",
+        "claim": "Weights adjusted to sum to 1.0",
+        "finding": "The visible final neither corrects nor acknowledges the 8% budget shortfall identified in actual draft feedback. This is an observable result, not a claim about hidden consumption of feedback."
+      }
+    ]
+  },
+  "coverage_counts": {
+    "interpretation": "Occurrence counts in one final output, not independent facts, observations, reviewers or validation events; no composite score or accuracy rate.",
+    "sector_rows_reviewed": 11,
+    "source_label_occurrences_checked": 11,
+    "source_reading_occurrences_checked": 11,
+    "raw_weight_occurrences_checked": 11,
+    "prior_final_weight_comparisons": 11,
+    "citation_occurrences_checked": 69,
+    "historical_return_numeric_occurrences": {
+      "total": 12,
+      "supported_rounding": 4,
+      "small_precision_discrepancy": 1,
+      "contradictory": 7,
+      "scope": "11 row statements plus repeated Real Estate claim in unresolved[1]."
+    },
+    "volatility_numeric_occurrences": {
+      "total": 10,
+      "contradictory": 10,
+      "scope": "9 row statements plus repeated IT annualized claim in risk_discussion."
+    },
+    "macro_numeric_occurrences": {
+      "total": 15,
+      "matching_value_without_explicit_metric_contradiction": 14,
+      "matching_value_but_wrong_observation_vs_forecast_label": 1,
+      "scope": "A Fed range counts once per location. Correct value does not certify a causal link or complete period description."
+    },
+    "benchmark_weight_numeric_occurrences_checked": 1,
+    "own_IT_weight_numeric_occurrences_checked": 2,
+    "budget_sum_claim_occurrences_checked": 1,
+    "date_assertion_occurrences_checked": 5,
+    "limit": "Defined claim families, not every number token or every qualitative clause."
+  },
+  "limitations_disagreements_unresolved": [
+    "Masking is incomplete because source identity/output can reveal a condition. No condition mapping or cross-item comparison was accessed.",
+    "This is unvalidated AI-assisted descriptive coding, not independent human validation. No composite score or winner is produced.",
+    "Source evidence is a researcher paraphrase with original labels preserved; the original external PDF was not independently inspected.",
+    "The institution describes broad-market tilts in a largest-3,000-stock context; the shared comparator is an S&P 500 sector reference. Raw differences are diagnostic against that supplied anchor, not proof against every possible institutional comparator.",
+    "Ratings create no compulsory numerical target. A reasoned departure is allowed. Findings concern unqualified adoption or baseline assertions versus actual weights, not distance from an invented optimum.",
+    "IT 38% matches reported benchmark precision; its normalized -0.0380 percentage-point difference must not be exaggerated as a substantive negative tilt. Materials and Consumer Discretionary also use coarse weights, but the final supplies no rounding rationale for their opposite-direction adoption labels.",
+    "Health Care benchmark average is ambiguous. Its 9% is near its own sector comparator and also near 1/11; approximate neutrality is supportable without exact equality.",
+    "Plausible, may, could and suggests generally denote own inferences/proposals. Lack of confirmation is not automatic falsity. Asserted unsupported factual characterizations are separately identified.",
+    "The IT 14.9% return is a small precision discrepancy, separately tracked from sign reversals and large mismatches.",
+    "Citation visibility does not prove entailment. An omitted citation does not make a supplied value fabricated. No fixed citation count is required.",
+    "No post-decision performance, present-day facts, private objectives, hidden source-author reasoning or hidden model reasoning is inferred.",
+    "Raw values remain unrepaired. The missing 8% is not silently classified as cash or normalized away.",
+    "No external authoritative verification of supplied release facts or current vendor vintage was performed; this is a supplied-evidence review."
+  ],
+  "alternatives_and_risk": {
+    "alternative_text": "An alternative allocation could overweight Utilities and Consumer Staples to hedge against potential economic slowdown or rate hikes, despite the Fidelity report's negative views, given the defensive nature of these sectors in a 12-month horizon. However, the explicit 'value-trap' warning for Staples and 'unfavorable valuations' for Utilities in the source packet provide stronger evidence for the current allocation.",
+    "findings": [
+      {
+        "category": "supported_link",
+        "claim": "Consider Staples/Utilities defensive overweight despite negative source views",
+        "evidence": "Final alternatives and source sector 30/55 rationales",
+        "finding": "A meaningful alternative direction and risk trade-off are stated. Reasons for retaining the current source-leaning choice are visible. No precise alternative vector is required by the rubric."
+      },
+      {
+        "category": "unresolved",
+        "claim": "Could hedge slowdown or rate hikes",
+        "evidence": "No supplied scenario response or hedge calculation",
+        "finding": "Could is a proposed scenario, not a guaranteed hedge. In particular, rate-hike protection and differing rate sensitivities are not demonstrated."
+      },
+      {
+        "category": "supported_link",
+        "claim": "IT concentration risk",
+        "evidence": "IT raw 0.38 is largest weight",
+        "finding": "Grounded in the actual vector; no invented cap. The attached annualized volatility remains wrong."
+      },
+      {
+        "category": "unresolved",
+        "claim": "Interest-rate and geopolitical sensitivities",
+        "evidence": "No sector-specific quantitative support in packet",
+        "finding": "Generic risk considerations rather than verified source findings; no probability or portfolio-loss estimate is asserted."
+      }
+    ]
+  },
+  "verification": {
+    "report_json_serializable": true,
+    "per_row_count_checked": true,
+    "claim_occurrence_counts_reconciled": true,
+    "input_hashes_unchanged": {
+      "item.json": true,
+      "final.txt": true,
+      "prior.txt": true,
+      "rubric.json": true
+    },
+    "no_input_mutation": true
+  }
+}

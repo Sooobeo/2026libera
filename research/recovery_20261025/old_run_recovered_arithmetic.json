@@ -1,0 +1,2003 @@
+{
+  "recovery_adapter_version": "read_only_frozen_functions_1",
+  "created_at_utc": "2026-10-25T10:01:06.814424+00:00",
+  "scope": "Arithmetic and ID-availability recovery analysis of interrupted run. Not an original runtime completion or semantic review.",
+  "original_run_directory": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019",
+  "reconciled_summary_ref": {
+    "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\old_run_reconciled_summary.json",
+    "sha256": "2e5828229a15179c248a4df468a0497a0962564f4be93b01f09987a9dc800f67",
+    "bytes": 2358
+  },
+  "independent_audit_ref": {
+    "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\old_run_interruption_audit.json",
+    "sha256": "55e336338b2a7d9b6cb63dd0d38ae7d5caa540dd94cc2ba4eed63a5a1dd1d5d1",
+    "bytes": 81833
+  },
+  "analyzer_ref": {
+    "path": "C:\\Users\\Insun\\2026libera\\research\\analyze_v492_pilot.py",
+    "sha256": "841c1f941e2c39165f84f51f5df283ca7a3c5727de285d4ad56edfa50166529f",
+    "bytes": 28354
+  },
+  "evaluation_protocol_ref": {
+    "path": "C:\\Users\\Insun\\2026libera\\research\\v492_evaluation_protocol_20261019_r2.json",
+    "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+  },
+  "response_schema_ref": {
+    "path": "C:\\Users\\Insun\\2026libera\\data\\sector_protocol\\v491_design_20261019\\response_schema.json",
+    "sha256": "944a232de9f4a1e9ae672b172196aa906077ee03c3f6bf2ab06ad032d6d0b147"
+  },
+  "computational_references_ref": {
+    "path": "C:\\Users\\Insun\\2026libera\\research\\v492_computational_references_20261019.json",
+    "sha256": "d65a7d302ed03f4fc430134b947f9f81f10b8b84fec1855511f258144a46bd11"
+  },
+  "input_artifacts": [
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__E__D0\\http_0001_generation\\assembled_text.json",
+      "sha256": "95e8494433078e3553b02cb06bcaf48805a0eb7fd6903a260b4ee251be641a1a",
+      "bytes": 16968
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__E__D0\\http_0001_generation\\events.jsonl",
+      "sha256": "67bb2a232c1e31d0bc342309f139b6cedbe8bf0442a0dc7249a7d4be0eae4124",
+      "bytes": 837101
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__E__D0\\transport_result.json",
+      "sha256": "0f6c89e2474a9526953de4a8c02f23e8acb88211f65b6493d2c93471bc47ab0a"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__E__D0\\http_0001_generation\\response.json",
+      "sha256": "65e4663f327f819218ec30203ea918bba227a2ad982283a1194f23a15ea80317"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__E__D0\\worker_spec.json",
+      "sha256": "675b9993d93571ccf8b66854a73026d8197ac6263cc2f90970b3097e380d85ee"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__E__F0\\http_0001_generation\\assembled_text.json",
+      "sha256": "a4c1e90f6e548e3ca9a4bb8c4f1764a61f99361ac096efd1b93b5f9131989248",
+      "bytes": 12910
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__E__F0\\http_0001_generation\\events.jsonl",
+      "sha256": "ea190080994226ea4c1cffcd2ebf55a0dbe55e0fe45b7df9c14649c8bd28b3c4",
+      "bytes": 618416
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__E__F0\\transport_result.json",
+      "sha256": "099b59c955ccd87466ddbe8b63a864c8b20804251f5fdc3d8a740f4dfbfea3f5"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__E__F0\\http_0001_generation\\response.json",
+      "sha256": "f2077e6e53ee56a4af26f598cdb1e604f57c949c8401787f71035d7c628c69aa"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__E__F0\\worker_spec.json",
+      "sha256": "b039665529ca56e7bc50f22d0f71191984ad8992833652bd4396d0f03c1590f0"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__L__D0\\http_0001_generation\\assembled_text.json",
+      "sha256": "7c4e6292480e324a58dc1fa3b178d159033decfc167beb0d0dbe5c5ab3da6117",
+      "bytes": 12476
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__L__D0\\http_0001_generation\\events.jsonl",
+      "sha256": "aad830ccef0f0849e318c478ab4f4a12d0a3f1b63ff17365f2df7e9605af7bf6",
+      "bytes": 568138
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__L__D0\\transport_result.json",
+      "sha256": "0cdb381b36c4a68de239278e4bace1f87f6388de08f162d162194e48f195c4f9"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__L__D0\\http_0001_generation\\response.json",
+      "sha256": "e2b150e07121927ca18eed944e71f17642ea78cbb7c067dc7f11986126f0269b"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__L__D0\\worker_spec.json",
+      "sha256": "470b27d656f1b6c949462c129419bc2e71c0db095c82dd1af96e861baa48e59a"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__L__F0\\http_0001_generation\\assembled_text.json",
+      "sha256": "307da9667cef564a11d7567f7329c2c423a5bbada4e8af23b722230233736822",
+      "bytes": 13761
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__L__F0\\http_0001_generation\\events.jsonl",
+      "sha256": "9f058c2278b20745275d9372a19ac366c8c9d81dc070bc6331e3631cf55583b5",
+      "bytes": 638977
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__L__F0\\transport_result.json",
+      "sha256": "a88e35302a091f7365e859efe52ea3f47968b352aecfbfad6ec50f640f3ec380"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__L__F0\\http_0001_generation\\response.json",
+      "sha256": "b382cfdf20887d5e92539ca544e901cd56813ea9322332bde1372e59336c5001"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__L__F0\\worker_spec.json",
+      "sha256": "ea7d6ff95d8741fc04d16d0b1caf6d685133361be13aad9240ceccc0f927c4e5"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\ubs_june_2026__E__D0\\http_0001_generation\\assembled_text.json",
+      "sha256": "02c8b4dd9ccad6711cea4f4b64dc5217e7562f41bf0fa37529279d39a37f2cb0",
+      "bytes": 13388
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\ubs_june_2026__E__D0\\http_0001_generation\\events.jsonl",
+      "sha256": "04bf6ae4e552ac2e3b7372d28cf9c2d5273a9cbff98aec62e701b7a1d642c9e9",
+      "bytes": 584013
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\ubs_june_2026__E__D0\\transport_result.json",
+      "sha256": "6e2e6b54b67c295aba158d611e9f9da527ba46ddc93f7e8e2ce47d17e9c8dc4e"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\ubs_june_2026__E__D0\\http_0001_generation\\response.json",
+      "sha256": "a5490918c4c937fba19a4a43706d9826b8233744476a956e88c3c169888e1d7e"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\ubs_june_2026__E__D0\\worker_spec.json",
+      "sha256": "b0c2f67d3d099720f30f681d452cb74d8e423a6ea1225c854e1a535be4acc00e"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\ubs_june_2026__E__F0\\http_0001_generation\\events.jsonl",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    }
+  ],
+  "stage_records": [
+    {
+      "case_id": "fidelity_q2_2026__E",
+      "stage": "D0",
+      "source_conditioned": true,
+      "source_fidelity_applicability": "AI_review_pending",
+      "generation_requests_attempted": 1,
+      "attempted": true,
+      "recorded_status": "completed",
+      "transport_complete": true,
+      "response_done": true,
+      "done_reason": "stop",
+      "readable_partial": false,
+      "infrastructure_failure": false,
+      "artifact_integrity_failure": false,
+      "system_integrity_incident": false,
+      "response_artifact_bound": true,
+      "citation_visibility": {
+        "allowed_id_count": 89,
+        "citation_occurrences": 85,
+        "unavailable_citations": [
+          {
+            "path": [
+              "sectors",
+              8,
+              "decision_evidence_ids"
+            ],
+            "id": "correlation"
+          }
+        ],
+        "malformed_id_fields": [],
+        "semantic_support_verified": false
+      },
+      "parseable": true,
+      "schema_valid": true,
+      "schema_errors": [],
+      "raw_text_sha256": "2818a625b675a1e49e0de64b82c63d00425616fcab71c49de1824cdcf829bb3f",
+      "vector": {
+        "complete_vector": true,
+        "missing_codes": [],
+        "duplicate_codes": [],
+        "unknown_codes": [],
+        "malformed_rows": 0,
+        "invalid_numeric_codes": [],
+        "negative_weight_codes": [],
+        "above_one_weight_codes": [],
+        "raw_weights": {
+          "10": 0.02,
+          "15": 0.015,
+          "20": 0.09,
+          "25": 0.08,
+          "30": 0.04,
+          "35": 0.045,
+          "40": 0.115,
+          "45": 0.38,
+          "50": 0.03,
+          "55": 0.025,
+          "60": 0.01
+        },
+        "raw_weights_exact_decimal": {
+          "10": "0.02",
+          "15": "0.015",
+          "20": "0.09",
+          "25": "0.08",
+          "30": "0.04",
+          "35": "0.045",
+          "40": "0.115",
+          "45": "0.38",
+          "50": "0.03",
+          "55": "0.025",
+          "60": "0.01"
+        },
+        "zero_weight_codes": [],
+        "positive_weight_codes": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "35",
+          "40",
+          "45",
+          "50",
+          "55",
+          "60"
+        ],
+        "raw_sum": 0.85,
+        "raw_budget_residual": -0.15000000000000002,
+        "raw_sum_exact_decimal": "0.85",
+        "raw_residual_exact_decimal": "-0.15",
+        "budget_check_passed": false,
+        "sum_tolerance": 1e-06,
+        "valid_raw_allocation": false,
+        "distance_eligible": false,
+        "distance_null_reasons": [
+          "budget_check_failed_or_unavailable"
+        ],
+        "normalized_or_repaired": false
+      },
+      "parse_error": "assistant_content_not_text",
+      "partial_artifacts": [
+        {
+          "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__E__D0\\http_0001_generation\\assembled_text.json",
+          "sha256": "95e8494433078e3553b02cb06bcaf48805a0eb7fd6903a260b4ee251be641a1a",
+          "bytes": 16968
+        },
+        {
+          "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__E__D0\\http_0001_generation\\events.jsonl",
+          "sha256": "67bb2a232c1e31d0bc342309f139b6cedbe8bf0442a0dc7249a7d4be0eae4124",
+          "bytes": 837101
+        }
+      ],
+      "partial_text_available": true,
+      "partial_thinking_available": false,
+      "partial_event_complete_lines": 4286,
+      "partial_event_content_fragments": 4285,
+      "transport_status": "completed",
+      "supplied_source_ids": [
+        "fidelity_q2_2026"
+      ],
+      "C_source_free_input": null,
+      "reported_source_id": "fidelity_q2_2026"
+    },
+    {
+      "case_id": "fidelity_q2_2026__E",
+      "stage": "F0",
+      "source_conditioned": true,
+      "source_fidelity_applicability": "AI_review_pending",
+      "generation_requests_attempted": 1,
+      "attempted": true,
+      "recorded_status": "completed",
+      "transport_complete": true,
+      "response_done": true,
+      "done_reason": "stop",
+      "readable_partial": false,
+      "infrastructure_failure": false,
+      "artifact_integrity_failure": false,
+      "system_integrity_incident": false,
+      "response_artifact_bound": true,
+      "citation_visibility": {
+        "allowed_id_count": 91,
+        "citation_occurrences": 70,
+        "unavailable_citations": [],
+        "malformed_id_fields": [],
+        "semantic_support_verified": false
+      },
+      "parseable": true,
+      "schema_valid": true,
+      "schema_errors": [],
+      "raw_text_sha256": "5c4a06afaefbcd327f4510bc60d31241438f6b2314cc4859a02ae68a5a5e4f1a",
+      "vector": {
+        "complete_vector": true,
+        "missing_codes": [],
+        "duplicate_codes": [],
+        "unknown_codes": [],
+        "malformed_rows": 0,
+        "invalid_numeric_codes": [],
+        "negative_weight_codes": [],
+        "above_one_weight_codes": [],
+        "raw_weights": {
+          "10": 0.02,
+          "15": 0.015,
+          "20": 0.09,
+          "25": 0.08,
+          "30": 0.04,
+          "35": 0.045,
+          "40": 0.115,
+          "45": 0.38,
+          "50": 0.03,
+          "55": 0.025,
+          "60": 0.01
+        },
+        "raw_weights_exact_decimal": {
+          "10": "0.02",
+          "15": "0.015",
+          "20": "0.09",
+          "25": "0.08",
+          "30": "0.04",
+          "35": "0.045",
+          "40": "0.115",
+          "45": "0.38",
+          "50": "0.03",
+          "55": "0.025",
+          "60": "0.01"
+        },
+        "zero_weight_codes": [],
+        "positive_weight_codes": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "35",
+          "40",
+          "45",
+          "50",
+          "55",
+          "60"
+        ],
+        "raw_sum": 0.85,
+        "raw_budget_residual": -0.15000000000000002,
+        "raw_sum_exact_decimal": "0.85",
+        "raw_residual_exact_decimal": "-0.15",
+        "budget_check_passed": false,
+        "sum_tolerance": 1e-06,
+        "valid_raw_allocation": false,
+        "distance_eligible": false,
+        "distance_null_reasons": [
+          "budget_check_failed_or_unavailable"
+        ],
+        "normalized_or_repaired": false
+      },
+      "parse_error": "assistant_content_not_text",
+      "partial_artifacts": [
+        {
+          "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__E__F0\\http_0001_generation\\assembled_text.json",
+          "sha256": "a4c1e90f6e548e3ca9a4bb8c4f1764a61f99361ac096efd1b93b5f9131989248",
+          "bytes": 12910
+        },
+        {
+          "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__E__F0\\http_0001_generation\\events.jsonl",
+          "sha256": "ea190080994226ea4c1cffcd2ebf55a0dbe55e0fe45b7df9c14649c8bd28b3c4",
+          "bytes": 618416
+        }
+      ],
+      "partial_text_available": true,
+      "partial_thinking_available": false,
+      "partial_event_complete_lines": 3161,
+      "partial_event_content_fragments": 3160,
+      "transport_status": "completed",
+      "supplied_source_ids": [
+        "fidelity_q2_2026",
+        "fidelity_q2_2026"
+      ],
+      "C_source_free_input": null,
+      "reported_source_id": null
+    },
+    {
+      "case_id": "fidelity_q2_2026__L",
+      "stage": "D0",
+      "source_conditioned": false,
+      "source_fidelity_applicability": "not_applicable",
+      "generation_requests_attempted": 1,
+      "attempted": true,
+      "recorded_status": "completed",
+      "transport_complete": true,
+      "response_done": true,
+      "done_reason": "stop",
+      "readable_partial": false,
+      "infrastructure_failure": false,
+      "artifact_integrity_failure": false,
+      "system_integrity_incident": false,
+      "response_artifact_bound": true,
+      "citation_visibility": {
+        "allowed_id_count": 77,
+        "citation_occurrences": 41,
+        "unavailable_citations": [],
+        "malformed_id_fields": [],
+        "semantic_support_verified": false
+      },
+      "parseable": true,
+      "schema_valid": true,
+      "schema_errors": [],
+      "raw_text_sha256": "4fb5cde9c224f4946a639f63be2d519c12682eaf69d27eec5306f5d294157b55",
+      "vector": {
+        "complete_vector": true,
+        "missing_codes": [],
+        "duplicate_codes": [],
+        "unknown_codes": [],
+        "malformed_rows": 0,
+        "invalid_numeric_codes": [],
+        "negative_weight_codes": [],
+        "above_one_weight_codes": [],
+        "raw_weights": {
+          "10": 0.035,
+          "15": 0.02,
+          "20": 0.09,
+          "25": 0.095,
+          "30": 0.05,
+          "35": 0.09,
+          "40": 0.12,
+          "45": 0.385,
+          "50": 0.098,
+          "55": 0.022,
+          "60": 0.018
+        },
+        "raw_weights_exact_decimal": {
+          "10": "0.035",
+          "15": "0.02",
+          "20": "0.09",
+          "25": "0.095",
+          "30": "0.05",
+          "35": "0.09",
+          "40": "0.12",
+          "45": "0.385",
+          "50": "0.098",
+          "55": "0.022",
+          "60": "0.018"
+        },
+        "zero_weight_codes": [],
+        "positive_weight_codes": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "35",
+          "40",
+          "45",
+          "50",
+          "55",
+          "60"
+        ],
+        "raw_sum": 1.023,
+        "raw_budget_residual": 0.02299999999999991,
+        "raw_sum_exact_decimal": "1.023",
+        "raw_residual_exact_decimal": "0.023",
+        "budget_check_passed": false,
+        "sum_tolerance": 1e-06,
+        "valid_raw_allocation": false,
+        "distance_eligible": false,
+        "distance_null_reasons": [
+          "budget_check_failed_or_unavailable"
+        ],
+        "normalized_or_repaired": false
+      },
+      "parse_error": "assistant_content_not_text",
+      "partial_artifacts": [
+        {
+          "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__L__D0\\http_0001_generation\\assembled_text.json",
+          "sha256": "7c4e6292480e324a58dc1fa3b178d159033decfc167beb0d0dbe5c5ab3da6117",
+          "bytes": 12476
+        },
+        {
+          "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__L__D0\\http_0001_generation\\events.jsonl",
+          "sha256": "aad830ccef0f0849e318c478ab4f4a12d0a3f1b63ff17365f2df7e9605af7bf6",
+          "bytes": 568138
+        }
+      ],
+      "partial_text_available": true,
+      "partial_thinking_available": false,
+      "partial_event_complete_lines": 2906,
+      "partial_event_content_fragments": 2905,
+      "transport_status": "completed",
+      "supplied_source_ids": [],
+      "C_source_free_input": null,
+      "reported_source_id": null
+    },
+    {
+      "case_id": "fidelity_q2_2026__L",
+      "stage": "F0",
+      "source_conditioned": true,
+      "source_fidelity_applicability": "AI_review_pending",
+      "generation_requests_attempted": 1,
+      "attempted": true,
+      "recorded_status": "completed",
+      "transport_complete": true,
+      "response_done": true,
+      "done_reason": "stop",
+      "readable_partial": false,
+      "infrastructure_failure": false,
+      "artifact_integrity_failure": false,
+      "system_integrity_incident": false,
+      "response_artifact_bound": true,
+      "citation_visibility": {
+        "allowed_id_count": 91,
+        "citation_occurrences": 51,
+        "unavailable_citations": [],
+        "malformed_id_fields": [],
+        "semantic_support_verified": false
+      },
+      "parseable": true,
+      "schema_valid": true,
+      "schema_errors": [],
+      "raw_text_sha256": "390d9412f7cbf8926181f1a2f5e65573ec869607797c534304a3adbb7aa7c758",
+      "vector": {
+        "complete_vector": true,
+        "missing_codes": [],
+        "duplicate_codes": [],
+        "unknown_codes": [],
+        "malformed_rows": 0,
+        "invalid_numeric_codes": [],
+        "negative_weight_codes": [],
+        "above_one_weight_codes": [],
+        "raw_weights": {
+          "10": 0.025,
+          "15": 0.018,
+          "20": 0.105,
+          "25": 0.1,
+          "30": 0.04,
+          "35": 0.095,
+          "40": 0.13,
+          "45": 0.39,
+          "50": 0.085,
+          "55": 0.02,
+          "60": 0.015
+        },
+        "raw_weights_exact_decimal": {
+          "10": "0.025",
+          "15": "0.018",
+          "20": "0.105",
+          "25": "0.1",
+          "30": "0.04",
+          "35": "0.095",
+          "40": "0.13",
+          "45": "0.39",
+          "50": "0.085",
+          "55": "0.02",
+          "60": "0.015"
+        },
+        "zero_weight_codes": [],
+        "positive_weight_codes": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "35",
+          "40",
+          "45",
+          "50",
+          "55",
+          "60"
+        ],
+        "raw_sum": 1.0230000000000001,
+        "raw_budget_residual": 0.02300000000000013,
+        "raw_sum_exact_decimal": "1.023",
+        "raw_residual_exact_decimal": "0.023",
+        "budget_check_passed": false,
+        "sum_tolerance": 1e-06,
+        "valid_raw_allocation": false,
+        "distance_eligible": false,
+        "distance_null_reasons": [
+          "budget_check_failed_or_unavailable"
+        ],
+        "normalized_or_repaired": false
+      },
+      "parse_error": "assistant_content_not_text",
+      "partial_artifacts": [
+        {
+          "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__L__F0\\http_0001_generation\\assembled_text.json",
+          "sha256": "307da9667cef564a11d7567f7329c2c423a5bbada4e8af23b722230233736822",
+          "bytes": 13761
+        },
+        {
+          "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\fidelity_q2_2026__L__F0\\http_0001_generation\\events.jsonl",
+          "sha256": "9f058c2278b20745275d9372a19ac366c8c9d81dc070bc6331e3631cf55583b5",
+          "bytes": 638977
+        }
+      ],
+      "partial_text_available": true,
+      "partial_thinking_available": false,
+      "partial_event_complete_lines": 3265,
+      "partial_event_content_fragments": 3264,
+      "transport_status": "completed",
+      "supplied_source_ids": [
+        "fidelity_q2_2026"
+      ],
+      "C_source_free_input": null,
+      "reported_source_id": "fidelity_q2_2026"
+    },
+    {
+      "case_id": "ubs_june_2026__E",
+      "stage": "D0",
+      "source_conditioned": true,
+      "source_fidelity_applicability": "AI_review_pending",
+      "generation_requests_attempted": 1,
+      "attempted": true,
+      "recorded_status": "completed",
+      "transport_complete": true,
+      "response_done": true,
+      "done_reason": "stop",
+      "readable_partial": false,
+      "infrastructure_failure": false,
+      "artifact_integrity_failure": false,
+      "system_integrity_incident": false,
+      "response_artifact_bound": true,
+      "citation_visibility": {
+        "allowed_id_count": 90,
+        "citation_occurrences": 50,
+        "unavailable_citations": [],
+        "malformed_id_fields": [],
+        "semantic_support_verified": false
+      },
+      "parseable": true,
+      "schema_valid": true,
+      "schema_errors": [],
+      "raw_text_sha256": "daf881ae3879ec980aeb808f2b634561c4414ebe9ec341aa01f4467c79918e37",
+      "vector": {
+        "complete_vector": true,
+        "missing_codes": [],
+        "duplicate_codes": [],
+        "unknown_codes": [],
+        "malformed_rows": 0,
+        "invalid_numeric_codes": [],
+        "negative_weight_codes": [],
+        "above_one_weight_codes": [],
+        "raw_weights": {
+          "10": 0.03,
+          "15": 0.02,
+          "20": 0.12,
+          "25": 0.11,
+          "30": 0.05,
+          "35": 0.1,
+          "40": 0.12,
+          "45": 0.38,
+          "50": 0.1,
+          "55": 0.02,
+          "60": 0.02
+        },
+        "raw_weights_exact_decimal": {
+          "10": "0.03",
+          "15": "0.02",
+          "20": "0.12",
+          "25": "0.11",
+          "30": "0.05",
+          "35": "0.1",
+          "40": "0.12",
+          "45": "0.38",
+          "50": "0.1",
+          "55": "0.02",
+          "60": "0.02"
+        },
+        "zero_weight_codes": [],
+        "positive_weight_codes": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "35",
+          "40",
+          "45",
+          "50",
+          "55",
+          "60"
+        ],
+        "raw_sum": 1.07,
+        "raw_budget_residual": 0.07000000000000006,
+        "raw_sum_exact_decimal": "1.07",
+        "raw_residual_exact_decimal": "0.07",
+        "budget_check_passed": false,
+        "sum_tolerance": 1e-06,
+        "valid_raw_allocation": false,
+        "distance_eligible": false,
+        "distance_null_reasons": [
+          "budget_check_failed_or_unavailable"
+        ],
+        "normalized_or_repaired": false
+      },
+      "parse_error": "assistant_content_not_text",
+      "partial_artifacts": [
+        {
+          "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\ubs_june_2026__E__D0\\http_0001_generation\\assembled_text.json",
+          "sha256": "02c8b4dd9ccad6711cea4f4b64dc5217e7562f41bf0fa37529279d39a37f2cb0",
+          "bytes": 13388
+        },
+        {
+          "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\ubs_june_2026__E__D0\\http_0001_generation\\events.jsonl",
+          "sha256": "04bf6ae4e552ac2e3b7372d28cf9c2d5273a9cbff98aec62e701b7a1d642c9e9",
+          "bytes": 584013
+        }
+      ],
+      "partial_text_available": true,
+      "partial_thinking_available": false,
+      "partial_event_complete_lines": 2982,
+      "partial_event_content_fragments": 2981,
+      "transport_status": "completed",
+      "supplied_source_ids": [
+        "ubs_june_2026"
+      ],
+      "C_source_free_input": null,
+      "reported_source_id": "ubs_june_2026"
+    },
+    {
+      "case_id": "ubs_june_2026__E",
+      "stage": "F0",
+      "source_conditioned": true,
+      "source_fidelity_applicability": "AI_review_pending",
+      "generation_requests_attempted": 1,
+      "attempted": true,
+      "recorded_status": "reconciled_interruption_unknown_cause",
+      "transport_complete": false,
+      "response_done": null,
+      "done_reason": null,
+      "readable_partial": false,
+      "infrastructure_failure": true,
+      "artifact_integrity_failure": true,
+      "system_integrity_incident": null,
+      "response_artifact_bound": false,
+      "citation_visibility": null,
+      "parseable": false,
+      "schema_valid": false,
+      "schema_errors": [],
+      "raw_text_sha256": null,
+      "vector": {
+        "complete_vector": false,
+        "missing_codes": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "35",
+          "40",
+          "45",
+          "50",
+          "55",
+          "60"
+        ],
+        "duplicate_codes": [],
+        "unknown_codes": [],
+        "malformed_rows": 1,
+        "invalid_numeric_codes": [],
+        "negative_weight_codes": [],
+        "above_one_weight_codes": [],
+        "raw_weights": {},
+        "raw_weights_exact_decimal": {},
+        "zero_weight_codes": [],
+        "positive_weight_codes": [],
+        "raw_sum": null,
+        "raw_budget_residual": null,
+        "raw_sum_exact_decimal": null,
+        "raw_residual_exact_decimal": null,
+        "budget_check_passed": false,
+        "sum_tolerance": 1e-06,
+        "valid_raw_allocation": false,
+        "distance_eligible": false,
+        "distance_null_reasons": [
+          "preserved_bound_response_unavailable"
+        ],
+        "normalized_or_repaired": false
+      },
+      "parse_error": "assistant_content_not_text",
+      "partial_artifacts": [
+        {
+          "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v492_pilot_20261019\\ubs_june_2026__E__F0\\http_0001_generation\\events.jsonl",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      ],
+      "partial_event_complete_lines": 0,
+      "partial_event_content_fragments": 0,
+      "artifact_issue": "[Errno 2] No such file or directory: 'C:\\\\Users\\\\Insun\\\\2026libera\\\\data\\\\local_sector_runtime\\\\v492_pilot_20261019\\\\ubs_june_2026__E__F0\\\\transport_result.json'"
+    },
+    {
+      "case_id": "ubs_june_2026__L",
+      "stage": "D0",
+      "source_conditioned": false,
+      "source_fidelity_applicability": "not_applicable",
+      "generation_requests_attempted": 0,
+      "attempted": false,
+      "recorded_status": "not_attempted",
+      "transport_complete": false,
+      "response_done": null,
+      "done_reason": null,
+      "readable_partial": false,
+      "infrastructure_failure": false,
+      "artifact_integrity_failure": false,
+      "system_integrity_incident": null,
+      "response_artifact_bound": false,
+      "citation_visibility": null,
+      "parseable": false,
+      "schema_valid": false,
+      "schema_errors": [],
+      "raw_text_sha256": null,
+      "vector": {
+        "complete_vector": false,
+        "missing_codes": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "35",
+          "40",
+          "45",
+          "50",
+          "55",
+          "60"
+        ],
+        "duplicate_codes": [],
+        "unknown_codes": [],
+        "malformed_rows": 1,
+        "invalid_numeric_codes": [],
+        "negative_weight_codes": [],
+        "above_one_weight_codes": [],
+        "raw_weights": {},
+        "raw_weights_exact_decimal": {},
+        "zero_weight_codes": [],
+        "positive_weight_codes": [],
+        "raw_sum": null,
+        "raw_budget_residual": null,
+        "raw_sum_exact_decimal": null,
+        "raw_residual_exact_decimal": null,
+        "budget_check_passed": false,
+        "sum_tolerance": 1e-06,
+        "valid_raw_allocation": false,
+        "distance_eligible": false,
+        "distance_null_reasons": [
+          "entire_response_JSON_unavailable"
+        ],
+        "normalized_or_repaired": false
+      },
+      "parse_error": "assistant_content_not_text",
+      "partial_artifacts": [],
+      "missing_reason": "generation_not_attempted",
+      "unexpected_response_without_attempt": false
+    },
+    {
+      "case_id": "ubs_june_2026__L",
+      "stage": "F0",
+      "source_conditioned": true,
+      "source_fidelity_applicability": "AI_review_pending",
+      "generation_requests_attempted": 0,
+      "attempted": false,
+      "recorded_status": "not_attempted",
+      "transport_complete": false,
+      "response_done": null,
+      "done_reason": null,
+      "readable_partial": false,
+      "infrastructure_failure": false,
+      "artifact_integrity_failure": false,
+      "system_integrity_incident": null,
+      "response_artifact_bound": false,
+      "citation_visibility": null,
+      "parseable": false,
+      "schema_valid": false,
+      "schema_errors": [],
+      "raw_text_sha256": null,
+      "vector": {
+        "complete_vector": false,
+        "missing_codes": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "35",
+          "40",
+          "45",
+          "50",
+          "55",
+          "60"
+        ],
+        "duplicate_codes": [],
+        "unknown_codes": [],
+        "malformed_rows": 1,
+        "invalid_numeric_codes": [],
+        "negative_weight_codes": [],
+        "above_one_weight_codes": [],
+        "raw_weights": {},
+        "raw_weights_exact_decimal": {},
+        "zero_weight_codes": [],
+        "positive_weight_codes": [],
+        "raw_sum": null,
+        "raw_budget_residual": null,
+        "raw_sum_exact_decimal": null,
+        "raw_residual_exact_decimal": null,
+        "budget_check_passed": false,
+        "sum_tolerance": 1e-06,
+        "valid_raw_allocation": false,
+        "distance_eligible": false,
+        "distance_null_reasons": [
+          "entire_response_JSON_unavailable"
+        ],
+        "normalized_or_repaired": false
+      },
+      "parse_error": "assistant_content_not_text",
+      "partial_artifacts": [],
+      "missing_reason": "generation_not_attempted",
+      "unexpected_response_without_attempt": false
+    },
+    {
+      "case_id": "common_market_only__C",
+      "stage": "D0",
+      "source_conditioned": false,
+      "source_fidelity_applicability": "not_applicable",
+      "generation_requests_attempted": 0,
+      "attempted": false,
+      "recorded_status": "not_attempted",
+      "transport_complete": false,
+      "response_done": null,
+      "done_reason": null,
+      "readable_partial": false,
+      "infrastructure_failure": false,
+      "artifact_integrity_failure": false,
+      "system_integrity_incident": null,
+      "response_artifact_bound": false,
+      "citation_visibility": null,
+      "parseable": false,
+      "schema_valid": false,
+      "schema_errors": [],
+      "raw_text_sha256": null,
+      "vector": {
+        "complete_vector": false,
+        "missing_codes": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "35",
+          "40",
+          "45",
+          "50",
+          "55",
+          "60"
+        ],
+        "duplicate_codes": [],
+        "unknown_codes": [],
+        "malformed_rows": 1,
+        "invalid_numeric_codes": [],
+        "negative_weight_codes": [],
+        "above_one_weight_codes": [],
+        "raw_weights": {},
+        "raw_weights_exact_decimal": {},
+        "zero_weight_codes": [],
+        "positive_weight_codes": [],
+        "raw_sum": null,
+        "raw_budget_residual": null,
+        "raw_sum_exact_decimal": null,
+        "raw_residual_exact_decimal": null,
+        "budget_check_passed": false,
+        "sum_tolerance": 1e-06,
+        "valid_raw_allocation": false,
+        "distance_eligible": false,
+        "distance_null_reasons": [
+          "entire_response_JSON_unavailable"
+        ],
+        "normalized_or_repaired": false
+      },
+      "parse_error": "assistant_content_not_text",
+      "partial_artifacts": [],
+      "missing_reason": "generation_not_attempted",
+      "unexpected_response_without_attempt": false
+    },
+    {
+      "case_id": "common_market_only__C",
+      "stage": "F0",
+      "source_conditioned": false,
+      "source_fidelity_applicability": "not_applicable",
+      "generation_requests_attempted": 0,
+      "attempted": false,
+      "recorded_status": "not_attempted",
+      "transport_complete": false,
+      "response_done": null,
+      "done_reason": null,
+      "readable_partial": false,
+      "infrastructure_failure": false,
+      "artifact_integrity_failure": false,
+      "system_integrity_incident": null,
+      "response_artifact_bound": false,
+      "citation_visibility": null,
+      "parseable": false,
+      "schema_valid": false,
+      "schema_errors": [],
+      "raw_text_sha256": null,
+      "vector": {
+        "complete_vector": false,
+        "missing_codes": [
+          "10",
+          "15",
+          "20",
+          "25",
+          "30",
+          "35",
+          "40",
+          "45",
+          "50",
+          "55",
+          "60"
+        ],
+        "duplicate_codes": [],
+        "unknown_codes": [],
+        "malformed_rows": 1,
+        "invalid_numeric_codes": [],
+        "negative_weight_codes": [],
+        "above_one_weight_codes": [],
+        "raw_weights": {},
+        "raw_weights_exact_decimal": {},
+        "zero_weight_codes": [],
+        "positive_weight_codes": [],
+        "raw_sum": null,
+        "raw_budget_residual": null,
+        "raw_sum_exact_decimal": null,
+        "raw_residual_exact_decimal": null,
+        "budget_check_passed": false,
+        "sum_tolerance": 1e-06,
+        "valid_raw_allocation": false,
+        "distance_eligible": false,
+        "distance_null_reasons": [
+          "entire_response_JSON_unavailable"
+        ],
+        "normalized_or_repaired": false
+      },
+      "parse_error": "assistant_content_not_text",
+      "partial_artifacts": [],
+      "missing_reason": "generation_not_attempted",
+      "unexpected_response_without_attempt": false
+    }
+  ],
+  "recovery_caveat": "Frozen load_stage flags the interrupted UBS E F0 missing transport_result as artifact_integrity_failure. The independent audit separately identifies terminal-record absence after an attempted request; no tampering, schema failure, or budget failure is inferred for the missing output.",
+  "original_summary_gate_not_invoked": true,
+  "original_artifacts_modified": false,
+  "generation_requests_made_by_adapter": 0,
+  "semantic_support_verified": false,
+  "denominators": {
+    "planned_cases": 5,
+    "planned_final_sector_rows": 55,
+    "planned_source_conditioned_rows": 44,
+    "planned_no_source_control_rows": 11,
+    "planned_stage_slots": 10,
+    "shared_C_count": 1
+  },
+  "final_coverage": {
+    "planned": 5,
+    "attempted": 3,
+    "not_attempted": 2,
+    "infrastructure_failure": 1,
+    "artifact_integrity_failure": 1,
+    "recorded_completed": 2,
+    "transport_complete": 2,
+    "readable_partial": 0,
+    "parseable": 2,
+    "schema_valid": 2,
+    "complete_vector": 2,
+    "valid_raw_allocation": 0,
+    "distance_eligible": 0
+  },
+  "all_stage_coverage": {
+    "planned": 10,
+    "attempted": 6,
+    "not_attempted": 4,
+    "infrastructure_failure": 1,
+    "artifact_integrity_failure": 1,
+    "recorded_completed": 5,
+    "transport_complete": 5,
+    "readable_partial": 0,
+    "parseable": 5,
+    "schema_valid": 5,
+    "complete_vector": 5,
+    "valid_raw_allocation": 0,
+    "distance_eligible": 0
+  },
+  "eligible_within_source_pairs": 0,
+  "eligible_between_source_pairs": 0,
+  "within_source": [
+    {
+      "left": "fidelity_q2_2026__E:F0",
+      "right": "fidelity_q2_2026__L:F0",
+      "distance": null,
+      "distance_exact_decimal": null,
+      "raw_difference": {
+        "10": -0.005,
+        "15": -0.003,
+        "20": -0.015,
+        "25": -0.02,
+        "30": 0.0,
+        "35": -0.05,
+        "40": -0.015,
+        "45": -0.01,
+        "50": -0.055,
+        "55": 0.005,
+        "60": -0.005
+      },
+      "raw_difference_exact_decimal": {
+        "10": "-0.005",
+        "15": "-0.003",
+        "20": "-0.015",
+        "25": "-0.02",
+        "30": "0",
+        "35": "-0.05",
+        "40": "-0.015",
+        "45": "-0.01",
+        "50": "-0.055",
+        "55": "0.005",
+        "60": "-0.005"
+      },
+      "null_reasons": [
+        {
+          "vector": "fidelity_q2_2026__E:F0",
+          "reasons": [
+            "budget_check_failed_or_unavailable"
+          ]
+        },
+        {
+          "vector": "fidelity_q2_2026__L:F0",
+          "reasons": [
+            "budget_check_failed_or_unavailable"
+          ]
+        }
+      ],
+      "left_raw_sum": 0.85,
+      "right_raw_sum": 1.0230000000000001,
+      "normalized_or_repaired": false,
+      "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+    },
+    {
+      "left": "ubs_june_2026__E:F0",
+      "right": "ubs_june_2026__L:F0",
+      "distance": null,
+      "distance_exact_decimal": null,
+      "raw_difference": null,
+      "raw_difference_exact_decimal": null,
+      "null_reasons": [
+        {
+          "vector": "ubs_june_2026__E:F0",
+          "reasons": [
+            "preserved_bound_response_unavailable"
+          ]
+        },
+        {
+          "vector": "ubs_june_2026__L:F0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        }
+      ],
+      "left_raw_sum": null,
+      "right_raw_sum": null,
+      "normalized_or_repaired": false,
+      "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+    }
+  ],
+  "between_sources": [
+    {
+      "left": "fidelity_q2_2026__E:F0",
+      "right": "ubs_june_2026__E:F0",
+      "distance": null,
+      "distance_exact_decimal": null,
+      "raw_difference": null,
+      "raw_difference_exact_decimal": null,
+      "null_reasons": [
+        {
+          "vector": "fidelity_q2_2026__E:F0",
+          "reasons": [
+            "budget_check_failed_or_unavailable"
+          ]
+        },
+        {
+          "vector": "ubs_june_2026__E:F0",
+          "reasons": [
+            "preserved_bound_response_unavailable"
+          ]
+        }
+      ],
+      "left_raw_sum": 0.85,
+      "right_raw_sum": null,
+      "normalized_or_repaired": false,
+      "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+    },
+    {
+      "left": "fidelity_q2_2026__L:F0",
+      "right": "ubs_june_2026__L:F0",
+      "distance": null,
+      "distance_exact_decimal": null,
+      "raw_difference": null,
+      "raw_difference_exact_decimal": null,
+      "null_reasons": [
+        {
+          "vector": "fidelity_q2_2026__L:F0",
+          "reasons": [
+            "budget_check_failed_or_unavailable"
+          ]
+        },
+        {
+          "vector": "ubs_june_2026__L:F0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        }
+      ],
+      "left_raw_sum": 1.0230000000000001,
+      "right_raw_sum": null,
+      "normalized_or_repaired": false,
+      "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+    }
+  ],
+  "difference_of_distances": {
+    "value": null,
+    "exact_decimal": null,
+    "null_reasons": [
+      {
+        "vector": "fidelity_q2_2026__E:F0",
+        "reasons": [
+          "budget_check_failed_or_unavailable"
+        ]
+      },
+      {
+        "vector": "ubs_june_2026__E:F0",
+        "reasons": [
+          "preserved_bound_response_unavailable"
+        ]
+      },
+      {
+        "vector": "fidelity_q2_2026__L:F0",
+        "reasons": [
+          "budget_check_failed_or_unavailable"
+        ]
+      },
+      {
+        "vector": "ubs_june_2026__L:F0",
+        "reasons": [
+          "entire_response_JSON_unavailable"
+        ]
+      }
+    ],
+    "interpretation": "descriptive difference of two distances; not a causal difference-in-differences estimate"
+  },
+  "shared_control_comparisons": [
+    {
+      "left": "fidelity_q2_2026__E:F0",
+      "right": "common_market_only__C:F0",
+      "distance": null,
+      "distance_exact_decimal": null,
+      "raw_difference": null,
+      "raw_difference_exact_decimal": null,
+      "null_reasons": [
+        {
+          "vector": "fidelity_q2_2026__E:F0",
+          "reasons": [
+            "budget_check_failed_or_unavailable"
+          ]
+        },
+        {
+          "vector": "common_market_only__C:F0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        }
+      ],
+      "left_raw_sum": 0.85,
+      "right_raw_sum": null,
+      "normalized_or_repaired": false,
+      "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+    },
+    {
+      "left": "fidelity_q2_2026__L:F0",
+      "right": "common_market_only__C:F0",
+      "distance": null,
+      "distance_exact_decimal": null,
+      "raw_difference": null,
+      "raw_difference_exact_decimal": null,
+      "null_reasons": [
+        {
+          "vector": "fidelity_q2_2026__L:F0",
+          "reasons": [
+            "budget_check_failed_or_unavailable"
+          ]
+        },
+        {
+          "vector": "common_market_only__C:F0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        }
+      ],
+      "left_raw_sum": 1.0230000000000001,
+      "right_raw_sum": null,
+      "normalized_or_repaired": false,
+      "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+    },
+    {
+      "left": "ubs_june_2026__E:F0",
+      "right": "common_market_only__C:F0",
+      "distance": null,
+      "distance_exact_decimal": null,
+      "raw_difference": null,
+      "raw_difference_exact_decimal": null,
+      "null_reasons": [
+        {
+          "vector": "ubs_june_2026__E:F0",
+          "reasons": [
+            "preserved_bound_response_unavailable"
+          ]
+        },
+        {
+          "vector": "common_market_only__C:F0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        }
+      ],
+      "left_raw_sum": null,
+      "right_raw_sum": null,
+      "normalized_or_repaired": false,
+      "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+    },
+    {
+      "left": "ubs_june_2026__L:F0",
+      "right": "common_market_only__C:F0",
+      "distance": null,
+      "distance_exact_decimal": null,
+      "raw_difference": null,
+      "raw_difference_exact_decimal": null,
+      "null_reasons": [
+        {
+          "vector": "ubs_june_2026__L:F0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        },
+        {
+          "vector": "common_market_only__C:F0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        }
+      ],
+      "left_raw_sum": null,
+      "right_raw_sum": null,
+      "normalized_or_repaired": false,
+      "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+    }
+  ],
+  "reference_comparisons": {
+    "fidelity_q2_2026__E": {
+      "equal_weight": {
+        "left": "fidelity_q2_2026__E:F0",
+        "right": "equal_weight",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": {
+          "10": -0.07090909090909091,
+          "15": -0.07590909090909091,
+          "20": -0.00090909090909091,
+          "25": -0.01090909090909091,
+          "30": -0.05090909090909091,
+          "35": -0.04590909090909091,
+          "40": 0.02409090909090909,
+          "45": 0.28909090909090907,
+          "50": -0.06090909090909091,
+          "55": -0.0659090909090909,
+          "60": -0.08090909090909092
+        },
+        "raw_difference_exact_decimal": {
+          "10": "-0.07090909090909091",
+          "15": "-0.07590909090909091",
+          "20": "-0.00090909090909091",
+          "25": "-0.01090909090909091",
+          "30": "-0.05090909090909091",
+          "35": "-0.04590909090909091",
+          "40": "0.02409090909090909",
+          "45": "0.28909090909090909",
+          "50": "-0.06090909090909091",
+          "55": "-0.06590909090909091",
+          "60": "-0.08090909090909091"
+        },
+        "null_reasons": [
+          {
+            "vector": "fidelity_q2_2026__E:F0",
+            "reasons": [
+              "budget_check_failed_or_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": 0.85,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      },
+      "long_only_minimum_variance": {
+        "left": "fidelity_q2_2026__E:F0",
+        "right": "long_only_minimum_variance",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": {
+          "10": -0.11653777964449714,
+          "15": 0.015,
+          "20": 0.09,
+          "25": 0.08,
+          "30": -0.2293577551691947,
+          "35": 0.029319227089170077,
+          "40": -0.1804125940338565,
+          "45": 0.19411458153871805,
+          "50": -0.01759745443390786,
+          "55": -0.02452822534643188,
+          "60": 0.01
+        },
+        "raw_difference_exact_decimal": {
+          "10": "-0.11653777964449715",
+          "15": "0.015",
+          "20": "0.09",
+          "25": "0.08",
+          "30": "-0.2293577551691947",
+          "35": "0.029319227089170076",
+          "40": "-0.1804125940338565",
+          "45": "0.19411458153871805",
+          "50": "-0.01759745443390786",
+          "55": "-0.02452822534643188",
+          "60": "0.01"
+        },
+        "null_reasons": [
+          {
+            "vector": "fidelity_q2_2026__E:F0",
+            "reasons": [
+              "budget_check_failed_or_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": 0.85,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      },
+      "existing_market_benchmark": {
+        "left": "fidelity_q2_2026__E:F0",
+        "right": "existing_market_benchmark",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": {
+          "10": -0.01003003003003003,
+          "15": -0.003018018018018018,
+          "20": 0.00191191191191191,
+          "25": -0.01309309309309309,
+          "30": -0.00604604604604604,
+          "35": -0.0440890890890891,
+          "40": -0.00311811811811812,
+          "45": -0.00038038038038036,
+          "50": -0.06709709709709709,
+          "55": 0.002977977977977978,
+          "60": -0.008018018018018018
+        },
+        "raw_difference_exact_decimal": {
+          "10": "-0.01003003003003003",
+          "15": "-0.003018018018018018",
+          "20": "0.00191191191191191",
+          "25": "-0.01309309309309309",
+          "30": "-0.00604604604604604",
+          "35": "-0.0440890890890891",
+          "40": "-0.00311811811811812",
+          "45": "-0.00038038038038036",
+          "50": "-0.06709709709709709",
+          "55": "0.002977977977977978",
+          "60": "-0.008018018018018018"
+        },
+        "null_reasons": [
+          {
+            "vector": "fidelity_q2_2026__E:F0",
+            "reasons": [
+              "budget_check_failed_or_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": 0.85,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      }
+    },
+    "fidelity_q2_2026__L": {
+      "equal_weight": {
+        "left": "fidelity_q2_2026__L:F0",
+        "right": "equal_weight",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": {
+          "10": -0.0659090909090909,
+          "15": -0.07290909090909091,
+          "20": 0.01409090909090909,
+          "25": 0.00909090909090909,
+          "30": -0.05090909090909091,
+          "35": 0.00409090909090909,
+          "40": 0.03909090909090909,
+          "45": 0.2990909090909091,
+          "50": -0.00590909090909091,
+          "55": -0.07090909090909091,
+          "60": -0.07590909090909091
+        },
+        "raw_difference_exact_decimal": {
+          "10": "-0.06590909090909091",
+          "15": "-0.07290909090909091",
+          "20": "0.01409090909090909",
+          "25": "0.00909090909090909",
+          "30": "-0.05090909090909091",
+          "35": "0.00409090909090909",
+          "40": "0.03909090909090909",
+          "45": "0.29909090909090909",
+          "50": "-0.00590909090909091",
+          "55": "-0.07090909090909091",
+          "60": "-0.07590909090909091"
+        },
+        "null_reasons": [
+          {
+            "vector": "fidelity_q2_2026__L:F0",
+            "reasons": [
+              "budget_check_failed_or_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": 1.0230000000000001,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      },
+      "long_only_minimum_variance": {
+        "left": "fidelity_q2_2026__L:F0",
+        "right": "long_only_minimum_variance",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": {
+          "10": -0.11153777964449715,
+          "15": 0.018,
+          "20": 0.105,
+          "25": 0.1,
+          "30": -0.2293577551691947,
+          "35": 0.07931922708917008,
+          "40": -0.1654125940338565,
+          "45": 0.20411458153871806,
+          "50": 0.03740254556609214,
+          "55": -0.02952822534643188,
+          "60": 0.015
+        },
+        "raw_difference_exact_decimal": {
+          "10": "-0.11153777964449715",
+          "15": "0.018",
+          "20": "0.105",
+          "25": "0.1",
+          "30": "-0.2293577551691947",
+          "35": "0.079319227089170076",
+          "40": "-0.1654125940338565",
+          "45": "0.20411458153871805",
+          "50": "0.03740254556609214",
+          "55": "-0.02952822534643188",
+          "60": "0.015"
+        },
+        "null_reasons": [
+          {
+            "vector": "fidelity_q2_2026__L:F0",
+            "reasons": [
+              "budget_check_failed_or_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": 1.0230000000000001,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      },
+      "existing_market_benchmark": {
+        "left": "fidelity_q2_2026__L:F0",
+        "right": "existing_market_benchmark",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": {
+          "10": -0.00503003003003003,
+          "15": -1.8018018018018e-05,
+          "20": 0.01691191191191191,
+          "25": 0.00690690690690691,
+          "30": -0.00604604604604604,
+          "35": 0.0059109109109109,
+          "40": 0.01188188188188188,
+          "45": 0.00961961961961964,
+          "50": -0.01209709709709709,
+          "55": -0.002022022022022022,
+          "60": -0.003018018018018018
+        },
+        "raw_difference_exact_decimal": {
+          "10": "-0.00503003003003003",
+          "15": "-0.000018018018018018",
+          "20": "0.01691191191191191",
+          "25": "0.00690690690690691",
+          "30": "-0.00604604604604604",
+          "35": "0.0059109109109109",
+          "40": "0.01188188188188188",
+          "45": "0.00961961961961964",
+          "50": "-0.01209709709709709",
+          "55": "-0.002022022022022022",
+          "60": "-0.003018018018018018"
+        },
+        "null_reasons": [
+          {
+            "vector": "fidelity_q2_2026__L:F0",
+            "reasons": [
+              "budget_check_failed_or_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": 1.0230000000000001,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      }
+    },
+    "ubs_june_2026__E": {
+      "equal_weight": {
+        "left": "ubs_june_2026__E:F0",
+        "right": "equal_weight",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": null,
+        "raw_difference_exact_decimal": null,
+        "null_reasons": [
+          {
+            "vector": "ubs_june_2026__E:F0",
+            "reasons": [
+              "preserved_bound_response_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": null,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      },
+      "long_only_minimum_variance": {
+        "left": "ubs_june_2026__E:F0",
+        "right": "long_only_minimum_variance",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": null,
+        "raw_difference_exact_decimal": null,
+        "null_reasons": [
+          {
+            "vector": "ubs_june_2026__E:F0",
+            "reasons": [
+              "preserved_bound_response_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": null,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      },
+      "existing_market_benchmark": {
+        "left": "ubs_june_2026__E:F0",
+        "right": "existing_market_benchmark",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": null,
+        "raw_difference_exact_decimal": null,
+        "null_reasons": [
+          {
+            "vector": "ubs_june_2026__E:F0",
+            "reasons": [
+              "preserved_bound_response_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": null,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      }
+    },
+    "ubs_june_2026__L": {
+      "equal_weight": {
+        "left": "ubs_june_2026__L:F0",
+        "right": "equal_weight",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": null,
+        "raw_difference_exact_decimal": null,
+        "null_reasons": [
+          {
+            "vector": "ubs_june_2026__L:F0",
+            "reasons": [
+              "entire_response_JSON_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": null,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      },
+      "long_only_minimum_variance": {
+        "left": "ubs_june_2026__L:F0",
+        "right": "long_only_minimum_variance",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": null,
+        "raw_difference_exact_decimal": null,
+        "null_reasons": [
+          {
+            "vector": "ubs_june_2026__L:F0",
+            "reasons": [
+              "entire_response_JSON_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": null,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      },
+      "existing_market_benchmark": {
+        "left": "ubs_june_2026__L:F0",
+        "right": "existing_market_benchmark",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": null,
+        "raw_difference_exact_decimal": null,
+        "null_reasons": [
+          {
+            "vector": "ubs_june_2026__L:F0",
+            "reasons": [
+              "entire_response_JSON_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": null,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      }
+    },
+    "common_market_only__C": {
+      "equal_weight": {
+        "left": "common_market_only__C:F0",
+        "right": "equal_weight",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": null,
+        "raw_difference_exact_decimal": null,
+        "null_reasons": [
+          {
+            "vector": "common_market_only__C:F0",
+            "reasons": [
+              "entire_response_JSON_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": null,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      },
+      "long_only_minimum_variance": {
+        "left": "common_market_only__C:F0",
+        "right": "long_only_minimum_variance",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": null,
+        "raw_difference_exact_decimal": null,
+        "null_reasons": [
+          {
+            "vector": "common_market_only__C:F0",
+            "reasons": [
+              "entire_response_JSON_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": null,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      },
+      "existing_market_benchmark": {
+        "left": "common_market_only__C:F0",
+        "right": "existing_market_benchmark",
+        "distance": null,
+        "distance_exact_decimal": null,
+        "raw_difference": null,
+        "raw_difference_exact_decimal": null,
+        "null_reasons": [
+          {
+            "vector": "common_market_only__C:F0",
+            "reasons": [
+              "entire_response_JSON_unavailable"
+            ]
+          }
+        ],
+        "left_raw_sum": null,
+        "right_raw_sum": 1.0,
+        "normalized_or_repaired": false,
+        "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+      }
+    }
+  },
+  "own_D0_F0": [
+    {
+      "left": "fidelity_q2_2026__E:F0",
+      "right": "fidelity_q2_2026__E:D0",
+      "distance": null,
+      "distance_exact_decimal": null,
+      "raw_difference": {
+        "10": 0.0,
+        "15": 0.0,
+        "20": 0.0,
+        "25": 0.0,
+        "30": 0.0,
+        "35": 0.0,
+        "40": 0.0,
+        "45": 0.0,
+        "50": 0.0,
+        "55": 0.0,
+        "60": 0.0
+      },
+      "raw_difference_exact_decimal": {
+        "10": "0",
+        "15": "0",
+        "20": "0",
+        "25": "0",
+        "30": "0",
+        "35": "0",
+        "40": "0",
+        "45": "0",
+        "50": "0",
+        "55": "0",
+        "60": "0"
+      },
+      "null_reasons": [
+        {
+          "vector": "fidelity_q2_2026__E:F0",
+          "reasons": [
+            "budget_check_failed_or_unavailable"
+          ]
+        },
+        {
+          "vector": "fidelity_q2_2026__E:D0",
+          "reasons": [
+            "budget_check_failed_or_unavailable"
+          ]
+        }
+      ],
+      "left_raw_sum": 0.85,
+      "right_raw_sum": 0.85,
+      "normalized_or_repaired": false,
+      "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+    },
+    {
+      "left": "fidelity_q2_2026__L:F0",
+      "right": "fidelity_q2_2026__L:D0",
+      "distance": null,
+      "distance_exact_decimal": null,
+      "raw_difference": {
+        "10": -0.01,
+        "15": -0.002,
+        "20": 0.015,
+        "25": 0.005,
+        "30": -0.01,
+        "35": 0.005,
+        "40": 0.01,
+        "45": 0.005,
+        "50": -0.013,
+        "55": -0.002,
+        "60": -0.003
+      },
+      "raw_difference_exact_decimal": {
+        "10": "-0.01",
+        "15": "-0.002",
+        "20": "0.015",
+        "25": "0.005",
+        "30": "-0.01",
+        "35": "0.005",
+        "40": "0.01",
+        "45": "0.005",
+        "50": "-0.013",
+        "55": "-0.002",
+        "60": "-0.003"
+      },
+      "null_reasons": [
+        {
+          "vector": "fidelity_q2_2026__L:F0",
+          "reasons": [
+            "budget_check_failed_or_unavailable"
+          ]
+        },
+        {
+          "vector": "fidelity_q2_2026__L:D0",
+          "reasons": [
+            "budget_check_failed_or_unavailable"
+          ]
+        }
+      ],
+      "left_raw_sum": 1.0230000000000001,
+      "right_raw_sum": 1.023,
+      "normalized_or_repaired": false,
+      "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+    },
+    {
+      "left": "ubs_june_2026__E:F0",
+      "right": "ubs_june_2026__E:D0",
+      "distance": null,
+      "distance_exact_decimal": null,
+      "raw_difference": null,
+      "raw_difference_exact_decimal": null,
+      "null_reasons": [
+        {
+          "vector": "ubs_june_2026__E:F0",
+          "reasons": [
+            "preserved_bound_response_unavailable"
+          ]
+        },
+        {
+          "vector": "ubs_june_2026__E:D0",
+          "reasons": [
+            "budget_check_failed_or_unavailable"
+          ]
+        }
+      ],
+      "left_raw_sum": null,
+      "right_raw_sum": 1.07,
+      "normalized_or_repaired": false,
+      "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+    },
+    {
+      "left": "ubs_june_2026__L:F0",
+      "right": "ubs_june_2026__L:D0",
+      "distance": null,
+      "distance_exact_decimal": null,
+      "raw_difference": null,
+      "raw_difference_exact_decimal": null,
+      "null_reasons": [
+        {
+          "vector": "ubs_june_2026__L:F0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        },
+        {
+          "vector": "ubs_june_2026__L:D0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        }
+      ],
+      "left_raw_sum": null,
+      "right_raw_sum": null,
+      "normalized_or_repaired": false,
+      "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+    },
+    {
+      "left": "common_market_only__C:F0",
+      "right": "common_market_only__C:D0",
+      "distance": null,
+      "distance_exact_decimal": null,
+      "raw_difference": null,
+      "raw_difference_exact_decimal": null,
+      "null_reasons": [
+        {
+          "vector": "common_market_only__C:F0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        },
+        {
+          "vector": "common_market_only__C:D0",
+          "reasons": [
+            "entire_response_JSON_unavailable"
+          ]
+        }
+      ],
+      "left_raw_sum": null,
+      "right_raw_sum": null,
+      "normalized_or_repaired": false,
+      "interpretation": "no_valid_portfolio_distance; any raw component differences are arithmetic diagnostics only"
+    }
+  ],
+  "semantic_review": "Not performed by this arithmetic analyzer; no source tendency or claim-support score inferred."
+}

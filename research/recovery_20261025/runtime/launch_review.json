@@ -1,0 +1,85 @@
+{
+  "receipt_version": "v494_launcher_independent_review_1",
+  "status": "PASS",
+  "completed_at_utc": "2026-10-25T10:12:06.687709+00:00",
+  "input_refs": [
+    {
+      "path": "research/start_v494_pilot.ps1",
+      "sha256": "834144d68e563cb05990bf6977a00ce6246080e169974d48dcf2dfadc8ead9a3"
+    },
+    {
+      "path": "research/run_v494_recovery.py",
+      "sha256": "56fdb077c375ca4b99a110a93d81210a74812257cae3b0967b613f0b5de27576"
+    },
+    {
+      "path": "research/sector_v494_runtime.py",
+      "sha256": "c9521000aa3a1497775c83fa83a1b9bac9f5443edbcb707f131d313f7cd8bed1"
+    },
+    {
+      "path": "research/sector_v494_review_gate.py",
+      "sha256": "07cac8a0606eff3dfeb1bc1e0b3786ff373ca49bb424edb20674033e28d7e194"
+    },
+    {
+      "path": "research/recovery_20261025/runtime_candidate.json",
+      "sha256": "e331ea026c04537a15fba83eb538ac3b6cb6022ee1ad14160d18bb292d99870c"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/service_ready/service_receipt.json",
+      "sha256": "be9cb88616a78efe41175f45a57085952f249ac0314e1afcfc4e24b36eb19b3d"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/launch_review_observation.json",
+      "sha256": "56dd41ea2d809894953c7e0d1fe47e22cc03b03c67817cded826815f0d07c5ce"
+    }
+  ],
+  "launch_executed": false,
+  "generation_calls": 0,
+  "syntax_parse_errors": [],
+  "syntax_evidence": "Final PowerShell Parser.ParseFile observed 0 errors via read-only command; launcher was not invoked.",
+  "unit_tests_run_by_this_reviewer": [],
+  "active_service_identity": {
+    "pid": 35148,
+    "receipt_creation_utc": "2026-10-25T10:03:30.7525818Z",
+    "cim_creation_utc": "2026-10-25T10:03:30.7525810Z",
+    "observed_difference_milliseconds": 0.0008,
+    "tolerance_milliseconds": 1,
+    "corrected_creation_comparison_passed": true,
+    "other_identity_checks": "Exact PID, executable path/hash, serve command and single owned loopback listener are bound in launch_review_observation.json and rechecked by launcher."
+  },
+  "findings": [
+    {
+      "id": "creation_time_precision",
+      "status": "resolved",
+      "observation": "CIM rounds Start-Process creation time by 0.8 microsecond. Exact DateTime equality would wrongly reject the current service.",
+      "resolution": "At most 1 ms absolute creation-time difference, alongside exact PID/path/hash/command/listener checks. Observed current difference is 0.0008 ms. This changes process identity precision only, with no scientific setting change."
+    },
+    {
+      "id": "exclusive_launch_directory",
+      "status": "resolved",
+      "observation": "Idempotent Directory.CreateDirectory could allow simultaneous launchers to share log and receipt names.",
+      "resolution": "New-Item without Force exclusively reserves launch directory and fails on an existing directory. Wrapper separately rejects existing run/report paths."
+    }
+  ],
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "Final syntax parsed without errors. Actual service field types match launcher assumptions; corrected timestamp comparison passes current process. Argument quoting, executable pin, version and idle checks were inspected. No further critical launch defect identified."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Explicit recovered service and frozen candidate/gate paths feed one hidden independent Python Start-Process without Wait. Unique launch/run/report paths prevent resume or duplicate output reuse. Existing 11434 is never targeted; idle is checked again at launch."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "Launcher selects the same five-case prospectively frozen E/L/C development pilot and at most ten first attempts. Identity-check precision and exclusive log reservation alter no model, prompt, sources, generation options, source timing, scoring or experimental outcomes."
+    }
+  },
+  "limitations": [
+    "No launcher or generation executed by this reviewer; actual coordinator launch/completion must be observed separately.",
+    "Idle/directory/process observations are time-bound. Launcher repeats checks immediately before startup.",
+    "Successful launch does not establish completion or semantic source support."
+  ],
+  "service_calls_during_final_review": [],
+  "service_restart_performed": false,
+  "tooling_note": "One long review-recording PowerShell command was automatically rejected before execution with blocked by policy and no further reason. Bounded file patch and short read-only checks completed the artifact; no permission or launcher bypass occurred."
+}

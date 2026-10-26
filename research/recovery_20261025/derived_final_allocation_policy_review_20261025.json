@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "review_id": "derived_final_allocation_policy_review_20261025",
+  "recorded_at": "2026-10-25T11:41:24.180Z",
+  "status": "policy_review_with_required_edge_cases",
+  "authorization_basis": "Parent relayed new explicit user steering: the mathematical final allocation should total 100%, with automatic rounding reconciliation. This supersedes the earlier no-repair presentation policy for a separately derived final allocation, not for historical raw model records.",
+  "scope": {
+    "new_pilot_response_reads": 0,
+    "model_calls": 0,
+    "frozen_file_edits": 0,
+    "original_response_edits": 0,
+    "implementation_owner": "root",
+    "independent_test_source": "research/test_finalize_sector_allocation.py"
+  },
+  "mathematical_contract": {
+    "canonical_sector_order": [
+      "10",
+      "15",
+      "20",
+      "25",
+      "30",
+      "35",
+      "40",
+      "45",
+      "50",
+      "55",
+      "60"
+    ],
+    "input": "A full strict JSON object containing exactly eleven distinct canonical sector rows with actual finite JSON numeric weights. Reject duplicate object keys, duplicate or unknown codes, booleans, numeric strings, missing/malformed rows, negative values and all-zero vectors. Signed zero is zero.",
+    "eligibility": "Every weight nonnegative and exact sum S positive. A raw value above one or a non-unit sum remains a raw submission error but may still be proportionally scaled. Do not gate mathematical derivability on the legacy float budget test.",
+    "exact_parse": "Parse JSON numbers directly to Decimal without a float round trip, then use Fraction or exact integer coefficients for all sums, ratios, floors and remainder comparisons. Retain raw text/hash to preserve original lexical evidence.",
+    "scale": "n_i = w_i / S. Store n_i as numerator/denominator strings; recurring values such as 1/3 and 1/11 have no exact finite decimal representation.",
+    "round": "Q=10000 allocation units. q_i=Q*n_i; f_i=floor(q_i); distribute Q-sum(f_i) units to largest exact fractional remainders, resolving exact ties in the canonical sector order. Final weight=u_i/Q; display percent=u_i/100 with two decimals.",
+    "unit_choice": "One integer unit is 0.01 percentage point, i.e. 0.0001 of the full portfolio. This is a practical display precision, not a literature-derived investment threshold or an inference about model precision.",
+    "unavailable": "Return an explicit reason and no derived portfolio; never insert equal weights, benchmark weights, missing sectors, clipped negatives or guessed percentages.",
+    "resource_guard": "Check numeric token/coefficient/exponent size before Fraction conversion. Extremely large finite exponents must return an explicit unsupported-resource reason rather than attempting enormous integers or silently approximating. Do not execute an unguarded 1e1000000000 test."
+  },
+  "invariants": [
+    "Canonical ID mapping is invariant to input row order.",
+    "Exact normalized weights sum to one; integer final units sum to 10000; displayed decimal percentages sum exactly to 100.00.",
+    "Each final unit count is a nonnegative integer at most 10000 and is floor(q_i) or ceil(q_i); component rounding error is strictly less than one unit.",
+    "An exactly zero input stays zero. A tiny positive input may display zero and must remain distinguishable in exact normalized evidence.",
+    "Positive common rescaling leaves normalized ratios and displayed final units unchanged, while raw sum and scale factor differ.",
+    "Normalization delta is n_i-w_i; rounding delta is u_i/Q-n_i; total delta is u_i/Q-w_i. Their sums are 1-S, zero and 1-S respectively.",
+    "An already unit-sum vector on the 1/10000 grid is unchanged. Finalizing the final integer vector again is idempotent.",
+    "True ties use canonical sector order; a difference beyond default Decimal precision must not be collapsed into a tie.",
+    "No explanatory text, citation or semantic label is rewritten by numeric finalization."
+  ],
+  "test_oracles": [
+    {
+      "case": "Ten weights 0.08 and final weight 0.12; S=0.92",
+      "expected_units": [
+        870,
+        870,
+        870,
+        870,
+        870,
+        870,
+        869,
+        869,
+        869,
+        869,
+        1304
+      ]
+    },
+    {
+      "case": "Eleven equal positive values",
+      "expected_units": [
+        910,
+        909,
+        909,
+        909,
+        909,
+        909,
+        909,
+        909,
+        909,
+        909,
+        909
+      ]
+    },
+    {
+      "case": "First three equal positive values, eight zeros",
+      "expected_units": [
+        3334,
+        3333,
+        3333,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "case": "First three 1, 1+1e-40, 1; rest zero",
+      "expected_units": [
+        3333,
+        3334,
+        3333,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "case": "First two 1e-400 and 2e-400; rest zero",
+      "expected_units": [
+        3333,
+        6667,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "case": "First three 0.00005, 0.00005, 0.9999; rest zero",
+      "expected_units": [
+        1,
+        0,
+        9999,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "submitted_constraints": {
+    "finding": "Budget reconciliation is not constrained optimization. Proportional scaling and even a one-unit rounding adjustment can change whether a submitted minimum/maximum is satisfied.",
+    "required_diagnostics": [
+      "Preserve each submitted constraint and its evidence IDs; do not represent it as source-verified solely because a numeric bound is parseable.",
+      "Report raw, normalized and final satisfaction separately. Do not silently clip or reallocate again to enforce a bound.",
+      "Malformed/missing/duplicate constraint IDs, invalid code/kind, boolean/nonnumeric bounds or bounds outside [0,1] should be unassessable rather than silently accepted.",
+      "Constraint output must remain JSON serializable even when input IDs/objects are malformed; do not copy unchecked Decimal IDs into result JSON."
+    ],
+    "scope": "A mathematically finalized vector may have an unresolved or violated submitted constraint. Report that distinction plainly."
+  },
+  "research_and_reporting": {
+    "raw_endpoint": "Preserve frozen raw validity, original budget residuals, citations, explanations, termination and planned five-case denominator. Do not retroactively classify raw failures as raw successes.",
+    "derived_endpoint": "Label the 100% vector as a deterministic user-directed derived final allocation under a new post-start policy. Record raw artifact hash, finalizer code/version, scale factor and exact row deltas.",
+    "comparisons": "If reporting derived E/L/C distances, use the same derivation and representation across every eligible case and label them separately from frozen raw distances. Missing or ineligible inputs stay missing. Scaling can eliminate differences caused only by total mass, so it cannot itself establish preserved source meaning.",
+    "source_choice_links": "Evaluate what the model actually asserted against its raw weights. Separately flag whether normalization or rounding changes a benchmark-relative or D0-to-F0 direction. Do not attach unchanged prose to corrected percentages as though the model had chosen those numbers.",
+    "ties_and_precision": "A 0.01pp difference created solely by tie-breaking is a rounding artifact, not a model preference or a substantive institution contrast.",
+    "risk_and_constraints": "Do not reuse a raw-vector risk number as verification of the derived vector. Recompute any derived risk/constraint diagnostic using the declared new vector and pinned inputs, with separate provenance.",
+    "old_analyzer_caution": "analyze_v492_pilot.exact_decimal assumes a terminating rational because it operates on original finite decimals and their differences. It must not be reused to label recurring normalized fractions as exact finite decimals."
+  },
+  "review_axes": {
+    "errors": {
+      "status": "pass_policy_with_explicit_guards",
+      "reason": "Exact rational scaling and integer largest remainder can guarantee 100% without floating drift; invalid inputs and unsupported resource sizes require explicit unavailable outcomes."
+    },
+    "consistency": {
+      "status": "pass_if_separate_provenance_retained",
+      "reason": "The new user-directed derived output is separated from unchanged raw responses, frozen eligibility and denominators; source IDs/order and explanations are preserved."
+    },
+    "paper_topic": {
+      "status": "pass_with_claim_limits",
+      "reason": "A usable mathematical allocation supports the allocation task, while source interpretation and observed explanation-to-weight claims remain separately assessed. Automatic budget repair is not semantic or investment validation."
+    }
+  },
+  "source_evidence": [
+    {
+      "path": "data/sector_protocol/v491_design_20261019/response_schema.json",
+      "sha256": "944a232de9f4a1e9ae672b172196aa906077ee03c3f6bf2ab06ad032d6d0b147",
+      "bytes": 4250
+    },
+    {
+      "path": "research/sector_engine.py",
+      "sha256": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c",
+      "bytes": 27360
+    },
+    {
+      "path": "research/analyze_v492_pilot.py",
+      "sha256": "841c1f941e2c39165f84f51f5df283ca7a3c5727de285d4ad56edfa50166529f",
+      "bytes": 28354
+    },
+    {
+      "path": "research/sector_v491_contract.py",
+      "sha256": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397",
+      "bytes": 21578
+    }
+  ],
+  "test_status": "Test source is synthetic and separate; execution receipt must be reported when the pending test process completes. This policy record does not assert a passing test run."
+}

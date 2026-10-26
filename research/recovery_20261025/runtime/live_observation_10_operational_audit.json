@@ -1,0 +1,400 @@
+{
+  "receipt_version": "v494_runtime_operational_audit_1",
+  "status": "PASS_OBSERVED_OPERATIONAL_CHECKPOINT_WITH_LIMITATIONS",
+  "recorded_at_utc": "2026-10-25T11:36:52.225Z",
+  "scope": "First D0 transport terminal and initial F0 operational health, including documented temporary display/system awake amendment. This is not semantic review or whole-pilot completion.",
+  "input_refs": [
+    {
+      "path": "research/recovery_20261025/runtime/temporary_display_awake.py",
+      "sha256": "ea7b56971389b0db8c204a00689c87c3a255f3938ed7215de55fede23059de07"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/temporary_awake_01/config.json",
+      "sha256": "a8d090cc89bbc0ee3e2684562e52b57a14b9c2a1b713ad7d7009c016343dee64"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/temporary_awake_01/acquire.json",
+      "sha256": "b73bbe1452712e186014ee361add627359906d69d844b663384ea7e66bacc139"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/temporary_awake_01/helper_launch_receipt.json",
+      "sha256": "331645896b0888dd4c1d099c1223deceffbf098aea67b67dc029ef0e5354d503"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/temporary_awake_01/static_review.json",
+      "sha256": "6bf1e6b50e051807e2a7114512c0cacd560921f129fd7e6b9851376d7559101f"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/live_observation_08_standby_correlation.json",
+      "sha256": "11c56e0154e9f50d7cd95c44389138af207950b02d93fd88d218488a42ad8cfd"
+    },
+    {
+      "path": "research/recovery_20261025/pilot_freeze.json",
+      "sha256": "8f8f95c4b90583e5bd97f2b80168c51aa9efec92a958b8235a9baecdfb7001cf"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_pilot_20261025/fidelity_q2_2026__E__D0/transport_result.json",
+      "sha256": "2056dd8e4332c5998ba67a0ef2725007a36b9d89ae1b902b8525419a6b4f6a84"
+    },
+    {
+      "path": "data/local_sector_runtime/v494_pilot_20261025/fidelity_q2_2026__E__F0/context_capacity.json",
+      "sha256": "927ccea5f8dc64e30b76f1d008a7fdd4fceb3c8c0984d22357f0b70900f18074"
+    }
+  ],
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "D0 transport accounting reports one attempted generation and one completed stream, raw stream preserved, no integrity/preservation/accounting errors. Exact F0 native-token request fits declared context. Temporary helper acquired successfully and same-thread renewals return requested flags; no failure/release exists at this active checkpoint. All34 frozen reference hashes still match."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Pinned recoveredCPU service/model and context preserved in worker-collected observations. Temporary independent helper is bound to exact native coordinator PID/executable/creation FILETIME and reviewed launch receipt. Scientific settings, frozen source, request bytes, deadlines and stage order are unchanged. Operational amendment timestamp/stage/power are explicit."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "Runtime restoration and temporary awake handling preserve the development pilot allocation/citation task and its E/L/C contrasts. Completed transport is not labeled valid allocation, supported citation, hypothesis evidence or main-experiment readiness. Standby-interrupted elapsed times must not be treated as clean throughput or feasibility estimates."
+    }
+  },
+  "d0_transport": {
+    "status": "completed",
+    "system_integrity_incident": false,
+    "artifact_preservation_error": null,
+    "render_requests_attempted": 1,
+    "generation_requests_attempted": 1,
+    "http_streams_completed": 1,
+    "unexpected_generation_evidence_in_render": false,
+    "raw_stream_present": true,
+    "accounting_artifact_errors": {}
+  },
+  "f0_context_capacity": {
+    "status": "exact_request_fits_declared_context",
+    "prompt_tokens": 19451,
+    "allowed_output_tokens": 8192,
+    "total_required_tokens": 27643,
+    "context_tokens": 65536,
+    "scope": "This actual request only; not a worst-case bound for an unknown future response."
+  },
+  "temporary_awake": {
+    "helper_pid": 41708,
+    "owner_thread_id": 31460,
+    "owner_coordinator_pid": 35216,
+    "owner_creation_filetime_100ns_decimal": "134373972807413088",
+    "acquired_at_utc": "2026-10-25T11:29:19.908466+00:00",
+    "flags_hex": "0x80000003",
+    "hard_expiry_utc": "2026-10-25T23:21:20.748527+00:00",
+    "current_state": "active_at_checkpoint",
+    "release_observed": false,
+    "auto_release_conditions": [
+      "bound coordinator handle exit",
+      "coordinator terminal receipt",
+      "absolute hard expiry",
+      "explicit owned STOP marker"
+    ],
+    "last_heartbeat": {
+      "at_utc": "2026-10-25T11:36:27.435869+00:00",
+      "helper_pid": 41708,
+      "owner_thread_id": 31460,
+      "renewal_previous_state": 2147483651,
+      "coordinator_handle_active": true,
+      "power_status": {
+        "status": "observed",
+        "at_utc": "2026-10-25T11:36:27.435941+00:00",
+        "ac_line_status": 0,
+        "ac_interpretation": "offline",
+        "battery_flag": 0,
+        "battery_percent": 48,
+        "battery_saver": 0,
+        "battery_lifetime_seconds": 8727,
+        "battery_full_lifetime_seconds": null
+      }
+    },
+    "heartbeat_count": 8,
+    "all_heartbeat_same_pid_thread_and_requested_previous_state": true,
+    "native_inspect_probes": {
+      "first_exit_code": 0,
+      "second_exit_code": 0,
+      "exec_inspect_exit_code": 0
+    },
+    "no_persistent_settings_changes": true,
+    "no_away_mode_or_input_simulation": true
+  },
+  "observed_continuity": {
+    "after_acquisition_seconds": 451.624,
+    "first_post_sample": "2026-10-25T11:29:20.846022+00:00",
+    "last_post_sample": "2026-10-25T11:36:51.532665+00:00",
+    "sample_count": 223,
+    "max_monitor_gap_seconds": 6.007,
+    "gaps_over10_seconds": [],
+    "interpretation": "More than7minutes of post-amendment worker observations, exceeding the earlier observed roughly5minute interval before standby reentry; absence of standby-scale gaps in this bounded window does not guarantee future continuity."
+  },
+  "latest_worker_collected_runtime": {
+    "observed_at_utc": "2026-10-25T11:36:51.532665+00:00",
+    "available_physical_bytes": 6691717120,
+    "memory_load_percent": 80,
+    "ollama_ps": {
+      "status": "ok",
+      "value": {
+        "models": [
+          {
+            "name": "qwen3.5:4b-q4_K_M",
+            "model": "qwen3.5:4b-q4_K_M",
+            "size": 5212429351,
+            "digest": "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+            "details": {
+              "parent_model": "",
+              "format": "gguf",
+              "family": "qwen35",
+              "families": [
+                "qwen35"
+              ],
+              "parameter_size": "4.2B",
+              "quantization_level": "Q4_K_M"
+            },
+            "expires_at": "2026-10-25T20:36:51.6422876+09:00",
+            "size_vram": 0,
+            "context_length": 65536
+          }
+        ]
+      }
+    }
+  },
+  "f0_stream": {
+    "bytes": 155116,
+    "modified_utc": "2026-10-25T11:36:52.023Z",
+    "semantics_inspected": false
+  },
+  "append_only_evidence_prefixes": [
+    {
+      "path": "data/local_sector_runtime/v494_pilot_20261025/fidelity_q2_2026__E__F0/monitor.jsonl",
+      "bytes": 2555324,
+      "sha256": "71f1fa1fb40e2b60c697f7b70385672f7eb337ab8df1690f568906210800847e"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/temporary_awake_01/heartbeat.jsonl",
+      "bytes": 3536,
+      "sha256": "282df932eac95e2a9bbc0489f4e0a8af46124071dfdf9c6e93406ab84844508f"
+    }
+  ],
+  "frozen_hash_checks_at_utc": "2026-10-25T11:31:13.917Z",
+  "frozen_hash_checks": [
+    {
+      "path": "research/analyze_v492_pilot.py",
+      "expected": "841c1f941e2c39165f84f51f5df283ca7a3c5727de285d4ad56edfa50166529f",
+      "observed": "841c1f941e2c39165f84f51f5df283ca7a3c5727de285d4ad56edfa50166529f",
+      "match": true
+    },
+    {
+      "path": "research/benchmark_sector_latency.py",
+      "expected": "0686444e608033be931922a26886ed4a4b5b0789385215b7b75bfacc4050458b",
+      "observed": "0686444e608033be931922a26886ed4a4b5b0789385215b7b75bfacc4050458b",
+      "match": true
+    },
+    {
+      "path": "research/build_v492_masked_review.py",
+      "expected": "f4f9295a657892431d76b79310b3af229dc5bc7d972b098adb10ff5dd29a1f77",
+      "observed": "f4f9295a657892431d76b79310b3af229dc5bc7d972b098adb10ff5dd29a1f77",
+      "match": true
+    },
+    {
+      "path": "research/build_v494_masked_review.py",
+      "expected": "8ed40877f82414678d5808181712813ad474ddf089a08a5ba06a7b7bcaa6d148",
+      "observed": "8ed40877f82414678d5808181712813ad474ddf089a08a5ba06a7b7bcaa6d148",
+      "match": true
+    },
+    {
+      "path": "research/freeze_sector_v494.py",
+      "expected": "2e40a2f9b646ad547987ac6ce9679e989792bd0b16e7525af2f22276c1801856",
+      "observed": "2e40a2f9b646ad547987ac6ce9679e989792bd0b16e7525af2f22276c1801856",
+      "match": true
+    },
+    {
+      "path": "research/local_sector_single_case.py",
+      "expected": "0b2596a223167136bb37578e86469d50c26e7883305d4db31f43b9ddd10d28d0",
+      "observed": "0b2596a223167136bb37578e86469d50c26e7883305d4db31f43b9ddd10d28d0",
+      "match": true
+    },
+    {
+      "path": "research/prepare_sector_v491.py",
+      "expected": "0e8188630a8b3a36da08671519b2bfeba7d3d2ca412568f789bfeca2ea4192e7",
+      "observed": "0e8188630a8b3a36da08671519b2bfeba7d3d2ca412568f789bfeca2ea4192e7",
+      "match": true
+    },
+    {
+      "path": "research/prepare_sector_v492.py",
+      "expected": "bc60c7ecb972ad2ce0d9df3f3e41f715264dbeb6a4b3a3838a13216a5c56b098",
+      "observed": "bc60c7ecb972ad2ce0d9df3f3e41f715264dbeb6a4b3a3838a13216a5c56b098",
+      "match": true
+    },
+    {
+      "path": "research/prepare_sector_v494.py",
+      "expected": "80d293ab0df0a209c234e3ab1136ac845fe6a5e81b1b68d543660cc19108e855",
+      "observed": "80d293ab0df0a209c234e3ab1136ac845fe6a5e81b1b68d543660cc19108e855",
+      "match": true
+    },
+    {
+      "path": "research/probe_ollama_runtime.py",
+      "expected": "2dd48936bbaf8fd090a26f92fd356fec3a11ac81e5b01b39d661ffe72552fddb",
+      "observed": "2dd48936bbaf8fd090a26f92fd356fec3a11ac81e5b01b39d661ffe72552fddb",
+      "match": true
+    },
+    {
+      "path": "research/recovery_20261025/method_build_audit.py",
+      "expected": "b6254ac3f8a607b7a9602eb4bef89953ba7e6188cbf6227982106294c839b488",
+      "observed": "b6254ac3f8a607b7a9602eb4bef89953ba7e6188cbf6227982106294c839b488",
+      "match": true
+    },
+    {
+      "path": "research/recovery_20261025/runtime/start_isolated_cpu.ps1",
+      "expected": "ae44ac080a877e84b596b59894917f0226f6493660552428ac03c10c4187cfd8",
+      "observed": "ae44ac080a877e84b596b59894917f0226f6493660552428ac03c10c4187cfd8",
+      "match": true
+    },
+    {
+      "path": "research/recovery_20261025/runtime/stop_isolated_cpu.ps1",
+      "expected": "78eb6eeb3d8de0c2e7fbb21bc682d2af5ee5bb1db9a56b1f6eb42f54ecd5b732",
+      "observed": "78eb6eeb3d8de0c2e7fbb21bc682d2af5ee5bb1db9a56b1f6eb42f54ecd5b732",
+      "match": true
+    },
+    {
+      "path": "research/remote_sector_runtime.py",
+      "expected": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5",
+      "observed": "52bfdde8cb7e72aa016b6e1923d82ba51c68f5d773a055f246e015055d13b8c5",
+      "match": true
+    },
+    {
+      "path": "research/review_sector_v494_stage.py",
+      "expected": "81195353a74f00fde66e1915e068e9167966ccc3cb774b65ad929867bf44b3e6",
+      "observed": "81195353a74f00fde66e1915e068e9167966ccc3cb774b65ad929867bf44b3e6",
+      "match": true
+    },
+    {
+      "path": "research/run_v494_recovery.py",
+      "expected": "56fdb077c375ca4b99a110a93d81210a74812257cae3b0967b613f0b5de27576",
+      "observed": "56fdb077c375ca4b99a110a93d81210a74812257cae3b0967b613f0b5de27576",
+      "match": true
+    },
+    {
+      "path": "research/sector_engine.py",
+      "expected": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c",
+      "observed": "507eb352fc3b8b61ad92be31e4697e48deb0e8cc233fae5e230aecb7a0c9649c",
+      "match": true
+    },
+    {
+      "path": "research/sector_v48_main_awake.py",
+      "expected": "185a9f6be9471ff7808730153227682f0f0eae25f72ee1474602106a950fa98a",
+      "observed": "185a9f6be9471ff7808730153227682f0f0eae25f72ee1474602106a950fa98a",
+      "match": true
+    },
+    {
+      "path": "research/sector_v48_transport.py",
+      "expected": "db395eb3d54ebec93aa67556e1f2424aba1d591ba8b9fcfce7fbd3332db0379c",
+      "observed": "db395eb3d54ebec93aa67556e1f2424aba1d591ba8b9fcfce7fbd3332db0379c",
+      "match": true
+    },
+    {
+      "path": "research/sector_v491_contract.py",
+      "expected": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397",
+      "observed": "de5bfab83726e6f9b8f93a4203296d8a5cc93630d9c4412df3532c0441d80397",
+      "match": true
+    },
+    {
+      "path": "research/sector_v491_runtime.py",
+      "expected": "a542a53ef7a9a035a3641e1e9637d3eb5bd442677318a82434e245bb1e5dc649",
+      "observed": "a542a53ef7a9a035a3641e1e9637d3eb5bd442677318a82434e245bb1e5dc649",
+      "match": true
+    },
+    {
+      "path": "research/sector_v491_tokenizer.py",
+      "expected": "1e25d31d18e659e90186d2a598d0bcad77824d0dbc5a0e76beed692a8373e440",
+      "observed": "1e25d31d18e659e90186d2a598d0bcad77824d0dbc5a0e76beed692a8373e440",
+      "match": true
+    },
+    {
+      "path": "research/sector_v492_contract.py",
+      "expected": "f77d1ddec9630a4c7edbf3928d298b7b05094345996ece1cf53d91fc40171a21",
+      "observed": "f77d1ddec9630a4c7edbf3928d298b7b05094345996ece1cf53d91fc40171a21",
+      "match": true
+    },
+    {
+      "path": "research/sector_v492_review_gate.py",
+      "expected": "a93b575104509e9810663ec4feca3e6bbb6963ca03dd988b451e06744e23a092",
+      "observed": "a93b575104509e9810663ec4feca3e6bbb6963ca03dd988b451e06744e23a092",
+      "match": true
+    },
+    {
+      "path": "research/sector_v492_runtime.py",
+      "expected": "cc8285db4d561aea10878db336771752965f4517405a93a1574b18f2fa300e04",
+      "observed": "cc8285db4d561aea10878db336771752965f4517405a93a1574b18f2fa300e04",
+      "match": true
+    },
+    {
+      "path": "research/sector_v494_review_gate.py",
+      "expected": "07cac8a0606eff3dfeb1bc1e0b3786ff373ca49bb424edb20674033e28d7e194",
+      "observed": "07cac8a0606eff3dfeb1bc1e0b3786ff373ca49bb424edb20674033e28d7e194",
+      "match": true
+    },
+    {
+      "path": "research/sector_v494_runtime.py",
+      "expected": "c9521000aa3a1497775c83fa83a1b9bac9f5443edbcb707f131d313f7cd8bed1",
+      "observed": "c9521000aa3a1497775c83fa83a1b9bac9f5443edbcb707f131d313f7cd8bed1",
+      "match": true
+    },
+    {
+      "path": "plan/LIBERA_실험설정_v4.9.1_20261019.json",
+      "expected": "0d7ad14eb7f07fb9a7e7607a1cdb1ff148794d88878d6706b7b6a66bbc319110",
+      "observed": "0d7ad14eb7f07fb9a7e7607a1cdb1ff148794d88878d6706b7b6a66bbc319110",
+      "match": true
+    },
+    {
+      "path": "research/v492_evaluation_protocol_20261019_r2.json",
+      "expected": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1",
+      "observed": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1",
+      "match": true
+    },
+    {
+      "path": "research/v492_source_review_20261019.json",
+      "expected": "3f6e4bd952b0bbf1d4e3487bb00a5e839a9f907038e43e895807425c21747718",
+      "observed": "3f6e4bd952b0bbf1d4e3487bb00a5e839a9f907038e43e895807425c21747718",
+      "match": true
+    },
+    {
+      "path": "research/recovery_20261025/stage02_method_preparation_review.json",
+      "expected": "f78183fd2bc0177f23713fd7bdd7d8174a84c96dfa2fb71bce23d98fdb495d3a",
+      "observed": "f78183fd2bc0177f23713fd7bdd7d8174a84c96dfa2fb71bce23d98fdb495d3a",
+      "match": true
+    },
+    {
+      "path": "data/sector_protocol/v494_design_20261025/prompt_contract.json",
+      "expected": "7d75828866825af1f7051a528defc92c88f2beac3f42a66f5d5223c4fb714362",
+      "observed": "7d75828866825af1f7051a528defc92c88f2beac3f42a66f5d5223c4fb714362",
+      "match": true
+    },
+    {
+      "path": "data/sector_protocol/v494_design_20261025/prepared/preparation_manifest.json",
+      "expected": "8023f8b11ec9b1d43bf1b5b08ac37ccbab4ac5ab7ad7de28a9e93d8e67a4ef29",
+      "observed": "8023f8b11ec9b1d43bf1b5b08ac37ccbab4ac5ab7ad7de28a9e93d8e67a4ef29",
+      "match": true
+    },
+    {
+      "path": "research/recovery_20261025/runtime_candidate.json",
+      "expected": "e331ea026c04537a15fba83eb538ac3b6cb6022ee1ad14160d18bb292d99870c",
+      "observed": "e331ea026c04537a15fba83eb538ac3b6cb6022ee1ad14160d18bb292d99870c",
+      "match": true
+    }
+  ],
+  "generation_calls_by_auditor": 0,
+  "tests_run_by_auditor": [],
+  "parent_handoff": [
+    "Parent continues rest ofpilot and monitors actual battery/AC telemetry and terminal status.",
+    "Verify durable same-helper release.json after terminal before archive.",
+    "Stop only owned isolated service via reviewed helper when appropriate and verify shutdown receipt.",
+    "All reportwriters and helper must be quiescent before archive; current static archive review is live_observation_09_archive_review.json."
+  ],
+  "limitations": [
+    "Current telemetry is AC offline; no physical user wake or connection is assumed.",
+    "Original monitor gaps correlate with OS Modern Standby exit events; their exact effect on generation timings is not disentangled.",
+    "Temporary helper was an explicitly recorded mid-F0 operational amendment, not a pre-frozen scientific treatment.",
+    "No full output semantic analysis or additional model requests were performed in this audit.",
+    "No automated helper lifecycle test was run against the active experiment; eventual release remains a parent-verifiable obligation."
+  ]
+}

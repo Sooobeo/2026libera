@@ -1,0 +1,125 @@
+{
+  "receipt_version": "v494_modern_standby_correlation_1",
+  "recorded_at_utc": "2026-10-25T11:13:45.806Z",
+  "status": "MODERN_STANDBY_INTERRUPTION_EVIDENCE",
+  "case_id": "fidelity_q2_2026__E",
+  "stage": "D0",
+  "matched_gaps": [
+    {
+      "monitor_gap": {
+        "from": "2026-10-25T10:36:05.515423+00:00",
+        "to": "2026-10-25T10:50:12.234709+00:00",
+        "utc_gap_seconds": 846.719,
+        "elapsed_gap_seconds": 846.7193370000459
+      },
+      "nearest_modern_standby_exit": {
+        "time_created_utc": "2026-10-25T10:50:11.0316116Z",
+        "Id": 507,
+        "ProviderName": "Microsoft-Windows-Kernel-Power",
+        "RecordId": 61208,
+        "Message": "The system is exiting Modern Standby \r\n\r\nReason: Input Keyboard."
+      },
+      "resume_minus_event_seconds": 1.203,
+      "within_2seconds": true
+    },
+    {
+      "monitor_gap": {
+        "from": "2026-10-25T10:55:34.999521+00:00",
+        "to": "2026-10-25T10:58:29.505632+00:00",
+        "utc_gap_seconds": 174.506,
+        "elapsed_gap_seconds": 174.50612440000987
+      },
+      "nearest_modern_standby_exit": {
+        "time_created_utc": "2026-10-25T10:58:28.7592503Z",
+        "Id": 507,
+        "ProviderName": "Microsoft-Windows-Kernel-Power",
+        "RecordId": 61228,
+        "Message": "The system is exiting Modern Standby \r\n\r\nReason: Input Touchpad."
+      },
+      "resume_minus_event_seconds": 0.746,
+      "within_2seconds": true
+    },
+    {
+      "monitor_gap": {
+        "from": "2026-10-25T11:06:10.604543+00:00",
+        "to": "2026-10-25T11:09:39.533191+00:00",
+        "utc_gap_seconds": 208.929,
+        "elapsed_gap_seconds": 208.928652600036
+      },
+      "nearest_modern_standby_exit": {
+        "time_created_utc": "2026-10-25T11:09:39.6096655Z",
+        "Id": 507,
+        "ProviderName": "Microsoft-Windows-Kernel-Power",
+        "RecordId": 61272,
+        "Message": "The system is exiting Modern Standby \r\n\r\nReason: Input Keyboard."
+      },
+      "resume_minus_event_seconds": -0.076,
+      "within_2seconds": true
+    }
+  ],
+  "standby_entry_events": [
+    {
+      "time_created_utc": "2026-10-25T11:10:45.0022239Z",
+      "Id": 506,
+      "ProviderName": "Microsoft-Windows-Kernel-Power",
+      "RecordId": 61298,
+      "Message": "The system is entering Modern Standby \r\n\r\nReason: Idle Timeout."
+    },
+    {
+      "time_created_utc": "2026-10-25T11:06:02.1304757Z",
+      "Id": 506,
+      "ProviderName": "Microsoft-Windows-Kernel-Power",
+      "RecordId": 61267,
+      "Message": "The system is entering Modern Standby \r\n\r\nReason: Austerity Battery Drain Budget Exceeded."
+    },
+    {
+      "time_created_utc": "2026-10-25T11:05:43.2468679Z",
+      "Id": 506,
+      "ProviderName": "Microsoft-Windows-Kernel-Power",
+      "RecordId": 61262,
+      "Message": "The system is entering Modern Standby \r\n\r\nReason: Idle Timeout."
+    },
+    {
+      "time_created_utc": "2026-10-25T10:55:27.6367396Z",
+      "Id": 506,
+      "ProviderName": "Microsoft-Windows-Kernel-Power",
+      "RecordId": 61220,
+      "Message": "The system is entering Modern Standby \r\n\r\nReason: Austerity Battery Drain Budget Exceeded."
+    },
+    {
+      "time_created_utc": "2026-10-25T10:54:49.2686627Z",
+      "Id": 506,
+      "ProviderName": "Microsoft-Windows-Kernel-Power",
+      "RecordId": 61216,
+      "Message": "The system is entering Modern Standby \r\n\r\nReason: Idle Timeout."
+    },
+    {
+      "time_created_utc": "2026-10-25T10:28:21.5257084Z",
+      "Id": 506,
+      "ProviderName": "Microsoft-Windows-Kernel-Power",
+      "RecordId": 61205,
+      "Message": "The system is entering Modern Standby \r\n\r\nReason: Idle Timeout."
+    },
+    {
+      "time_created_utc": "2026-10-25T10:24:22.0440167Z",
+      "Id": 506,
+      "ProviderName": "Microsoft-Windows-Kernel-Power",
+      "RecordId": 61192,
+      "Message": "The system is entering Modern Standby \r\n\r\nReason: Idle Timeout."
+    }
+  ],
+  "current_power_requests_observed": false,
+  "powercfg_requests_exit_code": 1,
+  "powercfg_limitation": "Read-only requests query requires administrator privileges and failed. No elevation, policy or setting change performed.",
+  "conclusion": "All three observed monitor-resumption times align within2seconds of recorded Kernel-Power507 Modern Standby exit events. OS records therefore support Modern Standby interruptions during this D0. The precise reason existing awake request did not maintain uninterrupted execution is not established.",
+  "performance_scope": "Do not interpret elapsed mean throughput or this stage as clean uninterrupted CPU feasibility. Preserve deadlines, raw response and deviations for separate review.",
+  "observer_actions": {
+    "generation_calls": 0,
+    "api_calls": 0,
+    "process_changes": false,
+    "settings_changes": false,
+    "deadline_changes": false,
+    "retry": false,
+    "semantic_output_read": false
+  }
+}

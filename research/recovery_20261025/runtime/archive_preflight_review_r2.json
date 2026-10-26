@@ -1,0 +1,98 @@
+{
+  "version": "v494_archive_preflight_static_review_2",
+  "created_at_utc": "2026-10-25T23:45:02.187Z",
+  "status": "PASS_STATIC_REVIEW_WITH_EXPLICIT_POSTWORK_RELEASE_LIMITATION",
+  "scope": "Read-only inspection of current archive implementation and actual cleanup receipt fields; archive execution and byte verification are separate root-owned steps.",
+  "source_refs": [
+    {
+      "path": "research/archive_v494_recovery.py",
+      "sha256": "eecd3561eac5baf9da23840a2790283b2bf9054e78e2e1faf597d759a860bd81"
+    },
+    {
+      "path": "research/restore_research_artifacts.py",
+      "sha256": "080d93bb41a01a0625084f6b335795b0a3a11736234eda2abaed8bd14889beff"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/archive_preflight_review.json",
+      "sha256": "45a0b69f4d8d5bb083e4dde930d0f08b1c3c5f2832c542de173159f43831eb93"
+    },
+    {
+      "path": "research/recovery_20261025/new_pilot/terminal_receipt.json",
+      "sha256": "bc872eb8326233e274629d8ea16f5d841e098b6e45aa26f31a9588d760289d15"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/service_ready/service_shutdown_receipt.json",
+      "sha256": "7e4b3318af91727e11b2135cad04a03ddda9df82a3aaf781eaf49a664c0d9dff"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/temporary_awake_01/acquire.json",
+      "sha256": "b73bbe1452712e186014ee361add627359906d69d844b663384ea7e66bacc139"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/temporary_awake_01/release.json",
+      "sha256": "01529b274ddff941e50ab6f957ce4d948a350a309577a9425f729dec69887740"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/postwork_awake_01/acquire.json",
+      "sha256": "0de8fe68e8aa1c3491dfa3861f79637baa601de8e20531c851f00d1c9c60cebb"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/postwork_awake_01/process_exit_observation.json",
+      "sha256": "39d63a34b6bcb768263e0d0623112cd19d78fa40cb69f006431ab3dcf669e3ce"
+    }
+  ],
+  "actual_receipt_field_checks": {
+    "recognized_terminal_status": true,
+    "service_status_and_port_fields": true,
+    "experiment_explicit_release_identity_and_flags": true,
+    "postwork_absence_status_identity_hash_and_false_clear": true
+  },
+  "findings": [
+    {
+      "id": "postwork_only_absence_fallback",
+      "result": "PASS",
+      "evidence": "Only postwork_awake_01 may use process_exit_observation when release.json is missing. Exact status, acquired PID, acquire-byte SHA256, observed absence, empty matching command list and explicit_api_clear_verified=false are required. Original experimental helper still requires released status, matching PID and integer clear_flags=2147483648."
+    },
+    {
+      "id": "no_false_release_claim",
+      "result": "PASS_WITH_LIMITATION_RETAINED",
+      "evidence": "The manifest records postwork absence status and explicit_api_clear_verified=false separately from the experimental helper explicit_release_verified. It does not assert the postwork exit cause or successful explicit API clearing."
+    },
+    {
+      "id": "source_inventory_and_duplicate_roots",
+      "result": "PASS_STATIC",
+      "evidence": "Run/design/main-candidate/recovery roots plus top-level helpers/tests/PDF and PNG evidence are contained in the workspace and nonempty at archive execution. File roots already covered by an existing root are skipped; duplicate inventory paths reject."
+    },
+    {
+      "id": "source_stability_and_immutability",
+      "result": "PASS_STATIC",
+      "evidence": "Frozen source hashes are checked. All input paths have initial size/mtime_ns checked immediately before and after reads, followed by full inventory comparison after ZIP close. Source files are only read; no deletion or restore writes are invoked."
+    },
+    {
+      "id": "exclusive_archive_and_verification",
+      "result": "PASS_STATIC",
+      "evidence": "ZIP, manifest and verification outputs live outside evidence roots, reject existing outputs, and use exclusive creation. restore(...,write=False) validates ZIP SHA256, entry coverage, path safety and member bytes without restoring. Partial failure may leave an incomplete exclusive output but no successful verification claim."
+    },
+    {
+      "id": "scope_and_topic",
+      "result": "PASS_STATIC",
+      "evidence": "Archive preserves old interrupted and new terminal pilot, prospective main candidate, code and review records. Main PDFs and reviewed PNG pages are included. Missing/failed stages stay unchanged, model_calls=0, and completion_is_not_semantic_or_research_success=true."
+    }
+  ],
+  "axes": {
+    "errors": "No blocking defect found in inspected current fallback or receipt field/types. Missing postwork explicit release is an observed limitation, not repaired with fabricated evidence.",
+    "consistency": "Current archive SHA and real receipt hashes are bound; original experimental clear and postwork process absence remain distinct. Exclusive output and stable inventory checks preserve provenance.",
+    "paper_topic": "Packaging preserves the allocation/citation experiment and candidate source evidence without adding inference, changing treatment inputs, excluding failed slots or asserting scientific validity."
+  },
+  "limitations": [
+    "Static review did not execute archive(), syntax compilation, unit tests, restoration or ZIP verification.",
+    "Postwork helper absence was observed at 23:44:14.4973348Z and 23:44:16.2471402Z. Exact exit time, exit cause and explicit API clear remain unknown.",
+    "Source stability verification depends on the archive helper executing after all writers are quiet; actual byte verification remains a separate result."
+  ],
+  "archive_executed": false,
+  "model_calls": 0,
+  "power_or_process_changes": 0,
+  "frozen_or_live_sources_modified": false,
+  "prior_review_modified": false,
+  "reviewer_report_writes_complete_after_this_receipt": true
+}

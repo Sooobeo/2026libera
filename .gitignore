@@ -26,6 +26,8 @@ Desktop.ini
 # Disposable headless-browser profiles; screenshots and QA receipts stay tracked.
 /tmp/browser_profiles/
 /tmp/v491_visual/
+# Verified portable runtime cache; provenance receipts remain under research/.
+/tmp/libera_ollama0351_20261025/
 
 # Downloaded installers and local model weights, not research evidence
 /tmp/**/OllamaSetup*.exe
@@ -53,3 +55,20 @@ Desktop.ini
 /research/v*_postpilot_status_*.json
 /research/v*_postpilot_status_*.json.lock
 /research/v*_postpilot_status_*.json.writing
+
+# Exact archived recovery duplicates; source/review JSON and verified ZIP stay tracked.
+/research/recovery_20261025/runtime/preflight_d0_r2/*/render_only/rendered_prompt.txt
+/research/recovery_20261025/runtime/preflight_d0_r2/*/render_only/request_body.bin
+/research/recovery_20261025/runtime/preflight_d0_r2/*/render_only/response_body.bin
+/research/recovery_20261025/launch/coordinator.stderr.log
+/research/recovery_20261025/launch/coordinator.stdout.log
+/research/recovery_20261025/runtime/service_01/server.stderr.log
+/research/recovery_20261025/runtime/service_01/server.stdout.log
+/research/recovery_20261025/runtime/service_ready/server.stderr.log
+/research/recovery_20261025/runtime/service_ready/server.stdout.log
+/research/recovery_20261025/runtime/preflight_stderr.log
+/research/recovery_20261025/runtime/preflight_stdout.log
+/research/recovery_20261025/runtime/preflight_r2_stderr.log
+/research/recovery_20261025/runtime/preflight_r2_stdout.log
+/research/recovery_20261025/runtime/temporary_awake_01/heartbeat.jsonl
+/research/recovery_20261025/runtime/postwork_awake_01/heartbeat.jsonl

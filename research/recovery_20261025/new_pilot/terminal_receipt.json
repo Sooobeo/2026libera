@@ -1,0 +1,85 @@
+{
+  "wrapper_version": "run_v494_recovery_1",
+  "protocol_version": "4.9.4",
+  "at_utc": "2026-10-25T22:45:16.759553+00:00",
+  "status": "stopped_semantic_review_pending",
+  "run_directory": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025",
+  "output_root": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\new_pilot",
+  "development_context": "v4.9.4 prompt development after inspection of v4.9.2 pilot outputs. The frozen v4.9.2 r2 evaluation is reused; historical outputs remain separate, never replaced or pooled as identical replications.",
+  "summary_ref": {
+    "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\pilot_summary.json",
+    "sha256": "ad5b11da9677d3cb091738d0b0427240842f2ca541bb0f7e72f3747400b599a4"
+  },
+  "generation_requests_attempted": 3,
+  "steps": [
+    {
+      "step": "analysis",
+      "status": "completed_offline_only",
+      "result": {
+        "artifact": {
+          "path": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\new_pilot\\arithmetic_analysis.json",
+          "sha256": "d89dc111beb60ed810914e2e5131990f7ef02964f20d4806e4ad58c3b68ea419"
+        },
+        "final_coverage": {
+          "planned": 5,
+          "attempted": 1,
+          "not_attempted": 4,
+          "infrastructure_failure": 0,
+          "artifact_integrity_failure": 0,
+          "recorded_completed": 1,
+          "transport_complete": 1,
+          "readable_partial": 0,
+          "parseable": 1,
+          "schema_valid": 1,
+          "complete_vector": 1,
+          "valid_raw_allocation": 0,
+          "distance_eligible": 0
+        }
+      }
+    },
+    {
+      "step": "masked",
+      "status": "completed_offline_only",
+      "result": {
+        "status": "completed_offline_packaging_only",
+        "items": 5,
+        "first_attempt_requests": 3,
+        "judge_bundle": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\new_pilot\\judge_bundle",
+        "private_mapping": "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\new_pilot\\private_mapping",
+        "model_calls": 0
+      }
+    }
+  ],
+  "errors": [],
+  "service_cleanup": {
+    "status": "pending_verified_idle_and_ownership_cleanup",
+    "service_stop_attempted": false,
+    "reason": "The wrapper does not own service shutdown. Runtime records per-stage unload; a separate helper must verify current idle state and exact service ownership before stopping it."
+  },
+  "semantic_review": {
+    "status": "pending_actual_AI_reading",
+    "performed_by_wrapper": false,
+    "independent_human_review_completed": false,
+    "no_composite_score": true
+  },
+  "stagewise_checks": {
+    "errors": {
+      "status": "offline_checks_completed",
+      "details": [],
+      "output_errors_are_measured_results": true
+    },
+    "integrity": {
+      "status": "runtime_and_offline_receipts_recorded",
+      "no_retries": true,
+      "no_response_repair": true,
+      "no_mutable_status_replacement": true
+    },
+    "topic": {
+      "status": "scope_preserved_semantic_review_pending",
+      "question": "Institution evidence to stated interpretation, decision reasons and observable allocation; E/L timing and source-free C.",
+      "arithmetic_success_is_not_semantic_success_or_main_gate": true
+    }
+  },
+  "main_execution_started": false,
+  "main_readiness": "Not inferred from arithmetic success or failure; separate review of auditable execution and unresolved research-question coverage is required."
+}

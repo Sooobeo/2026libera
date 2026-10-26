@@ -1,0 +1,49 @@
+{
+  "receipt_version": "v494_archive_static_review_1",
+  "status": "PASS",
+  "completed_at_utc": "2026-10-25T10:54:26.483Z",
+  "input_refs": [
+    {
+      "path": "research/archive_v494_recovery.py",
+      "sha256": "aa9c7f58d76373270c3d9702af93c6d3ac5a3de2f62f072f0f7c77b924987680"
+    },
+    {
+      "path": "research/restore_research_artifacts.py",
+      "sha256": "080d93bb41a01a0625084f6b335795b0a3a11736234eda2abaed8bd14889beff"
+    }
+  ],
+  "review_type": "static_inspection_only",
+  "tests_run": [],
+  "archiver_executed": false,
+  "generation_calls": 0,
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "Recognized coordinator terminal receipt and owned stopped-service/closed-port receipt required before packaging. New archive/manifest/verification paths use exclusive creation. Each evidence root must exist, be nonempty and resolve inside workspace. Whole inventory and each file size/mtime are checked before/after read and again after ZIP close."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Original evidence is only read. SHA256/byte manifest covers each archive member, archive checksum is recorded and existing restore verifier is called with write=False. Failed/missing stage outcomes are retained rather than replaced. No active archive execution was performed during pilot."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "Package preserves historical interrupted run, new development run, new preparation and recovery audits as separately named evidence. Packaging makes no semantic-success, hypothesis or main-readiness claim and changes no sources, treatments, output or inference parameters."
+    }
+  },
+  "resolved_findings": [
+    {
+      "id": "missing_expected_root",
+      "resolution": "inventory requires each expected evidence directory and a nonempty file list instead of silently skipping missing rglob roots."
+    },
+    {
+      "id": "writes_between_file_reads",
+      "resolution": "initial path-to-size/mtime inventory is required before every read and complete inventory is compared again after archive closes, before success manifest."
+    }
+  ],
+  "limitations": [
+    "Parent must ensure all report writers have completed before packaging, as coordinated.",
+    "Size/mtime stability is an operational change detector; it is not protection against deliberate byte edits that preserve timestamps and length.",
+    "Partial archive after a detected error remains a failed artifact and receives no success manifest; caller must not silently overwrite it.",
+    "No runtime or automated test execution was performed in this static review."
+  ]
+}

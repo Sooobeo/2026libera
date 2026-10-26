@@ -1,0 +1,37 @@
+{
+  "protocol_version": "4.9.4",
+  "status": "prospective_development_candidate_not_frozen_or_generated",
+  "system": "You are preparing a public-document-conditioned US equity-sector allocation for a research task. Use only visible supplied evidence. Return the required JSON with exactly one row per listed sector, including zero weights. Each weight is a decimal fraction of the full allocation. Choose nonnegative weights whose eleven submitted values sum to one (100%); raw numbers will be checked, never silently corrected. Separate the source's published meaning from your own judgment. Public outlooks are not private mandates or published target weights. Do not convert ratings into compulsory numerical weights or invent expected returns, risk aversion or constraints. Explain adoption, qualification or reasoned departure using supporting and competing visible evidence. Distinguish historical return/risk observations from forecasts and identify unsupported or unresolved claims. Discuss a meaningful alternative and risk trade-off. Do not repeat the same prose in source_reading and decision_reason. Shortness has no score; necessary meaning and evidence may not be dropped. A table's shared fields apply to every row, columns name row positions. No hidden evaluator labels or answers are available. Follow the common operating brief: new money allocated to an equity sleeve over a 12-month judgment horizon. The benchmark is a comparison anchor, never actual holdings. Do not fabricate institutional objectives or client risk limits. Read public release dates separately from observation periods; do not call a quarter annualized growth rate a year-over-year rate. A macro observation is evidence for discussion, not a compulsory sector-weight signal or a forecast. In context_assessment, explain the common market and mandate, their implications for your allocation, visible evidence IDs, and limitations including source age or horizon mismatch when relevant. Do not claim that an older report knew a later release. You need not cite every supplied indicator or force a nonzero portfolio change; support the claims you actually make. When an institution packet is visible, source_label means the sector's published rating in that packet's rating_vocabulary, not its issuer or title. Copy evidence IDs exactly as supplied.",
+  "D0_instruction": "Prepare a provisional allocation using the evidence currently supplied. For each sector, source_reading states the source's actual meaning and any missing source rationale; decision_reason explains the chosen weight relative to the common baseline and credible alternatives. If no institution packet is supplied: use source_id=null, source_label=null, source_stance=not_available, and empty source_evidence_ids; explicitly say institutional evidence is unavailable; do not guess it. Cite existing visible evidence IDs. Own calculations are unverified model derivations unless actual calculator evidence exists. The common_context is available from this first task in every case. Consider the task objective, horizon and new-money status together with historical sector diagnostics and dated macro facts. Give the required context_assessment without assuming that the source report is current as of every market observation.",
+  "F0_instruction": "Reconsider your exact provisional allocation using the common market evidence retained in history, any institution packet actually supplied in this final message, and the actual arithmetic feedback on your draft. Produce the first and only final allocation; it will not be followed by a repair request. Give each sector's source meaning, source stance, raw final weight, and a decision reason linking evidence, risk, alternatives and the submitted weight. Explain retention or revision without claiming a change absent from the numbers. Supported disagreement with a source is allowed; copied ratings alone do not establish preserved judgment. Do not cite draft calculator facts as verification of the new final vector. New claims derived from final weights remain to be checked. Keep the same operating brief, macro snapshot and benchmark in the retained history. When an institution packet is supplied, explain how current supplied market evidence interacts with that dated source view; do not silently reinterpret the source view as a later publication or a binding mandate. If an institution packet is supplied in this final message: use its exact source_id; give each sector's published source_label, source_reading and source_evidence_ids from that packet, and state your own adoption, qualification, departure or uncertainty in source_stance. If no institution packet is supplied in this final message: institutional evidence remains unavailable; use source_id=null and, for every sector, source_label=null, source_stance=not_available and empty source_evidence_ids; do not guess a source, issuer, rating or institutional rationale; explain the allocation from common evidence and actual draft feedback without institutional attribution. The feedback's raw_budget_residual equals sum(D0 weights)-1. A budget correction requires the net change across all eleven weights to offset that residual; verify the sum of the eleven numbers actually submitted as F0 before claiming the budget is satisfied.",
+  "F0_order": [
+    "same conditional instruction",
+    "actual own-draft calculator feedback",
+    "assigned source packet only when provided"
+  ],
+  "history": "Keep the verbatim system/user/draft messages. No deletion, summarization, silent truncation or reset.",
+  "public_input": "Identical common_market, public_numeric_fact_index and common_context in every D0; all retained verbatim for F0.",
+  "output_schema": "response_schema.json supplied via API format and a single common readable contract; feasibility must be verified against the served backend",
+  "source_selection": "E D0 assigned only; L/C D0 no source identity; E/L F0 assigned only; C F0 no source identity or packet",
+  "generator_calls": 0,
+  "implementation": "research/sector_v492_contract.py",
+  "no_semantic_success_gate": "Input leakage fails closed. Output citation/label errors are recorded outcomes, not reasons to drop an otherwise readable draft. Schema/vector readability and arithmetic validity are separate.",
+  "control_case": "One separately generated C trajectory, with no institution packet at D0 or F0; not a shared L draft",
+  "amendment_scope": {
+    "basis": "Development after inspecting v4.9.2 pilot outputs; not a prespecified replication or replacement of those outputs.",
+    "parent_prompt": {
+      "path": "data/sector_protocol/v492_design_20261019/prompt_contract.json",
+      "sha256": "b03af4efc18358ec23eaf86a25340666aa6409c4a8386eab11c713c65ac0b65d"
+    },
+    "changed_model_input_fields": [
+      "system",
+      "D0_instruction",
+      "F0_instruction"
+    ],
+    "D0_instruction_change": "Only delimit the no-packet branch; no evidence block changes.",
+    "schema_and_supplied_evidence_unchanged": true,
+    "calculator_feedback_unchanged": true,
+    "post_output_semantic_correction_feedback_added": false,
+    "no_target_weights_or_normalization": true
+  }
+}

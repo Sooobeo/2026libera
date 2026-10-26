@@ -1,0 +1,97 @@
+{
+  "receipt_version": "v494_runtime_independent_static_review_1",
+  "status": "PASS",
+  "completed_at_utc": "2026-10-25T10:06:24.117524+00:00",
+  "input_refs": [
+    {
+      "path": "research/sector_v494_runtime.py",
+      "sha256": "c9521000aa3a1497775c83fa83a1b9bac9f5443edbcb707f131d313f7cd8bed1"
+    },
+    {
+      "path": "research/sector_v494_review_gate.py",
+      "sha256": "07cac8a0606eff3dfeb1bc1e0b3786ff373ca49bb424edb20674033e28d7e194"
+    },
+    {
+      "path": "research/review_sector_v494_stage.py",
+      "sha256": "81195353a74f00fde66e1915e068e9167966ccc3cb774b65ad929867bf44b3e6"
+    },
+    {
+      "path": "research/prepare_sector_v494.py",
+      "sha256": "80d293ab0df0a209c234e3ab1136ac845fe6a5e81b1b68d543660cc19108e855"
+    },
+    {
+      "path": "research/freeze_sector_v494.py",
+      "sha256": "2e40a2f9b646ad547987ac6ce9679e989792bd0b16e7525af2f22276c1801856"
+    },
+    {
+      "path": "research/run_v494_recovery.py",
+      "sha256": "56fdb077c375ca4b99a110a93d81210a74812257cae3b0967b613f0b5de27576"
+    },
+    {
+      "path": "research/build_v494_masked_review.py",
+      "sha256": "8ed40877f82414678d5808181712813ad474ddf089a08a5ba06a7b7bcaa6d148"
+    },
+    {
+      "path": "research/recovery_20261025/runtime_candidate.json",
+      "sha256": "e331ea026c04537a15fba83eb538ac3b6cb6022ee1ad14160d18bb292d99870c"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/preflight_d0_r2/summary.json",
+      "sha256": "ddc1d248e046be5cd64109e381539ed91584e885f6edd3a30dffd5f1cdaafe92"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/service_ready/service_receipt.json",
+      "sha256": "be9cb88616a78efe41175f45a57085952f249ac0314e1afcfc4e24b36eb19b3d"
+    }
+  ],
+  "scope": "Independent static inspection and AST syntax parsing of current bytes, plus actual render-only capacity receipt. No unit test suite executed by this reviewer.",
+  "generation_calls": 0,
+  "tests_run_by_this_reviewer": [],
+  "syntax_parsing": {
+    "passed": true,
+    "files": [
+      "research/sector_v494_runtime.py",
+      "research/sector_v494_review_gate.py",
+      "research/review_sector_v494_stage.py",
+      "research/prepare_sector_v494.py",
+      "research/freeze_sector_v494.py",
+      "research/run_v494_recovery.py",
+      "research/build_v494_masked_review.py"
+    ]
+  },
+  "findings": [
+    {
+      "id": "completed_response_parse_inconsistency",
+      "severity": "instrument_integrity",
+      "original_finding": "Stage reviewer parse exceptions were always retained as model outcomes, even if transport claimed a completed structurally readable response. That mismatch could pass the independent integrity gate.",
+      "resolution": "Parent added completed_response_independently_parseable=False only when result status is completed. Such inconsistency now makes instrument_integrity_pass false and run_pilot halts before another stage. Ordinary model_structure_failure stays an observed model outcome.",
+      "status": "resolved_by_static_inspection",
+      "automated_test_evidence": "Not run by this reviewer; parent validation tracked separately."
+    }
+  ],
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "Inspected runtime, freeze/gate and stage-review call paths. Exact prepared-message reconstruction, one-attempt stages, original D0 response binding, per-stage renderer/token reserve checks and stop-on-instrument-failure are present. Completed-versus-unparseable discrepancy is now fail-closed; no additional critical defect identified in inspected scope."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Coordinator runtime equals independent candidate reconstruction with original model/options and recovered tokenizer path. Hash-bound freeze/gate captures revised and inherited code, source preparation and review chronology. Prior large CPU smoke is explicitly historical; current five D0 render-only counts all fit full reserve. Model arithmetic/citation failures do not cause response normalization or retry."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "E/L institution timing, source-free C, sector allocation task, original evidence and descriptive rubric remain. Diagnostics separate arithmetic validity and ID visibility from semantic source support. Topic boundary checks are stagewise; actual source entailment remains separately recorded AI reading, with no fabricated semantic pass."
+    }
+  },
+  "limitations": [
+    "Static inspection and render-only checks do not establish completion of a current-host generation; initial D0 must supply that evidence.",
+    "An existing evidence ID does not prove entailment. Per-stage deterministic review explicitly leaves semantic source support pending separate AI reading.",
+    "Code identity is time-bound by input_refs. Any subsequent code change needs updated review bindings before freeze.",
+    "The first local capacity checker failed before HTTP due to absolute-versus-relative receipt-path spelling; failed receipt is retained, and corrected r2 completed exactly five render-only calls with zero generation."
+  ],
+  "service_left_ready": {
+    "origin": "http://127.0.0.1:11435",
+    "pid": 35148,
+    "restart_performed_during_preflight": false
+  }
+}

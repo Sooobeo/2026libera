@@ -1,0 +1,86 @@
+{
+  "version": "allocation_finalization_user_amendment_1",
+  "recorded_at_utc": "2026-10-25T11:44:03.768Z",
+  "authorization": {
+    "exact_user_text": "뭐 배분 퍼센테이지 때문에 막힌다는거\n배분이 100%로 안 떨어지는 이유를 모르겠네 마지막 처리가 수학적 계산이면 무조건 100이 되어야하는거 아냐? 반올림같은건 100%로 맞춰지게 알아서 하고",
+    "recorded_after_user_message": true
+  },
+  "status": "adopted_mathematical_rule_validation_in_progress",
+  "development_disclosure": {
+    "adopted_after_pilot_start": true,
+    "already_seen_completed_output": "fidelity_q2_2026__E__D0",
+    "first_F0_transport_terminal_at_recording": false,
+    "raw_response_and_frozen_generation_conditions_changed": false,
+    "post_start_user_directed_derived_analysis": true
+  },
+  "scope": {
+    "conditions": [
+      "fidelity_q2_2026__E",
+      "fidelity_q2_2026__L",
+      "ubs_june_2026__E",
+      "ubs_june_2026__L",
+      "common_market_only__C"
+    ],
+    "final_endpoint": "Every eligible completed F0 receives the same deterministic finalizer; integer units are the derived final allocation.",
+    "draft_use": "D0 conversion is a diagnostic only, never a substitute final.",
+    "generation_calls": 0,
+    "main_model_calls": 0,
+    "no_retries_or_output_selection": true
+  },
+  "rule": {
+    "eligible": "Bound normally completed whole JSON response; exactly 11 unique known sectors, finite numeric nonnegative weights, positive sum, explicit engineering resource bounds.",
+    "normalization": "Exact Fraction(raw_weight)/sum(raw_weights). Original sum and scaling factor retained.",
+    "rounding": "Floor each exact normalized quota times 10000, then distribute remaining units by descending fractional remainder.",
+    "ties": [
+      "10",
+      "15",
+      "20",
+      "25",
+      "30",
+      "35",
+      "40",
+      "45",
+      "50",
+      "55",
+      "60"
+    ],
+    "canonical_final": "10000 integer units; one unit = 0.0001 weight = 0.01 percentage point.",
+    "above_one_raw_weights": "May be scaled but original above-one errors remain visible.",
+    "unavailable": "No equal-weight fallback, clipping, filling, or partial-response extraction for missing, negative, zero-sum, malformed, unbound or unsuccessful outcomes.",
+    "bounds": "Submitted model min/max constraints are diagnosed but not enforced or assumed source-supported by this budget-only operation."
+  },
+  "interpretation": {
+    "raw_arithmetic_failures": "Retained as model submission diagnostics and in frozen raw evaluation.",
+    "final_sum": "Derived integer allocation sums exactly to 100.00%; no floating-point equality claim.",
+    "reasoning": "Do not retroactively validate model explanations using repaired weights. Raw vs derived baseline directions, own-draft changes and distances are distinct.",
+    "rounding": "No inference that rounding caused the original deficit. Scaling and quantization deltas are separately recorded.",
+    "research_topic": "Evidence interpretation, stated reason and resulting allocation remain the objects of analysis. Arithmetic finalization does not repair source/citation or factual errors.",
+    "main": "Before any main generation, bind this rule and relevant input revisions in a new main protocol; current pilot freeze remains unchanged."
+  },
+  "refs": [
+    {
+      "path": "research/finalize_sector_allocation.py",
+      "sha256": "117301ec9cb0ee6fb09cd5a4d3388005cf4c2cd94f565e06a4a5d36c2851ff64"
+    },
+    {
+      "path": "research/test_finalize_sector_allocation.py",
+      "sha256": "1bf92287c3b29079b2935c94e79885e3d47f59b5503eca61249943b8b0535501"
+    },
+    {
+      "path": "research/recovery_20261025/pilot_freeze.json",
+      "sha256": "8f8f95c4b90583e5bd97f2b80168c51aa9efec92a958b8235a9baecdfb7001cf"
+    },
+    {
+      "path": "research/recovery_20261025/derived_final_allocation_policy_review_20261025.json",
+      "sha256": "7355b0de7466edac93187133ca2156a3cd31f2c852a0e0351193320ee0687c3d"
+    },
+    {
+      "path": "research/recovery_20261025/new_semantic/fidelity_E_finalization_method_note.json",
+      "sha256": "60721d645d529e6f1effc49de6edcb3c1ef1c1ca99c22bd0661b07bc7f095694"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/finalizer_static_review.json",
+      "sha256": "ce43852a732006aef2cfab3e31a98daf9f68079dad6e892ac9953f642db4328e"
+    }
+  ]
+}

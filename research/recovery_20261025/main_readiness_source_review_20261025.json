@@ -1,0 +1,1177 @@
+{
+  "schema_version": 1,
+  "audit_id": "main_readiness_source_review_20261025",
+  "recorded_at": "2026-10-25T11:04:33.440Z",
+  "reviewer": {
+    "identity": "AI assistant",
+    "role": "Independent original-source and input-binding review; not human validation or outcome coding"
+  },
+  "status": "preparatory_source_evidence_complete_with_explicit_limits_main_not_launched_or_certified",
+  "source_selection": "Previously selected held-out Fidelity Q3 2026 and UBS July 2026 only; no source substitution or selection conditioned on new pilot results.",
+  "independence": {
+    "new_pilot_responses_read": 0,
+    "experiment_model_calls": 0,
+    "main_preparations_created": 0,
+    "main_generations_started": 0,
+    "protected_files_modified": 0,
+    "earlier_deferred_record": "research/recovery_20261025/main_readiness_deferred.json remains historical and unchanged"
+  },
+  "scope": {
+    "sources": 2,
+    "sectors_per_source": 11,
+    "rating_checks": 22,
+    "comparison_rows": 11,
+    "macro_facts_checked": 7,
+    "original_source_pages_visually_inspected": [
+      "Fidelity Q3 PDF pages 2 and 3 via existing cached renders",
+      "UBS July PDF pages 2, 21 and 27 via existing cached renders"
+    ],
+    "no_claims": [
+      "No p-values or inferential effect estimates",
+      "No future or realized performance claims",
+      "No institution-weight gold standard",
+      "No mandatory rating-to-weight mapping",
+      "No independent human semantic validation",
+      "No main experiment readiness certification from source checks alone"
+    ]
+  },
+  "stage_reviews": [
+    {
+      "stage": "original_sources_and_packet_fidelity",
+      "review_axes": {
+        "errors": {
+          "status": "pass_with_documented_source_ambiguity",
+          "reason": "All 22 labels and the core selected reasons agree with inspected original pages. Fidelity’s invalid printed date remains unresolved; conditional phrasing caveats are retained."
+        },
+        "consistency": {
+          "status": "pass_with_scope_limits",
+          "reason": "Vocabularies, universes, publication/view dates, horizons and published-vs-proposed numbers remain distinct; PDFs and packet hashes match prior pins."
+        },
+        "paper_topic": {
+          "status": "pass",
+          "reason": "Comparing how source evidence is interpreted and used in allocations remains relevant; source-label obedience or agreement with unknown institutional holdings is not substituted for the research question."
+        }
+      }
+    },
+    {
+      "stage": "common_context_and_existing_preparation_binding",
+      "review_axes": {
+        "errors": {
+          "status": "pass_for_checked_bindings",
+          "reason": "All seven macro values, units, periods and release dates match official releases. Benchmark percentage sum is 99.9, with comparison-only normalization explicitly separated from raw model outputs."
+        },
+        "consistency": {
+          "status": "pass_for_existing_D0_files_only",
+          "reason": "The four existing v491 D0 files share equal common context, market data and numeric index; their two source-free L drafts are equal and the E compact documents reconstruct the pinned source packets."
+        },
+        "paper_topic": {
+          "status": "pass",
+          "reason": "A common hypothetical new-money task permits source-timing comparisons without inventing client risk limits, institutional targets or future outcomes."
+        }
+      }
+    },
+    {
+      "stage": "readiness_boundary",
+      "review_axes": {
+        "errors": {
+          "status": "pass_with_open_launch_gate",
+          "reason": "This report does not misrepresent blank prior human forms or pilot-only source reviews as completed main evaluation. No source audit alone authorizes a main run."
+        },
+        "consistency": {
+          "status": "pass",
+          "reason": "The fixed r2 rubric and historical records remain unchanged; later main preparation must bind these source and context artifacts to its own reviewed prompt/runtime."
+        },
+        "paper_topic": {
+          "status": "pass",
+          "reason": "Later claims must remain descriptive within the frozen research question, and source fidelity must be separated from arithmetic validity and observable explanation-to-decision consistency."
+        }
+      }
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "fidelity_q3_2026",
+      "title": "Quarterly Sector and Investment Research Update Q3 2026",
+      "primary_url": "https://clearingcustody.fidelity.com/app/proxy/content?literatureURL=/9906006.PDF",
+      "landing_url": "https://clearingcustody.fidelity.com/insights/topics/market-commentary/third-quarter-2026-quarterly-sector-and-investment-research-update",
+      "metadata_url": "https://clearingcustody.fidelity.com/app/literature/view?itemCode=9906006&renditionType=PDF",
+      "cache": {
+        "path": "tmp/pdfs/sector_documents/fidelity_q3_2026.pdf",
+        "sha256": "4179aa3e97f3146e664655ac1008cc87942341069ec4bccfbfe7d7436467dd04",
+        "size_bytes": 286906
+      },
+      "dates": {
+        "publisher_document_date": "2026-07-16",
+        "publisher_date_kind": "official landing page updated date",
+        "publisher_html_datePublished": "2026-07-15T23:00:00-05:00",
+        "sector_view_as_of_raw": "6/31/26",
+        "sector_view_as_of_normalized": null,
+        "sector_view_date_status": "invalid_calendar_date_printed_6/31/26_unresolved",
+        "market_statistics_as_of": "2026-06-30",
+        "snapshot_cutoff": "2026-07-17",
+        "cutoff_interpretation": "retrospective document-snapshot availability cutoff; not contemporaneous information or historical replay"
+      },
+      "original_page_locators": {
+        "ratings_and_reasons": 3,
+        "interpretation_and_scope": 2
+      },
+      "scope": {
+        "authorial_scope": "Denise Chisholm strategist view; not necessarily Fidelity firm-wide",
+        "universe": "GICS sectors in the largest 3,000 US stocks",
+        "rating_semantics": "Overweight and Underweight describe hypothetical opportunistic tilts versus broad-market sector weights; actual selection depends on investor objectives and risk tolerance.",
+        "comparison_limit": "The separately supplied S&P 500 reference is a task comparison anchor and not necessarily the exact strategist universe.",
+        "horizon": "No independent numeric sector-view horizon is established by inspected pages; do not project the task’s twelve months onto this source.",
+        "invalid_date_handling": {
+          "raw": "6/31/26",
+          "normalized": null,
+          "status": "unresolved_invalid_calendar_date",
+          "prohibited_repair": "Do not silently replace with June 30 or July 1; the valid June 30 statistics date is a distinct field."
+        }
+      },
+      "packet_scope": {
+        "numeric_target_weights_published_in_selected_section": false,
+        "full_eleven_sector_target_allocation_available": false,
+        "selected_original_core_meaning_preserved": true,
+        "evaluator_only_original_facts_are_not_model_visible_by_default": true
+      }
+    },
+    {
+      "source_id": "ubs_july_2026",
+      "title": "UBS House View Investment Strategy Guide July 2026",
+      "primary_url": "https://advisors.ubs.com/mediahandler/media/816396/UBS%20House%20View%20for%20July%202026.pdf",
+      "landing_url": null,
+      "metadata_url": null,
+      "cache": {
+        "path": "tmp/pdfs/sector_documents/ubs_july_2026.pdf",
+        "sha256": "07369578859be743e2323ea611f8d9b47e9bb7bc1e7b0e081d4b8df5ad2b4b7b",
+        "size_bytes": 2110541
+      },
+      "dates": {
+        "publisher_document_date": "2026-06-22",
+        "publisher_date_kind": "PDF p2 publication statement",
+        "publisher_html_datePublished": null,
+        "sector_view_as_of_raw": "18 June 2026",
+        "sector_view_as_of_normalized": "2026-06-18",
+        "sector_view_date_status": "valid_reported_date",
+        "market_statistics_as_of": null,
+        "snapshot_cutoff": "2026-07-17",
+        "cutoff_interpretation": "retrospective document-snapshot availability cutoff; not contemporaneous information or historical replay"
+      },
+      "original_page_locators": {
+        "ratings_and_us_sector_reasons": 21,
+        "rating_semantics": 27
+      },
+      "scope": {
+        "authorial_scope": "UBS CIO US-equity sector preferences",
+        "universe": "S&P 500 sectors; regional/global views elsewhere are separate",
+        "rating_semantics": "Page 27 describes twelve-month opportunity preferences and allows tactical allocations to differ because of portfolio construction, concentration or borrowing. Attractive is not a numerical Overweight instruction; Neutral is not an exact benchmark target.",
+        "horizon": "The source’s next-twelve-month view is tied to its own June publication/view dates. The separate task horizon starts July 17 and does not rewrite the source horizon.",
+        "scope_guard": "Overall US equities Attractive does not change the six Neutral sector entries, including Information Technology."
+      },
+      "packet_scope": {
+        "numeric_target_weights_published_in_selected_section": false,
+        "full_eleven_sector_target_allocation_available": false,
+        "selected_original_core_meaning_preserved": true,
+        "evaluator_only_original_facts_are_not_model_visible_by_default": true
+      }
+    }
+  ],
+  "live_url_provenance_caution": {
+    "source_id": "fidelity_q3_2026",
+    "metadata_url": "https://clearingcustody.fidelity.com/app/literature/view?itemCode=9906006&renditionType=PDF",
+    "pdf_url": "https://clearingcustody.fidelity.com/app/proxy/content?literatureURL=/9906006.PDF",
+    "landing_url": "https://clearingcustody.fidelity.com/insights/topics/market-commentary/third-quarter-2026-quarterly-sector-and-investment-research-update",
+    "observed_utc_date": "2026-10-25",
+    "exact_fetch_timestamp": null,
+    "timestamp_limit": "The web observations occurred earlier in this audit; exact fetch wall-clock time was not persisted. recorded_at is the report creation time, not fabricated fetch time.",
+    "observation": "The current literature metadata title identifies Q4 2026 while the Q3 landing page still identifies Q3 and Updated 7/16/2026. The mutable PDF URL could not be freshly established as the cached Q3 byte stream in this review.",
+    "interpretation": "Mutable-link metadata drift is a provenance caution, not a packet-fidelity failure. The preserved Q3 PDF matches its existing SHA256 pin.",
+    "prior_successful_pdf_pin_observation": {
+      "status": 200,
+      "final_url": "https://clearingcustody.fidelity.com/app/proxy/content?literatureURL=/9906006.PDF",
+      "content_type": "application/pdf;charset=ISO-8859-1",
+      "bytes": 286906,
+      "sha256": "4179aa3e97f3146e664655ac1008cc87942341069ec4bccfbfe7d7436467dd04",
+      "checked_at_utc": "2026-10-17T09:43:28.032341+00:00",
+      "success": true,
+      "is_pdf": true,
+      "matches_pinned_pdf": true
+    },
+    "pinned_cache_replaced": false
+  },
+  "sector_comparison_rows": [
+    {
+      "sector_code": "10",
+      "sector_name": "Energy",
+      "source_checks": [
+        {
+          "source_id": "fidelity_q3_2026",
+          "original_rating": "Underweight",
+          "packet_rating": "Underweight",
+          "label_matches_original": true,
+          "evidence_id": "fidelity_q3_2026:p3:sector:10",
+          "original_page": 3,
+          "source_image": "tmp/pdfs/sector_documents/fidelity_q3_2026_3.png",
+          "original_meaning_summary": "Unfavorable risk/return assessment.",
+          "separate_sector_reason_present_in_selected_original": true,
+          "packet_text": "Energy receives Underweight. Unfavorable risk-return indicators.",
+          "packet_fidelity": "core_label_and_selected_reason_preserved",
+          "precision_caveat": null
+        },
+        {
+          "source_id": "ubs_july_2026",
+          "original_rating": "Neutral",
+          "packet_rating": "Neutral",
+          "label_matches_original": true,
+          "evidence_id": "ubs_july_2026:p21:sector:10",
+          "original_page": 21,
+          "source_image": "tmp/pdfs/sector_documents/ubs_july_2026_21.png",
+          "original_meaning_summary": null,
+          "separate_sector_reason_present_in_selected_original": false,
+          "packet_text": "Energy receives Neutral.",
+          "packet_fidelity": "core_label_and_selected_reason_preserved",
+          "precision_caveat": null
+        }
+      ],
+      "comparison": {
+        "observed_relation": "different_labels_with_scope_or_explanation_limits",
+        "finding": "Only Fidelity gives a negative selected-sector reason; UBS Neutral alone does not establish an opposed positive view.",
+        "cross_scale_numeric_comparability": false,
+        "numeric_weight_constraint": null,
+        "comparison_uncertainty": "Differences in source universe, authorship, view timing, horizon and vocabulary remain; this is descriptive source comparison, not a causal institution effect."
+      }
+    },
+    {
+      "sector_code": "15",
+      "sector_name": "Materials",
+      "source_checks": [
+        {
+          "source_id": "fidelity_q3_2026",
+          "original_rating": "Overweight",
+          "packet_rating": "Overweight",
+          "label_matches_original": true,
+          "evidence_id": "fidelity_q3_2026:p3:sector:15",
+          "original_page": 3,
+          "source_image": "tmp/pdfs/sector_documents/fidelity_q3_2026_3.png",
+          "original_meaning_summary": "Opportunities in selected mining businesses, not a blanket claim about every Materials company.",
+          "separate_sector_reason_present_in_selected_original": true,
+          "packet_text": "Materials receives Overweight. Selected mining opportunities.",
+          "packet_fidelity": "core_label_and_selected_reason_preserved",
+          "precision_caveat": null
+        },
+        {
+          "source_id": "ubs_july_2026",
+          "original_rating": "Neutral",
+          "packet_rating": "Neutral",
+          "label_matches_original": true,
+          "evidence_id": "ubs_july_2026:p21:sector:15",
+          "original_page": 21,
+          "source_image": "tmp/pdfs/sector_documents/ubs_july_2026_21.png",
+          "original_meaning_summary": null,
+          "separate_sector_reason_present_in_selected_original": false,
+          "packet_text": "Materials receives Neutral.",
+          "packet_fidelity": "core_label_and_selected_reason_preserved",
+          "precision_caveat": null
+        }
+      ],
+      "comparison": {
+        "observed_relation": "different_labels_with_scope_or_explanation_limits",
+        "finding": "Fidelity’s favorable argument is selected mining exposure; UBS supplies no separate Materials reason.",
+        "cross_scale_numeric_comparability": false,
+        "numeric_weight_constraint": null,
+        "comparison_uncertainty": "Differences in source universe, authorship, view timing, horizon and vocabulary remain; this is descriptive source comparison, not a causal institution effect."
+      }
+    },
+    {
+      "sector_code": "20",
+      "sector_name": "Industrials",
+      "source_checks": [
+        {
+          "source_id": "fidelity_q3_2026",
+          "original_rating": "Overweight",
+          "packet_rating": "Overweight",
+          "label_matches_original": true,
+          "evidence_id": "fidelity_q3_2026:p3:sector:20",
+          "original_page": 3,
+          "source_image": "tmp/pdfs/sector_documents/fidelity_q3_2026_3.png",
+          "original_meaning_summary": "Predictive valuation measures appear compelling.",
+          "separate_sector_reason_present_in_selected_original": true,
+          "packet_text": "Industrials receives Overweight. Forward-looking valuation evidence is favorable.",
+          "packet_fidelity": "core_label_and_selected_reason_preserved",
+          "precision_caveat": null
+        },
+        {
+          "source_id": "ubs_july_2026",
+          "original_rating": "Attractive",
+          "packet_rating": "Attractive",
+          "label_matches_original": true,
+          "evidence_id": "ubs_july_2026:p21:sector:20",
+          "original_page": 21,
+          "source_image": "tmp/pdfs/sector_documents/ubs_july_2026_21.png",
+          "original_meaning_summary": "Long-cycle aerospace growth and possible short-cycle transportation upside.",
+          "separate_sector_reason_present_in_selected_original": true,
+          "packet_text": "Industrials receives Attractive. Aerospace growth and transportation's cyclical potential.",
+          "packet_fidelity": "core_label_and_selected_reason_preserved",
+          "precision_caveat": null
+        }
+      ],
+      "comparison": {
+        "observed_relation": "favorable_labels_in_distinct_scales_and_distinct_reasons",
+        "finding": "Both labels are favorable in their own vocabularies, with different valuation/business-cycle arguments.",
+        "cross_scale_numeric_comparability": false,
+        "numeric_weight_constraint": null,
+        "comparison_uncertainty": "Differences in source universe, authorship, view timing, horizon and vocabulary remain; this is descriptive source comparison, not a causal institution effect."
+      }
+    },
+    {
+      "sector_code": "25",
+      "sector_name": "Consumer Discretionary",
+      "source_checks": [
+        {
+          "source_id": "fidelity_q3_2026",
+          "original_rating": "Overweight",
+          "packet_rating": "Overweight",
+          "label_matches_original": true,
+          "evidence_id": "fidelity_q3_2026:p3:sector:25",
+          "original_page": 3,
+          "source_image": "tmp/pdfs/sector_documents/fidelity_q3_2026_3.png",
+          "original_meaning_summary": "Forward valuation evidence supports a favorable risk/return assessment.",
+          "separate_sector_reason_present_in_selected_original": true,
+          "packet_text": "Consumer Discretionary receives Overweight. Forward valuations imply favorable risk-return.",
+          "packet_fidelity": "core_label_and_selected_reason_preserved",
+          "precision_caveat": null
+        },
+        {
+          "source_id": "ubs_july_2026",
+          "original_rating": "Attractive",
+          "packet_rating": "Attractive",
+          "label_matches_original": true,
+          "evidence_id": "ubs_july_2026:p21:sector:25",
+          "original_page": 21,
+          "source_image": "tmp/pdfs/sector_documents/ubs_july_2026_21.png",
+          "original_meaning_summary": "AI adoption by the largest companies, fiscal stimulus, wealth effects and easing peak tariff headwinds.",
+          "separate_sector_reason_present_in_selected_original": true,
+          "packet_text": "Consumer Discretionary receives Attractive. AI adoption, fiscal support, wealth effects, and fading tariff pressure.",
+          "packet_fidelity": "core_label_and_selected_reason_preserved",
+          "precision_caveat": null
+        }
+      ],
+      "comparison": {
+        "observed_relation": "favorable_labels_in_distinct_scales_and_distinct_reasons",
+        "finding": "Both labels are favorable in their own vocabularies; valuation and AI/fiscal/wealth/tariff channels differ.",
+        "cross_scale_numeric_comparability": false,
+        "numeric_weight_constraint": null,
+        "comparison_uncertainty": "Differences in source universe, authorship, view timing, horizon and vocabulary remain; this is descriptive source comparison, not a causal institution effect."
+      }
+    },
+    {
+      "sector_code": "30",
+      "sector_name": "Consumer Staples",
+      "source_checks": [
+        {
+          "source_id": "fidelity_q3_2026",
+          "original_rating": "Underweight",
+          "packet_rating": "Underweight",
+          "label_matches_original": true,
+          "evidence_id": "fidelity_q3_2026:p3:sector:30",
+          "original_page": 3,
+          "source_image": "tmp/pdfs/sector_documents/fidelity_q3_2026_3.png",
+          "original_meaning_summary": "Weak fundamentals may leave the sector a value trap.",
+          "separate_sector_reason_present_in_selected_original": true,
+          "packet_text": "Consumer Staples receives Underweight. Weak fundamentals raise value-trap concerns.",
+          "packet_fidelity": "core_label_and_selected_reason_preserved",
+          "precision_caveat": null
+        },
+        {
+          "source_id": "ubs_july_2026",
+          "original_rating": "Neutral",
+          "packet_rating": "Neutral",
+          "label_matches_original": true,
+          "evidence_id": "ubs_july_2026:p21:sector:30",
+          "original_page": 21,
+          "source_image": "tmp/pdfs/sector_documents/ubs_july_2026_21.png",
+          "original_meaning_summary": null,
+          "separate_sector_reason_present_in_selected_original": false,
+          "packet_text": "Consumer Staples receives Neutral.",
+          "packet_fidelity": "core_label_and_selected_reason_preserved",
+          "precision_caveat": null
+        }
+      ],
+      "comparison": {
+        "observed_relation": "different_labels_with_scope_or_explanation_limits",
+        "finding": "Fidelity’s possible value-trap concern is explicit; UBS supplies no separate Staples reason.",
+        "cross_scale_numeric_comparability": false,
+        "numeric_weight_constraint": null,
+        "comparison_uncertainty": "Differences in source universe, authorship, view timing, horizon and vocabulary remain; this is descriptive source comparison, not a causal institution effect."
+      }
+    },
+    {
+      "sector_code": "35",
+      "sector_name": "Health Care",
+      "source_checks": [
+        {
+          "source_id": "fidelity_q3_2026",
+          "original_rating": "Neutral",
+          "packet_rating": "Neutral",
+          "label_matches_original": true,
+          "evidence_id": "fidelity_q3_2026:p3:sector:35",
+          "original_page": 3,
+          "source_image": "tmp/pdfs/sector_documents/fidelity_q3_2026_3.png",
+          "original_meaning_summary": "Risk/reward evidence appears more neutral.",
+          "separate_sector_reason_present_in_selected_original": true,
+          "packet_text": "Health Care receives Neutral. Risk-return evidence is balanced.",
+          "packet_fidelity": "core_label_and_selected_reason_preserved",
+          "precision_caveat": null
+        },
+        {
+          "source_id": "ubs_july_2026",
+          "original_rating": "Attractive",
+          "packet_rating": "Attractive",
+          "label_matches_original": true,
+          "evidence_id": "ubs_july_2026:p21:sector:35",
+          "original_page": 21,
+          "source_image": "tmp/pdfs/sector_documents/ubs_july_2026_21.png",
+          "original_meaning_summary": "Potential resilience if growth disappoints.",
+          "separate_sector_reason_present_in_selected_original": true,
+          "packet_text": "Health Care receives Attractive. Resilience if economic growth disappoints.",
+          "packet_fidelity": "core_label_and_selected_reason_preserved",
+          "precision_caveat": null
+        }
+      ],
+      "comparison": {
+        "observed_relation": "different_labels_with_scope_or_explanation_limits",
+        "finding": "A balanced Fidelity assessment and conditional UBS defensiveness differ in emphasis, without a numerical target comparison.",
+        "cross_scale_numeric_comparability": false,
+        "numeric_weight_constraint": null,
+        "comparison_uncertainty": "Differences in source universe, authorship, view timing, horizon and vocabulary remain; this is descriptive source comparison, not a causal institution effect."
+      }
+    },
+    {
+      "sector_code": "40",
+      "sector_name": "Financials",
+      "source_checks": [
+        {
+          "source_id": "fidelity_q3_2026",
+          "original_rating": "Overweight",
+          "packet_rating": "Overweight",
+          "label_matches_original": true,
+          "evidence_id": "fidelity_q3_2026:p3:sector:40",
+          "original_page": 3,
+          "source_image": "tmp/pdfs/sector_documents/fidelity_q3_2026_3.png",
+          "original_meaning_summary": "Relative valuations may limit downside; this is conditional, not guaranteed protection.",
+          "separate_sector_reason_present_in_selected_original": true,
+          "packet_text": "Financials receives Overweight. Relative valuations offer downside support.",
+          "packet_fidelity": "core_label_and_selected_reason_preserved",
+          "precision_caveat": "The packet wording is slightly stronger than the original’s conditional may-limit-downside phrasing; interpret support as a possibility, never a guarantee."
+        },
+        {
+          "source_id": "ubs_july_2026",
+          "original_rating": "Attractive",
+          "packet_rating": "Attractive",
+          "label_matches_original": true,
+          "evidence_id": "ubs_july_2026:p21:sector:40",
+          "original_page": 21,
+          "source_image": "tmp/pdfs/sector_documents/ubs_july_2026_21.png",
+          "original_meaning_summary": "Easier regulation and capital-markets activity.",
+          "separate_sector_reason_present_in_selected_original": true,
+          "packet_text": "Financials receives Attractive. Regulatory easing and capital-markets activity.",
+          "packet_fidelity": "core_label_and_selected_reason_preserved",
+          "precision_caveat": null
+        }
+      ],
+      "comparison": {
+        "observed_relation": "favorable_labels_in_distinct_scales_and_distinct_reasons",
+        "finding": "Both labels are favorable; valuation downside cushioning and regulation/capital-markets activity are distinct reasons.",
+        "cross_scale_numeric_comparability": false,
+        "numeric_weight_constraint": null,
+        "comparison_uncertainty": "Differences in source universe, authorship, view timing, horizon and vocabulary remain; this is descriptive source comparison, not a causal institution effect."
+      }
+    },
+    {
+      "sector_code": "45",
+      "sector_name": "Information Technology",
+      "source_checks": [
+        {
+          "source_id": "fidelity_q3_2026",
+          "original_rating": "Overweight",
+          "packet_rating": "Overweight",
+          "label_matches_original": true,
+          "evidence_id": "fidelity_q3_2026:p3:sector:45",
+          "original_page": 3,
+          "source_image": "tmp/pdfs/sector_documents/fidelity_q3_2026_3.png",
+          "original_meaning_summary": "Solid fundamentals plus valuations following a selloff.",
+          "separate_sector_reason_present_in_selected_original": true,
+          "packet_text": "Information Technology receives Overweight. Fundamentals and post-decline valuations support the view.",
+          "packet_fidelity": "core_label_and_selected_reason_preserved",
+          "precision_caveat": null
+        },
+        {
+          "source_id": "ubs_july_2026",
+          "original_rating": "Neutral",
+          "packet_rating": "Neutral",
+          "label_matches_original": true,
+          "evidence_id": "ubs_july_2026:p21:sector:45",
+          "original_page": 21,
+          "source_image": "tmp/pdfs/sector_documents/ubs_july_2026_21.png",
+          "original_meaning_summary": null,
+          "separate_sector_reason_present_in_selected_original": false,
+          "packet_text": "Information Technology receives Neutral.",
+          "packet_fidelity": "core_label_and_selected_reason_preserved",
+          "precision_caveat": null
+        }
+      ],
+      "comparison": {
+        "observed_relation": "different_labels_with_scope_or_explanation_limits",
+        "finding": "Fidelity is favorable; UBS IT is Neutral. Broader UBS AI enthusiasm or overall US-equity attractiveness cannot replace the selected sector rating.",
+        "cross_scale_numeric_comparability": false,
+        "numeric_weight_constraint": null,
+        "comparison_uncertainty": "Differences in source universe, authorship, view timing, horizon and vocabulary remain; this is descriptive source comparison, not a causal institution effect."
+      }
+    },
+    {
+      "sector_code": "50",
+      "sector_name": "Communication Services",
+      "source_checks": [
+        {
+          "source_id": "fidelity_q3_2026",
+          "original_rating": "Underweight",
+          "packet_rating": "Underweight",
+          "label_matches_original": true,
+          "evidence_id": "fidelity_q3_2026:p3:sector:50",
+          "original_page": 3,
+          "source_image": "tmp/pdfs/sector_documents/fidelity_q3_2026_3.png",
+          "original_meaning_summary": "Technology-like components are viewed positively while defensive components are not; the aggregate label remains Underweight.",
+          "separate_sector_reason_present_in_selected_original": true,
+          "packet_text": "Communication Services receives Underweight. Technology-related components fare better than defensive components.",
+          "packet_fidelity": "core_label_and_selected_reason_preserved",
+          "precision_caveat": null
+        },
+        {
+          "source_id": "ubs_july_2026",
+          "original_rating": "Neutral",
+          "packet_rating": "Neutral",
+          "label_matches_original": true,
+          "evidence_id": "ubs_july_2026:p21:sector:50",
+          "original_page": 21,
+          "source_image": "tmp/pdfs/sector_documents/ubs_july_2026_21.png",
+          "original_meaning_summary": null,
+          "separate_sector_reason_present_in_selected_original": false,
+          "packet_text": "Communication Services receives Neutral.",
+          "packet_fidelity": "core_label_and_selected_reason_preserved",
+          "precision_caveat": null
+        }
+      ],
+      "comparison": {
+        "observed_relation": "different_labels_with_scope_or_explanation_limits",
+        "finding": "Fidelity’s negative aggregate rating coexists with favorable technology-like components; UBS supplies no separate sector reason.",
+        "cross_scale_numeric_comparability": false,
+        "numeric_weight_constraint": null,
+        "comparison_uncertainty": "Differences in source universe, authorship, view timing, horizon and vocabulary remain; this is descriptive source comparison, not a causal institution effect."
+      }
+    },
+    {
+      "sector_code": "55",
+      "sector_name": "Utilities",
+      "source_checks": [
+        {
+          "source_id": "fidelity_q3_2026",
+          "original_rating": "Underweight",
+          "packet_rating": "Underweight",
+          "label_matches_original": true,
+          "evidence_id": "fidelity_q3_2026:p3:sector:55",
+          "original_page": 3,
+          "source_image": "tmp/pdfs/sector_documents/fidelity_q3_2026_3.png",
+          "original_meaning_summary": "Unattractive valuation evidence.",
+          "separate_sector_reason_present_in_selected_original": true,
+          "packet_text": "Utilities receives Underweight. Valuations are unfavorable.",
+          "packet_fidelity": "core_label_and_selected_reason_preserved",
+          "precision_caveat": null
+        },
+        {
+          "source_id": "ubs_july_2026",
+          "original_rating": "Attractive",
+          "packet_rating": "Attractive",
+          "label_matches_original": true,
+          "evidence_id": "ubs_july_2026:p21:sector:55",
+          "original_page": 21,
+          "source_image": "tmp/pdfs/sector_documents/ubs_july_2026_21.png",
+          "original_meaning_summary": "Potential resilience if growth disappoints, plus AI-related exposure for some utilities.",
+          "separate_sector_reason_present_in_selected_original": true,
+          "packet_text": "Utilities receives Attractive. Defensive resilience and AI-related exposure.",
+          "packet_fidelity": "core_label_and_selected_reason_preserved",
+          "precision_caveat": "The packet compresses the growth-disappointment condition and company-level heterogeneity; neither a guaranteed hedge nor all-utilities AI exposure is established."
+        }
+      ],
+      "comparison": {
+        "observed_relation": "contrasting_assessments_on_different_dimensions",
+        "finding": "Fidelity’s negative valuation assessment and UBS’s favorable defensive/AI assessment support a substantive contrast on different dimensions; no mandatory weight inequality follows.",
+        "cross_scale_numeric_comparability": false,
+        "numeric_weight_constraint": null,
+        "comparison_uncertainty": "Differences in source universe, authorship, view timing, horizon and vocabulary remain; this is descriptive source comparison, not a causal institution effect."
+      }
+    },
+    {
+      "sector_code": "60",
+      "sector_name": "Real Estate",
+      "source_checks": [
+        {
+          "source_id": "fidelity_q3_2026",
+          "original_rating": "Underweight",
+          "packet_rating": "Underweight",
+          "label_matches_original": true,
+          "evidence_id": "fidelity_q3_2026:p3:sector:60",
+          "original_page": 3,
+          "source_image": "tmp/pdfs/sector_documents/fidelity_q3_2026_3.png",
+          "original_meaning_summary": "Potential higher interest rates may be a headwind.",
+          "separate_sector_reason_present_in_selected_original": true,
+          "packet_text": "Real Estate receives Underweight. Possible higher interest rates create a headwind.",
+          "packet_fidelity": "core_label_and_selected_reason_preserved",
+          "precision_caveat": null
+        },
+        {
+          "source_id": "ubs_july_2026",
+          "original_rating": "Neutral",
+          "packet_rating": "Neutral",
+          "label_matches_original": true,
+          "evidence_id": "ubs_july_2026:p21:sector:60",
+          "original_page": 21,
+          "source_image": "tmp/pdfs/sector_documents/ubs_july_2026_21.png",
+          "original_meaning_summary": null,
+          "separate_sector_reason_present_in_selected_original": false,
+          "packet_text": "Real Estate receives Neutral.",
+          "packet_fidelity": "core_label_and_selected_reason_preserved",
+          "precision_caveat": null
+        }
+      ],
+      "comparison": {
+        "observed_relation": "different_labels_with_scope_or_explanation_limits",
+        "finding": "Fidelity identifies a possible rates headwind; UBS supplies no separate Real Estate reason.",
+        "cross_scale_numeric_comparability": false,
+        "numeric_weight_constraint": null,
+        "comparison_uncertainty": "Differences in source universe, authorship, view timing, horizon and vocabulary remain; this is descriptive source comparison, not a causal institution effect."
+      }
+    }
+  ],
+  "numeric_fact_review": {
+    "benchmark": {
+      "source_id": "fidelity_q3_2026",
+      "source_page": 2,
+      "source_image": "tmp/pdfs/sector_documents/fidelity_q3_2026_2.png",
+      "date": "2026-06-30",
+      "reported_percentages": [
+        3,
+        1.8,
+        8.8,
+        9.3,
+        4.6,
+        8.9,
+        11.8,
+        38,
+        9.7,
+        2.2,
+        1.8
+      ],
+      "sector_codes": [
+        "10",
+        "15",
+        "20",
+        "25",
+        "30",
+        "35",
+        "40",
+        "45",
+        "50",
+        "55",
+        "60"
+      ],
+      "sum_in_tenths": 999,
+      "exact_reported_sum_percent": "99.9",
+      "matches_printed_table": true,
+      "normalization_rule": "reported sector percentage / 99.9 for comparison benchmark only",
+      "all_baseline_values_follow_rule": true,
+      "not_institution_target": true,
+      "not_model_output_repair": true
+    },
+    "ubs_selected_page_numbers": {
+      "source_page": 21,
+      "status": "No full eleven-sector allocation target is published. The page also contains market-level scenarios, which are not sector target weights and are not supplied by the selected institution packet.",
+      "action": "Do not import excluded index scenarios into scoring as though the model had seen them."
+    },
+    "common_macro_facts": [
+      {
+        "evidence_id": "MACRO_FED_TARGET_20260617",
+        "value": {
+          "lower": 3.5,
+          "upper": 3.75
+        },
+        "unit": "percent per year",
+        "observation_period": "2026-06-17 policy decision",
+        "seasonal_adjustment": "not applicable",
+        "publication_date": "2026-06-17",
+        "publication_time_local": "14:00:00",
+        "publication_timezone": "America/New_York",
+        "primary_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260617a.htm",
+        "source_locator": "Dated press release, first policy-decision paragraph",
+        "release_vintage": "Dated policy announcement; not a later statistical time-series extraction",
+        "interpretation_limit": "This is a policy target range, not an observed effective rate or an assumed future rate.",
+        "recheck_status": "correct_against_primary_release",
+        "review_basis": "Official primary release was accessed in this audit; value/date/period/unit checked, not merely copied from the prior audit."
+      },
+      {
+        "evidence_id": "MACRO_CPI_HEADLINE_MOM_202606",
+        "value": -0.4,
+        "unit": "percent month over month",
+        "observation_period": "2026-06",
+        "seasonal_adjustment": "seasonally adjusted",
+        "publication_date": "2026-07-14",
+        "publication_time_local": "08:30:00",
+        "publication_timezone": "America/New_York",
+        "primary_url": "https://www.bls.gov/news.release/archives/cpi_07142026.htm",
+        "source_locator": "Archive release header and opening CPI-U paragraphs; Table A",
+        "release_vintage": "June 2026 figures as printed in the July 14 release, not a current BLS API series",
+        "interpretation_limit": "Monthly price change; do not interpret as an annual inflation rate.",
+        "recheck_status": "correct_against_primary_release",
+        "review_basis": "Official primary release was accessed in this audit; value/date/period/unit checked, not merely copied from the prior audit."
+      },
+      {
+        "evidence_id": "MACRO_CPI_HEADLINE_YOY_202606",
+        "value": 3.5,
+        "unit": "percent year over year",
+        "observation_period": "2025-06 to 2026-06",
+        "seasonal_adjustment": "not seasonally adjusted",
+        "publication_date": "2026-07-14",
+        "publication_time_local": "08:30:00",
+        "publication_timezone": "America/New_York",
+        "primary_url": "https://www.bls.gov/news.release/archives/cpi_07142026.htm",
+        "source_locator": "Archive release header and opening CPI-U paragraphs; Table A",
+        "release_vintage": "June 2026 figures as printed in the July 14 release, not a current BLS API series",
+        "interpretation_limit": "Twelve-month price change ending June 2026.",
+        "recheck_status": "correct_against_primary_release",
+        "review_basis": "Official primary release was accessed in this audit; value/date/period/unit checked, not merely copied from the prior audit."
+      },
+      {
+        "evidence_id": "MACRO_CPI_CORE_YOY_202606",
+        "value": 2.6,
+        "unit": "percent year over year",
+        "observation_period": "2025-06 to 2026-06",
+        "seasonal_adjustment": "not seasonally adjusted",
+        "publication_date": "2026-07-14",
+        "publication_time_local": "08:30:00",
+        "publication_timezone": "America/New_York",
+        "primary_url": "https://www.bls.gov/news.release/archives/cpi_07142026.htm",
+        "source_locator": "Archive release header and opening CPI-U paragraphs; Table A",
+        "release_vintage": "June 2026 figures as printed in the July 14 release, not a current BLS API series",
+        "interpretation_limit": "Core CPI excludes food and energy; it is not PCE inflation.",
+        "recheck_status": "correct_against_primary_release",
+        "review_basis": "Official primary release was accessed in this audit; value/date/period/unit checked, not merely copied from the prior audit."
+      },
+      {
+        "evidence_id": "MACRO_UNEMPLOYMENT_202606",
+        "value": 4.2,
+        "unit": "percent of civilian labor force",
+        "observation_period": "2026-06",
+        "seasonal_adjustment": "seasonally adjusted",
+        "publication_date": "2026-07-02",
+        "publication_time_local": "08:30:00",
+        "publication_timezone": "America/New_York",
+        "primary_url": "https://www.bls.gov/news.release/archives/empsit_07022026.htm",
+        "source_locator": "Archive release header and opening paragraph; Tables A-1 and B-1",
+        "release_vintage": "June 2026 first-release estimates; subsequent payroll revisions are excluded",
+        "interpretation_limit": "Household-survey unemployment measure; not the payroll employment growth rate.",
+        "recheck_status": "correct_against_primary_release",
+        "review_basis": "Official primary release was accessed in this audit; value/date/period/unit checked, not merely copied from the prior audit."
+      },
+      {
+        "evidence_id": "MACRO_NONFARM_CHANGE_202606",
+        "value": 57000,
+        "unit": "jobs from previous month",
+        "observation_period": "2026-06",
+        "seasonal_adjustment": "seasonally adjusted",
+        "publication_date": "2026-07-02",
+        "publication_time_local": "08:30:00",
+        "publication_timezone": "America/New_York",
+        "primary_url": "https://www.bls.gov/news.release/archives/empsit_07022026.htm",
+        "source_locator": "Archive release header and opening paragraph; Tables A-1 and B-1",
+        "release_vintage": "June 2026 first-release estimates; subsequent payroll revisions are excluded",
+        "interpretation_limit": "First-release establishment-survey estimate; subsequent revisions are excluded.",
+        "recheck_status": "correct_against_primary_release",
+        "review_basis": "Official primary release was accessed in this audit; value/date/period/unit checked, not merely copied from the prior audit."
+      },
+      {
+        "evidence_id": "MACRO_REAL_GDP_Q1_2026_THIRD",
+        "value": 2.1,
+        "unit": "percent quarter over quarter at annual rate",
+        "observation_period": "2026-Q1",
+        "seasonal_adjustment": "seasonally adjusted annual rate",
+        "publication_date": "2026-06-25",
+        "publication_time_local": "08:30:00",
+        "publication_timezone": "America/New_York",
+        "primary_url": "https://www.bea.gov/sites/default/files/2026-06/gdp1q26-3rd.pdf",
+        "source_locator": "Release PDF page 1 and Real GDP and Related Measures table on page 3",
+        "release_vintage": "2026 Q1 third estimate released June 25; later annual updates are excluded",
+        "interpretation_limit": "Third estimate for January-March 2026; not Q2 growth, a year-over-year rate, or a forecast.",
+        "recheck_status": "correct_against_primary_release",
+        "review_basis": "Official primary release was accessed in this audit; value/date/period/unit checked, not merely copied from the prior audit."
+      }
+    ],
+    "dated_information_guard": "The GDP June 25, jobs July 2 and CPI July 14 releases postdate the UBS June 18 view and June 22 publication. They can inform the common July 17 task but cannot be attributed to the UBS author’s earlier information set. Fidelity’s invalid view date prevents exact view-age calculation."
+  },
+  "common_context_binding": {
+    "all_four_common_context_equal": true,
+    "all_four_common_market_equal": true,
+    "all_four_numeric_fact_indexes_equal": true,
+    "two_L_D0_messages_equal": true,
+    "early_compact_docs": [
+      {
+        "name": "fidelity_q3_2026__E__D0_messages.json",
+        "packet_id": "fidelity_q3_2026",
+        "lossless_matches_packet": true
+      },
+      {
+        "name": "ubs_july_2026__E__D0_messages.json",
+        "packet_id": "ubs_july_2026",
+        "lossless_matches_packet": true
+      }
+    ],
+    "comparison_scope": "Existing v491 D0 prepared files only; no v494 main freeze or F0 generation exists in this review.",
+    "canonical_context_equals_review_pack": true,
+    "canonical_context_equals_all_existing_D0": true,
+    "declared_task": {
+      "assignment_type": "hypothetical_new_US_equity_sector_sleeve",
+      "decision_reference_date": "2026-07-17",
+      "information_cutoff_exclusive": "2026-07-17",
+      "judgment_horizon_months": 12,
+      "horizon_end_reference": "2027-07-17",
+      "decision_type": "new_target_allocation_not_rebalancing",
+      "existing_sector_holdings": null,
+      "existing_holdings_meaning": "No sector portfolio exists within this new-money task; null is not unknown actual institutional holdings.",
+      "benchmark_role": "comparison_only_not_holdings_not_gold",
+      "numeric_risk_limit": null,
+      "numeric_utility_coefficient": null,
+      "required_return": null,
+      "evidence_items": [
+        {
+          "evidence_id": "CTX:task",
+          "statement": "This is a hypothetical research assignment to recommend a new US equity-sector sleeve, not to impersonate any institution or infer its private mandate.",
+          "evidence_type": "declared_research_task_not_empirical_institution_fact"
+        },
+        {
+          "evidence_id": "CTX:date",
+          "statement": "Use a 2026-07-17 decision reference and only supplied observations and public releases before that date. This is a documentary retrospective case, not a point-in-time trading replay.",
+          "evidence_type": "declared_research_task_not_empirical_institution_fact"
+        },
+        {
+          "evidence_id": "CTX:horizon",
+          "statement": "The allocation judgment horizon is 12 months. This is not a 12-month realized-return test. Document view dates and horizons remain those of their respective sources.",
+          "evidence_type": "declared_research_task_not_empirical_institution_fact"
+        },
+        {
+          "evidence_id": "CTX:objective",
+          "statement": "Propose a reasoned allocation intended for capital appreciation over the stated horizon, explaining diversification and risk-return trade-offs relative to the common sector benchmark. No required return or unique optimal allocation is specified.",
+          "evidence_type": "declared_research_task_not_empirical_institution_fact"
+        },
+        {
+          "evidence_id": "CTX:risk",
+          "statement": "The hypothetical assignment accepts equity-market loss risk and provides no capital guarantee. No numerical risk-aversion coefficient, volatility ceiling, loss budget or sector cap is supplied. Do not invent one; discuss remaining risk and uncertainty.",
+          "evidence_type": "declared_research_task_not_empirical_institution_fact"
+        },
+        {
+          "evidence_id": "CTX:starting_state",
+          "statement": "This is new money assigned to an equity sleeve with no existing sector holdings. Recommend target weights, not trades from current holdings. The S&P sector benchmark is only a comparison anchor and is not the starting portfolio.",
+          "evidence_type": "declared_research_task_not_empirical_institution_fact"
+        },
+        {
+          "evidence_id": "CTX:universe",
+          "statement": "Use exactly the supplied 11 GICS sector baskets, with one row for each sector including zero weights. The submitted allocation must be long-only, unlevered and fully invested: raw weights sum to one. Individual stocks, cash, bonds and derivatives are outside this sleeve task.",
+          "evidence_type": "declared_research_task_not_empirical_institution_fact"
+        },
+        {
+          "evidence_id": "CTX:scope",
+          "statement": "The deliverable is an allocation proposal for review, not a trade order or a whole-client financial plan. Transaction costs, turnover, tax optimization, withdrawals and actual client suitability are not measured. Do not invent missing client or liquidity requirements.",
+          "evidence_type": "declared_research_task_not_empirical_institution_fact"
+        },
+        {
+          "evidence_id": "CTX:liquidity_and_ESG",
+          "statement": "For this hypothetical sleeve there are no scheduled withdrawals during the judgment horizon and no separate ESG exclusion. These are declared task assumptions, not observed facts about a real institution or customer.",
+          "evidence_type": "declared_research_task_not_empirical_institution_fact"
+        },
+        {
+          "evidence_id": "CTX:evidence_use",
+          "statement": "Use dated market observations and any institution packet currently supplied. Published outlook ratings are not binding weight constraints or target holdings. Explain justified adoption, qualification or departure and any age/horizon mismatch. Do not assume the outlook author had observed later common market releases.",
+          "evidence_type": "declared_research_task_not_empirical_institution_fact"
+        }
+      ]
+    },
+    "market_scope": {
+      "return_observations": 60,
+      "lookback_return_dates": [
+        "2026-04-21",
+        "2026-07-16"
+      ],
+      "last_observation_date": "2026-07-16",
+      "annualization_trading_days": 252,
+      "covariance_ddof": 1,
+      "asof_scope": "Dates of included observations precede 2026-07-17. Downloaded current vendor vintage does not establish historical availability of identical adjusted prices. Same packet is supplied to both institutions and all compared workflows.",
+      "review_limit": "Binding checked; no new vendor download or independent recomputation of the full market return/covariance dataset was performed in this source review."
+    },
+    "benchmark_provenance_note": "The common numerical S&P 500 reference is sourced from Fidelity’s page 2 but supplied equally across compared conditions. Source-free means no institution outlook packet at that stage; it does not mean no common numerical fact originally published on an institution’s page.",
+    "excluded_certification": "No new C/F0 main preparation, runtime/prompt compatibility or launch gate is certified by equality of these four historical D0 files."
+  },
+  "fixed_rubric_binding": {
+    "path": "research/v492_evaluation_protocol_20261019_r2.json",
+    "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1",
+    "relevant_layers": [
+      "industry_existence_and_coverage",
+      "raw_vector_validity",
+      "source_reading_and_weight_tendency",
+      "numeric_fidelity",
+      "context_and_evidence_decision_link"
+    ],
+    "application": [
+      "Check source label, population, date, scope and visible reasons separately from numeric validity.",
+      "Allow a supported explicit departure; a source label is not a mandatory numerical target.",
+      "Check the response’s own stated direction against its actual weight or change using its stated comparator.",
+      "Judge model claims only against evidence supplied at that stage; original-source omissions are separate packet-fidelity questions.",
+      "Keep unvalidated AI semantic categories, uncertainties and evidence locators; do not create a composite score or post-hoc semantic pass threshold."
+    ]
+  },
+  "prior_review_status": {
+    "pilot_review": {
+      "path": "research/v492_source_review_20261019.json",
+      "split": "pilot",
+      "status": "completed_ai_preoutput_source_review",
+      "main_review_completed": false
+    },
+    "human_form": {
+      "path": "research/v491_human_review_pack_20261019_R1.json",
+      "status": "blank_human_form_not_completed_review",
+      "human_review_completed": false,
+      "nonempty_answers": 0
+    },
+    "interpretation": "This new AI source review supplies additional main-source evidence. It does not silently fill or relabel the old human form."
+  },
+  "remaining_gaps_before_later_main_freeze": [
+    {
+      "id": "later_main_runtime_prompt_input_binding",
+      "severity": "launch_gate",
+      "finding": "The reviewed source/context files and protocol must be bound to a separately reviewed main preparation and runtime after the active pilot is resolved. Existing v491 D0 files do not establish v494 main readiness.",
+      "bounded_next_action": "At the later main-freeze stage, verify exact source hashes, equal common inputs, source visibility by stage, no retry/resume policy and reviewed code/prompt settings before any generation."
+    },
+    {
+      "id": "fidelity_invalid_view_date",
+      "severity": "retained_source_uncertainty",
+      "finding": "The printed 6/31/26 date cannot be normalized honestly from available evidence.",
+      "bounded_next_action": "Keep raw text and null normalized view date in source evidence, prompts and reporting; do not use publication or statistics dates as silent replacements."
+    },
+    {
+      "id": "fidelity_mutable_url",
+      "severity": "provenance_caution",
+      "finding": "Current metadata references Q4; the selected Q3 cached file is the reviewed artifact.",
+      "bounded_next_action": "Retain the pinned Q3 cache and its existing archive; cite its hash and retrieval provenance. Do not refresh from the mutable URL as though it were the same edition."
+    },
+    {
+      "id": "conditional_reason_precision",
+      "severity": "bounded_interpretation_caveat",
+      "finding": "The Fidelity Financials and UBS Utilities paraphrases compress conditions; neither implies guaranteed downside protection or uniform exposure.",
+      "bounded_next_action": "Use original-page locators in evaluator-only packet review, while judging model output on the actual supplied text. Any future packet wording edit would require a separately versioned, reviewed freeze, not a silent replacement."
+    },
+    {
+      "id": "semantic_validation_boundary",
+      "severity": "claim_limit",
+      "finding": "This is one AI-assisted evidence review, not independent human reliability validation or a validated measurement scale.",
+      "bounded_next_action": "Keep reviewer identity, evidence, uncertainty and descriptive limits visible; do not infer institutional truth or causal performance from these source checks."
+    }
+  ],
+  "file_evidence": [
+    {
+      "path": "data/sector_documents/packets/main/fidelity_q3_2026.json",
+      "bytes": 6643,
+      "sha256": "3f84c5d1e1302238fd270b41f1b9bcf86e3ae5c8c44a74f7a49a19941407d297",
+      "prior_expected_sha256": "3f84c5d1e1302238fd270b41f1b9bcf86e3ae5c8c44a74f7a49a19941407d297",
+      "prior_hash_matches": true,
+      "unchanged_during_this_review": true,
+      "final_sha256": "3f84c5d1e1302238fd270b41f1b9bcf86e3ae5c8c44a74f7a49a19941407d297"
+    },
+    {
+      "path": "data/sector_documents/packets/main/ubs_july_2026.json",
+      "bytes": 6757,
+      "sha256": "49f47f8c628b53231cdfb09fa90eabfa0a5d271fb6a439e75360bdb97db29d30",
+      "prior_expected_sha256": "49f47f8c628b53231cdfb09fa90eabfa0a5d271fb6a439e75360bdb97db29d30",
+      "prior_hash_matches": true,
+      "unchanged_during_this_review": true,
+      "final_sha256": "49f47f8c628b53231cdfb09fa90eabfa0a5d271fb6a439e75360bdb97db29d30"
+    },
+    {
+      "path": "tmp/pdfs/sector_documents/fidelity_q3_2026.pdf",
+      "bytes": 286906,
+      "sha256": "4179aa3e97f3146e664655ac1008cc87942341069ec4bccfbfe7d7436467dd04",
+      "prior_expected_sha256": "4179aa3e97f3146e664655ac1008cc87942341069ec4bccfbfe7d7436467dd04",
+      "prior_hash_matches": true,
+      "unchanged_during_this_review": true,
+      "final_sha256": "4179aa3e97f3146e664655ac1008cc87942341069ec4bccfbfe7d7436467dd04"
+    },
+    {
+      "path": "tmp/pdfs/sector_documents/ubs_july_2026.pdf",
+      "bytes": 2110541,
+      "sha256": "07369578859be743e2323ea611f8d9b47e9bb7bc1e7b0e081d4b8df5ad2b4b7b",
+      "prior_expected_sha256": "07369578859be743e2323ea611f8d9b47e9bb7bc1e7b0e081d4b8df5ad2b4b7b",
+      "prior_hash_matches": true,
+      "unchanged_during_this_review": true,
+      "final_sha256": "07369578859be743e2323ea611f8d9b47e9bb7bc1e7b0e081d4b8df5ad2b4b7b"
+    },
+    {
+      "path": "tmp/pdfs/sector_documents/fidelity_q3_2026_2.png",
+      "bytes": 178619,
+      "sha256": "f8eaf9eeeb1cb596dd62990c211aa6e3b47abfd8c40903878ed391ce42dcb93a",
+      "prior_expected_sha256": null,
+      "prior_hash_matches": null,
+      "unchanged_during_this_review": true,
+      "final_sha256": "f8eaf9eeeb1cb596dd62990c211aa6e3b47abfd8c40903878ed391ce42dcb93a"
+    },
+    {
+      "path": "tmp/pdfs/sector_documents/fidelity_q3_2026_3.png",
+      "bytes": 147184,
+      "sha256": "76c3209496ffa9e0c0c69f5d15bb1591c5a80e088304328e96cc3085811d6780",
+      "prior_expected_sha256": null,
+      "prior_hash_matches": null,
+      "unchanged_during_this_review": true,
+      "final_sha256": "76c3209496ffa9e0c0c69f5d15bb1591c5a80e088304328e96cc3085811d6780"
+    },
+    {
+      "path": "tmp/pdfs/sector_documents/ubs_july_2026_2.png",
+      "bytes": 90819,
+      "sha256": "0f48881b169fcda5a5ab2235248ac78f4b24819d236e757e823c20c5083b920e",
+      "prior_expected_sha256": null,
+      "prior_hash_matches": null,
+      "unchanged_during_this_review": true,
+      "final_sha256": "0f48881b169fcda5a5ab2235248ac78f4b24819d236e757e823c20c5083b920e"
+    },
+    {
+      "path": "tmp/pdfs/sector_documents/ubs_july_2026_21.png",
+      "bytes": 212842,
+      "sha256": "4d228d2bd01e2b7b5ede6be5fd719374447f83aebaa7b95de241a19832eb7e77",
+      "prior_expected_sha256": null,
+      "prior_hash_matches": null,
+      "unchanged_during_this_review": true,
+      "final_sha256": "4d228d2bd01e2b7b5ede6be5fd719374447f83aebaa7b95de241a19832eb7e77"
+    },
+    {
+      "path": "tmp/pdfs/sector_documents/ubs_july_2026_27.png",
+      "bytes": 267179,
+      "sha256": "74fe82cc06156a53fc1cb8a01120bf8a28a565b6e574910f9d8e40bed411ca66",
+      "prior_expected_sha256": null,
+      "prior_hash_matches": null,
+      "unchanged_during_this_review": true,
+      "final_sha256": "74fe82cc06156a53fc1cb8a01120bf8a28a565b6e574910f9d8e40bed411ca66"
+    },
+    {
+      "path": "data/sector_documents/source_manifest.json",
+      "bytes": 11536,
+      "sha256": "d1af00ee2a1c5e3ba4ca9949b5f9427a9102a373ff19afa0e6c4309769627b28",
+      "prior_expected_sha256": "d1af00ee2a1c5e3ba4ca9949b5f9427a9102a373ff19afa0e6c4309769627b28",
+      "prior_hash_matches": true,
+      "unchanged_during_this_review": true,
+      "final_sha256": "d1af00ee2a1c5e3ba4ca9949b5f9427a9102a373ff19afa0e6c4309769627b28"
+    },
+    {
+      "path": "research/v491_human_review_pack_20261019_R1.json",
+      "bytes": 265931,
+      "sha256": "ea6bd366adf09da0f79c9811fb760dc4b33b9b4a1618ac13435aecb20915f411",
+      "prior_expected_sha256": "ea6bd366adf09da0f79c9811fb760dc4b33b9b4a1618ac13435aecb20915f411",
+      "prior_hash_matches": true,
+      "unchanged_during_this_review": true,
+      "final_sha256": "ea6bd366adf09da0f79c9811fb760dc4b33b9b4a1618ac13435aecb20915f411"
+    },
+    {
+      "path": "research/v491_human_review_pack_20261019_manifest.json",
+      "bytes": 3666,
+      "sha256": "b8780e214219a10756a7db7dbe9a162cff30c4a48f029a89d5e7c8957d791160",
+      "prior_expected_sha256": null,
+      "prior_hash_matches": null,
+      "unchanged_during_this_review": true,
+      "final_sha256": "b8780e214219a10756a7db7dbe9a162cff30c4a48f029a89d5e7c8957d791160"
+    },
+    {
+      "path": "research/v492_source_review_20261019.json",
+      "bytes": 78785,
+      "sha256": "3f6e4bd952b0bbf1d4e3487bb00a5e839a9f907038e43e895807425c21747718",
+      "prior_expected_sha256": null,
+      "prior_hash_matches": null,
+      "unchanged_during_this_review": true,
+      "final_sha256": "3f6e4bd952b0bbf1d4e3487bb00a5e839a9f907038e43e895807425c21747718"
+    },
+    {
+      "path": "research/v491_macro_source_audit_20261019.json",
+      "bytes": 18540,
+      "sha256": "0567efc4a5ae8eee60b66c3cf0904d376a8b4943a27f45f780053dee3746e6fc",
+      "prior_expected_sha256": null,
+      "prior_hash_matches": null,
+      "unchanged_during_this_review": true,
+      "final_sha256": "0567efc4a5ae8eee60b66c3cf0904d376a8b4943a27f45f780053dee3746e6fc"
+    },
+    {
+      "path": "data/sector_context/v491_20261019/common_context.json",
+      "bytes": 11615,
+      "sha256": "67d94bdee3d38854097970cdfb74f40e2557a11e22b016e9a68374e6f13cb96f",
+      "prior_expected_sha256": "67d94bdee3d38854097970cdfb74f40e2557a11e22b016e9a68374e6f13cb96f",
+      "prior_hash_matches": true,
+      "unchanged_during_this_review": true,
+      "final_sha256": "67d94bdee3d38854097970cdfb74f40e2557a11e22b016e9a68374e6f13cb96f"
+    },
+    {
+      "path": "research/v492_evaluation_protocol_20261019_r2.json",
+      "bytes": 28550,
+      "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1",
+      "prior_expected_sha256": null,
+      "prior_hash_matches": null,
+      "unchanged_during_this_review": true,
+      "final_sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/main/fidelity_q3_2026__E__D0_messages.json",
+      "bytes": 34812,
+      "sha256": "f4e00e18e9fc17e37701999159e2acb35e4e9a79d60063899f897839eff49dcd",
+      "prior_expected_sha256": null,
+      "prior_hash_matches": null,
+      "unchanged_during_this_review": true,
+      "final_sha256": "f4e00e18e9fc17e37701999159e2acb35e4e9a79d60063899f897839eff49dcd"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/main/fidelity_q3_2026__L__D0_messages.json",
+      "bytes": 30843,
+      "sha256": "3b53227438dd6c5b450a7ed2e30751388d27d6c0054a89a544b88b5095eedf61",
+      "prior_expected_sha256": null,
+      "prior_hash_matches": null,
+      "unchanged_during_this_review": true,
+      "final_sha256": "3b53227438dd6c5b450a7ed2e30751388d27d6c0054a89a544b88b5095eedf61"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/main/ubs_july_2026__E__D0_messages.json",
+      "bytes": 34766,
+      "sha256": "6905c838dace1c97ff8bd328844b7c7319f8627843677a77c843feb60d985696",
+      "prior_expected_sha256": null,
+      "prior_hash_matches": null,
+      "unchanged_during_this_review": true,
+      "final_sha256": "6905c838dace1c97ff8bd328844b7c7319f8627843677a77c843feb60d985696"
+    },
+    {
+      "path": "data/sector_protocol/v491_design_20261019/prepared/main/ubs_july_2026__L__D0_messages.json",
+      "bytes": 30843,
+      "sha256": "3b53227438dd6c5b450a7ed2e30751388d27d6c0054a89a544b88b5095eedf61",
+      "prior_expected_sha256": null,
+      "prior_hash_matches": null,
+      "unchanged_during_this_review": true,
+      "final_sha256": "3b53227438dd6c5b450a7ed2e30751388d27d6c0054a89a544b88b5095eedf61"
+    }
+  ],
+  "summary": {
+    "label_matches": 22,
+    "label_mismatches": 0,
+    "comparison_rows": 11,
+    "common_macro_values_verified": 7,
+    "protected_evidence_files_checked": 20,
+    "protected_evidence_files_changed": 0,
+    "source_cache_hash_mismatches": 0,
+    "main_ready_claim": false
+  }
+}

@@ -1,0 +1,579 @@
+{
+  "schema_version": "1.0",
+  "recorded_at_utc": "2026-10-25T10:35:17.140Z",
+  "audit_date_local": "2026-10-25",
+  "status": "completed_scoped_primary_source_recheck_with_explicit_unresolved_items",
+  "scope": {
+    "purpose": "Independent bibliography/claim-support/topic-bridge audit during pilot; does not certify pilot outcomes or main-run readiness.",
+    "inputs": [
+      {
+        "path": "research/v493_paper_source_review_20261019.json",
+        "sha256_at_read": "516ea16cc16f4e2c9571c80d2a2a2cf0715cce0d6912e12078df03412f0ec5b3",
+        "sha256_at_report": "516ea16cc16f4e2c9571c80d2a2a2cf0715cce0d6912e12078df03412f0ec5b3",
+        "unchanged": true
+      },
+      {
+        "path": "paper/v493_manuscript_20261019.json",
+        "sha256_at_read": "c14e5627035da92f1e28e4e50d5b3b81fd5432b4e67e8ac6cda9854c564a1018",
+        "sha256_at_report": "c14e5627035da92f1e28e4e50d5b3b81fd5432b4e67e8ac6cda9854c564a1018",
+        "unchanged": true
+      },
+      {
+        "path": "research/v492_evaluation_protocol_20261019_r2.json",
+        "sha256_at_read": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1",
+        "sha256_at_report": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1",
+        "unchanged": true
+      }
+    ],
+    "manuscript_block_index_base": 0,
+    "selected_existing_scholarly_policy_references": 12,
+    "additional_protocol_reference": 1,
+    "total_manuscript_reference_blocks": 24,
+    "prior_assertions_treated_as_unverified_until_checked": true,
+    "excluded": [
+      "institution-source PDF interpretation",
+      "complete recheck of every data reference",
+      "PDF rendering or original PDF formula inspection",
+      "new pilot response content",
+      "model generation",
+      "manuscript/protocol editing"
+    ],
+    "model_generation_calls": 0,
+    "new_pilot_responses_read": false,
+    "pdf_renders": 0
+  },
+  "verdict_definitions": {
+    "correct": "Inspected primary evidence supports the bounded claim or metadata.",
+    "fault": "A directly evidenced contradiction or false attribution; none established among the checked claims.",
+    "unresolved": "Specific detail not freshly verified; not assumed false or inherited as true from the prior review."
+  },
+  "summary": {
+    "metadata_confirmed": 13,
+    "material_bibliographic_or_claim_contradictions_found": 0,
+    "unresolved_original_details": [
+      "Hornuf exact twelve-month appendix/table provenance",
+      "Markowitz original formula locator"
+    ],
+    "traceability_gap": "CLQT v3 informs two frozen rubric bases but is not named in the audited manuscript/prior paper review.",
+    "interpretive_clarifications": [
+      "E2A directional coverage differs from eleven-row or transport coverage.",
+      "Evidence locators and isolated rubric checks improve auditability; their bias-reduction efficacy here remains unmeasured.",
+      "PortBench settings do not validate local semantic categories, numeric tolerances or pilot size."
+    ],
+    "scope_limit": "A count of zero detected contradictions is not a universal bibliography or measurement-validity certification."
+  },
+  "reference_checks": [
+    {
+      "id": "portbench2026",
+      "manuscript_blocks": [
+        15,
+        34,
+        35,
+        43,
+        44,
+        56,
+        58,
+        94
+      ],
+      "status": "correct",
+      "identity_status": "correct",
+      "version": "2605.27887v6; 2026-10-09",
+      "urls": [
+        "https://arxiv.org/abs/2605.27887v6",
+        "https://arxiv.org/html/2605.27887v6"
+      ],
+      "locators": [
+        "3.1 Experimental Setup",
+        "B decision-time market context; B.2 correlation estimation",
+        "C.2 Eq.8",
+        "C.4 Classical strategies",
+        "D.4 Information ablation",
+        "F.9 estimated volatility"
+      ],
+      "checked_claims": [
+        {
+          "claim": "Temperature 0 and maximum output 8192, with thinking enabled in the source study.",
+          "status": "correct"
+        },
+        {
+          "claim": "60-trading-day lookback, 252 annualization, equal-weight and long-only minimum-variance comparators.",
+          "status": "correct"
+        },
+        {
+          "claim": "Half-L1 distance is the complement of Eq.8 reference similarity for normalized long-only portfolios.",
+          "status": "correct"
+        },
+        {
+          "claim": "Information ablation removes supplied covariance information.",
+          "status": "correct"
+        }
+      ],
+      "boundary": "These are settings and diagnostics from a different task. They do not validate local sample size, tolerance, categorical semantic rubric, institutional numeric targets, or the model configuration. The manuscript already states thinking is off locally and avoids a replication claim.",
+      "clarification": "ddof=1 was not established from the inspected HTML; retain it as a disclosed local estimator choice. The manuscript attributes only 60 observations and annualization to PortBench, so no contradiction was found.",
+      "manuscript_reference": {
+        "text": "Yuxuan Zhao, Sijia Chen, Ningxin Su (2026). PortBench: A Correlation-Aware, Full-Pipeline Benchmark for LLM-Driven Portfolio Management. arXiv:2605.27887. v6, 9 October 2026. ",
+        "url": "https://arxiv.org/abs/2605.27887v6"
+      }
+    },
+    {
+      "id": "e2a2026",
+      "manuscript_blocks": [
+        15,
+        16,
+        95
+      ],
+      "status": "correct",
+      "identity_status": "correct",
+      "version": "2609.14302v1; 2026-09-13",
+      "urls": [
+        "https://arxiv.org/abs/2609.14302v1",
+        "https://arxiv.org/html/2609.14302v1"
+      ],
+      "locators": [
+        "Abstract",
+        "3.4 Eqs.4,10,11 and reporting convention",
+        "A.5 Human validation"
+      ],
+      "checked_claims": [
+        {
+          "claim": "Evidence grounding, rationale/action consistency, confidence, and coverage are distinct diagnostics.",
+          "status": "correct"
+        },
+        {
+          "claim": "Its coverage and NDR measure evidence-to-action reliability rather than realized returns.",
+          "status": "correct"
+        }
+      ],
+      "boundary": "Coverage here means the proportion committing to BUY/SELL, not the presence of eleven sector rows or mere successful completion. The local adaptation is conceptual, not an imported validated scale. Source scorer validation by four finance practitioners does not validate local AI coding.",
+      "clarification": "Keep the arXiv citation; an EMNLP Findings comment alone does not verify a proceedings record.",
+      "manuscript_reference": {
+        "text": "Xiaoya Wang, Yutong Xu, Junjie Wang (2026). E2A-Bench: Benchmarking Evidence-to-Action Reliability in Financial Chart Reasoning. arXiv:2609.14302. v1, 13 September 2026. ",
+        "url": "https://arxiv.org/abs/2609.14302v1"
+      }
+    },
+    {
+      "id": "pombal2026",
+      "manuscript_blocks": [
+        63,
+        97
+      ],
+      "status": "correct",
+      "identity_status": "correct",
+      "version": "2604.06996v3; 2026-08-03",
+      "urls": [
+        "https://arxiv.org/abs/2604.06996v3",
+        "https://arxiv.org/html/2604.06996v3"
+      ],
+      "locators": [
+        "Abstract",
+        "Introduction",
+        "3 objective rubrics"
+      ],
+      "checked_claims": [
+        {
+          "claim": "Self/family preference persists with objective rubric-based judgments; multiple judges can mitigate without eliminating it.",
+          "status": "correct"
+        }
+      ],
+      "boundary": "Granular or isolated review is not sufficient to eliminate self-preference. Exact-field evidence logging improves auditability, but its bias-reduction effect in this project is unmeasured. The manuscript states intent and explicitly disclaims unbiasedness/human validation.",
+      "manuscript_reference": {
+        "text": "José Pombal, Ricardo Rei, André F. T. Martins (2026). Self-Preference Bias in Rubric-Based Evaluation of Large Language Models. arXiv:2604.06996. v3, 3 August 2026. ",
+        "url": "https://arxiv.org/abs/2604.06996v3"
+      }
+    },
+    {
+      "id": "clqt2026",
+      "manuscript_blocks": [],
+      "status": "correct",
+      "identity_status": "correct",
+      "version": "2606.29771v3; 2026-09-12",
+      "title": "CLQT: A Closed-Loop, Cost-Aware, Strategy-Consistent Benchmark for Diagnostic Evaluation of LLM Portfolio-Management Agents",
+      "authors": [
+        "Bo Qu",
+        "Mingguang Chen"
+      ],
+      "urls": [
+        "https://arxiv.org/abs/2606.29771v3",
+        "https://arxiv.org/html/2606.29771v3"
+      ],
+      "locators": [
+        "6.4.1",
+        "7.9",
+        "8.5",
+        "Appendix F.5"
+      ],
+      "protocol_locations": [
+        "operational_evaluation_layers[source_reading_and_weight_tendency].basis",
+        "operational_evaluation_layers[context_and_evidence_decision_link].basis"
+      ],
+      "checked_claims": [
+        {
+          "claim": "Mechanical signal/action direction and stated-analysis/allocation coherence are separate checks.",
+          "status": "correct"
+        },
+        {
+          "claim": "A held-out judge helps address bias but does not establish independence or eliminate self-preference.",
+          "status": "correct"
+        }
+      ],
+      "boundary": "Its human anchoring uses one blinded author, not an independent expert panel. It supplies motivation for process diagnostics; it does not validate this project's categories, thresholds, or institution-weight mapping.",
+      "traceability": "Named in two frozen rubric bases but absent from both supplied manuscript and prior paper review. This is a documentation gap, not an incorrect existing citation or a requirement to add another study. A future manuscript may name it where this specific distinction is discussed."
+    },
+    {
+      "id": "kleinberg2021",
+      "manuscript_blocks": [
+        5,
+        88
+      ],
+      "status": "correct",
+      "identity_status": "correct",
+      "urls": [
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC8179131/",
+        "https://doi.org/10.1073/pnas.2018340118"
+      ],
+      "locators": [
+        "Article metadata",
+        "Significance",
+        "Abstract",
+        "Introduction"
+      ],
+      "checked_claims": [
+        {
+          "claim": "A more accurate shared algorithm can worsen aggregate outcomes under the paper's competitive selection model.",
+          "status": "correct"
+        }
+      ],
+      "boundary": "A conditional theoretical motivation; not evidence that current financial institutions herd or that this small allocation study measures welfare.",
+      "manuscript_reference": {
+        "text": "Jon Kleinberg, Manish Raghavan (2021). Algorithmic monoculture and social welfare. Proceedings of the National Academy of Sciences, 118(22), e2018340118. ",
+        "url": "https://doi.org/10.1073/pnas.2018340118"
+      }
+    },
+    {
+      "id": "bommasani2022",
+      "manuscript_blocks": [
+        5,
+        89
+      ],
+      "status": "correct",
+      "identity_status": "correct",
+      "urls": [
+        "https://papers.neurips.cc/paper_files/paper/2022/hash/17a234c91f746d9625a75cf8a8731ee2-Abstract-Conference.html"
+      ],
+      "locators": [
+        "Official title/authors/venue",
+        "Abstract"
+      ],
+      "checked_claims": [
+        {
+          "claim": "Foundation-model sharing has mixed homogenization results depending on adaptation methods.",
+          "status": "correct"
+        }
+      ],
+      "boundary": "Supports separating common-tool use from the degree of outcome homogenization; does not directly test institutional allocation prompts.",
+      "manuscript_reference": {
+        "text": "Rishi Bommasani, Kathleen A. Creel, Ananya Kumar, Dan Jurafsky, Percy Liang (2022). Picking on the Same Person: Does Algorithmic Monoculture lead to Outcome Homogenization? Advances in Neural Information Processing Systems, 35. ",
+        "url": "https://papers.neurips.cc/paper_files/paper/2022/hash/17a234c91f746d9625a75cf8a8731ee2-Abstract-Conference.html"
+      }
+    },
+    {
+      "id": "doshi2024",
+      "manuscript_blocks": [
+        10,
+        90
+      ],
+      "status": "correct",
+      "identity_status": "correct",
+      "urls": [
+        "https://discovery.ucl.ac.uk/id/eprint/10195027/",
+        "https://doi.org/10.1126/sciadv.adn5290"
+      ],
+      "locators": [
+        "UCL publication metadata and abstract",
+        "Publisher-indexed abstract"
+      ],
+      "checked_claims": [
+        {
+          "claim": "AI ideas can improve evaluated short-story quality while making the set of stories more similar.",
+          "status": "correct"
+        }
+      ],
+      "boundary": "Creative-writing evidence motivates a quality/diversity distinction, not financial-return or institutional-herding estimates. Direct DOI open was 403 and PMC open was a browser challenge; UCL repository metadata/abstract and publisher-indexed content were available.",
+      "manuscript_reference": {
+        "text": "Anil R. Doshi, Oliver P. Hauser (2024). Generative AI enhances individual creativity but reduces the collective diversity of novel content. Science Advances, 10, eadn5290. ",
+        "url": "https://doi.org/10.1126/sciadv.adn5290"
+      }
+    },
+    {
+      "id": "hornuf2025",
+      "manuscript_blocks": [
+        12,
+        44,
+        91
+      ],
+      "status": "unresolved",
+      "identity_status": "correct",
+      "urls": [
+        "https://www.ifo.de/en/cesifo/publications/2025/working-paper/making-genai-smarter-evidence-portfolio-allocation-experiment",
+        "https://www.ifo.de/DocDL/cesifo1_wp11862.pdf"
+      ],
+      "locators": [
+        "Official CESifo landing-page metadata and abstract"
+      ],
+      "checked_claims": [
+        {
+          "claim": "The study compares domain-information conditions within a common portfolio allocation task.",
+          "status": "correct"
+        },
+        {
+          "claim": "Exact 1/6/12-month horizons and the prior review's Appendix/Table locators.",
+          "status": "unresolved"
+        }
+      ],
+      "boundary": "The landing page verifies authors, title, 2025 and Working Paper11862, plus the broad information-condition precedent. Exact twelve-month-horizon provenance was not freshly checked because this pass avoided PDF inspection. The previous review's asserted check is not substituted for fresh evidence.",
+      "manuscript_reference": {
+        "text": "Lars Hornuf, David J. Streich, Niklas Töllich (2025). Making GenAI Smarter: Evidence from a Portfolio Allocation Experiment. CESifo Working Paper No. 11862. ",
+        "url": "https://www.ifo.de/DocDL/cesifo1_wp11862.pdf"
+      }
+    },
+    {
+      "id": "quek2025",
+      "manuscript_blocks": [
+        12,
+        34,
+        92
+      ],
+      "status": "correct",
+      "identity_status": "correct",
+      "version": "2503.09647v5; 2025-04-10",
+      "urls": [
+        "https://arxiv.org/abs/2503.09647v5",
+        "https://arxiv.org/html/2503.09647v5"
+      ],
+      "locators": [
+        "3 Data Source",
+        "4 Design Process"
+      ],
+      "checked_claims": [
+        {
+          "claim": "Macro categories include inflation, employment, growth and monetary policy, with released/latest-available data.",
+          "status": "correct"
+        }
+      ],
+      "boundary": "The paper explicitly uses official release dates for macro memories and prior-day news. It does not establish that this project's selected seven facts or GDP substitution are uniquely optimal.",
+      "manuscript_reference": {
+        "text": "Ryan Quek Wei Heng, Edoardo Vittori, Keane Ong, Rui Mao, Erik Cambria, Gianmarco Mengaldo (2025). Leveraging LLMs for Top-Down Sector Allocation in Automated Trading. arXiv:2503.09647. v5, 10 April 2025. ",
+        "url": "https://arxiv.org/abs/2503.09647v5"
+      }
+    },
+    {
+      "id": "laban2025",
+      "manuscript_blocks": [
+        13,
+        93
+      ],
+      "status": "correct",
+      "identity_status": "correct",
+      "version": "2505.06120v1; 2025-05-09",
+      "urls": [
+        "https://arxiv.org/abs/2505.06120v1",
+        "https://arxiv.org/html/2505.06120v1"
+      ],
+      "locators": [
+        "Abstract",
+        "Introduction",
+        "Discussion",
+        "Appendix F"
+      ],
+      "checked_claims": [
+        {
+          "claim": "Underspecified multi-turn tasks can produce premature assumptions and excessive reliance on previous answers.",
+          "status": "correct"
+        }
+      ],
+      "boundary": "Motivates studying provision procedures. It does not isolate a pure timing, memory or psychological anchoring effect in this project; manuscript block13 correctly declares combined exposure/draft/history differences.",
+      "manuscript_reference": {
+        "text": "Philippe Laban, Hiroaki Hayashi, Yingbo Zhou, Jennifer Neville (2025). LLMs Get Lost In Multi-Turn Conversation. arXiv:2505.06120. v1, 9 May 2025. ",
+        "url": "https://arxiv.org/abs/2505.06120v1"
+      }
+    },
+    {
+      "id": "markowitz1952",
+      "manuscript_blocks": [
+        56,
+        96
+      ],
+      "status": "unresolved",
+      "identity_status": "correct",
+      "urls": [
+        "https://onlinelibrary.wiley.com/doi/10.1111/j.1540-6261.1952.tb01525.x"
+      ],
+      "locators": [
+        "Publisher title/author/volume/issue/pages/first publication"
+      ],
+      "checked_claims": [
+        {
+          "claim": "Harry Markowitz, Portfolio Selection, Journal of Finance7(1),77–91,March1952 and DOI match.",
+          "status": "correct"
+        },
+        {
+          "claim": "Original-article formula/location for covariance variance.",
+          "status": "unresolved"
+        }
+      ],
+      "boundary": "The Wiley landing page was available but the original full formula was not freshly inspected. The equivalent historical covariance/annualized volatility expression is directly supported by inspected PortBench F.9; no numeric threshold is attributed to Markowitz.",
+      "manuscript_reference": {
+        "text": "Harry Markowitz (1952). Portfolio Selection. The Journal of Finance, 7(1), 77–91. ",
+        "url": "https://doi.org/10.1111/j.1540-6261.1952.tb01525.x"
+      }
+    },
+    {
+      "id": "shi2025",
+      "manuscript_blocks": [
+        63,
+        98
+      ],
+      "status": "correct",
+      "identity_status": "correct",
+      "urls": [
+        "https://aclanthology.org/2025.ijcnlp-long.18/"
+      ],
+      "locators": [
+        "Official ACL metadata",
+        "Abstract"
+      ],
+      "checked_claims": [
+        {
+          "claim": "LLM judges exhibit position bias in pairwise/listwise evaluations; listed author/venue/pages/DOI metadata match.",
+          "status": "correct"
+        }
+      ],
+      "boundary": "This establishes a comparative-evaluation bias risk, not the efficacy of the project's isolated-field coding or a guarantee that its coding has no bias.",
+      "manuscript_reference": {
+        "text": "Lin Shi, Chiyu Ma, Wenhua Liang, Xingjian Diao, Weicheng Ma, Soroush Vosoughi (2025). Judging the Judges: A Systematic Study of Position Bias in LLM-as-a-Judge. Proceedings of the 14th International Joint Conference on Natural Language Processing and the 4th Conference of the Asia-Pacific Chapter of the Association for Computational Linguistics, 292–314. ",
+        "url": "https://doi.org/10.18653/v1/2025.ijcnlp-long.18"
+      }
+    },
+    {
+      "id": "fsb2024",
+      "manuscript_blocks": [
+        5,
+        99
+      ],
+      "status": "correct",
+      "identity_status": "correct",
+      "urls": [
+        "https://www.fsb.org/2024/11/fsb-assesses-the-financial-stability-implications-of-artificial-intelligence/",
+        "https://www.fsb.org/2024/11/the-financial-stability-implications-of-artificial-intelligence/"
+      ],
+      "locators": [
+        "Official release dated2024-11-14",
+        "Potential vulnerability summary"
+      ],
+      "checked_claims": [
+        {
+          "claim": "Third-party concentration, market correlations, cyber and model/data governance risks are potential vulnerabilities.",
+          "status": "correct"
+        }
+      ],
+      "boundary": "Official release supports the manuscript's potential-risk wording. Report landing-page open timed out; full report not re-read. This is a policy motivation, not observed causal institutional homogenization.",
+      "manuscript_reference": {
+        "text": "Financial Stability Board (2024). The Financial Stability Implications of Artificial Intelligence. Financial Stability Board policy report. ",
+        "url": "https://www.fsb.org/2024/11/the-financial-stability-implications-of-artificial-intelligence/"
+      }
+    }
+  ],
+  "proposed_corrections": [
+    {
+      "id": "C1",
+      "kind": "optional_traceability_clarification",
+      "target": "Future manuscript block15/16 or methods provenance footnote",
+      "proposal_ko": "필요하면 CLQT(Qu와 Chen, 2026, v3)를 명시하여 기계적 방향 일치와 설명-배분 정합성의 구분이 평가 프로토콜에 반영되었음을 연결한다. 이 구분을 쓰지 않는 요약문에 인용을 의무적으로 추가할 필요는 없다.",
+      "do_not_change": "Frozen rubric, thresholds, source choice, active pilot."
+    },
+    {
+      "id": "C2",
+      "kind": "precision_clarification",
+      "target": "Future manuscript block15",
+      "proposal_ko": "E2A-Bench의 응답 범위를 방향성 매수·매도 행동의 제시 범위로 구체화한다. 본 연구의 11개 산업 행 충족 여부와 동일한 지표라고 쓰지 않는다.",
+      "do_not_change": "No E2A composite score or gold trading action is imported."
+    },
+    {
+      "id": "C3",
+      "kind": "interpretation_boundary",
+      "target": "Future manuscript block63",
+      "proposal_ko": "개별 응답 검토와 근거 위치 기록은 판단을 추적하기 위한 절차이며, 본 연구에서 자기선호 또는 기타 평가 편향을 얼마나 줄이는지는 검증하지 않았다고 명확히 한다.",
+      "do_not_change": "No claim of human validation, independent raters or measured reliability is added."
+    },
+    {
+      "id": "C4",
+      "kind": "verification_followup_only",
+      "target": "Final bibliography/method provenance before submission",
+      "proposal_ko": "자원이 한가할 때 Hornuf의 정확한 12개월 선택 근거와 Markowitz의 원식 위치를 원문에서 재확인한다. 확인 전에는 이번 재점검에서 검증 완료로 표시하지 않는다.",
+      "do_not_change": "No setting is revised in response to pilot results."
+    }
+  ],
+  "research_question_bridge": {
+    "status": "supported_as_bounded_motivation_not_direct_external_validation",
+    "chain": [
+      {
+        "from": "Shared algorithms and conditional homogenization concerns",
+        "to": "Ask whether institution-specific supplied reasons survive a common AI procedure",
+        "sources": [
+          "kleinberg2021",
+          "bommasani2022",
+          "fsb2024"
+        ],
+        "inference": true
+      },
+      {
+        "from": "Distinct factual grounding and observable explanation/action coherence",
+        "to": "Trace source meaning -> stated interpretation -> adoption/qualification/departure -> raw allocation/delta",
+        "sources": [
+          "e2a2026",
+          "clqt2026"
+        ],
+        "inference": true
+      },
+      {
+        "from": "Information conditions and multi-turn instability",
+        "to": "Describe source-free/source-supplied and early/late provision cases",
+        "sources": [
+          "hornuf2025",
+          "quek2025",
+          "laban2025"
+        ],
+        "inference": true
+      }
+    ],
+    "preserve": [
+      "Do not infer real financial-institution behavior from AI proposals.",
+      "Do not infer ignored evidence from similar weights alone or correct use from different weights alone.",
+      "Do not equate institutional qualitative views with hidden numeric gold portfolios.",
+      "Do not interpret E/L as an isolated timing or psychological effect.",
+      "Do not transfer benchmark performance, p-values, validated judge reliability or realized-return claims.",
+      "Keep source interpretation and own explanation-to-weight consistency separate from arithmetic eligibility."
+    ]
+  },
+  "review_axes": {
+    "errors": {
+      "status": "pass_with_explicit_unresolved_details",
+      "reason": "Official identities/versions and central claims agree. No concrete contradiction found; two original-text details remain unverified, and access failures are recorded."
+    },
+    "consistency": {
+      "status": "pass_with_documentation_gap",
+      "reason": "Three read local inputs have identical before/after hashes. Version pins and local-adaptation disclaimers agree with primary sources. CLQT protocol-to-manuscript traceability and coverage terminology merit bounded clarification."
+    },
+    "paper_topic": {
+      "status": "pass_with_bounded_inference",
+      "reason": "The bridge remains institution evidence interpretation and its connection to observable allocation under common AI. It does not expand into trading-performance ranking, institution herding measurement or evaluator-validation claims."
+    }
+  },
+  "changes": {
+    "new_files": [
+      "research/recovery_20261025/paper_citation_recheck_20261025.json"
+    ],
+    "existing_files_modified": [],
+    "note": "Only this new report is written; no original source, manuscript, rubric, prompt, frozen code, or live-run artifact is changed."
+  }
+}

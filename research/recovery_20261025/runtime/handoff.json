@@ -1,0 +1,72 @@
+﻿{
+    "recorded_at_utc":  "2026-10-25T10:03:48.8296947Z",
+    "status":  "ready_for_coordinated_pilot_preflight",
+    "origin":  "http://127.0.0.1:11435",
+    "pid":  35148,
+    "version":  "0.35.1",
+    "executable":  "C:\\Users\\Insun\\2026libera\\tmp\\libera_ollama0351_20261025\\portable\\ollama.exe",
+    "executable_sha256":  "3cc17c238b081adf2bd3a206e52a063b637af1bf283d95b4ffd73a2bdec8b027",
+    "tokenizer_config":  {
+                             "library_dir":  "C:\\Users\\Insun\\2026libera\\tmp\\libera_ollama0351_20261025\\portable\\lib\\ollama",
+                             "gguf_path":  "C:\\Users\\Insun\\.ollama\\models\\blobs\\sha256-a9d0a3e1d8c91732a3812becd31f8d4a8ff57414903f226306069f0437e2ac50"
+                         },
+    "model":  "qwen3.5:4b-q4_K_M",
+    "model_digest":  "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+    "template_sha256":  "b507b9c2f6ca642bffcd06665ea7c91f235fd32daeefdf875a0f938db05fb315",
+    "evidence":  [
+                     {
+                         "path":  "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\download_receipt.json",
+                         "sha256":  "de4254dd973f4694e79f100092af0d143cbf2cce4da30fac7c17ff0528dc19e4"
+                     },
+                     {
+                         "path":  "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\extraction_receipt.json",
+                         "sha256":  "345b9b8d15fce54d6f618717806d30b872e324fe905a4ebd721354d084528388"
+                     },
+                     {
+                         "path":  "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\verification_receipt.json",
+                         "sha256":  "19bb51f463cd6a947ed5bdadcc6ee90dba48857b36770954a8a8117cf1f43d5b"
+                     },
+                     {
+                         "path":  "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\service_01\\service_shutdown_receipt.json",
+                         "sha256":  "04ab27988b2cf782e35dae60e468d8fc7b2fb8f2f0c58585b36db6146e36abec"
+                     },
+                     {
+                         "path":  "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\service_ready\\service_receipt.json",
+                         "sha256":  "be9cb88616a78efe41175f45a57085952f249ac0314e1afcfc4e24b36eb19b3d"
+                     },
+                     {
+                         "path":  "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\start_isolated_cpu.ps1",
+                         "sha256":  "ae44ac080a877e84b596b59894917f0226f6493660552428ac03c10c4187cfd8"
+                     },
+                     {
+                         "path":  "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\stop_isolated_cpu.ps1",
+                         "sha256":  "78eb6eeb3d8de0c2e7fbb21bc682d2af5ee5bb1db9a56b1f6eb42f54ecd5b732"
+                     },
+                     {
+                         "path":  "C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\verify_recovered_runtime.py",
+                         "sha256":  "928ad987ded97656f3e2b79d4f24f46aa5ab213e51a0cae22aa8a8a53c421ea5"
+                     }
+                 ],
+    "generation_requests":  0,
+    "helper_verification":  "Start, read-only API/model/tokenizer checks, owned stop, fresh restart and final live ownership checks passed",
+    "error_check":  "No runtime pin, model manifest/blob, tokenizer or listener mismatch",
+    "integrity_check":  "Official portable release archive verified; CLI and three tokenizer DLLs byte-identical to original pins; archived provider prompt token count reproduced (12587)",
+    "topic_connection":  "Original engine/model/CPU choice restores measurement comparability. No source materials, treatment arms, allocations, citations, prompts, output schema, inference settings or outcomes changed.",
+    "configuration_constraints":  {
+                                      "num_gpu":  0,
+                                      "num_batch":  512,
+                                      "num_predict":  8192,
+                                      "num_thread":  8,
+                                      "deadline_seconds":  4500,
+                                      "num_ctx":  65536
+                                  },
+    "remaining_checks":  [
+                             "Actual pilot generation must show CPU placement, exact request options and completion in its own evidence.",
+                             "System available memory was about 10.2 GiB; fresh full-context resource preflight remains with pilot coordinator."
+                         ],
+    "preserved_user_service":  {
+                                   "pid":  29500,
+                                   "port":  11434
+                               },
+    "stop_command":  "powershell -NoProfile -ExecutionPolicy Bypass -File research/recovery_20261025/runtime/stop_isolated_cpu.ps1 -EvidenceDirectory C:\\Users\\Insun\\2026libera\\research\\recovery_20261025\\runtime\\service_ready"
+}

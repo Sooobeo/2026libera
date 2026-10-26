@@ -1,0 +1,42 @@
+{
+  "version": "temporary_awake_static_review_1",
+  "status": "PASS_STATIC_INSPECTION",
+  "recorded_at_utc": "2026-10-25T11:25:18.198Z",
+  "code_ref": {
+    "path": "research/recovery_20261025/runtime/temporary_display_awake.py",
+    "sha256": "ea7b56971389b0db8c204a00689c87c3a255f3938ed7215de55fede23059de07"
+  },
+  "launch_ref": {
+    "path": "research/recovery_20261025/launch/launch_receipt.json",
+    "sha256": "6e31b546feaa8b4eb85eadbd7a99b98bd979dcb81b5c7df9fe9433f4ad9e4f71"
+  },
+  "review_axes": {
+    "errors": {
+      "pass": true,
+      "reason": "Explicit typed Win32 API calls, same-thread request and finally-clear, exact live handle identity, bounded13h-from-coordinator-launch expiry, terminal/exit/STOP checks and exclusive config/acquire/release receipts inspected. Bootstrap obtains live identity before any request; active state is claimed only after successful API return and durable acquire receipt."
+    },
+    "consistency": {
+      "pass": true,
+      "reason": "Only new independent helper files. Launch hash, PID35216, normalized executable/script paths and creation within10seconds of coordinator launch precede exact FILETIME binding. Existing workers/services, model settings, prompts and deadlines are untouched."
+    },
+    "paper_topic": {
+      "pass": true,
+      "reason": "Operational amendment addresses documented Modern Standby interruptions. Scientific conditions stay fixed; amendment time/current stage/power source are recorded, and pre/post amendment runtime continuity must be assessed separately."
+    }
+  },
+  "static_checks": [
+    "Power-status struct uses4unsigned bytes and2DWORDs",
+    "SetThreadExecutionState flags0x80000003; clear0x80000000; no away mode",
+    "Process handle keeps exact owner identity despite later PID reuse",
+    "Finally closes process handle and writes release status",
+    "Absolute expiry revalidated equals coordinator launch+13hours",
+    "Bootstrap cannot overwrite config.json; only sole launcher will invoke it"
+  ],
+  "limitations": [
+    "No automated tests or completed native inspection yet; native process startup is delayed.",
+    "API request acceptance is not proof of uninterrupted operation and manual sleep/lid/power action remains respected.",
+    "Current AC/battery is recorded by GetSystemPowerStatus only when native inspection completes."
+  ],
+  "request_activated": false,
+  "generation_calls": 0
+}

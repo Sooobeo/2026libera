@@ -1,0 +1,46 @@
+{
+  "receipt_version": "v494_live_monitor_gap_observation_2",
+  "recorded_at_utc": "2026-10-25T10:58:53.264Z",
+  "status": "REPEATED_GAP_ACTIVE_RUN_CONTINUES",
+  "case_id": "fidelity_q2_2026__E",
+  "stage": "D0",
+  "observed_gaps_over10seconds": [
+    {
+      "from": "2026-10-25T10:36:05.515423+00:00",
+      "to": "2026-10-25T10:50:12.234709+00:00",
+      "utc_gap_seconds": 846.719,
+      "elapsed_gap_seconds": 846.7193370000459
+    },
+    {
+      "from": "2026-10-25T10:55:34.999521+00:00",
+      "to": "2026-10-25T10:58:29.505632+00:00",
+      "utc_gap_seconds": 174.506,
+      "elapsed_gap_seconds": 174.50612440000987
+    }
+  ],
+  "new_gap_seconds": 174.506,
+  "observer_sleep": {
+    "requested_seconds": 45,
+    "returned_elapsed_wall_seconds": 176.0311
+  },
+  "latest_monitor_at": "2026-10-25T10:58:43.543107+00:00",
+  "latest_elapsed_seconds": 2241.0991320999456,
+  "latest_available_physical_bytes": 7472517120,
+  "latest_progress": [
+    "slot print_timing: id  0 | task 0 | n_gen =   2270, tg =   1.32 t/s, tg_3s =   4.59 t/s",
+    "slot print_timing: id  0 | task 0 | n_gen =   2280, tg =   1.32 t/s, tg_3s =   3.14 t/s"
+  ],
+  "awake_release_file_present": false,
+  "worker_summary_present": false,
+  "transport_present": false,
+  "interpretation": "A second shared UTC/monotonic monitoring gap is observed. Decode resumed. Cause remains undetermined; no host-suspension or model-stall cause is established. Deadline and outputs remain unchanged.",
+  "observer_actions": {
+    "generation_calls": 0,
+    "api_calls": 0,
+    "process_changes": false,
+    "settings_changes": false,
+    "deadline_changes": false,
+    "retry": false,
+    "semantic_output_read": false
+  }
+}

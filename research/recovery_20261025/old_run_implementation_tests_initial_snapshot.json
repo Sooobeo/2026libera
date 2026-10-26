@@ -1,0 +1,92 @@
+{
+  "status": "FAIL",
+  "started_at_utc": "2026-10-25T10:05:41.963259+00:00",
+  "completed_at_utc": "2026-10-25T10:09:50.740925+00:00",
+  "command": [
+    "C:\\Users\\Insun\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "-m",
+    "unittest",
+    "test_sector_v494_recovery",
+    "test_run_v494_recovery",
+    "-v"
+  ],
+  "working_directory": "C:\\Users\\Insun\\2026libera\\research",
+  "exit_code": 0,
+  "test_count": 73,
+  "elapsed_test_seconds": 247.742,
+  "source_refs_before": [
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\sector_v494_runtime.py",
+      "sha256": "c9521000aa3a1497775c83fa83a1b9bac9f5443edbcb707f131d313f7cd8bed1"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\prepare_sector_v494.py",
+      "sha256": "80d293ab0df0a209c234e3ab1136ac845fe6a5e81b1b68d543660cc19108e855"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\sector_v494_review_gate.py",
+      "sha256": "07cac8a0606eff3dfeb1bc1e0b3786ff373ca49bb424edb20674033e28d7e194"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\review_sector_v494_stage.py",
+      "sha256": "8ea79e6c68192283feea1f7ef66ee2fe528c2d3f4ba08b346fee54fb4d5fc1dc"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\run_v494_recovery.py",
+      "sha256": "56fdb077c375ca4b99a110a93d81210a74812257cae3b0967b613f0b5de27576"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\build_v494_masked_review.py",
+      "sha256": "8ed40877f82414678d5808181712813ad474ddf089a08a5ba06a7b7bcaa6d148"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\test_sector_v494_recovery.py",
+      "sha256": "37d7219455f1d576aad7a39f234410b8ed87d2481ea4481cde18c040e62dc8cf"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\test_run_v494_recovery.py",
+      "sha256": "38e6726fe7a82a14e80cd5f76107d7a5b6a90fd18b1b9f06d8ecffefb14368c6"
+    }
+  ],
+  "source_refs_after": [
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\sector_v494_runtime.py",
+      "sha256": "c9521000aa3a1497775c83fa83a1b9bac9f5443edbcb707f131d313f7cd8bed1"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\prepare_sector_v494.py",
+      "sha256": "80d293ab0df0a209c234e3ab1136ac845fe6a5e81b1b68d543660cc19108e855"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\sector_v494_review_gate.py",
+      "sha256": "07cac8a0606eff3dfeb1bc1e0b3786ff373ca49bb424edb20674033e28d7e194"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\review_sector_v494_stage.py",
+      "sha256": "81195353a74f00fde66e1915e068e9167966ccc3cb774b65ad929867bf44b3e6"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\run_v494_recovery.py",
+      "sha256": "56fdb077c375ca4b99a110a93d81210a74812257cae3b0967b613f0b5de27576"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\build_v494_masked_review.py",
+      "sha256": "8ed40877f82414678d5808181712813ad474ddf089a08a5ba06a7b7bcaa6d148"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\test_sector_v494_recovery.py",
+      "sha256": "37d7219455f1d576aad7a39f234410b8ed87d2481ea4481cde18c040e62dc8cf"
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\research\\test_run_v494_recovery.py",
+      "sha256": "38e6726fe7a82a14e80cd5f76107d7a5b6a90fd18b1b9f06d8ecffefb14368c6"
+    }
+  ],
+  "source_files_unchanged_during_tests": false,
+  "original_frozen_refs_checked": 27,
+  "original_frozen_ref_mismatches": [],
+  "model_generation_calls": 0,
+  "scope": "Offline adversarial synthetic runtime, preparation, gate, per-stage review and wrapper tests. No semantic validity claim.",
+  "stdout": "",
+  "stderr": "test_changed_code_or_prompt_after_freeze_denied (test_sector_v494_recovery.V494GateTests.test_changed_code_or_prompt_after_freeze_denied) ... ok\ntest_explicit_development_gate_passes_without_claiming_human_review (test_sector_v494_recovery.V494GateTests.test_explicit_development_gate_passes_without_claiming_human_review) ... ok\ntest_missing_topic_axis_or_postfreeze_review_denied (test_sector_v494_recovery.V494GateTests.test_missing_topic_axis_or_postfreeze_review_denied) ... ok\ntest_new_call_count_requires_integer_zero (test_sector_v494_recovery.V494GateTests.test_new_call_count_requires_integer_zero) ... ok\ntest_runtime_controls_and_engine_cannot_change (test_sector_v494_recovery.V494GateTests.test_runtime_controls_and_engine_cannot_change) ... ok\ntest_backend_reference_hash_is_verified (test_sector_v494_recovery.V494RuntimeTests.test_backend_reference_hash_is_verified) ... ok\ntest_blank_AI_review_receipt_is_rejected (test_sector_v494_recovery.V494RuntimeTests.test_blank_AI_review_receipt_is_rejected) ... ok\ntest_body_boolean_zero_is_not_integer_zero (test_sector_v494_recovery.V494RuntimeTests.test_body_boolean_zero_is_not_integer_zero) ... ok\ntest_budget_tolerance_boundary_preserves_frozen_float_policy (test_sector_v494_recovery.V494RuntimeTests.test_budget_tolerance_boundary_preserves_frozen_float_policy) ... ok\ntest_controller_metadata_cannot_enter_messages (test_sector_v494_recovery.V494RuntimeTests.test_controller_metadata_cannot_enter_messages) ... ok\ntest_declared_4500_second_ceiling_rejects_old_900 (test_sector_v494_recovery.V494RuntimeTests.test_declared_4500_second_ceiling_rejects_old_900) ... ok\ntest_draft_cannot_accept_prior_draft_reference (test_sector_v494_recovery.V494RuntimeTests.test_draft_cannot_accept_prior_draft_reference) ... ok\ntest_duplicate_json_keys_do_not_become_a_valid_allocation (test_sector_v494_recovery.V494RuntimeTests.test_duplicate_json_keys_do_not_become_a_valid_allocation) ... ok\ntest_each_stage_records_error_integrity_and_topic_review (test_sector_v494_recovery.V494RuntimeTests.test_each_stage_records_error_integrity_and_topic_review) ... ok\ntest_exact_capacity_includes_full_output_allowance (test_sector_v494_recovery.V494RuntimeTests.test_exact_capacity_includes_full_output_allowance) ... ok\ntest_final_cannot_be_started_with_only_caller_supplied_draft (test_sector_v494_recovery.V494RuntimeTests.test_final_cannot_be_started_with_only_caller_supplied_draft) ... ok\ntest_final_prior_response_hash_mismatch_denied (test_sector_v494_recovery.V494RuntimeTests.test_final_prior_response_hash_mismatch_denied) ... ok\ntest_final_prior_response_other_case_denied (test_sector_v494_recovery.V494RuntimeTests.test_final_prior_response_other_case_denied) ... ok\ntest_final_request_must_retain_exact_own_history (test_sector_v494_recovery.V494RuntimeTests.test_final_request_must_retain_exact_own_history) ... ok\ntest_final_requires_saved_completion_and_continuation (test_sector_v494_recovery.V494RuntimeTests.test_final_requires_saved_completion_and_continuation) ... ok\ntest_final_saved_draft_spec_must_name_same_case (test_sector_v494_recovery.V494RuntimeTests.test_final_saved_draft_spec_must_name_same_case) ... ok\ntest_final_saved_response_requires_pinned_model_and_normal_stop (test_sector_v494_recovery.V494RuntimeTests.test_final_saved_response_requires_pinned_model_and_normal_stop) ... ok\ntest_final_self_consistent_changed_draft_cannot_replace_saved_response (test_sector_v494_recovery.V494RuntimeTests.test_final_self_consistent_changed_draft_cannot_replace_saved_response) ... ok\ntest_five_separate_cases_ten_calls_no_final_repair (test_sector_v494_recovery.V494RuntimeTests.test_five_separate_cases_ten_calls_no_final_repair) ... ok\ntest_fixed_options_cannot_drift (test_sector_v494_recovery.V494RuntimeTests.test_fixed_options_cannot_drift) ... ok\ntest_integrity_failure_stops_all_following_cases (test_sector_v494_recovery.V494RuntimeTests.test_integrity_failure_stops_all_following_cases) ... ok\ntest_late_source_injection_denied_before_transport (test_sector_v494_recovery.V494RuntimeTests.test_late_source_injection_denied_before_transport) ... ok\ntest_main_case_denied (test_sector_v494_recovery.V494RuntimeTests.test_main_case_denied) ... ok\ntest_model_vector_failure_is_retained_without_integrity_halt (test_sector_v494_recovery.V494RuntimeTests.test_model_vector_failure_is_retained_without_integrity_halt) ... ok\ntest_oversize_actual_final_prevents_generation_and_is_capacity_failure (test_sector_v494_recovery.V494RuntimeTests.test_oversize_actual_final_prevents_generation_and_is_capacity_failure) ... ok\ntest_pilot_preparation_cannot_bypass_review_gate (test_sector_v494_recovery.V494RuntimeTests.test_pilot_preparation_cannot_bypass_review_gate) ... ok\ntest_pilot_run_rechecks_review_gate (test_sector_v494_recovery.V494RuntimeTests.test_pilot_run_rechecks_review_gate) ... ok\ntest_preexisting_cancel_prevents_all_generation (test_sector_v494_recovery.V494RuntimeTests.test_preexisting_cancel_prevents_all_generation) ... ok\ntest_preparation_refuses_overwrite_and_preserves_historical_bytes (test_sector_v494_recovery.V494RuntimeTests.test_preparation_refuses_overwrite_and_preserves_historical_bytes) ... ok\ntest_preparation_retains_common_evidence_schema_and_source_timing (test_sector_v494_recovery.V494RuntimeTests.test_preparation_retains_common_evidence_schema_and_source_timing) ... ok\ntest_raw_sum_failure_and_bad_citations_do_not_censor_final (test_sector_v494_recovery.V494RuntimeTests.test_raw_sum_failure_and_bad_citations_do_not_censor_final) ... ok\ntest_schema_failure_with_numeric_vector_is_not_instrument_failure (test_sector_v494_recovery.V494RuntimeTests.test_schema_failure_with_numeric_vector_is_not_instrument_failure) ... ok\ntest_second_execution_is_not_a_resume_or_retry (test_sector_v494_recovery.V494RuntimeTests.test_second_execution_is_not_a_resume_or_retry) ... ok\ntest_supervisor_does_not_apply_legacy_900_second_cutoff (test_sector_v494_recovery.V494RuntimeTests.test_supervisor_does_not_apply_legacy_900_second_cutoff) ... ok\ntest_supervisor_stops_at_declared_4500_second_cutoff (test_sector_v494_recovery.V494RuntimeTests.test_supervisor_stops_at_declared_4500_second_cutoff) ... ok\ntest_tampered_completed_response_stops_before_next_model_stage (test_sector_v494_recovery.V494RuntimeTests.test_tampered_completed_response_stops_before_next_model_stage) ... ok\ntest_tampered_prepared_message_denied_even_with_rehashed_manifest (test_sector_v494_recovery.V494RuntimeTests.test_tampered_prepared_message_denied_even_with_rehashed_manifest) ... ok\ntest_token_counter_rejects_estimates_or_other_prompt (test_sector_v494_recovery.V494RuntimeTests.test_token_counter_rejects_estimates_or_other_prompt) ... ok\ntest_unreadable_draft_skips_only_its_final (test_sector_v494_recovery.V494RuntimeTests.test_unreadable_draft_skips_only_its_final) ... ok\ntest_valid_stage_directory_name_in_other_run_is_rejected (test_sector_v494_recovery.V494RuntimeTests.test_valid_stage_directory_name_in_other_run_is_rejected) ... ok\ntest_worker_location_must_match_same_run_case_and_stage (test_sector_v494_recovery.V494RuntimeTests.test_worker_location_must_match_same_run_case_and_stage) ... ok\ntest_worker_requires_exact_review_gate_hash (test_sector_v494_recovery.V494RuntimeTests.test_worker_requires_exact_review_gate_hash) ... ok\ntest_worker_spec_cannot_bypass_review_gate (test_sector_v494_recovery.V494RuntimeTests.test_worker_spec_cannot_bypass_review_gate) ... ok\ntest_actual_common_system_and_final_instruction_are_available_without_arm_metadata (test_run_v494_recovery.AdaptedMaskedTests.test_actual_common_system_and_final_instruction_are_available_without_arm_metadata) ... ok\ntest_changed_response_hash_rejected (test_run_v494_recovery.AdaptedMaskedTests.test_changed_response_hash_rejected) ... ok\ntest_event_prefix_is_retained_without_repair (test_run_v494_recovery.AdaptedMaskedTests.test_event_prefix_is_retained_without_repair) ... ok\ntest_extra_generation_and_false_counts_rejected (test_run_v494_recovery.AdaptedMaskedTests.test_extra_generation_and_false_counts_rejected) ... ok\ntest_full_bundle_masks_metadata_preserves_exact_strings_and_dates (test_run_v494_recovery.AdaptedMaskedTests.test_full_bundle_masks_metadata_preserves_exact_strings_and_dates) ... ok\ntest_interrupted_unbound_response_retained_without_completion_claim (test_run_v494_recovery.AdaptedMaskedTests.test_interrupted_unbound_response_retained_without_completion_claim) ... ok\ntest_live_run_is_rejected_before_any_response_read (test_run_v494_recovery.AdaptedMaskedTests.test_live_run_is_rejected_before_any_response_read) ... ok\ntest_main_case_and_duplicate_attempt_are_rejected (test_run_v494_recovery.AdaptedMaskedTests.test_main_case_and_duplicate_attempt_are_rejected) ... ok\ntest_missing_partial_and_not_attempted_are_retained_without_replacement (test_run_v494_recovery.AdaptedMaskedTests.test_missing_partial_and_not_attempted_are_retained_without_replacement) ... ok\ntest_no_source_final_injection_and_hidden_main_source_rejected (test_run_v494_recovery.AdaptedMaskedTests.test_no_source_final_injection_and_hidden_main_source_rejected) ... ok\ntest_no_source_item_keeps_no_hidden_institution (test_run_v494_recovery.AdaptedMaskedTests.test_no_source_item_keeps_no_hidden_institution) ... ok\ntest_own_draft_whitespace_replacement_rejected (test_run_v494_recovery.AdaptedMaskedTests.test_own_draft_whitespace_replacement_rejected) ... ok\ntest_preflight_failure_does_not_claim_evidence_was_delivered (test_run_v494_recovery.AdaptedMaskedTests.test_preflight_failure_does_not_claim_evidence_was_delivered) ... ok\ntest_private_mapping_cannot_be_nested_in_judge_bundle (test_run_v494_recovery.AdaptedMaskedTests.test_private_mapping_cannot_be_nested_in_judge_bundle) ... ok\ntest_rubric_excludes_contrasts_source_comparison_answers_and_benchmarks (test_run_v494_recovery.AdaptedMaskedTests.test_rubric_excludes_contrasts_source_comparison_answers_and_benchmarks) ... ok\ntest_source_packet_and_actual_feedback_are_preserved (test_run_v494_recovery.AdaptedMaskedTests.test_source_packet_and_actual_feedback_are_preserved) ... ok\ntest_changed_processor_source_is_not_executed (test_run_v494_recovery.RecoveryTests.test_changed_processor_source_is_not_executed) ... ok\ntest_clean_sequence_packages_without_semantic_or_cleanup_claim (test_run_v494_recovery.RecoveryTests.test_clean_sequence_packages_without_semantic_or_cleanup_claim) ... ok\ntest_events_and_output_names_are_immutable (test_run_v494_recovery.RecoveryTests.test_events_and_output_names_are_immutable) ... ok\ntest_exception_recovers_accounting_without_binding_or_repairing_raw_response (test_run_v494_recovery.RecoveryTests.test_exception_recovers_accounting_without_binding_or_repairing_raw_response) ... ok\ntest_existing_run_refused_before_any_calls (test_run_v494_recovery.RecoveryTests.test_existing_run_refused_before_any_calls) ... ok\ntest_existing_transport_and_terminal_never_overwritten (test_run_v494_recovery.RecoveryTests.test_existing_transport_and_terminal_never_overwritten) ... ok\ntest_failed_processor_does_not_suppress_other_processor (test_run_v494_recovery.RecoveryTests.test_failed_processor_does_not_suppress_other_processor) ... ok\ntest_preparation_failure_has_no_fabricated_terminal_pilot (test_run_v494_recovery.RecoveryTests.test_preparation_failure_has_no_fabricated_terminal_pilot) ... ok\ntest_second_launch_refused_no_resume (test_run_v494_recovery.RecoveryTests.test_second_launch_refused_no_resume) ... ok\n\n----------------------------------------------------------------------\nRan 73 tests in 247.742s\n\nOK\n"
+}

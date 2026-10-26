@@ -1,0 +1,100 @@
+{
+  "version": "postwork_helper_process_exit_observation_1",
+  "status": "helper_process_absent_no_explicit_release_receipt",
+  "observation_timestamp": "2026-10-25T23:44:16.2471402Z",
+  "written_at_utc": "2026-10-25T23:44:33.673Z",
+  "helper_pid": 43548,
+  "acquire_ref": {
+    "path": "research/recovery_20261025/runtime/postwork_awake_01/acquire.json",
+    "sha256": "0de8fe68e8aa1c3491dfa3861f79637baa601de8e20531c851f00d1c9c60cebb"
+  },
+  "launch_ref": {
+    "path": "research/recovery_20261025/runtime/postwork_awake_01/launch_receipt.json",
+    "sha256": "baacf1212b43f225d920171f3b6d0845aad75a2f2eebb11955711c317c28f4c8",
+    "bytes": 518,
+    "mtime_utc": "2026-10-25T23:36:42.962Z"
+  },
+  "config_ref": {
+    "path": "research/recovery_20261025/runtime/postwork_awake_01/config.json",
+    "sha256": "0e7ee9d2c3a09ad9038bcd1534db341a0e0e977898e1ba9ccde2678b71e9f22c",
+    "bytes": 895,
+    "mtime_utc": "2026-10-25T23:36:42.910Z"
+  },
+  "helper_code_ref": {
+    "path": "research/recovery_20261025/runtime/postwork_display_awake.py",
+    "sha256": "04c5f3d1f9a517c98bd3f8fb801b1279aab864acb007228b08777c5ed174e8dd"
+  },
+  "observed_helper_pid_absent": true,
+  "matching_helper_command_processes": [],
+  "permanent_power_settings_changed": false,
+  "explicit_api_clear_verified": false,
+  "release_receipt_exists": false,
+  "observations": [
+    {
+      "observation_timestamp": "2026-10-25T23:44:14.4973348Z",
+      "query_succeeded": true,
+      "helper_pid": 43548,
+      "pid_processes": [],
+      "matching_helper_command_processes": []
+    },
+    {
+      "observation_timestamp": "2026-10-25T23:44:16.2471402Z",
+      "query_succeeded": true,
+      "helper_pid": 43548,
+      "pid_processes": [],
+      "matching_helper_command_processes": []
+    }
+  ],
+  "observation_method": {
+    "tool": "exec_command PowerShell -NoProfile-equivalent login:false; Get-CimInstance Win32_Process",
+    "pid_filter": "ProcessId = 43548",
+    "helper_filter": "(Name = 'python.exe' OR Name = 'pythonw.exe') AND CommandLine LIKE '%postwork_display_awake.py%'",
+    "helper_filter_scope": "Broader basename match includes the exact known absolute helper path; this PowerShell probe cannot self-match Python names.",
+    "actual_rechecks": 2,
+    "requested_pause_between_checks_seconds": 1,
+    "tool_exit_code": 0,
+    "mutation": false
+  },
+  "identity_binding": {
+    "launch_pid_equals_acquire_pid": true,
+    "source_hash_equals_acquire_and_config_and_launch": true,
+    "config_hash_equals_acquire": true,
+    "known_script_path": "C:/Users/Insun/2026libera/research/recovery_20261025/runtime/postwork_display_awake.py",
+    "native_creation_time_not_in_original_acquire_receipt": true
+  },
+  "last_observed_heartbeat_utc": "2026-10-25T23:37:43.263517+00:00",
+  "supporting_refs": [
+    {
+      "path": "research/recovery_20261025/runtime/postwork_awake_01/STOP",
+      "sha256": "936f61b68eaf3a222da2a1fe019c3752d330087f1324f53a05620e533f7da4bf",
+      "bytes": 90,
+      "mtime_utc": "2026-10-25T23:42:16.504Z"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/postwork_awake_01/heartbeat.jsonl",
+      "sha256": "4b0f7d1a5b80228778fd54d59a5459e35b406717775a40db0745a2f91793e01f",
+      "bytes": 812,
+      "mtime_utc": "2026-10-25T23:37:43.267Z"
+    },
+    {
+      "path": "research/recovery_20261025/runtime/postwork_awake_01/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mtime_utc": "2026-10-25T23:36:42.910Z"
+    }
+  ],
+  "limits": [
+    "The process was absent at both recorded query times; this does not establish its exact exit time or cause.",
+    "No release.json exists. Successful explicit SetThreadExecutionState clearing is not verified and no replacement release receipt is created.",
+    "STOP file presence does not establish that the helper read it or exited through its finally block.",
+    "Permanent power settings were not changed by the reviewed helper or this observation; no new power configuration inspection is claimed."
+  ],
+  "axes": {
+    "errors": "Both read-only CIM queries succeeded and found neither the acquired PID nor any Python command naming this helper; missing explicit release is retained as an unresolved instrumentation limitation.",
+    "consistency": "PID and code/config hashes are bound to actual acquire and launch records. No normal-release claim is substituted for absence.",
+    "paper_topic": "Operational writer-quiescence evidence only; no model calls, research results, runtime settings, frozen sources or main-readiness conclusion are changed."
+  },
+  "model_calls": 0,
+  "process_changes": 0,
+  "original_evidence_modified": false
+}

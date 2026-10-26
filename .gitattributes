@@ -157,3 +157,17 @@
 /data/sector_context/v491_20261019/** -text
 /research/artifacts/v491_visual_20261019/** -text
 /research/artifacts/v491_review_history_20261019/** -text
+
+# Recovery and continuation hashes bind original bytes, including mixed EOLs.
+/data/sector_protocol/v494_design_20261025/** -text
+/data/sector_protocol/v495_main_candidate_20261025/** -text
+/research/recovery_20261025/** -text
+/research/continuation_20261026/** -text
+/research/artifacts/recovery-evidence-20261025* -text
+/research/finalize_sector_allocation.py -text
+/research/test_finalize_sector_allocation*.py -text
+/research/finalize_sector_campaign.py -text
+/research/test_finalize_sector_campaign.py -text
+/research/*continuation*.py -text
+# Override inherited PDF text-conversion attributes for these exact originals.
+/research/recovery_20261025/*.pdf binary

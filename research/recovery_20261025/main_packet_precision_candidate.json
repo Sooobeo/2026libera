@@ -1,0 +1,258 @@
+{
+  "schema_version": 1,
+  "artifact_id": "main_packet_precision_candidate",
+  "created_at": "2026-10-25T11:12:50.579Z",
+  "status": "candidate_only_not_approved_main_input",
+  "reviewer": "AI assistant, original-source precision review; not independent human validation",
+  "purpose": "Concretize two minimal prospective packet wording repairs before any later main freeze, using exact source language and preserving all other input facts and design choices.",
+  "application_status": {
+    "applied": false,
+    "original_packets_modified": false,
+    "active_pilot_modified": false,
+    "prepared_main_inputs_created": false,
+    "experiment_model_calls": 0,
+    "new_pilot_responses_read": 0
+  },
+  "source_urls": {
+    "fidelity_q3_2026": "https://clearingcustody.fidelity.com/app/proxy/content?literatureURL=/9906006.PDF",
+    "ubs_july_2026": "https://advisors.ubs.com/mediahandler/media/816396/UBS%20House%20View%20for%20July%202026.pdf"
+  },
+  "source_binding_note": "The reviewed Fidelity source is the hash-pinned Q3 cache. The mutable live metadata has shown Q4; it is not a substitute for the pinned Q3 PDF.",
+  "changes": [
+    {
+      "source_id": "fidelity_q3_2026",
+      "packet_path": "data/sector_documents/packets/main/fidelity_q3_2026.json",
+      "precondition_packet_sha256": "3f84c5d1e1302238fd270b41f1b9bcf86e3ae5c8c44a74f7a49a19941407d297",
+      "affected_field": {
+        "json_pointer": "/evidence_passages/7/text",
+        "evidence_id": "fidelity_q3_2026:p3:sector:40",
+        "sector_code": "40"
+      },
+      "original_text": "Financials receives Overweight. Relative valuations offer downside support.",
+      "replacement_text": "Financials receives Overweight. Relative valuation may limit downside.",
+      "original_short_quotes": [
+        {
+          "text": "Relative valuation may limit downside.",
+          "locator": "Printed page 3, scorecard, Financials row, Comments column"
+        }
+      ],
+      "quote_verification": {
+        "method": "Visual inspection of the existing cached page render during this precision review",
+        "pdf_page_one_based": 3,
+        "printed_page": "3",
+        "image_path": "tmp/pdfs/sector_documents/fidelity_q3_2026_3.png",
+        "normalization": "Quoted fragments preserve the visible words; line-wrap whitespace is normalized.",
+        "company_subset_inference_permitted": false
+      },
+      "rationale": "Restore the source’s explicit modal may, replacing the potentially more definite offer downside support. Preserve the rating and valuation-based argument.",
+      "current_paraphrase_can_mislead": true,
+      "misleading_interpretation": "The current paraphrase can be read as established downside protection rather than a conditional possibility. This is a precision risk, not an observed model error or a changed source rating.",
+      "candidate_only_json_patch": [
+        {
+          "op": "test",
+          "path": "/evidence_passages/7/text",
+          "value": "Financials receives Overweight. Relative valuations offer downside support."
+        },
+        {
+          "op": "replace",
+          "path": "/evidence_passages/7/text",
+          "value": "Financials receives Overweight. Relative valuation may limit downside."
+        }
+      ],
+      "in_memory_checks": {
+        "changed_field_paths": [
+          "/evidence_passages/7/text"
+        ],
+        "ratings_preserved": true,
+        "all_evidence_ids_preserved": true,
+        "dates_preserved": true,
+        "source_selection_preserved": true,
+        "sector_rows_preserved": true,
+        "scope_and_vocabulary_preserved": true
+      },
+      "candidate_serialization_sha256": "2159bd2bc26ca9fea3315738a69b7994796cbc232f1e6efe1a2e4bfa12497cba",
+      "candidate_serialization_note": "Hash describes an in-memory JSON.stringify(packet, null, 2) plus newline preview. No replacement packet file or prepared model input was written."
+    },
+    {
+      "source_id": "ubs_july_2026",
+      "packet_path": "data/sector_documents/packets/main/ubs_july_2026.json",
+      "precondition_packet_sha256": "49f47f8c628b53231cdfb09fa90eabfa0a5d271fb6a439e75360bdb97db29d30",
+      "affected_field": {
+        "json_pointer": "/evidence_passages/11/text",
+        "evidence_id": "ubs_july_2026:p21:sector:55",
+        "sector_code": "55"
+      },
+      "original_text": "Utilities receives Attractive. Defensive resilience and AI-related exposure.",
+      "replacement_text": "Utilities receives Attractive. Expected greater resilience if economic growth disappoints; also some exposure to AI trends.",
+      "original_short_quotes": [
+        {
+          "text": "if economic growth disappoints",
+          "locator": "Printed page 21, left column, US equities – sectors, final sentence opening condition"
+        },
+        {
+          "text": "health care and utilities should be more resilient",
+          "locator": "Same final sentence, expected resilience clause"
+        },
+        {
+          "text": "with the latter also having some exposure to AI trends",
+          "locator": "Same final sentence, trailing clause; latter refers to utilities"
+        }
+      ],
+      "quote_verification": {
+        "method": "Visual inspection of the existing cached page render during this precision review",
+        "pdf_page_one_based": 21,
+        "printed_page": "21",
+        "image_path": "tmp/pdfs/sector_documents/ubs_july_2026_21.png",
+        "normalization": "Quoted fragments preserve the visible words; line-wrap whitespace is normalized.",
+        "company_subset_inference_permitted": false
+      },
+      "rationale": "Restore the economic-growth-disappointment condition and the limited some-exposure qualifier. Keep the Attractive label and preserve the distinction between a conditional resilience expectation and the additional AI-exposure rationale.",
+      "current_paraphrase_can_mislead": true,
+      "misleading_interpretation": "The current compressed wording can be read as unconditional defensiveness and can obscure the limited extent of AI exposure. The original does not state a company subset, and the replacement must not add one.",
+      "candidate_only_json_patch": [
+        {
+          "op": "test",
+          "path": "/evidence_passages/11/text",
+          "value": "Utilities receives Attractive. Defensive resilience and AI-related exposure."
+        },
+        {
+          "op": "replace",
+          "path": "/evidence_passages/11/text",
+          "value": "Utilities receives Attractive. Expected greater resilience if economic growth disappoints; also some exposure to AI trends."
+        }
+      ],
+      "in_memory_checks": {
+        "changed_field_paths": [
+          "/evidence_passages/11/text"
+        ],
+        "ratings_preserved": true,
+        "all_evidence_ids_preserved": true,
+        "dates_preserved": true,
+        "source_selection_preserved": true,
+        "sector_rows_preserved": true,
+        "scope_and_vocabulary_preserved": true
+      },
+      "candidate_serialization_sha256": "aeca97cc0a2eca7eeb02e79c6efe8015d4d47f93ce9b37b2108e5141ab6027ed",
+      "candidate_serialization_note": "Hash describes an in-memory JSON.stringify(packet, null, 2) plus newline preview. No replacement packet file or prepared model input was written."
+    }
+  ],
+  "aggregate_invariants": {
+    "changed_text_fields": 2,
+    "ratings_preserved": 22,
+    "evidence_id_sets_preserved": true,
+    "source_choice_preserved": [
+      "fidelity_q3_2026",
+      "ubs_july_2026"
+    ],
+    "source_dates_and_scopes_unchanged": true,
+    "fidelity_invalid_date_preserved": {
+      "raw": "6/31/26",
+      "normalized": null
+    },
+    "numeric_weight_targets_added": 0,
+    "mandatory_rating_weight_mappings_added": 0,
+    "new_numbers_added": 0
+  },
+  "erratum_to_prior_ai_review": {
+    "path": "research/recovery_20261025/main_readiness_source_review_20261025.json",
+    "sha256": "50572a99534574693a8e87180e3f0f158fa80f79a3aa0d11ad1f7b963c781605",
+    "old_record_preserved": true,
+    "reason": "The prior AI review over-specified the UBS phrase some exposure as company-level heterogeneity. The inspected original qualifies exposure but does not identify a company subset.",
+    "field_corrections": [
+      {
+        "json_pointer": "/sector_comparison_rows/9/source_checks/1/original_meaning_summary",
+        "prior_text": "Potential resilience if growth disappoints, plus AI-related exposure for some utilities.",
+        "replacement_interpretation": "Expected greater resilience if economic growth disappoints, plus some exposure to AI trends. No company subset is specified."
+      },
+      {
+        "json_pointer": "/sector_comparison_rows/9/source_checks/1/precision_caveat",
+        "prior_text": "The packet compresses the growth-disappointment condition and company-level heterogeneity; neither a guaranteed hedge nor all-utilities AI exposure is established.",
+        "replacement_interpretation": "The packet compresses the growth-disappointment condition and the qualified degree of AI exposure. The source does not specify company-level heterogeneity."
+      },
+      {
+        "json_pointer": "/remaining_gaps_before_later_main_freeze/3/finding",
+        "prior_text": "The Fidelity Financials and UBS Utilities paraphrases compress conditions; neither implies guaranteed downside protection or uniform exposure.",
+        "replacement_interpretation": "Fidelity’s downside-limitation claim is conditional. UBS’s resilience expectation is conditional on disappointing growth and its AI exposure is qualified as some; the source does not identify a company subset."
+      }
+    ],
+    "supersession_scope": "Only these interpretive statements are corrected. This addendum does not rewrite the old report, alter its verified rating counts, or change any original packet."
+  },
+  "review_axes": {
+    "errors": {
+      "status": "pass_for_candidate",
+      "reason": "The two replacements restore visible modality, condition and exposure qualification; exact quotes are page-linked. An unsupported company-subset inference from the prior AI review is explicitly corrected."
+    },
+    "consistency": {
+      "status": "pass_for_candidate",
+      "reason": "In-memory comparisons show only the two specified text fields differ. All 22 ratings, evidence IDs, source selection, dates including invalid 6/31/26/null, scopes and vocabularies remain unchanged. Current protected hashes still match."
+    },
+    "paper_topic": {
+      "status": "pass",
+      "reason": "Clearer evidence qualifiers support the intended source-reading and explanation-to-allocation study without introducing gold weights, source obedience constraints, new performance objectives or outcome-driven source selection."
+    }
+  },
+  "later_application_requirements": [
+    "Use this record only as a reviewable candidate, not a current model input.",
+    "If adopted, write separately versioned main packet copies and new preparation artifacts; preserve the old source packets and this immutable record.",
+    "Bind the adopted packet hashes, unchanged common context, stage-specific source visibility and reviewed prompt/runtime into a later main freeze before generation.",
+    "Use the actual supplied packet version for model-output evaluation; do not retroactively judge existing outputs against this candidate."
+  ],
+  "file_evidence": [
+    {
+      "path": "data/sector_documents/packets/main/fidelity_q3_2026.json",
+      "bytes": 6643,
+      "sha256": "3f84c5d1e1302238fd270b41f1b9bcf86e3ae5c8c44a74f7a49a19941407d297",
+      "previously_bound_sha256": "3f84c5d1e1302238fd270b41f1b9bcf86e3ae5c8c44a74f7a49a19941407d297",
+      "previous_binding_matches": true
+    },
+    {
+      "path": "data/sector_documents/packets/main/ubs_july_2026.json",
+      "bytes": 6757,
+      "sha256": "49f47f8c628b53231cdfb09fa90eabfa0a5d271fb6a439e75360bdb97db29d30",
+      "previously_bound_sha256": "49f47f8c628b53231cdfb09fa90eabfa0a5d271fb6a439e75360bdb97db29d30",
+      "previous_binding_matches": true
+    },
+    {
+      "path": "tmp/pdfs/sector_documents/fidelity_q3_2026.pdf",
+      "bytes": 286906,
+      "sha256": "4179aa3e97f3146e664655ac1008cc87942341069ec4bccfbfe7d7436467dd04",
+      "previously_bound_sha256": "4179aa3e97f3146e664655ac1008cc87942341069ec4bccfbfe7d7436467dd04",
+      "previous_binding_matches": true
+    },
+    {
+      "path": "tmp/pdfs/sector_documents/fidelity_q3_2026_3.png",
+      "bytes": 147184,
+      "sha256": "76c3209496ffa9e0c0c69f5d15bb1591c5a80e088304328e96cc3085811d6780",
+      "previously_bound_sha256": "76c3209496ffa9e0c0c69f5d15bb1591c5a80e088304328e96cc3085811d6780",
+      "previous_binding_matches": true
+    },
+    {
+      "path": "tmp/pdfs/sector_documents/ubs_july_2026.pdf",
+      "bytes": 2110541,
+      "sha256": "07369578859be743e2323ea611f8d9b47e9bb7bc1e7b0e081d4b8df5ad2b4b7b",
+      "previously_bound_sha256": "07369578859be743e2323ea611f8d9b47e9bb7bc1e7b0e081d4b8df5ad2b4b7b",
+      "previous_binding_matches": true
+    },
+    {
+      "path": "tmp/pdfs/sector_documents/ubs_july_2026_21.png",
+      "bytes": 212842,
+      "sha256": "4d228d2bd01e2b7b5ede6be5fd719374447f83aebaa7b95de241a19832eb7e77",
+      "previously_bound_sha256": "4d228d2bd01e2b7b5ede6be5fd719374447f83aebaa7b95de241a19832eb7e77",
+      "previous_binding_matches": true
+    },
+    {
+      "path": "research/recovery_20261025/main_readiness_source_review_20261025.json",
+      "bytes": 62503,
+      "sha256": "50572a99534574693a8e87180e3f0f158fa80f79a3aa0d11ad1f7b963c781605",
+      "previously_bound_sha256": "50572a99534574693a8e87180e3f0f158fa80f79a3aa0d11ad1f7b963c781605",
+      "previous_binding_matches": true
+    },
+    {
+      "path": "research/v492_evaluation_protocol_20261019_r2.json",
+      "bytes": 28550,
+      "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1",
+      "previously_bound_sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1",
+      "previous_binding_matches": true
+    }
+  ]
+}

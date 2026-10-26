@@ -1,0 +1,53 @@
+{
+  "schema_version": "old_numeric_diagnostic_independent_check_1",
+  "reviewer": "Codex method_audit agent; unvalidated AI assistance, not independent human or statistical rater",
+  "review_type": "Unmasked retrospective sanity-check of one diagnostic; not a full semantic score or arm comparison",
+  "diagnostic_ref": {
+    "path": "research/recovery_20261025/old_fidelity_E_D0_numeric_semantic_diagnostic.json",
+    "sha256": "fe2e31156161775ca96d8e0083a9199c0d8f30440c71fa9f81b710ffe6727b80"
+  },
+  "evidence_refs": [
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__E__D0/worker_spec.json",
+      "sha256": "675b9993d93571ccf8b66854a73026d8197ac6263cc2f90970b3097e380d85ee"
+    },
+    {
+      "path": "data/local_sector_runtime/v492_pilot_20261019/fidelity_q2_2026__E__D0/http_0001_generation/response.json",
+      "sha256": "65e4663f327f819218ec30203ea918bba227a2ad982283a1194f23a15ea80317"
+    },
+    {
+      "path": "research/v492_evaluation_protocol_20261019_r2.json",
+      "sha256": "807def444cc36d4a702321401a52e653b3f9a304383911e13f3c0389183086f1"
+    }
+  ],
+  "checks": {
+    "all_three_reference_hashes_match": true,
+    "numeric_claims_checked": 20,
+    "all_numeric_quote_locators_match": true,
+    "all_sector_metric_value_mappings_match": true,
+    "all_return_percent_conversions_match": true,
+    "all_display_precision_roundings_match": true,
+    "all_window_periods_match": true,
+    "numeric_categories_supported": 10,
+    "numeric_categories_contradictory": 10,
+    "source_readings_checked": 11,
+    "all_source_quotes_and_supplied_evidence_match": true,
+    "additional_quotes_checked": 4,
+    "all_additional_quote_locators_match": true,
+    "actual_technology_communication_services_correlation": 0.021719290003936645,
+    "actual_baseline_annualized_volatility": 0.13902338650295984
+  },
+  "corrections": [],
+  "interpretation": "No extraction, rounding, source-sector or locator corrections found. Undefined market average remains unresolved: arithmetic mean of sector volatilities and volatility of the portfolio are distinct quantities. This validates the listed diagnostic checks, not every claim in the response.",
+  "scope_limits": [
+    "No exhaustive semantic review or supported-claim percentage",
+    "Valid source_reading does not certify metadata label or allocation choice",
+    "No code, prompt, generated output or settings changed",
+    "No model calls"
+  ],
+  "three_axes": {
+    "errors": "Listed extraction and numeric diagnostic checks reproduce; no corrections.",
+    "consistency": "Hashes, exact quote locations, sector indexing, units, periods and displayed precision checked against actual old worker input.",
+    "paper_topic": "Preserves evidence-to-stated-reason-to-weight interpretation; no financial-performance or causal-monoculture claim."
+  }
+}

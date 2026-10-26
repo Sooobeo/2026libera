@@ -1,0 +1,137 @@
+{
+  "version": "allocation_finalization_acceptance_r2",
+  "recorded_at_utc": "2026-10-25T23:35:03.834Z",
+  "status": "PASS",
+  "refs": [
+    {
+      "path": "research/finalize_sector_allocation.py",
+      "sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3"
+    },
+    {
+      "path": "research/test_finalize_sector_allocation.py",
+      "sha256": "1bf92287c3b29079b2935c94e79885e3d47f59b5503eca61249943b8b0535501"
+    },
+    {
+      "path": "research/test_finalize_sector_allocation_artifacts.py",
+      "sha256": "f15a9b681135fd2e5e843e9d134780673372df4522627e3dfe82dfed26432baa"
+    },
+    {
+      "path": "research/recovery_20261025/allocation_finalization_amendment.json",
+      "sha256": "009f90b89a6185f1af9c63fd6be47d01f9662d959fd13b9938295f5943156031"
+    },
+    {
+      "path": "research/recovery_20261025/allocation_finalization_acceptance.json",
+      "sha256": "402ad49fc81c3732d1266a0449859c1a0ca2fe26150efc96c2d5900733c7066a"
+    },
+    {
+      "path": "research/recovery_20261025/allocation_finalization_artifact_tests_20261025.json",
+      "sha256": "f81ec2d5109a4368992cad8dee6b4c6e440eaa6a695d2262696c6c70e4eea4f4"
+    },
+    {
+      "path": "research/recovery_20261025/derived_allocation/fidelity_E_D0_math_r2.json",
+      "sha256": "ebed3b35b79524a7341f35737acd58e9d74dd14276159e0841110101e084f84c"
+    },
+    {
+      "path": "research/recovery_20261025/derived_allocation/completed_pilot_math.json",
+      "sha256": "091608a9184c0481a0f9a33af0f96903eba64eeeb800b7ed38b1ccca7654e49d"
+    },
+    {
+      "path": "research/recovery_20261025/finalizer_history/finalize_sector_allocation_r1.py",
+      "sha256": "117301ec9cb0ee6fb09cd5a4d3388005cf4c2cd94f565e06a4a5d36c2851ff64"
+    }
+  ],
+  "revision": {
+    "prior_source_sha256": "117301ec9cb0ee6fb09cd5a4d3388005cf4c2cd94f565e06a4a5d36c2851ff64",
+    "current_source_sha256": "54bf904de34dad83b1b504241f8a8b54158105fa9f740b1d2717f73ceaf048d3",
+    "numeric_rule_changed": false,
+    "changes": [
+      "Reject every unexpected raw run subdirectory, including alternate stage suffixes.",
+      "Reject standalone stages outside D0/F0.",
+      "Bind generation-folder count and name to zero-or-one recorded attempts."
+    ],
+    "prior_source_preserved": "research/recovery_20261025/finalizer_history/finalize_sector_allocation_r1.py",
+    "historical_amendment_refs": "Original amendment and r1 acceptance retain historical source hashes; this addendum binds current artifact guards without changing the adopted math rule."
+  },
+  "validation": {
+    "tests_passed": 47,
+    "pure_tests": 32,
+    "artifact_tests": 15,
+    "test_exit_code": 0,
+    "hashes_stable_during_tests": true,
+    "real_D0_r2_CLI_exit_code": 0,
+    "real_terminal_run_CLI_exit_code": 0,
+    "D0_rows_identical_to_r1": true,
+    "all_preserved_input_refs_match": true,
+    "preserved_input_ref_checks": [
+      {
+        "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__E__D0\\transport_result.json",
+        "match": true
+      },
+      {
+        "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__E__D0\\worker_spec.json",
+        "match": true
+      },
+      {
+        "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__E__D0\\http_0001_generation\\response.json",
+        "match": true
+      },
+      {
+        "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__E__D0\\stage_review.json",
+        "match": true
+      },
+      {
+        "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__E__F0\\transport_result.json",
+        "match": true
+      },
+      {
+        "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__E__F0\\worker_spec.json",
+        "match": true
+      },
+      {
+        "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__E__F0\\http_0001_generation\\response.json",
+        "match": true
+      },
+      {
+        "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__E__F0\\stage_review.json",
+        "match": true
+      },
+      {
+        "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__L__D0\\transport_result.json",
+        "match": true
+      },
+      {
+        "path": "C:\\Users\\Insun\\2026libera\\data\\local_sector_runtime\\v494_pilot_20261025\\fidelity_q2_2026__L__D0\\worker_spec.json",
+        "match": true
+      }
+    ],
+    "planned_final_denominator": 5,
+    "planned_stage_slots": 10,
+    "first_attempts": 3,
+    "derived_finals": 1,
+    "observed_final_units": [
+      {
+        "case": "fidelity_q2_2026__E",
+        "total": 10000,
+        "percent": "100.00"
+      }
+    ],
+    "all_cross_condition_comparisons_unavailable": true
+  },
+  "review_axes": {
+    "errors": {
+      "status": "pass_declared_math_and_artifact_scope",
+      "reason": "Exact integer100% and guarded source accounting verified; no semantic repair or missing-output invention."
+    },
+    "consistency": {
+      "status": "pass",
+      "reason": "Raw sources unchanged; same rule across all planned slots. Only one final is observed and normalized; unattempted finals remain unavailable."
+    },
+    "paper_topic": {
+      "status": "preserved_comparative_question_unresolved",
+      "reason": "Source meaning/stated reason/allocation chain remains assessable for one output. Missing E/L/source/control pairs prevent the planned comparative conclusions."
+    }
+  },
+  "field_note": "raw_budget_within_1e_6 is an exact-rational diagnostic, not the frozen binary-float eligibility rule.",
+  "model_generation_calls": 0,
+  "live_generation_conditions_changed": false
+}
