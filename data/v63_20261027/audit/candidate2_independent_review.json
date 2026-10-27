@@ -1,0 +1,94 @@
+{
+  "reviewer": "numerical_core",
+  "kind": "independent_candidate2_code_and_synthetic_regression_review",
+  "real_model_requests": 0,
+  "real_experiment_completed_by_this_review": false,
+  "tests": {
+    "core": 70,
+    "guardian": 47,
+    "total": 117,
+    "result": "passed",
+    "elapsed_seconds": 6.4
+  },
+  "checked_at_utc": "2026-10-27T04:16:56.475760+00:00",
+  "resolved_findings": [
+    {
+      "issue": "Parseable partial traces were incorrectly reusable terminal results",
+      "resolution": "Only explicit terminal/blocked statuses reusable; partial preserved and replayed"
+    },
+    {
+      "issue": "Existing evaluator bank could be re-frozen without checking its former hash",
+      "resolution": "Prior frozen artifact refs checked before overwrite; run-wide source manifest immutable"
+    },
+    {
+      "issue": "Unknown recovery interruption could become hold-h terminal fallback",
+      "resolution": "Recovery interruption nonterminal with None effective weights, no new requests, phase halted; uncertain prior dispatch reserved only in original cost ledger"
+    }
+  ],
+  "reviewed_invariants": [
+    "evidence onset once with retained full history",
+    "retrieval filtering before posterior observations",
+    "hidden theta and reference bank evaluator-only",
+    "original numeric atomic units preserved and source slices verified",
+    "code/model/input hashes frozen and unchanged on recovery",
+    "identical canonical request bytes needed for verified replay",
+    "unknown dispatch cannot trigger duplicate live request",
+    "original attempt costs counted once; copied replay history outside ledger",
+    "cumulative phase and total resource budgets retained"
+  ],
+  "known_limitations": [
+    "Replayed trace elapsed uses original generation HTTP receipt timing, excluding the before/after identity-check overhead included in initial live call elapsed. Raw HTTP cost accounting remains on one consistent basis.",
+    "Human review remains user_assumed_completed; these tests are independent automated checks, not human signatures."
+  ],
+  "files": [
+    {
+      "path": "research/v63/runtime.py",
+      "sha256": "3bcb3ae9d07d2477690c49ff36a8a0e0cc3a949208b7aceedd219d5f2e629050"
+    },
+    {
+      "path": "research/v63/build_run.py",
+      "sha256": "6bb784a76579f46cb41a121c66149db2b4868a91f21b78e6c33d970e3542d294"
+    },
+    {
+      "path": "research/v63/campaign.py",
+      "sha256": "86c233778ff2e15807619e6f9ecbd5d62366a92f6906e179249f557df02df713"
+    },
+    {
+      "path": "research/v63/campaign_control.py",
+      "sha256": "c8e99ebac3285441026f31688b12ba6a5b402878f34421d264fa8e2d3cddc675"
+    },
+    {
+      "path": "research/v63/ollama_transport.py",
+      "sha256": "95aac74c2cc1da8605615cb306ea1ca49a70a2c751be435e9df65db43f6c0fa3"
+    },
+    {
+      "path": "research/v63/recovery.py",
+      "sha256": "6a92a93d242d449c63781f4f10a1f4f8709529422b8a2e0f6fde015b1ea081b4"
+    },
+    {
+      "path": "research/v63/retrieval.py",
+      "sha256": "5b1c17f0e94a4230e7508fb9e8cef07efad8fe921931c359ee87cb80dda39aac"
+    },
+    {
+      "path": "research/v63/longrun_guardian.py",
+      "sha256": "0c9c08434b326250c7dfeb8ac74bfbbe8c81b8ff2f3e8510827c3324d1647888"
+    },
+    {
+      "path": "research/v63/finalize_experiment_report.py",
+      "sha256": "857bdd6a79562e1b1256709790b955d042cc2d97d38acb2c6cfbdbe65438c1a6"
+    }
+  ],
+  "finalizer_followup": {
+    "reviewed_at_utc": "2026-10-27T04:17:48.183283+00:00",
+    "compile": "passed",
+    "guardian_retest": 47,
+    "checks": [
+      "public API requires approved config plus out-of-band approval SHA",
+      "same run/output and frozen main flag",
+      "complete expected phase schedule, original trace hashes and real response gates reused",
+      "canonical runtime and prepared case identities checked",
+      "raw-valid versus fallback counts distinct",
+      "replay cost basis stated explicitly"
+    ]
+  }
+}

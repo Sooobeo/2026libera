@@ -1,0 +1,68 @@
+Approval-bound experiment supervisor
+
+This document does not authorize a run. The guardian never creates an approval.
+Root must first inspect the same-runtime 15/60-stage feasibility measurements,
+including an actual three-stage C-context history, and issue a separate
+resource_review_approval.json. Its SHA-256 is supplied separately on the CLI.
+
+Read-only approval evidence:
+  research.v63.longrun_guardian.required_bindings(workspace_root, config_path)
+
+Required approval fields:
+  schema: libera-resource-review-v1
+  issued_by: /root
+  decision: authorize_guardian_after_measured_feasibility
+  issued_at_utc: the actual root approval timestamp
+  main_N: 60
+  main_replicates: 2
+  effect_or_pvalue_used_for_selection: false
+  allow_main_only_after_ready_pilot: true
+  recovery_required: true
+  All fields returned by required_bindings, without modifications.
+  resource_limits: positive finite max_total_generation_requests,
+    max_total_request_seconds, max_guardian_wall_seconds, max_prompt_tokens,
+    forecast_safety_factor (at least 1).
+  historical_costs: generation_requests (nonnegative integer),
+    recorded_request_seconds (nonnegative finite), evidence (immutable file
+    references), and scope (explicit prior-candidate scope excluding this run).
+    Nonzero prior calls require evidence. Unknown historical timing is not
+    invented; document it as a lower bound in the referenced evidence.
+  measurement_evidence: technical-smoke and paired-feasibility, each containing
+    immutable references named measurements, prepared_inputs, records and
+    runtime_identity. References are objects with path and sha256 fields.
+
+Execution, only after root issues and reviews that concrete approval:
+  <approved-python> -m research.v63.longrun_guardian --config <fixed-config>
+    --approval <root-issued-approval> --approval-sha256 <separately-reviewed-sha>
+
+The sequence is development-pilot, pilot precision, B-main, x-replacement,
+negative-control, A, C, and the final report. The guardian first verifies
+240 actual terminal development trajectories and the FULL history, a real
+ready precision report bound to its inputs, and measured cost forecasts for
+every later phase. Only then may it set main_model_frozen=true; that is the
+sole allowed runtime-freeze mutation. It records the transition and review.
+
+The guardian counts original HTTP attempt receipts, plus historical cost
+evidence. An uncertain request consumes a request reservation. Missing timing
+reserves the frozen request timeout; this is not reported as observed latency.
+Campaign phase budgets retain their original first-start timestamp, including
+downtime. Shared 15/60-stage trajectories are counted once in development.
+
+On interruption, rerun the identical command under the same approved Python,
+code, model, inputs and config. A kernel process lock permits one guardian.
+The campaign's recovery implementation preserves all prior artifacts and
+reuses only proven complete same-request responses. The guardian neither
+deletes failed work nor fills missing trajectories with zero or hold-h.
+Changed identity or exhausted authority requires root review; no automatic
+model/parameter/sample-size changes or approval regeneration occur.
+
+Logs, heartbeat, checkpoint, precision inputs, main resource review and freeze
+transition live under <output_root>/guardian/<runtime_identity_sha256>/.
+completion_receipt.json is written only after all six phases, required
+analyses, and same-run final reporting complete. Statistical non-significance,
+model failures, and documented A/C source limitations remain in the report.
+Do not run the default continuation snapshot after completion: the finalizer
+already writes the correct completed snapshot using its explicit override.
+
+Tests use isolated synthetic files and mocked children. Passing tests does
+not imply an approval, a model request, or completed empirical experiments.

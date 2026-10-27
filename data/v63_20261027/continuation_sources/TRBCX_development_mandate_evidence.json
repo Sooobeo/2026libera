@@ -1,0 +1,206 @@
+{
+  "fund_id": "F04",
+  "period": "development",
+  "verified": true,
+  "objective": "Long-term capital growth; income is secondary.",
+  "mandatory_constraints": [
+    {
+      "evidence_id": "TRBCX_BLUE80",
+      "source_document_id": "TRBCX_dev_full485_20250225",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/902259/000174177325000623/c485bpos.htm",
+      "source_line": 227,
+      "source_excerpt": "The fund normally invests at least 80% of its net assets (plus any borrowings for investment purposes) in securities of blue chip companies with growth characteristics. For purposes of the fund’s 80% investment policy, the fund considers a company to be a blue chip company if the company’s securities are represented in the S&P 500 Index and the fund considers a company to have growth characteristics if the company’s securities are represented in an appropriate third-party growth-oriented index. Any derivatives that provide exposure to the investment focus suggested by the fund’s name, or to one or more market risk factors associated with the investment focus suggested by the fund’s name, are counted (as applicable) toward compliance with the fund’s 80% investment policy.",
+      "text": "Normally at least 80% of NAV plus investment borrowings in blue-chip growth securities: S&P 500 membership and an appropriate third-party growth index define eligibility; qualifying derivatives count. Changes require 60 days notice.",
+      "denominator": "NAV plus investment borrowing",
+      "handling": "class3_not_identifiable_from_FF12",
+      "numerically_enforced_in_FF12": false
+    },
+    {
+      "evidence_id": "TRBCX_NONDIVERSIFIED",
+      "source_document_id": "TRBCX_amendment_20251002_014522",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/902259/000199937125014522/pricefunds-497_100125.htm",
+      "source_line": 33796,
+      "source_excerpt": "(a) Percent Limit on Assets Invested in Any One Issuer (All Funds Except Asia Opportunities, Blue Chip Growth, Communications & Technology, Dynamic Global Bond, Emerging Europe, Emerging Markets Local Currency Bond, Equity Index 500, Extended Equity Market Index, Georgia Tax-Free Bond, Global Consumer, Global Technology, Growth Stock, Hedged Equity, Institutional Large-Cap Core Growth, International Bond, International Bond Fund (USD Hedged), International Equity Index, Large-Cap Growth, Latin America, Maryland Short-Term Tax-Free Bond, Maryland Tax-Free Bond, Mid-Cap Index Fund, New Asia, New Jersey Tax-Free Bond, Real Estate, Science & Technology, Small-Cap Index, Total Equity Market Index, Transition, and Virginia Tax-Free Bond Funds)",
+      "text": "The fund is nondiversified; the general 75%/5%/10% diversified-fund issuer limits explicitly exclude Blue Chip Growth.",
+      "denominator": "security/transaction attributes",
+      "handling": "class3_not_identifiable_from_FF12",
+      "numerically_enforced_in_FF12": false
+    },
+    {
+      "evidence_id": "TRBCX_INDUSTRY25",
+      "source_document_id": "TRBCX_amendment_20251002_014522",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/902259/000199937125014522/pricefunds-497_100125.htm",
+      "source_line": 33774,
+      "source_excerpt": "Purchase the securities of any issuer if, as a result, more than 25% of the value of the funds’ net assets would be invested in the securities of issuers having their principal business activities in the same industry;",
+      "text": "Purchases must not produce over 25% of NAV in one source-defined industry. Government exclusions apply; recognized provider/adviser classifications do not establish an FF12 cap.",
+      "denominator": "NAV",
+      "handling": "class3_source_taxonomy_differs_from_FF12",
+      "numerically_enforced_in_FF12": false
+    },
+    {
+      "evidence_id": "TRBCX_BORROW",
+      "source_document_id": "TRBCX_amendment_20251002_014522",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/902259/000199937125014522/pricefunds-497_100125.htm",
+      "source_line": 33759,
+      "source_excerpt": "Borrow money, except that the funds may (i) borrow for non-leveraging, temporary, or emergency purposes; and (ii) engage in reverse repurchase agreements and make other investments or engage in other transactions, which may involve a borrowing, in a manner consistent with the funds’ investment objectives and programs, provided that the combination of (i) and (ii) shall not exceed 33⅓% of the value of the funds’ total assets (including the amount borrowed) less liabilities (other than borrowings) or such other percentage permitted by law. Any borrowings that come to exceed this amount will be reduced in accordance with applicable law. The funds may borrow from banks, other Price Funds, or other persons to the extent permitted by applicable law. In addition, the Target Date Funds may not, in any manner, transfer as collateral for indebtedness any securities owned by the fund except in connection with permissible borrowings, which in no event will exceed 33⅓% of the fund’s total assets valued at market;",
+      "text": "Temporary/emergency non-leveraging borrowing and permitted borrowing transactions together cannot exceed 33 1/3% of total assets including borrowing less other liabilities, subject to law.",
+      "denominator": "total assets including borrowing less non-borrowing liabilities",
+      "handling": "class3_not_identifiable_from_FF12",
+      "numerically_enforced_in_FF12": false
+    },
+    {
+      "evidence_id": "TRBCX_BORROW_PURCHASE",
+      "source_document_id": "TRBCX_amendment_20251002_014522",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/902259/000199937125014522/pricefunds-497_100125.htm",
+      "source_line": 33859,
+      "source_excerpt": "Purchase additional securities when money borrowed exceeds 5% of its total assets.",
+      "text": "Do not purchase additional securities while borrowings exceed 5% of total assets; collateral transfers are restricted to permitted transactions and 33 1/3% of total assets.",
+      "denominator": "total assets",
+      "handling": "class3_not_identifiable_from_FF12",
+      "numerically_enforced_in_FF12": false
+    },
+    {
+      "evidence_id": "TRBCX_LENDING",
+      "source_document_id": "TRBCX_amendment_20251002_014522",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/902259/000199937125014522/pricefunds-497_100125.htm",
+      "source_line": 33785,
+      "source_excerpt": "Make loans, although the funds may (i) lend portfolio securities and participate in an interfund lending program with other Price Funds provided that no such loan may be made if, as a result, the aggregate of such loans would exceed 33⅓% of the value of the funds’ total assets; (ii) purchase money market securities and enter into repurchase agreements; and (iii) acquire publicly distributed or privately placed debt securities and purchase debt;",
+      "text": "Portfolio and interfund lending together cannot exceed 33 1/3% of total assets; debt and repurchase exceptions apply.",
+      "denominator": "total assets",
+      "handling": "class3_not_identifiable_from_FF12",
+      "numerically_enforced_in_FF12": false
+    },
+    {
+      "evidence_id": "TRBCX_ILLIQUID",
+      "source_document_id": "TRBCX_amendment_20251002_014522",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/902259/000199937125014522/pricefunds-497_100125.htm",
+      "source_line": 33867,
+      "source_excerpt": "Acquire an illiquid investment if, immediately after the acquisition, the fund would have invested more than 15% of its net assets (10% of its net assets for Spectrum Funds and 5% of its total assets for Money Market Funds) in such investments.",
+      "text": "Do not acquire illiquid investments if the resulting exposure exceeds 15% of NAV.",
+      "denominator": "NAV",
+      "handling": "class3_not_identifiable_from_FF12",
+      "numerically_enforced_in_FF12": false
+    },
+    {
+      "evidence_id": "TRBCX_WARRANTS",
+      "source_document_id": "TRBCX_amendment_20251002_014522",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/902259/000199937125014522/pricefunds-497_100125.htm",
+      "source_line": 33890,
+      "source_excerpt": "Invest in warrants if, as a result, more than 10% of the value of the fund’s net assets would be invested in warrants, provided that, the Money, State Tax-Free, Tax-Free, and Summit Municipal Funds will not invest in warrants.",
+      "text": "Warrants cannot exceed 10% of NAV after investment.",
+      "denominator": "NAV",
+      "handling": "class3_not_identifiable_from_FF12",
+      "numerically_enforced_in_FF12": false
+    },
+    {
+      "evidence_id": "TRBCX_LOW_GRADE",
+      "source_document_id": "TRBCX_amendment_20251002_014522",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/902259/000199937125014522/pricefunds-497_100125.htm",
+      "source_line": 33930,
+      "source_excerpt": "Invest in below-investment grade instruments if, as a result, more than 10% of the fund’s total assets would be invested in such instruments. The fund’s investments in convertible securities are not subject to this limit.",
+      "text": "Below-investment-grade instruments cannot exceed 10% of total assets; convertible securities are exempt from this limit.",
+      "denominator": "total assets",
+      "handling": "class3_not_identifiable_from_FF12",
+      "numerically_enforced_in_FF12": false
+    },
+    {
+      "evidence_id": "TRBCX_OILGAS",
+      "source_document_id": "TRBCX_amendment_20251002_014522",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/902259/000199937125014522/pricefunds-497_100125.htm",
+      "source_line": 33882,
+      "source_excerpt": "Purchase participations or other direct interests in or enter into leases with respect to oil, gas, or other mineral exploration or development programs if, as a result thereof, more than 5% of the value of the total assets of the funds would be invested in such programs.",
+      "text": "Direct mineral/oil/gas exploration and development interests cannot exceed 5% of total assets.",
+      "denominator": "total assets",
+      "handling": "class3_not_identifiable_from_FF12",
+      "numerically_enforced_in_FF12": false
+    },
+    {
+      "evidence_id": "TRBCX_SHORT_MARGIN",
+      "source_document_id": "TRBCX_amendment_20251002_014522",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/902259/000199937125014522/pricefunds-497_100125.htm",
+      "source_line": 33884,
+      "source_excerpt": "(a) Short Sales (All Funds Except Credit Opportunities, Dynamic Credit, Floating Rate, Global High Income Bond, High Yield, Institutional Floating Rate, Institutional High Yield, Multi-Strategy Total Return, and U.S. High Yield Funds)",
+      "text": "Short sales are prohibited; securities margin purchases are restricted to settlement credit and permitted investment margin deposits.",
+      "denominator": "security/transaction attributes",
+      "handling": "class3_not_identifiable_from_FF12",
+      "numerically_enforced_in_FF12": false
+    },
+    {
+      "evidence_id": "TRBCX_INSTRUMENTS",
+      "source_document_id": "TRBCX_amendment_20251002_014522",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/902259/000199937125014522/pricefunds-497_100125.htm",
+      "source_line": 33766,
+      "source_excerpt": "(a) Commodities (All Funds Except Money Market Funds Institutional Mid-Cap Equity Growth, and Institutional Small-Cap Stock Funds)",
+      "text": "Physical real estate, physical commodities, senior securities and underwriting retain the stated statutory, securities-backed and ordinary-portfolio exceptions; investing for management control is prohibited.",
+      "denominator": "security/transaction attributes",
+      "handling": "class3_not_identifiable_from_FF12",
+      "numerically_enforced_in_FF12": false
+    },
+    {
+      "evidence_id": "TRBCX_FUNDS",
+      "source_document_id": "TRBCX_amendment_20251002_014522",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/902259/000199937125014522/pricefunds-497_100125.htm",
+      "source_line": 33870,
+      "source_excerpt": "Purchase securities of open-end or closed-end investment companies except (i) securities of the TRP Reserve Funds; (ii) securities of other Price Funds; (iii) in the case of the Money Market Funds, only securities of other money market funds; or (iv) otherwise consistent with the 1940 Act.",
+      "text": "Other investment companies may be purchased only through the enumerated Price-fund exceptions or consistently with the 1940 Act.",
+      "denominator": "security/transaction attributes",
+      "handling": "class3_not_identifiable_from_FF12",
+      "numerically_enforced_in_FF12": false
+    },
+    {
+      "evidence_id": "TRBCX_TIME",
+      "source_document_id": "TRBCX_amendment_20251002_014522",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/902259/000199937125014522/pricefunds-497_100125.htm",
+      "source_line": 33754,
+      "source_excerpt": "Fundamental policies may not be changed without the approval of the lesser of (1) 67% of the funds’ shares present at a meeting of shareholders if the holders of more than 50% of the outstanding shares are present in person or by proxy or (2) more than 50% of the funds’ outstanding shares. Other restrictions in the form of operating policies are subject to change by the funds’ Boards without shareholder approval. Any investment restriction that involves a maximum percentage of securities or assets shall not be considered to be violated unless an excess over the percentage occurs immediately after, and is caused by, an acquisition of securities or assets of, or borrowings by, the funds. With the exception of the diversification test required by the Code, calculation of the funds’ total assets for compliance with any of the following fundamental or operating policies or any other investment restrictions set forth in the funds’ prospectuses or this SAI will not include collateral held in connection with securities lending activities. For purposes of the tax diversification test, calculation of the funds’ total assets will include investments made with cash received by the funds as collateral for securities loaned.",
+      "text": "Maximum-percentage limits apply to acquisition or borrowing breaches. Securities-lending collateral is excluded from restriction total-assets calculations except for the tax diversification test.",
+      "denominator": "security/transaction attributes",
+      "handling": "class3_not_identifiable_from_FF12",
+      "numerically_enforced_in_FF12": false
+    },
+    {
+      "evidence_id": "TRBCX_DEFENSIVE",
+      "source_document_id": "TRBCX_dev_full485_20250225",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/902259/000174177325000623/c485bpos.htm",
+      "source_line": 529,
+      "source_excerpt": "The fund may assume a temporary defensive position to respond to adverse market, economic, political, or other conditions, such as to provide flexibility in meeting redemptions, pay expenses, or manage cash flows. The temporary defensive position may be inconsistent with the fund’s principal investment objective(s) and/or strategies, which may impact the fund’s returns or its ability to achieve its investment objective(s). For temporary defensive purposes, the fund may invest without limit in cash or other liquid instruments.",
+      "text": "Temporary defensive positions may invest without limit in cash or liquid instruments.",
+      "denominator": "security/transaction attributes",
+      "handling": "class3_not_identifiable_from_FF12",
+      "numerically_enforced_in_FF12": false
+    }
+  ],
+  "A": [],
+  "b": [],
+  "source_url": "https://www.sec.gov/Archives/edgar/data/902259/000174177325000623/c485bpos.htm",
+  "source_evidence_ids": [
+    "TRBCX_dev_full485_20250225",
+    "TRBCX_amendment_20251002_014522"
+  ],
+  "publication_date": "2025-02-25",
+  "document_date": "2025-03-01",
+  "filing_accession": "0001741773-25-000623",
+  "evidence_sha256": "47676b2fd0e0941f65a5179a403bc1385058c6d3bf21fc0ffb9349fe5e9ee6ae",
+  "capture_method": "official SEC HTTP original HTML bytes, locally parsed with source-line references",
+  "amendments_reviewed": [
+    {
+      "source_id": "TRBCX_amendment_20251002_014522",
+      "filing_date": "2025-10-02",
+      "sha256": "2ddb4df5334cf09ba01d9e3d6153509e1fff456f6be49538b018111482db6ccf"
+    },
+    {
+      "source_id": "TRBCX_amendment_20250801_010437",
+      "filing_date": "2025-08-01",
+      "sha256": "dd0ce4d70e36542aa1c1a67c9913078bd9f5b4187a1ce8894948321b04dbb24a"
+    },
+    {
+      "source_id": "TRBCX_amendment_20250501_005215",
+      "filing_date": "2025-05-01",
+      "sha256": "4dd7dd80e5f854ede3391e76f165a310a7fdbb7e0d7f0ee0a55ed035de130d2e"
+    }
+  ],
+  "human_review_mode": "user_assumed_completed",
+  "actual_independent_signatures": null,
+  "numerical_scope_note": "Rules involving issuer, liquidity, index membership, source industry taxonomy or transaction attributes remain semantic constraints. FF12 weights cannot certify those rules. A and b are empty; no invented FF12 caps.",
+  "version_notes": "Latest cutoff-eligible common SAI used with fund-specific prospectus. Blue Chip Growth is explicitly excluded from diversified-fund issuer caps. June 30 2026 supplement changes other named funds effective July 1, not Blue Chip Growth."
+}

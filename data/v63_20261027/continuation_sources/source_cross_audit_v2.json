@@ -1,0 +1,5338 @@
+{
+  "generated_at_utc": "2026-10-27T03:48:24.506747+00:00",
+  "profile_input_sha256": "556a5f546c0e27a1403cadd40b6ad8c16d72841855c2bb5b7ad8255b5eaae922",
+  "source_manifest_sha256": "d4a45c1c7609cc164645c33a8ebcd386ebc2bf9329ed92eedb30892ea505d590",
+  "corpus_sha256": "930560346838abed6129187611c461e88c77b082a30d7456c4053d0cbb108d72",
+  "checks": [
+    {
+      "check": "SEC_index_CIK:F01",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "SEC_index_CIK:F02",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "SEC_index_CIK:F03",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "SEC_index_CIK:F04",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "canonical_profile_fund:F01_development",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "indexed_filing_date:holdings:F01_development",
+      "passed": true,
+      "detail": {
+        "accession": "0000035402-25-002136",
+        "claimed_date": "2025-11-25",
+        "SEC_index": {
+          "filingDate": "2025-11-25",
+          "form": "NPORT-P",
+          "primaryDocument": "xslFormNPORT-P_X01/primary_doc.xml"
+        }
+      }
+    },
+    {
+      "check": "indexed_filing_date:mandate:F01_development",
+      "passed": true,
+      "detail": {
+        "accession": "0000024238-25-000018",
+        "claimed_date": "2025-02-25",
+        "SEC_index": {
+          "filingDate": "2025-02-25",
+          "form": "485BPOS",
+          "primaryDocument": "filing8440.htm"
+        }
+      }
+    },
+    {
+      "check": "unique_rule_ids:F01_development",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_development:FCNTX_COMMON",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_development:FCNTX_COMMON",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-02-25",
+        "form": "485BPOS",
+        "primaryDocument": "filing8440.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_development:FCNTX_COMMON",
+      "passed": true,
+      "detail": "FCNTX_dev_full485_20250225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_development:FCNTX_COMMON",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_development:FCNTX_COMMON",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_development:FCNTX_ISSUER75",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_development:FCNTX_ISSUER75",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-02-25",
+        "form": "485BPOS",
+        "primaryDocument": "filing8440.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_development:FCNTX_ISSUER75",
+      "passed": true,
+      "detail": "FCNTX_dev_full485_20250225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_development:FCNTX_ISSUER75",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_development:FCNTX_ISSUER75",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_development:FCNTX_INDUSTRY25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_development:FCNTX_INDUSTRY25",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-02-25",
+        "form": "485BPOS",
+        "primaryDocument": "filing8440.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_development:FCNTX_INDUSTRY25",
+      "passed": true,
+      "detail": "FCNTX_dev_full485_20250225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_development:FCNTX_INDUSTRY25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_development:FCNTX_INDUSTRY25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_development:FCNTX_BORROW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_development:FCNTX_BORROW",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-02-25",
+        "form": "485BPOS",
+        "primaryDocument": "filing8440.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_development:FCNTX_BORROW",
+      "passed": true,
+      "detail": "FCNTX_dev_full485_20250225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_development:FCNTX_BORROW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_development:FCNTX_BORROW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_development:FCNTX_LENDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_development:FCNTX_LENDING",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-02-25",
+        "form": "485BPOS",
+        "primaryDocument": "filing8440.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_development:FCNTX_LENDING",
+      "passed": true,
+      "detail": "FCNTX_dev_full485_20250225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_development:FCNTX_LENDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_development:FCNTX_LENDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_development:FCNTX_ILLIQUID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_development:FCNTX_ILLIQUID",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-02-25",
+        "form": "485BPOS",
+        "primaryDocument": "filing8440.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_development:FCNTX_ILLIQUID",
+      "passed": true,
+      "detail": "FCNTX_dev_full485_20250225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_development:FCNTX_ILLIQUID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_development:FCNTX_ILLIQUID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_development:FCNTX_SHORT_MARGIN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_development:FCNTX_SHORT_MARGIN",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-02-25",
+        "form": "485BPOS",
+        "primaryDocument": "filing8440.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_development:FCNTX_SHORT_MARGIN",
+      "passed": true,
+      "detail": "FCNTX_dev_full485_20250225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_development:FCNTX_SHORT_MARGIN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_development:FCNTX_SHORT_MARGIN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_development:FCNTX_INSTRUMENTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_development:FCNTX_INSTRUMENTS",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-02-25",
+        "form": "485BPOS",
+        "primaryDocument": "filing8440.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_development:FCNTX_INSTRUMENTS",
+      "passed": true,
+      "detail": "FCNTX_dev_full485_20250225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_development:FCNTX_INSTRUMENTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_development:FCNTX_INSTRUMENTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_development:FCNTX_POOLED",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_development:FCNTX_POOLED",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-02-25",
+        "form": "485BPOS",
+        "primaryDocument": "filing8440.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_development:FCNTX_POOLED",
+      "passed": true,
+      "detail": "FCNTX_dev_full485_20250225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_development:FCNTX_POOLED",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_development:FCNTX_POOLED",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_development:FCNTX_TIME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_development:FCNTX_TIME",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-02-25",
+        "form": "485BPOS",
+        "primaryDocument": "filing8440.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_development:FCNTX_TIME",
+      "passed": true,
+      "detail": "FCNTX_dev_full485_20250225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_development:FCNTX_TIME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_development:FCNTX_TIME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_development:FCNTX_TAX",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_development:FCNTX_TAX",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-02-25",
+        "form": "485BPOS",
+        "primaryDocument": "filing8440.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_development:FCNTX_TAX",
+      "passed": true,
+      "detail": "FCNTX_dev_full485_20250225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_development:FCNTX_TAX",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_development:FCNTX_TAX",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_development:FCNTX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_development:FCNTX_DEFENSIVE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-02-25",
+        "form": "485BPOS",
+        "primaryDocument": "filing8440.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_development:FCNTX_DEFENSIVE",
+      "passed": true,
+      "detail": "FCNTX_dev_full485_20250225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_development:FCNTX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_development:FCNTX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "canonical_profile_fund:F01_A_B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "indexed_filing_date:holdings:F01_A_B",
+      "passed": true,
+      "detail": {
+        "accession": "0000024238-26-000023",
+        "claimed_date": "2026-02-20",
+        "SEC_index": {
+          "filingDate": "2026-02-20",
+          "form": "N-CSR",
+          "primaryDocument": "filing10969.htm"
+        }
+      }
+    },
+    {
+      "check": "indexed_filing_date:mandate:F01_A_B",
+      "passed": true,
+      "detail": {
+        "accession": "0000024238-26-000028",
+        "claimed_date": "2026-02-24",
+        "SEC_index": {
+          "filingDate": "2026-02-24",
+          "form": "485BPOS",
+          "primaryDocument": "filing10952.htm"
+        }
+      }
+    },
+    {
+      "check": "unique_rule_ids:F01_A_B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_A_B:FCNTX_COMMON",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_A_B:FCNTX_COMMON",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-02-24",
+        "form": "485BPOS",
+        "primaryDocument": "filing10952.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_A_B:FCNTX_COMMON",
+      "passed": true,
+      "detail": "FCNTX_main_full485_20260225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_A_B:FCNTX_COMMON",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_A_B:FCNTX_COMMON",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_A_B:FCNTX_ISSUER75",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_A_B:FCNTX_ISSUER75",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-02-24",
+        "form": "485BPOS",
+        "primaryDocument": "filing10952.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_A_B:FCNTX_ISSUER75",
+      "passed": true,
+      "detail": "FCNTX_main_full485_20260225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_A_B:FCNTX_ISSUER75",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_A_B:FCNTX_ISSUER75",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_A_B:FCNTX_INDUSTRY25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_A_B:FCNTX_INDUSTRY25",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-02-24",
+        "form": "485BPOS",
+        "primaryDocument": "filing10952.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_A_B:FCNTX_INDUSTRY25",
+      "passed": true,
+      "detail": "FCNTX_main_full485_20260225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_A_B:FCNTX_INDUSTRY25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_A_B:FCNTX_INDUSTRY25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_A_B:FCNTX_BORROW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_A_B:FCNTX_BORROW",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-02-24",
+        "form": "485BPOS",
+        "primaryDocument": "filing10952.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_A_B:FCNTX_BORROW",
+      "passed": true,
+      "detail": "FCNTX_main_full485_20260225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_A_B:FCNTX_BORROW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_A_B:FCNTX_BORROW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_A_B:FCNTX_LENDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_A_B:FCNTX_LENDING",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-02-24",
+        "form": "485BPOS",
+        "primaryDocument": "filing10952.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_A_B:FCNTX_LENDING",
+      "passed": true,
+      "detail": "FCNTX_main_full485_20260225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_A_B:FCNTX_LENDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_A_B:FCNTX_LENDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_A_B:FCNTX_ILLIQUID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_A_B:FCNTX_ILLIQUID",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-02-24",
+        "form": "485BPOS",
+        "primaryDocument": "filing10952.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_A_B:FCNTX_ILLIQUID",
+      "passed": true,
+      "detail": "FCNTX_main_full485_20260225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_A_B:FCNTX_ILLIQUID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_A_B:FCNTX_ILLIQUID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_A_B:FCNTX_SHORT_MARGIN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_A_B:FCNTX_SHORT_MARGIN",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-02-24",
+        "form": "485BPOS",
+        "primaryDocument": "filing10952.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_A_B:FCNTX_SHORT_MARGIN",
+      "passed": true,
+      "detail": "FCNTX_main_full485_20260225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_A_B:FCNTX_SHORT_MARGIN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_A_B:FCNTX_SHORT_MARGIN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_A_B:FCNTX_INSTRUMENTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_A_B:FCNTX_INSTRUMENTS",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-02-24",
+        "form": "485BPOS",
+        "primaryDocument": "filing10952.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_A_B:FCNTX_INSTRUMENTS",
+      "passed": true,
+      "detail": "FCNTX_main_full485_20260225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_A_B:FCNTX_INSTRUMENTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_A_B:FCNTX_INSTRUMENTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_A_B:FCNTX_POOLED",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_A_B:FCNTX_POOLED",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-02-24",
+        "form": "485BPOS",
+        "primaryDocument": "filing10952.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_A_B:FCNTX_POOLED",
+      "passed": true,
+      "detail": "FCNTX_main_full485_20260225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_A_B:FCNTX_POOLED",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_A_B:FCNTX_POOLED",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_A_B:FCNTX_TIME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_A_B:FCNTX_TIME",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-02-24",
+        "form": "485BPOS",
+        "primaryDocument": "filing10952.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_A_B:FCNTX_TIME",
+      "passed": true,
+      "detail": "FCNTX_main_full485_20260225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_A_B:FCNTX_TIME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_A_B:FCNTX_TIME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_A_B:FCNTX_TAX",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_A_B:FCNTX_TAX",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-02-24",
+        "form": "485BPOS",
+        "primaryDocument": "filing10952.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_A_B:FCNTX_TAX",
+      "passed": true,
+      "detail": "FCNTX_main_full485_20260225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_A_B:FCNTX_TAX",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_A_B:FCNTX_TAX",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_A_B:FCNTX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_A_B:FCNTX_DEFENSIVE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-02-24",
+        "form": "485BPOS",
+        "primaryDocument": "filing10952.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_A_B:FCNTX_DEFENSIVE",
+      "passed": true,
+      "detail": "FCNTX_main_full485_20260225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_A_B:FCNTX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_A_B:FCNTX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "canonical_profile_fund:F01_C",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "indexed_filing_date:holdings:F01_C",
+      "passed": true,
+      "detail": {
+        "accession": "0000035402-26-003312",
+        "claimed_date": "2026-05-26",
+        "SEC_index": {
+          "filingDate": "2026-05-26",
+          "form": "NPORT-P",
+          "primaryDocument": "xslFormNPORT-P_X01/primary_doc.xml"
+        }
+      }
+    },
+    {
+      "check": "indexed_filing_date:mandate:F01_C",
+      "passed": true,
+      "detail": {
+        "accession": "0000024238-26-000028",
+        "claimed_date": "2026-02-24",
+        "SEC_index": {
+          "filingDate": "2026-02-24",
+          "form": "485BPOS",
+          "primaryDocument": "filing10952.htm"
+        }
+      }
+    },
+    {
+      "check": "unique_rule_ids:F01_C",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_C:FCNTX_COMMON",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_C:FCNTX_COMMON",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-02-24",
+        "form": "485BPOS",
+        "primaryDocument": "filing10952.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_C:FCNTX_COMMON",
+      "passed": true,
+      "detail": "FCNTX_main_full485_20260225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_C:FCNTX_COMMON",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_C:FCNTX_COMMON",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_C:FCNTX_ISSUER75",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_C:FCNTX_ISSUER75",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-05-15",
+        "form": "497",
+        "primaryDocument": "filing12309.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_C:FCNTX_ISSUER75",
+      "passed": true,
+      "detail": "FCNTX_amendment_20260515_000050"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_C:FCNTX_ISSUER75",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_C:FCNTX_ISSUER75",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_C:FCNTX_INDUSTRY25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_C:FCNTX_INDUSTRY25",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-05-15",
+        "form": "497",
+        "primaryDocument": "filing12309.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_C:FCNTX_INDUSTRY25",
+      "passed": true,
+      "detail": "FCNTX_amendment_20260515_000050"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_C:FCNTX_INDUSTRY25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_C:FCNTX_INDUSTRY25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_C:FCNTX_BORROW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_C:FCNTX_BORROW",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-05-15",
+        "form": "497",
+        "primaryDocument": "filing12309.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_C:FCNTX_BORROW",
+      "passed": true,
+      "detail": "FCNTX_amendment_20260515_000050"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_C:FCNTX_BORROW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_C:FCNTX_BORROW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_C:FCNTX_LENDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_C:FCNTX_LENDING",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-05-15",
+        "form": "497",
+        "primaryDocument": "filing12309.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_C:FCNTX_LENDING",
+      "passed": true,
+      "detail": "FCNTX_amendment_20260515_000050"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_C:FCNTX_LENDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_C:FCNTX_LENDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_C:FCNTX_ILLIQUID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_C:FCNTX_ILLIQUID",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-05-15",
+        "form": "497",
+        "primaryDocument": "filing12309.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_C:FCNTX_ILLIQUID",
+      "passed": true,
+      "detail": "FCNTX_amendment_20260515_000050"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_C:FCNTX_ILLIQUID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_C:FCNTX_ILLIQUID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_C:FCNTX_SHORT_MARGIN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_C:FCNTX_SHORT_MARGIN",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-05-15",
+        "form": "497",
+        "primaryDocument": "filing12309.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_C:FCNTX_SHORT_MARGIN",
+      "passed": true,
+      "detail": "FCNTX_amendment_20260515_000050"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_C:FCNTX_SHORT_MARGIN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_C:FCNTX_SHORT_MARGIN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_C:FCNTX_INSTRUMENTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_C:FCNTX_INSTRUMENTS",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-05-15",
+        "form": "497",
+        "primaryDocument": "filing12309.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_C:FCNTX_INSTRUMENTS",
+      "passed": true,
+      "detail": "FCNTX_amendment_20260515_000050"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_C:FCNTX_INSTRUMENTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_C:FCNTX_INSTRUMENTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_C:FCNTX_POOLED",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_C:FCNTX_POOLED",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-05-15",
+        "form": "497",
+        "primaryDocument": "filing12309.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_C:FCNTX_POOLED",
+      "passed": true,
+      "detail": "FCNTX_amendment_20260515_000050"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_C:FCNTX_POOLED",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_C:FCNTX_POOLED",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_C:FCNTX_TIME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_C:FCNTX_TIME",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-05-15",
+        "form": "497",
+        "primaryDocument": "filing12309.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_C:FCNTX_TIME",
+      "passed": true,
+      "detail": "FCNTX_amendment_20260515_000050"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_C:FCNTX_TIME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_C:FCNTX_TIME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_C:FCNTX_TAX",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_C:FCNTX_TAX",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-05-15",
+        "form": "497",
+        "primaryDocument": "filing12309.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_C:FCNTX_TAX",
+      "passed": true,
+      "detail": "FCNTX_amendment_20260515_000050"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_C:FCNTX_TAX",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_C:FCNTX_TAX",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F01_C:FCNTX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F01_C:FCNTX_DEFENSIVE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-02-24",
+        "form": "485BPOS",
+        "primaryDocument": "filing10952.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F01_C:FCNTX_DEFENSIVE",
+      "passed": true,
+      "detail": "FCNTX_main_full485_20260225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F01_C:FCNTX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F01_C:FCNTX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "canonical_profile_fund:F02_development",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "indexed_filing_date:holdings:F02_development",
+      "passed": true,
+      "detail": {
+        "accession": "0001104659-25-116918",
+        "claimed_date": "2025-11-28",
+        "SEC_index": {
+          "filingDate": "2025-11-28",
+          "form": "N-CSR",
+          "primaryDocument": "tm2527480d7_ncsr.htm"
+        }
+      }
+    },
+    {
+      "check": "indexed_filing_date:mandate:F02_development",
+      "passed": true,
+      "detail": {
+        "accession": "0001683863-25-000459",
+        "claimed_date": "2025-01-31",
+        "SEC_index": {
+          "filingDate": "2025-01-31",
+          "form": "485BPOS",
+          "primaryDocument": "f40563d0.htm"
+        }
+      }
+    },
+    {
+      "check": "unique_rule_ids:F02_development",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_development:VPMCX_FOREIGN25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_development:VPMCX_FOREIGN25",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-01-31",
+        "form": "485BPOS",
+        "primaryDocument": "f40563d0.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_development:VPMCX_FOREIGN25",
+      "passed": true,
+      "detail": "VPMCX_2025_mandate_prospectus_web_excerpt"
+    },
+    {
+      "check": "no_business_day_rewording:F02_development:VPMCX_FOREIGN25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_development:VPMCX_DERIVATIVES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_development:VPMCX_DERIVATIVES",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-01-31",
+        "form": "485BPOS",
+        "primaryDocument": "f40563d0.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_development:VPMCX_DERIVATIVES",
+      "passed": true,
+      "detail": "VPMCX_2025_mandate_prospectus_web_excerpt"
+    },
+    {
+      "check": "no_business_day_rewording:F02_development:VPMCX_DERIVATIVES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_development:VPMCX_ISSUER25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_development:VPMCX_ISSUER25",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-01-31",
+        "form": "485BPOS",
+        "primaryDocument": "f40563d0.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_development:VPMCX_ISSUER25",
+      "passed": true,
+      "detail": "VPMCX_2025_mandate_sai_web_excerpt"
+    },
+    {
+      "check": "no_business_day_rewording:F02_development:VPMCX_ISSUER25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_development:VPMCX_ISSUER75",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_development:VPMCX_ISSUER75",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-01-31",
+        "form": "485BPOS",
+        "primaryDocument": "f40563d0.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_development:VPMCX_ISSUER75",
+      "passed": true,
+      "detail": "VPMCX_2025_mandate_sai_web_excerpt"
+    },
+    {
+      "check": "no_business_day_rewording:F02_development:VPMCX_ISSUER75",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_development:VPMCX_INDUSTRY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_development:VPMCX_INDUSTRY",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-01-31",
+        "form": "485BPOS",
+        "primaryDocument": "f40563d0.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_development:VPMCX_INDUSTRY",
+      "passed": true,
+      "detail": "VPMCX_2025_mandate_sai_web_excerpt"
+    },
+    {
+      "check": "no_business_day_rewording:F02_development:VPMCX_INDUSTRY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_development:VPMCX_OBJECTIVE_CHANGE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_development:VPMCX_OBJECTIVE_CHANGE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-01-31",
+        "form": "485BPOS",
+        "primaryDocument": "f40563d0.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_development:VPMCX_OBJECTIVE_CHANGE",
+      "passed": true,
+      "detail": "VPMCX_2025_mandate_sai_web_excerpt"
+    },
+    {
+      "check": "no_business_day_rewording:F02_development:VPMCX_OBJECTIVE_CHANGE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_development:VPMCX_BORROWING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_development:VPMCX_BORROWING",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-01-31",
+        "form": "485BPOS",
+        "primaryDocument": "f40563d0.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_development:VPMCX_BORROWING",
+      "passed": true,
+      "detail": "VPMCX_2025_mandate_sai_web_excerpt"
+    },
+    {
+      "check": "no_business_day_rewording:F02_development:VPMCX_BORROWING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_development:VPMCX_BORROWING_COVER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_development:VPMCX_BORROWING_COVER",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-01-31",
+        "form": "485BPOS",
+        "primaryDocument": "f40563d0.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_development:VPMCX_BORROWING_COVER",
+      "passed": true,
+      "detail": "VPMCX_2025_mandate_sai_web_excerpt"
+    },
+    {
+      "check": "no_business_day_rewording:F02_development:VPMCX_BORROWING_COVER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_development:VPMCX_COMMODITIES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_development:VPMCX_COMMODITIES",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-01-31",
+        "form": "485BPOS",
+        "primaryDocument": "f40563d0.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_development:VPMCX_COMMODITIES",
+      "passed": true,
+      "detail": "VPMCX_2025_mandate_sai_web_excerpt"
+    },
+    {
+      "check": "no_business_day_rewording:F02_development:VPMCX_COMMODITIES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_development:VPMCX_LOANS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_development:VPMCX_LOANS",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-01-31",
+        "form": "485BPOS",
+        "primaryDocument": "f40563d0.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_development:VPMCX_LOANS",
+      "passed": true,
+      "detail": "VPMCX_2025_mandate_sai_web_excerpt"
+    },
+    {
+      "check": "no_business_day_rewording:F02_development:VPMCX_LOANS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_development:VPMCX_REAL_ESTATE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_development:VPMCX_REAL_ESTATE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-01-31",
+        "form": "485BPOS",
+        "primaryDocument": "f40563d0.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_development:VPMCX_REAL_ESTATE",
+      "passed": true,
+      "detail": "VPMCX_2025_mandate_sai_web_excerpt"
+    },
+    {
+      "check": "no_business_day_rewording:F02_development:VPMCX_REAL_ESTATE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_development:VPMCX_SENIOR",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_development:VPMCX_SENIOR",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-01-31",
+        "form": "485BPOS",
+        "primaryDocument": "f40563d0.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_development:VPMCX_SENIOR",
+      "passed": true,
+      "detail": "VPMCX_2025_mandate_sai_web_excerpt"
+    },
+    {
+      "check": "no_business_day_rewording:F02_development:VPMCX_SENIOR",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_development:VPMCX_UNDERWRITING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_development:VPMCX_UNDERWRITING",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-01-31",
+        "form": "485BPOS",
+        "primaryDocument": "f40563d0.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_development:VPMCX_UNDERWRITING",
+      "passed": true,
+      "detail": "VPMCX_2025_mandate_sai_web_excerpt"
+    },
+    {
+      "check": "no_business_day_rewording:F02_development:VPMCX_UNDERWRITING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_development:VPMCX_PURCHASE_TIME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_development:VPMCX_PURCHASE_TIME",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-01-31",
+        "form": "485BPOS",
+        "primaryDocument": "f40563d0.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_development:VPMCX_PURCHASE_TIME",
+      "passed": true,
+      "detail": "VPMCX_2025_mandate_sai_web_excerpt"
+    },
+    {
+      "check": "no_business_day_rewording:F02_development:VPMCX_PURCHASE_TIME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_development:VPMCX_ILLIQUID15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_development:VPMCX_ILLIQUID15",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-01-31",
+        "form": "485BPOS",
+        "primaryDocument": "f40563d0.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_development:VPMCX_ILLIQUID15",
+      "passed": true,
+      "detail": "VPMCX_2025_amendments_web_2_and_liquidity"
+    },
+    {
+      "check": "no_business_day_rewording:F02_development:VPMCX_ILLIQUID15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_development:VPMCX_LENDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_development:VPMCX_LENDING",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-01-31",
+        "form": "485BPOS",
+        "primaryDocument": "f40563d0.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_development:VPMCX_LENDING",
+      "passed": true,
+      "detail": "VPMCX_2025_amendments_web_2_and_liquidity"
+    },
+    {
+      "check": "no_business_day_rewording:F02_development:VPMCX_LENDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_development:VPMCX_TEMPORARY_DEPARTURE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_development:VPMCX_TEMPORARY_DEPARTURE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-01-31",
+        "form": "485BPOS",
+        "primaryDocument": "f40563d0.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_development:VPMCX_TEMPORARY_DEPARTURE",
+      "passed": true,
+      "detail": "VPMCX_2025_mandate_prospectus_web_excerpt"
+    },
+    {
+      "check": "no_business_day_rewording:F02_development:VPMCX_TEMPORARY_DEPARTURE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_development:VPMCX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_development:VPMCX_DEFENSIVE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-01-31",
+        "form": "485BPOS",
+        "primaryDocument": "f40563d0.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_development:VPMCX_DEFENSIVE",
+      "passed": true,
+      "detail": "VPMCX_2025_mandate_prospectus_web_excerpt"
+    },
+    {
+      "check": "no_business_day_rewording:F02_development:VPMCX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_development:VPMCX_VANGUARD_OWNERSHIP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_development:VPMCX_VANGUARD_OWNERSHIP",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-01-31",
+        "form": "485BPOS",
+        "primaryDocument": "f40563d0.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_development:VPMCX_VANGUARD_OWNERSHIP",
+      "passed": true,
+      "detail": "VPMCX_2025_mandate_sai_web_excerpt"
+    },
+    {
+      "check": "no_business_day_rewording:F02_development:VPMCX_VANGUARD_OWNERSHIP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_development:VPMCX_BORROWING_RESTORE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_development:VPMCX_BORROWING_RESTORE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-01-31",
+        "form": "485BPOS",
+        "primaryDocument": "f40563d0.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_development:VPMCX_BORROWING_RESTORE",
+      "passed": true,
+      "detail": "VPMCX_2025_mandate_sai_web_excerpt"
+    },
+    {
+      "check": "no_business_day_rewording:F02_development:VPMCX_BORROWING_RESTORE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "canonical_profile_fund:F02_A_B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "indexed_filing_date:holdings:F02_A_B",
+      "passed": true,
+      "detail": {
+        "accession": "0000752177-26-000071",
+        "claimed_date": "2026-02-26",
+        "SEC_index": {
+          "filingDate": "2026-02-26",
+          "form": "NPORT-P",
+          "primaryDocument": "xslFormNPORT-P_X01/primary_doc.xml"
+        }
+      }
+    },
+    {
+      "check": "indexed_filing_date:mandate:F02_A_B",
+      "passed": true,
+      "detail": {
+        "accession": "0001193125-26-024962",
+        "claimed_date": "2026-01-28",
+        "SEC_index": {
+          "filingDate": "2026-01-28",
+          "form": "485BPOS",
+          "primaryDocument": "f43837d1.htm"
+        }
+      }
+    },
+    {
+      "check": "unique_rule_ids:F02_A_B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_A_B:VPMCX_FOREIGN25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_A_B:VPMCX_FOREIGN25",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-01-28",
+        "form": "485BPOS",
+        "primaryDocument": "f43837d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_A_B:VPMCX_FOREIGN25",
+      "passed": true,
+      "detail": "VPMCX_main_full485_20260128"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_A_B:VPMCX_FOREIGN25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_A_B:VPMCX_FOREIGN25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_A_B:VPMCX_DERIVATIVES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_A_B:VPMCX_DERIVATIVES",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-01-28",
+        "form": "485BPOS",
+        "primaryDocument": "f43837d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_A_B:VPMCX_DERIVATIVES",
+      "passed": true,
+      "detail": "VPMCX_main_full485_20260128"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_A_B:VPMCX_DERIVATIVES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_A_B:VPMCX_DERIVATIVES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_A_B:VPMCX_ISSUER25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_A_B:VPMCX_ISSUER25",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_A_B:VPMCX_ISSUER25",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_A_B:VPMCX_ISSUER25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_A_B:VPMCX_ISSUER25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_A_B:VPMCX_ISSUER75",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_A_B:VPMCX_ISSUER75",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_A_B:VPMCX_ISSUER75",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_A_B:VPMCX_ISSUER75",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_A_B:VPMCX_ISSUER75",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_A_B:VPMCX_INDUSTRY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_A_B:VPMCX_INDUSTRY",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_A_B:VPMCX_INDUSTRY",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_A_B:VPMCX_INDUSTRY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_A_B:VPMCX_INDUSTRY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_A_B:VPMCX_OBJECTIVE_CHANGE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_A_B:VPMCX_OBJECTIVE_CHANGE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_A_B:VPMCX_OBJECTIVE_CHANGE",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_A_B:VPMCX_OBJECTIVE_CHANGE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_A_B:VPMCX_OBJECTIVE_CHANGE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_A_B:VPMCX_BORROWING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_A_B:VPMCX_BORROWING",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_A_B:VPMCX_BORROWING",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_A_B:VPMCX_BORROWING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_A_B:VPMCX_BORROWING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_A_B:VPMCX_BORROWING_COVER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_A_B:VPMCX_BORROWING_COVER",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_A_B:VPMCX_BORROWING_COVER",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_A_B:VPMCX_BORROWING_COVER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_A_B:VPMCX_BORROWING_COVER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_A_B:VPMCX_COMMODITIES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_A_B:VPMCX_COMMODITIES",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_A_B:VPMCX_COMMODITIES",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_A_B:VPMCX_COMMODITIES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_A_B:VPMCX_COMMODITIES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_A_B:VPMCX_LOANS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_A_B:VPMCX_LOANS",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_A_B:VPMCX_LOANS",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_A_B:VPMCX_LOANS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_A_B:VPMCX_LOANS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_A_B:VPMCX_REAL_ESTATE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_A_B:VPMCX_REAL_ESTATE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_A_B:VPMCX_REAL_ESTATE",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_A_B:VPMCX_REAL_ESTATE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_A_B:VPMCX_REAL_ESTATE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_A_B:VPMCX_SENIOR",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_A_B:VPMCX_SENIOR",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_A_B:VPMCX_SENIOR",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_A_B:VPMCX_SENIOR",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_A_B:VPMCX_SENIOR",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_A_B:VPMCX_UNDERWRITING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_A_B:VPMCX_UNDERWRITING",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_A_B:VPMCX_UNDERWRITING",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_A_B:VPMCX_UNDERWRITING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_A_B:VPMCX_UNDERWRITING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_A_B:VPMCX_PURCHASE_TIME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_A_B:VPMCX_PURCHASE_TIME",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_A_B:VPMCX_PURCHASE_TIME",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_A_B:VPMCX_PURCHASE_TIME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_A_B:VPMCX_PURCHASE_TIME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_A_B:VPMCX_ILLIQUID15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_A_B:VPMCX_ILLIQUID15",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_A_B:VPMCX_ILLIQUID15",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_A_B:VPMCX_ILLIQUID15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_A_B:VPMCX_ILLIQUID15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_A_B:VPMCX_LENDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_A_B:VPMCX_LENDING",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_A_B:VPMCX_LENDING",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_A_B:VPMCX_LENDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_A_B:VPMCX_LENDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_A_B:VPMCX_TEMPORARY_DEPARTURE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_A_B:VPMCX_TEMPORARY_DEPARTURE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-01-28",
+        "form": "485BPOS",
+        "primaryDocument": "f43837d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_A_B:VPMCX_TEMPORARY_DEPARTURE",
+      "passed": true,
+      "detail": "VPMCX_main_full485_20260128"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_A_B:VPMCX_TEMPORARY_DEPARTURE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_A_B:VPMCX_TEMPORARY_DEPARTURE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_A_B:VPMCX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_A_B:VPMCX_DEFENSIVE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-01-28",
+        "form": "485BPOS",
+        "primaryDocument": "f43837d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_A_B:VPMCX_DEFENSIVE",
+      "passed": true,
+      "detail": "VPMCX_main_full485_20260128"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_A_B:VPMCX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_A_B:VPMCX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_A_B:VPMCX_VANGUARD_OWNERSHIP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_A_B:VPMCX_VANGUARD_OWNERSHIP",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_A_B:VPMCX_VANGUARD_OWNERSHIP",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_A_B:VPMCX_VANGUARD_OWNERSHIP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_A_B:VPMCX_VANGUARD_OWNERSHIP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_A_B:VPMCX_BORROWING_RESTORE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_A_B:VPMCX_BORROWING_RESTORE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_A_B:VPMCX_BORROWING_RESTORE",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_A_B:VPMCX_BORROWING_RESTORE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_A_B:VPMCX_BORROWING_RESTORE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_A_B:VPMCX_INTERFUND",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_A_B:VPMCX_INTERFUND",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_A_B:VPMCX_INTERFUND",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_A_B:VPMCX_INTERFUND",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_A_B:VPMCX_INTERFUND",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "canonical_profile_fund:F02_C",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "indexed_filing_date:holdings:F02_C",
+      "passed": true,
+      "detail": {
+        "accession": "0001104659-26-068850",
+        "claimed_date": "2026-06-01",
+        "SEC_index": {
+          "filingDate": "2026-06-01",
+          "form": "N-CSRS",
+          "primaryDocument": "tm2611750d7_ncsrs.htm"
+        }
+      }
+    },
+    {
+      "check": "indexed_filing_date:mandate:F02_C",
+      "passed": true,
+      "detail": {
+        "accession": "0001193125-26-024962",
+        "claimed_date": "2026-01-28",
+        "SEC_index": {
+          "filingDate": "2026-01-28",
+          "form": "485BPOS",
+          "primaryDocument": "f43837d1.htm"
+        }
+      }
+    },
+    {
+      "check": "unique_rule_ids:F02_C",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_C:VPMCX_FOREIGN25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_C:VPMCX_FOREIGN25",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-01-28",
+        "form": "485BPOS",
+        "primaryDocument": "f43837d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_C:VPMCX_FOREIGN25",
+      "passed": true,
+      "detail": "VPMCX_main_full485_20260128"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_C:VPMCX_FOREIGN25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_C:VPMCX_FOREIGN25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_C:VPMCX_DERIVATIVES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_C:VPMCX_DERIVATIVES",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-01-28",
+        "form": "485BPOS",
+        "primaryDocument": "f43837d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_C:VPMCX_DERIVATIVES",
+      "passed": true,
+      "detail": "VPMCX_main_full485_20260128"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_C:VPMCX_DERIVATIVES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_C:VPMCX_DERIVATIVES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_C:VPMCX_ISSUER25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_C:VPMCX_ISSUER25",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_C:VPMCX_ISSUER25",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_C:VPMCX_ISSUER25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_C:VPMCX_ISSUER25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_C:VPMCX_ISSUER75",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_C:VPMCX_ISSUER75",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_C:VPMCX_ISSUER75",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_C:VPMCX_ISSUER75",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_C:VPMCX_ISSUER75",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_C:VPMCX_INDUSTRY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_C:VPMCX_INDUSTRY",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_C:VPMCX_INDUSTRY",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_C:VPMCX_INDUSTRY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_C:VPMCX_INDUSTRY",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_C:VPMCX_OBJECTIVE_CHANGE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_C:VPMCX_OBJECTIVE_CHANGE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_C:VPMCX_OBJECTIVE_CHANGE",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_C:VPMCX_OBJECTIVE_CHANGE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_C:VPMCX_OBJECTIVE_CHANGE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_C:VPMCX_BORROWING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_C:VPMCX_BORROWING",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_C:VPMCX_BORROWING",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_C:VPMCX_BORROWING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_C:VPMCX_BORROWING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_C:VPMCX_BORROWING_COVER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_C:VPMCX_BORROWING_COVER",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_C:VPMCX_BORROWING_COVER",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_C:VPMCX_BORROWING_COVER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_C:VPMCX_BORROWING_COVER",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_C:VPMCX_COMMODITIES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_C:VPMCX_COMMODITIES",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_C:VPMCX_COMMODITIES",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_C:VPMCX_COMMODITIES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_C:VPMCX_COMMODITIES",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_C:VPMCX_LOANS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_C:VPMCX_LOANS",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_C:VPMCX_LOANS",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_C:VPMCX_LOANS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_C:VPMCX_LOANS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_C:VPMCX_REAL_ESTATE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_C:VPMCX_REAL_ESTATE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_C:VPMCX_REAL_ESTATE",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_C:VPMCX_REAL_ESTATE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_C:VPMCX_REAL_ESTATE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_C:VPMCX_SENIOR",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_C:VPMCX_SENIOR",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_C:VPMCX_SENIOR",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_C:VPMCX_SENIOR",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_C:VPMCX_SENIOR",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_C:VPMCX_UNDERWRITING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_C:VPMCX_UNDERWRITING",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_C:VPMCX_UNDERWRITING",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_C:VPMCX_UNDERWRITING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_C:VPMCX_UNDERWRITING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_C:VPMCX_PURCHASE_TIME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_C:VPMCX_PURCHASE_TIME",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_C:VPMCX_PURCHASE_TIME",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_C:VPMCX_PURCHASE_TIME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_C:VPMCX_PURCHASE_TIME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_C:VPMCX_ILLIQUID15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_C:VPMCX_ILLIQUID15",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_C:VPMCX_ILLIQUID15",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_C:VPMCX_ILLIQUID15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_C:VPMCX_ILLIQUID15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_C:VPMCX_LENDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_C:VPMCX_LENDING",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_C:VPMCX_LENDING",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_C:VPMCX_LENDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_C:VPMCX_LENDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_C:VPMCX_TEMPORARY_DEPARTURE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_C:VPMCX_TEMPORARY_DEPARTURE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-01-28",
+        "form": "485BPOS",
+        "primaryDocument": "f43837d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_C:VPMCX_TEMPORARY_DEPARTURE",
+      "passed": true,
+      "detail": "VPMCX_main_full485_20260128"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_C:VPMCX_TEMPORARY_DEPARTURE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_C:VPMCX_TEMPORARY_DEPARTURE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_C:VPMCX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_C:VPMCX_DEFENSIVE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-01-28",
+        "form": "485BPOS",
+        "primaryDocument": "f43837d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_C:VPMCX_DEFENSIVE",
+      "passed": true,
+      "detail": "VPMCX_main_full485_20260128"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_C:VPMCX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_C:VPMCX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_C:VPMCX_VANGUARD_OWNERSHIP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_C:VPMCX_VANGUARD_OWNERSHIP",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_C:VPMCX_VANGUARD_OWNERSHIP",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_C:VPMCX_VANGUARD_OWNERSHIP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_C:VPMCX_VANGUARD_OWNERSHIP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_C:VPMCX_BORROWING_RESTORE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_C:VPMCX_BORROWING_RESTORE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_C:VPMCX_BORROWING_RESTORE",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_C:VPMCX_BORROWING_RESTORE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_C:VPMCX_BORROWING_RESTORE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F02_C:VPMCX_INTERFUND",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F02_C:VPMCX_INTERFUND",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "f44410d1.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F02_C:VPMCX_INTERFUND",
+      "passed": true,
+      "detail": "VPMCX_SAI_20260325"
+    },
+    {
+      "check": "rule_source_pointer_exact:F02_C:VPMCX_INTERFUND",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F02_C:VPMCX_INTERFUND",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "canonical_profile_fund:F03_development",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "indexed_filing_date:holdings:F03_development",
+      "passed": true,
+      "detail": {
+        "accession": "0001193125-25-299123",
+        "claimed_date": "2025-11-26",
+        "SEC_index": {
+          "filingDate": "2025-11-26",
+          "form": "NPORT-P",
+          "primaryDocument": "xslFormNPORT-P_X01/primary_doc.xml"
+        }
+      }
+    },
+    {
+      "check": "indexed_filing_date:mandate:F03_development",
+      "passed": true,
+      "detail": {
+        "accession": "0001193125-25-151247",
+        "claimed_date": "2025-06-27",
+        "SEC_index": {
+          "filingDate": "2025-06-27",
+          "form": "497",
+          "primaryDocument": "d12840d497.htm"
+        }
+      }
+    },
+    {
+      "check": "unique_rule_ids:F03_development",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F03_development:DODGX_EQ80",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F03_development:DODGX_EQ80",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-06-27",
+        "form": "497",
+        "primaryDocument": "d12840d497.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F03_development:DODGX_EQ80",
+      "passed": true,
+      "detail": "DODGX_mandate_20250630_evidence"
+    },
+    {
+      "check": "no_business_day_rewording:F03_development:DODGX_EQ80",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F03_development:DODGX_FOREIGN20",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F03_development:DODGX_FOREIGN20",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-06-27",
+        "form": "497",
+        "primaryDocument": "d12840d497.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F03_development:DODGX_FOREIGN20",
+      "passed": true,
+      "detail": "DODGX_mandate_20250630_evidence"
+    },
+    {
+      "check": "no_business_day_rewording:F03_development:DODGX_FOREIGN20",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F03_development:DODGX_CURRENCY5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F03_development:DODGX_CURRENCY5",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-06-27",
+        "form": "497",
+        "primaryDocument": "d12840d497.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F03_development:DODGX_CURRENCY5",
+      "passed": true,
+      "detail": "DODGX_mandate_20250630_evidence"
+    },
+    {
+      "check": "no_business_day_rewording:F03_development:DODGX_CURRENCY5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F03_development:DODGX_INDUSTRY25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F03_development:DODGX_INDUSTRY25",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-06-27",
+        "form": "497",
+        "primaryDocument": "d12840d497.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F03_development:DODGX_INDUSTRY25",
+      "passed": true,
+      "detail": "DODGX_mandate_20250630_evidence"
+    },
+    {
+      "check": "no_business_day_rewording:F03_development:DODGX_INDUSTRY25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F03_development:DODGX_ISSUER75",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F03_development:DODGX_ISSUER75",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-06-27",
+        "form": "497",
+        "primaryDocument": "d12840d497.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F03_development:DODGX_ISSUER75",
+      "passed": true,
+      "detail": "DODGX_mandate_20250630_evidence"
+    },
+    {
+      "check": "no_business_day_rewording:F03_development:DODGX_ISSUER75",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F03_development:DODGX_ILLIQUID15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F03_development:DODGX_ILLIQUID15",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-06-27",
+        "form": "497",
+        "primaryDocument": "d12840d497.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F03_development:DODGX_ILLIQUID15",
+      "passed": true,
+      "detail": "DODGX_mandate_20250630_evidence"
+    },
+    {
+      "check": "no_business_day_rewording:F03_development:DODGX_ILLIQUID15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F03_development:DODGX_TRANSACTION_SCOPE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F03_development:DODGX_TRANSACTION_SCOPE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-06-27",
+        "form": "497",
+        "primaryDocument": "d12840d497.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F03_development:DODGX_TRANSACTION_SCOPE",
+      "passed": true,
+      "detail": "DODGX_mandate_20250630_evidence"
+    },
+    {
+      "check": "no_business_day_rewording:F03_development:DODGX_TRANSACTION_SCOPE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F03_development:DODGX_OTHER_RESTRICTIONS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F03_development:DODGX_OTHER_RESTRICTIONS",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-06-27",
+        "form": "497",
+        "primaryDocument": "d12840d497.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F03_development:DODGX_OTHER_RESTRICTIONS",
+      "passed": true,
+      "detail": "DODGX_mandate_20250630_evidence"
+    },
+    {
+      "check": "no_business_day_rewording:F03_development:DODGX_OTHER_RESTRICTIONS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F03_development:DODGX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F03_development:DODGX_DEFENSIVE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-06-27",
+        "form": "497",
+        "primaryDocument": "d12840d497.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F03_development:DODGX_DEFENSIVE",
+      "passed": true,
+      "detail": "DODGX_mandate_20250630_evidence"
+    },
+    {
+      "check": "no_business_day_rewording:F03_development:DODGX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "canonical_profile_fund:F03_A_B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "indexed_filing_date:holdings:F03_A_B",
+      "passed": true,
+      "detail": {
+        "accession": "0000029440-26-000002",
+        "claimed_date": "2026-03-05",
+        "SEC_index": {
+          "filingDate": "2026-03-05",
+          "form": "N-CSR",
+          "primaryDocument": "8de7a3fff0d1081.htm"
+        }
+      }
+    },
+    {
+      "check": "indexed_filing_date:mandate:F03_A_B",
+      "passed": true,
+      "detail": {
+        "accession": "0001193125-25-151247",
+        "claimed_date": "2025-06-27",
+        "SEC_index": {
+          "filingDate": "2025-06-27",
+          "form": "497",
+          "primaryDocument": "d12840d497.htm"
+        }
+      }
+    },
+    {
+      "check": "unique_rule_ids:F03_A_B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F03_A_B:DODGX_EQ80",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F03_A_B:DODGX_EQ80",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-06-27",
+        "form": "497",
+        "primaryDocument": "d12840d497.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F03_A_B:DODGX_EQ80",
+      "passed": true,
+      "detail": "DODGX_mandate_20250630_evidence"
+    },
+    {
+      "check": "no_business_day_rewording:F03_A_B:DODGX_EQ80",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F03_A_B:DODGX_FOREIGN20",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F03_A_B:DODGX_FOREIGN20",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-06-27",
+        "form": "497",
+        "primaryDocument": "d12840d497.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F03_A_B:DODGX_FOREIGN20",
+      "passed": true,
+      "detail": "DODGX_mandate_20250630_evidence"
+    },
+    {
+      "check": "no_business_day_rewording:F03_A_B:DODGX_FOREIGN20",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F03_A_B:DODGX_CURRENCY5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F03_A_B:DODGX_CURRENCY5",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-06-27",
+        "form": "497",
+        "primaryDocument": "d12840d497.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F03_A_B:DODGX_CURRENCY5",
+      "passed": true,
+      "detail": "DODGX_mandate_20250630_evidence"
+    },
+    {
+      "check": "no_business_day_rewording:F03_A_B:DODGX_CURRENCY5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F03_A_B:DODGX_INDUSTRY25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F03_A_B:DODGX_INDUSTRY25",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-06-27",
+        "form": "497",
+        "primaryDocument": "d12840d497.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F03_A_B:DODGX_INDUSTRY25",
+      "passed": true,
+      "detail": "DODGX_mandate_20250630_evidence"
+    },
+    {
+      "check": "no_business_day_rewording:F03_A_B:DODGX_INDUSTRY25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F03_A_B:DODGX_ISSUER75",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F03_A_B:DODGX_ISSUER75",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-06-27",
+        "form": "497",
+        "primaryDocument": "d12840d497.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F03_A_B:DODGX_ISSUER75",
+      "passed": true,
+      "detail": "DODGX_mandate_20250630_evidence"
+    },
+    {
+      "check": "no_business_day_rewording:F03_A_B:DODGX_ISSUER75",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F03_A_B:DODGX_ILLIQUID15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F03_A_B:DODGX_ILLIQUID15",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-06-27",
+        "form": "497",
+        "primaryDocument": "d12840d497.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F03_A_B:DODGX_ILLIQUID15",
+      "passed": true,
+      "detail": "DODGX_mandate_20250630_evidence"
+    },
+    {
+      "check": "no_business_day_rewording:F03_A_B:DODGX_ILLIQUID15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F03_A_B:DODGX_TRANSACTION_SCOPE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F03_A_B:DODGX_TRANSACTION_SCOPE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-06-27",
+        "form": "497",
+        "primaryDocument": "d12840d497.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F03_A_B:DODGX_TRANSACTION_SCOPE",
+      "passed": true,
+      "detail": "DODGX_mandate_20250630_evidence"
+    },
+    {
+      "check": "no_business_day_rewording:F03_A_B:DODGX_TRANSACTION_SCOPE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F03_A_B:DODGX_OTHER_RESTRICTIONS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F03_A_B:DODGX_OTHER_RESTRICTIONS",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-06-27",
+        "form": "497",
+        "primaryDocument": "d12840d497.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F03_A_B:DODGX_OTHER_RESTRICTIONS",
+      "passed": true,
+      "detail": "DODGX_mandate_20250630_evidence"
+    },
+    {
+      "check": "no_business_day_rewording:F03_A_B:DODGX_OTHER_RESTRICTIONS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F03_A_B:DODGX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F03_A_B:DODGX_DEFENSIVE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-06-27",
+        "form": "497",
+        "primaryDocument": "d12840d497.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F03_A_B:DODGX_DEFENSIVE",
+      "passed": true,
+      "detail": "DODGX_mandate_20250630_evidence"
+    },
+    {
+      "check": "no_business_day_rewording:F03_A_B:DODGX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "canonical_profile_fund:F03_C",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "indexed_filing_date:holdings:F03_C",
+      "passed": true,
+      "detail": {
+        "accession": "0001193125-26-250426",
+        "claimed_date": "2026-06-01",
+        "SEC_index": {
+          "filingDate": "2026-06-01",
+          "form": "NPORT-P",
+          "primaryDocument": "xslFormNPORT-P_X01/primary_doc.xml"
+        }
+      }
+    },
+    {
+      "check": "indexed_filing_date:mandate:F03_C",
+      "passed": true,
+      "detail": {
+        "accession": "0001193125-26-169303",
+        "claimed_date": "2026-04-22",
+        "SEC_index": {
+          "filingDate": "2026-04-22",
+          "form": "485BPOS",
+          "primaryDocument": "d21586d485bpos.htm"
+        }
+      }
+    },
+    {
+      "check": "unique_rule_ids:F03_C",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F03_C:DODGX_EQ80",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F03_C:DODGX_EQ80",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-04-22",
+        "form": "485BPOS",
+        "primaryDocument": "d21586d485bpos.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F03_C:DODGX_EQ80",
+      "passed": true,
+      "detail": "DODGX_C_full485_20260422"
+    },
+    {
+      "check": "rule_source_pointer_exact:F03_C:DODGX_EQ80",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F03_C:DODGX_EQ80",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F03_C:DODGX_FOREIGN20",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F03_C:DODGX_FOREIGN20",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-04-22",
+        "form": "485BPOS",
+        "primaryDocument": "d21586d485bpos.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F03_C:DODGX_FOREIGN20",
+      "passed": true,
+      "detail": "DODGX_C_full485_20260422"
+    },
+    {
+      "check": "rule_source_pointer_exact:F03_C:DODGX_FOREIGN20",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F03_C:DODGX_FOREIGN20",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F03_C:DODGX_CURRENCY5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F03_C:DODGX_CURRENCY5",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-04-22",
+        "form": "485BPOS",
+        "primaryDocument": "d21586d485bpos.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F03_C:DODGX_CURRENCY5",
+      "passed": true,
+      "detail": "DODGX_C_full485_20260422"
+    },
+    {
+      "check": "rule_source_pointer_exact:F03_C:DODGX_CURRENCY5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F03_C:DODGX_CURRENCY5",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F03_C:DODGX_INDUSTRY25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F03_C:DODGX_INDUSTRY25",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-04-22",
+        "form": "485BPOS",
+        "primaryDocument": "d21586d485bpos.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F03_C:DODGX_INDUSTRY25",
+      "passed": true,
+      "detail": "DODGX_C_full485_20260422"
+    },
+    {
+      "check": "rule_source_pointer_exact:F03_C:DODGX_INDUSTRY25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F03_C:DODGX_INDUSTRY25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F03_C:DODGX_ISSUER75",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F03_C:DODGX_ISSUER75",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-04-22",
+        "form": "485BPOS",
+        "primaryDocument": "d21586d485bpos.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F03_C:DODGX_ISSUER75",
+      "passed": true,
+      "detail": "DODGX_C_full485_20260422"
+    },
+    {
+      "check": "rule_source_pointer_exact:F03_C:DODGX_ISSUER75",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F03_C:DODGX_ISSUER75",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F03_C:DODGX_ILLIQUID15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F03_C:DODGX_ILLIQUID15",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-04-22",
+        "form": "485BPOS",
+        "primaryDocument": "d21586d485bpos.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F03_C:DODGX_ILLIQUID15",
+      "passed": true,
+      "detail": "DODGX_C_full485_20260422"
+    },
+    {
+      "check": "rule_source_pointer_exact:F03_C:DODGX_ILLIQUID15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F03_C:DODGX_ILLIQUID15",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F03_C:DODGX_TRANSACTION_SCOPE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F03_C:DODGX_TRANSACTION_SCOPE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-04-22",
+        "form": "485BPOS",
+        "primaryDocument": "d21586d485bpos.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F03_C:DODGX_TRANSACTION_SCOPE",
+      "passed": true,
+      "detail": "DODGX_C_full485_20260422"
+    },
+    {
+      "check": "rule_source_pointer_exact:F03_C:DODGX_TRANSACTION_SCOPE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F03_C:DODGX_TRANSACTION_SCOPE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F03_C:DODGX_OTHER_RESTRICTIONS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F03_C:DODGX_OTHER_RESTRICTIONS",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-04-22",
+        "form": "485BPOS",
+        "primaryDocument": "d21586d485bpos.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F03_C:DODGX_OTHER_RESTRICTIONS",
+      "passed": true,
+      "detail": "DODGX_C_full485_20260422"
+    },
+    {
+      "check": "rule_source_pointer_exact:F03_C:DODGX_OTHER_RESTRICTIONS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F03_C:DODGX_OTHER_RESTRICTIONS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F03_C:DODGX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F03_C:DODGX_DEFENSIVE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-04-22",
+        "form": "485BPOS",
+        "primaryDocument": "d21586d485bpos.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F03_C:DODGX_DEFENSIVE",
+      "passed": true,
+      "detail": "DODGX_C_full485_20260422"
+    },
+    {
+      "check": "rule_source_pointer_exact:F03_C:DODGX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F03_C:DODGX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "canonical_profile_fund:F04_development",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "indexed_filing_date:holdings:F04_development",
+      "passed": true,
+      "detail": {
+        "accession": "0001099263-25-003630",
+        "claimed_date": "2025-11-25",
+        "SEC_index": {
+          "filingDate": "2025-11-25",
+          "form": "NPORT-P",
+          "primaryDocument": "xslFormNPORT-P_X01/primary_doc.xml"
+        }
+      }
+    },
+    {
+      "check": "indexed_filing_date:mandate:F04_development",
+      "passed": true,
+      "detail": {
+        "accession": "0001741773-25-000623",
+        "claimed_date": "2025-02-25",
+        "SEC_index": {
+          "filingDate": "2025-02-25",
+          "form": "485BPOS",
+          "primaryDocument": "c485bpos.htm"
+        }
+      }
+    },
+    {
+      "check": "unique_rule_ids:F04_development",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_development:TRBCX_BLUE80",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_development:TRBCX_BLUE80",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-02-25",
+        "form": "485BPOS",
+        "primaryDocument": "c485bpos.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_development:TRBCX_BLUE80",
+      "passed": true,
+      "detail": "TRBCX_dev_full485_20250225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_development:TRBCX_BLUE80",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_development:TRBCX_BLUE80",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_development:TRBCX_NONDIVERSIFIED",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_development:TRBCX_NONDIVERSIFIED",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-10-02",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_100125.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_development:TRBCX_NONDIVERSIFIED",
+      "passed": true,
+      "detail": "TRBCX_amendment_20251002_014522"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_development:TRBCX_NONDIVERSIFIED",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_development:TRBCX_NONDIVERSIFIED",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_development:TRBCX_INDUSTRY25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_development:TRBCX_INDUSTRY25",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-10-02",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_100125.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_development:TRBCX_INDUSTRY25",
+      "passed": true,
+      "detail": "TRBCX_amendment_20251002_014522"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_development:TRBCX_INDUSTRY25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_development:TRBCX_INDUSTRY25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_development:TRBCX_BORROW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_development:TRBCX_BORROW",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-10-02",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_100125.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_development:TRBCX_BORROW",
+      "passed": true,
+      "detail": "TRBCX_amendment_20251002_014522"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_development:TRBCX_BORROW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_development:TRBCX_BORROW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_development:TRBCX_BORROW_PURCHASE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_development:TRBCX_BORROW_PURCHASE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-10-02",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_100125.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_development:TRBCX_BORROW_PURCHASE",
+      "passed": true,
+      "detail": "TRBCX_amendment_20251002_014522"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_development:TRBCX_BORROW_PURCHASE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_development:TRBCX_BORROW_PURCHASE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_development:TRBCX_LENDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_development:TRBCX_LENDING",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-10-02",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_100125.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_development:TRBCX_LENDING",
+      "passed": true,
+      "detail": "TRBCX_amendment_20251002_014522"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_development:TRBCX_LENDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_development:TRBCX_LENDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_development:TRBCX_ILLIQUID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_development:TRBCX_ILLIQUID",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-10-02",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_100125.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_development:TRBCX_ILLIQUID",
+      "passed": true,
+      "detail": "TRBCX_amendment_20251002_014522"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_development:TRBCX_ILLIQUID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_development:TRBCX_ILLIQUID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_development:TRBCX_WARRANTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_development:TRBCX_WARRANTS",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-10-02",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_100125.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_development:TRBCX_WARRANTS",
+      "passed": true,
+      "detail": "TRBCX_amendment_20251002_014522"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_development:TRBCX_WARRANTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_development:TRBCX_WARRANTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_development:TRBCX_LOW_GRADE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_development:TRBCX_LOW_GRADE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-10-02",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_100125.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_development:TRBCX_LOW_GRADE",
+      "passed": true,
+      "detail": "TRBCX_amendment_20251002_014522"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_development:TRBCX_LOW_GRADE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_development:TRBCX_LOW_GRADE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_development:TRBCX_OILGAS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_development:TRBCX_OILGAS",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-10-02",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_100125.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_development:TRBCX_OILGAS",
+      "passed": true,
+      "detail": "TRBCX_amendment_20251002_014522"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_development:TRBCX_OILGAS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_development:TRBCX_OILGAS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_development:TRBCX_SHORT_MARGIN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_development:TRBCX_SHORT_MARGIN",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-10-02",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_100125.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_development:TRBCX_SHORT_MARGIN",
+      "passed": true,
+      "detail": "TRBCX_amendment_20251002_014522"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_development:TRBCX_SHORT_MARGIN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_development:TRBCX_SHORT_MARGIN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_development:TRBCX_INSTRUMENTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_development:TRBCX_INSTRUMENTS",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-10-02",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_100125.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_development:TRBCX_INSTRUMENTS",
+      "passed": true,
+      "detail": "TRBCX_amendment_20251002_014522"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_development:TRBCX_INSTRUMENTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_development:TRBCX_INSTRUMENTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_development:TRBCX_FUNDS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_development:TRBCX_FUNDS",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-10-02",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_100125.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_development:TRBCX_FUNDS",
+      "passed": true,
+      "detail": "TRBCX_amendment_20251002_014522"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_development:TRBCX_FUNDS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_development:TRBCX_FUNDS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_development:TRBCX_TIME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_development:TRBCX_TIME",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-10-02",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_100125.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_development:TRBCX_TIME",
+      "passed": true,
+      "detail": "TRBCX_amendment_20251002_014522"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_development:TRBCX_TIME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_development:TRBCX_TIME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_development:TRBCX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_development:TRBCX_DEFENSIVE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2025-02-25",
+        "form": "485BPOS",
+        "primaryDocument": "c485bpos.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_development:TRBCX_DEFENSIVE",
+      "passed": true,
+      "detail": "TRBCX_dev_full485_20250225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_development:TRBCX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_development:TRBCX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "canonical_profile_fund:F04_A_B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "indexed_filing_date:holdings:F04_A_B",
+      "passed": true,
+      "detail": {
+        "accession": "0001099263-26-002537",
+        "claimed_date": "2026-02-26",
+        "SEC_index": {
+          "filingDate": "2026-02-26",
+          "form": "NPORT-P",
+          "primaryDocument": "xslFormNPORT-P_X01/primary_doc.xml"
+        }
+      }
+    },
+    {
+      "check": "indexed_filing_date:mandate:F04_A_B",
+      "passed": true,
+      "detail": {
+        "accession": "0001999371-26-004097",
+        "claimed_date": "2026-02-25",
+        "SEC_index": {
+          "filingDate": "2026-02-25",
+          "form": "485BPOS",
+          "primaryDocument": "bcg-485bpos_022526.htm"
+        }
+      }
+    },
+    {
+      "check": "unique_rule_ids:F04_A_B",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_A_B:TRBCX_BLUE80",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_A_B:TRBCX_BLUE80",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-02-25",
+        "form": "485BPOS",
+        "primaryDocument": "bcg-485bpos_022526.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_A_B:TRBCX_BLUE80",
+      "passed": true,
+      "detail": "TRBCX_main_full485_20260225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_A_B:TRBCX_BLUE80",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_A_B:TRBCX_BLUE80",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_A_B:TRBCX_NONDIVERSIFIED",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_A_B:TRBCX_NONDIVERSIFIED",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_032526.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_A_B:TRBCX_NONDIVERSIFIED",
+      "passed": true,
+      "detail": "TRBCX_amendment_20260325_006885"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_A_B:TRBCX_NONDIVERSIFIED",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_A_B:TRBCX_NONDIVERSIFIED",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_A_B:TRBCX_INDUSTRY25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_A_B:TRBCX_INDUSTRY25",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_032526.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_A_B:TRBCX_INDUSTRY25",
+      "passed": true,
+      "detail": "TRBCX_amendment_20260325_006885"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_A_B:TRBCX_INDUSTRY25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_A_B:TRBCX_INDUSTRY25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_A_B:TRBCX_BORROW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_A_B:TRBCX_BORROW",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_032526.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_A_B:TRBCX_BORROW",
+      "passed": true,
+      "detail": "TRBCX_amendment_20260325_006885"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_A_B:TRBCX_BORROW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_A_B:TRBCX_BORROW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_A_B:TRBCX_BORROW_PURCHASE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_A_B:TRBCX_BORROW_PURCHASE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_032526.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_A_B:TRBCX_BORROW_PURCHASE",
+      "passed": true,
+      "detail": "TRBCX_amendment_20260325_006885"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_A_B:TRBCX_BORROW_PURCHASE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_A_B:TRBCX_BORROW_PURCHASE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_A_B:TRBCX_LENDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_A_B:TRBCX_LENDING",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_032526.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_A_B:TRBCX_LENDING",
+      "passed": true,
+      "detail": "TRBCX_amendment_20260325_006885"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_A_B:TRBCX_LENDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_A_B:TRBCX_LENDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_A_B:TRBCX_ILLIQUID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_A_B:TRBCX_ILLIQUID",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_032526.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_A_B:TRBCX_ILLIQUID",
+      "passed": true,
+      "detail": "TRBCX_amendment_20260325_006885"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_A_B:TRBCX_ILLIQUID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_A_B:TRBCX_ILLIQUID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_A_B:TRBCX_WARRANTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_A_B:TRBCX_WARRANTS",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_032526.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_A_B:TRBCX_WARRANTS",
+      "passed": true,
+      "detail": "TRBCX_amendment_20260325_006885"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_A_B:TRBCX_WARRANTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_A_B:TRBCX_WARRANTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_A_B:TRBCX_LOW_GRADE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_A_B:TRBCX_LOW_GRADE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_032526.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_A_B:TRBCX_LOW_GRADE",
+      "passed": true,
+      "detail": "TRBCX_amendment_20260325_006885"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_A_B:TRBCX_LOW_GRADE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_A_B:TRBCX_LOW_GRADE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_A_B:TRBCX_OILGAS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_A_B:TRBCX_OILGAS",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_032526.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_A_B:TRBCX_OILGAS",
+      "passed": true,
+      "detail": "TRBCX_amendment_20260325_006885"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_A_B:TRBCX_OILGAS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_A_B:TRBCX_OILGAS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_A_B:TRBCX_SHORT_MARGIN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_A_B:TRBCX_SHORT_MARGIN",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_032526.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_A_B:TRBCX_SHORT_MARGIN",
+      "passed": true,
+      "detail": "TRBCX_amendment_20260325_006885"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_A_B:TRBCX_SHORT_MARGIN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_A_B:TRBCX_SHORT_MARGIN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_A_B:TRBCX_INSTRUMENTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_A_B:TRBCX_INSTRUMENTS",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_032526.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_A_B:TRBCX_INSTRUMENTS",
+      "passed": true,
+      "detail": "TRBCX_amendment_20260325_006885"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_A_B:TRBCX_INSTRUMENTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_A_B:TRBCX_INSTRUMENTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_A_B:TRBCX_FUNDS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_A_B:TRBCX_FUNDS",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_032526.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_A_B:TRBCX_FUNDS",
+      "passed": true,
+      "detail": "TRBCX_amendment_20260325_006885"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_A_B:TRBCX_FUNDS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_A_B:TRBCX_FUNDS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_A_B:TRBCX_TIME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_A_B:TRBCX_TIME",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-03-25",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_032526.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_A_B:TRBCX_TIME",
+      "passed": true,
+      "detail": "TRBCX_amendment_20260325_006885"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_A_B:TRBCX_TIME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_A_B:TRBCX_TIME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_A_B:TRBCX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_A_B:TRBCX_DEFENSIVE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-02-25",
+        "form": "485BPOS",
+        "primaryDocument": "bcg-485bpos_022526.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_A_B:TRBCX_DEFENSIVE",
+      "passed": true,
+      "detail": "TRBCX_main_full485_20260225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_A_B:TRBCX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_A_B:TRBCX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "canonical_profile_fund:F04_C",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "indexed_filing_date:holdings:F04_C",
+      "passed": true,
+      "detail": {
+        "accession": "0001099263-26-006586",
+        "claimed_date": "2026-05-28",
+        "SEC_index": {
+          "filingDate": "2026-05-28",
+          "form": "NPORT-P",
+          "primaryDocument": "xslFormNPORT-P_X01/primary_doc.xml"
+        }
+      }
+    },
+    {
+      "check": "indexed_filing_date:mandate:F04_C",
+      "passed": true,
+      "detail": {
+        "accession": "0001999371-26-004097",
+        "claimed_date": "2026-02-25",
+        "SEC_index": {
+          "filingDate": "2026-02-25",
+          "form": "485BPOS",
+          "primaryDocument": "bcg-485bpos_022526.htm"
+        }
+      }
+    },
+    {
+      "check": "unique_rule_ids:F04_C",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_C:TRBCX_BLUE80",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_C:TRBCX_BLUE80",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-02-25",
+        "form": "485BPOS",
+        "primaryDocument": "bcg-485bpos_022526.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_C:TRBCX_BLUE80",
+      "passed": true,
+      "detail": "TRBCX_main_full485_20260225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_C:TRBCX_BLUE80",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_C:TRBCX_BLUE80",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_C:TRBCX_NONDIVERSIFIED",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_C:TRBCX_NONDIVERSIFIED",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-05-01",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_050126.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_C:TRBCX_NONDIVERSIFIED",
+      "passed": true,
+      "detail": "TRBCX_amendment_20260501_009623"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_C:TRBCX_NONDIVERSIFIED",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_C:TRBCX_NONDIVERSIFIED",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_C:TRBCX_INDUSTRY25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_C:TRBCX_INDUSTRY25",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-05-01",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_050126.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_C:TRBCX_INDUSTRY25",
+      "passed": true,
+      "detail": "TRBCX_amendment_20260501_009623"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_C:TRBCX_INDUSTRY25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_C:TRBCX_INDUSTRY25",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_C:TRBCX_BORROW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_C:TRBCX_BORROW",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-05-01",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_050126.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_C:TRBCX_BORROW",
+      "passed": true,
+      "detail": "TRBCX_amendment_20260501_009623"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_C:TRBCX_BORROW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_C:TRBCX_BORROW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_C:TRBCX_BORROW_PURCHASE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_C:TRBCX_BORROW_PURCHASE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-05-01",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_050126.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_C:TRBCX_BORROW_PURCHASE",
+      "passed": true,
+      "detail": "TRBCX_amendment_20260501_009623"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_C:TRBCX_BORROW_PURCHASE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_C:TRBCX_BORROW_PURCHASE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_C:TRBCX_LENDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_C:TRBCX_LENDING",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-05-01",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_050126.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_C:TRBCX_LENDING",
+      "passed": true,
+      "detail": "TRBCX_amendment_20260501_009623"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_C:TRBCX_LENDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_C:TRBCX_LENDING",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_C:TRBCX_ILLIQUID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_C:TRBCX_ILLIQUID",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-05-01",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_050126.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_C:TRBCX_ILLIQUID",
+      "passed": true,
+      "detail": "TRBCX_amendment_20260501_009623"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_C:TRBCX_ILLIQUID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_C:TRBCX_ILLIQUID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_C:TRBCX_WARRANTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_C:TRBCX_WARRANTS",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-05-01",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_050126.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_C:TRBCX_WARRANTS",
+      "passed": true,
+      "detail": "TRBCX_amendment_20260501_009623"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_C:TRBCX_WARRANTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_C:TRBCX_WARRANTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_C:TRBCX_LOW_GRADE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_C:TRBCX_LOW_GRADE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-05-01",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_050126.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_C:TRBCX_LOW_GRADE",
+      "passed": true,
+      "detail": "TRBCX_amendment_20260501_009623"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_C:TRBCX_LOW_GRADE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_C:TRBCX_LOW_GRADE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_C:TRBCX_OILGAS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_C:TRBCX_OILGAS",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-05-01",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_050126.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_C:TRBCX_OILGAS",
+      "passed": true,
+      "detail": "TRBCX_amendment_20260501_009623"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_C:TRBCX_OILGAS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_C:TRBCX_OILGAS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_C:TRBCX_SHORT_MARGIN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_C:TRBCX_SHORT_MARGIN",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-05-01",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_050126.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_C:TRBCX_SHORT_MARGIN",
+      "passed": true,
+      "detail": "TRBCX_amendment_20260501_009623"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_C:TRBCX_SHORT_MARGIN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_C:TRBCX_SHORT_MARGIN",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_C:TRBCX_INSTRUMENTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_C:TRBCX_INSTRUMENTS",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-05-01",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_050126.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_C:TRBCX_INSTRUMENTS",
+      "passed": true,
+      "detail": "TRBCX_amendment_20260501_009623"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_C:TRBCX_INSTRUMENTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_C:TRBCX_INSTRUMENTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_C:TRBCX_FUNDS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_C:TRBCX_FUNDS",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-05-01",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_050126.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_C:TRBCX_FUNDS",
+      "passed": true,
+      "detail": "TRBCX_amendment_20260501_009623"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_C:TRBCX_FUNDS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_C:TRBCX_FUNDS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_C:TRBCX_TIME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_C:TRBCX_TIME",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-05-01",
+        "form": "497",
+        "primaryDocument": "pricefunds-497_050126.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_C:TRBCX_TIME",
+      "passed": true,
+      "detail": "TRBCX_amendment_20260501_009623"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_C:TRBCX_TIME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_C:TRBCX_TIME",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_official_owner:F04_C:TRBCX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "rule_indexed_before_cutoff:F04_C:TRBCX_DEFENSIVE",
+      "passed": true,
+      "detail": {
+        "filingDate": "2026-02-25",
+        "form": "485BPOS",
+        "primaryDocument": "bcg-485bpos_022526.htm"
+      }
+    },
+    {
+      "check": "rule_evidence_file_exists:F04_C:TRBCX_DEFENSIVE",
+      "passed": true,
+      "detail": "TRBCX_main_full485_20260225"
+    },
+    {
+      "check": "rule_source_pointer_exact:F04_C:TRBCX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "no_business_day_rewording:F04_C:TRBCX_DEFENSIVE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "corpus_original_hash:A-COMMON-FOMC-20260318",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "corpus_period_date:A-COMMON-FOMC-20260318",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "corpus_original_hash:C-COMMON-FOMC-20260617",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "corpus_period_date:C-COMMON-FOMC-20260617",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "corpus_original_hash:A-F01-FCNTX-2025-REVIEW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "corpus_period_date:A-F01-FCNTX-2025-REVIEW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "corpus_canonical_fund_id:A-F01-FCNTX-2025-REVIEW",
+      "passed": true,
+      "detail": {
+        "canonical_ticker": "FCNTX",
+        "document_id": "A-F01-FCNTX-2025-REVIEW"
+      }
+    },
+    {
+      "check": "corpus_official_owner:A-F01-FCNTX-2025-REVIEW",
+      "passed": true,
+      "detail": "https://www.sec.gov/Archives/edgar/data/24238/000002423826000023/filing10969.htm"
+    },
+    {
+      "check": "corpus_original_hash:A-F02-VPMCX-2025-REVIEW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "corpus_period_date:A-F02-VPMCX-2025-REVIEW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "corpus_canonical_fund_id:A-F02-VPMCX-2025-REVIEW",
+      "passed": true,
+      "detail": {
+        "canonical_ticker": "VPMCX",
+        "document_id": "A-F02-VPMCX-2025-REVIEW"
+      }
+    },
+    {
+      "check": "corpus_official_owner:A-F02-VPMCX-2025-REVIEW",
+      "passed": true,
+      "detail": "https://www.sec.gov/Archives/edgar/data/752177/000110465925116918/tm2527480d7_ncsr.htm"
+    },
+    {
+      "check": "corpus_original_hash:A-F04-TRBCX-2025-REVIEW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "corpus_period_date:A-F04-TRBCX-2025-REVIEW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "corpus_canonical_fund_id:A-F04-TRBCX-2025-REVIEW",
+      "passed": true,
+      "detail": {
+        "canonical_ticker": "TRBCX",
+        "document_id": "A-F04-TRBCX-2025-REVIEW"
+      }
+    },
+    {
+      "check": "corpus_official_owner:A-F04-TRBCX-2025-REVIEW",
+      "passed": true,
+      "detail": "https://www.troweprice.com/literature/public/country/us/language/en/literature-type/annual-report/sub-type/mf?currency=USD&productCode=BCG"
+    },
+    {
+      "check": "corpus_original_hash:A-F03-DODGX-2025-REVIEW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "corpus_period_date:A-F03-DODGX-2025-REVIEW",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "corpus_canonical_fund_id:A-F03-DODGX-2025-REVIEW",
+      "passed": true,
+      "detail": {
+        "canonical_ticker": "DODGX",
+        "document_id": "A-F03-DODGX-2025-REVIEW"
+      }
+    },
+    {
+      "check": "corpus_official_owner:A-F03-DODGX-2025-REVIEW",
+      "passed": true,
+      "detail": "https://www.dodgeandcox.com/content/dam/web/documents/insights/2025-annual-investment-reviews/dc-us-on-demand-audio-transcript-us-equity-4Q2025.pdf"
+    },
+    {
+      "check": "protected_file_unchanged:profiles_v2.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "protected_file_unchanged:mandates_v2.json",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "protected_file_unchanged:source_manifest_v2.json",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "passed": 887,
+  "failed": 0,
+  "all_passed": true,
+  "manual_review_notes": [
+    "F01 C restrictions cite same Fidelity Contrafund Class K, not the distinct Contrafund K6 portfolio; only fund-wide investment rules are used.",
+    "VPMCX SAI 50%-basket language explicitly excludes PRIMECAP. The subsequent single-issuer 25% rule applies to each fund.",
+    "TRBCX common SAI explicitly excludes Blue Chip Growth from diversified-fund issuer caps; 25% industry rule uses NAV and provider/adviser taxonomy.",
+    "FCNTX illiquid rule changed 10% to 15% in May 15 2026 amendment; this is applied only in C.",
+    "SIC is current official issuer fallback with retrospective classification; h uses mapped eligible equity and q_NAV uses matched same-source NAV.",
+    "A historical shareholder-performance commentary is labeled historical, not relabeled forward-looking outlook; common FOMC March/June outlook serves the corresponding source-date windows."
+  ]
+}

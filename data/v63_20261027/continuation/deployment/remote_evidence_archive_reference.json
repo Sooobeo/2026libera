@@ -1,0 +1,12 @@
+{
+  "host": "Proxmox ycc-1 / container 150 (gpt)",
+  "remote_path": "/root/libera_v63_20261027/package_001/remote_candidate_001_evidence.tar.gz",
+  "sha256": "857a1494b19edbf82336a9531fff0b2fe4610dcccc36f67ca50c4066ed6a53d8",
+  "bytes": 86385,
+  "campaign_pid_alive": false,
+  "source_paths_preserved": true,
+  "local_archive_copy_available": false,
+  "observed_via": "Authorized Proxmox container 150 console; remote Python hashlib over actual archive bytes",
+  "contains": ["launch_smoke.json", "technical_smoke.log", "capacity_abort_receipt.json", "data/v63_20261027/campaign_results"],
+  "interpretation": "Raw remote requests, timeout and interrupted-retry receipts remain archived on the user's server. The capacity-abort JSON is also copied locally with its exact SHA-256."
+}

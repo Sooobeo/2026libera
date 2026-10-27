@@ -63,6 +63,13 @@ Desktop.ini
 # Keep source data, experiment inputs, papers, plans, and evidence ZIPs otherwise.
 # Do not broadly ignore *.log, *.bin, *.jsonl, *.zip, or *.tar.gz.
 
+# Rebuildable v6.3 dependencies and local visual previews; receipts stay tracked.
+/tmp/v63_python_deps/
+/tmp/v63_numerics_venv/
+/tmp/v63_local_ollama/
+/data/v63_20261027/audit/abstract_preview/
+/data/v63_20261027/audit/report_preview/
+
 # Live post-pilot observer state is machine-local; preserve fixed snapshots separately.
 /research/v*_postpilot_status_*.json
 /research/v*_postpilot_status_*.json.lock
@@ -100,3 +107,71 @@ Desktop.ini
 /research/last_final_20261026/runtime/service_ready/server.stderr.log
 /research/last_final_20261026/runtime/service_ready/server.stdout.log
 /research/last_final_20261026/run_reports/events/
+
+# v6.3 working evidence stays on this machine; never delete it with git clean -X.
+# Keep executable inputs, source/hash indexes, selected audits, and handoff records.
+# Full raw downloads, HTTP responses, frozen phase outputs, and recovery copies
+# remain under data/v63_20261027 and are required to resume this exact run.
+/data/v63_20261027/**
+!/data/v63_20261027/**/
+!/data/v63_20261027/execution_status.json
+!/data/v63_20261027/artifact_manifest.json
+!/data/v63_20261027/final_results.json
+!/data/v63_20261027/continuation/execution_amendment.json
+!/data/v63_20261027/continuation/user_pause_20261027.json
+!/data/v63_20261027/continuation/git_ignore_summary_20261027.json
+!/data/v63_20261027/continuation/pause_20261027/*.json
+!/data/v63_20261027/continuation/pause_20261027/*.txt
+!/data/v63_20261027/continuation/deployment/campaign_config.json
+!/data/v63_20261027/continuation/deployment/runtime_candidate.json
+!/data/v63_20261027/continuation/deployment/tokenizer_config.json
+!/data/v63_20261027/continuation/deployment/*_manifest.json
+!/data/v63_20261027/continuation/deployment/*cost_ledger.json
+!/data/v63_20261027/continuation/deployment/remote_capacity_abort.json
+!/data/v63_20261027/continuation/deployment/remote_cost_summary.json
+!/data/v63_20261027/continuation/deployment/remote_evidence_archive_reference.json
+!/data/v63_20261027/continuation/deployment/local_windows/tokenizer_config.json
+!/data/v63_20261027/continuation/deployment/local_windows/candidate_002_patch_plan.json
+!/data/v63_20261027/continuation/deployment/local_windows/candidate_*/campaign_config.json
+!/data/v63_20261027/continuation/deployment/local_windows/candidate_*/runtime_candidate.json
+!/data/v63_20261027/continuation/deployment/local_windows/candidate_*/execution_environment.json
+!/data/v63_20261027/continuation_sources/profiles_v2.json
+!/data/v63_20261027/continuation_sources/documents_v2.json
+!/data/v63_20261027/continuation_sources/mandate_atomic_units_v2.json
+!/data/v63_20261027/continuation_sources/mandates_v2.json
+!/data/v63_20261027/continuation_sources/holdings_mapped_v2.json
+!/data/v63_20261027/continuation_sources/source_manifest_v2.json
+!/data/v63_20261027/continuation_sources/readiness_v2.json
+!/data/v63_20261027/continuation_sources/data_verification_v2.json
+!/data/v63_20261027/continuation_sources/source_cross_audit_v2.json
+!/data/v63_20261027/continuation_sources/documents_v2_verification.json
+!/data/v63_20261027/continuation_sources/human_audit_assumption_v2.json
+!/data/v63_20261027/continuation_sources/issuer_sic_manifest.json
+!/data/v63_20261027/continuation_sources/issuer_sic_mapping.json
+!/data/v63_20261027/continuation_sources/issuer_identity_overrides.json
+!/data/v63_20261027/continuation_sources/mandate_amendment_manifest.json
+!/data/v63_20261027/continuation_sources/fund_attribution_correction_receipt.json
+!/data/v63_20261027/continuation_sources/C_private_outlook_search_decision.json
+!/data/v63_20261027/continuation_sources/*_mandate_evidence.json
+!/data/v63_20261027/continuation_sources/VPMCX_development_mandate.json
+!/data/v63_20261027/continuation_sources/VPMCX_development_mandate_independent_review.json
+!/data/v63_20261027/numerical/calibration.json
+!/data/v63_20261027/numerical/manifest.json
+!/data/v63_20261027/numerical/verification.json
+!/data/v63_20261027/numerical/evaluation_pipeline_verification.json
+!/data/v63_20261027/numerical/evaluator_only/source_catalog_v2.json
+!/data/v63_20261027/audit/engineering_verification.json
+!/data/v63_20261027/audit/candidate2_independent_review.json
+!/data/v63_20261027/audit/completion_readiness_audit.json
+!/data/v63_20261027/audit/finalizer_independent_test_receipt.json
+!/data/v63_20261027/audit/catalog_date_and_source_version_review.json
+!/data/v63_20261027/runtime/native_tokenizer_receipt.json
+!/data/v63_20261027/runtime/local_windows/qwen35_2b_q4_download/receipt.json
+!/data/v63_20261027/runtime/local_windows/pause_20261027/*.json
+!/data/v63_20261027/runtime/local_windows/pause_20261027/*.txt
+!/data/v63_20261027/runtime/remote_qwen35_4b_resource_probe_001/*observation.json
+!/data/v63_20261027/runtime/remote_qwen35_4b_resource_probe_001/*reconciliation.json
+
+# Regenerable v6.3 scratch output; source scripts and the original reference stay.
+/tmp/v63_*.log
+/tmp/v63_pdf_review/

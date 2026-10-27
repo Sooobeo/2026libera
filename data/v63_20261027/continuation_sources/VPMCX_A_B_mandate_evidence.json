@@ -1,0 +1,310 @@
+{
+  "fund_id": "F02",
+  "period": "A_B",
+  "verified": true,
+  "objective": "Long-term capital appreciation.",
+  "mandatory_constraints": [
+    {
+      "evidence_id": "VPMCX_FOREIGN25",
+      "source_document_id": "VPMCX_main_full485_20260128",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000119312526024962/f43837d1.htm",
+      "source_line": 3359,
+      "text": "Foreign securities, including depositary receipts, are limited to 25% of assets. The source does not explicitly call this denominator NAV.",
+      "denominator": "assets (source wording)",
+      "handling": "class3_country_security_level",
+      "numerically_enforced_in_FF12": false,
+      "source_excerpt": "The Fund may invest up to 25% of its assets in foreign securities, which may include depositary receipts. Foreign securities may be traded on U.S. or foreign markets.",
+      "source_line_end": 3359
+    },
+    {
+      "evidence_id": "VPMCX_DERIVATIVES",
+      "source_document_id": "VPMCX_main_full485_20260128",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000119312526024962/f43837d1.htm",
+      "source_line": 3614,
+      "text": "Limited derivative use may provide alternate issuer or industry exposure; derivatives must not be used for speculation or to leverage investment returns.",
+      "denominator": "instrument purpose",
+      "handling": "class3_instrument_and_purpose",
+      "numerically_enforced_in_FF12": false,
+      "source_excerpt": "The Fund may invest in derivatives such as total return swaps, equity futures, foreign currency exchange forward contracts, or other derivatives. In general, a derivative is a financial contract whose value is based on the value of a financial asset (such as a stock, a bond, or a currency), a physical asset (such as gold, oil, or wheat), a market index, or a reference rate. The Fund may use derivatives to obtain exposure to a stock, a basket of stocks, or an index. Derivatives may also be used as an alternate means to obtain economic exposure if the Fund is required to limit its investment in a particular issuer or industry. The Fund will not use derivatives for speculation or for the purpose of leveraging (magnifying) investment returns.",
+      "source_line_end": 3614
+    },
+    {
+      "evidence_id": "VPMCX_ISSUER25",
+      "source_document_id": "VPMCX_SAI_20260325",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000120/f44410d1.htm",
+      "source_line": 153,
+      "text": "At each taxable quarter end, single-issuer holdings are limited to 25% of total assets, excluding U.S. government securities and other regulated investment companies.",
+      "denominator": "total assets",
+      "handling": "class3_security_level",
+      "numerically_enforced_in_FF12": false,
+      "source_excerpt": "Each Fund (other than Vanguard PRIMECAP Fund) will limit the aggregate value of its holdings (other than U.S. government securities, cash, and cash items, as defined under subchapter M of the IRC, and securities of other regulated investment companies), each of which exceeds 5% of the Fund’s total assets or 10% of the issuer’s outstanding voting securities, to an aggregate of 50% of the Fund’s total assets as of the end of each quarter of the taxable year. Additionally, each Fund will limit the aggregate value of its holdings of a single issuer (other than U.S. government securities, as defined in the IRC, or the securities of other regulated investment companies) to a maximum of 25% of the Fund’s total assets as of the end of each quarter of the taxable year.",
+      "source_line_end": 153
+    },
+    {
+      "evidence_id": "VPMCX_ISSUER75",
+      "source_document_id": "VPMCX_SAI_20260325",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000120/f44410d1.htm",
+      "source_line": 154,
+      "text": "For 75% of total assets, purchases may not exceed 10% of one issuer voting securities or result in over 5% of fund total assets in that issuer; U.S. government, agency and instrumentality obligations are excepted.",
+      "denominator": "fund total assets and issuer voting securities",
+      "handling": "class3_security_level",
+      "numerically_enforced_in_FF12": false,
+      "source_excerpt": "With respect to 75% of its total assets, Vanguard PRIMECAP Fund may not (1) purchase more than 10% of the outstanding voting securities of any one issuer; or (2) purchase securities of any issuer if, as a result, more than 5% of the Fund’s total assets would be invested in that issuer’s securities. This limitation does not apply to obligations of the U.S. government or its agencies or instrumentalities.",
+      "source_line_end": 154
+    },
+    {
+      "evidence_id": "VPMCX_INDUSTRY",
+      "source_document_id": "VPMCX_SAI_20260325",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000120/f44410d1.htm",
+      "source_line": 156,
+      "text": "Do not concentrate in issuers whose principal activities share an industry or group of industries. This source classification is not FF12; no numerical FF12 cap is inferred.",
+      "denominator": "source-defined industry/group",
+      "handling": "class3_source_taxonomy_differs_from_FF12",
+      "numerically_enforced_in_FF12": false,
+      "source_excerpt": "Each Fund will not concentrate its investments in the securities of issuers whose principal business activities are in the same industry or group of industries.",
+      "source_line_end": 156
+    },
+    {
+      "evidence_id": "VPMCX_OBJECTIVE_CHANGE",
+      "source_document_id": "VPMCX_SAI_20260325",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000120/f44410d1.htm",
+      "source_line": 158,
+      "text": "The investment objective cannot be materially changed without a shareholder vote.",
+      "denominator": "governance condition",
+      "handling": "class3_conditional",
+      "numerically_enforced_in_FF12": false,
+      "source_excerpt": "The investment objective of each Fund may not be materially changed without a shareholder vote.",
+      "source_line_end": 158
+    },
+    {
+      "evidence_id": "VPMCX_BORROWING",
+      "source_document_id": "VPMCX_SAI_20260325",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000120/f44410d1.htm",
+      "source_line": 149,
+      "text": "Borrowing is allowed only as permitted by the governing statutes, rules and regulators.",
+      "denominator": "transaction attributes",
+      "handling": "class3_statutory_instrument_rule",
+      "numerically_enforced_in_FF12": false,
+      "source_excerpt": "Each Fund may borrow money only as permitted by the 1940 Act or other governing statute, by the Rules thereunder, or by the SEC or other regulatory agency with authority over the Fund.",
+      "source_line_end": 149
+    },
+    {
+      "evidence_id": "VPMCX_BORROWING_COVER",
+      "source_document_id": "VPMCX_SAI_20260325",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000120/f44410d1.htm",
+      "source_line": 196,
+      "text": "Maintain continuous asset coverage of 300% of borrowings, measured as total assets including borrowings less liabilities other than borrowings; temporary/emergency borrowing not exceeding 5% of total assets at borrowing has the stated exception.",
+      "denominator": "borrowings and total assets",
+      "handling": "class3_security_and_path_dependent",
+      "numerically_enforced_in_FF12": false,
+      "source_excerpt": "A fund’s ability to borrow money is limited by its investment policies and limitations; by the 1940 Act; and by applicable exemptions, no-action letters, interpretations, and other pronouncements issued from time to time by the SEC and its staff or any other regulatory authority with jurisdiction. Under the 1940 Act, a fund is required to maintain continuous asset coverage (i.e., total assets including borrowings, less liabilities exclusive of borrowings) of 300% of the amount borrowed, with an exception for borrowings not in excess of 5% of the fund’s total assets (at the time of borrowing) made for temporary or emergency purposes. Any borrowings for temporary purposes in excess of 5% of the fund’s total assets must maintain continuous asset coverage. If the 300% asset coverage should decline as a result of market fluctuations or for other reasons, a fund may be required to sell some of its portfolio holdings within three days (excluding Sundays and holidays) to reduce the debt and restore the 300% asset coverage, even though it may be disadvantageous from an investment standpoint to sell securities at that time. Borrowing will tend to exaggerate the effect on net asset value of any increase or decrease in the market value of a fund’s portfolio. Money borrowed will be subject to interest costs that may or may not be recovered by earnings on the securities purchased with the proceeds of such borrowing. A fund also may be required to maintain minimum average balances in connection with a borrowing or to pay a commitment or other fee to maintain a line of credit; either of these requirements would increase the cost of borrowing over the stated interest rate. A borrowing transaction will not be considered to constitute the issuance, by a fund, of a “senior security,” as that term is defined in Section 18(g) of the 1940 Act, and therefore such transaction will not be subject to the 300% asset coverage requirement otherwise applicable to borrowings by a fund, if the fund complies with Rule 18f-4 under the 1940 Act.",
+      "source_line_end": 198
+    },
+    {
+      "evidence_id": "VPMCX_COMMODITIES",
+      "source_document_id": "VPMCX_SAI_20260325",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000120/f44410d1.htm",
+      "source_line": 151,
+      "text": "Commodity investments are allowed only as permitted by the governing statutes, rules and regulators.",
+      "denominator": "instrument attributes",
+      "handling": "class3_statutory_instrument_rule",
+      "numerically_enforced_in_FF12": false,
+      "source_excerpt": "Each Fund may invest in commodities only as permitted by the 1940 Act or other governing statute, by the Rules thereunder, or by the SEC or other regulatory agency with authority over the Fund.",
+      "source_line_end": 151
+    },
+    {
+      "evidence_id": "VPMCX_LOANS",
+      "source_document_id": "VPMCX_SAI_20260325",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000120/f44410d1.htm",
+      "source_line": 160,
+      "text": "Loans are allowed only as permitted by the governing statutes, rules and regulators.",
+      "denominator": "instrument attributes",
+      "handling": "class3_statutory_instrument_rule",
+      "numerically_enforced_in_FF12": false,
+      "source_excerpt": "Each Fund may make loans to another person only as permitted by the 1940 Act or other governing statute, by the Rules thereunder, or by the SEC or other regulatory agency with authority over the Fund.",
+      "source_line_end": 160
+    },
+    {
+      "evidence_id": "VPMCX_REAL_ESTATE",
+      "source_document_id": "VPMCX_SAI_20260325",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000120/f44410d1.htm",
+      "source_line": 162,
+      "text": "Direct real estate is prohibited except property acquired through ownership of securities or instruments; real-estate-company and real-estate-backed instruments are allowed.",
+      "denominator": "instrument attributes",
+      "handling": "class3_instrument_rule",
+      "numerically_enforced_in_FF12": false,
+      "source_excerpt": "Each Fund may not invest directly in real estate unless it is acquired as a result of ownership of securities or other instruments. This restriction shall not prevent a Fund from investing in securities or other instruments (1) issued by companies that invest, deal, or otherwise engage in transactions in real estate or (2) backed or secured by real estate or interests in real estate.",
+      "source_line_end": 162
+    },
+    {
+      "evidence_id": "VPMCX_SENIOR",
+      "source_document_id": "VPMCX_SAI_20260325",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000120/f44410d1.htm",
+      "source_line": 164,
+      "text": "Senior securities may be issued only under the stated statutory and regulatory permissions.",
+      "denominator": "instrument attributes",
+      "handling": "class3_statutory_instrument_rule",
+      "numerically_enforced_in_FF12": false,
+      "source_excerpt": "Each Fund may not issue senior securities except as permitted by the 1940 Act or other governing statute, by the Rules thereunder, or by the SEC or other regulatory agency with authority over the Fund.",
+      "source_line_end": 164
+    },
+    {
+      "evidence_id": "VPMCX_UNDERWRITING",
+      "source_document_id": "VPMCX_SAI_20260325",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000120/f44410d1.htm",
+      "source_line": 167,
+      "text": "Do not underwrite another issuer securities, except being deemed an underwriter in purchases or sales of portfolio securities.",
+      "denominator": "transaction attributes",
+      "handling": "class3_transaction_rule",
+      "numerically_enforced_in_FF12": false,
+      "source_excerpt": "Each Fund may not act as an underwriter of another issuer’s securities, except to the extent that the Fund may be deemed to be an underwriter within the meaning of the Securities Act of 1933 (the 1933 Act), in connection with the purchase and sale of portfolio securities.",
+      "source_line_end": 167
+    },
+    {
+      "evidence_id": "VPMCX_PURCHASE_TIME",
+      "source_document_id": "VPMCX_SAI_20260325",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000120/f44410d1.htm",
+      "source_line": 168,
+      "text": "Percentage restrictions are generally tested on purchase; subsequent market movements alone do not breach a met restriction. Statutory exceptions, including continuous borrowing requirements and explicit quarter-end tests, remain applicable.",
+      "denominator": "purchase-time holdings with explicit exceptions",
+      "handling": "class3_path_dependent",
+      "numerically_enforced_in_FF12": false,
+      "source_excerpt": "Compliance with the fundamental policies previously described is generally measured at the time the securities are purchased. Unless otherwise required by the 1940 Act (as is the case with borrowing), if a percentage restriction is adhered to at the time the investment is made, a later change in percentage resulting from a change in the market value of assets will not constitute a violation of such restriction. All fundamental policies must comply with applicable regulatory requirements. For more details, see Investment Strategies, Risks, and Nonfundamental Policies .",
+      "source_line_end": 170
+    },
+    {
+      "evidence_id": "VPMCX_ILLIQUID15",
+      "source_document_id": "VPMCX_SAI_20260325",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000120/f44410d1.htm",
+      "source_line": 496,
+      "text": "Aggregate illiquid investments are limited to 15% of NAV. Illiquid means not reasonably saleable within seven calendar days under current conditions without significantly changing market value.",
+      "denominator": "NAV",
+      "handling": "class3_security_liquidity",
+      "numerically_enforced_in_FF12": false,
+      "source_excerpt": "Illiquid securities/investments are investments that a fund reasonably expects cannot be sold or disposed of in current market conditions in seven calendar days or less without the sale or disposition significantly changing the market value of the investment. The SEC generally limits aggregate holdings of illiquid securities/investments by a mutual fund to 15% of its net assets (5% for money market funds). A fund may experience difficulty valuing and selling illiquid securities/investments and, in some cases, may be unable to value or sell certain illiquid securities for an indefinite period of time. Illiquid securities may include a wide variety of investments, such as (1) repurchase agreements maturing in more than seven days (unless the agreements have demand/redemption features), (2) OTC options contracts and certain other derivatives (including certain swap agreements), (3) fixed time deposits that are not subject to prepayment or do not provide for withdrawal penalties upon prepayment (other than overnight deposits), (4) certain loan interests and other direct debt instruments,",
+      "source_line_end": 496
+    },
+    {
+      "evidence_id": "VPMCX_LENDING",
+      "source_document_id": "VPMCX_SAI_20260325",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000120/f44410d1.htm",
+      "source_line": 505,
+      "text": "Securities lending is limited to one-third of total assets; permitted collateral must remain at least 100% of loaned securities value, be marked to market, and satisfy termination and income rights.",
+      "denominator": "total assets and collateral value",
+      "handling": "class3_security_transaction",
+      "numerically_enforced_in_FF12": false,
+      "source_excerpt": "The terms and the structure of the loan arrangements, as well as the aggregate amount of securities loans, must be consistent with the 1940 Act and the rules or interpretations of the SEC thereunder. These provisions limit the amount of securities a fund may lend to 33 1 ⁄ 3 % of the fund’s total assets and require that (1) the borrower pledge and maintain with the fund collateral consisting of cash, an irrevocable letter of credit, or securities issued or guaranteed by the U.S. government having at all times not less than 100% of the value of the securities lent; (2) the borrower add to such collateral whenever the price of the securities lent rises (i.e., the borrower “marks to market” on a daily basis); (3) the loan be made subject to termination by the fund at any time; and (4) the fund receives reasonable interest on the loan (which may include the fund investing any cash collateral in interest-bearing short-term investments), any distribution on the lent securities, and any increase in their market value. Loan arrangements made by a fund will comply with any other applicable regulatory requirements. At the present time, the SEC does not object if an investment company pays reasonable negotiated fees in connection with lent securities, so long as such fees are set forth in a written contract and approved by the investment company’s trustees. In addition, voting rights pass with the lent securities, but if a fund has knowledge that a material event will occur affecting securities on loan, and in respect to which the holder of the securities will be entitled to vote or consent, the lender must be entitled to call the loaned securities in time to vote or consent. A fund bears the risk that there may be a delay in the return of the securities, which may impair the fund’s ability to vote on such a matter. See",
+      "source_line_end": 509
+    },
+    {
+      "evidence_id": "VPMCX_TEMPORARY_DEPARTURE",
+      "source_document_id": "VPMCX_main_full485_20260128",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000119312526024962/f43837d1.htm",
+      "source_line": 3619,
+      "text": "Temporary departures require the advisor to judge them in the fund best interest and consistent with its objective. More favorably priced or needed-liquidity derivatives/ETFs, advisor transitions and large cash flows may justify departures from normal limits; alternate derivative exposure may address issuer/industry limits.",
+      "denominator": "conditional portfolio state",
+      "handling": "class3_conditional",
+      "numerically_enforced_in_FF12": false,
+      "source_excerpt": "The Fund may temporarily depart from its normal investment policies and strategies when the advisor believes that doing so is in the Fund’s best interest, so long as the strategy or policy employed is consistent with the Fund’s investment objective. For instance, the Fund may invest beyond its normal limits in derivatives or exchange-traded funds that are consistent with the Fund’s investment objective when those instruments are favorably priced or provide needed liquidity, as might be the case if the Fund is transitioning assets 16 from one advisor to another or receives large cash flows that it cannot prudently invest immediately. The Fund may also invest beyond its normal limits in derivatives as an alternate means to obtain economic exposure if the Fund is required to limit its investment in a particular issuer or industry.",
+      "source_line_end": 3621
+    },
+    {
+      "evidence_id": "VPMCX_DEFENSIVE",
+      "source_document_id": "VPMCX_main_full485_20260128",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000119312526024962/f43837d1.htm",
+      "source_line": 3622,
+      "text": "Temporary defensive departures may respond to adverse or unusual market, economic, political or other conditions through substantial cash equivalents or less volatile instruments; these positions may fail to achieve the investment objective.",
+      "denominator": "conditional portfolio state",
+      "handling": "class3_conditional",
+      "numerically_enforced_in_FF12": false,
+      "source_excerpt": "In addition, the Fund may take temporary defensive positions that are inconsistent with its normal investment policies and strategies—for instance, by allocating substantial assets to cash equivalent investments or other less volatile instruments—in response to adverse or unusual market, economic, political, or other conditions. In doing so, the Fund may succeed in avoiding losses but may otherwise fail to achieve its investment objective. Cash equivalent investments include cash deposits, short-term bank deposits, and money market instruments such as U.S. Treasury bills and notes, bank certificates of deposit (CDs), repurchase agreements, commercial paper, and banker’s acceptances.",
+      "source_line_end": 3623
+    },
+    {
+      "evidence_id": "VPMCX_VANGUARD_OWNERSHIP",
+      "source_document_id": "VPMCX_SAI_20260325",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000120/f44410d1.htm",
+      "source_line": 171,
+      "text": "The fundamental policies do not prevent the fund from owning Vanguard securities, lending to Vanguard or contributing to its costs or other financial requirements as part owner.",
+      "denominator": "ownership-specific exception",
+      "handling": "class3_conditional",
+      "numerically_enforced_in_FF12": false,
+      "source_excerpt": "None of these policies prevents the Funds from having an ownership interest in Vanguard. As a part owner of Vanguard, each Fund may own securities issued by Vanguard, make loans to Vanguard, and contribute to Vanguard’s costs or other financial requirements. See Management of the Funds for more information.",
+      "source_line_end": 173
+    },
+    {
+      "evidence_id": "VPMCX_BORROWING_RESTORE",
+      "source_document_id": "VPMCX_SAI_20260325",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000120/f44410d1.htm",
+      "source_line": 196,
+      "text": "If asset coverage falls below 300%, the fund may be required to sell holdings within three days, excluding Sundays and holidays, to reduce debt and restore coverage despite disadvantageous investment timing.",
+      "denominator": "borrowing coverage and elapsed days",
+      "handling": "class3_path_dependent",
+      "numerically_enforced_in_FF12": false,
+      "source_excerpt": "A fund’s ability to borrow money is limited by its investment policies and limitations; by the 1940 Act; and by applicable exemptions, no-action letters, interpretations, and other pronouncements issued from time to time by the SEC and its staff or any other regulatory authority with jurisdiction. Under the 1940 Act, a fund is required to maintain continuous asset coverage (i.e., total assets including borrowings, less liabilities exclusive of borrowings) of 300% of the amount borrowed, with an exception for borrowings not in excess of 5% of the fund’s total assets (at the time of borrowing) made for temporary or emergency purposes. Any borrowings for temporary purposes in excess of 5% of the fund’s total assets must maintain continuous asset coverage. If the 300% asset coverage should decline as a result of market fluctuations or for other reasons, a fund may be required to sell some of its portfolio holdings within three days (excluding Sundays and holidays) to reduce the debt and restore the 300% asset coverage, even though it may be disadvantageous from an investment standpoint to sell securities at that time.",
+      "source_line_end": 196
+    },
+    {
+      "evidence_id": "VPMCX_INTERFUND",
+      "source_document_id": "VPMCX_SAI_20260325",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000120/f44410d1.htm",
+      "source_line": 400,
+      "source_excerpt": "The SEC has granted an exemption permitting registered open-end Vanguard funds to participate in Vanguard’s interfund lending program. This program allows the Vanguard funds to borrow money from and lend money to each other for temporary or emergency purposes. The program is subject to a number of conditions, including, among other things, the requirements that (1) no fund may borrow or lend money through the program unless it receives a more favorable interest rate than is typically available from a bank for a comparable transaction, (2) no fund may lend money if the loan would cause its aggregate outstanding loans through the program to exceed 15% of its net assets at the time of the loan, and (3) a fund’s interfund loans to any one fund shall not exceed 5% of the lending fund’s net assets. In addition, a Vanguard fund may participate in the program only if and to the extent that such participation is consistent with the fund’s investment objective and investment policies. The boards of trustees of the Vanguard funds are responsible for overseeing the interfund lending program. Any delay in repayment to a lending fund could result in a lost investment opportunity or additional borrowing costs.",
+      "text": "Interfund lending is limited to 15% of NAV in aggregate and 5% of NAV to any single fund; temporary/emergency participation must improve on comparable bank rates and remain consistent with fund policies.",
+      "denominator": "NAV",
+      "handling": "class3_not_identifiable_from_FF12",
+      "numerically_enforced_in_FF12": false
+    }
+  ],
+  "A": [],
+  "b": [],
+  "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000119312526024962/f43837d1.htm",
+  "source_evidence_ids": [
+    "VPMCX_main_full485_20260128",
+    "VPMCX_SAI_20260325",
+    "VPMCX_supplement_20260211"
+  ],
+  "publication_date": "2026-01-28",
+  "document_date": "2026-01-28",
+  "filing_accession": "0001193125-26-024962",
+  "cutoff": "2026-03-31",
+  "capture_method": "official SEC HTTP original HTML bytes; locally parsed exact PRIMECAP prospectus and SAI",
+  "evidence_sha256": "c37ffcc9f830ff1fe1b866a0676b0079f58fc63a8bf57b7db5a60fc38db61f4b",
+  "evidence_files": [
+    {
+      "source_id": "VPMCX_main_full485_20260128",
+      "path": "data\\v63_20261027\\continuation_sources\\VPMCX_main_full485_20260128.html",
+      "sha256": "c37ffcc9f830ff1fe1b866a0676b0079f58fc63a8bf57b7db5a60fc38db61f4b",
+      "url": "https://www.sec.gov/Archives/edgar/data/752177/000119312526024962/f43837d1.htm"
+    },
+    {
+      "source_id": "VPMCX_SAI_20260325",
+      "path": "data\\v63_20261027\\continuation_sources\\VPMCX_SAI_20260325.html",
+      "sha256": "076888bb357f196fa7f947170d2fd43758bce2dab2536dd8d51d5d95520f2f36",
+      "url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000120/f44410d1.htm"
+    },
+    {
+      "source_id": "VPMCX_supplement_20260211",
+      "path": "data\\v63_20261027\\continuation_sources\\VPMCX_supplement_20260211.html",
+      "sha256": "bfaa4878c765eb0a0321bc154b25059eb4fefcb150855768bf4f48fcd1ef37d5",
+      "url": "https://www.sec.gov/Archives/edgar/data/752177/000119312526045639/f44014d1.htm"
+    }
+  ],
+  "human_review_mode": "user_assumed_completed",
+  "actual_independent_signatures": null,
+  "version_chain_verified": true,
+  "supplement_review": [
+    {
+      "id": "VPMCX_SAI_20260325",
+      "date": "2026-03-25",
+      "effect": "Cutoff-eligible SAI restatement preserves the stated PRIMECAP investment restrictions."
+    },
+    {
+      "id": "VPMCX_supplement_20260211",
+      "date": "2026-02-11",
+      "effect": "Leadership appointments, not investment mandate changes."
+    }
+  ],
+  "numerical_scope_note": "Security, country, liquidity, instrument, purchase-time and source-industry restrictions cannot be certified from twelve FF12 weights. A and b are empty; no invented 80% equity mandate, 50%-basket requirement or 25% per-FF12 cap is imposed. The SAI 50% diversification clause expressly excludes PRIMECAP. Common-equity sleeve and outside assets remain fixed.",
+  "version_notes": "January 28 2026 PRIMECAP Fund prospectus plus March 25 2026 restated same-fund SAI. All post-prospectus 497 versions through cutoff checked. Rule text preserves source denominator assets for foreign exposure, separate 25% total-assets issuer rule, and the specific PRIMECAP 75% diversification rule."
+}

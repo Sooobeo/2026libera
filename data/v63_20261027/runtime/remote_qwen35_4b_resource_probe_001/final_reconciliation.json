@@ -1,0 +1,20 @@
+{
+  "status": "not_dispatched_and_no_probe_process_verified",
+  "observed_at_utc": "2026-10-27T05:12:23.748357+00:00",
+  "capture_method": "Authorized Proxmox console DOM; normalized local observation, not a raw remote file copy.",
+  "container": 150,
+  "probe_directory_exists": false,
+  "probe_files": [],
+  "generation_dispatch_receipt_exists": false,
+  "probe_runner_processes": [],
+  "ollama_loaded_models": [],
+  "existing_ollama_service_preserved": true,
+  "runner_script_sha256": "f7f82701ca1289c29b05fb0e1a310e3b88236bf09102c23a9b16ba143a30c833",
+  "remote_reconciliation_path": "/root/libera_v63_20261027/runtime/remote_probe_pause_reconciliation.json",
+  "engineering_generation_requests": 0,
+  "interpretation": "The verified runner creates its output directory and dispatch record before POST. Neither exists; no runner or loaded model remains. Earlier UI submission was not proof of generation.",
+  "supersedes_uncertain_observations": [
+    "pause_observation.json",
+    "local_dispatch_observation.json"
+  ]
+}

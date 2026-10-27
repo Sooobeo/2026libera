@@ -1,0 +1,206 @@
+{
+  "recorded_at_utc": "2026-10-27T03:57:21.135310+00:00",
+  "status": "search_complete_no_additional_eligible_fund_private_outlook_admitted",
+  "C_publication_window": [
+    "2026-04-01",
+    "2026-06-30"
+  ],
+  "newly_admitted_fund_private_documents": 0,
+  "corpus_retained": "documents_v2.json",
+  "corpus_sha256": "930560346838abed6129187611c461e88c77b082a30d7456c4053d0cbb108d72",
+  "documents_v3_created": false,
+  "scope_limitation": "C is limited to the new common FOMC projection text for all four funds. This does not establish a four-fund private-outlook retrieval treatment and must not be reported as such. No search snippets or stale publication metadata substitute for missing eligible original text.",
+  "candidates": [
+    {
+      "fund_id": "F01",
+      "ticker": "FCNTX",
+      "candidate": "April 2026 institutional presentation 9586315.PDF",
+      "url": "https://institutional.fidelity.com/app/proxy/content?literatureURL=%2F9586315.PDF",
+      "decision": "exclude",
+      "reason": "Search index identifies April 2026, but original current URL and encoded/literal variants return HTTP 404 with empty body. Original eligible text not recovered."
+    },
+    {
+      "fund_id": "F01",
+      "ticker": "FCNTX",
+      "candidate": "Quarterly review mutable PDF",
+      "decision": "exclude",
+      "reason": "Current downloaded PDF is as of September 30 2026, created October 15. Old search-index dates are not admissible historical source verification."
+    },
+    {
+      "fund_id": "F02",
+      "ticker": "VPMCX",
+      "candidate": "Investment profile 0059.pdf",
+      "decision": "exclude",
+      "reason": "Search index March 2026 differs from live September 2026 (earlier local file June 2026 also post-cutoff); no historically eligible original outlook recovered."
+    },
+    {
+      "fund_id": "F02",
+      "ticker": "VPMCX",
+      "candidate": "SEC N-CSRS March31 2026 R2 shareholder report",
+      "url": "https://www.sec.gov/Archives/edgar/data/752177/000110465926068850/R2.htm",
+      "decision": "exclude_from_new_outlook",
+      "reason": "Original HTTP200 retrieved but contains fund expenses, holdings and management changes without investment outlook prose."
+    },
+    {
+      "fund_id": "F03",
+      "ticker": "DODGX",
+      "candidate": "Stock Fund Investment Commentary mutable PDF",
+      "decision": "exclude",
+      "reason": "Live official PDF as of September30 2026, created October13. Search-index Q1 text cannot substitute for original eligible document."
+    },
+    {
+      "fund_id": "F04",
+      "ticker": "TRBCX",
+      "candidate": "Quarterly review productBCG and portfolio-update productBCI",
+      "decision": "exclude",
+      "reason": "Live official PDFs as of September30 2026; index earlier quarter/month dates differ. BCI is a share class of same portfolio but live late document remains ineligible."
+    },
+    {
+      "fund_id": "F04",
+      "ticker": "TRBCX",
+      "candidate": "AI Innovation: Which Inning Are We In?",
+      "url": "https://www.troweprice.com/financial-intermediary/us/en/insights/articles/2026/q1/ai-innovation-which-inning-are-we-in.html",
+      "decision": "exclude_pending_first_publication_verification",
+      "publisher_datePublished": "2026-04-01",
+      "source_views_as_of": "2025-06",
+      "reason": "Stale view date alone is not disqualifying. But same exact title appears in a cached StockScan news index dated Feb12 2026, conflicting with current April publisher metadata. No primary original-version evidence resolves first publication. Searches of official exact title and distinctive transcript phrases found current April versions, which does not prove absence of earlier publication.",
+      "conflicting_secondary_lead": "https://stockscan.io/de/stocks/TCHP"
+    },
+    {
+      "fund_id": "F04",
+      "ticker": "TRBCX",
+      "candidate": "T. Rowe Price GESE board presentation May29 2026",
+      "url": "https://www.gese.org/wp-content/uploads/board-meetings/20260529/T%20ROWE%20PRICE-31Mar26updated.pdf",
+      "decision": "exclude_wrong_fund",
+      "reason": "Original 57-page PDF createdMay27/modifiedMay28. Presentation is Large-Cap Growth Fund/strategy, not Blue Chip Growth Fund; Paul Greene appears only in broader team roster. No TRBCX or Blue Chip text. Cannot assign another portfolio outlook to TRBCX."
+    }
+  ],
+  "source_artifacts": [
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\DODGX_investment_commentary.pdf",
+      "bytes": 134762,
+      "sha256": "f4bb185b6dc6eb34988badc1db070386639089302b50d38d8bfcd3001763cff6"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\DODGX_investment_commentary_receipt.json",
+      "bytes": 2202,
+      "sha256": "dc68723a262bab9b87dfb5c625b51b861b4b3344f519e258152693f0f014aa04"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\DODGX_wayback_cdx_receipt.json",
+      "bytes": 375,
+      "sha256": "b93fffb30c8caea9c5ca9b2d93769d8a3c9db9559f3c2a2475c2d9200341dbf5"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\FCNTX_April_presentation.html",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\FCNTX_April_presentation_encoded.html",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\FCNTX_April_presentation_encoded_receipt.json",
+      "bytes": 3640,
+      "sha256": "0497e250992dc9ced28b046b8b086a668c72ad11d0177524bf2345322b5c144b"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\FCNTX_April_presentation_literal.html",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\FCNTX_April_presentation_literal_receipt.json",
+      "bytes": 3636,
+      "sha256": "c2f922d84b3f913fb475de047ab61b2caffb02be39dc8d76c9ec0262de3db1ac"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\FCNTX_April_presentation_receipt.json",
+      "bytes": 3569,
+      "sha256": "a69eacbe16590c0fe418b248bb5828ec9b1335e75f336625113607b9f6b07279"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\FCNTX_quarterly_article.pdf",
+      "bytes": 278076,
+      "sha256": "d3c00e33ee8595a1c10bf02463a404bb84ec16f679d122449ad53497125b18a4"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\FCNTX_quarterly_article_receipt.json",
+      "bytes": 1644,
+      "sha256": "fc48f62c9e9aa9e1dba658c6830c3d1400ab7a5ba4ccf0092746bc51e751a94d"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\FCNTX_quarterly_pdf.pdf",
+      "bytes": 278076,
+      "sha256": "d3c00e33ee8595a1c10bf02463a404bb84ec16f679d122449ad53497125b18a4"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\FCNTX_quarterly_pdf_receipt.json",
+      "bytes": 1601,
+      "sha256": "74b36c4486847578e3b330e23f14f43671e8e56578a1dbaff0ca43283e5b9f0a"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\FCNTX_wayback_cdx_receipt.json",
+      "bytes": 407,
+      "sha256": "5c0885e876ed6168e3b581acc64d36d95b1e3adfab6bf78d1a30e05893a2db36"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\TRBCX_AI_first_publication_search_receipt.json",
+      "bytes": 12254,
+      "sha256": "1e9dde6ed92349366c9edcaacbd085352997468d626e1646dc504ca361b7fca5"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\TRBCX_AI_innovation_April.html",
+      "bytes": 135487,
+      "sha256": "f9d188f54c94b7400381552231e5d4818ba0c90a8aba6d0f1bb1b27c33289647"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\TRBCX_AI_innovation_April_receipt.json",
+      "bytes": 1992,
+      "sha256": "ccb4e5d2e95074523a0578dd0244ac4e43ede9553676a2de48cd996283a6bebd"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\TRBCX_annual_2025.pdf",
+      "bytes": 259708,
+      "sha256": "b56e8268e934576d78868b01e4bad45c18c7273aede95144ee989fcd95b29e7b"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\TRBCX_annual_2025_receipt.json",
+      "bytes": 2195,
+      "sha256": "edc7a394ae7875c49f585aa4ceeb97c80b99fa92993a8e052f5f7d51864f8cb8"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\TRBCX_May_board_presentation.pdf",
+      "bytes": 1413147,
+      "sha256": "8c0c858fd3d56940b0df3e7aa0362573721e82b10d1f50b45b73625bfd248886"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\TRBCX_May_board_presentation_receipt.json",
+      "bytes": 2186,
+      "sha256": "331781c72250c91d482ea0afe687db3040501be065b06639efc2931b808c803a"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\TRBCX_wayback_cdx_receipt.json",
+      "bytes": 416,
+      "sha256": "3bb177fd60081f15b27a948c61a8e09e43d87aa2afc5f9d008497567c3bb2f61"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\VPMCX_C_semiannual_XBRL.html",
+      "bytes": 204359,
+      "sha256": "3ee5bf9aca58499c9a882f7bc04aa2b7bbcf45b40cb60331ddcf9ce1b6b03e6c"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\VPMCX_C_semiannual_XBRL_receipt.json",
+      "bytes": 2915,
+      "sha256": "6b09a409553c08dde49a6ccce17b823a9fa993558974a2129ade196241331ea7"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\VPMCX_wayback_cdx_receipt.json",
+      "bytes": 367,
+      "sha256": "050323c56945d355841d326457d492e9b2325fc9b36184c3c8c3e9f9f35d6d79"
+    }
+  ],
+  "human_review_status": "assumed_complete_by_user_instruction; not an assertion of actual human signatures"
+}

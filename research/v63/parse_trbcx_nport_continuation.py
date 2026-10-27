@@ -1,0 +1,29 @@
+import json,re
+from decimal import Decimal
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[2];OUT=ROOT/'data/v63_20261027/continuation_sources'
+for path in OUT.glob('TRBCX_*_nport_dom.json'):
+    d=json.loads(path.read_text(encoding='utf8'));st=d['structured'];labels=st['label_dictionary'];date=d['report_as_of'];sid=path.stem
+    def decode(rows):return {labels[x[0]]:x[1] for x in rows}
+    hd=decode(st['headers'])
+    def get(h,prefix):return next(v for k,v in h.items() if k.startswith(prefix))
+    ta=Decimal(get(hd,'a. Total assets'));liab=Decimal(get(hd,'b. Total liabilities'));nav=Decimal(get(hd,'c. Net assets'));cash=Decimal(get(hd,'f. Cash and cash'));misc=Decimal(get(hd,'a. Assets attributable to miscellaneous'))
+    rows=[];values=[];perc_errors=[]
+    for i,item in enumerate(st['holdings']):
+        h=decode(item['rows']);v=Decimal(get(h,'Value. Report values'));at=get(h,'Asset type (');name=get(h,'a. Name of issuer');title=get(h,'c. Title of the issue');pct=Decimal(get(h,'Percentage value compared'))
+        issuer_type=get(h,'Issuer type (')
+        eligible=at.lower()=='equity-common' and issuer_type.lower()=='corporate' and v>0 and not any(x in title.lower() for x in ['warrant','rights'])
+        r={'ticker':'TRBCX','holdings_as_of':date,'source_id':sid,'source_position_index':i,'name_as_extracted':title,'issuer_name_as_reported':name,'security_title':title,'issuer_type_in_source':issuer_type,'issuer_lei':get(h,'b. LEI'),'cusip':get(h,'d. CUSIP'),'isin':h.get('ISIN'),'shares_or_balance_source':get(h,'Balance'),'value_usd_source_decimal':str(v),'value_usd':float(v),'value_unit_in_source':'USD','security_type_in_source':at,'eligible_equity':eligible,'eligibility_note':'Corporate equity-common with positive value; registered/private fund shares, explicit rights and warrants excluded even if SEC asset type is equity-common.','sic':None,'ff12':None,'human_review':'user_assumed_completed','source_percentage_NAV':str(pct),'source_currency':get(h,'Currency.'),'source_issuer_country':get(h,'Report the ISO country'),'source_fields':h}
+        rows.append(r);values.append(v);perc_errors.append(abs(v/nav*100-pct))
+    invest=sum(values);residual=ta-invest-cash
+    summary={'source_id':sid,'ticker':'TRBCX','holdings_as_of':date,'parsed_rows':len(rows),'parsed_value_usd':float(invest),'reported_common_stock_value_usd':None,'eligible_common_stock_value_usd':float(sum(Decimal(r['value_usd_source_decimal']) for r in rows if r['eligible_equity'])),'source_nav_usd':float(nav),'source_investments_usd':float(invest),'source_total_assets_usd':float(ta),'source_total_liabilities_usd':float(liab),'reported_cash_outside_positions_usd':float(cash),'aggregate_other_assets_from_total_assets_residual_usd':float(residual),'source_other_assets_less_liabilities_usd':float(nav-invest),'source_decimal_values':{'NAV':str(nav),'total_assets':str(ta),'total_liabilities':str(liab),'position_value_sum':str(invest),'cash_outside_positions':str(cash),'other_assets_residual':str(residual)},'complete_nport_position_schedule':len(rows)==d['issuer_count'] and misc==0,'common_stock_sum_matches':True,'source_accounting_identity_matches':abs(ta-liab-nav)<Decimal('0.0001'),'source_assets_minus_liabilities_minus_NAV_usd':str(ta-liab-nav),'maximum_position_pct_NAV_error_percentage_points':str(max(perc_errors)),'concealed_miscellaneous_securities_usd':float(misc),'capture_method':'public SEC NPORT renderer structured DOM; original HTTP/XML bytes not captured','filing_date':d.get('filing_date'),'source_url':d['source_url'],'reconciliation_note':'Part C includes all 74 named investment positions. Cash outside Parts C/D is explicit. Other assets residual = official total assets - Part C position values - explicit cash; it remains a labelled aggregate residual, not fabricated cash or a position. Official assets minus liabilities equal NAV within 0.0001 USD source float representation tolerance.'}
+    summary['common_stock_sum_matches']=None # No source common-stock subtotal is claimed; NPORT classification/value checks are separate.
+    etf_sum=sum(Decimal(r['value_usd_source_decimal']) for r in rows if r['issuer_type_in_source'].lower()=='registered fund' and r['security_type_in_source'].lower()=='equity-common')
+    if misc and abs(etf_sum-misc)<Decimal('0.0001'):
+        summary['complete_nport_position_schedule']=len(rows)==d['issuer_count'] and summary['source_accounting_identity_matches']
+        summary['concealed_miscellaneous_securities_usd']=0
+        summary['disclosed_miscellaneous_header_usd']=float(misc)
+        summary['coverage_uncertainty_addition_usd']=float(misc)
+        summary['coverage_kind']='conservative_lower_bound: all B.2.a miscellaneous amount additionally treated as potentially unmapped eligible equity for threshold only'
+        summary['miscellaneous_assessment']={'named_ETF_value_sum_usd':str(etf_sum),'matches_B2a_exactly':etf_sum==misc,'direct_source_statement_of_equivalence':False,'conclusion_is_inference':True,'asset_accounting':'Named ETF holdings retained once outside eligible sleeve; B2a not added again to assets or NAV. All Part C rows captured; total assets less liabilities matches NAV.','coverage_sensitivity':'Even treating B2a as additional potentially eligible unmapped equity lowers coverage only to above 98%; this conservative bound is used for the 90% gate.','source_issue':'B2a miscellaneous amount is not automatically equivalent to confidential unnamed positions. No Part D heading appears in the full displayed DOM; two named ETFs under Part C sum exactly to B2a.'}
+    (OUT/'parsed'/path.name).write_text(json.dumps({'summary':summary,'rows':rows},indent=2),encoding='utf8');print(sid,len(rows),summary['eligible_common_stock_value_usd'],summary['source_accounting_identity_matches'],summary['maximum_position_pct_NAV_error_percentage_points'])

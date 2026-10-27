@@ -1,0 +1,36 @@
+{
+  "scope": "synthetic software verification only; not empirical experimental results",
+  "command": "tmp/v63_numerics_venv/Scripts/python.exe -m pytest research/v63/test_evaluate.py research/v63/test_numerics.py research/v63/test_statistics.py -q",
+  "passed": 38,
+  "exit_code": 0,
+  "modules": {
+    "evaluate": 9,
+    "numerics": 17,
+    "statistics": 12
+  },
+  "source_hashes": {
+    "research/v63/evaluate.py": "b43d6f8db4db54488dad703016ecb3e0d50376cae53591f0e34b74e995826686",
+    "research/v63/numerics.py": "b8906ee2cf06a8c9b51dac2f73ea8584a09d998a618e94879ca05b39e4236dd7",
+    "research/v63/statistics.py": "2b06ebb144b0f7ea59750ea38563e5aa68c4bee29e60e20bf3840058269f95e5"
+  },
+  "minimum_variance_boundary": "exact rational singleton risk-set certificate implemented; no risk-cap enlargement",
+  "coverage": [
+    "2400-trajectory full policy fixture",
+    "raw final independently revalidated",
+    "failure h included",
+    "unattempted and protocol-invalid excluded from completion",
+    "R3 early failure has R0 available information",
+    "nonlinear metrics before replicate averaging",
+    "paired exact regret differences",
+    "Holm five claims",
+    "counterfactual zero-change retained",
+    "negative-control canonical reference and input equivalence",
+    "A/C no invented exact allocation gold"
+  ],
+  "additional_coverage": [
+    "exact singleton minimum-variance certificate",
+    "counterfactual scenario means and stratified bootstrap",
+    "negative-control loss and reference uncertainty",
+    "actual-document fact matches never implied when source catalog absent"
+  ]
+}

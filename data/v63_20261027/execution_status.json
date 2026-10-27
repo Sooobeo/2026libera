@@ -1,0 +1,210 @@
+{
+  "schema": "libera_v63_execution_status_v2",
+  "recorded_at_utc": "2026-10-27T05:17:19.244140+00:00",
+  "protocol_version": "6.3-design",
+  "protocol_sha256": "a884b1242217cfed37a52444a541968eb680739c649e85c2b8d3bf9b0de383dc",
+  "status": "paused_by_user",
+  "all_experiments_completed": false,
+  "actual_experimental_model_requests": 14,
+  "possibly_sent_requests_without_final_receipt": 0,
+  "generation_request_budget_count": 14,
+  "count_scope": "Lifetime candidate attempts as of this snapshot. Confirmed requests require original attempt receipts; in-flight or uncertain dispatches are separate. Superseded attempts do not fill slots of a new frozen pilot.",
+  "planned_trajectories": 3272,
+  "planned_logical_stages": 9816,
+  "successful_main_trajectories": 0,
+  "main_started": false,
+  "selected_run_id": "de1b479b54d5b4429211059df1496be588c3c5af81ec21f4d4c355e3004f76ec",
+  "human_review_mode": "user_assumed_completed",
+  "actual_independent_human_signatures": null,
+  "execution_amendment": "continuation/execution_amendment.json",
+  "data_readiness": {
+    "fund_periods": 12,
+    "parsed_rows": 2127,
+    "mapped_rows": 1735,
+    "h_computed": 12,
+    "holdings_scientific_ready": 12,
+    "scientific_ready": 12,
+    "human_review_mode": "user_assumed_completed",
+    "actual_independent_signatures": null
+  },
+  "data_validation": {
+    "checks": 2887,
+    "passed": 2887,
+    "failed": 0
+  },
+  "local_candidates": [
+    {
+      "output_root": "data/v63_20261027/local_campaign_results",
+      "run_id": "a151e0eea80931eb9bb281fc303a503410c5fd58e52ca9cff010d3e8ed11f10d",
+      "latest_progress": null,
+      "generation_requests_started": 5,
+      "request_accounting": {
+        "generation_requests": 5,
+        "confirmed_attempt_records": 5,
+        "uncertain_dispatch_requests": 0
+      },
+      "saved_terminal_traces": 5,
+      "selected_trace_issues": [],
+      "trace_status_counts": {
+        "completed": 0,
+        "model_output_failure": 5,
+        "operational_failure": 0,
+        "protocol_violation": 0,
+        "recovery_interrupted": 0
+      },
+      "phases": {
+        "technical-smoke": {
+          "phase": "technical-smoke",
+          "run_id": "a151e0eea80931eb9bb281fc303a503410c5fd58e52ca9cff010d3e8ed11f10d",
+          "current_task": null,
+          "status": "completed",
+          "updated_at_utc": "2026-10-27T03:56:22.499358+00:00",
+          "planned_trajectories": 5,
+          "recorded_trajectories": 5,
+          "terminal_counts": {
+            "model_output_failure": 5,
+            "operational_failure": 0,
+            "protocol_violation": 0,
+            "completed": 0
+          },
+          "cumulative_wall_seconds": 1530.75,
+          "actual_costs": {
+            "generation_requests": 5,
+            "prompt_tokens": 53002,
+            "generated_tokens": 10240,
+            "request_elapsed_seconds": 1527.5776390002575
+          }
+        }
+      },
+      "main_generation_requests": 0,
+      "provenance": "Original HTTP attempt receipts count actual requests. Missing attempt receipts reserve one uncertain dispatch. Each task contributes only its selected trace; preserved partial and superseded traces are not double counted."
+    },
+    {
+      "output_root": "data/v63_20261027/local_campaign_results",
+      "run_id": "de1b479b54d5b4429211059df1496be588c3c5af81ec21f4d4c355e3004f76ec",
+      "latest_progress": {
+        "phase": "technical-smoke",
+        "run_id": "de1b479b54d5b4429211059df1496be588c3c5af81ec21f4d4c355e3004f76ec",
+        "current_task": "development-001__F03__R2__1",
+        "status": "running",
+        "updated_at_utc": "2026-10-27T05:02:21.972462+00:00",
+        "planned_trajectories": 5,
+        "recorded_trajectories": 2,
+        "terminal_counts": {
+          "operational_failure": 0,
+          "completed": 0,
+          "model_output_failure": 2,
+          "protocol_violation": 0,
+          "recovery_interrupted": 0
+        },
+        "cumulative_wall_seconds": 1689.477886,
+        "phase_generation_requests": 6,
+        "budget_limits": {
+          "max_generation_requests": 135,
+          "max_wall_seconds": 21600
+        },
+        "actual_costs": {
+          "generation_requests": 6,
+          "confirmed_attempt_records": 6,
+          "uncertain_dispatch_requests": 0,
+          "prompt_tokens": 72940,
+          "generated_tokens": 9637,
+          "request_elapsed_seconds": 1686.2539093995001
+        }
+      },
+      "generation_requests_started": 7,
+      "request_accounting": {
+        "generation_requests": 7,
+        "confirmed_attempt_records": 7,
+        "uncertain_dispatch_requests": 0
+      },
+      "saved_terminal_traces": 2,
+      "selected_trace_issues": [
+        "data/v63_20261027/local_campaign_results/runs/de1b479b54d5b4429211059df1496be588c3c5af81ec21f4d4c355e3004f76ec/B-development/development-001__F03__R2__1: no selected terminal trace yet"
+      ],
+      "trace_status_counts": {
+        "completed": 0,
+        "model_output_failure": 2,
+        "operational_failure": 0,
+        "protocol_violation": 0,
+        "recovery_interrupted": 0
+      },
+      "phases": {
+        "technical-smoke": {
+          "phase": "technical-smoke",
+          "run_id": "de1b479b54d5b4429211059df1496be588c3c5af81ec21f4d4c355e3004f76ec",
+          "current_task": "development-001__F03__R2__1",
+          "status": "running",
+          "updated_at_utc": "2026-10-27T05:02:21.972462+00:00",
+          "planned_trajectories": 5,
+          "recorded_trajectories": 2,
+          "terminal_counts": {
+            "operational_failure": 0,
+            "completed": 0,
+            "model_output_failure": 2,
+            "protocol_violation": 0,
+            "recovery_interrupted": 0
+          },
+          "cumulative_wall_seconds": 1689.477886,
+          "phase_generation_requests": 6,
+          "budget_limits": {
+            "max_generation_requests": 135,
+            "max_wall_seconds": 21600
+          },
+          "actual_costs": {
+            "generation_requests": 6,
+            "confirmed_attempt_records": 6,
+            "uncertain_dispatch_requests": 0,
+            "prompt_tokens": 72940,
+            "generated_tokens": 9637,
+            "request_elapsed_seconds": 1686.2539093995001
+          }
+        }
+      },
+      "main_generation_requests": 0,
+      "provenance": "Original HTTP attempt receipts count actual requests. Missing attempt receipts reserve one uncertain dispatch. Each task contributes only its selected trace; preserved partial and superseded traces are not double counted."
+    }
+  ],
+  "remote_candidate_abort": {
+    "status": "technical_candidate_aborted_for_capacity",
+    "recorded_at_utc": "2026-10-27T04:00:03.845538+00:00",
+    "pid": 2552520,
+    "reason": "First request exceeded frozen 1800-second timeout with zero response bytes; same model returned on Windows CPU. Preserve all receipts; this candidate is not completed or reused as a completed pilot.",
+    "generation_requests_started": 2,
+    "generation_receipts": [
+      {
+        "elapsed_seconds": 1800.1003355812281,
+        "generation_endpoint": true,
+        "method": "POST",
+        "network_error": "TimeoutError",
+        "request_sha256": "6f737d93f89533fb985b7da9fc27202f5baac6254cca1abe169f07428d1aed10",
+        "response_bytes": 0,
+        "response_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "started_at_utc": "2026-10-27T03:27:31.941157+00:00",
+        "url": "http://127.0.0.1:11434/api/chat"
+      }
+    ],
+    "signal": "SIGINT",
+    "other_services_unchanged": true
+  },
+  "engineering_calls_excluded": true,
+  "engineering_receipt_locations": [
+    "runtime/local_windows",
+    "runtime/remote_runtime_inventory.json"
+  ],
+  "prior_preparation_snapshot": "continuation/previous_delivery/execution_status.json",
+  "current_report": "../../실험참고자료_20261027/04_중지와재개_20261027.html",
+  "remaining": [
+    "Resume only after an explicit user instruction; preserve the exact recorded model/code/data identity.",
+    "Qualify the revised development runtime, preserving all superseded attempts.",
+    "Complete the same-version 720 planned development stages and precision/resource report.",
+    "Freeze the runtime, inputs and budgets; complete B, x-replacement, negative controls and A/C.",
+    "Validate complete raw-to-statistics accounting and write final experimental conclusions."
+  ],
+  "source_limitations": [
+    "Issuer SIC fallback uses current official information for retrospective classification.",
+    "C currently has a new common FOMC outlook; fund-private new outlooks were not verified.",
+    "Security-level, source-industry, country, currency and transaction rules cannot be certified from FF12 weights alone."
+  ],
+  "user_pause": "continuation/user_pause_20261027.json"
+}

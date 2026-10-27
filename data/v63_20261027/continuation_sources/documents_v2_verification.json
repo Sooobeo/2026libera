@@ -1,0 +1,113 @@
+{
+  "documents": 6,
+  "evidence_units": 176,
+  "numeric_fact_units": 62,
+  "authoritative_protocol_path": "plan\\LIBERA_실험설정_v6.3_20261027.json",
+  "authoritative_protocol_sha256": "a884b1242217cfed37a52444a541968eb680739c649e85c2b8d3bf9b0de383dc",
+  "fund_attribution": [
+    {
+      "document_id": "A-COMMON-FOMC-20260318",
+      "fund_id": "COMMON",
+      "ticker": null,
+      "source_owner": "Federal Open Market Committee",
+      "source_owner_evidence": null
+    },
+    {
+      "document_id": "C-COMMON-FOMC-20260617",
+      "fund_id": "COMMON",
+      "ticker": null,
+      "source_owner": "Federal Open Market Committee",
+      "source_owner_evidence": null
+    },
+    {
+      "document_id": "A-F01-FCNTX-2025-REVIEW",
+      "fund_id": "F01",
+      "ticker": "FCNTX",
+      "source_owner": "Fidelity Contrafund",
+      "source_owner_evidence": {
+        "source_literal": "Fidelity® Contrafund® : FCNTX",
+        "source_locator": "SEC visible shareholder-report heading, after hidden iXBRL header removal"
+      }
+    },
+    {
+      "document_id": "A-F02-VPMCX-2025-REVIEW",
+      "fund_id": "F02",
+      "ticker": "VPMCX",
+      "source_owner": "Vanguard PRIMECAP",
+      "source_owner_evidence": {
+        "source_literal": "Vanguard PRIMECAP Fund / Investor Shares (VPMCX)",
+        "source_locator": "Official shareholder report DOM heading"
+      }
+    },
+    {
+      "document_id": "A-F04-TRBCX-2025-REVIEW",
+      "fund_id": "F04",
+      "ticker": "TRBCX",
+      "source_owner": "T. Rowe Price Blue Chip Growth",
+      "source_owner_evidence": {
+        "source_literal": "Blue Chip Growth Fund / Investor Class (TRBCX)",
+        "source_locator": "Official annual PDF page1 title"
+      }
+    },
+    {
+      "document_id": "A-F03-DODGX-2025-REVIEW",
+      "fund_id": "F03",
+      "ticker": "DODGX",
+      "source_owner": "Dodge & Cox Stock",
+      "source_owner_evidence": {
+        "source_literal": "Dodge & Cox Stock Fund — Class I",
+        "source_locator": "Official transcript PDF page4 performance disclosure"
+      }
+    }
+  ],
+  "corpus_sha256": "930560346838abed6129187611c461e88c77b082a30d7456c4053d0cbb108d72",
+  "source_catalog_sha256": "dae02567ae157fe5eaec1d672e480807e03f233a77110dbc939864f5f51429ef",
+  "source_files": [
+    {
+      "document_id": "A-COMMON-FOMC-20260318",
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\FOMC_20260318.html",
+      "sha256": "3aa22cb795c921f92eadfd19748068bfa02c9405e0887c2c29cff29a517da8d7",
+      "units": 52,
+      "max_unit_characters": 1003
+    },
+    {
+      "document_id": "C-COMMON-FOMC-20260617",
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\FOMC_20260617.html",
+      "sha256": "b6c96dfb1f6341f154c7d2d7c2ffad1deb14ae09d9927664e6b38409af155e42",
+      "units": 53,
+      "max_unit_characters": 1000
+    },
+    {
+      "document_id": "A-F01-FCNTX-2025-REVIEW",
+      "path": "data\\v63_20261027\\continuation_sources\\FCNTX_A_shareholder_report.html",
+      "sha256": "6851fd986bfb1ef58df2c5a76605d4aa4446eb44969a76ca70d3b6938b2d34c8",
+      "units": 3,
+      "max_unit_characters": 750
+    },
+    {
+      "document_id": "A-F02-VPMCX-2025-REVIEW",
+      "path": "data\\v63_20261027\\continuation_sources\\VPMCX_annual_20250930_browser_dom.json",
+      "sha256": "5255191111735bf4b0727b0c5650188d83d1fcdae4705b16bc6d23058ded0231",
+      "units": 4,
+      "max_unit_characters": 482
+    },
+    {
+      "document_id": "A-F04-TRBCX-2025-REVIEW",
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\TRBCX_annual_2025.pdf",
+      "sha256": "b56e8268e934576d78868b01e4bad45c18c7273aede95144ee989fcd95b29e7b",
+      "units": 3,
+      "max_unit_characters": 763
+    },
+    {
+      "document_id": "A-F03-DODGX-2025-REVIEW",
+      "path": "data\\v63_20261027\\raw\\DODGX_2025_review_transcript.pdf",
+      "sha256": "9613b9b24cc80356f132c2e2f123f6510a6b5bca2cef4855392d2063cb970a31",
+      "units": 61,
+      "max_unit_characters": 811
+    }
+  ],
+  "exact_model_tokenizer_status": "pending root build_run; character length is diagnostic only",
+  "human_review": "assumed by user instruction, distinct from actual automatic checks",
+  "source_catalog_is_evaluator_only": true,
+  "script_sha256": "60057535e9cc2280208579d370294baf69a2bd2037ba6bbc41b948a1bfc66fa8"
+}

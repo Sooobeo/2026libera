@@ -1,0 +1,545 @@
+{
+  "status": "read_only_catalog_date_and_source_version_audit_complete",
+  "recorded_at_utc": "2026-10-27T04:49:38.951177+00:00",
+  "experiment_outcomes_inspected": false,
+  "core_candidate_or_catalog_modified": false,
+  "generation_calls": 0,
+  "candidate_source_catalog_path": "data/v63_20261027/numerical/evaluator_only/source_catalog_v2.json",
+  "catalog_evidence_units": 176,
+  "catalog_period_counts": {
+    "A": 123,
+    "C": 53
+  },
+  "catalog_publication_date_counts": {
+    "2026-03-18": 52,
+    "2026-06-17": 53,
+    "2026-02-20": 3,
+    "2025-11-28": 4,
+    "2026-02-28": 64
+  },
+  "catalog_documents": [
+    {
+      "document_id": "A-COMMON-FOMC-20260318",
+      "period": "A",
+      "role": "common_economic_outlook",
+      "publication_date": "2026-03-18",
+      "units": 52
+    },
+    {
+      "document_id": "C-COMMON-FOMC-20260617",
+      "period": "C",
+      "role": "common_economic_outlook",
+      "publication_date": "2026-06-17",
+      "units": 53
+    },
+    {
+      "document_id": "A-F01-FCNTX-2025-REVIEW",
+      "period": "A",
+      "role": "fund_historical_performance_commentary",
+      "publication_date": "2026-02-20",
+      "units": 3
+    },
+    {
+      "document_id": "A-F02-VPMCX-2025-REVIEW",
+      "period": "A",
+      "role": "fund_historical_performance_commentary",
+      "publication_date": "2025-11-28",
+      "units": 4
+    },
+    {
+      "document_id": "A-F04-TRBCX-2025-REVIEW",
+      "period": "A",
+      "role": "fund_historical_performance_commentary",
+      "publication_date": "2026-02-28",
+      "units": 3
+    },
+    {
+      "document_id": "A-F03-DODGX-2025-REVIEW",
+      "period": "A",
+      "role": "fund_investment_outlook",
+      "publication_date": "2026-02-28",
+      "units": 61
+    }
+  ],
+  "mandatory_rule_id_catalog_intersection": [],
+  "all_catalog_ids_unique_and_one_source_version": true,
+  "catalog_source_document_hashes_and_period_prefixes_verified": true,
+  "A_C_shared_mandatory_ids": 57,
+  "A_C_shared_ids_with_changed_source_versions": 32,
+  "changed_version_counts_by_fund": {
+    "F01": 10,
+    "F03": 9,
+    "F04": 13
+  },
+  "changed_mandatory_source_versions": [
+    {
+      "fund_id": "F01",
+      "evidence_id": "FCNTX_BORROW",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_line"
+      ],
+      "A_source_document_id": "FCNTX_main_full485_20260225",
+      "C_source_document_id": "FCNTX_amendment_20260515_000050",
+      "A_excerpt_sha256": "955753be2c208407ec585333fd017a4b8e627ceb78dd600b7bfdc7c22f43adc6",
+      "C_excerpt_sha256": "955753be2c208407ec585333fd017a4b8e627ceb78dd600b7bfdc7c22f43adc6"
+    },
+    {
+      "fund_id": "F01",
+      "evidence_id": "FCNTX_ILLIQUID",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_excerpt",
+        "source_line"
+      ],
+      "A_source_document_id": "FCNTX_main_full485_20260225",
+      "C_source_document_id": "FCNTX_amendment_20260515_000050",
+      "A_excerpt_sha256": "000096359c832d8b300e32347f60aa62739c1fafd95439425d816b771696af57",
+      "C_excerpt_sha256": "72513373f257a55ac807973603ace0eeba991a804b7f9d6da088f13e74a96cbb"
+    },
+    {
+      "fund_id": "F01",
+      "evidence_id": "FCNTX_INDUSTRY25",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_line"
+      ],
+      "A_source_document_id": "FCNTX_main_full485_20260225",
+      "C_source_document_id": "FCNTX_amendment_20260515_000050",
+      "A_excerpt_sha256": "e8d9e1a2eae0d73338243ded8e9fcde5ccba2eda25fa8958ce7f222e92ccf8fd",
+      "C_excerpt_sha256": "e8d9e1a2eae0d73338243ded8e9fcde5ccba2eda25fa8958ce7f222e92ccf8fd"
+    },
+    {
+      "fund_id": "F01",
+      "evidence_id": "FCNTX_INSTRUMENTS",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_line"
+      ],
+      "A_source_document_id": "FCNTX_main_full485_20260225",
+      "C_source_document_id": "FCNTX_amendment_20260515_000050",
+      "A_excerpt_sha256": "3261f855e833083b5e275f57a35c17e7f3c5d3020589c97fe8908f7399946852",
+      "C_excerpt_sha256": "3261f855e833083b5e275f57a35c17e7f3c5d3020589c97fe8908f7399946852"
+    },
+    {
+      "fund_id": "F01",
+      "evidence_id": "FCNTX_ISSUER75",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_line"
+      ],
+      "A_source_document_id": "FCNTX_main_full485_20260225",
+      "C_source_document_id": "FCNTX_amendment_20260515_000050",
+      "A_excerpt_sha256": "84ed3e84da6510715be4310170760569677c8f413978da43e9b64baf2367fdd2",
+      "C_excerpt_sha256": "84ed3e84da6510715be4310170760569677c8f413978da43e9b64baf2367fdd2"
+    },
+    {
+      "fund_id": "F01",
+      "evidence_id": "FCNTX_LENDING",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_line"
+      ],
+      "A_source_document_id": "FCNTX_main_full485_20260225",
+      "C_source_document_id": "FCNTX_amendment_20260515_000050",
+      "A_excerpt_sha256": "f4647f61a3659a3a41ad8a72238856c13d026239f594b376e8dcb1e7c53f305a",
+      "C_excerpt_sha256": "f4647f61a3659a3a41ad8a72238856c13d026239f594b376e8dcb1e7c53f305a"
+    },
+    {
+      "fund_id": "F01",
+      "evidence_id": "FCNTX_POOLED",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_line"
+      ],
+      "A_source_document_id": "FCNTX_main_full485_20260225",
+      "C_source_document_id": "FCNTX_amendment_20260515_000050",
+      "A_excerpt_sha256": "a8f195277a0e45b7057244bac3b108593aabace5e6bf304ef700adcf2ec45409",
+      "C_excerpt_sha256": "a8f195277a0e45b7057244bac3b108593aabace5e6bf304ef700adcf2ec45409"
+    },
+    {
+      "fund_id": "F01",
+      "evidence_id": "FCNTX_SHORT_MARGIN",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_line"
+      ],
+      "A_source_document_id": "FCNTX_main_full485_20260225",
+      "C_source_document_id": "FCNTX_amendment_20260515_000050",
+      "A_excerpt_sha256": "ba4a20a5817cbcaaa628bc4dc6506a8410a003f869e88598228a1a6cfeca2005",
+      "C_excerpt_sha256": "ba4a20a5817cbcaaa628bc4dc6506a8410a003f869e88598228a1a6cfeca2005"
+    },
+    {
+      "fund_id": "F01",
+      "evidence_id": "FCNTX_TAX",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_line"
+      ],
+      "A_source_document_id": "FCNTX_main_full485_20260225",
+      "C_source_document_id": "FCNTX_amendment_20260515_000050",
+      "A_excerpt_sha256": "b59d6ddf551817015eea95e774f14c1c74e3cd217ba26dd12864fb0daad05eb6",
+      "C_excerpt_sha256": "b59d6ddf551817015eea95e774f14c1c74e3cd217ba26dd12864fb0daad05eb6"
+    },
+    {
+      "fund_id": "F01",
+      "evidence_id": "FCNTX_TIME",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_excerpt",
+        "source_line"
+      ],
+      "A_source_document_id": "FCNTX_main_full485_20260225",
+      "C_source_document_id": "FCNTX_amendment_20260515_000050",
+      "A_excerpt_sha256": "7a626b34dd0de4b3868f8eaf7e02165243c797b136e40498591338aaf43f7075",
+      "C_excerpt_sha256": "d8164581d35c3500cf4f196019a130dea80ec99759e27fb2583909368860bf15"
+    },
+    {
+      "fund_id": "F03",
+      "evidence_id": "DODGX_CURRENCY5",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_excerpt",
+        "source_line"
+      ],
+      "A_source_document_id": "DODGX_mandate_20250630_evidence",
+      "C_source_document_id": "DODGX_C_full485_20260422",
+      "A_excerpt_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "C_excerpt_sha256": "173787ff30657bf0cbdaa9b8df8fcce5754425de94d2d871d3ca337cb8cfca3d"
+    },
+    {
+      "fund_id": "F03",
+      "evidence_id": "DODGX_DEFENSIVE",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_excerpt",
+        "source_line"
+      ],
+      "A_source_document_id": "DODGX_mandate_20250630_evidence",
+      "C_source_document_id": "DODGX_C_full485_20260422",
+      "A_excerpt_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "C_excerpt_sha256": "393905392c6998bfa8cd51ad2e941d704d251b19da7b702811ae663c44304882"
+    },
+    {
+      "fund_id": "F03",
+      "evidence_id": "DODGX_EQ80",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_excerpt",
+        "source_line"
+      ],
+      "A_source_document_id": "DODGX_mandate_20250630_evidence",
+      "C_source_document_id": "DODGX_C_full485_20260422",
+      "A_excerpt_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "C_excerpt_sha256": "173787ff30657bf0cbdaa9b8df8fcce5754425de94d2d871d3ca337cb8cfca3d"
+    },
+    {
+      "fund_id": "F03",
+      "evidence_id": "DODGX_FOREIGN20",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_excerpt",
+        "source_line"
+      ],
+      "A_source_document_id": "DODGX_mandate_20250630_evidence",
+      "C_source_document_id": "DODGX_C_full485_20260422",
+      "A_excerpt_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "C_excerpt_sha256": "173787ff30657bf0cbdaa9b8df8fcce5754425de94d2d871d3ca337cb8cfca3d"
+    },
+    {
+      "fund_id": "F03",
+      "evidence_id": "DODGX_ILLIQUID15",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_excerpt",
+        "source_line"
+      ],
+      "A_source_document_id": "DODGX_mandate_20250630_evidence",
+      "C_source_document_id": "DODGX_C_full485_20260422",
+      "A_excerpt_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "C_excerpt_sha256": "b74e1df5aa602c1ec471d738c88329630dbdddabf217e866868b4f069996472f"
+    },
+    {
+      "fund_id": "F03",
+      "evidence_id": "DODGX_INDUSTRY25",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_excerpt",
+        "source_line"
+      ],
+      "A_source_document_id": "DODGX_mandate_20250630_evidence",
+      "C_source_document_id": "DODGX_C_full485_20260422",
+      "A_excerpt_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "C_excerpt_sha256": "41aeeaeddf0fae3424dc6f433c2536bd436ee52ce97a0238e7af59abc253e8ef"
+    },
+    {
+      "fund_id": "F03",
+      "evidence_id": "DODGX_ISSUER75",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_excerpt",
+        "source_line"
+      ],
+      "A_source_document_id": "DODGX_mandate_20250630_evidence",
+      "C_source_document_id": "DODGX_C_full485_20260422",
+      "A_excerpt_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "C_excerpt_sha256": "36afa881c6727cd469c952dc716911e6b8f3d05716c04620ae87b61ffc5bf748"
+    },
+    {
+      "fund_id": "F03",
+      "evidence_id": "DODGX_OTHER_RESTRICTIONS",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_excerpt",
+        "source_line"
+      ],
+      "A_source_document_id": "DODGX_mandate_20250630_evidence",
+      "C_source_document_id": "DODGX_C_full485_20260422",
+      "A_excerpt_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "C_excerpt_sha256": "a03a8031318909c4325e191ad6bc1f69abdd328efa8e266d4e19dac7ecfbae1b"
+    },
+    {
+      "fund_id": "F03",
+      "evidence_id": "DODGX_TRANSACTION_SCOPE",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_excerpt",
+        "source_line"
+      ],
+      "A_source_document_id": "DODGX_mandate_20250630_evidence",
+      "C_source_document_id": "DODGX_C_full485_20260422",
+      "A_excerpt_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "C_excerpt_sha256": "1d7686530548a70f88710bb6e920bd4d68f1e454c120a8bee31f3a550fec3e4a"
+    },
+    {
+      "fund_id": "F04",
+      "evidence_id": "TRBCX_BORROW",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_line"
+      ],
+      "A_source_document_id": "TRBCX_amendment_20260325_006885",
+      "C_source_document_id": "TRBCX_amendment_20260501_009623",
+      "A_excerpt_sha256": "7f514496c71f7aaefb9ac6adc7b143aba7b536a8dd839a27e3b8ec1aa26cc252",
+      "C_excerpt_sha256": "7f514496c71f7aaefb9ac6adc7b143aba7b536a8dd839a27e3b8ec1aa26cc252"
+    },
+    {
+      "fund_id": "F04",
+      "evidence_id": "TRBCX_BORROW_PURCHASE",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_line"
+      ],
+      "A_source_document_id": "TRBCX_amendment_20260325_006885",
+      "C_source_document_id": "TRBCX_amendment_20260501_009623",
+      "A_excerpt_sha256": "d7f80d794a88faf1a50b2d22765861e1f65dd1e0be5c2d373df6a56d26fb4a4c",
+      "C_excerpt_sha256": "d7f80d794a88faf1a50b2d22765861e1f65dd1e0be5c2d373df6a56d26fb4a4c"
+    },
+    {
+      "fund_id": "F04",
+      "evidence_id": "TRBCX_FUNDS",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_line"
+      ],
+      "A_source_document_id": "TRBCX_amendment_20260325_006885",
+      "C_source_document_id": "TRBCX_amendment_20260501_009623",
+      "A_excerpt_sha256": "9e144e58eea4b6cf91178b6c222a1eb40a6713a9500a323f7b0067cf718ab202",
+      "C_excerpt_sha256": "9e144e58eea4b6cf91178b6c222a1eb40a6713a9500a323f7b0067cf718ab202"
+    },
+    {
+      "fund_id": "F04",
+      "evidence_id": "TRBCX_ILLIQUID",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_line"
+      ],
+      "A_source_document_id": "TRBCX_amendment_20260325_006885",
+      "C_source_document_id": "TRBCX_amendment_20260501_009623",
+      "A_excerpt_sha256": "6b2d5e264a9a1b1203c7854fc1d4c4314f32e456ed59bed507f718a3311377bc",
+      "C_excerpt_sha256": "6b2d5e264a9a1b1203c7854fc1d4c4314f32e456ed59bed507f718a3311377bc"
+    },
+    {
+      "fund_id": "F04",
+      "evidence_id": "TRBCX_INDUSTRY25",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_line"
+      ],
+      "A_source_document_id": "TRBCX_amendment_20260325_006885",
+      "C_source_document_id": "TRBCX_amendment_20260501_009623",
+      "A_excerpt_sha256": "575c0b03f64d44226c8c43f8cc1a1d1ff465e70036a4768039443dec5663c0da",
+      "C_excerpt_sha256": "575c0b03f64d44226c8c43f8cc1a1d1ff465e70036a4768039443dec5663c0da"
+    },
+    {
+      "fund_id": "F04",
+      "evidence_id": "TRBCX_INSTRUMENTS",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_line"
+      ],
+      "A_source_document_id": "TRBCX_amendment_20260325_006885",
+      "C_source_document_id": "TRBCX_amendment_20260501_009623",
+      "A_excerpt_sha256": "97d2de12f451a176f3995b19b0123cf381d1ba6f428bb618507b1a3b57b6bc90",
+      "C_excerpt_sha256": "97d2de12f451a176f3995b19b0123cf381d1ba6f428bb618507b1a3b57b6bc90"
+    },
+    {
+      "fund_id": "F04",
+      "evidence_id": "TRBCX_LENDING",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_line"
+      ],
+      "A_source_document_id": "TRBCX_amendment_20260325_006885",
+      "C_source_document_id": "TRBCX_amendment_20260501_009623",
+      "A_excerpt_sha256": "9018098c09f826dc8223e14ee069fa38c50bd21002906ebcfd13813455b9e523",
+      "C_excerpt_sha256": "9018098c09f826dc8223e14ee069fa38c50bd21002906ebcfd13813455b9e523"
+    },
+    {
+      "fund_id": "F04",
+      "evidence_id": "TRBCX_LOW_GRADE",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_line"
+      ],
+      "A_source_document_id": "TRBCX_amendment_20260325_006885",
+      "C_source_document_id": "TRBCX_amendment_20260501_009623",
+      "A_excerpt_sha256": "e4b6dce6c48bb7ffc5f5a06e77b73e917577ccd26798ad69af47bd3475dd4866",
+      "C_excerpt_sha256": "e4b6dce6c48bb7ffc5f5a06e77b73e917577ccd26798ad69af47bd3475dd4866"
+    },
+    {
+      "fund_id": "F04",
+      "evidence_id": "TRBCX_NONDIVERSIFIED",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_excerpt",
+        "source_line"
+      ],
+      "A_source_document_id": "TRBCX_amendment_20260325_006885",
+      "C_source_document_id": "TRBCX_amendment_20260501_009623",
+      "A_excerpt_sha256": "c9dd2c022b53ba2ac83c7457e9f4afd61b588472f6613faacb93bd070e55c10d",
+      "C_excerpt_sha256": "aa6691baa32c2a82c092445c7ee4802188a4fc05798675aaac78136cb101a91e"
+    },
+    {
+      "fund_id": "F04",
+      "evidence_id": "TRBCX_OILGAS",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_line"
+      ],
+      "A_source_document_id": "TRBCX_amendment_20260325_006885",
+      "C_source_document_id": "TRBCX_amendment_20260501_009623",
+      "A_excerpt_sha256": "cf5f09e8e70d62365a5403e1badf7cf15782ac4879ba6fd6fa69b1ab1872c11d",
+      "C_excerpt_sha256": "cf5f09e8e70d62365a5403e1badf7cf15782ac4879ba6fd6fa69b1ab1872c11d"
+    },
+    {
+      "fund_id": "F04",
+      "evidence_id": "TRBCX_SHORT_MARGIN",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_line"
+      ],
+      "A_source_document_id": "TRBCX_amendment_20260325_006885",
+      "C_source_document_id": "TRBCX_amendment_20260501_009623",
+      "A_excerpt_sha256": "584b1dcc66830415fc3f910f05ae37662fc372480ce4c80fad9c65929a6e0af8",
+      "C_excerpt_sha256": "584b1dcc66830415fc3f910f05ae37662fc372480ce4c80fad9c65929a6e0af8"
+    },
+    {
+      "fund_id": "F04",
+      "evidence_id": "TRBCX_TIME",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_line"
+      ],
+      "A_source_document_id": "TRBCX_amendment_20260325_006885",
+      "C_source_document_id": "TRBCX_amendment_20260501_009623",
+      "A_excerpt_sha256": "bf001605dd56ae72510001977a4403c7420e725902a87c725db4d86185f1c1df",
+      "C_excerpt_sha256": "bf001605dd56ae72510001977a4403c7420e725902a87c725db4d86185f1c1df"
+    },
+    {
+      "fund_id": "F04",
+      "evidence_id": "TRBCX_WARRANTS",
+      "changed_fields": [
+        "source_document_id",
+        "source_url",
+        "source_line"
+      ],
+      "A_source_document_id": "TRBCX_amendment_20260325_006885",
+      "C_source_document_id": "TRBCX_amendment_20260501_009623",
+      "A_excerpt_sha256": "09669f39de9f2577b088fdd87f20d2e5be671a84b85c5176cf6a3ec10d7e4e25",
+      "C_excerpt_sha256": "09669f39de9f2577b088fdd87f20d2e5be671a84b85c5176cf6a3ec10d7e4e25"
+    }
+  ],
+  "protocol_new_document_rule": "추가 전망은 A의2026-03-31 상한 이후 처음 공개되고 C의2026-06-30 상한 안에 공개된 문서. 계속 유효한 기존 의무 규칙은 기본정보로 유지하되 새 전망 회수 성과로 세지 않음",
+  "conclusions": [
+    "Current source_catalog_v2 is restricted to the six original eligible additional documents (including explicitly labeled A historical commentary), not mandatory baselines.",
+    "All C catalog facts are the new 2026-06-17 FOMC document. The current after-March31 condition cannot falsely flag an existing mandatory rule, because those IDs are absent from this catalog.",
+    "A mandatory baseline citation is currently exposed but unscored for source facts: gold=None -> source_fact_scored=False; no publication_within_cutoff=False is assigned. This is a source-audit coverage limitation, not evidence that the rule is correct or wrong.",
+    "A C citation to an A outlook ID is a different case: the old outlook is outside the C additional-document eligibility window, so its cutoff/period flag is appropriate.",
+    "Current scored evidence IDs have A-/C- version-specific prefixes and map to exactly one original source SHA. Grouping by evidence ID plus literal payload does not combine different actual source versions in the current catalog.",
+    "Baseline mandatory IDs are reused across A/C and some point to different source documents. If they are added to source scoring later, an eid-only catalog or recurrence key would be unsafe.",
+    "Future extension requires role-aware publication checks (new outlook window versus effective mandatory-rule applicability), period/fund-aware mandatory lookup, and an explicit source_document_id/source_bytes_sha256 in each scored fact and recurrence group.",
+    "No current evaluator/candidate change is needed to remove the suspected false violation. A future source-audit expansion is a declared new audit specification/global reanalysis, not an outcome-selected correction."
+  ],
+  "source_files": [
+    {
+      "path": "data\\v63_20261027\\continuation\\deployment\\local_windows\\candidate_002\\campaign_config.json",
+      "sha256": "ab652756d3a278e12937d47172d9190acc82c018423730dbe76303fc57553df3"
+    },
+    {
+      "path": "data\\v63_20261027\\numerical\\evaluator_only\\source_catalog_v2.json",
+      "sha256": "dae02567ae157fe5eaec1d672e480807e03f233a77110dbc939864f5f51429ef"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\documents_v2.json",
+      "sha256": "930560346838abed6129187611c461e88c77b082a30d7456c4053d0cbb108d72"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\profiles_v2.json",
+      "sha256": "556a5f546c0e27a1403cadd40b6ad8c16d72841855c2bb5b7ad8255b5eaae922"
+    },
+    {
+      "path": "plan\\LIBERA_실험설정_v6.3_20261027.json",
+      "sha256": "a884b1242217cfed37a52444a541968eb680739c649e85c2b8d3bf9b0de383dc"
+    },
+    {
+      "path": "research\\v63\\evaluate.py",
+      "sha256": "c64aadcebd2a607a18cc5eeb1a9824e7d6ae15310f4cd7e4c08e8e8544e7dbc9"
+    },
+    {
+      "path": "research\\v63\\audit_catalog_dates_versions.py",
+      "sha256": "cbac8e45ffb6786c7125ebb324fc4945bd05317a79dfb33beadd22d926788cb8"
+    }
+  ]
+}

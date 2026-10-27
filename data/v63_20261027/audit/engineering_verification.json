@@ -1,0 +1,165 @@
+{
+  "recorded_at_utc": "2026-10-27T03:24:23.828433+00:00",
+  "engineering_only": true,
+  "scope": "offline automated tests only; separate live connectivity probe is not counted here",
+  "real_model_generation_calls": 0,
+  "real_fund_experiment_completed": false,
+  "status": "passed",
+  "tests": 88,
+  "suites": [
+    {
+      "suite": "research.v63.test_numerics",
+      "command": [
+        "C:\\Users\\kuri\\2026libera\\tmp\\v63_numerics_venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "research/v63/test_numerics.py",
+        "-q",
+        "--junitxml",
+        "C:\\Users\\kuri\\2026libera\\data\\v63_20261027\\audit\\test_numerics.xml"
+      ],
+      "exit_code": 0,
+      "tests": 17,
+      "elapsed_seconds": 2.5760248999577016,
+      "log": "data/v63_20261027/audit/test_numerics.log",
+      "log_sha256": "dab11f22cdae8ba97a055c63879f07ef3ce02a0b7a07d87ece9993e5d0b05a34"
+    },
+    {
+      "suite": "research.v63.test_runtime_retrieval",
+      "command": [
+        "C:\\Users\\kuri\\2026libera\\tmp\\v63_numerics_venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "research/v63/test_runtime_retrieval.py",
+        "-q",
+        "--junitxml",
+        "C:\\Users\\kuri\\2026libera\\data\\v63_20261027\\audit\\test_runtime_retrieval.xml"
+      ],
+      "exit_code": 0,
+      "tests": 23,
+      "elapsed_seconds": 2.403749000048265,
+      "log": "data/v63_20261027/audit/test_runtime_retrieval.log",
+      "log_sha256": "18bd53cd4a856166a0a3c7ac010556ec490fe8d66243cee43ce7f1becfa90879"
+    },
+    {
+      "suite": "research.v63.test_statistics",
+      "command": [
+        "C:\\Users\\kuri\\2026libera\\tmp\\v63_numerics_venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "research/v63/test_statistics.py",
+        "-q",
+        "--junitxml",
+        "C:\\Users\\kuri\\2026libera\\data\\v63_20261027\\audit\\test_statistics.xml"
+      ],
+      "exit_code": 0,
+      "tests": 12,
+      "elapsed_seconds": 1.4472262000199407,
+      "log": "data/v63_20261027/audit/test_statistics.log",
+      "log_sha256": "3962e9dafd530c26de1138341570a84826b51f65e5780f11aaaa0d89028d5912"
+    },
+    {
+      "suite": "research.v63.test_delivery",
+      "command": [
+        "C:\\Users\\kuri\\2026libera\\tmp\\v63_numerics_venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "research/v63/test_delivery.py",
+        "-q",
+        "--junitxml",
+        "C:\\Users\\kuri\\2026libera\\data\\v63_20261027\\audit\\test_delivery.xml"
+      ],
+      "exit_code": 0,
+      "tests": 6,
+      "elapsed_seconds": 0.7706065000966191,
+      "log": "data/v63_20261027/audit/test_delivery.log",
+      "log_sha256": "aab6cf99481d64dd294c1491f37f0597bd8106003ff0ff2dbd2f057b69a770cc"
+    },
+    {
+      "suite": "research.v63.test_ollama_transport",
+      "command": [
+        "C:\\Users\\kuri\\2026libera\\tmp\\v63_numerics_venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "research/v63/test_ollama_transport.py",
+        "-q",
+        "--junitxml",
+        "C:\\Users\\kuri\\2026libera\\data\\v63_20261027\\audit\\test_ollama_transport.xml"
+      ],
+      "exit_code": 0,
+      "tests": 10,
+      "elapsed_seconds": 1.206589800072834,
+      "log": "data/v63_20261027/audit/test_ollama_transport.log",
+      "log_sha256": "b618e880e65207cdc1a3fc38522ddc9686d5a69b860400b47669ea4a480da9e5"
+    },
+    {
+      "suite": "research.v63.test_campaign",
+      "command": [
+        "C:\\Users\\kuri\\2026libera\\tmp\\v63_numerics_venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "research/v63/test_campaign.py",
+        "-q",
+        "--junitxml",
+        "C:\\Users\\kuri\\2026libera\\data\\v63_20261027\\audit\\test_campaign.xml"
+      ],
+      "exit_code": 0,
+      "tests": 11,
+      "elapsed_seconds": 2.2703971001319587,
+      "log": "data/v63_20261027/audit/test_campaign.log",
+      "log_sha256": "1f3fe726db00e95b0cbb1c0fea461e35ab702b8c06e99cac3b1721351227e308"
+    },
+    {
+      "suite": "research.v63.test_evaluate",
+      "command": [
+        "C:\\Users\\kuri\\2026libera\\tmp\\v63_numerics_venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "research/v63/test_evaluate.py",
+        "-q",
+        "--junitxml",
+        "C:\\Users\\kuri\\2026libera\\data\\v63_20261027\\audit\\test_evaluate.xml"
+      ],
+      "exit_code": 0,
+      "tests": 9,
+      "elapsed_seconds": 5.8127720998600125,
+      "log": "data/v63_20261027/audit/test_evaluate.log",
+      "log_sha256": "29d40851b3ce21a6b03688fe24315eb1a356778dbe98f942026f4168581a03a1"
+    }
+  ],
+  "source_code_sha256": {
+    "research/v63/artifact_bridge.py": "b6d2411f2aec30d16e143d1875c1a827899c7da623a7c30a910a6cfcc3777084",
+    "research/v63/audit_runtime.py": "778e442e8127bbaf0a5b92c02ba8ace3f9db815d08c6ba756734f621043402bb",
+    "research/v63/audit_workspace.py": "ee2665a550e01abd1699dba5fc6da239568eed6878d2e9816698945a83b82e75",
+    "research/v63/build_delivery.py": "1c41a376fe54dc54a26c6b65ea15938f766a40e4368d8a2570c18da1045e7cc8",
+    "research/v63/build_profiles_continuation.py": "6d602e709fd4b7dd754cf1b5e88f559bd54e1ebdcf8940b08a0a2b6efeb86a4b",
+    "research/v63/build_run.py": "0eed11c2041ecd4cd4385e5429778ab116a6182815d83cdc494cb2dd2cda5d71",
+    "research/v63/campaign.py": "5e3715078e5d349ac8ecf072a15e4f616b9b1b7b4d74d455f642abd618e1bd21",
+    "research/v63/collect_official_data.py": "b51a77d9a2e1b587cd3880899981cef58f3141ead1410b40f21ce1e8079a9da1",
+    "research/v63/continue_identity_aliases.py": "9dbac52bdfd92ca3d29dd76306ace82a66bd4882f4f444980fbd5819916076aa",
+    "research/v63/continue_sic_mapping.py": "7483d90fd70f4519dae682b0b97700f14089402571a12367e7050dcc18e0e6ac",
+    "research/v63/evaluate.py": "b43d6f8db4db54488dad703016ecb3e0d50376cae53591f0e34b74e995826686",
+    "research/v63/exact_tokenizer.py": "f14ec91b7016f2ba76318f7eb00657c397827b0712c22a4f5e46f3a52926cefe",
+    "research/v63/numerics.py": "b8906ee2cf06a8c9b51dac2f73ea8584a09d998a618e94879ca05b39e4236dd7",
+    "research/v63/ollama_transport.py": "aa9d9ecfb6106769b7667c9a991cf8598950f9ec3e1cf933bd531fb08ebd8a52",
+    "research/v63/parse_fidelity_continuation.py": "632997978bfd13548da4368dc3d33908dab158cbedb13cf13d57094918f16a75",
+    "research/v63/parse_fidelity_dom_continuation.py": "24ce2b593c1208fe75632e245717ba6311e5a4930a02dc312b3d4a9b4a11ece0",
+    "research/v63/parse_vanguard_dom_continuation.py": "022a79dad99a5074d43f584cd97dd598c7fc2d08b62533bcff4808b0e86e2966",
+    "research/v63/prepare_data_audit.py": "bc9a6b1e691728f0c88b5f7e75160bae428e2daccdacdb0702f431c2e4a53f21",
+    "research/v63/prepare_dodge_mandate_continuation.py": "380fe31fc1c9b9ae9fb0909bc3cf2771361046aadfaae37c350ed0d2e9fb34f8",
+    "research/v63/prepare_numerics.py": "c95c7e594d5176c849ec69ed6da21038b01b7c438a74df229d16c50e5a0ddd6c",
+    "research/v63/retrieval.py": "5b1c17f0e94a4230e7508fb9e8cef07efad8fe921931c359ee87cb80dda39aac",
+    "research/v63/run_verification.py": "0dfc8a7fb9739317e530d99d7c1b6a877efc673d559dc15e105493717894ce80",
+    "research/v63/runtime.py": "19ce7156ddf689660df64017ec07eb9366e0fd0bc9e2419117bf1bf54781dd2f",
+    "research/v63/statistics.py": "2b06ebb144b0f7ea59750ea38563e5aa68c4bee29e60e20bf3840058269f95e5",
+    "research/v63/test_campaign.py": "c2366fea90c63cc89369a5910050b631952b339e08401e6feb077066dc61adcd",
+    "research/v63/test_delivery.py": "e010dc02c28be4f0d07d496d9fd1aae6e0edcb8b1bd60b22ef82f1a75743c278",
+    "research/v63/test_evaluate.py": "52cbfdba538ac146729b5d45e0384c5b220e6935b8084a9c74c7b78e03529de0",
+    "research/v63/test_numerics.py": "74f0f927db502bb7cad434918de4d9bbd4669d57a70805df2ba5ceadc216cb23",
+    "research/v63/test_ollama_transport.py": "a39aee91f04592f59523750549003bb458569bdcae9d7c76f37adc48dba8e9d4",
+    "research/v63/test_runtime_retrieval.py": "6e11aca54e924de05237b59575d682dac64196fbdcb53ce37cdb5d3fbf42a90b",
+    "research/v63/test_statistics.py": "6443e5582ef5d8bc289fb51643e860f9812488095d2e39d8747dca862c998947",
+    "research/v63/transport_errors.py": "59db49ba45f5035921054d799dadd22d01d6dd6f1864b964c6ad95de86287a59",
+    "research/v63/verify_official_data.py": "8683c253f183031d6634bc7cbd41ae8f3c6b1ea7cacc60f01f02ef995b2d75e4"
+  }
+}

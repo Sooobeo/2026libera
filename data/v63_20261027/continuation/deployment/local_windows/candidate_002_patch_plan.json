@@ -1,0 +1,52 @@
+{
+  "status": "prospective_plan_only_current_candidate_unchanged",
+  "selection_basis": "Technical capacity, prompt/output length, latency, memory and protocol execution only; no strategic outcome-based model or prompt selection.",
+  "trigger": "Candidate 1 stage-one responses repeat mandate facts and reach the 2048 output cap. The complete first smoke remains running without modification.",
+  "requested_changes": [
+    {
+      "file": "research/v63/runtime.py",
+      "change": "Define concise contents for every output field, identically across all arms.",
+      "stage1": {
+        "baseline_conditions": "Short objective/risk/budget summary and mandatory rule IDs. Refer to the supplied baseline; never reproduce its arrays or rule prose.",
+        "evidence": "Each materially used extra source fact appears once with the existing evidence_id/value/unit/date/interpretation fields. Source atoms, numbers and units remain intact.",
+        "adopted_and_withheld": "Objects with only evidence_id, status (adopted/withheld), and a short reason. Do not repeat value/unit/date/source text already in evidence or the common baseline.",
+        "industry_plan": "Exactly 12 objects containing industry, proposed direction and a short reason. No oracle or optimal weights are supplied."
+      },
+      "stage2": "Exactly 12 raw weights and changes; retain the evidence fields; keep tradeoffs brief and refer to earlier facts instead of duplicating baseline prose.",
+      "stage3": "Exactly 12 raw final weights; small calculator result summary; short prior-error and direction explanations. Never report a calculation that was not performed.",
+      "schema": "Constrain object/array item fields to these contents and bounded explanation strings. Preserve raw numeric output without normalization or repair."
+    },
+    {
+      "file": "research/v63/runtime.py",
+      "change": "Inject the exact frozen packet/FULL text once at its assigned onset, then retain it through unchanged full history.",
+      "audit": "Keep cumulative exposed IDs and original evidence SHA at every stage; add evidence_injected_this_stage. Later stage messages refer to the evidence already in history. No source text or prior model output is removed.",
+      "expected_structural_saving": "For current DODGX FULL, avoid up to two duplicate copies of 2300 tokens. This is a representation change and must be frozen before the new candidate's calls."
+    },
+    {
+      "file": "research/v63/build_run.py",
+      "change": "Use explicit per-document retrieval_gold_evidence_ids for A/C diagnostics when supplied, validate them against unit IDs, and filter source date eligibility before constructing the denominator.",
+      "information_boundary": "The retrieval gold set remains evaluator-only. All original units and source IDs remain available in FULL; gold does not affect BM25 ranking or the model prompt."
+    },
+    {
+      "file": "research/v63/campaign.py",
+      "change": "Persist phase budget start, cumulative cost accounting and run source snapshots; prevent concurrent writers with an OS-held lock.",
+      "resume": "Reuse completed same-input trajectories. Replay only complete verified raw request/response pairs without generation. If a partial request may have been dispatched and its response cannot be recovered, retain it as an explicit operational interruption and never silently resubmit. All uncertainty and unattempted child stages stay visible.",
+      "budget": "Include reused requests belonging to the phase and interrupted attempts conservatively. A process restart does not reset the phase budget or elapsed clock. Preserve old records."
+    },
+    {
+      "file": "research/v63/campaign.py and local deployment configs",
+      "change": "Include the explicit server environment and signed binary/library manifest identity in the frozen runtime.",
+      "possible_next_runtime": {"OLLAMA_FLASH_ATTENTION": "1", "OLLAMA_KV_CACHE_TYPE": "q8_0", "context_tokens": 32768, "output_tokens": "2048 initially or 4096 only if prospectively chosen from capacity evidence"},
+      "verification": "Restart only the owned isolated server after candidate 1 ends; confirm launch args, resolved K/V cache types, native/provider token counts, memory and measured latency. Do not infer speed from memory reduction."
+    }
+  ],
+  "validation_plan": [
+    "Assert packet bytes appear once in R1/FULL histories, first appear at R2/R3 onsets, and every past output is retained.",
+    "Reject unknown A/C gold IDs and exclude future/old C source rows from retrieval recall denominators.",
+    "Verify response schemas reject duplicated free-form object shapes while preserving the required scientific fields.",
+    "Simulate process interruption and confirm replay never duplicates a submitted generation request, unknown sends are explicit, and budget totals survive restart.",
+    "Preserve candidate 1 code hashes and outputs. Candidate 2 uses a separate run identity and starts with the staged development smoke."
+  ],
+  "main_model_frozen": false,
+  "current_execution_modified": false
+}

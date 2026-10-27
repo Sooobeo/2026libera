@@ -1,0 +1,89 @@
+{
+  "state": "prepared signals and numerical QA, NOT experimental completion",
+  "protocol_sha256": "a884b1242217cfed37a52444a541968eb680739c649e85c2b8d3bf9b0de383dc",
+  "files": [
+    {
+      "path": "data/v63_20261027/numerical/calibration.json",
+      "bytes": 43479,
+      "sha256": "bfa703298bf0e61574e0297fbc918ae639437dfe57b16449f9ebabfce04343a3"
+    },
+    {
+      "path": "data/v63_20261027/numerical/environment.json",
+      "bytes": 263,
+      "sha256": "e54555b4292e6849ababec7ec29740431c5a81c118835e3a7a3f42300c5ed573"
+    },
+    {
+      "path": "data/v63_20261027/numerical/environment_change_receipt.json",
+      "bytes": 1172,
+      "sha256": "b1983ef9a92c3e29559f73fd9bdf4b462902d3f9ddbc38e9666753b79941c46b"
+    },
+    {
+      "path": "data/v63_20261027/numerical/evaluation_pipeline_verification.json",
+      "bytes": 1642,
+      "sha256": "fcc22bf1b1dc064103839c143c40a1fc94b1fd95ef40cbfa844e3d78d1a68a51"
+    },
+    {
+      "path": "data/v63_20261027/numerical/evaluator_only/development_latent_theta.json",
+      "bytes": 5821,
+      "sha256": "746052f61aa84b7e86dc780e9efceafa67465acfd1dfb1244fc7c1c314a05d59"
+    },
+    {
+      "path": "data/v63_20261027/numerical/evaluator_only/development_signals.json",
+      "bytes": 71176,
+      "sha256": "5f1bbcc6d480afbc3d3fb4c027e9f391031937079a689fd2136455e2f687f774"
+    },
+    {
+      "path": "data/v63_20261027/numerical/evaluator_only/main_latent_theta.json",
+      "bytes": 28806,
+      "sha256": "959d44403a6b23a7b1199f2894ece43a220c30c69efe2c7a2f0030722aac6fc0"
+    },
+    {
+      "path": "data/v63_20261027/numerical/evaluator_only/main_signals.json",
+      "bytes": 355684,
+      "sha256": "26c3133f91105e9ffe96fd289fed10413c6749e8dac069cd74e279429507b9bd"
+    },
+    {
+      "path": "data/v63_20261027/numerical/evaluator_only/negative_control_latent_theta.json",
+      "bytes": 3913,
+      "sha256": "d58c179e42123508102d36bf1aa8cef3042387446ec85a0a3c94100c09a95a63"
+    },
+    {
+      "path": "data/v63_20261027/numerical/evaluator_only/negative_control_signals.json",
+      "bytes": 47544,
+      "sha256": "4c9622ab0922126a3ed693be3ffacb416ead22f54b88f641e48ba4f8b1964d1a"
+    },
+    {
+      "path": "data/v63_20261027/numerical/evaluator_only/replacement_signals.json",
+      "bytes": 24620,
+      "sha256": "7c3766260549203bfd9a50adbcc0412ecb3d37bfb89c7c2f375a2aee62ad7e43"
+    },
+    {
+      "path": "data/v63_20261027/numerical/synthetic_references.json",
+      "bytes": 238666,
+      "sha256": "15f3eb8d276d3d4374ea593f99369a9bf25142c6b457a26cd2d6f06566f81bda"
+    },
+    {
+      "path": "data/v63_20261027/numerical/synthetic_verification_profiles.json",
+      "bytes": 1544,
+      "sha256": "348825126ade65074dd79eb9565e8d54443ab43e3d82c5d75faa0d69c5da977f"
+    },
+    {
+      "path": "data/v63_20261027/numerical/test_receipt.json",
+      "bytes": 1304,
+      "sha256": "d2b95f1b3ac46791985d037eb7bf84e1d5b18c3076406016d8a9c73dbbb6d51d"
+    },
+    {
+      "path": "data/v63_20261027/numerical/verification.json",
+      "bytes": 17332,
+      "sha256": "36e5170b6c834ec34493730a35554bb3042e711558dab28732bb73b577452378"
+    }
+  ],
+  "all_fund_signal_and_latent_ledgers": "evaluator_only; no model or retrieval access",
+  "pending": [
+    "audited actual fund profiles",
+    "reference audit on those profiles",
+    "human audit",
+    "runtime/model freeze",
+    "actual model requests"
+  ]
+}

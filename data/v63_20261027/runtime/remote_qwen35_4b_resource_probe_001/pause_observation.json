@@ -1,0 +1,31 @@
+﻿{
+    "status":  "paused_by_user_dispatch_outcome_unknown",
+    "observed_at_utc":  "2026-10-27T05:06:53.2288380Z",
+    "engineering_only":  true,
+    "remote_service_pid":  2704,
+    "remote_service_signalled":  false,
+    "model":  "qwen3.5:4b-q4_K_M",
+    "model_digest":  "d8b0f5e9760cd1682034f292d7ef72ec46f432149be0df7574bf2d6e92e38c04",
+    "maximum_generation_dispatches":  1,
+    "retries":  0,
+    "additional_generation_after_pause":  0,
+    "remote_runner":  "/root/libera_v63_20261027/runtime/remote_qwen35_4b_resource_probe_001_runner.py",
+    "remote_output":  "/root/libera_v63_20261027/runtime/remote_qwen35_4b_resource_probe_001",
+    "script_sha256":  "f7f82701ca1289c29b05fb0e1a310e3b88236bf09102c23a9b16ba143a30c833",
+    "foreground_ctrl_c_ui_attempts":  2,
+    "cancel_acknowledged":  false,
+    "http_receipt_recovered":  false,
+    "console_tabs":  [
+                         "1456050333",
+                         "1456050334"
+                     ],
+    "original_user_tab_untouched":  "1456050293",
+    "last_observation":  "New console shows root prompt followed by submitted python3 runner command, no completion or cancellation output. Browser input action returns but terminal DOM does not update.",
+    "resume_rule":  "READ ONLY FIRST: inspect remote generation_dispatch.json, generation.receipt.json, summary.json, /proc PID status and GET /api/ps through authorized console. Never resend this runner or generation request when dispatch/response is unknown. Existing output mkdir(exist_ok=False) prevents rerun. Any new inference requires explicit resumed authorization. Preserve existing Ollama PID2704/service11434.",
+    "timeout_seconds":  900,
+    "keep_alive":  "0s",
+    "automatic_unload_expected_only_after_server_completion":  true,
+    "quality_content_read":  false,
+    "handoff_module_created":  false,
+    "handoff_tests_created":  false
+}

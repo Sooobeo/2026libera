@@ -1,0 +1,74 @@
+{
+  "reviewer": "numerical_core agent, automatic/source-line review; human review assumed only by user instruction",
+  "reviewed_at_utc": "2026-10-27T03:52:04.219866+00:00",
+  "source_files": [
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\VPMCX_development_mandate.json",
+      "sha256": "9acd7596cbc47615e008191b44367fd34e72cafd5f38139cd56aea456ecd5d08"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\VPMCX_2025_mandate_prospectus_web_excerpt.txt",
+      "sha256": "ff92a8ea548d52737696a83156186e1afc5c3d248ccee3388566875388d8efff"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\VPMCX_2025_mandate_sai_web_excerpt.txt",
+      "sha256": "1c78e297ae54fa0b50899381f87dca076ebfc0b84a85f45ab9e26a269349a582"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\VPMCX_2025_amendments_web_2_and_liquidity.txt",
+      "sha256": "dcf221f85dd9c48cca2b5a1d3c0f34c1c92c2a998a02b74ef677b8c00d999466"
+    }
+  ],
+  "findings": [
+    {
+      "item": "50 percent issuer basket",
+      "verdict": "correctly excluded",
+      "source_line": 4330,
+      "reason": "The source explicitly applies this basket to the other funds except Vanguard PRIMECAP."
+    },
+    {
+      "item": "issuer25 and issuer75",
+      "verdict": "applicable",
+      "source_lines": [
+        4331,
+        4332
+      ],
+      "reason": "25 percent quarter-end requirement applies to each Fund; separate 75 percent purchase-time diversification clause specifically includes PRIMECAP. Different timing and denominators are preserved."
+    },
+    {
+      "item": "temporary departures",
+      "verdict": "corrected after initial review",
+      "source_lines": [
+        374,
+        375,
+        376
+      ],
+      "reason": "Initial defensive heading pointer 373 did not contain substantive conditions. Current TEMPORARY_DEPARTURE points to 374 and retains best-interest/objective consistency plus circumstances."
+    },
+    {
+      "item": "defensive departure",
+      "verdict": "corrected after initial review",
+      "source_line": 377,
+      "reason": "Current DEFENSIVE points to substantive rule and retains adverse/unusual circumstances and possibility of missing the objective."
+    },
+    {
+      "item": "FF12 numerical enforcement",
+      "verdict": "appropriate no invented cap",
+      "reason": "Issuer, source-industry, instrument, liquidity and path-dependent restrictions do not translate directly to numerical FF12 caps. Class3 semantics are preserved."
+    },
+    {
+      "item": "liquidity and lending",
+      "verdict": "source conditions retained",
+      "source_lines": [
+        4864,
+        4880,
+        4881
+      ],
+      "reason": "15 percent NAV liquidity and one-third total assets lending use different denominators; collateral requirement is separate."
+    }
+  ],
+  "limitations": [
+    "Independent agent review is not a claim that a second human signed the source audit.",
+    "This check targets source applicability and cited rule lines, not a full legal opinion."
+  ]
+}

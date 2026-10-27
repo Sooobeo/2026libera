@@ -1,0 +1,452 @@
+{
+  "schema_version": "v2",
+  "status": "semantic_source_units_with_exact_scope_token_check",
+  "recorded_at_utc": "2026-10-27T03:53:43.676957+00:00",
+  "generation_calls": 0,
+  "tokenizer_identity": "native:3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6:8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+  "profiles_path": "data\\v63_20261027\\continuation_sources\\profiles_v2.json",
+  "profiles_sha256": "556a5f546c0e27a1403cadd40b6ad8c16d72841855c2bb5b7ad8255b5eaae922",
+  "source_path": "data\\v63_20261027\\continuation_sources\\VPMCX_SAI_20260325_text.txt",
+  "source_sha256": "b8cad4ade34ed6dfd13486d503944522af0ff72eceaca0c9bdb59be9ce4e812d",
+  "script_sha256": "cb39f3244920cca38f66e9844fc1ed6dde546fd79b0edaff3aac418eda6c79ad",
+  "profiles": [
+    {
+      "fund_id": "F02",
+      "ticker": "VPMCX",
+      "period": "A_B",
+      "evidence_id": "VPMCX_BORROWING_COVER",
+      "source_document_id": "VPMCX_SAI_20260325",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000120/f44410d1.htm",
+      "original_source_excerpt": "A fund’s ability to borrow money is limited by its investment policies and limitations; by the 1940 Act; and by applicable exemptions, no-action letters, interpretations, and other pronouncements issued from time to time by the SEC and its staff or any other regulatory authority with jurisdiction. Under the 1940 Act, a fund is required to maintain continuous asset coverage (i.e., total assets including borrowings, less liabilities exclusive of borrowings) of 300% of the amount borrowed, with an exception for borrowings not in excess of 5% of the fund’s total assets (at the time of borrowing) made for temporary or emergency purposes. Any borrowings for temporary purposes in excess of 5% of the fund’s total assets must maintain continuous asset coverage. If the 300% asset coverage should decline as a result of market fluctuations or for other reasons, a fund may be required to sell some of its portfolio holdings within three days (excluding Sundays and holidays) to reduce the debt and restore the 300% asset coverage, even though it may be disadvantageous from an investment standpoint to sell securities at that time. Borrowing will tend to exaggerate the effect on net asset value of any increase or decrease in the market value of a fund’s portfolio. Money borrowed will be subject to interest costs that may or may not be recovered by earnings on the securities purchased with the proceeds of such borrowing. A fund also may be required to maintain minimum average balances in connection with a borrowing or to pay a commitment or other fee to maintain a line of credit; either of these requirements would increase the cost of borrowing over the stated interest rate. A borrowing transaction will not be considered to constitute the issuance, by a fund, of a “senior security,” as that term is defined in Section 18(g) of the 1940 Act, and therefore such transaction will not be subject to the 300% asset coverage requirement otherwise applicable to borrowings by a fund, if the fund complies with Rule 18f-4 under the 1940 Act.",
+      "source_excerpt_sha256": "cce464105962b8debfbe199a7380f684ae5e960152ae7a60ea9f677697ba1582",
+      "source_continuation": "",
+      "continuation_reason": null,
+      "common_scope_text": "F02 VPMCX; period=A_B; VPMCX_BORROWING_COVER; source=VPMCX_SAI_20260325, 2026-03-25. Original mandatory rule; applicable from stage 1 to every arm; not a new outlook.",
+      "units": [
+        {
+          "unit_id": "VPMCX_BORROWING_COVER/U01",
+          "evidence_ids": [
+            "VPMCX_BORROWING_COVER"
+          ],
+          "text": "A fund’s ability to borrow money is limited by its investment policies and limitations; by the 1940 Act; and by applicable exemptions, no-action letters, interpretations, and other pronouncements issued from time to time by the SEC and its staff or any other regulatory authority with jurisdiction. Under the 1940 Act, a fund is required to maintain continuous asset coverage (i.e., total assets including borrowings, less liabilities exclusive of borrowings) of 300% of the amount borrowed, with an exception for borrowings not in excess of 5% of the fund’s total assets (at the time of borrowing) made for temporary or emergency purposes. Any borrowings for temporary purposes in excess of 5% of the fund’s total assets must maintain continuous asset coverage. If the 300% asset coverage should decline as a result of market fluctuations or for other reasons, a fund may be required to sell some of its portfolio holdings within three days (excluding Sundays and holidays) to reduce the debt and restore the 300% asset coverage, even though it may be disadvantageous from an investment standpoint to sell securities at that time. ",
+          "shared_context": "",
+          "original_start": 0,
+          "original_end": 1132,
+          "source_line_start": 196,
+          "source_line_end": 196,
+          "token_receipt": {
+            "method": "exact_installed_libllama_vocab_only",
+            "abi_identity": "llama.cpp-6f767fe96-model-params-80-amd64",
+            "token_count": 280,
+            "text_sha256": "2b503568cf860d653e09e40b674182ebfc55c9cea5d6a1b28b2caaf9f31e7c1b",
+            "token_ids_sha256": "04f306a25fb3bdd394c26ebb24aa74c38e3e7db0b5b1a100fe82e5990e76d272",
+            "model_sha256": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+            "gguf_sha256": "3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6",
+            "vocabulary_size": 151936,
+            "library_hashes": {
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libwinpthread-1.dll": "43ee72bd3daa5348339d820695442b7cc0cc37892072b06e0547111d08572258",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libunwind.dll": "cf46fe9f953a2cdb16f82558316bdd53873ec8d9a7850887d409ee9685ed3cd7",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libc++.dll": "659b8402be4dd615d16685fdaffc94e70db1ce8617c7de32a78644d06422fd3c",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libomp.dll": "492036a3aedc3671e2ff7781504f8ffb59082b717d12f58a7049772b81f24ccd",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\ggml-base.dll": "b385871a358e2a1e750921b0233b5bb73c32b4dda9ee2a64cba2d853d3efd4ae",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\ggml.dll": "ebe3ffe406e27d08c8e34d1d8e49ee62e007b761ea126b49c04096106ef078b9",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libllama.dll": "0335cae1bc3429fd8fe2a98f02777653d6680380a5e5698c514e6c928d36abb3",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\models\\blobs\\sha256-3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6": "3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6"
+            },
+            "add_bos": false,
+            "add_eos": false,
+            "generation_calls": 0,
+            "vocab_only": true
+          }
+        },
+        {
+          "unit_id": "VPMCX_BORROWING_COVER/U02",
+          "evidence_ids": [
+            "VPMCX_BORROWING_COVER"
+          ],
+          "text": "Borrowing will tend to exaggerate the effect on net asset value of any increase or decrease in the market value of a fund’s portfolio. Money borrowed will be subject to interest costs that may or may not be recovered by earnings on the securities purchased with the proceeds of such borrowing. A fund also may be required to maintain minimum average balances in connection with a borrowing or to pay a commitment or other fee to maintain a line of credit; either of these requirements would increase the cost of borrowing over the stated interest rate. ",
+          "shared_context": "",
+          "original_start": 1132,
+          "original_end": 1685,
+          "source_line_start": 197,
+          "source_line_end": 197,
+          "token_receipt": {
+            "method": "exact_installed_libllama_vocab_only",
+            "abi_identity": "llama.cpp-6f767fe96-model-params-80-amd64",
+            "token_count": 146,
+            "text_sha256": "ac2f322549e2f052ff89f39d6787d180e76eadeb2fcb25f415448a04eaea2f68",
+            "token_ids_sha256": "9f985edca5f5e0dfd27cc95bf020f56bc1c3cb753fa9b6dbf17644832df2d9d3",
+            "model_sha256": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+            "gguf_sha256": "3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6",
+            "vocabulary_size": 151936,
+            "library_hashes": {
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libwinpthread-1.dll": "43ee72bd3daa5348339d820695442b7cc0cc37892072b06e0547111d08572258",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libunwind.dll": "cf46fe9f953a2cdb16f82558316bdd53873ec8d9a7850887d409ee9685ed3cd7",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libc++.dll": "659b8402be4dd615d16685fdaffc94e70db1ce8617c7de32a78644d06422fd3c",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libomp.dll": "492036a3aedc3671e2ff7781504f8ffb59082b717d12f58a7049772b81f24ccd",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\ggml-base.dll": "b385871a358e2a1e750921b0233b5bb73c32b4dda9ee2a64cba2d853d3efd4ae",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\ggml.dll": "ebe3ffe406e27d08c8e34d1d8e49ee62e007b761ea126b49c04096106ef078b9",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libllama.dll": "0335cae1bc3429fd8fe2a98f02777653d6680380a5e5698c514e6c928d36abb3",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\models\\blobs\\sha256-3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6": "3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6"
+            },
+            "add_bos": false,
+            "add_eos": false,
+            "generation_calls": 0,
+            "vocab_only": true
+          }
+        },
+        {
+          "unit_id": "VPMCX_BORROWING_COVER/U03",
+          "evidence_ids": [
+            "VPMCX_BORROWING_COVER"
+          ],
+          "text": "A borrowing transaction will not be considered to constitute the issuance, by a fund, of a “senior security,” as that term is defined in Section 18(g) of the 1940 Act, and therefore such transaction will not be subject to the 300% asset coverage requirement otherwise applicable to borrowings by a fund, if the fund complies with Rule 18f-4 under the 1940 Act.",
+          "shared_context": "",
+          "original_start": 1685,
+          "original_end": 2045,
+          "source_line_start": 198,
+          "source_line_end": 198,
+          "token_receipt": {
+            "method": "exact_installed_libllama_vocab_only",
+            "abi_identity": "llama.cpp-6f767fe96-model-params-80-amd64",
+            "token_count": 135,
+            "text_sha256": "12f095e6eb59946c345989163945c5d0cd2d3f8ae12beb270a0c842557561a91",
+            "token_ids_sha256": "852834d3998635f7cbea3d1a061c77bc0385b237e2c77988280fce46e8d733d7",
+            "model_sha256": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+            "gguf_sha256": "3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6",
+            "vocabulary_size": 151936,
+            "library_hashes": {
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libwinpthread-1.dll": "43ee72bd3daa5348339d820695442b7cc0cc37892072b06e0547111d08572258",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libunwind.dll": "cf46fe9f953a2cdb16f82558316bdd53873ec8d9a7850887d409ee9685ed3cd7",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libc++.dll": "659b8402be4dd615d16685fdaffc94e70db1ce8617c7de32a78644d06422fd3c",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libomp.dll": "492036a3aedc3671e2ff7781504f8ffb59082b717d12f58a7049772b81f24ccd",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\ggml-base.dll": "b385871a358e2a1e750921b0233b5bb73c32b4dda9ee2a64cba2d853d3efd4ae",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\ggml.dll": "ebe3ffe406e27d08c8e34d1d8e49ee62e007b761ea126b49c04096106ef078b9",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libllama.dll": "0335cae1bc3429fd8fe2a98f02777653d6680380a5e5698c514e6c928d36abb3",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\models\\blobs\\sha256-3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6": "3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6"
+            },
+            "add_bos": false,
+            "add_eos": false,
+            "generation_calls": 0,
+            "vocab_only": true
+          }
+        }
+      ],
+      "original_excerpt_preserved_exactly": true,
+      "reconstruction": "concatenate unit text exactly = original_source_excerpt; final unit shared_context contains the adjacent original cross-reference sentence when needed",
+      "all_parts_required_for_complete_rule": true,
+      "gold_count_per_rule": 1
+    },
+    {
+      "fund_id": "F02",
+      "ticker": "VPMCX",
+      "period": "A_B",
+      "evidence_id": "VPMCX_LENDING",
+      "source_document_id": "VPMCX_SAI_20260325",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000120/f44410d1.htm",
+      "original_source_excerpt": "The terms and the structure of the loan arrangements, as well as the aggregate amount of securities loans, must be consistent with the 1940 Act and the rules or interpretations of the SEC thereunder. These provisions limit the amount of securities a fund may lend to 33 1 ⁄ 3 % of the fund’s total assets and require that (1) the borrower pledge and maintain with the fund collateral consisting of cash, an irrevocable letter of credit, or securities issued or guaranteed by the U.S. government having at all times not less than 100% of the value of the securities lent; (2) the borrower add to such collateral whenever the price of the securities lent rises (i.e., the borrower “marks to market” on a daily basis); (3) the loan be made subject to termination by the fund at any time; and (4) the fund receives reasonable interest on the loan (which may include the fund investing any cash collateral in interest-bearing short-term investments), any distribution on the lent securities, and any increase in their market value. Loan arrangements made by a fund will comply with any other applicable regulatory requirements. At the present time, the SEC does not object if an investment company pays reasonable negotiated fees in connection with lent securities, so long as such fees are set forth in a written contract and approved by the investment company’s trustees. In addition, voting rights pass with the lent securities, but if a fund has knowledge that a material event will occur affecting securities on loan, and in respect to which the holder of the securities will be entitled to vote or consent, the lender must be entitled to call the loaned securities in time to vote or consent. A fund bears the risk that there may be a delay in the return of the securities, which may impair the fund’s ability to vote on such a matter. See",
+      "source_excerpt_sha256": "0b6700cf9446544330f3c2f8f903e1d4111e27f4cc9c22075bd4bf9dbf05692a",
+      "source_continuation": "Tax Status of the Funds for information about certain tax consequences related to a fund’s securities lending activities.",
+      "continuation_reason": "Complete the original See Tax Status cross-reference sentence without changing the frozen profile.",
+      "common_scope_text": "F02 VPMCX; period=A_B; VPMCX_LENDING; source=VPMCX_SAI_20260325, 2026-03-25. Original mandatory rule; applicable from stage 1 to every arm; not a new outlook.",
+      "units": [
+        {
+          "unit_id": "VPMCX_LENDING/U01",
+          "evidence_ids": [
+            "VPMCX_LENDING"
+          ],
+          "text": "The terms and the structure of the loan arrangements, as well as the aggregate amount of securities loans, must be consistent with the 1940 Act and the rules or interpretations of the SEC thereunder. These provisions limit the amount of securities a fund may lend to 33 1 ⁄ 3 % of the fund’s total assets and require that (1) the borrower pledge and maintain with the fund collateral consisting of cash, an irrevocable letter of credit, or securities issued or guaranteed by the U.S. government having at all times not less than 100% of the value of the securities lent; (2) the borrower add to such collateral whenever the price of the securities lent rises (i.e., the borrower “marks to market” on a daily basis); (3) the loan be made subject to termination by the fund at any time; and (4) the fund receives reasonable interest on the loan (which may include the fund investing any cash collateral in interest-bearing short-term investments), any distribution on the lent securities, and any increase in their market value. ",
+          "shared_context": "",
+          "original_start": 0,
+          "original_end": 1027,
+          "source_line_start": 505,
+          "source_line_end": 509,
+          "token_receipt": {
+            "method": "exact_installed_libllama_vocab_only",
+            "abi_identity": "llama.cpp-6f767fe96-model-params-80-amd64",
+            "token_count": 262,
+            "text_sha256": "dde501e062183f54170eb5f72c3ef0cc4eb675bfc06ab82d906f134c19aa9de0",
+            "token_ids_sha256": "4bd0c16e4046904024cb5911f010a74cc86fb1f4b1e7c2c0f045fb055aa06f93",
+            "model_sha256": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+            "gguf_sha256": "3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6",
+            "vocabulary_size": 151936,
+            "library_hashes": {
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libwinpthread-1.dll": "43ee72bd3daa5348339d820695442b7cc0cc37892072b06e0547111d08572258",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libunwind.dll": "cf46fe9f953a2cdb16f82558316bdd53873ec8d9a7850887d409ee9685ed3cd7",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libc++.dll": "659b8402be4dd615d16685fdaffc94e70db1ce8617c7de32a78644d06422fd3c",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libomp.dll": "492036a3aedc3671e2ff7781504f8ffb59082b717d12f58a7049772b81f24ccd",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\ggml-base.dll": "b385871a358e2a1e750921b0233b5bb73c32b4dda9ee2a64cba2d853d3efd4ae",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\ggml.dll": "ebe3ffe406e27d08c8e34d1d8e49ee62e007b761ea126b49c04096106ef078b9",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libllama.dll": "0335cae1bc3429fd8fe2a98f02777653d6680380a5e5698c514e6c928d36abb3",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\models\\blobs\\sha256-3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6": "3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6"
+            },
+            "add_bos": false,
+            "add_eos": false,
+            "generation_calls": 0,
+            "vocab_only": true
+          }
+        },
+        {
+          "unit_id": "VPMCX_LENDING/U02",
+          "evidence_ids": [
+            "VPMCX_LENDING"
+          ],
+          "text": "Loan arrangements made by a fund will comply with any other applicable regulatory requirements. At the present time, the SEC does not object if an investment company pays reasonable negotiated fees in connection with lent securities, so long as such fees are set forth in a written contract and approved by the investment company’s trustees. In addition, voting rights pass with the lent securities, but if a fund has knowledge that a material event will occur affecting securities on loan, and in respect to which the holder of the securities will be entitled to vote or consent, the lender must be entitled to call the loaned securities in time to vote or consent. A fund bears the risk that there may be a delay in the return of the securities, which may impair the fund’s ability to vote on such a matter. See",
+          "shared_context": "See Tax Status of the Funds for information about certain tax consequences related to a fund’s securities lending activities.",
+          "original_start": 1027,
+          "original_end": 1840,
+          "source_line_start": 509,
+          "source_line_end": 511,
+          "token_receipt": {
+            "method": "exact_installed_libllama_vocab_only",
+            "abi_identity": "llama.cpp-6f767fe96-model-params-80-amd64",
+            "token_count": 217,
+            "text_sha256": "26a3e42c849506b534594326ed0aaa7213be22fff3532db158d3163b38ff8d02",
+            "token_ids_sha256": "df8ec70bc2aafebb2c211884f324799263dd8be58cc30c37a127a47a3b54edd8",
+            "model_sha256": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+            "gguf_sha256": "3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6",
+            "vocabulary_size": 151936,
+            "library_hashes": {
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libwinpthread-1.dll": "43ee72bd3daa5348339d820695442b7cc0cc37892072b06e0547111d08572258",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libunwind.dll": "cf46fe9f953a2cdb16f82558316bdd53873ec8d9a7850887d409ee9685ed3cd7",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libc++.dll": "659b8402be4dd615d16685fdaffc94e70db1ce8617c7de32a78644d06422fd3c",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libomp.dll": "492036a3aedc3671e2ff7781504f8ffb59082b717d12f58a7049772b81f24ccd",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\ggml-base.dll": "b385871a358e2a1e750921b0233b5bb73c32b4dda9ee2a64cba2d853d3efd4ae",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\ggml.dll": "ebe3ffe406e27d08c8e34d1d8e49ee62e007b761ea126b49c04096106ef078b9",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libllama.dll": "0335cae1bc3429fd8fe2a98f02777653d6680380a5e5698c514e6c928d36abb3",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\models\\blobs\\sha256-3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6": "3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6"
+            },
+            "add_bos": false,
+            "add_eos": false,
+            "generation_calls": 0,
+            "vocab_only": true
+          }
+        }
+      ],
+      "original_excerpt_preserved_exactly": true,
+      "reconstruction": "concatenate unit text exactly = original_source_excerpt; final unit shared_context contains the adjacent original cross-reference sentence when needed",
+      "all_parts_required_for_complete_rule": true,
+      "gold_count_per_rule": 1
+    },
+    {
+      "fund_id": "F02",
+      "ticker": "VPMCX",
+      "period": "C",
+      "evidence_id": "VPMCX_BORROWING_COVER",
+      "source_document_id": "VPMCX_SAI_20260325",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000120/f44410d1.htm",
+      "original_source_excerpt": "A fund’s ability to borrow money is limited by its investment policies and limitations; by the 1940 Act; and by applicable exemptions, no-action letters, interpretations, and other pronouncements issued from time to time by the SEC and its staff or any other regulatory authority with jurisdiction. Under the 1940 Act, a fund is required to maintain continuous asset coverage (i.e., total assets including borrowings, less liabilities exclusive of borrowings) of 300% of the amount borrowed, with an exception for borrowings not in excess of 5% of the fund’s total assets (at the time of borrowing) made for temporary or emergency purposes. Any borrowings for temporary purposes in excess of 5% of the fund’s total assets must maintain continuous asset coverage. If the 300% asset coverage should decline as a result of market fluctuations or for other reasons, a fund may be required to sell some of its portfolio holdings within three days (excluding Sundays and holidays) to reduce the debt and restore the 300% asset coverage, even though it may be disadvantageous from an investment standpoint to sell securities at that time. Borrowing will tend to exaggerate the effect on net asset value of any increase or decrease in the market value of a fund’s portfolio. Money borrowed will be subject to interest costs that may or may not be recovered by earnings on the securities purchased with the proceeds of such borrowing. A fund also may be required to maintain minimum average balances in connection with a borrowing or to pay a commitment or other fee to maintain a line of credit; either of these requirements would increase the cost of borrowing over the stated interest rate. A borrowing transaction will not be considered to constitute the issuance, by a fund, of a “senior security,” as that term is defined in Section 18(g) of the 1940 Act, and therefore such transaction will not be subject to the 300% asset coverage requirement otherwise applicable to borrowings by a fund, if the fund complies with Rule 18f-4 under the 1940 Act.",
+      "source_excerpt_sha256": "cce464105962b8debfbe199a7380f684ae5e960152ae7a60ea9f677697ba1582",
+      "source_continuation": "",
+      "continuation_reason": null,
+      "common_scope_text": "F02 VPMCX; period=C; VPMCX_BORROWING_COVER; source=VPMCX_SAI_20260325, 2026-03-25. Original mandatory rule; applicable from stage 1 to every arm; not a new outlook.",
+      "units": [
+        {
+          "unit_id": "VPMCX_BORROWING_COVER/U01",
+          "evidence_ids": [
+            "VPMCX_BORROWING_COVER"
+          ],
+          "text": "A fund’s ability to borrow money is limited by its investment policies and limitations; by the 1940 Act; and by applicable exemptions, no-action letters, interpretations, and other pronouncements issued from time to time by the SEC and its staff or any other regulatory authority with jurisdiction. Under the 1940 Act, a fund is required to maintain continuous asset coverage (i.e., total assets including borrowings, less liabilities exclusive of borrowings) of 300% of the amount borrowed, with an exception for borrowings not in excess of 5% of the fund’s total assets (at the time of borrowing) made for temporary or emergency purposes. Any borrowings for temporary purposes in excess of 5% of the fund’s total assets must maintain continuous asset coverage. If the 300% asset coverage should decline as a result of market fluctuations or for other reasons, a fund may be required to sell some of its portfolio holdings within three days (excluding Sundays and holidays) to reduce the debt and restore the 300% asset coverage, even though it may be disadvantageous from an investment standpoint to sell securities at that time. ",
+          "shared_context": "",
+          "original_start": 0,
+          "original_end": 1132,
+          "source_line_start": 196,
+          "source_line_end": 196,
+          "token_receipt": {
+            "method": "exact_installed_libllama_vocab_only",
+            "abi_identity": "llama.cpp-6f767fe96-model-params-80-amd64",
+            "token_count": 280,
+            "text_sha256": "2b503568cf860d653e09e40b674182ebfc55c9cea5d6a1b28b2caaf9f31e7c1b",
+            "token_ids_sha256": "04f306a25fb3bdd394c26ebb24aa74c38e3e7db0b5b1a100fe82e5990e76d272",
+            "model_sha256": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+            "gguf_sha256": "3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6",
+            "vocabulary_size": 151936,
+            "library_hashes": {
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libwinpthread-1.dll": "43ee72bd3daa5348339d820695442b7cc0cc37892072b06e0547111d08572258",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libunwind.dll": "cf46fe9f953a2cdb16f82558316bdd53873ec8d9a7850887d409ee9685ed3cd7",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libc++.dll": "659b8402be4dd615d16685fdaffc94e70db1ce8617c7de32a78644d06422fd3c",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libomp.dll": "492036a3aedc3671e2ff7781504f8ffb59082b717d12f58a7049772b81f24ccd",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\ggml-base.dll": "b385871a358e2a1e750921b0233b5bb73c32b4dda9ee2a64cba2d853d3efd4ae",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\ggml.dll": "ebe3ffe406e27d08c8e34d1d8e49ee62e007b761ea126b49c04096106ef078b9",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libllama.dll": "0335cae1bc3429fd8fe2a98f02777653d6680380a5e5698c514e6c928d36abb3",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\models\\blobs\\sha256-3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6": "3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6"
+            },
+            "add_bos": false,
+            "add_eos": false,
+            "generation_calls": 0,
+            "vocab_only": true
+          }
+        },
+        {
+          "unit_id": "VPMCX_BORROWING_COVER/U02",
+          "evidence_ids": [
+            "VPMCX_BORROWING_COVER"
+          ],
+          "text": "Borrowing will tend to exaggerate the effect on net asset value of any increase or decrease in the market value of a fund’s portfolio. Money borrowed will be subject to interest costs that may or may not be recovered by earnings on the securities purchased with the proceeds of such borrowing. A fund also may be required to maintain minimum average balances in connection with a borrowing or to pay a commitment or other fee to maintain a line of credit; either of these requirements would increase the cost of borrowing over the stated interest rate. ",
+          "shared_context": "",
+          "original_start": 1132,
+          "original_end": 1685,
+          "source_line_start": 197,
+          "source_line_end": 197,
+          "token_receipt": {
+            "method": "exact_installed_libllama_vocab_only",
+            "abi_identity": "llama.cpp-6f767fe96-model-params-80-amd64",
+            "token_count": 146,
+            "text_sha256": "ac2f322549e2f052ff89f39d6787d180e76eadeb2fcb25f415448a04eaea2f68",
+            "token_ids_sha256": "9f985edca5f5e0dfd27cc95bf020f56bc1c3cb753fa9b6dbf17644832df2d9d3",
+            "model_sha256": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+            "gguf_sha256": "3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6",
+            "vocabulary_size": 151936,
+            "library_hashes": {
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libwinpthread-1.dll": "43ee72bd3daa5348339d820695442b7cc0cc37892072b06e0547111d08572258",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libunwind.dll": "cf46fe9f953a2cdb16f82558316bdd53873ec8d9a7850887d409ee9685ed3cd7",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libc++.dll": "659b8402be4dd615d16685fdaffc94e70db1ce8617c7de32a78644d06422fd3c",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libomp.dll": "492036a3aedc3671e2ff7781504f8ffb59082b717d12f58a7049772b81f24ccd",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\ggml-base.dll": "b385871a358e2a1e750921b0233b5bb73c32b4dda9ee2a64cba2d853d3efd4ae",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\ggml.dll": "ebe3ffe406e27d08c8e34d1d8e49ee62e007b761ea126b49c04096106ef078b9",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libllama.dll": "0335cae1bc3429fd8fe2a98f02777653d6680380a5e5698c514e6c928d36abb3",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\models\\blobs\\sha256-3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6": "3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6"
+            },
+            "add_bos": false,
+            "add_eos": false,
+            "generation_calls": 0,
+            "vocab_only": true
+          }
+        },
+        {
+          "unit_id": "VPMCX_BORROWING_COVER/U03",
+          "evidence_ids": [
+            "VPMCX_BORROWING_COVER"
+          ],
+          "text": "A borrowing transaction will not be considered to constitute the issuance, by a fund, of a “senior security,” as that term is defined in Section 18(g) of the 1940 Act, and therefore such transaction will not be subject to the 300% asset coverage requirement otherwise applicable to borrowings by a fund, if the fund complies with Rule 18f-4 under the 1940 Act.",
+          "shared_context": "",
+          "original_start": 1685,
+          "original_end": 2045,
+          "source_line_start": 198,
+          "source_line_end": 198,
+          "token_receipt": {
+            "method": "exact_installed_libllama_vocab_only",
+            "abi_identity": "llama.cpp-6f767fe96-model-params-80-amd64",
+            "token_count": 135,
+            "text_sha256": "12f095e6eb59946c345989163945c5d0cd2d3f8ae12beb270a0c842557561a91",
+            "token_ids_sha256": "852834d3998635f7cbea3d1a061c77bc0385b237e2c77988280fce46e8d733d7",
+            "model_sha256": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+            "gguf_sha256": "3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6",
+            "vocabulary_size": 151936,
+            "library_hashes": {
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libwinpthread-1.dll": "43ee72bd3daa5348339d820695442b7cc0cc37892072b06e0547111d08572258",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libunwind.dll": "cf46fe9f953a2cdb16f82558316bdd53873ec8d9a7850887d409ee9685ed3cd7",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libc++.dll": "659b8402be4dd615d16685fdaffc94e70db1ce8617c7de32a78644d06422fd3c",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libomp.dll": "492036a3aedc3671e2ff7781504f8ffb59082b717d12f58a7049772b81f24ccd",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\ggml-base.dll": "b385871a358e2a1e750921b0233b5bb73c32b4dda9ee2a64cba2d853d3efd4ae",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\ggml.dll": "ebe3ffe406e27d08c8e34d1d8e49ee62e007b761ea126b49c04096106ef078b9",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libllama.dll": "0335cae1bc3429fd8fe2a98f02777653d6680380a5e5698c514e6c928d36abb3",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\models\\blobs\\sha256-3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6": "3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6"
+            },
+            "add_bos": false,
+            "add_eos": false,
+            "generation_calls": 0,
+            "vocab_only": true
+          }
+        }
+      ],
+      "original_excerpt_preserved_exactly": true,
+      "reconstruction": "concatenate unit text exactly = original_source_excerpt; final unit shared_context contains the adjacent original cross-reference sentence when needed",
+      "all_parts_required_for_complete_rule": true,
+      "gold_count_per_rule": 1
+    },
+    {
+      "fund_id": "F02",
+      "ticker": "VPMCX",
+      "period": "C",
+      "evidence_id": "VPMCX_LENDING",
+      "source_document_id": "VPMCX_SAI_20260325",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000120/f44410d1.htm",
+      "original_source_excerpt": "The terms and the structure of the loan arrangements, as well as the aggregate amount of securities loans, must be consistent with the 1940 Act and the rules or interpretations of the SEC thereunder. These provisions limit the amount of securities a fund may lend to 33 1 ⁄ 3 % of the fund’s total assets and require that (1) the borrower pledge and maintain with the fund collateral consisting of cash, an irrevocable letter of credit, or securities issued or guaranteed by the U.S. government having at all times not less than 100% of the value of the securities lent; (2) the borrower add to such collateral whenever the price of the securities lent rises (i.e., the borrower “marks to market” on a daily basis); (3) the loan be made subject to termination by the fund at any time; and (4) the fund receives reasonable interest on the loan (which may include the fund investing any cash collateral in interest-bearing short-term investments), any distribution on the lent securities, and any increase in their market value. Loan arrangements made by a fund will comply with any other applicable regulatory requirements. At the present time, the SEC does not object if an investment company pays reasonable negotiated fees in connection with lent securities, so long as such fees are set forth in a written contract and approved by the investment company’s trustees. In addition, voting rights pass with the lent securities, but if a fund has knowledge that a material event will occur affecting securities on loan, and in respect to which the holder of the securities will be entitled to vote or consent, the lender must be entitled to call the loaned securities in time to vote or consent. A fund bears the risk that there may be a delay in the return of the securities, which may impair the fund’s ability to vote on such a matter. See",
+      "source_excerpt_sha256": "0b6700cf9446544330f3c2f8f903e1d4111e27f4cc9c22075bd4bf9dbf05692a",
+      "source_continuation": "Tax Status of the Funds for information about certain tax consequences related to a fund’s securities lending activities.",
+      "continuation_reason": "Complete the original See Tax Status cross-reference sentence without changing the frozen profile.",
+      "common_scope_text": "F02 VPMCX; period=C; VPMCX_LENDING; source=VPMCX_SAI_20260325, 2026-03-25. Original mandatory rule; applicable from stage 1 to every arm; not a new outlook.",
+      "units": [
+        {
+          "unit_id": "VPMCX_LENDING/U01",
+          "evidence_ids": [
+            "VPMCX_LENDING"
+          ],
+          "text": "The terms and the structure of the loan arrangements, as well as the aggregate amount of securities loans, must be consistent with the 1940 Act and the rules or interpretations of the SEC thereunder. These provisions limit the amount of securities a fund may lend to 33 1 ⁄ 3 % of the fund’s total assets and require that (1) the borrower pledge and maintain with the fund collateral consisting of cash, an irrevocable letter of credit, or securities issued or guaranteed by the U.S. government having at all times not less than 100% of the value of the securities lent; (2) the borrower add to such collateral whenever the price of the securities lent rises (i.e., the borrower “marks to market” on a daily basis); (3) the loan be made subject to termination by the fund at any time; and (4) the fund receives reasonable interest on the loan (which may include the fund investing any cash collateral in interest-bearing short-term investments), any distribution on the lent securities, and any increase in their market value. ",
+          "shared_context": "",
+          "original_start": 0,
+          "original_end": 1027,
+          "source_line_start": 505,
+          "source_line_end": 509,
+          "token_receipt": {
+            "method": "exact_installed_libllama_vocab_only",
+            "abi_identity": "llama.cpp-6f767fe96-model-params-80-amd64",
+            "token_count": 262,
+            "text_sha256": "dde501e062183f54170eb5f72c3ef0cc4eb675bfc06ab82d906f134c19aa9de0",
+            "token_ids_sha256": "4bd0c16e4046904024cb5911f010a74cc86fb1f4b1e7c2c0f045fb055aa06f93",
+            "model_sha256": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+            "gguf_sha256": "3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6",
+            "vocabulary_size": 151936,
+            "library_hashes": {
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libwinpthread-1.dll": "43ee72bd3daa5348339d820695442b7cc0cc37892072b06e0547111d08572258",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libunwind.dll": "cf46fe9f953a2cdb16f82558316bdd53873ec8d9a7850887d409ee9685ed3cd7",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libc++.dll": "659b8402be4dd615d16685fdaffc94e70db1ce8617c7de32a78644d06422fd3c",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libomp.dll": "492036a3aedc3671e2ff7781504f8ffb59082b717d12f58a7049772b81f24ccd",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\ggml-base.dll": "b385871a358e2a1e750921b0233b5bb73c32b4dda9ee2a64cba2d853d3efd4ae",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\ggml.dll": "ebe3ffe406e27d08c8e34d1d8e49ee62e007b761ea126b49c04096106ef078b9",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libllama.dll": "0335cae1bc3429fd8fe2a98f02777653d6680380a5e5698c514e6c928d36abb3",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\models\\blobs\\sha256-3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6": "3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6"
+            },
+            "add_bos": false,
+            "add_eos": false,
+            "generation_calls": 0,
+            "vocab_only": true
+          }
+        },
+        {
+          "unit_id": "VPMCX_LENDING/U02",
+          "evidence_ids": [
+            "VPMCX_LENDING"
+          ],
+          "text": "Loan arrangements made by a fund will comply with any other applicable regulatory requirements. At the present time, the SEC does not object if an investment company pays reasonable negotiated fees in connection with lent securities, so long as such fees are set forth in a written contract and approved by the investment company’s trustees. In addition, voting rights pass with the lent securities, but if a fund has knowledge that a material event will occur affecting securities on loan, and in respect to which the holder of the securities will be entitled to vote or consent, the lender must be entitled to call the loaned securities in time to vote or consent. A fund bears the risk that there may be a delay in the return of the securities, which may impair the fund’s ability to vote on such a matter. See",
+          "shared_context": "See Tax Status of the Funds for information about certain tax consequences related to a fund’s securities lending activities.",
+          "original_start": 1027,
+          "original_end": 1840,
+          "source_line_start": 509,
+          "source_line_end": 511,
+          "token_receipt": {
+            "method": "exact_installed_libllama_vocab_only",
+            "abi_identity": "llama.cpp-6f767fe96-model-params-80-amd64",
+            "token_count": 217,
+            "text_sha256": "26a3e42c849506b534594326ed0aaa7213be22fff3532db158d3163b38ff8d02",
+            "token_ids_sha256": "df8ec70bc2aafebb2c211884f324799263dd8be58cc30c37a127a47a3b54edd8",
+            "model_sha256": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+            "gguf_sha256": "3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6",
+            "vocabulary_size": 151936,
+            "library_hashes": {
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libwinpthread-1.dll": "43ee72bd3daa5348339d820695442b7cc0cc37892072b06e0547111d08572258",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libunwind.dll": "cf46fe9f953a2cdb16f82558316bdd53873ec8d9a7850887d409ee9685ed3cd7",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libc++.dll": "659b8402be4dd615d16685fdaffc94e70db1ce8617c7de32a78644d06422fd3c",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libomp.dll": "492036a3aedc3671e2ff7781504f8ffb59082b717d12f58a7049772b81f24ccd",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\ggml-base.dll": "b385871a358e2a1e750921b0233b5bb73c32b4dda9ee2a64cba2d853d3efd4ae",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\ggml.dll": "ebe3ffe406e27d08c8e34d1d8e49ee62e007b761ea126b49c04096106ef078b9",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\portable\\lib\\ollama\\libllama.dll": "0335cae1bc3429fd8fe2a98f02777653d6680380a5e5698c514e6c928d36abb3",
+              "C:\\Users\\kuri\\2026libera\\tmp\\v63_local_ollama\\models\\blobs\\sha256-3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6": "3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6"
+            },
+            "add_bos": false,
+            "add_eos": false,
+            "generation_calls": 0,
+            "vocab_only": true
+          }
+        }
+      ],
+      "original_excerpt_preserved_exactly": true,
+      "reconstruction": "concatenate unit text exactly = original_source_excerpt; final unit shared_context contains the adjacent original cross-reference sentence when needed",
+      "all_parts_required_for_complete_rule": true,
+      "gold_count_per_rule": 1
+    }
+  ],
+  "token_rendering": "canonical JSON with evidence_id, source_document_id, source_excerpt_part, shared_context; <=340 exact tokens, leaving at least 60 tokens for runtime header",
+  "limitation": "Runtime must recheck its exact final header, chunk construction and overlap against 400 tokens."
+}

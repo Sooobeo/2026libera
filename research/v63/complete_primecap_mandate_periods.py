@@ -1,0 +1,21 @@
+import json,copy,hashlib
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[2];OUT=ROOT/'data/v63_20261027/continuation_sources';path=OUT/'mandates_v2.json';obj=json.loads(path.read_text(encoding='utf8'))
+dev=json.loads((OUT/'VPMCX_development_mandate.json').read_text(encoding='utf8'))
+prosp='VPMCX_main_full485_20260128';sai='VPMCX_SAI_20260325';pl=(OUT/(prosp+'_text.txt')).read_text(encoding='utf8').splitlines();sl=(OUT/(sai+'_text.txt')).read_text(encoding='utf8').splitlines()
+sources={n:json.loads((OUT/(n+'_receipt.json')).read_text(encoding='utf8')) for n in [prosp,sai,'VPMCX_supplement_20260211','VPMCX_supplement_20260520','VPMCX_supplement_20260630']}
+locations={'VPMCX_FOREIGN25':(prosp,3359,3359),'VPMCX_DERIVATIVES':(prosp,3614,3614),'VPMCX_ISSUER25':(sai,153,153),'VPMCX_ISSUER75':(sai,154,154),'VPMCX_INDUSTRY':(sai,156,156),'VPMCX_OBJECTIVE_CHANGE':(sai,158,158),'VPMCX_BORROWING':(sai,149,149),'VPMCX_BORROWING_COVER':(sai,196,198),'VPMCX_COMMODITIES':(sai,151,151),'VPMCX_LOANS':(sai,160,160),'VPMCX_REAL_ESTATE':(sai,162,162),'VPMCX_SENIOR':(sai,164,164),'VPMCX_UNDERWRITING':(sai,167,167),'VPMCX_PURCHASE_TIME':(sai,168,170),'VPMCX_ILLIQUID15':(sai,496,496),'VPMCX_LENDING':(sai,505,509),'VPMCX_DEFENSIVE':(prosp,3619,3623)}
+locations.update(VPMCX_TEMPORARY_DEPARTURE=(prosp,3619,3621),VPMCX_VANGUARD_OWNERSHIP=(sai,171,173),VPMCX_BORROWING_RESTORE=(sai,196,196),VPMCX_DEFENSIVE=(prosp,3622,3623))
+obj['profiles']=[v for v in obj['profiles'] if (v['fund_id'],v['period'])!=('F02','development')]+[dev]
+for period in ['A_B','C']:
+ p=copy.deepcopy(dev);p.update(period=period,publication_date='2026-01-28',document_date='2026-01-28',filing_accession='0001193125-26-024962',cutoff='2026-03-31' if period=='A_B' else '2026-06-30',source_url=sources[prosp]['source_url'],capture_method='official SEC HTTP original HTML bytes; locally parsed exact PRIMECAP prospectus and SAI',evidence_sha256=sources[prosp]['sha256'])
+ names=[prosp,sai,'VPMCX_supplement_20260211']+(['VPMCX_supplement_20260520','VPMCX_supplement_20260630'] if period=='C' else [])
+ p['source_evidence_ids']=names;p['evidence_files']=[{'source_id':n,'path':str((OUT/(n+'.html')).relative_to(ROOT)),'sha256':sources[n]['sha256'],'url':sources[n]['source_url']} for n in names]
+ p['supplement_review']=[{'id':sai,'date':'2026-03-25','effect':'Cutoff-eligible SAI restatement preserves the stated PRIMECAP investment restrictions.'},{'id':'VPMCX_supplement_20260211','date':'2026-02-11','effect':'Leadership appointments, not investment mandate changes.'}]
+ if period=='C':p['supplement_review'] += [{'id':'VPMCX_supplement_20260520','date':'2026-05-20','effect':'Intermediary shareholder frequent-trading procedures, not portfolio mandate changes.'},{'id':'VPMCX_supplement_20260630','date':'2026-06-30','effect':'Trustee and officer governance changes, not portfolio mandate changes.'}]
+ for r in p['mandatory_constraints']:
+  name,a,b=locations[r['evidence_id']];ls=pl if name==prosp else sl;r.update(source_document_id=name,source_url=sources[name]['source_url'],source_line=a,source_excerpt=' '.join(ls[a-1:b]),source_line_end=b)
+ p['mandatory_constraints'].append({'evidence_id':'VPMCX_INTERFUND','source_document_id':sai,'source_url':sources[sai]['source_url'],'source_line':400,'source_excerpt':sl[399],'text':'Interfund lending is limited to 15% of NAV in aggregate and 5% of NAV to any single fund; temporary/emergency participation must improve on comparable bank rates and remain consistent with fund policies.','denominator':'NAV','handling':'class3_not_identifiable_from_FF12','numerically_enforced_in_FF12':False})
+ p['version_notes']='January 28 2026 PRIMECAP Fund prospectus plus March 25 2026 restated same-fund SAI. All post-prospectus 497 versions through cutoff checked. Rule text preserves source denominator assets for foreign exposure, separate 25% total-assets issuer rule, and the specific PRIMECAP 75% diversification rule.'
+ obj['profiles']=[v for v in obj['profiles'] if (v['fund_id'],v['period'])!=('F02',period)]+[p];(OUT/f'VPMCX_{period}_mandate_evidence.json').write_text(json.dumps(p,ensure_ascii=False,indent=2),encoding='utf8')
+path.write_text(json.dumps(obj,ensure_ascii=False,indent=2),encoding='utf8');print('VPMCX A_B/C mandates complete; development unchanged')

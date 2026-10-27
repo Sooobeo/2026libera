@@ -1,0 +1,557 @@
+{
+  "role": "offline numerical implementation verification; zero LLM calls; not B/A/C results",
+  "passed": 48,
+  "failed": 0,
+  "checks": [
+    {
+      "scenario_id": "development-001",
+      "fixture_id": "synthetic-1",
+      "r": 0.5,
+      "status": "passed",
+      "objective": 0.045775479637873456,
+      "primal_dual_gap": 2.7755575615628914e-17,
+      "eta": 0.000637846436493757,
+      "independent_difference": 6.730727086790012e-16
+    },
+    {
+      "scenario_id": "development-001",
+      "fixture_id": "synthetic-2",
+      "r": 0.5,
+      "status": "passed",
+      "objective": 0.031119859654920992,
+      "primal_dual_gap": 1.3877787807814457e-17,
+      "eta": 0.0009411263966956991,
+      "independent_difference": 4.683753385137379e-16
+    },
+    {
+      "scenario_id": "development-001",
+      "fixture_id": "synthetic-3",
+      "r": 0.5,
+      "status": "passed",
+      "objective": 0.03608128465997729,
+      "primal_dual_gap": 0.0,
+      "eta": 0.0005639484013294921,
+      "independent_difference": 6.938893903907228e-18
+    },
+    {
+      "scenario_id": "development-001",
+      "fixture_id": "synthetic-4",
+      "r": 0.5,
+      "status": "passed",
+      "objective": 0.04614124015212805,
+      "primal_dual_gap": 0.0,
+      "eta": 0.0005159840435268841,
+      "independent_difference": 3.469446951953614e-16
+    },
+    {
+      "scenario_id": "development-002",
+      "fixture_id": "synthetic-1",
+      "r": 1.0,
+      "status": "passed",
+      "objective": 0.026459650311128017,
+      "primal_dual_gap": 1.3877787807814457e-17,
+      "eta": 0.0006713384303076598,
+      "independent_difference": 7.28583859910259e-17
+    },
+    {
+      "scenario_id": "development-002",
+      "fixture_id": "synthetic-2",
+      "r": 1.0,
+      "status": "passed",
+      "objective": 0.018465604958640396,
+      "primal_dual_gap": 0.0,
+      "eta": 0.0003842137705330436,
+      "independent_difference": 3.469446951953614e-18
+    },
+    {
+      "scenario_id": "development-002",
+      "fixture_id": "synthetic-3",
+      "r": 1.0,
+      "status": "passed",
+      "objective": 0.02424134896548348,
+      "primal_dual_gap": 0.0,
+      "eta": 0.00042249908788886476,
+      "independent_difference": 2.0816681711721685e-17
+    },
+    {
+      "scenario_id": "development-002",
+      "fixture_id": "synthetic-4",
+      "r": 1.0,
+      "status": "passed",
+      "objective": 0.02191844222594954,
+      "primal_dual_gap": 0.0,
+      "eta": 0.00023526747749907473,
+      "independent_difference": 3.469446951953614e-18
+    },
+    {
+      "scenario_id": "development-003",
+      "fixture_id": "synthetic-1",
+      "r": 2.0,
+      "status": "passed",
+      "objective": 0.017886268590352496,
+      "primal_dual_gap": 0.0,
+      "eta": 0.0005067761540496383,
+      "independent_difference": 9.332812300755222e-16
+    },
+    {
+      "scenario_id": "development-003",
+      "fixture_id": "synthetic-2",
+      "r": 2.0,
+      "status": "passed",
+      "objective": 0.01712028680050926,
+      "primal_dual_gap": 0.0,
+      "eta": 0.0007589983974693824,
+      "independent_difference": 9.71445146547012e-17
+    },
+    {
+      "scenario_id": "development-003",
+      "fixture_id": "synthetic-3",
+      "r": 2.0,
+      "status": "passed",
+      "objective": 0.02630746711385948,
+      "primal_dual_gap": 0.0,
+      "eta": 0.00038428139847153934,
+      "independent_difference": 1.0304257447302234e-15
+    },
+    {
+      "scenario_id": "development-003",
+      "fixture_id": "synthetic-4",
+      "r": 2.0,
+      "status": "passed",
+      "objective": 0.022007351791561335,
+      "primal_dual_gap": 0.0,
+      "eta": 0.00031449673423932195,
+      "independent_difference": 1.3877787807814457e-17
+    },
+    {
+      "scenario_id": "development-004",
+      "fixture_id": "synthetic-1",
+      "r": 0.5,
+      "status": "passed",
+      "objective": 0.036369605222753586,
+      "primal_dual_gap": 0.0,
+      "eta": 0.00020493883887290495,
+      "independent_difference": 2.0816681711721685e-15
+    },
+    {
+      "scenario_id": "development-004",
+      "fixture_id": "synthetic-2",
+      "r": 0.5,
+      "status": "passed",
+      "objective": 0.026909257179824585,
+      "primal_dual_gap": 0.0,
+      "eta": 0.00030095163554862,
+      "independent_difference": 2.0365653607967715e-15
+    },
+    {
+      "scenario_id": "development-004",
+      "fixture_id": "synthetic-3",
+      "r": 0.5,
+      "status": "passed",
+      "objective": 0.031870556929756606,
+      "primal_dual_gap": 6.938893903907228e-18,
+      "eta": 0.0003008141990034295,
+      "independent_difference": 1.1268763699945339e-14
+    },
+    {
+      "scenario_id": "development-004",
+      "fixture_id": "synthetic-4",
+      "r": 0.5,
+      "status": "passed",
+      "objective": 0.03521698865967766,
+      "primal_dual_gap": 0.0,
+      "eta": 0.00017939153193891988,
+      "independent_difference": 6.938893903907228e-18
+    },
+    {
+      "scenario_id": "development-005",
+      "fixture_id": "synthetic-1",
+      "r": 1.0,
+      "status": "passed",
+      "objective": 0.02356206785999096,
+      "primal_dual_gap": 3.469446951953614e-18,
+      "eta": 0.00042279791270066996,
+      "independent_difference": 1.734723475976807e-17
+    },
+    {
+      "scenario_id": "development-005",
+      "fixture_id": "synthetic-2",
+      "r": 1.0,
+      "status": "passed",
+      "objective": 0.022628804809875204,
+      "primal_dual_gap": 0.0,
+      "eta": 1.3333584056646149e-06,
+      "independent_difference": 3.469446951953614e-18
+    },
+    {
+      "scenario_id": "development-005",
+      "fixture_id": "synthetic-3",
+      "r": 1.0,
+      "status": "passed",
+      "objective": 0.018744652823797957,
+      "primal_dual_gap": 6.938893903907228e-18,
+      "eta": 0.0005386933963843353,
+      "independent_difference": 2.42861286636753e-17
+    },
+    {
+      "scenario_id": "development-005",
+      "fixture_id": "synthetic-4",
+      "r": 1.0,
+      "status": "passed",
+      "objective": 0.020836013599484563,
+      "primal_dual_gap": 5.154487947578446e-13,
+      "eta": 6.085412944514043e-07,
+      "independent_difference": 5.154557336517485e-13
+    },
+    {
+      "scenario_id": "development-006",
+      "fixture_id": "synthetic-1",
+      "r": 2.0,
+      "status": "passed",
+      "objective": 0.03203674022307854,
+      "primal_dual_gap": 6.938893903907228e-18,
+      "eta": 0.0007061210938622783,
+      "independent_difference": 7.632783294297951e-17
+    },
+    {
+      "scenario_id": "development-006",
+      "fixture_id": "synthetic-2",
+      "r": 2.0,
+      "status": "passed",
+      "objective": 0.02820928356465963,
+      "primal_dual_gap": 0.0,
+      "eta": 0.0008148702028739436,
+      "independent_difference": 1.214306433183765e-15
+    },
+    {
+      "scenario_id": "development-006",
+      "fixture_id": "synthetic-3",
+      "r": 2.0,
+      "status": "passed",
+      "objective": 0.03546270899873092,
+      "primal_dual_gap": 0.0,
+      "eta": 0.00046188107667516386,
+      "independent_difference": 1.4363510381087963e-15
+    },
+    {
+      "scenario_id": "development-006",
+      "fixture_id": "synthetic-4",
+      "r": 2.0,
+      "status": "passed",
+      "objective": 0.020957257271484998,
+      "primal_dual_gap": 3.469446951953614e-18,
+      "eta": 0.0008315628906807764,
+      "independent_difference": 0.0
+    },
+    {
+      "scenario_id": "development-007",
+      "fixture_id": "synthetic-1",
+      "r": 0.5,
+      "status": "passed",
+      "objective": 0.026631371837940485,
+      "primal_dual_gap": 2.069063670395721e-12,
+      "eta": 5.329581809634723e-07,
+      "independent_difference": 2.069067139842673e-12
+    },
+    {
+      "scenario_id": "development-007",
+      "fixture_id": "synthetic-2",
+      "r": 0.5,
+      "status": "passed",
+      "objective": 0.03268361076946776,
+      "primal_dual_gap": 6.938893903907228e-18,
+      "eta": 0.0006028854265549435,
+      "independent_difference": 7.632783294297951e-17
+    },
+    {
+      "scenario_id": "development-007",
+      "fixture_id": "synthetic-3",
+      "r": 0.5,
+      "status": "passed",
+      "objective": 0.023364561696476643,
+      "primal_dual_gap": 3.469446951953614e-18,
+      "eta": 0.000275569215593344,
+      "independent_difference": 0.0
+    },
+    {
+      "scenario_id": "development-007",
+      "fixture_id": "synthetic-4",
+      "r": 0.5,
+      "status": "passed",
+      "objective": 0.023775127579876106,
+      "primal_dual_gap": 1.320436815444026e-13,
+      "eta": 9.203296652984568e-07,
+      "independent_difference": 1.3201939541573893e-13
+    },
+    {
+      "scenario_id": "development-008",
+      "fixture_id": "synthetic-1",
+      "r": 1.0,
+      "status": "passed",
+      "objective": 0.02272986994484798,
+      "primal_dual_gap": 3.469446951953614e-18,
+      "eta": 0.000555597856017944,
+      "independent_difference": 6.938893903907228e-18
+    },
+    {
+      "scenario_id": "development-008",
+      "fixture_id": "synthetic-2",
+      "r": 1.0,
+      "status": "passed",
+      "objective": 0.016488766724396167,
+      "primal_dual_gap": 0.0,
+      "eta": 0.0008470820334017888,
+      "independent_difference": 3.9898639947466563e-16
+    },
+    {
+      "scenario_id": "development-008",
+      "fixture_id": "synthetic-3",
+      "r": 1.0,
+      "status": "passed",
+      "objective": 0.023703665596258406,
+      "primal_dual_gap": 3.469446951953614e-18,
+      "eta": 0.0005685054405646181,
+      "independent_difference": 2.42861286636753e-17
+    },
+    {
+      "scenario_id": "development-008",
+      "fixture_id": "synthetic-4",
+      "r": 1.0,
+      "status": "passed",
+      "objective": 0.016072830362025368,
+      "primal_dual_gap": 0.0,
+      "eta": 0.000896600314278438,
+      "independent_difference": 1.3877787807814457e-17
+    },
+    {
+      "scenario_id": "development-009",
+      "fixture_id": "synthetic-1",
+      "r": 2.0,
+      "status": "passed",
+      "objective": 0.024044739049215242,
+      "primal_dual_gap": 7.921475975170011e-13,
+      "eta": 4.406511345082375e-07,
+      "independent_difference": 7.921510669639531e-13
+    },
+    {
+      "scenario_id": "development-009",
+      "fixture_id": "synthetic-2",
+      "r": 2.0,
+      "status": "passed",
+      "objective": 0.023459737288686097,
+      "primal_dual_gap": 0.0,
+      "eta": 5.961817202511327e-07,
+      "independent_difference": 3.469446951953614e-18
+    },
+    {
+      "scenario_id": "development-009",
+      "fixture_id": "synthetic-3",
+      "r": 2.0,
+      "status": "passed",
+      "objective": 0.023422596610672322,
+      "primal_dual_gap": 0.0,
+      "eta": 1.1337808510951349e-06,
+      "independent_difference": 3.469446951953614e-18
+    },
+    {
+      "scenario_id": "development-009",
+      "fixture_id": "synthetic-4",
+      "r": 2.0,
+      "status": "passed",
+      "objective": 0.027508756599925337,
+      "primal_dual_gap": 8.328407408164651e-14,
+      "eta": 8.369968890384898e-07,
+      "independent_difference": 8.330142131640628e-14
+    },
+    {
+      "scenario_id": "development-010",
+      "fixture_id": "synthetic-1",
+      "r": 0.5,
+      "status": "passed",
+      "objective": 0.0321101555055656,
+      "primal_dual_gap": 0.0,
+      "eta": 2.678928416926582e-06,
+      "independent_difference": 6.938893903907228e-18
+    },
+    {
+      "scenario_id": "development-010",
+      "fixture_id": "synthetic-2",
+      "r": 0.5,
+      "status": "passed",
+      "objective": 0.025874110941371646,
+      "primal_dual_gap": 0.0,
+      "eta": 0.00040177605990100593,
+      "independent_difference": 2.2898349882893854e-16
+    },
+    {
+      "scenario_id": "development-010",
+      "fixture_id": "synthetic-3",
+      "r": 0.5,
+      "status": "passed",
+      "objective": 0.026197968740199872,
+      "primal_dual_gap": 3.469446951953614e-18,
+      "eta": 0.00023351851331941708,
+      "independent_difference": 1.3877787807814457e-17
+    },
+    {
+      "scenario_id": "development-010",
+      "fixture_id": "synthetic-4",
+      "r": 0.5,
+      "status": "passed",
+      "objective": 0.020741612798332486,
+      "primal_dual_gap": 1.6536945424139304e-12,
+      "eta": 6.980840584660981e-07,
+      "independent_difference": 1.6536980118608824e-12
+    },
+    {
+      "scenario_id": "development-011",
+      "fixture_id": "synthetic-1",
+      "r": 1.0,
+      "status": "passed",
+      "objective": 0.018551978599694513,
+      "primal_dual_gap": 3.0548480411951573e-13,
+      "eta": 4.250933805059136e-07,
+      "independent_difference": 3.0549868190732354e-13
+    },
+    {
+      "scenario_id": "development-011",
+      "fixture_id": "synthetic-2",
+      "r": 1.0,
+      "status": "passed",
+      "objective": 0.016213925090298516,
+      "primal_dual_gap": 0.0,
+      "eta": 1.8988581436605055e-06,
+      "independent_difference": 0.0
+    },
+    {
+      "scenario_id": "development-011",
+      "fixture_id": "synthetic-3",
+      "r": 1.0,
+      "status": "passed",
+      "objective": 0.020304276474294856,
+      "primal_dual_gap": 0.0,
+      "eta": 1.0314172408246815e-06,
+      "independent_difference": 3.469446951953614e-18
+    },
+    {
+      "scenario_id": "development-011",
+      "fixture_id": "synthetic-4",
+      "r": 1.0,
+      "status": "passed",
+      "objective": 0.01645995676635091,
+      "primal_dual_gap": 3.157404893094906e-13,
+      "eta": 3.8658014351138804e-07,
+      "independent_difference": 3.157404893094906e-13
+    },
+    {
+      "scenario_id": "development-012",
+      "fixture_id": "synthetic-1",
+      "r": 2.0,
+      "status": "passed",
+      "objective": 0.028046066040353455,
+      "primal_dual_gap": 3.469446951953614e-18,
+      "eta": 0.0005320288857055772,
+      "independent_difference": 2.42861286636753e-17
+    },
+    {
+      "scenario_id": "development-012",
+      "fixture_id": "synthetic-2",
+      "r": 2.0,
+      "status": "passed",
+      "objective": 0.03219364142509793,
+      "primal_dual_gap": 6.938893903907228e-18,
+      "eta": 0.0004332440004858558,
+      "independent_difference": 2.8449465006019636e-16
+    },
+    {
+      "scenario_id": "development-012",
+      "fixture_id": "synthetic-3",
+      "r": 2.0,
+      "status": "passed",
+      "objective": 0.02801838956171566,
+      "primal_dual_gap": 0.0,
+      "eta": 0.00043936883023313364,
+      "independent_difference": 0.0
+    },
+    {
+      "scenario_id": "development-012",
+      "fixture_id": "synthetic-4",
+      "r": 2.0,
+      "status": "passed",
+      "objective": 0.03118943637869873,
+      "primal_dual_gap": 0.0,
+      "eta": 0.0003832820143676245,
+      "independent_difference": 0.0
+    }
+  ],
+  "minimum_variance_boundary": {
+    "status": "certified",
+    "result": {
+      "weights": [
+        0.5,
+        0.5
+      ],
+      "primal_objective": 0.5,
+      "dual_bound": 0.5000000000000001,
+      "signed_computed_gap": 1.1102230246251565e-16,
+      "primal_dual_gap": 1.1102230246251565e-16,
+      "feasibility": {
+        "valid": true,
+        "failures": [],
+        "raw_weights": [
+          0.5,
+          0.5
+        ],
+        "budget_residual": 0.0,
+        "minimum_weight": 0.5,
+        "risk": 0.5,
+        "risk_cap": 0.5,
+        "risk_residual": 0.0,
+        "explicit_residuals": [],
+        "budget_lower_tolerance": 1e-09,
+        "risk_tolerance": 1e-09
+      },
+      "status": "exact_singleton_risk_set_certified",
+      "solver": "exact Fraction Gaussian elimination and positive-definite quadratic identity",
+      "certificate": "Exact rational cap=rho and sum(v)=1; SPD quadratic identity forces w=v",
+      "exact_budget_residual": "0",
+      "exact_risk_radius": "0",
+      "coordinate_lower": [
+        0.49999999999999994,
+        0.49999999999999994
+      ],
+      "coordinate_upper": [
+        0.5000000000000001,
+        0.5000000000000001
+      ],
+      "near_optimal_epsilon": 1e-09,
+      "coordinate_dual_gap_max": 0.0,
+      "coordinate_bound_padding": "one outward float ULP",
+      "eta": 1.1102230246251565e-16,
+      "one_percentage_point_width_diagnostic": false,
+      "independent_crosscheck": {
+        "method": "exact rational quadratic identity; no numerical dual multiplier assumed",
+        "success": true
+      },
+      "independent_objective_abs_difference": 0.0
+    }
+  },
+  "warnings": [
+    "Solution may be inaccurate. Try another solver, adjusting the solver settings, or solve with verbose=True for more information."
+  ],
+  "elapsed_seconds": 4.758638100000098,
+  "actual_fund_holdings_available": false,
+  "main_reference_audit_complete": false,
+  "signal_preparation": {
+    "development": 12,
+    "main": 60,
+    "negative_control": 8,
+    "replacement": 60
+  },
+  "no_main_execution": true,
+  "sources": [
+    "https://www.cvxpy.org/tutorial/solvers/index.html",
+    "https://scikit-learn.org/stable/modules/generated/sklearn.covariance.LedoitWolf.html",
+    "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/12_Industry_Portfolios_TXT.zip"
+  ]
+}

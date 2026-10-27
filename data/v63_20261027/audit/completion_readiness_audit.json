@@ -1,0 +1,210 @@
+{
+  "status": "preparation_audit_passed_with_authorized_reporting_fixes",
+  "audited_at_utc": "2026-10-27T04:52:21.696501+00:00",
+  "scope": "Completion/status/restart/reporting audit; not empirical experiment completion or authorization.",
+  "actual_model_calls_made_by_audit": 0,
+  "actual_approvals_issued": 0,
+  "experimental_core_CODE_FILES_modified_by_this_audit": false,
+  "authorized_file_fix": "research/v63/finalize_experiment_report.py; parent authorized proof-gate and transaction changes after initial read-only findings.",
+  "snapshot_observations": {
+    "canonical": {
+      "path": "data/v63_20261027/execution_status.json",
+      "sha256": "96081ae2169829755c13765b3fe903ad4c2f62455a4f98a8a7d041b1f4ecef58",
+      "bytes": 8864
+    },
+    "live": {
+      "path": "data/v63_20261027/continuation/live_status.json",
+      "sha256": "a7099c9fd2d06734de78bdafad1b5e78b754036ff0e7f8c140f8640763374e3f",
+      "bytes": 5630
+    },
+    "continuation_report": {
+      "path": "실험참고자료_20261027/02_계속실행기록_20261027.html",
+      "sha256": "86979b65cdc749d16da97c143ca579a103f8814b1016e856b7a2b3b7e8a50237",
+      "bytes": 11139
+    },
+    "canonical_all_experiments_completed": false,
+    "live_all_experiments_completed": false,
+    "canonical_status": "development_in_progress",
+    "canonical_main_started": false,
+    "canonical_experimental_request_snapshot": 10,
+    "canonical_snapshot_time": "2026-10-27T04:51:33.469909+00:00",
+    "live_snapshot_time": "2026-10-27T04:52:10.085859+00:00",
+    "current_raw_candidate_costs": [
+      {
+        "output_root": "data/v63_20261027/local_campaign_results",
+        "run_id": "a151e0eea80931eb9bb281fc303a503410c5fd58e52ca9cff010d3e8ed11f10d",
+        "generation_requests": 5,
+        "confirmed_attempt_records": 5,
+        "uncertain_dispatch_requests": 0
+      },
+      {
+        "output_root": "data/v63_20261027/local_campaign_results",
+        "run_id": "de1b479b54d5b4429211059df1496be588c3c5af81ec21f4d4c355e3004f76ec",
+        "generation_requests": 4,
+        "confirmed_attempt_records": 3,
+        "uncertain_dispatch_requests": 1
+      }
+    ],
+    "interpretation": "A live candidate is active. Snapshot and raw counts may differ because of observation time and reserved uncertain dispatches; neither is a completion claim."
+  },
+  "prior_resource_ledger": {
+    "evidence": {
+      "path": "data/v63_20261027/continuation/deployment/prior_candidate_002_cost_ledger.json",
+      "sha256": "5a5769e67d9b7b48d4cd1639e162e381ab09d0ae151719d730b367d4ed9ceb15",
+      "bytes": 5812
+    },
+    "resource_requests": 12,
+    "experimental_requests": 7,
+    "engineering_requests": 5,
+    "known_HTTP_seconds_lower_bound": 4083.0081519694068,
+    "authorization": false,
+    "scope": "Only closed attempts preceding candidate_002; excludes its active run entirely. Engineering generations consume resources but fill no experimental slots."
+  },
+  "schedule_checks": {
+    "phase_trajectories": {
+      "technical-smoke": 5,
+      "paired-feasibility": 20,
+      "development-pilot": 240,
+      "B-main": 2400,
+      "x-replacement": 360,
+      "negative-control": 192,
+      "A": 40,
+      "C": 40
+    },
+    "final_unique_trajectories": 3272,
+    "planned_logical_stages": 9816,
+    "development_independent_scenarios": 12,
+    "main_independent_scenarios": 60,
+    "negative_independent_scenarios": 8,
+    "development_replicates": 1,
+    "main_replicates": 2,
+    "nested_technical_paired_development_no_double_count": true,
+    "negative_pair_rows": 288,
+    "AC_combined_audit_rows": 80
+  },
+  "regression_tests": {
+    "command": "tmp/v63_numerics_venv/Scripts/python.exe -m pytest research/v63/test_report_accounting.py research/v63/test_finalize_experiment_report.py research/v63/test_longrun_guardian.py research/v63/test_final_report_rendering.py -q",
+    "passed": 87,
+    "failed": 0,
+    "seconds": 36.21,
+    "fixtures": "Isolated synthetic files/mock children; actual evaluator rendering uses allow_synthetic=True; no real approvals or model calls."
+  },
+  "findings": [
+    {
+      "id": "F01",
+      "issue": "Standalone finalizer omitted pilot precision/input/transition/resource proofs",
+      "resolution": "Pure read-only verify_main_completion_proofs validates all proofs before any bundle or alias write; missing/mutated proof tests pass.",
+      "status": "resolved"
+    },
+    {
+      "id": "F02",
+      "issue": "Interrupted publication could leave completed aliases before all status/report writes",
+      "resolution": "Immutable report/results are staged and hash-checked, then validated_complete_run commit is written before any completion alias. Handled publish errors restore six prior aliases byte-for-byte. Root status readers require commit and artifact hashes; post-hard-kill new aliases reference an already valid complete bundle.",
+      "status": "resolved"
+    },
+    {
+      "id": "F03",
+      "issue": "Snapshot scanned preserved partial/recovery traces and could double-count or fail parsing",
+      "resolution": "Parent now uses original request receipts and selected final_trace_path once per task; malformed partial evidence remains preserved and flagged. Accounting regressions pass.",
+      "status": "resolved_by_parent"
+    },
+    {
+      "id": "F04",
+      "issue": "Continuation page retained old candidate progress or 0/5 after finalization",
+      "resolution": "Parent renders completion from verified committed phase summaries and preserves current phase semantics; completion status requires commit verification.",
+      "status": "resolved_by_parent"
+    },
+    {
+      "id": "F05",
+      "issue": "Final phase checks did not revalidate all frozen evaluator artifacts and analysis source links",
+      "resolution": "Finalizer checks required frozen input/bank/receipt/scenario/hidden/source-manifest hashes, evaluator provenance, main model/reference fingerprint, x360/negative288 row cardinality, and exact B/A-C analysis-to-original-trace source hashes.",
+      "status": "resolved"
+    },
+    {
+      "id": "F06",
+      "issue": "Potential A/C version conflation and overclaiming source mismatch candidates",
+      "resolution": "Report-only recurrence groups module plus evidence ID plus exact typed payload, requires original trace hashes, and leaves semantic/economic error counts null. Actual-helper tests cover A/C separation and changed payloads.",
+      "status": "resolved_by_parent_and_tested"
+    }
+  ],
+  "completion_invariants": [
+    "No root approval or mismatched hash stops before model work.",
+    "Main flag remains false until complete same-version development, actual FULL three-stage response, ready precision, and all later phase resource forecasts.",
+    "Completed checkpoint phases are revalidated on restart; source identity changes and recovery_interrupted remain blocked, never zero/h-filled.",
+    "Phase first-start time and original request accounting survive restart; raw replay copies do not increase requests.",
+    "Final status requires six exact schedules and all required analyses, independent main N60 and five-claim family; planned stages are distinct from actual requests and early-failure unattempted stages.",
+    "Finalizer publishes only a hash-verified bundle and preserves all previous aliases/backups and failed-publication receipts."
+  ],
+  "limitations": [
+    "Actual candidate_002 remains development work; no main or final empirical conclusions are asserted by this audit.",
+    "A complete real 3272-trajectory finalization has not occurred; transaction/rendering checks are synthetic software verification.",
+    "C fund-private newly published outlooks remain unavailable; current official SIC fallback is retrospective; assumed human audit is not an actual signed independent review."
+  ],
+  "code_artifacts": [
+    {
+      "path": "research/v63/longrun_guardian.py",
+      "sha256": "0c9c08434b326250c7dfeb8ac74bfbbe8c81b8ff2f3e8510827c3324d1647888",
+      "bytes": 36861
+    },
+    {
+      "path": "research/v63/finalize_experiment_report.py",
+      "sha256": "facca0b5515061c03e9521ba65945a5f7fffac6f1beb304d337286b311fab1e2",
+      "bytes": 53190
+    },
+    {
+      "path": "research/v63/record_continuation_snapshot.py",
+      "sha256": "0fc0321bdd818f28c7ec6dad79ce456ff4a20ba7c2323c018f068e1f56801b8e",
+      "bytes": 8565
+    },
+    {
+      "path": "research/v63/observe_continuation.py",
+      "sha256": "407f91cd9bdb6e1062ea0fa4ff19d93e2c60a6abdd3e4186144ef740d372864b",
+      "bytes": 6822
+    },
+    {
+      "path": "research/v63/build_continuation_report.py",
+      "sha256": "717525f860b83cd19af86c5893bc0908537c5499357c0cf54750b43d14f95b73",
+      "bytes": 9375
+    },
+    {
+      "path": "research/v63/campaign.py",
+      "sha256": "bafec17a41b718f6639c2552dc59f5cd1ff03c8bc4202ab602ebcbf857c34263",
+      "bytes": 23106
+    },
+    {
+      "path": "research/v63/campaign_control.py",
+      "sha256": "c8e99ebac3285441026f31688b12ba6a5b402878f34421d264fa8e2d3cddc675",
+      "bytes": 6173
+    },
+    {
+      "path": "research/v63/recovery.py",
+      "sha256": "6a92a93d242d449c63781f4f10a1f4f8709529422b8a2e0f6fde015b1ea081b4",
+      "bytes": 12853
+    },
+    {
+      "path": "research/v63/pilot_precision.py",
+      "sha256": "855c720d45eda62c8ef4f6268c06c54a7ac8cf274f477bb246be8b259efe24a5",
+      "bytes": 16425
+    },
+    {
+      "path": "research/v63/test_finalize_experiment_report.py",
+      "sha256": "43a80d85a0de8cb76981d35b91183ba3a45d37cc5e1126e6b67db2a605ee463f",
+      "bytes": 9800
+    },
+    {
+      "path": "research/v63/test_report_accounting.py",
+      "sha256": "b6e60e6f8a32d0ef4375f6b2a6858760f9917132008f8490bba71369f011b64a",
+      "bytes": 4169
+    },
+    {
+      "path": "research/v63/test_final_report_rendering.py",
+      "sha256": "8ee51c2cc8dc77849b8607f811de3f66d3190138d06a0d153cc966290972c5a2",
+      "bytes": 13688
+    },
+    {
+      "path": "research/v63/test_longrun_guardian.py",
+      "sha256": "5c38877efd17825168dbd1e230e14c30a73765b9bdc159ced03be6fdfbf0de74",
+      "bytes": 21859
+    }
+  ]
+}

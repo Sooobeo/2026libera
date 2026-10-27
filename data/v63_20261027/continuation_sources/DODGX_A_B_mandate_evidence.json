@@ -1,0 +1,116 @@
+{
+  "fund_id": "F03",
+  "period": "A_B",
+  "verified": true,
+  "objective": "Long-term growth of principal and income; reasonable current income is secondary.",
+  "mandatory_constraints": [
+    {
+      "evidence_id": "DODGX_EQ80",
+      "source_document_id": "DODGX_mandate_20250630_evidence",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/29440/000119312525151247/d12840d497.htm",
+      "source_line": 1386,
+      "text": "Normal circumstances require equity exposure of at least 80% of NAV; qualifying preferred/convertible securities, rights, warrants and equity derivatives may count.",
+      "denominator": "NAV",
+      "handling": "class2_fixed_sleeve_invariant",
+      "numerically_enforced_in_FF12": false
+    },
+    {
+      "evidence_id": "DODGX_FOREIGN20",
+      "source_document_id": "DODGX_mandate_20250630_evidence",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/29440/000119312525151247/d12840d497.htm",
+      "source_line": 1387,
+      "text": "Non-US issuers outside the S&P 500 are limited to 20% of total assets.",
+      "denominator": "total assets",
+      "handling": "class3_not_identifiable_from_FF12",
+      "numerically_enforced_in_FF12": false
+    },
+    {
+      "evidence_id": "DODGX_CURRENCY5",
+      "source_document_id": "DODGX_mandate_20250630_evidence",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/29440/000119312525151247/d12840d497.htm",
+      "source_line": 1387,
+      "text": "Securities denominated in non-USD currencies are limited to 5% of total assets.",
+      "denominator": "total assets",
+      "handling": "class3_not_identifiable_from_FF12",
+      "numerically_enforced_in_FF12": false
+    },
+    {
+      "evidence_id": "DODGX_INDUSTRY25",
+      "source_document_id": "DODGX_mandate_20250630_evidence",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/29440/000119312525151247/d12840d497.htm",
+      "source_line": 3113,
+      "text": "Issuer securities in a single source-defined industry cannot exceed 25% of total assets; government/GSE exceptions apply. Source uses third-party industry classifications and manager discretion, so this is not an FF12 25% cap.",
+      "denominator": "total assets",
+      "handling": "class3_source_taxonomy_differs_from_FF12",
+      "numerically_enforced_in_FF12": false
+    },
+    {
+      "evidence_id": "DODGX_ISSUER75",
+      "source_document_id": "DODGX_mandate_20250630_evidence",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/29440/000119312525151247/d12840d497.htm",
+      "source_line": 3121,
+      "text": "For 75% of total assets, issuer exposure is limited to 5% of fund total assets and 10% of issuer voting securities, subject to stated exceptions.",
+      "denominator": "total assets and issuer voting securities",
+      "handling": "class3_security_level",
+      "numerically_enforced_in_FF12": false
+    },
+    {
+      "evidence_id": "DODGX_ILLIQUID15",
+      "source_document_id": "DODGX_mandate_20250630_evidence",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/29440/000119312525151247/d12840d497.htm",
+      "source_line": 3126,
+      "text": "Illiquid securities purchases must not result in more than 15% of NAV in illiquid securities.",
+      "denominator": "NAV",
+      "handling": "class3_security_level",
+      "numerically_enforced_in_FF12": false
+    },
+    {
+      "evidence_id": "DODGX_TRANSACTION_SCOPE",
+      "source_document_id": "DODGX_mandate_20250630_evidence",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/29440/000119312525151247/d12840d497.htm",
+      "source_line": 3135,
+      "text": "Percentage restrictions apply when purchasing; later market changes do not automatically require a sale.",
+      "denominator": "purchase-time holdings",
+      "handling": "class3_path_dependent",
+      "numerically_enforced_in_FF12": false
+    },
+    {
+      "evidence_id": "DODGX_OTHER_RESTRICTIONS",
+      "source_document_id": "DODGX_mandate_20250630_evidence",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/29440/000119312525151247/d12840d497.htm",
+      "source_line": 3112,
+      "text": "Underwriting, physical real estate, physical commodities, borrowing/senior securities and lending restrictions retain the statutory and instrument exceptions listed in the SAI.",
+      "denominator": "instrument and transaction attributes",
+      "handling": "class3_not_identifiable_from_FF12",
+      "numerically_enforced_in_FF12": false
+    },
+    {
+      "evidence_id": "DODGX_DEFENSIVE",
+      "source_document_id": "DODGX_mandate_20250630_evidence",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/29440/000119312525151247/d12840d497.htm",
+      "source_line": 1391,
+      "text": "Temporary defensive allocations may consist entirely of cash and cash equivalents.",
+      "denominator": "portfolio under temporary defensive circumstances",
+      "handling": "class3_conditional",
+      "numerically_enforced_in_FF12": false
+    }
+  ],
+  "A": [],
+  "b": [],
+  "source_url": "https://www.sec.gov/Archives/edgar/data/29440/000119312525151247/d12840d497.htm",
+  "source_evidence_ids": [
+    "DODGX_mandate_20250630_evidence",
+    "DODGX_amendment_20250627_151247",
+    "DODGX_SEC_submissions"
+  ],
+  "publication_date": "2025-06-27",
+  "document_date": "2025-05-01",
+  "supplement_effective_date": "2025-06-30",
+  "filing_accession": "0001193125-25-151247",
+  "capture_method": "official SEC text via normal web retrieval; original HTML bytes not captured",
+  "evidence_sha256": "4b38ead72150533e8d7238b0fdce96ea779ec484b3d52670713cfce734e07189",
+  "human_review_mode": "user_assumed_completed",
+  "actual_independent_signatures": null,
+  "numerical_scope_note": "FF12 cannot certify security-level, country, currency, purchase-time or source-industry compliance. The common-equity sleeve mass and outside assets are held fixed, so the 80% rule is constant across feasible reallocations. No invented per-FF12 cap was imposed.",
+  "version_notes": "The June 27 2025 filed prospectus/SAI, revised June 30, remains the cutoff-eligible version. SEC submission history has no later full prospectus/SAI replacement before March 31 2026; next annual replacement filed April 22 2026. Later raw HTTP recovery corroborates the retained earlier normalized evidence."
+}

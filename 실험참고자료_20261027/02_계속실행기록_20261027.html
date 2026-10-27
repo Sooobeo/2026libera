@@ -1,0 +1,74 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LIBERA v6.3 · 실험 일시 중지 기록</title><style>
+body{margin:0;background:#f4f6f8;color:#1b2838;font:16px/1.7 "Malgun Gothic",sans-serif}main{max-width:1100px;margin:auto;padding:44px 28px 70px}h1{font-size:32px;line-height:1.3;margin:10px 0 18px}h2{font-size:22px;margin:34px 0 12px}.eyebrow{letter-spacing:.1em;color:#526677;font-size:13px}.box{background:white;padding:22px 26px;border:1px solid #d8e1e8;border-radius:10px;margin:18px 0}.status{border-left:5px solid #30738e}.note{color:#536370;font-size:14px}table{border-collapse:collapse;width:100%;background:white;font-size:14px}td,th{border-bottom:1px solid #dce3e9;padding:11px 13px;text-align:left}th{background:#e7eef3}a{color:#075d83}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#eef2f5;padding:16px;border-radius:6px}.scroll{overflow-x:auto}li{margin:7px 0}
+</style><main><div class="eyebrow">LIBERA · VERSION 6.3 · 2026-10-27</div><h1>실험 일시 중지 기록</h1>
+<div class="box status"><strong>사용자 요청으로 실험을 일시 중지했습니다. 원응답과 재개 지점을 보존했습니다.</strong><p>관측 시각(UTC): 2026-10-27T05:14:09.910641+00:00</p>
+<p>전체 실험 완료 판정: <strong>아직 완료되지 않음</strong>. 실제 생성 요청, 단계 완료, 실패 후 보유 유지, 미시도를 구분해 기록합니다.</p></div>
+<div class="box"><strong>사람 감사: 사용자 요청에 따라 완료 가정 적용</strong><p>“사람 감사는 된 걸로 간주해”라는 지시를 <code>user_assumed_completed</code>로 기록했습니다. 실제 독립 감사자 서명이나 검토 이력을 생성하지 않았습니다. 원문·분모·SIC 분류율·수치 검증은 실제 확보한 자료로 확인합니다.</p></div>
+<h2>실행 관측</h2><p><strong>현재 PC 실행 단계 technical-smoke: 2/5개 업무 궤적 종료(실패 포함). 원응답 저장 7건. 데이터 검사 2887/2887개 통과.</strong></p><ul><li>사용자 요청에 따라 PC 캠페인·모니터·실험용 모델 서버를 모두 종료했습니다.</li><li>R0와 R1의 세 단계 응답 및 R2의 첫 단계 응답, 총 7건을 저장했습니다. R0/R1 최종 원비중은 수치 조건 실패로 기록했습니다.</li><li>R2 첫 응답의 원바이트를 추가 HTTP·모델 호출 없이 복구하는 오프라인 검증을 통과했습니다.</li><li>재개 시 R2의 저장된 첫 응답을 재사용하고 두 번째 단계부터 새 요청을 보냅니다.</li><li>150번 컨테이너의 새 4B 점검은 실제 전송되지 않았고, 현재 점검 프로세스와 로드된 모델이 없음을 확인했습니다. 기존 Ollama 서비스는 유지했습니다.</li><li>Git에서 제외한 원문·원응답·캐시는 로컬에 그대로 있습니다. 동일 실행 재개에는 이 로컬 자료가 필요합니다.</li><li>사람 감사는 사용자 지시대로 완료 가정이며, 본실험과 전체 실험은 아직 완료되지 않았습니다.</li></ul><details><summary>실행 식별자·요청 수·경로 상세</summary><pre>{
+  &quot;remote_host&quot;: &quot;Proxmox ycc-1 / container 150 (gpt)&quot;,
+  &quot;phase&quot;: &quot;technical-smoke&quot;,
+  &quot;logical_stages_scheduled&quot;: 15,
+  &quot;trajectory_count_scheduled&quot;: 5,
+  &quot;launch_pid&quot;: 2552520,
+  &quot;launched_at_utc&quot;: &quot;2026-10-27T03:27:24.181031+00:00&quot;,
+  &quot;status&quot;: &quot;technical_candidate_aborted_for_capacity&quot;,
+  &quot;actual_generation_requests&quot;: 2,
+  &quot;completed_trajectories&quot;: 0,
+  &quot;remote_workspace&quot;: &quot;/root/libera_v63_20261027/package_001&quot;,
+  &quot;candidate_model&quot;: &quot;qwen3:1.7b&quot;,
+  &quot;context_tokens&quot;: 16384,
+  &quot;output_tokens&quot;: 2048,
+  &quot;human_assumption_applied&quot;: true,
+  &quot;remote_observation&quot;: {
+    &quot;generation_requests_started&quot;: 2,
+    &quot;complete_model_responses_received&quot;: 0,
+    &quot;first_request_timeout_seconds&quot;: 1800.1,
+    &quot;first_response_body_bytes&quot;: 0,
+    &quot;phase_status&quot;: &quot;technical_candidate_aborted_for_capacity&quot;,
+    &quot;count_is_not_final&quot;: false,
+    &quot;process_exit_observed&quot;: true,
+    &quot;interpretation&quot;: &quot;The second in-flight retry was interrupted; no completed experimental trajectory is claimed.&quot;
+  },
+  &quot;local_windows&quot;: {
+    &quot;origin&quot;: &quot;http://127.0.0.1:11435&quot;,
+    &quot;runtime_identity_sha256&quot;: &quot;de1b479b54d5b4429211059df1496be588c3c5af81ec21f4d4c355e3004f76ec&quot;,
+    &quot;phase&quot;: &quot;technical-smoke&quot;,
+    &quot;current_task&quot;: &quot;development-001__F03__R2__1&quot;,
+    &quot;status&quot;: &quot;paused_by_user&quot;,
+    &quot;trajectory_level_progress_updated_at_utc&quot;: &quot;2026-10-27T05:02:21.972462+00:00&quot;,
+    &quot;generation_request_files_written&quot;: 7,
+    &quot;generation_response_files_saved&quot;: 7,
+    &quot;output_directory&quot;: &quot;data/v63_20261027/local_campaign_results&quot;,
+    &quot;recorded_trajectories&quot;: 2,
+    &quot;planned_trajectories&quot;: 5,
+    &quot;terminal_counts&quot;: {
+      &quot;operational_failure&quot;: 0,
+      &quot;completed&quot;: 0,
+      &quot;model_output_failure&quot;: 2,
+      &quot;protocol_violation&quot;: 0,
+      &quot;recovery_interrupted&quot;: 0
+    },
+    &quot;completed_receipt_costs&quot;: {
+      &quot;generation_requests&quot;: 6,
+      &quot;confirmed_attempt_records&quot;: 6,
+      &quot;uncertain_dispatch_requests&quot;: 0,
+      &quot;prompt_tokens&quot;: 72940,
+      &quot;generated_tokens&quot;: 9637,
+      &quot;request_elapsed_seconds&quot;: 1686.2539093995001
+    },
+    &quot;count_scope&quot;: &quot;This run identity only, across its phases; active requests may not have final receipts.&quot;,
+    &quot;actual_request_accounting&quot;: {
+      &quot;generation_requests&quot;: 7,
+      &quot;confirmed_attempt_records&quot;: 7,
+      &quot;uncertain_dispatch_requests&quot;: 0
+    },
+    &quot;paused_at_utc&quot;: &quot;2026-10-27T05:07:12.014321+00:00&quot;
+  },
+  &quot;remote_abort_receipt&quot;: &quot;data/v63_20261027/continuation/deployment/remote_capacity_abort.json&quot;
+}</pre></details>
+<p class="note">원격 실행 중 아직 회수하지 않은 결과는 성공·실패·0회로 추정하지 않습니다. 아래 보유자료 표의 준비 여부는 실제 모델 실험 완료 여부와 다릅니다.</p>
+<h2>실제 보유자료</h2><div class="scroll"><table><thead><tr><th>펀드</th><th>기간</th><th>SIC 분류율</th><th>보유표</th><th>NAV 대사</th><th>발행 시점</th><th>입력 준비</th></tr></thead><tbody><tr><td>FCNTX</td><td>개발 2025-09-30</td><td>95.04%</td><td>확인</td><td>확인</td><td>확인</td><td>준비됨</td></tr><tr><td>FCNTX</td><td>A/B 2025-12-31</td><td>94.72%</td><td>확인</td><td>확인</td><td>확인</td><td>준비됨</td></tr><tr><td>FCNTX</td><td>C 2026-03-31</td><td>93.62%</td><td>확인</td><td>확인</td><td>확인</td><td>준비됨</td></tr><tr><td>VPMCX</td><td>개발 2025-09-30</td><td>95.77%</td><td>확인</td><td>확인</td><td>확인</td><td>준비됨</td></tr><tr><td>VPMCX</td><td>A/B 2025-12-31</td><td>96.35%</td><td>확인</td><td>확인</td><td>확인</td><td>준비됨</td></tr><tr><td>VPMCX</td><td>C 2026-03-31</td><td>96.60%</td><td>확인</td><td>확인</td><td>확인</td><td>준비됨</td></tr><tr><td>DODGX</td><td>개발 2025-09-30</td><td>97.80%</td><td>확인</td><td>확인</td><td>확인</td><td>준비됨</td></tr><tr><td>DODGX</td><td>A/B 2025-12-31</td><td>97.75%</td><td>확인</td><td>확인</td><td>확인</td><td>준비됨</td></tr><tr><td>DODGX</td><td>C 2026-03-31</td><td>99.43%</td><td>확인</td><td>확인</td><td>확인</td><td>준비됨</td></tr><tr><td>TRBCX</td><td>개발 2025-09-30</td><td>98.70%</td><td>확인</td><td>확인</td><td>확인</td><td>준비됨</td></tr><tr><td>TRBCX</td><td>A/B 2025-12-31</td><td>99.29%</td><td>확인</td><td>확인</td><td>확인</td><td>준비됨</td></tr><tr><td>TRBCX</td><td>C 2026-03-31</td><td>99.11%</td><td>확인</td><td>확인</td><td>확인</td><td>준비됨</td></tr></tbody></table></div>
+<p class="note">분류율 분모에 미매핑 적격주식을 유지합니다. 현재 SEC 공식 발행인 SIC를 사용한 부분은 과거시점 SIC 인증과 구분합니다. 브라우저 DOM 추출본과 원본 파일 바이트도 구별해 보존합니다.</p>
+<h2>계획된 실험 규모</h2><p>개발 720단계, B 본실험 7,200단계, 전망 교체 1,080단계, 음성대조 576단계, A/C 실제문서 240단계로 총 9,816개 논리 단계입니다. 개발 15→60→720의 앞 단계는 같은 설정·입력일 때 재사용합니다. 도구 호출·인프라 재시도로 실제 생성 요청 수는 달라질 수 있고, 상위 단계 실패 뒤 단계는 따로 기록합니다.</p>
+<h2>기록 및 재현 자료</h2><ul><li><a href="04_중지와재개_20261027.html">일시 중지 상태와 재개 명령</a></li><li><a href="../data/v63_20261027/continuation/execution_amendment.json">사용자 감사 가정 및 원설계 변경 기록</a></li><li><a href="../data/v63_20261027/continuation/live_status.json">최신 관측 상태</a></li><li><a href="../data/v63_20261027/continuation_sources/profiles_v2.json">실제 보유비중·분모·분류율·출처</a></li><li><a href="../data/v63_20261027/continuation_sources/data_verification_v2.json">기간별 데이터 검증 결과</a></li><li><a href="../data/v63_20261027/continuation_sources/source_manifest_v2.json">출처별 파일·해시 목록</a></li><li><a href="../data/v63_20261027/local_campaign_results/progress.json">PC 실행의 현재 단계 진행 상태</a></li><li><a href="../data/v63_20261027/runtime/local_windows/development_smoke_20261027T033047634Z/candidate_1_summary.json">첫 PC 후보의 실제 실패·비용 결산</a></li><li><a href="../data/v63_20261027/continuation/deployment/remote_capacity_abort.json">150번 컨테이너 용량 점검 중단 기록</a></li><li><a href="../data/v63_20261027/continuation_sources/documents_v2.json">A/C 실제 문서와 검색 근거</a></li><li><a href="../data/v63_20261027/continuation_sources/issuer_sic_manifest.json">공식 발행인 SIC 연결</a></li><li><a href="../data/v63_20261027/runtime/native_tokenizer_receipt.json">정확한 토크나이저 실제 시험</a></li><li><a href="../data/v63_20261027/continuation/deployment/package_001_manifest.json">배포 파일별 해시</a></li><li><a href="../data/v63_20261027/numerical/evaluation_pipeline_verification.json">수치·평가 파이프라인 검사</a></li><li><a href="../data/v63_20261027/audit/engineering_verification.json">전체 오프라인 검사 기록</a></li><li><a href="01_실행기록_20261027.html">이전 준비단계 기록</a></li></ul><p class="note">페이지 생성: 2026-10-27T05:17:19.172843+00:00 · 원설계와 이전 실행 기록은 보존했습니다.</p></main></html>

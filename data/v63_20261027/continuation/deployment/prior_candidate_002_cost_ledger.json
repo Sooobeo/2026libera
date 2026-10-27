@@ -1,0 +1,126 @@
+{
+  "schema": "libera_closed_prior_cost_ledger_v1",
+  "recorded_at_utc": "2026-10-27T04:40:01.832796+00:00",
+  "authorization": false,
+  "scope": "Only closed attempts preceding candidate_002; excludes its active run entirely. Engineering generations consume resources but fill no experimental slots.",
+  "generation_requests": 12,
+  "experimental_generation_requests": 7,
+  "engineering_generation_requests": 5,
+  "recorded_http_seconds_lower_bound": 4083.0081519694068,
+  "requests_without_client_http_timing": 1,
+  "rows": [
+    {
+      "kind": "superseded_experimental_candidate",
+      "location": "current_pc",
+      "generation_requests": 1,
+      "recorded_http_seconds": 357.655498099979,
+      "evidence": {
+        "path": "data/v63_20261027/local_campaign_results/runs/a151e0eea80931eb9bb281fc303a503410c5fd58e52ca9cff010d3e8ed11f10d/B-development/development-001__F03__C-context__1/http/attempt_000001/generation.receipt.json",
+        "sha256": "fd695db7a05332467bfad2decf0debc81338c9ca2fe105d684b745a68459e2cd"
+      }
+    },
+    {
+      "kind": "superseded_experimental_candidate",
+      "location": "current_pc",
+      "generation_requests": 1,
+      "recorded_http_seconds": 325.9815672999248,
+      "evidence": {
+        "path": "data/v63_20261027/local_campaign_results/runs/a151e0eea80931eb9bb281fc303a503410c5fd58e52ca9cff010d3e8ed11f10d/B-development/development-001__F03__R0__1/http/attempt_000001/generation.receipt.json",
+        "sha256": "5deddc2ea6435bdf4a6e1b7a41f6608fa4cff67c2972ec4ced851eb8a2e62824"
+      }
+    },
+    {
+      "kind": "superseded_experimental_candidate",
+      "location": "current_pc",
+      "generation_requests": 1,
+      "recorded_http_seconds": 309.6234240999911,
+      "evidence": {
+        "path": "data/v63_20261027/local_campaign_results/runs/a151e0eea80931eb9bb281fc303a503410c5fd58e52ca9cff010d3e8ed11f10d/B-development/development-001__F03__R1__1/http/attempt_000001/generation.receipt.json",
+        "sha256": "9899d51fbf82902c0f9145aaf333a705b2c4573e54bc37e975c53d096a1ded7b"
+      }
+    },
+    {
+      "kind": "superseded_experimental_candidate",
+      "location": "current_pc",
+      "generation_requests": 1,
+      "recorded_http_seconds": 266.61012060008943,
+      "evidence": {
+        "path": "data/v63_20261027/local_campaign_results/runs/a151e0eea80931eb9bb281fc303a503410c5fd58e52ca9cff010d3e8ed11f10d/B-development/development-001__F03__R2__1/http/attempt_000001/generation.receipt.json",
+        "sha256": "fafadb5709e4086f53711e1312784d25d20b88699b63d4bd7d6a04d48c6d505e"
+      }
+    },
+    {
+      "kind": "superseded_experimental_candidate",
+      "location": "current_pc",
+      "generation_requests": 1,
+      "recorded_http_seconds": 267.44124520011246,
+      "evidence": {
+        "path": "data/v63_20261027/local_campaign_results/runs/a151e0eea80931eb9bb281fc303a503410c5fd58e52ca9cff010d3e8ed11f10d/B-development/development-001__F03__R3__1/http/attempt_000001/generation.receipt.json",
+        "sha256": "1a631268a07f11d39171c8c34fd3cdad873dd14325d6df794da23732728139cc"
+      }
+    },
+    {
+      "kind": "aborted_experimental_candidate",
+      "location": "container_150",
+      "generation_requests": 2,
+      "recorded_http_seconds": 1949.9075824692845,
+      "evidence": {
+        "path": "data/v63_20261027/continuation/deployment/remote_cost_summary.json",
+        "sha256": "dc8d757365a60e7c6f85e04551bea805263a9d3c7a71de650b6cdf1a3ea3f806"
+      },
+      "raw_original_location": "Remote hash-identified evidence archive; local JSON is a normalized browser-console extraction."
+    },
+    {
+      "kind": "engineering_only",
+      "location": "current_pc",
+      "generation_requests": 1,
+      "recorded_http_seconds": 328.28567099990323,
+      "evidence": {
+        "path": "data/v63_20261027/runtime/local_windows/q8_timing_probe_002/threads_4/http/attempt_000001/generation.receipt.json",
+        "sha256": "e586a4cff000fb577d4ca472fddfcaf51968dba8dc1b531acf7bb35e40e40d15"
+      }
+    },
+    {
+      "kind": "engineering_only",
+      "location": "current_pc",
+      "generation_requests": 1,
+      "recorded_http_seconds": 211.86061710002832,
+      "evidence": {
+        "path": "data/v63_20261027/runtime/local_windows/q8_timing_probe_002/threads_8/http/attempt_000001/generation.receipt.json",
+        "sha256": "e2eca7b21c4a82fa6c78b4c676fb480e6ecafdc40183e92a64edee133bcd239e"
+      }
+    },
+    {
+      "kind": "engineering_only",
+      "location": "current_pc",
+      "generation_requests": 1,
+      "recorded_http_seconds": 62.93942610011436,
+      "evidence": {
+        "path": "data/v63_20261027/runtime/local_windows/f16_timing_probe_003/http/attempt_000001/generation.receipt.json",
+        "sha256": "3747a1c42fc3310cccb73ed93a46696053858d82ec1777b7ce2db6bcecbedab6"
+      }
+    },
+    {
+      "kind": "engineering_only",
+      "location": "current_pc",
+      "generation_requests": 1,
+      "recorded_http_seconds": 2.702999999979511,
+      "evidence": {
+        "path": "data/v63_20261027/runtime/local_windows/connectivity_probe_001/summary.json",
+        "sha256": "1a8d64a3f7a12a49d20d3832fb301cbf9bcbe974953f5a9d899b5d9ce477cbe7"
+      }
+    },
+    {
+      "kind": "engineering_only",
+      "location": "container_150",
+      "generation_requests": 1,
+      "recorded_http_seconds": null,
+      "observed_server_seconds": 7.306156902,
+      "evidence": {
+        "path": "data/v63_20261027/runtime/remote_connectivity_probe_response.json",
+        "sha256": "ba6693421c40829aee350a733a1dcc6fe9a71d2db5ca034e2035880b2d173b59"
+      },
+      "timing_note": "Provider server duration exists; complete client HTTP wall time was not captured. Do not invent it."
+    }
+  ]
+}

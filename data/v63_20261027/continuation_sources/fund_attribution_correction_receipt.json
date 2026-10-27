@@ -1,0 +1,46 @@
+{
+  "time_utc": "2026-10-27T03:46:19.002165+00:00",
+  "reason": "Agent manually swapped F03/F04 in A/C corpus; protocol is F03 DODGX, F04 TRBCX. Discovered and corrected before any A/C model runs. Old candidate preserved for audit and must not be executed.",
+  "old_artifacts": [
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\previous_candidates\\fund_attribution_correction\\documents_v2.json",
+      "sha256": "a4d6fe062b23ef394b0a0a6e7e434aa1a46de5e6ae555cc91f3e5cb11cc259ec"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\previous_candidates\\fund_attribution_correction\\documents_v2_verification.json",
+      "sha256": "0c2d008b6cd8bce883928670477b8b14592f7159a9b0b62f1bb36a2ec2a88f5c"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\previous_candidates\\fund_attribution_correction\\source_catalog_v2.json",
+      "sha256": "75fd2a570128d277bdb07cb1cde71c3a208e19a51aa20f9597a8ae69e4302fe2"
+    }
+  ],
+  "corrected_at_utc": "2026-10-27T03:49:49.888356+00:00",
+  "tests": {
+    "command": "tmp/v63_numerics_venv/Scripts/python.exe -m pytest research/v63/test_ac_corpus.py research/v63/test_evaluate.py -q",
+    "result": "16 passed in 26.60s",
+    "scope": "6 actual corpus integrity tests and 10 evaluator tests, no experiment results"
+  },
+  "new_artifacts": [
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\documents_v2.json",
+      "sha256": "930560346838abed6129187611c461e88c77b082a30d7456c4053d0cbb108d72"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\documents_v2_verification.json",
+      "sha256": "bc9061c94171d3160f7bbb3fc41a34a70f714c00e83ed91ce5fc71ee08ba9138"
+    },
+    {
+      "path": "data\\v63_20261027\\numerical\\evaluator_only\\source_catalog_v2.json",
+      "sha256": "dae02567ae157fe5eaec1d672e480807e03f233a77110dbc939864f5f51429ef"
+    },
+    {
+      "path": "research\\v63\\build_ac_corpus.py",
+      "sha256": "60057535e9cc2280208579d370294baf69a2bd2037ba6bbc41b948a1bfc66fa8"
+    },
+    {
+      "path": "research\\v63\\test_ac_corpus.py",
+      "sha256": "5e50be2ba3da3bb37db0d07fa3356944614cc67cd89674ad0fd22375a5335e1c"
+    }
+  ]
+}

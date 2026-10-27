@@ -1,0 +1,26 @@
+{
+  "schema": "libera_v63_execution_amendment_v1",
+  "amendment_id": "20261027-user-assumed-human-review",
+  "date": "2026-10-27",
+  "base_protocol": "plan/LIBERA_실험설정_v6.3_20261027.json",
+  "base_protocol_sha256": "a884b1242217cfed37a52444a541968eb680739c649e85c2b8d3bf9b0de383dc",
+  "authorization_source": "User messages in this conversation",
+  "user_instructions_verbatim": ["실험 마저 다 끝내", "사람 감사는 된 걸로 간주해"],
+  "human_review_mode": "user_assumed_completed",
+  "human_review_gate_satisfied_by_user_assumption": true,
+  "actual_independent_human_reviews_evidenced": false,
+  "actual_reviewer_signatures_created": false,
+  "overrides": [
+    "human_review.fund_eligibility_and_constraints: two independent humans for all funds",
+    "human_review.actual_facts: pre-execution human review requirement"
+  ],
+  "interpretation": "Proceed on the user's assumption that human review is complete. Report the assumption explicitly; do not claim that two independent humans actually reviewed the records.",
+  "unchanged_requirements": [
+    "Official complete holdings, source dates, issuer identification and SIC coverage",
+    "Preserved original denominators and unresolved source differences",
+    "Reference solver, information boundary, retrieval, runtime and statistical validation",
+    "Development-only feasibility measurements and pre-main freeze",
+    "Raw model responses, failed attempts, protocol deviations and all costs recorded",
+    "No substitution of simulated outputs for real model responses"
+  ]
+}

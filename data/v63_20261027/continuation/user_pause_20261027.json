@@ -1,0 +1,63 @@
+{
+  "schema": "libera_user_pause_v1",
+  "active": true,
+  "status": "paused_by_user",
+  "recorded_at_utc": "2026-10-27T05:14:09.910641+00:00",
+  "user_instruction": "잠깐 중지하고, gitignore 써서 커밋할거 줄여봐. 이후에 바로 실험 다시 재개할 수 있게 기록이나 글너거 잘 해놔봐",
+  "run_id": "de1b479b54d5b4429211059df1496be588c3c5af81ec21f4d4c355e3004f76ec",
+  "paused_at_utc": "2026-10-27T05:07:12.014321+00:00",
+  "phase": "technical-smoke",
+  "resume_case": "development-001__F03__R2__1",
+  "last_durable_response_stage": 1,
+  "next_new_generation_stage": 2,
+  "current_candidate_confirmed_generation_requests": 7,
+  "current_candidate_complete_responses": 7,
+  "terminal_trajectories": 2,
+  "terminal_model_output_failures": 2,
+  "unattempted_trajectories": [
+    "development-001__F03__R3__1",
+    "development-001__F03__C-context__1"
+  ],
+  "new_dispatches_after_pause_boundary": 0,
+  "all_experiments_completed": false,
+  "main_started": false,
+  "main_model_frozen": false,
+  "human_review_mode": "user_assumed_completed",
+  "resume_command": ".\\research\\resume_v63_candidate_002.ps1",
+  "resume_requires_explicit_user_instruction": true,
+  "runtime_config": "data/v63_20261027/continuation/deployment/local_windows/candidate_002/campaign_config.json",
+  "phase_budget_first_started_at_utc": "2026-10-27T04:34:12.494576+00:00",
+  "phase_budget_expires_at_utc": "2026-10-27T10:34:12.494576+00:00",
+  "phase_budget_expires_at_kst": "2026-10-27T19:34:12.494576+09:00",
+  "budget_policy": "Downtime counts. After expiry, record an explicit budget amendment; do not reset start time or discard prior calls.",
+  "local_evidence_required": "data/v63_20261027/local_campaign_results",
+  "gitignored_evidence_is_still_present": true,
+  "evidence": [
+    {
+      "path": "data/v63_20261027/continuation/pause_20261027/pause_boundary.json",
+      "sha256": "2abfa9e2c6e2f4b1fa1570cb20b00a18e7de70713fbdbbc5ad4005e9ac0ee8af"
+    },
+    {
+      "path": "data/v63_20261027/continuation/pause_20261027/campaign_stop.json",
+      "sha256": "caff2d5f98b92102259974b5a1e32357417cd7c0f19140f7413a934a6106131d"
+    },
+    {
+      "path": "data/v63_20261027/continuation/pause_20261027/offline_replay_verification.json",
+      "sha256": "b554a25451a11f87101e74705d66029faee1fac49fba27e603406ec81f08a419"
+    },
+    {
+      "path": "data/v63_20261027/continuation/pause_20261027/local_service_stop_verification.json",
+      "sha256": "3be85be314dc99735fa36b48f52f688fd4e8950c52cdf0ad06bf3ca1c87f425f"
+    },
+    {
+      "path": "data/v63_20261027/runtime/remote_qwen35_4b_resource_probe_001/final_reconciliation.json",
+      "sha256": "da21081a699fc7720aed8add2f15921f6401118c699f9e34abec19b6a4e2015e"
+    }
+  ],
+  "deferred_work": [
+    "Complete current same-identity 15-stage technical smoke, then review runtime resources.",
+    "Downloaded Qwen3.5 2B is not yet loaded or benchmarked. Remote 4B probe has not been sent.",
+    "Paired 60, development 720, main/secondary/A/C have not been launched.",
+    "feasibility_handoff.py was designed but not implemented; no approval or guardian exists."
+  ]
+}

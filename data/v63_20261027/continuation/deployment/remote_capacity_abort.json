@@ -1,0 +1,22 @@
+{
+  "status": "technical_candidate_aborted_for_capacity",
+  "recorded_at_utc": "2026-10-27T04:00:03.845538+00:00",
+  "pid": 2552520,
+  "reason": "First request exceeded frozen 1800-second timeout with zero response bytes; same model returned on Windows CPU. Preserve all receipts; this candidate is not completed or reused as a completed pilot.",
+  "generation_requests_started": 2,
+  "generation_receipts": [
+    {
+      "elapsed_seconds": 1800.1003355812281,
+      "generation_endpoint": true,
+      "method": "POST",
+      "network_error": "TimeoutError",
+      "request_sha256": "6f737d93f89533fb985b7da9fc27202f5baac6254cca1abe169f07428d1aed10",
+      "response_bytes": 0,
+      "response_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "started_at_utc": "2026-10-27T03:27:31.941157+00:00",
+      "url": "http://127.0.0.1:11434/api/chat"
+    }
+  ],
+  "signal": "SIGINT",
+  "other_services_unchanged": true
+}
