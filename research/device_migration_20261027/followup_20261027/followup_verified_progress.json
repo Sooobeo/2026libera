@@ -1,0 +1,58 @@
+{
+  "schema": "libera_followup_verified_progress_v1",
+  "observed_at_utc": "2026-10-27T10:10:24.682003+00:00",
+  "candidate": "005",
+  "run_id": "2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2",
+  "status": "running_after_first_completed_three_stage_trajectory",
+  "all_experiments_completed": false,
+  "main_started": false,
+  "first_trajectory": {
+    "path": "data/v63_20261027/local_campaign_results/runs/2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2/B-development/development-001__F03__R0__1/trajectory/trace.json",
+    "sha256": "33c2ef074bfef6ab96bf25585cb482984c5c8bf3a14ac165c3007118987da4cf"
+  },
+  "first_trajectory_stage_statuses": [
+    "completed",
+    "completed",
+    "completed"
+  ],
+  "current_run_request_costs": {
+    "generation_requests": 4,
+    "confirmed_attempt_records": 3,
+    "uncertain_dispatch_requests": 1
+  },
+  "supervisor_status": "running",
+  "supervisor_pid": 24104,
+  "config": {
+    "path": "data/v63_20261027/continuation/deployment/local_windows/candidate_005/campaign_config.json",
+    "sha256": "d843e3fd0557a29a315465ff50782082f9584f57261854e9eed22d7547e5a8c9"
+  },
+  "prior_candidate_response_handling": "Candidate004 two closed responses and one lost dispatch remain preserved; none are observations of005.",
+  "selection_scope": "GPU resource feasibility only; no investment effect or p-value used for selection.",
+  "evidence": [
+    {
+      "path": "research/device_migration_20261027/followup_20261027/reboot_quiescence.json",
+      "sha256": "cbfb6af23eae7a8366eb8ea16f2a9166d5dd0bee521dc653c38b5d1c5effcdc7"
+    },
+    {
+      "path": "research/device_migration_20261027/followup_20261027/candidate004_review.json",
+      "sha256": "fc0f99ec8a2ead6ddac7daae13d131c25a31e595284b9c43dfa35a30e3993cad"
+    },
+    {
+      "path": "research/device_migration_20261027/followup_20261027/finalcandidate005_review.json",
+      "sha256": "00034829460bb0f1fa66cf014fdd36a64e62fec754d8dc780ed85080070c8032"
+    },
+    {
+      "path": "research/device_migration_20261027/gpu_probe_summary.json",
+      "sha256": "32f93680b03b5b5403f9234acf1fc8b962c8d960553d490c449ca2fa0e9619b2"
+    },
+    {
+      "path": "research/device_migration_20261027/observer_output_retry_verification.json",
+      "sha256": "630cee2ea80e1cd80d96a35aedc9120ebd59e42191d581bdc2c0dd9f82641f04"
+    },
+    {
+      "path": "research/device_migration_20261027/followup/source_archive_recovery.json",
+      "sha256": "241d8e1ef34a92170340d11727cd366709b62071391d3358c87fc24bea83737f"
+    }
+  ],
+  "continuation": "Bounded supervisor runs15 then60 with actual full-history validation, then requires measured resource review for guardian. This is a progress snapshot, not final experiment results."
+}

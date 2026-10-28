@@ -1,0 +1,46 @@
+{
+  "schema": "libera_current_execution_locator_v1",
+  "recorded_at_utc": "2026-10-27T10:09:15.941919+00:00",
+  "scope": "Locator only; read the linked observer and supervisor files for current live state.",
+  "candidate": "005",
+  "run_id": "2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2",
+  "config": {
+    "path": "data/v63_20261027/continuation/deployment/local_windows/candidate_005/campaign_config.json",
+    "sha256": "d843e3fd0557a29a315465ff50782082f9584f57261854e9eed22d7547e5a8c9"
+  },
+  "selection": {
+    "path": "data/v63_20261027/continuation/deployment/local_windows/candidate_005/selection_receipt.json",
+    "sha256": "0fddc6c22a3ee1b6f74998e7ff4ccdbd38ad78d4e28422d0763ff6160dd999a8"
+  },
+  "python": "tmp/v63_numerics_venv/Scripts/python.exe",
+  "service_start_command": ".\\research\\start_v63_vulkan_ollama.ps1",
+  "resume_module": "research.run_v63_candidate_003_development",
+  "resume_args": [
+    "--config",
+    "data/v63_20261027/continuation/deployment/local_windows/candidate_005/campaign_config.json"
+  ],
+  "observer_module": "research.observe_v63_candidate_003",
+  "observer_args": [
+    "--config",
+    "data/v63_20261027/continuation/deployment/local_windows/candidate_005/campaign_config.json",
+    "--watch"
+  ],
+  "live_status": "research/device_migration_20261027/live_status.json",
+  "supervisor_state": "data/v63_20261027/local_campaign_results/development_supervisor/2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2/state.json",
+  "report": "??????_20261027/05_?????_20261027.html",
+  "resume_guide": "research/device_migration_20261027/RESUME.txt",
+  "main_auto_launch": false,
+  "after_feasibility": "Review actual same-runtime 15/60-stage results before guardian resource approval; main remains gated.",
+  "reboot_quiescence": {
+    "path": "research/device_migration_20261027/followup_20261027/reboot_quiescence.json",
+    "sha256": "cbfb6af23eae7a8366eb8ea16f2a9166d5dd0bee521dc653c38b5d1c5effcdc7"
+  },
+  "previous_run_review": {
+    "path": "research/device_migration_20261027/followup_20261027/candidate004_review.json",
+    "sha256": "fc0f99ec8a2ead6ddac7daae13d131c25a31e595284b9c43dfa35a30e3993cad"
+  },
+  "gpu_probe": {
+    "path": "research/device_migration_20261027/gpu_probe_summary.json",
+    "sha256": "32f93680b03b5b5403f9234acf1fc8b962c8d960553d490c449ca2fa0e9619b2"
+  }
+}

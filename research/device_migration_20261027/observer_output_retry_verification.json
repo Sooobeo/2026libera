@@ -1,0 +1,44 @@
+{
+  "schema": "libera_observer_output_retry_verification_v1",
+  "recorded_at_utc": "2026-10-27T09:59:36.346417+00:00",
+  "status": "observer_helper_frozen_after_18_passing_regressions",
+  "scope": "Observer-only output replacement hardening. No experiment core or ledger changes, model calls, process control, watcher launch, or live snapshot publication.",
+  "replacement_policy": {
+    "windows_retry_errors": [
+      5,
+      32,
+      33
+    ],
+    "deadline_seconds": 30,
+    "initial_delay_seconds": 0.05,
+    "maximum_delay_seconds": 0.5,
+    "temporary_file_written_once": true,
+    "fsync_once_before_first_replace": true,
+    "same_complete_temp_reused": true,
+    "unrelated_errors": "propagate immediately",
+    "exhausted_deadline": "propagate original replacement error; preserve old output and complete temporary bytes"
+  },
+  "validation": {
+    "command": "python -m unittest research.device_migration_20261027.test_observer_transient_reads -v",
+    "tests_passed": 18,
+    "tests_failed": 0,
+    "tests_skipped": 0,
+    "includes_previous_regressions": 15,
+    "new_output_tests": [
+      "Real exclusive Windows target lock releases after 0.12 seconds; replacement succeeds with identical path/mtime/content across attempts and fsync called once.",
+      "Persistent real target lock exceeds a fixture-specific 0.06-second deadline; old output and completed temporary file are preserved. Production deadline remains 30 seconds.",
+      "Unrelated WinError123 propagates after one replacement attempt with no sleep."
+    ],
+    "py_compile_passed": true
+  },
+  "core_sha_mismatches_against_candidate004": [],
+  "frozen_helper": {
+    "path": "research/observe_v63_candidate_003.py",
+    "sha256": "6adbf2634e464660eff90e8d25590c7e6ae69586adc553847a8fb62682978b90",
+    "bytes": 27307
+  },
+  "test_source": {
+    "path": "research/device_migration_20261027/test_observer_transient_reads.py",
+    "sha256": "36dd2fd6d28c6f1108427031a72babe7fd8a80f13c2d3ac037529183df75fd47"
+  }
+}

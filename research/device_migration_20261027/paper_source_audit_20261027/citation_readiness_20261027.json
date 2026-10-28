@@ -1,0 +1,158 @@
+{
+  "schema": "libera_paper_primary_citation_readiness_v1",
+  "access_date": "2026-10-27",
+  "access_timezone": "Asia/Seoul",
+  "scope": "Bibliography and claim-scope verification for the original abstract and composition guide; not an exhaustive literature review, final paper, or evaluation of current experimental outcomes.",
+  "method": "Primary institution, publisher/conference, author institutional repository, and version-pinned author preprint pages. Search results from unrelated secondary sites were not used as evidence. No full copyrighted text reproduced.",
+  "checked_count": 7,
+  "claim_ready_count": 7,
+  "citations": [
+    {
+      "id": "BOE_FCA_2024",
+      "bibliography": "Bank of England & Financial Conduct Authority. (2024, November 21). Artificial intelligence in UK financial services – 2024.",
+      "publication_date": "2024-11-21",
+      "version": "2024 joint survey report, official HTML",
+      "primary_url": "https://www.bankofengland.co.uk/report/2024/artificial-intelligence-in-uk-financial-services-2024",
+      "corroborating_primary_url": "https://www.fca.org.uk/publications/research-notes/ai-uk-financial-services",
+      "access_date": "2026-10-27",
+      "access_status": "official_full_report_opened",
+      "locator": "Executive summary; §1.2; §1.3; §2.1; §2.5",
+      "supported_claim": "2024년 공동조사에 응답한 118개 금융회사 중 75%가 AI를 사용한다고 답했다. 보고된 AI 활용사례 중 완전자율 의사결정은 2%였다.",
+      "cautions": [
+        "75%의 분모는 응답 회사이고 2%의 분모는 활용사례다. 2%를 회사 비율이나 투자결정 비율로 쓰지 않는다.",
+        "AI 전체 조사이며 GenAI만의 도입률이 아니다. 모든 영국 금융회사를 대표하는 모집단 사용률이나 현재 시점의 비율로 일반화하지 않는다.",
+        "이 수치만으로 공통 AI가 투자판단을 동질화했다거나 수익에 영향을 줬다고 주장할 수 없다. FCA 연결 페이지의 갱신일 대신 원 보고서의 2024-11-21을 인용한다."
+      ],
+      "readiness": "ready_with_denominator_and_year_qualifiers"
+    },
+    {
+      "id": "MORGAN_STANLEY_2024",
+      "bibliography": "Morgan Stanley. (2024, October 23). Morgan Stanley Research Announces AskResearchGPT Powered by OpenAI.",
+      "publication_date": "2024-10-23",
+      "version": "Company launch press release",
+      "primary_url": "https://www.morganstanley.com/press-releases/morgan-stanley-research-announces-askresearchgpt",
+      "access_date": "2026-10-27",
+      "access_status": "official_press_release_opened",
+      "locator": "Dated heading and first three substantive paragraphs; workflow/citation paragraph",
+      "supported_claim": "Morgan Stanley는 2024년 AskResearchGPT 출시를 발표했다. 이 도구는 투자은행·세일즈/트레이딩·리서치 직원이 사내 리서치에서 정보를 찾고 요약하도록 지원하며 출처 링크를 제공한다고 설명됐다.",
+      "cautions": [
+        "기업의 제품 출시·기능 설명이다. 독립적인 생산성, 정확도, 초과수익 또는 위험 감소의 실증 평가가 아니다.",
+        "중간 리서치 업무에 생성형 AI가 배치된 사례로 사용한다. 자율적인 펀드 자산배분이나 투자전략 동질화의 관측 증거로 바꾸지 않는다."
+      ],
+      "readiness": "ready_as_deployment_example_not_effect_evidence"
+    },
+    {
+      "id": "DOSHI_HAUSER_2024",
+      "bibliography": "Doshi, A. R., & Hauser, O. P. (2024). Generative AI enhances individual creativity but reduces the collective diversity of novel content. Science Advances, 10(28), eadn5290.",
+      "publication_date": "2024-07-12",
+      "version": "Published journal version, not the differently titled 2023 preprint",
+      "doi": "10.1126/sciadv.adn5290",
+      "primary_url": "https://discovery.ucl.ac.uk/id/eprint/10195027/",
+      "publisher_url": "https://www.science.org/doi/10.1126/sciadv.adn5290",
+      "published_pdf_url": "https://discovery.ucl.ac.uk/10195027/1/Generative%20AI%20enhances%20individual%20creativity%20but%20reduces%20the%20collective%20diversity%20of%20novel%20content.pdf",
+      "archived_journal_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11244532/",
+      "access_date": "2026-10-27",
+      "access_status": "UCL author-institution repository metadata_and_abstract_opened; indexed published PDF first page and journal archive metadata corroborated date; live PDF fetch failed",
+      "locator": "UCL bibliography, Published Version label and Abstract; indexed published PDF p.1 date footer",
+      "supported_claim": "온라인 짧은 이야기 쓰기 실험에서 GenAI 아이디어 접근은 이야기의 창의성·문장 품질·즐거움 평가를 높였고, AI 도움을 받은 이야기들은 서로 더 비슷했다. 개인 산출물의 평가와 집단 산출물의 다양성은 분리해 살펴볼 수 있다.",
+      "cautions": [
+        "이야기 쓰기 과제의 인과 결과다. 기관투자자의 수익·위험·전략 이질성에 대한 직접 증거로 전이하지 않는다.",
+        "이 감사에서는 UCL 초록과 게재본 식별을 확인했으며 전체 PDF를 새로 정독한 것으로 표시하지 않는다."
+      ],
+      "readiness": "ready_for_abstract_level_claims_and_bibliography"
+    },
+    {
+      "id": "BOMMASANI_ET_AL_2022",
+      "bibliography": "Bommasani, R., Creel, K. A., Kumar, A., Jurafsky, D., & Liang, P. (2022). Picking on the Same Person: Does Algorithmic Monoculture lead to Outcome Homogenization? Advances in Neural Information Processing Systems, 35.",
+      "publication_year": 2022,
+      "version": "NeurIPS 2022 Main Conference Track proceedings",
+      "primary_url": "https://papers.neurips.cc/paper_files/paper/2022/hash/17a234c91f746d9625a75cf8a8731ee2-Abstract-Conference.html",
+      "paper_url": "https://proceedings.neurips.cc/paper_files/paper/2022/file/17a234c91f746d9625a75cf8a8731ee2-Paper-Conference.pdf",
+      "access_date": "2026-10-27",
+      "access_status": "official_proceedings_metadata_and_abstract_opened",
+      "locator": "Proceedings authors, venue and abstract",
+      "supported_claim": "연구는 여러 의사결정자가 데이터·모델 구성요소를 공유하는 상황과 동일 개인·집단에 결과가 집중되는 현상을 구분했다. 공정성 벤치마크에서 데이터 공유는 결과 동질화를 높였지만 모델 공유의 결과는 혼합적이며 적응 방법의 영향을 받았다.",
+      "cautions": [
+        "동질화의 단위는 여러 배치에서 같은 개인·집단이 겪는 결과다. 기관 간 포트폴리오 거리를 같은 측정치로 취급하지 않는다.",
+        "공유 모델이 항상 동질화를 낳는다는 법칙이나 GenAI 금융 인과효과로 인용하지 않는다."
+      ],
+      "readiness": "ready_for_concept_and_conditional_claim"
+    },
+    {
+      "id": "HORNUF_ET_AL_2025",
+      "bibliography": "Hornuf, L., Streich, D. J., & Töllich, N. (2025). Making GenAI Smarter: Evidence from a Portfolio Allocation Experiment. CESifo Working Paper No. 11862.",
+      "publication_date": "2025-04-30",
+      "version": "CESifo No.11862; cover April 2025; manuscript title page April 30, 2025; 95 PDF pages at access",
+      "primary_url": "https://www.ifo.de/DocDL/cesifo1_wp11862.pdf",
+      "metadata_url": "https://www.ifo.de/en/cesifo/publications/2025/working-paper/making-genai-smarter-evidence-portfolio-allocation-experiment",
+      "access_date": "2026-10-27",
+      "access_status": "official_pdf_and_metadata_opened",
+      "locator": "PDF p.3 abstract (printed p.1); PDF pp.4–6 introduction (printed pp.2–4); PDF p.7 background (printed p.5)",
+      "supported_claim": "단순 포트폴리오 배분에서 7개 LLM에 제공하는 금융이론·정량/정성 기업정보를 비교했다. 기업정보로 역사적 성과가 개선된 부분은 위험자산 노출 증가와 연결됐으며, 위험자산 내부 평균-분산 효율 향상으로 설명되지 않았다. 연구자는 검색기에 맡기지 않고 입력 정보를 직접 통제했다.",
+      "cautions": [
+        "작업논문 버전으로 인용한다. 자동 검색기 또는 RAG 배치시점의 성능을 직접 검증한 연구라고 쓰지 않는다.",
+        "추가 정보가 항상 추천 품질을 높인다는 결론이 아니다. 위험 회피 성향과 위험 노출의 부조화 및 짧은 표본외 기간에서 제한된 재현을 함께 고려한다.",
+        "v6.3의 펀드별 SOCP 기준·과잉수렴·주 검정 효과로 전이하지 않는다."
+      ],
+      "readiness": "ready_with_working_paper_and_manual_information_injection_qualifiers"
+    },
+    {
+      "id": "MATTON_ET_AL_2025",
+      "bibliography": "Matton, K., Ness, R., Guttag, J., & Kiciman, E. (2025). Walk the Talk? Measuring the Faithfulness of Large Language Model Explanations. International Conference on Learning Representations.",
+      "publication_year": 2025,
+      "version": "ICLR 2025 official proceedings; authors follow proceedings metadata",
+      "primary_url": "https://proceedings.iclr.cc/paper_files/paper/2025/hash/b5ec50eb177908f21f78ed0d76ed525c-Abstract-Conference.html",
+      "paper_url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/b5ec50eb177908f21f78ed0d76ed525c-Paper-Conference.pdf",
+      "openreview_url": "https://openreview.net/pdf?id=4ub9gpx9xw",
+      "access_date": "2026-10-27",
+      "access_status": "official_proceedings_metadata_and_abstract_opened; live PDF access unavailable",
+      "locator": "Proceedings abstract, especially faithfulness definition, counterfactual construction and hierarchical Bayesian estimation",
+      "supported_claim": "설명에서 영향이 있다고 주장한 개념과 실제로 영향을 미친 개념을 구분해 충실성을 정의했다. 보조 LLM으로 개념 값을 바꾼 반사실 입력과 계층 베이즈 모형으로 개념의 영향을 추정하며 사회적 편향·의료 질의 과제에 적용했다.",
+      "cautions": [
+        "출처 인용이나 설명의 그럴듯함만으로 실제 개념 사용을 인증할 수 없다는 평가 근거다.",
+        "LIBERA의 문장·숫자 대조 또는 x 교체를 이 논문의 전체 인과적 충실성 추정법과 동일시하지 않는다. 금융 배분 품질이나 v6.3 결과의 증거가 아니다.",
+        "이 감사의 확인 수준은 공식 초록이다. 상세 정의·모형을 재현하거나 직접 인용하려면 해당 본문 위치를 별도로 확인한다."
+      ],
+      "readiness": "ready_for_abstract_level_definition_and_method_scope"
+    },
+    {
+      "id": "LABAN_ET_AL_2025_V1",
+      "bibliography": "Laban, P., Hayashi, H., Zhou, Y., & Neville, J. (2025). LLMs Get Lost In Multi-Turn Conversation. arXiv:2505.06120v1.",
+      "publication_date": "2025-05-09",
+      "version": "arXiv v1 submitted 2025-05-09 15:21:44 UTC; matches the guide's pinned v1",
+      "doi": "10.48550/arXiv.2505.06120",
+      "primary_url": "https://arxiv.org/abs/2505.06120v1",
+      "full_text_url": "https://arxiv.org/html/2505.06120v1",
+      "author_publication_index_url": "https://www.microsoft.com/en-us/research/publication/llms-get-lost-in-multi-turn-conversation/",
+      "access_date": "2026-10-27",
+      "access_status": "version_pinned_author_preprint_metadata_and_html_opened",
+      "locator": "Abstract; §§3.1–3.3, 5–6.1; §9 Limitations",
+      "supported_claim": "동일 과제 정보를 한 번에 주거나 여러 차례 나눠 주는 모의 대화를 비교했다. 여섯 생성 과제와 15개 LLM의 실험에서 다중 턴의 평균 성능 저하를 보고하고 초기 가정·성급한 답안·불안정성과의 관계를 분석했다.",
+      "cautions": [
+        "LLM이 사용자도 모사한 제한된 구조의 대화이며 자연스러운 사람-AI 대화 전체를 대표하지 않는다. 자료를 언제 제공하는지가 모든 과제에서 같은 효과를 낸다는 법칙이 아니다.",
+        "금융 RAG 배치시점, qwen3:1.7b의 구체적 효과 또는 이번 실험의 결과로 전이하지 않는다.",
+        "저자 기관의 현재 색인은 ICLR 2026도 표시한다. 여기서는 실제 확인한 2025 v1을 인용하며, 학회 게재본으로 교체할 때는 버전 내용을 별도 비교한다."
+      ],
+      "readiness": "ready_as_version_pinned_preprint"
+    }
+  ],
+  "access_failures": [
+    {"url": "https://www.science.org/doi/10.1126/sciadv.adn5290", "operation": "open", "observed_result": "403 Forbidden", "fallback": "Official author-institution UCL repository metadata and abstract"},
+    {"url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11244532/", "operation": "open", "observed_result": "Browser/reCAPTCHA check; primary search index exposed journal metadata and article text", "fallback": "UCL repository open; not treated as a successful live full-text read"},
+    {"url": "https://discovery.ucl.ac.uk/10195027/1/Generative%20AI%20enhances%20individual%20creativity%20but%20reduces%20the%20collective%20diversity%20of%20novel%20content.pdf", "operation": "open and repository download link", "observed_result": "Timeout on open; internal fetch error on repository download", "fallback": "UCL landing-page metadata and abstract; indexed published PDF first-page text"},
+    {"url": "https://papers.neurips.cc/paper_files/paper/17123-/bibtex", "operation": "click", "observed_result": "Unsupported content-type application/x-bibtex", "fallback": "Official proceedings displayed bibliography"},
+    {"url": "https://proceedings.iclr.cc/paper_files/paper/1052-/bibtex", "operation": "click", "observed_result": "Unsupported content-type application/x-bibtex", "fallback": "Official proceedings displayed bibliography"},
+    {"url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/b5ec50eb177908f21f78ed0d76ed525c-Paper-Conference.pdf", "operation": "official paper link", "observed_result": "Internal fetch error", "fallback": "Official proceedings abstract"},
+    {"url": "https://openreview.net/pdf?id=4ub9gpx9xw", "operation": "open", "observed_result": "Redirected to browser-verification challenge", "fallback": "Official ICLR proceedings metadata and abstract"}
+  ],
+  "global_claim_rules": [
+    "Published titles and author lists identify versions; supported claims above are paraphrases, not direct quotations.",
+    "Use financial adoption examples to motivate the question and nonfinancial studies to distinguish concepts or methods. Do not present them as estimates of institutional portfolio homogenization.",
+    "Do not combine publication years with mutable landing-page update timestamps or search-engine crawl dates.",
+    "No citation in this audit establishes current v6.3 results, successful completion, economic benefit, or statistical significance."
+  ],
+  "current_experiment_outputs_or_pvalues_read": false,
+  "final_paper_written": false,
+  "model_calls": 0,
+  "external_apps_or_style_samples_used": false
+}

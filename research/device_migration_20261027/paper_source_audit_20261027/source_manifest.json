@@ -1,0 +1,70 @@
+{
+  "schema": "libera_paper_source_audit_manifest_v1",
+  "recorded_at_utc": "2026-10-27T13:37:00.380928+00:00",
+  "sources": [
+    {
+      "path": "실험참고자료_20261027/original/greengreen (1).pdf",
+      "bytes": 70452,
+      "sha256": "75a70c60a2fdf8db6e17576a829e0960c8c48afb70422c85ee2515a5efe9ece0"
+    },
+    {
+      "path": "paper/v540_manuscript_20261026.json",
+      "bytes": 101548,
+      "sha256": "8d90b534bab9fea1439ed6822315ac06870a3546bdbd17ccb2b44b8772ac6858"
+    },
+    {
+      "path": "paper/LIBERA_소논문_원초록반영_v5.4_20261026.md",
+      "bytes": 80747,
+      "sha256": "13e0c0eb5a28fc05c4ffbb49d7fc07c94f6303faceb53e0633a47e69a1dbf8a2"
+    },
+    {
+      "path": "paper/LIBERA_소논문_구성과문장_레퍼런스분석_20261026.md",
+      "bytes": 58099,
+      "sha256": "d1987b2d39b968403dcaeebaa163c306c2e361bae708620178b4078f84f2d9e0"
+    },
+    {
+      "path": "plan/LIBERA_실험설정_v6.3_20261027.json",
+      "bytes": 59680,
+      "sha256": "a884b1242217cfed37a52444a541968eb680739c649e85c2b8d3bf9b0de383dc"
+    },
+    {
+      "path": "research/v63/finalize_experiment_report.py",
+      "bytes": 53190,
+      "sha256": "facca0b5515061c03e9521ba65945a5f7fffac6f1beb304d337286b311fab1e2"
+    },
+    {
+      "path": "data/v63_20261027/continuation/execution_amendment.json",
+      "bytes": 1560,
+      "sha256": "40b1fb616814b599d1b04c137e2fc7558852a929c4986082edc88907b3d3dfde"
+    },
+    {
+      "path": "research/v63/README.md",
+      "bytes": 6511,
+      "sha256": "3a2f29c653d46cd8af28c7f5e902cc50651bea4bed6bf59b95d24d9dcaddc060"
+    }
+  ],
+  "audit_artifacts": [
+    {
+      "path": "research/device_migration_20261027/paper_source_audit_20261027/report.json",
+      "bytes": 19719,
+      "sha256": "2d80e86a697035796ff2ed67709e0ab54a4bf2c13d687b4c8e94170b3bc09f00"
+    },
+    {
+      "path": "research/device_migration_20261027/paper_source_audit_20261027/original_abstract_extracted.txt",
+      "bytes": 5293,
+      "sha256": "e7fceca669115d3d134b6bf6c34963fe0a24f4c21fed2b03003d294479c8ad40"
+    }
+  ],
+  "checks": {
+    "json_valid": true,
+    "title_subtitle_match_pdf_v54_v63": true,
+    "pdf_pages": 2,
+    "pdf_extracted_characters": 2605,
+    "pdf_second_reader": "pypdf 6.14.2",
+    "pdf_first_reader": "PyMuPDF in preceding source inspection; emitted four invalid dictionary-key warnings but extracted both pages",
+    "source_mutations": 0,
+    "model_calls": 0,
+    "current_effect_or_pvalue_reads": 0,
+    "final_paper_written": false
+  }
+}

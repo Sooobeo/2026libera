@@ -1,7 +1,7 @@
 """Durable campaign state and a process-held lock; no model or protocol choices."""
 from contextlib import contextmanager
 from datetime import datetime,timezone
-import hashlib,json,os
+import hashlib,json,os,time
 from pathlib import Path
 import shutil
 
@@ -28,7 +28,19 @@ def atomic_json(path,value):
     temporary=path.with_name('.'+path.name+'.tmp')
     with temporary.open('w',encoding='utf8',newline='\n') as handle:
         json.dump(value,handle,ensure_ascii=False,indent=2,allow_nan=False);handle.write('\n');handle.flush();os.fsync(handle.fileno())
-    os.replace(temporary,path)
+    # Windows readers can briefly deny replacement even after the new bytes
+    # are flushed. Retry only those sharing/access errors, preserving this
+    # same temporary file and the old destination until replacement succeeds.
+    deadline=time.monotonic()+30.;delay=.05
+    while True:
+        try:
+            os.replace(temporary,path)
+            return
+        except OSError as exc:
+            if os.name!='nt' or getattr(exc,'winerror',None) not in (5,32,33):raise
+            remaining=deadline-time.monotonic()
+            if remaining<=0:raise
+            time.sleep(min(delay,remaining));delay=min(.5,delay*2)
 
 @contextmanager
 def campaign_lock(path):

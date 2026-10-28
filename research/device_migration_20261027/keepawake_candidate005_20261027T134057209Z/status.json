@@ -1,0 +1,74 @@
+{
+  "schema": "libera_temporary_keepawake_v1",
+  "started_at_utc": "2026-10-27T13:40:58.494384+00:00",
+  "pid": 30232,
+  "candidate": "candidate_005",
+  "run_id": "2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2",
+  "config": "data\\v63_20261027\\continuation\\deployment\\local_windows\\candidate_005\\campaign_config.json",
+  "config_sha256": "d843e3fd0557a29a315465ff50782082f9584f57261854e9eed22d7547e5a8c9",
+  "helper_sha256": "4d04e5517f12d6d4fe870354c75a7344f17a07b7fa0d1d61ad318f5e2636b064",
+  "docs": [
+    "https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-setthreadexecutionstate",
+    "https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-powercreaterequest",
+    "https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-powersetrequest",
+    "https://learn.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-powerclearrequest",
+    "https://learn.microsoft.com/en-us/windows/win32/api/minwinbase/ns-minwinbase-reason_context"
+  ],
+  "model_calls": 0,
+  "power_plan_changes": false,
+  "experiment_or_process_mutation": false,
+  "handoff_grace_seconds": 120,
+  "limitations": "OS power policy and explicit user sleep still apply; execution request protects this helper, not an exemption for other processes. Display/system requirements prevent automatic idle entry while active.",
+  "updated_at_utc": "2026-10-27T15:56:46.532120+00:00",
+  "status": "released",
+  "ever_acquired": true,
+  "reason": "no_verified_active_experiment_after_grace",
+  "observation": {
+    "observed_at_utc": "2026-10-27T15:56:46.531596+00:00",
+    "controller": "supervisor",
+    "status": "feasibility_complete_requires_measured_resource_review",
+    "state_fresh": true,
+    "read_errors": [],
+    "processes": [
+      {
+        "pid": 24104,
+        "role": "supervisor",
+        "expected_record_time": "2026-10-27T10:01:31.566199+00:00",
+        "verified_alive": false
+      }
+    ],
+    "decision": "gap",
+    "reason": "handoff_or_process_identity_unavailable"
+  },
+  "api_events": [
+    {
+      "api": "SetThreadExecutionState",
+      "flags": 2147483651,
+      "return_value": 2147483648,
+      "success": true
+    },
+    {
+      "api": "PowerCreateRequest",
+      "success": true
+    },
+    {
+      "api": "PowerSetRequest",
+      "request_type": "PowerRequestExecutionRequired",
+      "success": true
+    },
+    {
+      "api": "PowerClearRequest",
+      "success": true
+    },
+    {
+      "api": "CloseHandle",
+      "success": true
+    },
+    {
+      "api": "SetThreadExecutionState",
+      "flags": 2147483648,
+      "return_value": 2147483651,
+      "success": true
+    }
+  ]
+}

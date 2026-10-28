@@ -1,0 +1,207 @@
+{
+  "schema": "libera_device_migration_offline_test_analysis_v1",
+  "recorded_at_utc": "2026-10-27T08:19:43.805716+00:00",
+  "status": "core_tests_passed_source_and_historical_draft_evidence_incomplete",
+  "suite_status_remains": "failed",
+  "counts": {
+    "tests": 226,
+    "failures": 10,
+    "errors": 0,
+    "skipped": 0
+  },
+  "all_failures_are_missing_files": true,
+  "observed_python_313_compatibility_failures": 0,
+  "failure_groups": [
+    {
+      "kind": "actual_document_raw_source_absent",
+      "failed_tests": 1,
+      "missing_raw_sources": [
+        {
+          "document_id": "A-COMMON-FOMC-20260318",
+          "path": "data\\v63_20261027\\continuation_sources\\outlook\\FOMC_20260318.html",
+          "expected_sha256": "3aa22cb795c921f92eadfd19748068bfa02c9405e0887c2c29cff29a517da8d7"
+        },
+        {
+          "document_id": "C-COMMON-FOMC-20260617",
+          "path": "data\\v63_20261027\\continuation_sources\\outlook\\FOMC_20260617.html",
+          "expected_sha256": "b6c96dfb1f6341f154c7d2d7c2ffad1deb14ae09d9927664e6b38409af155e42"
+        },
+        {
+          "document_id": "A-F01-FCNTX-2025-REVIEW",
+          "path": "data\\v63_20261027\\continuation_sources\\FCNTX_A_shareholder_report.html",
+          "expected_sha256": "6851fd986bfb1ef58df2c5a76605d4aa4446eb44969a76ca70d3b6938b2d34c8"
+        },
+        {
+          "document_id": "A-F02-VPMCX-2025-REVIEW",
+          "path": "data\\v63_20261027\\continuation_sources\\VPMCX_annual_20250930_browser_dom.json",
+          "expected_sha256": "5255191111735bf4b0727b0c5650188d83d1fcdae4705b16bc6d23058ded0231"
+        },
+        {
+          "document_id": "A-F04-TRBCX-2025-REVIEW",
+          "path": "data\\v63_20261027\\continuation_sources\\outlook\\TRBCX_annual_2025.pdf",
+          "expected_sha256": "b56e8268e934576d78868b01e4bad45c18c7273aede95144ee989fcd95b29e7b"
+        },
+        {
+          "document_id": "A-F03-DODGX-2025-REVIEW",
+          "path": "data\\v63_20261027\\raw\\DODGX_2025_review_transcript.pdf",
+          "expected_sha256": "9613b9b24cc80356f132c2e2f123f6510a6b5bca2cef4855392d2063cb970a31"
+        }
+      ],
+      "note": "The test stops at the first absent source; all six referenced raw sources were separately checked and are absent."
+    },
+    {
+      "kind": "mandate_original_text_absent",
+      "failed_tests": 1,
+      "path": "data/v63_20261027/continuation_sources/VPMCX_SAI_20260325_text.txt"
+    },
+    {
+      "kind": "historical_report_draft_artifacts_absent",
+      "failed_tests": 8,
+      "paths": [
+        "data/v63_20261027/audit/final_report_supplement_code_draft.txt",
+        "data/v63_20261027/audit/shared_source_mismatch_code_draft.txt"
+      ],
+      "note": "These tests execute preserved draft text. The separate tests against the final report implementation passed."
+    }
+  ],
+  "by_suite": {
+    "research.v63.test_ac_corpus.ActualCorpusTests": {
+      "passed": 5,
+      "failed": 1,
+      "errors": 0,
+      "skipped": 0
+    },
+    "research.v63.test_campaign.CampaignTests": {
+      "passed": 13,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "research.v63.test_campaign_control.ControlTests": {
+      "passed": 6,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "research.v63.test_delivery.DeliveryTests": {
+      "passed": 6,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "research.v63.test_evaluate": {
+      "passed": 10,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "research.v63.test_final_report_rendering": {
+      "passed": 8,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "research.v63.test_finalize_experiment_report": {
+      "passed": 29,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "research.v63.test_longrun_guardian": {
+      "passed": 47,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "research.v63.test_mandate_atomic_units": {
+      "passed": 1,
+      "failed": 1,
+      "errors": 0,
+      "skipped": 0
+    },
+    "research.v63.test_numerics": {
+      "passed": 17,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "research.v63.test_ollama_transport.OllamaTransportTests": {
+      "passed": 10,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "research.v63.test_pilot_precision": {
+      "passed": 8,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "research.v63.test_recovery": {
+      "passed": 14,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "research.v63.test_report_accounting.AccountingTest": {
+      "passed": 3,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "research.v63.test_report_summary_drafts": {
+      "passed": 0,
+      "failed": 8,
+      "errors": 0,
+      "skipped": 0
+    },
+    "research.v63.test_runtime_retrieval.RetrievalTests": {
+      "passed": 7,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "research.v63.test_runtime_retrieval.RuntimeTests": {
+      "passed": 20,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "research.v63.test_statistics.StatisticsTests": {
+      "passed": 12,
+      "failed": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "warnings": [
+    {
+      "category": "UserWarning",
+      "source": "research/v63/numerics.py:326",
+      "message": "Solution may be inaccurate",
+      "tests": [
+        "test_analytic_two_asset_oracle_and_ranges",
+        "test_actual_twelve_dimensional_near_optimal_dual_ranges"
+      ],
+      "outcome": "Both tests passed their numerical assertions."
+    }
+  ],
+  "core_CODE_FILES_modified": false,
+  "existing_audit_artifacts_overwritten": false,
+  "real_model_generation_calls": 0,
+  "result_interpretation": "Do not label the entire suite passed or substitute reconstructed text for authenticated raw sources. Pure implementation tests passed on the new Python environment; source revalidation remains unavailable.",
+  "evidence": [
+    {
+      "path": "research/device_migration_20261027/offline_tests.log",
+      "sha256": "2b75e62b946d63250995e7720e224f8301d27e12c01eceec093bddf1662c74c8"
+    },
+    {
+      "path": "research/device_migration_20261027/offline_tests.xml",
+      "sha256": "91d65b7e73a011f9c68c83f9c5ff34c434dc736fae650505fd76ccd696272a48"
+    },
+    {
+      "path": "research/device_migration_20261027/offline_tests_summary.json",
+      "sha256": "5357d898893d6a4d6e8796bf50a5a3d7f1c7b7404441bc848d72eac14f8e3e9e"
+    }
+  ]
+}

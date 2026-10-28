@@ -1,0 +1,60 @@
+{
+  "schema": "libera_guardian_windows_robustness_verification_v1",
+  "status": "passed",
+  "started_at_utc": "2026-10-27T13:28:48.652648+00:00",
+  "completed_at_utc": "2026-10-27T13:30:20.067456+00:00",
+  "elapsed_seconds": 91.41477459999987,
+  "command": [
+    "C:\\Users\\Insun\\2026libera\\tmp\\v63_numerics_venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "research/v63/test_longrun_guardian.py",
+    "research/v63/test_campaign_control.py",
+    "research/v63/test_finalize_experiment_report.py",
+    "-q",
+    "--junitxml=C:\\Users\\Insun\\2026libera\\research\\device_migration_20261027\\followup_20261027\\guardian_windows_robustness_tests.xml"
+  ],
+  "exit_code": 0,
+  "counts": {
+    "tests": 102,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "changes": [
+    "Guardian writer delegates to existing fsync + bounded Windows sharing retry implementation.",
+    "Interrupt cleanup targets the owned Windows process tree, including venv launcher descendants; command failures remain explicit in the attempt record.",
+    "Run scope establishes temporary ES_SYSTEM_REQUIRED and restores prior thread state on success or exception."
+  ],
+  "current_campaign_identity_preserved": true,
+  "runtime_identity_sha256": "2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2",
+  "guardian_is_campaign_CODE_FILES_member": false,
+  "frozen_core_files_modified": false,
+  "actual_resource_approval_created": false,
+  "model_calls": 0,
+  "http_calls": 0,
+  "artifacts": [
+    {
+      "path": "research/device_migration_20261027/followup_20261027/guardian_windows_robustness_tests.log",
+      "sha256": "1fa689eaec1a3f779e7f8221ad01028a6e1ee0487ae012276bfb8c1a4e8ec5fb"
+    },
+    {
+      "path": "research/device_migration_20261027/followup_20261027/guardian_windows_robustness_tests.xml",
+      "sha256": "eea1c048064b924a84a4f166a8936b96078a3fdf382c0b7974f856dbfe1c583e"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "research/v63/longrun_guardian.py",
+      "sha256": "370b8a92f6433d24884d8e51c7d6a8a4b7bba0bf1a56363f3c2113260d8e04e0"
+    },
+    {
+      "path": "research/v63/test_longrun_guardian.py",
+      "sha256": "e835b8c3467c93bcc337b47d0b344491c9775389fa0b727cf931ce2225ca5795"
+    }
+  ],
+  "limitations": [
+    "Automatic idle-sleep prevention cannot prevent explicit user sleep/restart. Original observed request times and phase elapsed clocks remain unmodified.",
+    "If Windows rejects taskkill, fallback stops the owned stub and records unverified tree cleanup; it does not claim that every descendant ended."
+  ]
+}

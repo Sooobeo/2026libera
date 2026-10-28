@@ -1,4 +1,4 @@
-param([Parameter(Mandatory=$true)][int]$CampaignProcessId,[Parameter(Mandatory=$true)][string]$RecordDirectory)
+param([Parameter(Mandatory=$true)][int]$CampaignProcessId,[Parameter(Mandatory=$true)][string]$RecordDirectory,[string]$InferencePathPattern='*\tmp\v63_local_ollama\portable\*')
 $ErrorActionPreference='Stop'
 $monitorStart=Get-Date
 $monitorOutput=Join-Path $RecordDirectory 'memory_observations.jsonl'
@@ -6,7 +6,7 @@ $monitorPeak=0L;$monitorMinimumAvailable=[double]::PositiveInfinity;$monitorCoun
 while ($true) {
     $monitorCampaign=Get-Process -Id $CampaignProcessId -ErrorAction SilentlyContinue
     $monitorMemory=Get-CimInstance Win32_OperatingSystem | Select-Object TotalVisibleMemorySize,FreePhysicalMemory,TotalVirtualMemorySize,FreeVirtualMemory
-    $monitorWorkers=@(Get-Process -Name 'ollama','llama-server' -ErrorAction SilentlyContinue | Where-Object {$_.Path -like '*\tmp\v63_local_ollama\portable\*'} | Select-Object Id,Name,WorkingSet64,PrivateMemorySize64,CPU)
+    $monitorWorkers=@(Get-Process -Name 'ollama','llama-server' -ErrorAction SilentlyContinue | Where-Object {$_.Path -like $InferencePathPattern} | Select-Object Id,Name,WorkingSet64,PrivateMemorySize64,CPU)
     if ($monitorCampaign) {
         $monitorWorkers += $monitorCampaign | Select-Object Id,Name,WorkingSet64,PrivateMemorySize64,CPU
         $monitorChildren=@(Get-CimInstance Win32_Process -Filter "ParentProcessId=$CampaignProcessId" | Where-Object {$_.Name -eq 'python.exe'})

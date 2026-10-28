@@ -23,10 +23,22 @@ Required approval fields:
     max_total_request_seconds, max_guardian_wall_seconds, max_prompt_tokens,
     forecast_safety_factor (at least 1).
   historical_costs: generation_requests (nonnegative integer),
-    recorded_request_seconds (nonnegative finite), evidence (immutable file
-    references), and scope (explicit prior-candidate scope excluding this run).
-    Nonzero prior calls require evidence. Unknown historical timing is not
-    invented; document it as a lower bound in the referenced evidence.
+    recorded_request_seconds (the original nonnegative finite lower bound),
+    supplemental_recorded_request_seconds (separately evidenced observations
+    absent from that original bound; explicit zero if none),
+    generation_requests_without_timing (explicit integer from zero to count),
+    reservation_seconds_per_untimed_request and
+    request_seconds_reserved_for_missing_timing (their count-times-rate product;
+    both zero when no requests lack timing), and reservation_basis (root's
+    explanation of the resource allowance, never a claimed measured duration).
+    Nonzero prior calls require evidence (immutable file references) and
+    timing_evidence (a separately hashed libera_historical_request_timing_audit_v1
+    JSON). The audit must match count, original and supplemental observations,
+    untimed count and scope, and supply timed_generation_requests so the timed
+    and untimed counts sum to generation_requests. Scope excludes this run.
+    Missing historical timing fields fail closed, including legacy approvals;
+    omission never silently means zero unknown durations. Preserve old evidence
+    and issue a newly reviewed approval instead of editing the old approval.
   measurement_evidence: technical-smoke and paired-feasibility, each containing
     immutable references named measurements, prepared_inputs, records and
     runtime_identity. References are objects with path and sha256 fields.
@@ -43,8 +55,13 @@ every later phase. Only then may it set main_model_frozen=true; that is the
 sole allowed runtime-freeze mutation. It records the transition and review.
 
 The guardian counts original HTTP attempt receipts, plus historical cost
-evidence. An uncertain request consumes a request reservation. Missing timing
-reserves the frozen request timeout; this is not reported as observed latency.
+evidence. An uncertain request consumes a request reservation. Missing current
+run timing reserves the frozen request timeout. Historical unknown durations
+use the separately approved historical allowance. These reservations remain
+separate from observed original and supplemental time in checkpoints and the
+main resource review, and both count against total time authority before main.
+They are accounting allowances, not recovered measurements or physical upper
+bounds: an explicit sleep can exceed a request timeout. No downtime is removed.
 Campaign phase budgets retain their original first-start timestamp, including
 downtime. Shared 15/60-stage trajectories are counted once in development.
 

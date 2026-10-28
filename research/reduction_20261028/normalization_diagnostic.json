@@ -1,0 +1,204 @@
+{
+  "status": "offline_diagnostic_not_applied_to_experiment",
+  "model_calls": 0,
+  "original_files_changed": false,
+  "rule": "Only finite nonnegative weights with positive sum can be proportionally scaled; then rerun all numeric constraints. Negative weights are not clipped or sign-flipped.",
+  "cases": [
+    {
+      "fund": "F02",
+      "arm": "R1",
+      "raw_sum": 8.117419776661183,
+      "original_status": "model_output_failure",
+      "effective_sum": 1.0,
+      "can_proportionally_normalize_nonnegative_output": true,
+      "normalized_check_valid": false,
+      "remaining_failures": [
+        "risk_cap"
+      ]
+    },
+    {
+      "fund": "F02",
+      "arm": "C-context",
+      "raw_sum": 32.98774615347224,
+      "original_status": "model_output_failure",
+      "effective_sum": 1.0,
+      "can_proportionally_normalize_nonnegative_output": true,
+      "normalized_check_valid": true,
+      "remaining_failures": []
+    },
+    {
+      "fund": "F04",
+      "arm": "R2",
+      "raw_sum": -0.31310263162283847,
+      "original_status": "model_output_failure",
+      "effective_sum": 1.0,
+      "can_proportionally_normalize_nonnegative_output": false
+    },
+    {
+      "fund": "F04",
+      "arm": "R3",
+      "raw_sum": 0.3644614987228385,
+      "original_status": "model_output_failure",
+      "effective_sum": 1.0,
+      "can_proportionally_normalize_nonnegative_output": true,
+      "normalized_check_valid": true,
+      "remaining_failures": []
+    },
+    {
+      "fund": "F02",
+      "arm": "R0",
+      "raw_sum": 0.9999999999999996,
+      "original_status": "completed",
+      "effective_sum": 0.9999999999999996,
+      "can_proportionally_normalize_nonnegative_output": true,
+      "normalized_check_valid": true,
+      "remaining_failures": []
+    },
+    {
+      "fund": "F01",
+      "arm": "C-context",
+      "raw_sum": 32.98774615347224,
+      "original_status": "model_output_failure",
+      "effective_sum": 1.0,
+      "can_proportionally_normalize_nonnegative_output": true,
+      "normalized_check_valid": true,
+      "remaining_failures": []
+    },
+    {
+      "fund": "F04",
+      "arm": "R1",
+      "raw_sum": -1.0000000000000002,
+      "original_status": "model_output_failure",
+      "effective_sum": 1.0,
+      "can_proportionally_normalize_nonnegative_output": false
+    },
+    {
+      "fund": "F01",
+      "arm": "R0",
+      "raw_sum": 0.3573052529348622,
+      "original_status": "model_output_failure",
+      "effective_sum": 1.0,
+      "can_proportionally_normalize_nonnegative_output": true,
+      "normalized_check_valid": true,
+      "remaining_failures": []
+    },
+    {
+      "fund": "F01",
+      "arm": "R3",
+      "raw_sum": 0.3573052529348622,
+      "original_status": "model_output_failure",
+      "effective_sum": 1.0,
+      "can_proportionally_normalize_nonnegative_output": true,
+      "normalized_check_valid": true,
+      "remaining_failures": []
+    },
+    {
+      "fund": "F04",
+      "arm": "C-context",
+      "raw_sum": 32.98774615347224,
+      "original_status": "model_output_failure",
+      "effective_sum": 1.0,
+      "can_proportionally_normalize_nonnegative_output": true,
+      "normalized_check_valid": true,
+      "remaining_failures": []
+    },
+    {
+      "fund": "F04",
+      "arm": "R0",
+      "raw_sum": 0.3644614987228385,
+      "original_status": "model_output_failure",
+      "effective_sum": 1.0,
+      "can_proportionally_normalize_nonnegative_output": true,
+      "normalized_check_valid": true,
+      "remaining_failures": []
+    },
+    {
+      "fund": "F03",
+      "arm": "R0",
+      "raw_sum": 0.9999999999999994,
+      "original_status": "completed",
+      "effective_sum": 0.9999999999999994,
+      "can_proportionally_normalize_nonnegative_output": true,
+      "normalized_check_valid": true,
+      "remaining_failures": []
+    },
+    {
+      "fund": "F02",
+      "arm": "R3",
+      "raw_sum": 0.9999999999999996,
+      "original_status": "completed",
+      "effective_sum": 0.9999999999999996,
+      "can_proportionally_normalize_nonnegative_output": true,
+      "normalized_check_valid": true,
+      "remaining_failures": []
+    },
+    {
+      "fund": "F03",
+      "arm": "R1",
+      "raw_sum": 32.98774615347224,
+      "original_status": "model_output_failure",
+      "effective_sum": 1.0,
+      "can_proportionally_normalize_nonnegative_output": true,
+      "normalized_check_valid": true,
+      "remaining_failures": []
+    },
+    {
+      "fund": "F01",
+      "arm": "R1",
+      "raw_sum": 8.117324060336315,
+      "original_status": "model_output_failure",
+      "effective_sum": 1.0,
+      "can_proportionally_normalize_nonnegative_output": true,
+      "normalized_check_valid": false,
+      "remaining_failures": [
+        "risk_cap"
+      ]
+    },
+    {
+      "fund": "F01",
+      "arm": "R2",
+      "raw_sum": 0.6137187015,
+      "original_status": "model_output_failure",
+      "effective_sum": 1.0,
+      "can_proportionally_normalize_nonnegative_output": true,
+      "normalized_check_valid": false,
+      "remaining_failures": [
+        "risk_cap"
+      ]
+    },
+    {
+      "fund": "F03",
+      "arm": "R2",
+      "raw_sum": -0.9999999999999994,
+      "original_status": "model_output_failure",
+      "effective_sum": 1.0,
+      "can_proportionally_normalize_nonnegative_output": false
+    },
+    {
+      "fund": "F03",
+      "arm": "C-context",
+      "raw_sum": -0.9999999999999994,
+      "original_status": "model_output_failure",
+      "effective_sum": 1.0,
+      "can_proportionally_normalize_nonnegative_output": false
+    },
+    {
+      "fund": "F03",
+      "arm": "R3",
+      "raw_sum": 0.9999999999999994,
+      "original_status": "completed",
+      "effective_sum": 0.9999999999999994,
+      "can_proportionally_normalize_nonnegative_output": true,
+      "normalized_check_valid": true,
+      "remaining_failures": []
+    },
+    {
+      "fund": "F02",
+      "arm": "R2",
+      "raw_sum": -0.03754010559999999,
+      "original_status": "model_output_failure",
+      "effective_sum": 1.0,
+      "can_proportionally_normalize_nonnegative_output": false
+    }
+  ]
+}

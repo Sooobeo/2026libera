@@ -1,0 +1,179 @@
+{
+  "schema": "libera_selected_candidate_readonly_observer_v1",
+  "observed_at_utc": "2026-10-27T09:01:07.462509+00:00",
+  "observed_at_kst": "2026-10-27T18:01:07.462509+09:00",
+  "candidate": "004",
+  "run_id": "00b7955a968c13547e6fcc857485a62c6d27a6ecc008c3c3cee4f32d981e5a0d",
+  "status": "supervisor_not_started",
+  "config_path": "data\\v63_20261027\\continuation\\deployment\\local_windows\\candidate_004\\campaign_config.json",
+  "output_root": "data\\v63_20261027\\local_campaign_results",
+  "report_scope": "Current development progress only; not a final experiment result.",
+  "observer_model_calls": 0,
+  "observer_http_calls": 0,
+  "observer_writes": [
+    "research\\device_migration_20261027\\live_status.json",
+    "실험참고자료_20261027\\05_새기기실행_20261027.html"
+  ],
+  "supervisor_alive": false,
+  "watch_should_continue": false,
+  "supervisor": {},
+  "progress": {
+    "phase": "technical-smoke",
+    "run_id": "00b7955a968c13547e6fcc857485a62c6d27a6ecc008c3c3cee4f32d981e5a0d",
+    "current_task": "development-001__F03__R0__1",
+    "status": "running",
+    "updated_at_utc": "2026-10-27T08:39:14.114803+00:00",
+    "planned_trajectories": 5,
+    "recorded_trajectories": 0,
+    "terminal_counts": {
+      "operational_failure": 0,
+      "model_output_failure": 0,
+      "completed": 0,
+      "recovery_interrupted": 0,
+      "protocol_violation": 0
+    },
+    "cumulative_wall_seconds": 0.044606,
+    "phase_generation_requests": 0,
+    "budget_limits": {
+      "max_generation_requests": 135,
+      "max_wall_seconds": 21600
+    },
+    "actual_costs": {
+      "generation_requests": 0,
+      "confirmed_attempt_records": 0,
+      "uncertain_dispatch_requests": 0,
+      "prompt_tokens": 0,
+      "generated_tokens": 0,
+      "request_elapsed_seconds": 0
+    }
+  },
+  "current_candidate_request_costs": {
+    "generation_requests": 1,
+    "confirmed_attempt_records": 0,
+    "uncertain_dispatch_requests": 1
+  },
+  "tasks": [
+    {
+      "task": "development-001__F03__R0__1",
+      "block": "B-development",
+      "terminal_status": null,
+      "completed_stages": null
+    }
+  ],
+  "terminal_trajectories": 0,
+  "phases": [
+    {
+      "phase": "technical-smoke",
+      "label_ko": "기술 점검",
+      "planned_trajectories": 5,
+      "planned_logical_stages": 15,
+      "status": "prepared",
+      "measurements": null
+    },
+    {
+      "phase": "paired-feasibility",
+      "label_ko": "4펀드 실행 가능성",
+      "planned_trajectories": 20,
+      "planned_logical_stages": 60,
+      "status": "not_attempted",
+      "measurements": null
+    },
+    {
+      "phase": "development-pilot",
+      "label_ko": "개발 파일럿",
+      "planned_trajectories": 240,
+      "planned_logical_stages": 720,
+      "status": "not_attempted",
+      "measurements": null
+    },
+    {
+      "phase": "B-main",
+      "label_ko": "본실험 B",
+      "planned_trajectories": 2400,
+      "planned_logical_stages": 7200,
+      "status": "not_attempted",
+      "measurements": null
+    },
+    {
+      "phase": "x-replacement",
+      "label_ko": "전망 교체",
+      "planned_trajectories": 360,
+      "planned_logical_stages": 1080,
+      "status": "not_attempted",
+      "measurements": null
+    },
+    {
+      "phase": "negative-control",
+      "label_ko": "음성 대조",
+      "planned_trajectories": 192,
+      "planned_logical_stages": 576,
+      "status": "not_attempted",
+      "measurements": null
+    },
+    {
+      "phase": "A",
+      "label_ko": "실제 문서 A",
+      "planned_trajectories": 40,
+      "planned_logical_stages": 120,
+      "status": "not_attempted",
+      "measurements": null
+    },
+    {
+      "phase": "C",
+      "label_ko": "실제 문서 C",
+      "planned_trajectories": 40,
+      "planned_logical_stages": 120,
+      "status": "not_attempted",
+      "measurements": null
+    }
+  ],
+  "main_auto_launch": false,
+  "main_model_frozen": false,
+  "prior_device_summary": {
+    "experimental_requests_recorded": 16,
+    "engineering_requests_recorded": 5,
+    "raw_files_expected": 266,
+    "raw_files_available": 0,
+    "responses_reused_in_current_candidate": 0,
+    "scope": "Previous device summaries (14 experimental + 5 engineering), plus interrupted candidate 003: one closed original response and one sent/canceled request retained as an uncertain reservation. Neither candidate contributes observations to 004."
+  },
+  "environment": {
+    "python_version": "3.13.3",
+    "model": "qwen3:1.7b",
+    "engine_revision": "0.35.1",
+    "context_tokens": 32768,
+    "output_tokens": 4096
+  },
+  "verification": {
+    "suite_status": "failed",
+    "tests_passed": 216,
+    "tests_failed": 10,
+    "all_failures_are_missing_files": true,
+    "input_checks_passed": 47,
+    "input_checks_failed": 0,
+    "input_capacity_status": "passed",
+    "input_capacity_cases": 20
+  },
+  "source_archive_availability": {
+    "manifest": {
+      "path": "data/v63_20261027/continuation_sources/source_manifest_v2.json",
+      "sha256": "d4a45c1c7609cc164645c33a8ebcd386ebc2bf9329ed92eedb30892ea505d590",
+      "bytes": 458748
+    },
+    "source_records": 567,
+    "missing_records": 567,
+    "missing_active_profile_reference_records": 28,
+    "A_C_raw_source_files_present": 0,
+    "A_C_raw_source_files_expected": 6,
+    "interpretation": "Raw source archive is absent on this device. Hash-preserved profiles, normalized original text units and evaluator catalog are present. Prior source-verification receipts are historical evidence, not new raw-byte revalidation."
+  },
+  "human_review_mode": "user_assumed_completed",
+  "actual_independent_human_reviews_claimed": false,
+  "observation_errors": [
+    {
+      "path": "data\\v63_20261027\\local_campaign_results\\development_supervisor\\00b7955a968c13547e6fcc857485a62c6d27a6ecc008c3c3cee4f32d981e5a0d\\state.json",
+      "error": "PermissionError",
+      "detail": "[Errno 13] Permission denied: 'C:\\\\Users\\\\Insun\\\\2026libera\\\\data\\\\v63_20261027\\\\local_campaign_results\\\\development_supervisor\\\\00b7955a968c13547e6fcc857485a62c6d27a6ecc008c3c3cee4f32d981e5a0d\\\\state.json'"
+    }
+  ]
+}

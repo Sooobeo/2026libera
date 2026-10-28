@@ -1,0 +1,77 @@
+{
+  "schema": "libera_guardian_historical_reservation_verification_v1",
+  "status": "passed",
+  "recorded_at_utc": "2026-10-27T13:42:41.522262+00:00",
+  "command": [
+    "C:\\Users\\Insun\\2026libera\\tmp\\v63_numerics_venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "research/v63/test_longrun_guardian.py",
+    "research/v63/test_finalize_experiment_report.py",
+    "research/test_v63_development_supervisor.py",
+    "-q",
+    "--junitxml=research/device_migration_20261027/followup_20261027/guardian_historical_reservation_tests.xml"
+  ],
+  "exit_code": 0,
+  "counts": {
+    "tests": 112,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "source_files": [
+    {
+      "path": "research/v63/longrun_guardian.py",
+      "sha256": "6a533ae68f63b72d5ffc8ea6e018fc917e5533c47a67e194876370d3c949a879"
+    },
+    {
+      "path": "research/v63/test_longrun_guardian.py",
+      "sha256": "d0511f9524b90c2775a95c0c998eaee1fcef019924076414ad8b0e34e66c73a9"
+    },
+    {
+      "path": "research/v63/LONGRUN_GUARDIAN_USAGE.txt",
+      "sha256": "5b8c1678f8ce71dd2dd2b5d7ad045f3d0b1d4ab30613acbbb987b6f60859d193"
+    }
+  ],
+  "test_artifacts": [
+    {
+      "path": "research/device_migration_20261027/followup_20261027/guardian_historical_reservation_tests.log",
+      "sha256": "6af5acfc3ce81f05240e30e38497b90711d1a75703d20f69da486b097efd7eb8"
+    },
+    {
+      "path": "research/device_migration_20261027/followup_20261027/guardian_historical_reservation_tests.xml",
+      "sha256": "adb8cd20166e71cafedf0e6012c38ede0c193b84b61e17631f9e94c795ed0dcb"
+    }
+  ],
+  "historical_timing_audit": {
+    "path": "research/device_migration_20261027/followup_20261027/candidate005_historical_timing_audit.json",
+    "sha256": "1e60891137f0d9dc0e5f54400e5895bfeea46de05ce828d16019ec39e61eaaa5"
+  },
+  "original_historical_cost_ledger": {
+    "path": "research/device_migration_20261027/followup_20261027/candidate005_historical_costs.json",
+    "sha256": "bcb182bbf97444e490d2b0247a4ef88ce21d59c37fcb790bc92c6e43d1fe70da"
+  },
+  "original_lower_bound_exactly_preserved": 6689.774238069407,
+  "supplemental_observed_seconds": 1975.626223700121,
+  "generation_requests": 25,
+  "timed_requests": 22,
+  "untimed_requests": 3,
+  "uncertain_dispatch_reservations": 2,
+  "reservation_amount_not_yet_approved": true,
+  "actual_resource_approval_created": false,
+  "checked": [
+    "Explicit finite unknown-count and reservation fields required; legacy absence never implies zero.",
+    "Immutable timing audit matches exact original lower bound, supplemental observations, request count and timed/untimed partition.",
+    "Historical and current-run reservations remain distinct from observed duration; count-times-rate consistency checked.",
+    "Runtime total-time cap and pre-main all-phase forecasts include historical reservations; over-budget fixture fails before main flag changes.",
+    "Fresh raw costs are copied, historical accounting is added once, and already-accounted input is rejected.",
+    "Guardian Windows robustness, final-report and completed-phase reuse regression tests pass."
+  ],
+  "runtime_identity_sha256": "2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2",
+  "current_campaign_identity_preserved": true,
+  "frozen_core_files_modified": false,
+  "historical_evidence_modified": false,
+  "model_calls": 0,
+  "http_calls": 0,
+  "effect_or_pvalue_read_for_selection": false
+}

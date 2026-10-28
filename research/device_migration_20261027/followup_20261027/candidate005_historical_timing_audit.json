@@ -1,0 +1,181 @@
+{
+  "schema": "libera_historical_request_timing_audit_v1",
+  "recorded_at_utc": "2026-10-27T13:40:48.441503+00:00",
+  "authorization": false,
+  "scope": "All recorded earlier candidates plus one new Vulkan engineering probe; excludes candidate 005. Interrupted requests remain charged; no old response fills any 005 slot.",
+  "current_candidate005_excluded": true,
+  "generation_requests": 25,
+  "experimental_generation_requests": 19,
+  "engineering_generation_requests": 6,
+  "timed_generation_requests": 22,
+  "generation_requests_without_timing": 3,
+  "uncertain_dispatch_reservations": 2,
+  "recorded_request_seconds": 6689.774238069407,
+  "supplemental_recorded_request_seconds": 1975.626223700121,
+  "observed_request_seconds_including_supplemental": 8665.400461769528,
+  "original_cost_ledger": {
+    "path": "research/device_migration_20261027/followup_20261027/candidate005_historical_costs.json",
+    "sha256": "bcb182bbf97444e490d2b0247a4ef88ce21d59c37fcb790bc92c6e43d1fe70da"
+  },
+  "original_cost_ledger_modified": false,
+  "rows": [
+    {
+      "group": "pre_candidate002",
+      "generation_requests": 12,
+      "timed_generation_requests": 11,
+      "generation_requests_without_timing": 1,
+      "recorded_request_seconds": 4083.0081519694068,
+      "supplemental_recorded_request_seconds": 0.0,
+      "evidence": [
+        {
+          "path": "data/v63_20261027/continuation/deployment/prior_candidate_002_cost_ledger.json",
+          "sha256": "5a5769e67d9b7b48d4cd1639e162e381ab09d0ae151719d730b367d4ed9ceb15"
+        }
+      ],
+      "note": "One remote connectivity engineering request has provider duration but no complete client HTTP timing; the two aborted remote experimental requests do have recorded elapsed times."
+    },
+    {
+      "group": "candidate002",
+      "generation_requests": 7,
+      "timed_generation_requests": 7,
+      "generation_requests_without_timing": 0,
+      "recorded_request_seconds": 0.0,
+      "supplemental_recorded_request_seconds": 1975.626223700121,
+      "evidence": [
+        {
+          "path": "data/v63_20261027/continuation/pause_20261027/pause_summary.json",
+          "sha256": "247dd7d98deafb41dfc89af2f41693fb12ef967ff8fad55c0deefb3dc38493d9"
+        },
+        {
+          "path": "data/v63_20261027/continuation/pause_20261027/raw_http_manifest.json",
+          "sha256": "a4909538b8a41c8c35b381b5b3241811d9a751b97755577e955ba2c8278ea707"
+        }
+      ],
+      "note": "Seven per-request timing summaries survive and their response hashes agree with the original raw manifest. Raw files are absent on this replacement device. These times were omitted from the immutable 005 lower bound; add them separately once."
+    },
+    {
+      "group": "candidate003",
+      "generation_requests": 2,
+      "timed_generation_requests": 1,
+      "generation_requests_without_timing": 1,
+      "recorded_request_seconds": 654.0629855000002,
+      "supplemental_recorded_request_seconds": 0.0,
+      "evidence": [
+        {
+          "path": "data/v63_20261027/local_campaign_results/runs/d69737467f0c91be38c9f806fa7c3984f45c71a66269eb9114f17d2f2bf30341/B-development/development-001__F03__R0__1/http/attempt_000001/generation.receipt.json",
+          "sha256": "988a11291ae5fd12b61ddc25cc2694414f2d2d213a548fb41e2df2fcf22b3da5"
+        },
+        {
+          "path": "data/v63_20261027/local_campaign_results/runs/d69737467f0c91be38c9f806fa7c3984f45c71a66269eb9114f17d2f2bf30341/B-development/development-001__F03__R0__1/http/attempt_000002/generation.dispatch_started.json",
+          "sha256": "d981e975cadc75a8a41f8434d9a7f117223caf413c7c149d7c1e2bafb6db6689"
+        }
+      ],
+      "note": "Interrupted tail has a dispatch and no terminal client timing receipt. It remains an uncertain request reservation."
+    },
+    {
+      "group": "candidate004",
+      "generation_requests": 3,
+      "timed_generation_requests": 2,
+      "generation_requests_without_timing": 1,
+      "recorded_request_seconds": 1897.6270971999993,
+      "supplemental_recorded_request_seconds": 0.0,
+      "evidence": [
+        {
+          "path": "data/v63_20261027/local_campaign_results/runs/00b7955a968c13547e6fcc857485a62c6d27a6ecc008c3c3cee4f32d981e5a0d/B-development/development-001__F03__R0__1/http/attempt_000001/generation.receipt.json",
+          "sha256": "fad076d9903c395595e4f12539199cdfdb52883c64eae3f80c59cf085b26dc0c"
+        },
+        {
+          "path": "data/v63_20261027/local_campaign_results/runs/00b7955a968c13547e6fcc857485a62c6d27a6ecc008c3c3cee4f32d981e5a0d/B-development/development-001__F03__R0__1/http/attempt_000002/generation.receipt.json",
+          "sha256": "9675ca8eafce999a448799a30301c5c031f2f622c0a905708ddd9c71e2fdcd6d"
+        },
+        {
+          "path": "data/v63_20261027/local_campaign_results/runs/00b7955a968c13547e6fcc857485a62c6d27a6ecc008c3c3cee4f32d981e5a0d/B-development/development-001__F03__R0__1/http/attempt_000003/generation.dispatch_started.json",
+          "sha256": "e56381add56ea449828275e105152ce4ff9f1ff144a43236fdf18f7221e68a8e"
+        }
+      ],
+      "note": "Interrupted tail has a dispatch and no terminal client timing receipt. It remains an uncertain request reservation."
+    },
+    {
+      "group": "vulkan_engineering_probe",
+      "generation_requests": 1,
+      "timed_generation_requests": 1,
+      "generation_requests_without_timing": 0,
+      "recorded_request_seconds": 55.07600339999999,
+      "supplemental_recorded_request_seconds": 0.0,
+      "evidence": [
+        {
+          "path": "data/v63_20261027/runtime/local_windows/vulkan_probe_20261027T094843038524Z/http/attempt_000001/generation.receipt.json",
+          "sha256": "f9dc460dcef59ad01cb2b95687b0c4c668ee7deaf08076925e49e218773ff5ff"
+        }
+      ]
+    }
+  ],
+  "unknown_duration_groups": [
+    {
+      "group": "pre_candidate002_remote_connectivity",
+      "generation_requests": 1,
+      "reason": "Client HTTP timing was not captured; provider time is a different measure.",
+      "evidence": [
+        {
+          "path": "data/v63_20261027/continuation/deployment/prior_candidate_002_cost_ledger.json",
+          "sha256": "5a5769e67d9b7b48d4cd1639e162e381ab09d0ae151719d730b367d4ed9ceb15"
+        }
+      ]
+    },
+    {
+      "group": "candidate003",
+      "generation_requests": 1,
+      "reason": "Interrupted dispatched tail lacks client timing.",
+      "evidence": [
+        {
+          "path": "data/v63_20261027/local_campaign_results/runs/d69737467f0c91be38c9f806fa7c3984f45c71a66269eb9114f17d2f2bf30341/B-development/development-001__F03__R0__1/http/attempt_000002/generation.dispatch_started.json",
+          "sha256": "d981e975cadc75a8a41f8434d9a7f117223caf413c7c149d7c1e2bafb6db6689"
+        }
+      ]
+    },
+    {
+      "group": "candidate004",
+      "generation_requests": 1,
+      "reason": "Interrupted dispatched tail lacks client timing.",
+      "evidence": [
+        {
+          "path": "data/v63_20261027/local_campaign_results/runs/00b7955a968c13547e6fcc857485a62c6d27a6ecc008c3c3cee4f32d981e5a0d/B-development/development-001__F03__R0__1/http/attempt_000003/generation.dispatch_started.json",
+          "sha256": "e56381add56ea449828275e105152ce4ff9f1ff144a43236fdf18f7221e68a8e"
+        }
+      ]
+    }
+  ],
+  "reservation_guidance": {
+    "requires_root_approval": true,
+    "illustrative_seconds_per_untimed_request": 1800.0,
+    "illustrative_total_reserved_seconds": 5400.0,
+    "not_observed_time": true,
+    "basis": "One 1800-second allowance per each of the three untimed requests; root must explicitly review this resource allowance. It is not a recovered measurement or a guaranteed physical upper bound."
+  },
+  "evidence": [
+    {
+      "path": "research/device_migration_20261027/followup_20261027/candidate005_historical_costs.json",
+      "sha256": "bcb182bbf97444e490d2b0247a4ef88ce21d59c37fcb790bc92c6e43d1fe70da"
+    },
+    {
+      "path": "data/v63_20261027/continuation/deployment/local_windows/candidate_005/selection_receipt.json",
+      "sha256": "0fddc6c22a3ee1b6f74998e7ff4ccdbd38ad78d4e28422d0763ff6160dd999a8"
+    },
+    {
+      "path": "data/v63_20261027/continuation/deployment/prior_candidate_002_cost_ledger.json",
+      "sha256": "5a5769e67d9b7b48d4cd1639e162e381ab09d0ae151719d730b367d4ed9ceb15"
+    },
+    {
+      "path": "data/v63_20261027/continuation/pause_20261027/pause_summary.json",
+      "sha256": "247dd7d98deafb41dfc89af2f41693fb12ef967ff8fad55c0deefb3dc38493d9"
+    },
+    {
+      "path": "data/v63_20261027/continuation/pause_20261027/raw_http_manifest.json",
+      "sha256": "a4909538b8a41c8c35b381b5b3241811d9a751b97755577e955ba2c8278ea707"
+    }
+  ],
+  "raw_responses_modified": false,
+  "effect_or_pvalue_read_for_selection": false,
+  "model_calls": 0,
+  "http_calls": 0
+}

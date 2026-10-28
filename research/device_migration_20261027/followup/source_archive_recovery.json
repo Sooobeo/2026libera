@@ -1,0 +1,175 @@
+{
+  "schema": "libera_exact_source_archive_recovery_v1",
+  "recorded_at_utc": "2026-10-27T10:05:00.117387+00:00",
+  "scope": "Seven missing A/C/mandate source files only. Direct official HTTPS bytes may be restored only after matching the retained SHA. No source input, manifest, answer key, observer, model, core or campaign ledger is modified.",
+  "model_calls": 0,
+  "goals": 7,
+  "attempted_direct_HTTP_downloads": 5,
+  "restored_exact_files": 2,
+  "derived_targets_not_reconstructed": 2,
+  "rows": [
+    {
+      "source_id": "A-F02-VPMCX-2025-REVIEW",
+      "target_path": "data\\v63_20261027\\continuation_sources\\VPMCX_annual_20250930_browser_dom.json",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000110465925116918/tm2527480d7_ncsr.htm",
+      "expected_sha256": "5255191111735bf4b0727b0c5650188d83d1fcdae4705b16bc6d23058ded0231",
+      "target_existed_before": false,
+      "status": "not_recoverable_as_direct_HTTP_bytes",
+      "reason": "The retained manifest identifies a browser-visible DOM JSON capture, not original HTTP response bytes. Recreating a DOM snapshot or synthesizing the expected hash is prohibited."
+    },
+    {
+      "source_id": "VPMCX_SAI_20260325_text",
+      "target_path": "data\\v63_20261027\\continuation_sources\\VPMCX_SAI_20260325_text.txt",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000120/f44410d1.htm",
+      "expected_sha256": "b8cad4ade34ed6dfd13486d503944522af0ff72eceaca0c9bdb59be9ce4e812d",
+      "target_existed_before": false,
+      "status": "not_recoverable_as_direct_HTTP_bytes",
+      "reason": "Target is a historical derived text extraction. Official URL supplies HTML with its own different SHA; no transformation or reconstruction is attempted.",
+      "underlying_original_HTML": {
+        "path": "data\\v63_20261027\\continuation_sources\\VPMCX_SAI_20260325.html",
+        "sha256": "076888bb357f196fa7f947170d2fd43758bce2dab2536dd8d51d5d95520f2f36",
+        "bytes": 6429022
+      }
+    },
+    {
+      "source_id": "A-COMMON-FOMC-20260318",
+      "target_path": "data\\v63_20261027\\continuation_sources\\outlook\\FOMC_20260318.html",
+      "source_url": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260318.htm",
+      "expected_sha256": "3aa22cb795c921f92eadfd19748068bfa02c9405e0887c2c29cff29a517da8d7",
+      "target_existed_before": false,
+      "requested_at_utc": "2026-10-27T10:04:57.979659+00:00",
+      "download_path": "research/device_migration_20261027/followup/source_archive_downloads/A-COMMON-FOMC-20260318.download",
+      "http_status": 200,
+      "resolved_url": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260318.htm",
+      "content_type": "text/html",
+      "content_encoding": null,
+      "downloaded_bytes": 229531,
+      "download_sha256": "574f650da448a09720094c310854c1baad0a17ee0c07b9dad2f2b5aeadd965d4",
+      "expected_sha256_matches": false,
+      "status": "download_retained_no_restore",
+      "reason": "HTTP status or bytes did not match the preserved source identity.",
+      "finished_at_utc": "2026-10-27T10:04:58.723212+00:00"
+    },
+    {
+      "source_id": "C-COMMON-FOMC-20260617",
+      "target_path": "data\\v63_20261027\\continuation_sources\\outlook\\FOMC_20260617.html",
+      "source_url": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260617.htm",
+      "expected_sha256": "b6c96dfb1f6341f154c7d2d7c2ffad1deb14ae09d9927664e6b38409af155e42",
+      "target_existed_before": false,
+      "requested_at_utc": "2026-10-27T10:04:57.983713+00:00",
+      "download_path": "research/device_migration_20261027/followup/source_archive_downloads/C-COMMON-FOMC-20260617.download",
+      "http_status": 200,
+      "resolved_url": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260617.htm",
+      "content_type": "text/html",
+      "content_encoding": null,
+      "downloaded_bytes": 232840,
+      "download_sha256": "baa660af5db4cea2ca54ffc47ee0ccc842b10eaae0f1b978774b52128afaff5b",
+      "expected_sha256_matches": false,
+      "status": "download_retained_no_restore",
+      "reason": "HTTP status or bytes did not match the preserved source identity.",
+      "finished_at_utc": "2026-10-27T10:04:58.726608+00:00"
+    },
+    {
+      "source_id": "A-F01-FCNTX-2025-REVIEW",
+      "target_path": "data\\v63_20261027\\continuation_sources\\FCNTX_A_shareholder_report.html",
+      "source_url": "https://www.sec.gov/Archives/edgar/data/24238/000002423826000023/filing10969.htm",
+      "expected_sha256": "6851fd986bfb1ef58df2c5a76605d4aa4446eb44969a76ca70d3b6938b2d34c8",
+      "target_existed_before": false,
+      "requested_at_utc": "2026-10-27T10:04:58.073155+00:00",
+      "download_path": "research/device_migration_20261027/followup/source_archive_downloads/A-F01-FCNTX-2025-REVIEW.download",
+      "http_status": 200,
+      "resolved_url": "https://www.sec.gov/Archives/edgar/data/24238/000002423826000023/filing10969.htm",
+      "content_type": "text/html",
+      "content_encoding": null,
+      "downloaded_bytes": 6964969,
+      "download_sha256": "f58de57695a76c37ba0c134369df5bd363015987eae726e1581bbf06f9a4977d",
+      "expected_sha256_matches": false,
+      "status": "download_retained_no_restore",
+      "reason": "HTTP status or bytes did not match the preserved source identity.",
+      "finished_at_utc": "2026-10-27T10:04:59.611794+00:00"
+    },
+    {
+      "source_id": "A-F04-TRBCX-2025-REVIEW",
+      "target_path": "data\\v63_20261027\\continuation_sources\\outlook\\TRBCX_annual_2025.pdf",
+      "source_url": "https://www.troweprice.com/literature/public/country/us/language/en/literature-type/annual-report/sub-type/mf?currency=USD&productCode=BCG",
+      "expected_sha256": "b56e8268e934576d78868b01e4bad45c18c7273aede95144ee989fcd95b29e7b",
+      "target_existed_before": false,
+      "requested_at_utc": "2026-10-27T10:04:58.158473+00:00",
+      "download_path": "research/device_migration_20261027/followup/source_archive_downloads/A-F04-TRBCX-2025-REVIEW.download",
+      "http_status": 200,
+      "resolved_url": "https://www.troweprice.com/literature/public/country/us/language/en/literature-type/annual-report/sub-type/mf?currency=USD&productCode=BCG",
+      "content_type": "application/pdf",
+      "content_encoding": null,
+      "downloaded_bytes": 259708,
+      "download_sha256": "b56e8268e934576d78868b01e4bad45c18c7273aede95144ee989fcd95b29e7b",
+      "expected_sha256_matches": true,
+      "status": "restored_exact_original_bytes",
+      "restored_sha256": "b56e8268e934576d78868b01e4bad45c18c7273aede95144ee989fcd95b29e7b",
+      "finished_at_utc": "2026-10-27T10:05:00.106909+00:00"
+    },
+    {
+      "source_id": "A-F03-DODGX-2025-REVIEW",
+      "target_path": "data\\v63_20261027\\raw\\DODGX_2025_review_transcript.pdf",
+      "source_url": "https://www.dodgeandcox.com/content/dam/web/documents/insights/2025-annual-investment-reviews/dc-us-on-demand-audio-transcript-us-equity-4Q2025.pdf",
+      "expected_sha256": "9613b9b24cc80356f132c2e2f123f6510a6b5bca2cef4855392d2063cb970a31",
+      "target_existed_before": false,
+      "requested_at_utc": "2026-10-27T10:04:58.159184+00:00",
+      "download_path": "research/device_migration_20261027/followup/source_archive_downloads/A-F03-DODGX-2025-REVIEW.download",
+      "http_status": 200,
+      "resolved_url": "https://www.dodgeandcox.com/content/dam/web/documents/insights/2025-annual-investment-reviews/dc-us-on-demand-audio-transcript-us-equity-4Q2025.pdf",
+      "content_type": "application/pdf",
+      "content_encoding": null,
+      "downloaded_bytes": 142276,
+      "download_sha256": "9613b9b24cc80356f132c2e2f123f6510a6b5bca2cef4855392d2063cb970a31",
+      "expected_sha256_matches": true,
+      "status": "restored_exact_original_bytes",
+      "restored_sha256": "9613b9b24cc80356f132c2e2f123f6510a6b5bca2cef4855392d2063cb970a31",
+      "finished_at_utc": "2026-10-27T10:04:59.320191+00:00"
+    }
+  ],
+  "core_source_hashes_unchanged": true,
+  "core_matches_candidate005_selection": true,
+  "protected_inputs_unchanged": true,
+  "protected_input_sha256": {
+    "continuation_sources/source_manifest_v2.json": "d4a45c1c7609cc164645c33a8ebcd386ebc2bf9329ed92eedb30892ea505d590",
+    "continuation_sources/documents_v2.json": "930560346838abed6129187611c461e88c77b082a30d7456c4053d0cbb108d72",
+    "continuation_sources/profiles_v2.json": "556a5f546c0e27a1403cadd40b6ad8c16d72841855c2bb5b7ad8255b5eaae922",
+    "continuation_sources/mandate_atomic_units_v2.json": "4b563c5208bbed0a209534b87399514bb19f8be4a4da8df75e37af6dc3bd6d96",
+    "numerical/evaluator_only/source_catalog_v2.json": "dae02567ae157fe5eaec1d672e480807e03f233a77110dbc939864f5f51429ef"
+  },
+  "source_identity_refs": {
+    "documents_v2_sha256": "930560346838abed6129187611c461e88c77b082a30d7456c4053d0cbb108d72",
+    "source_manifest_v2_sha256": "d4a45c1c7609cc164645c33a8ebcd386ebc2bf9329ed92eedb30892ea505d590",
+    "mandate_atomic_units_v2_sha256": "4b563c5208bbed0a209534b87399514bb19f8be4a4da8df75e37af6dc3bd6d96"
+  },
+  "related_test_policy": "Run only the two relevant source tests if exact target restoration can change their result; historical draft-only tests are excluded.",
+  "related_tests": {
+    "rerun": false,
+    "reason": "Both previously failing source tests still encounter unchanged missing prerequisites: the A/C source test first opens FOMC_20260318.html, and the mandate source test opens VPMCX_SAI_20260325_text.txt. Repeating those failures would not validate the two restored PDFs. Their exact raw-byte SHA checks were instead rerun after placement.",
+    "tests": [
+      "research/v63/test_ac_corpus.py::ActualCorpusTests::test_dates_scope_and_source_hashes",
+      "research/v63/test_mandate_atomic_units.py::test_actual_slices_exactly_restore_immutable_source_excerpts"
+    ]
+  },
+  "post_restore_hash_checks": [
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\outlook\\TRBCX_annual_2025.pdf",
+      "expected_sha256": "b56e8268e934576d78868b01e4bad45c18c7273aede95144ee989fcd95b29e7b",
+      "actual_sha256": "b56e8268e934576d78868b01e4bad45c18c7273aede95144ee989fcd95b29e7b",
+      "passed": true
+    },
+    {
+      "path": "data\\v63_20261027\\raw\\DODGX_2025_review_transcript.pdf",
+      "expected_sha256": "9613b9b24cc80356f132c2e2f123f6510a6b5bca2cef4855392d2063cb970a31",
+      "actual_sha256": "9613b9b24cc80356f132c2e2f123f6510a6b5bca2cef4855392d2063cb970a31",
+      "passed": true
+    }
+  ],
+  "remaining_missing_targets": [
+    "data\\v63_20261027\\continuation_sources\\VPMCX_annual_20250930_browser_dom.json",
+    "data\\v63_20261027\\continuation_sources\\VPMCX_SAI_20260325_text.txt",
+    "data\\v63_20261027\\continuation_sources\\outlook\\FOMC_20260318.html",
+    "data\\v63_20261027\\continuation_sources\\outlook\\FOMC_20260617.html",
+    "data\\v63_20261027\\continuation_sources\\FCNTX_A_shareholder_report.html"
+  ]
+}

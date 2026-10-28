@@ -1,0 +1,90 @@
+{
+  "schema": "libera_windows_atomic_write_fix_verification_v1",
+  "status": "passed",
+  "started_at_utc": "2026-10-27T08:37:47.958904+00:00",
+  "completed_at_utc": "2026-10-27T08:37:57.894157+00:00",
+  "elapsed_regression_seconds": 9.935262299999977,
+  "engineering_only": true,
+  "real_model_generation_calls": 0,
+  "implementation": {
+    "path": "research/v63/campaign_control.py",
+    "changed_function": "atomic_json",
+    "retry_windows_winerrors": [
+      5,
+      32,
+      33
+    ],
+    "max_retry_seconds": 30,
+    "first_sleep_seconds": 0.05,
+    "max_sleep_seconds": 0.5,
+    "pending_bytes_rewritten_on_retry": false,
+    "unrelated_errors_retried": false
+  },
+  "verification": [
+    {
+      "kind": "focused_atomic_and_existing_control_invariants",
+      "command": [
+        "C:\\Users\\Insun\\2026libera\\tmp\\v63_numerics_venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "research/v63/test_campaign_control.py",
+        "-q",
+        "--junitxml=C:\\Users\\Insun\\2026libera\\research\\device_migration_20261027\\atomic_retry_tests.xml"
+      ],
+      "status": "passed",
+      "counts": {
+        "tests": 19,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "pytest_summary": "10 tests passed, 9 subtests passed; JUnit counts subtests as additional cases.",
+      "evidence": {
+        "path": "research/device_migration_20261027/atomic_retry_tests.json",
+        "sha256": "2790254cb2b97c86aa909184de4650f3f94c80db2f013e6176a14405d47c4200"
+      }
+    },
+    {
+      "kind": "campaign_and_recovery_regression",
+      "command": [
+        "C:\\Users\\Insun\\2026libera\\tmp\\v63_numerics_venv\\Scripts\\python.exe",
+        "-m",
+        "pytest",
+        "research/v63/test_campaign.py",
+        "research/v63/test_recovery.py",
+        "-q",
+        "--junitxml=C:\\Users\\Insun\\2026libera\\research\\device_migration_20261027\\atomic_retry_regression.xml"
+      ],
+      "status": "passed",
+      "exit_code": 0,
+      "counts": {
+        "tests": 27,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "log": {
+        "path": "research/device_migration_20261027/atomic_retry_regression.log",
+        "sha256": "7f4f569d8ef8fd6f318e892d3fa3684df9798816d04e899b6cae6e4d9e775061"
+      },
+      "junit": {
+        "path": "research/device_migration_20261027/atomic_retry_regression.xml",
+        "sha256": "fb1935f8d9fd5abe12cf65d24b213e64f2321c90e28d46163d673419b319a9f2"
+      }
+    }
+  ],
+  "coverage": [
+    "Actual CreateFileW read handle with FILE_SHARE_READ and no FILE_SHARE_DELETE blocks os.replace, then writer succeeds after CloseHandle.",
+    "Windows errors 5,32,33 transient recovery preserves identical pending bytes and mtime.",
+    "Permanent lock stops after simulated 30 seconds and preserves previous target plus pending bytes.",
+    "Unrelated Windows errors, errors without winerror, and non-Windows errors propagate immediately.",
+    "Original campaign locks, preserved budgets, immutable references, unknown dispatch costs and exact-response recovery remain tested."
+  ],
+  "source_sha256": {
+    "research/v63/campaign_control.py": "1826f17f250b8cdaeb6ebea3352d16165f9842d4a01b80dfef43916b43ff8583",
+    "research/v63/test_campaign_control.py": "7786329b234b6ff67d24150406bbcf77d2ff087bb440c97e954e30892f04cc02"
+  },
+  "previous_candidate_artifacts_modified": false,
+  "recovery_behavior_modified": false,
+  "selection_basis": "Windows persistence engineering correction only; no model outcomes inspected or used."
+}

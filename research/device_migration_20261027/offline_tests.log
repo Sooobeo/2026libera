@@ -1,0 +1,382 @@
+..F..................................................................... [ 31%]
+.....................................................F.................. [ 63%]
+...................................FFFFFFFF............................. [ 95%]
+..........                                                               [100%]
+================================== FAILURES ===================================
+____________ ActualCorpusTests.test_dates_scope_and_source_hashes _____________
+
+self = <test_ac_corpus.ActualCorpusTests testMethod=test_dates_scope_and_source_hashes>
+
+    def test_dates_scope_and_source_hashes(self):
+        self.assertEqual({d['fund_id'] for d in self.docs if d['period']=='A'}, {'COMMON','F01','F02','F03','F04'})
+        self.assertEqual({d['fund_id'] for d in self.docs if d['period']=='C'}, {'COMMON'})
+        for d in self.docs:
+>           self.assertEqual(hashlib.sha256((ROOT/d['source_path']).read_bytes()).hexdigest(),d['source_bytes_sha256'])
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+research\v63\test_ac_corpus.py:22: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py:625: in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/Insun/2026libera/data/v63_20261027/continuation_sources/outlook/FOMC_20260318.html')
+mode = 'rb', buffering = -1, encoding = None, errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Insun\\2026libera\\data\\v63_20261027\\continuation_sources\\outlook\\FOMC_20260318.html'
+
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py:537: FileNotFoundError
+________ test_actual_slices_exactly_restore_immutable_source_excerpts _________
+
+    def test_actual_slices_exactly_restore_immutable_source_excerpts():
+        profiles=read(SRC/'profiles_v2.json')
+>       lines=(SRC/'VPMCX_SAI_20260325_text.txt').read_text(encoding='utf-8-sig').splitlines()
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+research\v63\test_mandate_atomic_units.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py:546: in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py:632: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/Insun/2026libera/data/v63_20261027/continuation_sources/VPMCX_SAI_20260325_text.txt')
+mode = 'r', buffering = -1, encoding = 'utf-8-sig', errors = None
+newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Insun\\2026libera\\data\\v63_20261027\\continuation_sources\\VPMCX_SAI_20260325_text.txt'
+
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py:537: FileNotFoundError
+_ test_recommendation_withheld_when_failures_increase_despite_joint_rejection _
+
+    def test_recommendation_withheld_when_failures_increase_despite_joint_rejection():
+>       fn=load_draft('final_report_supplement_code_draft.txt')['recommendation_rows'];main=main_fixture()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+research\v63\test_report_summary_drafts.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+research\v63\test_report_summary_drafts.py:10: in load_draft
+    exec(compile(path.read_text(encoding='utf-8'),str(path),'exec'),ns)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py:546: in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py:632: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/Insun/2026libera/data/v63_20261027/audit/final_report_supplement_code_draft.txt')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Insun\\2026libera\\data\\v63_20261027\\audit\\final_report_supplement_code_draft.txt'
+
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py:537: FileNotFoundError
+____ test_h3_direction_comes_from_adjusted_iut_not_failure_rate_selection _____
+
+    def test_h3_direction_comes_from_adjusted_iut_not_failure_rate_selection():
+>       fn=load_draft('final_report_supplement_code_draft.txt')['recommendation_rows'];main=main_fixture()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+research\v63\test_report_summary_drafts.py:33: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+research\v63\test_report_summary_drafts.py:10: in load_draft
+    exec(compile(path.read_text(encoding='utf-8'),str(path),'exec'),ns)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py:546: in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py:632: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/Insun/2026libera/data/v63_20261027/audit/final_report_supplement_code_draft.txt')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Insun\\2026libera\\data\\v63_20261027\\audit\\final_report_supplement_code_draft.txt'
+
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py:537: FileNotFoundError
+___________ test_missing_raw_diagnostics_never_become_zero_failure ____________
+
+    def test_missing_raw_diagnostics_never_become_zero_failure():
+>       fn=load_draft('final_report_supplement_code_draft.txt')['recommendation_rows'];main=main_fixture()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+research\v63\test_report_summary_drafts.py:42: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+research\v63\test_report_summary_drafts.py:10: in load_draft
+    exec(compile(path.read_text(encoding='utf-8'),str(path),'exec'),ns)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py:546: in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py:632: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/Insun/2026libera/data/v63_20261027/audit/final_report_supplement_code_draft.txt')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Insun\\2026libera\\data\\v63_20261027\\audit\\final_report_supplement_code_draft.txt'
+
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py:537: FileNotFoundError
+____ test_exact_mismatch_shared_across_funds_and_persistent_across_stages _____
+
+tmp_path = WindowsPath('C:/Users/Insun/AppData/Local/Temp/pytest-of-Insun/pytest-0/test_exact_mismatch_shared_acr0')
+
+    def test_exact_mismatch_shared_across_funds_and_persistent_across_stages(tmp_path):
+>       ns=load_draft('shared_source_mismatch_code_draft.txt')
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+research\v63\test_report_summary_drafts.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+research\v63\test_report_summary_drafts.py:10: in load_draft
+    exec(compile(path.read_text(encoding='utf-8'),str(path),'exec'),ns)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py:546: in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py:632: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/Insun/2026libera/data/v63_20261027/audit/shared_source_mismatch_code_draft.txt')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Insun\\2026libera\\data\\v63_20261027\\audit\\shared_source_mismatch_code_draft.txt'
+
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py:537: FileNotFoundError
+___ test_review_flags_and_unscored_facts_do_not_become_confirmed_mismatches ___
+
+tmp_path = WindowsPath('C:/Users/Insun/AppData/Local/Temp/pytest-of-Insun/pytest-0/test_review_flags_and_unscored0')
+
+    def test_review_flags_and_unscored_facts_do_not_become_confirmed_mismatches(tmp_path):
+>       fn=load_draft('shared_source_mismatch_code_draft.txt')['shared_source_mismatch_candidates']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+research\v63\test_report_summary_drafts.py:81: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+research\v63\test_report_summary_drafts.py:10: in load_draft
+    exec(compile(path.read_text(encoding='utf-8'),str(path),'exec'),ns)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py:546: in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py:632: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/Insun/2026libera/data/v63_20261027/audit/shared_source_mismatch_code_draft.txt')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Insun\\2026libera\\data\\v63_20261027\\audit\\shared_source_mismatch_code_draft.txt'
+
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py:537: FileNotFoundError
+_______ test_same_id_different_wrong_values_are_not_one_shared_pattern ________
+
+tmp_path = WindowsPath('C:/Users/Insun/AppData/Local/Temp/pytest-of-Insun/pytest-0/test_same_id_different_wrong_v0')
+
+    def test_same_id_different_wrong_values_are_not_one_shared_pattern(tmp_path):
+>       fn=load_draft('shared_source_mismatch_code_draft.txt')['shared_source_mismatch_candidates']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+research\v63\test_report_summary_drafts.py:90: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+research\v63\test_report_summary_drafts.py:10: in load_draft
+    exec(compile(path.read_text(encoding='utf-8'),str(path),'exec'),ns)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py:546: in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py:632: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/Insun/2026libera/data/v63_20261027/audit/shared_source_mismatch_code_draft.txt')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Insun\\2026libera\\data\\v63_20261027\\audit\\shared_source_mismatch_code_draft.txt'
+
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py:537: FileNotFoundError
+_ test_duplicate_stage_citation_does_not_create_propagation_or_guess_payload __
+
+tmp_path = WindowsPath('C:/Users/Insun/AppData/Local/Temp/pytest-of-Insun/pytest-0/test_duplicate_stage_citation_0')
+
+    def test_duplicate_stage_citation_does_not_create_propagation_or_guess_payload(tmp_path):
+>       fn=load_draft('shared_source_mismatch_code_draft.txt')['shared_source_mismatch_candidates']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+research\v63\test_report_summary_drafts.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+research\v63\test_report_summary_drafts.py:10: in load_draft
+    exec(compile(path.read_text(encoding='utf-8'),str(path),'exec'),ns)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py:546: in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py:632: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/Insun/2026libera/data/v63_20261027/audit/shared_source_mismatch_code_draft.txt')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Insun\\2026libera\\data\\v63_20261027\\audit\\shared_source_mismatch_code_draft.txt'
+
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py:537: FileNotFoundError
+___________ test_original_trace_hash_drift_is_not_silently_rejoined ___________
+
+tmp_path = WindowsPath('C:/Users/Insun/AppData/Local/Temp/pytest-of-Insun/pytest-0/test_original_trace_hash_drift0')
+
+    def test_original_trace_hash_drift_is_not_silently_rejoined(tmp_path):
+>       fn=load_draft('shared_source_mismatch_code_draft.txt')['shared_source_mismatch_candidates']
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+research\v63\test_report_summary_drafts.py:106: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+research\v63\test_report_summary_drafts.py:10: in load_draft
+    exec(compile(path.read_text(encoding='utf-8'),str(path),'exec'),ns)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py:546: in read_text
+    return PathBase.read_text(self, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_abc.py:632: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors, newline=newline) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/Insun/2026libera/data/v63_20261027/audit/shared_source_mismatch_code_draft.txt')
+mode = 'r', buffering = -1, encoding = 'utf-8', errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed to by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Insun\\2026libera\\data\\v63_20261027\\audit\\shared_source_mismatch_code_draft.txt'
+
+..\AppData\Local\Programs\Python\Python313\Lib\pathlib\_local.py:537: FileNotFoundError
+============================== warnings summary ===============================
+research/v63/test_numerics.py::test_analytic_two_asset_oracle_and_ranges
+research/v63/test_numerics.py::test_actual_twelve_dimensional_near_optimal_dual_ranges
+  C:\Users\Insun\2026libera\research\v63\numerics.py:326: UserWarning: Solution may be inaccurate. Try another solver, adjusting the solver settings, or solve with verbose=True for more information.
+    problem.solve(solver="CLARABEL", max_iter=500, tol_gap_abs=1e-11,
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED research/v63/test_ac_corpus.py::ActualCorpusTests::test_dates_scope_and_source_hashes
+FAILED research/v63/test_mandate_atomic_units.py::test_actual_slices_exactly_restore_immutable_source_excerpts
+FAILED research/v63/test_report_summary_drafts.py::test_recommendation_withheld_when_failures_increase_despite_joint_rejection
+FAILED research/v63/test_report_summary_drafts.py::test_h3_direction_comes_from_adjusted_iut_not_failure_rate_selection
+FAILED research/v63/test_report_summary_drafts.py::test_missing_raw_diagnostics_never_become_zero_failure
+FAILED research/v63/test_report_summary_drafts.py::test_exact_mismatch_shared_across_funds_and_persistent_across_stages
+FAILED research/v63/test_report_summary_drafts.py::test_review_flags_and_unscored_facts_do_not_become_confirmed_mismatches
+FAILED research/v63/test_report_summary_drafts.py::test_same_id_different_wrong_values_are_not_one_shared_pattern
+FAILED research/v63/test_report_summary_drafts.py::test_duplicate_stage_citation_does_not_create_propagation_or_guess_payload
+FAILED research/v63/test_report_summary_drafts.py::test_original_trace_hash_drift_is_not_silently_rejoined
+10 failed, 216 passed, 2 warnings in 71.94s (0:01:11)

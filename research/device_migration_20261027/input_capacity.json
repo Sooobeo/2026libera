@@ -1,0 +1,307 @@
+{
+  "status": "passed",
+  "engineering_only": true,
+  "model_calls": 0,
+  "cases": 20,
+  "tokenizer_identity": "native:3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6:8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+  "source_sha256": {
+    "profiles_v2.json": "556a5f546c0e27a1403cadd40b6ad8c16d72841855c2bb5b7ad8255b5eaae922",
+    "documents_v2.json": "930560346838abed6129187611c461e88c77b082a30d7456c4053d0cbb108d72",
+    "mandate_atomic_units_v2.json": "4b563c5208bbed0a209534b87399514bb19f8be4a4da8df75e37af6dc3bd6d96"
+  },
+  "scope": "Actual retrieval builders include atomic chunk headers and overlap; model-rendered full-history capacity remains a live development gate.",
+  "rows": [
+    {
+      "fund_id": "F01",
+      "period": "development",
+      "case": "mandates_and_B_corpus",
+      "baseline_tokens": 9427,
+      "packet_tokens": 1125,
+      "full_tokens": 3495,
+      "diagnostics": {
+        "gold_recall_at_4": 1.0,
+        "gold_unit_count": 12,
+        "recovered_gold_count": 12,
+        "same_bytes_as_full": false,
+        "same_atomic_content_as_full": false
+      }
+    },
+    {
+      "fund_id": "F01",
+      "period": "A_B",
+      "case": "mandates_and_B_corpus",
+      "baseline_tokens": 9428,
+      "packet_tokens": 1125,
+      "full_tokens": 3498,
+      "diagnostics": {
+        "gold_recall_at_4": 1.0,
+        "gold_unit_count": 12,
+        "recovered_gold_count": 12,
+        "same_bytes_as_full": false,
+        "same_atomic_content_as_full": false
+      }
+    },
+    {
+      "fund_id": "F01",
+      "period": "A_B",
+      "case": "A",
+      "packet_tokens": 1178,
+      "full_tokens": 8910,
+      "diagnostics": {
+        "gold_recall_at_4": 0.030303030303030304,
+        "gold_unit_count": 33,
+        "recovered_gold_count": 1,
+        "same_bytes_as_full": false,
+        "same_atomic_content_as_full": false
+      }
+    },
+    {
+      "fund_id": "F01",
+      "period": "C",
+      "case": "mandates_and_B_corpus",
+      "baseline_tokens": 9471,
+      "packet_tokens": 1137,
+      "full_tokens": 3656,
+      "diagnostics": {
+        "gold_recall_at_4": 1.0,
+        "gold_unit_count": 12,
+        "recovered_gold_count": 12,
+        "same_bytes_as_full": false,
+        "same_atomic_content_as_full": false
+      }
+    },
+    {
+      "fund_id": "F01",
+      "period": "C",
+      "case": "C",
+      "packet_tokens": 1207,
+      "full_tokens": 8502,
+      "diagnostics": {
+        "gold_recall_at_4": 0.0,
+        "gold_unit_count": 30,
+        "recovered_gold_count": 0,
+        "same_bytes_as_full": false,
+        "same_atomic_content_as_full": false
+      }
+    },
+    {
+      "fund_id": "F02",
+      "period": "development",
+      "case": "mandates_and_B_corpus",
+      "baseline_tokens": 10116,
+      "packet_tokens": 1094,
+      "full_tokens": 3068,
+      "diagnostics": {
+        "gold_recall_at_4": 1.0,
+        "gold_unit_count": 12,
+        "recovered_gold_count": 12,
+        "same_bytes_as_full": false,
+        "same_atomic_content_as_full": false
+      }
+    },
+    {
+      "fund_id": "F02",
+      "period": "A_B",
+      "case": "mandates_and_B_corpus",
+      "baseline_tokens": 10366,
+      "packet_tokens": 1126,
+      "full_tokens": 6978,
+      "diagnostics": {
+        "gold_recall_at_4": 1.0,
+        "gold_unit_count": 12,
+        "recovered_gold_count": 12,
+        "same_bytes_as_full": false,
+        "same_atomic_content_as_full": false
+      }
+    },
+    {
+      "fund_id": "F02",
+      "period": "A_B",
+      "case": "A",
+      "packet_tokens": 1299,
+      "full_tokens": 8750,
+      "diagnostics": {
+        "gold_recall_at_4": 0.11764705882352941,
+        "gold_unit_count": 34,
+        "recovered_gold_count": 4,
+        "same_bytes_as_full": false,
+        "same_atomic_content_as_full": false
+      }
+    },
+    {
+      "fund_id": "F02",
+      "period": "C",
+      "case": "mandates_and_B_corpus",
+      "baseline_tokens": 10384,
+      "packet_tokens": 1126,
+      "full_tokens": 6995,
+      "diagnostics": {
+        "gold_recall_at_4": 1.0,
+        "gold_unit_count": 12,
+        "recovered_gold_count": 12,
+        "same_bytes_as_full": false,
+        "same_atomic_content_as_full": false
+      }
+    },
+    {
+      "fund_id": "F02",
+      "period": "C",
+      "case": "C",
+      "packet_tokens": 1207,
+      "full_tokens": 8502,
+      "diagnostics": {
+        "gold_recall_at_4": 0.0,
+        "gold_unit_count": 30,
+        "recovered_gold_count": 0,
+        "same_bytes_as_full": false,
+        "same_atomic_content_as_full": false
+      }
+    },
+    {
+      "fund_id": "F03",
+      "period": "development",
+      "case": "mandates_and_B_corpus",
+      "baseline_tokens": 9072,
+      "packet_tokens": 1136,
+      "full_tokens": 1835,
+      "diagnostics": {
+        "gold_recall_at_4": 1.0,
+        "gold_unit_count": 12,
+        "recovered_gold_count": 12,
+        "same_bytes_as_full": false,
+        "same_atomic_content_as_full": false
+      }
+    },
+    {
+      "fund_id": "F03",
+      "period": "A_B",
+      "case": "mandates_and_B_corpus",
+      "baseline_tokens": 9070,
+      "packet_tokens": 1136,
+      "full_tokens": 1832,
+      "diagnostics": {
+        "gold_recall_at_4": 1.0,
+        "gold_unit_count": 12,
+        "recovered_gold_count": 12,
+        "same_bytes_as_full": false,
+        "same_atomic_content_as_full": false
+      }
+    },
+    {
+      "fund_id": "F03",
+      "period": "A_B",
+      "case": "A",
+      "packet_tokens": 1414,
+      "full_tokens": 14477,
+      "diagnostics": {
+        "gold_recall_at_4": 0.0,
+        "gold_unit_count": 32,
+        "recovered_gold_count": 0,
+        "same_bytes_as_full": false,
+        "same_atomic_content_as_full": false
+      }
+    },
+    {
+      "fund_id": "F03",
+      "period": "C",
+      "case": "mandates_and_B_corpus",
+      "baseline_tokens": 9071,
+      "packet_tokens": 1059,
+      "full_tokens": 3280,
+      "diagnostics": {
+        "gold_recall_at_4": 1.0,
+        "gold_unit_count": 12,
+        "recovered_gold_count": 12,
+        "same_bytes_as_full": false,
+        "same_atomic_content_as_full": false
+      }
+    },
+    {
+      "fund_id": "F03",
+      "period": "C",
+      "case": "C",
+      "packet_tokens": 1207,
+      "full_tokens": 8502,
+      "diagnostics": {
+        "gold_recall_at_4": 0.0,
+        "gold_unit_count": 30,
+        "recovered_gold_count": 0,
+        "same_bytes_as_full": false,
+        "same_atomic_content_as_full": false
+      }
+    },
+    {
+      "fund_id": "F04",
+      "period": "development",
+      "case": "mandates_and_B_corpus",
+      "baseline_tokens": 9708,
+      "packet_tokens": 1201,
+      "full_tokens": 4621,
+      "diagnostics": {
+        "gold_recall_at_4": 1.0,
+        "gold_unit_count": 12,
+        "recovered_gold_count": 12,
+        "same_bytes_as_full": false,
+        "same_atomic_content_as_full": false
+      }
+    },
+    {
+      "fund_id": "F04",
+      "period": "A_B",
+      "case": "mandates_and_B_corpus",
+      "baseline_tokens": 9712,
+      "packet_tokens": 1054,
+      "full_tokens": 4524,
+      "diagnostics": {
+        "gold_recall_at_4": 1.0,
+        "gold_unit_count": 12,
+        "recovered_gold_count": 12,
+        "same_bytes_as_full": false,
+        "same_atomic_content_as_full": false
+      }
+    },
+    {
+      "fund_id": "F04",
+      "period": "A_B",
+      "case": "A",
+      "packet_tokens": 1336,
+      "full_tokens": 8842,
+      "diagnostics": {
+        "gold_recall_at_4": 0.0,
+        "gold_unit_count": 33,
+        "recovered_gold_count": 0,
+        "same_bytes_as_full": false,
+        "same_atomic_content_as_full": false
+      }
+    },
+    {
+      "fund_id": "F04",
+      "period": "C",
+      "case": "mandates_and_B_corpus",
+      "baseline_tokens": 9707,
+      "packet_tokens": 1051,
+      "full_tokens": 4517,
+      "diagnostics": {
+        "gold_recall_at_4": 1.0,
+        "gold_unit_count": 12,
+        "recovered_gold_count": 12,
+        "same_bytes_as_full": false,
+        "same_atomic_content_as_full": false
+      }
+    },
+    {
+      "fund_id": "F04",
+      "period": "C",
+      "case": "C",
+      "packet_tokens": 1207,
+      "full_tokens": 8502,
+      "diagnostics": {
+        "gold_recall_at_4": 0.0,
+        "gold_unit_count": 30,
+        "recovered_gold_count": 0,
+        "same_bytes_as_full": false,
+        "same_atomic_content_as_full": false
+      }
+    }
+  ]
+}

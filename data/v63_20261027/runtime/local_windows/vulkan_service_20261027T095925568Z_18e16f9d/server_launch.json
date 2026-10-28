@@ -1,0 +1,60 @@
+{
+    "schema":  "libera_vulkan_service_launch_v1",
+    "status":  "existing_pinned_vulkan_service_reused",
+    "started_at_utc":  "2026-10-27T09:59:25.5906693Z",
+    "candidate_directory":  "C:\\Users\\Insun\\2026libera\\data\\v63_20261027\\continuation\\deployment\\local_windows\\candidate_005",
+    "candidate_environment_sha256":  "88c7be694c26e90fb88476a93fc395a26372e16719434ccb51375e6a44e9522c",
+    "origin":  "http://127.0.0.1:11436",
+    "environment":  {
+                        "OLLAMA_HOST":  "127.0.0.1:11436",
+                        "OLLAMA_MODELS":  "C:\\Users\\Insun\\2026libera\\tmp\\v63_vulkan_probe_20261027\\models",
+                        "OLLAMA_NO_CLOUD":  "1",
+                        "OLLAMA_NOPRUNE":  "1",
+                        "OLLAMA_VULKAN":  "1",
+                        "OLLAMA_IGPU_ENABLE":  "1",
+                        "GGML_VK_VISIBLE_DEVICES":  "0",
+                        "OLLAMA_LLM_LIBRARY":  "",
+                        "OLLAMA_NUM_PARALLEL":  "1",
+                        "OLLAMA_MAX_LOADED_MODELS":  "1",
+                        "OLLAMA_CONTEXT_LENGTH":  "32768",
+                        "OLLAMA_FLASH_ATTENTION":  "1",
+                        "OLLAMA_KV_CACHE_TYPE":  "f16",
+                        "OLLAMA_KEEP_ALIVE":  "10m",
+                        "OLLAMA_LOAD_TIMEOUT":  "180s",
+                        "OPENBLAS_NUM_THREADS":  "1",
+                        "OMP_NUM_THREADS":  "1",
+                        "MKL_NUM_THREADS":  "1"
+                    },
+    "engine_revision":  "0.35.1",
+    "model_load_requests":  0,
+    "generation_requests":  0,
+    "user_service_changes":  0,
+    "persistent_environment_changes":  0,
+    "binary":  "C:\\Users\\Insun\\2026libera\\tmp\\v63_vulkan_probe_20261027\\portable\\ollama.exe",
+    "binary_sha256":  "3cc17c238b081adf2bd3a206e52a063b637af1bf283d95b4ffd73a2bdec8b027",
+    "pid":  9996,
+    "process_started_at_utc":  "2026-10-27T09:49:00.6471055Z",
+    "listeners":  [
+                      {
+                          "LocalAddress":  "127.0.0.1",
+                          "LocalPort":  11436,
+                          "OwningProcess":  9996
+                      }
+                  ],
+    "listener_owner_verified":  true,
+    "version":  {
+                    "version":  "0.35.1"
+                },
+    "environment_evidence":  {
+                                 "path":  "data/v63_20261027/runtime/local_windows/vulkan_probe_20261027T094843038524Z/server_launch.json",
+                                 "sha256":  "f61bfb01c28a878930a9dbb00420a5075b049752a75293047fef8c5f13049eb7",
+                                 "process_start_difference_seconds":  0.0158645,
+                                 "verification":  "Matched recorded launch overrides; live process environment was not read."
+                             },
+    "models_observed_without_loading":  {
+                                            "models":  [
+
+                                                       ]
+                                        },
+    "recorded_at_utc":  "2026-10-27T09:59:31.6265976Z"
+}

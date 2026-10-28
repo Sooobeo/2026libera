@@ -1,0 +1,52 @@
+{
+  "schema": "libera_user_requested_no_sleep_v1",
+  "recorded_at_utc": "2026-10-27T13:28:17.235708+00:00",
+  "authorization": "User explicitly requested laptop sleep prevention while continuing the experiment.",
+  "scheme_guid": "ab6534a3-bc02-4c44-94d1-a8535b2eb070",
+  "settings": [
+    {
+      "subgroup": "SUB_SLEEP",
+      "setting": "STANDBYIDLE",
+      "guid": "29f6c1db-86da-48c5-9fdb-f2b67b1f44da",
+      "before": {
+        "AC": 180,
+        "DC": 180
+      },
+      "after": {
+        "AC": 0,
+        "DC": 0
+      }
+    },
+    {
+      "subgroup": "SUB_SLEEP",
+      "setting": "HIBERNATEIDLE",
+      "guid": "9d7815a6-7ee4-497e-8888-515a05f02364",
+      "before": {
+        "AC": 2592000,
+        "DC": 259200
+      },
+      "after": {
+        "AC": 0,
+        "DC": 0
+      }
+    },
+    {
+      "subgroup": "SUB_BUTTONS",
+      "setting": "LIDACTION",
+      "guid": "5ca83367-6e45-459f-a27b-476b1d01c936",
+      "before": {
+        "AC": 1,
+        "DC": 1
+      },
+      "after": {
+        "AC": 0,
+        "DC": 0
+      }
+    }
+  ],
+  "all_seven_powercfg_operations_exit_zero": true,
+  "verified_by_requery": true,
+  "original_scheme_export": "powercfg /export denied Windows privilege 0x522; full text backups captured instead",
+  "experiment_config_or_model_changed": false,
+  "raw_evidence_removed": false
+}

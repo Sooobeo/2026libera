@@ -1,0 +1,156 @@
+{
+  "schema": "libera_keepawake_observer_verification_v1",
+  "observed_at_utc": "2026-10-27T13:43:50.007189+00:00",
+  "keeper_source_sha256": "4d04e5517f12d6d4fe870354c75a7344f17a07b7fa0d1d61ad318f5e2636b064",
+  "observer_source_sha256": "36324a4e2dd8f1089cedbef4ff098f634c11e7a35785fc5b712051cb412beede",
+  "test_result": {
+    "keepawake": 11,
+    "observer": 26,
+    "passed": 37,
+    "failed": 0
+  },
+  "keeper_pid": 30232,
+  "keeper_alive": true,
+  "keeper_status": "active",
+  "helper_api_events": [
+    {
+      "api": "SetThreadExecutionState",
+      "flags": 2147483651,
+      "return_value": 2147483648,
+      "success": true
+    },
+    {
+      "api": "PowerCreateRequest",
+      "success": true
+    },
+    {
+      "api": "PowerSetRequest",
+      "request_type": "PowerRequestExecutionRequired",
+      "success": true
+    }
+  ],
+  "observer_pid": 31064,
+  "observer_alive": true,
+  "live_report_observed_at_utc": "2026-10-27T13:43:21.539327+00:00",
+  "live_report_status": "running",
+  "display_idle_verified": true,
+  "keepawake_report": {
+    "path": "research\\device_migration_20261027\\keepawake_candidate005_20261027T134057209Z\\status.json",
+    "launch_path": "research\\device_migration_20261027\\keepawake_candidate005_20261027T134057209Z\\launch.json",
+    "pid": 30232,
+    "process_identity_alive": true,
+    "last_status": "active",
+    "updated_at_utc": "2026-10-27T13:43:17.277647+00:00",
+    "fresh": true,
+    "verified_active": true,
+    "api_events": [
+      {
+        "api": "SetThreadExecutionState",
+        "flags": 2147483651,
+        "return_value": 2147483648,
+        "success": true
+      },
+      {
+        "api": "PowerCreateRequest",
+        "success": true
+      },
+      {
+        "api": "PowerSetRequest",
+        "request_type": "PowerRequestExecutionRequired",
+        "success": true
+      }
+    ],
+    "scope": "Helper status and original process identity; not a new OS power-policy query or a guarantee against explicit user sleep."
+  },
+  "live_observation_errors": [],
+  "html_links_checked": 20,
+  "missing_html_links": [],
+  "core_source_files": [
+    {
+      "path": "research\\v63\\campaign.py",
+      "expected": "bafec17a41b718f6639c2552dc59f5cd1ff03c8bc4202ab602ebcbf857c34263",
+      "actual": "bafec17a41b718f6639c2552dc59f5cd1ff03c8bc4202ab602ebcbf857c34263",
+      "matches": true
+    },
+    {
+      "path": "research\\v63\\campaign_control.py",
+      "expected": "1826f17f250b8cdaeb6ebea3352d16165f9842d4a01b80dfef43916b43ff8583",
+      "actual": "1826f17f250b8cdaeb6ebea3352d16165f9842d4a01b80dfef43916b43ff8583",
+      "matches": true
+    },
+    {
+      "path": "research\\v63\\recovery.py",
+      "expected": "6a92a93d242d449c63781f4f10a1f4f8709529422b8a2e0f6fde015b1ea081b4",
+      "actual": "6a92a93d242d449c63781f4f10a1f4f8709529422b8a2e0f6fde015b1ea081b4",
+      "matches": true
+    },
+    {
+      "path": "research\\v63\\build_run.py",
+      "expected": "6bb784a76579f46cb41a121c66149db2b4868a91f21b78e6c33d970e3542d294",
+      "actual": "6bb784a76579f46cb41a121c66149db2b4868a91f21b78e6c33d970e3542d294",
+      "matches": true
+    },
+    {
+      "path": "research\\v63\\runtime.py",
+      "expected": "3bcb3ae9d07d2477690c49ff36a8a0e0cc3a949208b7aceedd219d5f2e629050",
+      "actual": "3bcb3ae9d07d2477690c49ff36a8a0e0cc3a949208b7aceedd219d5f2e629050",
+      "matches": true
+    },
+    {
+      "path": "research\\v63\\retrieval.py",
+      "expected": "5b1c17f0e94a4230e7508fb9e8cef07efad8fe921931c359ee87cb80dda39aac",
+      "actual": "5b1c17f0e94a4230e7508fb9e8cef07efad8fe921931c359ee87cb80dda39aac",
+      "matches": true
+    },
+    {
+      "path": "research\\v63\\numerics.py",
+      "expected": "b8906ee2cf06a8c9b51dac2f73ea8584a09d998a618e94879ca05b39e4236dd7",
+      "actual": "b8906ee2cf06a8c9b51dac2f73ea8584a09d998a618e94879ca05b39e4236dd7",
+      "matches": true
+    },
+    {
+      "path": "research\\v63\\evaluate.py",
+      "expected": "c64aadcebd2a607a18cc5eeb1a9824e7d6ae15310f4cd7e4c08e8e8544e7dbc9",
+      "actual": "c64aadcebd2a607a18cc5eeb1a9824e7d6ae15310f4cd7e4c08e8e8544e7dbc9",
+      "matches": true
+    },
+    {
+      "path": "research\\v63\\statistics.py",
+      "expected": "2b06ebb144b0f7ea59750ea38563e5aa68c4bee29e60e20bf3840058269f95e5",
+      "actual": "2b06ebb144b0f7ea59750ea38563e5aa68c4bee29e60e20bf3840058269f95e5",
+      "matches": true
+    },
+    {
+      "path": "research\\v63\\pilot_precision.py",
+      "expected": "855c720d45eda62c8ef4f6268c06c54a7ac8cf274f477bb246be8b259efe24a5",
+      "actual": "855c720d45eda62c8ef4f6268c06c54a7ac8cf274f477bb246be8b259efe24a5",
+      "matches": true
+    },
+    {
+      "path": "research\\v63\\ollama_transport.py",
+      "expected": "95aac74c2cc1da8605615cb306ea1ca49a70a2c751be435e9df65db43f6c0fa3",
+      "actual": "95aac74c2cc1da8605615cb306ea1ca49a70a2c751be435e9df65db43f6c0fa3",
+      "matches": true
+    },
+    {
+      "path": "research\\v63\\exact_tokenizer.py",
+      "expected": "f14ec91b7016f2ba76318f7eb00657c397827b0712c22a4f5e46f3a52926cefe",
+      "actual": "f14ec91b7016f2ba76318f7eb00657c397827b0712c22a4f5e46f3a52926cefe",
+      "matches": true
+    },
+    {
+      "path": "research\\v63\\transport_errors.py",
+      "expected": "59db49ba45f5035921054d799dadd22d01d6dd6f1864b964c6ad95de86287a59",
+      "actual": "59db49ba45f5035921054d799dadd22d01d6dd6f1864b964c6ad95de86287a59",
+      "matches": true
+    }
+  ],
+  "all_core_source_files_unchanged": true,
+  "powercfg_requests_readback": {
+    "exit_code": 1,
+    "reason": "Administrator privileges required; not escalated. API success and process identity verified."
+  },
+  "power_event_observation": "research/device_migration_20261027/keepawake_candidate005_20261027T134057209Z/power_events_since_1335UTC.json",
+  "model_calls": 0,
+  "campaign_server_config_or_ledger_changed": false
+}

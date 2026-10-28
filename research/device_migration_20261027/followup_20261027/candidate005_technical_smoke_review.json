@@ -1,0 +1,118 @@
+{
+  "schema": "libera_candidate005_technical_smoke_independent_review_v1",
+  "status": "passed",
+  "recorded_at_utc": "2026-10-27T13:36:06.091217+00:00",
+  "run_id": "2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2",
+  "config": {
+    "path": "data/v63_20261027/continuation/deployment/local_windows/candidate_005/campaign_config.json",
+    "sha256": "d843e3fd0557a29a315465ff50782082f9584f57261854e9eed22d7547e5a8c9"
+  },
+  "gate_review": {
+    "phase": "technical-smoke",
+    "trajectories": 5,
+    "mean_generation_requests": 3.0,
+    "mean_request_seconds": 1724.3714811000002,
+    "max_trajectory_request_seconds": 6597.8238225000005,
+    "logical_stage_status_counts": {
+      "completed": 12,
+      "model_output_failure": 3
+    },
+    "full_history_observed": true,
+    "measurements": {
+      "path": "data/v63_20261027/local_campaign_results/phases/2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2/technical-smoke/measurements.json",
+      "sha256": "07d73c64e03318028d25af67d2a1ed0df1786ff28fbcb594aa14f50d1361eeed"
+    },
+    "records": {
+      "path": "data/v63_20261027/local_campaign_results/phases/2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2/technical-smoke/records.json",
+      "sha256": "cfd6e22e8d4af7cead16f49ef221f83b3a05ae9b23e2c251ad47afce7ac6b616"
+    },
+    "analysis": null
+  },
+  "frozen_code_files_verified": 13,
+  "frozen_artifact_refs_verified": 16,
+  "source_identity_unchanged": true,
+  "original_files": [
+    {
+      "path": "data/v63_20261027/local_campaign_results/phases/2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2/technical-smoke/measurements.json",
+      "sha256": "07d73c64e03318028d25af67d2a1ed0df1786ff28fbcb594aa14f50d1361eeed"
+    },
+    {
+      "path": "data/v63_20261027/local_campaign_results/phases/2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2/technical-smoke/records.json",
+      "sha256": "cfd6e22e8d4af7cead16f49ef221f83b3a05ae9b23e2c251ad47afce7ac6b616"
+    },
+    {
+      "path": "data/v63_20261027/local_campaign_results/phases/2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2/technical-smoke/runtime_identity.json",
+      "sha256": "d4d7db6a92ca0eb5550855d92bcbf134f1dab97f5843401fc6ffbf1edf18c433"
+    },
+    {
+      "path": "data/v63_20261027/local_campaign_results/phases/2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2/technical-smoke/frozen_runtime.json",
+      "sha256": "59ca72b1d20019b7d80036c4f3728e49d23154af8ed389aa48241685757d24e8"
+    },
+    {
+      "path": "data/v63_20261027/local_campaign_results/phases/2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2/technical-smoke/budget_state.json",
+      "sha256": "785ef0ad0a5326cd5fc927cd671a52fd6e39b0e91e4a6b4936a234aa5b16e39d"
+    }
+  ],
+  "original_generation_requests": 15,
+  "uncertain_generation_requests": 0,
+  "recorded_request_seconds": 7891.980511799999,
+  "longest_original_request_seconds": 5610.585465,
+  "downtime_excluded_from_costs": false,
+  "offline_replays": [
+    {
+      "fund_id": "F03",
+      "arm": "R0",
+      "history_sha256": "baf92e550b433bab0e4c29e498e42e5fe2f466f06adb751686f59e908f800ac9",
+      "prior_attempts": 3,
+      "consumed_prior_attempts": 3,
+      "new_live_calls": 0,
+      "original_http_history_unchanged": true
+    },
+    {
+      "fund_id": "F03",
+      "arm": "R1",
+      "history_sha256": "91dfa8d19a3e4ee89824b451ff95ccd21cb67f3b90117a3b28aee226dec6f591",
+      "prior_attempts": 3,
+      "consumed_prior_attempts": 3,
+      "new_live_calls": 0,
+      "original_http_history_unchanged": true
+    },
+    {
+      "fund_id": "F03",
+      "arm": "R2",
+      "history_sha256": "beebef7200bd0107b4d36c6d4f3b8e7493988767c88785eac56877e7068415f3",
+      "prior_attempts": 3,
+      "consumed_prior_attempts": 3,
+      "new_live_calls": 0,
+      "original_http_history_unchanged": true
+    },
+    {
+      "fund_id": "F03",
+      "arm": "C-context",
+      "history_sha256": "22ab75accc76b1dddfe56a04f6cf7619b2cd45777c5694d9fb9cc197ba272dea",
+      "prior_attempts": 3,
+      "consumed_prior_attempts": 3,
+      "new_live_calls": 0,
+      "original_http_history_unchanged": true
+    },
+    {
+      "fund_id": "F03",
+      "arm": "R3",
+      "history_sha256": "b96f552b7e9ceb28f4e17e0384e95c57139054937223f3966f0e6175e9597486",
+      "prior_attempts": 3,
+      "consumed_prior_attempts": 3,
+      "new_live_calls": 0,
+      "original_http_history_unchanged": true
+    }
+  ],
+  "resource_approval_prerequisites": [
+    "Wait for same-identity completed 60-stage paired-feasibility with original clocks and resource measurements.",
+    "Bind the reviewed guardian and analysis sources, exact configuration/data/environment/model and actual 15/60 measurement hashes.",
+    "Root must issue a separately hashed resource approval that retains prior-candidate costs and uncertain reservations.",
+    "Validate the measured forecast and all phase and total resource caps before the 720-stage development pilot; only a ready original pilot allows main transition."
+  ],
+  "effect_or_pvalue_read_for_selection": false,
+  "model_calls": 0,
+  "http_calls": 0,
+  "actual_resource_approval_created": false
+}

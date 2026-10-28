@@ -1,0 +1,52 @@
+{
+  "schema": "libera_observer_process_identity_fix_v1",
+  "recorded_at_utc": "2026-10-27T09:50:31.134009+00:00",
+  "scope": "Observer-only change. No model calls, experiment ledger changes, experiment core changes, or service/process control. One-shot publication requested by root; no watcher started.",
+  "fixes": [
+    "Compare persisted supervisor started_at_utc against GetTickCount64 boot estimate with 30-second margin before querying PID.",
+    "Query GetProcessTimes creation timestamp when a handle is available; creation later than the expected process start plus margin rejects PID reuse.",
+    "Invalid, naive, future, unavailable timing and genuinely inaccessible current process information remain unknown rather than false.",
+    "Pass supervisor started_at_utc from both fresh state and same-run last-known state."
+  ],
+  "tests": {
+    "command": "python -m unittest research.device_migration_20261027.test_observer_transient_reads -q",
+    "passed": 15,
+    "failed": 0,
+    "skipped": 0,
+    "actual_exclusive_lock_and_delayed_unlock": true,
+    "actual_GetProcessTimes_for_current_interpreter": true,
+    "boot_and_PID_reuse_cases_use_isolated_mocks": true
+  },
+  "current_readonly_evidence": {
+    "candidate": "004",
+    "run_id": "00b7955a968c13547e6fcc857485a62c6d27a6ecc008c3c3cee4f32d981e5a0d",
+    "supervisor_pid": 5404,
+    "persisted_supervisor_state": "running",
+    "observed_status": "supervisor_process_not_running",
+    "alive": false,
+    "watch_should_continue": false,
+    "expected_started_at_utc": "2026-10-27T08:39:05.754375+00:00",
+    "boot_estimate_at_utc": "2026-10-27T09:15:30.262485+00:00",
+    "time_margin_seconds": 30.0,
+    "expected_start_precedes_boot_beyond_margin": true,
+    "seconds_start_before_boot": 2184.50811,
+    "request_costs": {
+      "generation_requests": 3,
+      "confirmed_attempt_records": 2,
+      "uncertain_dispatch_requests": 1
+    }
+  },
+  "core_sha_mismatches_against_selected_candidate": [],
+  "helper_sha256": "f0093c2ed60b77580ef37fc62c795f1ccff5c2611f60c8fd499b3c30caf30f51",
+  "test_source_sha256": "50442f7d143857f3e99b2abc0f4e8952af80fda27031878ba5a46cf841d16a14",
+  "published_observer_outputs": [
+    {
+      "path": "research/device_migration_20261027/live_status.json",
+      "sha256": "8e7edc158fb4c0c8508d98cbb49363fd97df0e75e6a786f780f6490e9d4749a0"
+    },
+    {
+      "path": "실험참고자료_20261027/05_새기기실행_20261027.html",
+      "sha256": "fce86f6d2a05da21136785e50720cd6006b57c83a693f796c1a298bd152f9c2d"
+    }
+  ]
+}

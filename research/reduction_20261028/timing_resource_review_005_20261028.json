@@ -1,0 +1,741 @@
+{
+  "schema": "libera_reduced_workload_measured_cost_review_v1",
+  "recorded_at_utc": "2026-10-27T23:43:54.374081+00:00",
+  "run_id": "2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2",
+  "read_only_scope": "Only timing, token, memory, runtime identity and input-capacity metadata; no portfolio content, effects or p-values extracted. No model calls, configuration, service or accounting changes.",
+  "all_60_http": {
+    "requests": 60,
+    "first_dispatch_utc": "2026-10-27T10:01:50.055128+00:00",
+    "last_http_end_utc": "2026-10-27T15:54:43.994284+00:00",
+    "first_dispatch_kst": "2026-10-27T19:01:50.055128+09:00",
+    "last_http_end_kst": "2026-10-28T00:54:43.994284+09:00",
+    "elapsed_dispatch_to_last_receipt_seconds": 21173.939156,
+    "http_status_counts": {
+      "200": 60
+    },
+    "complete_trajectories": 20,
+    "http_seconds": {
+      "n": 60,
+      "sum": 20415.1849443,
+      "mean": 340.253082405,
+      "minimum": 75.54430409999986,
+      "p10": 134.7206029700003,
+      "p25": 166.46618137500082,
+      "median": 200.7946560999992,
+      "p75": 215.75306802499927,
+      "p90": 247.63273515999865,
+      "p95": 310.5010933249999,
+      "maximum": 5610.585465
+    },
+    "prompt_eval_count": {
+      "n": 60,
+      "sum": 791999,
+      "mean": 13199.983333333334,
+      "minimum": 9570,
+      "p10": 10177.9,
+      "p25": 11406.5,
+      "median": 13292.0,
+      "p75": 15001.0,
+      "p90": 15989.9,
+      "p95": 16947.399999999998,
+      "maximum": 18790
+    },
+    "prompt_eval_cached_count": {
+      "n": 60,
+      "sum": 655961,
+      "mean": 10932.683333333332,
+      "minimum": 0,
+      "p10": 9411.400000000001,
+      "p25": 9912.0,
+      "median": 10601.0,
+      "p75": 12349.25,
+      "p90": 13693.6,
+      "p95": 14867.899999999998,
+      "maximum": 16893
+    },
+    "eval_count": {
+      "n": 60,
+      "sum": 97010,
+      "mean": 1616.8333333333333,
+      "minimum": 398,
+      "p10": 1234.0,
+      "p25": 1394.75,
+      "median": 1492.0,
+      "p75": 1825.0,
+      "p90": 2186.5,
+      "p95": 2335.7,
+      "maximum": 2617
+    },
+    "load_seconds": {
+      "n": 60,
+      "sum": 5459.5123201999995,
+      "mean": 90.99187200333333,
+      "minimum": 0.0022295,
+      "p10": 0.00618822,
+      "p25": 0.0067961,
+      "median": 0.008677,
+      "p75": 0.01476105,
+      "p90": 0.025946030000000002,
+      "p95": 0.02871027999999997,
+      "maximum": 5458.7964863
+    },
+    "prompt_eval_seconds": {
+      "n": 60,
+      "sum": 1246.749590999,
+      "mean": 20.779159849983333,
+      "minimum": 0.697469,
+      "p10": 0.8209115,
+      "p25": 14.790654,
+      "median": 22.173285999999997,
+      "p75": 25.616736500000002,
+      "p90": 34.621409299999996,
+      "p95": 37.44335454999998,
+      "maximum": 49.501833
+    },
+    "eval_seconds": {
+      "n": 60,
+      "sum": 13586.383536999001,
+      "mean": 226.43972561665,
+      "minimum": 49.516155,
+      "p10": 112.5709965,
+      "p25": 144.98363799999998,
+      "median": 170.800747,
+      "p75": 197.71014175,
+      "p90": 214.5738056,
+      "p95": 244.62389844999998,
+      "maximum": 3625.892318
+    },
+    "decode_tokens_per_second": {
+      "n": 60,
+      "sum": 568.5878870434257,
+      "mean": 9.476464784057093,
+      "minimum": 0.6431520286532679,
+      "p10": 7.801376241875382,
+      "p25": 8.298577714351712,
+      "median": 9.056461608248283,
+      "p75": 10.284327709941433,
+      "p90": 12.261628724369922,
+      "p95": 12.832921982766994,
+      "maximum": 16.30905948325965
+    },
+    "provider_aggregate_decode_tokens_per_second": 7.140237115772447,
+    "uncached_prompt_tokens": 136038,
+    "complete_trajectory_http_seconds": {
+      "n": 20,
+      "sum": 20415.1849443,
+      "mean": 1020.759247215,
+      "minimum": 397.4035006000008,
+      "p10": 467.88774920999936,
+      "p25": 534.342403900001,
+      "median": 584.4107535000021,
+      "p75": 663.187729499999,
+      "p90": 1135.56158074,
+      "p95": 4156.015508505001,
+      "maximum": 5870.6189711
+    },
+    "complete_trajectory_wall_seconds": {
+      "n": 20,
+      "sum": 21155.359732,
+      "mean": 1057.7679866,
+      "minimum": 399.112181,
+      "p10": 469.0967233,
+      "p25": 534.790936,
+      "median": 584.8818635,
+      "p75": 663.69635875,
+      "p90": 1136.0781283000047,
+      "p95": 4192.914289150002,
+      "maximum": 6598.585555
+    }
+  },
+  "after_power_fix": {
+    "cutoff_utc": "2026-10-27T13:35:00+00:00",
+    "criterion": "HTTP dispatch started at or after cutoff; boundary-straddling request excluded only from future-rate estimator, never from cost ledger.",
+    "summary": {
+      "requests": 41,
+      "first_dispatch_utc": "2026-10-27T13:38:15.079249+00:00",
+      "last_http_end_utc": "2026-10-27T15:54:43.994284+00:00",
+      "first_dispatch_kst": "2026-10-27T22:38:15.079249+09:00",
+      "last_http_end_kst": "2026-10-28T00:54:43.994284+09:00",
+      "elapsed_dispatch_to_last_receipt_seconds": 8188.915035,
+      "http_status_counts": {
+        "200": 41
+      },
+      "complete_trajectories": 13,
+      "http_seconds": {
+        "n": 41,
+        "sum": 8175.821049400001,
+        "mean": 199.41026949756102,
+        "minimum": 75.54430409999986,
+        "p10": 159.10282590000133,
+        "p25": 179.4443859999992,
+        "median": 201.96700259999852,
+        "p75": 217.06205060000138,
+        "p90": 243.37287580000157,
+        "p95": 265.14324190000116,
+        "maximum": 336.49201079999693
+      },
+      "prompt_eval_count": {
+        "n": 41,
+        "sum": 550161,
+        "mean": 13418.560975609756,
+        "minimum": 9925,
+        "p10": 10206.0,
+        "p25": 11407.0,
+        "median": 13420.0,
+        "p75": 15096.0,
+        "p90": 16061.0,
+        "p95": 17734.0,
+        "maximum": 18790
+      },
+      "prompt_eval_cached_count": {
+        "n": 41,
+        "sum": 471154,
+        "mean": 11491.560975609756,
+        "minimum": 8101,
+        "p10": 9912.0,
+        "p25": 10193.0,
+        "median": 10601.0,
+        "p75": 13124.0,
+        "p90": 13669.0,
+        "p95": 15892.0,
+        "maximum": 16893
+      },
+      "eval_count": {
+        "n": 41,
+        "sum": 64723,
+        "mean": 1578.6097560975609,
+        "minimum": 398,
+        "p10": 1268.0,
+        "p25": 1387.0,
+        "median": 1462.0,
+        "p75": 1817.0,
+        "p90": 2142.0,
+        "p95": 2185.0,
+        "maximum": 2617
+      },
+      "load_seconds": {
+        "n": 41,
+        "sum": 0.3595958,
+        "mean": 0.008770629268292683,
+        "minimum": 0.0055138,
+        "p10": 0.0061587,
+        "p25": 0.0066229,
+        "median": 0.0071219,
+        "p75": 0.0092673,
+        "p90": 0.0114657,
+        "p95": 0.017108,
+        "maximum": 0.0268067
+      },
+      "prompt_eval_seconds": {
+        "n": 41,
+        "sum": 853.733495,
+        "mean": 20.822768170731706,
+        "minimum": 0.720706,
+        "p10": 0.765728,
+        "p25": 14.064204,
+        "median": 21.493188,
+        "p75": 28.052389,
+        "p90": 34.526754,
+        "p95": 36.010358,
+        "maximum": 46.045587
+      },
+      "eval_seconds": {
+        "n": 41,
+        "sum": 7200.286871,
+        "mean": 175.61675295121952,
+        "minimum": 49.516155,
+        "p10": 141.033489,
+        "p25": 158.795241,
+        "median": 175.761228,
+        "p75": 201.174832,
+        "p90": 211.446059,
+        "p95": 237.909484,
+        "maximum": 290.38334
+      },
+      "decode_tokens_per_second": {
+        "n": 41,
+        "sum": 367.3911561851462,
+        "mean": 8.960759906954785,
+        "minimum": 7.106741174329282,
+        "p10": 7.73652231134433,
+        "p25": 8.200586317680616,
+        "median": 8.896251248393531,
+        "p75": 9.593205968140298,
+        "p90": 10.184680465602014,
+        "p95": 10.357387356485814,
+        "maximum": 12.253608647702276
+      },
+      "provider_aggregate_decode_tokens_per_second": 8.98894740717616,
+      "uncached_prompt_tokens": 79007,
+      "complete_trajectory_http_seconds": {
+        "n": 13,
+        "sum": 7782.912925400002,
+        "mean": 598.685609646154,
+        "minimum": 465.9979679999997,
+        "p10": 506.57653674000176,
+        "p25": 538.9237341000007,
+        "median": 563.7252005000046,
+        "p75": 643.9032292000011,
+        "p90": 726.0923932199996,
+        "p95": 769.6506671599977,
+        "maximum": 809.982509599995
+      },
+      "complete_trajectory_wall_seconds": {
+        "n": 13,
+        "sum": 7789.191778,
+        "mean": 599.1685983076923,
+        "minimum": 466.476511,
+        "p10": 507.00770539999996,
+        "p25": 539.384603,
+        "median": 564.211859,
+        "p75": 644.434637,
+        "p90": 726.6164882,
+        "p95": 770.1790517999999,
+        "maximum": 810.497919
+      }
+    },
+    "request_count_before_cutoff": 19,
+    "first_half_mean_http_seconds": 209.9280793799997,
+    "second_half_mean_http_seconds": 189.39330770476226
+  },
+  "measured_request_shape": {
+    "trajectories": 20,
+    "logical_stages": 60,
+    "generation_requests": 60,
+    "calls_per_trajectory": 3,
+    "additional_tool_round_requests": 0,
+    "note": "Every trajectory has stage1/2/3 round0 request files. This is the observed shape, not a guarantee for changed protocols or future tool calls."
+  },
+  "authoritative_costs_preserved": {
+    "paired_measurements_all_attempt_costs": {
+      "generation_requests": 60,
+      "confirmed_attempt_records": 60,
+      "uncertain_dispatch_requests": 0,
+      "prompt_tokens": 791999,
+      "generated_tokens": 97010,
+      "request_elapsed_seconds": 21150.386868400004
+    },
+    "unique_005_generation_http_seconds": 20415.1849443,
+    "wrapper_minus_generation_http_seconds": 735.2019241000053,
+    "first_launch_to_paired_completion_seconds": 21181.359234,
+    "first_launch_utc": "2026-10-27T10:01:42.826032+00:00",
+    "paired_completion_utc": "2026-10-27T15:54:44.185266+00:00",
+    "phase_wall_seconds": {
+      "technical-smoke": 8636.249871799999,
+      "paired-feasibility": 12539.604626700002
+    },
+    "note": "Paired measurements include the reused original 15 smoke requests: count 60, not 75. Raw HTTP duration, encompassing attempt duration and elapsed calendar time are distinct. All sleep/downtime stays charged.",
+    "historical_before_005": {
+      "scope": "All recorded earlier candidates plus one new Vulkan engineering probe; excludes candidate 005. Interrupted requests remain charged; no old response fills any 005 slot.",
+      "generation_requests": 25,
+      "experimental_generation_requests": 19,
+      "engineering_generation_requests": 6,
+      "uncertain_dispatch_reservations": 2,
+      "recorded_http_seconds_lower_bound": 6689.774238069407,
+      "unknown_duration_policy": "Uncertain-request durations remain unknown. Their request reservations and original evidence are retained; this lower bound is not complete resource time."
+    },
+    "prior_ledger_note": "Prior ledger values are preserved with their original definitions; do not treat unknown durations as zero or silently combine reservation counts into confirmed counts."
+  },
+  "memory": {
+    "all_observations": {
+      "samples": 1049,
+      "available_physical_GiB": {
+        "n": 1049,
+        "sum": 8121.386772155762,
+        "mean": 7.742027428175178,
+        "minimum": 5.283882141113281,
+        "p10": 7.148326873779297,
+        "p25": 7.233287811279297,
+        "median": 7.444709777832031,
+        "p75": 8.318416595458984,
+        "p90": 8.958509063720703,
+        "p95": 9.086113739013673,
+        "maximum": 14.633644104003906
+      },
+      "observed_process_combined_working_set_GiB": {
+        "n": 1049,
+        "sum": 6566.3840675354,
+        "mean": 6.259660693551383,
+        "minimum": 0.09166336059570312,
+        "p10": 5.10204849243164,
+        "p25": 5.190013885498047,
+        "median": 6.867149353027344,
+        "p75": 6.930107116699219,
+        "p90": 7.138710021972656,
+        "p95": 7.197682189941406,
+        "maximum": 9.023933410644531
+      }
+    },
+    "after_cutoff": {
+      "samples": 768,
+      "available_physical_GiB": {
+        "n": 768,
+        "sum": 5673.986675262451,
+        "mean": 7.38800348341465,
+        "minimum": 5.283882141113281,
+        "p10": 7.122103500366211,
+        "p25": 7.20192813873291,
+        "median": 7.353448867797852,
+        "p75": 7.467741966247559,
+        "p90": 7.535635375976563,
+        "p95": 8.775199890136719,
+        "maximum": 9.125873565673828
+      },
+      "observed_process_combined_working_set_GiB": {
+        "n": 768,
+        "sum": 5266.705493927002,
+        "mean": 6.85768944521745,
+        "minimum": 5.1013641357421875,
+        "p10": 6.864519882202148,
+        "p25": 6.866600036621094,
+        "median": 6.914569854736328,
+        "p75": 6.932180404663086,
+        "p90": 7.139722061157227,
+        "p95": 7.200657653808594,
+        "maximum": 9.023933410644531
+      }
+    },
+    "observer_summary": {
+      "status": "campaign_process_exited",
+      "observations": 1049,
+      "elapsed_seconds": 21211.533905599998,
+      "peak_combined_working_set_bytes": 9689374720,
+      "minimum_available_physical_memory_KiB": 5540552,
+      "recorded_at_utc": "2026-10-27T15:54:57.9109008Z"
+    },
+    "interpretation": "Sampled available RAM stayed above the 2 GiB stop threshold. iGPU uses shared system memory; do not add GPU memory to physical RAM. Sparse observations do not prove the absence of shorter peaks or guarantee larger-context capacity."
+  },
+  "actual_document_capacity": {
+    "existing_offline_audit_tokenizer_matches_005": true,
+    "source_rows": [
+      {
+        "fund_id": "F01",
+        "period": "development",
+        "case": "mandates_and_B_corpus",
+        "baseline_tokens": 9427,
+        "packet_tokens": 1125,
+        "full_tokens": 3495
+      },
+      {
+        "fund_id": "F01",
+        "period": "A_B",
+        "case": "mandates_and_B_corpus",
+        "baseline_tokens": 9428,
+        "packet_tokens": 1125,
+        "full_tokens": 3498
+      },
+      {
+        "fund_id": "F01",
+        "period": "A_B",
+        "case": "A",
+        "packet_tokens": 1178,
+        "full_tokens": 8910
+      },
+      {
+        "fund_id": "F01",
+        "period": "C",
+        "case": "mandates_and_B_corpus",
+        "baseline_tokens": 9471,
+        "packet_tokens": 1137,
+        "full_tokens": 3656
+      },
+      {
+        "fund_id": "F01",
+        "period": "C",
+        "case": "C",
+        "packet_tokens": 1207,
+        "full_tokens": 8502
+      },
+      {
+        "fund_id": "F02",
+        "period": "development",
+        "case": "mandates_and_B_corpus",
+        "baseline_tokens": 10116,
+        "packet_tokens": 1094,
+        "full_tokens": 3068
+      },
+      {
+        "fund_id": "F02",
+        "period": "A_B",
+        "case": "mandates_and_B_corpus",
+        "baseline_tokens": 10366,
+        "packet_tokens": 1126,
+        "full_tokens": 6978
+      },
+      {
+        "fund_id": "F02",
+        "period": "A_B",
+        "case": "A",
+        "packet_tokens": 1299,
+        "full_tokens": 8750
+      },
+      {
+        "fund_id": "F02",
+        "period": "C",
+        "case": "mandates_and_B_corpus",
+        "baseline_tokens": 10384,
+        "packet_tokens": 1126,
+        "full_tokens": 6995
+      },
+      {
+        "fund_id": "F02",
+        "period": "C",
+        "case": "C",
+        "packet_tokens": 1207,
+        "full_tokens": 8502
+      },
+      {
+        "fund_id": "F03",
+        "period": "development",
+        "case": "mandates_and_B_corpus",
+        "baseline_tokens": 9072,
+        "packet_tokens": 1136,
+        "full_tokens": 1835
+      },
+      {
+        "fund_id": "F03",
+        "period": "A_B",
+        "case": "mandates_and_B_corpus",
+        "baseline_tokens": 9070,
+        "packet_tokens": 1136,
+        "full_tokens": 1832
+      },
+      {
+        "fund_id": "F03",
+        "period": "A_B",
+        "case": "A",
+        "packet_tokens": 1414,
+        "full_tokens": 14477
+      },
+      {
+        "fund_id": "F03",
+        "period": "C",
+        "case": "mandates_and_B_corpus",
+        "baseline_tokens": 9071,
+        "packet_tokens": 1059,
+        "full_tokens": 3280
+      },
+      {
+        "fund_id": "F03",
+        "period": "C",
+        "case": "C",
+        "packet_tokens": 1207,
+        "full_tokens": 8502
+      },
+      {
+        "fund_id": "F04",
+        "period": "development",
+        "case": "mandates_and_B_corpus",
+        "baseline_tokens": 9708,
+        "packet_tokens": 1201,
+        "full_tokens": 4621
+      },
+      {
+        "fund_id": "F04",
+        "period": "A_B",
+        "case": "mandates_and_B_corpus",
+        "baseline_tokens": 9712,
+        "packet_tokens": 1054,
+        "full_tokens": 4524
+      },
+      {
+        "fund_id": "F04",
+        "period": "A_B",
+        "case": "A",
+        "packet_tokens": 1336,
+        "full_tokens": 8842
+      },
+      {
+        "fund_id": "F04",
+        "period": "C",
+        "case": "mandates_and_B_corpus",
+        "baseline_tokens": 9707,
+        "packet_tokens": 1051,
+        "full_tokens": 4517
+      },
+      {
+        "fund_id": "F04",
+        "period": "C",
+        "case": "C",
+        "packet_tokens": 1207,
+        "full_tokens": 8502
+      }
+    ],
+    "largest_A_full_document_tokens": 14477,
+    "corresponding_F03_baseline_tokens": 9070,
+    "simple_sum_before_rendered_history": 23547,
+    "measured_005_max_rendered_prompt_tokens": 18790,
+    "context_capacity_tokens": 32768,
+    "warning": "A/C phase inputs and rendered multi-stage histories have not been measured in this selected run. Document token sums omit wrappers, later responses and tools. Long FULL histories could approach the context limit; exact fit and runtime must be checked offline before launch."
+  },
+  "forecast_method": {
+    "units": "Future additional trajectories; one trajectory is the complete three-stage workflow. Development responses are not implicitly reused as new main-sample observations.",
+    "center": "Count × mean wall seconds of the 13 complete post-cutoff trajectories.",
+    "upper": "Count × empirical post-cutoff trajectory P90 × 1.20 resource/retry margin; actual-document upper additionally ×1.50 for unmeasured context/output shape.",
+    "overhead": "Planning allowances, not measured times: B preparation 0.5–2h plus analysis/report checks 0.5–2h; actual documents preparation 0.5–2h plus source/analysis checks 1–4h.",
+    "not_confidence_interval": true,
+    "caveats": [
+      "Only one development market scenario; 13 complete stabilized trajectories and 41 requests provide engineering rates, not population timing inference.",
+      "The lower endpoint is an empirical center, not a hard minimum; the upper endpoint is a planning margin, not a guarantee.",
+      "Observed extra tool rounds were zero. Future tool requests or retries increase calls beyond three per trajectory; worst permitted multi-round execution can exceed these ranges.",
+      "Output cap 4096 exceeds the observed maximum 2617 and post-cutoff mean 1579. Longer outputs, cold loads, GPU contention, power/thermal changes or restart downtime can materially increase runtime.",
+      "Preparation/analysis includes ordinary offline validation, not unforeseen protocol redesign, missing-source collection or independent human review.",
+      "No runtime reduction changes the statistical estimand or validates a smaller sample. Methodology and prior freeze must be amended separately before any new calls."
+    ]
+  },
+  "reduced_future_forecasts": [
+    {
+      "category": "same_B_workload",
+      "future_trajectories": 30,
+      "nominal_generation_calls": 90,
+      "same_shape_runtime_center_hours": 4.993071652564102,
+      "runtime_planning_range_hours": [
+        4.993071652564102,
+        7.266164882000001
+      ],
+      "preparation_and_analysis_allowance_hours": [
+        1.0,
+        4.0
+      ],
+      "end_to_end_planning_range_hours": [
+        5.993071652564102,
+        11.266164882000002
+      ],
+      "additional_generation_tokens_at_observed_post_mean": 142074.8780487805
+    },
+    {
+      "category": "same_B_workload",
+      "future_trajectories": 60,
+      "nominal_generation_calls": 180,
+      "same_shape_runtime_center_hours": 9.986143305128204,
+      "runtime_planning_range_hours": [
+        9.986143305128204,
+        14.532329764000002
+      ],
+      "preparation_and_analysis_allowance_hours": [
+        1.0,
+        4.0
+      ],
+      "end_to_end_planning_range_hours": [
+        10.986143305128204,
+        18.532329764000004
+      ],
+      "additional_generation_tokens_at_observed_post_mean": 284149.756097561
+    },
+    {
+      "category": "same_B_workload",
+      "future_trajectories": 120,
+      "nominal_generation_calls": 360,
+      "same_shape_runtime_center_hours": 19.972286610256408,
+      "runtime_planning_range_hours": [
+        19.972286610256408,
+        29.064659528000004
+      ],
+      "preparation_and_analysis_allowance_hours": [
+        1.0,
+        4.0
+      ],
+      "end_to_end_planning_range_hours": [
+        20.972286610256408,
+        33.06465952800001
+      ],
+      "additional_generation_tokens_at_observed_post_mean": 568299.512195122
+    },
+    {
+      "category": "actual_document_workload_unmeasured",
+      "future_trajectories": 20,
+      "nominal_generation_calls": 60,
+      "same_shape_runtime_center_hours": 3.328714435042735,
+      "runtime_planning_range_hours": [
+        3.328714435042735,
+        7.266164882000002
+      ],
+      "preparation_and_analysis_allowance_hours": [
+        1.5,
+        6.0
+      ],
+      "end_to_end_planning_range_hours": [
+        4.828714435042735,
+        13.266164882000002
+      ],
+      "additional_generation_tokens_at_observed_post_mean": 94716.58536585365
+    },
+    {
+      "category": "actual_document_workload_unmeasured",
+      "future_trajectories": 40,
+      "nominal_generation_calls": 120,
+      "same_shape_runtime_center_hours": 6.65742887008547,
+      "runtime_planning_range_hours": [
+        6.65742887008547,
+        14.532329764000004
+      ],
+      "preparation_and_analysis_allowance_hours": [
+        1.5,
+        6.0
+      ],
+      "end_to_end_planning_range_hours": [
+        8.15742887008547,
+        20.532329764000004
+      ],
+      "additional_generation_tokens_at_observed_post_mean": 189433.1707317073
+    }
+  ],
+  "original_plan_reference": {
+    "total_planned_trajectories": 3272,
+    "stabilized_same_shape_runtime_hours": 544.5776815729914,
+    "stabilized_same_shape_runtime_days": 22.690736732207977,
+    "note": "Illustrative no-additional-round runtime before preparation/analysis; not a new budget or authorization. Already completed development evidence remains separate."
+  },
+  "evidence": [
+    {
+      "path": "data/v63_20261027/local_campaign_results/phases/2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2/paired-feasibility/measurements.json",
+      "bytes": 1009,
+      "sha256": "28cf93298e8c4fc6a8c1004b3e1180a1e4a8b3daee2b6441663da0e5591cea2b"
+    },
+    {
+      "path": "data/v63_20261027/local_campaign_results/phases/2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2/technical-smoke/measurements.json",
+      "bytes": 998,
+      "sha256": "07d73c64e03318028d25af67d2a1ed0df1786ff28fbcb594aa14f50d1361eeed"
+    },
+    {
+      "path": "data/v63_20261027/local_campaign_results/phases/2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2/technical-smoke/budget_state.json",
+      "bytes": 254,
+      "sha256": "785ef0ad0a5326cd5fc927cd671a52fd6e39b0e91e4a6b4936a234aa5b16e39d"
+    },
+    {
+      "path": "research/device_migration_20261027/followup_20261027/candidate005_historical_costs.json",
+      "bytes": 2323,
+      "sha256": "bcb182bbf97444e490d2b0247a4ef88ce21d59c37fcb790bc92c6e43d1fe70da"
+    },
+    {
+      "path": "data/v63_20261027/runtime/local_windows/candidate005_development_20261027T100125587Z/memory_observations.jsonl",
+      "bytes": 699499,
+      "sha256": "c036afd9d45e7a55c17f87aa924d4e4a3a7dde450a64c167ae62b67408be688f"
+    },
+    {
+      "path": "data/v63_20261027/runtime/local_windows/candidate005_development_20261027T100125587Z/memory_summary.json",
+      "bytes": 290,
+      "sha256": "8df1e2693d5d5db918979e35b520dd77a325fda46fec2042facec06d2a7b28cb"
+    },
+    {
+      "path": "research/device_migration_20261027/input_capacity.json",
+      "bytes": 8351,
+      "sha256": "3685c88411c9682a81c8b3bda0d252cd604caff2793e4052443dce6139630424"
+    },
+    {
+      "path": "data/v63_20261027/continuation/deployment/local_windows/candidate_005/tokenizer_config.json",
+      "bytes": 2051,
+      "sha256": "258329413bdcbe22edbb32c6fa1677a18fded4821edfa8c9d1c324884b4f898d"
+    },
+    {
+      "path": "research/reduction_20261028/build_timing_resource_review_005.py",
+      "bytes": 15732,
+      "sha256": "ba30c4848e087ee7d13e031fb086ab6d0e667696488bdd02c26f27514a1d5efe"
+    }
+  ],
+  "request_table": {
+    "path": "research/reduction_20261028/timing_resource_requests_005_20261028.json",
+    "bytes": 75350,
+    "sha256": "0627b7145700af4af131e4eb324c322a8515c6873cc7ada0ce061c486ea8588d"
+  }
+}

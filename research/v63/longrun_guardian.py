@@ -7,6 +7,7 @@ requests; the guardian never deletes, repairs, replays, or fills a trajectory.
 from __future__ import annotations
 import argparse
 from collections import Counter
+from contextlib import contextmanager
 from datetime import datetime,timezone
 import hashlib
 import importlib.metadata
@@ -39,9 +40,58 @@ def digest(path):
 def object_hash(value):return hashlib.sha256(json.dumps(value,sort_keys=True,separators=(',',':'),ensure_ascii=False,allow_nan=False).encode()).hexdigest()
 def now():return datetime.now(timezone.utc).isoformat()
 def write(path,value):
-    path=Path(path);path.parent.mkdir(parents=True,exist_ok=True)
-    pending=path.with_name(path.name+f'.writing.{os.getpid()}')
-    pending.write_text(json.dumps(value,ensure_ascii=False,indent=2,allow_nan=False)+'\n',encoding='utf8');os.replace(pending,path)
+    # Reuse the campaign's fsync and bounded Windows sharing-error handling.
+    from research.v63.campaign_control import atomic_json
+    atomic_json(path,value)
+
+
+def _execution_state(flags):
+    import ctypes
+    kernel=ctypes.WinDLL('kernel32',use_last_error=True)
+    kernel.SetThreadExecutionState.argtypes=[ctypes.c_uint]
+    kernel.SetThreadExecutionState.restype=ctypes.c_uint
+    return kernel.SetThreadExecutionState(flags)
+
+
+@contextmanager
+def system_awake():
+    """Prevent automatic idle sleep while owned work runs; no persistent change.
+
+    Explicit user sleep/restart remains possible and is never subtracted from
+    recorded phase clocks or original request durations.
+    """
+    if os.name!='nt':
+        yield False
+        return
+    previous=_execution_state(0x80000001)  # ES_CONTINUOUS | ES_SYSTEM_REQUIRED
+    require(previous!=0,'Could not establish temporary Windows system-sleep prevention')
+    try:yield True
+    finally:_execution_state(previous)
+
+
+def stop_owned_process_tree(process):
+    """Stop only this child and its descendants, including Windows venv stubs."""
+    result={'owned_pid':process.pid,'windows_tree_command':None}
+    if process.poll() is not None:
+        result.update(already_exited=True,returncode=process.returncode)
+        return result
+    if os.name=='nt':
+        command=['taskkill.exe','/PID',str(process.pid),'/T','/F']
+        result['windows_tree_command']=command
+        try:
+            stopped=subprocess.run(command,capture_output=True,text=True,timeout=15,
+                creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
+            result.update(tree_command_exit_code=stopped.returncode,
+                          tree_command_stdout=stopped.stdout,tree_command_stderr=stopped.stderr)
+            if stopped.returncode and process.poll() is None:process.terminate()
+        except (OSError,subprocess.TimeoutExpired) as exc:
+            result['tree_command_error']=type(exc).__name__+': '+str(exc)
+            if process.poll() is None:process.terminate()
+    else:process.terminate()
+    try:process.wait(timeout=10)
+    except subprocess.TimeoutExpired:process.kill();process.wait(timeout=10)
+    result['returncode']=process.returncode
+    return result
 def resolve(root,path):
     p=Path(path);return (p if p.is_absolute() else Path(root)/p).resolve()
 def require(ok,message):
@@ -58,15 +108,56 @@ def freeze_hash(freeze):return object_hash({k:v for k,v in freeze.items() if k!=
 
 
 def historical_costs(root,approval):
-    """Root-reviewed prior candidate costs remain charged to total authority."""
+    """Keep historical observations and explicit untimed reservations separate."""
     h=approval.get('historical_costs');require(isinstance(h,dict),'Explicit prior-candidate cost accounting is required')
     count=h.get('generation_requests');seconds=h.get('recorded_request_seconds')
     require(type(count) is int and count>=0,'Invalid historical generation request count')
     require(type(seconds) in (int,float) and math.isfinite(seconds) and seconds>=0,'Invalid historical request seconds')
+    supplemental=h.get('supplemental_recorded_request_seconds');untimed=h.get('generation_requests_without_timing')
+    reserved=h.get('request_seconds_reserved_for_missing_timing');per_request=h.get('reservation_seconds_per_untimed_request')
+    require(type(supplemental) in (int,float) and math.isfinite(supplemental) and supplemental>=0,'Explicit finite supplemental historical observations required')
+    require(type(untimed) is int and 0<=untimed<=count,'Explicit historical untimed count required; legacy omission is not zero')
+    require(all(type(v) in (int,float) and math.isfinite(v) and v>=0 for v in (reserved,per_request)),'Explicit finite historical time reservations required')
+    require((untimed==0 and reserved==0 and per_request==0) or
+            (untimed>0 and per_request>0 and reserved>0 and math.isclose(reserved,untimed*per_request,rel_tol=1e-12,abs_tol=1e-9)),
+            'Historical reservation must cover each untimed request exactly once')
+    require(isinstance(h.get('reservation_basis'),str) and bool(h['reservation_basis'].strip()),'Historical reservation basis required; reserved time is not observed time')
     require(isinstance(h.get('evidence'),list) and (count==0 or h['evidence']),'Prior request costs require immutable evidence')
     require(isinstance(h.get('scope'),str) and bool(h['scope']),'Historical cost scope must exclude the current run to avoid double counting')
     for ref in h['evidence']:verify_ref(root,ref)
-    return count,seconds
+    if count:
+        audit=read(verify_ref(root,h.get('timing_evidence')))
+        require(audit.get('schema')=='libera_historical_request_timing_audit_v1','Historical timing audit schema required')
+        for key in ('generation_requests','recorded_request_seconds','supplemental_recorded_request_seconds','generation_requests_without_timing'):
+            require(audit.get(key)==h[key],'Historical timing audit disagrees with approval: '+key)
+        require(type(audit.get('timed_generation_requests')) is int and audit['timed_generation_requests']+untimed==count,'Historical timed/untimed counts do not partition the request count')
+        require(audit.get('scope')==h['scope'],'Historical timing audit scope differs')
+    else:require(seconds==0 and supplemental==0,'Zero historical requests cannot carry observed request time')
+    return {'generation_requests':count,'recorded_request_seconds':seconds,
+            'supplemental_recorded_request_seconds':supplemental,'generation_requests_without_timing':untimed,
+            'request_seconds_reserved_for_missing_timing':reserved}
+
+
+def accounted_costs(root,approval,raw,timeout):
+    """Combine fresh raw costs once; reservations never become observations."""
+    require('historical_generation_requests' not in raw,'Historical costs must not be added twice')
+    require(type(timeout) in (int,float) and math.isfinite(timeout) and timeout>0,'Frozen request timeout must be positive for unknown-timing reservations')
+    historical=historical_costs(root,approval);costs=dict(raw)
+    current_reserved=raw['generation_requests_without_timing']*timeout
+    historical_reserved=historical['request_seconds_reserved_for_missing_timing']
+    costs.update(historical_generation_requests=historical['generation_requests'],
+        historical_recorded_request_seconds=historical['recorded_request_seconds'],
+        historical_supplemental_recorded_request_seconds=historical['supplemental_recorded_request_seconds'],
+        historical_generation_requests_without_timing=historical['generation_requests_without_timing'],
+        current_run_recorded_generation_request_seconds=raw['recorded_generation_request_seconds'],
+        current_run_request_seconds_reserved_for_missing_timing=current_reserved,
+        historical_request_seconds_reserved_for_missing_timing=historical_reserved,
+        total_generation_requests_without_timing=raw['generation_requests_without_timing']+historical['generation_requests_without_timing'])
+    costs['generation_request_budget_count']+=historical['generation_requests']
+    costs['recorded_generation_request_seconds']+=historical['recorded_request_seconds']+historical['supplemental_recorded_request_seconds']
+    costs['request_seconds_reserved_for_missing_timing']=current_reserved+historical_reserved
+    costs['request_seconds_budget_count']=costs['recorded_generation_request_seconds']+costs['request_seconds_reserved_for_missing_timing']
+    return costs
 
 
 class ProcessLock:
@@ -265,13 +356,12 @@ def promote_main(root,config,approval,approval_sha,guardian_dir,pilot_report_pat
         require(review.get('approval_sha256')==approval_sha and set(review.get('phase_forecasts',{}))==set(PHASES[1:]),'Main resource review is missing or changed')
         return
     require(f.get('main_model_frozen') is False,'Initial main freeze must explicitly be false')
-    costs=raw_costs(resolve(root,config['output_root'])/'runs'/run_id);historical_requests,historical_seconds=historical_costs(root,approval)
-    costs['generation_request_budget_count']+=historical_requests;costs['recorded_generation_request_seconds']+=historical_seconds
+    costs=accounted_costs(root,approval,raw_costs(resolve(root,config['output_root'])/'runs'/run_id),f.get('request_timeout'))
     forecasts={phase:forecast_budget(phase,approval,measured,costs) for phase in PHASES[1:]}
     reserved_requests=sum(approval['phase_budgets'][phase]['max_generation_requests'] for phase in PHASES[1:])
     require(costs['generation_request_budget_count']+reserved_requests<=approval['resource_limits']['max_total_generation_requests'],'Total authority cannot reserve every remaining phase cap before main')
     projected_seconds=sum(row['request_seconds'] for row in forecasts.values())
-    require(costs['recorded_generation_request_seconds']+projected_seconds<=approval['resource_limits']['max_total_request_seconds'],'All remaining phase time forecasts exceed total resource authority')
+    require(costs['request_seconds_budget_count']+projected_seconds<=approval['resource_limits']['max_total_request_seconds'],'All remaining phase time forecasts plus observed and reserved costs exceed total resource authority')
     resource_review=Path(guardian_dir)/'main_resource_review.json'
     write(resource_review,{'approval_sha256':approval_sha,'runtime_identity_sha256':run_id,'at_utc':now(),'development_measurements':measured['measurements'],'phase_forecasts':forecasts,'actual_costs_before_main':costs,'remaining_phase_request_caps_reserved':reserved_requests,'conditional_remaining_request_seconds':projected_seconds,'effect_or_pvalue_read_for_decision':False})
     before=digest(frozen);f['main_model_frozen']=True;write(frozen,f)
@@ -306,15 +396,9 @@ class Guardian:
     def unchanged(self):
         validate_approval(self.root,self.config_path,self.approval_path,self.approval_sha)
     def limits(self,phase=None):
-        costs=raw_costs(self.run_root);lim=self.approval['resource_limits']
-        historical_requests,historical_seconds=historical_costs(self.root,self.approval)
-        costs.update(historical_generation_requests=historical_requests,historical_recorded_request_seconds=historical_seconds)
-        costs['generation_request_budget_count']+=historical_requests
-        costs['recorded_generation_request_seconds']+=historical_seconds
+        lim=self.approval['resource_limits']
         timeout=read(resolve(self.root,self.config['runtime_freeze_path'])).get('request_timeout',0)
-        require(type(timeout) in (int,float) and math.isfinite(timeout) and timeout>0,'Frozen request timeout must be positive for unknown-timing reservations')
-        costs['request_seconds_reserved_for_missing_timing']=costs['generation_requests_without_timing']*timeout
-        costs['request_seconds_budget_count']=costs['recorded_generation_request_seconds']+costs['request_seconds_reserved_for_missing_timing']
+        costs=accounted_costs(self.root,self.approval,raw_costs(self.run_root),timeout)
         require(costs['generation_request_budget_count']<=lim['max_total_generation_requests'],'Total generation request budget reached')
         require(costs['request_seconds_budget_count']<=lim['max_total_request_seconds'],'Total request-time budget including untimed request reservations reached')
         require(self.prior_elapsed+time.monotonic()-self.start<=lim['max_guardian_wall_seconds'],'Guardian cumulative active wall-time budget reached')
@@ -359,9 +443,7 @@ class Guardian:
                     except subprocess.TimeoutExpired:pass
                 code=self.process.returncode
             except BaseException:
-                self.process.terminate()
-                try:self.process.wait(timeout=10)
-                except subprocess.TimeoutExpired:self.process.kill();self.process.wait(timeout=10)
+                self.state['attempts'][-1]['interruption_cleanup']=stop_owned_process_tree(self.process)
                 raise
             finally:
                 self.state['attempts'][-1].update(returncode=self.process.returncode,ended_at_utc=now(),elapsed_seconds=time.monotonic()-started)
@@ -370,9 +452,10 @@ class Guardian:
         require(code==0,'Phase stopped/incomplete; restart uses campaign recovery without deleting prior artifacts: '+label)
         self.unchanged()
     def run(self):
-        with ProcessLock(self.output/'.longrun_guardian.lock'):
+        with ProcessLock(self.output/'.longrun_guardian.lock'),system_awake() as awake:
             try:
-                self.reload_checkpoint();self.unchanged();f=read(resolve(self.root,self.config['runtime_freeze_path']))
+                self.reload_checkpoint();self.state['temporary_system_sleep_prevention']=awake
+                self.unchanged();f=read(resolve(self.root,self.config['runtime_freeze_path']))
                 precision=self.directory/'pilot_precision_report.json'
                 if f.get('main_model_frozen') is True:
                     require((self.directory/'main_freeze_transition.json').is_file(),'Initial main auto-authorization is forbidden')

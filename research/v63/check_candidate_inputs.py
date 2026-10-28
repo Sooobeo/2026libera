@@ -1,4 +1,5 @@
 """Build every real profile/corpus with exact native vocabulary, without inference."""
+import argparse
 from pathlib import Path
 from research.v63 import numerics
 from research.v63.build_run import read_json,save_json,b_input,actual_document_input,load_mandate_units
@@ -7,7 +8,14 @@ from research.v63.retrieval import TokenCounter
 
 def main():
     root=Path(__file__).resolve().parents[2];data=root/'data/v63_20261027'
-    native=NativeTokenizer(read_json(data/'continuation/deployment/local_windows/tokenizer_config.json'))
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--tokenizer-config',type=Path,
+                        default=data/'continuation/deployment/local_windows/tokenizer_config.json',
+                        help='Native tokenizer configuration JSON (default: original local Windows configuration).')
+    parser.add_argument('--output',type=Path,default=data/'audit/candidate_002_input_capacity.json',
+                        help='Capacity verification JSON destination (default: candidate_002 audit).')
+    args=parser.parse_args()
+    native=NativeTokenizer(read_json(args.tokenizer_config))
     rows=[]
     try:
         counter=TokenCounter(native.identity,native.count,True);cal=numerics.calibrate(root)
@@ -30,7 +38,7 @@ def main():
                 'source_sha256':{p.name:numerics.sha256(p) for p in [data/'continuation_sources/profiles_v2.json',data/'continuation_sources/documents_v2.json',data/'continuation_sources/mandate_atomic_units_v2.json']},
                 'scope':'Actual retrieval builders include atomic chunk headers and overlap; model-rendered full-history capacity remains a live development gate.',
                 'rows':rows}
-        save_json(data/'audit/candidate_002_input_capacity.json',result)
+        save_json(args.output,result)
         print({'status':result['status'],'cases':len(rows),'max_full_tokens':max(r['full_tokens'] for r in rows),'model_calls':0})
     finally:native.close()
 

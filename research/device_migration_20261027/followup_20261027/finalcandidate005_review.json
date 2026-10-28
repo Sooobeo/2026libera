@@ -1,0 +1,299 @@
+{
+  "schema": "libera_final_candidate005_readonly_review_v1",
+  "recorded_at_utc": "2026-10-27T09:59:51.543601+00:00",
+  "status": "passed",
+  "runtime_identity_sha256": "2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2",
+  "checks": {
+    "runtime_identity_matches_requested_final": true,
+    "selection_new_run_matches_runtime": true,
+    "selection_source_identity_matches_runtime": true,
+    "selection_config_hash_matches": true,
+    "environment_matches_nested_freeze": true,
+    "launcher_hash_matches_frozen_and_reviewed": true,
+    "main_frozen_false": true,
+    "context_output_timeout_unchanged": true,
+    "vulkan_fixed_options": true,
+    "isolated_vulkan_origin": true,
+    "gpu_settings": true,
+    "historical_counts": true,
+    "selection_historical_counts": true,
+    "historical_time_lower_bound": true,
+    "previous_candidate_and_environment_labels": true,
+    "source_limitations_and_no_human_review_claims": true,
+    "no_historical_response_reuse": true,
+    "gpu_metadata_from_probe": true,
+    "all_39_binary_hashes_match": true,
+    "all_native_tokenizer_library_hashes_match": true,
+    "gguf_hash_matches": true,
+    "staged_model_manifest_matches": true,
+    "historical_evidence_refs_match": true,
+    "prelaunch_draft_archive_exists_and_has_no_run_artifacts": true
+  },
+  "errors": [],
+  "historical_costs": {
+    "experimental_generation_requests": 19,
+    "engineering_generation_requests": 6,
+    "generation_requests": 25,
+    "uncertain_dispatch_reservations": 2,
+    "recorded_http_seconds_lower_bound": 6689.774238069407
+  },
+  "prelaunch_drafts": [
+    {
+      "archive": "research/device_migration_20261027/followup_20261027/candidate005_prelaunch_20261027T095840412774Z",
+      "run_id": "9fe96e3c6eaa8dc8c3b6594783070a5fdadac110e5bdf275793bde13e6be2c4a",
+      "recomputed_identity_matches": true,
+      "archived_config_hash_matches": true,
+      "execution_artifact_directories_present": [
+        false,
+        false,
+        false
+      ],
+      "file_refs": [
+        {
+          "path": "research/device_migration_20261027/followup_20261027/candidate005_prelaunch_20261027T095840412774Z/campaign_config.json",
+          "sha256": "d843e3fd0557a29a315465ff50782082f9584f57261854e9eed22d7547e5a8c9"
+        },
+        {
+          "path": "research/device_migration_20261027/followup_20261027/candidate005_prelaunch_20261027T095840412774Z/execution_environment.json",
+          "sha256": "805d68bbfb8267afeb27cb2e5bb833dce7c2a22f5a7eef44ed865b80c68548e8"
+        },
+        {
+          "path": "research/device_migration_20261027/followup_20261027/candidate005_prelaunch_20261027T095840412774Z/runtime_candidate.json",
+          "sha256": "2949eff746074d94f2369478a722698a65a3806659a74af39628087afae17248"
+        },
+        {
+          "path": "research/device_migration_20261027/followup_20261027/candidate005_prelaunch_20261027T095840412774Z/selection_receipt.json",
+          "sha256": "8f90e62092e8fbfac6eb062e046417d9e738ca66a71a8f593b97472fab395de3"
+        },
+        {
+          "path": "research/device_migration_20261027/followup_20261027/candidate005_prelaunch_20261027T095840412774Z/tokenizer_config.json",
+          "sha256": "258329413bdcbe22edbb32c6fa1677a18fded4821edfa8c9d1c324884b4f898d"
+        }
+      ]
+    }
+  ],
+  "final_identity_dispatch_count_at_review": 0,
+  "binary_checks": [
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/ollama.exe",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/ggml-base.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/ggml-cpu-alderlake.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/ggml-cpu-cannonlake.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/ggml-cpu-cascadelake.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/ggml-cpu-cooperlake.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/ggml-cpu-haswell.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/ggml-cpu-icelake.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/ggml-cpu-ivybridge.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/ggml-cpu-piledriver.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/ggml-cpu-sandybridge.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/ggml-cpu-sapphirerapids.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/ggml-cpu-skylakex.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/ggml-cpu-sse42.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/ggml-cpu-x64.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/ggml-cpu-zen4.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/ggml.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/libc++.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/libllama-common.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/libllama-quantize-impl.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/libllama-server-impl.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/libllama.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/libmtmd.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/libomp.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/libunwind.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/libwinpthread-1.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/llama-quantize.exe",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/llama-server.exe",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/vulkan/concrt140.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/vulkan/ggml-vulkan.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/vulkan/msvcp140.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/vulkan/msvcp140_1.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/vulkan/msvcp140_2.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/vulkan/msvcp140_atomic_wait.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/vulkan/msvcp140_codecvt_ids.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/vulkan/vccorlib140.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/vulkan/vcruntime140.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/vulkan/vcruntime140_1.dll",
+      "matches": true
+    },
+    {
+      "path": "tmp/v63_vulkan_probe_20261027/portable/lib/ollama/vulkan/vcruntime140_threads.dll",
+      "matches": true
+    }
+  ],
+  "tokenizer_library_checks": [
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\tmp\\v63_vulkan_probe_20261027\\portable\\lib\\ollama\\libwinpthread-1.dll",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\tmp\\v63_vulkan_probe_20261027\\portable\\lib\\ollama\\libunwind.dll",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\tmp\\v63_vulkan_probe_20261027\\portable\\lib\\ollama\\libc++.dll",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\tmp\\v63_vulkan_probe_20261027\\portable\\lib\\ollama\\libomp.dll",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\tmp\\v63_vulkan_probe_20261027\\portable\\lib\\ollama\\ggml-base.dll",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\tmp\\v63_vulkan_probe_20261027\\portable\\lib\\ollama\\ggml.dll",
+      "matches": true
+    },
+    {
+      "path": "C:\\Users\\Insun\\2026libera\\tmp\\v63_vulkan_probe_20261027\\portable\\lib\\ollama\\libllama.dll",
+      "matches": true
+    }
+  ],
+  "evidence_errors": [],
+  "reviewed_files": [
+    {
+      "path": "data/v63_20261027/continuation/deployment/local_windows/candidate_005/campaign_config.json",
+      "sha256": "d843e3fd0557a29a315465ff50782082f9584f57261854e9eed22d7547e5a8c9"
+    },
+    {
+      "path": "data/v63_20261027/continuation/deployment/local_windows/candidate_005/runtime_candidate.json",
+      "sha256": "f14efbca36404c363d64cc2fb4b1ae8a5e19300fc3842ce6ad577a7de1148c54"
+    },
+    {
+      "path": "data/v63_20261027/continuation/deployment/local_windows/candidate_005/execution_environment.json",
+      "sha256": "88c7be694c26e90fb88476a93fc395a26372e16719434ccb51375e6a44e9522c"
+    },
+    {
+      "path": "data/v63_20261027/continuation/deployment/local_windows/candidate_005/tokenizer_config.json",
+      "sha256": "258329413bdcbe22edbb32c6fa1677a18fded4821edfa8c9d1c324884b4f898d"
+    },
+    {
+      "path": "data/v63_20261027/continuation/deployment/local_windows/candidate_005/selection_receipt.json",
+      "sha256": "0fddc6c22a3ee1b6f74998e7ff4ccdbd38ad78d4e28422d0763ff6160dd999a8"
+    },
+    {
+      "path": "research/device_migration_20261027/followup_20261027/candidate005_historical_costs.json",
+      "sha256": "bcb182bbf97444e490d2b0247a4ef88ce21d59c37fcb790bc92c6e43d1fe70da"
+    },
+    {
+      "path": "research/start_v63_vulkan_ollama.ps1",
+      "sha256": "2d6e11e7391efc8ff6b16988bea1bed6352fe7247ec5c6ff0c785d9053e32c3c"
+    }
+  ],
+  "model_generation_requests_by_review": 0,
+  "http_requests_by_review": 0,
+  "prior_artifacts_modified": false,
+  "limitation": "The 128-token engineering probe does not replace fresh 15/60/720-stage execution or full-history capacity review. Existing strict recovery remains in force."
+}

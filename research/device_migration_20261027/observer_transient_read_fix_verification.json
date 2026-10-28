@@ -1,0 +1,50 @@
+{
+  "schema": "libera_observer_transient_read_fix_v1",
+  "recorded_at_utc": "2026-10-27T09:46:49.571972+00:00",
+  "scope": "Observer-only fix; no experiment core, run ledger, service, campaign, or watcher process changed. Live snapshot sampled read-only without publishing.",
+  "root_cause": "PermissionError returned None, which was conflated with absent supervisor state and stopped the watcher.",
+  "fixes": [
+    "Windows FILE_SHARE_READ|FILE_SHARE_WRITE|FILE_SHARE_DELETE read handles; close before JSON parsing.",
+    "Up to six reads with bounded 0.05/0.1/0.2/0.4/0.8 second delays.",
+    "Unavailable state preserves last known same-run supervisor data with an explicit stale flag; no history reports unknown.",
+    "Unknown state or process liveness continues watching; confirmed process exit or fresh terminal state stops."
+  ],
+  "verification": {
+    "command": "python -m unittest research.device_migration_20261027.test_observer_transient_reads -v",
+    "tests_passed": 8,
+    "tests_failed": 0,
+    "tests_skipped": 0,
+    "actual_Windows_exclusive_file_lock_used": true,
+    "actual_delayed_unlock_used": true,
+    "dead_process_branch_used_mocked_liveness": true,
+    "live_model_calls": 0,
+    "watcher_started": false
+  },
+  "Windows_sharing_limit": "Shared-delete permits rename of an open file; MoveFileEx/os.replace can still require the existing writer retry until the read handle closes. No claim of guaranteed lock-free replacement.",
+  "current_readonly_observation": {
+    "candidate": "004",
+    "status": "supervisor_process_unverified",
+    "supervisor_alive": null,
+    "supervisor_state_fresh": true,
+    "watch_should_continue": true,
+    "observation_errors": [],
+    "current_candidate_request_costs": {
+      "generation_requests": 3,
+      "confirmed_attempt_records": 2,
+      "uncertain_dispatch_requests": 1
+    }
+  },
+  "current_core_sha_mismatches_against_candidate004": [],
+  "preserved_failure_snapshots": [
+    {
+      "path": "research/device_migration_20261027/candidate004_observer_read_error_20261027.json",
+      "sha256": "cbbbc583b9e523f5b05a6e382e1713e99ed6745931e1098b1529040f73d873f6"
+    },
+    {
+      "path": "research/device_migration_20261027/candidate004_observer_read_error_20261027.html",
+      "sha256": "03bc43d6449b08f93be81d1ae2977e05c30a35e92d530ce79b30b9973668312b"
+    }
+  ],
+  "changed_helper_sha256": "78f499a204e750531596eb6cb88f61650967fb1bc33ddef84a26e9ee0e4e402b",
+  "test_source_sha256": "da03ddbeae6bdc5fd60fbd59d4323b00142ce8f0b3ef70fdec363127b9e97fd0"
+}

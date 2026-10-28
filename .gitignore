@@ -175,3 +175,32 @@ Desktop.ini
 # Regenerable v6.3 scratch output; source scripts and the original reference stay.
 /tmp/v63_*.log
 /tmp/v63_pdf_review/
+
+# Replacement-device installer cache; verification receipts remain separate.
+/tmp/runtime_install/python-*.exe
+# Preserve candidate 003's portable configuration and migration provenance.
+!/data/v63_20261027/continuation/deployment/local_windows/candidate_*/tokenizer_config.json
+!/data/v63_20261027/continuation/deployment/local_windows/candidate_*/selection_receipt.json
+!/data/v63_20261027/runtime/local_windows/device_migration_20261027/asset_reuse.json
+!/data/v63_20261027/runtime/local_windows/device_migration_20261027/environment_migration.json
+!/data/v63_20261027/runtime/local_windows/device_migration_20261027/environment_verification.json
+!/data/v63_20261027/runtime/local_windows/device_migration_20261027/cpu_only_asset_reconciliation.json
+!/data/v63_20261027/runtime/local_windows/candidate003_development_*/launch.json
+!/data/v63_20261027/runtime/local_windows/candidate003_development_*/launch_review.json
+!/data/v63_20261027/runtime/local_windows/candidate004_development_*/launch.json
+!/data/v63_20261027/runtime/local_windows/candidate004_development_*/observer_launch.json
+
+# Isolated Vulkan cache; retain the measured configuration and compact receipts.
+/tmp/v63_vulkan_probe_20261027/
+!/data/v63_20261027/runtime/local_windows/vulkan_probe_*/binary_manifest.json
+!/data/v63_20261027/runtime/local_windows/vulkan_probe_*/binary_signatures.json
+!/data/v63_20261027/runtime/local_windows/vulkan_probe_*/server_launch.json
+!/data/v63_20261027/runtime/local_windows/vulkan_probe_*/summary.json
+!/data/v63_20261027/runtime/local_windows/vulkan_service_*/server_launch.json
+!/data/v63_20261027/runtime/local_windows/candidate005_development_*/launch.json
+!/data/v63_20261027/runtime/local_windows/candidate005_development_*/observer_launch.json
+!/data/v63_20261027/runtime/local_windows/candidate005_development_*/observer_revision*_launch.json
+
+# Document rendering environment and isolated launcher test fixtures.
+/tmp/v63_paper_venv/
+/tmp/v63_vulkan_launcher_fixture_*/

@@ -1,0 +1,167 @@
+{
+  "schema": "libera_device_migration_offline_tests_v1",
+  "status": "failed",
+  "started_at_utc": "2026-10-27T08:17:54.442661+00:00",
+  "completed_at_utc": "2026-10-27T08:19:08.278974+00:00",
+  "elapsed_seconds": 73.8361625,
+  "command": [
+    "C:\\Users\\Insun\\2026libera\\tmp\\v63_numerics_venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "research/v63",
+    "-q",
+    "--junitxml=research/device_migration_20261027/offline_tests.xml"
+  ],
+  "python_version": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+  "exit_code": 1,
+  "counts": {
+    "tests": 226,
+    "failures": 10,
+    "errors": 0,
+    "skipped": 0
+  },
+  "failures": [
+    {
+      "test": "research.v63.test_ac_corpus.ActualCorpusTests::test_dates_scope_and_source_hashes",
+      "kind": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\Insun\\\\2026libera\\\\data\\\\v63_20261027\\\\continuation_sources\\\\outlook\\\\FOMC_20260318.html'"
+    },
+    {
+      "test": "research.v63.test_mandate_atomic_units::test_actual_slices_exactly_restore_immutable_source_excerpts",
+      "kind": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\Insun\\\\2026libera\\\\data\\\\v63_20261027\\\\continuation_sources\\\\VPMCX_SAI_20260325_text.txt'"
+    },
+    {
+      "test": "research.v63.test_report_summary_drafts::test_recommendation_withheld_when_failures_increase_despite_joint_rejection",
+      "kind": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\Insun\\\\2026libera\\\\data\\\\v63_20261027\\\\audit\\\\final_report_supplement_code_draft.txt'"
+    },
+    {
+      "test": "research.v63.test_report_summary_drafts::test_h3_direction_comes_from_adjusted_iut_not_failure_rate_selection",
+      "kind": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\Insun\\\\2026libera\\\\data\\\\v63_20261027\\\\audit\\\\final_report_supplement_code_draft.txt'"
+    },
+    {
+      "test": "research.v63.test_report_summary_drafts::test_missing_raw_diagnostics_never_become_zero_failure",
+      "kind": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\Insun\\\\2026libera\\\\data\\\\v63_20261027\\\\audit\\\\final_report_supplement_code_draft.txt'"
+    },
+    {
+      "test": "research.v63.test_report_summary_drafts::test_exact_mismatch_shared_across_funds_and_persistent_across_stages",
+      "kind": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\Insun\\\\2026libera\\\\data\\\\v63_20261027\\\\audit\\\\shared_source_mismatch_code_draft.txt'"
+    },
+    {
+      "test": "research.v63.test_report_summary_drafts::test_review_flags_and_unscored_facts_do_not_become_confirmed_mismatches",
+      "kind": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\Insun\\\\2026libera\\\\data\\\\v63_20261027\\\\audit\\\\shared_source_mismatch_code_draft.txt'"
+    },
+    {
+      "test": "research.v63.test_report_summary_drafts::test_same_id_different_wrong_values_are_not_one_shared_pattern",
+      "kind": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\Insun\\\\2026libera\\\\data\\\\v63_20261027\\\\audit\\\\shared_source_mismatch_code_draft.txt'"
+    },
+    {
+      "test": "research.v63.test_report_summary_drafts::test_duplicate_stage_citation_does_not_create_propagation_or_guess_payload",
+      "kind": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\Insun\\\\2026libera\\\\data\\\\v63_20261027\\\\audit\\\\shared_source_mismatch_code_draft.txt'"
+    },
+    {
+      "test": "research.v63.test_report_summary_drafts::test_original_trace_hash_drift_is_not_silently_rejoined",
+      "kind": "failure",
+      "message": "FileNotFoundError: [Errno 2] No such file or directory: 'C:\\\\Users\\\\Insun\\\\2026libera\\\\data\\\\v63_20261027\\\\audit\\\\shared_source_mismatch_code_draft.txt'"
+    }
+  ],
+  "environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "PYTHONIOENCODING": "utf8"
+  },
+  "engineering_only": true,
+  "real_model_generation_calls": 0,
+  "scope": "Offline tests, synthetic fixtures and local mock transport only. Does not establish empirical completion.",
+  "artifacts": [
+    {
+      "path": "research/device_migration_20261027/offline_tests.log",
+      "sha256": "2b75e62b946d63250995e7720e224f8301d27e12c01eceec093bddf1662c74c8"
+    },
+    {
+      "path": "research/device_migration_20261027/offline_tests.xml",
+      "sha256": "91d65b7e73a011f9c68c83f9c5ff34c434dc736fae650505fd76ccd696272a48"
+    }
+  ],
+  "source_code_sha256": {
+    "research/v63/artifact_bridge.py": "b6d2411f2aec30d16e143d1875c1a827899c7da623a7c30a910a6cfcc3777084",
+    "research/v63/audit_catalog_dates_versions.py": "cbac8e45ffb6786c7125ebb324fc4945bd05317a79dfb33beadd22d926788cb8",
+    "research/v63/audit_runtime.py": "778e442e8127bbaf0a5b92c02ba8ace3f9db815d08c6ba756734f621043402bb",
+    "research/v63/audit_workspace.py": "ee2665a550e01abd1699dba5fc6da239568eed6878d2e9816698945a83b82e75",
+    "research/v63/build_ac_corpus.py": "60057535e9cc2280208579d370294baf69a2bd2037ba6bbc41b948a1bfc66fa8",
+    "research/v63/build_continuation_report.py": "741ca74e879492bbdc85dd97a22549dc002f4ad8b4e7752e7abec5418fca7690",
+    "research/v63/build_delivery.py": "1c41a376fe54dc54a26c6b65ea15938f766a40e4368d8a2570c18da1045e7cc8",
+    "research/v63/build_pause_handoff.py": "c621b4879e6654e648abc4900116c7864d4bddd634683c9ea663633fe603da2a",
+    "research/v63/build_profiles_continuation.py": "cf335ff5ffb465d071704ea14396cf466ee396c0ea015791f15448eb68ba7d10",
+    "research/v63/build_run.py": "6bb784a76579f46cb41a121c66149db2b4868a91f21b78e6c33d970e3542d294",
+    "research/v63/build_source_manifest_continuation.py": "6a7d67c3cd820083e2008c6d0644084e9253d119dd5048bc2012f02dd9b0dcfe",
+    "research/v63/campaign.py": "bafec17a41b718f6639c2552dc59f5cd1ff03c8bc4202ab602ebcbf857c34263",
+    "research/v63/campaign_control.py": "c8e99ebac3285441026f31688b12ba6a5b402878f34421d264fa8e2d3cddc675",
+    "research/v63/capacity_audit.py": "48ef3accf3e5abafebaa3738d1feeee240d58064968ba04d8131dcfc18081078",
+    "research/v63/check_candidate_inputs.py": "394129e98add0835e9983e4a94ddb95958005a34e06a73536fb5e24993464ce8",
+    "research/v63/check_source_token_capacity.py": "9eaa85acaba48927027d7411a2f70ab9152435bb96352d9c0ac98e5b4bf2b599",
+    "research/v63/collect_mandate_amendments.py": "6deee84749e5f0e3029754797703171a013fe5ef44074fd2d1b7b211fbfd8790",
+    "research/v63/collect_official_data.py": "b51a77d9a2e1b587cd3880899981cef58f3141ead1410b40f21ce1e8079a9da1",
+    "research/v63/complete_dodge_mandate_periods.py": "69983fa76e82fa0d1a148f4b9b1b9f15412ca40267bebe454e63e8ee62cb14f9",
+    "research/v63/complete_primecap_mandate_periods.py": "a0de789ed531c2db6736207d75f2d2cdeb03be5849434487ccc7368d7cec627e",
+    "research/v63/continue_identity_aliases.py": "9dbac52bdfd92ca3d29dd76306ace82a66bd4882f4f444980fbd5819916076aa",
+    "research/v63/continue_sic_mapping.py": "7483d90fd70f4519dae682b0b97700f14089402571a12367e7050dcc18e0e6ac",
+    "research/v63/covariance_representation_audit.py": "2bc5410aa1099325aa3236e4ce647f9a77a838712be5dfb40ac7af4ec9ae5d4f",
+    "research/v63/cross_audit_source_links_v2.py": "18749f067d9128b55cc55284d3f404cdc1ef67bda09a263b874e8b5929d9dcb8",
+    "research/v63/evaluate.py": "c64aadcebd2a607a18cc5eeb1a9824e7d6ae15310f4cd7e4c08e8e8544e7dbc9",
+    "research/v63/exact_tokenizer.py": "f14ec91b7016f2ba76318f7eb00657c397827b0712c22a4f5e46f3a52926cefe",
+    "research/v63/finalize_experiment_report.py": "facca0b5515061c03e9521ba65945a5f7fffac6f1beb304d337286b311fab1e2",
+    "research/v63/longrun_guardian.py": "0c9c08434b326250c7dfeb8ac74bfbbe8c81b8ff2f3e8510827c3324d1647888",
+    "research/v63/numerics.py": "b8906ee2cf06a8c9b51dac2f73ea8584a09d998a618e94879ca05b39e4236dd7",
+    "research/v63/observe_continuation.py": "fa72f23faa2fb77e056fa08c3a5b15bb4dfa20ef28ddb9661d44858e186677ae",
+    "research/v63/ollama_transport.py": "95aac74c2cc1da8605615cb306ea1ca49a70a2c751be435e9df65db43f6c0fa3",
+    "research/v63/parse_fidelity_continuation.py": "632997978bfd13548da4368dc3d33908dab158cbedb13cf13d57094918f16a75",
+    "research/v63/parse_fidelity_dom_continuation.py": "24ce2b593c1208fe75632e245717ba6311e5a4930a02dc312b3d4a9b4a11ece0",
+    "research/v63/parse_trbcx_nport_continuation.py": "3e750ff8f131346163603a9d942e1e6cc212f9f254a90a3175495b1ea6cf3f58",
+    "research/v63/parse_vanguard_dom_continuation.py": "022a79dad99a5074d43f584cd97dd598c7fc2d08b62533bcff4808b0e86e2966",
+    "research/v63/pilot_precision.py": "855c720d45eda62c8ef4f6268c06c54a7ac8cf274f477bb246be8b259efe24a5",
+    "research/v63/prepare_data_audit.py": "bc9a6b1e691728f0c88b5f7e75160bae428e2daccdacdb0702f431c2e4a53f21",
+    "research/v63/prepare_dodge_mandate_continuation.py": "380fe31fc1c9b9ae9fb0909bc3cf2771361046aadfaae37c350ed0d2e9fb34f8",
+    "research/v63/prepare_fidelity_price_mandates.py": "9b919925b398085b2a5061fd95908c576298d0d47054b322cb5190e0405642c4",
+    "research/v63/prepare_numerics.py": "c95c7e594d5176c849ec69ed6da21038b01b7c438a74df229d16c50e5a0ddd6c",
+    "research/v63/prepare_primecap_development_mandate.py": "75fc9c04ebfbb685e951cda6096f37e32f2b5546ef9a0c1ec6c35974970b02ba",
+    "research/v63/prepare_prior_cost_ledger.py": "50c4e79d0039481ec9b95246c1a3180aac4ae8874555f75ee773397c2be62c45",
+    "research/v63/record_continuation_snapshot.py": "453a2b1787bacc0db402c215f59a779460c787248df7c463dd7680de7618b31f",
+    "research/v63/recovery.py": "6a92a93d242d449c63781f4f10a1f4f8709529422b8a2e0f6fde015b1ea081b4",
+    "research/v63/remote_qwen35_resource_probe.py": "f7f82701ca1289c29b05fb0e1a310e3b88236bf09102c23a9b16ba143a30c833",
+    "research/v63/retrieval.py": "5b1c17f0e94a4230e7508fb9e8cef07efad8fe921931c359ee87cb80dda39aac",
+    "research/v63/review_qwen35_2b_metadata.py": "b9cbec6fc7c50fc909b8ad88492f5575f7e32c76eacdea9d1ca472f4cf8b7866",
+    "research/v63/run_verification.py": "0dfc8a7fb9739317e530d99d7c1b6a877efc673d559dc15e105493717894ce80",
+    "research/v63/runtime.py": "3bcb3ae9d07d2477690c49ff36a8a0e0cc3a949208b7aceedd219d5f2e629050",
+    "research/v63/split_mandate_sources.py": "cb39f3244920cca38f66e9844fc1ed6dde546fd79b0edaff3aac418eda6c79ad",
+    "research/v63/statistics.py": "2b06ebb144b0f7ea59750ea38563e5aa68c4bee29e60e20bf3840058269f95e5",
+    "research/v63/test_ac_corpus.py": "5e50be2ba3da3bb37db0d07fa3356944614cc67cd89674ad0fd22375a5335e1c",
+    "research/v63/test_campaign.py": "80e33a190990f76ce5a10ce24f2965fcfe9c15411595127be263fade57c1e73f",
+    "research/v63/test_campaign_control.py": "fad633e86d1caa8121c919d4db33abec2c546a6a0f5dc4dbe2bf3281e1a1257c",
+    "research/v63/test_delivery.py": "e010dc02c28be4f0d07d496d9fd1aae6e0edcb8b1bd60b22ef82f1a75743c278",
+    "research/v63/test_evaluate.py": "7ab22bb8986890d1f19dbe532c17a9622d6169bb594a91c3c12439704987e203",
+    "research/v63/test_final_report_rendering.py": "8ee51c2cc8dc77849b8607f811de3f66d3190138d06a0d153cc966290972c5a2",
+    "research/v63/test_finalize_experiment_report.py": "43a80d85a0de8cb76981d35b91183ba3a45d37cc5e1126e6b67db2a605ee463f",
+    "research/v63/test_longrun_guardian.py": "5c38877efd17825168dbd1e230e14c30a73765b9bdc159ced03be6fdfbf0de74",
+    "research/v63/test_mandate_atomic_units.py": "17cdc0ba1c046376fdcb027664f1cde61576ba3d0f0cdb62cd9a374ada13fe7d",
+    "research/v63/test_numerics.py": "74f0f927db502bb7cad434918de4d9bbd4669d57a70805df2ba5ceadc216cb23",
+    "research/v63/test_ollama_transport.py": "a39aee91f04592f59523750549003bb458569bdcae9d7c76f37adc48dba8e9d4",
+    "research/v63/test_pilot_precision.py": "644cd8eec255a16823c76a5cc388419698e7e7b97bf746ffbae5c3b4b0822c34",
+    "research/v63/test_recovery.py": "437a2f2dff92806e6584b504d68c0b2ec8f871ac49e999aeb80b7ee241e2cd76",
+    "research/v63/test_report_accounting.py": "b6e60e6f8a32d0ef4375f6b2a6858760f9917132008f8490bba71369f011b64a",
+    "research/v63/test_report_summary_drafts.py": "3000719ddc7102aa322407a50fc9521d1321a626e198d8fed4862477a3aac3a3",
+    "research/v63/test_runtime_retrieval.py": "ddcfa230a9f9e8d71f177d2140220de536c211240c55db76db6c30ab489d9a06",
+    "research/v63/test_statistics.py": "6443e5582ef5d8bc289fb51643e860f9812488095d2e39d8747dca862c998947",
+    "research/v63/transport_errors.py": "59db49ba45f5035921054d799dadd22d01d6dd6f1864b964c6ad95de86287a59",
+    "research/v63/verify_continuation_data.py": "2037c61c5dcfb331a3616eb98331b7f0e192ad3f2095248d46229653ce73b36a",
+    "research/v63/verify_official_data.py": "8683c253f183031d6634bc7cbd41ae8f3c6b1ea7cacc60f01f02ef995b2d75e4"
+  }
+}

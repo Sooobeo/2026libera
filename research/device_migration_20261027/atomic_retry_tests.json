@@ -1,0 +1,38 @@
+{
+  "schema": "libera_windows_atomic_replace_retry_verification_v1",
+  "status": "passed",
+  "started_at_utc": "2026-10-27T08:37:14.476369+00:00",
+  "completed_at_utc": "2026-10-27T08:37:16.769105+00:00",
+  "elapsed_seconds": 2.2927629000000707,
+  "exit_code": 0,
+  "counts": {
+    "tests": 19,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "command": [
+    "C:\\Users\\Insun\\2026libera\\tmp\\v63_numerics_venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "research/v63/test_campaign_control.py",
+    "-q",
+    "--junitxml=C:\\Users\\Insun\\2026libera\\research\\device_migration_20261027\\atomic_retry_tests.xml"
+  ],
+  "real_model_generation_calls": 0,
+  "scope": "Atomic JSON persistence only; real Windows no-delete-share handle, bounded retry, unrelated-error propagation, existing budget/ledger/recovery invariants.",
+  "source_sha256": {
+    "research\\v63\\campaign_control.py": "1826f17f250b8cdaeb6ebea3352d16165f9842d4a01b80dfef43916b43ff8583",
+    "research\\v63\\test_campaign_control.py": "7786329b234b6ff67d24150406bbcf77d2ff087bb440c97e954e30892f04cc02"
+  },
+  "artifacts": [
+    {
+      "path": "research\\device_migration_20261027\\atomic_retry_tests.log",
+      "sha256": "c953a31b480aefdacbc66602757459ef1c065d3acb2277d1948c6c2867db2ac5"
+    },
+    {
+      "path": "research\\device_migration_20261027\\atomic_retry_tests.xml",
+      "sha256": "d3501dff112c8b413ea8b01dd04a7ea5749535a2d8ace0cdf35eaf8787992d29"
+    }
+  ]
+}

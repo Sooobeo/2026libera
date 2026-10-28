@@ -1,0 +1,178 @@
+{
+  "schema": "libera_v63_paper_content_source_audit_v1",
+  "date_local": "2026-10-27",
+  "status": "source_mapping_only_not_a_final_paper_or_result_report",
+  "scope": "Read original abstract, historical v5.4 manuscript, v6.3 design and static finalizer requirements; do not read current investment outputs, effect estimates or p-values. Source files and active experiment were not changed.",
+  "title": "공통 GenAI는 기관투자자의 전략적 이질성을 축소하는가?",
+  "subtitle": "-액티브 주식형 펀드의 자산배분 프로세스 내 Workflow RAG 배치와 완화효과를 중심으로-",
+  "original_author": "배라31 2팀",
+  "title_evidence": [
+    "실험참고자료_20261027/original/greengreen (1).pdf",
+    "paper/v540_manuscript_20261026.json",
+    "plan/LIBERA_실험설정_v6.3_20261027.json"
+  ],
+  "original_abstract": {
+    "status": "prospective_design_not_completed_results",
+    "preserve_problem": "공통 AI가 검색·요약·전망·배분의 중간 업무에 분산적으로 사용되면서 기관별로 필요한 판단 차이까지 약해질 수 있다는 발생경로를 먼저 설명한다. 타당한 공통 근거에 의한 수렴은 과잉수렴과 구분한다.",
+    "proposed_scope": "미국 액티브 주식형 펀드 4개, 12개 산업, 실제 보유 및 명시 위험·제약, 공통 및 펀드별 전망, 수리 기준배분, 3단계 RAG 제공시점 비교, 사실·공동오류·새 문서 검색·자원비용 평가.",
+    "background_denominator_warning": "2024년 영국은행/FCA의 75%는 응답 금융회사 중 AI 사용 회사 비율이고 2%는 AI 활용사례 중 완전자율 의사결정 비율이다. 서로 다른 분모를 합치지 않는다.",
+    "citation_status": "PDF에 실린 두 배경 출처는 이 감사에서 외부 원문 재검증하지 않았다. 최종 집필에서 인용 범위와 공개일을 확인한다."
+  },
+  "guide_use": {
+    "path": "paper/LIBERA_소논문_구성과문장_레퍼런스분석_20261026.md",
+    "retain": [
+      "큰 금융 문제와 공통 AI 영향의 발생경로에서 출발하여 관찰 가능한 과제로 범위를 좁힌다.",
+      "문제 제기 → 실험 설계·평가 → 결과 → 해석·업무 설계 함의의 문단 기능을 유지한다.",
+      "자료 요약, 근거 사용, 실제 배분, 판단 품질과 집단 차이를 서로 다른 확인 대상으로 정의한다.",
+      "원문 관찰과 LIBERA에 적용한 편집 판단을 구분하고, 연구 개념·방법을 쓴 위치에 출처를 단다."
+    ],
+    "time_bound_content": "이 가이드는 2026-10-26의 v5.4 다섯 조건을 본실험으로 다루며 검색 RAG·실제 펀드·수리 기준을 후속 과제로 서술한다. 그 문장들은 해당 시점의 범위다. 새 v6.3 전체 완료 후 원고에는 실제 검증된 v6.3 상태를 반영하되 v5.4를 사후에 다른 실험으로 재분류하거나 결과를 합산하지 않는다.",
+    "do_not_copy_as_current": ["GICS11", "D0/F0 2단계", "다섯 최종안만이 현재 완료 범위라는 문장", "검색기를 사용하지 않았다는 현재형 문장", "v5.4 결과 수치 및 정규화 결과"]
+  },
+  "methodology_mapping": [
+    {
+      "topic": "연구 대상과 산업 체계",
+      "v54": "Fidelity·UBS의 공개 산업전망을 직접 제공한 GICS11 배분 사례. 실제 네 펀드와 수리 기준은 당시 후속 확장 항목.",
+      "v63": "FCNTX, VPMCX, DODGX, TRBCX의 실제 보유·운용조건을 이용한 FF12 주식 부문 재배분. 고유한 실제 운용목적 전체를 복원하는 과제는 아님.",
+      "sources": ["paper/LIBERA_소논문_원초록반영_v5.4_20261026.md §4, §8, §9", "plan/LIBERA_실험설정_v6.3_20261027.json:data_contract,task_definition"]
+    },
+    {
+      "topic": "조건과 단계",
+      "v54": "기관별 초기 E·후기 L 및 자료 없는 C의 다섯 조건; D0 초안과 F0 최종안의 두 단계.",
+      "v63": "계획·구성·점검/수정의 세 단계; R0, R1, R2, R3, FULL의 다섯 군. FULL의 내부 명칭 C-context는 실제문서 모듈 C와 다름.",
+      "sources": ["paper/LIBERA_소논문_원초록반영_v5.4_20261026.md §4", "plan/LIBERA_실험설정_v6.3_20261027.json:workflow,modules"]
+    },
+    {
+      "topic": "검색 처치",
+      "v54": "원문 자료를 직접 제공했으며 검색 RAG 구현이나 완화효과 검증이 아님.",
+      "v63": "BM25Okapi 0.2.2, k1=1.5, b=0.75, epsilon=0.25; 모델 토큰 기준 400토큰 청크·50토큰 중첩, top-k=4. 날짜·펀드 접근권한을 순위 전 필터링. R1/R2/R3는 동일 바이트의 동결 검색 묶음을 서로 다른 단계부터 유지. FULL은 적격 원문 전체.",
+      "sources": ["plan/LIBERA_실험설정_v6.3_20261027.json:retrieval,workflow"]
+    },
+    {
+      "topic": "시점 비교의 해석",
+      "v54": "초안·대화 이력·노출량·실행 순서가 함께 달라 순수한 시점 인과효과로 해석하지 않음.",
+      "v63": "동결 자료의 최초 제공 단계, 이후 유지 및 자기 대화 이력을 포함한 업무정책 효과. 순수한 기억 또는 시점만의 효과가 아님. R1/FULL 내용이 같으면 검색 자체의 우위를 식별하지 못함.",
+      "sources": ["plan/LIBERA_실험설정_v6.3_20261027.json:analysis,FULL_R1_bridge_diagnostic,workflow"]
+    },
+    {
+      "topic": "보유와 분모",
+      "v54": "공개 산업전망을 바탕으로 한 산업배분 과제.",
+      "v63": "적격 양의 주식·REIT·ADR·해외주식의 FF12 매핑 커버리지 90% 이상; 분모에 미분류 적격 주식 포함. h는 매핑된 주식 부분 내부에서 정규화하고 q_NAV는 공식 NAV 대비 그 부분의 비중. 현금·채권·기타 부문은 고정. 원문 제약의 분모를 보존.",
+      "sources": ["plan/LIBERA_실험설정_v6.3_20261027.json:data_contract,task_definition"]
+    },
+    {
+      "topic": "자료 시점과 위험 추정",
+      "v54": "기존 다섯 조건의 역사적 입력 및 실행 이력 유지.",
+      "v63": "개발 보유 2025-09-30/문서 마감 2025-12-31, A 보유 2025-12-31/마감 2026-03-31, C 보유 2026-03-31/마감 2026-06-30. French FF12 월간 가치가중 총수익률 2016-01~2025-12의 120개월. 회고적 자료이며 당시 투자 가능한 완전한 빈티지 자료를 인증하지 않음.",
+      "sources": ["plan/LIBERA_실험설정_v6.3_20261027.json:data_contract,modules"]
+    },
+    {
+      "topic": "기준배분",
+      "v54": "정성 전망을 정답 비중으로 바꾸지 않았고 실제 네 펀드의 수리 기준은 계산하지 않았음. 동일비중·최소분산은 별도 계산 참고안.",
+      "v63": "공통 연구 과제 max μ'w, w≥0, sum(w)=1, w'Σw≤h'Σh와 계산 가능한 명시 제약. 허용 전체정보와 실제 가용정보의 기준을 구분. CVXPY/Clarabel SOCP와 독립 수치 검산, 근사최적해 불확실성 경계를 사용. 실제 운용사의 사적 목표나 실현수익 최적해는 아님.",
+      "sources": ["plan/LIBERA_실험설정_v6.3_20261027.json:reference_solver,task_definition"]
+    },
+    {
+      "topic": "합성 통제와 실제문서의 역할",
+      "v54": "한 시장 상황의 공개전망을 이용한 소수 사례 서술 분석.",
+      "v63": "B는 실제 보유·위험 조건 위에 공개적으로 합성임을 밝힌 Gaussian 공통/개별 전망을 결합하는 통제실험. A/C는 실제문서의 출처·사실·설명·검색 적용성 확인. A/C 정성 문서에서 정답 비중을 만들거나 B 손실을 실제 펀드 투자성과로 전이하지 않음.",
+      "sources": ["plan/LIBERA_실험설정_v6.3_20261027.json:modules,scenario_generator"]
+    },
+    {
+      "topic": "계산도구와 정보 경계",
+      "v54": "완료 후 수학 처리와 문장·숫자 대조를 별도 보존.",
+      "v63": "posterior 및 check_portfolio 도구, 단계당 최대 2회 왕복. 노출된 근거만 사용. 숨겨진 x·theta·기준 최적비중·다른 펀드 정보를 모델에 반환하지 않음. stage1은 계획, stage2/3은 원비중과 근거를 보존.",
+      "sources": ["plan/LIBERA_실험설정_v6.3_20261027.json:workflow,runtime_and_failure_contract"]
+    },
+    {
+      "topic": "무효 출력과 정규화",
+      "v54": "원합계로 나눈 뒤 10,000 정수 단위와 고정 동률순서로 만든 파생 배분. 생성 이후 추가한 처리임을 명시하고 원비중도 보존.",
+      "v63": "최종 원출력을 사후 정규화해 성공으로 바꾸지 않음. raw 무효 지표는 NA. 사전 정의된 h 유지 업무정책을 별도로 평가하며 원출력 유효율과 fallback 기여를 보고. 미요청·프로토콜 위반 슬롯을 h로 채워 완료 처리하지 않음.",
+      "sources": ["paper/LIBERA_소논문_원초록반영_v5.4_20261026.md §5.1", "plan/LIBERA_실험설정_v6.3_20261027.json:evaluation,runtime_and_failure_contract,analysis"]
+    },
+    {
+      "topic": "거리·수축·판단 손실",
+      "v54": "배분 거리만으로 근거 충실성·정책 우열·과잉수렴을 판정하지 않음.",
+      "v63": "D=0.5||wi−wj||1, G=D*−D, E=0.5||(wi−wj)−(wi*−wj*)||1, R=μ_full'(w*−w). A는 |G|를 먼저 계산한 후 평균. full/available 정보 기준을 구분하고 기준배분 불확실성을 검정 방향에 전파.",
+      "sources": ["plan/LIBERA_실험설정_v6.3_20261027.json:evaluation,reference_solver,analysis"]
+    },
+    {
+      "topic": "표본·독립 단위",
+      "v54": "다섯 최종안·10개 완료 논리단계·11회 실제 생성요청의 역사적 사례. 산업행·재사용 대조군·동일 D0는 독립 반복이 아니며 모집단 유의성 검정 없음.",
+      "v63": "B 본실험 60개 독립 생성 시나리오, 세 정밀도 층에 20개씩, 네 펀드·다섯 군·두 반복. 6개 펀드쌍과 반복은 독립 시장표본이 아님. 각 반복에서 비선형 지표를 계산한 뒤 시나리오 내 평균.",
+      "sources": ["paper/LIBERA_소논문_원초록반영_v5.4_20261026.md §4, §5", "plan/LIBERA_실험설정_v6.3_20261027.json:analysis,workload"]
+    },
+    {
+      "topic": "주 검정",
+      "v54": "기술적 사례 비교와 원문 검토.",
+      "v63": "H1은 FULL 업무정책의 양의 lower G_available와 lower R_available 결합검정. H2는 R0의 양의 수축과 R1의 E·R·mean|G| 공동 개선. H3는 R1/R2, R1/R3, R2/R3 양방향 비교. 성분 p의 최댓값(IUT), 시점 양방향 보정, 다섯 주장 Holm α=.05. 시나리오 층화 10,000회 bootstrap의 개별 95% 구간이며 동시구간은 아님.",
+      "sources": ["plan/LIBERA_실험설정_v6.3_20261027.json:analysis"]
+    },
+    {
+      "topic": "보조 확인",
+      "v54": "핵심 근거 교체·동일정보 음성대조는 당시 후속 제안.",
+      "v63": "개별 x 교체 360궤적, 동일정보 음성대조 192궤적, A/C 총 80궤적. 음성대조는 정보·목표·h·제약을 같게 하고 라벨을 바꾸므로 D*=0이며, 차이만으로 경제적 오류를 단정하지 않음.",
+      "sources": ["plan/LIBERA_실험설정_v6.3_20261027.json:counterfactual_contract,negative_control_contract,workload"]
+    },
+    {
+      "topic": "규모와 완료 단위",
+      "v54": "기존 다섯 사례를 새 FF12 실험 표본으로 합산하지 않음.",
+      "v63": "개발 240, B 본실험 2400, x 교체 360, 음성대조 192, A 40, C 40의 총 3272 업무궤적·9816 계획 논리단계. 개발 15→60→720단계는 동일 identity와 hash일 때만 포함 관계로 재사용. 도구 왕복·재시도·조기 실패 때문에 계획 단계수와 API 요청수는 다름.",
+      "sources": ["plan/LIBERA_실험설정_v6.3_20261027.json:workload,analysis", "research/v63/finalize_experiment_report.py:COUNTS"]
+    },
+    {
+      "topic": "환경 동결과 자원 비용",
+      "v54": "과거 모델·프롬프트·순서·전원 중단 기록은 역사적 이력으로 보존.",
+      "v63": "최종 선택된 실행 identity의 실제 모델·템플릿·엔진·하드웨어·Python/패키지·컨텍스트/출력한도·시드·검색·계산기·분석코드·실패규칙을 사용. 계획의 기본값을 실제 환경으로 대체하지 않음. 폐기·중단 후보와 engineering probe 비용은 누적 원장에 남기되 최종 실험 표본과 구분.",
+      "sources": ["plan/LIBERA_실험설정_v6.3_20261027.json:main_freeze_requirements,execution_policy", "research/v63/finalize_experiment_report.py:collect_original_costs,verify_main_completion_proofs"]
+    }
+  ],
+  "required_final_artifacts": {
+    "completion_rule": "Only after every planned trajectory has an allowed terminal status and hash-checked analyses plus finalization commit validate. This audit does not assert those artifacts currently exist or are complete.",
+    "path_variables": {
+      "output_root": "selected candidate config.output_root, resolve from the final frozen selected configuration",
+      "run_id": "selected runtime_identity_sha256, never substitute an earlier candidate"
+    },
+    "per_phase": {
+      "base": "{output_root}/phases/{run_id}/{phase}",
+      "phases_and_expected_trajectories": {"development-pilot": 240, "B-main": 2400, "x-replacement": 360, "negative-control": 192, "A": 40, "C": 40},
+      "files": ["prepared_inputs.json", "evaluator_only/reference_bank.json", "evaluator_only/reference_bank_receipt.json", "evaluator_only/frozen_scenarios.json", "evaluator_only/hidden_truth.json", "measurements.json", "records.json", "frozen_runtime.json", "runtime_identity.json"],
+      "analysis_statuses": {"B-main": "completed_confirmatory_analysis", "x-replacement": "completed_secondary_analysis", "negative-control": "completed_secondary_analysis", "C": "completed_actual_document_audit"},
+      "analysis_note": "C analysis includes joint A/C evidence. Verify counts and provenance rather than treating status text alone as proof."
+    },
+    "run_inputs_and_original_responses": ["{output_root}/runs/{run_id}/source_input_manifest.json", "Original runner requests, rendered prompts, HTTP dispatch/receipts, raw responses and tool traces referenced by the selected run"],
+    "premain_and_resource_proofs": ["{output_root}/guardian/{run_id}/pilot_precision_report.json", "{output_root}/guardian/{run_id}/pilot_precision_report.inputs.json", "{output_root}/guardian/{run_id}/main_freeze_transition.json", "Resource approval and all-phase resource-review references bound by hash to the selected runtime and pilot measurements"],
+    "validated_immutable_bundle": ["{output_root}/finalization/{run_id}/validated_*/results.json", "{output_root}/finalization/{run_id}/validated_*/report.html", "{output_root}/finalization/{run_id}/validated_*/commit.json", "{output_root}/finalization/{run_id}/validated_*/publication_receipt.json"],
+    "public_aliases": ["data/v63_20261027/final_results.json", "data/v63_20261027/execution_status.json", "data/v63_20261027/artifact_manifest.json", "실험참고자료_20261027/03_최종실험결과_20261027.html"],
+    "table_inputs": [
+      "B-main trajectory diagnostics: raw-valid counts, fallback counts/contribution, per-arm G/E/R and uncertainty; scenario summaries and exact five inference claims including Holm p and not_testable reasons.",
+      "Reference-bank uncertainty and numerical verification; full/available information decomposition; FULL/R1 actual packet equivalence.",
+      "x-replacement 360 trajectories and negative-control 192 trajectories/288 within-replicate pair rows; no additional independent sample inflation.",
+      "A/C 80 trajectories: source-fact numeric checks, unresolved semantic-review needs, retrieval recall and source/date limits. Repeated shared mismatch candidates remain candidates.",
+      "Per-input retrieval score/rank/ID/hash, recall@4 denominator, atomic fact completeness, token size and full/packet identity; do not count repeated arm exposure as independent retrieved inputs.",
+      "Original-request costs: confirmed/uncertain attempts, observed prompt/output tokens, HTTP latency, whole-phase wall time, calculator time and prior-candidate historical costs. Keep missing usage missing and replay cost zero."
+    ]
+  },
+  "required_limitations_and_claim_boundaries": [
+    "The title is a broad research question. A common-model workflow compared with a task reference does not identify the causal effect of sharing a model versus using heterogeneous models.",
+    "H1 and H2 passing would not by itself establish that retrieval repaired the same internal failure mechanism. R1−R0 includes additional-information access and workflow exposure, not retrieval-engine superiority.",
+    "The financial objective is the explicit research task. Conditional model expected-return loss is not realized investment performance, the actual manager's private objective or investment advice.",
+    "Actual portfolio scope is the mapped equity sleeve, with fixed outside holdings. Issuer, country, currency, trading-time and original classification constraints are not all certified by FF12 checks.",
+    "SIC supplementation includes current official issuer information used retrospectively. Cached revised return data and retrospective classification do not establish real-time investability.",
+    "B forecasts are synthetic. A/C qualitative documents do not provide an exact optimal-allocation gold standard.",
+    "Static finalizer records that C supplies new common FOMC outlook documents; eligible first-published fund-specific new outlook originals were not verified for the period. Do not claim a replication of four funds' proprietary/new outlooks.",
+    "Human-review gate was satisfied by the user's assumption. execution_amendment.json explicitly records no evidenced independent human reviews and no fabricated reviewer signatures. Do not claim two human auditors or semantic accuracy rates.",
+    "Mechanical numeric/source mismatch and recurring identical payload candidates are not confirmed semantic shared errors. Equivalent units and narrative context can remain unresolved.",
+    "The independent unit is a generated scenario conditional on fixed calibrated market/fund profiles, not each fund, pair, output, stage or replicate. N=60 is not a measured power guarantee.",
+    "Failure-policy estimates include h fallback and must be separated from direct valid model judgments. Unattempted/protocol-invalid slots cannot be imputed to finish the experiment.",
+    "Uncertain/nonunique reference optima require numerical bounds. Signed G reduction alone is not improvement; nonsignificance is not equivalence or noninferiority.",
+    "Model and environment selection must use feasibility/resource evidence, not effect signs or p-values; prior candidates cannot be pooled into the selected sample.",
+    "Plan/readme fields such as execution_enabled=false, not built and pending are dated design snapshots. Actual completion, runtime versions and deviations must be established from later frozen receipts rather than copied as current facts.",
+    "Sleep intervals are part of authoritative wall-time and charged request costs. Any awake-only throughput estimate must be labeled explanatory and must not replace or subtract from the ledger.",
+    "No final results or conclusions are supported by this source audit. Write the final paper only after all experiments and the validated completion bundle finish."
+  ],
+  "related_resource_audit": "research/device_migration_20261027/sleep_latency_audit_20261027/report.json",
+  "external_references_not_newly_verified": true,
+  "current_investment_outputs_read_for_this_audit": false,
+  "final_paper_written": false
+}

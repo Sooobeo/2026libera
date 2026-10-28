@@ -1,0 +1,75 @@
+{
+  "schema": "libera_experiment_then_paper_request_v1",
+  "status": "authorized_pending_real_experiment_completion",
+  "user_request": "실험 다 끝내면 이 md 참고하고 원초록, 제목 내용에서 연결지어서 소논문까지 완성해봐",
+  "writing_reference": "paper/LIBERA_소논문_구성과문장_레퍼런스분석_20261026.md",
+  "original_abstract": "실험참고자료_20261027/original/greengreen (1).pdf",
+  "existing_manuscript": "paper/v540_manuscript_20261026.json",
+  "current_design": "plan/LIBERA_실험설정_v6.3_20261027.json",
+  "current_execution_locator": "research/device_migration_20261027/current_execution.json",
+  "title": "공통 GenAI는 기관투자자의 전략적 이질성을 축소하는가?",
+  "subtitle": "-액티브 주식형 펀드의 자산배분 프로세스 내 Workflow RAG 배치와 완화효과를 중심으로-",
+  "planned_deliverables": [
+    "새 버전의 소논문 Markdown",
+    "읽기용 HTML",
+    "편집 가능한 DOCX",
+    "실제 결과 도표와 수치·출처 대조 기록"
+  ],
+  "completion_evidence_required": {
+    "same_run_terminal_trajectories": 3272,
+    "planned_logical_stages": 9816,
+    "main_independent_scenarios": 60,
+    "main_replicates": 2,
+    "guardian_completion_receipt_status": "all_required_phases_and_analyses_completed",
+    "final_results_status": "completed_real_experiments",
+    "required_phases": [
+      "development-pilot",
+      "B-main",
+      "x-replacement",
+      "negative-control",
+      "A",
+      "C"
+    ]
+  },
+  "composition_constraints": [
+    "최종 결과와 결론은 실제 전 단계 및 분석 검증 뒤 작성한다.",
+    "원초록의 문제 제기와 제목·부제를 보존하고 실제 수행한 v6.3 설계와 결과에 연결한다.",
+    "지정 MD는 구성·문장 참고자료다. 그 안의 과거 실행 상태·수치·방법을 현재 실험 결과로 이전하지 않는다.",
+    "기존 GICS11 직접제공 실험은 기존 연구로 보존하며 FF12 검색 실험과 표본을 합치지 않는다.",
+    "통계적 비유의, 모델 출력 실패, 수치 검증 불가 및 실제 자료의 한계를 그대로 보고한다.",
+    "공통 AI 사용 조건의 실험을 AI 미사용 대비 효과나 실제 운용자·시장 수준의 인과효과로 확대하지 않는다.",
+    "human_review_mode=user_assumed_completed는 실제 독립 감사 서명이나 미수행 의미 채점으로 바꾸지 않는다.",
+    "이전 기기 원응답 누락, 새 후보 실행, 절전 지연, 폐기·중단 요청 비용을 재현 기록에 남긴다.",
+    "출처 보관본의 부분 누락과 C의 펀드별 신규 전망 미확보를 완전한 자료 감사로 표현하지 않는다.",
+    "기존 원고·원응답·계획은 덮어쓰지 않고 새 버전으로 산출한다."
+  ],
+  "next_steps": [
+    "후보005의 실제 60단계 실행 가능성 측정 및 동일성 검증",
+    "실측에 따른 root 자원 검토와 guardian 승인",
+    "720단계 개발·정밀도 검토와 조건부 본실험 동결",
+    "모든 후속 단계·분석·최종 완료 영수증 검증",
+    "결과 표·그림과 방법을 먼저 작성한 뒤 논의·결론·초록 확정",
+    "최종 원고의 수치·인용·주장 범위 및 DOCX/HTML 렌더링 검토"
+  ],
+  "paper_finished": false,
+  "experiment_finished": false,
+  "recorded_at_utc": "2026-10-27T13:32:50.211728+00:00",
+  "source_refs": {
+    "writing_reference": {
+      "path": "paper/LIBERA_소논문_구성과문장_레퍼런스분석_20261026.md",
+      "sha256": "d1987b2d39b968403dcaeebaa163c306c2e361bae708620178b4078f84f2d9e0"
+    },
+    "original_abstract": {
+      "path": "실험참고자료_20261027/original/greengreen (1).pdf",
+      "sha256": "75a70c60a2fdf8db6e17576a829e0960c8c48afb70422c85ee2515a5efe9ece0"
+    },
+    "existing_manuscript": {
+      "path": "paper/v540_manuscript_20261026.json",
+      "sha256": "8d90b534bab9fea1439ed6822315ac06870a3546bdbd17ccb2b44b8772ac6858"
+    },
+    "current_design": {
+      "path": "plan/LIBERA_실험설정_v6.3_20261027.json",
+      "sha256": "a884b1242217cfed37a52444a541968eb680739c649e85c2b8d3bf9b0de383dc"
+    }
+  }
+}

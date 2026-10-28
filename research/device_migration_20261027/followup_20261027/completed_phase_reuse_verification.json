@@ -1,0 +1,55 @@
+{
+  "schema": "libera_completed_phase_reuse_verification_v1",
+  "status": "passed",
+  "recorded_at_utc": "2026-10-27T13:35:19.616499+00:00",
+  "runtime_identity_sha256": "2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2",
+  "current_campaign_identity_preserved": true,
+  "frozen_core_files_modified": false,
+  "command": [
+    "C:\\Users\\Insun\\2026libera\\tmp\\v63_numerics_venv\\Scripts\\python.exe",
+    "-m",
+    "pytest",
+    "research/test_v63_development_supervisor.py",
+    "-q",
+    "--junitxml=research/device_migration_20261027/followup_20261027/completed_phase_reuse_tests.xml"
+  ],
+  "counts": {
+    "tests": 12,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "exit_code": 0,
+  "test_scope": "Synthetic filesystem and mocked children; existing real experiment phase files were not modified.",
+  "source_files": [
+    {
+      "path": "research/run_v63_candidate_003_development.py",
+      "sha256": "a01cec92e4926cb33de8fccfbe296d02e8990d212d679238107df717981d15b1"
+    },
+    {
+      "path": "research/test_v63_development_supervisor.py",
+      "sha256": "c7ce0b89883d8a09be943a1a84e17690c6340896c7e52ba3e059b1a6dd6545fa"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "research/device_migration_20261027/followup_20261027/completed_phase_reuse_tests.log",
+      "sha256": "6ebfa5e88008b54996f515a5f0a21bebf812ac8218384085925a53dda9240b31"
+    },
+    {
+      "path": "research/device_migration_20261027/followup_20261027/completed_phase_reuse_tests.xml",
+      "sha256": "ae28a3582394da8c8b46f45c06b125460ffb7f68cd8d975ef22f13d05bdc9c2d"
+    }
+  ],
+  "verified_behaviors": [
+    "Complete same-identity phase passes frozen artifacts, source snapshots, original budgets, and check_phase_outputs before reuse.",
+    "Complete phases launch no campaign child; incomplete phases keep the campaign recovery and accounting path.",
+    "Measurements, records, source files, original first-start, cumulative wall time and request counts remain byte-identical.",
+    "Each supervisor launch records a distinct immutable review and reuse receipt.",
+    "Mismatched identity, frozen artifact, source snapshot, budget limit, trace, or missing FULL history stops before a child launch."
+  ],
+  "effect_or_pvalue_read_for_selection": false,
+  "actual_resource_approval_created": false,
+  "model_calls": 0,
+  "http_calls": 0
+}

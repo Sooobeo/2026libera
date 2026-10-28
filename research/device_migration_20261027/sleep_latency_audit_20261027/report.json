@@ -1,0 +1,357 @@
+{
+  "schema": "libera_sleep_latency_audit_v1",
+  "recorded_at_utc": "2026-10-27T13:28:35.500313+00:00",
+  "run_id": "2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2",
+  "scope": "Read-only latency/resource investigation; only new audit files written. No service, power setting, configuration, original evidence or cost ledger changed.",
+  "finding": "Most additional wall time was Modern Standby, not sustained GPU decode regression.",
+  "authoritative_accounting_unchanged": {
+    "phase_wall_seconds": 8636.249871799999,
+    "cumulative_wall_seconds": 8634.886641,
+    "all_attempt_request_elapsed_seconds": 8621.8574055,
+    "confirmed_generation_requests": 15,
+    "generated_tokens": 24750,
+    "downtime_remains_charged": true,
+    "budget_state": {
+      "first_started_at_utc": "2026-10-27T10:01:42.826032+00:00",
+      "limits": {
+        "max_generation_requests": 135,
+        "max_wall_seconds": 21600
+      },
+      "wall_clock": "Elapsed UTC since first launch, including downtime; restart never resets the budget."
+    }
+  },
+  "explanatory_only_not_accounting_adjustment": {
+    "smoke_modern_standby_seconds_from_windows_events": 6181.798797,
+    "phase_wall_minus_observed_standby_seconds": 2454.4510747999984,
+    "per_generation_awake_proxy_seconds": 163.63007165333323,
+    "caveat": "Subtracting event intervals is an explanatory availability estimate, not precise GPU active time and not an amended budget or cost record."
+  },
+  "windows_standby_episodes": [
+    {
+      "start_utc": "2026-10-27T10:39:59.3501252Z",
+      "start_kst": "2026-10-27T19:39:59.350+09:00",
+      "end_utc": "2026-10-27T10:39:59.4569064Z",
+      "end_kst": "2026-10-27T19:39:59.456+09:00",
+      "seconds": 0.106781,
+      "entry_reason": "The system is entering Modern Standby \r\n\r\nReason: Power Button.",
+      "exit_reason": "The system is exiting Modern Standby \r\n\r\nReason: Lid.",
+      "entry_record_id": 66082,
+      "exit_record_id": 66083
+    },
+    {
+      "start_utc": "2026-10-27T10:39:59.4581714Z",
+      "start_kst": "2026-10-27T19:39:59.458+09:00",
+      "end_utc": "2026-10-27T10:52:05.1759417Z",
+      "end_kst": "2026-10-27T19:52:05.175+09:00",
+      "seconds": 725.71777,
+      "entry_reason": "The system is entering Modern Standby \r\n\r\nReason: Lid.",
+      "exit_reason": "The system is exiting Modern Standby \r\n\r\nReason: Austerity Battery Drain Budget Exceeded.",
+      "entry_record_id": 66087,
+      "exit_record_id": 66101
+    },
+    {
+      "start_utc": "2026-10-27T10:52:05.1802830Z",
+      "start_kst": "2026-10-27T19:52:05.180+09:00",
+      "end_utc": "2026-10-27T12:22:59.7515772Z",
+      "end_kst": "2026-10-27T21:22:59.751+09:00",
+      "seconds": 5454.571294,
+      "entry_reason": "The system is entering Modern Standby \r\n\r\nReason: Austerity Battery Drain Budget Exceeded.",
+      "exit_reason": "The system is exiting Modern Standby \r\n\r\nReason: AC/DC Display Burst Suppressed.",
+      "entry_record_id": 66103,
+      "exit_record_id": 66116
+    },
+    {
+      "start_utc": "2026-10-27T12:22:59.7533908Z",
+      "start_kst": "2026-10-27T21:22:59.753+09:00",
+      "end_utc": "2026-10-27T12:23:01.1563420Z",
+      "end_kst": "2026-10-27T21:23:01.156+09:00",
+      "seconds": 1.402952,
+      "entry_reason": "The system is entering Modern Standby \r\n\r\nReason: AC/DC Display Burst Suppressed.",
+      "exit_reason": "The system is exiting Modern Standby \r\n\r\nReason: Lid.",
+      "entry_record_id": 66118,
+      "exit_record_id": 66123
+    },
+    {
+      "start_utc": "2026-10-27T12:26:51.6209745Z",
+      "start_kst": "2026-10-27T21:26:51.620+09:00",
+      "end_utc": "2026-10-27T13:24:51.9144094Z",
+      "end_kst": "2026-10-27T22:24:51.914+09:00",
+      "seconds": 3480.293435,
+      "entry_reason": "The system is entering Modern Standby \r\n\r\nReason: Idle Timeout.",
+      "exit_reason": "The system is exiting Modern Standby \r\n\r\nReason: Input Keyboard.",
+      "entry_record_id": 66138,
+      "exit_record_id": 66149
+    }
+  ],
+  "monitor_gaps": [
+    {
+      "from_utc": "2026-10-27T10:39:53.4395040Z",
+      "to_utc": "2026-10-27T12:23:01.5659203Z",
+      "seconds": 6188.126416
+    },
+    {
+      "from_utc": "2026-10-27T12:26:55.4829099Z",
+      "to_utc": "2026-10-27T13:24:57.7400540Z",
+      "seconds": 3482.257145
+    }
+  ],
+  "first14_ordinary_requests": {
+    "count": 14,
+    "http_seconds_min": 115.57105489999958,
+    "http_seconds_max": 224.7951882000002,
+    "decode_tps_min": 8.516144866396052,
+    "decode_tps_max": 16.30905948325965,
+    "prompt_tokens_min": 9570,
+    "prompt_tokens_max": 15982,
+    "output_tokens_min": 1029,
+    "output_tokens_max": 2501
+  },
+  "last_smoke_request": {
+    "case": "development-001__F03__R3__1",
+    "attempt": "attempt_000003",
+    "started_at_utc": "2026-10-27T10:52:07.046863+00:00",
+    "http_seconds": 5610.585465,
+    "http_status": 200,
+    "done": true,
+    "done_reason": "stop",
+    "receipt_path": "data\\v63_20261027\\local_campaign_results\\runs\\2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2\\B-development\\development-001__F03__R3__1\\http\\attempt_000003\\generation.receipt.json",
+    "receipt_sha256": "352467547a18d9be15ffdc02712888f92f5cae3013229bd4e971f27ea70af2dc",
+    "prompt_eval_count": 14177,
+    "prompt_eval_cached_count": 0,
+    "eval_count": 1473,
+    "total_seconds": 5610.502165,
+    "load_seconds": 5458.7964863,
+    "prompt_eval_seconds": 49.501833,
+    "eval_seconds": 102.189262,
+    "decode_tokens_per_second": 14.41443035374891
+  },
+  "memory_snapshot": {
+    "samples": 250,
+    "minimum_free_GiB": 6.898273468017578,
+    "maximum_combined_observed_process_working_set_GiB": 5.198909759521484,
+    "shared_gpu_and_system_memory_must_not_be_added": true
+  },
+  "gpu_residency": {
+    "actual_gpu_layers": 29,
+    "total_layers": 29,
+    "live_api_ps": {
+      "models": [
+        {
+          "name": "qwen3:1.7b",
+          "model": "qwen3:1.7b",
+          "size": 4976237608,
+          "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "qwen3",
+            "families": [
+              "qwen3"
+            ],
+            "parameter_size": "2.0B",
+            "quantization_level": "Q4_K_M"
+          },
+          "expires_at": "2026-10-27T22:36:34.9791416+09:00",
+          "size_vram": 4976237608,
+          "context_length": 32768
+        }
+      ]
+    },
+    "cpu_fallback_evidence": false,
+    "reload_after_wake_seconds_from_engine_log": 2.77
+  },
+  "pre_change_power_policy_observation": {
+    "scheme": "SAMSUNG MODE",
+    "scheme_guid": "ab6534a3-bc02-4c44-94d1-a8535b2eb070",
+    "standby_idle_AC_seconds": 180,
+    "standby_idle_DC_seconds": 180,
+    "source": "read-only powercfg query before user instruction to root; root backup at research/device_migration_20261027/power_settings_20261027T222631",
+    "root_owns_power_changes": true
+  },
+  "conditional_runtime_forecasts": [
+    {
+      "scope": "paired_full_60",
+      "logical_stages_assuming_one_generation_each": 60,
+      "continuous_awake_explanatory_hours": 2.727167860888887,
+      "same_observed_sleep_pattern_wall_hours": 9.595833190888888,
+      "continuous_awake_range_from_first14_http_hours": [
+        1.9261842483333262,
+        3.7465864700000036
+      ]
+    },
+    {
+      "scope": "paired_incremental_after_15_reused",
+      "logical_stages_assuming_one_generation_each": 45,
+      "continuous_awake_explanatory_hours": 2.0453758956666652,
+      "same_observed_sleep_pattern_wall_hours": 7.196874893166665,
+      "continuous_awake_range_from_first14_http_hours": [
+        1.4446381862499948,
+        2.8099398525000026
+      ]
+    },
+    {
+      "scope": "development_pilot_full_720",
+      "logical_stages_assuming_one_generation_each": 720,
+      "continuous_awake_explanatory_hours": 32.726014330666644,
+      "same_observed_sleep_pattern_wall_hours": 115.14999829066664,
+      "continuous_awake_range_from_first14_http_hours": [
+        23.114210979999918,
+        44.95903764000004
+      ]
+    },
+    {
+      "scope": "development_pilot_incremental_after_60_reused",
+      "logical_stages_assuming_one_generation_each": 660,
+      "continuous_awake_explanatory_hours": 29.998846469777757,
+      "same_observed_sleep_pattern_wall_hours": 105.55416509977776,
+      "continuous_awake_range_from_first14_http_hours": [
+        21.18802673166659,
+        41.212451170000044
+      ]
+    },
+    {
+      "scope": "B_main_7200",
+      "logical_stages_assuming_one_generation_each": 7200,
+      "continuous_awake_explanatory_hours": 327.26014330666646,
+      "same_observed_sleep_pattern_wall_hours": 1151.4999829066664,
+      "continuous_awake_range_from_first14_http_hours": [
+        231.14210979999916,
+        449.5903764000004
+      ]
+    },
+    {
+      "scope": "all_planned_logical_stages_9816",
+      "logical_stages_assuming_one_generation_each": 9816,
+      "continuous_awake_explanatory_hours": 446.16466204142193,
+      "same_observed_sleep_pattern_wall_hours": 1569.8783100294218,
+      "continuous_awake_range_from_first14_http_hours": [
+        315.1237430273322,
+        612.9415464920006
+      ]
+    }
+  ],
+  "forecast_limitations": [
+    "Only one fund/development scenario smoke; other funds, longer histories, output lengths and tool calls may differ.",
+    "One generation per logical stage assumed; retries, tool loops, evaluations and transitions add time.",
+    "Awake proxy and sleep-pattern scenarios are explanatory projections, never replacements for charged wall time.",
+    "Main model and resource approval gates remain separate; no main run is authorized by this audit."
+  ],
+  "safe_next_actions": [
+    "Root handles explicitly authorized sleep prevention and retains restoration evidence.",
+    "Continue existing paired-feasibility identity while observing timing, GPU residency and memory.",
+    "Retain the charged sleep intervals in cost/budget ledgers and annotate their operational cause.",
+    "Re-estimate using completed 60-stage paired measurements before the 720-stage or main resource decision."
+  ],
+  "source_snapshots": [
+    {
+      "source": "data\\v63_20261027\\local_campaign_results\\phases\\2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2\\technical-smoke\\measurements.json",
+      "snapshot": "technical_smoke_measurements_snapshot.json",
+      "sha256": "07d73c64e03318028d25af67d2a1ed0df1786ff28fbcb594aa14f50d1361eeed",
+      "bytes": 998,
+      "source_modified_by_audit": false,
+      "source_live": false
+    },
+    {
+      "source": "data\\v63_20261027\\local_campaign_results\\phases\\2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2\\technical-smoke\\budget_state.json",
+      "snapshot": "technical_smoke_budget_snapshot.json",
+      "sha256": "785ef0ad0a5326cd5fc927cd671a52fd6e39b0e91e4a6b4936a234aa5b16e39d",
+      "bytes": 254,
+      "source_modified_by_audit": false,
+      "source_live": false
+    },
+    {
+      "source": "data\\v63_20261027\\local_campaign_results\\phases\\2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2\\technical-smoke\\progress.json",
+      "snapshot": "technical_smoke_progress_snapshot.json",
+      "sha256": "f188e9f329ae941c53066e983316b84453c4e76c9affb57d9fbc8a19c8efb1d6",
+      "bytes": 849,
+      "source_modified_by_audit": false,
+      "source_live": false
+    },
+    {
+      "source": "data\\v63_20261027\\runtime\\local_windows\\candidate005_development_20261027T100125587Z\\memory_observations.jsonl",
+      "snapshot": "memory_observations_snapshot.jsonl",
+      "sha256": "d85d0223c7178aa562ef25927202f3d78597bdc358ece0a8cea3c1bac0a6726b",
+      "bytes": 166147,
+      "source_modified_by_audit": false,
+      "source_live": true
+    }
+  ],
+  "network_requests_by_audit": {
+    "read_only_api_ps": 1,
+    "model_load": 0,
+    "generation": 0,
+    "postwake_read_only_status_health_slots": 3
+  },
+  "original_files_changed": 0,
+  "power_settings_changed_by_audit": 0,
+  "service_changes": 0,
+  "postwake_liveness": {
+    "observed_at_utc": "2026-10-27T13:29:11.490778+00:00",
+    "case": "development-001__F02__R1__1",
+    "first_request_completed_at_utc": "2026-10-27T13:26:34.929130+00:00",
+    "first_request_http_status": 200,
+    "first_request_charged_http_seconds": 3648.6041729999997,
+    "first_request_output_tokens": 2332,
+    "first_request_metrics_include_standby_seconds": true,
+    "second_request_dispatch": {
+      "status": "dispatch_started_or_indeterminate_if_interrupted",
+      "started_at_utc": "2026-10-27T13:26:35.070253+00:00",
+      "request_sha256": "64e01ec68ad509edf7fb397bbdf457f1b48a2d804a20b61952b12069139cb6cb",
+      "generation_requests_upper_bound": 1
+    },
+    "backend_read_only_health": {
+      "origin": "http://127.0.0.1:65069",
+      "status": "ok"
+    },
+    "backend_read_only_slot": {
+      "id": 0,
+      "n_ctx": 32768,
+      "is_processing": true,
+      "id_task": 3876
+    },
+    "server_log_token_progress_observed": [
+      585,
+      614,
+      645,
+      678,
+      710,
+      737,
+      771,
+      802,
+      835,
+      872,
+      903,
+      936,
+      969,
+      998,
+      1021,
+      1046,
+      1070,
+      1095,
+      1120,
+      1142,
+      1164,
+      1188
+    ],
+    "recent_decode_window_tps_observed": [
+      7.09,
+      12.01
+    ],
+    "live_gpu_residency_bytes": 4976237608,
+    "deadlock_evidence_found": false,
+    "audit_model_load_requests": 0,
+    "audit_generation_requests": 0,
+    "model_output_content_used_for_selection": false
+  },
+  "root_power_change_note": {
+    "reported_completed_kst": "2026-10-27T22:27/22:28+09:00",
+    "standby_idle_AC_DC_seconds": 0,
+    "hibernate_idle_AC_DC_seconds": 0,
+    "lid_action_AC_DC": 0,
+    "active_plan_unchanged": true,
+    "owner": "root",
+    "backup_and_restoration_directory": "research/device_migration_20261027/power_settings_20261027T222631",
+    "export_limitation": "powercfg /export denied 0x522; plaintext before/after and restore script retained by root",
+    "independently_modified_or_reapplied_by_this_audit": false
+  }
+}

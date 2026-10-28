@@ -2,6 +2,7 @@
 from copy import deepcopy
 import json
 from pathlib import Path
+from types import SimpleNamespace
 import pytest
 from research.v63 import longrun_guardian as g
 
@@ -11,8 +12,26 @@ def put(path,value):
     path.write_text(json.dumps(value),encoding='utf-8');return path
 
 
+def historical_fixture(root,count=0,seconds=0.,*,supplemental=0.,untimed=0,per_request=120.,evidence=None):
+    scope='Synthetic prior candidate only; excludes current run.'
+    h={'generation_requests':count,'recorded_request_seconds':seconds,
+       'supplemental_recorded_request_seconds':supplemental,'generation_requests_without_timing':untimed,
+       'request_seconds_reserved_for_missing_timing':untimed*per_request,
+       'reservation_seconds_per_untimed_request':per_request if untimed else 0.,
+       'reservation_basis':'Synthetic resource reservation, not an observed duration.',
+       'scope':scope,'evidence':list(evidence or [])}
+    if count:
+        audit=put(root/'synthetic_historical_timing_audit.json',{
+            'schema':'libera_historical_request_timing_audit_v1','generation_requests':count,
+            'recorded_request_seconds':seconds,'supplemental_recorded_request_seconds':supplemental,
+            'generation_requests_without_timing':untimed,'timed_generation_requests':count-untimed,'scope':scope})
+        h['timing_evidence']=g.file_ref(root,audit);h['evidence'].append(g.file_ref(root,audit))
+    return h
+
+
 @pytest.fixture
 def approval_fixture(tmp_path,monkeypatch):
+    monkeypatch.setattr(g,'_execution_state',lambda flags:0x80000000)
     root=tmp_path/'synthetic_workspace';root.mkdir()
     freeze={'model_sha256':'m'*64,'main_model_frozen':False,'temperature':0,'request_timeout':120}
     put(root/'freeze.json',freeze)
@@ -38,8 +57,7 @@ def approval_fixture(tmp_path,monkeypatch):
         'effect_or_pvalue_used_for_selection':False,'allow_main_only_after_ready_pilot':True,'recovery_required':True,
         'resource_limits':{'max_total_generation_requests':100000,'max_total_request_seconds':1e7,
             'max_guardian_wall_seconds':1e7,'max_prompt_tokens':16000,'forecast_safety_factor':1.1},
-        'historical_costs':{'generation_requests':0,'recorded_request_seconds':0.,'evidence':[],
-            'scope':'Synthetic fixture; no earlier real model calls.'},
+        'historical_costs':historical_fixture(root),
         'measurement_evidence':evidence,'synthetic_test_fixture_only':True}
     path=put(root/'synthetic_approval.json',approval)
     return root,config_path,path,approval,bindings
@@ -220,18 +238,81 @@ def test_running_child_is_terminated_when_bound_data_drifts(approval_fixture,mon
     root,config,path,a,b=approval_fixture;guardian=g.Guardian(root,config,path,g.digest(path));child=FakeProcess()
     def launch(*args,**kw):put(root/'bound_code_data.json',{'changed':True});return child
     monkeypatch.setattr(g.subprocess,'Popen',launch);monkeypatch.setattr(guardian,'unchanged',lambda:None)
+    def taskkill(*args,**kw):
+        child.terminate();return SimpleNamespace(returncode=0,stdout='synthetic tree stopped',stderr='')
+    monkeypatch.setattr(g.subprocess,'run',taskkill)
     with pytest.raises(g.GuardianStop):guardian.subprocess(['fake-program'],'synthetic-child',100)
     assert child.terminated and guardian.process is None
+
+
+def test_owned_windows_tree_cleanup_targets_exact_child(monkeypatch):
+    child=FakeProcess();calls=[]
+    monkeypatch.setattr(g,'os',SimpleNamespace(name='nt'))
+    def taskkill(command,**kwargs):
+        calls.append((command,kwargs));child.terminate()
+        return SimpleNamespace(returncode=0,stdout='mock child tree terminated',stderr='')
+    monkeypatch.setattr(g.subprocess,'run',taskkill)
+    result=g.stop_owned_process_tree(child)
+    assert calls[0][0]==['taskkill.exe','/PID',str(child.pid),'/T','/F']
+    assert calls[0][1]['timeout']==15 and calls[0][1]['capture_output'] is True
+    assert result['tree_command_exit_code']==0 and child.terminated
+
+
+def test_exited_child_never_invokes_pid_tree_cleanup(monkeypatch):
+    child=FakeProcess();child.returncode=0
+    monkeypatch.setattr(g.subprocess,'run',lambda *a,**kw:pytest.fail('Exited child PID must not be reused for termination'))
+    assert g.stop_owned_process_tree(child)['already_exited'] is True
+
+
+def test_windows_tree_cleanup_failure_is_recorded_and_owned_stub_stopped(monkeypatch):
+    child=FakeProcess();monkeypatch.setattr(g,'os',SimpleNamespace(name='nt'))
+    def denied(*args,**kwargs):raise PermissionError('synthetic taskkill failure')
+    monkeypatch.setattr(g.subprocess,'run',denied)
+    result=g.stop_owned_process_tree(child)
+    assert child.terminated and 'PermissionError' in result['tree_command_error']
+    assert 'tree_command_exit_code' not in result  # do not claim a verified tree stop
+
+
+@pytest.mark.parametrize('fails',[False,True])
+def test_temporary_windows_sleep_prevention_restores_previous_state(monkeypatch,fails):
+    flags=[];monkeypatch.setattr(g,'os',SimpleNamespace(name='nt'))
+    monkeypatch.setattr(g,'_execution_state',lambda value:(flags.append(value) or 0x80000000))
+    def work():
+        with g.system_awake() as awake:
+            assert awake is True
+            if fails:raise RuntimeError('synthetic work interruption')
+    if fails:
+        with pytest.raises(RuntimeError):work()
+    else:work()
+    assert flags==[0x80000001,0x80000000]
+
+
+def test_failed_sleep_prevention_never_enters_owned_work(monkeypatch):
+    monkeypatch.setattr(g,'os',SimpleNamespace(name='nt'))
+    monkeypatch.setattr(g,'_execution_state',lambda flags:0)
+    with pytest.raises(g.GuardianStop,match='sleep prevention'):
+        with g.system_awake():pytest.fail('Work cannot start after setup failed')
+
+
+def test_guardian_writer_uses_bounded_shared_atomic_implementation(tmp_path,monkeypatch):
+    from research.v63 import campaign_control as control
+    calls=[];real=control.atomic_json
+    def recorded(path,value):calls.append((path,value));return real(path,value)
+    monkeypatch.setattr(control,'atomic_json',recorded)
+    path=tmp_path/'state.json';g.write(path,{'status':'preserved'})
+    assert calls==[(path,{'status':'preserved'})]
+    assert g.read(path)=={'status':'preserved'}
 
 
 def test_historical_cost_evidence_is_explicit_and_immutable(approval_fixture):
     root,config,path,a,b=approval_fixture
     prior=put(root/'prior_requests.json',{'synthetic_prior_requests':7})
-    a=deepcopy(a);a['historical_costs']={'generation_requests':7,'recorded_request_seconds':13.,
-        'evidence':[g.file_ref(root,prior)],'scope':'Synthetic prior candidate only; excludes current run.'}
+    a=deepcopy(a);a['historical_costs']=historical_fixture(root,7,13.,evidence=[g.file_ref(root,prior)])
     put(path,a)
     assert g.validate_approval(root,config,path,g.digest(path))['historical_costs']['generation_requests']==7
-    assert g.historical_costs(root,a)==(7,13.)
+    assert g.historical_costs(root,a)=={'generation_requests':7,'recorded_request_seconds':13.,
+        'supplemental_recorded_request_seconds':0.,'generation_requests_without_timing':0,
+        'request_seconds_reserved_for_missing_timing':0.}
     prior.write_text('changed',encoding='utf-8')
     with pytest.raises(g.GuardianStop):g.validate_approval(root,config,path,g.digest(path))
     a.pop('historical_costs');put(path,a)
@@ -241,17 +322,84 @@ def test_historical_cost_evidence_is_explicit_and_immutable(approval_fixture):
 def test_untimed_requests_reserve_timeout_and_prior_costs_are_added(approval_fixture):
     root,config,path,a,b=approval_fixture
     prior=put(root/'prior.json',{'synthetic_only':True})
-    a=deepcopy(a);a['historical_costs']={'generation_requests':7,'recorded_request_seconds':13.,
-        'evidence':[g.file_ref(root,prior)],'scope':'Prior synthetic candidate'};put(path,a)
+    a=deepcopy(a);a['historical_costs']=historical_fixture(root,7,13.,untimed=2,
+        supplemental=5.,evidence=[g.file_ref(root,prior)]);put(path,a)
     guardian=g.Guardian(root,config,path,g.digest(path))
     put(guardian.run_root/'task/http/attempt_000001/runner_request.bin',{'uncertain':True})
     put(guardian.run_root/'task/http/attempt_000002/attempt_receipt.json',{'generation_requests':1})
     costs=guardian.limits()
     assert costs['generation_request_budget_count']==9
     assert costs['generation_requests_without_timing']==2
-    assert costs['request_seconds_budget_count']==253.
-    guardian.approval['resource_limits']['max_total_request_seconds']=252.
+    assert costs['historical_generation_requests_without_timing']==2
+    assert costs['total_generation_requests_without_timing']==4
+    assert costs['historical_recorded_request_seconds']==13.
+    assert costs['historical_supplemental_recorded_request_seconds']==5.
+    assert costs['recorded_generation_request_seconds']==18.
+    assert costs['historical_request_seconds_reserved_for_missing_timing']==240.
+    assert costs['request_seconds_reserved_for_missing_timing']==480.
+    assert costs['request_seconds_budget_count']==498.
+    guardian.approval['resource_limits']['max_total_request_seconds']=497.
     with pytest.raises(g.GuardianStop):guardian.limits()
+
+
+@pytest.mark.parametrize('field,value',[
+    ('generation_requests_without_timing',None),('generation_requests_without_timing',-1),
+    ('generation_requests_without_timing',8),('generation_requests_without_timing',True),
+    ('supplemental_recorded_request_seconds',None),('supplemental_recorded_request_seconds',float('nan')),
+    ('request_seconds_reserved_for_missing_timing',None),('request_seconds_reserved_for_missing_timing',float('inf')),
+    ('request_seconds_reserved_for_missing_timing',0),('request_seconds_reserved_for_missing_timing',239),
+    ('reservation_seconds_per_untimed_request',-1),('reservation_seconds_per_untimed_request',True),
+    ('reservation_basis',''),('timing_evidence',None),
+])
+def test_historical_timing_requires_explicit_consistent_finite_reservations(approval_fixture,field,value):
+    root,config,path,a,b=approval_fixture
+    a=deepcopy(a);a['historical_costs']=historical_fixture(root,7,13.,untimed=2)
+    a['historical_costs'][field]=value
+    with pytest.raises(g.GuardianStop):g.historical_costs(root,a)
+
+
+def test_legacy_timing_omission_and_rehashed_count_mismatch_fail_closed(approval_fixture):
+    root,config,path,a,b=approval_fixture;a=deepcopy(a)
+    a['historical_costs']={'generation_requests':7,'recorded_request_seconds':13.,'evidence':[],
+                         'scope':'Prior run without a timing audit'}
+    with pytest.raises(g.GuardianStop,match='Explicit'):g.historical_costs(root,a)
+    a['historical_costs']=historical_fixture(root,7,13.,untimed=2)
+    audit=root/a['historical_costs']['timing_evidence']['path']
+    put(audit,{**g.read(audit),'timed_generation_requests':6})
+    a['historical_costs']['timing_evidence']=g.file_ref(root,audit)
+    a['historical_costs']['evidence']=[g.file_ref(root,audit)]
+    with pytest.raises(g.GuardianStop,match='partition'):g.historical_costs(root,a)
+
+
+def test_accounted_costs_never_mutates_or_double_counts_observations(approval_fixture):
+    root,config,path,a,b=approval_fixture;a=deepcopy(a)
+    a['historical_costs']=historical_fixture(root,7,13.,supplemental=5.,untimed=2)
+    raw={'generation_request_budget_count':1,'recorded_generation_request_seconds':4.,
+         'generation_requests_without_timing':0}
+    before=deepcopy(raw);first=g.accounted_costs(root,a,raw,120.)
+    assert g.accounted_costs(root,a,raw,120.)==first and raw==before
+    assert first['generation_request_budget_count']==8
+    assert first['recorded_generation_request_seconds']==22.
+    assert first['request_seconds_budget_count']==262.
+    with pytest.raises(g.GuardianStop,match='twice'):g.accounted_costs(root,a,first,120.)
+
+
+def test_main_forecast_retains_historical_reservation_without_claiming_observation(approval_fixture):
+    root,config,path,a,b=approval_fixture;p=pilot_fixture(root);a=deepcopy(a)
+    a['historical_costs']=historical_fixture(root,7,13.,untimed=2)
+    forecast=sum(g.COUNTS[phase]*2*a['resource_limits']['forecast_safety_factor'] for phase in g.PHASES[1:])
+    a['resource_limits']['max_total_request_seconds']=forecast+13.+239.
+    directory=root/'guardian'
+    with pytest.raises(g.GuardianStop,match='reserved costs'):
+        g.promote_main(root,g.read(config),a,g.digest(path),directory,p)
+    assert g.read(root/'freeze.json')['main_model_frozen'] is False
+    a['resource_limits']['max_total_request_seconds']=forecast+13.+240.
+    g.promote_main(root,g.read(config),a,g.digest(path),directory,p)
+    costs=g.read(directory/'main_resource_review.json')['actual_costs_before_main']
+    assert costs['historical_recorded_request_seconds']==13.
+    assert costs['recorded_generation_request_seconds']==13.
+    assert costs['historical_request_seconds_reserved_for_missing_timing']==240.
+    assert costs['request_seconds_budget_count']==253.
 
 
 @pytest.mark.parametrize('value',[None,0,104])

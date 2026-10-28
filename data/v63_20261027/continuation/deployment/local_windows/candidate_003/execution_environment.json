@@ -1,0 +1,155 @@
+{
+  "candidate_id": "windows_cpu_device_migration_003",
+  "inference_engine": "official Ollama 0.35.1 Windows portable CPU",
+  "server_environment": {
+    "OLLAMA_HOST": "127.0.0.1:11435",
+    "OLLAMA_MODELS": "C:\\Users\\Insun\\2026libera\\tmp\\v63_local_ollama\\models",
+    "OLLAMA_NO_CLOUD": "1",
+    "OLLAMA_VULKAN": "0",
+    "OLLAMA_NUM_PARALLEL": "1",
+    "OLLAMA_MAX_LOADED_MODELS": "1",
+    "OLLAMA_FLASH_ATTENTION": "1",
+    "OLLAMA_KV_CACHE_TYPE": "f16"
+  },
+  "python_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "python_version": "3.13.3",
+  "python_packages": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "cvxpy": "1.9.3",
+    "clarabel": "0.11.1",
+    "scikit-learn": "1.9.1",
+    "rank-bm25": "0.2.2",
+    "jsonschema": "4.26.0"
+  },
+  "cpu": {
+    "Name": "Intel(R) Core(TM) Ultra 7 258V",
+    "NumberOfCores": 8,
+    "NumberOfLogicalProcessors": 8
+  },
+  "physical_memory_KiB": 33041064,
+  "binary_artifacts": [
+    {
+      "path": "tmp/v63_local_ollama/portable/ollama.exe",
+      "sha256": "3cc17c238b081adf2bd3a206e52a063b637af1bf283d95b4ffd73a2bdec8b027"
+    },
+    {
+      "path": "tmp/v63_local_ollama/portable/lib/ollama/ggml-base.dll",
+      "sha256": "b385871a358e2a1e750921b0233b5bb73c32b4dda9ee2a64cba2d853d3efd4ae"
+    },
+    {
+      "path": "tmp/v63_local_ollama/portable/lib/ollama/ggml-cpu-alderlake.dll",
+      "sha256": "341e96207a545301a778742ff78e791a51faab5264632cc893d43ef93bd84a58"
+    },
+    {
+      "path": "tmp/v63_local_ollama/portable/lib/ollama/ggml-cpu-cannonlake.dll",
+      "sha256": "4464bb5f8a9e7c7fa7b8fb651b60387ef94498dbebfa7efd63348c29afbbd1f2"
+    },
+    {
+      "path": "tmp/v63_local_ollama/portable/lib/ollama/ggml-cpu-cascadelake.dll",
+      "sha256": "464ff73f891e1629e65a4ec82a65cc42778c37d03f7bcf92a2cf1e5a83b563d6"
+    },
+    {
+      "path": "tmp/v63_local_ollama/portable/lib/ollama/ggml-cpu-cooperlake.dll",
+      "sha256": "1715e3d71bf1ee780e60124cad6f63f6cdc1bd4ed152545aaa81cde3a4317c5b"
+    },
+    {
+      "path": "tmp/v63_local_ollama/portable/lib/ollama/ggml-cpu-haswell.dll",
+      "sha256": "507fb06c9ca014239c1006acaee3f2c4090fbd507116f457682799a3373b80bb"
+    },
+    {
+      "path": "tmp/v63_local_ollama/portable/lib/ollama/ggml-cpu-icelake.dll",
+      "sha256": "a06e4169efa131b6f675834991816a14463310fb8ccdb1595e22928f57221a8d"
+    },
+    {
+      "path": "tmp/v63_local_ollama/portable/lib/ollama/ggml-cpu-ivybridge.dll",
+      "sha256": "cfe3fb1d81e77c64c22f49ecafd80910616db9d36742e205448f55c13b035b45"
+    },
+    {
+      "path": "tmp/v63_local_ollama/portable/lib/ollama/ggml-cpu-piledriver.dll",
+      "sha256": "d0859600dccbbaf66ca8dc825431e94e81dc9142f37d4766d856588e3d7330fc"
+    },
+    {
+      "path": "tmp/v63_local_ollama/portable/lib/ollama/ggml-cpu-sandybridge.dll",
+      "sha256": "fd3a721e4ec30d1f35ee6a2af99beeecef46dec4466987dd8790d7c07dd4942d"
+    },
+    {
+      "path": "tmp/v63_local_ollama/portable/lib/ollama/ggml-cpu-sapphirerapids.dll",
+      "sha256": "bb4c0ec591ec9f391e99e4e03c4055de3a6b51761709d53c4c2df12db79f1044"
+    },
+    {
+      "path": "tmp/v63_local_ollama/portable/lib/ollama/ggml-cpu-skylakex.dll",
+      "sha256": "450b79a1a30ff474f16d5d683b17a812202db6d30c9572cb9afa578a856f4be9"
+    },
+    {
+      "path": "tmp/v63_local_ollama/portable/lib/ollama/ggml-cpu-sse42.dll",
+      "sha256": "7a5c9d4f931ba9cfa20b6d735ee53dcc35da60145d773ff97c9a78ac71cb9167"
+    },
+    {
+      "path": "tmp/v63_local_ollama/portable/lib/ollama/ggml-cpu-x64.dll",
+      "sha256": "57729b8c8c4fec716bf10b53eae7da1cca359f820fa97bb1718fb04b5ab7aa51"
+    },
+    {
+      "path": "tmp/v63_local_ollama/portable/lib/ollama/ggml-cpu-zen4.dll",
+      "sha256": "1012650c31ffc1c341a8fe35cd49593b680eed473b67ffc8499100f39788cb9e"
+    },
+    {
+      "path": "tmp/v63_local_ollama/portable/lib/ollama/ggml.dll",
+      "sha256": "ebe3ffe406e27d08c8e34d1d8e49ee62e007b761ea126b49c04096106ef078b9"
+    },
+    {
+      "path": "tmp/v63_local_ollama/portable/lib/ollama/libc++.dll",
+      "sha256": "659b8402be4dd615d16685fdaffc94e70db1ce8617c7de32a78644d06422fd3c"
+    },
+    {
+      "path": "tmp/v63_local_ollama/portable/lib/ollama/libllama-common.dll",
+      "sha256": "a7a9ba013602e2f0659e6cb8b8c33d14c3b7b0b93e4fb519eb5975bc0706bf0e"
+    },
+    {
+      "path": "tmp/v63_local_ollama/portable/lib/ollama/libllama-quantize-impl.dll",
+      "sha256": "780aac00e9cbc1009a24e1b5c732b58cd3817bfccfc49a86ceb13908e5eea953"
+    },
+    {
+      "path": "tmp/v63_local_ollama/portable/lib/ollama/libllama-server-impl.dll",
+      "sha256": "3485f7f6e409d44b30aa476f66c83ceff32c87d5019ded741a63405797cd295c"
+    },
+    {
+      "path": "tmp/v63_local_ollama/portable/lib/ollama/libllama.dll",
+      "sha256": "0335cae1bc3429fd8fe2a98f02777653d6680380a5e5698c514e6c928d36abb3"
+    },
+    {
+      "path": "tmp/v63_local_ollama/portable/lib/ollama/libmtmd.dll",
+      "sha256": "63a810a6154c8834fd4eb577fc942fe0917c8a024d54fe351940098bba9930eb"
+    },
+    {
+      "path": "tmp/v63_local_ollama/portable/lib/ollama/libomp.dll",
+      "sha256": "492036a3aedc3671e2ff7781504f8ffb59082b717d12f58a7049772b81f24ccd"
+    },
+    {
+      "path": "tmp/v63_local_ollama/portable/lib/ollama/libunwind.dll",
+      "sha256": "cf46fe9f953a2cdb16f82558316bdd53873ec8d9a7850887d409ee9685ed3cd7"
+    },
+    {
+      "path": "tmp/v63_local_ollama/portable/lib/ollama/libwinpthread-1.dll",
+      "sha256": "43ee72bd3daa5348339d820695442b7cc0cc37892072b06e0547111d08572258"
+    },
+    {
+      "path": "tmp/v63_local_ollama/portable/lib/ollama/llama-quantize.exe",
+      "sha256": "056b1c149c69dbef3b8ee13e40ee88b6818ea90dc937860889e3f559cfcfb502"
+    },
+    {
+      "path": "tmp/v63_local_ollama/portable/lib/ollama/llama-server.exe",
+      "sha256": "a08019a85166eb2b54d0c0ff1a27e1fec0c58c13bbb8bf757d2bb908792bcd63"
+    }
+  ],
+  "launcher": {
+    "path": "research/start_v63_local_ollama.ps1",
+    "sha256": "c2ef60886be1bdcd892295631b1bf30db5f04f9436efb9fc4786f3ca22502f69"
+  },
+  "numeric_policy": "Campaign sets Python BLAS/OMP/MKL thread counts to 1 before NumPy import; the separate inference server uses num_thread=8.",
+  "selection_basis": "Replacement device requested by user. Same verified model and inference settings; no effect size, p-value or investment outcome used for selection."
+}

@@ -1,0 +1,7 @@
+powercfg.exe : 이 명령에는 관리자 권한이 필요하며 관리자 권한 명령 프롬프트에서 명령을 실행해야 합니다.
+위치 줄:7 문자:91
++ ... Queries[$taskName]; $taskText = & powercfg.exe @taskArgs 2>&1 | Out-S ...
++                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (이 명령에는 관리자 권한이 ...서 명령을 실행해야 합니다.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

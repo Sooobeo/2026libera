@@ -1,0 +1,151 @@
+{
+  "schema": "libera_continuation_and_paper_preparation_handoff_v1",
+  "recorded_at_utc": "2026-10-27T13:44:39.149701+00:00",
+  "run_id": "2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2",
+  "status": "paired_feasibility_running_final_results_and_paper_pending",
+  "observed_at_kst": "2026-10-27T22:44:23.980068+09:00",
+  "progress": {
+    "status": "running",
+    "terminal_trajectories": 6,
+    "current_candidate_request_costs": {
+      "generation_requests": 21,
+      "confirmed_attempt_records": 20,
+      "uncertain_dispatch_requests": 1
+    },
+    "observation_errors": [],
+    "controller_kind": "development_supervisor",
+    "power_settings_receipt": {
+      "path": "research\\device_migration_20261027\\power_settings_20261027T223543\\receipt.json",
+      "recorded_at_utc": "2026-10-27T13:35:44.310358+00:00",
+      "verified_no_idle_sleep_hibernate_or_lid_sleep_at_record_time": true,
+      "verified_no_display_idle_at_record_time": true,
+      "scope": "Verified setting receipt at its recorded time; observer does not query or change OS power settings.",
+      "settings": [
+        {
+          "subgroup": "SUB_SLEEP",
+          "setting": "STANDBYIDLE",
+          "guid": "29f6c1db-86da-48c5-9fdb-f2b67b1f44da",
+          "before": {
+            "AC": 180,
+            "DC": 180
+          },
+          "after": {
+            "AC": 0,
+            "DC": 0
+          }
+        },
+        {
+          "subgroup": "SUB_SLEEP",
+          "setting": "HIBERNATEIDLE",
+          "guid": "9d7815a6-7ee4-497e-8888-515a05f02364",
+          "before": {
+            "AC": 2592000,
+            "DC": 259200
+          },
+          "after": {
+            "AC": 0,
+            "DC": 0
+          }
+        },
+        {
+          "subgroup": "SUB_BUTTONS",
+          "setting": "LIDACTION",
+          "guid": "5ca83367-6e45-459f-a27b-476b1d01c936",
+          "before": {
+            "AC": 1,
+            "DC": 1
+          },
+          "after": {
+            "AC": 0,
+            "DC": 0
+          }
+        },
+        {
+          "subgroup": "SUB_VIDEO",
+          "setting": "VIDEOIDLE",
+          "guid": "3c0bc021-c8a8-4e07-a973-6b14cbcb2b7e",
+          "before": {
+            "AC": 180,
+            "DC": 180
+          },
+          "after": {
+            "AC": 0,
+            "DC": 0
+          }
+        }
+      ],
+      "restore_script": "research\\device_migration_20261027\\power_settings_20261027T223543\\restore_previous_settings.ps1"
+    },
+    "keepawake_receipt": {
+      "path": "research\\device_migration_20261027\\keepawake_candidate005_20261027T134057209Z\\status.json",
+      "launch_path": "research\\device_migration_20261027\\keepawake_candidate005_20261027T134057209Z\\launch.json",
+      "pid": 30232,
+      "process_identity_alive": true,
+      "last_status": "active",
+      "updated_at_utc": "2026-10-27T13:44:18.913819+00:00",
+      "fresh": true,
+      "verified_active": true,
+      "api_events": [
+        {
+          "api": "SetThreadExecutionState",
+          "flags": 2147483651,
+          "return_value": 2147483648,
+          "success": true
+        },
+        {
+          "api": "PowerCreateRequest",
+          "success": true
+        },
+        {
+          "api": "PowerSetRequest",
+          "request_type": "PowerRequestExecutionRequired",
+          "success": true
+        }
+      ],
+      "scope": "Helper status and original process identity; not a new OS power-policy query or a guarantee against explicit user sleep."
+    }
+  },
+  "current_task": "development-001__F02__C-context__1",
+  "original_config_unchanged": true,
+  "frozen_core_checks": 13,
+  "frozen_core_mismatches": [],
+  "main_model_frozen": false,
+  "root_resource_approval_issued": false,
+  "power_settings_changed_per_user_request": true,
+  "paper_finalized": false,
+  "refs": {
+    "power_settings": {
+      "path": "research/device_migration_20261027/power_settings_20261027T223543/receipt.json",
+      "sha256": "b18f20319a9dcca017008b42344d8cd53786a7e1548fbe5b9c81e00d17ff6300"
+    },
+    "guardian_verification": {
+      "path": "research/device_migration_20261027/followup_20261027/guardian_historical_reservation_verification.json",
+      "sha256": "39cc4eeee9895f99d983fa4d2eb8f119ef9e4b2ac34d70e0c9d1889e9a08d172"
+    },
+    "historical_timing_audit": {
+      "path": "research/device_migration_20261027/followup_20261027/candidate005_historical_timing_audit.json",
+      "sha256": "1e60891137f0d9dc0e5f54400e5895bfeea46de05ce828d16019ec39e61eaaa5"
+    },
+    "completed_phase_reuse": {
+      "path": "research/device_migration_20261027/followup_20261027/completed_phase_reuse_verification.json",
+      "sha256": "e4d667d013082e0d45ad2770cfbeadfc4c8934028a4a89ee3cc9bbf8fd2dc496"
+    },
+    "paper_request": {
+      "path": "research/device_migration_20261027/paper_completion_request.json",
+      "sha256": "ffce794d6342defe429787a3fe5070841b26d60e8f97414d97b454daaf1ca2ca"
+    },
+    "paper_sources": {
+      "path": "research/device_migration_20261027/paper_source_audit_20261027/report.json",
+      "sha256": "2d80e86a697035796ff2ed67709e0ab54a4bf2c13d687b4c8e94170b3bc09f00"
+    },
+    "paper_citations": {
+      "path": "research/device_migration_20261027/paper_source_audit_20261027/citation_readiness_20261027.json",
+      "sha256": "821c921800bed23ce9f5a3f6b806d49f6e82694c1ec79f927a16b89d4fa69355"
+    },
+    "paper_environment": {
+      "path": "research/device_migration_20261027/paper_environment/environment.json",
+      "sha256": "5b9031b539fbfba8d391cc0a4f600f66607eb7a8cd9a35f5cbe9b64655e804b4"
+    }
+  },
+  "next_action": "Review actual completed same-runtime 60-stage measurements, issue root resource approval with explicit historical observations and untimed reservations, run guardian through development and conditional main gates; write final paper after validated all-phase completion."
+}

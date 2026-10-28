@@ -1,0 +1,529 @@
+{
+  "schema": "libera-device-migration-input-readiness-v1",
+  "recorded_at_utc": "2026-10-27T08:08:41.747376+00:00",
+  "workspace_root": "C:\\Users\\Insun\\2026libera",
+  "status": "execution_inputs_verified_raw_source_archive_unavailable",
+  "scope": "Read-only stdlib audit of retained execution input bytes and internal consistency. No new primary-source collection, human review, numerical solver run, tokenizer run, model call or experimental result.",
+  "new_model_calls": 0,
+  "checks_passed": 47,
+  "checks_failed": 0,
+  "checks": [
+    {
+      "name": "preserved_input_sha256:data/v63_20261027/continuation_sources/profiles_v2.json",
+      "passed": true
+    },
+    {
+      "name": "preserved_input_sha256:data/v63_20261027/continuation_sources/documents_v2.json",
+      "passed": true
+    },
+    {
+      "name": "preserved_input_sha256:data/v63_20261027/continuation_sources/mandate_atomic_units_v2.json",
+      "passed": true
+    },
+    {
+      "name": "preserved_input_sha256:data/v63_20261027/numerical/evaluator_only/source_catalog_v2.json",
+      "passed": true
+    },
+    {
+      "name": "preserved_input_sha256:data/v63_20261027/numerical/calibration.json",
+      "passed": true
+    },
+    {
+      "name": "preserved_input_sha256:data/v63_20261027/continuation/execution_amendment.json",
+      "passed": true
+    },
+    {
+      "name": "12_unique_fund_period_profiles",
+      "passed": true
+    },
+    {
+      "name": "profile:F01:development",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "profile:F01:A_B",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "profile:F01:C",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "profile:F02:development",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "profile:F02:A_B",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "profile:F02:C",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "profile:F03:development",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "profile:F03:A_B",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "profile:F03:C",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "profile:F04:development",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "profile:F04:A_B",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "profile:F04:C",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "mandate_partitions_profile_link",
+      "passed": true
+    },
+    {
+      "name": "mandate_exact_slices:F02:A_B:VPMCX_BORROWING_COVER",
+      "passed": true
+    },
+    {
+      "name": "mandate_exact_slices:F02:A_B:VPMCX_LENDING",
+      "passed": true
+    },
+    {
+      "name": "mandate_exact_slices:F02:C:VPMCX_BORROWING_COVER",
+      "passed": true
+    },
+    {
+      "name": "mandate_exact_slices:F02:C:VPMCX_LENDING",
+      "passed": true
+    },
+    {
+      "name": "FF12_raw_zip_sha256",
+      "passed": true
+    },
+    {
+      "name": "FF12_zip_member_sha256",
+      "passed": true
+    },
+    {
+      "name": "FF12_120_month_raw_cache_agreement",
+      "passed": true,
+      "detail": {
+        "months": 120,
+        "max_abs_difference": 0.0
+      }
+    },
+    {
+      "name": "calibration_links",
+      "passed": true
+    },
+    {
+      "name": "A_C_embedded_source_consistency:A-COMMON-FOMC-20260318",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "A_C_embedded_source_consistency:C-COMMON-FOMC-20260617",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "A_C_embedded_source_consistency:A-F01-FCNTX-2025-REVIEW",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "A_C_embedded_source_consistency:A-F02-VPMCX-2025-REVIEW",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "A_C_embedded_source_consistency:A-F04-TRBCX-2025-REVIEW",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "A_C_embedded_source_consistency:A-F03-DODGX-2025-REVIEW",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "preserved_core_code:campaign.py",
+      "passed": true
+    },
+    {
+      "name": "preserved_core_code:campaign_control.py",
+      "passed": true
+    },
+    {
+      "name": "preserved_core_code:recovery.py",
+      "passed": true
+    },
+    {
+      "name": "preserved_core_code:build_run.py",
+      "passed": true
+    },
+    {
+      "name": "preserved_core_code:runtime.py",
+      "passed": true
+    },
+    {
+      "name": "preserved_core_code:retrieval.py",
+      "passed": true
+    },
+    {
+      "name": "preserved_core_code:numerics.py",
+      "passed": true
+    },
+    {
+      "name": "preserved_core_code:evaluate.py",
+      "passed": true
+    },
+    {
+      "name": "preserved_core_code:statistics.py",
+      "passed": true
+    },
+    {
+      "name": "preserved_core_code:pilot_precision.py",
+      "passed": true
+    },
+    {
+      "name": "preserved_core_code:ollama_transport.py",
+      "passed": true
+    },
+    {
+      "name": "preserved_core_code:exact_tokenizer.py",
+      "passed": true
+    },
+    {
+      "name": "preserved_core_code:transport_errors.py",
+      "passed": true
+    }
+  ],
+  "primary_execution_inputs": [
+    {
+      "path": "data/v63_20261027/continuation_sources/profiles_v2.json",
+      "sha256": "556a5f546c0e27a1403cadd40b6ad8c16d72841855c2bb5b7ad8255b5eaae922",
+      "bytes": 210655
+    },
+    {
+      "path": "data/v63_20261027/continuation_sources/documents_v2.json",
+      "sha256": "930560346838abed6129187611c461e88c77b082a30d7456c4053d0cbb108d72",
+      "bytes": 269677
+    },
+    {
+      "path": "data/v63_20261027/continuation_sources/mandate_atomic_units_v2.json",
+      "sha256": "4b563c5208bbed0a209534b87399514bb19f8be4a4da8df75e37af6dc3bd6d96",
+      "bytes": 47612
+    },
+    {
+      "path": "data/v63_20261027/numerical/evaluator_only/source_catalog_v2.json",
+      "sha256": "dae02567ae157fe5eaec1d672e480807e03f233a77110dbc939864f5f51429ef",
+      "bytes": 254896
+    },
+    {
+      "path": "data/v63_20261027/numerical/calibration.json",
+      "sha256": "bfa703298bf0e61574e0297fbc918ae639437dfe57b16449f9ebabfce04343a3",
+      "bytes": 43479
+    },
+    {
+      "path": "data/v63_20261027/continuation/execution_amendment.json",
+      "sha256": "40b1fb616814b599d1b04c137e2fc7558852a929c4986082edc88907b3d3dfde",
+      "bytes": 1560
+    }
+  ],
+  "french_inputs": [
+    {
+      "path": "data/french/manifest.json",
+      "sha256": "75ac2cf7042882f1f936acecfb17d70ce43fdb4edea5c37b5a1f00d993175a66",
+      "bytes": 8483
+    },
+    {
+      "path": "data/french/monthly_returns.json",
+      "sha256": "cf2aee8587eec33a09bf83775bed498d70c527696acf62525eca276a4c1a91a5",
+      "bytes": 1838072
+    },
+    {
+      "path": "data/french/raw/20261017T065550688169Z/12_Industry_Portfolios_TXT.zip",
+      "sha256": "633a1d2da4a9dc7160f5a927c526af325cf4813ca623c7d2053e241f48cbddcf",
+      "bytes": 137579
+    }
+  ],
+  "profiles": [
+    {
+      "fund_id": "F01",
+      "period": "development",
+      "coverage": 0.9503634304426508,
+      "weight_sum": 1.0,
+      "linear_constraint_rows": 0,
+      "checks_passed": true
+    },
+    {
+      "fund_id": "F01",
+      "period": "A_B",
+      "coverage": 0.9471842589553168,
+      "weight_sum": 1.0,
+      "linear_constraint_rows": 0,
+      "checks_passed": true
+    },
+    {
+      "fund_id": "F01",
+      "period": "C",
+      "coverage": 0.9362479725809943,
+      "weight_sum": 1.0,
+      "linear_constraint_rows": 0,
+      "checks_passed": true
+    },
+    {
+      "fund_id": "F02",
+      "period": "development",
+      "coverage": 0.9577380575140537,
+      "weight_sum": 1.0,
+      "linear_constraint_rows": 0,
+      "checks_passed": true
+    },
+    {
+      "fund_id": "F02",
+      "period": "A_B",
+      "coverage": 0.9634879387675347,
+      "weight_sum": 1.0,
+      "linear_constraint_rows": 0,
+      "checks_passed": true
+    },
+    {
+      "fund_id": "F02",
+      "period": "C",
+      "coverage": 0.9660377445938161,
+      "weight_sum": 1.0,
+      "linear_constraint_rows": 0,
+      "checks_passed": true
+    },
+    {
+      "fund_id": "F03",
+      "period": "development",
+      "coverage": 0.9780413798442001,
+      "weight_sum": 1.0,
+      "linear_constraint_rows": 0,
+      "checks_passed": true
+    },
+    {
+      "fund_id": "F03",
+      "period": "A_B",
+      "coverage": 0.9774544116516509,
+      "weight_sum": 1.0,
+      "linear_constraint_rows": 0,
+      "checks_passed": true
+    },
+    {
+      "fund_id": "F03",
+      "period": "C",
+      "coverage": 0.9943181134867642,
+      "weight_sum": 1.0,
+      "linear_constraint_rows": 0,
+      "checks_passed": true
+    },
+    {
+      "fund_id": "F04",
+      "period": "development",
+      "coverage": 0.9870280172928279,
+      "weight_sum": 1.0,
+      "linear_constraint_rows": 0,
+      "checks_passed": true
+    },
+    {
+      "fund_id": "F04",
+      "period": "A_B",
+      "coverage": 0.9929226719812385,
+      "weight_sum": 1.0,
+      "linear_constraint_rows": 0,
+      "checks_passed": true
+    },
+    {
+      "fund_id": "F04",
+      "period": "C",
+      "coverage": 0.9910687387869203,
+      "weight_sum": 1.0,
+      "linear_constraint_rows": 0,
+      "checks_passed": true
+    }
+  ],
+  "documents": [
+    {
+      "document_id": "A-COMMON-FOMC-20260318",
+      "fund_id": "COMMON",
+      "period": "A",
+      "units": 52,
+      "evidence_ids": 52,
+      "raw_source_path": "data\\v63_20261027\\continuation_sources\\outlook\\FOMC_20260318.html",
+      "raw_source_present": false,
+      "embedded_consistency_passed": true
+    },
+    {
+      "document_id": "C-COMMON-FOMC-20260617",
+      "fund_id": "COMMON",
+      "period": "C",
+      "units": 53,
+      "evidence_ids": 53,
+      "raw_source_path": "data\\v63_20261027\\continuation_sources\\outlook\\FOMC_20260617.html",
+      "raw_source_present": false,
+      "embedded_consistency_passed": true
+    },
+    {
+      "document_id": "A-F01-FCNTX-2025-REVIEW",
+      "fund_id": "F01",
+      "period": "A",
+      "units": 3,
+      "evidence_ids": 3,
+      "raw_source_path": "data\\v63_20261027\\continuation_sources\\FCNTX_A_shareholder_report.html",
+      "raw_source_present": false,
+      "embedded_consistency_passed": true
+    },
+    {
+      "document_id": "A-F02-VPMCX-2025-REVIEW",
+      "fund_id": "F02",
+      "period": "A",
+      "units": 4,
+      "evidence_ids": 4,
+      "raw_source_path": "data\\v63_20261027\\continuation_sources\\VPMCX_annual_20250930_browser_dom.json",
+      "raw_source_present": false,
+      "embedded_consistency_passed": true
+    },
+    {
+      "document_id": "A-F04-TRBCX-2025-REVIEW",
+      "fund_id": "F04",
+      "period": "A",
+      "units": 3,
+      "evidence_ids": 3,
+      "raw_source_path": "data\\v63_20261027\\continuation_sources\\outlook\\TRBCX_annual_2025.pdf",
+      "raw_source_present": false,
+      "embedded_consistency_passed": true
+    },
+    {
+      "document_id": "A-F03-DODGX-2025-REVIEW",
+      "fund_id": "F03",
+      "period": "A",
+      "units": 61,
+      "evidence_ids": 61,
+      "raw_source_path": "data\\v63_20261027\\raw\\DODGX_2025_review_transcript.pdf",
+      "raw_source_present": false,
+      "embedded_consistency_passed": true
+    }
+  ],
+  "source_archive_availability": {
+    "manifest": {
+      "path": "data/v63_20261027/continuation_sources/source_manifest_v2.json",
+      "sha256": "d4a45c1c7609cc164645c33a8ebcd386ebc2bf9329ed92eedb30892ea505d590",
+      "bytes": 458748
+    },
+    "source_records": 567,
+    "missing_records": 567,
+    "missing_active_profile_reference_records": 28,
+    "A_C_raw_source_files_present": 0,
+    "A_C_raw_source_files_expected": 6,
+    "interpretation": "Raw source archive is absent on this device. Hash-preserved profiles, normalized original text units and evaluator catalog are present. Prior source-verification receipts are historical evidence, not new raw-byte revalidation."
+  },
+  "execution_dependency_findings": [
+    "campaign.py freezes profiles/documents/mandate units/source catalog, French manifest/cache/raw FF12 ZIP; all are present.",
+    "build_run.py consumes embedded profile/rule/document text and does not open the original source_path fields.",
+    "numerics.calibrate reopens and verifies FF12 raw ZIP and cache; both are present and matched here.",
+    "Missing original download/DOM files limit independent provenance re-audit and must remain disclosed; do not reconstruct them from normalized text or claim their hashes were verified here.",
+    "C corpus still contains only newly published common FOMC material; no verified new fund-specific C outlook is added.",
+    "Human review remains user_assumed_completed, with no actual independent signatures."
+  ],
+  "preserved_core_code": [
+    {
+      "path": "research/v63/campaign.py",
+      "sha256": "bafec17a41b718f6639c2552dc59f5cd1ff03c8bc4202ab602ebcbf857c34263",
+      "bytes": 23106
+    },
+    {
+      "path": "research/v63/campaign_control.py",
+      "sha256": "c8e99ebac3285441026f31688b12ba6a5b402878f34421d264fa8e2d3cddc675",
+      "bytes": 6173
+    },
+    {
+      "path": "research/v63/recovery.py",
+      "sha256": "6a92a93d242d449c63781f4f10a1f4f8709529422b8a2e0f6fde015b1ea081b4",
+      "bytes": 12853
+    },
+    {
+      "path": "research/v63/build_run.py",
+      "sha256": "6bb784a76579f46cb41a121c66149db2b4868a91f21b78e6c33d970e3542d294",
+      "bytes": 14902
+    },
+    {
+      "path": "research/v63/runtime.py",
+      "sha256": "3bcb3ae9d07d2477690c49ff36a8a0e0cc3a949208b7aceedd219d5f2e629050",
+      "bytes": 28831
+    },
+    {
+      "path": "research/v63/retrieval.py",
+      "sha256": "5b1c17f0e94a4230e7508fb9e8cef07efad8fe921931c359ee87cb80dda39aac",
+      "bytes": 11314
+    },
+    {
+      "path": "research/v63/numerics.py",
+      "sha256": "b8906ee2cf06a8c9b51dac2f73ea8584a09d998a618e94879ca05b39e4236dd7",
+      "bytes": 27775
+    },
+    {
+      "path": "research/v63/evaluate.py",
+      "sha256": "c64aadcebd2a607a18cc5eeb1a9824e7d6ae15310f4cd7e4c08e8e8544e7dbc9",
+      "bytes": 30258
+    },
+    {
+      "path": "research/v63/statistics.py",
+      "sha256": "2b06ebb144b0f7ea59750ea38563e5aa68c4bee29e60e20bf3840058269f95e5",
+      "bytes": 7976
+    },
+    {
+      "path": "research/v63/pilot_precision.py",
+      "sha256": "855c720d45eda62c8ef4f6268c06c54a7ac8cf274f477bb246be8b259efe24a5",
+      "bytes": 16425
+    },
+    {
+      "path": "research/v63/ollama_transport.py",
+      "sha256": "95aac74c2cc1da8605615cb306ea1ca49a70a2c751be435e9df65db43f6c0fa3",
+      "bytes": 15036
+    },
+    {
+      "path": "research/v63/exact_tokenizer.py",
+      "sha256": "f14ec91b7016f2ba76318f7eb00657c397827b0712c22a4f5e46f3a52926cefe",
+      "bytes": 6341
+    },
+    {
+      "path": "research/v63/transport_errors.py",
+      "sha256": "59db49ba45f5035921054d799dadd22d01d6dd6f1864b964c6ad95de86287a59",
+      "bytes": 628
+    }
+  ],
+  "historical_artifact_manifest": {
+    "path": "data/v63_20261027/artifact_manifest.json",
+    "sha256": "76998efb3a25706eb831b26b8ca73d233697a7dbd064d00704a1f18550f9df5a",
+    "bytes": 775957
+  },
+  "next_required_checks": [
+    "Run numerical and integration tests under the newly frozen environment.",
+    "Use a new runtime identity for the new device; do not merge prior candidate responses.",
+    "Perform exact-tokenizer/input construction before model dispatch."
+  ]
+}

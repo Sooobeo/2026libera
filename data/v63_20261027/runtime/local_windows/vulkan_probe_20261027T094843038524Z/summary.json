@@ -1,0 +1,78 @@
+{
+  "started_at_utc": "2026-10-27T09:48:43.039439+00:00",
+  "evidence_directory": "C:\\Users\\Insun\\2026libera\\data\\v63_20261027\\runtime\\local_windows\\vulkan_probe_20261027T094843038524Z",
+  "engineering_only": true,
+  "experimental_generation_requests": 0,
+  "engineering_generation_requests": 1,
+  "max_generation_requests": 1,
+  "max_output_tokens": 128,
+  "timeout_seconds": 600,
+  "retries": 0,
+  "model": "qwen3:1.7b",
+  "model_sha256": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+  "origin": "http://127.0.0.1:11436",
+  "selection_criteria": "speed, complete prompt coverage, memory, provider token agreement only",
+  "investment_content_evaluated_for_selection": false,
+  "models_unloaded_at_end": true,
+  "server_pid": 9996,
+  "loaded_model": {
+    "name": "qwen3:1.7b",
+    "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+    "size": 4976237608,
+    "size_vram": 4976237608,
+    "context_length": 32768
+  },
+  "memory_after_load": {
+    "utc": "2026-10-27T09:49:15.643036+00:00",
+    "physical_total_bytes": 33834049536,
+    "physical_available_bytes": 9340637184,
+    "memory_load_percent": 72
+  },
+  "exact_prompt_tokens": 9570,
+  "source_expected_prompt_tokens": 9570,
+  "http_wall_seconds": 55.431671799999776,
+  "provider_metrics": {
+    "prompt_eval_count": 9570,
+    "eval_count": 128,
+    "total_duration": 55023710800,
+    "prompt_eval_duration": 45219730000,
+    "eval_duration": 9674775000,
+    "load_duration": 62004700
+  },
+  "finish_reason": "length",
+  "status": "engineering_generation_completed",
+  "provider_token_count_matches_exact": true,
+  "prefill_tokens_per_second": 211.633284851546,
+  "decode_tokens_per_second": 13.23028184117977,
+  "minimum_available_memory_bytes": 9306009600,
+  "memory_after": {
+    "utc": "2026-10-27T09:50:22.228398+00:00",
+    "physical_total_bytes": 33834049536,
+    "physical_available_bytes": 14957481984,
+    "memory_load_percent": 55
+  },
+  "server_left_running": true,
+  "ended_at_utc": "2026-10-27T09:50:22.228412+00:00",
+  "user_service_preserved": true,
+  "actual_gpu_layers_offloaded": 29,
+  "actual_model_layers": 29,
+  "gpu_device": "Intel Arc 140V integrated GPU",
+  "gpu_driver_version": "32.0.101.8626",
+  "vulkan_api_version": "1.4.340",
+  "kv_cache_type": "f16",
+  "kv_cache_MiB_from_server_log": 3584.0,
+  "verified_binary_count": 39,
+  "all_binary_hash_and_signature_checks_passed": true,
+  "user_service_port_11434_pid_preserved": 6212,
+  "benchmark_limitations": [
+    "One 128-token engineering output from a 9570-token stage-1 prompt; not a full 4096-token throughput benchmark.",
+    "32768 context allocation was verified; input at the entire context limit was not benchmarked.",
+    "Only timing, memory, exact prompt/provider counts and GPU placement were examined; investment output was not evaluated."
+  ],
+  "primary_support_sources": [
+    "https://raw.githubusercontent.com/ollama/ollama/v0.35.1/docs/gpu.mdx",
+    "https://raw.githubusercontent.com/ollama/ollama/v0.35.1/envconfig/config.go",
+    "https://raw.githubusercontent.com/ollama/ollama/v0.35.1/llm/llama_server.go",
+    "https://raw.githubusercontent.com/ollama/ollama/v0.35.1/llm/vulkan_windows.go"
+  ]
+}
