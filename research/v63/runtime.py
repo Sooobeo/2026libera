@@ -20,6 +20,7 @@ import urllib.request
 
 import numpy as np
 from jsonschema import Draft202012Validator
+from research.v63 import numerics
 from research.v63.retrieval import canonical, sha, INDUSTRIES
 from research.v63.transport_errors import InfraFailure, ProtocolViolation
 from research.v63.campaign_control import atomic_json
@@ -188,7 +189,8 @@ def call_with_retries(client, request_bytes, events, sleep=time.sleep):
 
 
 def run_trajectory(baseline, retrieval_record, arm, client, tools, check_raw_weights,
-                   freeze, *, output_dir, count_rendered_request, engineering=False):
+                   freeze, *, output_dir, count_rendered_request, engineering=False,
+                   normalize_weights=False):
     """client(bytes)->{content,model_sha256,finish_reason,usage}; no client retries.
 
     tools(name, arguments, exposed_ids) must implement allowed-information tools.
@@ -328,12 +330,19 @@ def run_trajectory(baseline, retrieval_record, arm, client, tools, check_raw_wei
                                                         if isinstance(e, dict) and e.get("evidence_id") not in exposed]
                 stage_log["status"] = "completed"
                 if stage > 1:
-                    check = check_raw_weights(payload["weights"])
+                    normalization = numerics.normalize_nonnegative_weights(payload["weights"]) if normalize_weights else None
+                    checked_weights = (normalization["normalized_weights"]
+                                       if normalization and normalization.get("applied") else payload["weights"])
+                    check = check_raw_weights(checked_weights)
+                    if normalization is not None:
+                        stage_log["weight_normalization"] = normalization
                     stage_log["raw_weight_check"] = check
                     if stage == 2:
-                        messages.append({"role": "user", "content": "RAW WEIGHT CHECK (no normalization)\n" + canonical(check)})
+                        label = "NORMALIZED WEIGHT CONSTRAINT CHECK" if normalize_weights else "RAW WEIGHT CHECK (no normalization)"
+                        messages.append({"role": "user", "content": label + "\n" + canonical(check)})
                     elif check.get("valid"):
-                        trace.update(status="completed", effective_weights=payload["weights"], fallback=False)
+                        trace.update(status="completed", effective_weights=checked_weights, fallback=False,
+                                     weight_policy="normalize_nonnegative_then_recheck" if normalize_weights else "raw_only")
                     else:
                         stage_log.update(status="model_output_failure", reason="invalid_final_weights")
                 break

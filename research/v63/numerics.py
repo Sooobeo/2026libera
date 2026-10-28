@@ -296,6 +296,30 @@ def check_portfolio(raw_weights, h, Sigma, A=None, b=None, *, solver=False):
                 explicit_residuals=residual, budget_lower_tolerance=tol, risk_tolerance=risk_tol)
 
 
+def normalize_nonnegative_weights(raw_weights):
+    """Scale an otherwise usable long-only vector to sum to one.
+
+    The original values are returned alongside the scaled values so the model
+    output is never lost. Shape, finiteness, nonnegativity, and a positive sum
+    are prerequisites; risk and mandate constraints are deliberately checked
+    only after this arithmetic transformation.
+    """
+    try:
+        raw = np.asarray(raw_weights, dtype=float)
+    except (TypeError, ValueError):
+        return dict(applied=False, reason="nonnumeric_weights", raw_weights=raw_weights)
+    if raw.shape != (len(INDUSTRIES),) or not np.isfinite(raw).all():
+        return dict(applied=False, reason="weight_shape_or_nonfinite", raw_weights=jsonable(raw))
+    if raw.min() < 0:
+        return dict(applied=False, reason="negative_weight", raw_weights=jsonable(raw))
+    total = float(raw.sum())
+    if total <= 0:
+        return dict(applied=False, reason="nonpositive_sum", raw_weights=jsonable(raw), raw_sum=total)
+    normalized = raw / total
+    return dict(applied=True, reason=None, raw_weights=jsonable(raw), raw_sum=total,
+                normalized_weights=jsonable(normalized), normalized_sum=float(normalized.sum()))
+
+
 def _solve_linear(mu, h, Sigma, A=None, b=None, feasible_start=None):
     """Conic solve plus a separate explicit Lagrange upper-bound certificate."""
     mu, h, Sigma = map(lambda x: np.asarray(x, float), (mu, h, Sigma))

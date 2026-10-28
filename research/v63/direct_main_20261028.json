@@ -1,0 +1,18 @@
+{
+  "schema": "libera_v63_direct_main_authorization_v1",
+  "authorized_at_utc": "2026-10-28T01:14:57Z",
+  "user_instruction": "검증하지 말고 바로 본실험을 진행하며 예비 검증을 제외한다.",
+  "phase": "B-main",
+  "preliminary_phases": [],
+  "precision_levels": [0.5, 2.0],
+  "samples_per_precision": 5,
+  "independent_scenarios": 10,
+  "funds": 4,
+  "arms": 5,
+  "stages_per_trajectory": 3,
+  "replicates": 1,
+  "planned_trajectories": 200,
+  "planned_logical_stages": 600,
+  "weight_policy": "normalize_nonnegative_then_recheck",
+  "recording_policy": "원출력을 보존하고 비음수 유한 벡터를 합계 100%로 비례 조정한 뒤 위험 및 명시 제약을 재검사한다."
+}

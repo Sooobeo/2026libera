@@ -180,7 +180,8 @@ def _run_phase_locked(root,config,phase,native,locked_run_id):
     previous=out/'phases'/run_id/'development-pilot'/'measurements.json'
     full_main=phase not in PHASES[:3]
     prior=read_json(previous) if previous.is_file() else {}
-    if full_main and (prior.get('status')!='completed' or prior.get('full_history_observed') is not True):
+    direct_main = phase == 'B-main' and config.get('direct_main_no_preliminary_validation') is True
+    if full_main and not direct_main and (prior.get('status')!='completed' or prior.get('full_history_observed') is not True):
         raise ValueError('Main/counterfactual/negative/A/C phases require the completed same-version 720-stage development pilot with full-history evidence.')
     if phase=='paired-feasibility':required_previous='technical-smoke'
     elif phase=='development-pilot':required_previous='paired-feasibility'
@@ -196,7 +197,14 @@ def _run_phase_locked(root,config,phase,native,locked_run_id):
                   artifacts=[file_ref(p,root) for p in (package_path,bank_path,bank_receipt,evaluation_dir/'frozen_scenarios.json',evaluation_dir/'hidden_truth.json',run_root/'source_input_manifest.json')]+source_refs+[tokenizer_ref,config['execution_amendment']]+([environment_ref] if environment_ref else []),
                   gates={name:True for name in ('complete_sources','holdings_and_constraints','human_audit','numerical_verification',
                          'retrieval_validation','information_boundary','model_snapshot','budget','sample_plan_and_analysis','input_manifest')})
-    freeze['gates'].update(pilot_measurements=prior.get('status')=='completed',full_history_capacity=prior.get('full_history_observed') is True)
+    freeze['gates'].update(pilot_measurements=(prior.get('status')=='completed' or direct_main),
+                           full_history_capacity=(prior.get('full_history_observed') is True or direct_main))
+    if direct_main:
+        freeze['direct_main_authorization']={
+            'user_requested_no_preliminary_validation':True,
+            'preliminary_phases_skipped':True,
+            'results_are_main_experiment':True,
+        }
     errors=gate_errors(freeze)
     if errors:raise ValueError('Execution prerequisites: '+', '.join(errors))
     save_json(phase_dir/'frozen_runtime.json',freeze);save_json(phase_dir/'runtime_identity.json',identity)
@@ -259,7 +267,8 @@ def _run_phase_locked(root,config,phase,native,locked_run_id):
                 trajectory_dir=task_dir/'trajectory'
             tools,check=make_numeric_callbacks(case)
             trace=run_trajectory(case['baseline'],case['retrieval'],entry['arm'],client,tools,check,freeze,
-                   output_dir=trajectory_dir,count_rendered_request=lambda request:transport.render_and_count(request,native),engineering=False)
+                   output_dir=trajectory_dir,count_rendered_request=lambda request:transport.render_and_count(request,native),engineering=False,
+                   normalize_weights=config.get('weight_policy')=='normalize_nonnegative_then_recheck')
             trace_path=trajectory_dir/'trace.json'
             if isinstance(client,RecoveryClient):save_json(recovery_dir/'recovery_receipt.json',client.recovery_receipt())
             save_json(task_dir/'trace_pointer.json',{'relative_path':trace_path.relative_to(task_dir).as_posix(),'sha256':numerics.sha256(trace_path)})

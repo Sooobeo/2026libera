@@ -50,7 +50,7 @@ def load_profiles(path,period,*,funds=None):
     if not chosen:raise ValueError('No eligible real fund profile for '+period)
     return chosen
 
-def select_phase_schedule(phase,smoke_fund_id):
+def select_phase_schedule(phase,smoke_fund_id,config=None):
     if phase not in PHASES:raise ValueError('Unknown campaign phase.')
     all_rows=planned_schedule()
     if phase=='technical-smoke':
@@ -58,6 +58,20 @@ def select_phase_schedule(phase,smoke_fund_id):
     if phase=='paired-feasibility':return [r for r in all_rows if r['block']=='B-development' and r['scenario']=='development-001']
     if phase=='development-pilot':return [r for r in all_rows if r['block']=='B-development']
     if phase in {'A','C'}:return [r for r in all_rows if r['block']=='actual-documents' and r['module']==phase]
+    if phase == 'B-main' and config and config.get('main_direct_design'):
+        design=config['main_direct_design']
+        levels={float(x) for x in design['precision_levels']}
+        per_level=int(design['samples_per_precision'])
+        replicates=int(design.get('replicates',1))
+        selected=[];counts={level:0 for level in levels}
+        for index in range(60):
+            level=(0.5,1.0,2.0)[index%3]
+            if level in counts and counts[level] < per_level:
+                selected.append(f'main-{index+1:03d}');counts[level]+=1
+        if any(value != per_level for value in counts.values()):
+            raise ValueError('Requested direct-main precision sample is unavailable.')
+        return [{**row,'replicate':1} for row in all_rows
+                if row['block']=='B-main' and row['scenario'] in selected and row['replicate']<=replicates]
     return [r for r in all_rows if r['block']==phase]
 
 def project_rule(rule):
@@ -187,7 +201,7 @@ def build_phase(root,config,phase,tokenizer):
     if phase=='x-replacement':
         replacements=numerics.replacement_signals(calibration,scenarios,hidden)
         for s,replacement in zip(scenarios,replacements):s['private_signals'][replacement['fund_id']]=replacement['replacement_x']
-    lookup={s['scenario_id']:s for s in scenarios};schedule=select_phase_schedule(phase,config['smoke_fund_id'])
+    lookup={s['scenario_id']:s for s in scenarios};schedule=select_phase_schedule(phase,config['smoke_fund_id'],config)
     cases={};entries=[];reference_profiles={}
     for row in schedule:
         key=row['scenario']+'__'+row['fund_id'];fund=row['fund_id']
