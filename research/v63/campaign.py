@@ -37,7 +37,9 @@ CODE_FILES=('campaign.py','campaign_control.py','recovery.py','build_run.py','ru
 
 def now():return datetime.now(timezone.utc).isoformat()
 
-def validate_phase_freeze(freeze,phase):
+def validate_phase_freeze(freeze,phase,config=None):
+    if phase=='B-main' and (config or {}).get('direct_main_no_preliminary_validation') is True:
+        return
     if phase not in PHASES[:3] and freeze.get('main_model_frozen') is not True:
         raise ValueError('Main execution requires main_model_frozen=true after development resource review.')
 
@@ -49,13 +51,21 @@ def verify_amendment(root,ref):
         raise ValueError('This campaign requires the explicit user assumption amendment.')
     return amendment
 
-def runtime_identity(root,freeze,tokenizer_ref,amendment_ref):
+def runtime_identity(root,freeze,tokenizer_ref,amendment_ref,config=None):
     fields=('model','model_sha256','engine_revision','chat_template_sha256','quantization_level','context_tokens',
             'temperature','seed_support','seed','output_tokens','request_timeout','think','fixed_options','execution_environment')
     identity={key:freeze.get(key) for key in fields}
     identity.update(tokenizer_sha256=tokenizer_ref['sha256'],amendment_sha256=amendment_ref['sha256'],
                     code={name:numerics.sha256(root/'research/v63'/name) for name in CODE_FILES},
                     response_schemas=[response_schema(i) for i in (1,2,3)])
+    if (config or {}).get('direct_main_no_preliminary_validation') is True:
+        identity['direct_main']={key:config.get(key) for key in (
+            'main_direct_design','weight_policy','skip_duplicate_render_identity','allow_infrastructure_retries')}
+        identity['direct_main']['design_manifest']=file_ref(root/config['design_manifest_path'],root)
+        paths=('research/v64_reduced/design.py','research/v64_reduced/runtime.py',
+               'research/v64_reduced/policy.py','research/v64_reduced/analysis.py',
+               'research/v63/start_direct_main.py')
+        identity['direct_main']['code']={path:numerics.sha256(root/path) for path in paths}
     return sha(canonical(identity)),identity
 
 def normalized_input_hash(case,arm,identity):
@@ -118,21 +128,35 @@ def phase_measurements(records,entries,started):
 
 def run_phase(root,config,phase,native):
     root=Path(root).resolve();freeze=read_json(root/config['runtime_freeze_path'])
-    run_id,_=runtime_identity(root,freeze,file_ref(root/config['tokenizer_config_path'],root),config['execution_amendment'])
+    run_id,_=runtime_identity(root,freeze,file_ref(root/config['tokenizer_config_path'],root),config['execution_amendment'],config)
     with campaign_lock(root/config['output_root']/'runs'/run_id/'.campaign.lock'):
         return _run_phase_locked(root,config,phase,native,run_id)
 
 def _run_phase_locked(root,config,phase,native,locked_run_id):
     root=Path(root).resolve();out=root/config['output_root'];out.mkdir(parents=True,exist_ok=True)
+    if config.get('direct_main_no_preliminary_validation') is True:
+        from research.v64_reduced.design import make_main_only_design,validate_design
+        manifest=read_json(root/config['design_manifest_path'])
+        expected={'precision_levels':[.5,2.],'samples_per_precision':5,'replicates':1,
+                  'arms':['R0','R1','R2','R3']}
+        if (phase!='B-main' or manifest.get('status')!='USER_SCOPE_CONFIRMED'
+                or validate_design(manifest.get('design'))!=make_main_only_design()
+                or config.get('main_direct_design')!=expected
+                or config.get('weight_policy')!='normalize_nonnegative_then_recheck'
+                or config.get('skip_duplicate_render_identity') is not True
+                or config.get('allow_infrastructure_retries') is not False):
+            raise ValueError('Direct-main configuration differs from the selected scope/call policy.')
     amendment=verify_amendment(root,config['execution_amendment'])
     freeze=read_json(root/config['runtime_freeze_path'])
-    validate_phase_freeze(freeze,phase)
+    validate_phase_freeze(freeze,phase,config)
     tokenizer_ref=file_ref(root/config['tokenizer_config_path'],root)
-    run_id,identity=runtime_identity(root,freeze,tokenizer_ref,config['execution_amendment'])
+    run_id,identity=runtime_identity(root,freeze,tokenizer_ref,config['execution_amendment'],config)
     if run_id!=locked_run_id:raise ValueError('Frozen source/config changed while acquiring the run lock.')
     run_root=out/'runs'/run_id;phase_dir=out/'phases'/run_id/phase;phase_dir.mkdir(parents=True,exist_ok=True)
     verify_frozen_artifacts(root,phase_dir/'frozen_runtime.json')
     source_paths=[config[k] for k in ('profiles_path','documents_path','mandate_atomic_units_path','source_catalog_path') if config.get(k)]
+    if identity.get('direct_main'):
+        source_paths+=list(identity['direct_main']['code'])
     french_manifest=read_json(root/'data/french/manifest.json')
     source_paths+=['data/french/manifest.json','data/french/monthly_returns.json',french_manifest['sources']['ff12_returns']['path']]
     source_refs=[file_ref(root/path,root) for path in sorted(set(source_paths))]
@@ -145,6 +169,15 @@ def _run_phase_locked(root,config,phase,native,locked_run_id):
         if path.exists() and path.read_bytes()!=content:raise ValueError('Frozen source snapshot changed.')
         path.write_bytes(content)
     save_json(source_snapshot/'manifest.json',identity['code'])
+    for relative,expected in identity.get('direct_main',{}).get('code',{}).items():
+        content=(root/relative).read_bytes()
+        if digest_bytes(content)!=expected:raise ValueError('Selected direct-main source changed before snapshot.')
+        path=source_snapshot/'prospective'/relative
+        path.parent.mkdir(parents=True,exist_ok=True)
+        if path.exists() and path.read_bytes()!=content:raise ValueError('Selected direct-main source snapshot changed.')
+        path.write_bytes(content)
+    if identity.get('direct_main'):
+        immutable_json(source_snapshot/'prospective_manifest.json',identity['direct_main']['code'])
     environment_ref=None
     if config.get('execution_environment_path'):
         environment_ref=file_ref(root/config['execution_environment_path'],root)
@@ -158,7 +191,12 @@ def _run_phase_locked(root,config,phase,native,locked_run_id):
             if importlib.metadata.version(name)!=expected:raise ValueError('Frozen Python package version differs: '+name)
     counter=TokenCounter(native.identity,native.count,True)
     started=time.monotonic()
-    package=build_phase(root,config,phase,counter)
+    direct_main = phase == 'B-main' and config.get('direct_main_no_preliminary_validation') is True
+    if direct_main:
+        from research.v64_reduced.design import build_phase as build_selected_phase
+        package=build_selected_phase(root,config,phase,counter)
+    else:
+        package=build_phase(root,config,phase,counter)
     package_path=phase_dir/'prepared_inputs.json'
     serial=numerics.jsonable({k:v for k,v in package.items() if k not in {'scenarios_evaluator_only','hidden_evaluator_only'}})
     if package_path.exists() and read_json(package_path)!=serial:raise ValueError('Prepared inputs changed under an existing runtime identity; create a new frozen config/version.')
@@ -197,15 +235,22 @@ def _run_phase_locked(root,config,phase,native,locked_run_id):
                   artifacts=[file_ref(p,root) for p in (package_path,bank_path,bank_receipt,evaluation_dir/'frozen_scenarios.json',evaluation_dir/'hidden_truth.json',run_root/'source_input_manifest.json')]+source_refs+[tokenizer_ref,config['execution_amendment']]+([environment_ref] if environment_ref else []),
                   gates={name:True for name in ('complete_sources','holdings_and_constraints','human_audit','numerical_verification',
                          'retrieval_validation','information_boundary','model_snapshot','budget','sample_plan_and_analysis','input_manifest')})
-    freeze['gates'].update(pilot_measurements=(prior.get('status')=='completed' or direct_main),
-                           full_history_capacity=(prior.get('full_history_observed') is True or direct_main))
+    freeze['gates'].update(pilot_measurements=(prior.get('status')=='completed'),
+                           full_history_capacity=(prior.get('full_history_observed') is True))
     if direct_main:
         freeze['direct_main_authorization']={
             'user_requested_no_preliminary_validation':True,
             'preliminary_phases_skipped':True,
             'results_are_main_experiment':True,
         }
-    errors=gate_errors(freeze)
+        freeze.update(skip_duplicate_render_identity=config.get('skip_duplicate_render_identity',False),
+                      allow_infrastructure_retries=config.get('allow_infrastructure_retries',True))
+        freeze['artifacts'].append(file_ref(root/config['design_manifest_path'],root))
+    if direct_main:
+        from research.v64_reduced.runtime import execution_gate_errors
+        errors=execution_gate_errors(freeze)
+    else:
+        errors=gate_errors(freeze)
     if errors:raise ValueError('Execution prerequisites: '+', '.join(errors))
     save_json(phase_dir/'frozen_runtime.json',freeze);save_json(phase_dir/'runtime_identity.json',identity)
     records=[];budget_state=phase_budget(phase_dir/'budget_state.json',budget)
@@ -243,7 +288,8 @@ def _run_phase_locked(root,config,phase,native,locked_run_id):
             trace=read_json(trace_path)
         else:
             elapsed=budget_elapsed(budget_state);used=phase_requests()
-            reserve=max(0,27-task_costs[task_dir]['generation_requests'])
+            worst_case=9 if direct_main and not config.get('allow_infrastructure_retries',True) else 27
+            reserve=max(0,worst_case-task_costs[task_dir]['generation_requests'])
             if elapsed>=budget['max_wall_seconds'] or used+reserve>budget['max_generation_requests']:
                 save_json(phase_dir/'budget_stop.json',{'status':'not_attempted_budget_stop','elapsed':elapsed,'used_generation_requests':used,
                                                      'next_trajectory':task_id,'reason':'Reserve a complete worst-case trajectory before launch.'})
@@ -266,9 +312,14 @@ def _run_phase_locked(root,config,phase,native,locked_run_id):
                 transport=OllamaTransport(config['origin'],freeze,task_dir/'http');client=transport
                 trajectory_dir=task_dir/'trajectory'
             tools,check=make_numeric_callbacks(case)
-            trace=run_trajectory(case['baseline'],case['retrieval'],entry['arm'],client,tools,check,freeze,
-                   output_dir=trajectory_dir,count_rendered_request=lambda request:transport.render_and_count(request,native),engineering=False,
-                   normalize_weights=config.get('weight_policy')=='normalize_nonnegative_then_recheck')
+            trajectory_args=dict(output_dir=trajectory_dir,
+                count_rendered_request=lambda request:transport.render_and_count(request,native),engineering=False)
+            if direct_main:
+                from research.v64_reduced.runtime import run_trajectory as run_selected_trajectory
+                trace=run_selected_trajectory(case['baseline'],case['retrieval'],entry['arm'],client,tools,check,freeze,**trajectory_args)
+            else:
+                trace=run_trajectory(case['baseline'],case['retrieval'],entry['arm'],client,tools,check,freeze,
+                    normalize_weights=config.get('weight_policy')=='normalize_nonnegative_then_recheck',**trajectory_args)
             trace_path=trajectory_dir/'trace.json'
             if isinstance(client,RecoveryClient):save_json(recovery_dir/'recovery_receipt.json',client.recovery_receipt())
             save_json(task_dir/'trace_pointer.json',{'relative_path':trace_path.relative_to(task_dir).as_posix(),'sha256':numerics.sha256(trace_path)})
@@ -286,8 +337,12 @@ def _run_phase_locked(root,config,phase,native,locked_run_id):
     save_json(phase_dir/'measurements.json',measurements)
     progress(None,measurements['status'])
     if phase=='B-main':
-        result=evaluate.evaluate_main(records,bank,package['scenarios_evaluator_only'],frozen_model_sha256=freeze['model_sha256'])
-        save_json(phase_dir/'analysis.json',result)
+        if direct_main:
+            from research.v64_reduced.analysis import analyze_phase
+            analyze_phase(root,config,phase_dir,package,records,bank,run_id,freeze)
+        else:
+            result=evaluate.evaluate_main(records,bank,package['scenarios_evaluator_only'],frozen_model_sha256=freeze['model_sha256'])
+            save_json(phase_dir/'analysis.json',result)
     elif phase=='x-replacement':
         main_dir=out/'phases'/run_id/'B-main'
         if (main_dir/'records.json').is_file() and (main_dir/'evaluator_only/reference_bank.json').is_file():

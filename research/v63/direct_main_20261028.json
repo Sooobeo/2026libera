@@ -1,18 +1,30 @@
 {
-  "schema": "libera_v63_direct_main_authorization_v1",
-  "authorized_at_utc": "2026-10-28T01:14:57Z",
-  "user_instruction": "검증하지 말고 바로 본실험을 진행하며 예비 검증을 제외한다.",
+  "schema": "libera_direct_main_selected_scope_v2",
+  "recorded_at_utc": "2026-10-28T01:42:29.220197+00:00",
+  "authoritative_scope": {
+    "path": "research/reduction_20261028/main_only_no_full_approved.json",
+    "sha256": "8248bf6cb066b3a87b63ceda1c0dec0b9fb63709c4a26a866167f972dda02d7d",
+    "bytes": 5064
+  },
   "phase": "B-main",
   "preliminary_phases": [],
-  "precision_levels": [0.5, 2.0],
+  "precision_levels": [
+    0.5,
+    2.0
+  ],
   "samples_per_precision": 5,
   "independent_scenarios": 10,
   "funds": 4,
-  "arms": 5,
+  "arms": [
+    "R0",
+    "R1",
+    "R2",
+    "R3"
+  ],
   "stages_per_trajectory": 3,
   "replicates": 1,
-  "planned_trajectories": 200,
-  "planned_logical_stages": 600,
+  "planned_trajectories": 160,
+  "planned_logical_stages": 480,
   "weight_policy": "normalize_nonnegative_then_recheck",
-  "recording_policy": "원출력을 보존하고 비음수 유한 벡터를 합계 100%로 비례 조정한 뒤 위험 및 명시 제약을 재검사한다."
+  "real_model_calls_by_this_update": 0
 }

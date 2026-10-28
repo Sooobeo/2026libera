@@ -1,137 +1,27 @@
-LIBERA v6.3 — 새 기기 GPU 후보 005 실행 안내
+LIBERA 현재 실행 지침 — 2026-10-28 10:42 KST
 
-작업 폴더: C:\Users\Insun\2026libera
-후보: 005 / Vulkan GPU 속도·문맥·메모리 검증 후 별도 개발 실행
-run_id: 2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2
-설정: data/v63_20261027/continuation/deployment/local_windows/candidate_005/campaign_config.json
+새 세션 첫 파일: 실험참고자료_20261027/00_먼저읽기.html
+전체 설계: 실험참고자료_20261027/06_현재실험설계와실행_20261028.html
+현재 상태: research/device_migration_20261027/current_execution.json
+실행 설정: data/v64_20261028/main_only_results/direct_main_config.json
 
-모델: qwen3:1.7b / Ollama 0.35.1 / Intel Arc 140V Vulkan / f16 KV
-추론 옵션: CPU helper 8 threads / num_gpu=-1 / batch=256 / mmap=true
-격리 서버: 127.0.0.1:11436. 기존 사용자 11434 서비스는 별개다.
-context 32768 / output 4096 / temperature 0 / seed 1001
-Python: tmp/v63_numerics_venv/Scripts/python.exe (3.13.3)
-수치 라이브러리: 기존 requirements 고정 버전. BLAS/OMP/MKL 1 thread.
+확정 범위: B-main만 / r=0.5와2 각각5개 / 4펀드 / R0 R1 R2 R3 / 3단계 / 반복1회.
+총 160개 작업 흐름, 480개 예정 단계 출력. FULL 및 별도 예비·보조실험은 제외.
+비중은 원출력 보존 후 합계100% 비례 보정, 위험·제약 재검사. 부적격이면 기존 h 유지.
+본실험은 이 갱신 작업에서 시작하지 않았다. 첫 실행 후 실제 progress/records가 정적 안내보다 우선한다.
+이전 후보005의 개발 응답60개는 이번 본실험 표본이 아니다.
 
-현재 실행을 확인할 파일:
-  data/v63_20261027/local_campaign_results/progress.json
-  data/v63_20261027/local_campaign_results/development_supervisor/<run_id>/state.json
-  실험참고자료_20261027/05_새기기실행_20261027.html
+노트북 실행·재개 (이미 같은 config의 실행이 있으면 중복 시작 금지):
+Set-Location 'C:\Users\Insun\2026libera'
+.\research\start_v63_vulkan_ollama.ps1
+.\tmp\v63_numerics_venv\Scripts\python.exe -m research.v63.campaign data/v64_20261028/main_only_results/direct_main_config.json --phase B-main
 
-2026-10-27 21:25 KST 기술 점검 15단계를 완료했다. 5개 궤적은 정상 종료 2개와
-모델 출력 실패 3개이며, 실제 C-context의 3단계 원응답과 최대 입력 15982토큰을
-확인했다. 15개 원응답은 오프라인 복구 재생 검증을 통과했고 미확정 요청은 없었다.
-이는 전체 실험 결과가 아니다. 현재 실시간 상태는 위 상태 파일을 읽는다.
-
-이번 실행기는 technical-smoke(15단계) 다음 paired-feasibility(60단계)를 진행한다.
-각 단계에서 원장과 실제 C-context 3단계 응답을 검증한다. 15단계 결과는 같은
-후보의 60단계에 재사용하며 중복 표본으로 세지 않는다. 실패 응답도 보존한다.
-60단계 뒤에는 실제 시간·문맥·호출수를 검토하고 별도 guardian 자원 승인 기록을
-발행해야 한다. 본실험을 자동 승인하지 않으며 전체 실험 완료 상태가 아니다.
-
-중단 뒤 같은 후보를 재개하려면 먼저 위 상태 파일의 프로세스가 종료됐는지 확인한다.
-11436 실험 서버 상태 확인 및 필요한 경우 시작:
-  .\research\start_v63_vulkan_ollama.ps1
-그다음 저장소 루트에서:
-  .\tmp\v63_numerics_venv\Scripts\python.exe -m research.run_v63_candidate_003_development --config data/v63_20261027/continuation/deployment/local_windows/candidate_005/campaign_config.json
-
-진행 페이지 갱신 관찰기가 종료된 경우:
-  .\tmp\v63_numerics_venv\Scripts\python.exe -m research.observe_v63_candidate_003 --config data/v63_20261027/continuation/deployment/local_windows/candidate_005/campaign_config.json --watch
-helper 파일명에는 003이 남아 있지만 --config로 현재 후보 005를 명시한다.
-
-이미 실행 중이면 두 번째 실행을 시작하지 않는다. 잠금은 중복 실행을 막는다.
-완료된 단계는 재시작 시 동일성·원장·동결 입력·전체 이력을 검증한 뒤 재사용한다.
-그 단계의 최초 시작 시각·측정 파일·호출 수를 다시 쓰거나 재실행하지 않는다.
-기존 원응답은 campaign의 RecoveryClient가 검증하여 재사용한다. 불완전하거나
-동일성 검증이 실패한 기록을 삭제해 재요청하지 않는다. 예산은 중지 시간도 포함한다.
-만료 시 원래 시작 시각을 지우지 말고 이전·새 한도와 사유를 별도로 기록한다.
-
-이전 기기 후보 002:
-원응답/HTTP 266개 파일과 phase 예산·동결 파일이 이 기기에 없어 직접 재개하지 않았다.
-후보 002의 설정·중지 기록·예산은 수정하지 않았다. 이전 요약 기록상 실험 14회와
-공학 점검 5회가 있었으며, 이번 후보의 실제 관측 자료와 합치지 않는다.
-research/resume_v63_candidate_002.ps1은 이전 기기 원자료를 확보한 경우에만 쓴다.
-
-이 기기에서 중단된 후보 003:
-첫 응답 1개를 온전히 저장했고 두 번째 요청은 서버에서 처리 중 취소됐다.
-상태 JSON 교체 시 Windows 파일 잠금 오류가 발생해 관리자가 캠페인을 종료했다.
-원응답과 기존 예산은 보존했다. 원장상 확정 1회 + 미확정 예약 1회 = 2회를
-비용으로 유지하며 후보 004에 응답을 재사용하지 않는다.
-공통 atomic_json에 Windows 공유 잠금의 제한된 재시도를 구현하고 실제 파일
-핸들 잠금 테스트 및 campaign/recovery 회귀 검사를 통과한 뒤 004를 새로 동결했다.
-candidate003_interruption.json과 atomic_write_fix_verification.json을 참조한다.
-후보 003을 현재 코드로 재실행하지 않는다. 당시 동결 소스는 phase/source_snapshot에 있다.
-
-후보 004와 기기 재부팅:
-2026-10-27 18:15:30 KST Windows 재부팅으로 전용 서버와 실행기가 종료됐다.
-004의 첫 두 응답은 해시·모델·HTTP 검증과 오프라인 재생을 통과했다.
-세 번째 요청은 전송됐지만 원응답이 없으므로 비용 3회(확정2+미확정예약1)를
-보존하며 자동 재전송하거나 005의 관측으로 합치지 않는다.
-followup_20261027/candidate004_review.json과 reboot_quiescence.json이 근거다.
-관찰기의 일시적 읽기 실패·PID 재사용 오판도 수정하고 18개 검사를 통과했다.
-재부팅 도중 미완료 요청이 있으면 엄격한 복구 검증이 차단할 수 있다.
-
-005 선택 근거:
-공학 점검 1회에서 전체29층 GPU 적재, 문맥32768 할당, 정확입력9570토큰 대사,
-128토큰 출력13.23tokens/s, 최저여유RAM8.67GiB를 확인했다.
-이 공학 점검 자체는 실제4096토큰 출력이나 FULL3단계 전체 처리의 증명이 아니다.
-이후 실제15단계에서 FULL3단계 처리도 검증했으며 60·720단계 gate를 유지한다.
-이전 후보와 점검의 비용은 실험19회+공학6회=25회로 별도 보존(미확정예약2회 포함).
-GPU가속·실행안정성 기준만 사용했으며 투자효과·p값으로 모델을 선택하지 않았다.
-
-검증 및 한계:
-실행 입력 47개 검사와 native tokenizer 입력 20개 사례 검사 통과.
-전체 offline pytest 226개 중 216개 통과, 누락된 과거 원문·초안 의존 10개 실패.
-전체 테스트가 통과했다고 주장하지 않는다. 결과와 원인은 이 폴더의 JSON/XML/log에 있다.
-파일 잠금 수정 후 control 10 tests + 9 subtests 및 campaign/recovery 27 tests가 통과했다.
-실행에는 해시가 검증된 프로필과 내장 문서 단위를 사용한다. 원 출처 보관본은
-불완전하며, 공식 PDF 두 개를 동일 SHA로 복구했지만 새 원문 감사를 완료한 것은 아니다.
-followup/source_archive_recovery.json에 복구 성공·실패 근거를 보존했다.
-사람 감사는 user_assumed_completed 가정이다. 실제 감사 서명은 없다.
-C는 검증된 공통 FOMC 전망만 있으며 펀드별 신규 전망을 확보했다고 주장하지 않는다.
-
-다른 기기로 옮길 때 Git 복사본만 사용하지 않는다. data/v63_20261027 전체와
-tmp/v63_local_ollama, tmp/v63_numerics_venv를 별도로 보존하고 SHA를 확인한다.
-현재 GPU 후보에는 tmp/v63_vulkan_probe_20261027도 필요하다.
-git clean -X/-x를 실행하거나 원응답·모델 캐시를 삭제하지 않는다.
-
-2026-10-27 후속 작업: 절전 방지와 최종 소논문
-
-사용자의 명시적 요청에 따라 기존 전원 설정을 백업하고 AC/DC 모두 자동 절전,
-최대절전, 화면 자동 꺼짐을 0(없음)으로 설정했다. 덮개 닫기는 아무 것도 안 함이다.
-최신 검증·이전 값 복원 스크립트:
-  research/device_migration_20261027/power_settings_20261027T223543/receipt.json
-  research/device_migration_20261027/power_settings_20261027T223543/restore_previous_settings.ps1
-처음에는 절전/최대절전/덮개만 바꾸었으나 화면 꺼짐 뒤 Modern Standby 이벤트가
-재발하여 화면 자동 꺼짐도 해제했다. 이후 전원 요청 helper의 실제 실행 여부와
-추가 이력은 live_status 및 후속 증거를 확인한다. 재부팅·전원 종료를 막는 설정은 아니다.
-절전 시간은 원래 요청 시간과 단계 예산에 그대로 남긴다.
-  research/device_migration_20261027/sleep_latency_audit_20261027/report.json
-상시 가동 때 전체 약19일이라는 값은 초기 실측에 따른 조건부 전망이며 완료 약속이 아니다.
-
-사용자는 전체 실험 종료 후 지정한 구성·문장 MD와 원초록·제목을 연결하여
-소논문까지 완성하라고 추가 요청했다. 이 작업은 아직 완료되지 않았다.
-  research/device_migration_20261027/paper_completion_request.json
-  research/device_migration_20261027/paper_source_audit_20261027/report.json
-  research/device_migration_20261027/followup_20261027/paper_outline_mapping_review.json
-제목·부제는 원초록과 일치한다. 최종 결과 검증 뒤 새 Markdown·HTML·DOCX와
-도표를 작성하며 기존 원고·표본은 보존한다. 기존GICS11 직접제공 자료를
-현재FF12 검색 실험에 합치지 않고, 구성 가이드의 과거 실행 상태도 갱신한다.
-문서 생성용 Python은 tmp/v63_paper_venv/Scripts/python.exe이다.
-실험 가상환경을 변경하지 않았고 기존 문서 builder와 설치된 도표/PDF 도구를
-사용할 수 있다. 환경 기록은 paper_environment/environment.json에 있다.
-
-실험 실행 중 임시 전원 요청 helper:
-  research/device_migration_20261027/keepawake_candidate005_20261027T134057209Z/launch.json
-  research/device_migration_20261027/keepawake_candidate005_20261027T134057209Z/status.json
-  research/device_migration_20261027/keepawake_candidate005_20261027T1348Z/probe.json
-2026-10-27 22:40 KST에 실제 Windows API의 획득·해제를 확인한 뒤 숨김 실행했다.
-SetThreadExecutionState(system+display)와 PowerRequestExecutionRequired를 사용한다.
-후보005의 supervisor/guardian/campaign 실행 명령과 생성 시각을 확인하며,
-중단·완료 기록이 있거나 활성 프로세스가 없어진 뒤 120초의 전환 유예가 끝나면
-전원 요청을 해제하고 종료한다. 전원 계획·실험 원장·모델에는 쓰지 않는다.
-Windows 전원 정책 및 사용자가 선택한 절전은 별개이며 강제로 차단하지 않는다.
-이미 살아 있는 helper가 있으면 새로 시작하지 않는다. 같은 run의 kernel lock이
-중복 helper를 차단한다. 재개 후 helper가 종료돼 있을 때만 저장소 루트에서 실행:
-  .\tmp\v63_numerics_venv\Scripts\python.exe -m research.keep_awake_v63 --config data/v63_20261027/continuation/deployment/local_windows/candidate_005/campaign_config.json --output-dir research/device_migration_20261027/keepawake_candidate005_manual_resume
-창 없이 계속 실행하려면 위 명령을 Start-Process -WindowStyle Hidden으로 실행하고
-stdout/stderr와 새 실행 영수증은 별도 폴더에 보존한다. 과거 영수증은 덮어쓰지 않는다.
+현재 소스 기준 실행 ID: 32526c6a82f01473d91451e6873df78f52150b536acdfb06f87a1cf9400ff301
+진행: data/v64_20261028/main_only_results/phases/32526c6a82f01473d91451e6873df78f52150b536acdfb06f87a1cf9400ff301/B-main/progress.json
+오프라인 문서/설정 확인: .\tmp\v63_numerics_venv\Scripts\python.exe 실험참고자료_20261027/verify_bundle.py
+이 확인은 AI 모델을 호출하지 않는다. 기존 전체 예비실험이나 guardian 승인 경로를 다시 실행하지 않는다.
+서버·입력·문맥·정규화·제약 검사는 본실험의 필수 처리이며 별도 AI 채점 호출은 없다.
+통신 오류/미확정 요청은 자동 재생성하지 않는다. 원기록을 지우지 말고 복구 차단 사유를 기록한다.
+클라우드 환경은 아직 지정되지 않았으며 위 명령은 현재 Windows 노트북용이다.
+전체 본실험 완료 후 지정 MD·원초록을 참고하여 탐색적 소논문 MD/HTML/DOCX를 작성한다.
+과거 전체 설계와 이 기기 개발 안내는 history/before_main_only_20261028/에 보존했다.

@@ -1,52 +1,27 @@
-LIBERA 실험 참고자료 모음 — 2026-10-27
+LIBERA 현재 실행 지침 — 2026-10-28 10:42 KST
 
-시작: 00_먼저읽기.html 을 브라우저로 열기
+새 세션 첫 파일: 실험참고자료_20261027/00_먼저읽기.html
+전체 설계: 실험참고자료_20261027/06_현재실험설계와실행_20261028.html
+현재 상태: research/device_migration_20261027/current_execution.json
+실행 설정: data/v64_20261028/main_only_results/direct_main_config.json
 
-1. 최종 기준
-   snapshot/plan/LIBERA_최종실험설계_쉬운설명_v6.3_20261027.html
-   snapshot/plan/LIBERA_실험설정_v6.3_20261027.json
-   original/greengreen (1).pdf : 제목과 원초록 원문
+확정 범위: B-main만 / r=0.5와2 각각5개 / 4펀드 / R0 R1 R2 R3 / 3단계 / 반복1회.
+총 160개 작업 흐름, 480개 예정 단계 출력. FULL 및 별도 예비·보조실험은 제외.
+비중은 원출력 보존 후 합계100% 비례 보정, 위험·제약 재검사. 부적격이면 기존 h 유지.
+본실험은 이 갱신 작업에서 시작하지 않았다. 첫 실행 후 실제 progress/records가 정적 안내보다 우선한다.
+이전 후보005의 개발 응답60개는 이번 본실험 표본이 아니다.
 
-2. 설계 근거와 검토
-   snapshot/plan/LIBERA_실험설계서0925.html
-   snapshot/plan/문규리 제안서 상세_최종.html
-   snapshot/research/redesign_20261027/ : 원설계 복원과 출처 목록
-   snapshot/research/redesign_3round_20261027/ : 3회 검토·개선과 검증 기록
-   snapshot/paper/ : 현재 v5.4 원고와 과거 원고·관련 문헌
-   과거 버전은 설계 계보와 오류 확인용이며 최종 실행 기준은 v6.3이다.
+노트북 실행·재개 (이미 같은 config의 실행이 있으면 중복 시작 금지):
+Set-Location 'C:\Users\Insun\2026libera'
+.\research\start_v63_vulkan_ollama.ps1
+.\tmp\v63_numerics_venv\Scripts\python.exe -m research.v63.campaign data/v64_20261028/main_only_results/direct_main_config.json --phase B-main
 
-3. 새 본실험에서 출발할 데이터
-   snapshot/data/documentary/source_inventory.json : 실제 4펀드 식별자·공식 자료 후보
-   snapshot/data/french/ : FF12 수익률, SIC 분류, 다운로드 원본·출처 해시
-   4펀드 공식 원문·전체 보유·시점별 적격성·사람이 감사한 정답표는 아직 완성되지 않았다.
-
-4. 이전 실험의 참고자료
-   snapshot/data/institutional_recent/ : 72개 가상 위임의 보조 정량자료
-   snapshot/data/sector_documents/, sector_market/, sector_protocol/ : GICS11 계열
-   snapshot/tmp/pdfs/sector_documents/ : 기존 전망 문서의 PDF 캐시
-   snapshot/research/last_final_20261026/results_explained_ko.html : 완료 실험 쉬운 설명
-   snapshot/research/delivery_20261026/completion_index.json : 결과·원응답·보관본 색인
-   snapshot/research/artifacts/ : 기존 실행 원본 ZIP 및 파일별 해시 목록
-   snapshot/research/ : 준비·실행·평가·검증 코드와 기존 검토 기록
-   나머지 data 하위 폴더는 과거 비교·준비자료다. FF12 실제 4펀드 본실험과 혼합하지 않는다.
-   과거 평가기는 목적함수가 다르므로 v6.3 분산상한 기준평가기의 완성 구현으로 쓰지 않는다.
-   기존 직접 제공 실험을 실제 검색 RAG의 검증 결과로 합산하지 않는다.
-
-5. 실험 시작 전 남은 작업
-   (1) 실제 4펀드 공식 원문·전체 보유 수집과 시간 기준 확인
-   (2) SIC 매핑·분류율·제약 및 정답표의 사람 감사
-   (3) B 신호 생성기·분산상한 기준평가기 구현과 독립 검산
-   (4) BM25 색인·검색 로그·정보 경계 구현
-   (5) 세 단계·다섯 조건 실행기 구현과 파일럿
-   (6) 모델·문맥·예산·표본 동결 후 본실험 실행
-   이 폴더를 모았다는 사실은 위 작업 또는 새 실험이 완료됐다는 뜻이 아니다.
-
-6. 사용과 검증
-   원본을 이동·수정하지 않고 바이트가 같은 복사본을 모았다.
-   자료목록.json에 원래 위치·복사 위치·크기·SHA-256을 기록했다.
-   python verify_bundle.py 로 이 폴더의 복사본과 생성 안내 파일을 검증한다.
-   복사본은 수집 시점의 스냅샷이다. 작업은 기존 저장소에서 진행한다.
-   코드·설계 JSON의 기존 상대경로·절대경로는 보존했다. 다른 컴퓨터에서는 경로 조정이 필요하다.
-   snapshot은 중복 커밋을 막도록 이 폴더의 .gitignore에서 제외했다. 원초록·안내·목록은 유지한다.
-   이미 ZIP으로 보관된 대량 실행자료는 중복으로 펼쳐 복사하지 않았다. 목록의 생략 항목을 참고한다.
-   임시 브라우저 프로필·모델 가중치·캐시·Word 페이지 미리보기 등 Git에서 제외된 생성물은 수집하지 않았다.
+현재 소스 기준 실행 ID: 32526c6a82f01473d91451e6873df78f52150b536acdfb06f87a1cf9400ff301
+진행: data/v64_20261028/main_only_results/phases/32526c6a82f01473d91451e6873df78f52150b536acdfb06f87a1cf9400ff301/B-main/progress.json
+오프라인 문서/설정 확인: .\tmp\v63_numerics_venv\Scripts\python.exe 실험참고자료_20261027/verify_bundle.py
+이 확인은 AI 모델을 호출하지 않는다. 기존 전체 예비실험이나 guardian 승인 경로를 다시 실행하지 않는다.
+서버·입력·문맥·정규화·제약 검사는 본실험의 필수 처리이며 별도 AI 채점 호출은 없다.
+통신 오류/미확정 요청은 자동 재생성하지 않는다. 원기록을 지우지 말고 복구 차단 사유를 기록한다.
+클라우드 환경은 아직 지정되지 않았으며 위 명령은 현재 Windows 노트북용이다.
+전체 본실험 완료 후 지정 MD·원초록을 참고하여 탐색적 소논문 MD/HTML/DOCX를 작성한다.
+과거 전체 설계와 이 기기 개발 안내는 history/before_main_only_20261028/에 보존했다.

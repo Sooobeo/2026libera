@@ -86,7 +86,11 @@ class OllamaTransport:
     def render_and_count(self,request,tokenizer):
         """Use the same installed Ollama renderer without generating tokens."""
         folder=self.logs/f'render_{self.next_render_id:06d}';folder.mkdir(exist_ok=False);self.next_render_id+=1
-        self._identity(folder,'identity')
+        # Direct-main mode verifies identity immediately before and after the
+        # actual generation. Repeating all three metadata queries here adds
+        # no extra model response or information to that same dispatch.
+        if not self.freeze.get('skip_duplicate_render_identity',False):
+            self._identity(folder,'identity')
         body=json.loads(self._translate(packed(request)));body['_debug_render_only']=True
         raw=self._http(folder,'render','/api/chat',packed(body),generation=False)
         result=json.loads(raw);info=result.get('_debug_info',{})

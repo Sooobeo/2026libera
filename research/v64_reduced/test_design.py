@@ -16,6 +16,34 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 class ScheduleTests(unittest.TestCase):
+    def test_user_selected_main_only_scope_excludes_full_and_auxiliary_phases(self):
+        specification = design.make_main_only_design()
+        self.assertEqual(specification['main_scenario_ids'],[
+            'main-001','main-003','main-004','main-006','main-007',
+            'main-009','main-010','main-012','main-013','main-015'])
+        rows = design.select_phase_schedule('B-main',None,design=specification)
+        expected = {(sid,fund,arm,1) for sid in specification['main_scenario_ids']
+                    for fund in design.FUNDS for arm in ('R0','R1','R2','R3')}
+        actual = {(r['scenario'],r['fund_id'],r['arm'],r['replicate']) for r in rows}
+        self.assertEqual(actual,expected)
+        self.assertEqual(len(rows),160)
+        self.assertEqual([r['execution_order'] for r in rows],sorted(r['execution_order'] for r in rows))
+        metadata = design.derivation_metadata(specification)
+        self.assertEqual(metadata['main_precision_counts'],{'0.5':5,'1.0':0,'2.0':5})
+        self.assertEqual(metadata['total_trajectories'],160)
+        self.assertEqual(metadata['logical_stages'],480)
+        self.assertEqual(metadata['historical_responses_credited'],0)
+        self.assertTrue(all(count==0 for phase,count in design.phase_counts(specification).items() if phase!='B-main'))
+
+    def test_main_only_contract_rejects_unselected_cells_or_historical_credit(self):
+        for field,value in [('arms',['R0','R1','R2','R3','C-context']),
+                            ('replicates',2),('historical_005_responses_credited_to_new_design',60),
+                            ('main_scenario_ids',['main-001'])]:
+            specification = design.make_main_only_design()
+            specification[field] = value
+            with self.assertRaises(ValueError):
+                design.validate_design(specification)
+
     def test_default_draft_preserves_all_types_but_all_424_are_fresh(self):
         specification = design.make_design()
         counts = design.phase_counts(specification)
@@ -128,6 +156,18 @@ class OfflineBuilderTests(unittest.TestCase):
         self.assertEqual(len(self.calls),48)
         self.assertEqual(len(package['entries']),240)
         self.assertEqual({s['scenario_id'] for s in package['scenarios_evaluator_only']},set(design.choose_main_scenarios(12)))
+
+    def test_main_only_offline_builder_uses_40_inputs_and_160_four_arm_entries(self):
+        specification = design.make_main_only_design()
+        self.manifest.write_text(json.dumps({'design':specification}),encoding='utf-8')
+        package,generate = self.build('B-main')
+        generate.assert_called_once()
+        self.assertEqual(len(package['scenarios_evaluator_only']),10)
+        self.assertEqual(len(package['hidden_evaluator_only']),10)
+        self.assertEqual(len(package['cases']),40)
+        self.assertEqual(len(package['entries']),160)
+        self.assertEqual(package['logical_stages'],480)
+        self.assertEqual({entry['arm'] for entry in package['entries']},{'R0','R1','R2','R3'})
 
     def test_counterfactual_draws_from_full_original_60_before_filtering(self):
         package,_=self.build('x-replacement')

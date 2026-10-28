@@ -63,6 +63,9 @@ def select_phase_schedule(phase,smoke_fund_id,config=None):
         levels={float(x) for x in design['precision_levels']}
         per_level=int(design['samples_per_precision'])
         replicates=int(design.get('replicates',1))
+        arms=design.get('arms',list(('R0','R1','R2','R3','C-context')))
+        if len(set(arms))!=len(arms) or not arms or set(arms)-{'R0','R1','R2','R3','C-context'}:
+            raise ValueError('Invalid direct-main material conditions.')
         selected=[];counts={level:0 for level in levels}
         for index in range(60):
             level=(0.5,1.0,2.0)[index%3]
@@ -71,7 +74,7 @@ def select_phase_schedule(phase,smoke_fund_id,config=None):
         if any(value != per_level for value in counts.values()):
             raise ValueError('Requested direct-main precision sample is unavailable.')
         return [{**row,'replicate':1} for row in all_rows
-                if row['block']=='B-main' and row['scenario'] in selected and row['replicate']<=replicates]
+                if row['block']=='B-main' and row['scenario'] in selected and row['replicate']<=replicates and row['arm'] in arms]
     return [r for r in all_rows if r['block']==phase]
 
 def project_rule(rule):

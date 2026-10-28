@@ -91,13 +91,12 @@ def test_invalid_original_holdings_fail_closed_instead_of_becoming_fallback():
         normalize_and_check([.2] * 12, [0.] * 12, checker())
 
 
-def test_residual_correction_is_deterministic_at_first_largest_component():
-    # Search only for a floating representation that requires a nonzero residual,
-    # then verify the operation against an independent proportional calculation.
-    candidates = [[float(i * k + 1) for i in range(12)] for k in range(1, 100)]
-    raw = next(w for w in candidates if 1. - math.fsum(x / math.fsum(w) for x in w))
+def test_residual_correction_is_deterministic_at_largest_component():
+    # Fixed IEEE-754 example whose independently normalized sum has a residual.
+    raw = [1.] * 11 + [13.]
     expected = [x / math.fsum(raw) for x in raw]
     residual = 1. - math.fsum(expected)
+    assert residual != 0
     index = max(range(12), key=expected.__getitem__)
     expected[index] += residual
     result = normalize_and_check(raw, H, checker(np.zeros((12, 12))))

@@ -17,12 +17,36 @@ from research.v63.runtime import (
 from research.v63.transport_errors import InfraFailure, ProtocolViolation
 from research.v64_reduced.policy import POLICY_ID, normalize_and_check
 
-PARENT_RUNTIME_SHA256 = '3bcb3ae9d07d2477690c49ff36a8a0e0cc3a949208b7aceedd219d5f2e629050'
+PARENT_RUNTIME_SHA256 = 'ad539f0aef7f73b0806e2fd06fd63dde4c245e50d3770f024e1ef9acf4cf7b64'
 
 
 def verify_parent_runtime():
     if hashlib.sha256(Path(parent_runtime.__file__).read_bytes()).hexdigest() != PARENT_RUNTIME_SHA256:
         raise ValueError('The bound v6.3 parent runtime changed; review and freeze a new identity.')
+
+
+def execution_gate_errors(freeze):
+    errors = gate_errors(freeze)
+    authorization = freeze.get('direct_main_authorization',{})
+    if (freeze.get('execution_phase') == 'B-main'
+            and authorization.get('user_requested_no_preliminary_validation') is True
+            and authorization.get('preliminary_phases_skipped') is True):
+        # Skipped measurements remain skipped in the stored receipt, never
+        # falsely marked as observed/passed merely to satisfy an old gate.
+        errors = [error for error in errors if error not in {'pilot_measurements','full_history_capacity'}]
+    return errors
+
+
+def call_model(client, request_bytes, events, freeze):
+    if freeze.get('allow_infrastructure_retries',True):
+        return call_with_retries(client,request_bytes,events)
+    def once(raw):
+        try:
+            return client(raw)
+        except InfraFailure as exc:
+            exc.retryable = False
+            raise
+    return call_with_retries(once,request_bytes,events)
 
 
 def _finite_json_float(value):
@@ -50,8 +74,8 @@ def run_trajectory(baseline, retrieval_record, arm, client, tools, check_raw_wei
         raise ValueError("Baseline fields must exactly match the visible contract")
     if arm not in ARMS:
         raise ValueError("Unknown arm")
-    if not engineering and (gate_errors(freeze) or retrieval_record.get("engineering_only")):
-        raise ValueError("Unmet v6.3 prerequisites: " + ", ".join(gate_errors(freeze)))
+    if not engineering and (execution_gate_errors(freeze) or retrieval_record.get("engineering_only")):
+        raise ValueError("Unmet execution prerequisites: " + ", ".join(execution_gate_errors(freeze)))
     out = Path(output_dir)
     if out.exists() and any(out.iterdir()):
         raise ValueError("Refuse to overwrite an existing trajectory")
@@ -121,7 +145,7 @@ def run_trajectory(baseline, retrieval_record, arm, client, tools, check_raw_wei
                 raw = canonical(request).encode("utf-8")
                 write_json(out / f"stage{stage}_round{roundtrip}_request.json", request)
                 previous_events=len(trace['calls'])
-                try:response = call_with_retries(client, raw, trace["calls"])
+                try:response = call_model(client, raw, trace["calls"], freeze)
                 finally:
                     for event in trace['calls'][previous_events:]:event.update(stage=stage,roundtrip=roundtrip)
                 if response.get("finish_reason") == "incomplete":

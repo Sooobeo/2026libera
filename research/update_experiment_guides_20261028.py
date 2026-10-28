@@ -1,0 +1,307 @@
+"""Publish the user-selected handoff. No service, network, or model calls."""
+from datetime import datetime, timezone, timedelta
+from html import escape
+import json
+from pathlib import Path
+import hashlib
+
+ROOT=Path(__file__).resolve().parents[1]
+BUNDLE=ROOT/'실험참고자료_20261027'
+HISTORY=BUNDLE/'history/before_main_only_20261028'
+SCOPE=ROOT/'research/reduction_20261028/main_only_no_full_approved.json'
+CONFIG=ROOT/'data/v64_20261028/main_only_results/direct_main_config.json'
+
+
+def read(path):
+    return json.loads(path.read_text(encoding='utf-8-sig'))
+
+
+def write(path,value):
+    path.parent.mkdir(parents=True,exist_ok=True)
+    path.write_text(json.dumps(value,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='\n')
+
+
+def ref(path):
+    return {'path':path.relative_to(ROOT).as_posix(),'sha256':hashlib.sha256(path.read_bytes()).hexdigest(),
+            'bytes':path.stat().st_size}
+
+
+def main():
+    from research.v63.campaign import runtime_identity
+    from research.v63.build_run import file_ref
+    from research.v64_reduced.design import validate_design
+    stamp=datetime.now(timezone.utc)
+    stamp_kst=stamp.astimezone(timezone(timedelta(hours=9))).strftime('%Y-%m-%d %H:%M KST')
+    scope=read(SCOPE)
+    design=validate_design(scope['design'])
+    config=read(CONFIG)
+    frozen=read(ROOT/config['runtime_freeze_path'])
+    run_id,identity=runtime_identity(ROOT,frozen,file_ref(ROOT/config['tokenizer_config_path'],ROOT),config['execution_amendment'],config)
+    HISTORY.mkdir(parents=True,exist_ok=True)
+    archive_names=['00_먼저읽기.html','01_실행기록_20261027.html','02_계속실행기록_20261027.html',
+                   '04_중지와재개_20261027.html','05_새기기실행_20261027.html','README.txt','verify_bundle.py']
+    for name in archive_names:
+        original=BUNDLE/name
+        target=HISTORY/name
+        if original.exists() and not target.exists():
+            target.write_bytes(original.read_bytes())
+    for source,name in [(ROOT/'research/device_migration_20261027/RESUME.txt','migration_RESUME.txt'),
+                        (ROOT/'research/v63/RESUME_20261027.txt','v63_RESUME_20261027.txt'),
+                        (ROOT/'research/v63/direct_main_20261028.json','previous_direct_main_scope.json'),
+                        (ROOT/'research/device_migration_20261027/current_execution.json','previous_execution_locator.json')]:
+        if source.exists() and not (HISTORY/name).exists():
+            (HISTORY/name).write_bytes(source.read_bytes())
+    write(ROOT/'research/v63/direct_main_20261028.json',{
+        'schema':'libera_direct_main_selected_scope_v2','recorded_at_utc':stamp.isoformat(),
+        'authoritative_scope':ref(SCOPE),'phase':'B-main','preliminary_phases':[],
+        'precision_levels':[.5,2.],'samples_per_precision':5,'independent_scenarios':10,
+        'funds':4,'arms':['R0','R1','R2','R3'],'stages_per_trajectory':3,'replicates':1,
+        'planned_trajectories':160,'planned_logical_stages':480,
+        'weight_policy':'normalize_nonnegative_then_recheck','real_model_calls_by_this_update':0})
+
+    # Measure the removed non-generating metadata overhead from existing logs.
+    timings=read(ROOT/'research/reduction_20261028/timing_resource_requests_005_20261028.json')
+    metadata_seconds=[]
+    for row in timings:
+        if row['started_at_utc']<'2026-10-27T13:35:00':
+            continue
+        attempt=(ROOT/row['receipt']['path']).parent
+        render=attempt.parent/attempt.name.replace('attempt_','render_')
+        paths=[render/f'identity_{kind}.receipt.json' for kind in ('version','tags','show')]
+        if all(path.is_file() for path in paths):
+            metadata_seconds.append(sum(read(path)['elapsed_seconds'] for path in paths))
+    audit={'schema':'libera_direct_main_call_audit_v1','recorded_at_utc':stamp.isoformat(),
+           'scope':ref(SCOPE),'configuration':ref(CONFIG),'runtime_id_if_started_with_current_sources':run_id,
+           'new_real_model_requests_in_this_update':0,
+           'preliminary_generation_requests':0,'model_validation_or_grading_requests':0,
+           'planned_workflow_output_slots':480,'calculator_roundtrips':'Optional, at most two per stage; these support the experimental workflow, not extra validation experiments.',
+           'invalid_output_regeneration':False,'automatic_infrastructure_regeneration':False,
+           'identity_queries_per_normal_response_before':9,'identity_queries_per_normal_response_after':6,
+           'removed_metadata_requests_for_480_responses':1440,
+           'exact_render_only_requests_per_response':1,
+           'generation_identity_checks':'Immediately before and after generation, preserving original recovery receipts.',
+           'measured_removed_metadata_overhead':{'observations':len(metadata_seconds),
+               'mean_seconds_per_response':sum(metadata_seconds)/len(metadata_seconds),
+               'projection_for_480_seconds':480*sum(metadata_seconds)/len(metadata_seconds)},
+           'latency_interpretation':'Metadata reduction is not an hours-scale inference speedup. Most measured time is response generation.',
+           'historical_results_mutated':False}
+    audit_path=ROOT/'research/reduction_20261028/direct_main_call_audit.json'
+    write(audit_path,audit)
+
+    paper=read(ROOT/'research/device_migration_20261027/paper_completion_request.json')
+    paper.update(schema='libera_experiment_then_paper_request_v2',
+        status='authorized_after_selected_main_experiment_and_analysis',current_design=ref(SCOPE),
+        scope_amended_at_utc=stamp.isoformat(),
+        completion_evidence_required={'same_run_terminal_trajectories':160,'planned_logical_stages':480,
+           'main_independent_scenarios':10,'precision_levels':[.5,2.],'scenarios_per_precision':5,
+           'main_replicates':1,'arms':['R0','R1','R2','R3'],'required_phases':['B-main'],
+           'analysis_status':'completed_descriptive_analysis','independent_human_reviews_claimed':False},
+        next_steps=['Run only the selected main schedule; no separate preliminary generation.',
+                    'Analyze every selected terminal outcome including failures and normalization.',
+                    'Write MD/HTML/DOCX using the designated reference and original research motivation.'],
+        composition_constraints=[
+            '원초록·제목의 문제의식과 RAG 배치·완화효과를 연결하되 실제로 수행한 축소 설계만 서술한다.',
+            'FULL 제외에 따라 원문 전체 제공 조건의 결과 및 기존 FULL 기반 H1 검정을 주장하지 않는다.',
+            '전망 교체·음성대조·실제문서 A/C는 이번 실행·논문의 수행 결과에 포함하지 않는다.',
+            '총 10개 독립 합성 시나리오의 탐색적·기술적 결과로 해석한다. 원래 N60 확증검정을 재사용하지 않는다.',
+            '원출력과 외부 100% 보정·제약 재검사 결과 및 h 유지 실패를 구분한다.',
+            '기존 GICS11 실험과 과거 후보 005의 개발 응답을 새 본실험 표본에 합치지 않는다.',
+            '실제 사람 감사가 수행되었다거나 모델 공유 자체의 인과효과를 식별했다고 주장하지 않는다.',
+            '최종 결과는 같은 실행의 실제 기록과 분석이 완결된 뒤에만 작성한다.'
+        ],experiment_finished=False,paper_finished=False)
+    paper_path=ROOT/'research/device_migration_20261027/paper_completion_request_main_only_20261028.json'
+    write(paper_path,paper)
+    progress_relative=f"{config['output_root'].replace(chr(92),'/')}/phases/{run_id}/B-main/progress.json"
+    locator={'schema':'libera_current_execution_locator_v2','recorded_at_utc':stamp.isoformat(),
+       'status':'prepared_main_not_started','design':ref(SCOPE),'config':ref(CONFIG),'run_id':run_id,
+       'run_id_note':'Prepared identity, not proof of an actual run. Source/config changes require regenerating this locator before a first dispatch.',
+       'preliminary_phases':[],'phase':'B-main','planned_trajectories':160,'planned_output_slots':480,
+       'python':'tmp/v63_numerics_venv/Scripts/python.exe',
+       'service_start_command':'.\\research\\start_v63_vulkan_ollama.ps1',
+       'resume_module':'research.v63.campaign','resume_args':[ref(CONFIG)['path'],'--phase','B-main'],
+       'progress_path':progress_relative,'output_root':config['output_root'],
+       'call_audit':ref(audit_path),'paper_request':ref(paper_path),
+       'guide':'실험참고자료_20261027/06_현재실험설계와실행_20261028.html',
+       'cloud':{'configured':False,'speed_measured':False},
+       'generation_requests_in_this_update':0,
+       'historical_development':{'candidate':'005','run_id':'2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2',
+          'completed_stage_responses':60,'completed_trajectories':20,'credited_to_new_main':0,
+          'terminal_status_counts':{'completed':4,'model_output_failure':16}},
+       'previous_locator':'실험참고자료_20261027/history/before_main_only_20261028/previous_execution_locator.json'}
+    live_path=ROOT/progress_relative
+    if live_path.is_file():
+        live=read(live_path)
+        locator['status']=live.get('status','read_live_progress')
+        locator['live_progress_observed_at_utc']=stamp.isoformat()
+    write(ROOT/'research/device_migration_20261027/current_execution.json',locator)
+    write(BUNDLE/'현재실험상태_20261028.json',locator)
+    (BUNDLE/'현재실험설정_20261028.json').write_bytes(SCOPE.read_bytes())
+
+    command=(f"Set-Location 'C:\\Users\\Insun\\2026libera'\n"
+             ".\\research\\start_v63_vulkan_ollama.ps1\n"
+             f".\\tmp\\v63_numerics_venv\\Scripts\\python.exe -m research.v63.campaign {ref(CONFIG)['path']} --phase B-main")
+    ids=''.join(f'<tr><td>{escape(sid)}</td><td>{.5 if (int(sid[-3:])-1)%3==0 else 2}</td></tr>' for sid in design['main_scenario_ids'])
+    common=f'''<p class="stamp">갱신 {stamp_kst} · 사용자가 확정한 축소 본실험</p>
+<div class="box status"><strong>현재 기준: 본실험 B-main만 실행. FULL 제외. 별도 예비실험 0회.</strong>
+<p>새 본실험은 이 문서 갱신 과정에서 시작하지 않았다. 아래 실행 명령은 준비되어 있으며,
+실제 진척은 실행 후 생성되는 progress.json과 records.json으로 확인한다.
+기존 후보 005의 개발 응답 60개는 새 본실험 완료 수에 포함하지 않는다.</p></div>
+<h2>확정된 실험 설계</h2>
+<table><tr><th>항목</th><th>현재 설정</th></tr>
+<tr><td>실험 범위</td><td>B-main만. 전망 교체·음성대조·A/C 및 별도 개발·예비실험 제외</td></tr>
+<tr><td>전망 정확도</td><td>낮음 r=0.5, 높음 r=2.0. 합성 전망의 오차 공분산은 V0/r이며 실제 예측 성공률이 아니다.</td></tr>
+<tr><td>표본</td><td>정확도별 5개, 총 10개 독립 합성 시나리오. 원래 seed 2001 생성값을 유지하며 결과를 보지 않고 각 수준의 앞 5개 ID 선택</td></tr>
+<tr><td>펀드</td><td>F01 FCNTX / F02 VPMCX / F03 DODGX / F04 TRBCX · FF12 산업 12개</td></tr>
+<tr><td>자료 조건</td><td>R0·R1·R2·R3 총 4개. FULL/C-context는 실행하지 않음</td></tr>
+<tr><td>작업 단계</td><td>계획 → 배분안 작성 → 점검·수정. 앞 단계 응답과 이미 받은 자료를 다음 단계에서도 유지</td></tr>
+<tr><td>동일 조건 반복</td><td>1회</td></tr>
+<tr><td>전체 작업량</td><td>10 × 4 × 4 × 1 = 160개 작업 흐름, × 3단계 = 480개 예정 응답</td></tr></table>
+<p>480개는 예정된 단계 출력 수다. 모델이 계산 도구를 요청하면 단계당 최대 2번의 추가 왕복이 가능하다.
+모델 출력 실패로 조기 종료하면 후속 단계는 미실행으로 기록한다. API 요청 수를 무조건 480으로 맞추지 않는다.</p>
+<h2>자료 조건과 3단계</h2>
+<table><tr><th>조건</th><th>추가 펀드별 전망자료</th></tr>
+<tr><td>R0</td><td>추가 전망자료 없음. 공통 시장정보·보유비중·제약은 제공</td></tr>
+<tr><td>R1</td><td>검색된 전망자료를 계획 단계부터 제공</td></tr>
+<tr><td>R2</td><td>검색된 전망자료를 배분안 작성 단계부터 제공</td></tr>
+<tr><td>R3</td><td>검색된 전망자료를 점검·수정 단계부터 제공</td></tr></table>
+<ol><li>계획: 사용할 정보·배분 기준·산업별 방향을 정한다.</li>
+<li>배분안 작성: 12개 산업별 비중을 제안한다.</li>
+<li>점검·수정: 코드가 전달한 비중 보정·제약 검사 결과와 새로 제공된 자료를 참고하여 최종안을 만든다.</li></ol>
+<h2>비중 처리</h2>
+<p>모델 원응답을 보존한다. 유한한 비음수 12개 비중이고 합계가 양수이면 비례 조정하여 합계 100%로 만든 다음,
+원래 위험상한과 명시 제약을 다시 검사한다. 음수를 0으로 자르거나 부호를 뒤집지 않는다.
+보정 후에도 제약을 위반하거나 입력 벡터가 부적격이면 기존 보유비중 h를 유지하고 실패로 기록한다.
+원출력의 유효성과 외부 보정 후 유효성을 별도로 보고한다.</p>
+<h2>불필요한 호출 제거</h2>
+<ul><li>technical-smoke·paired-feasibility·development-pilot·워밍업용 답변 생성·별도 AI 채점 호출을 새로 실행하지 않는다.</li>
+<li>응답마다 render-only 직전에 중복하던 모델 메타데이터 3회 조회를 제거했다. 실제 생성 직전·직후 동일성 확인은 유지한다.</li>
+<li>통신 오류 때 자동 재생성하지 않는다. 잘못된 JSON이나 비중 때문에 좋은 답이 나올 때까지 재질문하지 않는다.</li>
+<li>계산 도구, 토큰 수 계산, 제약 검사, 기준해 계산은 본실험의 필요한 처리이며 별도 AI 검증 답변을 생성하지 않는다.</li></ul>
+<p>과거 응답 41개에서 제거한 중복 조회 시간은 평균 약 0.038초/응답이었다.
+480개에 약 18초 절감이라는 단순 환산이며, 27시간이 몇 시간으로 바뀌는 개선은 아니다.
+약 27시간은 현재 노트북의 평균 생성시간 199.4초를 480개에 적용한 추정치다. 새 비중 정책·시나리오·도구 왕복에 따라 달라진다.
+클라우드 실행 시간은 측정하지 않았다.</p>
+<h2>다른 세션의 시작 순서</h2>
+<ol><li><a href="현재실험상태_20261028.json">현재 실험 상태</a>와
+<a href="현재실험설정_20261028.json">확정 설계</a>를 읽는다. 현재 상태 파일이 가리키는 저장소 설정과 SHA가 실제 파일과 일치해야 한다.</li>
+<li>같은 config의 캠페인이 이미 실행 중이면 해당 progress.json을 확인한다. 두 번째 실행을 병렬로 시작하지 않는다.</li>
+<li>현재 노트북에서는 아래 명령으로 격리 서버와 본실험만 실행한다. 예비실험이나 과거 guardian을 먼저 돌릴 필요가 없다.</li></ol>
+<pre>{escape(command)}</pre>
+<p>서버 시작 스크립트는 별도 답변 생성을 하지 않는다. 기존 사용자 Ollama 11434는 이번 실험의 11436 서버와 구분한다.
+실행 설정은 <code>{escape(ref(CONFIG)['path'])}</code>이며, 이 파일의 결과 위치를 그대로 사용한다.</p>
+<h2>진행 확인·중단·재개</h2>
+<p>현재 소스에서 계산한 실행 ID: <code>{run_id}</code>. 아직 실제 실행 완료의 증거는 아니다.</p>
+<pre>{escape(progress_relative)}\n{escape(progress_relative.replace('progress.json','records.json'))}\n{escape(progress_relative.replace('progress.json','analysis.json'))}</pre>
+<p>처음에는 이 결과 파일들이 없는 것이 정상이다. 이후에는 실시간 파일이 이 정적 문서보다 우선한다.
+정상 완료는 같은 실행의 160개 작업 흐름 모두가 유효한 종료 기록을 갖고,
+분석 상태가 <code>completed_descriptive_analysis</code>인 것으로 판정한다. 실패도 기록하지만 미시도를 h 유지로 채우지 않는다.</p>
+<p>재개할 때도 위의 동일 config·명령을 사용한다. 완결된 기록은 재사용하며, 중단 중 전송되어 응답이 없는 요청은
+삭제하거나 자동으로 다시 보내지 않는다. 복구 차단 사유를 먼저 기록한다. 설정·모델·소스가 바뀌면 별도 실행으로 구분한다.</p>
+<p>노트북의 AC/DC 자동 절전·최대절전·화면 꺼짐은 해제된 상태로 설정했다.
+<a href="../research/device_migration_20261027/power_settings_20261027T223543/receipt.json">설정 영수증</a>을 참고한다.
+이전 후보 005 전용 keep-awake/observer는 새 config와 호환된다고 가정하지 않는다.</p>
+<h2>고정 모델과 클라우드 이전</h2>
+<p>qwen3:1.7b, Q4_K_M, Ollama 0.35.1, temperature 0, seed 1001, think=false,
+context 32768, output 4096. 모델 digest <code>{frozen['model_sha256']}</code>.</p>
+<p>현재 준비된 config는 Windows Intel Arc 140V/Vulkan 및 해당 기기의 라이브러리·경로에 맞춘 것이다.
+클라우드 서버·접속 경로는 아직 지정되지 않았다. 클라우드에서는 같은 모델 파일·자료·설계·비중 정책을 유지하면서
+GPU/엔진/토크나이저/경로를 해당 환경의 별도 실행 정보로 기록한다.
+Windows용 DLL 경로를 Linux에 그대로 복사하거나 하드웨어가 다른 응답을 같은 실행에 합치지 않는다.
+새 환경에서 별도 예비 답변을 의무화하지 않으며, 첫 본실험 기록에서 실제 속도와 정상 저장을 확인한다.</p>
+<h2>논문 작성과 해석 범위</h2>
+<p>본실험 완료 후 원초록·제목의 문제의식과 연결하여
+<a href="../paper/LIBERA_소논문_구성과문장_레퍼런스분석_20261026.md">지정 구성·문장 참고 MD</a>를 참고해 새 MD·HTML·DOCX를 작성한다.
+실제 수행한 R0 대비 정보 제공 효과와 R1/R2/R3 시점 차이만 보고한다.
+FULL 기반 H1·전망교체·음성대조·A/C 결과를 수행한 것처럼 쓰지 않는다.
+10개 독립 시나리오의 탐색적 결과이며, 기존 N60 확증검정과 부트스트랩을 그대로 적용하지 않는다.</p>
+<p>합성 전망은 실제 펀드 운용자의 비공개 전망이 아니다. FF12로 판정 불가한 실제 규정·출처 보관본의 부분 누락·
+실제 독립 사람 감사 미수행의 한계는 유지한다. 기존 GICS11 실험과 후보 005 개발 응답은 새 본실험 표본에 합치지 않는다.</p>
+<h2>선택된 10개 시나리오</h2><table><tr><th>ID</th><th>정확도 r</th></tr>{ids}</table>
+<h2>과거 안내와 자료 보존</h2>
+<p>기존 60개 시나리오·5조건·반복 2회·3,272개 작업 흐름·9,816단계·15→60→720 예비실험 경로는 과거 전체 설계다.
+현재 실행 지시가 아니다. <a href="history/before_main_only_20261028/00_먼저읽기.html">갱신 전 안내</a>와
+<a href="자료목록.json">과거 스냅샷 목록</a>은 이력으로 보존한다. snapshot/ 및 Git 제외 원자료 일부는 이 기기에 없으므로 완전 복구라고 주장하지 않는다.</p>
+<p>실제 작업 폴더는 <code>C:\\Users\\Insun\\2026libera</code>이다. 과거 PC의 <code>C:\\Users\\kuri</code>나
+<code>resume_v63_candidate_002.ps1</code>을 현재 시작 경로로 사용하지 않는다.
+원응답·HTTP·모델 캐시를 삭제하거나 git clean -X/-x로 지우지 않는다.</p>
+<h2>이번 변경의 오프라인 확인</h2>
+<p>실제 답변 생성 없이 일정·정규화·중복 조회 제거·오류 처리·복구 관련 68개 테스트를 통과했다.
+현재 GGUF의 어휘 전용 토크나이저로 실제 40개 입력·160개 작업 흐름·480개 예정 출력을 준비했고,
+모든 시작 보유비중의 수치 제약을 확인했다. 이 확인의 모델 생성 요청과 외부 HTTP 요청은 모두 0회다.</p>
+<ul><li><a href="../research/reduction_20261028/direct_main_verification.xml">68개 테스트 기록</a></li>
+<li><a href="../research/reduction_20261028/offline_selected_inputs_receipt.json">실제 선택 입력 준비 기록</a></li>
+<li><a href="../research/reduction_20261028/direct_main_call_audit.json">호출 경로와 절감량 기록</a></li></ul>
+<p>현재 안내의 파일·링크·설정은 <code>python 실험참고자료_20261027/verify_bundle.py</code>로 오프라인 확인한다.
+기본 검사는 현재 안내만 대상으로 한다. <code>--historical</code>은 과거 스냅샷의 누락 파일을 별도 보고하며,
+과거 복사본이 전부 있다는 뜻으로 현재 확인 결과를 해석하지 않는다.</p>'''
+    style='''body{margin:0;background:#f4f6f8;color:#243044;font:16px/1.8 "Malgun Gothic",sans-serif}main{max-width:1060px;margin:auto;padding:32px 24px 70px}h1{font-size:29px}h2{font-size:21px;margin-top:30px}.box{background:white;border:1px solid #cfd9e4;border-radius:8px;padding:18px 22px;margin:18px 0}.status{border-left:5px solid #15656b}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#e8eef5;padding:18px;font:14px/1.8 Consolas,"Malgun Gothic",monospace}code{overflow-wrap:anywhere}table{border-collapse:collapse;width:100%;background:white}th,td{padding:10px 13px;border:1px solid #cdd7e2;text-align:left}a{color:#125bc1}.stamp{color:#58687b}nav{padding:12px 0}li{margin:6px 0}'''
+    def html(title,body):
+        return f'<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{escape(title)}</title><style>{style}</style></head><body><main><h1>{escape(title)}</h1><nav><a href="00_먼저읽기.html">먼저읽기</a> · <a href="06_현재실험설계와실행_20261028.html">현재 설계·실행 전체 안내</a> · <a href="현재실험상태_20261028.json">현재 상태 JSON</a></nav>{body}</main></body></html>\n'
+    for name,title in [('00_먼저읽기.html','LIBERA · 새 세션은 여기서 시작'),
+                       ('04_중지와재개_20261027.html','LIBERA · 현재 본실험 시작·중지·재개'),
+                       ('05_새기기실행_20261027.html','LIBERA · 새 기기 실행과 현재 상태'),
+                       ('06_현재실험설계와실행_20261028.html','LIBERA · 2026-10-28 확정 설계와 실행 지침')]:
+        (BUNDLE/name).write_text(html(title,common),encoding='utf-8',newline='\n')
+    banner='<div style="padding:20px;background:#fff0cc;color:#382d16"><strong>과거 실행 기록입니다.</strong> 현재 축소 본실험의 실행 지시는 <a href="00_먼저읽기.html">00_먼저읽기.html</a>을 따르세요. 아래 본문·명령은 당시 이력으로만 보존합니다.</div>'
+    for name in ['01_실행기록_20261027.html','02_계속실행기록_20261027.html']:
+        text=(HISTORY/name).read_text(encoding='utf-8-sig')
+        text=text.replace('<h1',banner+'<h1',1)
+        (BUNDLE/name).write_text(text,encoding='utf-8',newline='\n')
+    resume=f'''LIBERA 현재 실행 지침 — {stamp_kst}
+
+새 세션 첫 파일: 실험참고자료_20261027/00_먼저읽기.html
+전체 설계: 실험참고자료_20261027/06_현재실험설계와실행_20261028.html
+현재 상태: research/device_migration_20261027/current_execution.json
+실행 설정: {ref(CONFIG)['path']}
+
+확정 범위: B-main만 / r=0.5와2 각각5개 / 4펀드 / R0 R1 R2 R3 / 3단계 / 반복1회.
+총 160개 작업 흐름, 480개 예정 단계 출력. FULL 및 별도 예비·보조실험은 제외.
+비중은 원출력 보존 후 합계100% 비례 보정, 위험·제약 재검사. 부적격이면 기존 h 유지.
+본실험은 이 갱신 작업에서 시작하지 않았다. 첫 실행 후 실제 progress/records가 정적 안내보다 우선한다.
+이전 후보005의 개발 응답60개는 이번 본실험 표본이 아니다.
+
+노트북 실행·재개 (이미 같은 config의 실행이 있으면 중복 시작 금지):
+{command}
+
+현재 소스 기준 실행 ID: {run_id}
+진행: {progress_relative}
+오프라인 문서/설정 확인: .\\tmp\\v63_numerics_venv\\Scripts\\python.exe 실험참고자료_20261027/verify_bundle.py
+이 확인은 AI 모델을 호출하지 않는다. 기존 전체 예비실험이나 guardian 승인 경로를 다시 실행하지 않는다.
+서버·입력·문맥·정규화·제약 검사는 본실험의 필수 처리이며 별도 AI 채점 호출은 없다.
+통신 오류/미확정 요청은 자동 재생성하지 않는다. 원기록을 지우지 말고 복구 차단 사유를 기록한다.
+클라우드 환경은 아직 지정되지 않았으며 위 명령은 현재 Windows 노트북용이다.
+전체 본실험 완료 후 지정 MD·원초록을 참고하여 탐색적 소논문 MD/HTML/DOCX를 작성한다.
+과거 전체 설계와 이 기기 개발 안내는 history/before_main_only_20261028/에 보존했다.
+'''
+    for path in [BUNDLE/'README.txt',ROOT/'research/device_migration_20261027/RESUME.txt',ROOT/'research/v63/RESUME_20261027.txt']:
+        path.write_text(resume,encoding='utf-8',newline='\n')
+
+    active=['00_먼저읽기.html','04_중지와재개_20261027.html','05_새기기실행_20261027.html','06_현재실험설계와실행_20261028.html']
+    generated=[*active,'01_실행기록_20261027.html','02_계속실행기록_20261027.html','README.txt',
+               '현재실험상태_20261028.json','현재실험설정_20261028.json','verify_bundle.py']
+    workspace_paths=[SCOPE,CONFIG,ROOT/'research/device_migration_20261027/current_execution.json',paper_path,audit_path,
+                     ROOT/'research/reduction_20261028/direct_main_verification.xml',
+                     ROOT/'research/reduction_20261028/offline_selected_inputs_receipt.json',
+                     ROOT/'research/v63/direct_main_20261028.json',
+                     ROOT/'research/device_migration_20261027/RESUME.txt',ROOT/'research/v63/RESUME_20261027.txt',
+                     ROOT/'research/start_v63_vulkan_ollama.ps1',ROOT/'research/v63/start_direct_main.py',
+                     *[ROOT/'research/v63'/name for name in identity['code']],
+                     *[ROOT/path for path in identity['direct_main']['code']]]
+    workspace_paths += [ROOT/config[key] for key in (
+        'runtime_freeze_path','tokenizer_config_path','execution_environment_path',
+        'profiles_path','documents_path','mandate_atomic_units_path','source_catalog_path') if config.get(key)]
+    french=read(ROOT/'data/french/manifest.json')
+    workspace_paths += [ROOT/'data/french/manifest.json',ROOT/'data/french/monthly_returns.json',
+                        ROOT/french['sources']['ff12_returns']['path']]
+    index={'schema':'libera_active_handoff_manifest_v1','recorded_at_utc':stamp.isoformat(),
+           'authoritative_design':ref(SCOPE),'expected_trajectories':160,'expected_stage_outputs':480,
+           'active_html':active,'generated_files':[{'copy':name,**ref(BUNDLE/name)} for name in generated],
+           'workspace_files':[ref(path) for path in sorted(set(workspace_paths))],
+           'historical_manifest':'자료목록.json',
+           'historical_snapshot_is_execution_authority':False,'real_model_calls_during_update':0}
+    write(BUNDLE/'현재자료목록_20261028.json',index)
+    print(json.dumps({'status':'guides_updated','run_id':run_id,'active_pages':active,'model_calls':0},ensure_ascii=True))
+
+
+if __name__=='__main__':
+    main()

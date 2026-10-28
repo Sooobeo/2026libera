@@ -21,11 +21,19 @@ PHASES = ('development-pilot', 'B-main', 'x-replacement', 'negative-control', 'A
 SUPPORTED_MAIN_COUNTS = (1, 2, 3, 6, 12)
 FUNDS = ('F01', 'F02', 'F03', 'F04')
 ARMS = ('R0', 'R1', 'R2', 'R3', 'C-context')
+MAIN_ONLY_ARMS = ('R0', 'R1', 'R2', 'R3')
 ORIGINAL_SCHEDULE_SHA256 = 'b2dd46acd001ffef04566df7e2bc128902b9224941a4fd5ce30f0ca6c27d77dd'
-ORIGINAL_SOURCE_SHA256 = {
+HISTORICAL_V63_SOURCE_SHA256 = {
     'runtime.py':'3bcb3ae9d07d2477690c49ff36a8a0e0cc3a949208b7aceedd219d5f2e629050',
     'numerics.py':'b8906ee2cf06a8c9b51dac2f73ea8584a09d998a618e94879ca05b39e4236dd7',
     'build_run.py':'6bb784a76579f46cb41a121c66149db2b4868a91f21b78e6c33d970e3542d294',
+}
+# Reviewed parent sources for the prospective direct-main implementation.
+# Historical 005 source snapshots keep the separate hashes above.
+ORIGINAL_SOURCE_SHA256 = {
+    'runtime.py':'ad539f0aef7f73b0806e2fd06fd63dde4c245e50d3770f024e1ef9acf4cf7b64',
+    'numerics.py':'27143f85959a93b1414ac6660ec3a6b09a5b66c236ae3014bb3977c06bcba5fc',
+    'build_run.py':'0f36cab677c276a75723bed83756ca40238746764de76d5ce51e02025114a96c',
 }
 
 
@@ -97,7 +105,39 @@ def make_design(*, main_scenarios=12, development_scenarios=3,
     }
 
 
+def make_main_only_design():
+    """User-selected 2 precision levels x 5 samples, with FULL excluded.
+
+    Select original IDs before inspecting any main outputs. Preserve the
+    original generated values and execution order rather than redrawing data.
+    """
+    candidates = sorted({row['scenario'] for row in _original_schedule()
+                         if row['block'] == 'B-main'})
+    selected = sorted(sid for r in (.5, 2.)
+                      for sid in [s for s in candidates if precision(s) == r][:5])
+    if len(selected) != 10:
+        raise ValueError('Original schedule lacks five scenarios per selected precision.')
+    return {
+        'schema':'libera_main_only_schedule_specification_v2',
+        'enabled_phases':['B-main'],
+        'main_scenario_ids':selected,
+        'development_scenario_ids':[],
+        'negative_control_scenario_ids':[],
+        'precision_levels':[.5, 2.], 'scenarios_per_precision':5,
+        'arms':list(MAIN_ONLY_ARMS), 'funds':list(FUNDS),
+        'replicates':1, 'stages_per_trajectory':3,
+        'fresh_generation_required':True,
+        'historical_005_responses_credited_to_new_design':0,
+        'selection_rule':'Select the first five original main scenario IDs in each of precision 0.5 and 2.0, using IDs and precision metadata only; preserve the seed-2001 values and original seed-5001 execution order. No main outcome is used.',
+        'original_schedule_sha256':ORIGINAL_SCHEDULE_SHA256,
+    }
+
+
 def validate_design(design):
+    if isinstance(design, dict) and design.get('schema') == 'libera_main_only_schedule_specification_v2':
+        if design != make_main_only_design():
+            raise ValueError('Main-only design differs from the user-selected scope or metadata-only selection.')
+        return deepcopy(design)
     if not isinstance(design, dict) or design.get('schema') != 'libera_reduced_schedule_specification_v1':
         raise ValueError('A reduced schedule specification is required.')
     try:
@@ -132,7 +172,7 @@ def select_phase_schedule(phase, smoke_fund_id, *, design=None):
             keep = row['block']==phase and row['scenario'] in specification['negative_control_scenario_ids']
         else:
             keep = row['block']=='actual-documents' and row['module']==phase
-        if keep:
+        if keep and row['arm'] in specification.get('arms', ARMS):
             selected.append(deepcopy(row))
     return selected
 
@@ -150,7 +190,7 @@ def derivation_metadata(design):
         'design_sha256':sha(canonical(design)), 'original_schedule_sha256':ORIGINAL_SCHEDULE_SHA256,
         'original_source_sha256':dict(ORIGINAL_SOURCE_SHA256),
         'main_precision_target_cells':cells,
-        'main_precision_counts':{str(r):sum(row['precision']==r for row in cells) for r in (.5,1.,2.)},
+        'main_precision_counts':{str(r):sum(precision(sid)==r for sid in design['main_scenario_ids']) for r in (.5,1.,2.)},
         'main_precision_target_cells_retained':len(cells), 'main_precision_target_cells_original':12,
         'negative_control_source_mapping':[
             {'scenario_id':sid, 'source_fund_id':f'F{(int(sid.rsplit("-",1)[1])-1)%4+1:02d}',

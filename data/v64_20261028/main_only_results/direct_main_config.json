@@ -1,0 +1,43 @@
+{
+  "workspace_root": "C:\\Users\\Insun\\2026libera",
+  "origin": "http://127.0.0.1:11436",
+  "profiles_path": "data/v63_20261027/continuation_sources/profiles_v2.json",
+  "documents_path": "data/v63_20261027/continuation_sources/documents_v2.json",
+  "runtime_freeze_path": "data/v63_20261027/continuation/deployment/local_windows/candidate_005/runtime_candidate.json",
+  "tokenizer_config_path": "data/v63_20261027/continuation/deployment/local_windows/candidate_005/tokenizer_config.json",
+  "execution_amendment": {
+    "path": "data/v63_20261027/continuation/execution_amendment.json",
+    "sha256": "40b1fb616814b599d1b04c137e2fc7558852a929c4986082edc88907b3d3dfde"
+  },
+  "smoke_fund_id": "F03",
+  "output_root": "data\\v64_20261028\\main_only_results",
+  "phase_budgets": {
+    "B-main": {
+      "max_generation_requests": 1440,
+      "max_wall_seconds": 259200
+    }
+  },
+  "budget_note": "Operational upper limits, not predicted cost. Reassess using staged development measurements before main. Original sample counts retained.",
+  "execution_environment_path": "data/v63_20261027/continuation/deployment/local_windows/candidate_005/execution_environment.json",
+  "mandate_atomic_units_path": "data/v63_20261027/continuation_sources/mandate_atomic_units_v2.json",
+  "source_catalog_path": "data/v63_20261027/numerical/evaluator_only/source_catalog_v2.json",
+  "direct_main_no_preliminary_validation": true,
+  "main_direct_design": {
+    "precision_levels": [
+      0.5,
+      2.0
+    ],
+    "samples_per_precision": 5,
+    "replicates": 1,
+    "arms": [
+      "R0",
+      "R1",
+      "R2",
+      "R3"
+    ]
+  },
+  "design_manifest_path": "research/reduction_20261028/main_only_no_full_approved.json",
+  "weight_policy": "normalize_nonnegative_then_recheck",
+  "skip_duplicate_render_identity": true,
+  "allow_infrastructure_retries": false
+}

@@ -1,94 +1,59 @@
 {
-  "schema": "libera_current_execution_locator_v1",
-  "recorded_at_utc": "2026-10-27T10:09:15.941919+00:00",
-  "scope": "Locator only; read the linked observer and supervisor files for current live state.",
-  "candidate": "005",
-  "run_id": "2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2",
+  "schema": "libera_current_execution_locator_v2",
+  "recorded_at_utc": "2026-10-28T01:42:29.220197+00:00",
+  "status": "prepared_main_not_started",
+  "design": {
+    "path": "research/reduction_20261028/main_only_no_full_approved.json",
+    "sha256": "8248bf6cb066b3a87b63ceda1c0dec0b9fb63709c4a26a866167f972dda02d7d",
+    "bytes": 5064
+  },
   "config": {
-    "path": "data/v63_20261027/continuation/deployment/local_windows/candidate_005/campaign_config.json",
-    "sha256": "d843e3fd0557a29a315465ff50782082f9584f57261854e9eed22d7547e5a8c9"
+    "path": "data/v64_20261028/main_only_results/direct_main_config.json",
+    "sha256": "e868b80e67afae04b5f261b4d8efbf6b7d8219d5da8cd56acfb3325adaff01b0",
+    "bytes": 1895
   },
-  "selection": {
-    "path": "data/v63_20261027/continuation/deployment/local_windows/candidate_005/selection_receipt.json",
-    "sha256": "0fddc6c22a3ee1b6f74998e7ff4ccdbd38ad78d4e28422d0763ff6160dd999a8"
-  },
+  "run_id": "32526c6a82f01473d91451e6873df78f52150b536acdfb06f87a1cf9400ff301",
+  "run_id_note": "Prepared identity, not proof of an actual run. Source/config changes require regenerating this locator before a first dispatch.",
+  "preliminary_phases": [],
+  "phase": "B-main",
+  "planned_trajectories": 160,
+  "planned_output_slots": 480,
   "python": "tmp/v63_numerics_venv/Scripts/python.exe",
   "service_start_command": ".\\research\\start_v63_vulkan_ollama.ps1",
-  "resume_module": "research.run_v63_candidate_003_development",
+  "resume_module": "research.v63.campaign",
   "resume_args": [
-    "--config",
-    "data/v63_20261027/continuation/deployment/local_windows/candidate_005/campaign_config.json"
+    "data/v64_20261028/main_only_results/direct_main_config.json",
+    "--phase",
+    "B-main"
   ],
-  "observer_module": "research.observe_v63_candidate_003",
-  "observer_args": [
-    "--config",
-    "data/v63_20261027/continuation/deployment/local_windows/candidate_005/campaign_config.json",
-    "--watch"
-  ],
-  "live_status": "research/device_migration_20261027/live_status.json",
-  "supervisor_state": "data/v63_20261027/local_campaign_results/development_supervisor/2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2/state.json",
-  "report": "실험참고자료_20261027/05_새기기실행_20261027.html",
-  "resume_guide": "research/device_migration_20261027/RESUME.txt",
-  "main_auto_launch": false,
-  "after_feasibility": "Root reviews actual completed 15/60-stage evidence before approval. Use current guardian bindings plus historical timing audit: original 6689.774238069407 s, supplemental observed 1975.626223700121 s, 3 untimed requests with explicit separate allowance. No approval issued while feasibility is incomplete.",
-  "reboot_quiescence": {
-    "path": "research/device_migration_20261027/followup_20261027/reboot_quiescence.json",
-    "sha256": "cbfb6af23eae7a8366eb8ea16f2a9166d5dd0bee521dc653c38b5d1c5effcdc7"
+  "progress_path": "data/v64_20261028/main_only_results/phases/32526c6a82f01473d91451e6873df78f52150b536acdfb06f87a1cf9400ff301/B-main/progress.json",
+  "output_root": "data\\v64_20261028\\main_only_results",
+  "call_audit": {
+    "path": "research/reduction_20261028/direct_main_call_audit.json",
+    "sha256": "378d0eb2465e7aa15c262845aa622c2f1b00ae69f743b4558551b54f696c8a4a",
+    "bytes": 1690
   },
-  "previous_run_review": {
-    "path": "research/device_migration_20261027/followup_20261027/candidate004_review.json",
-    "sha256": "fc0f99ec8a2ead6ddac7daae13d131c25a31e595284b9c43dfa35a30e3993cad"
+  "paper_request": {
+    "path": "research/device_migration_20261027/paper_completion_request_main_only_20261028.json",
+    "sha256": "75ff93057a459956149f4a76e18ef32abc46e521161745e0c060226cdf3c19be",
+    "bytes": 3931
   },
-  "gpu_probe": {
-    "path": "research/device_migration_20261027/gpu_probe_summary.json",
-    "sha256": "32f93680b03b5b5403f9234acf1fc8b962c8d960553d490c449ca2fa0e9619b2"
+  "guide": "실험참고자료_20261027/06_현재실험설계와실행_20261028.html",
+  "cloud": {
+    "configured": false,
+    "speed_measured": false
   },
-  "report_path_correction": {
-    "recorded_at_utc": "2026-10-27T13:26:54.116122+00:00",
-    "previous": "??????_20261027/05_?????_20261027.html",
-    "reason": "Restore the actual existing Unicode HTML path; locator-only correction."
+  "generation_requests_in_this_update": 0,
+  "historical_development": {
+    "candidate": "005",
+    "run_id": "2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2",
+    "completed_stage_responses": 60,
+    "completed_trajectories": 20,
+    "credited_to_new_main": 0,
+    "terminal_status_counts": {
+      "completed": 4,
+      "model_output_failure": 16
+    }
   },
-  "last_followup_at_utc": "2026-10-27T13:39:38.353015+00:00",
-  "power_settings_receipt": {
-    "path": "research/device_migration_20261027/power_settings_20261027T223543/receipt.json",
-    "sha256": "b18f20319a9dcca017008b42344d8cd53786a7e1548fbe5b9c81e00d17ff6300"
-  },
-  "paper_completion_request": {
-    "path": "research/device_migration_20261027/paper_completion_request.json",
-    "sha256": "ffce794d6342defe429787a3fe5070841b26d60e8f97414d97b454daaf1ca2ca"
-  },
-  "paper_source_audit": {
-    "path": "research/device_migration_20261027/paper_source_audit_20261027/report.json",
-    "sha256": "2d80e86a697035796ff2ed67709e0ab54a4bf2c13d687b4c8e94170b3bc09f00"
-  },
-  "paper_environment": {
-    "path": "research/device_migration_20261027/paper_environment/environment.json",
-    "sha256": "5b9031b539fbfba8d391cc0a4f600f66607eb7a8cd9a35f5cbe9b64655e804b4"
-  },
-  "smoke_review": {
-    "path": "data/v63_20261027/local_campaign_results/development_supervisor/2e51a74582f096f6ca806c7012dac05169e778bfc8701dae0ba9cbbeae9cdfb2/20261027T100131562726Z/technical-smoke.review.json",
-    "sha256": "c622a062c098402577e001e2db3d0bbd8caa0eaf7a2fcbbd8183da4bc9fe60e1"
-  },
-  "sleep_latency_audit": {
-    "path": "research/device_migration_20261027/sleep_latency_audit_20261027/report.json",
-    "sha256": "c7753e1f6f2f2383254fc302b789dd554232914fe16b7d35aed36fda9aed4549"
-  },
-  "paper_finished": false,
-  "experiment_finished": false,
-  "latest_followup_snapshot": {
-    "path": "research/device_migration_20261027/followup_20261027/continued_execution_and_paper_20261027T134439Z.json",
-    "sha256": "9c067a23951763fd7b6ac57f33240a79a2b310d9e7c8927722521433245b2da1"
-  },
-  "paper_citation_readiness": {
-    "path": "research/device_migration_20261027/paper_source_audit_20261027/citation_readiness_20261027.json",
-    "sha256": "821c921800bed23ce9f5a3f6b806d49f6e82694c1ec79f927a16b89d4fa69355"
-  },
-  "historical_timing_audit": {
-    "path": "research/device_migration_20261027/followup_20261027/candidate005_historical_timing_audit.json",
-    "sha256": "1e60891137f0d9dc0e5f54400e5895bfeea46de05ce828d16019ec39e61eaaa5"
-  },
-  "guardian_windows_and_cost_verification": {
-    "path": "research/device_migration_20261027/followup_20261027/guardian_historical_reservation_verification.json",
-    "sha256": "39cc4eeee9895f99d983fa4d2eb8f119ef9e4b2ac34d70e0c9d1889e9a08d172"
-  }
+  "previous_locator": "실험참고자료_20261027/history/before_main_only_20261028/previous_execution_locator.json"
 }

@@ -1,0 +1,81 @@
+{
+  "schema": "libera_experiment_then_paper_request_v2",
+  "status": "authorized_after_selected_main_experiment_and_analysis",
+  "user_request": "실험 다 끝내면 이 md 참고하고 원초록, 제목 내용에서 연결지어서 소논문까지 완성해봐",
+  "writing_reference": "paper/LIBERA_소논문_구성과문장_레퍼런스분석_20261026.md",
+  "original_abstract": "실험참고자료_20261027/original/greengreen (1).pdf",
+  "existing_manuscript": "paper/v540_manuscript_20261026.json",
+  "current_design": {
+    "path": "research/reduction_20261028/main_only_no_full_approved.json",
+    "sha256": "8248bf6cb066b3a87b63ceda1c0dec0b9fb63709c4a26a866167f972dda02d7d",
+    "bytes": 5064
+  },
+  "current_execution_locator": "research/device_migration_20261027/current_execution.json",
+  "title": "공통 GenAI는 기관투자자의 전략적 이질성을 축소하는가?",
+  "subtitle": "-액티브 주식형 펀드의 자산배분 프로세스 내 Workflow RAG 배치와 완화효과를 중심으로-",
+  "planned_deliverables": [
+    "새 버전의 소논문 Markdown",
+    "읽기용 HTML",
+    "편집 가능한 DOCX",
+    "실제 결과 도표와 수치·출처 대조 기록"
+  ],
+  "completion_evidence_required": {
+    "same_run_terminal_trajectories": 160,
+    "planned_logical_stages": 480,
+    "main_independent_scenarios": 10,
+    "precision_levels": [
+      0.5,
+      2.0
+    ],
+    "scenarios_per_precision": 5,
+    "main_replicates": 1,
+    "arms": [
+      "R0",
+      "R1",
+      "R2",
+      "R3"
+    ],
+    "required_phases": [
+      "B-main"
+    ],
+    "analysis_status": "completed_descriptive_analysis",
+    "independent_human_reviews_claimed": false
+  },
+  "composition_constraints": [
+    "원초록·제목의 문제의식과 RAG 배치·완화효과를 연결하되 실제로 수행한 축소 설계만 서술한다.",
+    "FULL 제외에 따라 원문 전체 제공 조건의 결과 및 기존 FULL 기반 H1 검정을 주장하지 않는다.",
+    "전망 교체·음성대조·실제문서 A/C는 이번 실행·논문의 수행 결과에 포함하지 않는다.",
+    "총 10개 독립 합성 시나리오의 탐색적·기술적 결과로 해석한다. 원래 N60 확증검정을 재사용하지 않는다.",
+    "원출력과 외부 100% 보정·제약 재검사 결과 및 h 유지 실패를 구분한다.",
+    "기존 GICS11 실험과 과거 후보 005의 개발 응답을 새 본실험 표본에 합치지 않는다.",
+    "실제 사람 감사가 수행되었다거나 모델 공유 자체의 인과효과를 식별했다고 주장하지 않는다.",
+    "최종 결과는 같은 실행의 실제 기록과 분석이 완결된 뒤에만 작성한다."
+  ],
+  "next_steps": [
+    "Run only the selected main schedule; no separate preliminary generation.",
+    "Analyze every selected terminal outcome including failures and normalization.",
+    "Write MD/HTML/DOCX using the designated reference and original research motivation."
+  ],
+  "paper_finished": false,
+  "experiment_finished": false,
+  "recorded_at_utc": "2026-10-27T13:32:50.211728+00:00",
+  "source_refs": {
+    "writing_reference": {
+      "path": "paper/LIBERA_소논문_구성과문장_레퍼런스분석_20261026.md",
+      "sha256": "d1987b2d39b968403dcaeebaa163c306c2e361bae708620178b4078f84f2d9e0"
+    },
+    "original_abstract": {
+      "path": "실험참고자료_20261027/original/greengreen (1).pdf",
+      "sha256": "75a70c60a2fdf8db6e17576a829e0960c8c48afb70422c85ee2515a5efe9ece0"
+    },
+    "existing_manuscript": {
+      "path": "paper/v540_manuscript_20261026.json",
+      "sha256": "8d90b534bab9fea1439ed6822315ac06870a3546bdbd17ccb2b44b8772ac6858"
+    },
+    "current_design": {
+      "path": "plan/LIBERA_실험설정_v6.3_20261027.json",
+      "sha256": "a884b1242217cfed37a52444a541968eb680739c649e85c2b8d3bf9b0de383dc"
+    }
+  },
+  "scope_amended_at_utc": "2026-10-28T01:42:29.220197+00:00"
+}
