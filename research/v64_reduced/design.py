@@ -1,6 +1,7 @@
 """Pure, parameterized reduced schedules and offline inputs; never calls a model.
 
-The original v6.3 modules and their global selectors are never changed.
+The original v6.3 global selectors and scenario generation are preserved.
+Reviewed execution-source revisions are pinned separately from derivation.
 Scope is supplied by a separate design manifest. A draft can prepare inputs,
 but this module does not authorize execution or certify protocol completion.
 """
@@ -34,6 +35,13 @@ ORIGINAL_SOURCE_SHA256 = {
     'runtime.py':'ad539f0aef7f73b0806e2fd06fd63dde4c245e50d3770f024e1ef9acf4cf7b64',
     'numerics.py':'27143f85959a93b1414ac6660ec3a6b09a5b66c236ae3014bb3977c06bcba5fc',
     'build_run.py':'0f36cab677c276a75723bed83756ca40238746764de76d5ce51e02025114a96c',
+}
+# Independent SLSQP scaling and certified inactive-risk vertices; the
+# original sample derivation stays above.
+# This new source is a separate run identity and retains the original checks.
+EXECUTION_SOURCE_SHA256 = {
+    **ORIGINAL_SOURCE_SHA256,
+    'numerics.py':'d4905bdc63b531737354ecba8d5892924c578597ffbffaf7438083a53e960c62',
 }
 
 
@@ -226,7 +234,7 @@ def build_phase(root, config, phase, tokenizer):
     schedule = select_phase_schedule(phase, config.get('smoke_fund_id'), design=design)
     if not schedule:
         raise ValueError('Requested phase is disabled in this design.')
-    for name, expected in ORIGINAL_SOURCE_SHA256.items():
+    for name, expected in EXECUTION_SOURCE_SHA256.items():
         if hashlib.sha256((root/'research/v63'/name).read_bytes()).hexdigest() != expected:
             raise ValueError('Original source changed: '+name)
     period = 'development' if phase=='development-pilot' else ('C' if phase=='C' else 'A_B')

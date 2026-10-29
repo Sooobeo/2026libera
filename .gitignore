@@ -204,3 +204,51 @@ Desktop.ini
 # Document rendering environment and isolated launcher test fixtures.
 /tmp/v63_paper_venv/
 /tmp/v63_vulkan_launcher_fixture_*/
+
+# Local scratch work, extracted documents, installed dependencies and test fixtures.
+# Previously tracked reference/source files are unaffected by ignore rules.
+/tmp/
+
+# Completed v6.4 run: keep compact results and reproducibility metadata in Git.
+# Raw model responses, request bodies, recovery copies, process logs and live state
+# remain on this machine. Ignoring is NOT a backup: do not git clean -X these data.
+/data/v64_20261028/**
+!/data/v64_20261028/**/
+!/data/v64_20261028/main_only_results/direct_main_config.json
+!/data/v64_20261028/main_only_results/first_response_verification.json
+!/data/v64_20261028/main_only_results/reboot_measurement_coverage.json
+!/data/v64_20261028/main_only_results/phases/*/B-main/analysis.json
+!/data/v64_20261028/main_only_results/phases/*/B-main/measurements.json
+!/data/v64_20261028/main_only_results/phases/*/B-main/records.json
+!/data/v64_20261028/main_only_results/phases/*/B-main/frozen_runtime.json
+!/data/v64_20261028/main_only_results/phases/*/B-main/runtime_identity.json
+
+# Service launches contain machine-local process/port state; retain model configs.
+/data/v63_20261027/runtime/local_windows/vulkan_service_*/server_launch.json
+
+# Rebuildable paper exports. Keep Markdown, figures, generation code and audits.
+/paper/LIBERA_소논문_최종결과반영_*.docx
+/paper/LIBERA_소논문_최종결과반영_*.pdf
+/paper/LIBERA_소논문_최종결과반영_*.html
+/paper/LIBERA_본실험_결과해석_*.docx
+/paper/LIBERA_본실험_결과해석_*.pdf
+/paper/LIBERA_본실험_결과해석_*.html
+/research/paper_final_*/visual_qa/
+/research/paper_final_*/document_qa/prior_render_*/
+/research/paper_final_*/README_before_final_*.txt
+
+# Local backup copies and regenerable test-run reports, not implementation fixes.
+/실험참고자료_20261027/history/
+/research/reduction_*/*.xml
+
+# Private keys and credential stores must never become new tracked files.
+*.pem
+*.key
+*.p12
+*.pfx
+.aws/
+.ssh/
+.netrc
+_netrc
+.npmrc
+.pypirc

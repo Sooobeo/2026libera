@@ -1,0 +1,101 @@
+{
+  "schema": "libera_method_data_reference_verification_v1",
+  "verified_date": "2026-10-29",
+  "scope": "공분산 방법 인용 및 FF12·SEC EDGAR 자료 출처의 공식 웹 검증. 보관된 실험 입력은 재수집하거나 변경하지 않음.",
+  "entries": [
+    {
+      "id": "ledoit_wolf_2004",
+      "bibliography": "Ledoit, O., & Wolf, M. (2004). A well-conditioned estimator for large-dimensional covariance matrices. Journal of Multivariate Analysis, 88(2), 365–411. https://doi.org/10.1016/S0047-259X(03)00096-4",
+      "title": "A well-conditioned estimator for large-dimensional covariance matrices",
+      "authors": ["Olivier Ledoit", "Michael Wolf"],
+      "year": 2004,
+      "doi": "10.1016/S0047-259X(03)00096-4",
+      "primary_urls": [
+        "https://doi.org/10.1016/S0047-259X(03)00096-4",
+        "https://www.ledoit.net/Well-conditioned2004.pdf"
+      ],
+      "implementation_documentation_url": "https://scikit-learn.org/stable/modules/generated/sklearn.covariance.LedoitWolf.html",
+      "supported_paraphrase_ko": "Ledoit와 Wolf(2004)는 표본 공분산을 항등행렬의 배수와 결합하는 선형 축소 추정량을 제안하였다. 이 연구는 그 추정량을 FF12 월간 수익률의 공분산 추정에 사용하였다.",
+      "implementation_match": {
+        "local_source": "research/v63/numerics.py:93",
+        "call": "LedoitWolf(assume_centered=False).fit(returns)",
+        "covariance_recipe": "(1 − α) S + α [trace(S)/p] I",
+        "basis": "공식 scikit-learn 문서가 해당 2004년 논문을 직접 인용하며 위 축소식을 제시한다. 로컬 코드는 자료를 중심화하는 기본 동작을 사용한다."
+      },
+      "citation_warnings": [
+        "같은 저자의 2004년 Honey, I Shrunk the Sample Covariance Matrix와 혼동하지 않는다. 본 코드의 scaled-identity 구현에 맞는 인용은 Journal of Multivariate Analysis 논문이다.",
+        "논문의 점근적 이차손실 최적성은 이 실험의 투자성과 우월성이나 실제 위험 예측의 정확성을 보증하지 않는다.",
+        "온라인 문서는 현재 버전의 방법 설명이며 실험에 사용된 설치 버전의 증명으로 사용하지 않는다."
+      ]
+    },
+    {
+      "id": "french_ff12_data",
+      "bibliography": "French, K. R. (n.d.). 12 Industry Portfolios. Kenneth R. French Data Library. https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_12_ind_port.html",
+      "primary_urls": [
+        "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_12_ind_port.html",
+        "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html"
+      ],
+      "official_data_urls": [
+        "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/12_Industry_Portfolios_TXT.zip",
+        "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/Siccodes12.zip"
+      ],
+      "supported_paraphrase_ko": "Kenneth R. French Data Library는 12개 산업 포트폴리오 수익률과 산업 분류 자료를 제공한다. 2025년 1월 공개분부터 미국 연구 수익률은 CRSP CIZ 자료를 사용하며, CIZ의 월간 수익률은 배당락일 배당 재투자를 반영한 일간 수익률의 복리 누적으로 계산된다. 라이브러리는 갱신 때 전체 과거 수익률을 다시 구성하므로 과거 수치가 수정될 수 있다.",
+      "local_input_match": {
+        "manifest": "data/french/manifest.json",
+        "downloaded_at_utc": "2026-10-17T06:55:54+00:00",
+        "raw_zip_path": "data/french/raw/20261017T065550688169Z/12_Industry_Portfolios_TXT.zip",
+        "raw_zip_sha256_recorded": "633a1d2da4a9dc7160f5a927c526af325cf4813ca623c7d2053e241f48cbddcf",
+        "source_code": "research/v63/numerics.py:57",
+        "selected_data": "Average Value Weighted Returns -- Monthly, 2016-01..2025-12, 120 months, percent divided by 100 exactly once",
+        "interpretation": "실험은 보관된 수정 CIZ 자료를 사용했다. 2016–2025년 각 시점에 실제 관측 가능했던 빈티지의 재현으로 해석하지 않는다."
+      },
+      "citation_warnings": [
+        "자료 설명 페이지는 제공 자료의 공식 출처를 확인한다. 실제 분석 기간·가치가중 선택·정규화는 로컬 실험 코드와 보관 manifest에 근거한다.",
+        "현행 파일을 다시 내려받아 동결된 실험 입력을 교체하지 않았다."
+      ]
+    },
+    {
+      "id": "sec_edgar_data",
+      "bibliography": "U.S. Securities and Exchange Commission. (n.d.). EDGAR public filings. https://www.sec.gov/edgar/search/",
+      "primary_urls": [
+        "https://www.sec.gov/edgar/search/",
+        "https://www.sec.gov/search-filings/edgar-search-assistance/accessing-edgar-data",
+        "https://www.sec.gov/search-filings/edgar-application-programming-interfaces"
+      ],
+      "supported_paraphrase_ko": "SEC EDGAR는 등록서류·정기보고서 등 공개 전자공시를 검색하고 내려받을 수 있는 공식 자료원이다. 기업별 submissions API는 공시 이력을 제공한다. 본 연구의 펀드 보유자료는 개별 공시 accession과 보관된 출처 기록으로 식별한다.",
+      "local_source_records": ["data/v63_20261027/continuation_sources/profiles_v2.json", "data/v63_20261027/continuation_sources/source_manifest_v2.json"],
+      "input_filings": [
+        {
+          "fund_id": "F01", "ticker": "FCNTX", "accession": "0000024238-26-000023",
+          "holdings_as_of": "2025-12-31", "filing_date": "2026-02-20",
+          "url": "https://www.sec.gov/Archives/edgar/data/24238/000002423826000023/0000024238-26-000023-index.html",
+          "live_web_check": "SEC index verified: N-CSR, report period, filing date, Fidelity Contrafund series and FCNTX ticker."
+        },
+        {
+          "fund_id": "F02", "ticker": "VPMCX", "accession": "0000752177-26-000071",
+          "holdings_as_of": "2025-12-31", "filing_date_from_local_profile": "2026-02-26",
+          "url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000071/vg_primcap.htm",
+          "live_web_check": "Direct SEC NPORT-EX document verified: Vanguard PRIMECAP Fund schedule of investments as of December 31, 2025. Filing-date metadata not independently reverified in this pass."
+        },
+        {
+          "fund_id": "F03", "ticker": "DODGX", "accession": "0000029440-26-000002",
+          "holdings_as_of": "2025-12-31", "filing_date": "2026-03-05",
+          "url": "https://www.sec.gov/Archives/edgar/data/29440/000002944026000002/0000029440-26-000002-index.html",
+          "live_web_check": "SEC index verified: N-CSR, report period, filing date, Dodge & Cox Stock Fund series and DODGX ticker."
+        },
+        {
+          "fund_id": "F04", "ticker": "TRBCX", "accession": "0001099263-26-002537",
+          "holdings_as_of_from_local_profile": "2025-12-31", "filing_date_from_local_profile": "2026-02-26",
+          "url": "https://www.sec.gov/Archives/edgar/data/902259/000109926326002537/xslFormNPORT-P_X01/primary_doc.xml",
+          "live_web_check": "Not reverified: official index and XML URLs were inaccessible through the web tool in this pass. URL and dates are traced to existing local source records, not claimed as newly web-verified."
+        }
+      ],
+      "citation_warnings": [
+        "EDGAR 일반 소개는 개별 보유량·산업 매핑·자료 완전성까지 검증하지 않는다. 기존 준비 입력의 한계와 보관 원본 누락을 이 참고문헌 확인으로 해소했다고 쓰지 않는다.",
+        "회사 재무 XBRL companyfacts API와 펀드의 N-CSR/NPORT-EX/NPORT-P 보유 공시를 혼동하지 않는다."
+      ]
+    }
+  ],
+  "manuscript_edited": false,
+  "model_calls": 0
+}

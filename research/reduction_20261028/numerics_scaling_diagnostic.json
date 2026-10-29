@@ -1,0 +1,4103 @@
+{
+  "stats": {
+    "original": {
+      "total": 80,
+      "failed": 1,
+      "infeasible": 0,
+      "max_objective_error": 3.6443764672711154e-12,
+      "failures": [
+        {
+          "scenario": "main-013",
+          "fund": "F02",
+          "view": "R0",
+          "success": false,
+          "feasible": true,
+          "difference": 3.5284275501368256e-15,
+          "message": "Positive directional derivative for linesearch",
+          "iterations": 72
+        }
+      ]
+    },
+    "unit": {
+      "total": 80,
+      "failed": 0,
+      "infeasible": 0,
+      "max_objective_error": 3.644362589483308e-12,
+      "failures": []
+    },
+    "center_unit": {
+      "total": 80,
+      "failed": 2,
+      "infeasible": 0,
+      "max_objective_error": 2.5330699343628638e-11,
+      "failures": [
+        {
+          "scenario": "main-006",
+          "fund": "F03",
+          "view": "full",
+          "success": false,
+          "feasible": true,
+          "difference": 2.5330699343628638e-11,
+          "message": "Positive directional derivative for linesearch",
+          "iterations": 15
+        },
+        {
+          "scenario": "main-009",
+          "fund": "F03",
+          "view": "R0",
+          "success": false,
+          "feasible": true,
+          "difference": 5.771008670940603e-13,
+          "message": "Positive directional derivative for linesearch",
+          "iterations": 12
+        }
+      ]
+    },
+    "unit_scaled_constraints": {
+      "total": 80,
+      "failed": 0,
+      "infeasible": 0,
+      "max_objective_error": 3.644362589483308e-12,
+      "failures": []
+    },
+    "center_unit_scaled_constraints": {
+      "total": 80,
+      "failed": 2,
+      "infeasible": 0,
+      "max_objective_error": 2.5330699343628638e-11,
+      "failures": [
+        {
+          "scenario": "main-006",
+          "fund": "F03",
+          "view": "full",
+          "success": false,
+          "feasible": true,
+          "difference": 2.5330699343628638e-11,
+          "message": "Positive directional derivative for linesearch",
+          "iterations": 15
+        },
+        {
+          "scenario": "main-009",
+          "fund": "F03",
+          "view": "R0",
+          "success": false,
+          "feasible": true,
+          "difference": 5.771008670940603e-13,
+          "message": "Positive directional derivative for linesearch",
+          "iterations": 12
+        }
+      ]
+    },
+    "center": {
+      "total": 80,
+      "failed": 0,
+      "infeasible": 0,
+      "max_objective_error": 3.6443764672711154e-12,
+      "failures": []
+    }
+  },
+  "rows": [
+    {
+      "scenario": "main-001",
+      "fund": "F01",
+      "view": "full",
+      "reference": 0.030393358274353917,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 5.967448757360216e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 26
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.8163916471489756e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 13
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.8163916471489756e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 13
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.071532165918825e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 26
+        }
+      }
+    },
+    {
+      "scenario": "main-001",
+      "fund": "F01",
+      "view": "R0",
+      "reference": 0.024614633246828797,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.591949208711867e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 29
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 15
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.1102230246251565e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 15
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.1102230246251565e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 8.326672684688674e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 29
+        }
+      }
+    },
+    {
+      "scenario": "main-001",
+      "fund": "F02",
+      "view": "full",
+      "reference": 0.031344373705781484,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 31
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 15
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 5.162537064506978e-15,
+          "message": "Optimization terminated successfully",
+          "iterations": 27
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 15
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 5.162537064506978e-15,
+          "message": "Optimization terminated successfully",
+          "iterations": 27
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 0.0,
+          "message": "Optimization terminated successfully",
+          "iterations": 31
+        }
+      }
+    },
+    {
+      "scenario": "main-001",
+      "fund": "F02",
+      "view": "R0",
+      "reference": 0.0238842798616958,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.914335439641036e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 35
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.1163626406917047e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 16
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 19
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.1163626406917047e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 16
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 19
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.8449465006019636e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 35
+        }
+      }
+    },
+    {
+      "scenario": "main-001",
+      "fund": "F03",
+      "view": "full",
+      "reference": 0.02347297724775436,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 8.049116928532385e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 58
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.85722573273506e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 19
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.0122792321330962e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 16
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.85722573273506e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 19
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.0122792321330962e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 16
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.0408340855860843e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 44
+        }
+      }
+    },
+    {
+      "scenario": "main-001",
+      "fund": "F03",
+      "view": "R0",
+      "reference": 0.022908945162525333,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 34
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.979727989493313e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 15
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.2836953722228372e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 11
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.979727989493313e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 15
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.2836953722228372e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 11
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 34
+        }
+      }
+    },
+    {
+      "scenario": "main-001",
+      "fund": "F04",
+      "view": "full",
+      "reference": 0.01715392921214113,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.632783294297951e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 26
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 5.551115123125783e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 24
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.7755575615628914e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 15
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 5.551115123125783e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 24
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.7755575615628914e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 15
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 8.326672684688674e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 26
+        }
+      }
+    },
+    {
+      "scenario": "main-001",
+      "fund": "F04",
+      "view": "R0",
+      "reference": 0.025994935464031185,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 0.0,
+          "message": "Optimization terminated successfully",
+          "iterations": 34
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.979727989493313e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 17
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.6020852139652106e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 13
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.979727989493313e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 17
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.6020852139652106e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 13
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 0.0,
+          "message": "Optimization terminated successfully",
+          "iterations": 34
+        }
+      }
+    },
+    {
+      "scenario": "main-003",
+      "fund": "F01",
+      "view": "full",
+      "reference": 0.021151208299957168,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.376707329889484e-14,
+          "message": "Optimization terminated successfully",
+          "iterations": 13
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.375666495803898e-14,
+          "message": "Optimization terminated successfully",
+          "iterations": 4
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.3760134404990936e-14,
+          "message": "Optimization terminated successfully",
+          "iterations": 4
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.375666495803898e-14,
+          "message": "Optimization terminated successfully",
+          "iterations": 4
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.3760134404990936e-14,
+          "message": "Optimization terminated successfully",
+          "iterations": 4
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.376360385194289e-14,
+          "message": "Optimization terminated successfully",
+          "iterations": 13
+        }
+      }
+    },
+    {
+      "scenario": "main-003",
+      "fund": "F01",
+      "view": "R0",
+      "reference": 0.018587123802462246,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 18
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.255140518769849e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.3021142204224816e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.255140518769849e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.3021142204224816e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 18
+        }
+      }
+    },
+    {
+      "scenario": "main-003",
+      "fund": "F02",
+      "view": "full",
+      "reference": 0.017730654199822577,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.8007470514724844e-13,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.8006776625334453e-13,
+          "message": "Optimization terminated successfully",
+          "iterations": 4
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.799949078673535e-13,
+          "message": "Optimization terminated successfully",
+          "iterations": 4
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.8006776625334453e-13,
+          "message": "Optimization terminated successfully",
+          "iterations": 4
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.799949078673535e-13,
+          "message": "Optimization terminated successfully",
+          "iterations": 4
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.8007470514724844e-13,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        }
+      }
+    },
+    {
+      "scenario": "main-003",
+      "fund": "F02",
+      "view": "R0",
+      "reference": 0.01834535195427377,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 19
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.734723475976807e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.42861286636753e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.734723475976807e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.42861286636753e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 0.0,
+          "message": "Optimization terminated successfully",
+          "iterations": 19
+        }
+      }
+    },
+    {
+      "scenario": "main-003",
+      "fund": "F03",
+      "view": "full",
+      "reference": 0.02142617554635546,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.6443764672711154e-12,
+          "message": "Optimization terminated successfully",
+          "iterations": 15
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.644362589483308e-12,
+          "message": "Optimization terminated successfully",
+          "iterations": 5
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.644421570081491e-12,
+          "message": "Optimization terminated successfully",
+          "iterations": 5
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.644362589483308e-12,
+          "message": "Optimization terminated successfully",
+          "iterations": 5
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.644421570081491e-12,
+          "message": "Optimization terminated successfully",
+          "iterations": 5
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.6443764672711154e-12,
+          "message": "Optimization terminated successfully",
+          "iterations": 15
+        }
+      }
+    },
+    {
+      "scenario": "main-003",
+      "fund": "F03",
+      "view": "R0",
+      "reference": 0.017992654429365085,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 0.0,
+          "message": "Optimization terminated successfully",
+          "iterations": 19
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.122502256758253e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.979727989493313e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.122502256758253e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.979727989493313e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 19
+        }
+      }
+    },
+    {
+      "scenario": "main-003",
+      "fund": "F04",
+      "view": "full",
+      "reference": 0.017653801649580334,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.197683867168678e-13,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.1974757003515606e-13,
+          "message": "Optimization terminated successfully",
+          "iterations": 4
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.197441005882041e-13,
+          "message": "Optimization terminated successfully",
+          "iterations": 4
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.1974757003515606e-13,
+          "message": "Optimization terminated successfully",
+          "iterations": 4
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.197441005882041e-13,
+          "message": "Optimization terminated successfully",
+          "iterations": 4
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.197683867168678e-13,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        }
+      }
+    },
+    {
+      "scenario": "main-003",
+      "fund": "F04",
+      "view": "R0",
+      "reference": 0.019004160773483103,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3877787807814457e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 17
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.8163916471489756e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.85722573273506e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.8163916471489756e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.85722573273506e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 17
+        }
+      }
+    },
+    {
+      "scenario": "main-004",
+      "fund": "F01",
+      "view": "full",
+      "reference": 0.016684830377605042,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.979727989493313e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 22
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 11
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 11
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 9.020562075079397e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 22
+        }
+      }
+    },
+    {
+      "scenario": "main-004",
+      "fund": "F01",
+      "view": "R0",
+      "reference": 0.02207475078547211,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 31
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 9.367506770274758e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 9.367506770274758e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 30
+        }
+      }
+    },
+    {
+      "scenario": "main-004",
+      "fund": "F02",
+      "view": "full",
+      "reference": 0.015764961708459504,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.979727989493313e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 35
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.734723475976807e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 5.551115123125783e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 11
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.734723475976807e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 5.551115123125783e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 11
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.632783294297951e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 35
+        }
+      }
+    },
+    {
+      "scenario": "main-004",
+      "fund": "F02",
+      "view": "R0",
+      "reference": 0.0212624429668805,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.457167719820518e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 30
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.42861286636753e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 13
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.0408340855860843e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.42861286636753e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 13
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.0408340855860843e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.457167719820518e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 30
+        }
+      }
+    },
+    {
+      "scenario": "main-004",
+      "fund": "F03",
+      "view": "full",
+      "reference": 0.02249540260250711,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 28
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3877787807814457e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3877787807814457e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 23
+        }
+      }
+    },
+    {
+      "scenario": "main-004",
+      "fund": "F03",
+      "view": "R0",
+      "reference": 0.02011838492016906,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.487865800153259e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 36
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.0547118733938987e-15,
+          "message": "Optimization terminated successfully",
+          "iterations": 11
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.5102810375396984e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.0547118733938987e-15,
+          "message": "Optimization terminated successfully",
+          "iterations": 11
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.5102810375396984e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.557254739192331e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 36
+        }
+      }
+    },
+    {
+      "scenario": "main-004",
+      "fund": "F04",
+      "view": "full",
+      "reference": 0.025005743164809094,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 24
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.0408340855860843e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.0408340855860843e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 24
+        }
+      }
+    },
+    {
+      "scenario": "main-004",
+      "fund": "F04",
+      "view": "R0",
+      "reference": 0.023605985373466268,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 31
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 5.204170427930421e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 5.898059818321144e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 5.204170427930421e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 5.898059818321144e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 27
+        }
+      }
+    },
+    {
+      "scenario": "main-006",
+      "fund": "F01",
+      "view": "full",
+      "reference": 0.015121530030126054,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 8.673617379884035e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 26
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3704315460216776e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.8622937353617317e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3704315460216776e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.8622937353617317e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.85722573273506e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 21
+        }
+      }
+    },
+    {
+      "scenario": "main-006",
+      "fund": "F01",
+      "view": "R0",
+      "reference": 0.015388970452015208,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.0408340855860843e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 21
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 8.847089727481716e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.9255430583342559e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 8.847089727481716e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.9255430583342559e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 0.0,
+          "message": "Optimization terminated successfully",
+          "iterations": 21
+        }
+      }
+    },
+    {
+      "scenario": "main-006",
+      "fund": "F02",
+      "view": "full",
+      "reference": 0.010948863322209354,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.5612511283791264e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 25
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 15
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.0408340855860843e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 15
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.0408340855860843e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.214306433183765e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 25
+        }
+      }
+    },
+    {
+      "scenario": "main-006",
+      "fund": "F02",
+      "view": "R0",
+      "reference": 0.015152743096821047,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 0.0,
+          "message": "Optimization terminated successfully",
+          "iterations": 28
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.6653345369377348e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.700029006457271e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.6653345369377348e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.700029006457271e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 20
+        }
+      }
+    },
+    {
+      "scenario": "main-006",
+      "fund": "F03",
+      "view": "full",
+      "reference": 0.018770041945781895,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.42861286636753e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 22
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.0408340855860843e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "center_unit": {
+          "success": false,
+          "feasible": true,
+          "difference": 2.5330699343628638e-11,
+          "message": "Positive directional derivative for linesearch",
+          "iterations": 15
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.0408340855860843e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "center_unit_scaled_constraints": {
+          "success": false,
+          "feasible": true,
+          "difference": 2.5330699343628638e-11,
+          "message": "Positive directional derivative for linesearch",
+          "iterations": 15
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 22
+        }
+      }
+    },
+    {
+      "scenario": "main-006",
+      "fund": "F03",
+      "view": "R0",
+      "reference": 0.014793600004542431,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 22
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.458239333260394e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.214306433183765e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 11
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.458239333260394e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.214306433183765e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 11
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 22
+        }
+      }
+    },
+    {
+      "scenario": "main-006",
+      "fund": "F04",
+      "view": "full",
+      "reference": 0.0241530402247919,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.131454734932703e-13,
+          "message": "Optimization terminated successfully",
+          "iterations": 13
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.1314200404631833e-13,
+          "message": "Optimization terminated successfully",
+          "iterations": 4
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.129581233578648e-13,
+          "message": "Optimization terminated successfully",
+          "iterations": 4
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.1314200404631833e-13,
+          "message": "Optimization terminated successfully",
+          "iterations": 4
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.129581233578648e-13,
+          "message": "Optimization terminated successfully",
+          "iterations": 4
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.1314894294022224e-13,
+          "message": "Optimization terminated successfully",
+          "iterations": 13
+        }
+      }
+    },
+    {
+      "scenario": "main-006",
+      "fund": "F04",
+      "view": "R0",
+      "reference": 0.01581553709184566,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.226585665316861e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 19
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.7755575615628914e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.8388068845354155e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.7755575615628914e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.8388068845354155e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.226585665316861e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 19
+        }
+      }
+    },
+    {
+      "scenario": "main-007",
+      "fund": "F01",
+      "view": "full",
+      "reference": 0.022800355477924902,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.0408340855860843e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 23
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.920475055707584e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.734723475976807e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 19
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.920475055707584e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.734723475976807e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 19
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 23
+        }
+      }
+    },
+    {
+      "scenario": "main-007",
+      "fund": "F01",
+      "view": "R0",
+      "reference": 0.013908944012061195,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.7755575615628914e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 27
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.0061396160665481e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.9081958235744878e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 14
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.0061396160665481e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.9081958235744878e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 14
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.7755575615628914e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 27
+        }
+      }
+    },
+    {
+      "scenario": "main-007",
+      "fund": "F02",
+      "view": "full",
+      "reference": 0.016190913547803675,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.8163916471489756e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 29
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.28583859910259e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3877787807814457e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 31
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.28583859910259e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3877787807814457e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 31
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.122502256758253e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 29
+        }
+      }
+    },
+    {
+      "scenario": "main-007",
+      "fund": "F02",
+      "view": "R0",
+      "reference": 0.01332316998327579,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.3306690738754696e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 35
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.734723475976807e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 20
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.45931094670027e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.734723475976807e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 20
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.45931094670027e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.3306690738754696e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 35
+        }
+      }
+    },
+    {
+      "scenario": "main-007",
+      "fund": "F03",
+      "view": "full",
+      "reference": 0.010717525358457672,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.0234868508263162e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 23
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3877787807814457e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 17
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.0755285551056204e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 11
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3877787807814457e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 17
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.0755285551056204e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 11
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.196959198423997e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 23
+        }
+      }
+    },
+    {
+      "scenario": "main-007",
+      "fund": "F03",
+      "view": "R0",
+      "reference": 0.012474581277244068,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.411265631607762e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 30
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.2551405187698492e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 11
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.42861286636753e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 25
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.2551405187698492e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 11
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.42861286636753e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 25
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.480654570646834e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 30
+        }
+      }
+    },
+    {
+      "scenario": "main-007",
+      "fund": "F04",
+      "view": "full",
+      "reference": 0.022343265174976163,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3877787807814457e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 23
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.28583859910259e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.8388068845354155e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.28583859910259e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.8388068845354155e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.0408340855860843e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 23
+        }
+      }
+    },
+    {
+      "scenario": "main-007",
+      "fund": "F04",
+      "view": "R0",
+      "reference": 0.014897285970672386,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.0408340855860843e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 29
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.122502256758253e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 5.377642775528102e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.122502256758253e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 5.377642775528102e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 5.880712583561376e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 27
+        }
+      }
+    },
+    {
+      "scenario": "main-009",
+      "fund": "F01",
+      "view": "full",
+      "reference": 0.01803024723153515,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.0234868508263162e-15,
+          "message": "Optimization terminated successfully",
+          "iterations": 24
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 11
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 8.673617379884035e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 11
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 8.673617379884035e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.016547956922409e-15,
+          "message": "Optimization terminated successfully",
+          "iterations": 24
+        }
+      }
+    },
+    {
+      "scenario": "main-009",
+      "fund": "F01",
+      "view": "R0",
+      "reference": 0.018512577663151383,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3877787807814457e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 19
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3114509478384662e-15,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3114509478384662e-15,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3877787807814457e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 19
+        }
+      }
+    },
+    {
+      "scenario": "main-009",
+      "fund": "F02",
+      "view": "full",
+      "reference": 0.01496180261369088,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 19
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.112366251504909e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.112366251504909e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.734723475976807e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 19
+        }
+      }
+    },
+    {
+      "scenario": "main-009",
+      "fund": "F02",
+      "view": "R0",
+      "reference": 0.01771515940402304,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3877787807814457e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 18
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.1884217488453714e-15,
+          "message": "Optimization terminated successfully",
+          "iterations": 45
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.1884217488453714e-15,
+          "message": "Optimization terminated successfully",
+          "iterations": 45
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.0816681711721685e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 18
+        }
+      }
+    },
+    {
+      "scenario": "main-009",
+      "fund": "F03",
+      "view": "full",
+      "reference": 0.014094828962338086,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3704315460216776e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 20
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.734723475976807e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.734723475976807e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.734723475976807e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.734723475976807e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.2836953722228372e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 20
+        }
+      }
+    },
+    {
+      "scenario": "main-009",
+      "fund": "F03",
+      "view": "R0",
+      "reference": 0.016594824609618662,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3877787807814457e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 19
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 0.0,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center_unit": {
+          "success": false,
+          "feasible": true,
+          "difference": 5.771008670940603e-13,
+          "message": "Positive directional derivative for linesearch",
+          "iterations": 12
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 0.0,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center_unit_scaled_constraints": {
+          "success": false,
+          "feasible": true,
+          "difference": 5.771008670940603e-13,
+          "message": "Positive directional derivative for linesearch",
+          "iterations": 12
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3877787807814457e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 19
+        }
+      }
+    },
+    {
+      "scenario": "main-009",
+      "fund": "F04",
+      "view": "full",
+      "reference": 0.01707503452200749,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 0.0,
+          "message": "Optimization terminated successfully",
+          "iterations": 17
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.163336342344337e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.163336342344337e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 17
+        }
+      }
+    },
+    {
+      "scenario": "main-009",
+      "fund": "F04",
+      "view": "R0",
+      "reference": 0.020029657039814294,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.0408340855860843e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 17
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 0.0,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 0.0,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.0816681711721685e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 17
+        }
+      }
+    },
+    {
+      "scenario": "main-010",
+      "fund": "F01",
+      "view": "full",
+      "reference": 0.030062876732502946,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.979727989493313e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 26
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3877787807814457e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 19
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.498001805406602e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 11
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3877787807814457e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 19
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.498001805406602e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 11
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.28583859910259e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 26
+        }
+      }
+    },
+    {
+      "scenario": "main-010",
+      "fund": "F01",
+      "view": "R0",
+      "reference": 0.02977085439700979,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.0816681711721685e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 25
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3877787807814457e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3877787807814457e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.734723475976807e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 25
+        }
+      }
+    },
+    {
+      "scenario": "main-010",
+      "fund": "F02",
+      "view": "full",
+      "reference": 0.029377969959378455,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 25
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 9.71445146547012e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 13
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.5265566588595902e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 9.71445146547012e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 13
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.5265566588595902e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 0.0,
+          "message": "Optimization terminated successfully",
+          "iterations": 25
+        }
+      }
+    },
+    {
+      "scenario": "main-010",
+      "fund": "F02",
+      "view": "R0",
+      "reference": 0.028799937598497145,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.42861286636753e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 24
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.1796119636642288e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.7755575615628914e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.1796119636642288e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.7755575615628914e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.5057399771478686e-15,
+          "message": "Optimization terminated successfully",
+          "iterations": 47
+        }
+      }
+    },
+    {
+      "scenario": "main-010",
+      "fund": "F03",
+      "view": "full",
+      "reference": 0.021395208534735012,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 5.759281940243e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 28
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.163336342344337e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 11
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 9.367506770274758e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.163336342344337e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 11
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 9.367506770274758e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 5.655198531684391e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 28
+        }
+      }
+    },
+    {
+      "scenario": "main-010",
+      "fund": "F03",
+      "view": "R0",
+      "reference": 0.02744133103759344,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.0408340855860843e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 34
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 11
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.626643678231403e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 11
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.626643678231403e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3877787807814457e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 27
+        }
+      }
+    },
+    {
+      "scenario": "main-010",
+      "fund": "F04",
+      "view": "full",
+      "reference": 0.03235795905851461,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.0816681711721685e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 18
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.0816681711721685e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.85722573273506e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.0816681711721685e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.85722573273506e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.0816681711721685e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 18
+        }
+      }
+    },
+    {
+      "scenario": "main-010",
+      "fund": "F04",
+      "view": "R0",
+      "reference": 0.03162378523151783,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.0816681711721685e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 29
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.2327252813834093e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 13
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.0816681711721685e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.2327252813834093e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 13
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.0816681711721685e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.1510571102112408e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 29
+        }
+      }
+    },
+    {
+      "scenario": "main-012",
+      "fund": "F01",
+      "view": "full",
+      "reference": 0.03719094528018571,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 8.326672684688674e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 32
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.7755575615628914e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 15
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.8041124150158794e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.7755575615628914e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 15
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.8041124150158794e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 9.020562075079397e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 32
+        }
+      }
+    },
+    {
+      "scenario": "main-012",
+      "fund": "F01",
+      "view": "R0",
+      "reference": 0.02734038242627334,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 31
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 14
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3322676295501878e-15,
+          "message": "Optimization terminated successfully",
+          "iterations": 13
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 14
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3322676295501878e-15,
+          "message": "Optimization terminated successfully",
+          "iterations": 13
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 31
+        }
+      }
+    },
+    {
+      "scenario": "main-012",
+      "fund": "F02",
+      "view": "full",
+      "reference": 0.040852108707080864,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 9.71445146547012e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 33
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 17
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.8449465006019636e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 17
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.8449465006019636e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 9.71445146547012e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 33
+        }
+      }
+    },
+    {
+      "scenario": "main-012",
+      "fund": "F02",
+      "view": "R0",
+      "reference": 0.026481120396974547,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.1102230246251565e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 25
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.0061396160665481e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 15
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3010426069826053e-15,
+          "message": "Optimization terminated successfully",
+          "iterations": 25
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.0061396160665481e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 15
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3010426069826053e-15,
+          "message": "Optimization terminated successfully",
+          "iterations": 25
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.0408340855860843e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 25
+        }
+      }
+    },
+    {
+      "scenario": "main-012",
+      "fund": "F03",
+      "view": "full",
+      "reference": 0.029441193873778283,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.8163916471489756e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 38
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.8145207558717402e-15,
+          "message": "Optimization terminated successfully",
+          "iterations": 15
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 8.326672684688674e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 13
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.8145207558717402e-15,
+          "message": "Optimization terminated successfully",
+          "iterations": 15
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 8.326672684688674e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 13
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 38
+        }
+      }
+    },
+    {
+      "scenario": "main-012",
+      "fund": "F03",
+      "view": "R0",
+      "reference": 0.025329517113393926,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 9.818534874028728e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 25
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.979727989493313e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 13
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3183898417423734e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.979727989493313e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 13
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3183898417423734e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 12
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 9.922618282587337e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 25
+        }
+      }
+    },
+    {
+      "scenario": "main-012",
+      "fund": "F04",
+      "view": "full",
+      "reference": 0.041261702196923364,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.2698175844150228e-15,
+          "message": "Optimization terminated successfully",
+          "iterations": 40
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.632783294297951e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 18
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.400058012914542e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 14
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.632783294297951e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 18
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.400058012914542e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 14
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.2698175844150228e-15,
+          "message": "Optimization terminated successfully",
+          "iterations": 40
+        }
+      }
+    },
+    {
+      "scenario": "main-012",
+      "fund": "F04",
+      "view": "R0",
+      "reference": 0.029041782588342856,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 28
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.40619762898109e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 14
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.8388068845354155e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 14
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.40619762898109e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 14
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.8388068845354155e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 14
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.008282842946301e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 28
+        }
+      }
+    },
+    {
+      "scenario": "main-013",
+      "fund": "F01",
+      "view": "full",
+      "reference": 0.028126050617157325,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 0.0,
+          "message": "Optimization terminated successfully",
+          "iterations": 20
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 0.0,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.0816681711721685e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 0.0,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.0816681711721685e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.734723475976807e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 20
+        }
+      }
+    },
+    {
+      "scenario": "main-013",
+      "fund": "F01",
+      "view": "R0",
+      "reference": 0.028594035312520718,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.0469737016526324e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 22
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.1163626406917047e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.1163626406917047e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 6
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.1163626406917047e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.1163626406917047e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 6
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.0816681711721685e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 22
+        }
+      }
+    },
+    {
+      "scenario": "main-013",
+      "fund": "F02",
+      "view": "full",
+      "reference": 0.03327232265000041,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 0.0,
+          "message": "Optimization terminated successfully",
+          "iterations": 19
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3877787807814457e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.718447854656915e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 7
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3877787807814457e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.718447854656915e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 7
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 0.0,
+          "message": "Optimization terminated successfully",
+          "iterations": 19
+        }
+      }
+    },
+    {
+      "scenario": "main-013",
+      "fund": "F02",
+      "view": "R0",
+      "reference": 0.0285853109677374,
+      "modes": {
+        "original": {
+          "success": false,
+          "feasible": true,
+          "difference": 3.5284275501368256e-15,
+          "message": "Positive directional derivative for linesearch",
+          "iterations": 72
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.249000902703301e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.457167719820518e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 7
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.249000902703301e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.457167719820518e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 7
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.1796119636642288e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 25
+        }
+      }
+    },
+    {
+      "scenario": "main-013",
+      "fund": "F03",
+      "view": "full",
+      "reference": 0.034172512994684115,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.122502256758253e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 35
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.163336342344337e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 14
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.7755575615628914e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.163336342344337e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 14
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.7755575615628914e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.2612801348363973e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 35
+        }
+      }
+    },
+    {
+      "scenario": "main-013",
+      "fund": "F03",
+      "view": "R0",
+      "reference": 0.028267045879410715,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 27
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.245004513516506e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3877787807814457e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.245004513516506e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.3877787807814457e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 9
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 27
+        }
+      }
+    },
+    {
+      "scenario": "main-013",
+      "fund": "F04",
+      "view": "full",
+      "reference": 0.027926432411178825,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.42861286636753e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 18
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.8163916471489756e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 6
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.163336342344337e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 6
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.8163916471489756e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 6
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.163336342344337e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 6
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.734723475976807e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 18
+        }
+      }
+    },
+    {
+      "scenario": "main-013",
+      "fund": "F04",
+      "view": "R0",
+      "reference": 0.02860577171012188,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.226585665316861e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 16
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.712308238590367e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 6
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.914335439641036e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 5
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.712308238590367e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 6
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.914335439641036e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 5
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.226585665316861e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 16
+        }
+      }
+    },
+    {
+      "scenario": "main-015",
+      "fund": "F01",
+      "view": "full",
+      "reference": 0.008839836012517026,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 5.204170427930421e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 24
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.45931094670027e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.45931094670027e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 8
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 24
+        }
+      }
+    },
+    {
+      "scenario": "main-015",
+      "fund": "F01",
+      "view": "R0",
+      "reference": 0.010739722805818004,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.279698983036042e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 30
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 5.412337245047638e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 16
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.734723475976807e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 16
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 5.412337245047638e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 16
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.734723475976807e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 16
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.279698983036042e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 30
+        }
+      }
+    },
+    {
+      "scenario": "main-015",
+      "fund": "F02",
+      "view": "full",
+      "reference": 0.013130949659290788,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.717376241217039e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 27
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.734723475976807e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 20
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 8.673617379884035e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 11
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.734723475976807e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 20
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 8.673617379884035e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 11
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.6653345369377348e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 27
+        }
+      }
+    },
+    {
+      "scenario": "main-015",
+      "fund": "F02",
+      "view": "R0",
+      "reference": 0.010290946814853224,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.0816681711721685e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 30
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.5388358909926865e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 16
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.354155924701786e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 15
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.5388358909926865e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 16
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 4.354155924701786e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 15
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.9081958235744878e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 30
+        }
+      }
+    },
+    {
+      "scenario": "main-015",
+      "fund": "F03",
+      "view": "full",
+      "reference": 0.010380870748652593,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.8388068845354155e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 27
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.8102520310824275e-15,
+          "message": "Optimization terminated successfully",
+          "iterations": 22
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 5.204170427930421e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.8102520310824275e-15,
+          "message": "Optimization terminated successfully",
+          "iterations": 22
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 5.204170427930421e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.8388068845354155e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 27
+        }
+      }
+    },
+    {
+      "scenario": "main-015",
+      "fund": "F03",
+      "view": "R0",
+      "reference": 0.009691029951885151,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 8.673617379884035e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 39
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 8.153200337090993e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 17
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.0816681711721685e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 16
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 8.153200337090993e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 17
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.0816681711721685e-16,
+          "message": "Optimization terminated successfully",
+          "iterations": 16
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 6.938893903907228e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 39
+        }
+      }
+    },
+    {
+      "scenario": "main-015",
+      "fund": "F04",
+      "view": "full",
+      "reference": 0.0073438331485866796,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.6020852139652106e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 32
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 5.204170427930421e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 11
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 9.540979117872439e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 5.204170427930421e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 11
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 9.540979117872439e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 10
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 1.734723475976807e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 32
+        }
+      }
+    },
+    {
+      "scenario": "main-015",
+      "fund": "F04",
+      "view": "R0",
+      "reference": 0.011630067606629414,
+      "modes": {
+        "original": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.632783294297951e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 38
+        },
+        "unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 16
+        },
+        "center_unit": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.0816681711721685e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 16
+        },
+        "unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 3.469446951953614e-18,
+          "message": "Optimization terminated successfully",
+          "iterations": 16
+        },
+        "center_unit_scaled_constraints": {
+          "success": true,
+          "feasible": true,
+          "difference": 2.0816681711721685e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 16
+        },
+        "center": {
+          "success": true,
+          "feasible": true,
+          "difference": 7.632783294297951e-17,
+          "message": "Optimization terminated successfully",
+          "iterations": 38
+        }
+      }
+    }
+  ],
+  "elapsed_seconds": 2.569709999996121,
+  "model_calls": 0
+}

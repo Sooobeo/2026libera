@@ -1,0 +1,64 @@
+{
+  "schema": "libera_exact_vertex_verification_v1",
+  "input_path": "tmp/selected_reference_failure.json",
+  "input_sha256": "3639ec8c3866a8b2b0d59eb6f7efaacb93e447306dcc65c801d00c4a03404582",
+  "method": "Fraction.from_float exact rational arithmetic on all recorded binary64 inputs; no tolerance relaxation",
+  "support_indices_zero_based": [
+    5,
+    6
+  ],
+  "weights": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.5450674308698789,
+    0.4549325691301212,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "risk_multiplier": 0,
+  "explicit_multipliers": [
+    11989.868561066562
+  ],
+  "budget_multiplier": 342.1890418596474,
+  "lower_bound_multipliers": [
+    81.57943617643544,
+    115.10641607842008,
+    58.20709860168474,
+    183.76864769270975,
+    125.94736207905017,
+    0.0,
+    0.0,
+    83.61657839126396,
+    104.9063297513659,
+    95.12653867482503,
+    32.53353056667294,
+    81.5951261184344
+  ],
+  "primal_objective": -0.5450674308698789,
+  "dual_bound": -0.5450674308698789,
+  "primal_dual_gap_exact": "0",
+  "risk_slack_exact": "4460856598851852976522153325383510179134417790831897512352974486125393393/442812504693767114858667256559178363353047819628215504780658998836564694057091072",
+  "risk_slack": 1.0073917406503274e-08,
+  "checks": {
+    "budget_exact": true,
+    "nonnegative_weights_exact": true,
+    "all_explicit_constraints_exact": true,
+    "risk_feasible_exact": true,
+    "risk_strictly_inactive_exact": true,
+    "explicit_dual_nonnegative_exact": true,
+    "all_lower_duals_nonnegative_exact": true,
+    "lower_bound_complementarity_exact": true,
+    "explicit_complementarity_exact": true,
+    "stationarity_exact": true,
+    "zero_duality_gap_exact": true
+  },
+  "model_calls": 0,
+  "http_requests": 0,
+  "script_path": "tmp/verify_vertex_exact.py"
+}

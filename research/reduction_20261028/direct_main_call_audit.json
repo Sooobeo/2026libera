@@ -1,6 +1,6 @@
 {
   "schema": "libera_direct_main_call_audit_v1",
-  "recorded_at_utc": "2026-10-28T01:42:29.220197+00:00",
+  "recorded_at_utc": "2026-10-28T02:01:50.465274+00:00",
   "scope": {
     "path": "research/reduction_20261028/main_only_no_full_approved.json",
     "sha256": "8248bf6cb066b3a87b63ceda1c0dec0b9fb63709c4a26a866167f972dda02d7d",
@@ -11,7 +11,7 @@
     "sha256": "e868b80e67afae04b5f261b4d8efbf6b7d8219d5da8cd56acfb3325adaff01b0",
     "bytes": 1895
   },
-  "runtime_id_if_started_with_current_sources": "32526c6a82f01473d91451e6873df78f52150b536acdfb06f87a1cf9400ff301",
+  "runtime_id_if_started_with_current_sources": "b713cc4533c2f5b18e165f51592ca8f89223977fd1e15aee202adff8bbca6b54",
   "new_real_model_requests_in_this_update": 0,
   "preliminary_generation_requests": 0,
   "model_validation_or_grading_requests": 0,
@@ -30,5 +30,10 @@
     "projection_for_480_seconds": 18.186529170716092
   },
   "latency_interpretation": "Metadata reduction is not an hours-scale inference speedup. Most measured time is response generation.",
-  "historical_results_mutated": false
+  "historical_results_mutated": false,
+  "numerics_fix": {
+    "path": "research/reduction_20261028/coordinate_numerics_fix_receipt.json",
+    "sha256": "e392f7c241b1c0eb95ea247daecd9952efb728a9dda3680e692c5617273fd9d8",
+    "bytes": 2701
+  }
 }

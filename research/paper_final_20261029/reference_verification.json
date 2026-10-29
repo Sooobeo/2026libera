@@ -1,0 +1,150 @@
+{
+  "schema": "libera_primary_reference_verification_v1",
+  "verified_on_kst": "2026-10-29",
+  "scope": "Seven primary academic sources for the completed LIBERA paper; bibliography and narrowly supported literature claims only. No manuscript or experiment artifact was edited.",
+  "internal_starting_source": "paper/LIBERA_소논문_구성과문장_레퍼런스분석_20261026.md",
+  "method": "Read official conference, research-institution, author-deposited journal, and arXiv pages/PDFs. Unsupported secondary search results were not used for substantive claims. NeurIPS page ranges were checked against the official BibTeX endpoints.",
+  "references": [
+    {
+      "id": "hornuf_2025",
+      "authors": ["Lars Hornuf", "David J. Streich", "Niklas Töllich"],
+      "year": 2025,
+      "title": "Making GenAI Smarter: Evidence from a Portfolio Allocation Experiment",
+      "publication": "CESifo Working Paper No. 11862",
+      "version_status": "Verified CESifo working-paper version dated April 30, 2025; not presented here as a journal article.",
+      "bibliography": "Hornuf, L., Streich, D. J., & Töllich, N. (2025). Making GenAI Smarter: Evidence from a Portfolio Allocation Experiment. CESifo Working Paper No. 11862.",
+      "primary_url": "https://www.ifo.de/DocDL/cesifo1_wp11862.pdf",
+      "verified_locations": ["PDF physical page 3: title, authors, date, abstract", "Printed pp. 2–4: information conditions, main findings, controlled information injection"],
+      "supported_paraphrase_ko": "Hornuf 등은 포트폴리오 배분 과제에서 추가 정보의 종류가 LLM 추천에 미치는 영향을 비교하였다. 기업별 정보의 제공은 역사적 성과를 개선했지만, 그 개선은 위험자산 비중 증가와 연결됐고 위험자산 내부의 평균·분산 효율 향상으로 설명되지 않았다. 따라서 정보 추가가 추천의 질을 일관되게 높인다고 단정하기 어렵다.",
+      "safe_use_in_libera": "기관별 자료가 배분에 영향을 줄 수 있다는 연구 선례와, 정보 제공·성과·위험을 구분해야 한다는 근거.",
+      "citation_warnings": [
+        "논문은 정보 선택을 검색기에 맡기지 않고 제공 정보를 직접 통제했다고 명시한다. 완전한 검색 파이프라인의 효과 검증으로 소개하지 않는다.",
+        "과거 성과 개선은 위험 증가를 동반했다. 이를 제약 준수 개선이나 위험조정 효율 향상으로 바꾸어 인용하지 않는다.",
+        "여러 모델과 인간 금융자문가를 비교한 별도 과제이므로 LIBERA의 단일 모델 결과를 그대로 뒷받침하지 않는다."
+      ]
+    },
+    {
+      "id": "doshi_hauser_2024",
+      "authors": ["Anil R. Doshi", "Oliver P. Hauser"],
+      "year": 2024,
+      "title": "Generative AI enhances individual creativity but reduces the collective diversity of novel content",
+      "publication": "Science Advances, 10(28), eadn5290",
+      "version_status": "Published journal article, July 12, 2024; published version hosted in the author's institutional repository.",
+      "bibliography": "Doshi, A. R., & Hauser, O. P. (2024). Generative AI enhances individual creativity but reduces the collective diversity of novel content. Science Advances, 10(28), eadn5290. https://doi.org/10.1126/sciadv.adn5290",
+      "doi": "10.1126/sciadv.adn5290",
+      "primary_url": "https://discovery.ucl.ac.uk/id/eprint/10195027/",
+      "pdf_url": "https://discovery.ucl.ac.uk/id/eprint/10195027/1/Generative%20AI%20enhances%20individual%20creativity%20but%20reduces%20the%20collective%20diversity%20of%20novel%20content.pdf",
+      "verified_locations": ["UCL repository bibliographic record and abstract", "Published PDF pp. 1–3: abstract, randomized writing conditions, results"],
+      "supported_paraphrase_ko": "Doshi와 Hauser의 짧은 이야기 작성 실험에서는 생성형 AI의 아이디어를 이용할 수 있는 집단의 산출물이 더 창의적이고 잘 쓰였다는 평가를 받았으나, 산출물 사이의 유사성도 높아졌다. 개별 산출물의 평가 개선과 집단 수준의 다양성은 별도로 살펴볼 필요가 있다.",
+      "safe_use_in_libera": "개별 과제의 질과 집단 수준의 차이를 구분하는 문제 제기.",
+      "citation_warnings": [
+        "사람이 AI 아이디어의 도움을 받아 쓴 짧은 이야기 연구다. 자율 투자 에이전트나 실제 기관 포트폴리오의 동질화 증거로 직접 일반화하지 않는다.",
+        "이 연구의 무작위 실험 인과 표현을 LIBERA가 측정하지 않은 시장 수준 인과효과에 옮기지 않는다."
+      ]
+    },
+    {
+      "id": "bommasani_2022",
+      "authors": ["Rishi Bommasani", "Kathleen A. Creel", "Ananya Kumar", "Dan Jurafsky", "Percy Liang"],
+      "year": 2022,
+      "title": "Picking on the Same Person: Does Algorithmic Monoculture lead to Outcome Homogenization?",
+      "publication": "Advances in Neural Information Processing Systems, 35, 3663–3678",
+      "version_status": "NeurIPS 2022 main-conference paper.",
+      "bibliography": "Bommasani, R., Creel, K. A., Kumar, A., Jurafsky, D., & Liang, P. (2022). Picking on the Same Person: Does Algorithmic Monoculture lead to Outcome Homogenization? Advances in Neural Information Processing Systems, 35, 3663–3678.",
+      "doi": "10.52202/068431-0265",
+      "primary_url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/17a234c91f746d9625a75cf8a8731ee2-Abstract-Conference.html",
+      "pdf_url": "https://proceedings.neurips.cc/paper_files/paper/2022/file/17a234c91f746d9625a75cf8a8731ee2-Paper-Conference.pdf",
+      "bibtex_url": "https://proceedings.neurips.cc/paper_files/paper/17123-/bibtex",
+      "verified_locations": ["Official abstract page: authors, conference, abstract, DOI", "Official BibTeX: volume 35 and pages 3663–3678"],
+      "supported_paraphrase_ko": "Bommasani 등은 여러 의사결정 시스템에서 같은 개인이나 집단이 유사한 결과를 반복해서 경험하는 현상을 결과 동질화로 정의하였다. 실험에서 데이터 공유는 동질화를 강화했지만, 모델 공유의 결과는 혼합되어 있었고 기초모델의 적응 방식에 따라 달라졌다.",
+      "safe_use_in_libera": "공통 구성요소의 사용과 실제 결과 동질화를 구분하고, 공통 모델 사용만으로 같은 결과를 예단하지 않는 근거.",
+      "citation_warnings": [
+        "논문 자체가 모델 공유에 대해 혼합된 결과를 보고한다. 같은 모델이면 반드시 동질화된다는 주장으로 인용하지 않는다.",
+        "개인·집단의 처우에 관한 동질화 지표를 펀드 간 비중 거리나 금융시장 상관관계와 동일시하지 않는다."
+      ]
+    },
+    {
+      "id": "matton_2025",
+      "authors": ["Katie Matton", "Robert Osazuwa Ness", "John Guttag", "Emre Kıcıman"],
+      "year": 2025,
+      "title": "Walk the Talk? Measuring the Faithfulness of Large Language Model Explanations",
+      "publication": "International Conference on Learning Representations (ICLR 2025)",
+      "version_status": "Official ICLR 2025 conference paper.",
+      "bibliography": "Matton, K., Ness, R. O., Guttag, J., & Kıcıman, E. (2025). Walk the Talk? Measuring the Faithfulness of Large Language Model Explanations. International Conference on Learning Representations.",
+      "primary_url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/b5ec50eb177908f21f78ed0d76ed525c-Paper-Conference.pdf",
+      "verified_locations": ["PDF p. 1: official conference label, title, authors, abstract", "PDF pp. 3–4, Section 2: causal concept effect and faithfulness definitions"],
+      "supported_paraphrase_ko": "Matton 등은 설명이 중요하다고 암시하는 입력 개념과, 그 개념을 바꾸었을 때 응답에 실제로 나타나는 영향의 일치 정도를 평가하였다. 사회적 편향 및 의료 질의응답 과제에서 그럴듯한 설명이 영향 요인을 잘못 나타낼 수 있음을 보였다.",
+      "safe_use_in_libera": "설명의 설득력, 근거 언급, 실제 선택에 대한 영향은 서로 다른 평가 대상이라는 근거.",
+      "citation_warnings": [
+        "이 논문은 반사실 입력과 반복 응답 및 계층모형을 사용한다. LIBERA의 설명·비중 대조나 제약 검사를 동일한 인과적 충실성 측정으로 부르지 않는다.",
+        "JSON 형식 오류나 비중 합계 오류 자체가 숨은 추론 과정의 불충실성을 입증하는 것은 아니다."
+      ]
+    },
+    {
+      "id": "laban_2025",
+      "authors": ["Philippe Laban", "Hiroaki Hayashi", "Yingbo Zhou", "Jennifer Neville"],
+      "year": 2025,
+      "title": "LLMs Get Lost In Multi-Turn Conversation",
+      "publication": "arXiv:2505.06120v1",
+      "version_status": "Verified arXiv version 1, submitted May 9, 2025. No conference or journal venue claimed.",
+      "bibliography": "Laban, P., Hayashi, H., Zhou, Y., & Neville, J. (2025). LLMs Get Lost In Multi-Turn Conversation. arXiv:2505.06120v1. https://doi.org/10.48550/arXiv.2505.06120",
+      "doi": "10.48550/arXiv.2505.06120",
+      "primary_url": "https://arxiv.org/abs/2505.06120v1",
+      "full_text_url": "https://arxiv.org/html/2505.06120v1",
+      "verified_locations": ["arXiv abstract and submission history", "v1 HTML Sections 1 and 3.3: matched information, Full/Sharded/Concat/Recap/Snowball conditions", "v1 HTML Section 2: simulation scope limitations"],
+      "supported_paraphrase_ko": "Laban 등은 동일한 과제 정보를 처음부터 한꺼번에 제공하는 경우와 대화 여러 차례에 나누어 제공하는 경우를 비교하였다. 단계적으로 정보가 주어지는 모의 대화에서 성능과 신뢰성이 낮아졌으며, 초기 가정과 앞선 답안에 대한 과도한 의존을 관찰하였다.",
+      "safe_use_in_libera": "정보의 최종 보유 여부뿐 아니라 제공 절차와 누적 대화 이력도 평가해야 한다는 근거.",
+      "citation_warnings": [
+        "v1의 평균 성능 감소 수치가 초록 39%, Figure 1 설명 35%, 서론 90%에서 65%로 각각 서술된다. 동일한 분모·집계를 확인하지 않고 하나의 보편적인 감소율로 재인용하지 않는다. 본 원고에는 정성적 서술을 권한다.",
+        "불완전한 사용자 요구를 단계적으로 공개하는 모의 대화 연구다. LIBERA의 계획·배분·점검 단계별 자료 제공과 동일한 실험은 아니다.",
+        "LIBERA의 조건 차이를 순수한 기억 효과나 앵커링의 인과효과로 확정하는 근거로 쓰지 않는다."
+      ]
+    },
+    {
+      "id": "hansen_lee_2025",
+      "authors": ["Anne Lundgaard Hansen", "Seung Jung Lee"],
+      "year": 2025,
+      "title": "Financial Stability Implications of Generative AI: Taming the Animal Spirits",
+      "publication": "Finance and Economics Discussion Series 2025-090, Board of Governors of the Federal Reserve System",
+      "version_status": "Working paper. Official PDF title page is dated September 25, 2025. Landing page last-update date August 21, 2026 is not the publication year.",
+      "bibliography": "Hansen, A. L., & Lee, S. J. (2025). Financial Stability Implications of Generative AI: Taming the Animal Spirits. Finance and Economics Discussion Series 2025-090. Board of Governors of the Federal Reserve System. https://doi.org/10.17016/FEDS.2025.090",
+      "doi": "10.17016/FEDS.2025.090",
+      "primary_url": "https://www.federalreserve.gov/econres/feds/financial-stability-implications-of-generative-ai-taming-the-animal-spirits.htm",
+      "pdf_url": "https://www.federalreserve.gov/econres/feds/files/2025090pap.pdf",
+      "verified_locations": ["PDF cover: required bibliographic form and working-paper status", "Printed p. 1: dated title page and abstract", "Printed pp. 3–4: controlled-setting limits and distinction between herding, model monoculture, and collusion"],
+      "supported_paraphrase_ko": "Hansen과 Lee는 투자 군집행동에 관한 기존 실험을 LLM으로 재현하였다. 기본 조건에서 AI 에이전트는 시장 추세보다 사적 정보에 더 의존했으나, 이윤 극대화를 명시한 변형 조건에서는 최적 군집행동도 나타났다. 이는 AI 사용의 함의가 과제와 지시 조건에 따라 달라질 수 있음을 보여준다.",
+      "safe_use_in_libera": "금융에서 공통 모델, 군집행동, 정보에 대한 반응을 구분하는 논의와 조건부 해석.",
+      "citation_warnings": [
+        "저자들은 현실 금융시장을 모형화하려는 연구가 아니라고 명시한다. 실제 금융안정 개선이나 위기 발생률 감소가 실증됐다고 쓰지 않는다.",
+        "논문에서 군집행동은 사적 정보를 무시하고 시장 추세를 따르는 좁은 의미다. 펀드 배분의 단순 유사성과 동일하지 않다.",
+        "FEDS 작업논문이며 저자 견해다. 연준의 공식 정책 결론으로 표기하지 않는다."
+      ]
+    },
+    {
+      "id": "lewis_2020",
+      "authors": ["Patrick Lewis", "Ethan Perez", "Aleksandra Piktus", "Fabio Petroni", "Vladimir Karpukhin", "Naman Goyal", "Heinrich Küttler", "Mike Lewis", "Wen-tau Yih", "Tim Rocktäschel", "Sebastian Riedel", "Douwe Kiela"],
+      "year": 2020,
+      "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
+      "publication": "Advances in Neural Information Processing Systems, 33, 9459–9474",
+      "version_status": "NeurIPS 2020 conference paper.",
+      "bibliography": "Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., Küttler, H., Lewis, M., Yih, W.-t., Rocktäschel, T., Riedel, S., & Kiela, D. (2020). Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks. Advances in Neural Information Processing Systems, 33, 9459–9474.",
+      "primary_url": "https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html",
+      "pdf_url": "https://proceedings.neurips.cc/paper_files/paper/2020/file/6b493230205f780e1bc26945df7481e5-Paper.pdf",
+      "bibtex_url": "https://proceedings.neurips.cc/paper_files/paper/10517-/bibtex",
+      "verified_locations": ["Official abstract: title, authors, venue, parametric/non-parametric memory formulation", "Official BibTeX: volume 33 and pages 9459–9474"],
+      "supported_paraphrase_ko": "Lewis 등은 사전학습 모델의 매개변수에 담긴 지식과 외부 문서 색인에서 검색한 정보를 결합하는 검색 증강 생성 모델을 제안하였다. 이 연구는 지식 집약적 언어 과제에서 검색된 자료를 생성에 결합하는 기본 개념을 제공한다.",
+      "safe_use_in_libera": "검색된 외부 자료를 생성 입력과 결합한다는 RAG 개념의 출처.",
+      "citation_warnings": [
+        "원 논문은 학습된 신경 검색기와 조밀 벡터 색인 및 seq2seq 모델을 사용한다. LIBERA의 BM25 검색·프롬프트 제공과 같은 구현이라고 쓰지 않는다.",
+        "원 논문의 QA·언어 생성 개선이 금융배분의 유효성, 제약 준수 또는 RAG 배치 시점의 우열을 보증하지 않는다."
+      ]
+    }
+  ],
+  "cross_reference_claim_limits": [
+    "공통 GenAI 사용 자체가 기관의 전략적 이질성을 줄인다는 인과효과나 실제 시장의 시스템 위험을 이번 문헌 연결 또는 LIBERA 실험이 입증했다고 쓰지 않는다.",
+    "문헌의 연구 과제·모델·표본·지표를 LIBERA의 조건으로 바꾸어 서술하지 않는다.",
+    "문헌에 근거한 배경, LIBERA에서 관찰한 결과, 연구자의 해석 및 미검증 제안을 구분한다.",
+    "현재 검증은 지정한 7편의 서지와 핵심 주장에 한정한다. 체계적 문헌고찰이나 최신 관련 연구 전체의 검증을 뜻하지 않는다."
+  ],
+  "verification_counts": {"primary_works_verified": 7, "core_works_verified": 5, "experiment_model_calls": 0},
+  "manuscript_edits": 0
+}

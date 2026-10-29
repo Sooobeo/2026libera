@@ -1,0 +1,84 @@
+{
+  "schema": "libera_selected_main_execution_plan_v1",
+  "scope": "Execute the current approved B-main design using the existing local frozen environment.",
+  "config": "data/v64_20261028/main_only_results/direct_main_config.json",
+  "config_sha256": "e868b80e67afae04b5f261b4d8efbf6b7d8219d5da8cd56acfb3325adaff01b0",
+  "expected_run_id": "b713cc4533c2f5b18e165f51592ca8f89223977fd1e15aee202adff8bbca6b54",
+  "design": {
+    "scenario_ids": [
+      "main-001",
+      "main-003",
+      "main-004",
+      "main-006",
+      "main-007",
+      "main-009",
+      "main-010",
+      "main-012",
+      "main-013",
+      "main-015"
+    ],
+    "precision_levels": [
+      0.5,
+      2.0
+    ],
+    "scenarios_per_precision": 5,
+    "funds": [
+      "F01",
+      "F02",
+      "F03",
+      "F04"
+    ],
+    "arms": [
+      "R0",
+      "R1",
+      "R2",
+      "R3"
+    ],
+    "replicates": 1,
+    "stages": [
+      "plan",
+      "allocate",
+      "check_and_revise"
+    ],
+    "trajectories": 160,
+    "planned_stage_slots": 480,
+    "execution_order": "Preserve original seed-5001 order filtered by the approved selection.",
+    "weight_policy": "Preserve raw output; normalize eligible nonnegative finite vectors to 100%, recheck original constraints; otherwise retain h and record failure."
+  },
+  "sequence": [
+    "Read active guide, scope, locator, configuration, resume instructions and execution code.",
+    "Verify active bundle once offline; compare frozen run identity; confirm no duplicate campaign and disabled idle sleep.",
+    "Verify and reuse or start the pinned dedicated Vulkan server on 11436 without generating any response.",
+    "Launch one timed campaign process; prepare selected inputs and numerical references before the first real model request.",
+    "Verify first real response persistence and actual timing using local receipts; monitor lightweight progress without repeatedly loading full records.",
+    "Let the campaign finish all terminal trajectories and perform its built-in descriptive analysis; record final process duration and exit status."
+  ],
+  "efficiency": {
+    "separate_preliminary_generations": 0,
+    "warmup_generations": 0,
+    "ai_grading_calls": 0,
+    "duplicate_render_identity_queries": false,
+    "automatic_infrastructure_retry": false,
+    "invalid_output_regeneration": false,
+    "max_optional_calculator_roundtrips_per_stage": 2,
+    "full_data_reloads_during_monitoring": false,
+    "frozen_experiment_sources_modified": true
+  },
+  "timing": {
+    "total_process": "Monotonic perf_counter_ns around child launch through exit, including preparation and analysis.",
+    "per_request": "Existing transport request receipts and returned engine duration fields.",
+    "timestamps": "UTC and Asia/Seoul (+09:00).",
+    "duration_estimate": "Historical estimate is provisional; actual completion duration is only available after exit."
+  },
+  "completion": {
+    "terminal_trajectories": 160,
+    "analysis_status": "completed_descriptive_analysis",
+    "unattempted_slots_are_not_filled": true,
+    "historical_responses_credited": 0
+  },
+  "numerics_fix": {
+    "path": "research/reduction_20261028/coordinate_numerics_fix_receipt.json",
+    "sha256": "e392f7c241b1c0eb95ea247daecd9952efb728a9dda3680e692c5617273fd9d8",
+    "bytes": 2701
+  }
+}

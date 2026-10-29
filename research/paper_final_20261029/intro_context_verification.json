@@ -1,0 +1,54 @@
+{
+  "schema": "libera_intro_context_primary_verification_v1",
+  "verified_on_kst": "2026-10-29",
+  "purpose": "Verify the two official sources used in the original research motivation; distinguish reported adoption and intermediate research support from autonomous allocation or observed homogenization.",
+  "sources": [
+    {
+      "id": "morgan_stanley_2024",
+      "author": "Morgan Stanley",
+      "publication_date": "2024-10-23",
+      "title": "Morgan Stanley Research Announces AskResearchGPT Powered by OpenAI",
+      "source_type": "Company's official launch announcement",
+      "url": "https://www.morganstanley.com/press-releases/morgan-stanley-research-announces-askresearchgpt",
+      "bibliography": "Morgan Stanley. (2024, October 23). Morgan Stanley Research Announces AskResearchGPT Powered by OpenAI.",
+      "verified_locations": ["Announcement heading and publication date", "Opening paragraph describing staff users and research search/summarization", "Paragraph on editable email drafts and hyperlinks to research citations"],
+      "supported_facts": [
+        "Morgan Stanley announced AskResearchGPT on October 23, 2024.",
+        "The assistant was described as supporting Investment Banking, Sales & Trading, and Research staff in finding and synthesizing the firm's research.",
+        "The announcement describes transferring findings into an editable email draft and including links to cited research."
+      ],
+      "suggested_paraphrase_ko": "Morgan Stanley는 2024년 자체 리서치의 검색과 종합을 지원하는 AskResearchGPT를 발표하였다. 이는 생성형 AI가 최종 투자결정을 대신하기에 앞서, 직원이 검토할 자료와 분석을 마련하는 업무에 들어온 사례다.",
+      "paraphrase_status": "첫 문장은 공식 발표 사실의 요약이다. 둘째 문장은 발표된 기능을 연구의 중간업무 문제의식과 연결한 한정적 해석이며, 실제 투자결정 효과의 관측이 아니다.",
+      "claim_limits": [
+        "회사 자체 발표이므로 독립적인 성과 검증으로 제시하지 않는다.",
+        "이 발표는 자율적 전략 자산배분, 자동 매매, 기관 간 전략 동질화 또는 고객 수익 개선을 입증하지 않는다.",
+        "공개 발표만으로 내부 검색 알고리즘이나 실제 RAG 구조의 세부 구현을 단정하지 않는다."
+      ]
+    },
+    {
+      "id": "boe_fca_2024",
+      "authors": ["Bank of England", "Financial Conduct Authority"],
+      "publication_date": "2024-11-21",
+      "title": "Artificial intelligence in UK financial services – 2024",
+      "source_type": "Joint official survey report",
+      "url": "https://www.bankofengland.co.uk/report/2024/artificial-intelligence-in-uk-financial-services-2024",
+      "bibliography": "Bank of England, & Financial Conduct Authority. (2024, November 21). Artificial intelligence in UK financial services – 2024.",
+      "verified_locations": ["Publication date", "Section 1.2 Methodology: 118 responses", "Section 2.1: AI adoption among respondents", "Executive summary and Section 2.5: fully autonomous decision-making"],
+      "verified_numbers": {
+        "respondent_firms": 118,
+        "ai_use_percent": {"value": 75, "denominator": "Firms responding to the survey", "technology_scope": "AI generally, not GenAI alone"},
+        "fully_autonomous_decision_percent": {"value": 2, "denominator": "Reported AI use cases/applications, not firms"}
+      },
+      "suggested_paraphrase_ko": "영국은행과 FCA의 2024년 조사에서는 응답 금융회사 118곳 중 75%가 AI를 사용한다고 답했지만, 보고된 AI 활용사례 중 완전자율 의사결정의 비중은 2%였다. 두 수치의 분모는 각각 회사와 활용사례이며, 조사는 생성형 AI에 한정되지 않는다.",
+      "lighter_alternative_ko": "영국은행과 FCA의 2024년 조사는 금융회사의 AI 활용이 넓게 확산되어 있으나 완전자율 의사결정은 보고된 활용사례의 작은 부분임을 보여준다.",
+      "claim_limits": [
+        "응답 회사의 AI 활용률을 전체 금융회사 또는 기관투자자의 GenAI 투자판단 사용률로 바꾸어 쓰지 않는다.",
+        "75%와 2%는 분모가 다르므로 직접 빼거나 상호 배타적 회사 비율로 해석하지 않는다.",
+        "서베이는 기관 간 포트폴리오 동질화나 공통 모델의 인과효과를 측정하지 않았다.",
+        "보고서 본문의 2%는 완전자율 의사결정 활용사례 비중이다. 다른 2%인 동적 모델 기반 자동화 항목과 혼동하지 않는다."
+      ]
+    }
+  ],
+  "experiment_model_calls": 0,
+  "manuscript_edits": 0
+}

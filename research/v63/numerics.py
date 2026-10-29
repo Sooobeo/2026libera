@@ -217,7 +217,8 @@ def _active_ellipsoid_polish(mu, h, Sigma, A, b, guess):
 
     The near-optimal objective plane makes generic SOCP interiors extremely
     thin. For each suggested face, solve the affine-section ellipsoid in
-    closed form, then verify ALL primal and dual constraints. The approximate
+    closed form (including vertices with an inactive risk constraint), then
+    verify ALL primal and dual constraints. The approximate
     conic solution only proposes faces; it never certifies a bound.
     """
     n=len(h); cap=float(h@Sigma@h)
@@ -233,6 +234,29 @@ def _active_ellipsoid_polish(mu, h, Sigma, A, b, guess):
             B=np.vstack([np.ones(len(support)),A[active_idx][:,support]])
             rhs=np.r_[1.,b[active_idx]]
             S=Sigma[np.ix_(support,support)]
+            if len(B)==len(support):
+                # A full-rank affine face is a single vertex. Its optimum can
+                # have slack risk, so the positive-radius ellipsoid formula
+                # below does not apply. Certify it against the original
+                # constraints and a global linear upper bound (risk dual=0).
+                try:
+                    local=np.linalg.solve(B,rhs)
+                    multipliers=np.linalg.solve(B.T,mu[support])
+                except np.linalg.LinAlgError:
+                    continue
+                w=np.zeros(n); w[support]=local
+                if not check_portfolio(w,h,Sigma,A,b,solver=True)["valid"]:
+                    continue
+                nu=float(multipliers[0]); a=np.zeros(len(A)); a[active_idx]=multipliers[1:]
+                z=nu+A.T@a-mu
+                if (len(a) and a.min() < -1e-8) or z.min() < -1e-8:
+                    continue
+                a=np.maximum(0,a); z=np.maximum(0,z)
+                bound=float(np.max(mu-A.T@a)+a@b)
+                gap=bound-float(mu@w)
+                if -1e-9 <= gap <= 1e-9:
+                    candidates.append((gap,w,0.,a,z,nu,bound))
+                continue
             invB=np.linalg.solve(S,B.T)
             gram=B@invB
             if np.linalg.matrix_rank(gram,tol=1e-13) != len(gram):
@@ -372,7 +396,8 @@ def _solve_linear(mu, h, Sigma, A=None, b=None, feasible_start=None):
                     status="analytic_active_face_dual_certified", solver="CLARABEL + analytic active ellipsoid",
                     preliminary_conic_status=problem.status, preliminary_conic_error=solver_error,
                     dual_risk=lam,dual_explicit=a,dual_lower=z,dual_budget=nu,
-                    certificate="Closed-form affine ellipsoid solution; independent full primal/dual residual and Lagrange upper bound")
+                    certificate=("Affine vertex; independent full primal/dual residual and global simplex linear upper bound" if lam==0 else
+                                 "Closed-form affine ellipsoid solution; independent full primal/dual residual and Lagrange upper bound"))
     if problem.status not in (cp.OPTIMAL, cp.OPTIMAL_INACCURATE) or w.value is None:
         raise RuntimeError(f"Reference solver failure: {problem.status}; {solver_error}")
     weights=guess
@@ -411,12 +436,19 @@ def independent_solve(mu, h, Sigma, A=None, b=None):
                  jac=lambda w: -2 * Sigma @ w / cap)]
     if len(A):
         cons.append(dict(type="ineq", fun=lambda w: b-A@w, jac=lambda w: -A))
-    fit = minimize(lambda w: -mu@w, h.copy(), jac=lambda w: -mu,
+    # Positive objective scaling preserves the optimizer while preventing tiny
+    # return coefficients from causing SLSQP line-search termination at a
+    # feasible optimum. Keep all acceptance checks and reported values in the
+    # original units; this independent solve still starts only from h.
+    objective_scale = max(float(np.max(np.abs(mu))), 1e-12)
+    scaled_mu = mu / objective_scale
+    fit = minimize(lambda w: -scaled_mu@w, h.copy(), jac=lambda w: -scaled_mu,
                    method="SLSQP", bounds=[(0, 1)]*len(h), constraints=cons,
                    options=dict(ftol=1e-13, maxiter=2000))
     check = check_portfolio(fit.x, h, Sigma, A, b, solver=True)
     return dict(weights=fit.x, objective=float(mu@fit.x), success=bool(fit.success),
-                message=str(fit.message), feasibility=check, iterations=int(fit.nit))
+                message=str(fit.message), feasibility=check, iterations=int(fit.nit),
+                objective_scale=objective_scale)
 
 
 def _exact_minimum_variance_boundary(mu,h,Sigma,A=None,b=None):

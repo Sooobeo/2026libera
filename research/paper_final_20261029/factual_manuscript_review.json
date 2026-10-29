@@ -1,0 +1,278 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-10-29T06:32:43.424983+00:00",
+  "reviewer": "execution_review",
+  "run_id": "b713cc4533c2f5b18e165f51592ca8f89223977fd1e15aee202adff8bbca6b54",
+  "status": "content_review_complete_with_corrections_transmitted",
+  "scope": "Read-only factual review of completed-result manuscripts and targeted extraction of retained source URLs. Does not certify final rendered documents or replace the numeric audit.",
+  "substantive_findings": [
+    {
+      "id": "coverage_denominator",
+      "finding": "Table 1 coverage denominator must be all eligible equity value, distinct from q_NAV denominator NAV.",
+      "resolution_state": "Parent reports correction applied to composition source; final regeneration and rendering verification belong to parent."
+    },
+    {
+      "id": "latent_generator",
+      "finding": "Appendix B should state theta ~ N(m0,V0), y=theta+epsilon0, xi=theta+epsiloni, conditional independence, and latent theta is used for generation only.",
+      "resolution_state": "Parent reports correction applied to composition source; final regeneration and rendering verification belong to parent."
+    },
+    {
+      "id": "r3_first_exposure",
+      "finding": "R3 first exposes the packet at stage 3; a future repeated final-review workflow is a proposal, not this experimental condition.",
+      "resolution_state": "Parent reports correction applied to composition source; final regeneration and rendering verification belong to parent."
+    },
+    {
+      "id": "numeric_scope_terminology",
+      "finding": "The task is long-only target allocation, not a buy-only trading restriction or legal-compliance certification.",
+      "resolution_state": "Parent reports correction applied to composition source; final regeneration and rendering verification belong to parent."
+    },
+    {
+      "id": "negative_holdings_interpretation",
+      "finding": "Repeated -h output is directly observed; confusion between changes and target weights is a proposed diagnosis, not an established cognitive cause.",
+      "resolution_state": "Parent reports correction applied to composition source; final regeneration and rendering verification belong to parent."
+    },
+    {
+      "id": "ledoit_wolf_reference",
+      "finding": "The named covariance estimator needs its primary citation; parent delegated bibliographic verification to another reviewer.",
+      "resolution_state": "Parent reports correction applied to composition source; final regeneration and rendering verification belong to parent."
+    }
+  ],
+  "validated_methods": {
+    "phase": "B-main",
+    "fund_count": 4,
+    "scenario_count": 10,
+    "case_count": 40,
+    "trajectory_count": 160,
+    "logical_stage_responses": 480,
+    "arms": [
+      "R0",
+      "R1",
+      "R2",
+      "R3"
+    ],
+    "additional_linear_constraints_empty_for_all_funds": true,
+    "textual_mandates_numerically_enforced_in_FF12": false,
+    "numerical_validity_scope": "Nonnegative target weights, sum 1, and mapped-sleeve variance no greater than current-holdings variance; not whole-fund legal compliance.",
+    "holdings_as_of": [
+      "2025-12-31"
+    ],
+    "publication_cutoff": [
+      "2026-03-31"
+    ],
+    "coverage_definition": "mapped eligible-equity value / all eligible-equity value",
+    "q_NAV_definition": "mapped eligible-equity value / source NAV",
+    "profiles": [
+      {
+        "fund_id": "F01",
+        "ticker": "FCNTX",
+        "coverage": 0.9471842589553168,
+        "q_NAV": 0.9056466131166399,
+        "eligible_equity_value_usd": 168582317769,
+        "mapped_equity_value_usd": 159678517729.0,
+        "source_NAV_usd": 176314376288,
+        "mapping_vintage": "current official SEC issuer fallback; retrospective classification",
+        "human_review_mode": "user_assumed_completed",
+        "actual_independent_signatures": null
+      },
+      {
+        "fund_id": "F02",
+        "ticker": "VPMCX",
+        "coverage": 0.9634879387675347,
+        "q_NAV": 0.954568836825871,
+        "eligible_equity_value_usd": 74997601000,
+        "mapped_equity_value_usd": 72259284000.0,
+        "source_NAV_usd": 75698348000,
+        "mapping_vintage": "current official SEC issuer fallback; retrospective classification",
+        "human_review_mode": "user_assumed_completed",
+        "actual_independent_signatures": null
+      },
+      {
+        "fund_id": "F03",
+        "ticker": "DODGX",
+        "coverage": 0.9774544116516509,
+        "q_NAV": 0.9701199509427451,
+        "eligible_equity_value_usd": 118237496481,
+        "mapped_equity_value_usd": 115571762558.0,
+        "source_NAV_usd": 119131415085,
+        "mapping_vintage": "current official SEC issuer fallback; retrospective classification",
+        "human_review_mode": "user_assumed_completed",
+        "actual_independent_signatures": null
+      },
+      {
+        "fund_id": "F04",
+        "ticker": "TRBCX",
+        "coverage": 0.9929226719812385,
+        "q_NAV": 0.980354037040578,
+        "eligible_equity_value_usd": 67875643774.96,
+        "mapped_equity_value_usd": 67395265579.48,
+        "source_NAV_usd": 68745843881.99998,
+        "mapping_vintage": "current official SEC issuer fallback; retrospective classification",
+        "human_review_mode": "user_assumed_completed",
+        "actual_independent_signatures": null
+      }
+    ],
+    "calibration": {
+      "observations": 120,
+      "units": "decimal monthly total return",
+      "raw_to_decimal": "percent / 100 exactly once",
+      "source_url": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/12_Industry_Portfolios_TXT.zip",
+      "raw_sha256": "633a1d2da4a9dc7160f5a927c526af325cf4813ca623c7d2053e241f48cbddcf",
+      "cache_sha256": "cf2aee8587eec33a09bf83775bed498d70c527696acf62525eca276a4c1a91a5",
+      "shrinkage": 0.05812594216101315,
+      "vintage": "cached revised French CIZ; not authenticated historical trading replay"
+    },
+    "calibration_date_range": [
+      "2016-01",
+      "2025-12"
+    ],
+    "retrieval": {
+      "engine": "rank-bm25==0.2.2/BM25Okapi",
+      "parameters": {
+        "k1": 1.5,
+        "b": 0.75,
+        "epsilon": 0.25,
+        "top_k": 4
+      },
+      "actual_selected_chunks_in_every_case": 4,
+      "cases_checked": 40,
+      "all_12_private_forecast_facts_recovered_in_every_packet": true,
+      "total_exposed_evidence_id_counts": {
+        "12": 10,
+        "14": 10,
+        "16": 10,
+        "15": 10
+      }
+    },
+    "outcome_counts_from_existing_verified_numeric_audit": {
+      "raw_valid": 19,
+      "rescued": 47,
+      "policy_valid": 66,
+      "fallback": 94,
+      "raw_equal_h_1e12": 19,
+      "raw_equal_negative_h_1e12": 55,
+      "raw_equal_h_exact": 0,
+      "raw_equal_negative_h_exact": 0,
+      "effective_equal_h_1e12": 113,
+      "stage2_valid": 71,
+      "actual_calculator_tool_calls": 0,
+      "calculator_claimed_performed": 0,
+      "calculator_claimed_valid": 1,
+      "model_response_records": 480
+    },
+    "interpretation_boundary": "Only final selected B-main results; unrun historical controls and earlier pilot results are not final experimental outcomes. Numeric -h patterns do not establish a mental cause."
+  },
+  "source_links": [
+    {
+      "fund_id": "F01",
+      "fund_name": "Fidelity Contrafund",
+      "ticker": "FCNTX",
+      "document_description": "Annual shareholder report for the year ended December 31, 2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/24238/000002423826000023/filing10969.htm",
+      "url_role": "SEC publication-period reconciliation; active holdings parser instead uses FCNTX_annual_20251231",
+      "metadata_source_id": "FCNTX_A_shareholder_report",
+      "active_holdings_source_url": "https://www.actionsxchangerepository.fidelity.com/ShowDocument/1049393/FaxToCDocument.htm?applicationId=SPPI&clientId=Fidelity&collectionId=1049393&criticalIndicator=N&docFormat=html&docName=CON-ANN.html&docType=ANN&extraId=1775834875244&securityId=316071109&securityIdType=CUSIP&tocIndicator=false",
+      "holdings_as_of": "2025-12-31",
+      "publication_date": "2026-02-20",
+      "publication_cutoff": "2026-03-31",
+      "publication_accession": "0000024238-26-000023",
+      "source_parser_path": "data\\v63_20261027\\continuation_sources\\parsed\\FCNTX_annual_20251231.json",
+      "title_status": "Descriptive document identification from retained metadata; not a freshly transcribed literal page title."
+    },
+    {
+      "fund_id": "F02",
+      "fund_name": "Vanguard PRIMECAP Fund",
+      "ticker": "VPMCX",
+      "document_description": "Investment holdings schedule / NPORT-EX for December 31, 2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/752177/000075217726000071/vg_primcap.htm",
+      "url_role": "SEC holdings/NAV reconciliation; active holdings parser uses VPMCX_manager_holdings_dec2025",
+      "metadata_source_id": "VPMCX_A_B_NPORT_EX_reconciliation_web",
+      "active_holdings_source_url": null,
+      "active_holdings_url_note": "Original manager-holdings URL is absent from the inspected retained continuation manifest. The original source_manifest.json and holdings parser output are unavailable in the current fileset. Do not substitute the reconciliation URL as the exact parsed source.",
+      "holdings_as_of": "2025-12-31",
+      "publication_date": "2026-02-26",
+      "publication_cutoff": "2026-03-31",
+      "publication_accession": "0000752177-26-000071",
+      "source_parser_path": "data\\v63_20261027\\parsed\\VPMCX_manager_holdings_dec2025.json",
+      "title_status": "Descriptive document identification from retained metadata; not a freshly transcribed literal page title."
+    },
+    {
+      "fund_id": "F03",
+      "fund_name": "Dodge & Cox Stock Fund",
+      "ticker": "DODGX",
+      "document_description": "Annual financial statements / Form N-CSR for the year ended December 31, 2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/29440/000002944026000002/8de7a3fff0d1081.htm",
+      "url_role": "SEC annual filing identified by profile accession and preserved filing-index metadata",
+      "metadata_source_id": "DODGX_NCSR_20251231_browser; source_cross_audit_v2 checks[539].detail",
+      "holdings_as_of": "2025-12-31",
+      "publication_date": "2026-03-05",
+      "publication_cutoff": "2026-03-31",
+      "publication_accession": "0000029440-26-000002",
+      "source_parser_path": "data\\v63_20261027\\parsed\\DODGX_NCSR_20251231_browser.json",
+      "title_status": "Descriptive document identification from retained metadata; not a freshly transcribed literal page title."
+    },
+    {
+      "fund_id": "F04",
+      "fund_name": "T. Rowe Price Blue Chip Growth Fund",
+      "ticker": "TRBCX",
+      "document_description": "Form NPORT-P investment holdings for December 31, 2025",
+      "url": "https://www.sec.gov/Archives/edgar/data/902259/000109926326002537/xslFormNPORT-P_X01/primary_doc.xml",
+      "url_role": "Active holdings source captured as browser-rendered DOM table cells",
+      "metadata_source_id": "TRBCX_main_20251231_nport_dom",
+      "holdings_as_of": "2025-12-31",
+      "publication_date": "2026-02-26",
+      "publication_cutoff": "2026-03-31",
+      "publication_accession": "0001099263-26-002537",
+      "source_parser_path": "data\\v63_20261027\\continuation_sources\\parsed\\TRBCX_main_20251231_nport_dom.json",
+      "title_status": "Descriptive document identification from retained metadata; not a freshly transcribed literal page title."
+    }
+  ],
+  "french_source_links": {
+    "returns_zip": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/12_Industry_Portfolios_TXT.zip",
+    "dataset_description": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/Data_Library/det_12_ind_port.html",
+    "industry_sic_mapping_zip": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/ftp/Siccodes12.zip",
+    "returns_downloaded_at": null
+  },
+  "source_snapshot_hashes": [
+    {
+      "path": "data\\v64_20261028\\main_only_results\\phases\\b713cc4533c2f5b18e165f51592ca8f89223977fd1e15aee202adff8bbca6b54\\B-main\\prepared_inputs.json",
+      "sha256": "e4efead6333468c01e10e24556932dc744abf72a967d34f186cfed3c20b33796"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\source_manifest_v2.json",
+      "sha256": "d4a45c1c7609cc164645c33a8ebcd386ebc2bf9329ed92eedb30892ea505d590"
+    },
+    {
+      "path": "data\\french\\manifest.json",
+      "sha256": "75ac2cf7042882f1f936acecfb17d70ce43fdb4edea5c37b5a1f00d993175a66"
+    },
+    {
+      "path": "research\\paper_final_20261029\\numeric_audit.json",
+      "sha256": "26270b81f611bda9a92125abc042527f84674bbf4bd3a01c932153cdd14f4de4"
+    },
+    {
+      "path": "research\\paper_final_20261029\\compose_documents.py",
+      "sha256": "27578802e084350af173976db98a815321fbaab01542ed388a95f60e1b5fda23"
+    },
+    {
+      "path": "data\\v63_20261027\\continuation_sources\\source_cross_audit_v2.json",
+      "sha256": "6677d32c9605d20d78fa8a8b9270f5e254ea891d0162793daabc88f3645f0c1e"
+    },
+    {
+      "path": "paper\\LIBERA_본실험_결과해석_20261029.md",
+      "sha256": "7a51d4723010560216c207dcf3579ecb5aaf2a3a2d9c1123fe6b6de6c3d444d6"
+    },
+    {
+      "path": "paper\\LIBERA_소논문_최종결과반영_20261029.md",
+      "sha256": "bf6839b1bb7835a32f3ad2d5282ca365b944763eac2c6043786506385cbdd305"
+    }
+  ],
+  "verification_notes": [
+    "URLs extracted from retained metadata and supplied plan; no HTTP requests.",
+    "F01/F02 reconciliation or publication links are distinguished from exact holdings-parser sources.",
+    "Current hashes identify the files present at receipt creation, not completed final regeneration."
+  ],
+  "model_generation_requests": 0,
+  "http_requests": 0,
+  "frozen_experiment_mutated": false,
+  "manuscript_edits": false
+}

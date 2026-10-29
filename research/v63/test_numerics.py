@@ -102,6 +102,9 @@ def test_binding_explicit_rule_with_inactive_risk():
     assert abs(ref["weights"][0]-.9)<1e-8
     assert ref["coordinate_lower"][0] <= .9 <= ref["coordinate_upper"][0]
     assert ref["primal_dual_gap"]<=1e-9
+    assert ref["dual_risk"] == 0
+    assert ref["feasibility"]["risk_residual"] < 0
+    assert "global simplex linear upper bound" in ref["certificate"]
 
 
 def test_nonunique_objective_ranges_are_preserved():
@@ -168,3 +171,26 @@ def test_degenerate_minimum_variance_cap_exact_singleton_certificate():
     assert ref["primal_objective"]==.5
     assert ref["dual_bound"]>=.5
     assert ref["eta"]<1e-15
+
+
+def test_selected_main_013_f02_r0_solver_and_coordinate_ranges(calibration):
+    # The original unscaled SLSQP returned status 8 at this feasible optimum.
+    # Coordinate 5 also has a risk-inactive affine vertex that the previous
+    # positive-radius-only polisher missed. Retain all acceptance checks.
+    from research.v63.build_run import load_profiles
+    from research.v63.numerics import ROOT
+    profile = load_profiles(ROOT / "data/v63_20261027/continuation_sources/profiles_v2.json", "A_B")["F02"]
+    scenario = next(s for s in generate_scenarios(calibration, "main")[0]
+                    if s["scenario_id"] == "main-013")
+    mean = posterior(calibration["m0"], calibration["V0"], scenario["y"],
+                     calibration["Omega0"], [])["mean"]
+    ref = solve_reference(mean, profile["h"], calibration["Sigma"],
+                          profile.get("A"), profile.get("b"))
+    second = ref["independent_crosscheck"]
+    assert second["success"] and second["feasibility"]["valid"]
+    assert second["objective"] == pytest.approx(float(mean @ second["weights"]), abs=1e-15)
+    assert ref["independent_objective_abs_difference"] <= 1e-9
+    assert ref["primal_dual_gap"] <= 1e-9
+    assert ref["coordinate_dual_gap_max"] <= 1e-9
+    assert np.all(ref["coordinate_lower"] <= ref["weights"] + 1e-9)
+    assert np.all(ref["coordinate_upper"] >= ref["weights"] - 1e-9)

@@ -1,7 +1,7 @@
 {
   "schema": "libera_current_execution_locator_v2",
-  "recorded_at_utc": "2026-10-28T01:42:29.220197+00:00",
-  "status": "prepared_main_not_started",
+  "recorded_at_utc": "2026-10-28T02:01:50.465274+00:00",
+  "status": "running_explicit_continuation",
   "design": {
     "path": "research/reduction_20261028/main_only_no_full_approved.json",
     "sha256": "8248bf6cb066b3a87b63ceda1c0dec0b9fb63709c4a26a866167f972dda02d7d",
@@ -12,7 +12,7 @@
     "sha256": "e868b80e67afae04b5f261b4d8efbf6b7d8219d5da8cd56acfb3325adaff01b0",
     "bytes": 1895
   },
-  "run_id": "32526c6a82f01473d91451e6873df78f52150b536acdfb06f87a1cf9400ff301",
+  "run_id": "b713cc4533c2f5b18e165f51592ca8f89223977fd1e15aee202adff8bbca6b54",
   "run_id_note": "Prepared identity, not proof of an actual run. Source/config changes require regenerating this locator before a first dispatch.",
   "preliminary_phases": [],
   "phase": "B-main",
@@ -26,12 +26,12 @@
     "--phase",
     "B-main"
   ],
-  "progress_path": "data/v64_20261028/main_only_results/phases/32526c6a82f01473d91451e6873df78f52150b536acdfb06f87a1cf9400ff301/B-main/progress.json",
+  "progress_path": "data/v64_20261028/main_only_results/phases/b713cc4533c2f5b18e165f51592ca8f89223977fd1e15aee202adff8bbca6b54/B-main/progress.json",
   "output_root": "data\\v64_20261028\\main_only_results",
   "call_audit": {
     "path": "research/reduction_20261028/direct_main_call_audit.json",
-    "sha256": "378d0eb2465e7aa15c262845aa622c2f1b00ae69f743b4558551b54f696c8a4a",
-    "bytes": 1690
+    "sha256": "f41bd2cd135ff4aafe94dbf6f029ccc1b68740fcb9532592898dd12471cd998e",
+    "bytes": 1895
   },
   "paper_request": {
     "path": "research/device_migration_20261027/paper_completion_request_main_only_20261028.json",
@@ -55,5 +55,39 @@
       "model_output_failure": 16
     }
   },
-  "previous_locator": "실험참고자료_20261027/history/before_main_only_20261028/previous_execution_locator.json"
+  "previous_locator": "실험참고자료_20261027/history/before_main_only_20261028/previous_execution_locator.json",
+  "numerics_fix": {
+    "path": "research/reduction_20261028/coordinate_numerics_fix_receipt.json",
+    "sha256": "e392f7c241b1c0eb95ea247daecd9952efb728a9dda3680e692c5617273fd9d8",
+    "bytes": 2701
+  },
+  "previous_preflight_execution": {
+    "run_id": "8bebf72e190926d0b4586ad86f469793781b1e9ffb823fb90ec749ce00b93238",
+    "generation_requests": 0,
+    "elapsed_seconds": 38.5347039
+  },
+  "live_progress_observed_at_utc": "2026-10-28T02:05:58.888153+00:00",
+  "process_started_at": {
+    "utc": "2026-10-28T02:01:58.462388+00:00",
+    "kst": "2026-10-28T11:01:58.462388+09:00"
+  },
+  "process_receipt_path": "C:\\Users\\Insun\\2026libera\\data\\v64_20261028\\main_only_results\\execution\\20261028T020158451834Z\\process_receipt.json",
+  "active_execution_path": "data/v64_20261028/main_only_results/active_execution.json",
+  "first_response_verification": {
+    "path": "data/v64_20261028/main_only_results/first_response_verification.json",
+    "sha256": "1917305774f36530e5b6a0f3a2c189ba784fb8e9db09d87e886eea4b86e97258",
+    "bytes": 2142
+  },
+  "completion_notification": {
+    "path": "data/v64_20261028/main_only_results/notifications/b713cc4533c2f5b18e165f51592ca8f89223977fd1e15aee202adff8bbca6b54/setup_receipt.json",
+    "sha256": "5e28104fbdb73a3a318c9339baa9e1d62bd1514334818caa2488477f181721cd",
+    "bytes": 1194
+  },
+  "operator_resume_state_path": "data/v64_20261028/main_only_results/operator_resume_state.json",
+  "operator_continuation_authorization": {
+    "path": "data/v64_20261028/main_only_results/runs/b713cc4533c2f5b18e165f51592ca8f89223977fd1e15aee202adff8bbca6b54/B-main/main-001__F01__R3__1/recovery_operator_001/operator_resume_authorization.json",
+    "sha256": "388f382476f66b9f2c3692035095717a357c6d172ffb0b3b33534f09edcb6ca5",
+    "bytes": 6833
+  },
+  "last_status_observed_at_utc": "2026-10-28T03:43:23.506913+00:00"
 }

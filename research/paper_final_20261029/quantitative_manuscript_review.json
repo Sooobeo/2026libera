@@ -1,0 +1,204 @@
+{
+  "schema": "libera_quantitative_manuscript_review_v1",
+  "recorded_at_utc": "2026-10-29T06:34:43.977339+00:00",
+  "status": "passed_no_material_quantitative_errors",
+  "run_id": "b713cc4533c2f5b18e165f51592ca8f89223977fd1e15aee202adff8bbca6b54",
+  "scope": "Experimental numeric claims, metric definitions/units, tables, illustrative case, intervals, time and interpretations; bibliographic verification is separate.",
+  "documents": [
+    {
+      "path": "paper\\LIBERA_소논문_최종결과반영_20261029.md",
+      "sha256": "6aee2aa13bd0447fd7ef6d737c5b1f7108d530443bbdad03aaa5e8a7de35989b"
+    },
+    {
+      "path": "paper\\LIBERA_본실험_결과해석_20261029.md",
+      "sha256": "1d71199c26609977e81f577741fcc892cd8331a51b60fdf35be6f9f77a1f3a7b"
+    }
+  ],
+  "automated_table_checks": [
+    {
+      "document": "paper\\LIBERA_소논문_최종결과반영_20261029.md",
+      "checks": [
+        "arm validity percentage table",
+        "D/Dstar/G/A/E/R table and unit conversions",
+        "precision-stratum table",
+        "hold-h comparator and deltas",
+        "core prose percentages, case regret, elapsed time",
+        "appendix actual counts and stage transitions",
+        "all four numerical G intervals",
+        "R0 available-information benchmark and illustrative case"
+      ],
+      "status": "passed"
+    },
+    {
+      "document": "paper\\LIBERA_본실험_결과해석_20261029.md",
+      "checks": [
+        "arm validity percentage table",
+        "D/Dstar/G/A/E/R table and unit conversions",
+        "precision-stratum table",
+        "hold-h comparator and deltas",
+        "core prose percentages, case regret, elapsed time"
+      ],
+      "status": "passed"
+    }
+  ],
+  "manual_and_arithmetic_checks": {
+    "R2_fallback_G_share_percent": 72.50108941153893,
+    "raw_valid_all_equal_h": true,
+    "rescued_actual_reallocations": 47,
+    "effective_h_count": 113,
+    "effective_h_percent": 70.625,
+    "stage2_to3_actual_change_count": 11,
+    "stage2_to3_actual_change_percent": 6.875000000000001,
+    "raw_stage_vectors_unchanged": 132,
+    "failure_negative_weights": 79,
+    "negative_h_1e12_count": 55,
+    "normalized_risk_cap_failures": 15,
+    "calculator_tool_calls": 0,
+    "G_intervals_all_four": "Rounded correctly; explicitly described as numerical ranges, not sampling confidence intervals.",
+    "matched_main009_F01": "sum32.988,TVchange57.37%p,R0/R2/R3=99.41bp,R1=113.52bp verified.",
+    "profile_coverage_and_q_NAV": "All four two-decimal percentages match frozen profiles; all A,b empty.",
+    "precision_interpretation": "Distinct draws identified; no causal cross-precision claim.",
+    "timing": {
+      "first_same_run_process_start": "2026-10-28T02:01:58.462388+00:00",
+      "final_process_end": "2026-10-29T05:28:41.815299+00:00",
+      "elapsed_seconds": 98803.352911,
+      "reported_whole_seconds": "27h26m43s",
+      "sources": [
+        "data\\v64_20261028\\main_only_results\\execution\\20261028T020158451834Z\\process_receipt.json",
+        "data\\v64_20261028\\main_only_results\\execution\\20261029T005418027933Z\\process_receipt.json"
+      ]
+    }
+  },
+  "required_changes": [],
+  "optional_wording_notes": [],
+  "interpretation_check": "No claim found of general causal shared-model adoption effects, sampling significance, beneficial economic reallocation from validity alone, or realized financial returns. R3 superiority confined to observed validity; quality metrics and h copies are separated.",
+  "original_experiment_mutated": false,
+  "manuscripts_edited_by_reviewer": false,
+  "latest_recheck": {
+    "scope": "Latest two Markdown documents: existing numeric tables, core numeric claims and local audit arithmetic; no recollection or experiment rerun.",
+    "previous_document_hashes": [
+      {
+        "path": "paper\\LIBERA_소논문_최종결과반영_20261029.md",
+        "sha256": "bf6839b1bb7835a32f3ad2d5282ca365b944763eac2c6043786506385cbdd305"
+      },
+      {
+        "path": "paper\\LIBERA_본실험_결과해석_20261029.md",
+        "sha256": "7a51d4723010560216c207dcf3579ecb5aaf2a3a2d9c1123fe6b6de6c3d444d6"
+      }
+    ],
+    "assertions_passed": 95,
+    "checks": [
+      "LIBERA_소논문_최종결과반영_20261029.md: validity R0",
+      "LIBERA_소논문_최종결과반영_20261029.md: validity R1",
+      "LIBERA_소논문_최종결과반영_20261029.md: validity R2",
+      "LIBERA_소논문_최종결과반영_20261029.md: validity R3",
+      "LIBERA_소논문_최종결과반영_20261029.md: metric D_full",
+      "LIBERA_소논문_최종결과반영_20261029.md: metric Dstar_full",
+      "LIBERA_소논문_최종결과반영_20261029.md: metric G_full",
+      "LIBERA_소논문_최종결과반영_20261029.md: metric A_full",
+      "LIBERA_소논문_최종결과반영_20261029.md: metric E_full",
+      "LIBERA_소논문_최종결과반영_20261029.md: metric R_full",
+      "LIBERA_소논문_최종결과반영_20261029.md: precision 0.5R0",
+      "LIBERA_소논문_최종결과반영_20261029.md: precision 0.5R1",
+      "LIBERA_소논문_최종결과반영_20261029.md: precision 0.5R2",
+      "LIBERA_소논문_최종결과반영_20261029.md: precision 0.5R3",
+      "LIBERA_소논문_최종결과반영_20261029.md: precision 2.0R0",
+      "LIBERA_소논문_최종결과반영_20261029.md: precision 2.0R1",
+      "LIBERA_소논문_최종결과반영_20261029.md: precision 2.0R2",
+      "LIBERA_소논문_최종결과반영_20261029.md: precision 2.0R3",
+      "LIBERA_소논문_최종결과반영_20261029.md: hold-h benchmark",
+      "LIBERA_소논문_최종결과반영_20261029.md: hold-h delta R0",
+      "LIBERA_소논문_최종결과반영_20261029.md: hold-h delta R1",
+      "LIBERA_소논문_최종결과반영_20261029.md: hold-h delta R2",
+      "LIBERA_소논문_최종결과반영_20261029.md: hold-h delta R3",
+      "LIBERA_소논문_최종결과반영_20261029.md: core prose token 72.5%",
+      "LIBERA_소논문_최종결과반영_20261029.md: core prose token 70.6%",
+      "LIBERA_소논문_최종결과반영_20261029.md: core prose token 6.9%",
+      "LIBERA_소논문_최종결과반영_20261029.md: core prose token 99.41",
+      "LIBERA_소논문_최종결과반영_20261029.md: core prose token 113.52",
+      "LIBERA_소논문_최종결과반영_20261029.md: core prose token 27시간 26분 43초",
+      "LIBERA_소논문_최종결과반영_20261029.md: appendix counts R0",
+      "LIBERA_소논문_최종결과반영_20261029.md: stage transitions R0",
+      "LIBERA_소논문_최종결과반영_20261029.md: G interval R0",
+      "LIBERA_소논문_최종결과반영_20261029.md: appendix counts R1",
+      "LIBERA_소논문_최종결과반영_20261029.md: stage transitions R1",
+      "LIBERA_소논문_최종결과반영_20261029.md: G interval R1",
+      "LIBERA_소논문_최종결과반영_20261029.md: appendix counts R2",
+      "LIBERA_소논문_최종결과반영_20261029.md: stage transitions R2",
+      "LIBERA_소논문_최종결과반영_20261029.md: G interval R2",
+      "LIBERA_소논문_최종결과반영_20261029.md: appendix counts R3",
+      "LIBERA_소논문_최종결과반영_20261029.md: stage transitions R3",
+      "LIBERA_소논문_최종결과반영_20261029.md: G interval R3",
+      "LIBERA_소논문_최종결과반영_20261029.md: aggregate counts",
+      "LIBERA_소논문_최종결과반영_20261029.md: appendix/case token 132개",
+      "LIBERA_소논문_최종결과반영_20261029.md: appendix/case token 79개",
+      "LIBERA_소논문_최종결과반영_20261029.md: appendix/case token 15개",
+      "LIBERA_소논문_최종결과반영_20261029.md: appendix/case token 55개",
+      "LIBERA_소논문_최종결과반영_20261029.md: appendix/case token 70.83bp",
+      "LIBERA_소논문_최종결과반영_20261029.md: appendix/case token 32.988",
+      "LIBERA_소논문_최종결과반영_20261029.md: appendix/case token 57.37",
+      "LIBERA_본실험_결과해석_20261029.md: validity R0",
+      "LIBERA_본실험_결과해석_20261029.md: validity R1",
+      "LIBERA_본실험_결과해석_20261029.md: validity R2",
+      "LIBERA_본실험_결과해석_20261029.md: validity R3",
+      "LIBERA_본실험_결과해석_20261029.md: metric D_full",
+      "LIBERA_본실험_결과해석_20261029.md: metric Dstar_full",
+      "LIBERA_본실험_결과해석_20261029.md: metric G_full",
+      "LIBERA_본실험_결과해석_20261029.md: metric A_full",
+      "LIBERA_본실험_결과해석_20261029.md: metric E_full",
+      "LIBERA_본실험_결과해석_20261029.md: metric R_full",
+      "LIBERA_본실험_결과해석_20261029.md: precision 0.5R0",
+      "LIBERA_본실험_결과해석_20261029.md: precision 0.5R1",
+      "LIBERA_본실험_결과해석_20261029.md: precision 0.5R2",
+      "LIBERA_본실험_결과해석_20261029.md: precision 0.5R3",
+      "LIBERA_본실험_결과해석_20261029.md: precision 2.0R0",
+      "LIBERA_본실험_결과해석_20261029.md: precision 2.0R1",
+      "LIBERA_본실험_결과해석_20261029.md: precision 2.0R2",
+      "LIBERA_본실험_결과해석_20261029.md: precision 2.0R3",
+      "LIBERA_본실험_결과해석_20261029.md: hold-h benchmark",
+      "LIBERA_본실험_결과해석_20261029.md: hold-h delta R0",
+      "LIBERA_본실험_결과해석_20261029.md: hold-h delta R1",
+      "LIBERA_본실험_결과해석_20261029.md: hold-h delta R2",
+      "LIBERA_본실험_결과해석_20261029.md: hold-h delta R3",
+      "LIBERA_본실험_결과해석_20261029.md: core prose token 72.5%",
+      "LIBERA_본실험_결과해석_20261029.md: core prose token 70.6%",
+      "LIBERA_본실험_결과해석_20261029.md: core prose token 6.9%",
+      "LIBERA_본실험_결과해석_20261029.md: core prose token 99.41",
+      "LIBERA_본실험_결과해석_20261029.md: core prose token 113.52",
+      "LIBERA_본실험_결과해석_20261029.md: core prose token 27시간 26분 43초",
+      "all 19 raw valid equal h",
+      "47 rescues are all actual reallocations",
+      "113/160 rounds to 70.6%",
+      "11/160 stage changes round to 6.9%",
+      "132 unchanged raw vectors",
+      "79 negative-weight failures",
+      "15 normalized risk failures",
+      "55 negative-h outputs within tolerance",
+      "no actual calculator calls",
+      "R2 fallback G share rounds to 72.5%",
+      "matched case regret R0",
+      "matched case regret R1",
+      "matched case regret R2",
+      "matched case regret R3",
+      "all arm mean regrets exceed hold-h",
+      "all RAG arm mean regrets exceed R0",
+      "elapsed time 27h26m43s"
+    ],
+    "audit_sha256": "26270b81f611bda9a92125abc042527f84674bbf4bd3a01c932153cdd14f4de4",
+    "script": "research\\paper_final_20261029\\recheck_quantitative_manuscripts.py",
+    "original_experiment_mutated": false,
+    "manuscripts_or_figures_modified": false
+  },
+  "resolved_wording_notes": [
+    {
+      "document": "paper\\LIBERA_소논문_최종결과반영_20261029.md",
+      "location": "Section5.1 paragraph after Figure1",
+      "suggestion": "Prefer numerically valid over lawful/legal when describing target weights; the checks do not certify regulatory compliance."
+    },
+    {
+      "document": "paper\\LIBERA_본실험_결과해석_20261029.md",
+      "location": "Section2 first paragraph",
+      "suggestion": "Specify that R0 receives no additional fund-specific forecast; common information is provided."
+    }
+  ]
+}

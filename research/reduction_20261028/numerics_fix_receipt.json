@@ -1,0 +1,43 @@
+{
+  "schema": "libera_preflight_numerics_fix_v1",
+  "recorded_at_utc": "2026-10-28T01:55:48.634552+00:00",
+  "previous_run_id": "32526c6a82f01473d91451e6873df78f52150b536acdfb06f87a1cf9400ff301",
+  "new_run_id": "8bebf72e190926d0b4586ad86f469793781b1e9ffb823fb90ec749ce00b93238",
+  "previous_process_receipt": {
+    "path": "data/v64_20261028/main_only_results/execution/20261028T015003805543Z/process_receipt.json",
+    "sha256": "ba72b45dec16a5e212bdffd5f2874e7c8e8348ff4e52ed46e0ad612ab2c79df6",
+    "bytes": 1672
+  },
+  "old_numerics": {
+    "path": "data/v64_20261028/main_only_results/phases/32526c6a82f01473d91451e6873df78f52150b536acdfb06f87a1cf9400ff301/B-main/source_snapshot/numerics.py",
+    "sha256": "27143f85959a93b1414ac6660ec3a6b09a5b66c236ae3014bb3977c06bcba5fc",
+    "bytes": 29005
+  },
+  "new_numerics": {
+    "path": "research/v63/numerics.py",
+    "sha256": "66913d8b0b129cfc0dc2454700fc75144f36e8dcec251f48982d7de5e99ede1f",
+    "bytes": 29467
+  },
+  "execution_source_guard": {
+    "path": "research/v64_reduced/design.py",
+    "sha256": "4c7203eaaf41e95493274b861352d49f3354a52cae08c158f4f1f5221b54e281",
+    "bytes": 16173
+  },
+  "cause": "SLSQP status 8 at main-013/F02/R0 despite feasible objective agreement.",
+  "change": "Positive internal objective scaling only; original objective units, h start, constraints, solver success and 1e-9 acceptance checks retained.",
+  "design_and_model_configuration_unchanged": true,
+  "previous_generation_requests": 0,
+  "model_calls_in_fix_validation": 0,
+  "focused_test_count": 45,
+  "focused_tests": {
+    "path": "research/reduction_20261028/numerics_fix_tests.xml",
+    "sha256": "62267e84382b4183274cb19107ab552fe9f8edff8a59b7dfe8dbc91c93bf1158",
+    "bytes": 6432
+  },
+  "selected_input_diagnostic": {
+    "path": "research/reduction_20261028/numerics_scaling_diagnostic.json",
+    "sha256": "e02692fbbe62c65570e2052cfdddfa91ec692594d43f561730af8dbd926cc911",
+    "bytes": 128235
+  },
+  "archive": "실험참고자료_20261027/history/before_numerics_fix_20261028T015548Z"
+}

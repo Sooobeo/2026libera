@@ -1,0 +1,57 @@
+{
+  "schema": "libera_preflight_numerics_fix_v1",
+  "recorded_at_utc": "2026-10-28T02:01:50.465274+00:00",
+  "previous_run_id": "8bebf72e190926d0b4586ad86f469793781b1e9ffb823fb90ec749ce00b93238",
+  "new_run_id": "b713cc4533c2f5b18e165f51592ca8f89223977fd1e15aee202adff8bbca6b54",
+  "previous_numerics_fix": {
+    "path": "research/reduction_20261028/numerics_fix_receipt.json",
+    "sha256": "a56e39ab4da02d637ab87ca3d0d29eb233035a9e9e6e764ecd8d1d3f52354cec",
+    "bytes": 2050
+  },
+  "previous_process_receipt": {
+    "path": "data/v64_20261028/main_only_results/execution/20261028T015600345486Z/process_receipt.json",
+    "sha256": "816ae13654a70c6c93bbef5b4678aa1373c4013b0751fe187b29fbec0d8ced3e",
+    "bytes": 1673
+  },
+  "old_numerics": {
+    "path": "data/v64_20261028/main_only_results/phases/8bebf72e190926d0b4586ad86f469793781b1e9ffb823fb90ec749ce00b93238/B-main/source_snapshot/numerics.py",
+    "sha256": "66913d8b0b129cfc0dc2454700fc75144f36e8dcec251f48982d7de5e99ede1f",
+    "bytes": 29467
+  },
+  "new_numerics": {
+    "path": "research/v63/numerics.py",
+    "sha256": "d4905bdc63b531737354ecba8d5892924c578597ffbffaf7438083a53e960c62",
+    "bytes": 30860
+  },
+  "execution_source_guard": {
+    "path": "research/v64_reduced/design.py",
+    "sha256": "08f2f7ac0c168ba05e5209cd76ca719262a753494dfc1b725c4c72fd8b775940",
+    "bytes": 16206
+  },
+  "change": "Positive SLSQP objective scaling plus a certified affine-vertex branch for inactive risk. Original scenarios, model, constraints and all feasibility/duality tolerances are unchanged. All 80 complete references and 2000 solves pass.",
+  "design_and_model_configuration_unchanged": true,
+  "previous_generation_requests": 0,
+  "model_calls_in_fix_validation": 0,
+  "focused_test_count": 45,
+  "focused_tests": {
+    "path": "research/reduction_20261028/numerics_complete_fix_tests.xml",
+    "sha256": "2d0ac2cae88d0d9fe997af197bac23cbbf22a44c6ff3d5bb9327c9318eed7ed3",
+    "bytes": 6606
+  },
+  "selected_input_diagnostic": {
+    "path": "research/reduction_20261028/coordinate_numerics_fix_receipt_diagnostic.json",
+    "sha256": "d56458db9a55637d1d764c817988d6d4903dff8933046dc508ee7a882fc52112",
+    "bytes": 1660
+  },
+  "exact_vertex_verification": {
+    "path": "research/reduction_20261028/vertex_exact_verification.json",
+    "sha256": "be776e208e952a0bf8844410f78e4fe5e041af062aaf464563b8966dcbc894f5",
+    "bytes": 1868
+  },
+  "coordinate_failure_input": {
+    "path": "research/reduction_20261028/coordinate_failure_input.json",
+    "sha256": "3639ec8c3866a8b2b0d59eb6f7efaacb93e447306dcc65c801d00c4a03404582",
+    "bytes": 5058
+  },
+  "archive": "실험참고자료_20261027/history/before_numerics_fix_20261028T020150Z"
+}
