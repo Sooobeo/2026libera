@@ -1,0 +1,71 @@
+{
+  "schema": "libera_final_paper_integration_v1",
+  "date": "2026-10-30",
+  "output": "paper\\LIBERA_소논문_최종결과반영_20261030.md",
+  "output_sha256": "d7dfcbc862ef6faa7a1f96422a24dea94b39fdbe7b88341e3ba14def735c8e1e",
+  "research_center": "공통 GenAI와 기관투자자의 전략적 이질성, Workflow RAG 배치와 완화효과",
+  "user_steering": "원초록과 제목의 중심을 보존. 출력실패는 이질성 결과의 형성 경로로 해석.",
+  "latest_by_topic": {
+    "problem_and_title": "원초록 반영 v5.4의 연구 질문·제목 보존",
+    "performed_design_and_solutions": "plan 최신 2026-10-30 통합 HTML",
+    "results": "paper 2026-10-29 완료 결과 및 수치 검산",
+    "style": "paper 구성·문장 레퍼런스분석 2026-10-26; 과거 실험 사실은 적용하지 않음"
+  },
+  "sources": [
+    {
+      "path": "paper\\LIBERA_소논문_최종결과반영_20261029.md",
+      "sha256": "6aee2aa13bd0447fd7ef6d737c5b1f7108d530443bbdad03aaa5e8a7de35989b"
+    },
+    {
+      "path": "plan\\LIBERA_최종실험설계_결과와해결방안_20261030.html",
+      "sha256": "94c111a2ee1ffd0619c6929b24828032c3abdbefc596abf4baee622bb32ada96"
+    },
+    {
+      "path": "plan\\LIBERA_최종수행_실험설계서_20261030.html",
+      "sha256": "02071a52d179d1329b0f60fd36ce4511c2afe46c0102e5224205849a0fe1111d"
+    },
+    {
+      "path": "paper\\LIBERA_소논문_원초록반영_v5.4_20261026.md",
+      "sha256": "13e0c0eb5a28fc05c4ffbb49d7fc07c94f6303faceb53e0633a47e69a1dbf8a2"
+    },
+    {
+      "path": "paper\\LIBERA_소논문_구성과문장_레퍼런스분석_20261026.md",
+      "sha256": "d1987b2d39b968403dcaeebaa163c306c2e361bae708620178b4078f84f2d9e0"
+    },
+    {
+      "path": "paper\\LIBERA_본실험_결과해석_20261029.md",
+      "sha256": "1d71199c26609977e81f577741fcc892cd8331a51b60fdf35be6f9f77a1f3a7b"
+    },
+    {
+      "path": "research\\paper_final_20261029\\numeric_audit.json",
+      "sha256": "26270b81f611bda9a92125abc042527f84674bbf4bd3a01c932153cdd14f4de4"
+    },
+    {
+      "path": "research\\paper_final_20261029\\reference_verification.json",
+      "sha256": "6c19aeb8c72f27c2d25d3acb3594bb4646a562899c80a602488b7c52a534a04f"
+    },
+    {
+      "path": "research\\paper_final_20261029\\intro_context_verification.json",
+      "sha256": "4dc041d5ad53cc1f55c8eba9f9722b27198de8e3e9cf8dfa97941d06a38b47d5"
+    },
+    {
+      "path": "research\\paper_final_20261029\\method_data_reference_verification.json",
+      "sha256": "411138ce3b869ac3aa54a66cc44bd4e36783d21980c9a3bb99782c50c55054d7"
+    },
+    {
+      "path": "research\\solution_design_20261030\\reference_addendum.json",
+      "sha256": "b0e509f0c92989dfda19dda31cb0439ee6f8f7f328d87d7f919e5bc9bddc4a01"
+    }
+  ],
+  "figures_reused": [
+    "paper/assets_20261029/figure1_validity_by_timing.png",
+    "paper/assets_20261029/figure2_distance_gap_regret.png"
+  ],
+  "new_experiment_calls": 0,
+  "frozen_experiment_data_modified": false,
+  "reference_count": 15,
+  "numbered_main_sections": 9,
+  "render_command": "python -X utf8 research/paper_final_20261029/render_documents.py paper/LIBERA_소논문_최종결과반영_20261030.md --qa-dir tmp/paper_final_20261030_qa --pdf",
+  "html_finalize_command": "python -X utf8 research/paper_final_20261030/compose_final_paper.py --collapse-generated-toc",
+  "html_toc_initially_collapsed": true
+}

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3200" height="870" viewBox="0 0 3200 870">
+<title>Workflow RAG — 가로형</title>
+<desc>원본의 11개 단계와 13개 연결을 유지한 왼쪽에서 오른쪽 방향의 워크플로.</desc>
+<rect width="100%" height="100%" fill="white"/>
+<defs>
+<marker id="gray" markerWidth="14" markerHeight="14" refX="13" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L14,7 L0,14 Z" fill="#75808F"/></marker>
+<marker id="orange" markerWidth="14" markerHeight="14" refX="13" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L14,7 L0,14 Z" fill="#C26820"/></marker>
+<marker id="purple" markerWidth="14" markerHeight="14" refX="13" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L14,7 L0,14 Z" fill="#6F42A8"/></marker>
+<marker id="constraint" markerWidth="14" markerHeight="14" refX="13" refY="7" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L14,7 L0,14 Z" fill="#667085"/></marker>
+</defs>
+<path d="M310,478 L370,478" fill="none" stroke="#75808F" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#gray)"/>
+<path d="M600,478 L660,478" fill="none" stroke="#75808F" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#gray)"/>
+<path d="M600,252.5 L775,252.5 L775,400" fill="none" stroke="#75808F" stroke-width="2.4" stroke-linejoin="round" stroke-dasharray="5 7" marker-end="url(#gray)"/>
+<path d="M960,478 L1005,478" fill="none" stroke="#75808F" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#gray)"/>
+<path d="M1140,578 L1140,690" fill="none" stroke="#C26820" stroke-width="4" stroke-linejoin="round" marker-end="url(#orange)"/>
+<path d="M1000,742.5 L810,742.5 L810,556" fill="none" stroke="#C26820" stroke-width="4" stroke-linejoin="round" marker-end="url(#orange)"/>
+<path d="M1275,478 L1410,478" fill="none" stroke="#75808F" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#gray)"/>
+<path d="M1640,478 L1700,478" fill="none" stroke="#75808F" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#gray)"/>
+<path d="M1930,478 L1990,478" fill="none" stroke="#75808F" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#gray)"/>
+<path d="M2240,478 L2285,478" fill="none" stroke="#75808F" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#gray)"/>
+<path d="M2440,368 L2440,100 L900,100 L900,400" fill="none" stroke="#6F42A8" stroke-width="4.5" stroke-linejoin="round" marker-end="url(#purple)"/>
+<path d="M2440,588 L2440,650 L1815,650 L1815,536" fill="none" stroke="#667085" stroke-width="3.2" stroke-linejoin="round" marker-end="url(#constraint)"/>
+<path d="M2595,478 L2780,478" fill="none" stroke="#75808F" stroke-width="2.4" stroke-linejoin="round" marker-end="url(#gray)"/>
+<g id="fundContext">
+<rect x="60" y="420" width="250" height="116" fill="#FFFFFF" stroke="#6B7280" stroke-width="2"/>
+<text x="185" y="458.695" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="27" fill="#17212F">펀드별</text>
+<text x="185" y="497.305" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="27" fill="#17212F">목표·보유·위험한도</text>
+</g>
+<g id="retrieve">
+<rect x="370" y="420" width="230" height="116" fill="#FFFFFF" stroke="#6B7280" stroke-width="2"/>
+<text x="485" y="457.265" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="29" fill="#17212F">시장·펀드별</text>
+<text x="485" y="498.735" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="29" fill="#17212F">근거 검색</text>
+</g>
+<g id="criteria">
+<rect x="370" y="210" width="230" height="85" fill="#F1F3F5" stroke="#868E96" stroke-width="2"/>
+<text x="485" y="233.195" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="27" fill="#17212F">사전 근거</text>
+<text x="485" y="271.805" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="27" fill="#17212F">채택 기준</text>
+</g>
+<g id="evidence">
+<rect x="660" y="400" width="300" height="156" fill="#C2E5FF" stroke="#3DADFF" stroke-width="2"/>
+<text x="810" y="436.53" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="29" fill="#17212F">공통 GenAI</text>
+<text x="810" y="478" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="29" fill="#17212F">상충 근거</text>
+<text x="810" y="519.47" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="29" fill="#17212F">비교·채택·보류</text>
+</g>
+<g id="needSearch">
+<polygon points="1140,378 1275,478 1140,578 1005,478" fill="#FFFFFF" stroke="#6B7280" stroke-width="2"/>
+<text x="1140" y="457.98" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="28" fill="#17212F">추가 근거</text>
+<text x="1140" y="498.02" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="28" fill="#17212F">필요?</text>
+</g>
+<g id="targetedSearch">
+<rect x="1000" y="690" width="280" height="105" fill="#FFE0C2" stroke="#FF9E42" stroke-width="2"/>
+<text x="1140" y="722.48" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="28" fill="#17212F">쟁점별</text>
+<text x="1140" y="762.52" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="28" fill="#17212F">반대근거 검색</text>
+</g>
+<g id="evaluate">
+<rect x="1410" y="420" width="230" height="116" fill="#FFFFFF" stroke="#6B7280" stroke-width="2"/>
+<text x="1525" y="457.265" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="29" fill="#17212F">산업 전망·</text>
+<text x="1525" y="498.735" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="29" fill="#17212F">위험 평가</text>
+</g>
+<g id="alternatives">
+<rect x="1700" y="420" width="230" height="116" fill="#FFFFFF" stroke="#6B7280" stroke-width="2"/>
+<text x="1815" y="457.98" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="28" fill="#17212F">증액·유지·감액</text>
+<text x="1815" y="498.02" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="28" fill="#17212F">비교</text>
+</g>
+<g id="allocation">
+<rect x="1990" y="420" width="250" height="116" fill="#FFFFFF" stroke="#6B7280" stroke-width="2"/>
+<text x="2115" y="457.265" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="29" fill="#17212F">배분안·</text>
+<text x="2115" y="498.735" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="29" fill="#17212F">자금 이동 계산</text>
+</g>
+<g id="review">
+<polygon points="2440,368 2595,478 2440,588 2285,478" fill="#DCCCFF" stroke="#874FFF" stroke-width="2"/>
+<text x="2440" y="457.98" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="28" fill="#17212F">근거·전제·제약</text>
+<text x="2440" y="498.02" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="28" fill="#17212F">점검</text>
+</g>
+<g id="finalChoice">
+<rect x="2780" y="420" width="340" height="116" fill="#CDF4D3" stroke="#66D575" stroke-width="2"/>
+<text x="2950" y="457.265" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="29" fill="#17212F">배분·유지 확정</text>
+<text x="2950" y="498.735" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="29" fill="#17212F">및 사유 기록</text>
+</g>
+<text x="1177" y="631" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="26" fill="#C26820">필요</text>
+<text x="905" y="712" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="24" fill="#C26820">추가 근거 반영</text>
+<text x="1342" y="408.555" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="23" fill="#75808F">현재 근거로</text>
+<text x="1342" y="441.445" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="23" fill="#75808F">평가</text>
+<text x="1670" y="65" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="29" fill="#6F42A8">근거 갱신·해석 변경</text>
+<text x="2130" y="621" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="27" fill="#667085">제약 위반</text>
+<text x="2687" y="407.84" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="24" fill="#75808F">근거 부합·</text>
+<text x="2687" y="442.16" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic,Arial,sans-serif" font-size="24" fill="#75808F">제약 충족</text>
+</svg>

@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="LIBERA가 2026년 10월 28~29일 실제 완료한 B-main 실험의 최종 설계. FULL 제외, R0~R3, 3단계, 비중 정규화와 실패 처리, 평가 및 복구 규칙을 통합했다.">
+<title>LIBERA 최종 수행 실험설계서 · 2026-10-30</title>
+<style>
+:root{--ink:#172b3c;--muted:#586c7b;--line:#d9e3e9;--paper:#fff;--bg:#f2f5f7;--navy:#16384b;--teal:#087e82;--light:#eaf6f4;--gold:#a75d17;--goldbg:#fff5e8;--radius:16px}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.85 "Malgun Gothic","Apple SD Gothic Neo",sans-serif;word-break:keep-all;overflow-wrap:anywhere}a{color:#086f8d;text-underline-offset:3px}button,a{touch-action:manipulation}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #e09c3d;outline-offset:4px}.wrap{max-width:1250px;margin:auto;padding:38px 28px 72px}.hero{background:var(--navy);color:white;border-radius:22px;padding:43px 46px;margin-bottom:28px}.eyebrow{font-size:12px;letter-spacing:.15em;font-weight:700;color:#9ed5d5}.hero h1{font-size:clamp(28px,4.3vw,43px);letter-spacing:-.045em;line-height:1.35;margin:15px 0}.hero .lead{max-width:850px;font-size:18px;color:#e3edf2;margin:0 0 24px}.meta{display:flex;flex-wrap:wrap;gap:10px 22px;font-size:13px;color:#bfd5df}.badge{display:inline-block;border:1px solid #58989c;background:#235362;color:#e3fffa;border-radius:20px;padding:2px 12px}.toolbar{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:24px;align-items:center}.toolbar p{margin:0;color:var(--muted);font-size:13px}.toolbar button{border:1px solid var(--line);background:white;border-radius:8px;padding:8px 16px;color:var(--ink);font-size:13px}.layout{display:grid;grid-template-columns:225px minmax(0,1fr);gap:25px;align-items:start}nav{position:sticky;top:20px;background:white;border:1px solid var(--line);border-radius:var(--radius);padding:20px 17px}nav strong{font-size:13px;display:block;margin:0 8px 10px}nav a{display:block;text-decoration:none;color:var(--muted);font-size:13px;line-height:1.5;padding:7px 8px;border-radius:7px}nav a:hover{background:var(--light);color:var(--teal)}main{min-width:0}.section{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:30px 34px;margin-bottom:22px}.section h2{font-size:24px;letter-spacing:-.035em;line-height:1.4;margin:0 0 20px}.section h2 span{font-size:12px;display:block;letter-spacing:.13em;color:var(--teal);margin-bottom:6px}h3{font-size:18px;margin:27px 0 10px;line-height:1.5}p{margin:12px 0}.muted,.note{color:var(--muted);font-size:13px;line-height:1.75}.callout{border-left:4px solid var(--teal);background:var(--light);padding:16px 20px;border-radius:0 10px 10px 0;margin:20px 0}.callout p{margin:0}.callout.warm{background:var(--goldbg);border-color:var(--gold)}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px 0}.card{background:#f5f8fa;border:1px solid var(--line);padding:16px;border-radius:12px}.card strong{display:block;font-size:25px;line-height:1.3;color:var(--navy)}.card span{font-size:13px;color:var(--muted)}.table-wrap{overflow-x:auto;margin:17px 0}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.7;text-align:left}th,td{border-bottom:1px solid var(--line);padding:13px 12px;vertical-align:top}th{background:#edf3f6;font-weight:700;color:#26485d}tbody tr:last-child td{border-bottom:0}caption{text-align:left;font-weight:700;font-size:14px;margin:0 0 10px}td small{font-size:12px;color:var(--muted)}.nowrap{white-space:nowrap}.formula{background:#f3f6f9;border:1px solid var(--line);padding:17px 20px;border-radius:9px;font-family:"Cambria Math","Malgun Gothic",serif;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.95;font-size:16px}.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:20px 0}.step{border-top:4px solid #87b9c4;background:#f4f8fa;padding:17px;border-radius:7px}.step b{display:block;font-size:16px;margin-bottom:6px}.step p{font-size:13px;line-height:1.75;margin:0}.step .tag{display:inline-block;font-size:12px;font-weight:700;color:var(--teal);margin-top:13px}.arm-controls{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 12px}.arm-controls button{border:1px solid var(--line);padding:7px 15px;border-radius:9px;background:#fff;font-size:14px;color:var(--ink)}.arm-controls button[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#fff}.inspector{background:#f2f8f8;border:1px solid #c7e0df;border-radius:12px;padding:20px}.inspector h3{margin:0 0 7px}.inspector p{font-size:14px}.stage-mini{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:15px 0}.stage-mini div{border:1px solid #ced9df;background:white;padding:12px;border-radius:8px;font-size:13px}.stage-mini div.on{background:#dff0ec;border-color:#8cbdb4;color:#174e4b}.stage-mini strong{display:block;margin-bottom:7px}.inspector .common{font-size:12px;color:var(--muted);margin:0}ul,ol{padding-left:23px}li{margin:7px 0}details{border:1px solid var(--line);border-radius:10px;padding:12px 17px;margin:14px 0}summary{font-size:14px;font-weight:700;cursor:pointer}details[open] summary{margin-bottom:15px}code{font-family:Consolas,"Malgun Gothic",monospace;font-size:.88em;background:#eef2f5;padding:2px 5px;border-radius:4px;word-break:break-all}.path{font-size:12px;line-height:1.65;display:block;margin-top:7px;color:var(--muted);word-break:break-all}.refs{font-size:14px}.refs li{margin:13px 0}.refs small{display:block;color:var(--muted);font-size:12px}.footer{color:var(--muted);font-size:12px;margin:30px 0 0;text-align:center}.js-only{display:none}.js .js-only{display:block}.js .arm-controls{display:flex}.section:target{border-color:#65a9ad}.print-only{display:none}
+@media(max-width:900px){.layout{grid-template-columns:1fr}nav{position:static;display:flex;gap:4px 10px;flex-wrap:wrap;padding:14px}nav strong{width:100%;margin-bottom:0}nav a{padding:4px 8px}.hero{padding:30px}.section{padding:25px}.wrap{padding:20px 17px 45px}}
+@media(max-width:560px){body{font-size:15px}.hero{padding:26px 22px}.hero .lead{font-size:16px}.section{padding:23px 19px}.section h2{font-size:22px}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.steps,.stage-mini{grid-template-columns:1fr}.card strong{font-size:23px}th,td{padding:10px 9px}table{font-size:13px}.comparison{min-width:620px}.matrix{min-width:600px}}
+@media print{@page{size:A4;margin:17mm}body{background:white;color:#111;font-size:10pt;line-height:1.65}.wrap{max-width:none;margin:0;padding:0}.hero{color:#111;background:white;border-radius:0;border-bottom:2px solid #16384b;margin-bottom:15px;padding:0 0 18px}.hero h1{font-size:26pt}.hero .lead,.meta,.eyebrow{color:#333}.hero .lead{font-size:12pt}.badge{color:#111;background:none;border-color:#777}nav,.toolbar,.js-only{display:none!important}.layout{display:block}.section{border:0;border-radius:0;padding:17px 0;margin:0}.section h2{font-size:16pt}.section h2 span{font-size:9pt}h3{font-size:12pt}h2,h3,caption,summary{break-after:avoid}p{orphans:3;widows:3}.table-wrap{overflow:visible}table{font-size:9pt}thead{display:table-header-group}tr,.callout,.card,.step,.formula{break-inside:avoid}th,td{padding:7px 8px}a{color:#111;text-decoration:none}.cards,.steps{gap:8px}.card strong{font-size:20pt}.card span,.step p,.note,.muted{font-size:9pt}details{border:0;padding:10px 0}.comparison,.matrix{min-width:0}.formula{font-size:11pt}code{font-size:9pt}.print-only{display:block}.footer{font-size:8pt}}
+@media print{h2,h3{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="hero">
+  <div class="eyebrow">LIBERA · FINAL EXECUTED DESIGN</div>
+  <h1>최종 수행 실험설계서</h1>
+  <p class="lead">공통 GenAI는 기관투자자의 전략적 이질성을 축소하는가?<br>실제 완료한 B-main의 자료, 조건, 처리 규칙과 평가방법</p>
+  <div class="meta"><span class="badge">실행·최종 분석 완료</span><span>실험 수행 2026.10.28–10.29</span><span>설계서 정리 2026.10.30 · KST</span></div>
+</header>
+<div class="toolbar"><p>확정 설계·동결 설정·실행 코드·완료 기록을 대조해 정리한 문서입니다.</p><button type="button" id="print-button">인쇄 / PDF 저장</button></div>
+<div class="layout">
+<nav aria-label="설계서 목차"><strong>이 문서의 순서</strong>
+<a href="#overview">01 최종 설계 한눈에 보기</a><a href="#changes">02 기존 설계에서 바뀐 점</a><a href="#question">03 연구질문과 비교 논리</a><a href="#data">04 펀드·자료·배분 과제</a><a href="#signals">05 합성 전망과 상황 선정</a><a href="#workflow">06 조건별 업무 흐름</a><a href="#retrieval">07 검색과 근거 전달</a><a href="#processing">08 비중 처리와 계산 역할</a><a href="#evaluation">09 평가방법</a><a href="#runtime">10 실행·복구·시간 기록</a><a href="#completion">11 실제 수행 확인</a><a href="#sources">12 기준 파일과 재현 정보</a>
+</nav>
+<main>
+<section class="section" id="overview">
+<h2><span>01 · OVERVIEW</span>최종적으로 무엇을 비교했는가</h2>
+<p>같은 언어모델에 서로 다른 펀드의 현재 보유상태와 새 전망을 제공하고, <strong>펀드별 근거를 처음 전달하는 시점</strong>이 최종 산업배분에 미치는 영향을 비교했다. 자료를 주지 않는 R0와 계획·작성·점검 단계부터 제공하는 R1·R2·R3를 같은 상황에서 실행했다. 평가에서는 배분의 실행 가능성, 펀드 사이에 필요한 차이, 기준배분 대비 판단 손실을 함께 확인했다.</p>
+<div class="cards"><div class="card"><strong>B-main</strong><span>합성 전망을 사용하는 핵심 통제실험</span></div><div class="card"><strong>R0–R3</strong><span>FULL을 제외한 네 자료 조건</span></div><div class="card"><strong>3단계</strong><span>계획 → 배분안 작성 → 점검·수정</span></div><div class="card"><strong>10개 상황</strong><span>정밀도 두 수준에서 각각 다섯 개</span></div><div class="card"><strong>4개 펀드</strong><span>실제 보유자료로 구성한 FF12 배분</span></div><div class="card"><strong>160개 흐름</strong><span>상황 × 펀드 × 조건 × 반복 1회</span></div></div>
+<div class="callout"><p><strong>FULL/C-context는 전체 적격 원문을 제공하는 비교조건이었다.</strong> 이를 최종 실행에서 제거했다. 업무 흐름은 세 단계로 유지했으며, 평가에 사용하는 <strong>전체정보 수리 기준배분</strong>은 그대로 계산했다. 전체 원문을 모델에 주는 조건과 평가용 기준해는 서로 다른 요소다.</p></div>
+<p class="note">이 문서는 완료된 실험을 기준으로 작성한 통합 설계서다. 과거 설계 파일은 변경 이력으로 보존하며, 아래 조건과 실제 완료 기록을 최종 수행 범위로 사용한다.</p>
+</section>
+
+<section class="section" id="changes">
+<h2><span>02 · CHANGES</span>기존 설계에서 바뀐 점</h2>
+<div class="table-wrap"><table class="comparison"><caption>확장 설계와 최종 수행 설계의 차이</caption><thead><tr><th scope="col">항목</th><th scope="col">초기 제안·이전 확장 설계</th><th scope="col">최종 수행 기준</th></tr></thead><tbody>
+<tr><td>실험 모듈</td><td>실제자료 A, 통제실험 B, 새 문서·검색 확인 C와 추가 검증</td><td><strong>B-main만 수행.</strong> A/C, 전망 교체, 음성대조는 제외</td></tr>
+<tr><td>자료 조건</td><td>v6.3의 R0·R1·R2·R3·C-context(FULL)</td><td><strong>R0·R1·R2·R3.</strong> 전체 원문 제공 조건 제거</td></tr>
+<tr><td>업무 단계</td><td>초기 제안의 네 단계를 이후 설계에서 세 단계로 정리</td><td><strong>계획 → 배분안 작성 → 점검·수정.</strong> FULL 제거 이후에도 이 세 단계 유지</td></tr>
+<tr><td>상황·정밀도</td><td>본실험 60개 상황, r=0.5·1·2</td><td><strong>r=0.5·2에서 각각 5개, 총 10개.</strong> 기존 생성값에서 ID로 선정</td></tr>
+<tr><td>동일 조건 반복</td><td>2회</td><td><strong>1회.</strong> 같은 셀에서 답변을 반복 생성하지 않음</td></tr>
+<tr><td>개발·예비 생성</td><td>개발, technical-smoke, paired-feasibility 등의 생성 경로</td><td>이 최종 실행에는 <strong>별도 예비·워밍업 답변 생성 없음.</strong> 과거 개발 응답도 새 표본에 합산하지 않음</td></tr>
+<tr><td>비중 처리</td><td>원출력 기준 검사 중심</td><td><strong>원출력 보존 + 비음수 벡터의 외부 비례 정규화 + 원래 제약 재검사</strong></td></tr>
+<tr><td>조회·재시도</td><td>중복 동일성 조회와 통신 오류 재시도 경로</td><td>중복 render-only 메타데이터 조회 제거, 자동 인프라 재시도 비활성화. 실제 생성 전후 동일성 확인은 유지</td></tr>
+<tr><td>수치 기준해</td><td>독립 솔버 수렴 과정에서 사전검사 중단</td><td>목적함수 내부 스케일 조정 및 위험제약이 비활성인 경우의 검증된 꼭짓점 해 처리. <strong>목적·제약·허용오차 유지</strong></td></tr>
+<tr><td>결과 분석</td><td>원래 N60 확증분석과 추가 실험을 포함한 계획</td><td><strong>10개 상황의 탐색적 기술분석.</strong> 실패를 포함한 전체 결과를 동일 규칙으로 집계</td></tr>
+</tbody></table></div>
+<p>최종 작업량은 <strong>10 × 4 × 4 × 1 = 160개 업무 흐름</strong>이고, 각 흐름에 세 단계가 있어 예정된 단계 출력은 480개였다. 원래 전체 설계의 3,272개 업무 흐름·9,816단계는 여러 모듈을 합친 계획값으로, 이번 완료 수와 구분한다.</p>
+<p class="note">초기 제안의 R3와 최종 설계의 R3는 단계 이름만으로 대응시키지 않는다. 이 문서의 R3는 일관되게 ‘세 번째 단계인 점검·수정에서 근거를 처음 제공하는 조건’을 뜻한다.</p>
+</section>
+
+<section class="section" id="question">
+<h2><span>03 · RESEARCH LOGIC</span>연구질문과 비교 논리</h2>
+<p>기관들이 같은 투자규칙을 공식 채택하지 않아도 검색·요약·평가에서 공통 GenAI를 사용하면 정보 선택과 해석 방식이 공유될 수 있다. 이 실험은 그 문제 중 <strong>펀드별 정보가 필요한 배분 차이로 이어지는 과정</strong>을 통제 과제로 관찰한다.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">연구질문</th><th scope="col">실제 비교</th></tr></thead><tbody>
+<tr><td>공통 모델의 배분 차이가 펀드별 정보·제약이 요구하는 차이보다 작아지는가?</td><td>각 조건의 펀드 간 거리와 전체정보 기준배분의 거리를 비교</td></tr>
+<tr><td>추가 근거가 필요한 차이와 판단 품질을 함께 개선하는가?</td><td>같은 펀드·상황에서 R0와 R1/R2/R3의 유효성, 차이의 정합성, 기대수익 손실 비교</td></tr>
+<tr><td>근거를 어느 단계부터 제공할 때 최종 선택이 달라지는가?</td><td>동일 패킷을 사용하는 R1·R2·R3 사이의 제공 시점 비교</td></tr>
+</tbody></table></div>
+<p>모델, 기본정보, 수치 제약, 출력 형식과 계산도구는 조건 간에 고정했다. 바꾼 것은 추가 근거의 최초 제공 시점과 그에 따라 누적되는 대화 이력이다. 이미 제공한 자료와 이전 응답은 다음 단계에도 유지했다.</p>
+<p class="note">분석 단위는 독립적으로 생성된 상황이다. 펀드 비교쌍, 세 단계 응답, 같은 상황의 네 조건은 서로 연결된 관측으로 다룬다. 실제 금융기관의 AI 도입 전후나 실제 거래를 비교하는 설계는 포함하지 않았다.</p>
+</section>
+
+<section class="section" id="data">
+<h2><span>04 · DATA &amp; TASK</span>펀드·자료·배분 과제</h2>
+<p>미국 액티브 주식형 펀드 네 개의 <strong>2025년 12월 31일 보유자료</strong>를 출발 상태로 사용했다. 공시 공개일의 마감은 2026년 3월 31일이다. 보유종목을 Fama–French 12개 산업으로 연결하고, 분류된 적격주식의 평가액을 합계 1로 정규화해 현재 비중 <em>h</em>를 구성했다.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">ID</th><th scope="col">펀드</th><th scope="col">티커</th><th scope="col">FF12 포괄률</th><th scope="col">분류 주식 / 순자산</th></tr></thead><tbody>
+<tr><td>F01</td><td>Fidelity Contrafund</td><td>FCNTX</td><td>94.72%</td><td>90.56%</td></tr>
+<tr><td>F02</td><td>Vanguard PRIMECAP Fund</td><td>VPMCX</td><td>96.35%</td><td>95.46%</td></tr>
+<tr><td>F03</td><td>Dodge &amp; Cox Stock Fund</td><td>DODGX</td><td>97.75%</td><td>97.01%</td></tr>
+<tr><td>F04</td><td>T. Rowe Price Blue Chip Growth Fund</td><td>TRBCX</td><td>99.29%</td><td>98.04%</td></tr>
+</tbody></table></div>
+<p class="note">포괄률의 분모는 분류 대상 적격주식 전체 평가액이고, 마지막 열의 분모는 순자산이다. 이 과제는 분류된 주식 부문의 산업배분을 다루며 현금·채권을 포함한 펀드 전체 자산배분과 구분한다.</p>
+<h3>모델이 결정하는 것</h3>
+<p>새 정보를 반영해 열두 산업의 목표비중을 정한다. 공통 목적은 허용된 정보에 따른 월간 사후 기대수익의 극대화다. 산업 순서는 NoDur, Durbl, Manuf, Enrgy, Chems, BusEq, Telcm, Utils, Shops, Hlth, Money, Other로 고정했다.</p>
+<div class="formula" role="math" aria-label="비중의 제약">wₖ ≥ 0 · Σₖ wₖ = 1 · wᵀΣw ≤ hᵀΣh</div>
+<p>최종 비중은 공매도 없이 합계 100%가 되어야 하며, 산업 수익률 공분산으로 계산한 위험은 현재 보유비중의 위험을 넘지 않아야 한다. 위험자료는 2016년 1월~2025년 12월의 FF12 가치가중 월간 총수익률이다. 월간 평균을 사전 기대수익으로, Ledoit–Wolf 수축 공분산을 위험척도로 사용했다.</p>
+<div class="callout"><p>운용목표와 규정은 문서 맥락으로 전달했다. 실제 네 프로필의 추가 선형제약 A·b는 비어 있어, 이번 수치 유효성 판정은 <strong>비음수·합계·위험상한</strong>에 적용된다.</p></div>
+<details><summary>보유자료의 추출 경로와 확인 범위</summary><p>F01은 Fidelity 연차보고서, F02는 운용사 보유자료, F03은 N-CSR 연차보고 공시, F04는 NPORT-P 보유명세에서 보유정보를 구성했다. F02는 연결한 NPORT-EX로 보유합계와 순자산을 대조했다. F02의 원래 운용사 URL과 일부 원출처 보관본은 현재 파일셋에 남아 있지 않다.</p><p>산업 분류에는 사후 확인 가능한 발행사 정보가 사용됐고, 수익률은 보관된 수정 CIZ 자료다. 독립 사람 감사는 수행하지 않았다. 출처별 역할과 공시 연결은 <a href="../research/paper_final_20261029/factual_manuscript_review.json">자료 검토 기록</a>에 정리돼 있다.</p></details>
+</section>
+
+<section class="section" id="signals">
+<h2><span>05 · SCENARIOS</span>합성 전망과 상황 선정</h2>
+<p>실제 보유상태와 위험척도 위에 공통 시장 전망과 펀드별 추가 전망을 합성했다. 공통 전망 <em>y</em>는 모든 조건에 제공하고, 펀드별 전망 <em>xᵢ</em>는 해당 펀드의 검색 패킷을 통해 조건별 시점에 제공했다. 합성 전망은 통제 실험을 위한 관측값이다.</p>
+<div class="formula" role="math" aria-label="합성 전망 생성 모형">θ ~ N(m₀, V₀),  V₀ = Σ / 12
+y = θ + ε₀,  ε₀ ~ N(0, V₀)
+xᵢ = θ + εᵢ,  εᵢ ~ N(0, V₀ / r)</div>
+<p>θ를 조건으로 관측 오차는 서로 독립이다. θ는 상황 생성에만 사용하며 모델이나 사후 기대수익 계산에 직접 제공하지 않는다. 높은 정밀도 r=2에서는 낮은 정밀도 r=0.5보다 오차 공분산이 작다.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">정밀도</th><th scope="col">선정된 상황 ID</th></tr></thead><tbody><tr><td>낮음 · r=0.5</td><td>main-001, main-004, main-007, main-010, main-013</td></tr><tr><td>높음 · r=2</td><td>main-003, main-006, main-009, main-012, main-015</td></tr></tbody></table></div>
+<p>원래 seed 2001로 생성한 상황 중 각 정밀도의 앞선 다섯 ID를 결과 확인 전에 선택했다. 새로 추출하지 않고 기존 생성값을 유지했으며, seed 5001의 원래 실행 순서를 선택된 조건으로 걸러 사용했다. 각 상황 안에서는 펀드·조건 간 공통 입력을 고정했다.</p>
+<p class="note">두 정밀도는 서로 다른 상황 추출값을 사용한다. 따라서 같은 상황에 r만 바꾼 짝 비교가 아니라, 각 정밀도 상황군 안의 R0~R3 비교와 전체 평균을 보고한다.</p>
+</section>
+
+<section class="section" id="workflow">
+<h2><span>06 · WORKFLOW</span>네 조건과 세 단계</h2>
+<div class="table-wrap"><table class="matrix"><caption>추가 전망 패킷의 최초 제공 시점</caption><thead><tr><th scope="col">조건</th><th scope="col">1 · 계획</th><th scope="col">2 · 배분안 작성</th><th scope="col">3 · 점검·수정</th></tr></thead><tbody>
+<tr><td><strong>R0</strong></td><td>추가 패킷 없음</td><td>추가 패킷 없음</td><td>추가 패킷 없음</td></tr>
+<tr><td><strong>R1</strong></td><td><strong>첫 제공</strong></td><td>패킷·이전 응답 유지</td><td>패킷·이전 응답 유지</td></tr>
+<tr><td><strong>R2</strong></td><td>추가 패킷 없음</td><td><strong>첫 제공</strong></td><td>패킷·이전 응답 유지</td></tr>
+<tr><td><strong>R3</strong></td><td>추가 패킷 없음</td><td>추가 패킷 없음</td><td><strong>첫 제공</strong></td></tr>
+</tbody></table></div>
+<p>R0에도 공통 전망, 현재 보유비중, 위험척도와 제약을 제공한다. 모든 조건의 3단계에는 2단계 제안에 대한 코드의 검사 결과가 전달된다. R1~R3는 같은 펀드·상황에서 동일한 검색 패킷을 사용한다.</p>
+<div class="js-only">
+<div class="arm-controls" role="group" aria-label="조건별 자료 흐름 보기"><button type="button" data-arm="R0" aria-pressed="false">R0 미제공</button><button type="button" data-arm="R1" aria-pressed="true">R1 계획</button><button type="button" data-arm="R2" aria-pressed="false">R2 작성</button><button type="button" data-arm="R3" aria-pressed="false">R3 점검</button></div>
+<div class="inspector" aria-live="polite" aria-atomic="true"><h3 id="arm-title">R1 · 계획부터 근거 제공</h3><p id="arm-description">계획을 세우기 전에 펀드별 추가 전망을 받고, 작성과 점검에서도 같은 근거를 유지한다.</p><div class="stage-mini"><div id="stage-1" class="on"><strong>1 · 계획</strong><span>패킷 첫 제공</span></div><div id="stage-2" class="on"><strong>2 · 배분안 작성</strong><span>패킷 유지 + 계획 응답</span></div><div id="stage-3" class="on"><strong>3 · 점검·수정</strong><span>패킷 유지 + 앞선 응답 + 검사 결과</span></div></div><p class="common">공통 전망·보유비중·제약은 모든 조건에서 유지한다. 이 패널은 설계 설명이며 실험을 실행하지 않는다.</p></div>
+</div>
+<h3>각 단계에서 모델에 요구한 출력</h3>
+<div class="steps"><div class="step"><b>1. 계획</b><p>기본 운용조건을 요약하고 근거의 채택·보류 이유, 열두 산업의 증액·감액·유지 방향을 제시한다.</p><span class="tag">계획과 근거</span></div><div class="step"><b>2. 배분안 작성</b><p>목표비중 weights와 현재 비중 대비 change_from_h를 각각 열두 성분으로 제출하고, 선택의 상충관계를 설명한다.</p><span class="tag">비중과 변경량</span></div><div class="step"><b>3. 점검·수정</b><p>앞선 제안과 외부 검사 결과를 검토해 최종 weights를 제출한다. 계산 확인 여부, 이전 오류와 방향 설명을 기록한다.</p><span class="tag">최종 비중과 점검</span></div></div>
+<p>모든 단계는 근거 ID·값·단위·날짜·해석을 포함한 구조화된 JSON을 출력한다. 단계별 필드와 길이 제한은 고정했다. 조건마다 독립된 대화를 시작하고 앞선 단계의 응답을 이어 사용했으며, 다른 조건의 초안을 복사해 쓰지 않았다.</p>
+</section>
+
+<section class="section" id="retrieval">
+<h2><span>07 · RETRIEVAL</span>검색과 근거 전달</h2>
+<p>B-main의 검색 대상은 펀드별 합성 전망과 해당 펀드의 기본·규정 사실을 담은 문서다. 펀드, 기간과 공개일의 적격성을 먼저 확인하고, BM25 검색으로 고른 근거를 고정 패킷으로 만들었다. 단계마다 다른 검색 결과를 다시 뽑는 방식이 아니라, 같은 패킷의 첫 제공 시점을 바꿨다.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">항목</th><th scope="col">최종 설정</th></tr></thead><tbody><tr><td>검색 엔진</td><td>rank-bm25 0.2.2 · BM25Okapi</td></tr><tr><td>문서 분할</td><td>정확한 모델 토크나이저 기준 최대 400토큰, 원자 단위 경계를 유지한 중첩 최대 50토큰</td></tr><tr><td>검색 매개변수</td><td>k1=1.5 · b=0.75 · epsilon=0.25 · top-k=4</td></tr><tr><td>동점·중복 처리</td><td>점수, 문서 ID, 문단 순서로 고정 정렬하고 중복 원자 사실은 한 번만 포함</td></tr><tr><td>공통 패킷</td><td>각 펀드·상황별 하나의 패킷을 R1·R2·R3에 공통 사용</td></tr><tr><td>실제 전달 확인</td><td>40개 패킷 모두 검색 청크 4개와 해당 펀드의 전망 사실 12항목 포함</td></tr></tbody></table></div>
+<p>검색 기록에는 문서·청크·패킷의 해시, 근거 ID와 토큰 수를 남겼다. 이를 통해 입력에 근거가 들어온 단계와 이후 비중 생성·수정 단계를 연결해 확인한다.</p>
+<p class="note">전체 적격 문서를 묶은 내부 자료가 준비 파일에 남아 있어도 FULL 조건의 실행을 뜻하지 않는다. 최종 일정에서 C-context를 제외했으며, 실제 모델 비교는 R0~R3로 한정했다.</p>
+</section>
+
+<section class="section" id="processing">
+<h2><span>08 · COMPUTATION &amp; POLICY</span>비중 처리와 계산 역할</h2>
+<p>모델이 제출한 비중과 실제 평가에 사용하는 비중을 별도로 보관했다. 코드의 비례 정규화는 모델 응답을 덮어쓰지 않고 별도의 처리 기록을 만든다.</p>
+<ol><li><strong>원출력 보존.</strong> 원문 응답, 열두 성분의 원비중 <em>u</em>, 원출력 제약 검사 결과를 저장한다.</li><li><strong>정규화 자격 확인.</strong> 숫자형의 유한한 비음수 성분 12개이고 합계가 양수인 벡터만 처리한다. 음수는 0으로 자르거나 부호를 뒤집지 않는다.</li><li><strong>합계 조정.</strong> 모든 성분을 원합계로 나누어 합계 1로 만든다. 부동소수점 합산 잔차만 가장 큰 성분에 반영한다.</li><li><strong>원래 제약 재검사.</strong> 정규화된 비중의 합계·비음수·위험상한과 명시된 수치 제약을 검사한다.</li><li><strong>최종 적용.</strong> 통과하면 정규화 비중을 적용한다. 처리 부적격 또는 최종 제약 위반이면 실패로 기록하고 기존 보유비중 <em>h</em>를 적용한다.</li></ol>
+<div class="formula" role="math" aria-label="최종 비중 처리">w = u / Σₖuₖ  : 정규화 자격과 원래 제약을 충족한 경우
+w = h         : 최종 제안이 처리 규칙을 통과하지 못한 경우</div>
+<p>2단계의 비중이 제약을 위반해도 구조화된 응답이 성립하면 검사 결과를 3단계에 전달해 수정을 진행한다. JSON·출력 형식 등의 실패는 단계 진행을 중단할 수 있다. 아직 시도하지 않은 후속 단계는 미실행으로 남기며, 응답 수를 맞추기 위해 생성하지 않는다.</p>
+<div class="table-wrap"><table><caption>모델의 판단과 외부 계산의 분담</caption><thead><tr><th scope="col">구분</th><th scope="col">수행 내용</th><th scope="col">모델 호출 여부</th></tr></thead><tbody>
+<tr><td>모델</td><td>근거 해석, 계획, 목표비중·변경량 제안, 최종 수정</td><td>각 단계의 답변 생성</td></tr>
+<tr><td>선택적 계산도구</td><td><code>posterior</code>: 노출된 근거에 따른 사후 평균·공분산<br><code>check_portfolio</code>: 제출한 비중의 제약 검사</td><td>요청 시 코드 계산 후 모델의 다음 응답. 단계별 최대 두 번의 도구 왕복</td></tr>
+<tr><td>자동 외부 처리</td><td>비례 정규화, 원래 제약 검사, 2단계 검사 결과 전달, 최종 적용 비중 확정</td><td>추가 AI 채점 호출 없음</td></tr>
+<tr><td>평가용 계산</td><td>기준 최적배분, 배분 거리·판단 손실, 실패·변경 여부 집계</td><td>수치 코드만 실행. 최적 비중을 모델에 제공하지 않음</td></tr>
+</tbody></table></div>
+<p>도구에는 그 단계까지 공개된 근거만 사용할 수 있다. 최적 배분을 직접 반환하는 도구는 제공하지 않았다. 실제 실행에서는 선택적 계산도구 호출이 없었고, 정해진 외부 검사·정규화는 수행됐다.</p>
+<details><summary>판정 허용오차와 실패 기록</summary><p>모델 비중 검사의 합계·하한 허용오차는 10⁻⁶, 위험 초과 허용오차는 max(10⁻¹⁰, 10⁻⁶ × hᵀΣh)다. 다만 외부 정규화의 자격 판정은 음수 성분을 허용하지 않는다. 수리 기준해의 원래 제약 검사에는 10⁻⁹ 기준을 사용한다.</p><p>출력 유효성은 <strong>원출력 유효 / 정규화 구제 / 실패 후 h 유지</strong>로 나눈다. 통신·엔진 문제와 프로토콜 위반은 모델 출력 실패와 별도 상태로 기록한다. 중단 당시 응답 미확인 요청은 완료된 모델 답변으로 계산하지 않는다.</p></details>
+</section>
+
+<section class="section" id="evaluation">
+<h2><span>09 · EVALUATION</span>기준배분과 평가방법</h2>
+<h3>평가용 수리 기준</h3>
+<p>공통 전망과 해당 펀드의 전체 추가 전망을 결합해 사후 기대수익 μᵢ를 계산하고, 같은 제약 아래 기대수익을 최대화하는 기준배분 vᵢ를 구했다. R0에는 실제 제공한 공통 정보만 사용하는 기준도 보조적으로 계산했다. 최적화 결과는 평가자가 사용하는 기준이며 모델 입력에 넣지 않았다.</p>
+<div class="formula" role="math" aria-label="사후 기대수익과 기준배분">Vᵢ = (V₀⁻¹ + Ω₀⁻¹ + Ωᵢ⁻¹)⁻¹
+μᵢ = Vᵢ(V₀⁻¹m₀ + Ω₀⁻¹y + Ωᵢ⁻¹xᵢ)
+vᵢ = argmax μᵢᵀv  subject to v ≥ 0, 1ᵀv = 1, vᵀΣv ≤ hᵢᵀΣhᵢ</div>
+<p class="note">Ω₀=V₀, Ωᵢ=V₀/r이다. R0의 가용정보 기준에서는 xᵢ에 대응하는 항을 제외한다. 근접한 최적해 선택에 따른 지표의 수치 범위를 별도 확인했으며, 이를 표본 신뢰구간으로 해석하지 않는다.</p>
+<div class="table-wrap"><table><caption>최종 평가 지표</caption><thead><tr><th scope="col">지표</th><th scope="col">계산·의미</th></tr></thead><tbody>
+<tr><td>유효성</td><td>원출력부터 유효한 비율과 외부 정규화 후 유효한 비율을 구분</td></tr>
+<tr><td>실제 변경</td><td>TV(wᵢ,hᵢ)와 h 유지 비율. 유효 응답이 실제 재배분인지 확인</td></tr>
+<tr><td>펀드 간 거리 D</td><td>Dᵢⱼ = ½Σₖ|wᵢₖ−wⱼₖ|. 최종 적용 비중의 차이</td></tr>
+<tr><td>과잉수렴 격차 G</td><td>Gᵢⱼ = D*ᵢⱼ−Dᵢⱼ. D*는 기준배분 v의 거리이며, G&gt;0이면 기준보다 작은 차이</td></tr>
+<tr><td>거리 오차 A</td><td>Aᵢⱼ = |D*ᵢⱼ−Dᵢⱼ|. 비교쌍별 절댓값을 평균하며 평균 G의 절댓값과 구분</td></tr>
+<tr><td>차이 방향의 불일치 E</td><td>Eᵢⱼ = ½Σₖ|(wᵢₖ−wⱼₖ)−(vᵢₖ−vⱼₖ)|. 산업별 차이의 방향·크기 불일치</td></tr>
+<tr><td>판단 손실 R</td><td>Rᵢ = μᵢᵀ(vᵢ−wᵢ). 같은 정보·제약 아래 기준배분 대비 포기한 월간 기대수익</td></tr>
+<tr><td>실패·수정 진단</td><td>음수 비중, 위험상한 위반, h·−h 반복, 2→3단계 유효성·적용 비중 변화, 실제 도구 호출</td></tr>
+</tbody></table></div>
+<h3>집계와 해석</h3>
+<p>각 상황 안에서 네 펀드의 여섯 비교쌍을 평균하고, 상황별 결과를 같은 비중으로 합산한다. 손실은 펀드·상황별로 계산한다. r=0.5와 r=2의 결과도 나누어 제시한다. 거리는 100을 곱한 %p로, 월간 기대수익 손실은 10,000을 곱한 bp로 표시한다.</p>
+<p>실패를 제외하지 않고 h 유지 정책이 반영된 전체 160개 종료 결과를 분석한다. 원출력 유효성, 외부 보정과 실제 변경을 분해하고, 모든 펀드가 h를 유지했을 때의 수치 기준도 함께 계산한다. 판단 손실은 합성 전망에 따른 모형상 기회비용이며 실제 매매 수익률과 구분한다.</p>
+<div class="callout"><p>평가의 중심은 <strong>필요한 차이와 판단 품질의 공동 개선</strong>이다. 배분 거리가 커진 것만으로 완화효과를 판정하지 않고, 제약 충족·차이의 정합성·판단 손실을 함께 읽는다.</p></div>
+<p class="note">원래 N60 확증검정·부트스트랩은 적용하지 않았다. 실패 유형, h 복제와 단계 전환은 완료 기록을 바탕으로 추가한 사후 진단으로, 새로운 모델 실험과 구분한다.</p>
+</section>
+
+<section class="section" id="runtime">
+<h2><span>10 · EXECUTION</span>실행·복구·시간 기록</h2>
+<div class="table-wrap"><table><thead><tr><th scope="col">항목</th><th scope="col">최종 실행 설정</th></tr></thead><tbody><tr><td>모델·양자화</td><td>Qwen3:1.7b · Q4_K_M</td></tr><tr><td>엔진·장치</td><td>Ollama 0.35.1 · 로컬 Windows · Intel Arc 140V / Vulkan</td></tr><tr><td>생성 설정</td><td>temperature 0 · seed 1001 · think=false</td></tr><tr><td>문맥·출력 한도</td><td>문맥 32,768토큰 · 단계 출력 최대 4,096토큰</td></tr><tr><td>실행 방식</td><td>고정된 순서로 단일 캠페인 실행. 같은 캠페인을 중복·병렬 실행하지 않음</td></tr><tr><td>표본·순서 난수</td><td>상황 생성 seed 2001 · 실행 순서 seed 5001</td></tr><tr><td>모델 응답 재생성</td><td>잘못된 답변을 성공할 때까지 다시 묻지 않음. 통신 오류의 자동 재시도도 비활성화</td></tr><tr><td>운영상 상한</td><td>최대 생성 요청 1,440회 · 최대 경과시간 259,200초. 예정 표본·요청 수가 아니라 중단을 위한 상한</td></tr></tbody></table></div>
+<h3>수행 순서</h3>
+<ol><li>확정 설정과 모델·소스 해시, 실행 중인 프로세스를 확인한다.</li><li>선정된 입력, 검색 패킷, 수리 기준해와 제약 검사를 코드로 준비한다.</li><li>고정 모델로 각 업무 흐름의 세 단계를 실행하고 원응답·정규화·검사를 저장한다.</li><li>가벼운 진행 파일로 진척을 확인하며 전체 데이터를 반복해서 불러오지 않는다.</li><li>모든 종료 기록이 모이면 같은 실행 ID의 분석을 생성하고 종료 상태·시간을 기록한다.</li></ol>
+<h3>수치 수정과 중단·재개</h3>
+<p>본실험 응답 생성 전에 독립 수치 솔버의 수렴 문제를 수정했다. 양의 상수로 목적함수의 내부 스케일을 조정하고, 위험제약이 비활성인 경우 검증된 꼭짓점 해를 처리하도록 보완했다. 시나리오·모델·제약과 허용오차는 유지했으며, 변경된 소스를 새 실행 ID로 구분했다. 앞선 두 수치 준비 중단에서는 모델 응답이 생성되지 않았다.</p>
+<p>이후 재부팅 등 중단이 발생했을 때 저장된 완료 응답은 재사용했다. 전송 후 응답이 확인되지 않은 요청은 중단 이력을 남기고 사용자 재개 지시에 따라 같은 요청으로 이어 갔다. 이는 잘못된 답변을 다시 받는 재시도와 구분한다. 첫 재부팅으로 손상된 한 단계의 응답 내용은 다음 요청에 남은 내용과 해시로 복원했고, 복구할 수 없는 그 단계의 토큰·시간은 누락으로 기록했다.</p>
+<h3>실험 시간</h3>
+<p>최종 실행 ID의 첫 프로세스 시작은 <strong>2026년 10월 28일 11:01:58 KST</strong>, 최종 분석 종료는 <strong>10월 29일 14:28:41 KST</strong>였다. 중단을 포함한 전체 경과시간은 <strong>27시간 26분 43초</strong>다. 요청별 계산시간·엔진 시간과 전체 경과시간은 별도로 기록했으며, 누락이 있는 요청별 비용 합계는 확인 가능한 기록의 합으로 보고했다.</p>
+<details><summary>모델과 실행의 고정 식별자</summary><p>모델 digest<span class="path">8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7</span></p><p>최종 run_id<span class="path">b713cc4533c2f5b18e165f51592ca8f89223977fd1e15aee202adff8bbca6b54</span></p><p>최종 실행의 모델, 엔진, 토크나이저, 코드, 응답 스키마와 실행 설정은 <a href="../data/v64_20261028/main_only_results/phases/b713cc4533c2f5b18e165f51592ca8f89223977fd1e15aee202adff8bbca6b54/B-main/runtime_identity.json">runtime_identity.json</a>과 <a href="../data/v64_20261028/main_only_results/phases/b713cc4533c2f5b18e165f51592ca8f89223977fd1e15aee202adff8bbca6b54/B-main/frozen_runtime.json">frozen_runtime.json</a>에서 확인한다.</p></details>
+</section>
+
+<section class="section" id="completion">
+<h2><span>11 · EXECUTION RECORD</span>설계대로 무엇이 완료됐는가</h2>
+<p>최종 실행은 <strong>160개 업무 흐름 모두 종료</strong>됐고, 분석 상태는 <code>completed_descriptive_analysis</code>다. 완료 여부는 모든 종료 기록과 최종 분석의 생성으로 판정하며, 모델이 제약을 만족한 답을 냈는지는 별도의 결과다.</p>
+<div class="table-wrap"><table><thead><tr><th scope="col">확인 항목</th><th scope="col">실제 완료 기록</th></tr></thead><tbody><tr><td>조건·표본</td><td>R0~R3 × 네 펀드 × 열 상황 × 반복 1회</td></tr><tr><td>단계 응답</td><td>480개 응답 기록. 전송 이력은 응답 미확인 중단 요청 3회를 포함한 483회</td></tr><tr><td>선택적 도구 호출</td><td>0회. 자동 외부 검사·정규화는 수행</td></tr><tr><td>최종 비중 처리</td><td>원출력 유효 19개 · 정규화 구제 47개 · 실패 후 h 유지 94개</td></tr><tr><td>미해결 실행 상태</td><td>최종 종료 집계상 운영 실패·프로토콜 위반·복구 차단 0개</td></tr><tr><td>FULL·추가 모듈</td><td>FULL/C-context, 전망 교체, 음성대조, A/C는 최종 실행에 포함하지 않음</td></tr></tbody></table></div>
+<p>설계서의 결과 수치는 수행 확인을 위한 요약이다. 조건별 성과와 실패의 해석은 <a href="../paper/LIBERA_본실험_결과해석_20261029.html">결과해석본</a>, 연구 전체의 논증은 <a href="../paper/LIBERA_소논문_최종결과반영_20261029.html">소논문 전체</a>에 정리했다.</p>
+</section>
+
+<section class="section" id="sources">
+<h2><span>12 · SOURCE OF RECORD</span>이 설계서의 기준 파일</h2>
+<p>범위는 확정 설계, 실제 동작은 동결 설정·실행 코드, 완료 여부는 같은 실행 ID의 결과 파일로 대조했다. 과거 문서의 ‘예정’이나 ‘아직 시작하지 않음’ 문구는 당시 상태를 나타내므로 최종 완료 판정에 사용하지 않는다.</p>
+<ol class="refs">
+<li><a href="../research/reduction_20261028/main_only_no_full_approved.json">최종 범위 확정 기록</a><small>B-main 단독, FULL 제외, 상황 선택·반복·단계 수와 호출 정책</small></li>
+<li><a href="../data/v64_20261028/main_only_results/direct_main_config.json">실제 실행 설정</a> · <a href="../research/reduction_20261028/execution_plan_20261028.json">실행 순서</a><small>main_direct_design과 최종 확정 기록으로 표본을 확인한다. 이전 설정에서 남은 budget_note 문구보다 명시된 최종 설계 필드를 우선한다.</small></li>
+<li><a href="../research/v64_reduced/design.py">상황·일정 구성</a> · <a href="../research/v64_reduced/runtime.py">3단계 실행</a> · <a href="../research/v64_reduced/policy.py">비중 처리 정책</a><small>수행 조건의 구현 근거</small></li>
+<li><a href="../research/v63/retrieval.py">검색 구성</a> · <a href="../research/v63/numerics.py">수치 계산</a> · <a href="../research/v63/runtime.py">단계별 출력 스키마</a><small>검색 패킷, 제약·기준해, 응답 형식의 구현 근거</small></li>
+<li><a href="../research/reduction_20261028/numerics_fix_receipt.json">첫 수치 수정 기록</a> · <a href="../research/reduction_20261028/coordinate_numerics_fix_receipt.json">최종 수치 수정 기록</a><small>제약·허용오차를 유지한 수정과 새 실행 ID 연결</small></li>
+<li><a href="../data/v64_20261028/main_only_results/phases/b713cc4533c2f5b18e165f51592ca8f89223977fd1e15aee202adff8bbca6b54/B-main/analysis.json">완료 분석</a> · <a href="../data/v64_20261028/main_only_results/phases/b713cc4533c2f5b18e165f51592ca8f89223977fd1e15aee202adff8bbca6b54/B-main/measurements.json">실측 집계</a> · <a href="../data/v64_20261028/main_only_results/phases/b713cc4533c2f5b18e165f51592ca8f89223977fd1e15aee202adff8bbca6b54/B-main/records.json">종료 기록</a><small>설계 완료와 모델 출력 결과의 구분</small></li>
+<li><a href="../research/paper_final_20261029/numeric_audit.json">수치 재검산</a> · <a href="../research/paper_final_20261029/factual_manuscript_review.json">자료·방법 검토</a><small>입력·응답 해시, 정규화, 집계와 실제 자료 경로 확인</small></li>
+<li><a href="../paper/LIBERA_본실험_결과해석_20261029.md">결과해석 Markdown</a> · <a href="../paper/LIBERA_소논문_최종결과반영_20261029.md">소논문 Markdown</a><small>읽기용 HTML·Word·PDF는 로컬 생성물이며, Git에는 Markdown 원본과 그림·코드·핵심 검산 자료를 보관한다.</small></li>
+</ol>
+<details><summary>전체 재현에 필요한 로컬 보존 자료</summary><p>완료 실행의 <code>prepared_inputs.json</code>, 검색 패킷, 원시 응답·HTTP 기록, 복구 이력과 모델 파일은 로컬에 보존돼 있다. 이 자료 중 일부는 파일 수와 용량 때문에 Git에서 제외했다. Git의 요약·코드만으로 저장되지 않은 원응답까지 복원되는 것은 아니므로, 같은 실행을 검토할 때에는 해당 로컬 보존 자료를 함께 사용한다.</p><p>이 HTML은 외부 글꼴·라이브러리·네트워크 없이 열 수 있다. 표와 본문은 JavaScript 없이도 읽을 수 있으며, 조건 선택 패널과 인쇄 버튼만 브라우저 스크립트를 사용한다.</p></details>
+</section>
+</main></div>
+<footer class="footer">LIBERA · 최종 수행 실험설계서 · 2026-10-30<br>최종 실행 기록을 설명하는 문서이며, 새 실험을 시작하거나 기존 결과를 변경하지 않습니다.</footer>
+</div>
+<script>
+'use strict';
+document.documentElement.classList.add('js');
+const descriptions={R0:['R0 · 추가 전망 미제공','공통 전망·현재 보유·제약으로 세 단계를 수행하며 펀드별 추가 전망 패킷은 받지 않는다.'],R1:['R1 · 계획부터 근거 제공','계획을 세우기 전에 펀드별 추가 전망을 받고, 작성과 점검에서도 같은 근거를 유지한다.'],R2:['R2 · 배분안 작성부터 근거 제공','계획은 공통 정보로 세운 뒤 배분안을 작성할 때 추가 전망을 받고, 점검에서도 그 근거를 유지한다.'],R3:['R3 · 점검·수정부터 근거 제공','계획과 배분안은 공통 정보로 만들고, 마지막 점검에서 추가 전망과 외부 검사 결과를 함께 검토한다.']};
+document.querySelectorAll('[data-arm]').forEach(button=>button.addEventListener('click',()=>{
+ const arm=button.dataset.arm, start=Number(arm.slice(1));
+ document.querySelectorAll('[data-arm]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
+ document.getElementById('arm-title').textContent=descriptions[arm][0];
+ document.getElementById('arm-description').textContent=descriptions[arm][1];
+ for(let i=1;i<=3;i++){
+  const node=document.getElementById('stage-'+i), on=start>0&&i>=start;
+  node.classList.toggle('on',on);
+  let text=on?(i===start?'패킷 첫 제공':'패킷 유지'):'추가 패킷 없음';
+  if(i===2)text+=' + 계획 응답';
+  if(i===3)text+=' + 앞선 응답 + 검사 결과';
+  node.querySelector('span').textContent=text;
+ }
+}));
+document.getElementById('print-button').addEventListener('click',()=>window.print());
+let closedForPrint=[],printing=false;
+window.addEventListener('beforeprint',()=>{if(printing)return;printing=true;closedForPrint=Array.from(document.querySelectorAll('details:not([open])'));closedForPrint.forEach(d=>d.open=true);});
+window.addEventListener('afterprint',()=>{if(!printing)return;closedForPrint.forEach(d=>d.open=false);closedForPrint=[];printing=false;});
+</script>
+</body>
+</html>
